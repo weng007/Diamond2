@@ -1,0 +1,625 @@
+﻿namespace DiamondShop
+{
+    partial class Customer
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Customer));
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.cmbTitleName = new System.Windows.Forms.ComboBox();
+            this.txtMobilephone = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtComment = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtAge = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtNickName = new System.Windows.Forms.TextBox();
+            this.btnSell = new System.Windows.Forms.Button();
+            this.txtSeller = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.cmbShop = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtCode = new System.Windows.Forms.TextBox();
+            this.txtLastName = new System.Windows.Forms.TextBox();
+            this.txtFirstName = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.dtUpdatedate = new System.Windows.Forms.DateTimePicker();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtNecklace = new System.Windows.Forms.TextBox();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.txtRing10 = new System.Windows.Forms.TextBox();
+            this.txtRing9 = new System.Windows.Forms.TextBox();
+            this.txtRing8 = new System.Windows.Forms.TextBox();
+            this.txtRing7 = new System.Windows.Forms.TextBox();
+            this.txtRing6 = new System.Windows.Forms.TextBox();
+            this.txtRing1 = new System.Windows.Forms.TextBox();
+            this.txtRing2 = new System.Windows.Forms.TextBox();
+            this.txtRing3 = new System.Windows.Forms.TextBox();
+            this.txtRing5 = new System.Windows.Forms.TextBox();
+            this.txtRing4 = new System.Windows.Forms.TextBox();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtBracelet = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
+            this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel10.SuspendLayout();
+            this.panel11.SuspendLayout();
+            this.panel12.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Controls.Add(this.cmbTitleName);
+            this.panel3.Controls.Add(this.txtMobilephone);
+            this.panel3.Controls.Add(this.label13);
+            this.panel3.Controls.Add(this.label10);
+            this.panel3.Controls.Add(this.txtComment);
+            this.panel3.Controls.Add(this.label9);
+            this.panel3.Controls.Add(this.txtAge);
+            this.panel3.Controls.Add(this.label7);
+            this.panel3.Controls.Add(this.txtNickName);
+            this.panel3.Controls.Add(this.btnSell);
+            this.panel3.Controls.Add(this.txtSeller);
+            this.panel3.Controls.Add(this.label8);
+            this.panel3.Controls.Add(this.cmbShop);
+            this.panel3.Controls.Add(this.label5);
+            this.panel3.Controls.Add(this.label4);
+            this.panel3.Controls.Add(this.txtCode);
+            this.panel3.Controls.Add(this.txtLastName);
+            this.panel3.Controls.Add(this.txtFirstName);
+            this.panel3.Controls.Add(this.label2);
+            this.panel3.Controls.Add(this.dtUpdatedate);
+            this.panel3.Controls.Add(this.label3);
+            this.panel3.Controls.Add(this.label6);
+            this.panel3.Controls.Add(this.label1);
+            this.panel3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel3.Location = new System.Drawing.Point(12, 71);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(986, 242);
+            this.panel3.TabIndex = 5;
+            // 
+            // cmbTitleName
+            // 
+            this.cmbTitleName.FormattingEnabled = true;
+            this.cmbTitleName.Location = new System.Drawing.Point(130, 57);
+            this.cmbTitleName.Name = "cmbTitleName";
+            this.cmbTitleName.Size = new System.Drawing.Size(165, 29);
+            this.cmbTitleName.TabIndex = 4;
+            // 
+            // txtMobilephone
+            // 
+            this.txtMobilephone.Location = new System.Drawing.Point(812, 96);
+            this.txtMobilephone.Name = "txtMobilephone";
+            this.txtMobilephone.Size = new System.Drawing.Size(147, 27);
+            this.txtMobilephone.TabIndex = 24;
+            // 
+            // label13
+            // 
+            this.label13.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(656, 99);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(150, 24);
+            this.label13.TabIndex = 173;
+            this.label13.Text = "Contact Number";
+            // 
+            // label10
+            // 
+            this.label10.Location = new System.Drawing.Point(718, 147);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(98, 22);
+            this.label10.TabIndex = 171;
+            this.label10.Text = "Comment";
+            // 
+            // txtComment
+            // 
+            this.txtComment.Location = new System.Drawing.Point(722, 172);
+            this.txtComment.Multiline = true;
+            this.txtComment.Name = "txtComment";
+            this.txtComment.Size = new System.Drawing.Size(242, 54);
+            this.txtComment.TabIndex = 36;
+            // 
+            // label9
+            // 
+            this.label9.Location = new System.Drawing.Point(676, 27);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(119, 24);
+            this.label9.TabIndex = 169;
+            this.label9.Text = "Update Date";
+            // 
+            // txtAge
+            // 
+            this.txtAge.Location = new System.Drawing.Point(443, 96);
+            this.txtAge.Name = "txtAge";
+            this.txtAge.Size = new System.Drawing.Size(54, 27);
+            this.txtAge.TabIndex = 20;
+            this.txtAge.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNecklace_KeyPress);
+            // 
+            // label7
+            // 
+            this.label7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label7.Location = new System.Drawing.Point(369, 99);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(63, 24);
+            this.label7.TabIndex = 167;
+            this.label7.Text = "Age";
+            // 
+            // txtNickName
+            // 
+            this.txtNickName.Location = new System.Drawing.Point(130, 96);
+            this.txtNickName.Name = "txtNickName";
+            this.txtNickName.Size = new System.Drawing.Size(99, 27);
+            this.txtNickName.TabIndex = 16;
+            // 
+            // btnSell
+            // 
+            this.btnSell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(202)))), ((int)(((byte)(119)))));
+            this.btnSell.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSell.BackgroundImage")));
+            this.btnSell.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnSell.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSell.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(109)))), ((int)(((byte)(65)))));
+            this.btnSell.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSell.Location = new System.Drawing.Point(272, 129);
+            this.btnSell.Name = "btnSell";
+            this.btnSell.Size = new System.Drawing.Size(34, 33);
+            this.btnSell.TabIndex = 28;
+            this.btnSell.UseVisualStyleBackColor = false;
+            this.btnSell.Click += new System.EventHandler(this.btnSell_Click);
+            // 
+            // txtSeller
+            // 
+            this.txtSeller.BackColor = System.Drawing.Color.White;
+            this.txtSeller.Enabled = false;
+            this.txtSeller.Location = new System.Drawing.Point(130, 133);
+            this.txtSeller.Name = "txtSeller";
+            this.txtSeller.Size = new System.Drawing.Size(136, 27);
+            this.txtSeller.TabIndex = 9;
+            // 
+            // label8
+            // 
+            this.label8.Location = new System.Drawing.Point(22, 135);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(63, 23);
+            this.label8.TabIndex = 48;
+            this.label8.Text = "Seller";
+            // 
+            // cmbShop
+            // 
+            this.cmbShop.FormattingEnabled = true;
+            this.cmbShop.Location = new System.Drawing.Point(443, 133);
+            this.cmbShop.Name = "cmbShop";
+            this.cmbShop.Size = new System.Drawing.Size(165, 29);
+            this.cmbShop.TabIndex = 32;
+            // 
+            // label5
+            // 
+            this.label5.Location = new System.Drawing.Point(373, 139);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(59, 31);
+            this.label5.TabIndex = 46;
+            this.label5.Text = "Shop";
+            // 
+            // label4
+            // 
+            this.label4.Location = new System.Drawing.Point(20, 62);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(87, 19);
+            this.label4.TabIndex = 45;
+            this.label4.Text = "Title Name";
+            // 
+            // txtCode
+            // 
+            this.txtCode.Location = new System.Drawing.Point(130, 22);
+            this.txtCode.Name = "txtCode";
+            this.txtCode.Size = new System.Drawing.Size(165, 27);
+            this.txtCode.TabIndex = 100;
+            // 
+            // txtLastName
+            // 
+            this.txtLastName.AccessibleDescription = "RW";
+            this.txtLastName.Location = new System.Drawing.Point(812, 59);
+            this.txtLastName.Name = "txtLastName";
+            this.txtLastName.Size = new System.Drawing.Size(147, 27);
+            this.txtLastName.TabIndex = 12;
+            // 
+            // txtFirstName
+            // 
+            this.txtFirstName.Location = new System.Drawing.Point(443, 59);
+            this.txtFirstName.Name = "txtFirstName";
+            this.txtFirstName.Size = new System.Drawing.Size(165, 27);
+            this.txtFirstName.TabIndex = 8;
+            // 
+            // label2
+            // 
+            this.label2.Location = new System.Drawing.Point(21, 25);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(80, 19);
+            this.label2.TabIndex = 41;
+            this.label2.Text = "Code";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // dtUpdatedate
+            // 
+            this.dtUpdatedate.CustomFormat = "dd/MM/yyyy";
+            this.dtUpdatedate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtUpdatedate.Location = new System.Drawing.Point(812, 22);
+            this.dtUpdatedate.Name = "dtUpdatedate";
+            this.dtUpdatedate.Size = new System.Drawing.Size(147, 27);
+            this.dtUpdatedate.TabIndex = 1;
+            // 
+            // label3
+            // 
+            this.label3.Location = new System.Drawing.Point(338, 62);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(99, 19);
+            this.label3.TabIndex = 34;
+            this.label3.Text = "First Name";
+            // 
+            // label6
+            // 
+            this.label6.Location = new System.Drawing.Point(699, 62);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(96, 24);
+            this.label6.TabIndex = 37;
+            this.label6.Text = "Last Name";
+            // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(22, 99);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(100, 24);
+            this.label1.TabIndex = 35;
+            this.label1.Text = "Nick Name";
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.label11);
+            this.panel4.Controls.Add(this.txtNecklace);
+            this.panel4.Controls.Add(this.panel10);
+            this.panel4.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.panel4.Location = new System.Drawing.Point(60, 324);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(300, 406);
+            this.panel4.TabIndex = 6;
+            // 
+            // label11
+            // 
+            this.label11.Image = ((System.Drawing.Image)(resources.GetObject("label11.Image")));
+            this.label11.Location = new System.Drawing.Point(10, 20);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(94, 19);
+            this.label11.TabIndex = 172;
+            // 
+            // txtNecklace
+            // 
+            this.txtNecklace.Location = new System.Drawing.Point(118, 17);
+            this.txtNecklace.Name = "txtNecklace";
+            this.txtNecklace.Size = new System.Drawing.Size(56, 27);
+            this.txtNecklace.TabIndex = 40;
+            this.txtNecklace.Text = "0";
+            this.txtNecklace.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtNecklace.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNecklace_KeyPress);
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.Transparent;
+            this.panel10.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel10.BackgroundImage")));
+            this.panel10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.panel10.Controls.Add(this.panel7);
+            this.panel10.Location = new System.Drawing.Point(36, 52);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(223, 312);
+            this.panel10.TabIndex = 13;
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.Transparent;
+            this.panel7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel7.BackgroundImage")));
+            this.panel7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.panel7.Location = new System.Drawing.Point(46, 169);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(135, 32);
+            this.panel7.TabIndex = 4;
+            // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.Color.Transparent;
+            this.panel11.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel11.BackgroundImage")));
+            this.panel11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.panel11.Controls.Add(this.panel13);
+            this.panel11.Controls.Add(this.panel8);
+            this.panel11.Controls.Add(this.txtRing10);
+            this.panel11.Controls.Add(this.txtRing9);
+            this.panel11.Controls.Add(this.txtRing8);
+            this.panel11.Controls.Add(this.txtRing7);
+            this.panel11.Controls.Add(this.txtRing6);
+            this.panel11.Controls.Add(this.txtRing1);
+            this.panel11.Controls.Add(this.txtRing2);
+            this.panel11.Controls.Add(this.txtRing3);
+            this.panel11.Controls.Add(this.txtRing5);
+            this.panel11.Controls.Add(this.txtRing4);
+            this.panel11.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel11.Location = new System.Drawing.Point(366, 324);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(585, 236);
+            this.panel11.TabIndex = 14;
+            // 
+            // panel13
+            // 
+            this.panel13.BackColor = System.Drawing.Color.Transparent;
+            this.panel13.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel13.BackgroundImage")));
+            this.panel13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.panel13.Location = new System.Drawing.Point(360, 149);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(132, 32);
+            this.panel13.TabIndex = 5;
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.Transparent;
+            this.panel8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel8.BackgroundImage")));
+            this.panel8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.panel8.Location = new System.Drawing.Point(82, 149);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(132, 32);
+            this.panel8.TabIndex = 4;
+            // 
+            // txtRing10
+            // 
+            this.txtRing10.Location = new System.Drawing.Point(503, 72);
+            this.txtRing10.Name = "txtRing10";
+            this.txtRing10.Size = new System.Drawing.Size(33, 27);
+            this.txtRing10.TabIndex = 80;
+            this.txtRing10.Text = "0";
+            this.txtRing10.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtRing10.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNecklace_KeyPress);
+            // 
+            // txtRing9
+            // 
+            this.txtRing9.Location = new System.Drawing.Point(473, 35);
+            this.txtRing9.Name = "txtRing9";
+            this.txtRing9.Size = new System.Drawing.Size(33, 27);
+            this.txtRing9.TabIndex = 76;
+            this.txtRing9.Text = "0";
+            this.txtRing9.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtRing9.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNecklace_KeyPress);
+            // 
+            // txtRing8
+            // 
+            this.txtRing8.Location = new System.Drawing.Point(434, 9);
+            this.txtRing8.Name = "txtRing8";
+            this.txtRing8.Size = new System.Drawing.Size(33, 27);
+            this.txtRing8.TabIndex = 72;
+            this.txtRing8.Text = "0";
+            this.txtRing8.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtRing8.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNecklace_KeyPress);
+            // 
+            // txtRing7
+            // 
+            this.txtRing7.Location = new System.Drawing.Point(385, 9);
+            this.txtRing7.Name = "txtRing7";
+            this.txtRing7.Size = new System.Drawing.Size(33, 27);
+            this.txtRing7.TabIndex = 68;
+            this.txtRing7.Text = "0";
+            this.txtRing7.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtRing7.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNecklace_KeyPress);
+            // 
+            // txtRing6
+            // 
+            this.txtRing6.Location = new System.Drawing.Point(335, 98);
+            this.txtRing6.Name = "txtRing6";
+            this.txtRing6.Size = new System.Drawing.Size(33, 27);
+            this.txtRing6.TabIndex = 64;
+            this.txtRing6.Text = "0";
+            this.txtRing6.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtRing6.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNecklace_KeyPress);
+            // 
+            // txtRing1
+            // 
+            this.txtRing1.Location = new System.Drawing.Point(40, 72);
+            this.txtRing1.Name = "txtRing1";
+            this.txtRing1.Size = new System.Drawing.Size(33, 27);
+            this.txtRing1.TabIndex = 44;
+            this.txtRing1.Text = "0";
+            this.txtRing1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtRing1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNecklace_KeyPress);
+            // 
+            // txtRing2
+            // 
+            this.txtRing2.Location = new System.Drawing.Point(71, 36);
+            this.txtRing2.Name = "txtRing2";
+            this.txtRing2.Size = new System.Drawing.Size(33, 27);
+            this.txtRing2.TabIndex = 48;
+            this.txtRing2.Text = "0";
+            this.txtRing2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtRing2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNecklace_KeyPress);
+            // 
+            // txtRing3
+            // 
+            this.txtRing3.Location = new System.Drawing.Point(110, 9);
+            this.txtRing3.Name = "txtRing3";
+            this.txtRing3.Size = new System.Drawing.Size(33, 27);
+            this.txtRing3.TabIndex = 52;
+            this.txtRing3.Text = "0";
+            this.txtRing3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtRing3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNecklace_KeyPress);
+            // 
+            // txtRing5
+            // 
+            this.txtRing5.Location = new System.Drawing.Point(207, 98);
+            this.txtRing5.Name = "txtRing5";
+            this.txtRing5.Size = new System.Drawing.Size(33, 27);
+            this.txtRing5.TabIndex = 60;
+            this.txtRing5.Text = "0";
+            this.txtRing5.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtRing5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNecklace_KeyPress);
+            // 
+            // txtRing4
+            // 
+            this.txtRing4.Location = new System.Drawing.Point(160, 9);
+            this.txtRing4.Name = "txtRing4";
+            this.txtRing4.Size = new System.Drawing.Size(33, 27);
+            this.txtRing4.TabIndex = 56;
+            this.txtRing4.Text = "0";
+            this.txtRing4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtRing4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNecklace_KeyPress);
+            // 
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.Color.Transparent;
+            this.panel12.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel12.BackgroundImage")));
+            this.panel12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.panel12.Controls.Add(this.panel9);
+            this.panel12.Controls.Add(this.label12);
+            this.panel12.Controls.Add(this.txtBracelet);
+            this.panel12.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.panel12.Location = new System.Drawing.Point(366, 566);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(585, 164);
+            this.panel12.TabIndex = 183;
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.Transparent;
+            this.panel9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel9.BackgroundImage")));
+            this.panel9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.panel9.Location = new System.Drawing.Point(173, 68);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(127, 32);
+            this.panel9.TabIndex = 184;
+            // 
+            // label12
+            // 
+            this.label12.Image = ((System.Drawing.Image)(resources.GetObject("label12.Image")));
+            this.label12.Location = new System.Drawing.Point(248, 74);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(95, 19);
+            this.label12.TabIndex = 173;
+            // 
+            // txtBracelet
+            // 
+            this.txtBracelet.Location = new System.Drawing.Point(354, 71);
+            this.txtBracelet.Name = "txtBracelet";
+            this.txtBracelet.Size = new System.Drawing.Size(51, 27);
+            this.txtBracelet.TabIndex = 84;
+            this.txtBracelet.Text = "0";
+            this.txtBracelet.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtBracelet.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNecklace_KeyPress);
+            // 
+            // Customer
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(195)))), ((int)(((byte)(157)))));
+            this.ClientSize = new System.Drawing.Size(1010, 741);
+            this.Controls.Add(this.panel12);
+            this.Controls.Add(this.panel11);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel3);
+            this.Name = "Customer";
+            this.Text = "Customer";
+            this.Controls.SetChildIndex(this.panel3, 0);
+            this.Controls.SetChildIndex(this.panel4, 0);
+            this.Controls.SetChildIndex(this.panel11, 0);
+            this.Controls.SetChildIndex(this.panel12, 0);
+            ((System.ComponentModel.ISupportInitialize)(this.ds)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            this.panel10.ResumeLayout(false);
+            this.panel11.ResumeLayout(false);
+            this.panel11.PerformLayout();
+            this.panel12.ResumeLayout(false);
+            this.panel12.PerformLayout();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.TextBox txtCode;
+        private System.Windows.Forms.TextBox txtLastName;
+        private System.Windows.Forms.TextBox txtFirstName;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox cmbShop;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtSeller;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button btnSell;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox txtComment;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txtAge;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtNickName;
+        private System.Windows.Forms.DateTimePicker dtUpdatedate;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox txtNecklace;
+        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.TextBox txtRing10;
+        private System.Windows.Forms.TextBox txtRing9;
+        private System.Windows.Forms.TextBox txtRing8;
+        private System.Windows.Forms.TextBox txtRing7;
+        private System.Windows.Forms.TextBox txtRing6;
+        private System.Windows.Forms.TextBox txtRing1;
+        private System.Windows.Forms.TextBox txtRing2;
+        private System.Windows.Forms.TextBox txtRing3;
+        private System.Windows.Forms.TextBox txtRing5;
+        private System.Windows.Forms.TextBox txtRing4;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox txtBracelet;
+        private System.Windows.Forms.Panel panel13;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.TextBox txtMobilephone;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.ComboBox cmbTitleName;
+    }
+}

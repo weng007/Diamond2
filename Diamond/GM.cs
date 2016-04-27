@@ -1,0 +1,213 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Data;
+using DiamondDS.DS;
+using DiamondBiz.Biz;
+
+namespace Diamond
+{
+    public static class GM
+    {
+        //Biz
+        static MasterTableDetailBiz bizMasterTableDetail;
+        static PriceCodeBiz bizPriceCode;
+        static UserBiz bizUser;
+        static SellerBiz bizSeller;
+        static BuyBookDiamondCerBiz bizBuyBookDiamondCer;
+        static BuyBookDiamondBiz bizBuyBookDiamond;
+        static BuyBookGemstoneBiz bizBuyBookGemstone;
+        static BuyBookGoldBiz bizBuyBookGold;
+        static BuyBookSpecialBiz bizBuyBookSpecial;
+        static ProductBiz bizProduct;
+        static DiamondCerBiz bizDiamondCer;
+        static DiamondDetailBiz bizDiamondDetail;
+        static GemstoneCerBiz bizGemstoneCer;
+        static GemstoneDetailBiz bizGemstoneDetail;
+        static CustomerBiz bizCustomer;
+        static SellBiz bizSell;
+
+        //DS
+        static dsPriceCode priceCodeDS;
+        static dsUser userDS;
+        static dsSeller sellerDS;
+        static dsBuyBookDiamondCer BuyBookDiamondCerDS;
+        static dsBuyBookDiamond BuyBookDiamondDS;
+        static dsBuyBookGemstone BuyBookGemstoneDS;
+        static dsBuyBookGold BuyBookGoldDS;
+        static dsBuyBookSpecial BuyBookSpecialDS;
+        static dsProduct ProductDS;
+        static dsDiamondCer DiamondCerDS;
+        static dsDiamondDetail DiamondDetailDS;
+        static dsGemstoneCer GemstoneCerDS;
+        static dsGemstoneDetail GemstoneDetailDS;
+        static dsCustomer CustomerDS;
+        static dsSell SellDS;
+
+        public static MasterTableDetailBiz GetMasterTableDetailBiz()
+        {
+            if (bizMasterTableDetail == null) { return new MasterTableDetailBiz(); }
+            else { return bizMasterTableDetail; }
+        }
+        public static PriceCodeBiz GetPriceCodeBiz()
+        {
+            if (bizPriceCode == null) { return new PriceCodeBiz(); }
+            else { return bizPriceCode; }
+        }
+        public static dsPriceCode GetDSPriceCode()
+        {
+            if (priceCodeDS == null) { return new dsPriceCode(); }
+            else { return priceCodeDS; }
+        }
+
+        public static UserBiz GetUserBiz()
+        {
+            if (bizUser == null) { return new UserBiz(); }
+            else { return bizUser; }
+        }
+        public static dsUser GetDSUser()
+        {
+            if (userDS == null) { return new dsUser(); }
+            else { return userDS; }
+        }
+
+        public static SellerBiz GetSellerBiz()
+        {
+            if (bizSeller == null) { return new SellerBiz(); }
+            else { return bizSeller; }
+        }
+        public static dsSeller GetDSSeller()
+        {
+            if (sellerDS == null) { return new dsSeller(); }
+            else { return sellerDS; }
+        }
+        public static BuyBookDiamondCerBiz GetBuyBookDiamondCerBiz()
+        {
+            if (bizBuyBookDiamondCer == null) { return new BuyBookDiamondCerBiz(); }
+            else { return bizBuyBookDiamondCer; }
+        }
+        public static dsBuyBookDiamondCer GetDSBuyBookDiamondCer()
+        {
+            if (BuyBookDiamondCerDS == null) { return new dsBuyBookDiamondCer(); }
+            else { return BuyBookDiamondCerDS; }
+        }
+        public static BuyBookDiamondBiz GetBuyBookDiamondBiz()
+        {
+            if (bizBuyBookDiamond == null) { return new BuyBookDiamondBiz(); }
+            else { return bizBuyBookDiamond; }
+        }
+        public static dsBuyBookDiamond GetDSBuyBookDiamond()
+        {
+            if (BuyBookDiamondDS == null) { return new dsBuyBookDiamond(); }
+            else { return BuyBookDiamondDS; }
+        }
+        public static BuyBookGemstoneBiz GetBuyBookGemstoneBiz()
+        {
+            if (bizBuyBookGemstone == null) { return new BuyBookGemstoneBiz(); }
+            else { return bizBuyBookGemstone; }
+        }
+        public static dsBuyBookGemstone GetDSBuyBookGemstone()
+        {
+            if (BuyBookGemstoneDS == null) { return new dsBuyBookGemstone(); }
+            else { return BuyBookGemstoneDS; }
+        }
+        public static BuyBookGoldBiz GetBuyBookGoldBiz()
+        {
+            if (bizBuyBookGold == null) { return new BuyBookGoldBiz(); }
+            else { return bizBuyBookGold; }
+        }
+        public static dsBuyBookGold GetDSBuyBookGold()
+        {
+            if (BuyBookGoldDS == null) { return new dsBuyBookGold(); }
+            else { return BuyBookGoldDS; }
+        }
+        public static BuyBookSpecialBiz GetBuyBookSpecialBiz()
+        {
+            if (bizBuyBookSpecial == null) { return new BuyBookSpecialBiz(); }
+            else { return bizBuyBookSpecial; }
+        }
+        public static dsBuyBookSpecial GetDSBuyBookSpecial()
+        {
+            if (BuyBookSpecialDS == null) { return new dsBuyBookSpecial(); }
+            else { return BuyBookSpecialDS; }
+        }
+
+        public static ProductBiz GetProductBiz()
+        {
+            if (bizProduct == null) { return new ProductBiz(); }
+            else { return bizProduct; }
+        }
+        public static dsProduct GetDSProduct()
+        {
+            if (ProductDS == null) { return new dsProduct(); }
+            else { return ProductDS; }
+        }
+        public static DiamondCerBiz GetDiamondBiz()
+        {
+            if (bizDiamondCer == null) { return new DiamondCerBiz(); }
+            else { return bizDiamondCer; }
+        }
+        public static dsDiamondCer GetDSDiamondCer()
+        {
+            if (DiamondCerDS == null) { return new dsDiamondCer(); }
+            else { return DiamondCerDS; }
+        }
+
+        public static DiamondDetailBiz GetDiamondDetailBiz()
+        {
+            if (bizDiamondDetail == null) { return new DiamondDetailBiz(); }
+            else { return bizDiamondDetail; }
+        }
+        public static dsDiamondDetail GetDSDiamondDetail()
+        {
+            if (DiamondDetailDS == null) { return new dsDiamondDetail(); }
+            else { return DiamondDetailDS; }
+        }
+
+        public static GemstoneCerBiz GetGemstoneCerBiz()
+        {
+            if (bizGemstoneCer == null) { return new GemstoneCerBiz(); }
+            else { return bizGemstoneCer; }
+        }
+       
+        public static dsGemstoneCer GetDSGemstoneCer()
+        {
+            if (GemstoneCerDS == null) { return new dsGemstoneCer(); }
+            else { return GemstoneCerDS; }
+        }
+        public static GemstoneDetailBiz GetGemstoneDetailBiz()
+        {
+            if (bizGemstoneDetail == null) { return new GemstoneDetailBiz(); }
+            else { return bizGemstoneDetail; }
+        }
+        public static dsGemstoneDetail GetDSGemstoneDetail()
+        {
+            if (GemstoneDetailDS == null) { return new dsGemstoneDetail(); }
+            else { return GemstoneDetailDS; }
+        }
+
+        public static CustomerBiz GetCustomerBiz()
+        {
+            if (bizCustomer == null) { return new CustomerBiz(); }
+            else { return bizCustomer; }
+        }
+        public static dsCustomer GetDSCustomer()
+        {
+            if (CustomerDS == null) { return new dsCustomer(); }
+            else { return CustomerDS; }
+        }
+
+        public static SellBiz SellBiz()
+        {
+            if (bizSell == null) { return new SellBiz(); }
+            else { return bizSell; }
+        }
+        public static dsSell GetDSSell()
+        {
+            if (SellDS == null) { return new dsSell(); }
+            else { return SellDS; }
+        }
+    }
+}

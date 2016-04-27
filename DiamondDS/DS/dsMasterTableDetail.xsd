@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsMasterTableDetail" targetNamespace="http://tempuri.org/dsMasterTableDetail.xsd" xmlns:mstns="http://tempuri.org/dsMasterTableDetail.xsd" xmlns="http://tempuri.org/dsMasterTableDetail.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="WealthDB2ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="WealthDB2ConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.WealthDB2ConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsMasterTableDetail" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsMasterTableDetail" msprop:Generator_UserDSName="dsMasterTableDetail">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="MasterTableDetail" msprop:Generator_TableClassName="MasterTableDetailDataTable" msprop:Generator_TableVarName="tableMasterTableDetail" msprop:Generator_RowChangedName="MasterTableDetailRowChanged" msprop:Generator_TablePropName="MasterTableDetail" msprop:Generator_RowDeletingName="MasterTableDetailRowDeleting" msprop:Generator_RowChangingName="MasterTableDetailRowChanging" msprop:Generator_RowEvHandlerName="MasterTableDetailRowChangeEventHandler" msprop:Generator_RowDeletedName="MasterTableDetailRowDeleted" msprop:Generator_RowClassName="MasterTableDetailRow" msprop:Generator_UserTableName="MasterTableDetail" msprop:Generator_RowEvArgName="MasterTableDetailRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Detail" msprop:Generator_ColumnVarNameInTable="columnDetail" msprop:Generator_ColumnPropNameInRow="Detail" msprop:Generator_ColumnPropNameInTable="DetailColumn" msprop:Generator_UserColumnName="Detail" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:MasterTableDetail" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

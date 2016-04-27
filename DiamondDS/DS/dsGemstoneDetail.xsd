@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsGemstoneDetail" targetNamespace="http://tempuri.org/dsGemstoneDetail.xsd" xmlns:mstns="http://tempuri.org/dsGemstoneDetail.xsd" xmlns="http://tempuri.org/dsGemstoneDetail.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="DiamondShopConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="DiamondShopConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.DiamondDS.Properties.Settings.GlobalReference.Default.DiamondShopConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsGemstoneDetail" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsGemstoneDetail" msprop:Generator_UserDSName="dsGemstoneDetail">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="GemstoneDetail" msprop:Generator_TableClassName="GemstoneDetailDataTable" msprop:Generator_TableVarName="tableGemstoneDetail" msprop:Generator_TablePropName="GemstoneDetail" msprop:Generator_RowDeletingName="GemstoneDetailRowDeleting" msprop:Generator_RowChangingName="GemstoneDetailRowChanging" msprop:Generator_RowEvHandlerName="GemstoneDetailRowChangeEventHandler" msprop:Generator_RowDeletedName="GemstoneDetailRowDeleted" msprop:Generator_UserTableName="GemstoneDetail" msprop:Generator_RowChangedName="GemstoneDetailRowChanged" msprop:Generator_RowEvArgName="GemstoneDetailRowChangeEvent" msprop:Generator_RowClassName="GemstoneDetailRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="Shape" msprop:Generator_ColumnVarNameInTable="columnShape" msprop:Generator_ColumnPropNameInRow="Shape" msprop:Generator_ColumnPropNameInTable="ShapeColumn" msprop:Generator_UserColumnName="Shape" type="xs:int" minOccurs="0" />
+              <xs:element name="GemstoneType" msprop:Generator_ColumnVarNameInTable="columnGemstoneType" msprop:Generator_ColumnPropNameInRow="GemstoneType" msprop:Generator_ColumnPropNameInTable="GemstoneTypeColumn" msprop:Generator_UserColumnName="GemstoneType" type="xs:int" minOccurs="0" />
+              <xs:element name="Amount" msprop:Generator_ColumnVarNameInTable="columnAmount" msprop:Generator_ColumnPropNameInRow="Amount" msprop:Generator_ColumnPropNameInTable="AmountColumn" msprop:Generator_UserColumnName="Amount" type="xs:int" minOccurs="0" />
+              <xs:element name="Weight" msprop:Generator_ColumnVarNameInTable="columnWeight" msprop:Generator_ColumnPropNameInRow="Weight" msprop:Generator_ColumnPropNameInTable="WeightColumn" msprop:Generator_UserColumnName="Weight" type="xs:double" minOccurs="0" />
+              <xs:element name="Origin" msprop:Generator_ColumnVarNameInTable="columnOrigin" msprop:Generator_ColumnPropNameInRow="Origin" msprop:Generator_ColumnPropNameInTable="OriginColumn" msprop:Generator_UserColumnName="Origin" type="xs:int" minOccurs="0" />
+              <xs:element name="CertificateNo" msprop:Generator_ColumnVarNameInTable="columnCertificateNo" msprop:Generator_ColumnPropNameInRow="CertificateNo" msprop:Generator_ColumnPropNameInTable="CertificateNoColumn" msprop:Generator_UserColumnName="CertificateNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ProductID" msprop:Generator_ColumnVarNameInTable="columnProductID" msprop:Generator_ColumnPropNameInRow="ProductID" msprop:Generator_ColumnPropNameInTable="ProductIDColumn" msprop:Generator_UserColumnName="ProductID" type="xs:int" minOccurs="0" />
+              <xs:element name="IsDeleted" msprop:Generator_ColumnVarNameInTable="columnIsDeleted" msprop:Generator_ColumnPropNameInRow="IsDeleted" msprop:Generator_ColumnPropNameInTable="IsDeletedColumn" msprop:Generator_UserColumnName="IsDeleted" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CreateBy" msprop:Generator_ColumnVarNameInTable="columnCreateBy" msprop:Generator_ColumnPropNameInRow="CreateBy" msprop:Generator_ColumnPropNameInTable="CreateByColumn" msprop:Generator_UserColumnName="CreateBy" type="xs:int" minOccurs="0" />
+              <xs:element name="CreateDate" msprop:Generator_ColumnVarNameInTable="columnCreateDate" msprop:Generator_ColumnPropNameInRow="CreateDate" msprop:Generator_ColumnPropNameInTable="CreateDateColumn" msprop:Generator_UserColumnName="CreateDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="EditBy" msprop:Generator_ColumnVarNameInTable="columnEditBy" msprop:Generator_ColumnPropNameInRow="EditBy" msprop:Generator_ColumnPropNameInTable="EditByColumn" msprop:Generator_UserColumnName="EditBy" type="xs:int" minOccurs="0" />
+              <xs:element name="EditDate" msprop:Generator_ColumnVarNameInTable="columnEditDate" msprop:Generator_ColumnPropNameInRow="EditDate" msprop:Generator_ColumnPropNameInTable="EditDateColumn" msprop:Generator_UserColumnName="EditDate" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:GemstoneDetail" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

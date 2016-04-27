@@ -1,0 +1,751 @@
+﻿namespace DiamondShop
+{
+    partial class BuyBookDiamond
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BuyBookDiamond));
+            this.dtBuyDate = new System.Windows.Forms.DateTimePicker();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.txtNote = new System.Windows.Forms.TextBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.grid1 = new System.Windows.Forms.DataGridView();
+            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label22 = new System.Windows.Forms.Label();
+            this.txtMarketPrice = new System.Windows.Forms.TextBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.cmbShop = new System.Windows.Forms.ComboBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.chkPayUSD = new System.Windows.Forms.CheckBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.txtTotalThaiBaht = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.txtPriceCarat = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.txtTotalUSD = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtTotalBaht = new System.Windows.Forms.TextBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.txtUSDRate = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.dtDueDate = new System.Windows.Forms.DateTimePicker();
+            this.radPament2 = new System.Windows.Forms.RadioButton();
+            this.rdoPayment1 = new System.Windows.Forms.RadioButton();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtPriceCaratUSD = new System.Windows.Forms.TextBox();
+            this.cmbClearity = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.cmbColor = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtWeight = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtAmount = new System.Windows.Forms.TextBox();
+            this.txtESize = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtSSize = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.txtSeller = new System.Windows.Forms.TextBox();
+            this.cmbShape = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtCode = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grid1)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // dtBuyDate
+            // 
+            this.dtBuyDate.CustomFormat = "dd/MM/yyyy";
+            this.dtBuyDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtBuyDate.Location = new System.Drawing.Point(137, 17);
+            this.dtBuyDate.Name = "dtBuyDate";
+            this.dtBuyDate.Size = new System.Drawing.Size(131, 27);
+            this.dtBuyDate.TabIndex = 1;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.txtNote);
+            this.panel3.Controls.Add(this.label26);
+            this.panel3.Controls.Add(this.grid1);
+            this.panel3.Controls.Add(this.label22);
+            this.panel3.Controls.Add(this.txtMarketPrice);
+            this.panel3.Controls.Add(this.label25);
+            this.panel3.Controls.Add(this.cmbShop);
+            this.panel3.Controls.Add(this.label20);
+            this.panel3.Controls.Add(this.chkPayUSD);
+            this.panel3.Controls.Add(this.label19);
+            this.panel3.Controls.Add(this.txtTotalThaiBaht);
+            this.panel3.Controls.Add(this.label17);
+            this.panel3.Controls.Add(this.label15);
+            this.panel3.Controls.Add(this.label16);
+            this.panel3.Controls.Add(this.txtPriceCarat);
+            this.panel3.Controls.Add(this.label13);
+            this.panel3.Controls.Add(this.label14);
+            this.panel3.Controls.Add(this.txtTotalUSD);
+            this.panel3.Controls.Add(this.label5);
+            this.panel3.Controls.Add(this.txtTotalBaht);
+            this.panel3.Controls.Add(this.label24);
+            this.panel3.Controls.Add(this.txtUSDRate);
+            this.panel3.Controls.Add(this.label23);
+            this.panel3.Controls.Add(this.label21);
+            this.panel3.Controls.Add(this.dtDueDate);
+            this.panel3.Controls.Add(this.radPament2);
+            this.panel3.Controls.Add(this.rdoPayment1);
+            this.panel3.Controls.Add(this.label12);
+            this.panel3.Controls.Add(this.label4);
+            this.panel3.Controls.Add(this.txtPriceCaratUSD);
+            this.panel3.Controls.Add(this.cmbClearity);
+            this.panel3.Controls.Add(this.label11);
+            this.panel3.Controls.Add(this.cmbColor);
+            this.panel3.Controls.Add(this.label2);
+            this.panel3.Controls.Add(this.label10);
+            this.panel3.Controls.Add(this.txtWeight);
+            this.panel3.Controls.Add(this.label9);
+            this.panel3.Controls.Add(this.txtAmount);
+            this.panel3.Controls.Add(this.txtESize);
+            this.panel3.Controls.Add(this.label8);
+            this.panel3.Controls.Add(this.txtSSize);
+            this.panel3.Controls.Add(this.label7);
+            this.panel3.Controls.Add(this.label18);
+            this.panel3.Controls.Add(this.txtSeller);
+            this.panel3.Controls.Add(this.cmbShape);
+            this.panel3.Controls.Add(this.label3);
+            this.panel3.Controls.Add(this.label1);
+            this.panel3.Controls.Add(this.label6);
+            this.panel3.Controls.Add(this.txtCode);
+            this.panel3.Controls.Add(this.dtBuyDate);
+            this.panel3.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.panel3.Location = new System.Drawing.Point(12, 68);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(921, 484);
+            this.panel3.TabIndex = 74;
+            // 
+            // txtNote
+            // 
+            this.txtNote.Location = new System.Drawing.Point(425, 392);
+            this.txtNote.Multiline = true;
+            this.txtNote.Name = "txtNote";
+            this.txtNote.Size = new System.Drawing.Size(214, 64);
+            this.txtNote.TabIndex = 72;
+            this.txtNote.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.label26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
+            this.label26.Location = new System.Drawing.Point(358, 404);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(45, 19);
+            this.label26.TabIndex = 171;
+            this.label26.Text = "Note";
+            // 
+            // grid1
+            // 
+            this.grid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grid1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Date,
+            this.Amount});
+            this.grid1.Location = new System.Drawing.Point(33, 178);
+            this.grid1.Name = "grid1";
+            this.grid1.RowHeadersWidth = 10;
+            this.grid1.Size = new System.Drawing.Size(235, 287);
+            this.grid1.TabIndex = 76;
+            // 
+            // Date
+            // 
+            this.Date.DataPropertyName = "Date";
+            this.Date.HeaderText = "วันที่";
+            this.Date.Name = "Date";
+            // 
+            // Amount
+            // 
+            this.Amount.DataPropertyName = "Amount";
+            this.Amount.HeaderText = "คงเหลือ (ct)";
+            this.Amount.Name = "Amount";
+            this.Amount.Width = 120;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.label22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
+            this.label22.Location = new System.Drawing.Point(843, 350);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(47, 21);
+            this.label22.TabIndex = 169;
+            this.label22.Text = "Baht";
+            // 
+            // txtMarketPrice
+            // 
+            this.txtMarketPrice.Location = new System.Drawing.Point(706, 347);
+            this.txtMarketPrice.Name = "txtMarketPrice";
+            this.txtMarketPrice.Size = new System.Drawing.Size(131, 27);
+            this.txtMarketPrice.TabIndex = 68;
+            this.txtMarketPrice.Text = "0";
+            this.txtMarketPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.label25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
+            this.label25.Location = new System.Drawing.Point(598, 350);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(107, 21);
+            this.label25.TabIndex = 167;
+            this.label25.Text = "Market Price";
+            // 
+            // cmbShop
+            // 
+            this.cmbShop.FormattingEnabled = true;
+            this.cmbShop.Location = new System.Drawing.Point(137, 122);
+            this.cmbShop.Name = "cmbShop";
+            this.cmbShop.Size = new System.Drawing.Size(157, 29);
+            this.cmbShop.TabIndex = 8;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
+            this.label20.Location = new System.Drawing.Point(29, 125);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(49, 21);
+            this.label20.TabIndex = 165;
+            this.label20.Text = "Shop";
+            // 
+            // chkPayUSD
+            // 
+            this.chkPayUSD.AutoSize = true;
+            this.chkPayUSD.Checked = true;
+            this.chkPayUSD.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkPayUSD.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.chkPayUSD.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
+            this.chkPayUSD.Location = new System.Drawing.Point(425, 187);
+            this.chkPayUSD.Name = "chkPayUSD";
+            this.chkPayUSD.Size = new System.Drawing.Size(112, 23);
+            this.chkPayUSD.TabIndex = 52;
+            this.chkPayUSD.Text = "Pay By USD";
+            this.chkPayUSD.UseVisualStyleBackColor = true;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.label19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
+            this.label19.Location = new System.Drawing.Point(532, 350);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(47, 21);
+            this.label19.TabIndex = 163;
+            this.label19.Text = "Baht";
+            // 
+            // txtTotalThaiBaht
+            // 
+            this.txtTotalThaiBaht.Location = new System.Drawing.Point(425, 347);
+            this.txtTotalThaiBaht.Name = "txtTotalThaiBaht";
+            this.txtTotalThaiBaht.Size = new System.Drawing.Size(101, 27);
+            this.txtTotalThaiBaht.TabIndex = 108;
+            this.txtTotalThaiBaht.Text = "0";
+            this.txtTotalThaiBaht.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
+            this.label17.Location = new System.Drawing.Point(307, 315);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(109, 21);
+            this.label17.TabIndex = 161;
+            this.label17.Text = "Price / Carat";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
+            this.label15.Location = new System.Drawing.Point(532, 315);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(47, 21);
+            this.label15.TabIndex = 160;
+            this.label15.Text = "Baht";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
+            this.label16.Location = new System.Drawing.Point(290, 350);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(126, 21);
+            this.label16.TabIndex = 159;
+            this.label16.Text = "Total Thai Baht";
+            // 
+            // txtPriceCarat
+            // 
+            this.txtPriceCarat.Location = new System.Drawing.Point(425, 312);
+            this.txtPriceCarat.Name = "txtPriceCarat";
+            this.txtPriceCarat.Size = new System.Drawing.Size(101, 27);
+            this.txtPriceCarat.TabIndex = 64;
+            this.txtPriceCarat.Text = "0";
+            this.txtPriceCarat.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
+            this.label13.Location = new System.Drawing.Point(532, 258);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(41, 21);
+            this.label13.TabIndex = 157;
+            this.label13.Text = "USD";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
+            this.label14.Location = new System.Drawing.Point(307, 258);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(84, 21);
+            this.label14.TabIndex = 156;
+            this.label14.Text = "Total USD";
+            // 
+            // txtTotalUSD
+            // 
+            this.txtTotalUSD.Location = new System.Drawing.Point(425, 255);
+            this.txtTotalUSD.Name = "txtTotalUSD";
+            this.txtTotalUSD.Size = new System.Drawing.Size(101, 27);
+            this.txtTotalUSD.TabIndex = 104;
+            this.txtTotalUSD.Text = "0";
+            this.txtTotalUSD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
+            this.label5.Location = new System.Drawing.Point(532, 225);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(41, 21);
+            this.label5.TabIndex = 154;
+            this.label5.Text = "USD";
+            // 
+            // txtTotalBaht
+            // 
+            this.txtTotalBaht.Location = new System.Drawing.Point(706, 255);
+            this.txtTotalBaht.Name = "txtTotalBaht";
+            this.txtTotalBaht.Size = new System.Drawing.Size(131, 27);
+            this.txtTotalBaht.TabIndex = 112;
+            this.txtTotalBaht.Text = "0";
+            this.txtTotalBaht.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.label24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
+            this.label24.Location = new System.Drawing.Point(610, 258);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(90, 21);
+            this.label24.TabIndex = 152;
+            this.label24.Text = "Total Baht";
+            // 
+            // txtUSDRate
+            // 
+            this.txtUSDRate.Location = new System.Drawing.Point(706, 222);
+            this.txtUSDRate.Name = "txtUSDRate";
+            this.txtUSDRate.Size = new System.Drawing.Size(61, 27);
+            this.txtUSDRate.TabIndex = 60;
+            this.txtUSDRate.Text = "0";
+            this.txtUSDRate.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
+            this.label23.Location = new System.Drawing.Point(610, 225);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(83, 21);
+            this.label23.TabIndex = 150;
+            this.label23.Text = "USD Rate";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.label21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
+            this.label21.Location = new System.Drawing.Point(652, 141);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(80, 19);
+            this.label21.TabIndex = 149;
+            this.label21.Text = "Due Date";
+            // 
+            // dtDueDate
+            // 
+            this.dtDueDate.CustomFormat = "dd/MM/yyyy";
+            this.dtDueDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtDueDate.Location = new System.Drawing.Point(752, 139);
+            this.dtDueDate.Name = "dtDueDate";
+            this.dtDueDate.Size = new System.Drawing.Size(131, 27);
+            this.dtDueDate.TabIndex = 48;
+            // 
+            // radPament2
+            // 
+            this.radPament2.AutoSize = true;
+            this.radPament2.Checked = true;
+            this.radPament2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
+            this.radPament2.Location = new System.Drawing.Point(824, 100);
+            this.radPament2.Name = "radPament2";
+            this.radPament2.Size = new System.Drawing.Size(50, 25);
+            this.radPament2.TabIndex = 44;
+            this.radPament2.TabStop = true;
+            this.radPament2.Text = "No";
+            this.radPament2.UseVisualStyleBackColor = true;
+            // 
+            // rdoPayment1
+            // 
+            this.rdoPayment1.AutoSize = true;
+            this.rdoPayment1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
+            this.rdoPayment1.Location = new System.Drawing.Point(758, 100);
+            this.rdoPayment1.Name = "rdoPayment1";
+            this.rdoPayment1.Size = new System.Drawing.Size(55, 25);
+            this.rdoPayment1.TabIndex = 40;
+            this.rdoPayment1.Text = "Yes";
+            this.rdoPayment1.UseVisualStyleBackColor = true;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
+            this.label12.Location = new System.Drawing.Point(652, 102);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(78, 19);
+            this.label12.TabIndex = 145;
+            this.label12.Text = "Payment";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
+            this.label4.Location = new System.Drawing.Point(307, 225);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(109, 21);
+            this.label4.TabIndex = 126;
+            this.label4.Text = "Price / Carat";
+            // 
+            // txtPriceCaratUSD
+            // 
+            this.txtPriceCaratUSD.Location = new System.Drawing.Point(425, 222);
+            this.txtPriceCaratUSD.Name = "txtPriceCaratUSD";
+            this.txtPriceCaratUSD.Size = new System.Drawing.Size(101, 27);
+            this.txtPriceCaratUSD.TabIndex = 56;
+            this.txtPriceCaratUSD.Text = "0";
+            this.txtPriceCaratUSD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // cmbClearity
+            // 
+            this.cmbClearity.FormattingEnabled = true;
+            this.cmbClearity.Location = new System.Drawing.Point(737, 52);
+            this.cmbClearity.Name = "cmbClearity";
+            this.cmbClearity.Size = new System.Drawing.Size(157, 29);
+            this.cmbClearity.TabIndex = 36;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
+            this.label11.Location = new System.Drawing.Point(652, 55);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(70, 21);
+            this.label11.TabIndex = 123;
+            this.label11.Text = "Clearity";
+            // 
+            // cmbColor
+            // 
+            this.cmbColor.FormattingEnabled = true;
+            this.cmbColor.Location = new System.Drawing.Point(737, 14);
+            this.cmbColor.Name = "cmbColor";
+            this.cmbColor.Size = new System.Drawing.Size(157, 29);
+            this.cmbColor.TabIndex = 32;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
+            this.label2.Location = new System.Drawing.Point(652, 17);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(51, 21);
+            this.label2.TabIndex = 121;
+            this.label2.Text = "Color";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
+            this.label10.Location = new System.Drawing.Point(347, 125);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(66, 21);
+            this.label10.TabIndex = 120;
+            this.label10.Text = "Weight";
+            // 
+            // txtWeight
+            // 
+            this.txtWeight.Location = new System.Drawing.Point(447, 122);
+            this.txtWeight.Name = "txtWeight";
+            this.txtWeight.Size = new System.Drawing.Size(53, 27);
+            this.txtWeight.TabIndex = 28;
+            this.txtWeight.Text = "0";
+            this.txtWeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
+            this.label9.Location = new System.Drawing.Point(347, 90);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(75, 21);
+            this.label9.TabIndex = 118;
+            this.label9.Text = "Amount";
+            // 
+            // txtAmount
+            // 
+            this.txtAmount.Location = new System.Drawing.Point(447, 87);
+            this.txtAmount.Name = "txtAmount";
+            this.txtAmount.Size = new System.Drawing.Size(79, 27);
+            this.txtAmount.TabIndex = 24;
+            this.txtAmount.Text = "0";
+            this.txtAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // txtESize
+            // 
+            this.txtESize.Location = new System.Drawing.Point(525, 52);
+            this.txtESize.Name = "txtESize";
+            this.txtESize.Size = new System.Drawing.Size(53, 27);
+            this.txtESize.TabIndex = 20;
+            this.txtESize.Text = "0";
+            this.txtESize.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
+            this.label8.Location = new System.Drawing.Point(506, 55);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(15, 21);
+            this.label8.TabIndex = 115;
+            this.label8.Text = "-";
+            // 
+            // txtSSize
+            // 
+            this.txtSSize.Location = new System.Drawing.Point(447, 52);
+            this.txtSSize.Name = "txtSSize";
+            this.txtSSize.Size = new System.Drawing.Size(53, 27);
+            this.txtSSize.TabIndex = 16;
+            this.txtSSize.Text = "0";
+            this.txtSSize.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
+            this.label7.Location = new System.Drawing.Point(347, 55);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(38, 21);
+            this.label7.TabIndex = 113;
+            this.label7.Text = "Size";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
+            this.label18.Location = new System.Drawing.Point(29, 55);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(49, 21);
+            this.label18.TabIndex = 112;
+            this.label18.Text = "Seller";
+            // 
+            // txtSeller
+            // 
+            this.txtSeller.Location = new System.Drawing.Point(137, 52);
+            this.txtSeller.Name = "txtSeller";
+            this.txtSeller.Size = new System.Drawing.Size(131, 27);
+            this.txtSeller.TabIndex = 4;
+            // 
+            // cmbShape
+            // 
+            this.cmbShape.FormattingEnabled = true;
+            this.cmbShape.Location = new System.Drawing.Point(447, 15);
+            this.cmbShape.Name = "cmbShape";
+            this.cmbShape.Size = new System.Drawing.Size(157, 29);
+            this.cmbShape.TabIndex = 12;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
+            this.label3.Location = new System.Drawing.Point(347, 22);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(60, 21);
+            this.label3.TabIndex = 88;
+            this.label3.Text = "Shape";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
+            this.label1.Location = new System.Drawing.Point(29, 90);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(54, 21);
+            this.label1.TabIndex = 85;
+            this.label1.Text = "Code";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
+            this.label6.Location = new System.Drawing.Point(29, 22);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(81, 21);
+            this.label6.TabIndex = 84;
+            this.label6.Text = "Buy Date";
+            // 
+            // txtCode
+            // 
+            this.txtCode.Location = new System.Drawing.Point(137, 87);
+            this.txtCode.Name = "txtCode";
+            this.txtCode.Size = new System.Drawing.Size(131, 27);
+            this.txtCode.TabIndex = 100;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(35)))), ((int)(((byte)(69)))));
+            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.panel1.Location = new System.Drawing.Point(3, 5);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(272, 32);
+            this.panel1.TabIndex = 4;
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button1.Location = new System.Drawing.Point(16, 50);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(1089, 352);
+            this.button1.TabIndex = 32;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // BuyBookDiamond
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(195)))), ((int)(((byte)(157)))));
+            this.ClientSize = new System.Drawing.Size(942, 562);
+            this.Controls.Add(this.panel3);
+            this.Name = "BuyBookDiamond";
+            this.Text = "DiamondCer";
+            this.Controls.SetChildIndex(this.panel3, 0);
+            ((System.ComponentModel.ISupportInitialize)(this.ds)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grid1)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+        private System.Windows.Forms.DateTimePicker dtBuyDate;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.TextBox txtCode;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox cmbShape;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.TextBox txtSeller;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox txtWeight;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txtAmount;
+        private System.Windows.Forms.TextBox txtESize;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtSSize;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox cmbClearity;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.ComboBox cmbColor;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtPriceCaratUSD;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TextBox txtPriceCarat;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox txtTotalUSD;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtTotalBaht;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.TextBox txtUSDRate;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.DateTimePicker dtDueDate;
+        private System.Windows.Forms.RadioButton radPament2;
+        private System.Windows.Forms.RadioButton rdoPayment1;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.TextBox txtTotalThaiBaht;
+        private System.Windows.Forms.CheckBox chkPayUSD;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.TextBox txtMarketPrice;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.ComboBox cmbShop;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.DataGridView grid1;
+        private System.Windows.Forms.TextBox txtNote;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Date;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Amount;
+    }
+}
