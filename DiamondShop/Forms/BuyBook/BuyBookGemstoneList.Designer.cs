@@ -40,20 +40,20 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.gridGemstone = new System.Windows.Forms.DataGridView();
+            this.tds = new DiamondDS.DS.dsDiamondCer();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RowNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BuyDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Seller = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Shape = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ShapeNmae = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Identification = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Origin = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.OriginName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Weight = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PriceCaratUSD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PriceCaratBaht = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MarketPriceBaht = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Remain = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tds = new DiamondDS.DS.dsDiamondCer();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -86,6 +86,7 @@
             this.txtSize.TabIndex = 8;
             this.txtSize.Text = "0";
             this.txtSize.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtSize.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSize_KeyPress);
             // 
             // label1
             // 
@@ -184,9 +185,9 @@
             this.RowNum,
             this.BuyDate,
             this.Seller,
-            this.Shape,
+            this.ShapeNmae,
             this.Identification,
-            this.Origin,
+            this.OriginName,
             this.Amount,
             this.Weight,
             this.PriceCaratUSD,
@@ -202,6 +203,11 @@
             this.gridGemstone.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridGemstone.Size = new System.Drawing.Size(1301, 418);
             this.gridGemstone.TabIndex = 2;
+            // 
+            // tds
+            // 
+            this.tds.DataSetName = "dsDiamondCer";
+            this.tds.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // ID
             // 
@@ -234,13 +240,13 @@
             this.Seller.ReadOnly = true;
             this.Seller.Width = 120;
             // 
-            // Shape
+            // ShapeNmae
             // 
-            this.Shape.DataPropertyName = "Shape";
-            this.Shape.HeaderText = "Shape";
-            this.Shape.Name = "Shape";
-            this.Shape.ReadOnly = true;
-            this.Shape.Width = 110;
+            this.ShapeNmae.DataPropertyName = "ShapeNmae";
+            this.ShapeNmae.HeaderText = "Shape";
+            this.ShapeNmae.Name = "ShapeNmae";
+            this.ShapeNmae.ReadOnly = true;
+            this.ShapeNmae.Width = 110;
             // 
             // Identification
             // 
@@ -250,13 +256,13 @@
             this.Identification.ReadOnly = true;
             this.Identification.Width = 120;
             // 
-            // Origin
+            // OriginName
             // 
-            this.Origin.DataPropertyName = "Origin";
-            this.Origin.HeaderText = "Origin";
-            this.Origin.Name = "Origin";
-            this.Origin.ReadOnly = true;
-            this.Origin.Width = 80;
+            this.OriginName.DataPropertyName = "OriginName";
+            this.OriginName.HeaderText = "Origin";
+            this.OriginName.Name = "OriginName";
+            this.OriginName.ReadOnly = true;
+            this.OriginName.Width = 80;
             // 
             // Amount
             // 
@@ -305,11 +311,6 @@
             this.Remain.Name = "Remain";
             this.Remain.ReadOnly = true;
             // 
-            // tds
-            // 
-            this.tds.DataSetName = "dsDiamondCer";
-            this.tds.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // BuyBookGemstoneList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -347,9 +348,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn RowNum;
         private System.Windows.Forms.DataGridViewTextBoxColumn BuyDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn Seller;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Shape;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ShapeNmae;
         private System.Windows.Forms.DataGridViewTextBoxColumn Identification;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Origin;
+        private System.Windows.Forms.DataGridViewTextBoxColumn OriginName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Amount;
         private System.Windows.Forms.DataGridViewTextBoxColumn Weight;
         private System.Windows.Forms.DataGridViewTextBoxColumn PriceCaratUSD;

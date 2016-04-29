@@ -14,7 +14,7 @@
   <xs:element name="dsSell" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsSell" msprop:Generator_UserDSName="dsSell">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Sell" msprop:Generator_TableClassName="SellDataTable" msprop:Generator_TableVarName="tableSell" msprop:Generator_TablePropName="Sell" msprop:Generator_RowDeletingName="SellRowDeleting" msprop:Generator_RowChangingName="SellRowChanging" msprop:Generator_RowEvHandlerName="SellRowChangeEventHandler" msprop:Generator_RowDeletedName="SellRowDeleted" msprop:Generator_UserTableName="Sell" msprop:Generator_RowChangedName="SellRowChanged" msprop:Generator_RowEvArgName="SellRowChangeEvent" msprop:Generator_RowClassName="SellRow">
+        <xs:element name="Sell" msprop:Generator_TableClassName="SellDataTable" msprop:Generator_TableVarName="tableSell" msprop:Generator_RowChangedName="SellRowChanged" msprop:Generator_TablePropName="Sell" msprop:Generator_RowDeletingName="SellRowDeleting" msprop:Generator_RowChangingName="SellRowChanging" msprop:Generator_RowEvHandlerName="SellRowChangeEventHandler" msprop:Generator_RowDeletedName="SellRowDeleted" msprop:Generator_RowClassName="SellRow" msprop:Generator_UserTableName="Sell" msprop:Generator_RowEvArgName="SellRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="RowNum" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnRowNum" msprop:Generator_ColumnPropNameInRow="RowNum" msprop:Generator_ColumnPropNameInTable="RowNumColumn" msprop:Generator_UserColumnName="RowNum" type="xs:long" minOccurs="0" />

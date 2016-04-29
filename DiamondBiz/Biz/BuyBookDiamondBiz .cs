@@ -13,11 +13,11 @@ namespace DiamondBiz.Biz
         dsBuyBookDiamond ds = new dsBuyBookDiamond();
         BuyBookDiamondDAL dal = new BuyBookDiamondDAL();
 
-        public dsBuyBookDiamond DoSearchData(double sSize, double eSize, int colorGrade, int color, int clarity)
+        public dsBuyBookDiamond DoSearchData(string code,double sSize, double eSize, int shape)
         {
             try
             {
-                return dal.DoSearchData(sSize,eSize,colorGrade,color,clarity);
+                return dal.DoSearchData(code, sSize,eSize, shape);
             }
             catch (Exception ex)
             {

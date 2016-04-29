@@ -32,8 +32,8 @@
             this.dtBuyDate = new System.Windows.Forms.DateTimePicker();
             this.panel3 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.rdoPayment1 = new System.Windows.Forms.RadioButton();
-            this.rdoPayment2 = new System.Windows.Forms.RadioButton();
+            this.rdoYes = new System.Windows.Forms.RadioButton();
+            this.rdoNo = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.rdoIns2 = new System.Windows.Forms.RadioButton();
             this.rdoIns1 = new System.Windows.Forms.RadioButton();
@@ -185,8 +185,8 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.rdoPayment1);
-            this.groupBox2.Controls.Add(this.rdoPayment2);
+            this.groupBox2.Controls.Add(this.rdoYes);
+            this.groupBox2.Controls.Add(this.rdoNo);
             this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.groupBox2.Location = new System.Drawing.Point(739, 153);
             this.groupBox2.Name = "groupBox2";
@@ -195,29 +195,29 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Payment";
             // 
-            // rdoPayment1
+            // rdoYes
             // 
-            this.rdoPayment1.AutoSize = true;
-            this.rdoPayment1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.rdoPayment1.Location = new System.Drawing.Point(12, 23);
-            this.rdoPayment1.Name = "rdoPayment1";
-            this.rdoPayment1.Size = new System.Drawing.Size(55, 25);
-            this.rdoPayment1.TabIndex = 100;
-            this.rdoPayment1.Text = "Yes";
-            this.rdoPayment1.UseVisualStyleBackColor = true;
+            this.rdoYes.AutoSize = true;
+            this.rdoYes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
+            this.rdoYes.Location = new System.Drawing.Point(12, 23);
+            this.rdoYes.Name = "rdoYes";
+            this.rdoYes.Size = new System.Drawing.Size(55, 25);
+            this.rdoYes.TabIndex = 100;
+            this.rdoYes.Text = "Yes";
+            this.rdoYes.UseVisualStyleBackColor = true;
             // 
-            // rdoPayment2
+            // rdoNo
             // 
-            this.rdoPayment2.AutoSize = true;
-            this.rdoPayment2.Checked = true;
-            this.rdoPayment2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.rdoPayment2.Location = new System.Drawing.Point(107, 23);
-            this.rdoPayment2.Name = "rdoPayment2";
-            this.rdoPayment2.Size = new System.Drawing.Size(50, 25);
-            this.rdoPayment2.TabIndex = 104;
-            this.rdoPayment2.TabStop = true;
-            this.rdoPayment2.Text = "No";
-            this.rdoPayment2.UseVisualStyleBackColor = true;
+            this.rdoNo.AutoSize = true;
+            this.rdoNo.Checked = true;
+            this.rdoNo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
+            this.rdoNo.Location = new System.Drawing.Point(107, 23);
+            this.rdoNo.Name = "rdoNo";
+            this.rdoNo.Size = new System.Drawing.Size(50, 25);
+            this.rdoNo.TabIndex = 104;
+            this.rdoNo.TabStop = true;
+            this.rdoNo.Text = "No";
+            this.rdoNo.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
@@ -871,8 +871,8 @@
         private System.Windows.Forms.LinkLabel linkFile;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.TextBox txtSeller;
-        private System.Windows.Forms.RadioButton rdoPayment2;
-        private System.Windows.Forms.RadioButton rdoPayment1;
+        private System.Windows.Forms.RadioButton rdoNo;
+        private System.Windows.Forms.RadioButton rdoYes;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.RadioButton rdoIns2;
         private System.Windows.Forms.RadioButton rdoIns1;

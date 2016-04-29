@@ -71,8 +71,8 @@
             this.label23 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.dtDueDate = new System.Windows.Forms.DateTimePicker();
-            this.rdo2 = new System.Windows.Forms.RadioButton();
-            this.rdo1 = new System.Windows.Forms.RadioButton();
+            this.rdoNo = new System.Windows.Forms.RadioButton();
+            this.rdoYes = new System.Windows.Forms.RadioButton();
             this.label12 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtPriceCaratUSD = new System.Windows.Forms.TextBox();
@@ -149,8 +149,8 @@
             this.panel3.Controls.Add(this.label23);
             this.panel3.Controls.Add(this.label21);
             this.panel3.Controls.Add(this.dtDueDate);
-            this.panel3.Controls.Add(this.rdo2);
-            this.panel3.Controls.Add(this.rdo1);
+            this.panel3.Controls.Add(this.rdoNo);
+            this.panel3.Controls.Add(this.rdoYes);
             this.panel3.Controls.Add(this.label12);
             this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.txtPriceCaratUSD);
@@ -560,27 +560,27 @@
             this.dtDueDate.Size = new System.Drawing.Size(131, 27);
             this.dtDueDate.TabIndex = 68;
             // 
-            // rdo2
+            // rdoNo
             // 
-            this.rdo2.AutoSize = true;
-            this.rdo2.Checked = true;
-            this.rdo2.Location = new System.Drawing.Point(539, 175);
-            this.rdo2.Name = "rdo2";
-            this.rdo2.Size = new System.Drawing.Size(50, 25);
-            this.rdo2.TabIndex = 64;
-            this.rdo2.TabStop = true;
-            this.rdo2.Text = "No";
-            this.rdo2.UseVisualStyleBackColor = true;
+            this.rdoNo.AutoSize = true;
+            this.rdoNo.Checked = true;
+            this.rdoNo.Location = new System.Drawing.Point(539, 175);
+            this.rdoNo.Name = "rdoNo";
+            this.rdoNo.Size = new System.Drawing.Size(50, 25);
+            this.rdoNo.TabIndex = 64;
+            this.rdoNo.TabStop = true;
+            this.rdoNo.Text = "No";
+            this.rdoNo.UseVisualStyleBackColor = true;
             // 
-            // rdo1
+            // rdoYes
             // 
-            this.rdo1.AutoSize = true;
-            this.rdo1.Location = new System.Drawing.Point(473, 175);
-            this.rdo1.Name = "rdo1";
-            this.rdo1.Size = new System.Drawing.Size(55, 25);
-            this.rdo1.TabIndex = 60;
-            this.rdo1.Text = "Yes";
-            this.rdo1.UseVisualStyleBackColor = true;
+            this.rdoYes.AutoSize = true;
+            this.rdoYes.Location = new System.Drawing.Point(473, 175);
+            this.rdoYes.Name = "rdoYes";
+            this.rdoYes.Size = new System.Drawing.Size(55, 25);
+            this.rdoYes.TabIndex = 60;
+            this.rdoYes.Text = "Yes";
+            this.rdoYes.UseVisualStyleBackColor = true;
             // 
             // label12
             // 
@@ -812,8 +812,8 @@
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.DateTimePicker dtDueDate;
-        private System.Windows.Forms.RadioButton rdo2;
-        private System.Windows.Forms.RadioButton rdo1;
+        private System.Windows.Forms.RadioButton rdoNo;
+        private System.Windows.Forms.RadioButton rdoYes;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label19;

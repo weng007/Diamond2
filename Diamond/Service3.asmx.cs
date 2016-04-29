@@ -82,6 +82,51 @@ namespace Diamond
         }
 
         [WebMethod]
+        public DataSet DoSearchBuyBookJewelry(string code)
+        {
+            BuyBookJewelryBiz biz = new BuyBookJewelryBiz();
+
+            try
+            {
+                return biz.DoSearchData(code);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        [WebMethod]
+        public DataSet DoSearchBuyBookETC(string seller)
+        {
+            BuyBookETCBiz biz = new BuyBookETCBiz();
+
+            try
+            {
+                return biz.DoSearchData(seller);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        [WebMethod]
+        public DataSet DoSearchBuyBookDiamond(string code, double sSize, double eSize, int shape)
+        {
+            BuyBookDiamondBiz biz = new BuyBookDiamondBiz();
+
+            try
+            {
+                return biz.DoSearchData(code, sSize, eSize,shape);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        [WebMethod]
         public DataSet DoSearchGemstoneCer(double sweight, double eweight, int shape, int origin, int companyCer, int gemstoneType)
         {
             GemstoneCerBiz biz = new GemstoneCerBiz();
@@ -97,13 +142,13 @@ namespace Diamond
         }
 
         [WebMethod]
-        public DataSet DoSearchBuyBookDiamond(double sSize, double eSize, int colorGrade, int color, int clarity)
+        public DataSet DoSearchBuyBookGemstone(string Code, double Size, string Shape)
         {
-            BuyBookDiamondBiz biz = new BuyBookDiamondBiz();
+            BuyBookGemstoneBiz biz = new BuyBookGemstoneBiz();
 
             try
             {
-                return biz.DoSearchData(sSize, eSize, colorGrade, color, clarity);
+                return biz.DoSearchData(Code, Size, Shape);
             }
             catch (Exception ex)
             {
@@ -112,13 +157,13 @@ namespace Diamond
         }
 
         [WebMethod]
-        public DataSet DoSearchBuyBookGemstone(int gemstoneType, int status, double sSize, double eSize)
+        public DataSet DoSearchBuyBookGemstoneCer(string code, string reportNumber, int shape, int lab, double sWeight, double eWeight, int identification, int comment, int origin, int status, int shop)
         {
-            BuyBookGemstoneBiz biz = new BuyBookGemstoneBiz();
+            BuyBookGemstoneCerBiz biz = new BuyBookGemstoneCerBiz();
 
             try
             {
-                return biz.DoSearchData(gemstoneType,status,sSize, eSize);
+                return biz.DoSearchData(code, reportNumber, shape, lab, sWeight, eWeight, identification, comment, origin, status, shop);
             }
             catch (Exception ex)
             {

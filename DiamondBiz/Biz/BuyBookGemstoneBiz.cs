@@ -13,11 +13,11 @@ namespace DiamondBiz.Biz
         dsBuyBookGemstone ds = new dsBuyBookGemstone();
         BuyBookGemstoneDAL dal = new BuyBookGemstoneDAL();
 
-        public dsBuyBookGemstone DoSearchData(int gemstoneType, int status, double sSize, double eSize)
+        public dsBuyBookGemstone DoSearchData(string Code, double Size, string Shape)
         {
             try
             {
-                return dal.DoSearchData(gemstoneType,status,sSize,eSize);
+                return dal.DoSearchData(Code, Size, Shape);
             }
             catch (Exception ex)
             {

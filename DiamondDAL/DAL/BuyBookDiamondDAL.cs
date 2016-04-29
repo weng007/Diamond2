@@ -13,16 +13,15 @@ namespace DiamondDAL.DAL
         dsBuyBookDiamond ds = new dsBuyBookDiamond();
         int flag = 0;
 
-        public dsBuyBookDiamond DoSearchData(double sSize, double eSize, int colorGrade, int color, int clarity)
+        public dsBuyBookDiamond DoSearchData(string code, double sSize, double eSize, int shop)
         {
             try
             {
                 SQL.ClearParameter();
+                SQL.CreateParameter("Code", code);
                 SQL.CreateParameter("SSize", sSize);
                 SQL.CreateParameter("ESize", eSize);
-                SQL.CreateParameter("ColorGrade", colorGrade);
-                SQL.CreateParameter("Color", color);
-                SQL.CreateParameter("Clarity", clarity);
+                SQL.CreateParameter("Shop", shop);
                 SQL.FillDataSetBySP("SP_BuyBookDiamond_Search", ds.BuyBookDiamond);
             }
             catch (Exception ex)

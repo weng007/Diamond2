@@ -483,7 +483,7 @@
             this.txtCode.Location = new System.Drawing.Point(112, 52);
             this.txtCode.Name = "txtCode";
             this.txtCode.Size = new System.Drawing.Size(146, 27);
-            this.txtCode.TabIndex = 2;
+            this.txtCode.TabIndex = 100;
             // 
             // panel1
             // 

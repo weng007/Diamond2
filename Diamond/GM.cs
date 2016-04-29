@@ -19,8 +19,11 @@ namespace Diamond
         static BuyBookDiamondCerBiz bizBuyBookDiamondCer;
         static BuyBookDiamondBiz bizBuyBookDiamond;
         static BuyBookGemstoneBiz bizBuyBookGemstone;
+        static BuyBookGemstoneCerBiz bizBuyBookGemstoneCer;
         static BuyBookGoldBiz bizBuyBookGold;
         static BuyBookSpecialBiz bizBuyBookSpecial;
+        static BuyBookJewelryBiz bizBuyBookJewelry;
+        static BuyBookETCBiz bizBuyBookETC;
         static ProductBiz bizProduct;
         static DiamondCerBiz bizDiamondCer;
         static DiamondDetailBiz bizDiamondDetail;
@@ -31,10 +34,12 @@ namespace Diamond
 
         //DS
         static dsPriceCode priceCodeDS;
-        static dsUser userDS;
-        static dsSeller sellerDS;
-        static dsBuyBookDiamondCer BuyBookDiamondCerDS;
-        static dsBuyBookDiamond BuyBookDiamondDS;
+        //static dsUser userDS;
+        //static dsSeller sellerDS;
+        //static dsBuyBookDiamondCer BuyBookDiamondCerDS;
+        //static dsBuyBookJewelry BuyBookJewelryDS;
+        //static dsBuyBookETC BuyBookETCDS;
+        //static dsBuyBookDiamond BuyBookDiamondDS;
         static dsBuyBookGemstone BuyBookGemstoneDS;
         static dsBuyBookGold BuyBookGoldDS;
         static dsBuyBookSpecial BuyBookSpecialDS;
@@ -67,46 +72,40 @@ namespace Diamond
             if (bizUser == null) { return new UserBiz(); }
             else { return bizUser; }
         }
-        public static dsUser GetDSUser()
-        {
-            if (userDS == null) { return new dsUser(); }
-            else { return userDS; }
-        }
-
         public static SellerBiz GetSellerBiz()
         {
             if (bizSeller == null) { return new SellerBiz(); }
             else { return bizSeller; }
-        }
-        public static dsSeller GetDSSeller()
-        {
-            if (sellerDS == null) { return new dsSeller(); }
-            else { return sellerDS; }
         }
         public static BuyBookDiamondCerBiz GetBuyBookDiamondCerBiz()
         {
             if (bizBuyBookDiamondCer == null) { return new BuyBookDiamondCerBiz(); }
             else { return bizBuyBookDiamondCer; }
         }
-        public static dsBuyBookDiamondCer GetDSBuyBookDiamondCer()
+        public static BuyBookJewelryBiz GetBuyBookJewelryBiz()
         {
-            if (BuyBookDiamondCerDS == null) { return new dsBuyBookDiamondCer(); }
-            else { return BuyBookDiamondCerDS; }
+            if (bizBuyBookJewelry == null) { return new BuyBookJewelryBiz(); }
+            else { return bizBuyBookJewelry; }
+        }
+        public static BuyBookETCBiz GetBuyBookETCBiz()
+        {
+            if (bizBuyBookETC == null) { return new BuyBookETCBiz(); }
+            else { return bizBuyBookETC; }
         }
         public static BuyBookDiamondBiz GetBuyBookDiamondBiz()
         {
             if (bizBuyBookDiamond == null) { return new BuyBookDiamondBiz(); }
             else { return bizBuyBookDiamond; }
         }
-        public static dsBuyBookDiamond GetDSBuyBookDiamond()
-        {
-            if (BuyBookDiamondDS == null) { return new dsBuyBookDiamond(); }
-            else { return BuyBookDiamondDS; }
-        }
         public static BuyBookGemstoneBiz GetBuyBookGemstoneBiz()
         {
             if (bizBuyBookGemstone == null) { return new BuyBookGemstoneBiz(); }
             else { return bizBuyBookGemstone; }
+        }
+        public static BuyBookGemstoneCerBiz GetBuyBookGemstoneCerBiz()
+        {
+            if (bizBuyBookGemstoneCer == null) { return new BuyBookGemstoneCerBiz(); }
+            else { return bizBuyBookGemstoneCer; }
         }
         public static dsBuyBookGemstone GetDSBuyBookGemstone()
         {

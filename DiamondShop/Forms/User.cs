@@ -15,6 +15,7 @@ namespace DiamondShop
 {
     public partial class User : FormInfo
     {
+        Service1 ser = GM.GetService();
         dsUser tds = new dsUser();
 
         public User()
