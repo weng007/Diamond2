@@ -51,6 +51,14 @@ namespace DiamondShop
 
         protected override void Initial()
         {
+            Company.DataSource= (GM.GetMasterTableDetail("C019")).Tables[0];
+            Company.ValueMember = "ID";
+            Company.DisplayMember = "Detail";
+
+            Shape.DataSource = (GM.GetMasterTableDetail("C019")).Tables[0];
+            Shape.ValueMember = "ID";
+            Shape.DisplayMember = "Detail";
+
             //cmbColorGrade.DataSource = (GM.GetMasterTableDetail("C025")).Tables[0];
             //cmbColorGrade.ValueMember = "ID";
             //cmbColorGrade.DisplayMember = "Detail";
@@ -174,6 +182,19 @@ namespace DiamondShop
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
             {
                 e.Handled = true;
+            }
+        }
+
+        private void grid1_CellEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            bool validClick = (e.RowIndex != -1 && e.ColumnIndex != -1); //Make sure the clicked row/column is valid.
+            var datagridview = sender as DataGridView;
+
+            // Check to make sure the cell clicked is the cell containing the combobox 
+            if (datagridview.Columns[e.ColumnIndex] is DataGridViewComboBoxColumn && validClick)
+            {
+                datagridview.BeginEdit(true);
+                ((ComboBox)datagridview.EditingControl).DroppedDown = true;
             }
         }
     }

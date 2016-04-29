@@ -31,7 +31,16 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BBJewelryDiamondDetail));
             this.button1 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.txtSumWeight1 = new System.Windows.Forms.TextBox();
+            this.txtSumAmount1 = new System.Windows.Forms.TextBox();
             this.grid2 = new System.Windows.Forms.DataGridView();
+            this.RowNum1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ID1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Shape1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Amount1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Weight1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Color1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Clearity1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.txtSumWeight = new System.Windows.Forms.TextBox();
             this.txtSumAmount = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -41,21 +50,12 @@
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ReportNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Company = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.ShapeName = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Shape = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Weight = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColorName = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Color = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.Clearity = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Shape = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Color = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Clearity1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.txtSumWeight1 = new System.Windows.Forms.TextBox();
-            this.txtSumAmount1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid2)).BeginInit();
@@ -85,23 +85,44 @@
             this.panel3.Controls.Add(this.grid1);
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel3.Location = new System.Drawing.Point(12, 68);
+            this.panel3.Location = new System.Drawing.Point(12, 78);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1247, 524);
             this.panel3.TabIndex = 73;
             // 
+            // txtSumWeight1
+            // 
+            this.txtSumWeight1.BackColor = System.Drawing.Color.White;
+            this.txtSumWeight1.Location = new System.Drawing.Point(340, 477);
+            this.txtSumWeight1.Name = "txtSumWeight1";
+            this.txtSumWeight1.ReadOnly = true;
+            this.txtSumWeight1.Size = new System.Drawing.Size(91, 30);
+            this.txtSumWeight1.TabIndex = 122;
+            this.txtSumWeight1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // txtSumAmount1
+            // 
+            this.txtSumAmount1.BackColor = System.Drawing.Color.White;
+            this.txtSumAmount1.Location = new System.Drawing.Point(240, 478);
+            this.txtSumAmount1.Name = "txtSumAmount1";
+            this.txtSumAmount1.ReadOnly = true;
+            this.txtSumAmount1.Size = new System.Drawing.Size(87, 30);
+            this.txtSumAmount1.TabIndex = 121;
+            this.txtSumAmount1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
             // grid2
             // 
             this.grid2.AllowUserToOrderColumns = true;
+            this.grid2.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.grid2.BackgroundColor = System.Drawing.SystemColors.Control;
             this.grid2.ColumnHeadersHeight = 33;
             this.grid2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.Shape,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.Color,
+            this.RowNum1,
+            this.ID1,
+            this.Shape1,
+            this.Amount1,
+            this.Weight1,
+            this.Color1,
             this.Clearity1});
             this.grid2.Location = new System.Drawing.Point(12, 275);
             this.grid2.Name = "grid2";
@@ -110,8 +131,63 @@
             this.grid2.RowTemplate.Height = 25;
             this.grid2.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.grid2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grid2.Size = new System.Drawing.Size(1226, 189);
+            this.grid2.Size = new System.Drawing.Size(1212, 189);
             this.grid2.TabIndex = 120;
+            this.grid2.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid1_CellEnter);
+            // 
+            // RowNum1
+            // 
+            this.RowNum1.DataPropertyName = "RowNum";
+            this.RowNum1.HeaderText = "No.";
+            this.RowNum1.Name = "RowNum1";
+            this.RowNum1.Width = 60;
+            // 
+            // ID1
+            // 
+            this.ID1.DataPropertyName = "ID";
+            this.ID1.HeaderText = "ID";
+            this.ID1.Name = "ID1";
+            this.ID1.Visible = false;
+            // 
+            // Shape1
+            // 
+            this.Shape1.DataPropertyName = "Shape";
+            this.Shape1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Shape1.HeaderText = "Shape";
+            this.Shape1.Name = "Shape1";
+            this.Shape1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Shape1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Shape1.Width = 150;
+            // 
+            // Amount1
+            // 
+            this.Amount1.DataPropertyName = "Amount";
+            this.Amount1.HeaderText = "Amount";
+            this.Amount1.Name = "Amount1";
+            // 
+            // Weight1
+            // 
+            this.Weight1.DataPropertyName = "Weight";
+            this.Weight1.HeaderText = "Weight";
+            this.Weight1.Name = "Weight1";
+            // 
+            // Color1
+            // 
+            this.Color1.DataPropertyName = "Color";
+            this.Color1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Color1.HeaderText = "Color";
+            this.Color1.Name = "Color1";
+            this.Color1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Color1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Color1.Width = 120;
+            // 
+            // Clearity1
+            // 
+            this.Clearity1.DataPropertyName = "Clearity";
+            this.Clearity1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Clearity1.HeaderText = "Clearity";
+            this.Clearity1.Name = "Clearity1";
+            this.Clearity1.Width = 120;
             // 
             // txtSumWeight
             // 
@@ -156,6 +232,7 @@
             // grid1
             // 
             this.grid1.AllowUserToOrderColumns = true;
+            this.grid1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.grid1.BackgroundColor = System.Drawing.SystemColors.Control;
             this.grid1.ColumnHeadersHeight = 33;
             this.grid1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -163,20 +240,20 @@
             this.ID,
             this.ReportNumber,
             this.Company,
-            this.ShapeName,
+            this.Shape,
             this.Amount,
             this.Weight,
-            this.ColorName,
+            this.Color,
             this.Clearity});
             this.grid1.Location = new System.Drawing.Point(12, 35);
             this.grid1.Name = "grid1";
             this.grid1.RowHeadersWidth = 10;
             this.grid1.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grid1.RowTemplate.Height = 25;
-            this.grid1.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.grid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grid1.Size = new System.Drawing.Size(1226, 181);
+            this.grid1.RowTemplate.Height = 30;
+            this.grid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.grid1.Size = new System.Drawing.Size(1212, 181);
             this.grid1.TabIndex = 46;
+            this.grid1.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid1_CellEnter);
             // 
             // RowNum
             // 
@@ -203,20 +280,22 @@
             // Company
             // 
             this.Company.DataPropertyName = "Company";
+            this.Company.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Company.HeaderText = "Company";
             this.Company.Name = "Company";
             this.Company.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Company.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Company.Width = 120;
             // 
-            // ShapeName
+            // Shape
             // 
-            this.ShapeName.DataPropertyName = "ShapeName";
-            this.ShapeName.HeaderText = "Shape";
-            this.ShapeName.Name = "ShapeName";
-            this.ShapeName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ShapeName.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.ShapeName.Width = 130;
+            this.Shape.DataPropertyName = "Shape";
+            this.Shape.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Shape.HeaderText = "Shape";
+            this.Shape.Name = "Shape";
+            this.Shape.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Shape.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Shape.Width = 130;
             // 
             // Amount
             // 
@@ -230,18 +309,20 @@
             this.Weight.HeaderText = "Weight";
             this.Weight.Name = "Weight";
             // 
-            // ColorName
+            // Color
             // 
-            this.ColorName.DataPropertyName = "ColorName";
-            this.ColorName.HeaderText = "Color";
-            this.ColorName.Name = "ColorName";
-            this.ColorName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ColorName.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.ColorName.Width = 110;
+            this.Color.DataPropertyName = "Color";
+            this.Color.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Color.HeaderText = "Color";
+            this.Color.Name = "Color";
+            this.Color.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Color.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Color.Width = 110;
             // 
             // Clearity
             // 
             this.Clearity.DataPropertyName = "Clearity";
+            this.Clearity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Clearity.HeaderText = "Clearity";
             this.Clearity.Name = "Clearity";
             this.Clearity.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -258,84 +339,14 @@
             this.panel4.Size = new System.Drawing.Size(207, 32);
             this.panel4.TabIndex = 45;
             // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "RowNum";
-            this.dataGridViewTextBoxColumn1.HeaderText = "No.";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Width = 60;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "ID";
-            this.dataGridViewTextBoxColumn2.HeaderText = "ID";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Visible = false;
-            // 
-            // Shape
-            // 
-            this.Shape.DataPropertyName = "Shape";
-            this.Shape.HeaderText = "Shape";
-            this.Shape.Name = "Shape";
-            this.Shape.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Shape.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Shape.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Amount";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Amount";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "Weight";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Weight";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // Color
-            // 
-            this.Color.DataPropertyName = "Color";
-            this.Color.HeaderText = "Color";
-            this.Color.Name = "Color";
-            this.Color.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Color.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Color.Width = 120;
-            // 
-            // Clearity1
-            // 
-            this.Clearity1.HeaderText = "Clearity";
-            this.Clearity1.Name = "Clearity1";
-            this.Clearity1.Width = 120;
-            // 
-            // txtSumWeight1
-            // 
-            this.txtSumWeight1.BackColor = System.Drawing.Color.White;
-            this.txtSumWeight1.Location = new System.Drawing.Point(340, 477);
-            this.txtSumWeight1.Name = "txtSumWeight1";
-            this.txtSumWeight1.ReadOnly = true;
-            this.txtSumWeight1.Size = new System.Drawing.Size(91, 30);
-            this.txtSumWeight1.TabIndex = 122;
-            this.txtSumWeight1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // txtSumAmount1
-            // 
-            this.txtSumAmount1.BackColor = System.Drawing.Color.White;
-            this.txtSumAmount1.Location = new System.Drawing.Point(240, 478);
-            this.txtSumAmount1.Name = "txtSumAmount1";
-            this.txtSumAmount1.ReadOnly = true;
-            this.txtSumAmount1.Size = new System.Drawing.Size(87, 30);
-            this.txtSumAmount1.TabIndex = 121;
-            this.txtSumAmount1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // JewelryDiamondDetail
+            // BBJewelryDiamondDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(195)))), ((int)(((byte)(157)))));
             this.ClientSize = new System.Drawing.Size(1270, 604);
             this.Controls.Add(this.panel3);
-            this.Name = "JewelryDiamondDetail";
+            this.Name = "BBJewelryDiamondDetail";
             this.Text = "GemstoneCer";
             this.Controls.SetChildIndex(this.panel3, 0);
             ((System.ComponentModel.ISupportInitialize)(this.ds)).EndInit();
@@ -357,24 +368,24 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox txtSumWeight;
         private System.Windows.Forms.TextBox txtSumAmount;
+        private System.Windows.Forms.DataGridView grid2;
+        private System.Windows.Forms.TextBox txtSumWeight1;
+        private System.Windows.Forms.TextBox txtSumAmount1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RowNum1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID1;
+        private System.Windows.Forms.DataGridViewComboBoxColumn Shape1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Amount1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Weight1;
+        private System.Windows.Forms.DataGridViewComboBoxColumn Color1;
+        private System.Windows.Forms.DataGridViewComboBoxColumn Clearity1;
         private System.Windows.Forms.DataGridViewTextBoxColumn RowNum;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn ReportNumber;
         private System.Windows.Forms.DataGridViewComboBoxColumn Company;
-        private System.Windows.Forms.DataGridViewComboBoxColumn ShapeName;
+        private System.Windows.Forms.DataGridViewComboBoxColumn Shape;
         private System.Windows.Forms.DataGridViewTextBoxColumn Amount;
         private System.Windows.Forms.DataGridViewTextBoxColumn Weight;
-        private System.Windows.Forms.DataGridViewComboBoxColumn ColorName;
-        private System.Windows.Forms.DataGridViewComboBoxColumn Clearity;
-        private System.Windows.Forms.DataGridView grid2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewComboBoxColumn Shape;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewComboBoxColumn Color;
-        private System.Windows.Forms.DataGridViewComboBoxColumn Clearity1;
-        private System.Windows.Forms.TextBox txtSumWeight1;
-        private System.Windows.Forms.TextBox txtSumAmount1;
+        private System.Windows.Forms.DataGridViewComboBoxColumn Clearity;
     }
 }

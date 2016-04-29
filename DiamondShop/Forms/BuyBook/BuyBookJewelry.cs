@@ -180,5 +180,11 @@ namespace DiamondShop
             if (message == "") { return true; }
             else { return false; }
         }
+
+        private void btnDiamond_Click(object sender, EventArgs e)
+        {
+            BBJewelryDiamondDetail frm = new BBJewelryDiamondDetail();
+            frm.ShowDialog();
+        }
     }
 }

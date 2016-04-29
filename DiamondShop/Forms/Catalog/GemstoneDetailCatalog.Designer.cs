@@ -235,6 +235,8 @@
             // 
             // gridGemstone
             // 
+            this.gridGemstone.AllowUserToAddRows = false;
+            this.gridGemstone.AllowUserToDeleteRows = false;
             this.gridGemstone.AllowUserToOrderColumns = true;
             this.gridGemstone.BackgroundColor = System.Drawing.SystemColors.Control;
             this.gridGemstone.ColumnHeadersHeight = 33;
@@ -252,6 +254,7 @@
             this.Origin});
             this.gridGemstone.Location = new System.Drawing.Point(12, 35);
             this.gridGemstone.Name = "gridGemstone";
+            this.gridGemstone.ReadOnly = true;
             this.gridGemstone.RowHeadersWidth = 10;
             this.gridGemstone.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridGemstone.RowTemplate.Height = 25;
@@ -265,6 +268,7 @@
             this.RowNum1.DataPropertyName = "RowNum";
             this.RowNum1.HeaderText = "No.";
             this.RowNum1.Name = "RowNum1";
+            this.RowNum1.ReadOnly = true;
             this.RowNum1.Width = 40;
             // 
             // ID1
@@ -272,6 +276,7 @@
             this.ID1.DataPropertyName = "ID";
             this.ID1.HeaderText = "ID";
             this.ID1.Name = "ID1";
+            this.ID1.ReadOnly = true;
             this.ID1.Visible = false;
             // 
             // Code
@@ -287,6 +292,7 @@
             this.CertificateNo.DataPropertyName = "CertificateNo";
             this.CertificateNo.HeaderText = "Certificate Number";
             this.CertificateNo.Name = "CertificateNo";
+            this.CertificateNo.ReadOnly = true;
             this.CertificateNo.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.CertificateNo.Width = 160;
             // 
@@ -294,12 +300,14 @@
             // 
             this.StoneType.HeaderText = "Stone";
             this.StoneType.Name = "StoneType";
+            this.StoneType.ReadOnly = true;
             // 
             // Company
             // 
             this.Company.DataPropertyName = "Company";
             this.Company.HeaderText = "Company";
             this.Company.Name = "Company";
+            this.Company.ReadOnly = true;
             this.Company.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Company.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
@@ -308,6 +316,7 @@
             this.Shape.DataPropertyName = "Shape";
             this.Shape.HeaderText = "Shape";
             this.Shape.Name = "Shape";
+            this.Shape.ReadOnly = true;
             this.Shape.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Shape.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Shape.Width = 130;
@@ -317,6 +326,7 @@
             this.Amount.DataPropertyName = "Amount";
             this.Amount.HeaderText = "Amount";
             this.Amount.Name = "Amount";
+            this.Amount.ReadOnly = true;
             this.Amount.Width = 70;
             // 
             // Weight
@@ -324,6 +334,7 @@
             this.Weight.DataPropertyName = "Weight";
             this.Weight.HeaderText = "Weight";
             this.Weight.Name = "Weight";
+            this.Weight.ReadOnly = true;
             this.Weight.Width = 70;
             // 
             // Color
@@ -331,6 +342,7 @@
             this.Color.DataPropertyName = "Color";
             this.Color.HeaderText = "Color";
             this.Color.Name = "Color";
+            this.Color.ReadOnly = true;
             this.Color.Width = 80;
             // 
             // Origin
@@ -338,6 +350,7 @@
             this.Origin.DataPropertyName = "Origin";
             this.Origin.HeaderText = "Origin";
             this.Origin.Name = "Origin";
+            this.Origin.ReadOnly = true;
             this.Origin.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Origin.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 

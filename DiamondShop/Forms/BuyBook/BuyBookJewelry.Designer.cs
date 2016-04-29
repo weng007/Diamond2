@@ -155,6 +155,7 @@
             this.btnDiamond.Size = new System.Drawing.Size(76, 86);
             this.btnDiamond.TabIndex = 52;
             this.btnDiamond.UseVisualStyleBackColor = false;
+            this.btnDiamond.Click += new System.EventHandler(this.btnDiamond_Click);
             // 
             // btnImage2
             // 
