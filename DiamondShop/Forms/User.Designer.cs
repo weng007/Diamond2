@@ -262,7 +262,7 @@
             // 
             // txtDisplayName
             // 
-            this.txtDisplayName.BackColor = System.Drawing.Color.LightBlue;
+            this.txtDisplayName.BackColor = System.Drawing.Color.White;
             this.txtDisplayName.Location = new System.Drawing.Point(478, 171);
             this.txtDisplayName.Name = "txtDisplayName";
             this.txtDisplayName.Size = new System.Drawing.Size(165, 27);
@@ -352,7 +352,7 @@
             // 
             // txtUserName
             // 
-            this.txtUserName.BackColor = System.Drawing.Color.LightBlue;
+            this.txtUserName.BackColor = System.Drawing.Color.White;
             this.txtUserName.Location = new System.Drawing.Point(130, 194);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(139, 27);
@@ -377,7 +377,7 @@
             // 
             // txtPassword1
             // 
-            this.txtPassword1.BackColor = System.Drawing.Color.LightBlue;
+            this.txtPassword1.BackColor = System.Drawing.Color.White;
             this.txtPassword1.Location = new System.Drawing.Point(130, 264);
             this.txtPassword1.Name = "txtPassword1";
             this.txtPassword1.Size = new System.Drawing.Size(93, 27);
@@ -503,7 +503,6 @@
             this.ClientSize = new System.Drawing.Size(693, 387);
             this.Controls.Add(this.panel3);
             this.EnableDelete = true;
-            this.EnableEdit = false;
             this.Name = "User";
             this.Text = "User";
             this.Controls.SetChildIndex(this.panel3, 0);
