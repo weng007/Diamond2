@@ -2,22 +2,22 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using DiamondDS.DS;
 using DiamondDAL.DAL;
 
 namespace DiamondBiz.Biz
 {
-    public class BuyBookDiamondBiz
+    public class BuyBookJewelryBiz
     {
-        dsBuyBookDiamond ds = new dsBuyBookDiamond();
-        BuyBookDiamondDAL dal = new BuyBookDiamondDAL();
+        dsBuyBookJewelry ds = new dsBuyBookJewelry();
+        BuyBookJewelryDAL dal = new BuyBookJewelryDAL();
 
-        public dsBuyBookDiamond DoSearchData(string code,double sSize, double eSize, int shape)
+        public dsBuyBookJewelry DoSearchData(string code)
         {
+
             try
             {
-                return dal.DoSearchData(code, sSize,eSize, shape);
+                return dal.DoSearchData(code);
             }
             catch (Exception ex)
             {
@@ -25,7 +25,7 @@ namespace DiamondBiz.Biz
             }
         }
 
-        public dsBuyBookDiamond DoSelectData(int id)
+        public dsBuyBookJewelry DoSelectData(int id)
         {
             try
             {
@@ -36,7 +36,7 @@ namespace DiamondBiz.Biz
                 throw ex;
             }
         }
-        public bool DoInsertData(dsBuyBookDiamond tds)
+        public bool DoInsertData(dsBuyBookJewelry tds)
         {
             try
             {
@@ -48,7 +48,7 @@ namespace DiamondBiz.Biz
             }
         }
 
-        public bool DoUpdateData(dsBuyBookDiamond tds)
+        public bool DoUpdateData(dsBuyBookJewelry tds)
         {
             try
             {
@@ -71,5 +71,6 @@ namespace DiamondBiz.Biz
                 throw ex;
             }
         }
+
     }
 }
