@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DiamondShop.FormMaster;
+using DiamondShop.DiamondService;
 using DiamondDS.DS;
 
 namespace DiamondShop
@@ -16,6 +18,8 @@ namespace DiamondShop
     {
         ////Service1 ser = GM.GetService();
         dsBuyBookSettingDetail tds = new dsBuyBookSettingDetail();
+        MemoryStream ms1;
+        byte[] image1;
 
         public BuyBookSettingDetail()
         {
@@ -72,81 +76,71 @@ namespace DiamondShop
         }
         protected override void LoadData()
         {
-            //ds = ser.DoSelectData("BuyBookSettingDetail", id);
-            //tds.Clear();
-            //tds.Merge(ds);
+            ds = ser.DoSelectData("BuyBookSettingDetail", id);
+            tds.Clear();
+            tds.Merge(ds);
 
-            //if (tds.BBSettingDetail.Rows.Count > 0)
-            //{
-            //    binder.BindValueToControl(tds.BBSettingDetail[0]);
-            //    image1 = tds.BBSettingDetail[0].Image1;
+            if (tds.BBSettingDetail.Rows.Count > 0)
+            {
+                binder.BindValueToControl(tds.BBSettingDetail[0]);
+                image1 = tds.BBSettingDetail[0].Image1;
 
-            //    if (tds.BuyBookGemstoneCer[0]["IsPaid"].ToString() == "0")
-            //    {
-            //        rdoYes.Checked = false;
-            //        rdoNo.Checked = true;
-            //    }
-            //    else
-            //    {
-            //        rdoYes.Checked = true;
-            //        rdoNo.Checked = false;
-            //    }
+                if (image1 != null)
+                {
+                    ms1 = new MemoryStream(image1);
+                    Image backImage1 = Image.FromStream(ms1);
+                    btnImage1.BackgroundImage = backImage1;
+                }
 
-            //    if (image1 != null)
-            //    {
-            //        ms1 = new MemoryStream(image1);
-            //        Image backImage1 = Image.FromStream(ms1);
-            //        Image1.BackgroundImage = backImage1;
-            //    }
+                EnableDelete = true;
+            }
 
-            //    EnableDelete = true;
-            //}
-
-            //base.LoadData();
+            base.LoadData();
         }
 
         protected override bool SaveData()
         {
-            //dsDiamondCer.DiamondCerRow row = null;
+            dsBuyBookSettingDetail.BBSettingDetailRow row = null;
 
-            //if (tds.DiamondCer.Rows.Count > 0)
-            //{
-            //    row = tds.DiamondCer[0];
-            //}
-            //else
-            //{
-            //    row = tds.DiamondCer.NewDiamondCerRow();
-            //    tds.DiamondCer.Rows.Add(row);
-            //}
-            //binder.BindValueToDataRow(row);
+            if (tds.BBSettingDetail.Rows.Count > 0)
+            {
+                row = tds.BBSettingDetail[0];
+            }
+            else
+            {
+                row = tds.BBSettingDetail.NewBBSettingDetailRow();
+                tds.BBSettingDetail.Rows.Add(row);
+            }
+            binder.BindValueToDataRow(row);
+            row.Image1 = image1;
 
-            //try
-            //{
-            //    if (id == 0)
-            //    {
-            //        SetCreateBy(row);
-            //        chkFlag = ser.DoInsertData("DiamondCer", tds);
-            //    }
-            //    else
-            //    {
-            //        SetEditBy(row);
-            //        chkFlag = ser.DoUpdateData("DiamondCer", tds);
-            //    }
+            try
+            {
+                if (id == 0)
+                {
+                    SetCreateBy(row);
+                    chkFlag = ser.DoInsertData("BBSettingDetail", tds);
+                }
+                else
+                {
+                    SetEditBy(row);
+                    chkFlag = ser.DoUpdateData("BBSettingDetail", tds);
+                }
 
-            //    tds.AcceptChanges();
-            //}
-            //catch (Exception ex)
-            //{
-            //    throw ex;
-            //}
+                tds.AcceptChanges();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
 
-            //return chkFlag;
+            return chkFlag;
         }
         protected override bool DeleteData()
         {
             try
             {
-                chkFlag = ser.DoDeleteData("DiamondCer", id);
+                chkFlag = ser.DoDeleteData("BBSettingDetail", id);
             }
             catch (Exception ex)
             {
