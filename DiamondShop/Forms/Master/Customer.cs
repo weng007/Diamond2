@@ -15,7 +15,7 @@ namespace DiamondShop
 {
     public partial class Customer : FormInfo
     {
-        Service1 ser = GM.GetService();
+        //Service1 ser = GM.GetService();
         dsCustomer tds = new dsCustomer();
         int sellerID = 0;
 

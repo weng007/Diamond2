@@ -15,7 +15,7 @@ namespace DiamondShop
 {
     public partial class BuyBookJewelry : FormInfo
     {
-        Service1 ser = GM.GetService();
+        //Service1 ser = GM.GetService();
         dsBuyBookJewelry tds = new dsBuyBookJewelry();
 
         public BuyBookJewelry()

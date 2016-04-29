@@ -172,13 +172,13 @@ namespace Diamond
         }
 
         [WebMethod]
-        public DataSet DoSearchBuyBookGold(double sSize, double eSize, int status)
+        public DataSet DoSearchBuyBookGold(DateTime sBuyDate, DateTime eBuyDate, int PercentGold)
         {
             BuyBookGoldBiz biz = new BuyBookGoldBiz();
 
             try
             {
-                return biz.DoSearchData(sSize, eSize, status);
+                return biz.DoSearchData(sBuyDate, eBuyDate, PercentGold);
             }
             catch (Exception ex)
             {

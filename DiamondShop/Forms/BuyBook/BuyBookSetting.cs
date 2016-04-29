@@ -15,7 +15,7 @@ namespace DiamondShop
 {
     public partial class BuyBookSetting : FormInfo
     {
-        Service1 ser = GM.GetService();
+        //Service1 ser = GM.GetService();
         dsDiamondCer tds = new dsDiamondCer();
 
         public BuyBookSetting()
@@ -23,18 +23,18 @@ namespace DiamondShop
             InitializeComponent();
             Initial();
 
-            //binder.BindControl(dtBuyDate, "CerDate");
-            //binder.BindControl(txtSeller, "GIANumber");
-            //binder.BindControl(cmbCompanyCer, "CompanyCer");
-            //binder.BindControl(cmbShapeAndCut, "ShapeAndCutting");
-            //binder.BindControl(txtMeasure1, "Measurement1");
-            //binder.BindControl(txtMeasure2, "Measurement2");
-            //binder.BindControl(txtMeasure3, "Measurement3");
-            //binder.BindControl(txtCarat, "Weight");
-            //binder.BindControl(cmbClarity, "ClarityGrade");
-            //binder.BindControl(cmbColorGrade, "ColorGrade");
-            //binder.BindControl(cmbColor, "Color");
-            //binder.BindControl(cmbFluores, "Fluorescence");
+            //binder.BindControl(dtBuyDate, "SettingType");
+            //binder.BindControl(txtSeller, "Amount");
+            //binder.BindControl(cmbCompanyCer, "Weight");
+            //binder.BindControl(cmbShapeAndCut, "LaborCost");
+            //binder.BindControl(txtMeasure1, "Material");
+            //binder.BindControl(txtMeasure2, "PricePerGram");
+            //binder.BindControl(txtMeasure3, "PricePerUnit");
+            //binder.BindControl(txtCarat, "Detail");
+            //binder.BindControl(TotalUSD, "TotalUSD");
+            //binder.BindControl(cmbColorGrade, "USDRate");
+            //binder.BindControl(cmbColor, "TotalBaht");
+            //binder.BindControl(cmbFluores, "RefID");
             //binder.BindControl(cmbCutGrade, "CutGrade");
             //binder.BindControl(cmbPolish, "Polish");
             //binder.BindControl(cmbSymmetry, "Symmetry");

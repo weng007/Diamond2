@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BuyBookSettingDetail));
             this.panel3 = new System.Windows.Forms.Panel();
-            this.btnImage1 = new System.Windows.Forms.Button();
+            this.Image1 = new System.Windows.Forms.Button();
             this.txtTotalBaht = new System.Windows.Forms.TextBox();
             this.TotalBaht = new System.Windows.Forms.Label();
             this.txtUSDRate = new System.Windows.Forms.TextBox();
@@ -63,7 +63,7 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.btnImage1);
+            this.panel3.Controls.Add(this.Image1);
             this.panel3.Controls.Add(this.txtTotalBaht);
             this.panel3.Controls.Add(this.TotalBaht);
             this.panel3.Controls.Add(this.txtUSDRate);
@@ -92,18 +92,18 @@
             this.panel3.Size = new System.Drawing.Size(861, 346);
             this.panel3.TabIndex = 74;
             // 
-            // btnImage1
+            // Image1
             // 
-            this.btnImage1.BackColor = System.Drawing.SystemColors.Control;
-            this.btnImage1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnImage1.BackgroundImage")));
-            this.btnImage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnImage1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnImage1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnImage1.Location = new System.Drawing.Point(33, 179);
-            this.btnImage1.Name = "btnImage1";
-            this.btnImage1.Size = new System.Drawing.Size(150, 150);
-            this.btnImage1.TabIndex = 109;
-            this.btnImage1.UseVisualStyleBackColor = false;
+            this.Image1.BackColor = System.Drawing.SystemColors.Control;
+            this.Image1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Image1.BackgroundImage")));
+            this.Image1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Image1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Image1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Image1.Location = new System.Drawing.Point(33, 179);
+            this.Image1.Name = "Image1";
+            this.Image1.Size = new System.Drawing.Size(150, 150);
+            this.Image1.TabIndex = 109;
+            this.Image1.UseVisualStyleBackColor = false;
             // 
             // txtTotalBaht
             // 
@@ -378,6 +378,6 @@
         private System.Windows.Forms.TextBox txtDetail;
         private System.Windows.Forms.TextBox txtPricePerUnit;
         private System.Windows.Forms.TextBox txtPricePerGram;
-        private System.Windows.Forms.Button btnImage1;
+        private System.Windows.Forms.Button Image1;
     }
 }

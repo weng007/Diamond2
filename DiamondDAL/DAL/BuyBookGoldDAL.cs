@@ -13,14 +13,14 @@ namespace DiamondDAL.DAL
         dsBuyBookGold ds = new dsBuyBookGold();
         int flag = 0;
 
-        public dsBuyBookGold DoSearchData(double sSize, double eSize,int status)
+        public dsBuyBookGold DoSearchData(DateTime sBuyDate, DateTime eBuyDate, int PercentGold)
         {
             try
             {
                 SQL.ClearParameter();
-                SQL.CreateParameter("SSize", sSize);
-                SQL.CreateParameter("ESize", eSize);
-                SQL.CreateParameter("Status", status);
+                SQL.CreateParameter("SBuyDate", sBuyDate);
+                SQL.CreateParameter("EBuyDate", eBuyDate);
+                SQL.CreateParameter("PercentGold", PercentGold);
                 SQL.FillDataSetBySP("SP_BuyBookGold_Search", ds.BuyBookGold);
             }
             catch (Exception ex)

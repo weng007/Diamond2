@@ -16,7 +16,7 @@ namespace DiamondShop
 {
     public partial class InvDiamondDetail : FormInfo
     {
-        Service1 ser = GM.GetService();
+        //Service1 ser = GM.GetService();
         dsDiamondDetail tds = new dsDiamondDetail();
         public int productID = 0;
 

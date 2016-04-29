@@ -44,7 +44,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.cmbLab = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtEWeight = new System.Windows.Forms.TextBox();
             this.txtSWeight = new System.Windows.Forms.TextBox();
@@ -55,7 +55,7 @@
             this.txtReportNumber = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.gridDiamondCer = new System.Windows.Forms.DataGridView();
+            this.gridGemstoneCer = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RowNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -84,7 +84,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridDiamondCer)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridGemstoneCer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tds)).BeginInit();
             this.SuspendLayout();
             // 
@@ -105,7 +105,7 @@
             this.panel4.Controls.Add(this.label10);
             this.panel4.Controls.Add(this.btnAdd);
             this.panel4.Controls.Add(this.label7);
-            this.panel4.Controls.Add(this.comboBox3);
+            this.panel4.Controls.Add(this.cmbLab);
             this.panel4.Controls.Add(this.label1);
             this.panel4.Controls.Add(this.txtEWeight);
             this.panel4.Controls.Add(this.txtSWeight);
@@ -253,14 +253,14 @@
             this.label7.TabIndex = 67;
             this.label7.Text = "Lab";
             // 
-            // comboBox3
+            // cmbLab
             // 
-            this.comboBox3.AccessibleName = "cmbLab";
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(257, 135);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(161, 29);
-            this.comboBox3.TabIndex = 12;
+            this.cmbLab.AccessibleName = "cmbLab";
+            this.cmbLab.FormattingEnabled = true;
+            this.cmbLab.Location = new System.Drawing.Point(257, 135);
+            this.cmbLab.Name = "cmbLab";
+            this.cmbLab.Size = new System.Drawing.Size(161, 29);
+            this.cmbLab.TabIndex = 12;
             // 
             // label1
             // 
@@ -355,21 +355,21 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
-            this.panel2.Controls.Add(this.gridDiamondCer);
+            this.panel2.Controls.Add(this.gridGemstoneCer);
             this.panel2.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.Location = new System.Drawing.Point(5, 189);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1311, 388);
             this.panel2.TabIndex = 34;
             // 
-            // gridDiamondCer
+            // gridGemstoneCer
             // 
-            this.gridDiamondCer.AllowUserToAddRows = false;
-            this.gridDiamondCer.AllowUserToDeleteRows = false;
-            this.gridDiamondCer.AllowUserToOrderColumns = true;
-            this.gridDiamondCer.BackgroundColor = System.Drawing.SystemColors.ControlLight;
-            this.gridDiamondCer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridDiamondCer.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.gridGemstoneCer.AllowUserToAddRows = false;
+            this.gridGemstoneCer.AllowUserToDeleteRows = false;
+            this.gridGemstoneCer.AllowUserToOrderColumns = true;
+            this.gridGemstoneCer.BackgroundColor = System.Drawing.SystemColors.ControlLight;
+            this.gridGemstoneCer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridGemstoneCer.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
             this.RowNum,
             this.Status,
@@ -394,15 +394,16 @@
             this.Setting,
             this.ReportNumber,
             this.BuyDate});
-            this.gridDiamondCer.Location = new System.Drawing.Point(7, 0);
-            this.gridDiamondCer.Name = "gridDiamondCer";
-            this.gridDiamondCer.ReadOnly = true;
-            this.gridDiamondCer.RowHeadersWidth = 10;
-            this.gridDiamondCer.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridDiamondCer.RowTemplate.Height = 30;
-            this.gridDiamondCer.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridDiamondCer.Size = new System.Drawing.Size(1301, 385);
-            this.gridDiamondCer.TabIndex = 2;
+            this.gridGemstoneCer.Location = new System.Drawing.Point(7, 0);
+            this.gridGemstoneCer.Name = "gridGemstoneCer";
+            this.gridGemstoneCer.ReadOnly = true;
+            this.gridGemstoneCer.RowHeadersWidth = 10;
+            this.gridGemstoneCer.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridGemstoneCer.RowTemplate.Height = 30;
+            this.gridGemstoneCer.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.gridGemstoneCer.Size = new System.Drawing.Size(1301, 385);
+            this.gridGemstoneCer.TabIndex = 2;
+            this.gridGemstoneCer.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.gridGemstoneCer_MouseDoubleClick);
             // 
             // ID
             // 
@@ -614,7 +615,7 @@
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridDiamondCer)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridGemstoneCer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tds)).EndInit();
             this.ResumeLayout(false);
 
@@ -622,7 +623,7 @@
 
         #endregion
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.DataGridView gridDiamondCer;
+        private System.Windows.Forms.DataGridView gridGemstoneCer;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnSearch;
@@ -634,7 +635,7 @@
         private System.Windows.Forms.TextBox txtSWeight;
         private DiamondDS.DS.dsDiamondCer tds;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox cmbLab;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.ComboBox cmbShop;

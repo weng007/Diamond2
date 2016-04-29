@@ -15,7 +15,6 @@ namespace DiamondShop
 {
     public partial class BuyBookGemstone : FormInfo
     {
-        Service1 ser = GM.GetService();
         dsBuyBookGemstone tds = new dsBuyBookGemstone();
 
         public BuyBookGemstone()

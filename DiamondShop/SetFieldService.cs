@@ -12,7 +12,7 @@ namespace DiamondShop
     {
         public static void SetRequireField(params Control[] ctrlList)
         {
-            Color cl = Color.LightBlue;
+            Color cl = Color.LemonChiffon;
             foreach (Control ctrl in ctrlList)
             {
                 switch (ctrl.GetType().FullName)

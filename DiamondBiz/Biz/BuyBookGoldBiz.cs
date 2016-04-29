@@ -13,11 +13,11 @@ namespace DiamondBiz.Biz
         dsBuyBookGold ds = new dsBuyBookGold();
         BuyBookGoldDAL dal = new BuyBookGoldDAL();
 
-        public dsBuyBookGold DoSearchData(double sSize, double eSize, int status)
+        public dsBuyBookGold DoSearchData(DateTime sBuyDate, DateTime eBuyDate, int PercentGold)
         {
             try
             {
-                return dal.DoSearchData(sSize,eSize,status);
+                return dal.DoSearchData(sBuyDate, eBuyDate, PercentGold);
             }
             catch (Exception ex)
             {

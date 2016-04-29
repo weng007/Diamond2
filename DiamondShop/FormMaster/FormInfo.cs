@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DiamondShop.DiamondService;
 using DiamondShop.Popup;
 
 namespace DiamondShop.FormMaster
@@ -18,6 +19,7 @@ namespace DiamondShop.FormMaster
         public string message = "";
         public DataBinder binder = new DataBinder();
         public DataSet ds = new DataSet();
+        public Service1 ser = GM.GetService();
 
         #region Standard Control
         //Standard Control     

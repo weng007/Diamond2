@@ -20,17 +20,17 @@ namespace DiamondDS.DS {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("dsBuyBookETC")]
+    [global::System.Xml.Serialization.XmlRootAttribute("dsBuyBookSettingDetail")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class dsBuyBookETC : global::System.Data.DataSet {
+    public partial class dsBuyBookSettingDetail : global::System.Data.DataSet {
         
-        private BuyBookETCDataTable tableBuyBookETC;
+        private BBSettingDetailDataTable tableBBSettingDetail;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public dsBuyBookETC() {
+        public dsBuyBookSettingDetail() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace DiamondDS.DS {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected dsBuyBookETC(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected dsBuyBookSettingDetail(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace DiamondDS.DS {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["BuyBookETC"] != null)) {
-                    base.Tables.Add(new BuyBookETCDataTable(ds.Tables["BuyBookETC"]));
+                if ((ds.Tables["BBSettingDetail"] != null)) {
+                    base.Tables.Add(new BBSettingDetailDataTable(ds.Tables["BBSettingDetail"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace DiamondDS.DS {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public BuyBookETCDataTable BuyBookETC {
+        public BBSettingDetailDataTable BBSettingDetail {
             get {
-                return this.tableBuyBookETC;
+                return this.tableBBSettingDetail;
             }
         }
         
@@ -127,7 +127,7 @@ namespace DiamondDS.DS {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            dsBuyBookETC cln = ((dsBuyBookETC)(base.Clone()));
+            dsBuyBookSettingDetail cln = ((dsBuyBookSettingDetail)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace DiamondDS.DS {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["BuyBookETC"] != null)) {
-                    base.Tables.Add(new BuyBookETCDataTable(ds.Tables["BuyBookETC"]));
+                if ((ds.Tables["BBSettingDetail"] != null)) {
+                    base.Tables.Add(new BBSettingDetailDataTable(ds.Tables["BBSettingDetail"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace DiamondDS.DS {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableBuyBookETC = ((BuyBookETCDataTable)(base.Tables["BuyBookETC"]));
+            this.tableBBSettingDetail = ((BBSettingDetailDataTable)(base.Tables["BBSettingDetail"]));
             if ((initTable == true)) {
-                if ((this.tableBuyBookETC != null)) {
-                    this.tableBuyBookETC.InitVars();
+                if ((this.tableBBSettingDetail != null)) {
+                    this.tableBBSettingDetail.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace DiamondDS.DS {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "dsBuyBookETC";
+            this.DataSetName = "dsBuyBookSettingDetail";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/dsBuyBookETC.xsd";
+            this.Namespace = "http://tempuri.org/dsBuyBookSettingDetail.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableBuyBookETC = new BuyBookETCDataTable();
-            base.Tables.Add(this.tableBuyBookETC);
+            this.tableBBSettingDetail = new BBSettingDetailDataTable();
+            base.Tables.Add(this.tableBBSettingDetail);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializeBuyBookETC() {
+        private bool ShouldSerializeBBSettingDetail() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace DiamondDS.DS {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            dsBuyBookETC ds = new dsBuyBookETC();
+            dsBuyBookSettingDetail ds = new dsBuyBookSettingDetail();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,26 +270,44 @@ namespace DiamondDS.DS {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void BuyBookETCRowChangeEventHandler(object sender, BuyBookETCRowChangeEvent e);
+        public delegate void BBSettingDetailRowChangeEventHandler(object sender, BBSettingDetailRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class BuyBookETCDataTable : global::System.Data.TypedTableBase<BuyBookETCRow> {
+        public partial class BBSettingDetailDataTable : global::System.Data.TypedTableBase<BBSettingDetailRow> {
             
             private global::System.Data.DataColumn columnRowNum;
             
             private global::System.Data.DataColumn columnID;
             
-            private global::System.Data.DataColumn columnBuyDate;
+            private global::System.Data.DataColumn columnSettingType;
             
-            private global::System.Data.DataColumn columnSeller;
+            private global::System.Data.DataColumn columnAmount;
+            
+            private global::System.Data.DataColumn columnWeight;
+            
+            private global::System.Data.DataColumn columnLaborCost;
+            
+            private global::System.Data.DataColumn columnMaterial;
+            
+            private global::System.Data.DataColumn columnPricePerGram;
+            
+            private global::System.Data.DataColumn columnPricePerUnit;
             
             private global::System.Data.DataColumn columnDetail;
             
-            private global::System.Data.DataColumn columnPrice;
+            private global::System.Data.DataColumn columnImage1;
+            
+            private global::System.Data.DataColumn columnTotalUSD;
+            
+            private global::System.Data.DataColumn columnUSDRate;
+            
+            private global::System.Data.DataColumn columnTotalBaht;
+            
+            private global::System.Data.DataColumn columnRefID;
             
             private global::System.Data.DataColumn columnIsDeleted;
             
@@ -303,8 +321,8 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public BuyBookETCDataTable() {
-                this.TableName = "BuyBookETC";
+            public BBSettingDetailDataTable() {
+                this.TableName = "BBSettingDetail";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -312,7 +330,7 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal BuyBookETCDataTable(global::System.Data.DataTable table) {
+            internal BBSettingDetailDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -329,7 +347,7 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected BuyBookETCDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected BBSettingDetailDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -352,17 +370,57 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn BuyDateColumn {
+            public global::System.Data.DataColumn SettingTypeColumn {
                 get {
-                    return this.columnBuyDate;
+                    return this.columnSettingType;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn SellerColumn {
+            public global::System.Data.DataColumn AmountColumn {
                 get {
-                    return this.columnSeller;
+                    return this.columnAmount;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn WeightColumn {
+                get {
+                    return this.columnWeight;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn LaborCostColumn {
+                get {
+                    return this.columnLaborCost;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn MaterialColumn {
+                get {
+                    return this.columnMaterial;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn PricePerGramColumn {
+                get {
+                    return this.columnPricePerGram;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn PricePerUnitColumn {
+                get {
+                    return this.columnPricePerUnit;
                 }
             }
             
@@ -376,9 +434,41 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn PriceColumn {
+            public global::System.Data.DataColumn Image1Column {
                 get {
-                    return this.columnPrice;
+                    return this.columnImage1;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn TotalUSDColumn {
+                get {
+                    return this.columnTotalUSD;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn USDRateColumn {
+                get {
+                    return this.columnUSDRate;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn TotalBahtColumn {
+                get {
+                    return this.columnTotalBaht;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn RefIDColumn {
+                get {
+                    return this.columnRefID;
                 }
             }
             
@@ -433,55 +523,90 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public BuyBookETCRow this[int index] {
+            public BBSettingDetailRow this[int index] {
                 get {
-                    return ((BuyBookETCRow)(this.Rows[index]));
+                    return ((BBSettingDetailRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event BuyBookETCRowChangeEventHandler BuyBookETCRowChanging;
+            public event BBSettingDetailRowChangeEventHandler BBSettingDetailRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event BuyBookETCRowChangeEventHandler BuyBookETCRowChanged;
+            public event BBSettingDetailRowChangeEventHandler BBSettingDetailRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event BuyBookETCRowChangeEventHandler BuyBookETCRowDeleting;
+            public event BBSettingDetailRowChangeEventHandler BBSettingDetailRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event BuyBookETCRowChangeEventHandler BuyBookETCRowDeleted;
+            public event BBSettingDetailRowChangeEventHandler BBSettingDetailRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddBuyBookETCRow(BuyBookETCRow row) {
+            public void AddBBSettingDetailRow(BBSettingDetailRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public BuyBookETCRow AddBuyBookETCRow(long RowNum, System.DateTime BuyDate, string Seller, string Detail, decimal Price, string IsDeleted, int CreateBy, System.DateTime CreateDate, int EditBy, System.DateTime EditDate) {
-                BuyBookETCRow rowBuyBookETCRow = ((BuyBookETCRow)(this.NewRow()));
+            public BBSettingDetailRow AddBBSettingDetailRow(
+                        long RowNum, 
+                        int SettingType, 
+                        double Amount, 
+                        double Weight, 
+                        decimal LaborCost, 
+                        int Material, 
+                        decimal PricePerGram, 
+                        decimal PricePerUnit, 
+                        string Detail, 
+                        byte[] Image1, 
+                        decimal TotalUSD, 
+                        decimal USDRate, 
+                        decimal TotalBaht, 
+                        int RefID, 
+                        string IsDeleted, 
+                        int CreateBy, 
+                        System.DateTime CreateDate, 
+                        int EditBy, 
+                        System.DateTime EditDate) {
+                BBSettingDetailRow rowBBSettingDetailRow = ((BBSettingDetailRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         RowNum,
                         null,
-                        BuyDate,
-                        Seller,
+                        SettingType,
+                        Amount,
+                        Weight,
+                        LaborCost,
+                        Material,
+                        PricePerGram,
+                        PricePerUnit,
                         Detail,
-                        Price,
+                        Image1,
+                        TotalUSD,
+                        USDRate,
+                        TotalBaht,
+                        RefID,
                         IsDeleted,
                         CreateBy,
                         CreateDate,
                         EditBy,
                         EditDate};
-                rowBuyBookETCRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowBuyBookETCRow);
-                return rowBuyBookETCRow;
+                rowBBSettingDetailRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowBBSettingDetailRow);
+                return rowBBSettingDetailRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public BBSettingDetailRow FindByID(int ID) {
+                return ((BBSettingDetailRow)(this.Rows.Find(new object[] {
+                            ID})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                BuyBookETCDataTable cln = ((BuyBookETCDataTable)(base.Clone()));
+                BBSettingDetailDataTable cln = ((BBSettingDetailDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -489,7 +614,7 @@ namespace DiamondDS.DS {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new BuyBookETCDataTable();
+                return new BBSettingDetailDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -497,10 +622,19 @@ namespace DiamondDS.DS {
             internal void InitVars() {
                 this.columnRowNum = base.Columns["RowNum"];
                 this.columnID = base.Columns["ID"];
-                this.columnBuyDate = base.Columns["BuyDate"];
-                this.columnSeller = base.Columns["Seller"];
+                this.columnSettingType = base.Columns["SettingType"];
+                this.columnAmount = base.Columns["Amount"];
+                this.columnWeight = base.Columns["Weight"];
+                this.columnLaborCost = base.Columns["LaborCost"];
+                this.columnMaterial = base.Columns["Material"];
+                this.columnPricePerGram = base.Columns["PricePerGram"];
+                this.columnPricePerUnit = base.Columns["PricePerUnit"];
                 this.columnDetail = base.Columns["Detail"];
-                this.columnPrice = base.Columns["Price"];
+                this.columnImage1 = base.Columns["Image1"];
+                this.columnTotalUSD = base.Columns["TotalUSD"];
+                this.columnUSDRate = base.Columns["USDRate"];
+                this.columnTotalBaht = base.Columns["TotalBaht"];
+                this.columnRefID = base.Columns["RefID"];
                 this.columnIsDeleted = base.Columns["IsDeleted"];
                 this.columnCreateBy = base.Columns["CreateBy"];
                 this.columnCreateDate = base.Columns["CreateDate"];
@@ -515,14 +649,32 @@ namespace DiamondDS.DS {
                 base.Columns.Add(this.columnRowNum);
                 this.columnID = new global::System.Data.DataColumn("ID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnID);
-                this.columnBuyDate = new global::System.Data.DataColumn("BuyDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnBuyDate);
-                this.columnSeller = new global::System.Data.DataColumn("Seller", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSeller);
+                this.columnSettingType = new global::System.Data.DataColumn("SettingType", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSettingType);
+                this.columnAmount = new global::System.Data.DataColumn("Amount", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAmount);
+                this.columnWeight = new global::System.Data.DataColumn("Weight", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnWeight);
+                this.columnLaborCost = new global::System.Data.DataColumn("LaborCost", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLaborCost);
+                this.columnMaterial = new global::System.Data.DataColumn("Material", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMaterial);
+                this.columnPricePerGram = new global::System.Data.DataColumn("PricePerGram", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPricePerGram);
+                this.columnPricePerUnit = new global::System.Data.DataColumn("PricePerUnit", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPricePerUnit);
                 this.columnDetail = new global::System.Data.DataColumn("Detail", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDetail);
-                this.columnPrice = new global::System.Data.DataColumn("Price", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPrice);
+                this.columnImage1 = new global::System.Data.DataColumn("Image1", typeof(byte[]), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnImage1);
+                this.columnTotalUSD = new global::System.Data.DataColumn("TotalUSD", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTotalUSD);
+                this.columnUSDRate = new global::System.Data.DataColumn("USDRate", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnUSDRate);
+                this.columnTotalBaht = new global::System.Data.DataColumn("TotalBaht", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTotalBaht);
+                this.columnRefID = new global::System.Data.DataColumn("RefID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnRefID);
                 this.columnIsDeleted = new global::System.Data.DataColumn("IsDeleted", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnIsDeleted);
                 this.columnCreateBy = new global::System.Data.DataColumn("CreateBy", typeof(int), null, global::System.Data.MappingType.Element);
@@ -533,41 +685,43 @@ namespace DiamondDS.DS {
                 base.Columns.Add(this.columnEditBy);
                 this.columnEditDate = new global::System.Data.DataColumn("EditDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnEditDate);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnID}, true));
                 this.columnRowNum.ReadOnly = true;
                 this.columnID.AutoIncrement = true;
                 this.columnID.AutoIncrementSeed = -1;
                 this.columnID.AutoIncrementStep = -1;
                 this.columnID.AllowDBNull = false;
                 this.columnID.ReadOnly = true;
-                this.columnSeller.MaxLength = 100;
+                this.columnID.Unique = true;
                 this.columnDetail.MaxLength = 250;
                 this.columnIsDeleted.MaxLength = 1;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public BuyBookETCRow NewBuyBookETCRow() {
-                return ((BuyBookETCRow)(this.NewRow()));
+            public BBSettingDetailRow NewBBSettingDetailRow() {
+                return ((BBSettingDetailRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new BuyBookETCRow(builder);
+                return new BBSettingDetailRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(BuyBookETCRow);
+                return typeof(BBSettingDetailRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.BuyBookETCRowChanged != null)) {
-                    this.BuyBookETCRowChanged(this, new BuyBookETCRowChangeEvent(((BuyBookETCRow)(e.Row)), e.Action));
+                if ((this.BBSettingDetailRowChanged != null)) {
+                    this.BBSettingDetailRowChanged(this, new BBSettingDetailRowChangeEvent(((BBSettingDetailRow)(e.Row)), e.Action));
                 }
             }
             
@@ -575,8 +729,8 @@ namespace DiamondDS.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.BuyBookETCRowChanging != null)) {
-                    this.BuyBookETCRowChanging(this, new BuyBookETCRowChangeEvent(((BuyBookETCRow)(e.Row)), e.Action));
+                if ((this.BBSettingDetailRowChanging != null)) {
+                    this.BBSettingDetailRowChanging(this, new BBSettingDetailRowChangeEvent(((BBSettingDetailRow)(e.Row)), e.Action));
                 }
             }
             
@@ -584,8 +738,8 @@ namespace DiamondDS.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.BuyBookETCRowDeleted != null)) {
-                    this.BuyBookETCRowDeleted(this, new BuyBookETCRowChangeEvent(((BuyBookETCRow)(e.Row)), e.Action));
+                if ((this.BBSettingDetailRowDeleted != null)) {
+                    this.BBSettingDetailRowDeleted(this, new BBSettingDetailRowChangeEvent(((BBSettingDetailRow)(e.Row)), e.Action));
                 }
             }
             
@@ -593,14 +747,14 @@ namespace DiamondDS.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.BuyBookETCRowDeleting != null)) {
-                    this.BuyBookETCRowDeleting(this, new BuyBookETCRowChangeEvent(((BuyBookETCRow)(e.Row)), e.Action));
+                if ((this.BBSettingDetailRowDeleting != null)) {
+                    this.BBSettingDetailRowDeleting(this, new BBSettingDetailRowChangeEvent(((BBSettingDetailRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemoveBuyBookETCRow(BuyBookETCRow row) {
+            public void RemoveBBSettingDetailRow(BBSettingDetailRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -609,7 +763,7 @@ namespace DiamondDS.DS {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                dsBuyBookETC ds = new dsBuyBookETC();
+                dsBuyBookSettingDetail ds = new dsBuyBookSettingDetail();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -627,7 +781,7 @@ namespace DiamondDS.DS {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "BuyBookETCDataTable";
+                attribute2.FixedValue = "BBSettingDetailDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -671,15 +825,15 @@ namespace DiamondDS.DS {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class BuyBookETCRow : global::System.Data.DataRow {
+        public partial class BBSettingDetailRow : global::System.Data.DataRow {
             
-            private BuyBookETCDataTable tableBuyBookETC;
+            private BBSettingDetailDataTable tableBBSettingDetail;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal BuyBookETCRow(global::System.Data.DataRowBuilder rb) : 
+            internal BBSettingDetailRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableBuyBookETC = ((BuyBookETCDataTable)(this.Table));
+                this.tableBBSettingDetail = ((BBSettingDetailDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -687,14 +841,14 @@ namespace DiamondDS.DS {
             public long RowNum {
                 get {
                     try {
-                        return ((long)(this[this.tableBuyBookETC.RowNumColumn]));
+                        return ((long)(this[this.tableBBSettingDetail.RowNumColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'RowNum\' in table \'BuyBookETC\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'RowNum\' in table \'BBSettingDetail\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableBuyBookETC.RowNumColumn] = value;
+                    this[this.tableBBSettingDetail.RowNumColumn] = value;
                 }
             }
             
@@ -702,42 +856,122 @@ namespace DiamondDS.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public int ID {
                 get {
-                    return ((int)(this[this.tableBuyBookETC.IDColumn]));
+                    return ((int)(this[this.tableBBSettingDetail.IDColumn]));
                 }
                 set {
-                    this[this.tableBuyBookETC.IDColumn] = value;
+                    this[this.tableBBSettingDetail.IDColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public System.DateTime BuyDate {
+            public int SettingType {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tableBuyBookETC.BuyDateColumn]));
+                        return ((int)(this[this.tableBBSettingDetail.SettingTypeColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'BuyDate\' in table \'BuyBookETC\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'SettingType\' in table \'BBSettingDetail\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableBuyBookETC.BuyDateColumn] = value;
+                    this[this.tableBBSettingDetail.SettingTypeColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Seller {
+            public double Amount {
                 get {
                     try {
-                        return ((string)(this[this.tableBuyBookETC.SellerColumn]));
+                        return ((double)(this[this.tableBBSettingDetail.AmountColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Seller\' in table \'BuyBookETC\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Amount\' in table \'BBSettingDetail\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableBuyBookETC.SellerColumn] = value;
+                    this[this.tableBBSettingDetail.AmountColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double Weight {
+                get {
+                    try {
+                        return ((double)(this[this.tableBBSettingDetail.WeightColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Weight\' in table \'BBSettingDetail\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableBBSettingDetail.WeightColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal LaborCost {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableBBSettingDetail.LaborCostColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'LaborCost\' in table \'BBSettingDetail\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableBBSettingDetail.LaborCostColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int Material {
+                get {
+                    try {
+                        return ((int)(this[this.tableBBSettingDetail.MaterialColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Material\' in table \'BBSettingDetail\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableBBSettingDetail.MaterialColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal PricePerGram {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableBBSettingDetail.PricePerGramColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'PricePerGram\' in table \'BBSettingDetail\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableBBSettingDetail.PricePerGramColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal PricePerUnit {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableBBSettingDetail.PricePerUnitColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'PricePerUnit\' in table \'BBSettingDetail\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableBBSettingDetail.PricePerUnitColumn] = value;
                 }
             }
             
@@ -746,30 +980,94 @@ namespace DiamondDS.DS {
             public string Detail {
                 get {
                     try {
-                        return ((string)(this[this.tableBuyBookETC.DetailColumn]));
+                        return ((string)(this[this.tableBBSettingDetail.DetailColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Detail\' in table \'BuyBookETC\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Detail\' in table \'BBSettingDetail\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableBuyBookETC.DetailColumn] = value;
+                    this[this.tableBBSettingDetail.DetailColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public decimal Price {
+            public byte[] Image1 {
                 get {
                     try {
-                        return ((decimal)(this[this.tableBuyBookETC.PriceColumn]));
+                        return ((byte[])(this[this.tableBBSettingDetail.Image1Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Price\' in table \'BuyBookETC\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Image1\' in table \'BBSettingDetail\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableBuyBookETC.PriceColumn] = value;
+                    this[this.tableBBSettingDetail.Image1Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal TotalUSD {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableBBSettingDetail.TotalUSDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TotalUSD\' in table \'BBSettingDetail\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableBBSettingDetail.TotalUSDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal USDRate {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableBBSettingDetail.USDRateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'USDRate\' in table \'BBSettingDetail\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableBBSettingDetail.USDRateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal TotalBaht {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableBBSettingDetail.TotalBahtColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TotalBaht\' in table \'BBSettingDetail\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableBBSettingDetail.TotalBahtColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int RefID {
+                get {
+                    try {
+                        return ((int)(this[this.tableBBSettingDetail.RefIDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'RefID\' in table \'BBSettingDetail\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableBBSettingDetail.RefIDColumn] = value;
                 }
             }
             
@@ -778,14 +1076,14 @@ namespace DiamondDS.DS {
             public string IsDeleted {
                 get {
                     try {
-                        return ((string)(this[this.tableBuyBookETC.IsDeletedColumn]));
+                        return ((string)(this[this.tableBBSettingDetail.IsDeletedColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'IsDeleted\' in table \'BuyBookETC\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'IsDeleted\' in table \'BBSettingDetail\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableBuyBookETC.IsDeletedColumn] = value;
+                    this[this.tableBBSettingDetail.IsDeletedColumn] = value;
                 }
             }
             
@@ -794,14 +1092,14 @@ namespace DiamondDS.DS {
             public int CreateBy {
                 get {
                     try {
-                        return ((int)(this[this.tableBuyBookETC.CreateByColumn]));
+                        return ((int)(this[this.tableBBSettingDetail.CreateByColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'CreateBy\' in table \'BuyBookETC\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'CreateBy\' in table \'BBSettingDetail\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableBuyBookETC.CreateByColumn] = value;
+                    this[this.tableBBSettingDetail.CreateByColumn] = value;
                 }
             }
             
@@ -810,14 +1108,14 @@ namespace DiamondDS.DS {
             public System.DateTime CreateDate {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tableBuyBookETC.CreateDateColumn]));
+                        return ((global::System.DateTime)(this[this.tableBBSettingDetail.CreateDateColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'CreateDate\' in table \'BuyBookETC\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'CreateDate\' in table \'BBSettingDetail\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableBuyBookETC.CreateDateColumn] = value;
+                    this[this.tableBBSettingDetail.CreateDateColumn] = value;
                 }
             }
             
@@ -826,14 +1124,14 @@ namespace DiamondDS.DS {
             public int EditBy {
                 get {
                     try {
-                        return ((int)(this[this.tableBuyBookETC.EditByColumn]));
+                        return ((int)(this[this.tableBBSettingDetail.EditByColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'EditBy\' in table \'BuyBookETC\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'EditBy\' in table \'BBSettingDetail\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableBuyBookETC.EditByColumn] = value;
+                    this[this.tableBBSettingDetail.EditByColumn] = value;
                 }
             }
             
@@ -842,135 +1140,243 @@ namespace DiamondDS.DS {
             public System.DateTime EditDate {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tableBuyBookETC.EditDateColumn]));
+                        return ((global::System.DateTime)(this[this.tableBBSettingDetail.EditDateColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'EditDate\' in table \'BuyBookETC\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'EditDate\' in table \'BBSettingDetail\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableBuyBookETC.EditDateColumn] = value;
+                    this[this.tableBBSettingDetail.EditDateColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsRowNumNull() {
-                return this.IsNull(this.tableBuyBookETC.RowNumColumn);
+                return this.IsNull(this.tableBBSettingDetail.RowNumColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetRowNumNull() {
-                this[this.tableBuyBookETC.RowNumColumn] = global::System.Convert.DBNull;
+                this[this.tableBBSettingDetail.RowNumColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsBuyDateNull() {
-                return this.IsNull(this.tableBuyBookETC.BuyDateColumn);
+            public bool IsSettingTypeNull() {
+                return this.IsNull(this.tableBBSettingDetail.SettingTypeColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetBuyDateNull() {
-                this[this.tableBuyBookETC.BuyDateColumn] = global::System.Convert.DBNull;
+            public void SetSettingTypeNull() {
+                this[this.tableBBSettingDetail.SettingTypeColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsSellerNull() {
-                return this.IsNull(this.tableBuyBookETC.SellerColumn);
+            public bool IsAmountNull() {
+                return this.IsNull(this.tableBBSettingDetail.AmountColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetSellerNull() {
-                this[this.tableBuyBookETC.SellerColumn] = global::System.Convert.DBNull;
+            public void SetAmountNull() {
+                this[this.tableBBSettingDetail.AmountColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsWeightNull() {
+                return this.IsNull(this.tableBBSettingDetail.WeightColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetWeightNull() {
+                this[this.tableBBSettingDetail.WeightColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsLaborCostNull() {
+                return this.IsNull(this.tableBBSettingDetail.LaborCostColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetLaborCostNull() {
+                this[this.tableBBSettingDetail.LaborCostColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsMaterialNull() {
+                return this.IsNull(this.tableBBSettingDetail.MaterialColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetMaterialNull() {
+                this[this.tableBBSettingDetail.MaterialColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsPricePerGramNull() {
+                return this.IsNull(this.tableBBSettingDetail.PricePerGramColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetPricePerGramNull() {
+                this[this.tableBBSettingDetail.PricePerGramColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsPricePerUnitNull() {
+                return this.IsNull(this.tableBBSettingDetail.PricePerUnitColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetPricePerUnitNull() {
+                this[this.tableBBSettingDetail.PricePerUnitColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsDetailNull() {
-                return this.IsNull(this.tableBuyBookETC.DetailColumn);
+                return this.IsNull(this.tableBBSettingDetail.DetailColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetDetailNull() {
-                this[this.tableBuyBookETC.DetailColumn] = global::System.Convert.DBNull;
+                this[this.tableBBSettingDetail.DetailColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsPriceNull() {
-                return this.IsNull(this.tableBuyBookETC.PriceColumn);
+            public bool IsImage1Null() {
+                return this.IsNull(this.tableBBSettingDetail.Image1Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetPriceNull() {
-                this[this.tableBuyBookETC.PriceColumn] = global::System.Convert.DBNull;
+            public void SetImage1Null() {
+                this[this.tableBBSettingDetail.Image1Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsTotalUSDNull() {
+                return this.IsNull(this.tableBBSettingDetail.TotalUSDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetTotalUSDNull() {
+                this[this.tableBBSettingDetail.TotalUSDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsUSDRateNull() {
+                return this.IsNull(this.tableBBSettingDetail.USDRateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetUSDRateNull() {
+                this[this.tableBBSettingDetail.USDRateColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsTotalBahtNull() {
+                return this.IsNull(this.tableBBSettingDetail.TotalBahtColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetTotalBahtNull() {
+                this[this.tableBBSettingDetail.TotalBahtColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsRefIDNull() {
+                return this.IsNull(this.tableBBSettingDetail.RefIDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetRefIDNull() {
+                this[this.tableBBSettingDetail.RefIDColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsIsDeletedNull() {
-                return this.IsNull(this.tableBuyBookETC.IsDeletedColumn);
+                return this.IsNull(this.tableBBSettingDetail.IsDeletedColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetIsDeletedNull() {
-                this[this.tableBuyBookETC.IsDeletedColumn] = global::System.Convert.DBNull;
+                this[this.tableBBSettingDetail.IsDeletedColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsCreateByNull() {
-                return this.IsNull(this.tableBuyBookETC.CreateByColumn);
+                return this.IsNull(this.tableBBSettingDetail.CreateByColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetCreateByNull() {
-                this[this.tableBuyBookETC.CreateByColumn] = global::System.Convert.DBNull;
+                this[this.tableBBSettingDetail.CreateByColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsCreateDateNull() {
-                return this.IsNull(this.tableBuyBookETC.CreateDateColumn);
+                return this.IsNull(this.tableBBSettingDetail.CreateDateColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetCreateDateNull() {
-                this[this.tableBuyBookETC.CreateDateColumn] = global::System.Convert.DBNull;
+                this[this.tableBBSettingDetail.CreateDateColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsEditByNull() {
-                return this.IsNull(this.tableBuyBookETC.EditByColumn);
+                return this.IsNull(this.tableBBSettingDetail.EditByColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetEditByNull() {
-                this[this.tableBuyBookETC.EditByColumn] = global::System.Convert.DBNull;
+                this[this.tableBBSettingDetail.EditByColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsEditDateNull() {
-                return this.IsNull(this.tableBuyBookETC.EditDateColumn);
+                return this.IsNull(this.tableBBSettingDetail.EditDateColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetEditDateNull() {
-                this[this.tableBuyBookETC.EditDateColumn] = global::System.Convert.DBNull;
+                this[this.tableBBSettingDetail.EditDateColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -978,22 +1384,22 @@ namespace DiamondDS.DS {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class BuyBookETCRowChangeEvent : global::System.EventArgs {
+        public class BBSettingDetailRowChangeEvent : global::System.EventArgs {
             
-            private BuyBookETCRow eventRow;
+            private BBSettingDetailRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public BuyBookETCRowChangeEvent(BuyBookETCRow row, global::System.Data.DataRowAction action) {
+            public BBSettingDetailRowChangeEvent(BBSettingDetailRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public BuyBookETCRow Row {
+            public BBSettingDetailRow Row {
                 get {
                     return this.eventRow;
                 }

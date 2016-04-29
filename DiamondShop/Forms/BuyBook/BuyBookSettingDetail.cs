@@ -9,124 +9,138 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DiamondShop.FormMaster;
 using DiamondDS.DS;
-using DiamondShop.DiamondService;
 
 namespace DiamondShop
 {
     public partial class BuyBookSettingDetail : FormInfo
     {
-        Service1 ser = GM.GetService();
-        dsDiamondCer tds = new dsDiamondCer();
+        ////Service1 ser = GM.GetService();
+        dsBuyBookSettingDetail tds = new dsBuyBookSettingDetail();
 
         public BuyBookSettingDetail()
         {
             InitializeComponent();
             Initial();
 
-            //binder.BindControl(dtDate, "CerDate");
-            //binder.BindControl(txtAmount, "GIANumber");
-            //binder.BindControl(cmbCompanyCer, "CompanyCer");
-            //binder.BindControl(cmbShapeAndCut, "ShapeAndCutting");
-            //binder.BindControl(txtMeasure1, "Measurement1");
-            //binder.BindControl(txtMeasure2, "Measurement2");
-            //binder.BindControl(txtMeasure3, "Measurement3");
-            //binder.BindControl(txtCarat, "Weight");
-            //binder.BindControl(cmbClarity, "ClarityGrade");
-            //binder.BindControl(cmbColorGrade, "ColorGrade");
-            //binder.BindControl(cmbColor, "Color");
-            //binder.BindControl(cmbFluores, "Fluorescence");
-            //binder.BindControl(cmbCutGrade, "CutGrade");
-            //binder.BindControl(cmbPolish, "Polish");
-            //binder.BindControl(cmbSymmetry, "Symmetry");
-            //binder.BindControl(txtComments, "Comment");
+            binder.BindControl(cmbSettingType, "SettingType");
+            binder.BindControl(txtAmount, "Amount");
+            binder.BindControl(txtWeight, "Weight");
+            binder.BindControl(txtLaborCost, "LaborCost");
+            binder.BindControl(cmbMaterial, "Material");
+            binder.BindControl(txtPricePerGram, "PricePerGram");
+            binder.BindControl(txtPricePerUnit, "PricePerUnit");
+            binder.BindControl(txtDetail, "Detail");
+            binder.BindControl(txtTotalUSD, "TotalUSD");
+            binder.BindControl(txtUSDRate, "USDRate");
+            binder.BindControl(txtTotalBaht, "TotalBaht");
         }
         public BuyBookSettingDetail(int id)
         {
             InitializeComponent();
             Initial();
 
-            //binder.BindControl(dtDate, "CerDate");
-            //binder.BindControl(txtAmount, "GIANumber");
-            //binder.BindControl(cmbCompanyCer, "CompanyCer");
-            //binder.BindControl(cmbShapeAndCut, "ShapeAndCutting");
-            //binder.BindControl(txtMeasure1, "Measurement1");
-            //binder.BindControl(txtMeasure2, "Measurement2");
-            //binder.BindControl(txtMeasure3, "Measurement3");
-            //binder.BindControl(txtCarat, "Weight");
-            //binder.BindControl(cmbClarity, "ClarityGrade");
-            //binder.BindControl(cmbColorGrade, "ColorGrade");
-            //binder.BindControl(cmbColor, "Color");
-            //binder.BindControl(cmbFluores, "Fluorescence");
-            //binder.BindControl(cmbCutGrade, "CutGrade");
-            //binder.BindControl(cmbPolish, "Polish");
-            //binder.BindControl(cmbSymmetry, "Symmetry");
-            //binder.BindControl(txtComments, "Comment");
+            binder.BindControl(cmbSettingType, "SettingType");
+            binder.BindControl(txtAmount, "Amount");
+            binder.BindControl(txtWeight, "Weight");
+            binder.BindControl(txtLaborCost, "LaborCost");
+            binder.BindControl(cmbMaterial, "Material");
+            binder.BindControl(txtPricePerGram, "PricePerGram");
+            binder.BindControl(txtPricePerUnit, "PricePerUnit");
+            binder.BindControl(txtDetail, "Detail");
+            binder.BindControl(txtTotalUSD, "TotalUSD");
+            binder.BindControl(txtUSDRate, "USDRate");
+            binder.BindControl(txtTotalBaht, "TotalBaht");
 
             this.id = id;
             LoadData();
         }
+        protected override void Initial()
+        {
+            cmbSettingType.DataSource = (GM.GetMasterTableDetail("C005")).Tables[0];
+            cmbSettingType.ValueMember = "ID";
+            cmbSettingType.DisplayMember = "Detail";
+            cmbSettingType.Refresh();
 
+            cmbMaterial.DataSource = (GM.GetMasterTableDetail("C014")).Tables[0];
+            cmbMaterial.ValueMember = "ID";
+            cmbMaterial.DisplayMember = "Detail";
+            cmbMaterial.Refresh();
+
+            //dtDate.Select();
+
+            //SetFieldService.SetRequireField(txtAmount, txtMeasure1, txtMeasure2, txtMeasure3, txtCarat);
+        }
         protected override void LoadData()
         {
-              ds = ser.DoSelectData("DiamondCer", id);
-              tds.Clear();
-              tds.Merge(ds);
+            //ds = ser.DoSelectData("BuyBookSettingDetail", id);
+            //tds.Clear();
+            //tds.Merge(ds);
 
-              if (tds.DiamondCer.Rows.Count > 0)
-              {
-                binder.BindValueToControl(tds.DiamondCer[0]);
-                if(tds.DiamondCer[0]["Inscription"].ToString() == "0")
-                {
-                    //chkNo.Checked = true;
-                    //chkYes.Checked = false;
-                }
-                else
-                {
-                    //chkYes.Checked = true;
-                    //chkNo.Checked = false;
-                }
-                  EnableDelete = true;
-              }
+            //if (tds.BBSettingDetail.Rows.Count > 0)
+            //{
+            //    binder.BindValueToControl(tds.BBSettingDetail[0]);
+            //    image1 = tds.BBSettingDetail[0].Image1;
 
-              base.LoadData();
+            //    if (tds.BuyBookGemstoneCer[0]["IsPaid"].ToString() == "0")
+            //    {
+            //        rdoYes.Checked = false;
+            //        rdoNo.Checked = true;
+            //    }
+            //    else
+            //    {
+            //        rdoYes.Checked = true;
+            //        rdoNo.Checked = false;
+            //    }
+
+            //    if (image1 != null)
+            //    {
+            //        ms1 = new MemoryStream(image1);
+            //        Image backImage1 = Image.FromStream(ms1);
+            //        Image1.BackgroundImage = backImage1;
+            //    }
+
+            //    EnableDelete = true;
+            //}
+
+            //base.LoadData();
         }
 
         protected override bool SaveData()
         {
-            dsDiamondCer.DiamondCerRow row = null;
+            //dsDiamondCer.DiamondCerRow row = null;
 
-            if (tds.DiamondCer.Rows.Count > 0)
-            {
-                row = tds.DiamondCer[0];
-            }
-            else
-            {
-                row = tds.DiamondCer.NewDiamondCerRow();
-                tds.DiamondCer.Rows.Add(row);
-            }
-            binder.BindValueToDataRow(row);
+            //if (tds.DiamondCer.Rows.Count > 0)
+            //{
+            //    row = tds.DiamondCer[0];
+            //}
+            //else
+            //{
+            //    row = tds.DiamondCer.NewDiamondCerRow();
+            //    tds.DiamondCer.Rows.Add(row);
+            //}
+            //binder.BindValueToDataRow(row);
 
-            try
-            {
-                if (id == 0)
-                {
-                    SetCreateBy(row);
-                    chkFlag = ser.DoInsertData("DiamondCer", tds);
-                }
-                else
-                {
-                    SetEditBy(row);
-                    chkFlag = ser.DoUpdateData("DiamondCer", tds);
-                }
+            //try
+            //{
+            //    if (id == 0)
+            //    {
+            //        SetCreateBy(row);
+            //        chkFlag = ser.DoInsertData("DiamondCer", tds);
+            //    }
+            //    else
+            //    {
+            //        SetEditBy(row);
+            //        chkFlag = ser.DoUpdateData("DiamondCer", tds);
+            //    }
 
-                tds.AcceptChanges();
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
+            //    tds.AcceptChanges();
+            //}
+            //catch (Exception ex)
+            //{
+            //    throw ex;
+            //}
 
-            return chkFlag;
+            //return chkFlag;
         }
         protected override bool DeleteData()
         {
@@ -164,52 +178,7 @@ namespace DiamondShop
             else { return false; }
         }
 
-        protected override void Initial()
-        {
-            //cmbCompanyCer.DataSource = (GM.GetMasterTableDetail("C020")).Tables[0];
-            //cmbCompanyCer.ValueMember = "ID";
-            //cmbCompanyCer.DisplayMember = "Detail";
-            //cmbCompanyCer.Refresh();
-
-            //cmbShapeAndCut.DataSource = (GM.GetMasterTableDetail("C019")).Tables[0];
-            //cmbShapeAndCut.ValueMember = "ID";
-            //cmbShapeAndCut.DisplayMember = "Detail";
-            //cmbShapeAndCut.Refresh();
-
-            //cmbClarity.DataSource = (GM.GetMasterTableDetail("C002")).Tables[0];
-            //cmbClarity.ValueMember = "ID";
-            //cmbClarity.DisplayMember = "Detail";
-            //cmbClarity.Refresh();
-
-            //cmbColorGrade.DataSource = (GM.GetMasterTableDetail("C025")).Tables[0];
-            //cmbColorGrade.ValueMember = "ID";
-            //cmbColorGrade.DisplayMember = "Detail";
-            //cmbColorGrade.Refresh();
-
-            //cmbCutGrade.DataSource = (GM.GetMasterTableDetail("C003")).Tables[0];
-            //cmbCutGrade.ValueMember = "ID";
-            //cmbCutGrade.DisplayMember = "Detail";
-            //cmbCutGrade.Refresh();
-
-            //cmbPolish.DataSource = (GM.GetMasterTableDetail("C003")).Tables[0];
-            //cmbPolish.ValueMember = "ID";
-            //cmbPolish.DisplayMember = "Detail";
-            //cmbPolish.Refresh();
-
-            //cmbSymmetry.DataSource = (GM.GetMasterTableDetail("C003")).Tables[0];
-            //cmbSymmetry.ValueMember = "ID";
-            //cmbSymmetry.DisplayMember = "Detail";
-            //cmbSymmetry.Refresh();
-
-            //cmbFluores.DataSource = (GM.GetMasterTableDetail("C018")).Tables[0];
-            //cmbFluores.ValueMember = "ID";
-            //cmbFluores.DisplayMember = "Detail";
-            //cmbFluores.Refresh();
-
-            //dtDate.Select();
-
-            //SetFieldService.SetRequireField(txtAmount, txtMeasure1, txtMeasure2, txtMeasure3, txtCarat);
-        }
+        
 
         private void cmbColorGrade_SelectedIndexChanged(object sender, EventArgs e)
         {

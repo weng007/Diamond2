@@ -3,21 +3,23 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DiamondShop.FormMaster;
-using DiamondDS.DS;
 using DiamondShop.DiamondService;
+using DiamondDS.DS;
 
 namespace DiamondShop
 {
     public partial class BuyBookGemstoneCer : FormInfo
     {
-        Service1 ser = GM.GetService();
         dsBuyBookGemstoneCer tds = new dsBuyBookGemstoneCer();
-
+        MemoryStream ms1;
+        byte[] image1;
+        
         public BuyBookGemstoneCer()
         {
             InitializeComponent();
@@ -128,7 +130,7 @@ namespace DiamondShop
             if (tds.BuyBookGemstoneCer.Rows.Count > 0)
             {
                 binder.BindValueToControl(tds.BuyBookGemstoneCer[0]);
-
+                image1 = tds.BuyBookGemstoneCer[0].Image1;
 
                 if (tds.BuyBookGemstoneCer[0]["IsPaid"].ToString() == "0")
                 {
@@ -139,6 +141,13 @@ namespace DiamondShop
                 {
                     rdoYes.Checked = true;
                     rdoNo.Checked = false;
+                }
+
+                if (image1 != null)
+                {
+                    ms1 = new MemoryStream(image1);
+                    Image backImage1 = Image.FromStream(ms1);
+                    btnImage1.BackgroundImage = backImage1;
                 }
 
                 EnableDelete = true;
@@ -161,6 +170,7 @@ namespace DiamondShop
                 tds.BuyBookGemstoneCer.Rows.Add(row);
             }
             binder.BindValueToDataRow(row);
+            row.Image1 = image1;
 
             try
             {
@@ -220,5 +230,18 @@ namespace DiamondShop
             else { return false; }
         }
 
+        private void btnImage1_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                btnImage1.BackgroundImage = Image.FromFile(openFileDialog1.FileName);
+
+                FileStream fs;
+                fs = new FileStream(openFileDialog1.FileName, FileMode.Open, FileAccess.Read);
+                image1 = new byte[fs.Length];
+                fs.Read(image1, 0, System.Convert.ToInt32(fs.Length));
+                fs.Close();
+            }
+        }
     }
 }

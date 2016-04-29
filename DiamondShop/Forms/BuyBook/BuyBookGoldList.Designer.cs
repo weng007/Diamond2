@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BuyBookGoldList));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.cmbShape = new System.Windows.Forms.ComboBox();
+            this.cmbPercentGold = new System.Windows.Forms.ComboBox();
             this.dtEBuyDate = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -66,7 +66,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(91)))), ((int)(((byte)(59)))));
-            this.panel4.Controls.Add(this.cmbShape);
+            this.panel4.Controls.Add(this.cmbPercentGold);
             this.panel4.Controls.Add(this.dtEBuyDate);
             this.panel4.Controls.Add(this.label2);
             this.panel4.Controls.Add(this.label1);
@@ -81,17 +81,17 @@
             this.panel4.TabIndex = 42;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
-            // cmbShape
+            // cmbPercentGold
             // 
-            this.cmbShape.FormattingEnabled = true;
-            this.cmbShape.Items.AddRange(new object[] {
+            this.cmbPercentGold.FormattingEnabled = true;
+            this.cmbPercentGold.Items.AddRange(new object[] {
             "0 All",
             "1 96.5%",
             "2 99.99%"});
-            this.cmbShape.Location = new System.Drawing.Point(238, 24);
-            this.cmbShape.Name = "cmbShape";
-            this.cmbShape.Size = new System.Drawing.Size(131, 29);
-            this.cmbShape.TabIndex = 1;
+            this.cmbPercentGold.Location = new System.Drawing.Point(238, 24);
+            this.cmbPercentGold.Name = "cmbPercentGold";
+            this.cmbPercentGold.Size = new System.Drawing.Size(131, 29);
+            this.cmbPercentGold.TabIndex = 1;
             // 
             // dtEBuyDate
             // 
@@ -274,8 +274,8 @@
             // BahtGold
             // 
             this.BahtGold.DataPropertyName = "BahtGold";
-            dataGridViewCellStyle1.Format = "dd/MM/yyyy";
-            this.BahtGold.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Format = "dd/MM/yyyy";
+            this.BahtGold.DefaultCellStyle = dataGridViewCellStyle3;
             this.BahtGold.HeaderText = "บาท";
             this.BahtGold.Name = "BahtGold";
             this.BahtGold.ReadOnly = true;
@@ -292,9 +292,9 @@
             // Total
             // 
             this.Total.DataPropertyName = "Total";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle2.Format = "N2";
-            this.Total.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle4.Format = "N2";
+            this.Total.DefaultCellStyle = dataGridViewCellStyle4;
             this.Total.HeaderText = "Total";
             this.Total.Name = "Total";
             this.Total.ReadOnly = true;
@@ -390,6 +390,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn PricePerGram2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Total1;
         private System.Windows.Forms.DataGridViewTextBoxColumn PricePerGram3;
-        private System.Windows.Forms.ComboBox cmbShape;
+        private System.Windows.Forms.ComboBox cmbPercentGold;
     }
 }

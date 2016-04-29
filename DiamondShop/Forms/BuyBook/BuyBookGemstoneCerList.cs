@@ -27,19 +27,10 @@ namespace DiamondShop
             cmbShape.DisplayMember = "Detail";
             cmbShape.Refresh();
 
-            //cmbColorGrade.DataSource = (GM.GetMasterTableDetail("C025",true)).Tables[0];
-            //cmbColorGrade.ValueMember = "ID";
-            //cmbColorGrade.DisplayMember = "Detail";
-            //cmbColorGrade.Refresh();
-
-            //cmbClarity.DataSource = (GM.GetMasterTableDetail("C002",true)).Tables[0];
-            //cmbClarity.ValueMember = "ID";
-            //cmbClarity.DisplayMember = "Detail";
-            //cmbClarity.Refresh();
 
             txtReportNumber.Select();
 
-            gridDiamondCer.AutoGenerateColumns = false;
+            gridGemstoneCer.AutoGenerateColumns = false;
         }
 
         protected override void DoLoadData()
@@ -48,13 +39,13 @@ namespace DiamondShop
 
             if (ds.Tables[0].Rows.Count > 0)
             {
-                gridDiamondCer.DataSource = ds.Tables[0];
-                gridDiamondCer.Refresh();
+                gridGemstoneCer.DataSource = ds.Tables[0];
+                gridGemstoneCer.Refresh();
             }
             else
             {
-                gridDiamondCer.DataSource = null;
-                gridDiamondCer.Refresh();
+                gridGemstoneCer.DataSource = null;
+                gridGemstoneCer.Refresh();
             }
         }
 
@@ -78,9 +69,9 @@ namespace DiamondShop
 
             if (chkFlag)
             {
-                if (gridDiamondCer.RowCount > 0 && gridDiamondCer.SelectedRows.Count > 0)
+                if (gridGemstoneCer.RowCount > 0 && gridGemstoneCer.SelectedRows.Count > 0)
                 {
-                    id = (int)gridDiamondCer.SelectedRows[0].Cells["ID"].Value;
+                    id = (int)gridGemstoneCer.SelectedRows[0].Cells["ID"].Value;
                     chkFlag = ser.DoDeleteData("DiamondCer", id);
                 }
             }
@@ -89,9 +80,9 @@ namespace DiamondShop
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            if (gridDiamondCer.RowCount > 0 && gridDiamondCer.SelectedRows.Count > 0)
+            if (gridGemstoneCer.RowCount > 0 && gridGemstoneCer.SelectedRows.Count > 0)
             {
-                id = (int)gridDiamondCer.SelectedRows[0].Cells["ID"].Value;
+                id = (int)gridGemstoneCer.SelectedRows[0].Cells["ID"].Value;
                 DiamondCer frm = new DiamondCer(id);
                 frm.ShowDialog();
             }
@@ -129,12 +120,18 @@ namespace DiamondShop
         {
             ser2 = GM.GetService2();
 
-            //ds = ser2.DoSearchDiamondCer(txtReportNumber.Text, GM.ConvertStringToDouble(txtSWeight), GM.ConvertStringToDouble(txtEWeight),
-            //    Convert.ToInt16(cmbShape.SelectedValue.ToString()), Convert.ToInt16(cmbColorGrade.SelectedValue.ToString()),
-            //    Convert.ToInt16(cmbColor.SelectedValue.ToString()), Convert.ToInt16(cmbClarity.SelectedValue.ToString()));
+            ds = ser2.DoSearchBuyBookGemstoneCer(txtCode.Text, txtReportNumber.Text, Convert.ToInt16(cmbShape.SelectedValue.ToString()),
+                Convert.ToInt16(cmbLab.SelectedValue.ToString()),
+                GM.ConvertStringToDouble(txtSWeight),
+                GM.ConvertStringToDouble(txtEWeight),
+                Convert.ToInt16(cmbIdentification.SelectedValue.ToString()),
+                Convert.ToInt16(cmbComment.SelectedValue.ToString()),
+                Convert.ToInt16(cmbOrigin.SelectedValue.ToString()),
+                Convert.ToInt16(cmbStatus.SelectedValue.ToString()),
+                Convert.ToInt16(cmbShop.SelectedValue.ToString()));
 
-            //gridDiamondCer.DataSource = ds.Tables[0];
-            //gridDiamondCer.Refresh();
+            gridGemstoneCer.DataSource = ds.Tables[0];
+            gridGemstoneCer.Refresh();
         }
 
         private void txtWeightTo_KeyPress(object sender, KeyPressEventArgs e)
@@ -143,6 +140,18 @@ namespace DiamondShop
             {
                 e.Handled = true;
             }
+        }
+
+        private void gridGemstoneCer_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if (gridGemstoneCer.RowCount > 0 && gridGemstoneCer.SelectedRows.Count > 0)
+            {
+                id = (int)gridGemstoneCer.SelectedRows[0].Cells["ID"].Value;
+                DiamondCer frm = new DiamondCer(id);
+                frm.ShowDialog();
+            }
+
+            DoLoadData();
         }
     }
 }

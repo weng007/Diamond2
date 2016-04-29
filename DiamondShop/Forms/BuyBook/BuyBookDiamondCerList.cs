@@ -147,7 +147,7 @@ namespace DiamondShop
             if (gridDiamondCer.RowCount > 0 && gridDiamondCer.SelectedRows.Count > 0)
             {
                 id = (int)gridDiamondCer.SelectedRows[0].Cells["ID"].Value;
-                DiamondCer frm = new DiamondCer(id);
+                BuyBookDiamondCer frm = new BuyBookDiamondCer(id);
                 frm.ShowDialog();
             }
 

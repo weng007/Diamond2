@@ -15,7 +15,7 @@ namespace DiamondShop
 {
     public partial class BuyBookETC : FormInfo
     {
-        Service1 ser = GM.GetService();
+        //Service1 ser = GM.GetService();
         dsBuyBookETC tds = new dsBuyBookETC();
 
         public BuyBookETC()

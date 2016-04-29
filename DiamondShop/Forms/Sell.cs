@@ -16,7 +16,7 @@ namespace DiamondShop
 {
     public partial class Sell : FormInfo
     {
-        Service1 ser = GM.GetService();
+        //Service1 ser = GM.GetService();
         dsSell tds = new dsSell();
         MemoryStream ms1;
         MemoryStream ms2;
