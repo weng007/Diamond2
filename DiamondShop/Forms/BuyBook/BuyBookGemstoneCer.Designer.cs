@@ -94,7 +94,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.cmbShape = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -112,7 +111,6 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.cmbShape);
             this.panel3.Controls.Add(this.comboBox1);
             this.panel3.Controls.Add(this.cmbOrigin);
             this.panel3.Controls.Add(this.label29);
@@ -773,20 +771,10 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(473, 55);
+            this.comboBox1.Location = new System.Drawing.Point(473, 52);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(157, 29);
-            this.comboBox1.TabIndex = 5;
-            // 
-            // cmbShape
-            // 
-            this.cmbShape.AutoSize = true;
-            this.cmbShape.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.cmbShape.Location = new System.Drawing.Point(333, 60);
-            this.cmbShape.Name = "cmbShape";
-            this.cmbShape.Size = new System.Drawing.Size(130, 21);
-            this.cmbShape.TabIndex = 195;
-            this.cmbShape.Text = "Report Number";
+            this.comboBox1.TabIndex = 196;
             // 
             // BuyBookGemstoneCer
             // 
@@ -871,7 +859,6 @@
         private System.Windows.Forms.ComboBox cmbOrigin;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.Label cmbShape;
         private System.Windows.Forms.ComboBox comboBox1;
     }
 }

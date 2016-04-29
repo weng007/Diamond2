@@ -186,6 +186,20 @@ namespace Diamond
             }
         }
 
+        [WebMethod]
+        public DataSet DoSearchBuyBookSettingDetail(int settingtype, DateTime sSBuydate, DateTime eBuydate)
+        {
+            BuyBookSettingDetailBiz biz = new BuyBookSettingDetailBiz();
+
+            try
+            {
+                return biz.DoSearchData(settingtype, sSBuydate, eBuydate);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
 
         [WebMethod]
         public DataSet DoSearchBuyBookSpecial(string search)

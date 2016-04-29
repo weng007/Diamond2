@@ -35,7 +35,7 @@ namespace DiamondShop
 
         protected override void DoLoadData()
         {
-            ds = ser.DoSelectData("DiamondCer", -1);
+            ds = ser.DoSelectData("BuyBookGemstoneCer", -1);
 
             if (ds.Tables[0].Rows.Count > 0)
             {
@@ -51,7 +51,7 @@ namespace DiamondShop
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            DiamondCer frm = new DiamondCer();
+            BuyBookGemstoneCer frm = new BuyBookGemstoneCer();
             frm.ShowDialog();
 
             DoLoadData();

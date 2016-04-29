@@ -24,32 +24,43 @@ namespace DiamondShop
 
         protected override void Initial()
         {
-            //cmbShop.DataSource = (GM.GetMasterTableDetail("C007",true)).Tables[0];
-            //cmbShop.ValueMember = "ID";
-            //cmbShop.DisplayMember = "Detail";
-            //cmbShop.Refresh();
-
-            //cmbStatus.DataSource = (GM.GetMasterTableDetail("C023",true)).Tables[0];
-            //cmbStatus.ValueMember = "ID";
-            //cmbStatus.DisplayMember = "Detail";
-            //cmbStatus.Refresh();
-
-            //cmbJewelryType.DataSource = (GM.GetMasterTableDetail("C015",true)).Tables[0];
-            //cmbJewelryType.ValueMember = "ID";
-            //cmbJewelryType.DisplayMember = "Detail";
-            //cmbJewelryType.Refresh();
+            cmbSettingType.DataSource = (GM.GetMasterTableDetail("C005")).Tables[0];
+            cmbSettingType.ValueMember = "ID";
+            cmbSettingType.DisplayMember = "Detail";
+            cmbSettingType.Refresh();
 
             //txtSearch.Select();
 
             gridSetting.AutoGenerateColumns = false;
         }
 
+        protected override void DoLoadData()
+        {
+            ds = ser.DoSelectData("BBSettingDetail", -1);
+
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                gridSetting.DataSource = ds.Tables[0];
+                gridSetting.Refresh();
+            }
+            else
+            {
+                gridSetting.DataSource = null;
+                gridSetting.Refresh();
+            }
+        }
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            BuyBookSetting frm = new BuyBookSetting();
+            frm.ShowDialog();
+            DoLoadData();
+        }
+
         private void DoSearchData()
         {
             ser2 = GM.GetService2();
 
-            //ds = ser2.DoSearchProduct(txtSearch.Text, Convert.ToInt16(cmbShop.SelectedValue.ToString()),
-            //       Convert.ToInt16(cmbStatus.SelectedValue.ToString()), Convert.ToInt16(cmbJewelryType.SelectedValue.ToString()));
+            ds = ser2.DoSearchBuyBookSettingDetail(Convert.ToInt16(cmbSettingType.SelectedValue.ToString()), Convert.ToDateTime(dtSBuyDate.Text),Convert.ToDateTime(dtEBuyDate.Text));
 
             if (ds.Tables[0].Rows.Count > 0)
             {
@@ -58,29 +69,38 @@ namespace DiamondShop
             }
             else { gridSetting.DataSource = null; gridSetting.Refresh(); }
         }
-
-        protected override void DoLoadData()
-        {
-            ds = ser.DoSelectData("Product", -1);
-
-            if (ds.Tables["Product"].Rows.Count > 0)
-            {
-                gridSetting.DataSource = ds.Tables["Product"];
-                gridSetting.Refresh();
-            }
-            else { gridSetting.DataSource = null; gridSetting.Refresh(); }
-        }
-
-        private void btnAdd_Click(object sender, EventArgs e)
-        {
-            BuyBookSetting frm = new BuyBookSetting();
-            frm.ShowDialog();
-            DoLoadData();
-        }
-
         private void btnSearch_Click(object sender, EventArgs e)
         {
             DoSearchData();
+        }
+
+        protected override bool DoDeleteData()
+        {
+            Popup.Popup winMessage = new Popup.Popup("Do you want to Delete data?");
+            winMessage.ShowDialog();
+            chkFlag = winMessage.result;
+
+            if (chkFlag)
+            {
+                if (gridSetting.RowCount > 0 && gridSetting.SelectedRows.Count > 0)
+                {
+                    id = (int)gridSetting.SelectedRows[0].Cells["ID"].Value;
+                    chkFlag = ser.DoDeleteData("BBSettingDetail", id);
+                }
+            }
+            return chkFlag;
+        }
+
+        private void gridSetting_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if (gridSetting.RowCount > 0 && gridSetting.SelectedRows.Count > 0)
+            {
+                id = (int)gridSetting.SelectedRows[0].Cells["ID"].Value;
+                BuyBookDiamondCer frm = new BuyBookDiamondCer(id);
+                frm.ShowDialog();
+            }
+
+            DoLoadData();
         }
     }
 }

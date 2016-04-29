@@ -24,6 +24,7 @@ namespace Diamond
         static BuyBookSpecialBiz bizBuyBookSpecial;
         static BuyBookJewelryBiz bizBuyBookJewelry;
         static BuyBookETCBiz bizBuyBookETC;
+        static BuyBookSettingDetailBiz bizBuyBookSettingDetail;
         static ProductBiz bizProduct;
         static DiamondCerBiz bizDiamondCer;
         static DiamondDetailBiz bizDiamondDetail;
@@ -121,6 +122,11 @@ namespace Diamond
         {
             if (BuyBookGoldDS == null) { return new dsBuyBookGold(); }
             else { return BuyBookGoldDS; }
+        }
+        public static BuyBookSettingDetailBiz GetBuyBookSettingDetailBiz()
+        {
+            if (bizBuyBookSettingDetail == null) { return new BuyBookSettingDetailBiz(); }
+            else { return bizBuyBookSettingDetail; }
         }
         public static BuyBookSpecialBiz GetBuyBookSpecialBiz()
         {

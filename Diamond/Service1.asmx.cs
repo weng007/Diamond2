@@ -141,6 +141,18 @@ namespace Diamond
                     throw ex;
                 }
             }
+            else if (TableName == "BuyBookSettingDetail")
+            {
+                BuyBookSettingDetailBiz biz = GM.GetBuyBookSettingDetailBiz();
+                try
+                {
+                    return biz.DoSelectData(id);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
             else if (TableName == "BuyBookSpecial")
             {
                 BuyBookSpecialBiz biz = GM.GetBuyBookSpecialBiz();
@@ -385,6 +397,21 @@ namespace Diamond
             {
                 BuyBookGoldBiz biz = GM.GetBuyBookGoldBiz();
                 dsBuyBookGold ds1 = GM.GetDSBuyBookGold();
+                ds1.Merge(ds);
+
+                try
+                {
+                    flag = biz.DoInsertData(ds1);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            else if (TableName == "BuyBookSettingDetail")
+            {
+                BuyBookSettingDetailBiz biz = GM.GetBuyBookSettingDetailBiz();
+                dsBuyBookSettingDetail ds1 = new dsBuyBookSettingDetail();
                 ds1.Merge(ds);
 
                 try
@@ -685,6 +712,22 @@ namespace Diamond
                     throw ex;
                 }
             }
+            else if (TableName == "BuyBookSettingDetail")
+            {
+                BuyBookSettingDetailBiz biz = GM.GetBuyBookSettingDetailBiz();
+                dsBuyBookSettingDetail ds1 =  new dsBuyBookSettingDetail();
+
+                ds1.Merge(ds);
+
+                try
+                {
+                    flag = biz.DoUpdateData(ds1);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
             else if (TableName == "BuyBookSpecial")
             {
                 BuyBookSpecialBiz biz = GM.GetBuyBookSpecialBiz();
@@ -917,6 +960,18 @@ namespace Diamond
             else if (TableName == "BuyBookGold")
             {
                 BuyBookGoldBiz biz = GM.GetBuyBookGoldBiz();
+                try
+                {
+                    flag = biz.DoDeleteData(id);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            else if (TableName == "BuyBookSettingDetail")
+            {
+                BuyBookSettingDetailBiz biz = GM.GetBuyBookSettingDetailBiz();
                 try
                 {
                     flag = biz.DoDeleteData(id);

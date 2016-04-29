@@ -46,7 +46,7 @@
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BuyDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Seller = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SettingType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Material = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Weight = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TotalBaht = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -182,7 +182,7 @@
             this.ID,
             this.BuyDate,
             this.Seller,
-            this.Type,
+            this.SettingType,
             this.Material,
             this.Weight,
             this.TotalBaht,
@@ -196,6 +196,7 @@
             this.gridSetting.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridSetting.Size = new System.Drawing.Size(995, 424);
             this.gridSetting.TabIndex = 2;
+            this.gridSetting.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.gridSetting_MouseDoubleClick);
             // 
             // RowNum
             // 
@@ -228,16 +229,16 @@
             this.Seller.ReadOnly = true;
             this.Seller.Width = 120;
             // 
-            // Type
+            // SettingType
             // 
-            this.Type.DataPropertyName = "Type";
+            this.SettingType.DataPropertyName = "SettingType";
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.Format = "dd/MM/yyyy";
-            this.Type.DefaultCellStyle = dataGridViewCellStyle1;
-            this.Type.HeaderText = "Type";
-            this.Type.Name = "Type";
-            this.Type.ReadOnly = true;
-            this.Type.Width = 120;
+            this.SettingType.DefaultCellStyle = dataGridViewCellStyle1;
+            this.SettingType.HeaderText = "Type";
+            this.SettingType.Name = "SettingType";
+            this.SettingType.ReadOnly = true;
+            this.SettingType.Width = 120;
             // 
             // Material
             // 
@@ -307,7 +308,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn BuyDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn Seller;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Type;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SettingType;
         private System.Windows.Forms.DataGridViewTextBoxColumn Material;
         private System.Windows.Forms.DataGridViewTextBoxColumn Weight;
         private System.Windows.Forms.DataGridViewTextBoxColumn TotalBaht;
