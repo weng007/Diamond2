@@ -27,24 +27,14 @@ namespace DiamondShop
             cmbShape.DisplayMember = "Detail";
             cmbShape.Refresh();
 
-            //cmbColorGrade.DataSource = (GM.GetMasterTableDetail("C025",true)).Tables[0];
-            //cmbColorGrade.ValueMember = "ID";
-            //cmbColorGrade.DisplayMember = "Detail";
-            //cmbColorGrade.Refresh();
-
-            //cmbClarity.DataSource = (GM.GetMasterTableDetail("C002",true)).Tables[0];
-            //cmbClarity.ValueMember = "ID";
-            //cmbClarity.DisplayMember = "Detail";
-            //cmbClarity.Refresh();
-
-            //txtSearch.Select();
+            txtCode.Select();
 
             gridDiamond.AutoGenerateColumns = false;
         }
 
         protected override void DoLoadData()
         {
-            ds = ser.DoSelectData("DiamondCer", -1);
+            ds = ser.DoSelectData("BuyBookDiamond", -1);
 
             if (ds.Tables[0].Rows.Count > 0)
             {
@@ -60,51 +50,24 @@ namespace DiamondShop
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            DiamondCer frm = new DiamondCer();
+            BuyBookDiamond frm = new BuyBookDiamond();
             frm.ShowDialog();
 
             DoLoadData();
-        }
-
-        private void cmbColorGrade_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string color = "";
-
-            //if(cmbColorGrade.SelectedIndex == 0)
-            //{
-            //    cmbColor.Enabled = false;
-            //    color = "C001";
-            //}
-            //else if(cmbColorGrade.SelectedIndex == 1)
-            //{
-            //    color = "C001";
-            //    cmbColor.Enabled = true;     
-            //}
-            //else
-            //{
-            //    color = "C017";
-            //    cmbColor.Enabled = true;
-            //}
-
-            //cmbColor.DataSource = (GM.GetMasterTableDetail(color,true)).Tables[0];
-            //cmbColor.ValueMember = "ID";
-            //cmbColor.DisplayMember = "Detail";
-            //cmbColor.Refresh();
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
             ser2 = GM.GetService2();
 
-            //ds = ser2.DoSearchDiamondCer(txtSearch.Text, GM.ConvertStringToDouble(txtSSize), GM.ConvertStringToDouble(txtWeightTo),
-            //    Convert.ToInt16(cmbShape.SelectedValue.ToString()), Convert.ToInt16(cmbColorGrade.SelectedValue.ToString()),
-            //    Convert.ToInt16(cmbColor.SelectedValue.ToString()), Convert.ToInt16(cmbClarity.SelectedValue.ToString()));
+            ds = ser2.DoSearchBuyBookDiamond(txtCode.Text, GM.ConvertStringToDouble(txtSSize), GM.ConvertStringToDouble(txtESize), Convert.ToInt16(cmbShape.SelectedValue.ToString()));
 
             gridDiamond.DataSource = ds.Tables[0];
             gridDiamond.Refresh();
+
         }
 
-        private void txtWeightTo_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtSSize_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
             {

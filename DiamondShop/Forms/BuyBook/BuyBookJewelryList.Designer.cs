@@ -33,6 +33,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
             this.txtPrefix = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
@@ -58,8 +59,8 @@
             this.Weight4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cost = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MinPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Shop = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ShopName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StatusName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Seller = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel4.SuspendLayout();
@@ -70,6 +71,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(91)))), ((int)(((byte)(59)))));
+            this.panel4.Controls.Add(this.label6);
             this.panel4.Controls.Add(this.btnAdd);
             this.panel4.Controls.Add(this.txtPrefix);
             this.panel4.Controls.Add(this.btnSearch);
@@ -80,6 +82,17 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1327, 119);
             this.panel4.TabIndex = 42;
+            // 
+            // label6
+            // 
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(251, 25);
+            this.label6.Margin = new System.Windows.Forms.Padding(0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(15, 25);
+            this.label6.TabIndex = 70;
+            this.label6.Text = "-";
             // 
             // btnAdd
             // 
@@ -99,10 +112,12 @@
             // 
             // txtPrefix
             // 
+            this.txtPrefix.Enabled = false;
             this.txtPrefix.Location = new System.Drawing.Point(196, 23);
             this.txtPrefix.Name = "txtPrefix";
-            this.txtPrefix.Size = new System.Drawing.Size(40, 27);
+            this.txtPrefix.Size = new System.Drawing.Size(52, 27);
             this.txtPrefix.TabIndex = 1;
+            this.txtPrefix.Text = "JWR";
             // 
             // btnSearch
             // 
@@ -121,7 +136,7 @@
             // 
             // txtCode
             // 
-            this.txtCode.Location = new System.Drawing.Point(242, 23);
+            this.txtCode.Location = new System.Drawing.Point(269, 23);
             this.txtCode.Name = "txtCode";
             this.txtCode.Size = new System.Drawing.Size(132, 27);
             this.txtCode.TabIndex = 4;
@@ -220,8 +235,8 @@
             this.Weight4,
             this.Cost,
             this.MinPrice,
-            this.Shop,
-            this.Status,
+            this.ShopName,
+            this.StatusName,
             this.Seller});
             this.gridJewelry.Location = new System.Drawing.Point(0, 32);
             this.gridJewelry.Name = "gridJewelry";
@@ -352,20 +367,20 @@
             this.MinPrice.ReadOnly = true;
             this.MinPrice.Width = 110;
             // 
-            // Shop
+            // ShopName
             // 
-            this.Shop.DataPropertyName = "Shop";
-            this.Shop.HeaderText = "Shop";
-            this.Shop.Name = "Shop";
-            this.Shop.ReadOnly = true;
+            this.ShopName.DataPropertyName = "ShopName";
+            this.ShopName.HeaderText = "Shop";
+            this.ShopName.Name = "ShopName";
+            this.ShopName.ReadOnly = true;
             // 
-            // Status
+            // StatusName
             // 
-            this.Status.DataPropertyName = "Status";
-            this.Status.HeaderText = "Status";
-            this.Status.Name = "Status";
-            this.Status.ReadOnly = true;
-            this.Status.Width = 90;
+            this.StatusName.DataPropertyName = "StatusName";
+            this.StatusName.HeaderText = "Status";
+            this.StatusName.Name = "StatusName";
+            this.StatusName.ReadOnly = true;
+            this.StatusName.Width = 90;
             // 
             // Seller
             // 
@@ -407,6 +422,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataGridViewTextBoxColumn RowNum;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Code;
@@ -421,8 +437,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Weight4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cost;
         private System.Windows.Forms.DataGridViewTextBoxColumn MinPrice;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Shop;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Status;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ShopName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn StatusName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Seller;
     }
 }

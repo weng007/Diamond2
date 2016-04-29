@@ -175,13 +175,13 @@ namespace DiamondShop
 
                 if (tds.BuyBookDiamondCer[0]["IsPaid"].ToString() == "0")
                 {
-                    rdoPayment1.Checked = false;
-                    rdoPayment2.Checked = true;
+                    rdoYes.Checked = false;
+                    rdoNo.Checked = true;
                 }
                 else
                 {
-                    rdoPayment1.Checked = true;
-                    rdoPayment2.Checked = false;
+                    rdoYes.Checked = true;
+                    rdoNo.Checked = false;
                 }
 
                 EnableDelete = true;

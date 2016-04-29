@@ -58,7 +58,7 @@
             this.label23 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.dtDueDate = new System.Windows.Forms.DateTimePicker();
-            this.radPament2 = new System.Windows.Forms.RadioButton();
+            this.rdoPayment2 = new System.Windows.Forms.RadioButton();
             this.rdoPayment1 = new System.Windows.Forms.RadioButton();
             this.label12 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -127,7 +127,7 @@
             this.panel3.Controls.Add(this.label23);
             this.panel3.Controls.Add(this.label21);
             this.panel3.Controls.Add(this.dtDueDate);
-            this.panel3.Controls.Add(this.radPament2);
+            this.panel3.Controls.Add(this.rdoPayment2);
             this.panel3.Controls.Add(this.rdoPayment1);
             this.panel3.Controls.Add(this.label12);
             this.panel3.Controls.Add(this.label4);
@@ -424,18 +424,18 @@
             this.dtDueDate.Size = new System.Drawing.Size(131, 27);
             this.dtDueDate.TabIndex = 48;
             // 
-            // radPament2
+            // rdoPayment2
             // 
-            this.radPament2.AutoSize = true;
-            this.radPament2.Checked = true;
-            this.radPament2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.radPament2.Location = new System.Drawing.Point(824, 100);
-            this.radPament2.Name = "radPament2";
-            this.radPament2.Size = new System.Drawing.Size(50, 25);
-            this.radPament2.TabIndex = 44;
-            this.radPament2.TabStop = true;
-            this.radPament2.Text = "No";
-            this.radPament2.UseVisualStyleBackColor = true;
+            this.rdoPayment2.AutoSize = true;
+            this.rdoPayment2.Checked = true;
+            this.rdoPayment2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
+            this.rdoPayment2.Location = new System.Drawing.Point(824, 100);
+            this.rdoPayment2.Name = "rdoPayment2";
+            this.rdoPayment2.Size = new System.Drawing.Size(50, 25);
+            this.rdoPayment2.TabIndex = 44;
+            this.rdoPayment2.TabStop = true;
+            this.rdoPayment2.Text = "No";
+            this.rdoPayment2.UseVisualStyleBackColor = true;
             // 
             // rdoPayment1
             // 
@@ -730,7 +730,7 @@
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.DateTimePicker dtDueDate;
-        private System.Windows.Forms.RadioButton radPament2;
+        private System.Windows.Forms.RadioButton rdoPayment2;
         private System.Windows.Forms.RadioButton rdoPayment1;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label17;

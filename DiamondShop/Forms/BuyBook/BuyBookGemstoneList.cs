@@ -27,24 +27,14 @@ namespace DiamondShop
             cmbShape.DisplayMember = "Detail";
             cmbShape.Refresh();
 
-            //cmbColorGrade.DataSource = (GM.GetMasterTableDetail("C025",true)).Tables[0];
-            //cmbColorGrade.ValueMember = "ID";
-            //cmbColorGrade.DisplayMember = "Detail";
-            //cmbColorGrade.Refresh();
-
-            //cmbClarity.DataSource = (GM.GetMasterTableDetail("C002",true)).Tables[0];
-            //cmbClarity.ValueMember = "ID";
-            //cmbClarity.DisplayMember = "Detail";
-            //cmbClarity.Refresh();
-
-            //txtSearch.Select();
+            txtCode.Select();
 
             gridGemstone.AutoGenerateColumns = false;
         }
 
         protected override void DoLoadData()
         {
-            ds = ser.DoSelectData("DiamondCer", -1);
+            ds = ser.DoSelectData("BuyBookGemstone", -1);
 
             if (ds.Tables[0].Rows.Count > 0)
             {
@@ -60,7 +50,7 @@ namespace DiamondShop
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            DiamondCer frm = new DiamondCer();
+            BuyBookGemstone frm = new BuyBookGemstone();
             frm.ShowDialog();
 
             DoLoadData();
@@ -129,15 +119,13 @@ namespace DiamondShop
         {
             ser2 = GM.GetService2();
 
-            //ds = ser2.DoSearchDiamondCer(txtSearch.Text, GM.ConvertStringToDouble(txtWeightForm), GM.ConvertStringToDouble(txtWeightTo),
-            //    Convert.ToInt16(cmbShape.SelectedValue.ToString()), Convert.ToInt16(cmbColorGrade.SelectedValue.ToString()),
-            //    Convert.ToInt16(cmbColor.SelectedValue.ToString()), Convert.ToInt16(cmbClarity.SelectedValue.ToString()));
+            ds = ser2.DoSearchBuyBookGemstone(txtCode.Text, GM.ConvertStringToDouble(txtSize), cmbShape.SelectedValue.ToString());
 
             gridGemstone.DataSource = ds.Tables[0];
             gridGemstone.Refresh();
         }
 
-        private void txtWeightTo_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtSize_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
             {

@@ -42,20 +42,20 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.gridDiamond = new System.Windows.Forms.DataGridView();
+            this.tds = new DiamondDS.DS.dsDiamondCer();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RowNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BuyDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Seller = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Shape = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ShapeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Weight = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Color = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Clearity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColorName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ClearityName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PriceCaratUSD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PriceCaratBaht = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MarketPriceBaht = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tds = new DiamondDS.DS.dsDiamondCer();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -100,6 +100,7 @@
             this.txtESize.TabIndex = 12;
             this.txtESize.Text = "0";
             this.txtESize.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtESize.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSSize_KeyPress);
             // 
             // txtCode
             // 
@@ -142,7 +143,7 @@
             this.txtSSize.TabIndex = 8;
             this.txtSSize.Text = "0";
             this.txtSSize.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtSSize.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtWeightTo_KeyPress);
+            this.txtSSize.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSSize_KeyPress);
             // 
             // label5
             // 
@@ -210,11 +211,11 @@
             this.Code,
             this.BuyDate,
             this.Seller,
-            this.Shape,
+            this.ShapeName,
             this.Amount,
             this.Weight,
-            this.Color,
-            this.Clearity,
+            this.ColorName,
+            this.ClearityName,
             this.PriceCaratUSD,
             this.PriceCaratBaht,
             this.MarketPriceBaht});
@@ -228,6 +229,11 @@
             this.gridDiamond.Size = new System.Drawing.Size(1301, 415);
             this.gridDiamond.TabIndex = 2;
             this.gridDiamond.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridDiamond_CellContentDoubleClick);
+            // 
+            // tds
+            // 
+            this.tds.DataSetName = "dsDiamondCer";
+            this.tds.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // ID
             // 
@@ -270,13 +276,13 @@
             this.Seller.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Seller.Width = 110;
             // 
-            // Shape
+            // ShapeName
             // 
-            this.Shape.DataPropertyName = "Shape";
-            this.Shape.HeaderText = "Shape";
-            this.Shape.Name = "Shape";
-            this.Shape.ReadOnly = true;
-            this.Shape.Width = 90;
+            this.ShapeName.DataPropertyName = "ShapeName";
+            this.ShapeName.HeaderText = "Shape";
+            this.ShapeName.Name = "ShapeName";
+            this.ShapeName.ReadOnly = true;
+            this.ShapeName.Width = 90;
             // 
             // Amount
             // 
@@ -294,21 +300,21 @@
             this.Weight.ReadOnly = true;
             this.Weight.Width = 60;
             // 
-            // Color
+            // ColorName
             // 
-            this.Color.DataPropertyName = "Color";
-            this.Color.HeaderText = "Color";
-            this.Color.Name = "Color";
-            this.Color.ReadOnly = true;
-            this.Color.Width = 90;
+            this.ColorName.DataPropertyName = "ColorName";
+            this.ColorName.HeaderText = "Color";
+            this.ColorName.Name = "ColorName";
+            this.ColorName.ReadOnly = true;
+            this.ColorName.Width = 90;
             // 
-            // Clearity
+            // ClearityName
             // 
-            this.Clearity.DataPropertyName = "Clearity";
-            this.Clearity.HeaderText = "Clearity";
-            this.Clearity.Name = "Clearity";
-            this.Clearity.ReadOnly = true;
-            this.Clearity.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ClearityName.DataPropertyName = "ClearityName";
+            this.ClearityName.HeaderText = "Clearity";
+            this.ClearityName.Name = "ClearityName";
+            this.ClearityName.ReadOnly = true;
+            this.ClearityName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // PriceCaratUSD
             // 
@@ -335,11 +341,6 @@
             this.MarketPriceBaht.Name = "MarketPriceBaht";
             this.MarketPriceBaht.ReadOnly = true;
             this.MarketPriceBaht.Width = 150;
-            // 
-            // tds
-            // 
-            this.tds.DataSetName = "dsDiamondCer";
-            this.tds.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // BuyBookDiamondList
             // 
@@ -381,11 +382,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Code;
         private System.Windows.Forms.DataGridViewTextBoxColumn BuyDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn Seller;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Shape;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ShapeName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Amount;
         private System.Windows.Forms.DataGridViewTextBoxColumn Weight;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Color;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Clearity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColorName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ClearityName;
         private System.Windows.Forms.DataGridViewTextBoxColumn PriceCaratUSD;
         private System.Windows.Forms.DataGridViewTextBoxColumn PriceCaratBaht;
         private System.Windows.Forms.DataGridViewTextBoxColumn MarketPriceBaht;

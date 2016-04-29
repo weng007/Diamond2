@@ -24,48 +24,18 @@ namespace DiamondShop
 
         protected override void Initial()
         {
-            //cmbShop.DataSource = (GM.GetMasterTableDetail("C007",true)).Tables[0];
-            //cmbShop.ValueMember = "ID";
-            //cmbShop.DisplayMember = "Detail";
-            //cmbShop.Refresh();
 
-            //cmbStatus.DataSource = (GM.GetMasterTableDetail("C023",true)).Tables[0];
-            //cmbStatus.ValueMember = "ID";
-            //cmbStatus.DisplayMember = "Detail";
-            //cmbStatus.Refresh();
-
-            //cmbJewelryType.DataSource = (GM.GetMasterTableDetail("C015",true)).Tables[0];
-            //cmbJewelryType.ValueMember = "ID";
-            //cmbJewelryType.DisplayMember = "Detail";
-            //cmbJewelryType.Refresh();
-
-            //txtSearch.Select();
+            txtSeller.Select();
 
             gridETC.AutoGenerateColumns = false;
         }
-
-        private void DoSearchData()
+        protected override void DoLoadData()
         {
-            ser2 = GM.GetService2();
-
-            //ds = ser2.DoSearchProduct(txtSearch.Text, Convert.ToInt16(cmbShop.SelectedValue.ToString()),
-            //       Convert.ToInt16(cmbStatus.SelectedValue.ToString()), Convert.ToInt16(cmbJewelryType.SelectedValue.ToString()));
+            ds = ser.DoSelectData("BuyBookETC", -1);
 
             if (ds.Tables[0].Rows.Count > 0)
             {
-                gridETC.DataSource = ds.Tables["Product"];
-                gridETC.Refresh();
-            }
-            else { gridETC.DataSource = null; gridETC.Refresh(); }
-        }
-
-        protected override void DoLoadData()
-        {
-            ds = ser.DoSelectData("Product", -1);
-
-            if (ds.Tables["Product"].Rows.Count > 0)
-            {
-                gridETC.DataSource = ds.Tables["Product"];
+                gridETC.DataSource = ds.Tables[0];
                 gridETC.Refresh();
             }
             else { gridETC.DataSource = null; gridETC.Refresh(); }
@@ -83,14 +53,25 @@ namespace DiamondShop
             DoSearchData();
         }
 
+        private void DoSearchData()
+        {
+            ser2 = GM.GetService2();
 
-        private void gridETC_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                gridETC.DataSource = ds.Tables[0];
+                gridETC.Refresh();
+            }
+            else { gridETC.DataSource = null; gridETC.Refresh(); }
+        }
+
+        private void gridETC_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             if (gridETC.RowCount > 0 && gridETC.SelectedRows.Count > 0)
             {
-                //id = (int)gridETC.SelectedRows[0].Cells["ID"].Value;
-                //BuyBookETC frm = new BuyBookETC(id);
-                //frm.ShowDialog();
+                id = (int)gridETC.SelectedRows[0].Cells["ID"].Value;
+                Seller frm = new Seller(id);
+                frm.ShowDialog();
             }
 
             DoLoadData();

@@ -84,7 +84,7 @@ namespace DiamondShop
         private void menuJewelry_Click(object sender, EventArgs e)
         {
             BuyBookJewelryList frm = new BuyBookJewelryList();
-            SetFormList(frm, 8, "BuyBookJewelryList");
+            SetFormList(frm, 10, "BuyBookJewelryList");
         }
 
         private void menuNonCerDiamond_Click(object sender, EventArgs e)
