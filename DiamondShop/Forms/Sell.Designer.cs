@@ -32,12 +32,12 @@
             this.btnImage1 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnBrowseCustomer = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtCustomer = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.btnPrint = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtNetPrice = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cmbShopRecive = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -86,13 +86,13 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Controls.Add(this.btnBrowseCustomer);
-            this.panel3.Controls.Add(this.textBox4);
+            this.panel3.Controls.Add(this.txtCustomer);
             this.panel3.Controls.Add(this.label8);
             this.panel3.Controls.Add(this.btnPrint);
             this.panel3.Controls.Add(this.btnImage1);
-            this.panel3.Controls.Add(this.textBox3);
+            this.panel3.Controls.Add(this.txtNetPrice);
             this.panel3.Controls.Add(this.label7);
-            this.panel3.Controls.Add(this.comboBox2);
+            this.panel3.Controls.Add(this.cmbShopRecive);
             this.panel3.Controls.Add(this.label6);
             this.panel3.Controls.Add(this.textBox2);
             this.panel3.Controls.Add(this.label4);
@@ -141,14 +141,14 @@
             this.btnBrowseCustomer.TabIndex = 40;
             this.btnBrowseCustomer.UseVisualStyleBackColor = false;
             // 
-            // textBox4
+            // txtCustomer
             // 
-            this.textBox4.BackColor = System.Drawing.Color.White;
-            this.textBox4.Location = new System.Drawing.Point(513, 188);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(166, 27);
-            this.textBox4.TabIndex = 185;
+            this.txtCustomer.BackColor = System.Drawing.Color.White;
+            this.txtCustomer.Location = new System.Drawing.Point(513, 188);
+            this.txtCustomer.Name = "txtCustomer";
+            this.txtCustomer.ReadOnly = true;
+            this.txtCustomer.Size = new System.Drawing.Size(166, 27);
+            this.txtCustomer.TabIndex = 185;
             // 
             // label8
             // 
@@ -172,14 +172,14 @@
             this.btnPrint.TabIndex = 184;
             this.btnPrint.UseVisualStyleBackColor = false;
             // 
-            // textBox3
+            // txtNetPrice
             // 
-            this.textBox3.Location = new System.Drawing.Point(145, 165);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(138, 27);
-            this.textBox3.TabIndex = 24;
-            this.textBox3.Text = "0";
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtNetPrice.Location = new System.Drawing.Point(145, 165);
+            this.txtNetPrice.Name = "txtNetPrice";
+            this.txtNetPrice.Size = new System.Drawing.Size(138, 27);
+            this.txtNetPrice.TabIndex = 24;
+            this.txtNetPrice.Text = "0";
+            this.txtNetPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label7
             // 
@@ -189,13 +189,13 @@
             this.label7.TabIndex = 183;
             this.label7.Text = "Price";
             // 
-            // comboBox2
+            // cmbShopRecive
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(145, 201);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(167, 29);
-            this.comboBox2.TabIndex = 28;
+            this.cmbShopRecive.FormattingEnabled = true;
+            this.cmbShopRecive.Location = new System.Drawing.Point(145, 201);
+            this.cmbShopRecive.Name = "cmbShopRecive";
+            this.cmbShopRecive.Size = new System.Drawing.Size(167, 29);
+            this.cmbShopRecive.TabIndex = 28;
             // 
             // label6
             // 
@@ -490,15 +490,15 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtNetPrice;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cmbShopRecive;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button btnPrint;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtCustomer;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnBrowseCustomer;
     }

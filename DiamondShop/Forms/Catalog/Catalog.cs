@@ -27,26 +27,20 @@ namespace DiamondShop
             InitializeComponent();
             Initial();
 
-            binder.BindControl(txtUpdateBy, "UserName");
             binder.BindControl(txtCode, "Code");
-            //binder.BindControl(cmbMaterial, "Material");
-            //binder.BindControl(txtNetWeight, "NetWeight");
-            //binder.BindControl(cmbJewelryType, "JewelryType");
-            //binder.BindControl(txtSize, "Size");
-            //binder.BindControl(cmbShop, "Shop");
-            //binder.BindControl(btnImage1, "Image1");
-            //binder.BindControl(btnImage2,"Image2");
-            //binder.BindControl(cmbStatus, "Status");
-            //binder.BindControl(txtMaterialWeight1, "Cost");
-            //binder.BindControl(txtMinPrice, "MinPrice");
-            //binder.BindControl(txtOpenPrice, "OpenPrice");
-            //binder.BindControl(txtImportDate, "ImportDate");
-            //binder.BindControl(txtSellDate, "SellDate");
-            //binder.BindControl(txtRemark, "Remark");
-
-            //txtMaterialWeight1.Text = GM.ConvertDoubleToString(txtMaterialWeight1);
-            //txtMinPrice.Text = GM.ConvertDoubleToString(txtMinPrice);
-            //txtOpenPrice.Text = GM.ConvertDoubleToString(txtOpenPrice);
+            binder.BindControl(txtShop, "Shop");
+            binder.BindControl(txtJewelryType, "JewelryType");
+            binder.BindControl(txtStatus, "Status");
+            binder.BindControl(txtMaterial1, "Material1");
+            binder.BindControl(txtMaterial2, "Material2");
+            binder.BindControl(txtMaterialWeight1, "MaterialWeight1");
+            binder.BindControl(txtMaterialWeight2, "MaterialWeight2");
+            binder.BindControl(txtMinBeforePremium, "MinBeforePremium");
+            binder.BindControl(txtMinPrice, "MinPrice");
+            binder.BindControl(txtPriceTag, "PriceTag");
+            //binder.BindControl(txtSellDate, "Image1");
+            //binder.BindControl(txtRemark, "Image2");
+            binder.BindControl(txtMinPrice, "Remark");
 
             txtUpdateBy.Text = ApplicationInfo.UserName;
         }
@@ -56,22 +50,20 @@ namespace DiamondShop
             InitializeComponent();
             Initial();
 
-            binder.BindControl(txtUpdateBy, "UserName");
             binder.BindControl(txtCode, "Code");
-            //binder.BindControl(cmbMaterial, "Material");
-            //binder.BindControl(txtNetWeight, "NetWeight");
-            //binder.BindControl(cmbJewelryType, "JewelryType");
-            //binder.BindControl(txtSize, "Size");
-            //binder.BindControl(cmbShop, "Shop");
-            //binder.BindControl(btnImage1, "Image1");
-            //binder.BindControl(btnImage2, "Image2");
-            //binder.BindControl(cmbStatus, "Status");
-            //binder.BindControl(txtMaterialWeight1, "Cost");
-            //binder.BindControl(txtMinPrice, "MinPrice");
-            //binder.BindControl(txtOpenPrice, "OpenPrice");
-            //binder.BindControl(txtImportDate, "ImportDate");
-            //binder.BindControl(txtSellDate, "SellDate");
-            binder.BindControl(txtRemark, "Remark");
+            binder.BindControl(txtShop, "Shop");
+            binder.BindControl(txtJewelryType, "JewelryType");
+            binder.BindControl(txtStatus, "Status");
+            binder.BindControl(txtMaterial1, "Material1");
+            binder.BindControl(txtMaterial2, "Material2");
+            binder.BindControl(txtMaterialWeight1, "MaterialWeight1");
+            binder.BindControl(txtMaterialWeight2, "MaterialWeight2");
+            binder.BindControl(txtMinBeforePremium, "MinBeforePremium");
+            binder.BindControl(txtMinPrice, "MinPrice");
+            binder.BindControl(txtPriceTag, "PriceTag");
+            //binder.BindControl(txtSellDate, "Image1");
+            //binder.BindControl(txtRemark, "Image2");
+            binder.BindControl(txtMinPrice, "Remark");
 
             this.id = id;
             LoadData();
@@ -79,58 +71,6 @@ namespace DiamondShop
 
         protected override void Initial()
         {
-            //cmbMaterial.DataSource = (GM.GetMasterTableDetail("C014")).Tables[0];
-            //cmbMaterial.ValueMember = "ID";
-            //cmbMaterial.DisplayMember = "Detail";
-            //cmbMaterial.Refresh();
-
-            //cmbJewelryType.DataSource = (GM.GetMasterTableDetail("C015")).Tables[0];
-            //cmbJewelryType.ValueMember = "ID";
-            //cmbJewelryType.DisplayMember = "Detail";
-            //cmbJewelryType.Refresh();
-
-            //cmbShop.DataSource = (GM.GetMasterTableDetail("C007")).Tables[0];
-            //cmbShop.ValueMember = "ID";
-            //cmbShop.DisplayMember = "Detail";
-            //cmbShop.Refresh();
-
-            //cmbStatus.DataSource = (GM.GetMasterTableDetail("C023")).Tables[0];
-            //cmbStatus.ValueMember = "ID";
-            //cmbStatus.DisplayMember = "Detail";
-            //cmbStatus.Refresh();
-
-            //gridDiamond
-            //DataGridViewComboBoxColumn colShape;
-            //colShape = (DataGridViewComboBoxColumn)gridDiamond.Columns["Shape"];
-            //colShape.ValueMember = "ID";
-            //colShape.DisplayMember = "Detail";
-            //colShape.Name = "Shape";
-            //colShape.DataSource = (GM.GetMasterTableDetail("C019")).Tables[0];
-            //colShape.DefaultCellStyle.NullValue = (GM.GetMasterTableDetail("C019")).Tables[0].Rows[0]["Detail"];
-            ////colShape.DefaultCellStyle.DataSourceNullValue = (GM.GetMasterTableDetail("C019")).Tables[0].Rows[0];
-
-            //DataGridViewComboBoxColumn colColorGrade;
-            //colColorGrade = (DataGridViewComboBoxColumn)gridDiamond.Columns["ColorGrade"];
-            //colColorGrade.ValueMember = "ID";
-            //colColorGrade.DisplayMember = "Detail";
-            //colColorGrade.Name = "ColorGrade";
-            //colColorGrade.DataSource = (GM.GetMasterTableDetail("C025")).Tables[0];
-            //colColorGrade.DefaultCellStyle.NullValue = (GM.GetMasterTableDetail("C025")).Tables[0].Rows[0]["Detail"];
-
-            //DataGridViewComboBoxColumn colClarity;
-            //colClarity = (DataGridViewComboBoxColumn)gridDiamond.Columns["Clarity"];
-            //colClarity.ValueMember = "ID";
-            //colClarity.DisplayMember = "Detail";
-            //colClarity.Name = "Clarity";
-            //colClarity.DataSource = (GM.GetMasterTableDetail("C002")).Tables[0];
-            //colClarity.DefaultCellStyle.NullValue = (GM.GetMasterTableDetail("C002")).Tables[0].Rows[0]["Detail"];
-
-            txtMaterialWeight1.Text = GM.ConvertDoubleToString(txtMaterialWeight1);
-            txtMinPrice.Text = GM.ConvertDoubleToString(txtMinPrice);
-            //txtOpenPrice.Text = GM.ConvertDoubleToString(txtOpenPrice);
-
-            //gridDiamond.AutoGenerateColumns = false;
-            //gridGemstone.AutoGenerateColumns = false;
 
             txtCode.Select();
 

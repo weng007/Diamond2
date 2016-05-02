@@ -28,21 +28,28 @@ namespace DiamondShop
             InitializeComponent();
             Initial();
 
+            binder.BindControl(dtSaleDate, "Seller");
             binder.BindControl(dtSaleDate, "SaleDate");
             binder.BindControl(txtCode, "Code");
             binder.BindControl(cmbPayment, "Payment");
-            //binder.BindControl(txtNetPrice, "NetPrice");
-            //binder.BindControl(txtCustomer, "CustID");
+            binder.BindControl(txtNetPrice, "NetPrice");
+            binder.BindControl(txtCustomer, "CustID");
+            binder.BindControl(cmbShopRecive, "ShopReceive");
+            binder.BindControl(txtRemark, "Remark");
         }
         public Sell(int id)
         {
             InitializeComponent();
             Initial();
 
+            binder.BindControl(dtSaleDate, "Seller");
             binder.BindControl(dtSaleDate, "SaleDate");
             binder.BindControl(txtCode, "Code");
             binder.BindControl(cmbPayment, "Payment");
-            //binder.BindControl(txtNetPrice, "NetPrice");
+            binder.BindControl(txtNetPrice, "NetPrice");
+            binder.BindControl(txtCustomer, "CustID");
+            binder.BindControl(cmbShopRecive, "ShopReceive");
+            binder.BindControl(txtRemark, "Remark");
 
             this.id = id;
             LoadData();

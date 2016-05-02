@@ -27,26 +27,31 @@ namespace DiamondShop
             InitializeComponent();
             Initial();
 
-            //binder.BindControl(txtUpdateBy, "UserName");
-            //binder.BindControl(txtCode, "Code");
-            //binder.BindControl(cmbMaterial1, "Material");
-            //binder.BindControl(txtNetWeight, "NetWeight");
-            //binder.BindControl(cmbJewelryType, "JewelryType");
-            //binder.BindControl(txtSize, "Size");
-            //binder.BindControl(cmbShop, "Shop");
-            //binder.BindControl(btnImage1, "Image1");
-            //binder.BindControl(btnImage2,"Image2");
-            //binder.BindControl(cmbStatus, "Status");
-            //binder.BindControl(txtMaterialWeight1, "Cost");
-            //binder.BindControl(txtMinPrice, "MinPrice");
-            //binder.BindControl(txtOpenPrice, "OpenPrice");
-            //binder.BindControl(txtImportDate, "ImportDate");
-            //binder.BindControl(txtSellDate, "SellDate");
-            //binder.BindControl(txtRemark, "Remark");
-
-            //txtMaterialWeight1.Text = GM.ConvertDoubleToString(txtMaterialWeight1);
-            //txtMinPrice.Text = GM.ConvertDoubleToString(txtMinPrice);
-            //txtOpenPrice.Text = GM.ConvertDoubleToString(txtOpenPrice);
+            binder.BindControl(txtCode, "Code");
+            binder.BindControl(cmbShop, "Shop");
+            binder.BindControl(cmbJewelryType, "JewelryType");
+            binder.BindControl(cmbStatus, "Status");
+            binder.BindControl(cmbMaterial1, "Material1");
+            binder.BindControl(cmbMaterial2, "Material2");
+            binder.BindControl(txtMaterialWeight1, "MaterialWeight1");
+            binder.BindControl(txtMaterialWeight2, "MaterialWeight2");
+            binder.BindControl(txtPricePerGram1, "PricePerGram1");
+            binder.BindControl(txtPricePerGram2, "PricePerGram2");
+            binder.BindControl(txtMaterialCost1, "MaterialCost1");
+            binder.BindControl(txtMaterialCost2, "MaterialCost2");
+            binder.BindControl(txtMaterialNetCost, "MaterialNetCost");
+            binder.BindControl(txtLaborCost, "LaborCost");
+            binder.BindControl(txtCost1, "Cost1");
+            binder.BindControl(txtCost2, "Cost2");
+            binder.BindControl(txtCost3, "Cost3");
+            binder.BindControl(txtCost4, "Cost4");
+            binder.BindControl(txtCostDiamondCer, "CostDiamondCer");
+            //binder.BindControl(txtCostGemstoneCer, "CostGemstoneCer");
+            binder.BindControl(txtRedCost, "RedCost");
+            binder.BindControl(txtMinBeforePremium, "MinBeforePremium");
+            binder.BindControl(txtMinPrice, "MinPrice");
+            binder.BindControl(txtPriceTag, "PriceTag");
+            binder.BindControl(txtMinPrice, "Remark");
 
             txtUpdateBy.Text = ApplicationInfo.UserName;
         }
@@ -56,22 +61,31 @@ namespace DiamondShop
             InitializeComponent();
             Initial();
 
-            //binder.BindControl(txtUpdateBy, "UserName");
-            //binder.BindControl(txtCode, "Code");
-            //binder.BindControl(cmbMaterial1, "Material");
-            //binder.BindControl(txtNetWeight, "NetWeight");
-            //binder.BindControl(cmbJewelryType, "JewelryType");
-            //binder.BindControl(txtSize, "Size");
-            //binder.BindControl(cmbShop, "Shop");
-            //binder.BindControl(btnImage1, "Image1");
-            //binder.BindControl(btnImage2, "Image2");
-            //binder.BindControl(cmbStatus, "Status");
-            //binder.BindControl(txtMaterialWeight1, "Cost");
-            //binder.BindControl(txtMinPrice, "MinPrice");
-            //binder.BindControl(txtOpenPrice, "OpenPrice");
-            //binder.BindControl(txtImportDate, "ImportDate");
-            //binder.BindControl(txtSellDate, "SellDate");
-            //binder.BindControl(txtRemark, "Remark");
+            binder.BindControl(txtCode, "Code");
+            binder.BindControl(cmbShop, "Shop");
+            binder.BindControl(cmbJewelryType, "JewelryType");
+            binder.BindControl(cmbStatus, "Status");
+            binder.BindControl(cmbMaterial1, "Material1");
+            binder.BindControl(cmbMaterial2, "Material2");
+            binder.BindControl(txtMaterialWeight1, "MaterialWeight1");
+            binder.BindControl(txtMaterialWeight2, "MaterialWeight2");
+            binder.BindControl(txtPricePerGram1, "PricePerGram1");
+            binder.BindControl(txtPricePerGram2, "PricePerGram2");
+            binder.BindControl(txtMaterialCost1, "MaterialCost1");
+            binder.BindControl(txtMaterialCost2, "MaterialCost2");
+            binder.BindControl(txtMaterialNetCost, "MaterialNetCost");
+            binder.BindControl(txtLaborCost, "LaborCost");
+            binder.BindControl(txtCost1, "Cost1");
+            binder.BindControl(txtCost2, "Cost2");
+            binder.BindControl(txtCost3, "Cost3");
+            binder.BindControl(txtCost4, "Cost4");
+            binder.BindControl(txtCostDiamondCer, "CostDiamondCer");
+            //binder.BindControl(txtCostGemstoneCer, "CostGemstoneCer");
+            binder.BindControl(txtRedCost, "RedCost");
+            binder.BindControl(txtMinBeforePremium, "MinBeforePremium");
+            binder.BindControl(txtMinPrice, "MinPrice");
+            binder.BindControl(txtPriceTag, "PriceTag");
+            binder.BindControl(txtMinPrice, "Remark");
 
             this.id = id;
             LoadData();
@@ -83,6 +97,11 @@ namespace DiamondShop
             cmbMaterial1.ValueMember = "ID";
             cmbMaterial1.DisplayMember = "Detail";
             cmbMaterial1.Refresh();
+
+            cmbMaterial2.DataSource = (GM.GetMasterTableDetail("C014")).Tables[0];
+            cmbMaterial2.ValueMember = "ID";
+            cmbMaterial2.DisplayMember = "Detail";
+            cmbMaterial2.Refresh();
 
             cmbJewelryType.DataSource = (GM.GetMasterTableDetail("C015")).Tables[0];
             cmbJewelryType.ValueMember = "ID";

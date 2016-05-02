@@ -42,17 +42,6 @@
             this.txtSumAmount = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.grid2 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GemstoneType1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Shape1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Amount1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Weight1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Origin1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.CostPerCarat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cost1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MinPricePerCarat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MinPrice1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grid1 = new System.Windows.Forms.DataGridView();
             this.RowNum1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -68,6 +57,17 @@
             this.Cost = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MinPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GemstoneType1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Shape1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Amount1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Weight1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Origin1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.CostPerCarat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cost1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MinPricePerCarat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MinPrice1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid2)).BeginInit();
@@ -209,6 +209,7 @@
             // grid2
             // 
             this.grid2.AllowUserToOrderColumns = true;
+            this.grid2.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.grid2.BackgroundColor = System.Drawing.SystemColors.Control;
             this.grid2.ColumnHeadersHeight = 33;
             this.grid2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -232,94 +233,13 @@
             this.grid2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grid2.Size = new System.Drawing.Size(1245, 191);
             this.grid2.TabIndex = 17;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "RowNum";
-            this.dataGridViewTextBoxColumn1.HeaderText = "No.";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Width = 40;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "ID";
-            this.dataGridViewTextBoxColumn2.HeaderText = "ID";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Visible = false;
-            // 
-            // GemstoneType1
-            // 
-            this.GemstoneType1.DataPropertyName = "GemstoneType";
-            this.GemstoneType1.HeaderText = "Type";
-            this.GemstoneType1.Name = "GemstoneType1";
-            this.GemstoneType1.ReadOnly = true;
-            this.GemstoneType1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.GemstoneType1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.GemstoneType1.Width = 120;
-            // 
-            // Shape1
-            // 
-            this.Shape1.DataPropertyName = "Shape";
-            this.Shape1.HeaderText = "Shape";
-            this.Shape1.Name = "Shape1";
-            this.Shape1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Shape1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Shape1.Width = 130;
-            // 
-            // Amount1
-            // 
-            this.Amount1.DataPropertyName = "Amount";
-            this.Amount1.HeaderText = "Amount";
-            this.Amount1.Name = "Amount1";
-            this.Amount1.Width = 70;
-            // 
-            // Weight1
-            // 
-            this.Weight1.DataPropertyName = "Weight";
-            this.Weight1.HeaderText = "Weight";
-            this.Weight1.Name = "Weight1";
-            this.Weight1.Width = 70;
-            // 
-            // Origin1
-            // 
-            this.Origin1.DataPropertyName = "Origin";
-            this.Origin1.HeaderText = "Origin";
-            this.Origin1.Name = "Origin1";
-            this.Origin1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Origin1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // CostPerCarat
-            // 
-            this.CostPerCarat.DataPropertyName = "CostPerCarat";
-            this.CostPerCarat.HeaderText = "Cost/Carat";
-            this.CostPerCarat.Name = "CostPerCarat";
-            this.CostPerCarat.Width = 130;
-            // 
-            // Cost1
-            // 
-            this.Cost1.DataPropertyName = "Cost";
-            this.Cost1.HeaderText = "Cost";
-            this.Cost1.Name = "Cost1";
-            this.Cost1.Width = 130;
-            // 
-            // MinPricePerCarat
-            // 
-            this.MinPricePerCarat.DataPropertyName = "MinPricePerCarat";
-            this.MinPricePerCarat.HeaderText = "Min Price/Carat";
-            this.MinPricePerCarat.Name = "MinPricePerCarat";
-            this.MinPricePerCarat.Width = 140;
-            // 
-            // MinPrice1
-            // 
-            this.MinPrice1.DataPropertyName = "MinPrice";
-            this.MinPrice1.HeaderText = "Min Price";
-            this.MinPrice1.Name = "MinPrice1";
-            this.MinPrice1.Width = 140;
+            this.grid2.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid2_CellEnter);
             // 
             // grid1
             // 
             this.grid1.AllowUserToAddRows = false;
             this.grid1.AllowUserToOrderColumns = true;
+            this.grid1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.grid1.BackgroundColor = System.Drawing.SystemColors.Control;
             this.grid1.ColumnHeadersHeight = 33;
             this.grid1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -466,6 +386,92 @@
             this.panel6.Size = new System.Drawing.Size(207, 32);
             this.panel6.TabIndex = 15;
             // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "RowNum";
+            this.dataGridViewTextBoxColumn1.HeaderText = "No.";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Width = 40;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "ID";
+            this.dataGridViewTextBoxColumn2.HeaderText = "ID";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Visible = false;
+            // 
+            // GemstoneType1
+            // 
+            this.GemstoneType1.DataPropertyName = "GemstoneType";
+            this.GemstoneType1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.GemstoneType1.HeaderText = "Type";
+            this.GemstoneType1.Name = "GemstoneType1";
+            this.GemstoneType1.ReadOnly = true;
+            this.GemstoneType1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.GemstoneType1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.GemstoneType1.Width = 120;
+            // 
+            // Shape1
+            // 
+            this.Shape1.DataPropertyName = "Shape";
+            this.Shape1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Shape1.HeaderText = "Shape";
+            this.Shape1.Name = "Shape1";
+            this.Shape1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Shape1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Shape1.Width = 130;
+            // 
+            // Amount1
+            // 
+            this.Amount1.DataPropertyName = "Amount";
+            this.Amount1.HeaderText = "Amount";
+            this.Amount1.Name = "Amount1";
+            this.Amount1.Width = 70;
+            // 
+            // Weight1
+            // 
+            this.Weight1.DataPropertyName = "Weight";
+            this.Weight1.HeaderText = "Weight";
+            this.Weight1.Name = "Weight1";
+            this.Weight1.Width = 70;
+            // 
+            // Origin1
+            // 
+            this.Origin1.DataPropertyName = "Origin";
+            this.Origin1.DisplayStyleForCurrentCellOnly = true;
+            this.Origin1.HeaderText = "Origin";
+            this.Origin1.Name = "Origin1";
+            this.Origin1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Origin1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // CostPerCarat
+            // 
+            this.CostPerCarat.DataPropertyName = "CostPerCarat";
+            this.CostPerCarat.HeaderText = "Cost/Carat";
+            this.CostPerCarat.Name = "CostPerCarat";
+            this.CostPerCarat.Width = 130;
+            // 
+            // Cost1
+            // 
+            this.Cost1.DataPropertyName = "Cost";
+            this.Cost1.HeaderText = "Cost";
+            this.Cost1.Name = "Cost1";
+            this.Cost1.Width = 130;
+            // 
+            // MinPricePerCarat
+            // 
+            this.MinPricePerCarat.DataPropertyName = "MinPricePerCarat";
+            this.MinPricePerCarat.HeaderText = "Min Price/Carat";
+            this.MinPricePerCarat.Name = "MinPricePerCarat";
+            this.MinPricePerCarat.Width = 140;
+            // 
+            // MinPrice1
+            // 
+            this.MinPrice1.DataPropertyName = "MinPrice";
+            this.MinPrice1.HeaderText = "Min Price";
+            this.MinPrice1.Name = "MinPrice1";
+            this.MinPrice1.Width = 140;
+            // 
             // InvGemstoneDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -502,17 +508,6 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewComboBoxColumn GemstoneType1;
-        private System.Windows.Forms.DataGridViewComboBoxColumn Shape1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Amount1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Weight1;
-        private System.Windows.Forms.DataGridViewComboBoxColumn Origin1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CostPerCarat;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cost1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MinPricePerCarat;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MinPrice1;
         private System.Windows.Forms.DataGridViewTextBoxColumn RowNum1;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Code;
@@ -526,5 +521,16 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Origin;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cost;
         private System.Windows.Forms.DataGridViewTextBoxColumn MinPrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewComboBoxColumn GemstoneType1;
+        private System.Windows.Forms.DataGridViewComboBoxColumn Shape1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Amount1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Weight1;
+        private System.Windows.Forms.DataGridViewComboBoxColumn Origin1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CostPerCarat;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cost1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MinPricePerCarat;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MinPrice1;
     }
 }

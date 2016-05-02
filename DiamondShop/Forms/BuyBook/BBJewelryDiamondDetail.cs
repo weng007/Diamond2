@@ -25,12 +25,11 @@ namespace DiamondShop
             InitializeComponent();
             Initial();
 
-            //binder.BindControl(cmbShape, "Shape");
-            //binder.BindControl(txtWeight, "Weight");
-            //binder.BindControl(cmbColorGrade, "ColorGrade");
+            //binder.BindControl(Shape, "Shape");
+            //binder.BindControl(txtWeight, "Amount");
+            //binder.BindControl(cmbColorGrade, "Weight");
             //binder.BindControl(cmbColor, "Color");
             //binder.BindControl(cmbClarity, "Clarity");
-            //binder.BindControl(txtGIANumber, "GIANumber");
         }
 
         public BBJewelryDiamondDetail(int id)
@@ -38,12 +37,11 @@ namespace DiamondShop
             InitializeComponent();
             Initial();
 
-            //binder.BindControl(cmbShape, "Shape");
-            //binder.BindControl(txtWeight, "Weight");
-            //binder.BindControl(cmbColorGrade, "ColorGrade");
+            //binder.BindControl(Shape, "Shape");
+            //binder.BindControl(txtWeight, "Amount");
+            //binder.BindControl(cmbColorGrade, "Weight");
             //binder.BindControl(cmbColor, "Color");
             //binder.BindControl(cmbClarity, "Clarity");
-            //binder.BindControl(txtGIANumber, "GIANumber");
 
             this.id = id;
             LoadData();
@@ -59,15 +57,25 @@ namespace DiamondShop
             Shape.ValueMember = "ID";
             Shape.DisplayMember = "Detail";
 
-            //cmbColorGrade.DataSource = (GM.GetMasterTableDetail("C025")).Tables[0];
-            //cmbColorGrade.ValueMember = "ID";
-            //cmbColorGrade.DisplayMember = "Detail";
-            //cmbColorGrade.Refresh();
+            Color.DataSource = (GM.GetMasterTableDetail("C001")).Tables[0];
+            Color.ValueMember = "ID";
+            Color.DisplayMember = "Detail";
 
-            //cmbShape.DataSource = (GM.GetMasterTableDetail("C019")).Tables[0];
-            //cmbShape.ValueMember = "ID";
-            //cmbShape.DisplayMember = "Detail";
-            //cmbShape.Refresh();
+            Clearity.DataSource = (GM.GetMasterTableDetail("C002")).Tables[0];
+            Clearity.ValueMember = "ID";
+            Clearity.DisplayMember = "Detail";
+
+            Shape1.DataSource = (GM.GetMasterTableDetail("C019")).Tables[0];
+            Shape1.ValueMember = "ID";
+            Shape1.DisplayMember = "Detail";
+
+            Color1.DataSource = (GM.GetMasterTableDetail("C001")).Tables[0];
+            Color1.ValueMember = "ID";
+            Color1.DisplayMember = "Detail";
+
+            Clearity1.DataSource = (GM.GetMasterTableDetail("C002")).Tables[0];
+            Clearity1.ValueMember = "ID";
+            Clearity1.DisplayMember = "Detail";
 
             //cmbClarity.DataSource = (GM.GetMasterTableDetail("C002")).Tables[0];
             //cmbClarity.ValueMember = "ID";

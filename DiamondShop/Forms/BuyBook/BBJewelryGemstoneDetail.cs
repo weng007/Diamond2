@@ -51,20 +51,38 @@ namespace DiamondShop
 
         protected override void Initial()
         {
-            //cmbOrigin.DataSource = (GM.GetMasterTableDetail("C024")).Tables[0];
-            //cmbOrigin.ValueMember = "ID";
-            //cmbOrigin.DisplayMember = "Detail";
-            //cmbOrigin.Refresh();
+            GemstoneType.DataSource = (GM.GetMasterTableDetail("C024")).Tables[0];
+            GemstoneType.ValueMember = "ID";
+            GemstoneType.DisplayMember = "Detail";
 
-            //cmbShape.DataSource = (GM.GetMasterTableDetail("C019")).Tables[0];
-            //cmbShape.ValueMember = "ID";
-            //cmbShape.DisplayMember = "Detail";
-            //cmbShape.Refresh();
+            Company.DataSource = (GM.GetMasterTableDetail("C019")).Tables[0];
+            Company.ValueMember = "ID";
+            Company.DisplayMember = "Detail";
 
-            //cmbGemstoneType.DataSource = (GM.GetMasterTableDetail("C006")).Tables[0];
-            //cmbGemstoneType.ValueMember = "ID";
-            //cmbGemstoneType.DisplayMember = "Detail";
-            //cmbGemstoneType.Refresh();
+            Shape.DataSource = (GM.GetMasterTableDetail("C006")).Tables[0];
+            Shape.ValueMember = "ID";
+            Shape.DisplayMember = "Detail";
+
+            Color.DataSource = (GM.GetMasterTableDetail("C006")).Tables[0];
+            Color.ValueMember = "ID";
+            Color.DisplayMember = "Detail";
+
+            Origin.DataSource = (GM.GetMasterTableDetail("C019")).Tables[0];
+            Origin.ValueMember = "ID";
+            Origin.DisplayMember = "Detail";
+
+            GemstoneType1.DataSource = (GM.GetMasterTableDetail("C024")).Tables[0];
+            GemstoneType1.ValueMember = "ID";
+            GemstoneType1.DisplayMember = "Detail";
+
+            Shape1.DataSource = (GM.GetMasterTableDetail("C006")).Tables[0];
+            Shape1.ValueMember = "ID";
+            Shape1.DisplayMember = "Detail";
+
+            Origin1.DataSource = (GM.GetMasterTableDetail("C019")).Tables[0];
+            Origin1.ValueMember = "ID";
+            Origin1.DisplayMember = "Detail";
+
 
             //cmbShape.Select();
 
@@ -160,6 +178,19 @@ namespace DiamondShop
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
             {
                 e.Handled = true;
+            }
+        }
+
+        private void grid1_CellEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            bool validClick = (e.RowIndex != -1 && e.ColumnIndex != -1); //Make sure the clicked row/column is valid.
+            var datagridview = sender as DataGridView;
+
+            // Check to make sure the cell clicked is the cell containing the combobox 
+            if (datagridview.Columns[e.ColumnIndex] is DataGridViewComboBoxColumn && validClick)
+            {
+                datagridview.BeginEdit(true);
+                ((ComboBox)datagridview.EditingControl).DroppedDown = true;
             }
         }
     }

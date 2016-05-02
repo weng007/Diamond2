@@ -23,44 +23,82 @@ namespace DiamondShop
             InitializeComponent();
             Initial();
 
-            binder.BindControl(dtReportDate, "CerDate");
-            binder.BindControl(txtCode, "GIANumber");
-            //binder.BindControl(cmbCompanyCer, "CompanyCer");
-            //binder.BindControl(cmbShapeAndCut, "ShapeAndCutting");
-            //binder.BindControl(txtW, "Measurement1");
-            //binder.BindControl(txtL, "Measurement2");
-            //binder.BindControl(txtD, "Measurement3");
-            //binder.BindControl(txtCarat, "Weight");
-            //binder.BindControl(cmbClarity, "ClarityGrade");
-            //binder.BindControl(cmbColorGrade, "ColorGrade");
-            //binder.BindControl(cmbColor, "Color");
-            //binder.BindControl(cmbFluores, "Fluorescence");
-            //binder.BindControl(cmbCutGrade, "CutGrade");
-            //binder.BindControl(cmbPolish, "Polish");
-            //binder.BindControl(cmbSymmetry, "Symmetry");
-            //binder.BindControl(txtComments, "Comment");
+            binder.BindControl(txtBuyDate, "BuyDate");
+            binder.BindControl(txtCode, "Code");
+            binder.BindControl(txtSeller, "Seller");
+            binder.BindControl(txtReportNumber, "ReportNumber");
+            //binder.BindControl(txtle, "Lab");
+            binder.BindControl(txtWeight, "Weight");
+            binder.BindControl(txtShape, "Shape");
+            binder.BindControl(txtW, "W");
+            binder.BindControl(txtL, "L");
+            binder.BindControl(txtD, "D");
+            //binder.BindControl(txtColor, "ColorType");
+            binder.BindControl(txtColor, "Color");
+            binder.BindControl(txtCut, "Cut");
+            binder.BindControl(txtClearity, "Clearity");
+            binder.BindControl(txtPolish, "Polish");
+            binder.BindControl(txtSymmetry, "Symmetry");
+
+            binder.BindControl(txtFluorescent, "Fluorescent");
+            binder.BindControl(txtStatus, "Status");
+            //binder.BindControl(txts, "SoldTo");
+            //binder.BindControl(dtd, "DueDate");
+          
+            binder.BindControl(txtPrice, "Price");
+            binder.BindControl(txtRap, "Rap");
+            //binder.BindControl(txtt, "Total$");
+
+            binder.BindControl(txtUSDRate, "USDRate");
+            //binder.BindControl(txtt, "TotalBaht");
+            binder.BindControl(txtSetting, "Setting");
+            binder.BindControl(txtShop, "Shop");
+            //binder.BindControl(txtc, "Certificate");
+
+            binder.BindControl(txtNote, "Note");
+            binder.BindControl(txtNote1, "Note1");
+
+
         }
         public DiamondCer(int id)
         {
             InitializeComponent();
             Initial();
 
-            binder.BindControl(dtReportDate, "CerDate");
-            binder.BindControl(txtCode, "GIANumber");
-            //binder.BindControl(cmbCompanyCer, "CompanyCer");
-            //binder.BindControl(cmbShapeAndCut, "ShapeAndCutting");
-            //binder.BindControl(txtW, "Measurement1");
-            //binder.BindControl(txtL, "Measurement2");
-            //binder.BindControl(txtD, "Measurement3");
-            //binder.BindControl(txtCarat, "Weight");
-            //binder.BindControl(cmbClarity, "ClarityGrade");
-            //binder.BindControl(cmbColorGrade, "ColorGrade");
-            //binder.BindControl(cmbColor, "Color");
-            //binder.BindControl(cmbFluores, "Fluorescence");
-            //binder.BindControl(cmbCutGrade, "CutGrade");
-            //binder.BindControl(cmbPolish, "Polish");
-            //binder.BindControl(cmbSymmetry, "Symmetry");
-            //binder.BindControl(txtComments, "Comment");
+            binder.BindControl(txtBuyDate, "BuyDate");
+            binder.BindControl(txtCode, "Code");
+            binder.BindControl(txtSeller, "Seller");
+            binder.BindControl(txtReportNumber, "ReportNumber");
+            //binder.BindControl(txtle, "Lab");
+            binder.BindControl(txtWeight, "Weight");
+            binder.BindControl(txtShape, "Shape");
+            binder.BindControl(txtW, "W");
+            binder.BindControl(txtL, "L");
+            binder.BindControl(txtD, "D");
+            //binder.BindControl(txtColor, "ColorType");
+            binder.BindControl(txtColor, "Color");
+            binder.BindControl(txtCut, "Cut");
+            binder.BindControl(txtClearity, "Clearity");
+            binder.BindControl(txtPolish, "Polish");
+            binder.BindControl(txtSymmetry, "Symmetry");
+
+            binder.BindControl(txtFluorescent, "Fluorescent");
+            binder.BindControl(txtStatus, "Status");
+            //binder.BindControl(txts, "SoldTo");
+            //binder.BindControl(dtd, "DueDate");
+
+            binder.BindControl(txtPrice, "Price");
+            binder.BindControl(txtRap, "Rap");
+            //binder.BindControl(txtt, "Total$");
+
+            binder.BindControl(txtUSDRate, "USDRate");
+            //binder.BindControl(txtt, "TotalBaht");
+            binder.BindControl(txtSetting, "Setting");
+            binder.BindControl(txtShop, "Shop");
+            //binder.BindControl(txtc, "Certificate");
+
+            binder.BindControl(txtNote, "Note");
+            binder.BindControl(txtNote1, "Note1");
 
             this.id = id;
             LoadData();

@@ -153,6 +153,7 @@
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AllowUserToOrderColumns = true;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridView1.ColumnHeadersHeight = 33;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -238,6 +239,7 @@
             this.gridGemstone.AllowUserToAddRows = false;
             this.gridGemstone.AllowUserToDeleteRows = false;
             this.gridGemstone.AllowUserToOrderColumns = true;
+            this.gridGemstone.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.gridGemstone.BackgroundColor = System.Drawing.SystemColors.Control;
             this.gridGemstone.ColumnHeadersHeight = 33;
             this.gridGemstone.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
