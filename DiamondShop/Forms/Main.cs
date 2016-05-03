@@ -33,76 +33,42 @@ namespace DiamondShop
             SellerList frm = new SellerList();
             SetFormList(frm, 1, "Seller");
         }
-        private void btnCatalog_Click(object sender, EventArgs e)
-        {
-            CatalogList frm = new CatalogList();
-            SetFormList(frm, 2, "Catalog");
-        }
-
-        private void btnCerDiamond_Click(object sender, EventArgs e)
-        {
-            DiamondCerList frm = new DiamondCerList();
-            SetFormList(frm, 3, "DiamondCer");
-        }
-
-        private void btnCerGemstone_Click(object sender, EventArgs e)
-        {
-            GemstoneCerList frm = new GemstoneCerList();
-            SetFormList(frm, 4,"GemstoneCer");
-        }
-
-        private void btnCustomer_Click(object sender, EventArgs e)
-        {
-            CustomerList frm = new CustomerList();
-            SetFormList(frm, 5,"Customer");
-        }
-
-        private void btnSell_Click(object sender, EventArgs e)
-        {
-            SellList frm = new SellList();
-            SetFormList(frm, 6,"Sell");
-        }
-
-        private void btnInventory_Click(object sender, EventArgs e)
-        {
-            InventoryList frm = new InventoryList();
-            SetFormList(frm, 7, "Inventory");
-        }
+  
 
         private void menuCerDiamond_Click(object sender, EventArgs e)
         {
             BuyBookDiamondCerList frm = new BuyBookDiamondCerList();
-            SetFormList(frm, 8, "BBCer. Diamond");
+            SetFormList(frm, 2, "BBCer. Diamond");
         }
 
         private void menuCerGemstone_Click(object sender, EventArgs e)
         {
             BuyBookGemstoneCerList frm = new BuyBookGemstoneCerList();
-            SetFormList(frm, 9, "BBCer. Gemstone");
+            SetFormList(frm, 3, "BBCer. Gemstone");
         }
 
         private void menuJewelry_Click(object sender, EventArgs e)
         {
             BuyBookJewelryList frm = new BuyBookJewelryList();
-            SetFormList(frm, 10, "BuyBookJewelryList");
+            SetFormList(frm, 4, "BuyBookJewelryList");
         }
 
         private void menuNonCerDiamond_Click(object sender, EventArgs e)
         {
             BuyBookDiamondList frm = new BuyBookDiamondList();
-            SetFormList(frm, 8, "BuyBookDiamond");
+            SetFormList(frm, 5, "BuyBookDiamond");
         }
 
         private void menuNonCerGemstone_Click(object sender, EventArgs e)
         {
             BuyBookGemstoneList frm = new BuyBookGemstoneList();
-            SetFormList(frm, 8, "BuyBookGemstone");
+            SetFormList(frm, 6, "BuyBookGemstone");
         }
 
         private void menuGold_Click(object sender, EventArgs e)
         {
             BuyBookGoldList frm = new BuyBookGoldList();
-            SetFormList(frm, 8, "BuyBookGold");
+            SetFormList(frm, 7, "BuyBookGold");
         }
 
         private void menuSetting_Click(object sender, EventArgs e)
@@ -114,7 +80,43 @@ namespace DiamondShop
         private void menuETC_Click(object sender, EventArgs e)
         {
             BuyBookETCList frm = new BuyBookETCList();
-            SetFormList(frm, 8, "BuyBookETC");
+            SetFormList(frm, 9, "BuyBookETC");
+        }
+
+        private void btnCatalog_Click(object sender, EventArgs e)
+        {
+            CatalogList frm = new CatalogList();
+            SetFormList(frm, 10, "Catalog");
+        }
+
+        private void btnCerDiamond_Click(object sender, EventArgs e)
+        {
+            DiamondCerList frm = new DiamondCerList();
+            SetFormList(frm, 11, "DiamondCer");
+        }
+
+        private void btnCerGemstone_Click(object sender, EventArgs e)
+        {
+            GemstoneCerList frm = new GemstoneCerList();
+            SetFormList(frm, 12, "GemstoneCer");
+        }
+
+        private void btnCustomer_Click(object sender, EventArgs e)
+        {
+            CustomerList frm = new CustomerList();
+            SetFormList(frm, 5, "Customer");
+        }
+
+        private void btnSell_Click(object sender, EventArgs e)
+        {
+            SellList frm = new SellList();
+            SetFormList(frm, 6, "Sell");
+        }
+
+        private void btnInventory_Click(object sender, EventArgs e)
+        {
+            InventoryList frm = new InventoryList();
+            SetFormList(frm, 7, "Inventory");
         }
 
         private void SetFormList(Form frm, int ImageIndex, string tabPageText)

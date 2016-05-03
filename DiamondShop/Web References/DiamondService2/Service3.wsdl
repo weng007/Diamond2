@@ -101,6 +101,72 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="DoSearchBuyBookJewelry">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="code" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DoSearchBuyBookJewelryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DoSearchBuyBookJewelryResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DoSearchBuyBookETC">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="seller" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DoSearchBuyBookETCResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DoSearchBuyBookETCResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DoSearchBuyBookDiamond">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="code" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="sSize" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="eSize" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="shape" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DoSearchBuyBookDiamondResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DoSearchBuyBookDiamondResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
       <s:element name="DoSearchGemstoneCer">
         <s:complexType>
           <s:sequence>
@@ -127,38 +193,12 @@
           </s:sequence>
         </s:complexType>
       </s:element>
-      <s:element name="DoSearchBuyBookDiamond">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="sSize" type="s:double" />
-            <s:element minOccurs="1" maxOccurs="1" name="eSize" type="s:double" />
-            <s:element minOccurs="1" maxOccurs="1" name="colorGrade" type="s:int" />
-            <s:element minOccurs="1" maxOccurs="1" name="color" type="s:int" />
-            <s:element minOccurs="1" maxOccurs="1" name="clarity" type="s:int" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="DoSearchBuyBookDiamondResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="DoSearchBuyBookDiamondResult">
-              <s:complexType>
-                <s:sequence>
-                  <s:element ref="s:schema" />
-                  <s:any />
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
       <s:element name="DoSearchBuyBookGemstone">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="gemstoneType" type="s:int" />
-            <s:element minOccurs="1" maxOccurs="1" name="status" type="s:int" />
-            <s:element minOccurs="1" maxOccurs="1" name="sSize" type="s:double" />
-            <s:element minOccurs="1" maxOccurs="1" name="eSize" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="Code" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Size" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="Shape" type="s:string" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -176,12 +216,43 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="DoSearchBuyBookGemstoneCer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="code" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="reportNumber" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="shape" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="lab" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="sWeight" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="eWeight" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="identification" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="comment" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="origin" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="status" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="shop" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DoSearchBuyBookGemstoneCerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DoSearchBuyBookGemstoneCerResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
       <s:element name="DoSearchBuyBookGold">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="sSize" type="s:double" />
-            <s:element minOccurs="1" maxOccurs="1" name="eSize" type="s:double" />
-            <s:element minOccurs="1" maxOccurs="1" name="status" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="sBuyDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="eBuyDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="PercentGold" type="s:int" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -189,6 +260,29 @@
         <s:complexType>
           <s:sequence>
             <s:element minOccurs="0" maxOccurs="1" name="DoSearchBuyBookGoldResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DoSearchBuyBookSettingDetail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="settingtype" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="sSBuydate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="eBuydate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DoSearchBuyBookSettingDetailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DoSearchBuyBookSettingDetailResult">
               <s:complexType>
                 <s:sequence>
                   <s:element ref="s:schema" />
@@ -270,11 +364,17 @@
   <wsdl:message name="DoSearchBuyBookDiamondCerSoapOut">
     <wsdl:part name="parameters" element="tns:DoSearchBuyBookDiamondCerResponse" />
   </wsdl:message>
-  <wsdl:message name="DoSearchGemstoneCerSoapIn">
-    <wsdl:part name="parameters" element="tns:DoSearchGemstoneCer" />
+  <wsdl:message name="DoSearchBuyBookJewelrySoapIn">
+    <wsdl:part name="parameters" element="tns:DoSearchBuyBookJewelry" />
   </wsdl:message>
-  <wsdl:message name="DoSearchGemstoneCerSoapOut">
-    <wsdl:part name="parameters" element="tns:DoSearchGemstoneCerResponse" />
+  <wsdl:message name="DoSearchBuyBookJewelrySoapOut">
+    <wsdl:part name="parameters" element="tns:DoSearchBuyBookJewelryResponse" />
+  </wsdl:message>
+  <wsdl:message name="DoSearchBuyBookETCSoapIn">
+    <wsdl:part name="parameters" element="tns:DoSearchBuyBookETC" />
+  </wsdl:message>
+  <wsdl:message name="DoSearchBuyBookETCSoapOut">
+    <wsdl:part name="parameters" element="tns:DoSearchBuyBookETCResponse" />
   </wsdl:message>
   <wsdl:message name="DoSearchBuyBookDiamondSoapIn">
     <wsdl:part name="parameters" element="tns:DoSearchBuyBookDiamond" />
@@ -282,17 +382,35 @@
   <wsdl:message name="DoSearchBuyBookDiamondSoapOut">
     <wsdl:part name="parameters" element="tns:DoSearchBuyBookDiamondResponse" />
   </wsdl:message>
+  <wsdl:message name="DoSearchGemstoneCerSoapIn">
+    <wsdl:part name="parameters" element="tns:DoSearchGemstoneCer" />
+  </wsdl:message>
+  <wsdl:message name="DoSearchGemstoneCerSoapOut">
+    <wsdl:part name="parameters" element="tns:DoSearchGemstoneCerResponse" />
+  </wsdl:message>
   <wsdl:message name="DoSearchBuyBookGemstoneSoapIn">
     <wsdl:part name="parameters" element="tns:DoSearchBuyBookGemstone" />
   </wsdl:message>
   <wsdl:message name="DoSearchBuyBookGemstoneSoapOut">
     <wsdl:part name="parameters" element="tns:DoSearchBuyBookGemstoneResponse" />
   </wsdl:message>
+  <wsdl:message name="DoSearchBuyBookGemstoneCerSoapIn">
+    <wsdl:part name="parameters" element="tns:DoSearchBuyBookGemstoneCer" />
+  </wsdl:message>
+  <wsdl:message name="DoSearchBuyBookGemstoneCerSoapOut">
+    <wsdl:part name="parameters" element="tns:DoSearchBuyBookGemstoneCerResponse" />
+  </wsdl:message>
   <wsdl:message name="DoSearchBuyBookGoldSoapIn">
     <wsdl:part name="parameters" element="tns:DoSearchBuyBookGold" />
   </wsdl:message>
   <wsdl:message name="DoSearchBuyBookGoldSoapOut">
     <wsdl:part name="parameters" element="tns:DoSearchBuyBookGoldResponse" />
+  </wsdl:message>
+  <wsdl:message name="DoSearchBuyBookSettingDetailSoapIn">
+    <wsdl:part name="parameters" element="tns:DoSearchBuyBookSettingDetail" />
+  </wsdl:message>
+  <wsdl:message name="DoSearchBuyBookSettingDetailSoapOut">
+    <wsdl:part name="parameters" element="tns:DoSearchBuyBookSettingDetailResponse" />
   </wsdl:message>
   <wsdl:message name="DoSearchBuyBookSpecialSoapIn">
     <wsdl:part name="parameters" element="tns:DoSearchBuyBookSpecial" />
@@ -323,21 +441,37 @@
       <wsdl:input message="tns:DoSearchBuyBookDiamondCerSoapIn" />
       <wsdl:output message="tns:DoSearchBuyBookDiamondCerSoapOut" />
     </wsdl:operation>
-    <wsdl:operation name="DoSearchGemstoneCer">
-      <wsdl:input message="tns:DoSearchGemstoneCerSoapIn" />
-      <wsdl:output message="tns:DoSearchGemstoneCerSoapOut" />
+    <wsdl:operation name="DoSearchBuyBookJewelry">
+      <wsdl:input message="tns:DoSearchBuyBookJewelrySoapIn" />
+      <wsdl:output message="tns:DoSearchBuyBookJewelrySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DoSearchBuyBookETC">
+      <wsdl:input message="tns:DoSearchBuyBookETCSoapIn" />
+      <wsdl:output message="tns:DoSearchBuyBookETCSoapOut" />
     </wsdl:operation>
     <wsdl:operation name="DoSearchBuyBookDiamond">
       <wsdl:input message="tns:DoSearchBuyBookDiamondSoapIn" />
       <wsdl:output message="tns:DoSearchBuyBookDiamondSoapOut" />
     </wsdl:operation>
+    <wsdl:operation name="DoSearchGemstoneCer">
+      <wsdl:input message="tns:DoSearchGemstoneCerSoapIn" />
+      <wsdl:output message="tns:DoSearchGemstoneCerSoapOut" />
+    </wsdl:operation>
     <wsdl:operation name="DoSearchBuyBookGemstone">
       <wsdl:input message="tns:DoSearchBuyBookGemstoneSoapIn" />
       <wsdl:output message="tns:DoSearchBuyBookGemstoneSoapOut" />
     </wsdl:operation>
+    <wsdl:operation name="DoSearchBuyBookGemstoneCer">
+      <wsdl:input message="tns:DoSearchBuyBookGemstoneCerSoapIn" />
+      <wsdl:output message="tns:DoSearchBuyBookGemstoneCerSoapOut" />
+    </wsdl:operation>
     <wsdl:operation name="DoSearchBuyBookGold">
       <wsdl:input message="tns:DoSearchBuyBookGoldSoapIn" />
       <wsdl:output message="tns:DoSearchBuyBookGoldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DoSearchBuyBookSettingDetail">
+      <wsdl:input message="tns:DoSearchBuyBookSettingDetailSoapIn" />
+      <wsdl:output message="tns:DoSearchBuyBookSettingDetailSoapOut" />
     </wsdl:operation>
     <wsdl:operation name="DoSearchBuyBookSpecial">
       <wsdl:input message="tns:DoSearchBuyBookSpecialSoapIn" />
@@ -386,8 +520,17 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="DoSearchGemstoneCer">
-      <soap:operation soapAction="http://tempuri.org/DoSearchGemstoneCer" style="document" />
+    <wsdl:operation name="DoSearchBuyBookJewelry">
+      <soap:operation soapAction="http://tempuri.org/DoSearchBuyBookJewelry" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoSearchBuyBookETC">
+      <soap:operation soapAction="http://tempuri.org/DoSearchBuyBookETC" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -404,6 +547,15 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="DoSearchGemstoneCer">
+      <soap:operation soapAction="http://tempuri.org/DoSearchGemstoneCer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="DoSearchBuyBookGemstone">
       <soap:operation soapAction="http://tempuri.org/DoSearchBuyBookGemstone" style="document" />
       <wsdl:input>
@@ -413,8 +565,26 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="DoSearchBuyBookGemstoneCer">
+      <soap:operation soapAction="http://tempuri.org/DoSearchBuyBookGemstoneCer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="DoSearchBuyBookGold">
       <soap:operation soapAction="http://tempuri.org/DoSearchBuyBookGold" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoSearchBuyBookSettingDetail">
+      <soap:operation soapAction="http://tempuri.org/DoSearchBuyBookSettingDetail" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -479,8 +649,17 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="DoSearchGemstoneCer">
-      <soap12:operation soapAction="http://tempuri.org/DoSearchGemstoneCer" style="document" />
+    <wsdl:operation name="DoSearchBuyBookJewelry">
+      <soap12:operation soapAction="http://tempuri.org/DoSearchBuyBookJewelry" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoSearchBuyBookETC">
+      <soap12:operation soapAction="http://tempuri.org/DoSearchBuyBookETC" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -497,6 +676,15 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="DoSearchGemstoneCer">
+      <soap12:operation soapAction="http://tempuri.org/DoSearchGemstoneCer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="DoSearchBuyBookGemstone">
       <soap12:operation soapAction="http://tempuri.org/DoSearchBuyBookGemstone" style="document" />
       <wsdl:input>
@@ -506,8 +694,26 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="DoSearchBuyBookGemstoneCer">
+      <soap12:operation soapAction="http://tempuri.org/DoSearchBuyBookGemstoneCer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="DoSearchBuyBookGold">
       <soap12:operation soapAction="http://tempuri.org/DoSearchBuyBookGold" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoSearchBuyBookSettingDetail">
+      <soap12:operation soapAction="http://tempuri.org/DoSearchBuyBookSettingDetail" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
