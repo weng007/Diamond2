@@ -11,7 +11,6 @@ using DiamondShop.DiamondService;
 using DiamondShop.DiamondService1;
 using DiamondShop.FormMaster;
 
-
 namespace DiamondShop
 {
     public partial class Login : Form

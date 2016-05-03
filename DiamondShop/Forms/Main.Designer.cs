@@ -52,6 +52,19 @@
             this.menuUser = new System.Windows.Forms.ToolStripMenuItem();
             this.menuSeller = new System.Windows.Forms.ToolStripMenuItem();
             this.btnCatalog = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnCatDR = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnCatDE = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuCatGR = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnCatGE = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnCatWR = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnCatIC = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnCatNL = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnCatBL = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnCatCL = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnCatBR = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnCatPD = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnCatSJ = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnCatMTO = new System.Windows.Forms.ToolStripMenuItem();
             this.btnCerDiamond = new System.Windows.Forms.ToolStripMenuItem();
             this.btnCerGemstone = new System.Windows.Forms.ToolStripMenuItem();
             this.btnCustomer = new System.Windows.Forms.ToolStripMenuItem();
@@ -70,6 +83,7 @@
             this.mnInvBR = new System.Windows.Forms.ToolStripMenuItem();
             this.mnInvPD = new System.Windows.Forms.ToolStripMenuItem();
             this.mnInvSJ = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnInvMTO = new System.Windows.Forms.ToolStripMenuItem();
             this.btnOrderFactory = new System.Windows.Forms.ToolStripMenuItem();
             this.btnBuyBook = new System.Windows.Forms.ToolStripMenuItem();
             this.mnBBCD = new System.Windows.Forms.ToolStripMenuItem();
@@ -81,20 +95,6 @@
             this.mnBBST = new System.Windows.Forms.ToolStripMenuItem();
             this.mnBBETC = new System.Windows.Forms.ToolStripMenuItem();
             this.btnAccounting = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnInvMTO = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnCatDR = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnCatDE = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuCatGR = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnCatGE = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnCatWR = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnCatIC = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnCatNL = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnCatBL = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnCatCL = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnCatBR = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnCatPD = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnCatSJ = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnCatMTO = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -350,7 +350,7 @@
             this.menuUser.Image = ((System.Drawing.Image)(resources.GetObject("menuUser.Image")));
             this.menuUser.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.menuUser.Name = "menuUser";
-            this.menuUser.Size = new System.Drawing.Size(168, 38);
+            this.menuUser.Size = new System.Drawing.Size(130, 38);
             this.menuUser.Text = "User";
             this.menuUser.Click += new System.EventHandler(this.btnUser_Click);
             // 
@@ -360,7 +360,7 @@
             this.menuSeller.Image = ((System.Drawing.Image)(resources.GetObject("menuSeller.Image")));
             this.menuSeller.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.menuSeller.Name = "menuSeller";
-            this.menuSeller.Size = new System.Drawing.Size(168, 38);
+            this.menuSeller.Size = new System.Drawing.Size(130, 38);
             this.menuSeller.Text = "Seller";
             this.menuSeller.Click += new System.EventHandler(this.menuSeller_Click);
             // 
@@ -386,7 +386,97 @@
             this.btnCatalog.Name = "btnCatalog";
             this.btnCatalog.Padding = new System.Windows.Forms.Padding(2);
             this.btnCatalog.Size = new System.Drawing.Size(78, 95);
-            this.btnCatalog.Click += new System.EventHandler(this.btnCatalog_Click);
+            // 
+            // mnCatDR
+            // 
+            this.mnCatDR.Name = "mnCatDR";
+            this.mnCatDR.Size = new System.Drawing.Size(226, 26);
+            this.mnCatDR.Text = "Diamond Ring";
+            this.mnCatDR.Click += new System.EventHandler(this.btnCatalog_Click);
+            // 
+            // mnCatDE
+            // 
+            this.mnCatDE.Name = "mnCatDE";
+            this.mnCatDE.Size = new System.Drawing.Size(226, 26);
+            this.mnCatDE.Text = "Diamond Earrings";
+            this.mnCatDE.Click += new System.EventHandler(this.btnCatalog_Click);
+            // 
+            // menuCatGR
+            // 
+            this.menuCatGR.Name = "menuCatGR";
+            this.menuCatGR.Size = new System.Drawing.Size(226, 26);
+            this.menuCatGR.Text = "Gemstone Ring";
+            this.menuCatGR.Click += new System.EventHandler(this.btnCatalog_Click);
+            // 
+            // mnCatGE
+            // 
+            this.mnCatGE.Name = "mnCatGE";
+            this.mnCatGE.Size = new System.Drawing.Size(226, 26);
+            this.mnCatGE.Text = "Gemstone Earrings";
+            this.mnCatGE.Click += new System.EventHandler(this.btnCatalog_Click);
+            // 
+            // mnCatWR
+            // 
+            this.mnCatWR.Name = "mnCatWR";
+            this.mnCatWR.Size = new System.Drawing.Size(226, 26);
+            this.mnCatWR.Text = "Wedding Ring";
+            this.mnCatWR.Click += new System.EventHandler(this.btnCatalog_Click);
+            // 
+            // mnCatIC
+            // 
+            this.mnCatIC.Name = "mnCatIC";
+            this.mnCatIC.Size = new System.Drawing.Size(226, 26);
+            this.mnCatIC.Text = "Intalian Chain";
+            this.mnCatIC.Click += new System.EventHandler(this.btnCatalog_Click);
+            // 
+            // mnCatNL
+            // 
+            this.mnCatNL.Name = "mnCatNL";
+            this.mnCatNL.Size = new System.Drawing.Size(226, 26);
+            this.mnCatNL.Text = "Necklace";
+            this.mnCatNL.Click += new System.EventHandler(this.btnCatalog_Click);
+            // 
+            // mnCatBL
+            // 
+            this.mnCatBL.Name = "mnCatBL";
+            this.mnCatBL.Size = new System.Drawing.Size(226, 26);
+            this.mnCatBL.Text = "Bracelace";
+            this.mnCatBL.Click += new System.EventHandler(this.btnCatalog_Click);
+            // 
+            // mnCatCL
+            // 
+            this.mnCatCL.Name = "mnCatCL";
+            this.mnCatCL.Size = new System.Drawing.Size(226, 26);
+            this.mnCatCL.Text = "Cufflinks";
+            this.mnCatCL.Click += new System.EventHandler(this.btnCatalog_Click);
+            // 
+            // mnCatBR
+            // 
+            this.mnCatBR.Name = "mnCatBR";
+            this.mnCatBR.Size = new System.Drawing.Size(226, 26);
+            this.mnCatBR.Text = "Brooch";
+            this.mnCatBR.Click += new System.EventHandler(this.btnCatalog_Click);
+            // 
+            // mnCatPD
+            // 
+            this.mnCatPD.Name = "mnCatPD";
+            this.mnCatPD.Size = new System.Drawing.Size(226, 26);
+            this.mnCatPD.Text = "Pendant";
+            this.mnCatPD.Click += new System.EventHandler(this.btnCatalog_Click);
+            // 
+            // mnCatSJ
+            // 
+            this.mnCatSJ.Name = "mnCatSJ";
+            this.mnCatSJ.Size = new System.Drawing.Size(226, 26);
+            this.mnCatSJ.Text = "Special Jewelry";
+            this.mnCatSJ.Click += new System.EventHandler(this.btnCatalog_Click);
+            // 
+            // mnCatMTO
+            // 
+            this.mnCatMTO.Name = "mnCatMTO";
+            this.mnCatMTO.Size = new System.Drawing.Size(226, 26);
+            this.mnCatMTO.Text = "Made To Order";
+            this.mnCatMTO.Click += new System.EventHandler(this.btnCatalog_Click);
             // 
             // btnCerDiamond
             // 
@@ -529,6 +619,12 @@
             this.mnInvSJ.Size = new System.Drawing.Size(226, 26);
             this.mnInvSJ.Text = "Special Jewelry";
             // 
+            // mnInvMTO
+            // 
+            this.mnInvMTO.Name = "mnInvMTO";
+            this.mnInvMTO.Size = new System.Drawing.Size(226, 26);
+            this.mnInvMTO.Text = "Made To Order";
+            // 
             // btnOrderFactory
             // 
             this.btnOrderFactory.Image = ((System.Drawing.Image)(resources.GetObject("btnOrderFactory.Image")));
@@ -642,90 +738,6 @@
             this.btnAccounting.Name = "btnAccounting";
             this.btnAccounting.Padding = new System.Windows.Forms.Padding(10, 4, 4, 4);
             this.btnAccounting.Size = new System.Drawing.Size(88, 95);
-            // 
-            // mnInvMTO
-            // 
-            this.mnInvMTO.Name = "mnInvMTO";
-            this.mnInvMTO.Size = new System.Drawing.Size(226, 26);
-            this.mnInvMTO.Text = "Made To Order";
-            // 
-            // mnCatDR
-            // 
-            this.mnCatDR.Name = "mnCatDR";
-            this.mnCatDR.Size = new System.Drawing.Size(226, 26);
-            this.mnCatDR.Text = "Diamond Ring";
-            // 
-            // mnCatDE
-            // 
-            this.mnCatDE.Name = "mnCatDE";
-            this.mnCatDE.Size = new System.Drawing.Size(226, 26);
-            this.mnCatDE.Text = "Diamond Earrings";
-            // 
-            // menuCatGR
-            // 
-            this.menuCatGR.Name = "menuCatGR";
-            this.menuCatGR.Size = new System.Drawing.Size(226, 26);
-            this.menuCatGR.Text = "Gemstone Ring";
-            // 
-            // mnCatGE
-            // 
-            this.mnCatGE.Name = "mnCatGE";
-            this.mnCatGE.Size = new System.Drawing.Size(226, 26);
-            this.mnCatGE.Text = "Gemstone Earrings";
-            // 
-            // mnCatWR
-            // 
-            this.mnCatWR.Name = "mnCatWR";
-            this.mnCatWR.Size = new System.Drawing.Size(226, 26);
-            this.mnCatWR.Text = "Wedding Ring";
-            // 
-            // mnCatIC
-            // 
-            this.mnCatIC.Name = "mnCatIC";
-            this.mnCatIC.Size = new System.Drawing.Size(226, 26);
-            this.mnCatIC.Text = "Intalian Chain";
-            // 
-            // mnCatNL
-            // 
-            this.mnCatNL.Name = "mnCatNL";
-            this.mnCatNL.Size = new System.Drawing.Size(226, 26);
-            this.mnCatNL.Text = "Necklace";
-            // 
-            // mnCatBL
-            // 
-            this.mnCatBL.Name = "mnCatBL";
-            this.mnCatBL.Size = new System.Drawing.Size(226, 26);
-            this.mnCatBL.Text = "Bracelace";
-            // 
-            // mnCatCL
-            // 
-            this.mnCatCL.Name = "mnCatCL";
-            this.mnCatCL.Size = new System.Drawing.Size(226, 26);
-            this.mnCatCL.Text = "Cufflinks";
-            // 
-            // mnCatBR
-            // 
-            this.mnCatBR.Name = "mnCatBR";
-            this.mnCatBR.Size = new System.Drawing.Size(226, 26);
-            this.mnCatBR.Text = "Brooch";
-            // 
-            // mnCatPD
-            // 
-            this.mnCatPD.Name = "mnCatPD";
-            this.mnCatPD.Size = new System.Drawing.Size(226, 26);
-            this.mnCatPD.Text = "Pendant";
-            // 
-            // mnCatSJ
-            // 
-            this.mnCatSJ.Name = "mnCatSJ";
-            this.mnCatSJ.Size = new System.Drawing.Size(226, 26);
-            this.mnCatSJ.Text = "Special Jewelry";
-            // 
-            // mnCatMTO
-            // 
-            this.mnCatMTO.Name = "mnCatMTO";
-            this.mnCatMTO.Size = new System.Drawing.Size(226, 26);
-            this.mnCatMTO.Text = "Made To Order";
             // 
             // Main
             // 
