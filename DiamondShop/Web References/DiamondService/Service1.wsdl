@@ -3,7 +3,7 @@
   <wsdl:types>
     <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
       <s:import namespace="http://tempuri.org/dsMasterTableDetail.xsd" />
-      <s:import schemaLocation="http://localhost:7777/DiamondService/Service1.asmx?schema=dsMasterTableDetail" namespace="http://tempuri.org/dsMasterTableDetail.xsd" />
+      <s:import schemaLocation="http://localhost:5555/DiamondService/Service1.asmx?schema=dsMasterTableDetail" namespace="http://tempuri.org/dsMasterTableDetail.xsd" />
       <s:element name="GetMasterTableDetail">
         <s:complexType>
           <s:sequence>
@@ -257,10 +257,10 @@
   </wsdl:binding>
   <wsdl:service name="Service1">
     <wsdl:port name="Service1Soap" binding="tns:Service1Soap">
-      <soap:address location="http://localhost:7777/DiamondService/Service1.asmx" />
+      <soap:address location="http://localhost:5555/DiamondService/Service1.asmx" />
     </wsdl:port>
     <wsdl:port name="Service1Soap12" binding="tns:Service1Soap12">
-      <soap12:address location="http://localhost:7777/DiamondService/Service1.asmx" />
+      <soap12:address location="http://localhost:5555/DiamondService/Service1.asmx" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>

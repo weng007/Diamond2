@@ -1,0 +1,490 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{71AC745F-C80C-4E34-B427-55E8E7042550}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DiamondDS</RootNamespace>
+    <AssemblyName>DiamondDS</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DS\dsBBJewelryDiamondCerDetail.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsBBJewelryDiamondCerDetail.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS\dsBBJewelryDiamondDetail.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsBBJewelryDiamondDetail.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS\dsBBJewelryGemstoneCerDetail.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsBBJewelryGemstoneCerDetail.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS\dsBBJewelryGemstoneDetail.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsBBJewelryGemstoneDetail.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS\dsBuyBookDiamond.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsBuyBookDiamond.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS\dsBuyBookDiamondCer.cs">
+      <DependentUpon>dsBuyBookDiamondCer.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS\dsBuyBookDiamondCer.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsBuyBookDiamondCer.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS\dsBuyBookETC.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsBuyBookETC.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS\dsBuyBookGemstone.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsBuyBookGemstone.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS\dsBuyBookGemstoneCer.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsBuyBookGemstoneCer.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS\dsBuyBookGold.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsBuyBookGold.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS\dsBuyBookJewelry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsBuyBookJewelry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS\dsBuyBookSettingDetail.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsBuyBookSettingDetail.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS\dsBuyBookSpecial.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsBuyBookSpecial.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS\dsCatalog.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsCatalog.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS\dsCustomer.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsCustomer.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS\dsDiamondCer.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsDiamondCer.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS\dsDiamondDetail.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsDiamondDetail.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS\dsGemstoneCer.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsGemstoneCer.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS\dsGemstoneDetail.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsGemstoneDetail.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS\dsInventory.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsInventory.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS\dsMasterTableDetail.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsMasterTableDetail.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS\dsPriceCode.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsPriceCode.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS\dsProduct.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsProduct.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS\dsSell.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsSell.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS\dsSeller.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsSeller.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS\dsUser.cs">
+      <DependentUpon>dsUser.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS\dsUser.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsUser.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="DS\dsBBJewelryDiamondCerDetail.xsc">
+      <DependentUpon>dsBBJewelryDiamondCerDetail.xsd</DependentUpon>
+    </None>
+    <None Include="DS\dsBBJewelryDiamondCerDetail.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsBBJewelryDiamondCerDetail.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS\dsBBJewelryDiamondCerDetail.xss">
+      <DependentUpon>dsBBJewelryDiamondCerDetail.xsd</DependentUpon>
+    </None>
+    <None Include="DS\dsBBJewelryDiamondDetail.xsc">
+      <DependentUpon>dsBBJewelryDiamondDetail.xsd</DependentUpon>
+    </None>
+    <None Include="DS\dsBBJewelryDiamondDetail.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsBBJewelryDiamondDetail.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS\dsBBJewelryDiamondDetail.xss">
+      <DependentUpon>dsBBJewelryDiamondDetail.xsd</DependentUpon>
+    </None>
+    <None Include="DS\dsBBJewelryGemstoneCerDetail.xsc">
+      <DependentUpon>dsBBJewelryGemstoneCerDetail.xsd</DependentUpon>
+    </None>
+    <None Include="DS\dsBBJewelryGemstoneCerDetail.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsBBJewelryGemstoneCerDetail.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS\dsBBJewelryGemstoneCerDetail.xss">
+      <DependentUpon>dsBBJewelryGemstoneCerDetail.xsd</DependentUpon>
+    </None>
+    <None Include="DS\dsBBJewelryGemstoneDetail.xsc">
+      <DependentUpon>dsBBJewelryGemstoneDetail.xsd</DependentUpon>
+    </None>
+    <None Include="DS\dsBBJewelryGemstoneDetail.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsBBJewelryGemstoneDetail.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS\dsBBJewelryGemstoneDetail.xss">
+      <DependentUpon>dsBBJewelryGemstoneDetail.xsd</DependentUpon>
+    </None>
+    <None Include="DS\dsBuyBookDiamond.xsc">
+      <DependentUpon>dsBuyBookDiamond.xsd</DependentUpon>
+    </None>
+    <None Include="DS\dsBuyBookDiamond.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsBuyBookDiamond.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DS\dsBuyBookDiamond.xss">
+      <DependentUpon>dsBuyBookDiamond.xsd</DependentUpon>
+    </None>
+    <None Include="DS\dsBuyBookDiamondCer.xsc">
+      <DependentUpon>dsBuyBookDiamondCer.xsd</DependentUpon>
+    </None>
+    <None Include="DS\dsBuyBookDiamondCer.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsBuyBookDiamondCer.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS\dsBuyBookDiamondCer.xss">
+      <DependentUpon>dsBuyBookDiamondCer.xsd</DependentUpon>
+    </None>
+    <None Include="DS\dsBuyBookETC.xsc">
+      <DependentUpon>dsBuyBookETC.xsd</DependentUpon>
+    </None>
+    <None Include="DS\dsBuyBookETC.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsBuyBookETC.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS\dsBuyBookETC.xss">
+      <DependentUpon>dsBuyBookETC.xsd</DependentUpon>
+    </None>
+    <None Include="DS\dsBuyBookGemstone.xsc">
+      <DependentUpon>dsBuyBookGemstone.xsd</DependentUpon>
+    </None>
+    <None Include="DS\dsBuyBookGemstone.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsBuyBookGemstone.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DS\dsBuyBookGemstone.xss">
+      <DependentUpon>dsBuyBookGemstone.xsd</DependentUpon>
+    </None>
+    <None Include="DS\dsBuyBookGemstoneCer.xsc">
+      <DependentUpon>dsBuyBookGemstoneCer.xsd</DependentUpon>
+    </None>
+    <None Include="DS\dsBuyBookGemstoneCer.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsBuyBookGemstoneCer.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DS\dsBuyBookGemstoneCer.xss">
+      <DependentUpon>dsBuyBookGemstoneCer.xsd</DependentUpon>
+    </None>
+    <None Include="DS\dsBuyBookGold.xsc">
+      <DependentUpon>dsBuyBookGold.xsd</DependentUpon>
+    </None>
+    <None Include="DS\dsBuyBookGold.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsBuyBookGold.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DS\dsBuyBookGold.xss">
+      <DependentUpon>dsBuyBookGold.xsd</DependentUpon>
+    </None>
+    <None Include="DS\dsBuyBookJewelry.xsc">
+      <DependentUpon>dsBuyBookJewelry.xsd</DependentUpon>
+    </None>
+    <None Include="DS\dsBuyBookJewelry.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsBuyBookJewelry.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS\dsBuyBookJewelry.xss">
+      <DependentUpon>dsBuyBookJewelry.xsd</DependentUpon>
+    </None>
+    <None Include="DS\dsBuyBookSettingDetail.xsc">
+      <DependentUpon>dsBuyBookSettingDetail.xsd</DependentUpon>
+    </None>
+    <None Include="DS\dsBuyBookSettingDetail.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsBuyBookSettingDetail.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS\dsBuyBookSettingDetail.xss">
+      <DependentUpon>dsBuyBookSettingDetail.xsd</DependentUpon>
+    </None>
+    <None Include="DS\dsBuyBookSpecial.xsc">
+      <DependentUpon>dsBuyBookSpecial.xsd</DependentUpon>
+    </None>
+    <None Include="DS\dsBuyBookSpecial.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsBuyBookSpecial.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DS\dsBuyBookSpecial.xss">
+      <DependentUpon>dsBuyBookSpecial.xsd</DependentUpon>
+    </None>
+    <None Include="DS\dsCatalog.xsc">
+      <DependentUpon>dsCatalog.xsd</DependentUpon>
+    </None>
+    <None Include="DS\dsCatalog.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsCatalog.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS\dsCatalog.xss">
+      <DependentUpon>dsCatalog.xsd</DependentUpon>
+    </None>
+    <None Include="DS\dsCustomer.xsc">
+      <DependentUpon>dsCustomer.xsd</DependentUpon>
+    </None>
+    <None Include="DS\dsCustomer.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsCustomer.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DS\dsCustomer.xss">
+      <DependentUpon>dsCustomer.xsd</DependentUpon>
+    </None>
+    <None Include="DS\dsDiamondCer.xsc">
+      <DependentUpon>dsDiamondCer.xsd</DependentUpon>
+    </None>
+    <None Include="DS\dsDiamondCer.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsDiamondCer.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DS\dsDiamondCer.xss">
+      <DependentUpon>dsDiamondCer.xsd</DependentUpon>
+    </None>
+    <None Include="DS\dsDiamondDetail.xsc">
+      <DependentUpon>dsDiamondDetail.xsd</DependentUpon>
+    </None>
+    <None Include="DS\dsDiamondDetail.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsDiamondDetail.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DS\dsDiamondDetail.xss">
+      <DependentUpon>dsDiamondDetail.xsd</DependentUpon>
+    </None>
+    <None Include="DS\dsGemstoneCer.xsc">
+      <DependentUpon>dsGemstoneCer.xsd</DependentUpon>
+    </None>
+    <None Include="DS\dsGemstoneCer.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsGemstoneCer.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DS\dsGemstoneCer.xss">
+      <DependentUpon>dsGemstoneCer.xsd</DependentUpon>
+    </None>
+    <None Include="DS\dsGemstoneDetail.xsc">
+      <DependentUpon>dsGemstoneDetail.xsd</DependentUpon>
+    </None>
+    <None Include="DS\dsGemstoneDetail.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsGemstoneDetail.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DS\dsGemstoneDetail.xss">
+      <DependentUpon>dsGemstoneDetail.xsd</DependentUpon>
+    </None>
+    <None Include="DS\dsInventory.xsc">
+      <DependentUpon>dsInventory.xsd</DependentUpon>
+    </None>
+    <None Include="DS\dsInventory.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsInventory.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS\dsInventory.xss">
+      <DependentUpon>dsInventory.xsd</DependentUpon>
+    </None>
+    <None Include="DS\dsMasterTableDetail.xsc">
+      <DependentUpon>dsMasterTableDetail.xsd</DependentUpon>
+    </None>
+    <None Include="DS\dsMasterTableDetail.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsMasterTableDetail.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DS\dsMasterTableDetail.xss">
+      <DependentUpon>dsMasterTableDetail.xsd</DependentUpon>
+    </None>
+    <None Include="DS\dsPriceCode.xsc">
+      <DependentUpon>dsPriceCode.xsd</DependentUpon>
+    </None>
+    <None Include="DS\dsPriceCode.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsPriceCode.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DS\dsPriceCode.xss">
+      <DependentUpon>dsPriceCode.xsd</DependentUpon>
+    </None>
+    <None Include="DS\dsProduct.xsc">
+      <DependentUpon>dsProduct.xsd</DependentUpon>
+    </None>
+    <None Include="DS\dsProduct.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsProduct.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DS\dsProduct.xss">
+      <DependentUpon>dsProduct.xsd</DependentUpon>
+    </None>
+    <None Include="DS\dsSell.xsc">
+      <DependentUpon>dsSell.xsd</DependentUpon>
+    </None>
+    <None Include="DS\dsSell.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsSell.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DS\dsSell.xss">
+      <DependentUpon>dsSell.xsd</DependentUpon>
+    </None>
+    <None Include="DS\dsSeller.xsc">
+      <DependentUpon>dsSeller.xsd</DependentUpon>
+    </None>
+    <None Include="DS\dsSeller.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsSeller.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS\dsSeller.xss">
+      <DependentUpon>dsSeller.xsd</DependentUpon>
+    </None>
+    <None Include="DS\dsUser.xsc">
+      <DependentUpon>dsUser.xsd</DependentUpon>
+    </None>
+    <None Include="DS\dsUser.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsUser.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS\dsUser.xss">
+      <DependentUpon>dsUser.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
