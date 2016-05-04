@@ -58,7 +58,7 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewComboBoxColumn2 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Shape = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.WeightPerStone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Weight1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -215,7 +215,7 @@
             this.grid2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
-            this.dataGridViewComboBoxColumn2,
+            this.Shape,
             this.WeightPerStone,
             this.dataGridViewTextBoxColumn5,
             this.Weight1,
@@ -380,15 +380,15 @@
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.Visible = false;
             // 
-            // dataGridViewComboBoxColumn2
+            // Shape
             // 
-            this.dataGridViewComboBoxColumn2.DataPropertyName = "ShapeName";
-            this.dataGridViewComboBoxColumn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.dataGridViewComboBoxColumn2.HeaderText = "Shape";
-            this.dataGridViewComboBoxColumn2.Name = "dataGridViewComboBoxColumn2";
-            this.dataGridViewComboBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewComboBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dataGridViewComboBoxColumn2.Width = 130;
+            this.Shape.DataPropertyName = "Shape";
+            this.Shape.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Shape.HeaderText = "Shape";
+            this.Shape.Name = "Shape";
+            this.Shape.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Shape.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Shape.Width = 130;
             // 
             // WeightPerStone
             // 
@@ -511,7 +511,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn MinPrice;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewComboBoxColumn2;
+        private System.Windows.Forms.DataGridViewComboBoxColumn Shape;
         private System.Windows.Forms.DataGridViewTextBoxColumn WeightPerStone;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Weight1;

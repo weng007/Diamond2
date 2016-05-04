@@ -87,13 +87,13 @@ namespace DiamondShop
             DoSearchData();
         }
 
-        private void gridInventory_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void gridInventory_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             if (gridInventory.RowCount > 0 && gridInventory.SelectedRows.Count > 0)
             {
-                //id = (int)gridInventory.SelectedRows[0].Cells["ID"].Value;
-                //Product frm = new Product(id);
-                //frm.ShowDialog();
+                id = (int)gridInventory.SelectedRows[0].Cells["ID"].Value;
+                Inventory frm = new Inventory(id);
+                frm.ShowDialog();
             }
 
             DoLoadData();

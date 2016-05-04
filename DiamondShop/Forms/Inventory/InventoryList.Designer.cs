@@ -232,7 +232,7 @@
             this.gridInventory.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridInventory.Size = new System.Drawing.Size(1311, 392);
             this.gridInventory.TabIndex = 2;
-            this.gridInventory.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridInventory_CellContentDoubleClick);
+            this.gridInventory.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.gridInventory_MouseDoubleClick);
             // 
             // RowNum
             // 

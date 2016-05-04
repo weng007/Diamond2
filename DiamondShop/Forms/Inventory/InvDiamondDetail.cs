@@ -51,20 +51,17 @@ namespace DiamondShop
 
         protected override void Initial()
         {
-            //cmbColorGrade.DataSource = (GM.GetMasterTableDetail("C025")).Tables[0];
-            //cmbColorGrade.ValueMember = "ID";
-            //cmbColorGrade.DisplayMember = "Detail";
-            //cmbColorGrade.Refresh();
+            Shape.DataSource = (GM.GetMasterTableDetail("C019")).Tables[0];
+            Shape.ValueMember = "ID";
+            Shape.DisplayMember = "Detail";
 
-            //cmbShape.DataSource = (GM.GetMasterTableDetail("C019")).Tables[0];
-            //cmbShape.ValueMember = "ID";
-            //cmbShape.DisplayMember = "Detail";
-            //cmbShape.Refresh();
+            Color.DataSource = (GM.GetMasterTableDetail("C001")).Tables[0];
+            Color.ValueMember = "ID";
+            Color.DisplayMember = "Detail";
 
-            //cmbClarity.DataSource = (GM.GetMasterTableDetail("C002")).Tables[0];
-            //cmbClarity.ValueMember = "ID";
-            //cmbClarity.DisplayMember = "Detail";
-            //cmbClarity.Refresh();
+            Clearity1.DataSource = (GM.GetMasterTableDetail("C002")).Tables[0];
+            Clearity1.ValueMember = "ID";
+            Clearity1.DisplayMember = "Detail";
 
             //cmbShape.Select();
 
@@ -72,15 +69,23 @@ namespace DiamondShop
         }
         protected override void LoadData()
         {
-            ds = ser.DoSelectData("DiamondDetail", id);
-            tds.Clear();
-            tds.Merge(ds);
+            //ds = ser.DoSelectData("BBJewelryDiamondCerDetail", id);
+            //ds2 = ser.DoSelectData("BBJewelryDiamondDetail", id);
+            //tds.Clear();
+            //tds.Merge(ds);
+            //tds2.Clear();
+            //tds2.Merge(ds2);
 
-            if (tds.DiamondDetail.Rows.Count > 0)
-            {
-                binder.BindValueToControl(tds.DiamondDetail[0]);
-                EnableDelete = true;
-            }
+
+            //if (tds.BBJewelryDiamondCerDetail.Rows.Count > 0)
+            //{
+            //    binder.BindValueToControl(tds.BBJewelryDiamondCerDetail[0]);
+            //}
+
+            //if (tds2.BBJewelryDiamondDetail.Rows.Count > 0)
+            //{
+            //    binder.BindValueToControl(tds2.BBJewelryDiamondDetail[0]);
+            //}
 
             base.LoadData();
         }
