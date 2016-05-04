@@ -52,22 +52,48 @@
             this.menuUser = new System.Windows.Forms.ToolStripMenuItem();
             this.menuSeller = new System.Windows.Forms.ToolStripMenuItem();
             this.btnCatalog = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnCatDR = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnCatDE = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuCatGR = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnCatGE = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnCatWR = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnCatIC = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnCatNL = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnCatBL = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnCatCL = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnCatBR = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnCatPD = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnCatSJ = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnCatMTO = new System.Windows.Forms.ToolStripMenuItem();
             this.btnCerDiamond = new System.Windows.Forms.ToolStripMenuItem();
             this.btnCerGemstone = new System.Windows.Forms.ToolStripMenuItem();
             this.btnCustomer = new System.Windows.Forms.ToolStripMenuItem();
             this.btnSell = new System.Windows.Forms.ToolStripMenuItem();
             this.btnConsign = new System.Windows.Forms.ToolStripMenuItem();
             this.btnInventory = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnInvDR = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnInvDE = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnInvGR = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnInvGE = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnInvWR = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnInvIC = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnInvNL = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnInvBL = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnInvCL = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnInvBR = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnInvPD = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnInvSJ = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnInvMTO = new System.Windows.Forms.ToolStripMenuItem();
             this.btnOrderFactory = new System.Windows.Forms.ToolStripMenuItem();
             this.btnBuyBook = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuCerDiamond = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuCerGemstone = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuJewelry = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuNonCerDiamond = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuNonCerGemstone = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuGold = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuSetting = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuETC = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnBBCD = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnBBCG = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnBBJW = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnBBNCD = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnBBNCG = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnBBG = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnBBST = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnBBETC = new System.Windows.Forms.ToolStripMenuItem();
             this.btnAccounting = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel1.SuspendLayout();
@@ -80,16 +106,19 @@
             // 
             this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "Tab0.png");
-            this.imageList1.Images.SetKeyName(1, "Tab1.png");
-            this.imageList1.Images.SetKeyName(2, "Tab2.png");
-            this.imageList1.Images.SetKeyName(3, "Tab3.png");
-            this.imageList1.Images.SetKeyName(4, "Tab5.png");
-            this.imageList1.Images.SetKeyName(5, "Tab6.png");
-            this.imageList1.Images.SetKeyName(6, "Tab8.png");
-            this.imageList1.Images.SetKeyName(7, "Tab9.png");
-            this.imageList1.Images.SetKeyName(8, "Tab10.png");
-            this.imageList1.Images.SetKeyName(9, "Tab11.png");
+            this.imageList1.Images.SetKeyName(0, "TabUser.png");
+            this.imageList1.Images.SetKeyName(1, "TabSeller.png");
+            this.imageList1.Images.SetKeyName(2, "TabBBCerDiamond.png");
+            this.imageList1.Images.SetKeyName(3, "TabBBCerGemstone.png");
+            this.imageList1.Images.SetKeyName(4, "TabBBJewelry.png");
+            this.imageList1.Images.SetKeyName(5, "TabBBDiamond.png");
+            this.imageList1.Images.SetKeyName(6, "TabBBGemstone.png");
+            this.imageList1.Images.SetKeyName(7, "TabBBGold.png");
+            this.imageList1.Images.SetKeyName(8, "TabBBSetting.png");
+            this.imageList1.Images.SetKeyName(9, "TabBBETC.png");
+            this.imageList1.Images.SetKeyName(10, "TabCatalog.png");
+            this.imageList1.Images.SetKeyName(11, "TabCerDiamond.png");
+            this.imageList1.Images.SetKeyName(12, "TabCerGemstone.png");
             // 
             // btnUser
             // 
@@ -337,12 +366,117 @@
             // 
             // btnCatalog
             // 
+            this.btnCatalog.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnCatDR,
+            this.mnCatDE,
+            this.menuCatGR,
+            this.mnCatGE,
+            this.mnCatWR,
+            this.mnCatIC,
+            this.mnCatNL,
+            this.mnCatBL,
+            this.mnCatCL,
+            this.mnCatBR,
+            this.mnCatPD,
+            this.mnCatSJ,
+            this.mnCatMTO});
+            this.btnCatalog.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCatalog.Image = ((System.Drawing.Image)(resources.GetObject("btnCatalog.Image")));
             this.btnCatalog.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnCatalog.Name = "btnCatalog";
             this.btnCatalog.Padding = new System.Windows.Forms.Padding(2);
             this.btnCatalog.Size = new System.Drawing.Size(78, 95);
-            this.btnCatalog.Click += new System.EventHandler(this.btnCatalog_Click);
+            // 
+            // mnCatDR
+            // 
+            this.mnCatDR.Name = "mnCatDR";
+            this.mnCatDR.Size = new System.Drawing.Size(226, 26);
+            this.mnCatDR.Text = "Diamond Ring";
+            this.mnCatDR.Click += new System.EventHandler(this.btnCatalog_Click);
+            // 
+            // mnCatDE
+            // 
+            this.mnCatDE.Name = "mnCatDE";
+            this.mnCatDE.Size = new System.Drawing.Size(226, 26);
+            this.mnCatDE.Text = "Diamond Earrings";
+            this.mnCatDE.Click += new System.EventHandler(this.btnCatalog_Click);
+            // 
+            // menuCatGR
+            // 
+            this.menuCatGR.Name = "menuCatGR";
+            this.menuCatGR.Size = new System.Drawing.Size(226, 26);
+            this.menuCatGR.Text = "Gemstone Ring";
+            this.menuCatGR.Click += new System.EventHandler(this.btnCatalog_Click);
+            // 
+            // mnCatGE
+            // 
+            this.mnCatGE.Name = "mnCatGE";
+            this.mnCatGE.Size = new System.Drawing.Size(226, 26);
+            this.mnCatGE.Text = "Gemstone Earrings";
+            this.mnCatGE.Click += new System.EventHandler(this.btnCatalog_Click);
+            // 
+            // mnCatWR
+            // 
+            this.mnCatWR.Name = "mnCatWR";
+            this.mnCatWR.Size = new System.Drawing.Size(226, 26);
+            this.mnCatWR.Text = "Wedding Ring";
+            this.mnCatWR.Click += new System.EventHandler(this.btnCatalog_Click);
+            // 
+            // mnCatIC
+            // 
+            this.mnCatIC.Name = "mnCatIC";
+            this.mnCatIC.Size = new System.Drawing.Size(226, 26);
+            this.mnCatIC.Text = "Intalian Chain";
+            this.mnCatIC.Click += new System.EventHandler(this.btnCatalog_Click);
+            // 
+            // mnCatNL
+            // 
+            this.mnCatNL.Name = "mnCatNL";
+            this.mnCatNL.Size = new System.Drawing.Size(226, 26);
+            this.mnCatNL.Text = "Necklace";
+            this.mnCatNL.Click += new System.EventHandler(this.btnCatalog_Click);
+            // 
+            // mnCatBL
+            // 
+            this.mnCatBL.Name = "mnCatBL";
+            this.mnCatBL.Size = new System.Drawing.Size(226, 26);
+            this.mnCatBL.Text = "Bracelace";
+            this.mnCatBL.Click += new System.EventHandler(this.btnCatalog_Click);
+            // 
+            // mnCatCL
+            // 
+            this.mnCatCL.Name = "mnCatCL";
+            this.mnCatCL.Size = new System.Drawing.Size(226, 26);
+            this.mnCatCL.Text = "Cufflinks";
+            this.mnCatCL.Click += new System.EventHandler(this.btnCatalog_Click);
+            // 
+            // mnCatBR
+            // 
+            this.mnCatBR.Name = "mnCatBR";
+            this.mnCatBR.Size = new System.Drawing.Size(226, 26);
+            this.mnCatBR.Text = "Brooch";
+            this.mnCatBR.Click += new System.EventHandler(this.btnCatalog_Click);
+            // 
+            // mnCatPD
+            // 
+            this.mnCatPD.Name = "mnCatPD";
+            this.mnCatPD.Size = new System.Drawing.Size(226, 26);
+            this.mnCatPD.Text = "Pendant";
+            this.mnCatPD.Click += new System.EventHandler(this.btnCatalog_Click);
+            // 
+            // mnCatSJ
+            // 
+            this.mnCatSJ.Name = "mnCatSJ";
+            this.mnCatSJ.Size = new System.Drawing.Size(226, 26);
+            this.mnCatSJ.Text = "Special Jewelry";
+            this.mnCatSJ.Click += new System.EventHandler(this.btnCatalog_Click);
+            // 
+            // mnCatMTO
+            // 
+            this.mnCatMTO.Name = "mnCatMTO";
+            this.mnCatMTO.Size = new System.Drawing.Size(226, 26);
+            this.mnCatMTO.Text = "Made To Order";
+            this.mnCatMTO.Click += new System.EventHandler(this.btnCatalog_Click);
             // 
             // btnCerDiamond
             // 
@@ -390,6 +524,21 @@
             // 
             // btnInventory
             // 
+            this.btnInventory.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnInvDR,
+            this.mnInvDE,
+            this.mnInvGR,
+            this.mnInvGE,
+            this.mnInvWR,
+            this.mnInvIC,
+            this.mnInvNL,
+            this.mnInvBL,
+            this.mnInvCL,
+            this.mnInvBR,
+            this.mnInvPD,
+            this.mnInvSJ,
+            this.mnInvMTO});
+            this.btnInventory.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInventory.Image = ((System.Drawing.Image)(resources.GetObject("btnInventory.Image")));
             this.btnInventory.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnInventory.Margin = new System.Windows.Forms.Padding(30, 0, 0, 0);
@@ -397,6 +546,84 @@
             this.btnInventory.Padding = new System.Windows.Forms.Padding(10, 4, 4, 4);
             this.btnInventory.Size = new System.Drawing.Size(88, 95);
             this.btnInventory.Click += new System.EventHandler(this.btnInventory_Click);
+            // 
+            // mnInvDR
+            // 
+            this.mnInvDR.Name = "mnInvDR";
+            this.mnInvDR.Size = new System.Drawing.Size(226, 26);
+            this.mnInvDR.Text = "Diamond Ring";
+            // 
+            // mnInvDE
+            // 
+            this.mnInvDE.Name = "mnInvDE";
+            this.mnInvDE.Size = new System.Drawing.Size(226, 26);
+            this.mnInvDE.Text = "Diamond Earrings";
+            // 
+            // mnInvGR
+            // 
+            this.mnInvGR.Name = "mnInvGR";
+            this.mnInvGR.Size = new System.Drawing.Size(226, 26);
+            this.mnInvGR.Text = "Gemstone Ring";
+            // 
+            // mnInvGE
+            // 
+            this.mnInvGE.Name = "mnInvGE";
+            this.mnInvGE.Size = new System.Drawing.Size(226, 26);
+            this.mnInvGE.Text = "Gemstone Earrings";
+            // 
+            // mnInvWR
+            // 
+            this.mnInvWR.Name = "mnInvWR";
+            this.mnInvWR.Size = new System.Drawing.Size(226, 26);
+            this.mnInvWR.Text = "Wedding Ring";
+            // 
+            // mnInvIC
+            // 
+            this.mnInvIC.Name = "mnInvIC";
+            this.mnInvIC.Size = new System.Drawing.Size(226, 26);
+            this.mnInvIC.Text = "Intalian Chain";
+            // 
+            // mnInvNL
+            // 
+            this.mnInvNL.Name = "mnInvNL";
+            this.mnInvNL.Size = new System.Drawing.Size(226, 26);
+            this.mnInvNL.Text = "Necklace";
+            // 
+            // mnInvBL
+            // 
+            this.mnInvBL.Name = "mnInvBL";
+            this.mnInvBL.Size = new System.Drawing.Size(226, 26);
+            this.mnInvBL.Text = "Bracelace";
+            // 
+            // mnInvCL
+            // 
+            this.mnInvCL.Name = "mnInvCL";
+            this.mnInvCL.Size = new System.Drawing.Size(226, 26);
+            this.mnInvCL.Text = "Cufflinks";
+            // 
+            // mnInvBR
+            // 
+            this.mnInvBR.Name = "mnInvBR";
+            this.mnInvBR.Size = new System.Drawing.Size(226, 26);
+            this.mnInvBR.Text = "Brooch";
+            // 
+            // mnInvPD
+            // 
+            this.mnInvPD.Name = "mnInvPD";
+            this.mnInvPD.Size = new System.Drawing.Size(226, 26);
+            this.mnInvPD.Text = "Pendant";
+            // 
+            // mnInvSJ
+            // 
+            this.mnInvSJ.Name = "mnInvSJ";
+            this.mnInvSJ.Size = new System.Drawing.Size(226, 26);
+            this.mnInvSJ.Text = "Special Jewelry";
+            // 
+            // mnInvMTO
+            // 
+            this.mnInvMTO.Name = "mnInvMTO";
+            this.mnInvMTO.Size = new System.Drawing.Size(226, 26);
+            this.mnInvMTO.Text = "Made To Order";
             // 
             // btnOrderFactory
             // 
@@ -409,100 +636,100 @@
             // btnBuyBook
             // 
             this.btnBuyBook.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuCerDiamond,
-            this.menuCerGemstone,
-            this.menuJewelry,
-            this.menuNonCerDiamond,
-            this.menuNonCerGemstone,
-            this.menuGold,
-            this.menuSetting,
-            this.menuETC});
+            this.mnBBCD,
+            this.mnBBCG,
+            this.mnBBJW,
+            this.mnBBNCD,
+            this.mnBBNCG,
+            this.mnBBG,
+            this.mnBBST,
+            this.mnBBETC});
             this.btnBuyBook.Image = ((System.Drawing.Image)(resources.GetObject("btnBuyBook.Image")));
             this.btnBuyBook.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnBuyBook.Name = "btnBuyBook";
             this.btnBuyBook.Padding = new System.Windows.Forms.Padding(10, 4, 4, 4);
             this.btnBuyBook.Size = new System.Drawing.Size(88, 95);
             // 
-            // menuCerDiamond
+            // mnBBCD
             // 
-            this.menuCerDiamond.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.menuCerDiamond.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuCerDiamond.Image = ((System.Drawing.Image)(resources.GetObject("menuCerDiamond.Image")));
-            this.menuCerDiamond.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.menuCerDiamond.Name = "menuCerDiamond";
-            this.menuCerDiamond.Size = new System.Drawing.Size(237, 38);
-            this.menuCerDiamond.Text = "Cer. Diamond";
-            this.menuCerDiamond.Click += new System.EventHandler(this.menuCerDiamond_Click);
+            this.mnBBCD.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.mnBBCD.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mnBBCD.Image = ((System.Drawing.Image)(resources.GetObject("mnBBCD.Image")));
+            this.mnBBCD.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.mnBBCD.Name = "mnBBCD";
+            this.mnBBCD.Size = new System.Drawing.Size(237, 38);
+            this.mnBBCD.Text = "Cer. Diamond";
+            this.mnBBCD.Click += new System.EventHandler(this.menuCerDiamond_Click);
             // 
-            // menuCerGemstone
+            // mnBBCG
             // 
-            this.menuCerGemstone.Font = new System.Drawing.Font("Century Gothic", 11.25F);
-            this.menuCerGemstone.Image = ((System.Drawing.Image)(resources.GetObject("menuCerGemstone.Image")));
-            this.menuCerGemstone.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.menuCerGemstone.Name = "menuCerGemstone";
-            this.menuCerGemstone.Size = new System.Drawing.Size(237, 38);
-            this.menuCerGemstone.Text = "Cer. Gemstone";
-            this.menuCerGemstone.Click += new System.EventHandler(this.menuCerGemstone_Click);
+            this.mnBBCG.Font = new System.Drawing.Font("Century Gothic", 11.25F);
+            this.mnBBCG.Image = ((System.Drawing.Image)(resources.GetObject("mnBBCG.Image")));
+            this.mnBBCG.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.mnBBCG.Name = "mnBBCG";
+            this.mnBBCG.Size = new System.Drawing.Size(237, 38);
+            this.mnBBCG.Text = "Cer. Gemstone";
+            this.mnBBCG.Click += new System.EventHandler(this.menuCerGemstone_Click);
             // 
-            // menuJewelry
+            // mnBBJW
             // 
-            this.menuJewelry.Font = new System.Drawing.Font("Century Gothic", 11.25F);
-            this.menuJewelry.Image = ((System.Drawing.Image)(resources.GetObject("menuJewelry.Image")));
-            this.menuJewelry.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.menuJewelry.Name = "menuJewelry";
-            this.menuJewelry.Size = new System.Drawing.Size(237, 38);
-            this.menuJewelry.Text = "Jewelry";
-            this.menuJewelry.Click += new System.EventHandler(this.menuJewelry_Click);
+            this.mnBBJW.Font = new System.Drawing.Font("Century Gothic", 11.25F);
+            this.mnBBJW.Image = ((System.Drawing.Image)(resources.GetObject("mnBBJW.Image")));
+            this.mnBBJW.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.mnBBJW.Name = "mnBBJW";
+            this.mnBBJW.Size = new System.Drawing.Size(237, 38);
+            this.mnBBJW.Text = "Jewelry";
+            this.mnBBJW.Click += new System.EventHandler(this.menuJewelry_Click);
             // 
-            // menuNonCerDiamond
+            // mnBBNCD
             // 
-            this.menuNonCerDiamond.Font = new System.Drawing.Font("Century Gothic", 11.25F);
-            this.menuNonCerDiamond.Image = ((System.Drawing.Image)(resources.GetObject("menuNonCerDiamond.Image")));
-            this.menuNonCerDiamond.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.menuNonCerDiamond.Name = "menuNonCerDiamond";
-            this.menuNonCerDiamond.Size = new System.Drawing.Size(237, 38);
-            this.menuNonCerDiamond.Text = "Non Cer. Diamond";
-            this.menuNonCerDiamond.Click += new System.EventHandler(this.menuNonCerDiamond_Click);
+            this.mnBBNCD.Font = new System.Drawing.Font("Century Gothic", 11.25F);
+            this.mnBBNCD.Image = ((System.Drawing.Image)(resources.GetObject("mnBBNCD.Image")));
+            this.mnBBNCD.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.mnBBNCD.Name = "mnBBNCD";
+            this.mnBBNCD.Size = new System.Drawing.Size(237, 38);
+            this.mnBBNCD.Text = "Non Cer. Diamond";
+            this.mnBBNCD.Click += new System.EventHandler(this.menuNonCerDiamond_Click);
             // 
-            // menuNonCerGemstone
+            // mnBBNCG
             // 
-            this.menuNonCerGemstone.Font = new System.Drawing.Font("Century Gothic", 11.25F);
-            this.menuNonCerGemstone.Image = ((System.Drawing.Image)(resources.GetObject("menuNonCerGemstone.Image")));
-            this.menuNonCerGemstone.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.menuNonCerGemstone.Name = "menuNonCerGemstone";
-            this.menuNonCerGemstone.Size = new System.Drawing.Size(237, 38);
-            this.menuNonCerGemstone.Text = "Non Cer. Gemstone";
-            this.menuNonCerGemstone.Click += new System.EventHandler(this.menuNonCerGemstone_Click);
+            this.mnBBNCG.Font = new System.Drawing.Font("Century Gothic", 11.25F);
+            this.mnBBNCG.Image = ((System.Drawing.Image)(resources.GetObject("mnBBNCG.Image")));
+            this.mnBBNCG.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.mnBBNCG.Name = "mnBBNCG";
+            this.mnBBNCG.Size = new System.Drawing.Size(237, 38);
+            this.mnBBNCG.Text = "Non Cer. Gemstone";
+            this.mnBBNCG.Click += new System.EventHandler(this.menuNonCerGemstone_Click);
             // 
-            // menuGold
+            // mnBBG
             // 
-            this.menuGold.Font = new System.Drawing.Font("Century Gothic", 11.25F);
-            this.menuGold.Image = ((System.Drawing.Image)(resources.GetObject("menuGold.Image")));
-            this.menuGold.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.menuGold.Name = "menuGold";
-            this.menuGold.Size = new System.Drawing.Size(237, 38);
-            this.menuGold.Text = "Gold";
-            this.menuGold.Click += new System.EventHandler(this.menuGold_Click);
+            this.mnBBG.Font = new System.Drawing.Font("Century Gothic", 11.25F);
+            this.mnBBG.Image = ((System.Drawing.Image)(resources.GetObject("mnBBG.Image")));
+            this.mnBBG.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.mnBBG.Name = "mnBBG";
+            this.mnBBG.Size = new System.Drawing.Size(237, 38);
+            this.mnBBG.Text = "Gold";
+            this.mnBBG.Click += new System.EventHandler(this.menuGold_Click);
             // 
-            // menuSetting
+            // mnBBST
             // 
-            this.menuSetting.Font = new System.Drawing.Font("Century Gothic", 11.25F);
-            this.menuSetting.Image = ((System.Drawing.Image)(resources.GetObject("menuSetting.Image")));
-            this.menuSetting.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.menuSetting.Name = "menuSetting";
-            this.menuSetting.Size = new System.Drawing.Size(237, 38);
-            this.menuSetting.Text = "Setting";
-            this.menuSetting.Click += new System.EventHandler(this.menuSetting_Click);
+            this.mnBBST.Font = new System.Drawing.Font("Century Gothic", 11.25F);
+            this.mnBBST.Image = ((System.Drawing.Image)(resources.GetObject("mnBBST.Image")));
+            this.mnBBST.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.mnBBST.Name = "mnBBST";
+            this.mnBBST.Size = new System.Drawing.Size(237, 38);
+            this.mnBBST.Text = "Setting";
+            this.mnBBST.Click += new System.EventHandler(this.menuSetting_Click);
             // 
-            // menuETC
+            // mnBBETC
             // 
-            this.menuETC.Font = new System.Drawing.Font("Century Gothic", 11.25F);
-            this.menuETC.Image = ((System.Drawing.Image)(resources.GetObject("menuETC.Image")));
-            this.menuETC.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.menuETC.Name = "menuETC";
-            this.menuETC.Size = new System.Drawing.Size(237, 38);
-            this.menuETC.Text = "ETC.";
-            this.menuETC.Click += new System.EventHandler(this.menuETC_Click);
+            this.mnBBETC.Font = new System.Drawing.Font("Century Gothic", 11.25F);
+            this.mnBBETC.Image = ((System.Drawing.Image)(resources.GetObject("mnBBETC.Image")));
+            this.mnBBETC.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.mnBBETC.Name = "mnBBETC";
+            this.mnBBETC.Size = new System.Drawing.Size(237, 38);
+            this.mnBBETC.Text = "ETC.";
+            this.mnBBETC.Click += new System.EventHandler(this.menuETC_Click);
             // 
             // btnAccounting
             // 
@@ -573,14 +800,40 @@
         private System.Windows.Forms.ToolStripMenuItem btnMaster;
         private System.Windows.Forms.ToolStripMenuItem menuUser;
         private System.Windows.Forms.ToolStripMenuItem menuSeller;
-        private System.Windows.Forms.ToolStripMenuItem menuCerDiamond;
-        private System.Windows.Forms.ToolStripMenuItem menuCerGemstone;
-        private System.Windows.Forms.ToolStripMenuItem menuJewelry;
-        private System.Windows.Forms.ToolStripMenuItem menuNonCerDiamond;
-        private System.Windows.Forms.ToolStripMenuItem menuNonCerGemstone;
-        private System.Windows.Forms.ToolStripMenuItem menuGold;
-        private System.Windows.Forms.ToolStripMenuItem menuSetting;
-        private System.Windows.Forms.ToolStripMenuItem menuETC;
+        private System.Windows.Forms.ToolStripMenuItem mnBBCD;
+        private System.Windows.Forms.ToolStripMenuItem mnBBCG;
+        private System.Windows.Forms.ToolStripMenuItem mnBBJW;
+        private System.Windows.Forms.ToolStripMenuItem mnBBNCD;
+        private System.Windows.Forms.ToolStripMenuItem mnBBNCG;
+        private System.Windows.Forms.ToolStripMenuItem mnBBG;
+        private System.Windows.Forms.ToolStripMenuItem mnBBST;
+        private System.Windows.Forms.ToolStripMenuItem mnBBETC;
+        private System.Windows.Forms.ToolStripMenuItem mnInvDR;
+        private System.Windows.Forms.ToolStripMenuItem mnInvDE;
+        private System.Windows.Forms.ToolStripMenuItem mnInvGR;
+        private System.Windows.Forms.ToolStripMenuItem mnInvGE;
+        private System.Windows.Forms.ToolStripMenuItem mnInvWR;
+        private System.Windows.Forms.ToolStripMenuItem mnInvIC;
+        private System.Windows.Forms.ToolStripMenuItem mnInvNL;
+        private System.Windows.Forms.ToolStripMenuItem mnInvBL;
+        private System.Windows.Forms.ToolStripMenuItem mnInvCL;
+        private System.Windows.Forms.ToolStripMenuItem mnInvBR;
+        private System.Windows.Forms.ToolStripMenuItem mnInvPD;
+        private System.Windows.Forms.ToolStripMenuItem mnInvSJ;
+        private System.Windows.Forms.ToolStripMenuItem mnCatDR;
+        private System.Windows.Forms.ToolStripMenuItem mnCatDE;
+        private System.Windows.Forms.ToolStripMenuItem menuCatGR;
+        private System.Windows.Forms.ToolStripMenuItem mnCatGE;
+        private System.Windows.Forms.ToolStripMenuItem mnCatWR;
+        private System.Windows.Forms.ToolStripMenuItem mnCatIC;
+        private System.Windows.Forms.ToolStripMenuItem mnCatNL;
+        private System.Windows.Forms.ToolStripMenuItem mnCatBL;
+        private System.Windows.Forms.ToolStripMenuItem mnCatCL;
+        private System.Windows.Forms.ToolStripMenuItem mnCatBR;
+        private System.Windows.Forms.ToolStripMenuItem mnCatPD;
+        private System.Windows.Forms.ToolStripMenuItem mnCatSJ;
+        private System.Windows.Forms.ToolStripMenuItem mnCatMTO;
+        private System.Windows.Forms.ToolStripMenuItem mnInvMTO;
     }
 }
 
