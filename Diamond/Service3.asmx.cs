@@ -260,5 +260,20 @@ namespace Diamond
                 throw ex;
             }
         }
+
+        [WebMethod]
+        public DataSet DoSearchInventory(string code)
+        {
+            InventoryBiz biz = new InventoryBiz();
+
+            try
+            {
+                return biz.DoSearchData(code);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

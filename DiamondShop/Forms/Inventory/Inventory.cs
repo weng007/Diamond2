@@ -17,7 +17,7 @@ namespace DiamondShop
     public partial class Inventory : FormInfo
     {
         //Service1 ser = GM.GetService();
-        dsProduct tds = new dsProduct();
+        dsInventory tds = new dsInventory();
         MemoryStream ms1;
         MemoryStream ms2;
         byte[] image1, image2;
@@ -118,32 +118,6 @@ namespace DiamondShop
             cmbStatus.DisplayMember = "Detail";
             cmbStatus.Refresh();
 
-            //gridDiamond
-            //DataGridViewComboBoxColumn colShape;
-            //colShape = (DataGridViewComboBoxColumn)gridDiamond.Columns["Shape"];
-            //colShape.ValueMember = "ID";
-            //colShape.DisplayMember = "Detail";
-            //colShape.Name = "Shape";
-            //colShape.DataSource = (GM.GetMasterTableDetail("C019")).Tables[0];
-            //colShape.DefaultCellStyle.NullValue = (GM.GetMasterTableDetail("C019")).Tables[0].Rows[0]["Detail"];
-            ////colShape.DefaultCellStyle.DataSourceNullValue = (GM.GetMasterTableDetail("C019")).Tables[0].Rows[0];
-
-            //DataGridViewComboBoxColumn colColorGrade;
-            //colColorGrade = (DataGridViewComboBoxColumn)gridDiamond.Columns["ColorGrade"];
-            //colColorGrade.ValueMember = "ID";
-            //colColorGrade.DisplayMember = "Detail";
-            //colColorGrade.Name = "ColorGrade";
-            //colColorGrade.DataSource = (GM.GetMasterTableDetail("C025")).Tables[0];
-            //colColorGrade.DefaultCellStyle.NullValue = (GM.GetMasterTableDetail("C025")).Tables[0].Rows[0]["Detail"];
-
-            //DataGridViewComboBoxColumn colClarity;
-            //colClarity = (DataGridViewComboBoxColumn)gridDiamond.Columns["Clarity"];
-            //colClarity.ValueMember = "ID";
-            //colClarity.DisplayMember = "Detail";
-            //colClarity.Name = "Clarity";
-            //colClarity.DataSource = (GM.GetMasterTableDetail("C002")).Tables[0];
-            //colClarity.DefaultCellStyle.NullValue = (GM.GetMasterTableDetail("C002")).Tables[0].Rows[0]["Detail"];
-
             txtMaterialWeight1.Text = GM.ConvertDoubleToString(txtMaterialWeight1);
             txtMinPrice.Text = GM.ConvertDoubleToString(txtMinPrice);
             //txtOpenPrice.Text = GM.ConvertDoubleToString(txtOpenPrice);
@@ -158,17 +132,17 @@ namespace DiamondShop
 
         protected override void LoadData()
         {
-            ds = ser.DoSelectData("Product", id);
+            ds = ser.DoSelectData("Inventory", id);
             tds.Clear();
             tds.Merge(ds);
 
-            if (tds.Product.Rows.Count > 0)
+            if (tds.Inventory.Rows.Count > 0)
             {
-                binder.BindValueToControl(tds.Product[0]);
+                binder.BindValueToControl(tds.Inventory[0]);
 
                 //Image
-                image1 = tds.Product[0].Image1;
-                image2 = tds.Product[0].Image2;
+                image1 = tds.Inventory[0].Image1;
+                image2 = tds.Inventory[0].Image2;
                 if(image1 !=  null)
                 {
                     ms1 = new MemoryStream(image1);
@@ -200,19 +174,19 @@ namespace DiamondShop
 
         protected override bool SaveData()
         {
-            dsProduct.ProductRow row = null;
+            dsInventory.InventoryRow row = null;
 
-            if (tds.Product.Rows.Count > 0)
+            if (tds.Inventory.Rows.Count > 0)
             {
-                row = tds.Product[0];
+                row = tds.Inventory[0];
             }
             else
             {
-                row = tds.Product.NewProductRow();
-                tds.Product.Rows.Add(row);
+                row = tds.Inventory.NewInventoryRow();
+                tds.Inventory.Rows.Add(row);
             }
             binder.BindValueToDataRow(row);
-            row.UserID = ApplicationInfo.UserID;
+            row.CreateBy = ApplicationInfo.UserID;
             row.Image1 = image1;
             row.Image2 = image2;
 
@@ -221,12 +195,12 @@ namespace DiamondShop
                 if (id == 0)
                 {
                     SetCreateBy(row);               
-                    chkFlag = ser.DoInsertData("Product", tds);
+                    chkFlag = ser.DoInsertData("Inventory", tds);
                 }
                 else
                 {
                     SetEditBy(row);
-                    chkFlag = ser.DoUpdateData("Product", tds);
+                    chkFlag = ser.DoUpdateData("Inventory", tds);
                 }
 
                 tds.AcceptChanges();
@@ -243,7 +217,7 @@ namespace DiamondShop
         {
             try
             {
-                chkFlag = ser.DoDeleteData("Product", id);
+                chkFlag = ser.DoDeleteData("Inventory", id);
             }
             catch (Exception ex)
             {
@@ -342,7 +316,7 @@ namespace DiamondShop
             if(gridNum == 0)
             try
             {
-                ser.DoDeleteData("DiamondDetail", sid);
+                ser.DoDeleteData("Inventory", sid);
             }
             catch (Exception ex)
             {
@@ -351,7 +325,7 @@ namespace DiamondShop
             else if (gridNum == 1)
             try
             {
-                ser.DoDeleteData("GemstoneDetail", sid);
+                ser.DoDeleteData("Inventory", sid);
             }
             catch (Exception ex)
             {
