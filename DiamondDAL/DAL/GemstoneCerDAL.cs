@@ -14,18 +14,23 @@ namespace DiamondDAL.DAL
         dsGemstoneCer ds = new dsGemstoneCer();
         int flag = 0;
 
-        public dsGemstoneCer DoSearchData(double sweight, double eweight, int shape, int origin, int companyCer, int gemstoneType)
+        public dsGemstoneCer DoSearchData(int identification, string code, string reportnumber, double sweight,double eweight, int shape, int comment,int lab,int origin, int status, int shop)
         {
             try
             {
                 SQL.ClearParameter();
-                SQL.CreateParameter("SWeight", sweight);
-                SQL.CreateParameter("EWeight", eweight);
+                SQL.CreateParameter("Identification", identification);
+                SQL.CreateParameter("Code", code);
+                SQL.CreateParameter("Reportnumber", reportnumber);
+                SQL.CreateParameter("Sweight", sweight);
+                SQL.CreateParameter("Eweight", eweight);
                 SQL.CreateParameter("Shape", shape);
+                SQL.CreateParameter("Comment", comment);
+                SQL.CreateParameter("Lab", lab);
                 SQL.CreateParameter("Origin", origin);
-                SQL.CreateParameter("CompanyCer", companyCer);
-                SQL.CreateParameter("GemstoneType", gemstoneType);
-                SQL.FillDataSetBySP("SP_GemstoneCer_Search", ds.GemstoneCer);
+                SQL.CreateParameter("Status", status);
+                SQL.CreateParameter("Shop", shop);
+                SQL.FillDataSetBySP("SP_BuyBookGemstoneCer_Search", ds.GemstoneCer);
             }
             catch (Exception ex)
             {

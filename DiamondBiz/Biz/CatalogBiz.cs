@@ -8,16 +8,18 @@ using DiamondDAL.DAL;
 
 namespace DiamondBiz.Biz
 {
-    public class GemstoneCerBiz
+    public class CatalogBiz
     {
-        dsGemstoneCer ds = new dsGemstoneCer();
-        GemstoneCerDAL dal = new GemstoneCerDAL();
+        dsCatalog ds = new dsCatalog();
+        CatalogDAL dal = new CatalogDAL();
 
-        public dsGemstoneCer DoSearchData(int identification, string code, string reportnumber, double sweight, double eweight, int shape, int comment, int lab, int origin, int status, int shop)
+        //type 0 = Login, 1 = BuyBook
+        public dsCatalog DoSearchData(string code)
         {
+
             try
             {
-                return dal.DoSearchData(identification, code, reportnumber, sweight, eweight, shape, comment, lab, origin, status, shop);
+                return dal.DoSearchData(code);
             }
             catch (Exception ex)
             {
@@ -25,7 +27,7 @@ namespace DiamondBiz.Biz
             }
         }
 
-        public dsGemstoneCer DoSelectData(int id)
+        public dsCatalog DoSelectData(int id)
         {
             try
             {
@@ -36,7 +38,7 @@ namespace DiamondBiz.Biz
                 throw ex;
             }
         }
-        public bool DoInsertData(dsGemstoneCer tds)
+        public bool DoInsertData(dsCatalog tds)
         {
             try
             {
@@ -48,7 +50,7 @@ namespace DiamondBiz.Biz
             }
         }
 
-        public bool DoUpdateData(dsGemstoneCer tds)
+        public bool DoUpdateData(dsCatalog tds)
         {
             try
             {

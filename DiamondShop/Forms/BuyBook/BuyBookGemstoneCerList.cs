@@ -83,7 +83,7 @@ namespace DiamondShop
             if (gridGemstoneCer.RowCount > 0 && gridGemstoneCer.SelectedRows.Count > 0)
             {
                 id = (int)gridGemstoneCer.SelectedRows[0].Cells["ID"].Value;
-                DiamondCer frm = new DiamondCer(id);
+                BuyBookGemstoneCer frm = new BuyBookGemstoneCer(id);
                 frm.ShowDialog();
             }
 
@@ -147,7 +147,7 @@ namespace DiamondShop
             if (gridGemstoneCer.RowCount > 0 && gridGemstoneCer.SelectedRows.Count > 0)
             {
                 id = (int)gridGemstoneCer.SelectedRows[0].Cells["ID"].Value;
-                DiamondCer frm = new DiamondCer(id);
+                BuyBookGemstoneCer frm = new BuyBookGemstoneCer(id);
                 frm.ShowDialog();
             }
 

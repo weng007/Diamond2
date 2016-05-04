@@ -127,21 +127,6 @@ namespace Diamond
         }
 
         [WebMethod]
-        public DataSet DoSearchGemstoneCer(double sweight, double eweight, int shape, int origin, int companyCer, int gemstoneType)
-        {
-            GemstoneCerBiz biz = new GemstoneCerBiz();
-
-            try
-            {
-                return biz.DoSearchData(sweight, eweight, shape, origin, companyCer, gemstoneType);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-
-        [WebMethod]
         public DataSet DoSearchBuyBookGemstone(string Code, double Size, string Shape)
         {
             BuyBookGemstoneBiz biz = new BuyBookGemstoneBiz();
@@ -224,6 +209,51 @@ namespace Diamond
             try
             {
                 return biz.DoSearchData(code, shop, status, jewelryType);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        [WebMethod]
+        public DataSet DoSearchCatalog(string code)
+        {
+            CatalogBiz biz = new CatalogBiz();
+
+            try
+            {
+                return biz.DoSearchData(code);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        [WebMethod]
+        public DataSet DoSearchDiamondCer(string reportNumber, int shape, int lab, double sWeight, double eWeight, int sColor,
+            int eColor, int sClearity, int eClearity, int status, int shop)
+        {
+            DiamondCerBiz biz = new DiamondCerBiz();
+
+            try
+            {
+                return biz.DoSearchData(reportNumber, shape, lab, sWeight, eWeight, sColor,
+            eColor, sClearity, eClearity, status, shop);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        [WebMethod]
+        public DataSet DoSearchGemstoneCer(int identification, string code, string reportnumber, double sweight, double eweight, int shape, int comment, int lab, int origin, int status, int shop)
+        {
+            GemstoneCerBiz biz = new GemstoneCerBiz();
+
+            try
+            {
+                return biz.DoSearchData(identification, code, reportnumber, sweight, eweight,shape, comment, lab, origin, status, shop);
             }
             catch (Exception ex)
             {

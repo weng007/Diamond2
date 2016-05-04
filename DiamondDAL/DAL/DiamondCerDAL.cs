@@ -12,28 +12,33 @@ namespace DiamondDAL.DAL
     {
         SQLHelper SQL = new SQLHelper();
         dsDiamondCer ds = new dsDiamondCer();
+        dsBuyBookDiamondCer ds2 = new dsBuyBookDiamondCer();
         int flag = 0;
 
-        public dsDiamondCer DoSearchData(string GIANumber, double sweight, double eweight, int shape,int colorGrade, int color, int clarity)
+        public dsBuyBookDiamondCer DoSearchData(string reportNumber, int shape, int lab, double sWeight, double eWeight, int sColor,int eColor, int sClearity, int eClearity, int status, int shop)
         {
             try
             {
                 SQL.ClearParameter();
-                SQL.CreateParameter("GIANumber", GIANumber);
-                SQL.CreateParameter("SWeight", sweight);
-                SQL.CreateParameter("EWeight", eweight);
+                SQL.CreateParameter("ReportNumber", reportNumber);
                 SQL.CreateParameter("Shape", shape);
-                SQL.CreateParameter("ColorGrade", colorGrade);
-                SQL.CreateParameter("Color", color);
-                SQL.CreateParameter("Clarity", clarity);
-                SQL.FillDataSetBySP("SP_DiamondCer_Search", ds.DiamondCer);
+                SQL.CreateParameter("Lab", lab);
+                SQL.CreateParameter("SWeight", sWeight);
+                SQL.CreateParameter("EWeight", eWeight);
+                SQL.CreateParameter("SColor", sColor);
+                SQL.CreateParameter("EColor", eColor);
+                SQL.CreateParameter("sClearity", sClearity);
+                SQL.CreateParameter("eClearity", eClearity);
+                SQL.CreateParameter("Status", status);
+                SQL.CreateParameter("Shop", shop);
+                SQL.FillDataSetBySP("SP_BuyBookDiamondCer_Search", ds2.BuyBookDiamondCer);
             }
             catch (Exception ex)
             {
                 throw ex;
             }
 
-            return ds;
+            return ds2;
         }
 
         public dsDiamondCer DoSelectData(int id)

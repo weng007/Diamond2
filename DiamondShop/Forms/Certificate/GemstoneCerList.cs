@@ -23,27 +23,42 @@ namespace DiamondShop
         }
         protected override void Initial()
         {
-            //cmbShape.DataSource = (GM.GetMasterTableDetail("C019",true)).Tables[0];
-            //cmbShape.ValueMember = "ID";
-            //cmbShape.DisplayMember = "Detail";
-            //cmbShape.Refresh();
+            cmbIdentification.DataSource = (GM.GetMasterTableDetail("C016", true)).Tables[0];
+            cmbIdentification.ValueMember = "ID";
+            cmbIdentification.DisplayMember = "Detail";
+            cmbIdentification.Refresh();
 
-            //cmbOrigin.DataSource = (GM.GetMasterTableDetail("C024",true)).Tables[0];
-            //cmbOrigin.ValueMember = "ID";
-            //cmbOrigin.DisplayMember = "Detail";
-            //cmbOrigin.Refresh();
+            cmbShape.DataSource = (GM.GetMasterTableDetail("C019", true)).Tables[0];
+            cmbShape.ValueMember = "ID";
+            cmbShape.DisplayMember = "Detail";
+            cmbShape.Refresh();
 
-            //cmbCompanyCer.DataSource = (GM.GetMasterTableDetail("C026",true)).Tables[0];
-            //cmbCompanyCer.ValueMember = "ID";
-            //cmbCompanyCer.DisplayMember = "Detail";
-            //cmbCompanyCer.Refresh();
+            cmbComment.DataSource = (GM.GetMasterTableDetail("C026", true)).Tables[0];
+            cmbComment.ValueMember = "ID";
+            cmbComment.DisplayMember = "Detail";
+            cmbComment.Refresh();
 
-            cmbGemstoneType.DataSource = (GM.GetMasterTableDetail("C016",true)).Tables[0];
-            cmbGemstoneType.ValueMember = "ID";
-            cmbGemstoneType.DisplayMember = "Detail";
-            cmbGemstoneType.Refresh();
+            cmbLab.DataSource = (GM.GetMasterTableDetail("C026", true)).Tables[0];
+            cmbLab.ValueMember = "ID";
+            cmbLab.DisplayMember = "Detail";
+            cmbLab.Refresh();
 
-            txtSWeight.Select();
+            cmbOrigin.DataSource = (GM.GetMasterTableDetail("C024", true)).Tables[0];
+            cmbOrigin.ValueMember = "ID";
+            cmbOrigin.DisplayMember = "Detail";
+            cmbOrigin.Refresh();
+
+            cmbStatus.DataSource = (GM.GetMasterTableDetail("C023", true)).Tables[0];
+            cmbStatus.ValueMember = "ID";
+            cmbStatus.DisplayMember = "Detail";
+            cmbStatus.Refresh();
+
+            cmbShop.DataSource = (GM.GetMasterTableDetail("C007", true)).Tables[0];
+            cmbShop.ValueMember = "ID";
+            cmbShop.DisplayMember = "Detail";
+            cmbShop.Refresh();
+
+            txtCode.Select();
 
             gridGemstone.AutoGenerateColumns = false;
         }
@@ -74,9 +89,15 @@ namespace DiamondShop
         {
             ser2 = GM.GetService2();
 
-            //ds = ser2.DoSearchGemstoneCer(GM.ConvertStringToDouble(txtSWeight), GM.ConvertStringToDouble(txtWeightTo),
-            //    Convert.ToInt16(cmbShape.SelectedValue.ToString()), Convert.ToInt16(cmbOrigin.SelectedValue.ToString()),
-            //    Convert.ToInt16(cmbCompanyCer.SelectedValue.ToString()), Convert.ToInt16(cmbGemstoneType.SelectedValue.ToString()));
+            ds = ser2.DoSearchGemstoneCer(Convert.ToInt16(cmbIdentification.SelectedValue.ToString()),
+                 txtCode.Text, txtReportNumber.Text,
+                 GM.ConvertStringToDouble(txtSWeight), GM.ConvertStringToDouble(txtEWeight),
+                 Convert.ToInt16(cmbShape.SelectedValue.ToString()),
+                 Convert.ToInt16(cmbComment.SelectedValue.ToString()),  
+                 Convert.ToInt16(cmbLab.SelectedValue.ToString()),
+                 Convert.ToInt16(cmbOrigin.SelectedValue.ToString()),
+                 Convert.ToInt16(cmbStatus.SelectedValue.ToString()), 
+                 Convert.ToInt16(cmbShop.SelectedValue.ToString()));
 
             gridGemstone.DataSource = ds.Tables[0];
             gridGemstone.Refresh();
@@ -90,16 +111,16 @@ namespace DiamondShop
             }
         }
 
-        private void gridGemstone_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (gridGemstone.RowCount > 0 && gridGemstone.SelectedRows.Count > 0)
-            {
-                //id = (int)gridGemstone.SelectedRows[0].Cells["ID"].Value;
-                //GemstoneCer frm = new GemstoneCer(id);
-                //frm.ShowDialog();
-            }
+        //private void gridGemstone_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        //{
+        //    if (gridGemstone.RowCount > 0 && gridGemstone.SelectedRows.Count > 0)
+        //    {
+        //        //id = (int)gridGemstone.SelectedRows[0].Cells["ID"].Value;
+        //        //GemstoneCer frm = new GemstoneCer(id);
+        //        //frm.ShowDialog();
+        //    }
 
-            DoLoadData();
-        }
+        //    DoLoadData();
+        //}
     }
 }

@@ -106,27 +106,17 @@ namespace DiamondShop
 
         protected override void LoadData()
         {
-              ds = ser.DoSelectData("DiamondCer", id);
-              tds.Clear();
-              tds.Merge(ds);
+            ds = ser.DoSelectData("DiamondCer", id);
+            tds.Clear();
+            tds.Merge(ds);
 
-              if (tds.DiamondCer.Rows.Count > 0)
-              {
+
+            if (tds.DiamondCer.Rows.Count > 0)
+            {
                 binder.BindValueToControl(tds.DiamondCer[0]);
-                if(tds.DiamondCer[0]["Inscription"].ToString() == "0")
-                {
-                    //chkNo.Checked = true;
-                    //chkYes.Checked = false;
-                }
-                else
-                {
-                    //chkYes.Checked = true;
-                    //chkNo.Checked = false;
-                }
-                  EnableDelete = true;
-              }
+            }
 
-              base.LoadData();
+            base.LoadData();
         }
 
         protected override bool SaveData()
@@ -146,16 +136,8 @@ namespace DiamondShop
 
             try
             {
-                if (id == 0)
-                {
-                    SetCreateBy(row);
-                    chkFlag = ser.DoInsertData("DiamondCer", tds);
-                }
-                else
-                {
                     SetEditBy(row);
                     chkFlag = ser.DoUpdateData("DiamondCer", tds);
-                }
 
                 tds.AcceptChanges();
             }
@@ -244,7 +226,7 @@ namespace DiamondShop
             //cmbFluores.DisplayMember = "Detail";
             //cmbFluores.Refresh();
 
-            dtReportDate.Select();
+            txtNote.Select();
 
             //SetFieldService.SetRequireField(txtCode, txtW, txtL, txtD, txtCarat);
         }

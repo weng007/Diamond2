@@ -11,13 +11,16 @@ namespace DiamondBiz.Biz
     public class DiamondCerBiz
     {
         dsDiamondCer ds = new dsDiamondCer();
+        dsBuyBookDiamondCer ds2 = new dsBuyBookDiamondCer();
         DiamondCerDAL dal = new DiamondCerDAL();
 
-        public dsDiamondCer DoSearchData(string GIANumber, double sweight, double eweight, int shape, int colorGrade, int color, int clarity)
+        public dsBuyBookDiamondCer DoSearchData(string reportNumber, int shape, int lab, double sWeight, double eWeight, int sColor,
+            int eColor, int sClearity, int eClearity, int status, int shop)
         {
             try
             {
-                return dal.DoSearchData(GIANumber,sweight,eweight,shape,colorGrade,color,clarity);
+                return dal.DoSearchData(reportNumber, shape, lab, sWeight, eWeight, sColor,
+            eColor, sClearity, eClearity, status, shop);
             }
             catch (Exception ex)
             {

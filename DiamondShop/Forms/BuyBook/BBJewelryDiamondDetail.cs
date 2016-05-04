@@ -17,8 +17,10 @@ namespace DiamondShop
     public partial class BBJewelryDiamondDetail : FormInfo
     {
         //Service1 ser = GM.GetService();
-        dsDiamondDetail tds = new dsDiamondDetail();
-        public int productID = 0;
+        dsBBJewelryDiamondCerDetail tds = new dsBBJewelryDiamondCerDetail();
+        dsBBJewelryDiamondDetail tds2 = new dsBBJewelryDiamondDetail();
+        DataSet ds2 = new DataSet();
+        //public int productID = 0;
 
         public BBJewelryDiamondDetail()
         {
@@ -88,14 +90,23 @@ namespace DiamondShop
         }
         protected override void LoadData()
         {
-            ds = ser.DoSelectData("DiamondDetail", id);
+
+            ds = ser.DoSelectData("BBJewelryDiamondCerDetail", id);
+            ds2 = ser.DoSelectData("BBJewelryDiamondDetail", id);
             tds.Clear();
             tds.Merge(ds);
+            tds2.Clear();
+            tds2.Merge(ds2);
 
-            if (tds.DiamondDetail.Rows.Count > 0)
+
+            if (tds.BBJewelryDiamondCerDetail.Rows.Count > 0)
             {
-                binder.BindValueToControl(tds.DiamondDetail[0]);
-                EnableDelete = true;
+                binder.BindValueToControl(tds.BBJewelryDiamondCerDetail[0]);
+            }
+
+            if (tds2.BBJewelryDiamondDetail.Rows.Count > 0)
+            {
+                binder.BindValueToControl(tds2.BBJewelryDiamondDetail[0]);
             }
 
             base.LoadData();
@@ -103,31 +114,56 @@ namespace DiamondShop
 
         protected override bool SaveData()
         {
-            dsDiamondDetail.DiamondDetailRow row = null;
+            dsBBJewelryDiamondCerDetail.BBJewelryDiamondCerDetailRow row = null;
+            dsBBJewelryDiamondDetail.BBJewelryDiamondDetailRow row2 = null;
 
-            if (tds.DiamondDetail.Rows.Count > 0)
+            if (tds.BBJewelryDiamondCerDetail.Rows.Count > 0)
             {
-                row = tds.DiamondDetail[0];
+                row = tds.BBJewelryDiamondCerDetail[0];
             }
             else
             {
-                row = tds.DiamondDetail.NewDiamondDetailRow();
-                tds.DiamondDetail.Rows.Add(row);
+                row = tds.BBJewelryDiamondCerDetail.NewBBJewelryDiamondCerDetailRow();
+                tds.BBJewelryDiamondCerDetail.Rows.Add(row);
             }
-            binder.BindValueToDataRow(row);
-            row.ProductID = productID;
+            //binder.BindValueToDataRow(row);
+            //row.ProductID = productID;
+
+            if (tds2.BBJewelryDiamondDetail.Rows.Count > 0)
+            {
+                row2 = tds2.BBJewelryDiamondDetail[0];
+            }
+            else
+            {
+                row2 = tds2.BBJewelryDiamondDetail.NewBBJewelryDiamondDetailRow();
+                tds2.BBJewelryDiamondDetail.Rows.Add(row);
+            }
+
 
             try
             {
                 if (id == 0)
                 {
                     SetCreateBy(row);
-                    chkFlag = ser.DoInsertData("DiamondDetail", tds);
+                    chkFlag = ser.DoInsertData("BBJewelryDiamondCerDetail", tds);
                 }
                 else
                 {
                     SetEditBy(row);
-                    chkFlag = ser.DoUpdateData("DiamondDetail", tds);
+                    chkFlag = ser.DoUpdateData("BBJewelryDiamondCerDetail", tds);
+                }
+
+                tds.AcceptChanges();
+
+                if (id == 0)
+                {
+                    SetCreateBy(row2);
+                    chkFlag = ser.DoInsertData("BBJewelryDiamondDetail", tds2);
+                }
+                else
+                {
+                    SetEditBy(row2);
+                    chkFlag = ser.DoUpdateData("BBJewelryDiamondDetail", tds2);
                 }
 
                 tds.AcceptChanges();
@@ -143,7 +179,7 @@ namespace DiamondShop
         {
             try
             {
-                chkFlag = ser.DoDeleteData("DiamondDetail", id);
+                //chkFlag = ser.DoDeleteData("GemstoneDetail", id);
             }
             catch (Exception ex)
             {
@@ -157,35 +193,21 @@ namespace DiamondShop
         {
             message = "";
 
-            //if (txtWeight.Text == "" || GM.ConvertStringToDouble(txtWeight)==0)
+            //if (txtAmount.Text == "" || GM.ConvertStringToDouble(txtAmount) == 0)
             //{
-            //    message = "Please input Weight > 0.\n";
+            //    message += "Please input Amount > 0.\n";
             //}
-            //if (txtGIANumber.Text == "")
+
+            //if (txtWeight.Text == "" || GM.ConvertStringToDouble(txtWeight) == 0)
             //{
-            //    message += "Please input Certificate.\n";
+            //    message += "Please input Weight > 0.\n";
             //}
 
             if (message == "") { return true; }
             else { return false; }
         }
 
-        private void cmbColorGrade_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string color = "C017";
-
-            //if (cmbColorGrade.SelectedIndex == 0)
-            //{
-            //    color = "C001";
-            //}
-
-            //cmbColor.DataSource = (GM.GetMasterTableDetail(color)).Tables[0];
-            //cmbColor.ValueMember = "ID";
-            //cmbColor.DisplayMember = "Detail";
-            //cmbColor.Refresh();
-        }
-
-        private void txtWeight_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtAmount_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
             {

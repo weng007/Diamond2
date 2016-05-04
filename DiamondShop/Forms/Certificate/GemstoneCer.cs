@@ -3,20 +3,21 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DiamondShop.FormMaster;
-using DiamondDS.DS;
 using DiamondShop.DiamondService;
+using DiamondDS.DS;
 
 namespace DiamondShop
 {
     public partial class GemstoneCer : FormInfo
     {
         //Service1 ser = GM.GetService();
-        dsDiamondCer tds = new dsDiamondCer();
+        dsGemstoneCer tds = new dsGemstoneCer();
 
         public GemstoneCer()
         {
@@ -66,27 +67,17 @@ namespace DiamondShop
             binder.BindControl(txtShop, "Shop");
             binder.BindControl(txtStatus, "Status");
             binder.BindControl(txtReportNumber, "ReportNumber");
-            //binder.BindControl(txtwe, "Weight");
             binder.BindControl(txtIdentification, "Identification");
-            //binder.BindControl(txtam, "Amount");
             binder.BindControl(dtReportDate, "ReportDate");
             binder.BindControl(txtLab, "Lab");
             binder.BindControl(txtOrigin, "Origin");
             binder.BindControl(txtW, "W");
             binder.BindControl(txtL, "L");
             binder.BindControl(txtD, "D");
-
-            //binder.BindControl(dtReportDate, "PayByUSD");
-            //binder.BindControl(txtCode, "IsPaid");
-            //binder.BindControl(dtd, "DueDate");
             binder.BindControl(txtPriceCaratUSD, "PriceCaratUSD");
-            //binder.BindControl(txtt, "TotalUSD");
             binder.BindControl(txtUSDRate, "USDRate");
-            //binder.BindControl(txtt, "TotalBaht");
             binder.BindControl(txtPriceCaratBaht, "PriceCarat");
-            //binder.BindControl(txtt, "TotalThaiBaht");
             binder.BindControl(txtNote, "Note");
-            //binder.BindControl(cmbColor, "Image1");
             binder.BindControl(txtShape, "Shape");
 
             this.id = id;
@@ -95,41 +86,31 @@ namespace DiamondShop
 
         protected override void LoadData()
         {
-              ds = ser.DoSelectData("DiamondCer", id);
-              tds.Clear();
-              tds.Merge(ds);
+            ds = ser.DoSelectData("GemstoneCer", id);
+            tds.Clear();
+            tds.Merge(ds);
 
-              if (tds.DiamondCer.Rows.Count > 0)
-              {
-                binder.BindValueToControl(tds.DiamondCer[0]);
-                if(tds.DiamondCer[0]["Inscription"].ToString() == "0")
-                {
-                    //chkNo.Checked = true;
-                    //chkYes.Checked = false;
-                }
-                else
-                {
-                    //chkYes.Checked = true;
-                    //chkNo.Checked = false;
-                }
-                  EnableDelete = true;
-              }
 
-              base.LoadData();
+            if (tds.GemstoneCer.Rows.Count > 0)
+            {
+                binder.BindValueToControl(tds.GemstoneCer[0]);
+            }
+
+            base.LoadData()
         }
 
         protected override bool SaveData()
         {
-            dsDiamondCer.DiamondCerRow row = null;
+            dsGemstoneCer.GemstoneCerRow row = null;
 
-            if (tds.DiamondCer.Rows.Count > 0)
+            if (tds.GemstoneCer.Rows.Count > 0)
             {
-                row = tds.DiamondCer[0];
+                row = tds.GemstoneCer[0];
             }
             else
             {
-                row = tds.DiamondCer.NewDiamondCerRow();
-                tds.DiamondCer.Rows.Add(row);
+                row = tds.GemstoneCer.NewGemstoneCerRow();
+                tds.GemstoneCer.Rows.Add(row);
             }
             binder.BindValueToDataRow(row);
 
@@ -138,12 +119,12 @@ namespace DiamondShop
                 if (id == 0)
                 {
                     SetCreateBy(row);
-                    chkFlag = ser.DoInsertData("DiamondCer", tds);
+                    chkFlag = ser.DoInsertData("GemstoneCer", tds);
                 }
                 else
                 {
                     SetEditBy(row);
-                    chkFlag = ser.DoUpdateData("DiamondCer", tds);
+                    chkFlag = ser.DoUpdateData("GemstoneCer", tds);
                 }
 
                 tds.AcceptChanges();
@@ -159,7 +140,7 @@ namespace DiamondShop
         {
             try
             {
-                chkFlag = ser.DoDeleteData("DiamondCer", id);
+                chkFlag = ser.DoDeleteData("GemstoneCer", id);
             }
             catch (Exception ex)
             {

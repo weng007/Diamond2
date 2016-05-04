@@ -17,8 +17,10 @@ namespace DiamondShop
     public partial class BBJewelryGemstoneDetail : FormInfo
     {
         //Service1 ser = GM.GetService();
-        dsGemstoneDetail tds = new dsGemstoneDetail();
-        public int productID = 0;
+        dsBBJewelryGemstoneCerDetail tds = new dsBBJewelryGemstoneCerDetail();
+        dsBBJewelryGemstoneDetail tds2 = new dsBBJewelryGemstoneDetail();
+        DataSet ds2 = new DataSet();
+        //public int productID = 0;
 
         public BBJewelryGemstoneDetail()
         {
@@ -90,14 +92,23 @@ namespace DiamondShop
         }
         protected override void LoadData()
         {
-            ds = ser.DoSelectData("GemstoneDetail", id);
+            
+            ds = ser.DoSelectData("BBJewelryGemstoneCerDetail", id);
+            ds2 = ser.DoSelectData("BBJewelryGemstoneDetail", id);
             tds.Clear();
             tds.Merge(ds);
+            tds2.Clear();
+            tds2.Merge(ds2);
+            
 
-            if (tds.GemstoneDetail.Rows.Count > 0)
+            if (tds.BBJewelryGemstoneCerDetail.Rows.Count > 0)
             {
-                binder.BindValueToControl(tds.GemstoneDetail[0]);
-                EnableDelete = true;
+                binder.BindValueToControl(tds.BBJewelryGemstoneCerDetail[0]);
+            }
+
+            if (tds2.BBJewelryGemstoneDetail.Rows.Count > 0)
+            {
+                binder.BindValueToControl(tds2.BBJewelryGemstoneDetail[0]);
             }
 
             base.LoadData();
@@ -105,31 +116,56 @@ namespace DiamondShop
 
         protected override bool SaveData()
         {
-            dsGemstoneDetail.GemstoneDetailRow row = null;
+            dsBBJewelryGemstoneCerDetail.BBJewelryGemstoneCerDetailRow row = null;
+            dsBBJewelryGemstoneDetail.BBJewelryGemstoneDetailRow row2 = null;
 
-            if (tds.GemstoneDetail.Rows.Count > 0)
+            if (tds.BBJewelryGemstoneCerDetail.Rows.Count > 0)
             {
-                row = tds.GemstoneDetail[0];
+                row = tds.BBJewelryGemstoneCerDetail[0];
             }
             else
             {
-                row = tds.GemstoneDetail.NewGemstoneDetailRow();
-                tds.GemstoneDetail.Rows.Add(row);
+                row = tds.BBJewelryGemstoneCerDetail.NewBBJewelryGemstoneCerDetailRow();
+                tds.BBJewelryGemstoneCerDetail.Rows.Add(row);
             }
-            binder.BindValueToDataRow(row);
-            row.ProductID = productID;
+            //binder.BindValueToDataRow(row);
+            //row.ProductID = productID;
+
+            if (tds2.BBJewelryGemstoneDetail.Rows.Count > 0)
+            {
+                row2 = tds2.BBJewelryGemstoneDetail[0];
+            }
+            else
+            {
+                row2 = tds2.BBJewelryGemstoneDetail.NewBBJewelryGemstoneDetailRow();
+                tds2.BBJewelryGemstoneDetail.Rows.Add(row);
+            }
+
 
             try
             {
                 if (id == 0)
                 {
                     SetCreateBy(row);
-                    chkFlag = ser.DoInsertData("GemstoneDetail", tds);
+                    chkFlag = ser.DoInsertData("BBJewelryGemstoneCerDetail", tds);
                 }
                 else
                 {
                     SetEditBy(row);
-                    chkFlag = ser.DoUpdateData("GemstoneDetail", tds);
+                    chkFlag = ser.DoUpdateData("BBJewelryGemstoneCerDetail", tds);
+                }
+
+                tds.AcceptChanges();
+
+                if (id == 0)
+                {
+                    SetCreateBy(row2);
+                    chkFlag = ser.DoInsertData("BBJewelryGemstoneDetail", tds2);
+                }
+                else
+                {
+                    SetEditBy(row2);
+                    chkFlag = ser.DoUpdateData("BBJewelryGemstoneDetail", tds2);
                 }
 
                 tds.AcceptChanges();
@@ -145,7 +181,7 @@ namespace DiamondShop
         {
             try
             {
-                chkFlag = ser.DoDeleteData("GemstoneDetail", id);
+                //chkFlag = ser.DoDeleteData("GemstoneDetail", id);
             }
             catch (Exception ex)
             {

@@ -33,7 +33,7 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.cmbLab = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.cmbShape = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.cmbShop = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -45,10 +45,10 @@
             this.label10 = new System.Windows.Forms.Label();
             this.txtCode = new System.Windows.Forms.TextBox();
             this.cmbIdentification = new System.Windows.Forms.ComboBox();
-            this.txtWeightTo = new System.Windows.Forms.TextBox();
+            this.txtEWeight = new System.Windows.Forms.TextBox();
             this.txtSWeight = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.cmbGemstoneType = new System.Windows.Forms.ComboBox();
+            this.cmbComment = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.cmbOrigin = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -89,7 +89,7 @@
             this.panel4.Controls.Add(this.btnSearch);
             this.panel4.Controls.Add(this.cmbLab);
             this.panel4.Controls.Add(this.label9);
-            this.panel4.Controls.Add(this.comboBox3);
+            this.panel4.Controls.Add(this.cmbShape);
             this.panel4.Controls.Add(this.label8);
             this.panel4.Controls.Add(this.cmbShop);
             this.panel4.Controls.Add(this.label3);
@@ -101,10 +101,10 @@
             this.panel4.Controls.Add(this.label10);
             this.panel4.Controls.Add(this.txtCode);
             this.panel4.Controls.Add(this.cmbIdentification);
-            this.panel4.Controls.Add(this.txtWeightTo);
+            this.panel4.Controls.Add(this.txtEWeight);
             this.panel4.Controls.Add(this.txtSWeight);
             this.panel4.Controls.Add(this.label7);
-            this.panel4.Controls.Add(this.cmbGemstoneType);
+            this.panel4.Controls.Add(this.cmbComment);
             this.panel4.Controls.Add(this.label6);
             this.panel4.Controls.Add(this.cmbOrigin);
             this.panel4.Controls.Add(this.label5);
@@ -147,13 +147,13 @@
             this.label9.TabIndex = 89;
             this.label9.Text = "Lab";
             // 
-            // comboBox3
+            // cmbShape
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(454, 60);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(139, 29);
-            this.comboBox3.TabIndex = 20;
+            this.cmbShape.FormattingEnabled = true;
+            this.cmbShape.Location = new System.Drawing.Point(454, 60);
+            this.cmbShape.Name = "cmbShape";
+            this.cmbShape.Size = new System.Drawing.Size(139, 29);
+            this.cmbShape.TabIndex = 20;
             // 
             // label8
             // 
@@ -255,15 +255,15 @@
             this.cmbIdentification.Size = new System.Drawing.Size(161, 29);
             this.cmbIdentification.TabIndex = 1;
             // 
-            // txtWeightTo
+            // txtEWeight
             // 
-            this.txtWeightTo.Location = new System.Drawing.Point(529, 20);
-            this.txtWeightTo.Name = "txtWeightTo";
-            this.txtWeightTo.Size = new System.Drawing.Size(49, 27);
-            this.txtWeightTo.TabIndex = 16;
-            this.txtWeightTo.Text = "50";
-            this.txtWeightTo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtWeightTo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtWeightTo_KeyPress);
+            this.txtEWeight.Location = new System.Drawing.Point(529, 20);
+            this.txtEWeight.Name = "txtEWeight";
+            this.txtEWeight.Size = new System.Drawing.Size(49, 27);
+            this.txtEWeight.TabIndex = 16;
+            this.txtEWeight.Text = "50";
+            this.txtEWeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtEWeight.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtWeightTo_KeyPress);
             // 
             // txtSWeight
             // 
@@ -285,13 +285,13 @@
             this.label7.TabIndex = 70;
             this.label7.Text = "-";
             // 
-            // cmbGemstoneType
+            // cmbComment
             // 
-            this.cmbGemstoneType.FormattingEnabled = true;
-            this.cmbGemstoneType.Location = new System.Drawing.Point(744, 20);
-            this.cmbGemstoneType.Name = "cmbGemstoneType";
-            this.cmbGemstoneType.Size = new System.Drawing.Size(169, 29);
-            this.cmbGemstoneType.TabIndex = 24;
+            this.cmbComment.FormattingEnabled = true;
+            this.cmbComment.Location = new System.Drawing.Point(744, 20);
+            this.cmbComment.Name = "cmbComment";
+            this.cmbComment.Size = new System.Drawing.Size(169, 29);
+            this.cmbComment.TabIndex = 24;
             // 
             // label6
             // 
@@ -380,7 +380,6 @@
             this.gridGemstone.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridGemstone.Size = new System.Drawing.Size(1317, 396);
             this.gridGemstone.TabIndex = 2;
-            this.gridGemstone.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridGemstone_CellContentDoubleClick);
             // 
             // RowNum
             // 
@@ -565,8 +564,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cmbOrigin;
-        private System.Windows.Forms.ComboBox cmbGemstoneType;
-        private System.Windows.Forms.TextBox txtWeightTo;
+        private System.Windows.Forms.ComboBox cmbComment;
+        private System.Windows.Forms.TextBox txtEWeight;
         private System.Windows.Forms.TextBox txtSWeight;
         private System.Windows.Forms.Label label7;
         private DiamondDS.DS.dsGemstoneCer tds;
@@ -578,7 +577,7 @@
         private System.Windows.Forms.ComboBox cmbIdentification;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtReportNumber;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox cmbShape;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox cmbShop;
         private System.Windows.Forms.Label label3;

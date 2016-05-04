@@ -23,66 +23,78 @@ namespace DiamondShop
         }
 
         protected override void Initial()
-        {
-            //cmbShop.DataSource = (GM.GetMasterTableDetail("C007",true)).Tables[0];
-            //cmbShop.ValueMember = "ID";
-            //cmbShop.DisplayMember = "Detail";
-            //cmbShop.Refresh();
-
-            //cmbStatus.DataSource = (GM.GetMasterTableDetail("C023",true)).Tables[0];
-            //cmbStatus.ValueMember = "ID";
-            //cmbStatus.DisplayMember = "Detail";
-            //cmbStatus.Refresh();
-
-            //cmbJewelryType.DataSource = (GM.GetMasterTableDetail("C015",true)).Tables[0];
-            //cmbJewelryType.ValueMember = "ID";
-            //cmbJewelryType.DisplayMember = "Detail";
-            //cmbJewelryType.Refresh();
+        { 
 
             txtCode.Select();
 
-            grid.AutoGenerateColumns = false;
+            grdCatalog.AutoGenerateColumns = false;
+        }
+
+        protected override void DoLoadData()
+        {
+            ds = ser.DoSelectData("Catalog", -1);
+
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                grdCatalog.DataSource = ds.Tables[0];
+                grdCatalog.Refresh();
+            }
+            else
+            {
+                grdCatalog.DataSource = null;
+                grdCatalog.Refresh();
+            }
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            Catalog frm = new Catalog();
+            frm.ShowDialog();
+            DoLoadData();
         }
 
         private void DoSearchData()
         {
             ser2 = GM.GetService2();
 
-            //ds = ser2.DoSearchProduct(txtCode.Text, Convert.ToInt16(cmbShop.SelectedValue.ToString()),
-            //       Convert.ToInt16(cmbStatus.SelectedValue.ToString()), Convert.ToInt16(cmbJewelryType.SelectedValue.ToString()));
+            ds = ser2.DoSearchCatalog(txtCode.Text);
 
             if (ds.Tables[0].Rows.Count > 0)
             {
-                grid.DataSource = ds.Tables["Product"];
-                grid.Refresh();
+                grdCatalog.DataSource = ds.Tables[0];
+                grdCatalog.Refresh();
             }
-            else { grid.DataSource = null; grid.Refresh(); }
+            else { grdCatalog.DataSource = null; grdCatalog.Refresh(); }
         }
-
-        protected override void DoLoadData()
-        {
-            ds = ser.DoSelectData("Product", -1);
-
-            if (ds.Tables["Product"].Rows.Count > 0)
-            {
-                grid.DataSource = ds.Tables["Product"];
-                grid.Refresh();
-            }
-            else { grid.DataSource = null; grid.Refresh(); }
-        }
-
         private void btnSearch_Click(object sender, EventArgs e)
         {
             DoSearchData();
         }
 
-        private void grid_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        protected override bool DoDeleteData()
         {
-            if (grid.RowCount > 0 && grid.SelectedRows.Count > 0)
+            Popup.Popup winMessage = new Popup.Popup("Do you want to Delete data?");
+            winMessage.ShowDialog();
+            chkFlag = winMessage.result;
+
+            if (chkFlag)
             {
-                //id = (int)grid.SelectedRows[0].Cells["ID"].Value;
-                //Catalog frm = new Catalog(id);
-                //frm.ShowDialog();
+                if (grdCatalog.RowCount > 0 && grdCatalog.SelectedRows.Count > 0)
+                {
+                    id = (int)grdCatalog.SelectedRows[0].Cells["ID"].Value;
+                    chkFlag = ser.DoDeleteData("Catalog", id);
+                }
+            }
+            return chkFlag;
+        }
+
+        private void grdCatalog_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if (grdCatalog.RowCount > 0 && grdCatalog.SelectedRows.Count > 0)
+            {
+                id = (int)grdCatalog.SelectedRows[0].Cells["ID"].Value;
+                Catalog frm = new Catalog(id);
+                frm.ShowDialog();
             }
 
             DoLoadData();

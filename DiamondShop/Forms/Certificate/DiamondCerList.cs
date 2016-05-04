@@ -27,15 +27,40 @@ namespace DiamondShop
             cmbShape.DisplayMember = "Detail";
             cmbShape.Refresh();
 
-            //cmbColorGrade.DataSource = (GM.GetMasterTableDetail("C025",true)).Tables[0];
-            //cmbColorGrade.ValueMember = "ID";
-            //cmbColorGrade.DisplayMember = "Detail";
-            //cmbColorGrade.Refresh();
+            cmbLab.DataSource = (GM.GetMasterTableDetail("C019", true)).Tables[0];
+            cmbLab.ValueMember = "ID";
+            cmbLab.DisplayMember = "Detail";
+            cmbLab.Refresh();
+
+            cmbSColor.DataSource = (GM.GetMasterTableDetail("C019", true)).Tables[0];
+            cmbSColor.ValueMember = "ID";
+            cmbSColor.DisplayMember = "Detail";
+            cmbSColor.Refresh();
+
+            cmbEColor.DataSource = (GM.GetMasterTableDetail("C019", true)).Tables[0];
+            cmbEColor.ValueMember = "ID";
+            cmbEColor.DisplayMember = "Detail";
+            cmbEColor.Refresh();
 
             cmbSClearity.DataSource = (GM.GetMasterTableDetail("C002",true)).Tables[0];
             cmbSClearity.ValueMember = "ID";
             cmbSClearity.DisplayMember = "Detail";
             cmbSClearity.Refresh();
+
+            cmbEClearity.DataSource = (GM.GetMasterTableDetail("C002", true)).Tables[0];
+            cmbEClearity.ValueMember = "ID";
+            cmbEClearity.DisplayMember = "Detail";
+            cmbEClearity.Refresh();
+
+            cmbStatus.DataSource = (GM.GetMasterTableDetail("C002", true)).Tables[0];
+            cmbStatus.ValueMember = "ID";
+            cmbStatus.DisplayMember = "Detail";
+            cmbStatus.Refresh();
+
+            cmbShop.DataSource = (GM.GetMasterTableDetail("C002", true)).Tables[0];
+            cmbShop.ValueMember = "ID";
+            cmbShop.DisplayMember = "Detail";
+            cmbShop.Refresh();
 
             txtReportNumber.Select();
 
@@ -88,9 +113,10 @@ namespace DiamondShop
         {
             ser2 = GM.GetService2();
 
-            //ds = ser2.DoSearchDiamondCer(txtReportNumber.Text, GM.ConvertStringToDouble(txtSWeight), GM.ConvertStringToDouble(txtEWeight),
-            //    Convert.ToInt16(cmbShape.SelectedValue.ToString()), Convert.ToInt16(cmbColorGrade.SelectedValue.ToString()),
-            //    Convert.ToInt16(cmbSColor.SelectedValue.ToString()), Convert.ToInt16(cmbSClearity.SelectedValue.ToString()));
+            ds = ser2.DoSearchDiamondCer(txtReportNumber.Text, Convert.ToInt16(cmbShape.SelectedValue.ToString()), Convert.ToInt16(cmbLab.SelectedValue.ToString()), GM.ConvertStringToDouble(txtSWeight), 
+                GM.ConvertStringToDouble(txtEWeight), Convert.ToInt16(cmbSColor.SelectedValue.ToString()),
+                Convert.ToInt16(cmbEColor.SelectedValue.ToString()), Convert.ToInt16(cmbSClearity.SelectedValue.ToString())
+                , Convert.ToInt16(cmbEClearity.SelectedValue.ToString()), Convert.ToInt16(cmbStatus.SelectedValue.ToString()), Convert.ToInt16(cmbShop.SelectedValue.ToString()));
 
             gridDiamondCer.DataSource = ds.Tables[0];
             gridDiamondCer.Refresh();

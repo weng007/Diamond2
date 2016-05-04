@@ -42,7 +42,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.grid = new System.Windows.Forms.DataGridView();
+            this.grdCatalog = new System.Windows.Forms.DataGridView();
             this.RowNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -62,7 +62,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdCatalog)).BeginInit();
             this.SuspendLayout();
             // 
             // panel4
@@ -123,7 +123,7 @@
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.grid);
+            this.panel2.Controls.Add(this.grdCatalog);
             this.panel2.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.Location = new System.Drawing.Point(5, 84);
             this.panel2.Name = "panel2";
@@ -178,14 +178,14 @@
             this.label1.Text = "Dia Cer.";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // grid
+            // grdCatalog
             // 
-            this.grid.AllowUserToAddRows = false;
-            this.grid.AllowUserToDeleteRows = false;
-            this.grid.AllowUserToOrderColumns = true;
-            this.grid.BackgroundColor = System.Drawing.SystemColors.ControlLight;
-            this.grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.grdCatalog.AllowUserToAddRows = false;
+            this.grdCatalog.AllowUserToDeleteRows = false;
+            this.grdCatalog.AllowUserToOrderColumns = true;
+            this.grdCatalog.BackgroundColor = System.Drawing.SystemColors.ControlLight;
+            this.grdCatalog.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grdCatalog.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.RowNum,
             this.ID,
             this.Code,
@@ -202,16 +202,16 @@
             this.PriceTag,
             this.Shop,
             this.Status});
-            this.grid.Location = new System.Drawing.Point(0, 32);
-            this.grid.Name = "grid";
-            this.grid.ReadOnly = true;
-            this.grid.RowHeadersWidth = 10;
-            this.grid.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grid.RowTemplate.Height = 60;
-            this.grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grid.Size = new System.Drawing.Size(1210, 437);
-            this.grid.TabIndex = 2;
-            this.grid.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid_CellContentDoubleClick);
+            this.grdCatalog.Location = new System.Drawing.Point(0, 32);
+            this.grdCatalog.Name = "grdCatalog";
+            this.grdCatalog.ReadOnly = true;
+            this.grdCatalog.RowHeadersWidth = 10;
+            this.grdCatalog.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grdCatalog.RowTemplate.Height = 60;
+            this.grdCatalog.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.grdCatalog.Size = new System.Drawing.Size(1210, 437);
+            this.grdCatalog.TabIndex = 2;
+            this.grdCatalog.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.grdCatalog_MouseDoubleClick);
             // 
             // RowNum
             // 
@@ -360,14 +360,14 @@
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.grid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdCatalog)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.DataGridView grid;
+        private System.Windows.Forms.DataGridView grdCatalog;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.TextBox txtCode;
         private System.Windows.Forms.Label label3;
