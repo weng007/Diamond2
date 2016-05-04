@@ -31,27 +31,17 @@ namespace DiamondShop
             binder.BindControl(txtShop, "Shop");
             binder.BindControl(txtStatus, "Status");
             binder.BindControl(txtReportNumber, "ReportNumber");
-            //binder.BindControl(txtwe, "Weight");
             binder.BindControl(txtIdentification, "Identification");
-            //binder.BindControl(txtam, "Amount");
             binder.BindControl(dtReportDate, "ReportDate");
             binder.BindControl(txtLab, "Lab");
             binder.BindControl(txtOrigin, "Origin");
             binder.BindControl(txtW, "W");
             binder.BindControl(txtL, "L");
             binder.BindControl(txtD, "D");
-
-            //binder.BindControl(dtReportDate, "PayByUSD");
-            //binder.BindControl(txtCode, "IsPaid");
-            //binder.BindControl(dtd, "DueDate");
             binder.BindControl(txtPriceCaratUSD, "PriceCaratUSD");
-            //binder.BindControl(txtt, "TotalUSD");
             binder.BindControl(txtUSDRate, "USDRate");
-            //binder.BindControl(txtt, "TotalBaht");
             binder.BindControl(txtPriceCaratBaht, "PriceCarat");
-            //binder.BindControl(txtt, "TotalThaiBaht");
             binder.BindControl(txtNote, "Note");
-            //binder.BindControl(cmbColor, "Image1");
             binder.BindControl(txtShape, "Shape");
 
         }
@@ -96,7 +86,7 @@ namespace DiamondShop
                 binder.BindValueToControl(tds.GemstoneCer[0]);
             }
 
-            base.LoadData()
+            base.LoadData();
         }
 
         protected override bool SaveData()

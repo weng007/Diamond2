@@ -17,7 +17,9 @@ namespace DiamondShop
     public partial class InvDiamondDetail : FormInfo
     {
         //Service1 ser = GM.GetService();
-        dsDiamondDetail tds = new dsDiamondDetail();
+        dsInvDiamondCerDetail tds = new dsInvDiamondCerDetail();
+        dsInvDiamondDetail tds2 = new dsInvDiamondDetail();
+        DataSet ds2 = new DataSet();
         public int productID = 0;
 
         public InvDiamondDetail()
@@ -69,54 +71,79 @@ namespace DiamondShop
         }
         protected override void LoadData()
         {
-            //ds = ser.DoSelectData("BBJewelryDiamondCerDetail", id);
-            //ds2 = ser.DoSelectData("BBJewelryDiamondDetail", id);
-            //tds.Clear();
-            //tds.Merge(ds);
-            //tds2.Clear();
-            //tds2.Merge(ds2);
+            ds = ser.DoSelectData("InvDiamondCerDetail", id);
+            ds2 = ser.DoSelectData("InvDiamondDetail", id);
+            tds.Clear();
+            tds.Merge(ds);
+            tds2.Clear();
+            tds2.Merge(ds2);
 
 
-            //if (tds.BBJewelryDiamondCerDetail.Rows.Count > 0)
-            //{
-            //    binder.BindValueToControl(tds.BBJewelryDiamondCerDetail[0]);
-            //}
+            if (tds.InvDiamondCerDetail.Rows.Count > 0)
+            {
+                binder.BindValueToControl(tds.InvDiamondCerDetail[0]);
+            }
 
-            //if (tds2.BBJewelryDiamondDetail.Rows.Count > 0)
-            //{
-            //    binder.BindValueToControl(tds2.BBJewelryDiamondDetail[0]);
-            //}
+            if (tds2.InvDiamondDetail.Rows.Count > 0)
+            {
+                binder.BindValueToControl(tds2.InvDiamondDetail[0]);
+            }
 
             base.LoadData();
         }
 
         protected override bool SaveData()
         {
-            dsDiamondDetail.DiamondDetailRow row = null;
+            dsInvDiamondCerDetail.InvDiamondCerDetailRow row = null;
+            dsInvDiamondDetail.InvDiamondDetailRow row2 = null;
 
-            if (tds.DiamondDetail.Rows.Count > 0)
+            if (tds.InvDiamondCerDetail.Rows.Count > 0)
             {
-                row = tds.DiamondDetail[0];
+                row = tds.InvDiamondCerDetail[0];
             }
             else
             {
-                row = tds.DiamondDetail.NewDiamondDetailRow();
-                tds.DiamondDetail.Rows.Add(row);
+                row = tds.InvDiamondCerDetail.NewInvDiamondCerDetailRow();
+                tds.InvDiamondCerDetail.Rows.Add(row);
             }
-            binder.BindValueToDataRow(row);
-            row.ProductID = productID;
+            //binder.BindValueToDataRow(row);
+            //row.ProductID = productID;
+
+            if (tds2.InvDiamondDetail.Rows.Count > 0)
+            {
+                row2 = tds2.InvDiamondDetail[0];
+            }
+            else
+            {
+                row2 = tds2.InvDiamondDetail.NewInvDiamondDetailRow();
+                tds2.InvDiamondDetail.Rows.Add(row);
+            }
+
 
             try
             {
                 if (id == 0)
                 {
                     SetCreateBy(row);
-                    chkFlag = ser.DoInsertData("DiamondDetail", tds);
+                    chkFlag = ser.DoInsertData("InvDiamondCerDetail", tds);
                 }
                 else
                 {
                     SetEditBy(row);
-                    chkFlag = ser.DoUpdateData("DiamondDetail", tds);
+                    chkFlag = ser.DoUpdateData("InvDiamondCerDetail", tds);
+                }
+
+                tds.AcceptChanges();
+
+                if (id == 0)
+                {
+                    SetCreateBy(row2);
+                    chkFlag = ser.DoInsertData("InvDiamondDetail", tds2);
+                }
+                else
+                {
+                    SetEditBy(row2);
+                    chkFlag = ser.DoUpdateData("InvDiamondDetail", tds2);
                 }
 
                 tds.AcceptChanges();
@@ -132,7 +159,7 @@ namespace DiamondShop
         {
             try
             {
-                chkFlag = ser.DoDeleteData("DiamondDetail", id);
+                chkFlag = ser.DoDeleteData("InvDiamondDetail", id);
             }
             catch (Exception ex)
             {

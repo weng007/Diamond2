@@ -43,18 +43,6 @@
             this.label14 = new System.Windows.Forms.Label();
             this.grid2 = new System.Windows.Forms.DataGridView();
             this.grid1 = new System.Windows.Forms.DataGridView();
-            this.RowNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ReportNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Company = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ShapeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Weight = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColorName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Clearity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cost = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MinPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel4 = new System.Windows.Forms.Panel();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -68,6 +56,17 @@
             this.Cost1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MinPricePerCarat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MinPrice1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RowNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ReportNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Lab = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ShapeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Weight = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColorName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Clearity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MinPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid2)).BeginInit();
@@ -247,9 +246,8 @@
             this.ID,
             this.Code,
             this.ReportNumber,
-            this.Company,
+            this.Lab,
             this.ShapeName,
-            this.Amount,
             this.Weight,
             this.ColorName,
             this.Clearity,
@@ -264,97 +262,6 @@
             this.grid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grid1.Size = new System.Drawing.Size(1226, 181);
             this.grid1.TabIndex = 46;
-            // 
-            // RowNum
-            // 
-            this.RowNum.DataPropertyName = "RowNum";
-            this.RowNum.HeaderText = "No.";
-            this.RowNum.Name = "RowNum";
-            this.RowNum.Width = 60;
-            // 
-            // ID
-            // 
-            this.ID.DataPropertyName = "ID";
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.Visible = false;
-            // 
-            // Code
-            // 
-            this.Code.DataPropertyName = "Code";
-            this.Code.HeaderText = "Code";
-            this.Code.Name = "Code";
-            this.Code.ReadOnly = true;
-            this.Code.Width = 130;
-            // 
-            // ReportNumber
-            // 
-            this.ReportNumber.DataPropertyName = "ReportNumber";
-            this.ReportNumber.HeaderText = "Report Number";
-            this.ReportNumber.Name = "ReportNumber";
-            this.ReportNumber.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ReportNumber.Width = 180;
-            // 
-            // Company
-            // 
-            this.Company.DataPropertyName = "Company";
-            this.Company.HeaderText = "Company";
-            this.Company.Name = "Company";
-            this.Company.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Company.Width = 90;
-            // 
-            // ShapeName
-            // 
-            this.ShapeName.DataPropertyName = "ShapeName";
-            this.ShapeName.HeaderText = "Shape";
-            this.ShapeName.Name = "ShapeName";
-            this.ShapeName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ShapeName.Width = 130;
-            // 
-            // Amount
-            // 
-            this.Amount.DataPropertyName = "Amount";
-            this.Amount.HeaderText = "Amount";
-            this.Amount.Name = "Amount";
-            this.Amount.Width = 80;
-            // 
-            // Weight
-            // 
-            this.Weight.DataPropertyName = "Weight";
-            this.Weight.HeaderText = "Weight";
-            this.Weight.Name = "Weight";
-            this.Weight.Width = 80;
-            // 
-            // ColorName
-            // 
-            this.ColorName.DataPropertyName = "ColorName";
-            this.ColorName.HeaderText = "Color";
-            this.ColorName.Name = "ColorName";
-            this.ColorName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ColorName.Width = 80;
-            // 
-            // Clearity
-            // 
-            this.Clearity.DataPropertyName = "Clearity";
-            this.Clearity.HeaderText = "Clearity";
-            this.Clearity.Name = "Clearity";
-            this.Clearity.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Clearity.Width = 80;
-            // 
-            // Cost
-            // 
-            this.Cost.DataPropertyName = "Cost";
-            this.Cost.HeaderText = "Cost";
-            this.Cost.Name = "Cost";
-            this.Cost.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Cost.Width = 150;
-            // 
-            // MinPrice
-            // 
-            this.MinPrice.DataPropertyName = "MinPrice";
-            this.MinPrice.HeaderText = "Min Price";
-            this.MinPrice.Name = "MinPrice";
-            this.MinPrice.Width = 150;
             // 
             // panel4
             // 
@@ -461,6 +368,90 @@
             this.MinPrice1.Name = "MinPrice1";
             this.MinPrice1.Width = 150;
             // 
+            // RowNum
+            // 
+            this.RowNum.DataPropertyName = "RowNum";
+            this.RowNum.HeaderText = "No.";
+            this.RowNum.Name = "RowNum";
+            this.RowNum.Width = 60;
+            // 
+            // ID
+            // 
+            this.ID.DataPropertyName = "ID";
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.Visible = false;
+            // 
+            // Code
+            // 
+            this.Code.DataPropertyName = "Code";
+            this.Code.HeaderText = "Code";
+            this.Code.Name = "Code";
+            this.Code.ReadOnly = true;
+            this.Code.Width = 130;
+            // 
+            // ReportNumber
+            // 
+            this.ReportNumber.DataPropertyName = "ReportNumber";
+            this.ReportNumber.HeaderText = "Report Number";
+            this.ReportNumber.Name = "ReportNumber";
+            this.ReportNumber.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ReportNumber.Width = 180;
+            // 
+            // Lab
+            // 
+            this.Lab.DataPropertyName = "Lab";
+            this.Lab.HeaderText = "Lab";
+            this.Lab.Name = "Lab";
+            this.Lab.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Lab.Width = 90;
+            // 
+            // ShapeName
+            // 
+            this.ShapeName.DataPropertyName = "ShapeName";
+            this.ShapeName.HeaderText = "Shape";
+            this.ShapeName.Name = "ShapeName";
+            this.ShapeName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ShapeName.Width = 130;
+            // 
+            // Weight
+            // 
+            this.Weight.DataPropertyName = "Weight";
+            this.Weight.HeaderText = "Weight";
+            this.Weight.Name = "Weight";
+            this.Weight.Width = 80;
+            // 
+            // ColorName
+            // 
+            this.ColorName.DataPropertyName = "ColorName";
+            this.ColorName.HeaderText = "Color";
+            this.ColorName.Name = "ColorName";
+            this.ColorName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ColorName.Width = 80;
+            // 
+            // Clearity
+            // 
+            this.Clearity.DataPropertyName = "Clearity";
+            this.Clearity.HeaderText = "Clearity";
+            this.Clearity.Name = "Clearity";
+            this.Clearity.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Clearity.Width = 80;
+            // 
+            // Cost
+            // 
+            this.Cost.DataPropertyName = "Cost";
+            this.Cost.HeaderText = "Cost";
+            this.Cost.Name = "Cost";
+            this.Cost.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Cost.Width = 150;
+            // 
+            // MinPrice
+            // 
+            this.MinPrice.DataPropertyName = "MinPrice";
+            this.MinPrice.HeaderText = "Min Price";
+            this.MinPrice.Name = "MinPrice";
+            this.MinPrice.Width = 150;
+            // 
             // InvDiamondDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -497,18 +488,6 @@
         private System.Windows.Forms.TextBox txtSumAmount1;
         private System.Windows.Forms.TextBox txtSumMinPrice1;
         private System.Windows.Forms.TextBox txtSumCost1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn RowNum;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Code;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ReportNumber;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Company;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ShapeName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Amount;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Weight;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColorName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Clearity;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cost;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MinPrice;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewComboBoxColumn Shape;
@@ -521,5 +500,16 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Cost1;
         private System.Windows.Forms.DataGridViewTextBoxColumn MinPricePerCarat;
         private System.Windows.Forms.DataGridViewTextBoxColumn MinPrice1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RowNum;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Code;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ReportNumber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Lab;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ShapeName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Weight;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColorName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Clearity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cost;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MinPrice;
     }
 }
