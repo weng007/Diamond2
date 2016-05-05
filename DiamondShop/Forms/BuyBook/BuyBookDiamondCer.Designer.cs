@@ -40,7 +40,7 @@
             this.btnUpload = new System.Windows.Forms.Button();
             this.txtNote = new System.Windows.Forms.TextBox();
             this.label30 = new System.Windows.Forms.Label();
-            this.txtSoldTo = new System.Windows.Forms.TextBox();
+            this.txtSoldToName = new System.Windows.Forms.TextBox();
             this.label29 = new System.Windows.Forms.Label();
             this.cmbStatus = new System.Windows.Forms.ComboBox();
             this.label28 = new System.Windows.Forms.Label();
@@ -121,7 +121,7 @@
             this.panel3.Controls.Add(this.btnUpload);
             this.panel3.Controls.Add(this.txtNote);
             this.panel3.Controls.Add(this.label30);
-            this.panel3.Controls.Add(this.txtSoldTo);
+            this.panel3.Controls.Add(this.txtSoldToName);
             this.panel3.Controls.Add(this.label29);
             this.panel3.Controls.Add(this.cmbStatus);
             this.panel3.Controls.Add(this.label28);
@@ -269,6 +269,7 @@
             // 
             // txtNote
             // 
+            this.txtNote.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txtNote.Location = new System.Drawing.Point(739, 368);
             this.txtNote.Multiline = true;
             this.txtNote.Name = "txtNote";
@@ -286,12 +287,12 @@
             this.label30.TabIndex = 153;
             this.label30.Text = "Note";
             // 
-            // txtSoldTo
+            // txtSoldToName
             // 
-            this.txtSoldTo.Location = new System.Drawing.Point(150, 341);
-            this.txtSoldTo.Name = "txtSoldTo";
-            this.txtSoldTo.Size = new System.Drawing.Size(165, 27);
-            this.txtSoldTo.TabIndex = 68;
+            this.txtSoldToName.Location = new System.Drawing.Point(150, 341);
+            this.txtSoldToName.Name = "txtSoldToName";
+            this.txtSoldToName.Size = new System.Drawing.Size(165, 27);
+            this.txtSoldToName.TabIndex = 68;
             // 
             // label29
             // 
@@ -365,6 +366,7 @@
             this.txtTotalBaht.TabIndex = 158;
             this.txtTotalBaht.Text = "0";
             this.txtTotalBaht.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtTotalBaht.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtWeight_KeyPress);
             // 
             // label24
             // 
@@ -384,6 +386,7 @@
             this.txtUSDRate.TabIndex = 88;
             this.txtUSDRate.Text = "0";
             this.txtUSDRate.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtUSDRate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtWeight_KeyPress);
             // 
             // label23
             // 
@@ -407,6 +410,8 @@
             // 
             // txtTotal
             // 
+            this.txtTotal.AccessibleDescription = "N";
+            this.txtTotal.Enabled = false;
             this.txtTotal.Location = new System.Drawing.Point(510, 269);
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.Size = new System.Drawing.Size(134, 27);
@@ -452,6 +457,7 @@
             this.txtRap.TabIndex = 84;
             this.txtRap.Text = "0";
             this.txtRap.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtRap.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtWeight_KeyPress);
             // 
             // label19
             // 
@@ -481,6 +487,7 @@
             this.txtPrice.TabIndex = 80;
             this.txtPrice.Text = "0";
             this.txtPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtWeight_KeyPress);
             // 
             // label16
             // 
@@ -518,6 +525,7 @@
             this.txtWeight.TabIndex = 12;
             this.txtWeight.Text = "0";
             this.txtWeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtWeight.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtWeight_KeyPress);
             // 
             // linkFile
             // 
@@ -741,6 +749,8 @@
             // 
             // txtCode
             // 
+            this.txtCode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.txtCode.Enabled = false;
             this.txtCode.Location = new System.Drawing.Point(150, 90);
             this.txtCode.Name = "txtCode";
             this.txtCode.Size = new System.Drawing.Size(150, 27);
@@ -754,7 +764,7 @@
             this.txtW.TabIndex = 16;
             this.txtW.Text = "0";
             this.txtW.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtW.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCarat_KeyPress);
+            this.txtW.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtWeight_KeyPress);
             // 
             // txtD
             // 
@@ -764,7 +774,7 @@
             this.txtD.TabIndex = 24;
             this.txtD.Text = "0";
             this.txtD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCarat_KeyPress);
+            this.txtD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtWeight_KeyPress);
             // 
             // label17
             // 
@@ -792,7 +802,7 @@
             this.txtL.TabIndex = 20;
             this.txtL.Text = "0";
             this.txtL.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtL.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCarat_KeyPress);
+            this.txtL.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtWeight_KeyPress);
             // 
             // panel1
             // 
@@ -893,7 +903,7 @@
         private System.Windows.Forms.TextBox txtUSDRate;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.TextBox txtSoldTo;
+        private System.Windows.Forms.TextBox txtSoldToName;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.ComboBox cmbStatus;
         private System.Windows.Forms.Label label28;

@@ -205,5 +205,13 @@ namespace DiamondShop
             }
             return frm;
         }
+        public static string GetRunningNumber(string subject)
+        {
+            string Code = "";
+            ser2 = new Service2();
+            Code = ser2.GetRunningNumber(subject);
+
+            return Code;
+        }
     }
 }

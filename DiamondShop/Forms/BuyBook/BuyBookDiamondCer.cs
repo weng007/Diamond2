@@ -15,7 +15,6 @@ namespace DiamondShop
 {
     public partial class BuyBookDiamondCer : FormInfo
     {
-        //Service1 ser = GM.GetService();
         dsBuyBookDiamondCer tds = new dsBuyBookDiamondCer();
 
         public BuyBookDiamondCer()
@@ -32,7 +31,7 @@ namespace DiamondShop
             binder.BindControl(cmbSymmetry, "Symmetry");
             binder.BindControl(cmbFluorescent, "Fluorescent");
             binder.BindControl(cmbStatus, "Status");
-            binder.BindControl(txtSoldTo, "SoldTo");
+            binder.BindControl(txtSoldToName, "SoldToName");
             binder.BindControl(txtReportNumber, "ReportNumber");
             binder.BindControl(txtWeight, "Weight");
             binder.BindControl(cmbShape, "Shape");
@@ -66,7 +65,7 @@ namespace DiamondShop
             binder.BindControl(cmbSymmetry, "Symmetry");
             binder.BindControl(cmbFluorescent, "Fluorescent");
             binder.BindControl(cmbStatus, "Status");
-            binder.BindControl(txtSoldTo, "SoldTo");
+            binder.BindControl(txtSoldToName, "SoldToName");
             binder.BindControl(txtReportNumber, "ReportNumber");
             binder.BindControl(txtWeight, "Weight");
             binder.BindControl(cmbShape, "Shape");
@@ -149,7 +148,7 @@ namespace DiamondShop
 
             dtBuyDate.Select();
 
-            //SetFieldService.SetRequireField(txtGIANo, txtMeasure1, txtMeasure2, txtMeasure3, txtCarat);
+            SetFieldService.SetRequireField(txtWeight, txtPrice, txtRap);
         }
 
         protected override void LoadData()
@@ -204,11 +203,17 @@ namespace DiamondShop
                 tds.BuyBookDiamondCer.Rows.Add(row);
             }
             binder.BindValueToDataRow(row);
+            row.IsInscription = rdoIns1.Checked ?"1":"0";
+            row.IsPaid = rdoYes.Checked ? "1" : "0";
 
             try
             {
                 if (id == 0)
                 {
+                    row.Code = GM.GetRunningNumber("DC");
+                    //พึ่งซื้อยังไม่ได้ขายให้ลูกค้า
+                    row.SoldTo = 0;
+
                     SetCreateBy(row);
                     chkFlag = ser.DoInsertData("BuyBookDiamondCer", tds);
                 }
@@ -245,25 +250,26 @@ namespace DiamondShop
         {
             message = "";
 
-            //if (txtGIANo.Text == "")
-            //{
-            //    message = "Please input GIA Number.\n";
-            //}
-            //if(txtMeasure1.Text == "" || txtMeasure2.Text == "" || txtMeasure3.Text == ""
-            //&& GM.ConvertStringToDouble(txtMeasure1) == 0 || GM.ConvertStringToDouble(txtMeasure2) == 0 || GM.ConvertStringToDouble(txtMeasure3) == 0)
-            //{
-            //    message += "Please input Measurement > 0.\n";
-            //}
-            //if (txtCarat.Text == "" || GM.ConvertStringToDouble(txtCarat) == 0)
-            //{
-            //    message += "Please input Carat Weight > 0.\n";
-            //}
+            if (txtWeight.Text == "" || GM.ConvertStringToDouble(txtWeight) == 0)
+            {
+                message = "Please Input Weight > 0.\n";
+            }
+
+            if (txtPrice.Text == "" || GM.ConvertStringToDouble(txtPrice) == 0)
+            {   
+                message += "Please Input Price > 0.\n";
+            }
+
+            if (txtRap.Text == "" || GM.ConvertStringToDouble(txtRap) == 0)
+            {
+                message += "Please Input Rap > 0.\n";
+            }
 
             if (message == "") { return true; }
             else { return false; }
         }
 
-        private void txtCarat_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtWeight_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
             {
