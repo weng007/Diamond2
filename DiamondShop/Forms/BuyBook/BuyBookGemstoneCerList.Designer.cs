@@ -75,7 +75,7 @@
             this.TotalUSD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PriceCaratBaht = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TotalBaht = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IsPaid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Payment = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DueDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ShopName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SettingName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -390,7 +390,7 @@
             this.TotalUSD,
             this.PriceCaratBaht,
             this.TotalBaht,
-            this.IsPaid,
+            this.Payment,
             this.DueDate,
             this.ShopName,
             this.SettingName,
@@ -557,13 +557,13 @@
             this.TotalBaht.ReadOnly = true;
             this.TotalBaht.Width = 120;
             // 
-            // IsPaid
+            // Payment
             // 
-            this.IsPaid.DataPropertyName = "IsPaid";
-            this.IsPaid.HeaderText = "Payment";
-            this.IsPaid.Name = "IsPaid";
-            this.IsPaid.ReadOnly = true;
-            this.IsPaid.Width = 80;
+            this.Payment.DataPropertyName = "Payment";
+            this.Payment.HeaderText = "Payment";
+            this.Payment.Name = "Payment";
+            this.Payment.ReadOnly = true;
+            this.Payment.Width = 80;
             // 
             // DueDate
             // 
@@ -670,7 +670,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TotalUSD;
         private System.Windows.Forms.DataGridViewTextBoxColumn PriceCaratBaht;
         private System.Windows.Forms.DataGridViewTextBoxColumn TotalBaht;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IsPaid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Payment;
         private System.Windows.Forms.DataGridViewTextBoxColumn DueDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn ShopName;
         private System.Windows.Forms.DataGridViewTextBoxColumn SettingName;

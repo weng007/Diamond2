@@ -222,7 +222,7 @@ namespace DiamondShop
         {
             try
             {
-                //chkFlag = ser.DoDeleteData("BuyBookGemstoneCer", id);
+                chkFlag = ser.DoDeleteData("BuyBookGemstoneCer", id);
             }
             catch (Exception ex)
             {
@@ -299,7 +299,7 @@ namespace DiamondShop
                 GemstoneType = "C028";
             }
 
-            cmbComment.DataSource = (GM.GetMasterTableDetail(GemstoneType, true)).Tables[0];
+            cmbComment.DataSource = (GM.GetMasterTableDetail(GemstoneType)).Tables[0];
             cmbComment.ValueMember = "ID";
             cmbComment.DisplayMember = "Detail";
             cmbComment.Refresh();
