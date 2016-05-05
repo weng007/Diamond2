@@ -386,6 +386,7 @@
             this.txtUSDRate.TabIndex = 88;
             this.txtUSDRate.Text = "0";
             this.txtUSDRate.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtUSDRate.TextChanged += new System.EventHandler(this.txtUSDRate_TextChanged);
             this.txtUSDRate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtWeight_KeyPress);
             // 
             // label23
@@ -418,6 +419,7 @@
             this.txtTotal.TabIndex = 154;
             this.txtTotal.Text = "0";
             this.txtTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtTotal.TextChanged += new System.EventHandler(this.txtTotal_TextChanged);
             // 
             // label21
             // 
@@ -457,6 +459,7 @@
             this.txtRap.TabIndex = 84;
             this.txtRap.Text = "0";
             this.txtRap.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtRap.TextChanged += new System.EventHandler(this.txtTotal_TextChanged);
             this.txtRap.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtWeight_KeyPress);
             // 
             // label19
@@ -487,6 +490,7 @@
             this.txtPrice.TabIndex = 80;
             this.txtPrice.Text = "0";
             this.txtPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtPrice.TextChanged += new System.EventHandler(this.txtTotal_TextChanged);
             this.txtPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtWeight_KeyPress);
             // 
             // label16
@@ -525,6 +529,7 @@
             this.txtWeight.TabIndex = 12;
             this.txtWeight.Text = "0";
             this.txtWeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtWeight.TextChanged += new System.EventHandler(this.txtTotal_TextChanged);
             this.txtWeight.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtWeight_KeyPress);
             // 
             // linkFile
@@ -691,6 +696,7 @@
             this.cmbShape.Name = "cmbShape";
             this.cmbShape.Size = new System.Drawing.Size(157, 29);
             this.cmbShape.TabIndex = 28;
+            this.cmbShape.SelectedIndexChanged += new System.EventHandler(this.cmbShape_SelectedIndexChanged);
             // 
             // label3
             // 

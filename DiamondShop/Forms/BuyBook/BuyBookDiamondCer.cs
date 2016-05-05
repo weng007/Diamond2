@@ -161,7 +161,7 @@ namespace DiamondShop
               {
                 binder.BindValueToControl(tds.BuyBookDiamondCer[0]);
 
-                if (tds.BuyBookDiamondCer[0]["Inscription"].ToString() == "0")
+                if (tds.BuyBookDiamondCer[0]["IsInscription"].ToString() == "0")
                 {
                     rdoIns1.Checked = false;
                     rdoIns2.Checked = true;                  
@@ -271,7 +271,7 @@ namespace DiamondShop
 
         private void txtWeight_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.') && (e.KeyChar!='-'))
             {
                 e.Handled = true;
             }
@@ -294,6 +294,39 @@ namespace DiamondShop
             cmbColor.ValueMember = "ID";
             cmbColor.DisplayMember = "Detail";
             cmbColor.Refresh();
+        }
+
+        private void cmbShape_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbShape.SelectedIndex != 0)
+            {
+                cmbCut.SelectedIndex = 0;
+                cmbCut.Enabled = false;
+            }
+            else
+            {
+                cmbCut.Enabled = true;
+            }
+        }
+
+        private void txtWeight_TextChanged(object sender, EventArgs e)
+        {
+            txtTotal.Text = (GM.ConvertStringToDouble(txtRap) * 100 * (1 + GM.ConvertStringToDouble(txtPrice))
+                * GM.ConvertStringToDouble(txtWeight)).ToString();
+        }
+
+        private void txtTotal_TextChanged(object sender, EventArgs e)
+        {
+            txtPrice.Text = GM.ConvertDoubleToString(txtPrice);
+            txtTotal.Text = GM.ConvertDoubleToString(txtTotal);
+            txtTotalBaht.Text = GM.ConvertDoubleToString(txtTotalBaht);
+
+            txtTotalBaht.Text = (GM.ConvertStringToDouble(txtTotal) * GM.ConvertStringToDouble(txtUSDRate)).ToString();
+        }
+
+        private void txtUSDRate_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
