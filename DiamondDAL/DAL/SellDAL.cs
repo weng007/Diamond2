@@ -13,6 +13,22 @@ namespace DiamondDAL.DAL
         dsSell ds = new dsSell();
         int flag = 0;
 
+        public dsSell DoSearchData(string code,int jewelryType)
+        {
+            try
+            {
+                SQL.ClearParameter();
+                SQL.CreateParameter("Code", code);
+                SQL.CreateParameter("JewelryType", jewelryType);
+                SQL.FillDataSetBySP("SP_Sell_Search", ds.Sell);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return ds;
+        }
         public dsSell DoSelectData(int id)
         {
             try

@@ -27,17 +27,17 @@ namespace DiamondShop
             cmbShape.DisplayMember = "Detail";
             cmbShape.Refresh();
 
-            cmbLab.DataSource = (GM.GetMasterTableDetail("C019", true)).Tables[0];
+            cmbLab.DataSource = (GM.GetMasterTableDetail("C020", true)).Tables[0];
             cmbLab.ValueMember = "ID";
             cmbLab.DisplayMember = "Detail";
             cmbLab.Refresh();
 
-            cmbSColor.DataSource = (GM.GetMasterTableDetail("C019", true)).Tables[0];
+            cmbSColor.DataSource = (GM.GetMasterTableDetail("C001", true)).Tables[0];
             cmbSColor.ValueMember = "ID";
             cmbSColor.DisplayMember = "Detail";
             cmbSColor.Refresh();
 
-            cmbEColor.DataSource = (GM.GetMasterTableDetail("C019", true)).Tables[0];
+            cmbEColor.DataSource = (GM.GetMasterTableDetail("C001", true)).Tables[0];
             cmbEColor.ValueMember = "ID";
             cmbEColor.DisplayMember = "Detail";
             cmbEColor.Refresh();
@@ -52,12 +52,12 @@ namespace DiamondShop
             cmbEClearity.DisplayMember = "Detail";
             cmbEClearity.Refresh();
 
-            cmbStatus.DataSource = (GM.GetMasterTableDetail("C002", true)).Tables[0];
+            cmbStatus.DataSource = (GM.GetMasterTableDetail("C023", true)).Tables[0];
             cmbStatus.ValueMember = "ID";
             cmbStatus.DisplayMember = "Detail";
             cmbStatus.Refresh();
 
-            cmbShop.DataSource = (GM.GetMasterTableDetail("C002", true)).Tables[0];
+            cmbShop.DataSource = (GM.GetMasterTableDetail("C007", true)).Tables[0];
             cmbShop.ValueMember = "ID";
             cmbShop.DisplayMember = "Detail";
             cmbShop.Refresh();

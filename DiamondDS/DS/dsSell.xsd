@@ -14,14 +14,12 @@
   <xs:element name="dsSell" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsSell" msprop:Generator_UserDSName="dsSell">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Sell" msprop:Generator_TableClassName="SellDataTable" msprop:Generator_TableVarName="tableSell" msprop:Generator_RowChangedName="SellRowChanged" msprop:Generator_TablePropName="Sell" msprop:Generator_RowDeletingName="SellRowDeleting" msprop:Generator_RowChangingName="SellRowChanging" msprop:Generator_RowEvHandlerName="SellRowChangeEventHandler" msprop:Generator_RowDeletedName="SellRowDeleted" msprop:Generator_RowClassName="SellRow" msprop:Generator_UserTableName="Sell" msprop:Generator_RowEvArgName="SellRowChangeEvent">
+        <xs:element name="Sell" msprop:Generator_TableClassName="SellDataTable" msprop:Generator_TableVarName="tableSell" msprop:Generator_TablePropName="Sell" msprop:Generator_RowDeletingName="SellRowDeleting" msprop:Generator_RowChangingName="SellRowChanging" msprop:Generator_RowEvHandlerName="SellRowChangeEventHandler" msprop:Generator_RowDeletedName="SellRowDeleted" msprop:Generator_UserTableName="Sell" msprop:Generator_RowChangedName="SellRowChanged" msprop:Generator_RowEvArgName="SellRowChangeEvent" msprop:Generator_RowClassName="SellRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="RowNum" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnRowNum" msprop:Generator_ColumnPropNameInRow="RowNum" msprop:Generator_ColumnPropNameInTable="RowNumColumn" msprop:Generator_UserColumnName="RowNum" type="xs:long" minOccurs="0" />
               <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
               <xs:element name="Seller" msprop:Generator_ColumnVarNameInTable="columnSeller" msprop:Generator_ColumnPropNameInRow="Seller" msprop:Generator_ColumnPropNameInTable="SellerColumn" msprop:Generator_UserColumnName="Seller" type="xs:int" minOccurs="0" />
-              <xs:element name="Image2" msdata:Caption="Image1" msprop:nullValue="_null" msprop:Generator_ColumnPropNameInRow="Image2" msprop:Generator_ColumnVarNameInTable="columnImage2" msprop:Generator_ColumnPropNameInTable="Image2Column" msprop:Generator_UserColumnName="Image2" type="xs:base64Binary" minOccurs="0" />
-              <xs:element name="Image1" msprop:nullValue="_null" msprop:Generator_ColumnPropNameInRow="Image1" msprop:Generator_ColumnVarNameInTable="columnImage1" msprop:Generator_ColumnPropNameInTable="Image1Column" msprop:Generator_UserColumnName="Image1" type="xs:base64Binary" minOccurs="0" />
               <xs:element name="SaleDate" msprop:Generator_ColumnVarNameInTable="columnSaleDate" msprop:Generator_ColumnPropNameInRow="SaleDate" msprop:Generator_ColumnPropNameInTable="SaleDateColumn" msprop:Generator_UserColumnName="SaleDate" type="xs:dateTime" minOccurs="0" />
               <xs:element name="Code" msprop:Generator_ColumnVarNameInTable="columnCode" msprop:Generator_ColumnPropNameInRow="Code" msprop:Generator_ColumnPropNameInTable="CodeColumn" msprop:Generator_UserColumnName="Code" minOccurs="0">
                 <xs:simpleType>
@@ -40,18 +38,25 @@
               </xs:element>
               <xs:element name="NetPrice" msprop:Generator_ColumnVarNameInTable="columnNetPrice" msprop:Generator_ColumnPropNameInRow="NetPrice" msprop:Generator_ColumnPropNameInTable="NetPriceColumn" msprop:Generator_UserColumnName="NetPrice" type="xs:double" minOccurs="0" />
               <xs:element name="CustID" msprop:Generator_ColumnVarNameInTable="columnCustID" msprop:Generator_ColumnPropNameInRow="CustID" msprop:Generator_ColumnPropNameInTable="CustIDColumn" msprop:Generator_UserColumnName="CustID" type="xs:int" minOccurs="0" />
-              <xs:element name="CustomerName" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCustomerName" msprop:Generator_ColumnPropNameInRow="CustomerName" msprop:Generator_ColumnPropNameInTable="CustomerNameColumn" msprop:Generator_UserColumnName="CustomerName" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="200" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="Remark" msprop:Generator_ColumnVarNameInTable="columnRemark" msprop:Generator_ColumnPropNameInRow="Remark" msprop:Generator_ColumnPropNameInTable="RemarkColumn" msprop:Generator_UserColumnName="Remark" type="xs:string" minOccurs="0" />
-              <xs:element name="IsReceive" msprop:Generator_ColumnVarNameInTable="columnIsReceive" msprop:Generator_ColumnPropNameInRow="IsReceive" msprop:Generator_ColumnPropNameInTable="IsReceiveColumn" msprop:Generator_UserColumnName="IsReceive" minOccurs="0">
+              <xs:element name="ShopReceive" msprop:Generator_ColumnVarNameInTable="columnShopReceive" msprop:Generator_ColumnPropNameInRow="ShopReceive" msprop:Generator_ColumnPropNameInTable="ShopReceiveColumn" msprop:Generator_UserColumnName="ShopReceive" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Remark" msprop:Generator_ColumnVarNameInTable="columnRemark" msprop:Generator_ColumnPropNameInRow="Remark" msprop:Generator_ColumnPropNameInTable="RemarkColumn" msprop:Generator_UserColumnName="Remark" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="300" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="JewelryType" msprop:Generator_ColumnVarNameInTable="columnJewelryType" msprop:Generator_ColumnPropNameInRow="JewelryType" msprop:Generator_ColumnPropNameInTable="JewelryTypeColumn" msprop:Generator_UserColumnName="JewelryType" type="xs:int" minOccurs="0" />
+              <xs:element name="JewelryTypeName" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnJewelryTypeName" msprop:Generator_ColumnPropNameInRow="JewelryTypeName" msprop:Generator_ColumnPropNameInTable="JewelryTypeNameColumn" msprop:Generator_UserColumnName="JewelryTypeName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
@@ -66,7 +71,6 @@
               <xs:element name="CreateDate" msprop:Generator_ColumnVarNameInTable="columnCreateDate" msprop:Generator_ColumnPropNameInRow="CreateDate" msprop:Generator_ColumnPropNameInTable="CreateDateColumn" msprop:Generator_UserColumnName="CreateDate" type="xs:dateTime" minOccurs="0" />
               <xs:element name="EditBy" msprop:Generator_ColumnVarNameInTable="columnEditBy" msprop:Generator_ColumnPropNameInRow="EditBy" msprop:Generator_ColumnPropNameInTable="EditByColumn" msprop:Generator_UserColumnName="EditBy" type="xs:int" minOccurs="0" />
               <xs:element name="EditDate" msprop:Generator_ColumnVarNameInTable="columnEditDate" msprop:Generator_ColumnPropNameInRow="EditDate" msprop:Generator_ColumnPropNameInTable="EditDateColumn" msprop:Generator_UserColumnName="EditDate" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="SellerName" msprop:Generator_ColumnVarNameInTable="columnSellerName" msprop:Generator_ColumnPropNameInRow="SellerName" msprop:Generator_ColumnPropNameInTable="SellerNameColumn" msprop:Generator_UserColumnName="SellerName" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

@@ -153,5 +153,31 @@ namespace DiamondShop
 
             DoLoadData();
         }
+
+        private void cmbIdentification_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string GemstoneType = "";
+
+            if (cmbIdentification.SelectedIndex == 0)
+            {
+                cmbComment.Enabled = false;
+                //GemstoneType = "C029";
+            }
+            else if (cmbIdentification.SelectedValue.ToString() == "95")
+            {
+                cmbComment.Enabled = true;
+                GemstoneType = "C029";
+            }
+            else
+            {
+                cmbComment.Enabled = true;
+                GemstoneType = "C028";
+            }
+
+            cmbComment.DataSource = (GM.GetMasterTableDetail(GemstoneType, true)).Tables[0];
+            cmbComment.ValueMember = "ID";
+            cmbComment.DisplayMember = "Detail";
+            cmbComment.Refresh();
+        }
     }
 }

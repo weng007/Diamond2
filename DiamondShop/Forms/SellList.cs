@@ -88,5 +88,15 @@ namespace DiamondShop
 
             DoLoadData();
         }
-}
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            ser2 = GM.GetService2();
+
+            ds = ser2.DoSearchSell(txtCode.Text, Convert.ToInt16(cmbType.SelectedValue.ToString()));
+
+            gridSell.DataSource = ds.Tables[0];
+            gridSell.Refresh();
+        }
+    }
 }

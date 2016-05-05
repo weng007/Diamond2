@@ -10,9 +10,20 @@ namespace DiamondBiz.Biz
 {
     public class SellBiz
     {
-        dsMasterTableDetail ds = new dsMasterTableDetail();
+        dsSell ds = new dsSell();
         SellDAL dal = new SellDAL();
 
+        public dsSell DoSearchData(string code, int jewelryType)
+        {
+            try
+            {
+                return dal.DoSearchData(code, jewelryType);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
         public dsSell DoSelectData(int id)
         {
             try

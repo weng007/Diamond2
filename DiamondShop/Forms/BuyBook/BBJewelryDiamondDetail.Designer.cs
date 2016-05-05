@@ -134,6 +134,7 @@
             this.grid2.Size = new System.Drawing.Size(1212, 189);
             this.grid2.TabIndex = 120;
             this.grid2.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid1_CellEnter);
+            this.grid2.UserDeletedRow += new System.Windows.Forms.DataGridViewRowEventHandler(this.grid2_UserDeletedRow);
             // 
             // RowNum1
             // 
@@ -254,6 +255,7 @@
             this.grid1.Size = new System.Drawing.Size(1212, 181);
             this.grid1.TabIndex = 46;
             this.grid1.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid1_CellEnter);
+            this.grid1.UserDeletedRow += new System.Windows.Forms.DataGridViewRowEventHandler(this.grid1_UserDeletedRow);
             // 
             // RowNum
             // 

@@ -164,7 +164,7 @@
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Location = new System.Drawing.Point(364, 54);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(100, 21);
+            this.comboBox3.Size = new System.Drawing.Size(100, 27);
             this.comboBox3.TabIndex = 28;
             // 
             // textBox2
@@ -440,7 +440,7 @@
             // txtMaterialWeight2
             // 
             this.txtMaterialWeight2.Enabled = false;
-            this.txtMaterialWeight2.Location = new System.Drawing.Point(761, 229);
+            this.txtMaterialWeight2.Location = new System.Drawing.Point(759, 228);
             this.txtMaterialWeight2.Name = "txtMaterialWeight2";
             this.txtMaterialWeight2.Size = new System.Drawing.Size(67, 27);
             this.txtMaterialWeight2.TabIndex = 232;
@@ -591,7 +591,7 @@
             // txtMaterialWeight1
             // 
             this.txtMaterialWeight1.Enabled = false;
-            this.txtMaterialWeight1.Location = new System.Drawing.Point(761, 154);
+            this.txtMaterialWeight1.Location = new System.Drawing.Point(759, 154);
             this.txtMaterialWeight1.Name = "txtMaterialWeight1";
             this.txtMaterialWeight1.Size = new System.Drawing.Size(67, 27);
             this.txtMaterialWeight1.TabIndex = 224;

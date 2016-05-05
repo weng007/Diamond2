@@ -98,16 +98,41 @@ namespace DiamondShop
             tds2.Clear();
             tds2.Merge(ds2);
 
+            ds = ser.DoSelectData("BBJewelryDiamondCerDetail", id);
 
-            if (tds.BBJewelryDiamondCerDetail.Rows.Count > 0)
+            if (ds.Tables[0].Rows.Count > 0)
             {
-                binder.BindValueToControl(tds.BBJewelryDiamondCerDetail[0]);
+                grid1.DataSource = ds.Tables[0];
+                grid1.Refresh();
+            }
+            else
+            {
+                grid1.DataSource = null;
+                grid1.Refresh();
             }
 
-            if (tds2.BBJewelryDiamondDetail.Rows.Count > 0)
+            ds2 = ser.DoSelectData("BBJewelryDiamondDetail", id);
+
+            if (ds2.Tables[0].Rows.Count > 0)
             {
-                binder.BindValueToControl(tds2.BBJewelryDiamondDetail[0]);
+                grid2.DataSource = ds2.Tables[0];
+                grid2.Refresh();
             }
+            else
+            {
+                grid2.DataSource = null;
+                grid2.Refresh();
+            }
+
+            //if (tds.BBJewelryDiamondCerDetail.Rows.Count > 0)
+            //{
+            //    binder.BindValueToControl(tds.BBJewelryDiamondCerDetail[0]);
+            //}
+
+            //if (tds2.BBJewelryDiamondDetail.Rows.Count > 0)
+            //{
+            //    binder.BindValueToControl(tds2.BBJewelryDiamondDetail[0]);
+            //}
 
             base.LoadData();
         }
@@ -166,7 +191,7 @@ namespace DiamondShop
                     chkFlag = ser.DoUpdateData("BBJewelryDiamondDetail", tds2);
                 }
 
-                tds.AcceptChanges();
+                tds2.AcceptChanges();
             }
             catch (Exception ex)
             {
@@ -175,19 +200,19 @@ namespace DiamondShop
 
             return chkFlag;
         }
-        protected override bool DeleteData()
-        {
-            try
-            {
-                //chkFlag = ser.DoDeleteData("GemstoneDetail", id);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
+        //protected override bool DeleteData()
+        //{
+        //    try
+        //    {
+        //        //chkFlag = ser.DoDeleteData("GemstoneDetail", id);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        throw ex;
+        //    }
 
-            return chkFlag;
-        }
+        //    return chkFlag;
+        //}
 
         protected override bool ValidateData()
         {
@@ -225,6 +250,30 @@ namespace DiamondShop
             {
                 datagridview.BeginEdit(true);
                 ((ComboBox)datagridview.EditingControl).DroppedDown = true;
+            }
+        }
+
+        private void grid1_UserDeletedRow(object sender, DataGridViewRowEventArgs e)
+        {
+            try
+            {
+                chkFlag = ser.DoDeleteData("BBJewelryDiamondCerDetail", id);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        private void grid2_UserDeletedRow(object sender, DataGridViewRowEventArgs e)
+        {
+            try
+            {
+                chkFlag = ser.DoDeleteData("BBJewelryDiamondDetail", id);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
             }
         }
     }

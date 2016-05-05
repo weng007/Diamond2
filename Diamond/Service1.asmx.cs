@@ -619,7 +619,7 @@ namespace Diamond
             else if (TableName == "Customer")
             {
                 CustomerBiz biz = GM.GetCustomerBiz();
-                dsCustomer ds1 = GM.GetDSCustomer();
+                dsCustomer ds1 = new dsCustomer();
                 ds1.Merge(ds);
 
                 try
@@ -1052,7 +1052,7 @@ namespace Diamond
             else if (TableName == "Customer")
             {
                 CustomerBiz biz = GM.GetCustomerBiz();
-                dsCustomer ds1 = GM.GetDSCustomer();
+                dsCustomer ds1 = new dsCustomer();
 
                 ds1.Merge(ds);
 

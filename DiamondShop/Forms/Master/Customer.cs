@@ -94,8 +94,8 @@ namespace DiamondShop
 
             txtCode.Select();
 
-            SetFieldService.SetRequireField(txtFirstName, txtLastName
-                , txtNickName, txtAge, txtMobilephone, txtCode);
+            //SetFieldService.SetRequireField(txtFirstName, txtLastName
+            //    , txtNickName, txtAge, txtMobilephone, txtCode);
         }
 
         protected override void LoadData()

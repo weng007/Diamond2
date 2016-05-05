@@ -78,21 +78,21 @@ namespace DiamondShop
             {
                 binder.BindValueToControl(tds.Sell[0]);
 
-                //Image
-                image1 = tds.Sell[0].Image1;
-                image2 = tds.Sell[0].Image2;
-                if (image1 != null)
-                {
-                    ms1 = new MemoryStream(image1);
-                    Image backImage1 = Image.FromStream(ms1);
-                    btnImage1.BackgroundImage = backImage1;
-                }
-                if (image2 != null)
-                {
-                    ms2 = new MemoryStream(image2);
-                    Image backImage2 = Image.FromStream(ms2);
-                    //btnImage2.BackgroundImage = backImage2;
-                }
+                ////Image
+                //image1 = tds.Sell[0].Image1;
+                //image2 = tds.Sell[0].Image2;
+                //if (image1 != null)
+                //{
+                //    ms1 = new MemoryStream(image1);
+                //    Image backImage1 = Image.FromStream(ms1);
+                //    btnImage1.BackgroundImage = backImage1;
+                //}
+                //if (image2 != null)
+                //{
+                //    ms2 = new MemoryStream(image2);
+                //    Image backImage2 = Image.FromStream(ms2);
+                //    //btnImage2.BackgroundImage = backImage2;
+                //}
 
                 EnableDelete = true;
             }
@@ -114,8 +114,8 @@ namespace DiamondShop
                 tds.Sell.Rows.Add(row);
             }
             binder.BindValueToDataRow(row);
-            row.Image1 = image1;
-            row.Image2 = image2;
+            //row.Image1 = image1;
+            //row.Image2 = image2;
 
             try
             {

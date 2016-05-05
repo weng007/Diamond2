@@ -122,7 +122,7 @@
             this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSearch.FlatAppearance.BorderColor = System.Drawing.Color.Linen;
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.Location = new System.Drawing.Point(866, 95);
+            this.btnSearch.Location = new System.Drawing.Point(932, 95);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(105, 32);
             this.btnSearch.TabIndex = 44;
@@ -131,7 +131,7 @@
             // cmbShop
             // 
             this.cmbShop.FormattingEnabled = true;
-            this.cmbShop.Location = new System.Drawing.Point(866, 52);
+            this.cmbShop.Location = new System.Drawing.Point(932, 52);
             this.cmbShop.Name = "cmbShop";
             this.cmbShop.Size = new System.Drawing.Size(148, 29);
             this.cmbShop.TabIndex = 40;
@@ -140,7 +140,7 @@
             // 
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(791, 55);
+            this.label11.Location = new System.Drawing.Point(857, 55);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(69, 26);
             this.label11.TabIndex = 72;
@@ -149,7 +149,7 @@
             // cmbStatus
             // 
             this.cmbStatus.FormattingEnabled = true;
-            this.cmbStatus.Location = new System.Drawing.Point(866, 13);
+            this.cmbStatus.Location = new System.Drawing.Point(932, 13);
             this.cmbStatus.Name = "cmbStatus";
             this.cmbStatus.Size = new System.Drawing.Size(148, 29);
             this.cmbStatus.TabIndex = 36;
@@ -158,7 +158,7 @@
             // 
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(791, 16);
+            this.label10.Location = new System.Drawing.Point(857, 16);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(69, 26);
             this.label10.TabIndex = 70;
@@ -213,16 +213,16 @@
             // cmbEClearity
             // 
             this.cmbEClearity.FormattingEnabled = true;
-            this.cmbEClearity.Location = new System.Drawing.Point(628, 94);
+            this.cmbEClearity.Location = new System.Drawing.Point(666, 94);
             this.cmbEClearity.Name = "cmbEClearity";
-            this.cmbEClearity.Size = new System.Drawing.Size(120, 29);
+            this.cmbEClearity.Size = new System.Drawing.Size(151, 29);
             this.cmbEClearity.TabIndex = 32;
             // 
             // label8
             // 
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(609, 97);
+            this.label8.Location = new System.Drawing.Point(647, 97);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(16, 26);
             this.label8.TabIndex = 61;
@@ -299,7 +299,7 @@
             this.cmbSClearity.FormattingEnabled = true;
             this.cmbSClearity.Location = new System.Drawing.Point(483, 94);
             this.cmbSClearity.Name = "cmbSClearity";
-            this.cmbSClearity.Size = new System.Drawing.Size(120, 29);
+            this.cmbSClearity.Size = new System.Drawing.Size(158, 29);
             this.cmbSClearity.TabIndex = 28;
             // 
             // label4

@@ -164,6 +164,7 @@
             this.cmbIdentification.Name = "cmbIdentification";
             this.cmbIdentification.Size = new System.Drawing.Size(184, 29);
             this.cmbIdentification.TabIndex = 16;
+            this.cmbIdentification.SelectedIndexChanged += new System.EventHandler(this.cmbIdentification_SelectedIndexChanged);
             // 
             // label14
             // 

@@ -31,6 +31,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BuyBookGemstoneCer));
             this.dtBuyDate = new System.Windows.Forms.DateTimePicker();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.label33 = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.label32 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label31 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
             this.cmbShape = new System.Windows.Forms.ComboBox();
             this.cmbOrigin = new System.Windows.Forms.ComboBox();
@@ -84,8 +90,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.txtWeight = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.txtAmount = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.txtSeller = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -95,12 +99,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label31 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label32 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.label33 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -177,8 +175,6 @@
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.label10);
             this.panel3.Controls.Add(this.txtWeight);
-            this.panel3.Controls.Add(this.label9);
-            this.panel3.Controls.Add(this.txtAmount);
             this.panel3.Controls.Add(this.label18);
             this.panel3.Controls.Add(this.txtSeller);
             this.panel3.Controls.Add(this.label3);
@@ -191,6 +187,60 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(967, 556);
             this.panel3.TabIndex = 74;
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(779, 85);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(157, 29);
+            this.comboBox3.TabIndex = 202;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
+            this.label33.Location = new System.Drawing.Point(723, 90);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(51, 21);
+            this.label33.TabIndex = 203;
+            this.label33.Text = "Color";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(779, 51);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(157, 29);
+            this.comboBox2.TabIndex = 200;
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
+            this.label32.Location = new System.Drawing.Point(734, 54);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(40, 21);
+            this.label32.TabIndex = 201;
+            this.label32.Text = "Cut";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(473, 164);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(157, 29);
+            this.comboBox1.TabIndex = 198;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
+            this.label31.Location = new System.Drawing.Point(373, 172);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(90, 21);
+            this.label31.TabIndex = 199;
+            this.label31.Text = "Comment";
             // 
             // label30
             // 
@@ -703,25 +753,6 @@
             this.txtWeight.Text = "0";
             this.txtWeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label9.Location = new System.Drawing.Point(388, 207);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(75, 21);
-            this.label9.TabIndex = 118;
-            this.label9.Text = "Amount";
-            // 
-            // txtAmount
-            // 
-            this.txtAmount.Location = new System.Drawing.Point(473, 201);
-            this.txtAmount.Name = "txtAmount";
-            this.txtAmount.Size = new System.Drawing.Size(131, 27);
-            this.txtAmount.TabIndex = 36;
-            this.txtAmount.Text = "0";
-            this.txtAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
             // label18
             // 
             this.label18.AutoSize = true;
@@ -800,60 +831,6 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(473, 164);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(157, 29);
-            this.comboBox1.TabIndex = 198;
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label31.Location = new System.Drawing.Point(373, 172);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(90, 21);
-            this.label31.TabIndex = 199;
-            this.label31.Text = "Comment";
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(779, 51);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(157, 29);
-            this.comboBox2.TabIndex = 200;
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label32.Location = new System.Drawing.Point(734, 54);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(40, 21);
-            this.label32.TabIndex = 201;
-            this.label32.Text = "Cut";
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(779, 85);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(157, 29);
-            this.comboBox3.TabIndex = 202;
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label33.Location = new System.Drawing.Point(723, 90);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(51, 21);
-            this.label33.TabIndex = 203;
-            this.label33.Text = "Color";
-            // 
             // BuyBookGemstoneCer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -885,8 +862,6 @@
         private System.Windows.Forms.TextBox txtSeller;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtWeight;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txtAmount;
         private System.Windows.Forms.ComboBox cmbLab;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ComboBox cmbIdentification;

@@ -142,6 +142,7 @@
             this.btnGemstone.Size = new System.Drawing.Size(76, 86);
             this.btnGemstone.TabIndex = 56;
             this.btnGemstone.UseVisualStyleBackColor = false;
+            this.btnGemstone.Click += new System.EventHandler(this.btnGemstone_Click);
             // 
             // btnDiamond
             // 

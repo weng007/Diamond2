@@ -275,5 +275,19 @@ namespace Diamond
                 throw ex;
             }
         }
+        [WebMethod]
+        public DataSet DoSearchSell(string code, int jewelryType)
+        {
+            SellBiz biz = new SellBiz();
+
+            try
+            {
+                return biz.DoSearchData(code, jewelryType);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

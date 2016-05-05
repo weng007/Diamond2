@@ -34,7 +34,6 @@ namespace DiamondShop
             binder.BindControl(txtReportNumber, "ReportNumber");
             binder.BindControl(txtWeight, "Weight");
             binder.BindControl(cmbIdentification, "Identification");
-            binder.BindControl(txtAmount, "Amount");
             binder.BindControl(dtReportDate, "ReportDate");
             binder.BindControl(cmbLab, "Lab");
             binder.BindControl(cmbOrigin, "Origin");
@@ -64,7 +63,6 @@ namespace DiamondShop
             binder.BindControl(txtReportNumber, "ReportNumber");
             binder.BindControl(txtWeight, "Weight");
             binder.BindControl(cmbIdentification, "Identification");
-            binder.BindControl(txtAmount, "Amount");
             binder.BindControl(dtReportDate, "ReportDate");
             binder.BindControl(cmbLab, "Lab");
             binder.BindControl(cmbOrigin, "Origin");
