@@ -29,6 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BuyBookDiamondCerList));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.tds = new DiamondDS.DS.dsDiamondCer();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnSearch = new System.Windows.Forms.Button();
             this.cmbColorType = new System.Windows.Forms.ComboBox();
@@ -60,7 +66,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.gridDiamondCer = new System.Windows.Forms.DataGridView();
-            this.tds = new DiamondDS.DS.dsDiamondCer();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RowNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StatusName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -85,13 +90,18 @@
             this.ShopName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SettingName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ReportNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoldTo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoldToName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tds)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridDiamondCer)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tds)).BeginInit();
             this.SuspendLayout();
+            // 
+            // tds
+            // 
+            this.tds.DataSetName = "dsDiamondCer";
+            this.tds.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // panel4
             // 
@@ -413,6 +423,7 @@
             this.gridDiamondCer.AllowUserToAddRows = false;
             this.gridDiamondCer.AllowUserToDeleteRows = false;
             this.gridDiamondCer.AllowUserToOrderColumns = true;
+            this.gridDiamondCer.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.gridDiamondCer.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.gridDiamondCer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridDiamondCer.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -440,22 +451,27 @@
             this.ShopName,
             this.SettingName,
             this.ReportNumber,
-            this.SoldTo});
+            this.SoldToName});
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridDiamondCer.DefaultCellStyle = dataGridViewCellStyle14;
             this.gridDiamondCer.Location = new System.Drawing.Point(7, 0);
             this.gridDiamondCer.Name = "gridDiamondCer";
             this.gridDiamondCer.ReadOnly = true;
             this.gridDiamondCer.RowHeadersWidth = 10;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridDiamondCer.RowsDefaultCellStyle = dataGridViewCellStyle15;
             this.gridDiamondCer.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridDiamondCer.RowTemplate.Height = 30;
             this.gridDiamondCer.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridDiamondCer.Size = new System.Drawing.Size(1301, 385);
             this.gridDiamondCer.TabIndex = 2;
             this.gridDiamondCer.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.gridDiamondCer_MouseDoubleClick);
-            // 
-            // tds
-            // 
-            this.tds.DataSetName = "dsDiamondCer";
-            this.tds.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // ID
             // 
@@ -576,6 +592,8 @@
             // Price
             // 
             this.Price.DataPropertyName = "Price";
+            dataGridViewCellStyle11.Format = "N0";
+            this.Price.DefaultCellStyle = dataGridViewCellStyle11;
             this.Price.HeaderText = "Price";
             this.Price.Name = "Price";
             this.Price.ReadOnly = true;
@@ -591,7 +609,9 @@
             // 
             // Cost
             // 
-            this.Cost.DataPropertyName = "Cost";
+            this.Cost.DataPropertyName = "Total";
+            dataGridViewCellStyle12.Format = "N0";
+            this.Cost.DefaultCellStyle = dataGridViewCellStyle12;
             this.Cost.HeaderText = "Cost";
             this.Cost.Name = "Cost";
             this.Cost.ReadOnly = true;
@@ -605,7 +625,9 @@
             // 
             // CostBaht
             // 
-            this.CostBaht.DataPropertyName = "CostBaht";
+            this.CostBaht.DataPropertyName = "TotalBaht";
+            dataGridViewCellStyle13.Format = "N0";
+            this.CostBaht.DefaultCellStyle = dataGridViewCellStyle13;
             this.CostBaht.HeaderText = "Cost Baht";
             this.CostBaht.Name = "CostBaht";
             this.CostBaht.ReadOnly = true;
@@ -649,12 +671,12 @@
             this.ReportNumber.ReadOnly = true;
             this.ReportNumber.Width = 130;
             // 
-            // SoldTo
+            // SoldToName
             // 
-            this.SoldTo.DataPropertyName = "SoldTo";
-            this.SoldTo.HeaderText = "Sold To";
-            this.SoldTo.Name = "SoldTo";
-            this.SoldTo.ReadOnly = true;
+            this.SoldToName.DataPropertyName = "SoldToName";
+            this.SoldToName.HeaderText = "Sold To";
+            this.SoldToName.Name = "SoldToName";
+            this.SoldToName.ReadOnly = true;
             // 
             // BuyBookDiamondCerList
             // 
@@ -667,11 +689,11 @@
             this.Name = "BuyBookDiamondCerList";
             this.Text = "DiamondCerList";
             ((System.ComponentModel.ISupportInitialize)(this.ds)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tds)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridDiamondCer)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tds)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -733,6 +755,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ShopName;
         private System.Windows.Forms.DataGridViewTextBoxColumn SettingName;
         private System.Windows.Forms.DataGridViewTextBoxColumn ReportNumber;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SoldTo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SoldToName;
     }
 }

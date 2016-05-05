@@ -101,7 +101,7 @@ namespace DiamondShop
             cmbCut.DisplayMember = "Detail";
             cmbCut.Refresh();
 
-            cmbPolish.DataSource = (GM.GetMasterTableDetail("C020")).Tables[0];
+            cmbPolish.DataSource = (GM.GetMasterTableDetail("C003")).Tables[0];
             cmbPolish.ValueMember = "ID";
             cmbPolish.DisplayMember = "Detail";
             cmbPolish.Refresh();
@@ -309,24 +309,38 @@ namespace DiamondShop
             }
         }
 
-        private void txtWeight_TextChanged(object sender, EventArgs e)
-        {
-            txtTotal.Text = (GM.ConvertStringToDouble(txtRap) * 100 * (1 + GM.ConvertStringToDouble(txtPrice))
-                * GM.ConvertStringToDouble(txtWeight)).ToString();
-        }
-
         private void txtTotal_TextChanged(object sender, EventArgs e)
         {
-            txtPrice.Text = GM.ConvertDoubleToString(txtPrice);
-            txtTotal.Text = GM.ConvertDoubleToString(txtTotal);
-            txtTotalBaht.Text = GM.ConvertDoubleToString(txtTotalBaht);
-
             txtTotalBaht.Text = (GM.ConvertStringToDouble(txtTotal) * GM.ConvertStringToDouble(txtUSDRate)).ToString();
+            txtTotalBaht.Text = GM.ConvertDoubleToString(txtTotalBaht);
         }
 
         private void txtUSDRate_TextChanged(object sender, EventArgs e)
         {
+            txtTotalBaht.Text = (GM.ConvertStringToDouble(txtTotal) * GM.ConvertStringToDouble(txtUSDRate)).ToString();
+            txtTotalBaht.Text = GM.ConvertDoubleToString(txtTotalBaht);
+        }
 
+        private void txtWeight_TextChanged(object sender, EventArgs e)
+        {
+            txtTotal.Text = (GM.ConvertStringToDouble(txtRap) * 100 * (1 + GM.ConvertStringToDouble(txtPrice))
+                * GM.ConvertStringToDouble(txtWeight)).ToString();
+            txtTotal.Text= GM.ConvertDoubleToString(txtTotal);
+        }
+
+        private void txtPrice_TextChanged(object sender, EventArgs e)
+        {
+            txtPrice.Text = GM.ConvertDoubleToString(txtPrice);
+            txtTotal.Text = (GM.ConvertStringToDouble(txtRap) * 100 * (1 + GM.ConvertStringToDouble(txtPrice))
+                * GM.ConvertStringToDouble(txtWeight)).ToString();
+            txtTotal.Text = GM.ConvertDoubleToString(txtTotal);
+        }
+
+        private void txtRap_TextChanged(object sender, EventArgs e)
+        {
+            txtTotal.Text = (GM.ConvertStringToDouble(txtRap) * 100 * (1 + GM.ConvertStringToDouble(txtPrice))
+                            * GM.ConvertStringToDouble(txtWeight)).ToString();
+            txtTotal.Text = GM.ConvertDoubleToString(txtTotal);
         }
     }
 }
