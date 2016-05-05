@@ -116,7 +116,7 @@ namespace DiamondShop
 
             dtBuyDate.Select();
 
-            //SetFieldService.SetRequireField(txtCode, txtW, txtL, txtD, txtCarat);
+            SetFieldService.SetRequireField(txtWeight, txtTotalThaiBaht);
         }
 
         protected override void LoadData()
@@ -210,15 +210,35 @@ namespace DiamondShop
         {
             message = "";
 
-            if (txtCode.Text == "")
+            if (GM.ConvertStringToDouble(txtWeight) == 0)
             {
-                message = "Please input GIA Number.\n";
+                message += "Please input  Weight > 0.\n";
             }
-            if(txtW.Text == "" || txtL.Text == "" || txtD.Text == ""
-            && GM.ConvertStringToDouble(txtW) == 0 || GM.ConvertStringToDouble(txtL) == 0 || GM.ConvertStringToDouble(txtD) == 0)
+            if (GM.ConvertStringToDouble(txtW) == 0 || GM.ConvertStringToDouble(txtL) == 0 || GM.ConvertStringToDouble(txtD) == 0) 
             {
-                message += "Please input Measurement > 0.\n";
+                message += "Please input  Measurements > 0.\n";
             }
+            if (GM.ConvertStringToDouble(txtPriceCaratUSD) == 0)
+            {
+                message += "Please input  Price CaratUSD > 0.\n";
+            }
+            if (GM.ConvertStringToDouble(txtPriceCarat) == 0)
+            {
+                message += "Please input  Price Carat > 0.\n";
+            }
+            if (GM.ConvertStringToDouble(txtUSDRate) == 0)
+            {
+                message += "Please input  USD Rate > 0.\n";
+            }
+            //if (txtCode.Text == "")
+            //{
+            //    message = "Please input GIA Number.\n";
+            //}
+            //if(txtW.Text == "" || txtL.Text == "" || txtD.Text == ""
+            //&& GM.ConvertStringToDouble(txtW) == 0 || GM.ConvertStringToDouble(txtL) == 0 || GM.ConvertStringToDouble(txtD) == 0)
+            //{
+            //    message += "Please input Measurement > 0.\n";
+            //}
             //if (txtCarat.Text == "" || GM.ConvertStringToDouble(txtCarat) == 0)
             //{
             //    message += "Please input Carat Weight > 0.\n";

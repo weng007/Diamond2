@@ -503,6 +503,7 @@
             // 
             // txtTotalThaiBaht
             // 
+            this.txtTotalThaiBaht.Enabled = false;
             this.txtTotalThaiBaht.Location = new System.Drawing.Point(426, 506);
             this.txtTotalThaiBaht.Name = "txtTotalThaiBaht";
             this.txtTotalThaiBaht.Size = new System.Drawing.Size(101, 27);
@@ -571,6 +572,7 @@
             // 
             // txtTotalUSD
             // 
+            this.txtTotalUSD.Enabled = false;
             this.txtTotalUSD.Location = new System.Drawing.Point(426, 414);
             this.txtTotalUSD.Name = "txtTotalUSD";
             this.txtTotalUSD.Size = new System.Drawing.Size(101, 27);
@@ -590,6 +592,7 @@
             // 
             // txtTotalBaht
             // 
+            this.txtTotalBaht.Enabled = false;
             this.txtTotalBaht.Location = new System.Drawing.Point(707, 414);
             this.txtTotalBaht.Name = "txtTotalBaht";
             this.txtTotalBaht.Size = new System.Drawing.Size(131, 27);
@@ -802,6 +805,7 @@
             // 
             // txtCode
             // 
+            this.txtCode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.txtCode.Location = new System.Drawing.Point(127, 87);
             this.txtCode.Name = "txtCode";
             this.txtCode.Size = new System.Drawing.Size(157, 27);
