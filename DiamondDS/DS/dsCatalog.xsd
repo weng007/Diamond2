@@ -19,6 +19,10 @@
             <xs:sequence>
               <xs:element name="RowNum" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnRowNum" msprop:Generator_ColumnPropNameInRow="RowNum" msprop:Generator_ColumnPropNameInTable="RowNumColumn" msprop:Generator_UserColumnName="RowNum" type="xs:long" minOccurs="0" />
               <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="CreateBy" msprop:Generator_ColumnVarNameInTable="columnCreateBy" msprop:Generator_ColumnPropNameInRow="CreateBy" msprop:Generator_ColumnPropNameInTable="CreateByColumn" msprop:Generator_UserColumnName="CreateBy" type="xs:int" minOccurs="0" />
+              <xs:element name="CreateDate" msprop:Generator_ColumnVarNameInTable="columnCreateDate" msprop:Generator_ColumnPropNameInRow="CreateDate" msprop:Generator_ColumnPropNameInTable="CreateDateColumn" msprop:Generator_UserColumnName="CreateDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="EditBy" msprop:Generator_ColumnVarNameInTable="columnEditBy" msprop:Generator_ColumnPropNameInRow="EditBy" msprop:Generator_ColumnPropNameInTable="EditByColumn" msprop:Generator_UserColumnName="EditBy" type="xs:int" minOccurs="0" />
+              <xs:element name="EditDate" msprop:Generator_ColumnVarNameInTable="columnEditDate" msprop:Generator_ColumnPropNameInRow="EditDate" msprop:Generator_ColumnPropNameInTable="EditDateColumn" msprop:Generator_UserColumnName="EditDate" type="xs:dateTime" minOccurs="0" />
               <xs:element name="Remark" msprop:Generator_ColumnVarNameInTable="columnRemark" msprop:Generator_ColumnPropNameInRow="Remark" msprop:Generator_ColumnPropNameInTable="RemarkColumn" msprop:Generator_UserColumnName="Remark" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -26,11 +30,56 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="RefID" msprop:Generator_ColumnVarNameInTable="columnRefID" msprop:Generator_ColumnPropNameInRow="RefID" msprop:Generator_ColumnPropNameInTable="RefIDColumn" msprop:Generator_UserColumnName="RefID" type="xs:int" />
-              <xs:element name="CreateBy" msprop:Generator_ColumnVarNameInTable="columnCreateBy" msprop:Generator_ColumnPropNameInRow="CreateBy" msprop:Generator_ColumnPropNameInTable="CreateByColumn" msprop:Generator_UserColumnName="CreateBy" type="xs:int" />
-              <xs:element name="CreateDate" msprop:Generator_ColumnVarNameInTable="columnCreateDate" msprop:Generator_ColumnPropNameInRow="CreateDate" msprop:Generator_ColumnPropNameInTable="CreateDateColumn" msprop:Generator_UserColumnName="CreateDate" type="xs:dateTime" />
-              <xs:element name="EditBy" msprop:Generator_ColumnVarNameInTable="columnEditBy" msprop:Generator_ColumnPropNameInRow="EditBy" msprop:Generator_ColumnPropNameInTable="EditByColumn" msprop:Generator_UserColumnName="EditBy" type="xs:int" />
-              <xs:element name="EditDate" msprop:Generator_ColumnVarNameInTable="columnEditDate" msprop:Generator_ColumnPropNameInRow="EditDate" msprop:Generator_ColumnPropNameInTable="EditDateColumn" msprop:Generator_UserColumnName="EditDate" type="xs:dateTime" />
+              <xs:element name="RefID" msprop:Generator_ColumnVarNameInTable="columnRefID" msprop:Generator_ColumnPropNameInRow="RefID" msprop:Generator_ColumnPropNameInTable="RefIDColumn" msprop:Generator_UserColumnName="RefID" type="xs:int" minOccurs="0" />
+              <xs:element name="BBAmount" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnBBAmount" msprop:Generator_ColumnPropNameInRow="BBAmount" msprop:Generator_ColumnPropNameInTable="BBAmountColumn" msprop:Generator_UserColumnName="BBAmount" type="xs:int" minOccurs="0" />
+              <xs:element name="BBWeight" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnBBWeight" msprop:Generator_ColumnPropNameInRow="BBWeight" msprop:Generator_ColumnPropNameInTable="BBWeightColumn" msprop:Generator_UserColumnName="BBWeight" type="xs:int" minOccurs="0" />
+              <xs:element name="BGCAmount" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnBGCAmount" msprop:Generator_ColumnPropNameInRow="BGCAmount" msprop:Generator_ColumnPropNameInTable="BGCAmountColumn" msprop:Generator_UserColumnName="BGCAmount" type="xs:int" minOccurs="0" />
+              <xs:element name="BGCWeight" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnBGCWeight" msprop:Generator_ColumnPropNameInRow="BGCWeight" msprop:Generator_ColumnPropNameInTable="BGCWeightColumn" msprop:Generator_UserColumnName="BGCWeight" type="xs:int" minOccurs="0" />
+              <xs:element name="BDCAmount" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnBDCAmount" msprop:Generator_ColumnPropNameInRow="BDCAmount" msprop:Generator_ColumnPropNameInTable="BDCAmountColumn" msprop:Generator_UserColumnName="BDCAmount" type="xs:int" minOccurs="0" />
+              <xs:element name="BDCWeight" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnBDCWeight" msprop:Generator_ColumnPropNameInRow="BDCWeight" msprop:Generator_ColumnPropNameInTable="BDCWeightColumn" msprop:Generator_UserColumnName="BDCWeight" type="xs:int" minOccurs="0" />
+              <xs:element name="BDAmount" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnBDAmount" msprop:Generator_ColumnPropNameInRow="BDAmount" msprop:Generator_ColumnPropNameInTable="BDAmountColumn" msprop:Generator_UserColumnName="BDAmount" type="xs:int" minOccurs="0" />
+              <xs:element name="BDWeight" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnBDWeight" msprop:Generator_ColumnPropNameInRow="BDWeight" msprop:Generator_ColumnPropNameInTable="BDWeightColumn" msprop:Generator_UserColumnName="BDWeight" type="xs:int" minOccurs="0" />
+              <xs:element name="MinPrice" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnMinPrice" msprop:Generator_ColumnPropNameInRow="MinPrice" msprop:Generator_ColumnPropNameInTable="MinPriceColumn" msprop:Generator_UserColumnName="MinPrice" type="xs:int" minOccurs="0" />
+              <xs:element name="PriceTag" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnPriceTag" msprop:Generator_ColumnPropNameInRow="PriceTag" msprop:Generator_ColumnPropNameInTable="PriceTagColumn" msprop:Generator_UserColumnName="PriceTag" type="xs:int" minOccurs="0" />
+              <xs:element name="MaterialWeight1" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnMaterialWeight1" msprop:Generator_ColumnPropNameInRow="MaterialWeight1" msprop:Generator_ColumnPropNameInTable="MaterialWeight1Column" msprop:Generator_UserColumnName="MaterialWeight1" type="xs:int" minOccurs="0" />
+              <xs:element name="MaterialWeight2" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnMaterialWeight2" msprop:Generator_ColumnPropNameInRow="MaterialWeight2" msprop:Generator_ColumnPropNameInTable="MaterialWeight2Column" msprop:Generator_UserColumnName="MaterialWeight2" type="xs:int" minOccurs="0" />
+              <xs:element name="Material1" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnMaterial1" msprop:Generator_ColumnPropNameInRow="Material1" msprop:Generator_ColumnPropNameInTable="Material1Column" msprop:Generator_UserColumnName="Material1" type="xs:int" minOccurs="0" />
+              <xs:element name="Material2" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnMaterial2" msprop:Generator_ColumnPropNameInRow="Material2" msprop:Generator_ColumnPropNameInTable="Material2Column" msprop:Generator_UserColumnName="Material2" type="xs:int" minOccurs="0" />
+              <xs:element name="JewelryType" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnJewelryType" msprop:Generator_ColumnPropNameInRow="JewelryType" msprop:Generator_ColumnPropNameInTable="JewelryTypeColumn" msprop:Generator_UserColumnName="JewelryType" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Size" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSize" msprop:Generator_ColumnPropNameInRow="Size" msprop:Generator_ColumnPropNameInTable="SizeColumn" msprop:Generator_UserColumnName="Size" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Shop" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnShop" msprop:Generator_ColumnPropNameInRow="Shop" msprop:Generator_ColumnPropNameInTable="ShopColumn" msprop:Generator_UserColumnName="Shop" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Status" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnStatus" msprop:Generator_ColumnPropNameInRow="Status" msprop:Generator_ColumnPropNameInTable="StatusColumn" msprop:Generator_UserColumnName="Status" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Remark1" msprop:Generator_ColumnVarNameInTable="columnRemark1" msprop:Generator_ColumnPropNameInRow="Remark1" msprop:Generator_ColumnPropNameInTable="Remark1Column" msprop:Generator_UserColumnName="Remark1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
             </xs:sequence>
           </xs:complexType>
         </xs:element>

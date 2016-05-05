@@ -31,6 +31,7 @@ namespace DiamondShop
             binder.BindControl(txtShop, "Shop");
             binder.BindControl(txtJewelryType, "JewelryType");
             binder.BindControl(txtStatus, "Status");
+            binder.BindControl(txtStatus, "Size");
             binder.BindControl(txtMaterial1, "Material1");
             binder.BindControl(txtMaterial2, "Material2");
             binder.BindControl(txtMaterialWeight1, "MaterialWeight1");
@@ -38,9 +39,8 @@ namespace DiamondShop
             binder.BindControl(txtMinBeforePremium, "MinBeforePremium");
             binder.BindControl(txtMinPrice, "MinPrice");
             binder.BindControl(txtPriceTag, "PriceTag");
-            //binder.BindControl(txtSellDate, "Image1");
-            //binder.BindControl(txtRemark, "Image2");
-            binder.BindControl(txtMinPrice, "Remark");
+            binder.BindControl(txtInvRemark, "InvRemark");
+            binder.BindControl(txtRemark, "Remark");
 
             txtUpdateBy.Text = ApplicationInfo.UserName;
         }
@@ -61,9 +61,8 @@ namespace DiamondShop
             binder.BindControl(txtMinBeforePremium, "MinBeforePremium");
             binder.BindControl(txtMinPrice, "MinPrice");
             binder.BindControl(txtPriceTag, "PriceTag");
-            //binder.BindControl(txtSellDate, "Image1");
-            //binder.BindControl(txtRemark, "Image2");
-            binder.BindControl(txtMinPrice, "Remark");
+            binder.BindControl(txtInvRemark, "InvRemark");
+            binder.BindControl(txtRemark, "Remark");
 
             this.id = id;
             LoadData();
@@ -79,7 +78,7 @@ namespace DiamondShop
 
         protected override void LoadData()
         {
-            ds = ser.DoSelectData("Product", id);
+            ds = ser.DoSelectData("Catalog", id);
             tds.Clear();
             tds.Merge(ds);
 

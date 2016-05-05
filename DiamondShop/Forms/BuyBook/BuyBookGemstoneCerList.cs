@@ -27,6 +27,26 @@ namespace DiamondShop
             cmbShape.DisplayMember = "Detail";
             cmbShape.Refresh();
 
+            cmbIdentification.DataSource = (GM.GetMasterTableDetail("C016", true)).Tables[0];
+            cmbIdentification.ValueMember = "ID";
+            cmbIdentification.DisplayMember = "Detail";
+            cmbIdentification.Refresh();
+
+            cmbOrigin.DataSource = (GM.GetMasterTableDetail("C024", true)).Tables[0];
+            cmbOrigin.ValueMember = "ID";
+            cmbOrigin.DisplayMember = "Detail";
+            cmbOrigin.Refresh();
+
+            cmbStatus.DataSource = (GM.GetMasterTableDetail("C023", true)).Tables[0];
+            cmbStatus.ValueMember = "ID";
+            cmbStatus.DisplayMember = "Detail";
+            cmbStatus.Refresh();
+
+            cmbShop.DataSource = (GM.GetMasterTableDetail("C007", true)).Tables[0];
+            cmbShop.ValueMember = "ID";
+            cmbShop.DisplayMember = "Detail";
+            cmbShop.Refresh();
+
 
             txtReportNumber.Select();
 

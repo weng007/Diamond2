@@ -24,7 +24,7 @@ namespace DiamondShop
 
         protected override void Initial()
         {
-            cmbSettingType.DataSource = (GM.GetMasterTableDetail("C005")).Tables[0];
+            cmbSettingType.DataSource = (GM.GetMasterTableDetail("C015")).Tables[0];
             cmbSettingType.ValueMember = "ID";
             cmbSettingType.DisplayMember = "Detail";
             cmbSettingType.Refresh();
@@ -36,7 +36,7 @@ namespace DiamondShop
 
         protected override void DoLoadData()
         {
-            ds = ser.DoSelectData("BBSettingDetail", -1);
+            ds = ser.DoSelectData("BuyBookSettingDetail", -1);
 
             if (ds.Tables[0].Rows.Count > 0)
             {
@@ -64,7 +64,7 @@ namespace DiamondShop
 
             if (ds.Tables[0].Rows.Count > 0)
             {
-                gridSetting.DataSource = ds.Tables["Product"];
+                gridSetting.DataSource = ds.Tables[0];
                 gridSetting.Refresh();
             }
             else { gridSetting.DataSource = null; gridSetting.Refresh(); }
@@ -85,7 +85,7 @@ namespace DiamondShop
                 if (gridSetting.RowCount > 0 && gridSetting.SelectedRows.Count > 0)
                 {
                     id = (int)gridSetting.SelectedRows[0].Cells["ID"].Value;
-                    chkFlag = ser.DoDeleteData("BBSettingDetail", id);
+                    chkFlag = ser.DoDeleteData("BuyBookSettingDetail", id);
                 }
             }
             return chkFlag;

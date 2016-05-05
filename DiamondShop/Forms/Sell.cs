@@ -62,6 +62,11 @@ namespace DiamondShop
             cmbPayment.DisplayMember = "Detail";
             cmbPayment.Refresh();
 
+            cmbShopRecive.DataSource = (GM.GetMasterTableDetail("C007")).Tables[0];
+            cmbShopRecive.ValueMember = "ID";
+            cmbShopRecive.DisplayMember = "Detail";
+            cmbShopRecive.Refresh();
+
             txtCost.Text = GM.ConvertDoubleToString(txtCost);
             //txtNetPrice.Text = GM.ConvertDoubleToString(txtNetPrice);
 

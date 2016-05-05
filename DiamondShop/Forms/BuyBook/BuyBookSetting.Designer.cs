@@ -337,7 +337,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(195)))), ((int)(((byte)(157)))));
-            this.ClientSize = new System.Drawing.Size(826, 486);
+            this.ClientSize = new System.Drawing.Size(826, 502);
             this.Controls.Add(this.panel3);
             this.Name = "BuyBookSetting";
             this.Text = "DiamondCer";
