@@ -31,11 +31,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BuyBookGemstoneCer));
             this.dtBuyDate = new System.Windows.Forms.DateTimePicker();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.cmbColor = new System.Windows.Forms.ComboBox();
             this.label33 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cmbCut = new System.Windows.Forms.ComboBox();
             this.label32 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbComment = new System.Windows.Forms.ComboBox();
             this.label31 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
             this.cmbShape = new System.Windows.Forms.ComboBox();
@@ -116,11 +116,11 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.comboBox3);
+            this.panel3.Controls.Add(this.cmbColor);
             this.panel3.Controls.Add(this.label33);
-            this.panel3.Controls.Add(this.comboBox2);
+            this.panel3.Controls.Add(this.cmbCut);
             this.panel3.Controls.Add(this.label32);
-            this.panel3.Controls.Add(this.comboBox1);
+            this.panel3.Controls.Add(this.cmbComment);
             this.panel3.Controls.Add(this.label31);
             this.panel3.Controls.Add(this.label30);
             this.panel3.Controls.Add(this.cmbShape);
@@ -188,13 +188,13 @@
             this.panel3.Size = new System.Drawing.Size(967, 556);
             this.panel3.TabIndex = 74;
             // 
-            // comboBox3
+            // cmbColor
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(779, 85);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(157, 29);
-            this.comboBox3.TabIndex = 202;
+            this.cmbColor.FormattingEnabled = true;
+            this.cmbColor.Location = new System.Drawing.Point(779, 85);
+            this.cmbColor.Name = "cmbColor";
+            this.cmbColor.Size = new System.Drawing.Size(157, 29);
+            this.cmbColor.TabIndex = 202;
             // 
             // label33
             // 
@@ -206,13 +206,13 @@
             this.label33.TabIndex = 203;
             this.label33.Text = "Color";
             // 
-            // comboBox2
+            // cmbCut
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(779, 51);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(157, 29);
-            this.comboBox2.TabIndex = 200;
+            this.cmbCut.FormattingEnabled = true;
+            this.cmbCut.Location = new System.Drawing.Point(779, 51);
+            this.cmbCut.Name = "cmbCut";
+            this.cmbCut.Size = new System.Drawing.Size(157, 29);
+            this.cmbCut.TabIndex = 200;
             // 
             // label32
             // 
@@ -224,13 +224,13 @@
             this.label32.TabIndex = 201;
             this.label32.Text = "Cut";
             // 
-            // comboBox1
+            // cmbComment
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(473, 164);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(157, 29);
-            this.comboBox1.TabIndex = 198;
+            this.cmbComment.FormattingEnabled = true;
+            this.cmbComment.Location = new System.Drawing.Point(473, 164);
+            this.cmbComment.Name = "cmbComment";
+            this.cmbComment.Size = new System.Drawing.Size(157, 29);
+            this.cmbComment.TabIndex = 198;
             // 
             // label31
             // 
@@ -726,6 +726,7 @@
             this.cmbIdentification.Name = "cmbIdentification";
             this.cmbIdentification.Size = new System.Drawing.Size(157, 29);
             this.cmbIdentification.TabIndex = 24;
+            this.cmbIdentification.SelectedIndexChanged += new System.EventHandler(this.cmbIdentification_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -918,11 +919,11 @@
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.ComboBox cmbShape;
         private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbComment;
         private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox cmbColor;
         private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cmbCut;
         private System.Windows.Forms.Label label32;
     }
 }

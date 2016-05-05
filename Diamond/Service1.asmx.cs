@@ -119,7 +119,7 @@ namespace Diamond
             }
             else if (TableName == "BuyBookGemstoneCer")
             {
-                BuyBookGemstoneBiz biz = GM.GetBuyBookGemstoneBiz();
+                BuyBookGemstoneCerBiz biz = GM.GetBuyBookGemstoneCerBiz();
                 try
                 {
                     return biz.DoSelectData(id);

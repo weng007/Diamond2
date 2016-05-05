@@ -48,6 +48,10 @@ namespace DiamondShop
             binder.BindControl(txtPriceCarat, "PriceCarat");
             binder.BindControl(txtTotalBaht, "TotalThaiBaht");
             binder.BindControl(txtNote, "Note");
+            binder.BindControl(cmbShape, "Shape");
+            binder.BindControl(cmbComment, "Comment");
+            binder.BindControl(cmbCut, "Cut");
+            binder.BindControl(cmbColor, "Color");
         }
         public BuyBookGemstoneCer(int id)
         {
@@ -77,6 +81,10 @@ namespace DiamondShop
             binder.BindControl(txtPriceCarat, "PriceCarat");
             binder.BindControl(txtTotalBaht, "TotalThaiBaht");
             binder.BindControl(txtNote, "Note");
+            binder.BindControl(cmbShape, "Shape");
+            binder.BindControl(cmbComment, "Comment");
+            binder.BindControl(cmbCut, "Cut");
+            binder.BindControl(cmbColor, "Color");
 
             this.id = id;
             LoadData();
@@ -84,7 +92,7 @@ namespace DiamondShop
 
         protected override void Initial()
         {
-            cmbSetting.DataSource = (GM.GetMasterTableDetail("C005")).Tables[0];
+            cmbSetting.DataSource = (GM.GetMasterTableDetail("C015")).Tables[0];
             cmbSetting.ValueMember = "ID";
             cmbSetting.DisplayMember = "Detail";
             cmbSetting.Refresh();
@@ -114,6 +122,21 @@ namespace DiamondShop
             cmbOrigin.DisplayMember = "Detail";
             cmbOrigin.Refresh();
 
+            cmbColor.DataSource = (GM.GetMasterTableDetail("C009")).Tables[0];
+            cmbColor.ValueMember = "ID";
+            cmbColor.DisplayMember = "Detail";
+            cmbColor.Refresh();
+
+            cmbCut.DataSource = (GM.GetMasterTableDetail("C006")).Tables[0];
+            cmbCut.ValueMember = "ID";
+            cmbCut.DisplayMember = "Detail";
+            cmbCut.Refresh();
+
+            cmbShape.DataSource = (GM.GetMasterTableDetail("C019")).Tables[0];
+            cmbShape.ValueMember = "ID";
+            cmbShape.DisplayMember = "Detail";
+            cmbShape.Refresh();
+
             dtBuyDate.Select();
 
             SetFieldService.SetRequireField(txtWeight, txtTotalThaiBaht);
@@ -140,6 +163,7 @@ namespace DiamondShop
                     rdoYes.Checked = true;
                     rdoNo.Checked = false;
                 }
+
 
                 if (image1 != null)
                 {
@@ -169,11 +193,13 @@ namespace DiamondShop
             }
             binder.BindValueToDataRow(row);
             row.Image1 = image1;
+            row.IsPaid = rdoYes.Checked ? "1" : "0";
 
             try
             {
                 if (id == 0)
                 {
+                    row.Code = GM.GetRunningNumber("GC");
                     SetCreateBy(row);
                     chkFlag = ser.DoInsertData("BuyBookGemstoneCer", tds);
                 }
@@ -210,23 +236,19 @@ namespace DiamondShop
         {
             message = "";
 
-            if (GM.ConvertStringToDouble(txtWeight) == 0)
+            if (txtWeight.Text == "" || GM.ConvertStringToDouble(txtWeight) == 0)
             {
                 message += "Please input  Weight > 0.\n";
             }
-            if (GM.ConvertStringToDouble(txtW) == 0 || GM.ConvertStringToDouble(txtL) == 0 || GM.ConvertStringToDouble(txtD) == 0) 
-            {
-                message += "Please input  Measurements > 0.\n";
-            }
-            if (GM.ConvertStringToDouble(txtPriceCaratUSD) == 0)
+            if (txtPriceCaratUSD.Text == "" || GM.ConvertStringToDouble(txtPriceCaratUSD) == 0)
             {
                 message += "Please input  Price CaratUSD > 0.\n";
             }
-            if (GM.ConvertStringToDouble(txtPriceCarat) == 0)
+            if (txtPriceCarat.Text == "" || GM.ConvertStringToDouble(txtPriceCarat) == 0)
             {
                 message += "Please input  Price Carat > 0.\n";
             }
-            if (GM.ConvertStringToDouble(txtUSDRate) == 0)
+            if (txtUSDRate.Text == "" || GM.ConvertStringToDouble(txtUSDRate) == 0)
             {
                 message += "Please input  USD Rate > 0.\n";
             }
@@ -260,6 +282,27 @@ namespace DiamondShop
                 fs.Read(image1, 0, System.Convert.ToInt32(fs.Length));
                 fs.Close();
             }
+        }
+
+        private void cmbIdentification_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string GemstoneType = "";
+
+            if (cmbIdentification.SelectedValue.ToString() == "95")
+            {
+                cmbComment.Enabled = true;
+                GemstoneType = "C029";
+            }
+            else
+            {
+                cmbComment.Enabled = true;
+                GemstoneType = "C028";
+            }
+
+            cmbComment.DataSource = (GM.GetMasterTableDetail(GemstoneType, true)).Tables[0];
+            cmbComment.ValueMember = "ID";
+            cmbComment.DisplayMember = "Detail";
+            cmbComment.Refresh();
         }
     }
 }

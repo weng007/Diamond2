@@ -47,6 +47,11 @@ namespace DiamondShop
             cmbShop.DisplayMember = "Detail";
             cmbShop.Refresh();
 
+            cmbLab.DataSource = (GM.GetMasterTableDetail("C026", true)).Tables[0];
+            cmbLab.ValueMember = "ID";
+            cmbLab.DisplayMember = "Detail";
+            cmbLab.Refresh();
+
 
             txtReportNumber.Select();
 
