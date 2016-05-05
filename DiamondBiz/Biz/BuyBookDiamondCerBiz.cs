@@ -10,7 +10,6 @@ namespace DiamondBiz.Biz
 {
     public class BuyBookDiamondCerBiz
     {
-        dsBuyBookDiamondCer ds = new dsBuyBookDiamondCer();
         BuyBookDiamondCerDAL dal = new BuyBookDiamondCerDAL();
 
         public dsBuyBookDiamondCer DoSearchData(string code, string reportNumber, int shape, int lab, double sWeight, double eWeight, int colorType, int sColor,

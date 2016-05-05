@@ -829,7 +829,6 @@ namespace Diamond
             {
                 BuyBookDiamondCerBiz biz = GM.GetBuyBookDiamondCerBiz();
                 dsBuyBookDiamondCer ds1 = new dsBuyBookDiamondCer();
-
                 ds1.Merge(ds);
 
                 try

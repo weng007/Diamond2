@@ -341,6 +341,8 @@ namespace DiamondDS.DS {
             
             private global::System.Data.DataColumn columnSoldTo;
             
+            private global::System.Data.DataColumn columnSoldToName;
+            
             private global::System.Data.DataColumn columnIsInscription;
             
             private global::System.Data.DataColumn columnDueDate;
@@ -660,6 +662,14 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn SoldToNameColumn {
+                get {
+                    return this.columnSoldToName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn IsInscriptionColumn {
                 get {
                     return this.columnIsInscription;
@@ -870,6 +880,7 @@ namespace DiamondDS.DS {
                         int Status, 
                         string StatusName, 
                         int SoldTo, 
+                        string SoldToName, 
                         string IsInscription, 
                         System.DateTime DueDate, 
                         string IsPaid, 
@@ -921,6 +932,7 @@ namespace DiamondDS.DS {
                         Status,
                         StatusName,
                         SoldTo,
+                        SoldToName,
                         IsInscription,
                         DueDate,
                         IsPaid,
@@ -999,6 +1011,7 @@ namespace DiamondDS.DS {
                 this.columnStatus = base.Columns["Status"];
                 this.columnStatusName = base.Columns["StatusName"];
                 this.columnSoldTo = base.Columns["SoldTo"];
+                this.columnSoldToName = base.Columns["SoldToName"];
                 this.columnIsInscription = base.Columns["IsInscription"];
                 this.columnDueDate = base.Columns["DueDate"];
                 this.columnIsPaid = base.Columns["IsPaid"];
@@ -1084,6 +1097,8 @@ namespace DiamondDS.DS {
                 base.Columns.Add(this.columnStatusName);
                 this.columnSoldTo = new global::System.Data.DataColumn("SoldTo", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSoldTo);
+                this.columnSoldToName = new global::System.Data.DataColumn("SoldToName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSoldToName);
                 this.columnIsInscription = new global::System.Data.DataColumn("IsInscription", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnIsInscription);
                 this.columnDueDate = new global::System.Data.DataColumn("DueDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
@@ -1131,7 +1146,7 @@ namespace DiamondDS.DS {
                 this.columnID.AllowDBNull = false;
                 this.columnID.ReadOnly = true;
                 this.columnID.Unique = true;
-                this.columnCode.MaxLength = 20;
+                this.columnCode.MaxLength = 30;
                 this.columnSeller.MaxLength = 100;
                 this.columnReportNumber.MaxLength = 50;
                 this.columnLabName.ReadOnly = true;
@@ -1794,6 +1809,22 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string SoldToName {
+                get {
+                    try {
+                        return ((string)(this[this.tableBuyBookDiamondCer.SoldToNameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'SoldToName\' in table \'BuyBookDiamondCer\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableBuyBookDiamondCer.SoldToNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string IsInscription {
                 get {
                     try {
@@ -2438,6 +2469,18 @@ namespace DiamondDS.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetSoldToNull() {
                 this[this.tableBuyBookDiamondCer.SoldToColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsSoldToNameNull() {
+                return this.IsNull(this.tableBuyBookDiamondCer.SoldToNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetSoldToNameNull() {
+                this[this.tableBuyBookDiamondCer.SoldToNameColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

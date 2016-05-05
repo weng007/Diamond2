@@ -48,5 +48,18 @@ namespace Diamond
             }
         }
 
+        [WebMethod]
+        public string GetRunningNumber(string subject)
+        {
+            GeneralCBiz biz = new GeneralCBiz();
+            try
+            {
+                return biz.GetRunningNumber(subject);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }
