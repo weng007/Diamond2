@@ -56,31 +56,31 @@
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.gridGemstoneCer = new System.Windows.Forms.DataGridView();
+            this.tds = new DiamondDS.DS.dsDiamondCer();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RowNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StatusName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Lab = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Identification = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Shape = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cut = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LabName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IdentificationName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ShapeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CutName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Weight = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Color = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Comment = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Origin = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColorName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CommentName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.OriginName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Seller = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PriceCaratUSD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.USDRate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TotalUSD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PriceCaratBaht = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TotalBaht = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Payment = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IsPaid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DueDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Shop = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Setting = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ShopName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SettingName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ReportNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BuyDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tds = new DiamondDS.DS.dsDiamondCer();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -243,6 +243,7 @@
             this.btnAdd.Size = new System.Drawing.Size(70, 90);
             this.btnAdd.TabIndex = 68;
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // label7
             // 
@@ -373,26 +374,26 @@
             this.gridGemstoneCer.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
             this.RowNum,
-            this.Status,
+            this.StatusName,
             this.Code,
-            this.Lab,
-            this.Identification,
-            this.Shape,
-            this.Cut,
+            this.LabName,
+            this.IdentificationName,
+            this.ShapeName,
+            this.CutName,
             this.Weight,
-            this.Color,
-            this.Comment,
-            this.Origin,
+            this.ColorName,
+            this.CommentName,
+            this.OriginName,
             this.Seller,
             this.PriceCaratUSD,
             this.USDRate,
             this.TotalUSD,
             this.PriceCaratBaht,
             this.TotalBaht,
-            this.Payment,
+            this.IsPaid,
             this.DueDate,
-            this.Shop,
-            this.Setting,
+            this.ShopName,
+            this.SettingName,
             this.ReportNumber,
             this.BuyDate});
             this.gridGemstoneCer.Location = new System.Drawing.Point(7, 0);
@@ -405,6 +406,11 @@
             this.gridGemstoneCer.Size = new System.Drawing.Size(1301, 385);
             this.gridGemstoneCer.TabIndex = 2;
             this.gridGemstoneCer.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.gridGemstoneCer_MouseDoubleClick);
+            // 
+            // tds
+            // 
+            this.tds.DataSetName = "dsDiamondCer";
+            this.tds.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // ID
             // 
@@ -422,13 +428,13 @@
             this.RowNum.ReadOnly = true;
             this.RowNum.Width = 50;
             // 
-            // Status
+            // StatusName
             // 
-            this.Status.DataPropertyName = "Status";
-            this.Status.HeaderText = "Status";
-            this.Status.Name = "Status";
-            this.Status.ReadOnly = true;
-            this.Status.Width = 90;
+            this.StatusName.DataPropertyName = "StatusName";
+            this.StatusName.HeaderText = "Status";
+            this.StatusName.Name = "StatusName";
+            this.StatusName.ReadOnly = true;
+            this.StatusName.Width = 90;
             // 
             // Code
             // 
@@ -438,38 +444,38 @@
             this.Code.ReadOnly = true;
             this.Code.Width = 120;
             // 
-            // Lab
+            // LabName
             // 
-            this.Lab.DataPropertyName = "Lab";
-            this.Lab.HeaderText = "Lab";
-            this.Lab.Name = "Lab";
-            this.Lab.ReadOnly = true;
-            this.Lab.Width = 60;
+            this.LabName.DataPropertyName = "LabName";
+            this.LabName.HeaderText = "Lab";
+            this.LabName.Name = "LabName";
+            this.LabName.ReadOnly = true;
+            this.LabName.Width = 60;
             // 
-            // Identification
+            // IdentificationName
             // 
-            this.Identification.DataPropertyName = "Identification";
-            this.Identification.HeaderText = "Identification";
-            this.Identification.Name = "Identification";
-            this.Identification.ReadOnly = true;
-            this.Identification.Width = 120;
+            this.IdentificationName.DataPropertyName = "IdentificationName";
+            this.IdentificationName.HeaderText = "Identification";
+            this.IdentificationName.Name = "IdentificationName";
+            this.IdentificationName.ReadOnly = true;
+            this.IdentificationName.Width = 120;
             // 
-            // Shape
+            // ShapeName
             // 
-            this.Shape.DataPropertyName = "Shape";
-            this.Shape.HeaderText = "Shape";
-            this.Shape.Name = "Shape";
-            this.Shape.ReadOnly = true;
-            this.Shape.Width = 90;
+            this.ShapeName.DataPropertyName = "ShapeName";
+            this.ShapeName.HeaderText = "Shape";
+            this.ShapeName.Name = "ShapeName";
+            this.ShapeName.ReadOnly = true;
+            this.ShapeName.Width = 90;
             // 
-            // Cut
+            // CutName
             // 
-            this.Cut.DataPropertyName = "Cut";
-            this.Cut.HeaderText = "Cut";
-            this.Cut.Name = "Cut";
-            this.Cut.ReadOnly = true;
-            this.Cut.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Cut.Width = 80;
+            this.CutName.DataPropertyName = "CutName";
+            this.CutName.HeaderText = "Cut";
+            this.CutName.Name = "CutName";
+            this.CutName.ReadOnly = true;
+            this.CutName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.CutName.Width = 80;
             // 
             // Weight
             // 
@@ -479,30 +485,30 @@
             this.Weight.ReadOnly = true;
             this.Weight.Width = 60;
             // 
-            // Color
+            // ColorName
             // 
-            this.Color.DataPropertyName = "Color";
-            this.Color.HeaderText = "Color";
-            this.Color.Name = "Color";
-            this.Color.ReadOnly = true;
-            this.Color.Width = 90;
+            this.ColorName.DataPropertyName = "ColorName";
+            this.ColorName.HeaderText = "Color";
+            this.ColorName.Name = "ColorName";
+            this.ColorName.ReadOnly = true;
+            this.ColorName.Width = 90;
             // 
-            // Comment
+            // CommentName
             // 
-            this.Comment.DataPropertyName = "Comment";
-            this.Comment.HeaderText = "Comment";
-            this.Comment.Name = "Comment";
-            this.Comment.ReadOnly = true;
-            this.Comment.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Comment.Width = 80;
+            this.CommentName.DataPropertyName = "CommentName";
+            this.CommentName.HeaderText = "Comment";
+            this.CommentName.Name = "CommentName";
+            this.CommentName.ReadOnly = true;
+            this.CommentName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.CommentName.Width = 80;
             // 
-            // Origin
+            // OriginName
             // 
-            this.Origin.DataPropertyName = "Origin";
-            this.Origin.HeaderText = "Origin";
-            this.Origin.Name = "Origin";
-            this.Origin.ReadOnly = true;
-            this.Origin.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.OriginName.DataPropertyName = "OriginName";
+            this.OriginName.HeaderText = "Origin";
+            this.OriginName.Name = "OriginName";
+            this.OriginName.ReadOnly = true;
+            this.OriginName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // Seller
             // 
@@ -551,13 +557,13 @@
             this.TotalBaht.ReadOnly = true;
             this.TotalBaht.Width = 120;
             // 
-            // Payment
+            // IsPaid
             // 
-            this.Payment.DataPropertyName = "Payment";
-            this.Payment.HeaderText = "Payment";
-            this.Payment.Name = "Payment";
-            this.Payment.ReadOnly = true;
-            this.Payment.Width = 80;
+            this.IsPaid.DataPropertyName = "IsPaid";
+            this.IsPaid.HeaderText = "Payment";
+            this.IsPaid.Name = "IsPaid";
+            this.IsPaid.ReadOnly = true;
+            this.IsPaid.Width = 80;
             // 
             // DueDate
             // 
@@ -567,20 +573,20 @@
             this.DueDate.ReadOnly = true;
             this.DueDate.Width = 90;
             // 
-            // Shop
+            // ShopName
             // 
-            this.Shop.DataPropertyName = "Shop";
-            this.Shop.HeaderText = "Shop";
-            this.Shop.Name = "Shop";
-            this.Shop.ReadOnly = true;
-            this.Shop.Width = 90;
+            this.ShopName.DataPropertyName = "ShopName";
+            this.ShopName.HeaderText = "Shop";
+            this.ShopName.Name = "ShopName";
+            this.ShopName.ReadOnly = true;
+            this.ShopName.Width = 90;
             // 
-            // Setting
+            // SettingName
             // 
-            this.Setting.DataPropertyName = "Setting";
-            this.Setting.HeaderText = "Setting";
-            this.Setting.Name = "Setting";
-            this.Setting.ReadOnly = true;
+            this.SettingName.DataPropertyName = "SettingName";
+            this.SettingName.HeaderText = "Setting";
+            this.SettingName.Name = "SettingName";
+            this.SettingName.ReadOnly = true;
             // 
             // ReportNumber
             // 
@@ -596,11 +602,6 @@
             this.BuyDate.HeaderText = "Buy Date";
             this.BuyDate.Name = "BuyDate";
             this.BuyDate.ReadOnly = true;
-            // 
-            // tds
-            // 
-            this.tds.DataSetName = "dsDiamondCer";
-            this.tds.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // BuyBookGemstoneCerList
             // 
@@ -653,26 +654,26 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn RowNum;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Status;
+        private System.Windows.Forms.DataGridViewTextBoxColumn StatusName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Code;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Lab;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Identification;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Shape;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cut;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LabName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdentificationName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ShapeName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CutName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Weight;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Color;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Comment;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Origin;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColorName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CommentName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn OriginName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Seller;
         private System.Windows.Forms.DataGridViewTextBoxColumn PriceCaratUSD;
         private System.Windows.Forms.DataGridViewTextBoxColumn USDRate;
         private System.Windows.Forms.DataGridViewTextBoxColumn TotalUSD;
         private System.Windows.Forms.DataGridViewTextBoxColumn PriceCaratBaht;
         private System.Windows.Forms.DataGridViewTextBoxColumn TotalBaht;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Payment;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IsPaid;
         private System.Windows.Forms.DataGridViewTextBoxColumn DueDate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Shop;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Setting;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ShopName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SettingName;
         private System.Windows.Forms.DataGridViewTextBoxColumn ReportNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn BuyDate;
     }

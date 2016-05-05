@@ -91,7 +91,7 @@ namespace DiamondShop
 
         private void cmbColorGrade_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string color = "";
+            //string color = "";
 
             //if(cmbColorGrade.SelectedIndex == 0)
             //{
