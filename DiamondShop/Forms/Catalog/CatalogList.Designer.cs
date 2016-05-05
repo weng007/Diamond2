@@ -33,6 +33,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtPrefix = new System.Windows.Forms.TextBox();
             this.txtCode = new System.Windows.Forms.TextBox();
@@ -68,6 +69,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(91)))), ((int)(((byte)(59)))));
+            this.panel4.Controls.Add(this.label6);
             this.panel4.Controls.Add(this.btnSearch);
             this.panel4.Controls.Add(this.txtPrefix);
             this.panel4.Controls.Add(this.txtCode);
@@ -77,6 +79,16 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1230, 78);
             this.panel4.TabIndex = 42;
+            // 
+            // label6
+            // 
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(198, 21);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(16, 25);
+            this.label6.TabIndex = 28;
+            this.label6.Text = "-";
             // 
             // btnSearch
             // 
@@ -94,14 +106,15 @@
             // 
             // txtPrefix
             // 
+            this.txtPrefix.Enabled = false;
             this.txtPrefix.Location = new System.Drawing.Point(147, 20);
             this.txtPrefix.Name = "txtPrefix";
-            this.txtPrefix.Size = new System.Drawing.Size(40, 27);
+            this.txtPrefix.Size = new System.Drawing.Size(48, 27);
             this.txtPrefix.TabIndex = 1;
             // 
             // txtCode
             // 
-            this.txtCode.Location = new System.Drawing.Point(193, 20);
+            this.txtCode.Location = new System.Drawing.Point(214, 21);
             this.txtCode.Name = "txtCode";
             this.txtCode.Size = new System.Drawing.Size(132, 27);
             this.txtCode.TabIndex = 4;
@@ -393,5 +406,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Shop;
         private System.Windows.Forms.DataGridViewTextBoxColumn Status;
         private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.Label label6;
     }
 }

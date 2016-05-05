@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InventoryList));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnAdd = new System.Windows.Forms.Button();
             this.txtPrefix = new System.Windows.Forms.TextBox();
@@ -61,6 +61,7 @@
             this.PriceTag = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Shop = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -70,6 +71,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(91)))), ((int)(((byte)(59)))));
+            this.panel4.Controls.Add(this.label6);
             this.panel4.Controls.Add(this.btnAdd);
             this.panel4.Controls.Add(this.txtPrefix);
             this.panel4.Controls.Add(this.btnSearch);
@@ -99,9 +101,10 @@
             // 
             // txtPrefix
             // 
+            this.txtPrefix.Enabled = false;
             this.txtPrefix.Location = new System.Drawing.Point(187, 20);
             this.txtPrefix.Name = "txtPrefix";
-            this.txtPrefix.Size = new System.Drawing.Size(40, 27);
+            this.txtPrefix.Size = new System.Drawing.Size(52, 27);
             this.txtPrefix.TabIndex = 1;
             // 
             // btnSearch
@@ -121,7 +124,7 @@
             // 
             // txtCode
             // 
-            this.txtCode.Location = new System.Drawing.Point(233, 20);
+            this.txtCode.Location = new System.Drawing.Point(263, 20);
             this.txtCode.Name = "txtCode";
             this.txtCode.Size = new System.Drawing.Size(132, 27);
             this.txtCode.TabIndex = 4;
@@ -268,9 +271,9 @@
             // Amount1
             // 
             this.Amount1.DataPropertyName = "Amount1";
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Format = "dd/MM/yyyy";
-            this.Amount1.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Format = "dd/MM/yyyy";
+            this.Amount1.DefaultCellStyle = dataGridViewCellStyle4;
             this.Amount1.HeaderText = "Amount";
             this.Amount1.Name = "Amount1";
             this.Amount1.ReadOnly = true;
@@ -279,8 +282,8 @@
             // Weight1
             // 
             this.Weight1.DataPropertyName = "Weight1";
-            dataGridViewCellStyle2.Format = "dd/MM/yyyy";
-            this.Weight1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Format = "dd/MM/yyyy";
+            this.Weight1.DefaultCellStyle = dataGridViewCellStyle5;
             this.Weight1.HeaderText = "Weight";
             this.Weight1.Name = "Weight1";
             this.Weight1.ReadOnly = true;
@@ -297,9 +300,9 @@
             // Weight2
             // 
             this.Weight2.DataPropertyName = "Weight2";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle3.Format = "N2";
-            this.Weight2.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle6.Format = "N2";
+            this.Weight2.DefaultCellStyle = dataGridViewCellStyle6;
             this.Weight2.HeaderText = "Weight";
             this.Weight2.Name = "Weight2";
             this.Weight2.ReadOnly = true;
@@ -375,6 +378,16 @@
             this.Status.Name = "Status";
             this.Status.ReadOnly = true;
             // 
+            // label6
+            // 
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(245, 22);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(17, 25);
+            this.label6.TabIndex = 71;
+            this.label6.Text = "-";
+            // 
             // InventoryList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -424,5 +437,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Label label6;
     }
 }

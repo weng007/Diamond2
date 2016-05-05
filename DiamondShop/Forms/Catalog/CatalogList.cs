@@ -22,6 +22,15 @@ namespace DiamondShop
             DoLoadData();
         }
 
+        public CatalogList(string prefix)
+        {
+            InitializeComponent();
+            Initial();
+
+            txtPrefix.Text = prefix;
+            DoLoadData();
+        }
+
         protected override void Initial()
         { 
 
@@ -57,7 +66,7 @@ namespace DiamondShop
         {
             ser2 = GM.GetService2();
 
-            ds = ser2.DoSearchCatalog(txtCode.Text);
+            ds = ser2.DoSearchCatalog(txtPrefix.Text+"-"+txtCode);
 
             if (ds.Tables[0].Rows.Count > 0)
             {

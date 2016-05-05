@@ -389,94 +389,107 @@
             // 
             // mnCatDR
             // 
+            this.mnCatDR.AccessibleDescription = "DR";
             this.mnCatDR.Name = "mnCatDR";
             this.mnCatDR.Size = new System.Drawing.Size(226, 26);
             this.mnCatDR.Text = "Diamond Ring";
-            this.mnCatDR.Click += new System.EventHandler(this.btnCatalog_Click);
+            this.mnCatDR.Click += new System.EventHandler(this.mnCatDR_Click);
             // 
             // mnCatDE
             // 
+            this.mnCatDE.AccessibleDescription = "DER";
             this.mnCatDE.Name = "mnCatDE";
             this.mnCatDE.Size = new System.Drawing.Size(226, 26);
             this.mnCatDE.Text = "Diamond Earrings";
-            this.mnCatDE.Click += new System.EventHandler(this.btnCatalog_Click);
+            this.mnCatDE.Click += new System.EventHandler(this.mnCatDR_Click);
             // 
             // menuCatGR
             // 
+            this.menuCatGR.AccessibleDescription = "GR";
             this.menuCatGR.Name = "menuCatGR";
             this.menuCatGR.Size = new System.Drawing.Size(226, 26);
             this.menuCatGR.Text = "Gemstone Ring";
-            this.menuCatGR.Click += new System.EventHandler(this.btnCatalog_Click);
+            this.menuCatGR.Click += new System.EventHandler(this.mnCatDR_Click);
             // 
             // mnCatGE
             // 
+            this.mnCatGE.AccessibleDescription = "GER";
             this.mnCatGE.Name = "mnCatGE";
             this.mnCatGE.Size = new System.Drawing.Size(226, 26);
             this.mnCatGE.Text = "Gemstone Earrings";
-            this.mnCatGE.Click += new System.EventHandler(this.btnCatalog_Click);
+            this.mnCatGE.Click += new System.EventHandler(this.mnCatDR_Click);
             // 
             // mnCatWR
             // 
+            this.mnCatWR.AccessibleDescription = "WR";
             this.mnCatWR.Name = "mnCatWR";
             this.mnCatWR.Size = new System.Drawing.Size(226, 26);
             this.mnCatWR.Text = "Wedding Ring";
-            this.mnCatWR.Click += new System.EventHandler(this.btnCatalog_Click);
+            this.mnCatWR.Click += new System.EventHandler(this.mnCatDR_Click);
             // 
             // mnCatIC
             // 
+            this.mnCatIC.AccessibleDescription = "IC";
             this.mnCatIC.Name = "mnCatIC";
             this.mnCatIC.Size = new System.Drawing.Size(226, 26);
             this.mnCatIC.Text = "Intalian Chain";
-            this.mnCatIC.Click += new System.EventHandler(this.btnCatalog_Click);
+            this.mnCatIC.Click += new System.EventHandler(this.mnCatDR_Click);
             // 
             // mnCatNL
             // 
+            this.mnCatNL.AccessibleDescription = "NL";
             this.mnCatNL.Name = "mnCatNL";
             this.mnCatNL.Size = new System.Drawing.Size(226, 26);
             this.mnCatNL.Text = "Necklace";
-            this.mnCatNL.Click += new System.EventHandler(this.btnCatalog_Click);
+            this.mnCatNL.Click += new System.EventHandler(this.mnCatDR_Click);
             // 
             // mnCatBL
             // 
+            this.mnCatBL.AccessibleDescription = "BL";
             this.mnCatBL.Name = "mnCatBL";
             this.mnCatBL.Size = new System.Drawing.Size(226, 26);
             this.mnCatBL.Text = "Bracelace";
-            this.mnCatBL.Click += new System.EventHandler(this.btnCatalog_Click);
+            this.mnCatBL.Click += new System.EventHandler(this.mnCatDR_Click);
             // 
             // mnCatCL
             // 
+            this.mnCatCL.AccessibleDescription = "CL";
             this.mnCatCL.Name = "mnCatCL";
             this.mnCatCL.Size = new System.Drawing.Size(226, 26);
             this.mnCatCL.Text = "Cufflinks";
-            this.mnCatCL.Click += new System.EventHandler(this.btnCatalog_Click);
+            this.mnCatCL.Click += new System.EventHandler(this.mnCatDR_Click);
             // 
             // mnCatBR
             // 
+            this.mnCatBR.AccessibleDescription = "BR";
             this.mnCatBR.Name = "mnCatBR";
             this.mnCatBR.Size = new System.Drawing.Size(226, 26);
             this.mnCatBR.Text = "Brooch";
-            this.mnCatBR.Click += new System.EventHandler(this.btnCatalog_Click);
+            this.mnCatBR.Click += new System.EventHandler(this.mnCatDR_Click);
             // 
             // mnCatPD
             // 
+            this.mnCatPD.AccessibleDescription = "PD";
             this.mnCatPD.Name = "mnCatPD";
             this.mnCatPD.Size = new System.Drawing.Size(226, 26);
             this.mnCatPD.Text = "Pendant";
-            this.mnCatPD.Click += new System.EventHandler(this.btnCatalog_Click);
+            this.mnCatPD.Click += new System.EventHandler(this.mnCatDR_Click);
             // 
             // mnCatSJ
             // 
+            this.mnCatSJ.AccessibleDescription = "SJ";
             this.mnCatSJ.Name = "mnCatSJ";
             this.mnCatSJ.Size = new System.Drawing.Size(226, 26);
             this.mnCatSJ.Text = "Special Jewelry";
-            this.mnCatSJ.Click += new System.EventHandler(this.btnCatalog_Click);
+            this.mnCatSJ.Click += new System.EventHandler(this.mnCatDR_Click);
             // 
             // mnCatMTO
             // 
+            this.mnCatMTO.AccessibleDescription = "MTO";
             this.mnCatMTO.Name = "mnCatMTO";
             this.mnCatMTO.Size = new System.Drawing.Size(226, 26);
             this.mnCatMTO.Text = "Made To Order";
-            this.mnCatMTO.Click += new System.EventHandler(this.btnCatalog_Click);
+            this.mnCatMTO.Click += new System.EventHandler(this.mnCatDR_Click);
             // 
             // btnCerDiamond
             // 
@@ -545,85 +558,110 @@
             this.btnInventory.Name = "btnInventory";
             this.btnInventory.Padding = new System.Windows.Forms.Padding(10, 4, 4, 4);
             this.btnInventory.Size = new System.Drawing.Size(88, 95);
-            this.btnInventory.Click += new System.EventHandler(this.btnInventory_Click);
             // 
             // mnInvDR
             // 
+            this.mnInvDR.AccessibleDescription = "DR";
             this.mnInvDR.Name = "mnInvDR";
             this.mnInvDR.Size = new System.Drawing.Size(226, 26);
             this.mnInvDR.Text = "Diamond Ring";
+            this.mnInvDR.Click += new System.EventHandler(this.mnInvDR_Click);
             // 
             // mnInvDE
             // 
+            this.mnInvDE.AccessibleDescription = "DER";
             this.mnInvDE.Name = "mnInvDE";
             this.mnInvDE.Size = new System.Drawing.Size(226, 26);
             this.mnInvDE.Text = "Diamond Earrings";
+            this.mnInvDE.Click += new System.EventHandler(this.mnInvDR_Click);
             // 
             // mnInvGR
             // 
+            this.mnInvGR.AccessibleDescription = "GR";
             this.mnInvGR.Name = "mnInvGR";
             this.mnInvGR.Size = new System.Drawing.Size(226, 26);
             this.mnInvGR.Text = "Gemstone Ring";
+            this.mnInvGR.Click += new System.EventHandler(this.mnInvDR_Click);
             // 
             // mnInvGE
             // 
+            this.mnInvGE.AccessibleDescription = "GER";
             this.mnInvGE.Name = "mnInvGE";
             this.mnInvGE.Size = new System.Drawing.Size(226, 26);
             this.mnInvGE.Text = "Gemstone Earrings";
+            this.mnInvGE.Click += new System.EventHandler(this.mnInvDR_Click);
             // 
             // mnInvWR
             // 
+            this.mnInvWR.AccessibleDescription = "WR";
             this.mnInvWR.Name = "mnInvWR";
             this.mnInvWR.Size = new System.Drawing.Size(226, 26);
             this.mnInvWR.Text = "Wedding Ring";
+            this.mnInvWR.Click += new System.EventHandler(this.mnInvDR_Click);
             // 
             // mnInvIC
             // 
+            this.mnInvIC.AccessibleDescription = "IC";
             this.mnInvIC.Name = "mnInvIC";
             this.mnInvIC.Size = new System.Drawing.Size(226, 26);
             this.mnInvIC.Text = "Intalian Chain";
+            this.mnInvIC.Click += new System.EventHandler(this.mnInvDR_Click);
             // 
             // mnInvNL
             // 
+            this.mnInvNL.AccessibleDescription = "NL";
             this.mnInvNL.Name = "mnInvNL";
             this.mnInvNL.Size = new System.Drawing.Size(226, 26);
             this.mnInvNL.Text = "Necklace";
+            this.mnInvNL.Click += new System.EventHandler(this.mnInvDR_Click);
             // 
             // mnInvBL
             // 
+            this.mnInvBL.AccessibleDescription = "BL";
             this.mnInvBL.Name = "mnInvBL";
             this.mnInvBL.Size = new System.Drawing.Size(226, 26);
             this.mnInvBL.Text = "Bracelace";
+            this.mnInvBL.Click += new System.EventHandler(this.mnInvDR_Click);
             // 
             // mnInvCL
             // 
+            this.mnInvCL.AccessibleDescription = "CL";
             this.mnInvCL.Name = "mnInvCL";
             this.mnInvCL.Size = new System.Drawing.Size(226, 26);
             this.mnInvCL.Text = "Cufflinks";
+            this.mnInvCL.Click += new System.EventHandler(this.mnInvDR_Click);
             // 
             // mnInvBR
             // 
+            this.mnInvBR.AccessibleDescription = "BR";
             this.mnInvBR.Name = "mnInvBR";
             this.mnInvBR.Size = new System.Drawing.Size(226, 26);
             this.mnInvBR.Text = "Brooch";
+            this.mnInvBR.Click += new System.EventHandler(this.mnInvDR_Click);
             // 
             // mnInvPD
             // 
+            this.mnInvPD.AccessibleDescription = "PD";
             this.mnInvPD.Name = "mnInvPD";
             this.mnInvPD.Size = new System.Drawing.Size(226, 26);
             this.mnInvPD.Text = "Pendant";
+            this.mnInvPD.Click += new System.EventHandler(this.mnInvDR_Click);
             // 
             // mnInvSJ
             // 
+            this.mnInvSJ.AccessibleDescription = "SJ";
             this.mnInvSJ.Name = "mnInvSJ";
             this.mnInvSJ.Size = new System.Drawing.Size(226, 26);
             this.mnInvSJ.Text = "Special Jewelry";
+            this.mnInvSJ.Click += new System.EventHandler(this.mnInvDR_Click);
             // 
             // mnInvMTO
             // 
+            this.mnInvMTO.AccessibleDescription = "MTO";
             this.mnInvMTO.Name = "mnInvMTO";
             this.mnInvMTO.Size = new System.Drawing.Size(226, 26);
             this.mnInvMTO.Text = "Made To Order";
+            this.mnInvMTO.Click += new System.EventHandler(this.mnInvDR_Click);
             // 
             // btnOrderFactory
             // 

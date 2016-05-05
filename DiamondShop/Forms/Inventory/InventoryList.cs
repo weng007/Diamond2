@@ -14,7 +14,6 @@ namespace DiamondShop
 {
     public partial class InventoryList : FormList
     {
-        
         public InventoryList()
         {
             InitializeComponent();
@@ -22,9 +21,18 @@ namespace DiamondShop
             DoLoadData();
         }
 
+        public InventoryList(string prefix)
+        {
+            InitializeComponent();
+            Initial();
+
+            txtPrefix.Text = prefix;
+            DoLoadData();
+        }
+
         protected override void Initial()
         {
-
+            
             txtCode.Select();
 
             gridInventory.AutoGenerateColumns = false;
@@ -45,7 +53,7 @@ namespace DiamondShop
         {
             ser2 = GM.GetService2();
 
-            ds = ser2.DoSearchInventory(txtCode.Text);
+            ds = ser2.DoSearchInventory(txtPrefix.Text+"-"+txtCode.Text);
 
             if (ds.Tables[0].Rows.Count > 0)
             {

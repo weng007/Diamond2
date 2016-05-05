@@ -83,12 +83,6 @@ namespace DiamondShop
             SetFormList(frm, 9, "BuyBookETC");
         }
 
-        private void btnCatalog_Click(object sender, EventArgs e)
-        {
-            CatalogList frm = new CatalogList();
-            SetFormList(frm, 10, "Catalog");
-        }
-
         private void btnCerDiamond_Click(object sender, EventArgs e)
         {
             DiamondCerList frm = new DiamondCerList();
@@ -202,6 +196,20 @@ namespace DiamondShop
         private void Main_Load(object sender, EventArgs e)
         {
             txtFullName.Text = ApplicationInfo.DisplayName;
+        }
+
+        private void mnInvDR_Click(object sender, EventArgs e)
+        {
+            string prefix = ((ToolStripMenuItem)sender).AccessibleDescription;
+            InventoryList frm = new InventoryList(prefix);
+            SetFormList(frm, 17, "Inventory " + prefix);
+        }
+
+        private void mnCatDR_Click(object sender, EventArgs e)
+        {
+            string prefix = ((ToolStripMenuItem)sender).AccessibleDescription;
+            CatalogList frm = new CatalogList(prefix);
+            SetFormList(frm, 10, "Catalog "+ prefix);
         }
     }
 }
