@@ -17,6 +17,7 @@ namespace DiamondShop
     {
         //Service1 ser = GM.GetService();
         dsBuyBookETC tds = new dsBuyBookETC();
+        bool isAuthorize = false;
 
         public BuyBookETC()
         {
@@ -60,7 +61,10 @@ namespace DiamondShop
             if (tds.BuyBookETC.Rows.Count > 0)
             {
                 binder.BindValueToControl(tds.BuyBookETC[0]);
-                EnableDelete = true;
+
+                EnableSave = false;
+                EnableEdit = true;
+                EnableDelete = false;
             }
 
             base.LoadData();
@@ -115,6 +119,29 @@ namespace DiamondShop
             }
 
             return chkFlag;
+        }
+
+        protected override void EditData()
+        {
+            if (isAuthorize)
+            {
+                EnableSave = true;
+                EnableDelete = true;
+            }
+            else
+            {
+                RequirePassword frm = new RequirePassword("2");
+                frm.ShowDialog();
+                isAuthorize = frm.isAuthorize;
+                frm.Close();
+
+                if (isAuthorize)
+                {
+                    EnableSave = true;
+                    EnableDelete = true;
+                    base.EditData();
+                }
+            }
         }
 
         protected override bool ValidateData()

@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BuyBookETCList));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel4 = new System.Windows.Forms.Panel();
             this.txtSeller = new System.Windows.Forms.TextBox();
             this.btnAdd = new System.Windows.Forms.Button();
@@ -191,6 +192,9 @@
             // Price
             // 
             this.Price.DataPropertyName = "Price";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle2.Format = "N2";
+            this.Price.DefaultCellStyle = dataGridViewCellStyle2;
             this.Price.HeaderText = "Price";
             this.Price.Name = "Price";
             this.Price.ReadOnly = true;
