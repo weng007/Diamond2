@@ -511,6 +511,7 @@
             // 
             // txtPriceCarat
             // 
+            this.txtPriceCarat.Enabled = false;
             this.txtPriceCarat.Location = new System.Drawing.Point(726, 320);
             this.txtPriceCarat.Name = "txtPriceCarat";
             this.txtPriceCarat.Size = new System.Drawing.Size(101, 27);
