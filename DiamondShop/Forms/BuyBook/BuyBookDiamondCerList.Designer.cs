@@ -476,8 +476,8 @@
             // RowNum
             // 
             this.RowNum.DataPropertyName = "RowNum";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            this.RowNum.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            this.RowNum.DefaultCellStyle = dataGridViewCellStyle11;
             this.RowNum.HeaderText = "No.";
             this.RowNum.Name = "RowNum";
             this.RowNum.ReadOnly = true;
@@ -601,12 +601,12 @@
             // 
             // Total
             // 
-            this.Cost.DataPropertyName = "Total";
+            this.Total.DataPropertyName = "Total";
             dataGridViewCellStyle12.Format = "N0";
-            this.Cost.DefaultCellStyle = dataGridViewCellStyle12;
-            this.Cost.HeaderText = "Cost";
-            this.Cost.Name = "Cost";
-            this.Cost.ReadOnly = true;
+            this.Total.DefaultCellStyle = dataGridViewCellStyle12;
+            this.Total.HeaderText = "Cost";
+            this.Total.Name = "Cost";
+            this.Total.ReadOnly = true;
             // 
             // USDRate
             // 
