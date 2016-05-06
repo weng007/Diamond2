@@ -29,6 +29,15 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BuyBookGemstoneCerList));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.tds = new DiamondDS.DS.dsDiamondCer();
             this.panel4 = new System.Windows.Forms.Panel();
             this.cmbOrigin = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -56,7 +65,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.gridGemstoneCer = new System.Windows.Forms.DataGridView();
-            this.tds = new DiamondDS.DS.dsDiamondCer();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RowNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StatusName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -73,7 +81,7 @@
             this.PriceCaratUSD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.USDRate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TotalUSD = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PriceCaratBaht = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PriceCarat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TotalBaht = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Payment = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DueDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -82,11 +90,16 @@
             this.ReportNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BuyDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tds)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridGemstoneCer)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tds)).BeginInit();
             this.SuspendLayout();
+            // 
+            // tds
+            // 
+            this.tds.DataSetName = "dsDiamondCer";
+            this.tds.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // panel4
             // 
@@ -388,7 +401,7 @@
             this.PriceCaratUSD,
             this.USDRate,
             this.TotalUSD,
-            this.PriceCaratBaht,
+            this.PriceCarat,
             this.TotalBaht,
             this.Payment,
             this.DueDate,
@@ -407,11 +420,6 @@
             this.gridGemstoneCer.TabIndex = 2;
             this.gridGemstoneCer.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.gridGemstoneCer_MouseDoubleClick);
             // 
-            // tds
-            // 
-            this.tds.DataSetName = "dsDiamondCer";
-            this.tds.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // ID
             // 
             this.ID.DataPropertyName = "ID";
@@ -423,6 +431,8 @@
             // RowNum
             // 
             this.RowNum.DataPropertyName = "RowNum";
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.RowNum.DefaultCellStyle = dataGridViewCellStyle1;
             this.RowNum.HeaderText = "No.";
             this.RowNum.Name = "RowNum";
             this.RowNum.ReadOnly = true;
@@ -442,7 +452,7 @@
             this.Code.HeaderText = "Code";
             this.Code.Name = "Code";
             this.Code.ReadOnly = true;
-            this.Code.Width = 120;
+            this.Code.Width = 150;
             // 
             // LabName
             // 
@@ -450,7 +460,7 @@
             this.LabName.HeaderText = "Lab";
             this.LabName.Name = "LabName";
             this.LabName.ReadOnly = true;
-            this.LabName.Width = 60;
+            this.LabName.Width = 80;
             // 
             // IdentificationName
             // 
@@ -458,7 +468,7 @@
             this.IdentificationName.HeaderText = "Identification";
             this.IdentificationName.Name = "IdentificationName";
             this.IdentificationName.ReadOnly = true;
-            this.IdentificationName.Width = 120;
+            this.IdentificationName.Width = 150;
             // 
             // ShapeName
             // 
@@ -466,7 +476,7 @@
             this.ShapeName.HeaderText = "Shape";
             this.ShapeName.Name = "ShapeName";
             this.ShapeName.ReadOnly = true;
-            this.ShapeName.Width = 90;
+            this.ShapeName.Width = 120;
             // 
             // CutName
             // 
@@ -475,15 +485,18 @@
             this.CutName.Name = "CutName";
             this.CutName.ReadOnly = true;
             this.CutName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.CutName.Width = 80;
+            this.CutName.Width = 120;
             // 
             // Weight
             // 
             this.Weight.DataPropertyName = "Weight";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle2.Format = "N2";
+            this.Weight.DefaultCellStyle = dataGridViewCellStyle2;
             this.Weight.HeaderText = "Weight";
             this.Weight.Name = "Weight";
             this.Weight.ReadOnly = true;
-            this.Weight.Width = 60;
+            this.Weight.Width = 80;
             // 
             // ColorName
             // 
@@ -491,7 +504,7 @@
             this.ColorName.HeaderText = "Color";
             this.ColorName.Name = "ColorName";
             this.ColorName.ReadOnly = true;
-            this.ColorName.Width = 90;
+            this.ColorName.Width = 70;
             // 
             // CommentName
             // 
@@ -500,7 +513,7 @@
             this.CommentName.Name = "CommentName";
             this.CommentName.ReadOnly = true;
             this.CommentName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.CommentName.Width = 80;
+            this.CommentName.Width = 160;
             // 
             // OriginName
             // 
@@ -509,6 +522,7 @@
             this.OriginName.Name = "OriginName";
             this.OriginName.ReadOnly = true;
             this.OriginName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.OriginName.Width = 130;
             // 
             // Seller
             // 
@@ -522,6 +536,9 @@
             // PriceCaratUSD
             // 
             this.PriceCaratUSD.DataPropertyName = "PriceCaratUSD";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle3.Format = "N0";
+            this.PriceCaratUSD.DefaultCellStyle = dataGridViewCellStyle3;
             this.PriceCaratUSD.HeaderText = "Price /Carat USD";
             this.PriceCaratUSD.Name = "PriceCaratUSD";
             this.PriceCaratUSD.ReadOnly = true;
@@ -530,6 +547,9 @@
             // USDRate
             // 
             this.USDRate.DataPropertyName = "USDRate";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle4.Format = "N2";
+            this.USDRate.DefaultCellStyle = dataGridViewCellStyle4;
             this.USDRate.HeaderText = "USD Rate";
             this.USDRate.Name = "USDRate";
             this.USDRate.ReadOnly = true;
@@ -537,29 +557,39 @@
             // TotalUSD
             // 
             this.TotalUSD.DataPropertyName = "TotalUSD";
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle5.Format = "N0";
+            this.TotalUSD.DefaultCellStyle = dataGridViewCellStyle5;
             this.TotalUSD.HeaderText = "Total USD";
             this.TotalUSD.Name = "TotalUSD";
             this.TotalUSD.ReadOnly = true;
             // 
-            // PriceCaratBaht
+            // PriceCarat
             // 
-            this.PriceCaratBaht.DataPropertyName = "PriceCaratBaht";
-            this.PriceCaratBaht.HeaderText = "Price /Carat Baht";
-            this.PriceCaratBaht.Name = "PriceCaratBaht";
-            this.PriceCaratBaht.ReadOnly = true;
-            this.PriceCaratBaht.Width = 140;
+            this.PriceCarat.DataPropertyName = "PriceCarat";
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle6.Format = "N0";
+            this.PriceCarat.DefaultCellStyle = dataGridViewCellStyle6;
+            this.PriceCarat.HeaderText = "Price /Carat Baht";
+            this.PriceCarat.Name = "PriceCarat";
+            this.PriceCarat.ReadOnly = true;
+            this.PriceCarat.Width = 140;
             // 
             // TotalBaht
             // 
             this.TotalBaht.DataPropertyName = "TotalBaht";
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle7.Format = "N0";
+            this.TotalBaht.DefaultCellStyle = dataGridViewCellStyle7;
             this.TotalBaht.HeaderText = "Total Baht";
             this.TotalBaht.Name = "TotalBaht";
             this.TotalBaht.ReadOnly = true;
-            this.TotalBaht.Width = 120;
             // 
             // Payment
             // 
             this.Payment.DataPropertyName = "Payment";
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Payment.DefaultCellStyle = dataGridViewCellStyle8;
             this.Payment.HeaderText = "Payment";
             this.Payment.Name = "Payment";
             this.Payment.ReadOnly = true;
@@ -579,7 +609,7 @@
             this.ShopName.HeaderText = "Shop";
             this.ShopName.Name = "ShopName";
             this.ShopName.ReadOnly = true;
-            this.ShopName.Width = 90;
+            this.ShopName.Width = 60;
             // 
             // SettingName
             // 
@@ -587,6 +617,7 @@
             this.SettingName.HeaderText = "Setting";
             this.SettingName.Name = "SettingName";
             this.SettingName.ReadOnly = true;
+            this.SettingName.Width = 175;
             // 
             // ReportNumber
             // 
@@ -594,7 +625,7 @@
             this.ReportNumber.HeaderText = "Report Number";
             this.ReportNumber.Name = "ReportNumber";
             this.ReportNumber.ReadOnly = true;
-            this.ReportNumber.Width = 130;
+            this.ReportNumber.Width = 135;
             // 
             // BuyDate
             // 
@@ -614,11 +645,11 @@
             this.Name = "BuyBookGemstoneCerList";
             this.Text = "DiamondCerList";
             ((System.ComponentModel.ISupportInitialize)(this.ds)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tds)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridGemstoneCer)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tds)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -668,7 +699,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn PriceCaratUSD;
         private System.Windows.Forms.DataGridViewTextBoxColumn USDRate;
         private System.Windows.Forms.DataGridViewTextBoxColumn TotalUSD;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PriceCaratBaht;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PriceCarat;
         private System.Windows.Forms.DataGridViewTextBoxColumn TotalBaht;
         private System.Windows.Forms.DataGridViewTextBoxColumn Payment;
         private System.Windows.Forms.DataGridViewTextBoxColumn DueDate;

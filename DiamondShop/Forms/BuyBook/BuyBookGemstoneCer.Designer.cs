@@ -109,7 +109,7 @@
             this.dtBuyDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtBuyDate.Location = new System.Drawing.Point(127, 17);
             this.dtBuyDate.Name = "dtBuyDate";
-            this.dtBuyDate.Size = new System.Drawing.Size(131, 27);
+            this.dtBuyDate.Size = new System.Drawing.Size(188, 27);
             this.dtBuyDate.TabIndex = 1;
             // 
             // panel3
@@ -325,7 +325,7 @@
             this.cmbShop.FormattingEnabled = true;
             this.cmbShop.Location = new System.Drawing.Point(127, 159);
             this.cmbShop.Name = "cmbShop";
-            this.cmbShop.Size = new System.Drawing.Size(157, 29);
+            this.cmbShop.Size = new System.Drawing.Size(188, 29);
             this.cmbShop.TabIndex = 52;
             // 
             // label28
@@ -343,7 +343,7 @@
             this.cmbSetting.FormattingEnabled = true;
             this.cmbSetting.Location = new System.Drawing.Point(127, 122);
             this.cmbSetting.Name = "cmbSetting";
-            this.cmbSetting.Size = new System.Drawing.Size(157, 29);
+            this.cmbSetting.Size = new System.Drawing.Size(188, 29);
             this.cmbSetting.TabIndex = 32;
             // 
             // label25
@@ -435,7 +435,7 @@
             this.cmbStatus.FormattingEnabled = true;
             this.cmbStatus.Location = new System.Drawing.Point(127, 196);
             this.cmbStatus.Name = "cmbStatus";
-            this.cmbStatus.Size = new System.Drawing.Size(157, 29);
+            this.cmbStatus.Size = new System.Drawing.Size(188, 29);
             this.cmbStatus.TabIndex = 56;
             // 
             // label20
@@ -450,6 +450,7 @@
             // 
             // txtNote
             // 
+            this.txtNote.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txtNote.Location = new System.Drawing.Point(707, 469);
             this.txtNote.Multiline = true;
             this.txtNote.Name = "txtNote";
@@ -770,7 +771,7 @@
             // 
             this.txtSeller.Location = new System.Drawing.Point(127, 52);
             this.txtSeller.Name = "txtSeller";
-            this.txtSeller.Size = new System.Drawing.Size(157, 27);
+            this.txtSeller.Size = new System.Drawing.Size(188, 27);
             this.txtSeller.TabIndex = 12;
             // 
             // label3
@@ -808,7 +809,7 @@
             this.txtCode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.txtCode.Location = new System.Drawing.Point(127, 87);
             this.txtCode.Name = "txtCode";
-            this.txtCode.Size = new System.Drawing.Size(157, 27);
+            this.txtCode.Size = new System.Drawing.Size(188, 27);
             this.txtCode.TabIndex = 100;
             // 
             // panel1

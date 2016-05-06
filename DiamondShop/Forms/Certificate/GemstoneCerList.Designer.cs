@@ -56,30 +56,24 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.gridGemstone = new System.Windows.Forms.DataGridView();
             this.RowNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Lab = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Identification = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Shape = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cut = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LabName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IdentificationName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ShapeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CutName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Weight = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Color = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Comment = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Origin = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.W = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.L = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.D = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ReportNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Shop = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Setting = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ShopName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SettingName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StatusName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BuyDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tds = new DiamondDS.DS.dsGemstoneCer();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridGemstone)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tds)).BeginInit();
             this.SuspendLayout();
             // 
             // panel4
@@ -112,7 +106,7 @@
             this.panel4.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.panel4.Location = new System.Drawing.Point(-3, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1349, 178);
+            this.panel4.Size = new System.Drawing.Size(1320, 178);
             this.panel4.TabIndex = 41;
             // 
             // btnSearch
@@ -339,7 +333,7 @@
             this.panel2.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.Location = new System.Drawing.Point(5, 184);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1327, 399);
+            this.panel2.Size = new System.Drawing.Size(1302, 360);
             this.panel2.TabIndex = 33;
             // 
             // gridGemstone
@@ -347,31 +341,24 @@
             this.gridGemstone.AllowUserToAddRows = false;
             this.gridGemstone.AllowUserToDeleteRows = false;
             this.gridGemstone.AllowUserToOrderColumns = true;
-            this.gridGemstone.AutoGenerateColumns = false;
             this.gridGemstone.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.gridGemstone.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridGemstone.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.RowNum,
-            this.ID,
             this.Code,
-            this.Lab,
-            this.Identification,
-            this.Shape,
-            this.Cut,
+            this.LabName,
+            this.IdentificationName,
+            this.ShapeName,
+            this.CutName,
             this.Weight,
-            this.Color,
-            this.Comment,
-            this.Origin,
             this.W,
             this.L,
             this.D,
             this.ReportNumber,
-            this.Shop,
-            this.Setting,
-            this.Status,
+            this.ShopName,
+            this.SettingName,
+            this.StatusName,
             this.BuyDate});
-            this.gridGemstone.DataMember = "GemstoneCer";
-            this.gridGemstone.DataSource = this.tds;
             this.gridGemstone.Location = new System.Drawing.Point(7, 0);
             this.gridGemstone.Name = "gridGemstone";
             this.gridGemstone.ReadOnly = true;
@@ -379,7 +366,7 @@
             this.gridGemstone.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridGemstone.RowTemplate.Height = 30;
             this.gridGemstone.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridGemstone.Size = new System.Drawing.Size(1317, 396);
+            this.gridGemstone.Size = new System.Drawing.Size(1289, 357);
             this.gridGemstone.TabIndex = 2;
             // 
             // RowNum
@@ -390,14 +377,6 @@
             this.RowNum.ReadOnly = true;
             this.RowNum.Width = 50;
             // 
-            // ID
-            // 
-            this.ID.DataPropertyName = "ID";
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            this.ID.Visible = false;
-            // 
             // Code
             // 
             this.Code.DataPropertyName = "Code";
@@ -406,38 +385,38 @@
             this.Code.ReadOnly = true;
             this.Code.Width = 120;
             // 
-            // Lab
+            // LabName
             // 
-            this.Lab.DataPropertyName = "Lab";
-            this.Lab.HeaderText = "Lab";
-            this.Lab.Name = "Lab";
-            this.Lab.ReadOnly = true;
-            this.Lab.Width = 80;
+            this.LabName.DataPropertyName = "LabName";
+            this.LabName.HeaderText = "Lab";
+            this.LabName.Name = "LabName";
+            this.LabName.ReadOnly = true;
+            this.LabName.Width = 80;
             // 
-            // Identification
+            // IdentificationName
             // 
-            this.Identification.DataPropertyName = "Identification";
-            this.Identification.HeaderText = "Identification";
-            this.Identification.Name = "Identification";
-            this.Identification.ReadOnly = true;
-            this.Identification.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Identification.Width = 120;
+            this.IdentificationName.DataPropertyName = "IdentificationName";
+            this.IdentificationName.HeaderText = "Identification";
+            this.IdentificationName.Name = "IdentificationName";
+            this.IdentificationName.ReadOnly = true;
+            this.IdentificationName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.IdentificationName.Width = 120;
             // 
-            // Shape
+            // ShapeName
             // 
-            this.Shape.DataPropertyName = "Shape";
-            this.Shape.HeaderText = "Shape";
-            this.Shape.Name = "Shape";
-            this.Shape.ReadOnly = true;
-            this.Shape.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ShapeName.DataPropertyName = "ShapeName";
+            this.ShapeName.HeaderText = "Shape";
+            this.ShapeName.Name = "ShapeName";
+            this.ShapeName.ReadOnly = true;
+            this.ShapeName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
-            // Cut
+            // CutName
             // 
-            this.Cut.DataPropertyName = "Cut";
-            this.Cut.HeaderText = "Cut";
-            this.Cut.Name = "Cut";
-            this.Cut.ReadOnly = true;
-            this.Cut.Width = 80;
+            this.CutName.DataPropertyName = "CutName";
+            this.CutName.HeaderText = "Cut";
+            this.CutName.Name = "CutName";
+            this.CutName.ReadOnly = true;
+            this.CutName.Width = 80;
             // 
             // Weight
             // 
@@ -446,30 +425,6 @@
             this.Weight.Name = "Weight";
             this.Weight.ReadOnly = true;
             this.Weight.Width = 70;
-            // 
-            // Color
-            // 
-            this.Color.DataPropertyName = "Color";
-            this.Color.HeaderText = "Color";
-            this.Color.Name = "Color";
-            this.Color.ReadOnly = true;
-            this.Color.Width = 80;
-            // 
-            // Comment
-            // 
-            this.Comment.DataPropertyName = "Comment";
-            this.Comment.HeaderText = "Comment";
-            this.Comment.Name = "Comment";
-            this.Comment.ReadOnly = true;
-            this.Comment.Width = 130;
-            // 
-            // Origin
-            // 
-            this.Origin.DataPropertyName = "Origin";
-            this.Origin.HeaderText = "Origin";
-            this.Origin.Name = "Origin";
-            this.Origin.ReadOnly = true;
-            this.Origin.Width = 80;
             // 
             // W
             // 
@@ -503,26 +458,26 @@
             this.ReportNumber.ReadOnly = true;
             this.ReportNumber.Width = 150;
             // 
-            // Shop
+            // ShopName
             // 
-            this.Shop.DataPropertyName = "Shop";
-            this.Shop.HeaderText = "Shop";
-            this.Shop.Name = "Shop";
-            this.Shop.ReadOnly = true;
+            this.ShopName.DataPropertyName = "ShopName";
+            this.ShopName.HeaderText = "Shop";
+            this.ShopName.Name = "ShopName";
+            this.ShopName.ReadOnly = true;
             // 
-            // Setting
+            // SettingName
             // 
-            this.Setting.DataPropertyName = "Setting";
-            this.Setting.HeaderText = "Setting";
-            this.Setting.Name = "Setting";
-            this.Setting.ReadOnly = true;
+            this.SettingName.DataPropertyName = "SettingName";
+            this.SettingName.HeaderText = "Setting";
+            this.SettingName.Name = "SettingName";
+            this.SettingName.ReadOnly = true;
             // 
-            // Status
+            // StatusName
             // 
-            this.Status.DataPropertyName = "Status";
-            this.Status.HeaderText = "Status";
-            this.Status.Name = "Status";
-            this.Status.ReadOnly = true;
+            this.StatusName.DataPropertyName = "StatusName";
+            this.StatusName.HeaderText = "Status";
+            this.StatusName.Name = "StatusName";
+            this.StatusName.ReadOnly = true;
             // 
             // BuyDate
             // 
@@ -532,27 +487,22 @@
             this.BuyDate.ReadOnly = true;
             this.BuyDate.Width = 90;
             // 
-            // tds
-            // 
-            this.tds.DataSetName = "dsGemstoneCer";
-            this.tds.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // GemstoneCerList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1346, 595);
+            this.ClientSize = new System.Drawing.Size(1318, 556);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
             this.Name = "GemstoneCerList";
             this.Text = "GemstoneCerList";
+            this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.ds)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridGemstone)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tds)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -569,7 +519,6 @@
         private System.Windows.Forms.TextBox txtEWeight;
         private System.Windows.Forms.TextBox txtSWeight;
         private System.Windows.Forms.Label label7;
-        private DiamondDS.DS.dsGemstoneCer tds;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label11;
@@ -585,25 +534,21 @@
         private System.Windows.Forms.ComboBox cmbStatus;
         private System.Windows.Forms.ComboBox cmbLab;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.DataGridViewTextBoxColumn RowNum;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Code;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Lab;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Identification;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Shape;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cut;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LabName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdentificationName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ShapeName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CutName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Weight;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Color;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Comment;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Origin;
         private System.Windows.Forms.DataGridViewTextBoxColumn W;
         private System.Windows.Forms.DataGridViewTextBoxColumn L;
         private System.Windows.Forms.DataGridViewTextBoxColumn D;
         private System.Windows.Forms.DataGridViewTextBoxColumn ReportNumber;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Shop;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Setting;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Status;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ShopName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SettingName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn StatusName;
         private System.Windows.Forms.DataGridViewTextBoxColumn BuyDate;
-        private System.Windows.Forms.Button btnSearch;
     }
 }
