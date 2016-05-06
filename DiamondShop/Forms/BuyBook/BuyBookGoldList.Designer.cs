@@ -29,8 +29,15 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BuyBookGoldList));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel4 = new System.Windows.Forms.Panel();
             this.cmbPercentGold = new System.Windows.Forms.ComboBox();
             this.dtEBuyDate = new System.Windows.Forms.DateTimePicker();
@@ -48,15 +55,15 @@
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BuyDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Seller = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BahtGold = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PricePerBaht = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PricePerGram = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PricePerGram1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Gram = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PricePerGram2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Amount1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Price1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Total1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PricePerGram3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PricePerGram = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PriceGram1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Amount2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Price2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Total2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PriceGram2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -85,9 +92,9 @@
             // 
             this.cmbPercentGold.FormattingEnabled = true;
             this.cmbPercentGold.Items.AddRange(new object[] {
-            "0 All",
-            "1 96.5%",
-            "2 99.99%"});
+            "All",
+            "96.5%",
+            "99.99%"});
             this.cmbPercentGold.Location = new System.Drawing.Point(238, 24);
             this.cmbPercentGold.Name = "cmbPercentGold";
             this.cmbPercentGold.Size = new System.Drawing.Size(131, 29);
@@ -220,25 +227,25 @@
             this.ID,
             this.BuyDate,
             this.Seller,
-            this.BahtGold,
-            this.PricePerBaht,
-            this.Total,
-            this.PricePerGram,
-            this.PricePerGram1,
-            this.Gram,
-            this.PricePerGram2,
+            this.Amount1,
+            this.Price1,
             this.Total1,
-            this.PricePerGram3});
+            this.PricePerGram,
+            this.PriceGram1,
+            this.Amount2,
+            this.Price2,
+            this.Total2,
+            this.PriceGram2});
             this.gridGold.Location = new System.Drawing.Point(0, 33);
             this.gridGold.Name = "gridGold";
             this.gridGold.ReadOnly = true;
             this.gridGold.RowHeadersWidth = 10;
             this.gridGold.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridGold.RowTemplate.Height = 60;
+            this.gridGold.RowTemplate.Height = 30;
             this.gridGold.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridGold.Size = new System.Drawing.Size(1311, 396);
             this.gridGold.TabIndex = 3;
-            this.gridGold.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridGold_CellContentDoubleClick);
+            this.gridGold.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.gridGold_MouseDoubleClick);
             // 
             // RowNum
             // 
@@ -271,80 +278,104 @@
             this.Seller.ReadOnly = true;
             this.Seller.Width = 120;
             // 
-            // BahtGold
+            // Amount1
             // 
-            this.BahtGold.DataPropertyName = "BahtGold";
-            dataGridViewCellStyle3.Format = "dd/MM/yyyy";
-            this.BahtGold.DefaultCellStyle = dataGridViewCellStyle3;
-            this.BahtGold.HeaderText = "บาท";
-            this.BahtGold.Name = "BahtGold";
-            this.BahtGold.ReadOnly = true;
-            this.BahtGold.Width = 80;
+            this.Amount1.DataPropertyName = "Amount1";
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle10.Format = "N2";
+            this.Amount1.DefaultCellStyle = dataGridViewCellStyle10;
+            this.Amount1.HeaderText = "บาท";
+            this.Amount1.Name = "Amount1";
+            this.Amount1.ReadOnly = true;
+            this.Amount1.Width = 80;
             // 
-            // PricePerBaht
+            // Price1
             // 
-            this.PricePerBaht.DataPropertyName = "PricePerBaht";
-            this.PricePerBaht.HeaderText = "ราคาบาทละ";
-            this.PricePerBaht.Name = "PricePerBaht";
-            this.PricePerBaht.ReadOnly = true;
-            this.PricePerBaht.Width = 110;
-            // 
-            // Total
-            // 
-            this.Total.DataPropertyName = "Total";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle4.Format = "N2";
-            this.Total.DefaultCellStyle = dataGridViewCellStyle4;
-            this.Total.HeaderText = "Total";
-            this.Total.Name = "Total";
-            this.Total.ReadOnly = true;
-            this.Total.Width = 110;
-            // 
-            // PricePerGram
-            // 
-            this.PricePerGram.DataPropertyName = "PricePerGram";
-            this.PricePerGram.HeaderText = "ราคากรัมละ";
-            this.PricePerGram.Name = "PricePerGram";
-            this.PricePerGram.ReadOnly = true;
-            this.PricePerGram.Width = 110;
-            // 
-            // PricePerGram1
-            // 
-            this.PricePerGram1.DataPropertyName = "PricePerGram1";
-            this.PricePerGram1.HeaderText = "ทอง 75% กรัมละ";
-            this.PricePerGram1.Name = "PricePerGram1";
-            this.PricePerGram1.ReadOnly = true;
-            this.PricePerGram1.Width = 140;
-            // 
-            // Gram
-            // 
-            this.Gram.HeaderText = "กรัม";
-            this.Gram.Name = "Gram";
-            this.Gram.ReadOnly = true;
-            this.Gram.Width = 90;
-            // 
-            // PricePerGram2
-            // 
-            this.PricePerGram2.HeaderText = "ราคากรัมละ";
-            this.PricePerGram2.Name = "PricePerGram2";
-            this.PricePerGram2.ReadOnly = true;
-            this.PricePerGram2.Width = 120;
+            this.Price1.DataPropertyName = "Price1";
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle11.Format = "N2";
+            this.Price1.DefaultCellStyle = dataGridViewCellStyle11;
+            this.Price1.HeaderText = "ราคาบาทละ";
+            this.Price1.Name = "Price1";
+            this.Price1.ReadOnly = true;
+            this.Price1.Width = 110;
             // 
             // Total1
             // 
             this.Total1.DataPropertyName = "Total1";
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle12.Format = "N2";
+            this.Total1.DefaultCellStyle = dataGridViewCellStyle12;
             this.Total1.HeaderText = "Total";
             this.Total1.Name = "Total1";
             this.Total1.ReadOnly = true;
             this.Total1.Width = 110;
             // 
-            // PricePerGram3
+            // PricePerGram
             // 
-            this.PricePerGram3.DataPropertyName = "PricePerGram3";
-            this.PricePerGram3.HeaderText = "ทอง 75% กรัมละ";
-            this.PricePerGram3.Name = "PricePerGram3";
-            this.PricePerGram3.ReadOnly = true;
-            this.PricePerGram3.Width = 140;
+            this.PricePerGram.DataPropertyName = "PricePerGram";
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle13.Format = "N2";
+            this.PricePerGram.DefaultCellStyle = dataGridViewCellStyle13;
+            this.PricePerGram.HeaderText = "ราคากรัมละ";
+            this.PricePerGram.Name = "PricePerGram";
+            this.PricePerGram.ReadOnly = true;
+            this.PricePerGram.Width = 110;
+            // 
+            // PriceGram1
+            // 
+            this.PriceGram1.DataPropertyName = "PriceGram1";
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle14.Format = "N2";
+            this.PriceGram1.DefaultCellStyle = dataGridViewCellStyle14;
+            this.PriceGram1.HeaderText = "ทอง 75% กรัมละ";
+            this.PriceGram1.Name = "PriceGram1";
+            this.PriceGram1.ReadOnly = true;
+            this.PriceGram1.Width = 140;
+            // 
+            // Amount2
+            // 
+            this.Amount2.DataPropertyName = "Amount2";
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle15.Format = "N2";
+            this.Amount2.DefaultCellStyle = dataGridViewCellStyle15;
+            this.Amount2.HeaderText = "กรัม";
+            this.Amount2.Name = "Amount2";
+            this.Amount2.ReadOnly = true;
+            this.Amount2.Width = 90;
+            // 
+            // Price2
+            // 
+            this.Price2.DataPropertyName = "Price2";
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle16.Format = "N2";
+            this.Price2.DefaultCellStyle = dataGridViewCellStyle16;
+            this.Price2.HeaderText = "ราคากรัมละ";
+            this.Price2.Name = "Price2";
+            this.Price2.ReadOnly = true;
+            this.Price2.Width = 120;
+            // 
+            // Total2
+            // 
+            this.Total2.DataPropertyName = "Total2";
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle17.Format = "N2";
+            this.Total2.DefaultCellStyle = dataGridViewCellStyle17;
+            this.Total2.HeaderText = "Total";
+            this.Total2.Name = "Total2";
+            this.Total2.ReadOnly = true;
+            this.Total2.Width = 110;
+            // 
+            // PriceGram2
+            // 
+            this.PriceGram2.DataPropertyName = "PriceGram2";
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle18.Format = "N2";
+            this.PriceGram2.DefaultCellStyle = dataGridViewCellStyle18;
+            this.PriceGram2.HeaderText = "ทอง 75% กรัมละ";
+            this.PriceGram2.Name = "PriceGram2";
+            this.PriceGram2.ReadOnly = true;
+            this.PriceGram2.Width = 140;
             // 
             // BuyBookGoldList
             // 
@@ -377,19 +408,19 @@
         private System.Windows.Forms.DataGridView gridGold;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox cmbPercentGold;
         private System.Windows.Forms.DataGridViewTextBoxColumn RowNum;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn BuyDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn Seller;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BahtGold;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PricePerBaht;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Total;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PricePerGram;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PricePerGram1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Gram;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PricePerGram2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Amount1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Price1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Total1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PricePerGram3;
-        private System.Windows.Forms.ComboBox cmbPercentGold;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PricePerGram;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PriceGram1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Amount2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Price2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Total2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PriceGram2;
     }
 }

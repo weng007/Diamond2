@@ -141,17 +141,8 @@ namespace DiamondShop
 
             if (txtSeller.Text == "")
             {
-                message = "Please input GIA Number.\n";
+                message = "Please input Seller.\n";
             }
-            //if(txtMeasure1.Text == "" || txtMeasure2.Text == "" || txtMeasure3.Text == ""
-            //&& GM.ConvertStringToDouble(txtMeasure1) == 0 || GM.ConvertStringToDouble(txtMeasure2) == 0 || GM.ConvertStringToDouble(txtMeasure3) == 0)
-            //{
-            //    message += "Please input Measurement > 0.\n";
-            //}
-            //if (txtCarat.Text == "" || GM.ConvertStringToDouble(txtCarat) == 0)
-            //{
-            //    message += "Please input Carat Weight > 0.\n";
-            //}
 
             if (message == "") { return true; }
             else { return false; }
@@ -172,13 +163,13 @@ namespace DiamondShop
             //cmbColor.Refresh();
         }
 
-        private void txtCarat_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
-            {
-                e.Handled = true;
-            }
-        }
+        //private void txtCarat_KeyPress(object sender, KeyPressEventArgs e)
+        //{
+        //    if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+        //    {
+        //        e.Handled = true;
+        //    }
+        //}
 
         private void cmbShapeAndCut_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -190,6 +181,14 @@ namespace DiamondShop
             //{
             //    lbl1.Text = "x";
             //}
+        }
+
+        private void txtBuyPrice_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

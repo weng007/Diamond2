@@ -24,7 +24,7 @@ namespace DiamondShop
 
         protected override void Initial()
         {
-
+            cmbPercentGold.SelectedIndex = 0;
             gridGold.AutoGenerateColumns = false;
         }
 
@@ -48,7 +48,7 @@ namespace DiamondShop
         {
             ser2 = GM.GetService2();
 
-            ds = ser2.DoSearchBuyBookGold(Convert.ToDateTime(dtSBuyDate.Text),Convert.ToDateTime( dtEBuyDate.Text), Convert.ToInt16(cmbPercentGold.SelectedValue.ToString()));
+            ds = ser2.DoSearchBuyBookGold(Convert.ToDateTime(dtSBuyDate.Text),Convert.ToDateTime( dtEBuyDate.Text), Convert.ToInt16(cmbPercentGold.SelectedIndex.ToString()));
 
             gridGold.DataSource = ds.Tables[0];
             gridGold.Refresh();
@@ -81,12 +81,15 @@ namespace DiamondShop
 
         private void gridGold_MouseDoubleClick(object sender, MouseEventArgs e)
         {
+            if (gridGold.RowCount > 0 && gridGold.SelectedRows.Count > 0)
+            {
+                id = (int)gridGold.SelectedRows[0].Cells["ID"].Value;
+                BuyBookGold frm = new BuyBookGold(id);
+                frm.ShowDialog();
+            }
 
+            DoLoadData();
         }
 
-        private void gridGold_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
     }
 }
