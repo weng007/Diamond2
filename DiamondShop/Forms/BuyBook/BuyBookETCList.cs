@@ -59,6 +59,8 @@ namespace DiamondShop
 
             if (ds.Tables[0].Rows.Count > 0)
             {
+                ds = ser2.DoSearchBuyBookETC(txtSeller.Text);
+
                 gridETC.DataSource = ds.Tables[0];
                 gridETC.Refresh();
             }
@@ -70,7 +72,7 @@ namespace DiamondShop
             if (gridETC.RowCount > 0 && gridETC.SelectedRows.Count > 0)
             {
                 id = (int)gridETC.SelectedRows[0].Cells["ID"].Value;
-                Seller frm = new Seller(id);
+                BuyBookETC frm = new BuyBookETC(id);
                 frm.ShowDialog();
             }
 

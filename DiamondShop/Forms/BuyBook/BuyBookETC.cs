@@ -48,7 +48,7 @@ namespace DiamondShop
 
             dtBuyDate.Select();
 
-            //SetFieldService.SetRequireField(txtSeller, txtMeasure1, txtMeasure2, txtMeasure3, txtCarat);
+            SetFieldService.SetRequireField(txtSeller, txtPrice);
         }
 
         protected override void LoadData()
@@ -107,7 +107,7 @@ namespace DiamondShop
         {
             try
             {
-                //chkFlag = ser.DoDeleteData("DiamondCer", id);
+                chkFlag = ser.DoDeleteData("BuyBookETC", id);
             }
             catch (Exception ex)
             {
@@ -123,17 +123,12 @@ namespace DiamondShop
 
             if (txtSeller.Text == "")
             {
-                message = "Please input GIA Number.\n";
+                message = "Please input Seller.\n";
             }
-            //if(txtMeasure1.Text == "" || txtMeasure2.Text == "" || txtMeasure3.Text == ""
-            //&& GM.ConvertStringToDouble(txtMeasure1) == 0 || GM.ConvertStringToDouble(txtMeasure2) == 0 || GM.ConvertStringToDouble(txtMeasure3) == 0)
-            //{
-            //    message += "Please input Measurement > 0.\n";
-            //}
-            //if (txtCarat.Text == "" || GM.ConvertStringToDouble(txtCarat) == 0)
-            //{
-            //    message += "Please input Carat Weight > 0.\n";
-            //}
+            if (txtPrice.Text == "" || GM.ConvertStringToDouble(txtPrice) == 0)
+            {
+                message += "Please input Price > 0.\n";
+            }
 
             if (message == "") { return true; }
             else { return false; }
@@ -154,6 +149,14 @@ namespace DiamondShop
             //cmbColor.ValueMember = "ID";
             //cmbColor.DisplayMember = "Detail";
             //cmbColor.Refresh();
+        }
+
+        private void txtPrice_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
         }
     }
 }
