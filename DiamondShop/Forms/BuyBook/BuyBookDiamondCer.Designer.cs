@@ -289,6 +289,7 @@
             // 
             // txtSoldToName
             // 
+            this.txtSoldToName.Enabled = false;
             this.txtSoldToName.Location = new System.Drawing.Point(150, 341);
             this.txtSoldToName.Name = "txtSoldToName";
             this.txtSoldToName.Size = new System.Drawing.Size(165, 27);
@@ -648,7 +649,7 @@
             this.cmbSetting.FormattingEnabled = true;
             this.cmbSetting.Location = new System.Drawing.Point(510, 339);
             this.cmbSetting.Name = "cmbSetting";
-            this.cmbSetting.Size = new System.Drawing.Size(172, 29);
+            this.cmbSetting.Size = new System.Drawing.Size(180, 29);
             this.cmbSetting.TabIndex = 72;
             // 
             // cmbClearity
@@ -656,7 +657,7 @@
             this.cmbClearity.FormattingEnabled = true;
             this.cmbClearity.Location = new System.Drawing.Point(510, 162);
             this.cmbClearity.Name = "cmbClearity";
-            this.cmbClearity.Size = new System.Drawing.Size(157, 29);
+            this.cmbClearity.Size = new System.Drawing.Size(180, 29);
             this.cmbClearity.TabIndex = 44;
             // 
             // label8

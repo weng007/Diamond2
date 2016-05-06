@@ -65,7 +65,7 @@ namespace DiamondShop
 
             dtBuyDate.Select();
 
-            //SetFieldService.SetRequireField(txtGIANo, txtMeasure1, txtMeasure2, txtMeasure3, txtCarat);
+            SetFieldService.SetRequireField(txtSeller);
         }
 
         protected override void LoadData()
