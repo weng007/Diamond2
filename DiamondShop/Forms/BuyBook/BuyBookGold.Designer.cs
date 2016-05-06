@@ -137,7 +137,7 @@
             this.label24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label24.Location = new System.Drawing.Point(293, 337);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(36, 21);
+            this.label24.Size = new System.Drawing.Size(38, 21);
             this.label24.TabIndex = 122;
             this.label24.Text = "บาท";
             // 
@@ -147,7 +147,7 @@
             this.label25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label25.Location = new System.Drawing.Point(73, 337);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(116, 21);
+            this.label25.Size = new System.Drawing.Size(120, 21);
             this.label25.TabIndex = 121;
             this.label25.Text = "ทอง 75% กรัมละ";
             // 
@@ -159,6 +159,7 @@
             this.txtPriceGram1.TabIndex = 28;
             this.txtPriceGram1.Text = "0";
             this.txtPriceGram1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtPriceGram1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBuyPrice_KeyPress);
             // 
             // label22
             // 
@@ -166,7 +167,7 @@
             this.label22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label22.Location = new System.Drawing.Point(567, 302);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(36, 21);
+            this.label22.Size = new System.Drawing.Size(38, 21);
             this.label22.TabIndex = 119;
             this.label22.Text = "บาท";
             // 
@@ -176,7 +177,7 @@
             this.label23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label23.Location = new System.Drawing.Point(347, 302);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(116, 21);
+            this.label23.Size = new System.Drawing.Size(120, 21);
             this.label23.TabIndex = 118;
             this.label23.Text = "ทอง 75% กรัมละ";
             // 
@@ -188,6 +189,7 @@
             this.txtPriceGram2.TabIndex = 40;
             this.txtPriceGram2.Text = "0";
             this.txtPriceGram2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtPriceGram2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBuyPrice_KeyPress);
             // 
             // label20
             // 
@@ -195,7 +197,7 @@
             this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label20.Location = new System.Drawing.Point(99, 302);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(81, 21);
+            this.label20.Size = new System.Drawing.Size(85, 21);
             this.label20.TabIndex = 116;
             this.label20.Text = "ราคากรัมละ";
             // 
@@ -205,7 +207,7 @@
             this.label21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label21.Location = new System.Drawing.Point(293, 302);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(36, 21);
+            this.label21.Size = new System.Drawing.Size(38, 21);
             this.label21.TabIndex = 115;
             this.label21.Text = "บาท";
             // 
@@ -217,6 +219,7 @@
             this.txtPricePerGram.TabIndex = 24;
             this.txtPricePerGram.Text = "0";
             this.txtPricePerGram.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtPricePerGram.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBuyPrice_KeyPress);
             // 
             // label16
             // 
@@ -224,7 +227,7 @@
             this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label16.Location = new System.Drawing.Point(567, 267);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(36, 21);
+            this.label16.Size = new System.Drawing.Size(38, 21);
             this.label16.TabIndex = 113;
             this.label16.Text = "บาท";
             // 
@@ -254,27 +257,31 @@
             this.label19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label19.Location = new System.Drawing.Point(293, 267);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(36, 21);
+            this.label19.Size = new System.Drawing.Size(38, 21);
             this.label19.TabIndex = 110;
             this.label19.Text = "บาท";
             // 
             // txtTotal2
             // 
+            this.txtTotal2.Enabled = false;
             this.txtTotal2.Location = new System.Drawing.Point(469, 264);
             this.txtTotal2.Name = "txtTotal2";
             this.txtTotal2.Size = new System.Drawing.Size(92, 27);
             this.txtTotal2.TabIndex = 104;
             this.txtTotal2.Text = "0";
             this.txtTotal2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtTotal2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBuyPrice_KeyPress);
             // 
             // txtTotal1
             // 
+            this.txtTotal1.Enabled = false;
             this.txtTotal1.Location = new System.Drawing.Point(195, 264);
             this.txtTotal1.Name = "txtTotal1";
             this.txtTotal1.Size = new System.Drawing.Size(92, 27);
             this.txtTotal1.TabIndex = 100;
             this.txtTotal1.Text = "0";
             this.txtTotal1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtTotal1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBuyPrice_KeyPress);
             // 
             // label15
             // 
@@ -282,7 +289,7 @@
             this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label15.Location = new System.Drawing.Point(567, 232);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(36, 21);
+            this.label15.Size = new System.Drawing.Size(38, 21);
             this.label15.TabIndex = 107;
             this.label15.Text = "บาท";
             // 
@@ -292,7 +299,7 @@
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label14.Location = new System.Drawing.Point(567, 197);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(36, 21);
+            this.label14.Size = new System.Drawing.Size(37, 21);
             this.label14.TabIndex = 106;
             this.label14.Text = "กรัม";
             // 
@@ -302,7 +309,7 @@
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label13.Location = new System.Drawing.Point(382, 232);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(81, 21);
+            this.label13.Size = new System.Drawing.Size(85, 21);
             this.label13.TabIndex = 105;
             this.label13.Text = "ราคากรัมละ";
             // 
@@ -312,7 +319,7 @@
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label12.Location = new System.Drawing.Point(99, 232);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(81, 21);
+            this.label12.Size = new System.Drawing.Size(86, 21);
             this.label12.TabIndex = 104;
             this.label12.Text = "ราคาบาทละ";
             // 
@@ -322,7 +329,7 @@
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label11.Location = new System.Drawing.Point(293, 232);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(36, 21);
+            this.label11.Size = new System.Drawing.Size(38, 21);
             this.label11.TabIndex = 103;
             this.label11.Text = "บาท";
             // 
@@ -332,7 +339,7 @@
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label10.Location = new System.Drawing.Point(293, 197);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(36, 21);
+            this.label10.Size = new System.Drawing.Size(38, 21);
             this.label10.TabIndex = 102;
             this.label10.Text = "บาท";
             // 
@@ -344,6 +351,7 @@
             this.txtPrice2.TabIndex = 36;
             this.txtPrice2.Text = "0";
             this.txtPrice2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtPrice2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBuyPrice_KeyPress);
             // 
             // label9
             // 
@@ -363,6 +371,7 @@
             this.txtPrice1.TabIndex = 20;
             this.txtPrice1.Text = "0";
             this.txtPrice1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtPrice1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBuyPrice_KeyPress);
             // 
             // label8
             // 
@@ -382,6 +391,7 @@
             this.txtAmount2.TabIndex = 32;
             this.txtAmount2.Text = "0";
             this.txtAmount2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtAmount2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBuyPrice_KeyPress);
             // 
             // txtAmount1
             // 
@@ -391,6 +401,7 @@
             this.txtAmount1.TabIndex = 16;
             this.txtAmount1.Text = "0";
             this.txtAmount1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtAmount1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBuyPrice_KeyPress);
             // 
             // label5
             // 
@@ -422,6 +433,7 @@
             this.txtSellPrice.TabIndex = 12;
             this.txtSellPrice.Text = "0";
             this.txtSellPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtSellPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBuyPrice_KeyPress);
             // 
             // label4
             // 
@@ -430,7 +442,7 @@
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label4.Location = new System.Drawing.Point(321, 100);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(61, 19);
+            this.label4.Size = new System.Drawing.Size(68, 19);
             this.label4.TabIndex = 90;
             this.label4.Text = "ขายออก";
             // 
@@ -441,7 +453,7 @@
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label3.Location = new System.Drawing.Point(200, 100);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 19);
+            this.label3.Size = new System.Drawing.Size(48, 19);
             this.label3.TabIndex = 88;
             this.label3.Text = "รับซื้อ";
             // 
@@ -451,7 +463,7 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label2.Location = new System.Drawing.Point(29, 127);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(126, 21);
+            this.label2.Size = new System.Drawing.Size(129, 21);
             this.label2.TabIndex = 87;
             this.label2.Text = "ทองคำแท่ง 96.5%";
             // 
@@ -463,6 +475,7 @@
             this.txtBuyPrice.TabIndex = 8;
             this.txtBuyPrice.Text = "0";
             this.txtBuyPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtBuyPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBuyPrice_KeyPress);
             // 
             // label1
             // 
