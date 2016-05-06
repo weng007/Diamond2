@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BuyBookETCList));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel4 = new System.Windows.Forms.Panel();
             this.txtSeller = new System.Windows.Forms.TextBox();
             this.btnAdd = new System.Windows.Forms.Button();
@@ -68,7 +67,6 @@
             this.txtSeller.BackColor = System.Drawing.Color.White;
             this.txtSeller.Location = new System.Drawing.Point(199, 22);
             this.txtSeller.Name = "txtSeller";
-            this.txtSeller.ReadOnly = true;
             this.txtSeller.Size = new System.Drawing.Size(165, 27);
             this.txtSeller.TabIndex = 1;
             // 
@@ -142,7 +140,7 @@
             this.gridETC.ReadOnly = true;
             this.gridETC.RowHeadersWidth = 10;
             this.gridETC.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridETC.RowTemplate.Height = 60;
+            this.gridETC.RowTemplate.Height = 30;
             this.gridETC.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridETC.Size = new System.Drawing.Size(674, 424);
             this.gridETC.TabIndex = 2;
@@ -193,8 +191,6 @@
             // Price
             // 
             this.Price.DataPropertyName = "Price";
-            dataGridViewCellStyle2.Format = "dd/MM/yyyy";
-            this.Price.DefaultCellStyle = dataGridViewCellStyle2;
             this.Price.HeaderText = "Price";
             this.Price.Name = "Price";
             this.Price.ReadOnly = true;

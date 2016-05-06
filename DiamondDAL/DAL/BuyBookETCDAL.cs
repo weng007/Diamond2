@@ -81,7 +81,7 @@ namespace DiamondDAL.DAL
             {
                 SQL.ClearParameter();
                 SQL.CreateParameter("@ID", id);
-                flag = SQL.ExecuteSP("SP_BuyBookJewelry_Del");
+                flag = SQL.ExecuteSP("SP_BuyBookETC_Del");
             }
             catch (Exception ex)
             {
