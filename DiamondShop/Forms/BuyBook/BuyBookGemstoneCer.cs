@@ -17,6 +17,7 @@ namespace DiamondShop
     public partial class BuyBookGemstoneCer : FormInfo
     {
         dsBuyBookGemstoneCer tds = new dsBuyBookGemstoneCer();
+        bool isAuthorize = false;
         MemoryStream ms1;
         byte[] image1;
         
@@ -180,7 +181,9 @@ namespace DiamondShop
                     btnImage1.BackgroundImage = backImage1;
                 }
 
-                EnableDelete = true;
+                EnableSave = false;
+                EnableEdit = true;
+                EnableDelete = false;
             }
 
             base.LoadData();
@@ -240,6 +243,28 @@ namespace DiamondShop
             return chkFlag;
         }
 
+        protected override void EditData()
+        {
+            if (isAuthorize)
+            {
+                EnableSave = true;
+                EnableDelete = true;
+            }
+            else
+            {
+                RequirePassword frm = new RequirePassword("2");
+                frm.ShowDialog();
+                isAuthorize = frm.isAuthorize;
+                frm.Close();
+
+                if (isAuthorize)
+                {
+                    EnableSave = true;
+                    EnableDelete = true;
+                    base.EditData();
+                }
+            }
+        }
         protected override bool ValidateData()
         {
             message = "";

@@ -16,6 +16,7 @@ namespace DiamondShop
     public partial class BuyBookGold : FormInfo
     {
         dsBuyBookGold tds = new dsBuyBookGold();
+        bool isAuthorize = false;
 
         public BuyBookGold()
         {
@@ -78,7 +79,9 @@ namespace DiamondShop
             {
                 binder.BindValueToControl(tds.BuyBookGold[0]);
 
-                EnableDelete = true;
+                EnableSave = false;
+                EnableEdit = true;
+                EnableDelete = false;
             }
 
             base.LoadData();
@@ -133,6 +136,29 @@ namespace DiamondShop
             }
 
             return chkFlag;
+        }
+
+        protected override void EditData()
+        {
+            if (isAuthorize)
+            {
+                EnableSave = true;
+                EnableDelete = true;
+            }
+            else
+            {
+                RequirePassword frm = new RequirePassword("2");
+                frm.ShowDialog();
+                isAuthorize = frm.isAuthorize;
+                frm.Close();
+
+                if (isAuthorize)
+                {
+                    EnableSave = true;
+                    EnableDelete = true;
+                    base.EditData();
+                }
+            }
         }
 
         protected override bool ValidateData()
