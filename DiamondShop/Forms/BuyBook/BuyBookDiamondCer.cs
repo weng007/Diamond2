@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 using System.Windows.Forms;
 using DiamondShop.FormMaster;
 using DiamondDS.DS;
@@ -17,6 +18,7 @@ namespace DiamondShop
     {
         dsBuyBookDiamondCer tds = new dsBuyBookDiamondCer();
         bool isAuthorize = false;
+        byte[] file;
 
         public BuyBookDiamondCer()
         {
@@ -367,6 +369,20 @@ namespace DiamondShop
             txtPrice.Text = GM.ConvertDoubleToString(txtPrice);
             txtTotal.Text = GM.ConvertDoubleToString(txtTotal);
             txtTotalBaht.Text = GM.ConvertDoubleToString(txtTotalBaht);
+        }
+
+        private void btnUpload_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                using (var stream = new FileStream(openFileDialog1.InitialDirectory + openFileDialog1.FileName, FileMode.Open, FileAccess.Read))
+                {
+                    using (var reader = new BinaryReader(stream))
+                    {
+                        file = reader.ReadBytes((int)stream.Length);
+                    }
+                }
+            }
         }
     }
 }
