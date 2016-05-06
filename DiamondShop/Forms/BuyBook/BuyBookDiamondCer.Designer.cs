@@ -367,6 +367,7 @@
             this.txtTotalBaht.TabIndex = 158;
             this.txtTotalBaht.Text = "0";
             this.txtTotalBaht.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtTotalBaht.TextChanged += new System.EventHandler(this.txtTotalBaht_TextChanged);
             this.txtTotalBaht.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtWeight_KeyPress);
             // 
             // label24
