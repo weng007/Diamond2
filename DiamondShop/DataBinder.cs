@@ -88,7 +88,7 @@ namespace DiamondShop
                                 break;
                             case "System.Windows.Forms.CheckBox":
                                 CheckBox chk = (CheckBox)ctrl;
-                                row[columnName] = chk.Checked;
+                                row[columnName] = chk.Checked?'1':'0';
                                 break;
                             case "System.Windows.Forms.ComboBox":
                                 ComboBox cmb = (ComboBox)ctrl;

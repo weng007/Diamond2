@@ -99,9 +99,13 @@ namespace DiamondShop
         
         public static string ConvertDoubleToString(TextBox txt)
         {
-            if (txt.Text != "")
+            if (txt.Text != "" && !txt.Text.Contains("-"))
             {
                 return string.Format("{0:#,##0.00}", double.Parse(txt.Text));
+            }
+            else if(txt.Text.Contains("-"))
+            {
+                return txt.Text;
             }
 
             return "0";

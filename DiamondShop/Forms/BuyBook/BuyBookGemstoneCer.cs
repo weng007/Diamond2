@@ -46,7 +46,6 @@ namespace DiamondShop
             binder.BindControl(txtUSDRate, "USDRate");
             binder.BindControl(txtTotalBaht, "TotalBaht");
             binder.BindControl(txtPriceCarat, "PriceCarat");
-            binder.BindControl(txtTotalBaht, "TotalThaiBaht");
             binder.BindControl(txtNote, "Note");
             binder.BindControl(cmbShape, "Shape");
             binder.BindControl(cmbComment, "Comment");
@@ -74,12 +73,12 @@ namespace DiamondShop
             binder.BindControl(txtL, "L");
             binder.BindControl(txtD, "D");
             binder.BindControl(dtDueDate, "DueDate");
+            binder.BindControl(chkPayByUSD, "PayByUSD");
             binder.BindControl(txtPriceCaratUSD, "PriceCaratUSD");
             binder.BindControl(txtTotalUSD, "TotalUSD");
             binder.BindControl(txtUSDRate, "USDRate");
             binder.BindControl(txtTotalBaht, "TotalBaht");
             binder.BindControl(txtPriceCarat, "PriceCarat");
-            binder.BindControl(txtTotalBaht, "TotalThaiBaht");
             binder.BindControl(txtNote, "Note");
             binder.BindControl(cmbShape, "Shape");
             binder.BindControl(cmbComment, "Comment");
@@ -139,7 +138,7 @@ namespace DiamondShop
 
             dtBuyDate.Select();
 
-            SetFieldService.SetRequireField(txtWeight, txtTotalThaiBaht);
+            SetFieldService.SetRequireField(txtWeight);
         }
 
         protected override void LoadData()
@@ -163,6 +162,15 @@ namespace DiamondShop
                     rdoYes.Checked = true;
                     rdoNo.Checked = false;
                 }
+
+                //if (tds.BuyBookGemstoneCer[0]["PayByUSD"].ToString() == "0")
+                //{
+                //    chkPayByUSD.Checked = false;
+                //}
+                //else
+                //{
+                //    chkPayByUSD.Checked = true;
+                //}
 
 
                 if (image1 != null)
@@ -240,31 +248,6 @@ namespace DiamondShop
             {
                 message += "Please input  Weight > 0.\n";
             }
-            if (txtPriceCaratUSD.Text == "" || GM.ConvertStringToDouble(txtPriceCaratUSD) == 0)
-            {
-                message += "Please input  Price CaratUSD > 0.\n";
-            }
-            if (txtPriceCarat.Text == "" || GM.ConvertStringToDouble(txtPriceCarat) == 0)
-            {
-                message += "Please input  Price Carat > 0.\n";
-            }
-            if (txtUSDRate.Text == "" || GM.ConvertStringToDouble(txtUSDRate) == 0)
-            {
-                message += "Please input  USD Rate > 0.\n";
-            }
-            //if (txtCode.Text == "")
-            //{
-            //    message = "Please input GIA Number.\n";
-            //}
-            //if(txtW.Text == "" || txtL.Text == "" || txtD.Text == ""
-            //&& GM.ConvertStringToDouble(txtW) == 0 || GM.ConvertStringToDouble(txtL) == 0 || GM.ConvertStringToDouble(txtD) == 0)
-            //{
-            //    message += "Please input Measurement > 0.\n";
-            //}
-            //if (txtCarat.Text == "" || GM.ConvertStringToDouble(txtCarat) == 0)
-            //{
-            //    message += "Please input Carat Weight > 0.\n";
-            //}
 
             if (message == "") { return true; }
             else { return false; }
@@ -303,6 +286,59 @@ namespace DiamondShop
             cmbComment.ValueMember = "ID";
             cmbComment.DisplayMember = "Detail";
             cmbComment.Refresh();
+        }
+
+        private void chkPayByUSD_CheckedChanged(object sender, EventArgs e)
+        {
+            if(chkPayByUSD.Checked)
+            {
+                txtPriceCaratUSD.Enabled = true;
+                txtUSDRate.Enabled = true;
+
+                txtPriceCarat.Enabled = false;
+                txtPriceCarat.Text = "0";
+                txtUSDRate_TextChanged(null, null);
+            }
+            else
+            {
+                txtPriceCaratUSD.Enabled = false;
+                txtUSDRate.Enabled = false;
+                txtUSDRate.Text = "0";
+                
+                txtPriceCarat.Enabled = true;
+                txtPriceCarat_TextChanged(null, null);
+            }       
+        }
+
+        private void txtWeight_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtWeight_TextChanged(object sender, EventArgs e)
+        {
+            txtTotalUSD.Text = (GM.ConvertStringToDouble(txtWeight) * GM.ConvertStringToDouble(txtPriceCaratUSD)).ToString();
+        }
+
+        private void txtUSDRate_TextChanged(object sender, EventArgs e)
+        {
+            if (chkPayByUSD.Checked)
+            {
+                txtTotalBaht.Text = (GM.ConvertStringToDouble(txtTotalUSD) * GM.ConvertStringToDouble(txtUSDRate)).ToString();
+                txtTotalBaht.Text = GM.ConvertDoubleToString(txtTotalBaht);
+            }
+        }
+
+        private void txtPriceCarat_TextChanged(object sender, EventArgs e)
+        {
+            if (!chkPayByUSD.Checked)
+            {
+                txtTotalBaht.Text = (GM.ConvertStringToDouble(txtPriceCarat) * GM.ConvertStringToDouble(txtWeight)).ToString();
+                txtTotalBaht.Text = GM.ConvertDoubleToString(txtTotalBaht);
+            }
         }
     }
 }

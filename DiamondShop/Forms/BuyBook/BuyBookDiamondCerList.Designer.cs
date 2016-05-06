@@ -29,11 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BuyBookDiamondCerList));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tds = new DiamondDS.DS.dsDiamondCer();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnSearch = new System.Windows.Forms.Button();
@@ -82,7 +83,7 @@
             this.Seller = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Rap = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.USDRate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CostBaht = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Payment = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -443,7 +444,7 @@
             this.Seller,
             this.Price,
             this.Rap,
-            this.Cost,
+            this.Total,
             this.USDRate,
             this.CostBaht,
             this.Payment,
@@ -452,20 +453,12 @@
             this.SettingName,
             this.ReportNumber,
             this.SoldToName});
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridDiamondCer.DefaultCellStyle = dataGridViewCellStyle14;
             this.gridDiamondCer.Location = new System.Drawing.Point(7, 0);
             this.gridDiamondCer.Name = "gridDiamondCer";
             this.gridDiamondCer.ReadOnly = true;
             this.gridDiamondCer.RowHeadersWidth = 10;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridDiamondCer.RowsDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridDiamondCer.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.gridDiamondCer.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridDiamondCer.RowTemplate.Height = 30;
             this.gridDiamondCer.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -592,8 +585,9 @@
             // Price
             // 
             this.Price.DataPropertyName = "Price";
-            dataGridViewCellStyle11.Format = "N0";
-            this.Price.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle1.Format = "N0";
+            this.Price.DefaultCellStyle = dataGridViewCellStyle1;
             this.Price.HeaderText = "Price";
             this.Price.Name = "Price";
             this.Price.ReadOnly = true;
@@ -602,23 +596,29 @@
             // Rap
             // 
             this.Rap.DataPropertyName = "Rap";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            this.Rap.DefaultCellStyle = dataGridViewCellStyle2;
             this.Rap.HeaderText = "Rap";
             this.Rap.Name = "Rap";
             this.Rap.ReadOnly = true;
             this.Rap.Width = 60;
             // 
-            // Cost
+            // Total
             // 
-            this.Cost.DataPropertyName = "Total";
-            dataGridViewCellStyle12.Format = "N0";
-            this.Cost.DefaultCellStyle = dataGridViewCellStyle12;
-            this.Cost.HeaderText = "Cost";
-            this.Cost.Name = "Cost";
-            this.Cost.ReadOnly = true;
+            this.Total.DataPropertyName = "Total";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle3.Format = "N0";
+            this.Total.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Total.HeaderText = "Cost";
+            this.Total.Name = "Total";
+            this.Total.ReadOnly = true;
             // 
             // USDRate
             // 
             this.USDRate.DataPropertyName = "USDRate";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle4.Format = "N2";
+            this.USDRate.DefaultCellStyle = dataGridViewCellStyle4;
             this.USDRate.HeaderText = "USD Rate";
             this.USDRate.Name = "USDRate";
             this.USDRate.ReadOnly = true;
@@ -626,8 +626,9 @@
             // CostBaht
             // 
             this.CostBaht.DataPropertyName = "TotalBaht";
-            dataGridViewCellStyle13.Format = "N0";
-            this.CostBaht.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle5.Format = "N0";
+            this.CostBaht.DefaultCellStyle = dataGridViewCellStyle5;
             this.CostBaht.HeaderText = "Cost Baht";
             this.CostBaht.Name = "CostBaht";
             this.CostBaht.ReadOnly = true;
@@ -747,7 +748,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Seller;
         private System.Windows.Forms.DataGridViewTextBoxColumn Price;
         private System.Windows.Forms.DataGridViewTextBoxColumn Rap;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cost;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Total;
         private System.Windows.Forms.DataGridViewTextBoxColumn USDRate;
         private System.Windows.Forms.DataGridViewTextBoxColumn CostBaht;
         private System.Windows.Forms.DataGridViewTextBoxColumn Payment;
