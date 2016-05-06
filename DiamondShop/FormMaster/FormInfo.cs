@@ -96,6 +96,11 @@ namespace DiamondShop.FormMaster
             return true;
         }
 
+        protected virtual void EditData()
+        {
+            EnableButton();
+        }
+
         protected virtual bool ValidateData()
         {
             return true;
@@ -106,7 +111,7 @@ namespace DiamondShop.FormMaster
         {
             if (ValidateData())
             {
-                Popup.Popup WinMessage = new Popup.Popup("Do you want to save Data?");
+                Popup.Popup WinMessage = new Popup.Popup("Do you want to save Data !!!");
                 WinMessage.ShowDialog();
                 chkFlag = WinMessage.result;
 
@@ -125,7 +130,7 @@ namespace DiamondShop.FormMaster
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            Popup.Popup WinMessage = new Popup.Popup("Do you want to Delete Data?");
+            Popup.Popup WinMessage = new Popup.Popup("Do you want to Delete Data !!!");
             WinMessage.ShowDialog();
             chkFlag = WinMessage.result;
 
@@ -154,6 +159,11 @@ namespace DiamondShop.FormMaster
             {
                 row["EditBy"] = ApplicationInfo.UserID;
             }
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            EditData();
         }
     }
 }

@@ -571,6 +571,7 @@
             this.txtTotalBaht.TabIndex = 108;
             this.txtTotalBaht.Text = "0";
             this.txtTotalBaht.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtTotalBaht.TextChanged += new System.EventHandler(this.txtTotalBaht_TextChanged);
             // 
             // label24
             // 
@@ -674,7 +675,7 @@
             this.txtPriceCaratUSD.TabIndex = 76;
             this.txtPriceCaratUSD.Text = "0";
             this.txtPriceCaratUSD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtPriceCaratUSD.TextChanged += new System.EventHandler(this.txtWeight_TextChanged);
+            this.txtPriceCaratUSD.TextChanged += new System.EventHandler(this.txtPriceCaratUSD_TextChanged);
             this.txtPriceCaratUSD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtWeight_KeyPress);
             // 
             // cmbLab

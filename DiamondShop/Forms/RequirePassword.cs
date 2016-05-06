@@ -15,25 +15,34 @@ namespace DiamondShop
 {
     public partial class RequirePassword : Form
     {
+        public bool isAuthorize = false;
+        string typeLogin = "";
+
         public RequirePassword()
         {
             InitializeComponent();
+        }
+
+        public RequirePassword(string type)
+        {
+            InitializeComponent();
+            typeLogin = type;
         }
 
         private void btnOK_Click(object sender, EventArgs e)
         {
             Service2 ser1 = new Service2();
 
-            DataSet ds = ser1.DoAuthenticate(ApplicationInfo.UserName, GM.Encrypt(txtPassword.Text.Trim()), "1");
+            DataSet ds = ser1.DoAuthenticate(ApplicationInfo.UserName, GM.Encrypt(txtPassword.Text.Trim()), typeLogin);
 
             if (ds.Tables[0].Rows.Count > 0)
             {
-                //BuyBookList frm = new BuyBookList();
-                //frm.ShowDialog();
-                //this.Close();
+                isAuthorize = true;
+                this.Close();
             }
             else
             {
+                isAuthorize = false;
                 Popup.Popup WinMessage = new Popup.Popup("Password is not correct or unauthorized.");
                 WinMessage.ShowDialog();
             }
