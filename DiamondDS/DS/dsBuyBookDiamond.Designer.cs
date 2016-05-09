@@ -329,8 +329,6 @@ namespace DiamondDS.DS {
             
             private global::System.Data.DataColumn columnPriceCarat;
             
-            private global::System.Data.DataColumn columnTotalThaiBaht;
-            
             private global::System.Data.DataColumn columnMarketPrice;
             
             private global::System.Data.DataColumn columnNote;
@@ -580,14 +578,6 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn TotalThaiBahtColumn {
-                get {
-                    return this.columnTotalThaiBaht;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn MarketPriceColumn {
                 get {
                     return this.columnMarketPrice;
@@ -704,7 +694,6 @@ namespace DiamondDS.DS {
                         decimal USDRate, 
                         decimal TotalBaht, 
                         decimal PriceCarat, 
-                        decimal TotalThaiBaht, 
                         decimal MarketPrice, 
                         string Note, 
                         string IsDeleted, 
@@ -739,7 +728,6 @@ namespace DiamondDS.DS {
                         USDRate,
                         TotalBaht,
                         PriceCarat,
-                        TotalThaiBaht,
                         MarketPrice,
                         Note,
                         IsDeleted,
@@ -801,7 +789,6 @@ namespace DiamondDS.DS {
                 this.columnUSDRate = base.Columns["USDRate"];
                 this.columnTotalBaht = base.Columns["TotalBaht"];
                 this.columnPriceCarat = base.Columns["PriceCarat"];
-                this.columnTotalThaiBaht = base.Columns["TotalThaiBaht"];
                 this.columnMarketPrice = base.Columns["MarketPrice"];
                 this.columnNote = base.Columns["Note"];
                 this.columnIsDeleted = base.Columns["IsDeleted"];
@@ -864,8 +851,6 @@ namespace DiamondDS.DS {
                 base.Columns.Add(this.columnTotalBaht);
                 this.columnPriceCarat = new global::System.Data.DataColumn("PriceCarat", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPriceCarat);
-                this.columnTotalThaiBaht = new global::System.Data.DataColumn("TotalThaiBaht", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTotalThaiBaht);
                 this.columnMarketPrice = new global::System.Data.DataColumn("MarketPrice", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnMarketPrice);
                 this.columnNote = new global::System.Data.DataColumn("Note", typeof(string), null, global::System.Data.MappingType.Element);
@@ -1440,22 +1425,6 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public decimal TotalThaiBaht {
-                get {
-                    try {
-                        return ((decimal)(this[this.tableBuyBookDiamond.TotalThaiBahtColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'TotalThaiBaht\' in table \'BuyBookDiamond\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableBuyBookDiamond.TotalThaiBahtColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public decimal MarketPrice {
                 get {
                     try {
@@ -1852,18 +1821,6 @@ namespace DiamondDS.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetPriceCaratNull() {
                 this[this.tableBuyBookDiamond.PriceCaratColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsTotalThaiBahtNull() {
-                return this.IsNull(this.tableBuyBookDiamond.TotalThaiBahtColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetTotalThaiBahtNull() {
-                this[this.tableBuyBookDiamond.TotalThaiBahtColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

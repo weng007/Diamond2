@@ -206,7 +206,7 @@
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Location = new System.Drawing.Point(364, 54);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(100, 27);
+            this.comboBox3.Size = new System.Drawing.Size(100, 21);
             this.comboBox3.TabIndex = 28;
             // 
             // textBox2
@@ -471,7 +471,6 @@
             this.txtTechnician.Name = "txtTechnician";
             this.txtTechnician.Size = new System.Drawing.Size(187, 27);
             this.txtTechnician.TabIndex = 80;
-            this.txtTechnician.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label37
             // 
@@ -491,6 +490,7 @@
             this.txtPriceTag.TabIndex = 76;
             this.txtPriceTag.Text = "0";
             this.txtPriceTag.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtPriceTag.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
             // 
             // label36
             // 
@@ -510,6 +510,7 @@
             this.txtMinPrice.TabIndex = 72;
             this.txtMinPrice.Text = "0";
             this.txtMinPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtMinPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
             // 
             // label35
             // 
@@ -529,6 +530,7 @@
             this.txtMinBeforePremium.TabIndex = 154;
             this.txtMinBeforePremium.Text = "0";
             this.txtMinBeforePremium.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtMinBeforePremium.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
             // 
             // label34
             // 
@@ -548,6 +550,7 @@
             this.txtRedCost.TabIndex = 68;
             this.txtRedCost.Text = "0";
             this.txtRedCost.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtRedCost.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
             // 
             // label33
             // 
@@ -567,6 +570,7 @@
             this.txtGemstoneCer.TabIndex = 64;
             this.txtGemstoneCer.Text = "0";
             this.txtGemstoneCer.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtGemstoneCer.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
             // 
             // txt10
             // 
@@ -576,6 +580,7 @@
             this.txt10.TabIndex = 148;
             this.txt10.Text = "0";
             this.txt10.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txt10.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
             // 
             // label32
             // 
@@ -595,6 +600,7 @@
             this.txtCostDiamondCer.TabIndex = 60;
             this.txtCostDiamondCer.Text = "0";
             this.txtCostDiamondCer.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtCostDiamondCer.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
             // 
             // txt9
             // 
@@ -604,6 +610,7 @@
             this.txt9.TabIndex = 145;
             this.txt9.Text = "0";
             this.txt9.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txt9.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
             // 
             // label31
             // 
@@ -623,6 +630,7 @@
             this.txtCost4.TabIndex = 56;
             this.txtCost4.Text = "0";
             this.txtCost4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtCost4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
             // 
             // txt8
             // 
@@ -632,6 +640,7 @@
             this.txt8.TabIndex = 142;
             this.txt8.Text = "0";
             this.txt8.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txt8.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
             // 
             // label30
             // 
@@ -651,6 +660,7 @@
             this.txtCost3.TabIndex = 52;
             this.txtCost3.Text = "0";
             this.txtCost3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtCost3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
             // 
             // txt7
             // 
@@ -660,6 +670,7 @@
             this.txt7.TabIndex = 139;
             this.txt7.Text = "0";
             this.txt7.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txt7.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
             // 
             // label29
             // 
@@ -679,6 +690,7 @@
             this.txt5.TabIndex = 137;
             this.txt5.Text = "0";
             this.txt5.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txt5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
             // 
             // txtCost1
             // 
@@ -688,6 +700,7 @@
             this.txtCost1.TabIndex = 44;
             this.txtCost1.Text = "0";
             this.txtCost1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtCost1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
             // 
             // label23
             // 
@@ -707,6 +720,7 @@
             this.txtCost2.TabIndex = 48;
             this.txtCost2.Text = "0";
             this.txtCost2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtCost2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
             // 
             // label25
             // 
@@ -726,6 +740,7 @@
             this.txt6.TabIndex = 132;
             this.txt6.Text = "0";
             this.txt6.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txt6.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
             // 
             // chkMoreMaterial
             // 
@@ -745,6 +760,7 @@
             this.txt3.TabIndex = 130;
             this.txt3.Text = "0";
             this.txt3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txt3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
             // 
             // txtMaterialNetCost
             // 
@@ -754,6 +770,7 @@
             this.txtMaterialNetCost.TabIndex = 140;
             this.txtMaterialNetCost.Text = "0";
             this.txtMaterialNetCost.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtMaterialNetCost.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
             // 
             // label28
             // 
@@ -798,6 +815,7 @@
             this.txtMaterialWeight2.TabIndex = 96;
             this.txtMaterialWeight2.Text = "0";
             this.txtMaterialWeight2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtMaterialWeight2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
             // 
             // txt11
             // 
@@ -807,6 +825,7 @@
             this.txt11.TabIndex = 164;
             this.txt11.Text = "0";
             this.txt11.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txt11.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
             // 
             // label21
             // 
@@ -825,6 +844,7 @@
             this.txt12.TabIndex = 172;
             this.txt12.Text = "0";
             this.txt12.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txt12.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
             // 
             // cmbMaterial2
             // 
@@ -842,6 +862,7 @@
             this.txtMaterialCost2.TabIndex = 104;
             this.txtMaterialCost2.Text = "0";
             this.txtMaterialCost2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtMaterialCost2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
             // 
             // label20
             // 
@@ -861,6 +882,7 @@
             this.txtPricePerGram2.TabIndex = 100;
             this.txtPricePerGram2.Text = "0";
             this.txtPricePerGram2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtPricePerGram2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
             // 
             // label18
             // 
@@ -890,6 +912,7 @@
             this.txt1.TabIndex = 136;
             this.txt1.Text = "0";
             this.txt1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txt1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
             // 
             // txt2
             // 
@@ -899,6 +922,7 @@
             this.txt2.TabIndex = 144;
             this.txt2.Text = "0";
             this.txt2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txt2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
             // 
             // txtLaborCost
             // 
@@ -908,6 +932,7 @@
             this.txtLaborCost.TabIndex = 40;
             this.txtLaborCost.Text = "0";
             this.txtLaborCost.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtLaborCost.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
             // 
             // label12
             // 
@@ -926,6 +951,7 @@
             this.txtMaterialCost1.TabIndex = 36;
             this.txtMaterialCost1.Text = "0";
             this.txtMaterialCost1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtMaterialCost1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
             // 
             // txt4
             // 
@@ -935,6 +961,7 @@
             this.txt4.TabIndex = 120;
             this.txt4.Text = "0";
             this.txt4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txt4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
             // 
             // txtPricePerGram1
             // 
@@ -944,6 +971,7 @@
             this.txtPricePerGram1.TabIndex = 32;
             this.txtPricePerGram1.Text = "0";
             this.txtPricePerGram1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtPricePerGram1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
             // 
             // label10
             // 
@@ -976,14 +1004,12 @@
             // 
             // txtRemark
             // 
-            this.txtRemark.BackColor = System.Drawing.Color.White;
+            this.txtRemark.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txtRemark.Location = new System.Drawing.Point(679, 478);
             this.txtRemark.Multiline = true;
             this.txtRemark.Name = "txtRemark";
-            this.txtRemark.ReadOnly = true;
             this.txtRemark.Size = new System.Drawing.Size(323, 59);
             this.txtRemark.TabIndex = 84;
-            this.txtRemark.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label27
             // 
@@ -1052,6 +1078,7 @@
             // 
             // txtCode
             // 
+            this.txtCode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.txtCode.Location = new System.Drawing.Point(150, 91);
             this.txtCode.Name = "txtCode";
             this.txtCode.Size = new System.Drawing.Size(162, 27);

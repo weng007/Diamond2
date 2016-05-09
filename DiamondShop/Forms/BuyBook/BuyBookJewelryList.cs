@@ -68,5 +68,17 @@ namespace DiamondShop
             }
             else { gridJewelry.DataSource = null; gridJewelry.Refresh(); }
         }
+
+        private void gridJewelry_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if (gridJewelry.RowCount > 0 && gridJewelry.SelectedRows.Count > 0)
+            {
+                id = (int)gridJewelry.SelectedRows[0].Cells["ID"].Value;
+                BuyBookJewelry frm = new BuyBookJewelry(id);
+                frm.ShowDialog();
+            }
+
+            DoLoadData();
+        }
     }
 }

@@ -14,7 +14,7 @@
   <xs:element name="dsBuyBookJewelry" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsBuyBookJewelry" msprop:Generator_UserDSName="dsBuyBookJewelry">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="BuyBookJewelry" msprop:Generator_TableClassName="BuyBookJewelryDataTable" msprop:Generator_TableVarName="tableBuyBookJewelry" msprop:Generator_RowChangedName="BuyBookJewelryRowChanged" msprop:Generator_TablePropName="BuyBookJewelry" msprop:Generator_RowDeletingName="BuyBookJewelryRowDeleting" msprop:Generator_RowChangingName="BuyBookJewelryRowChanging" msprop:Generator_RowEvHandlerName="BuyBookJewelryRowChangeEventHandler" msprop:Generator_RowDeletedName="BuyBookJewelryRowDeleted" msprop:Generator_RowClassName="BuyBookJewelryRow" msprop:Generator_UserTableName="BuyBookJewelry" msprop:Generator_RowEvArgName="BuyBookJewelryRowChangeEvent">
+        <xs:element name="BuyBookJewelry" msprop:Generator_TableClassName="BuyBookJewelryDataTable" msprop:Generator_TableVarName="tableBuyBookJewelry" msprop:Generator_TablePropName="BuyBookJewelry" msprop:Generator_RowDeletingName="BuyBookJewelryRowDeleting" msprop:Generator_RowChangingName="BuyBookJewelryRowChanging" msprop:Generator_RowEvHandlerName="BuyBookJewelryRowChangeEventHandler" msprop:Generator_RowDeletedName="BuyBookJewelryRowDeleted" msprop:Generator_UserTableName="BuyBookJewelry" msprop:Generator_RowChangedName="BuyBookJewelryRowChanged" msprop:Generator_RowEvArgName="BuyBookJewelryRowChangeEvent" msprop:Generator_RowClassName="BuyBookJewelryRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="RowNum" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnRowNum" msprop:Generator_ColumnPropNameInRow="RowNum" msprop:Generator_ColumnPropNameInTable="RowNumColumn" msprop:Generator_UserColumnName="RowNum" type="xs:long" minOccurs="0" />
@@ -87,6 +87,7 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+              <xs:element name="MinPrice" msprop:Generator_ColumnVarNameInTable="columnMinPrice" msprop:Generator_ColumnPropNameInRow="MinPrice" msprop:Generator_ColumnPropNameInTable="MinPriceColumn" msprop:Generator_UserColumnName="MinPrice" type="xs:decimal" minOccurs="0" />
               <xs:element name="IsDeleted" msprop:Generator_ColumnVarNameInTable="columnIsDeleted" msprop:Generator_ColumnPropNameInRow="IsDeleted" msprop:Generator_ColumnPropNameInTable="IsDeletedColumn" msprop:Generator_UserColumnName="IsDeleted" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -98,6 +99,14 @@
               <xs:element name="CreateDate" msprop:Generator_ColumnVarNameInTable="columnCreateDate" msprop:Generator_ColumnPropNameInRow="CreateDate" msprop:Generator_ColumnPropNameInTable="CreateDateColumn" msprop:Generator_UserColumnName="CreateDate" type="xs:dateTime" minOccurs="0" />
               <xs:element name="EditBy" msprop:Generator_ColumnVarNameInTable="columnEditBy" msprop:Generator_ColumnPropNameInRow="EditBy" msprop:Generator_ColumnPropNameInTable="EditByColumn" msprop:Generator_UserColumnName="EditBy" type="xs:int" minOccurs="0" />
               <xs:element name="EditDate" msprop:Generator_ColumnVarNameInTable="columnEditDate" msprop:Generator_ColumnPropNameInRow="EditDate" msprop:Generator_ColumnPropNameInTable="EditDateColumn" msprop:Generator_UserColumnName="EditDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Amount1" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnAmount1" msprop:Generator_ColumnPropNameInRow="Amount1" msprop:Generator_ColumnPropNameInTable="Amount1Column" msprop:Generator_UserColumnName="Amount1" type="xs:int" minOccurs="0" />
+              <xs:element name="Weight1" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnWeight1" msprop:Generator_ColumnPropNameInRow="Weight1" msprop:Generator_ColumnPropNameInTable="Weight1Column" msprop:Generator_UserColumnName="Weight1" type="xs:int" minOccurs="0" />
+              <xs:element name="Amount2" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnAmount2" msprop:Generator_ColumnPropNameInRow="Amount2" msprop:Generator_ColumnPropNameInTable="Amount2Column" msprop:Generator_UserColumnName="Amount2" type="xs:int" minOccurs="0" />
+              <xs:element name="Weight2" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnWeight2" msprop:Generator_ColumnPropNameInRow="Weight2" msprop:Generator_ColumnPropNameInTable="Weight2Column" msprop:Generator_UserColumnName="Weight2" type="xs:int" minOccurs="0" />
+              <xs:element name="Amount3" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnAmount3" msprop:Generator_ColumnPropNameInRow="Amount3" msprop:Generator_ColumnPropNameInTable="Amount3Column" msprop:Generator_UserColumnName="Amount3" type="xs:int" minOccurs="0" />
+              <xs:element name="Weight3" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnWeight3" msprop:Generator_ColumnPropNameInRow="Weight3" msprop:Generator_ColumnPropNameInTable="Weight3Column" msprop:Generator_UserColumnName="Weight3" type="xs:int" minOccurs="0" />
+              <xs:element name="Amount4" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnAmount4" msprop:Generator_ColumnPropNameInRow="Amount4" msprop:Generator_ColumnPropNameInTable="Amount4Column" msprop:Generator_UserColumnName="Amount4" type="xs:int" minOccurs="0" />
+              <xs:element name="Weight4" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnWeight4" msprop:Generator_ColumnPropNameInRow="Weight4" msprop:Generator_ColumnPropNameInTable="Weight4Column" msprop:Generator_UserColumnName="Weight4" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

@@ -29,6 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BuyBookDiamondList));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.txtESize = new System.Windows.Forms.TextBox();
@@ -54,8 +60,8 @@
             this.ColorName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ClearityName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PriceCaratUSD = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PriceCaratBaht = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MarketPriceBaht = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PriceCaratB = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MarketPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -217,8 +223,8 @@
             this.ColorName,
             this.ClearityName,
             this.PriceCaratUSD,
-            this.PriceCaratBaht,
-            this.MarketPriceBaht});
+            this.PriceCaratB,
+            this.MarketPrice});
             this.gridDiamond.Location = new System.Drawing.Point(7, 0);
             this.gridDiamond.Name = "gridDiamond";
             this.gridDiamond.ReadOnly = true;
@@ -246,6 +252,8 @@
             // RowNum
             // 
             this.RowNum.DataPropertyName = "RowNum";
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            this.RowNum.DefaultCellStyle = dataGridViewCellStyle1;
             this.RowNum.HeaderText = "No.";
             this.RowNum.Name = "RowNum";
             this.RowNum.ReadOnly = true;
@@ -257,7 +265,7 @@
             this.Code.HeaderText = "Code";
             this.Code.Name = "Code";
             this.Code.ReadOnly = true;
-            this.Code.Width = 120;
+            this.Code.Width = 160;
             // 
             // BuyDate
             // 
@@ -287,6 +295,9 @@
             // Amount
             // 
             this.Amount.DataPropertyName = "Amount";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle2.Format = "N0";
+            this.Amount.DefaultCellStyle = dataGridViewCellStyle2;
             this.Amount.HeaderText = "Amount";
             this.Amount.Name = "Amount";
             this.Amount.ReadOnly = true;
@@ -295,6 +306,9 @@
             // Weight
             // 
             this.Weight.DataPropertyName = "Weight";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle3.Format = "N2";
+            this.Weight.DefaultCellStyle = dataGridViewCellStyle3;
             this.Weight.HeaderText = "Weight";
             this.Weight.Name = "Weight";
             this.Weight.ReadOnly = true;
@@ -315,32 +329,42 @@
             this.ClearityName.Name = "ClearityName";
             this.ClearityName.ReadOnly = true;
             this.ClearityName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ClearityName.Width = 150;
             // 
             // PriceCaratUSD
             // 
             this.PriceCaratUSD.DataPropertyName = "PriceCaratUSD";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle4.Format = "N0";
+            this.PriceCaratUSD.DefaultCellStyle = dataGridViewCellStyle4;
             this.PriceCaratUSD.HeaderText = "Price/Carat USD";
             this.PriceCaratUSD.Name = "PriceCaratUSD";
             this.PriceCaratUSD.ReadOnly = true;
             this.PriceCaratUSD.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.PriceCaratUSD.Width = 150;
             // 
-            // PriceCaratBaht
+            // PriceCaratB
             // 
-            this.PriceCaratBaht.DataPropertyName = "PriceCaratBaht";
-            this.PriceCaratBaht.HeaderText = "Price/Carat Baht";
-            this.PriceCaratBaht.Name = "PriceCaratBaht";
-            this.PriceCaratBaht.ReadOnly = true;
-            this.PriceCaratBaht.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.PriceCaratBaht.Width = 150;
+            this.PriceCaratB.DataPropertyName = "PriceCarat";
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle5.Format = "N0";
+            this.PriceCaratB.DefaultCellStyle = dataGridViewCellStyle5;
+            this.PriceCaratB.HeaderText = "Price/Carat Baht";
+            this.PriceCaratB.Name = "PriceCaratB";
+            this.PriceCaratB.ReadOnly = true;
+            this.PriceCaratB.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.PriceCaratB.Width = 150;
             // 
-            // MarketPriceBaht
+            // MarketPrice
             // 
-            this.MarketPriceBaht.DataPropertyName = "MarketPriceBaht";
-            this.MarketPriceBaht.HeaderText = "Market Price Baht";
-            this.MarketPriceBaht.Name = "MarketPriceBaht";
-            this.MarketPriceBaht.ReadOnly = true;
-            this.MarketPriceBaht.Width = 150;
+            this.MarketPrice.DataPropertyName = "MarketPrice";
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle6.Format = "N2";
+            this.MarketPrice.DefaultCellStyle = dataGridViewCellStyle6;
+            this.MarketPrice.HeaderText = "Market Price Baht";
+            this.MarketPrice.Name = "MarketPrice";
+            this.MarketPrice.ReadOnly = true;
+            this.MarketPrice.Width = 150;
             // 
             // BuyBookDiamondList
             // 
@@ -388,7 +412,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColorName;
         private System.Windows.Forms.DataGridViewTextBoxColumn ClearityName;
         private System.Windows.Forms.DataGridViewTextBoxColumn PriceCaratUSD;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PriceCaratBaht;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MarketPriceBaht;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PriceCaratB;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MarketPrice;
     }
 }

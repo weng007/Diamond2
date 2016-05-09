@@ -60,34 +60,34 @@ namespace DiamondShop
             DoDeleteData();
             DoLoadData();
         }
-        protected override bool DoDeleteData()
-        {
-            Popup.Popup winMessage = new Popup.Popup("Do you want to Delete data?");
-            winMessage.ShowDialog();
-            chkFlag = winMessage.result;
+        //protected override bool DoDeleteData()
+        //{
+        //    Popup.Popup winMessage = new Popup.Popup("Do you want to Delete data?");
+        //    winMessage.ShowDialog();
+        //    chkFlag = winMessage.result;
 
-            if (chkFlag)
-            {
-                if (gridGemstone.RowCount > 0 && gridGemstone.SelectedRows.Count > 0)
-                {
-                    id = (int)gridGemstone.SelectedRows[0].Cells["ID"].Value;
-                    chkFlag = ser.DoDeleteData("DiamondCer", id);
-                }
-            }
-            return chkFlag;
-        }
+        //    if (chkFlag)
+        //    {
+        //        if (gridGemstone.RowCount > 0 && gridGemstone.SelectedRows.Count > 0)
+        //        {
+        //            id = (int)gridGemstone.SelectedRows[0].Cells["ID"].Value;
+        //            chkFlag = ser.DoDeleteData("BuyBookGemstone", id);
+        //        }
+        //    }
+        //    return chkFlag;
+        //}
 
-        private void btnEdit_Click(object sender, EventArgs e)
-        {
-            if (gridGemstone.RowCount > 0 && gridGemstone.SelectedRows.Count > 0)
-            {
-                id = (int)gridGemstone.SelectedRows[0].Cells["ID"].Value;
-                DiamondCer frm = new DiamondCer(id);
-                frm.ShowDialog();
-            }
+        //private void btnEdit_Click(object sender, EventArgs e)
+        //{
+        //    if (gridGemstone.RowCount > 0 && gridGemstone.SelectedRows.Count > 0)
+        //    {
+        //        id = (int)gridGemstone.SelectedRows[0].Cells["ID"].Value;
+        //        DiamondCer frm = new DiamondCer(id);
+        //        frm.ShowDialog();
+        //    }
 
-            DoLoadData();
-        }
+        //    DoLoadData();
+        //}
 
         private void cmbColorGrade_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -131,6 +131,18 @@ namespace DiamondShop
             {
                 e.Handled = true;
             }
+        }
+
+        private void gridGemstone_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if (gridGemstone.RowCount > 0 && gridGemstone.SelectedRows.Count > 0)
+            {
+                id = (int)gridGemstone.SelectedRows[0].Cells["ID"].Value;
+                BuyBookGemstone frm = new BuyBookGemstone(id);
+                frm.ShowDialog();
+            }
+
+            DoLoadData();
         }
     }
 }

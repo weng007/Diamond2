@@ -17,6 +17,7 @@ namespace DiamondShop
     {
         //Service1 ser = GM.GetService();
         dsBuyBookDiamond tds = new dsBuyBookDiamond();
+        bool isAuthorize = false;
 
         public BuyBookDiamond()
         {
@@ -35,13 +36,13 @@ namespace DiamondShop
             binder.BindControl(cmbColor, "Color");
             binder.BindControl(cmbClearity, "Clearity");
             binder.BindControl(dtDueDate, "DueDate");
-            binder.BindControl(chkPayUSD, "PayByUSD");
+            binder.BindControl(chkPayByUSD, "PayByUSD");
             binder.BindControl(txtPriceCaratUSD, "PriceCaratUSD");
             binder.BindControl(txtTotalUSD, "TotalUSD");
             binder.BindControl(txtUSDRate, "USDRate");
             binder.BindControl(txtTotalBaht, "TotalBaht");
             binder.BindControl(txtPriceCarat, "PriceCarat");
-            binder.BindControl(txtTotalThaiBaht, "TotalThaiBaht");
+            //binder.BindControl(txtTotalThaiBaht, "TotalThaiBaht");
             binder.BindControl(txtMarketPrice, "MarketPrice");
             binder.BindControl(txtNote, "Note");
 
@@ -63,13 +64,13 @@ namespace DiamondShop
             binder.BindControl(cmbColor, "Color");
             binder.BindControl(cmbClearity, "Clearity");
             binder.BindControl(dtDueDate, "DueDate");
-            binder.BindControl(chkPayUSD, "PayByUSD");
+            binder.BindControl(chkPayByUSD, "PayByUSD");
             binder.BindControl(txtPriceCaratUSD, "PriceCaratUSD");
             binder.BindControl(txtTotalUSD, "TotalUSD");
             binder.BindControl(txtUSDRate, "USDRate");
             binder.BindControl(txtTotalBaht, "TotalBaht");
             binder.BindControl(txtPriceCarat, "PriceCarat");
-            binder.BindControl(txtTotalThaiBaht, "TotalThaiBaht");
+            //binder.BindControl(txtTotalThaiBaht, "TotalThaiBaht");
             binder.BindControl(txtMarketPrice, "MarketPrice");
             binder.BindControl(txtNote, "Note");
 
@@ -84,7 +85,7 @@ namespace DiamondShop
             cmbShop.DisplayMember = "Detail";
             cmbShop.Refresh();
 
-            cmbShape.DataSource = (GM.GetMasterTableDetail("C015")).Tables[0];
+            cmbShape.DataSource = (GM.GetMasterTableDetail("C019")).Tables[0];
             cmbShape.ValueMember = "ID";
             cmbShape.DisplayMember = "Detail";
             cmbShape.Refresh();
@@ -101,7 +102,7 @@ namespace DiamondShop
 
             dtBuyDate.Select();
 
-            //SetFieldService.SetRequireField(txtCode, txtMeasure1, txtMeasure2, txtMeasure3, txtCarat);
+            SetFieldService.SetRequireField(txtWeight, txtSeller);
         }
 
         protected override void LoadData()
@@ -126,12 +127,9 @@ namespace DiamondShop
                     rdoPayment2.Checked = false;
                 }
 
-                if (tds.BuyBookDiamond[0]["PayByUSD"].ToString() == "0")
-                {
-                    chkPayUSD.Checked = true;
-                }
-
-                EnableDelete = true;
+                EnableSave = false;
+                EnableEdit = true;
+                EnableDelete = false;
             }
 
             base.LoadData();
@@ -151,11 +149,13 @@ namespace DiamondShop
                 tds.BuyBookDiamond.Rows.Add(row);
             }
             binder.BindValueToDataRow(row);
+            row.IsPaid = rdoPayment1.Checked ? "1" : "0";
 
             try
             {
                 if (id == 0)
                 {
+                    row.Code = GM.GetRunningNumber("NDC");
                     SetCreateBy(row);
                     chkFlag = ser.DoInsertData("BuyBookDiamond", tds);
                 }
@@ -178,7 +178,7 @@ namespace DiamondShop
         {
             try
             {
-                //chkFlag = ser.DoDeleteData("DiamondCer", id);
+                chkFlag = ser.DoDeleteData("BuyBookDiamond", id);
             }
             catch (Exception ex)
             {
@@ -187,15 +187,41 @@ namespace DiamondShop
 
             return chkFlag;
         }
+        protected override void EditData()
+        {
+            if (isAuthorize)
+            {
+                EnableSave = true;
+                EnableDelete = true;
+            }
+            else
+            {
+                RequirePassword frm = new RequirePassword("2");
+                frm.ShowDialog();
+                isAuthorize = frm.isAuthorize;
+                frm.Close();
 
+                if (isAuthorize)
+                {
+                    EnableSave = true;
+                    EnableDelete = true;
+                    base.EditData();
+                }
+            }
+        }
         protected override bool ValidateData()
         {
             message = "";
 
-            if (txtCode.Text == "")
+            if (txtSeller.Text == "")
             {
-                message = "Please input GIA Number.\n";
+                message = "Please input Seller.\n";
             }
+            if (txtWeight.Text == "" || GM.ConvertStringToDouble(txtWeight) == 0)
+            {
+                message += "Please input Weight > 0.\n";
+            }
+
             //if(txtMeasure1.Text == "" || txtMeasure2.Text == "" || txtMeasure3.Text == ""
             //&& GM.ConvertStringToDouble(txtMeasure1) == 0 || GM.ConvertStringToDouble(txtMeasure2) == 0 || GM.ConvertStringToDouble(txtMeasure3) == 0)
             //{
@@ -226,14 +252,6 @@ namespace DiamondShop
             //cmbColor.Refresh();
         }
 
-        private void txtCarat_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
-            {
-                e.Handled = true;
-            }
-        }
-
         private void cmbShapeAndCut_SelectedIndexChanged(object sender, EventArgs e)
         {
             //if(cmbShapeAndCut.SelectedIndex == 0)
@@ -244,6 +262,78 @@ namespace DiamondShop
             //{
             //    lbl1.Text = "x";
             //}
+        }
+
+        private void txtWeight_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+        }
+        private void chkPayByUSD_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkPayByUSD.Checked)
+            {
+                txtPriceCaratUSD.Enabled = true;
+                txtUSDRate.Enabled = true;
+
+                txtPriceCarat.Enabled = false;
+                txtPriceCarat.Text = "0";
+                txtUSDRate_TextChanged(null, null);
+            }
+            else
+            {
+                txtPriceCaratUSD.Enabled = false;
+                txtUSDRate.Enabled = false;
+                txtUSDRate.Text = "0";
+
+                txtPriceCarat.Enabled = true;
+
+                //txtPriceCarat.Enabled = true;
+                //txtPriceCarat_TextChanged(null, null);
+            }
+        }
+
+        private void txtWeight_TextChanged(object sender, EventArgs e)
+        {
+            txtTotalUSD.Text = (GM.ConvertStringToDouble(txtWeight) * GM.ConvertStringToDouble(txtPriceCaratUSD)).ToString();
+        }
+
+        private void txtPriceCaratUSD_TextChanged(object sender, EventArgs e)
+        {
+            txtTotalUSD.Text = (GM.ConvertStringToDouble(txtWeight) * GM.ConvertStringToDouble(txtPriceCaratUSD)).ToString();
+        }
+
+        private void txtUSDRate_TextChanged(object sender, EventArgs e)
+        {
+            if (chkPayByUSD.Checked)
+            {
+                txtTotalBaht.Text = (GM.ConvertStringToDouble(txtTotalUSD) * GM.ConvertStringToDouble(txtUSDRate)).ToString();
+            }
+        }
+
+        private void txtPriceCarat_TextChanged(object sender, EventArgs e)
+        {
+            if (!chkPayByUSD.Checked)
+            {
+                txtTotalBaht.Text = (GM.ConvertStringToDouble(txtPriceCarat) * GM.ConvertStringToDouble(txtWeight)).ToString();
+            }
+        }
+
+        private void txtTotalBaht_TextChanged(object sender, EventArgs e)
+        {
+            txtTotalUSD.Text = GM.ConvertDoubleToString(txtTotalUSD);
+            txtPriceCarat.Text = GM.ConvertDoubleToString(txtPriceCarat);
+            txtTotalBaht.Text = GM.ConvertDoubleToString(txtTotalBaht);
+        }
+
+        private void txtAmount_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

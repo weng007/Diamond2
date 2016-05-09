@@ -890,8 +890,8 @@ namespace Diamond
             }
             else if (TableName == "BuyBookGemstone")
             {
-                BuyBookGemstoneCerBiz biz = GM.GetBuyBookGemstoneCerBiz();
-                dsBuyBookGemstoneCer ds1 = new dsBuyBookGemstoneCer();
+                BuyBookGemstoneBiz biz = GM.GetBuyBookGemstoneBiz();
+                dsBuyBookGemstone ds1 = new dsBuyBookGemstone();
 
                 ds1.Merge(ds);
 

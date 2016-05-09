@@ -12,12 +12,14 @@ using DiamondShop.FormMaster;
 using DiamondShop.DiamondService;
 using DiamondDS.DS;
 
+
 namespace DiamondShop
 {
     public partial class Inventory : FormInfo
     {
         //Service1 ser = GM.GetService();
         dsInventory tds = new dsInventory();
+        bool isAuthorize = false;
         MemoryStream ms1;
         MemoryStream ms2;
         byte[] image1, image2;
@@ -46,12 +48,13 @@ namespace DiamondShop
             binder.BindControl(txtCost3, "Cost3");
             binder.BindControl(txtCost4, "Cost4");
             binder.BindControl(txtCostDiamondCer, "CostDiamondCer");
-            //binder.BindControl(txtCostGemstoneCer, "CostGemstoneCer");
+            binder.BindControl(txtGemstoneCer, "CostGemstoneCer");
             binder.BindControl(txtRedCost, "RedCost");
             binder.BindControl(txtMinBeforePremium, "MinBeforePremium");
             binder.BindControl(txtMinPrice, "MinPrice");
             binder.BindControl(txtPriceTag, "PriceTag");
             binder.BindControl(txtMinPrice, "Remark");
+            binder.BindControl(txtUpdateBy, "EditByName");
 
             txtUpdateBy.Text = ApplicationInfo.UserName;
         }
@@ -80,12 +83,15 @@ namespace DiamondShop
             binder.BindControl(txtCost3, "Cost3");
             binder.BindControl(txtCost4, "Cost4");
             binder.BindControl(txtCostDiamondCer, "CostDiamondCer");
-            //binder.BindControl(txtCostGemstoneCer, "CostGemstoneCer");
+            binder.BindControl(txtGemstoneCer, "CostGemstoneCer");
             binder.BindControl(txtRedCost, "RedCost");
             binder.BindControl(txtMinBeforePremium, "MinBeforePremium");
             binder.BindControl(txtMinPrice, "MinPrice");
             binder.BindControl(txtPriceTag, "PriceTag");
             binder.BindControl(txtMinPrice, "Remark");
+            binder.BindControl(txtUpdateBy, "EditByName");
+
+            txtUpdateBy.Text = ApplicationInfo.UserName;
 
             this.id = id;
             LoadData();
@@ -154,9 +160,11 @@ namespace DiamondShop
                     ms2 = new MemoryStream(image2);
                     Image backImage2 = Image.FromStream(ms2);
                     btnImage2.BackgroundImage = backImage2;
-                }              
+                }
 
-                EnableDelete = true;
+                EnableSave = false;
+                EnableEdit = true;
+                EnableDelete = false;
 
                 //gridDiamond.DataSource = tds.DiamondDetail;
                 //gridGemstone.DataSource = tds.GemstoneDetail;
@@ -194,6 +202,7 @@ namespace DiamondShop
             {
                 if (id == 0)
                 {
+                    row.Code = GM.GetRunningNumber("CR");
                     SetCreateBy(row);               
                     chkFlag = ser.DoInsertData("Inventory", tds);
                 }
@@ -226,7 +235,28 @@ namespace DiamondShop
 
             return chkFlag;
         }
+        protected override void EditData()
+        {
+            if (isAuthorize)
+            {
+                EnableSave = true;
+                EnableDelete = true;
+            }
+            else
+            {
+                RequirePassword frm = new RequirePassword("3");
+                frm.ShowDialog();
+                isAuthorize = frm.isAuthorize;
+                frm.Close();
 
+                if (isAuthorize)
+                {
+                    EnableSave = true;
+                    EnableDelete = true;
+                    base.EditData();
+                }
+            }
+        }
         protected override bool ValidateData()
         {
             message = "";
@@ -311,27 +341,27 @@ namespace DiamondShop
             //}
         }
 
-        private void DeleteData(int gridNum, int sid)
-        {
-            if(gridNum == 0)
-            try
-            {
-                ser.DoDeleteData("Inventory", sid);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-            else if (gridNum == 1)
-            try
-            {
-                ser.DoDeleteData("Inventory", sid);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
+        //private void DeleteData(int gridNum, int sid)
+        //{
+        //    if(gridNum == 0)
+        //    try
+        //    {
+        //        ser.DoDeleteData("Inventory", sid);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        throw ex;
+        //    }
+        //    else if (gridNum == 1)
+        //    try
+        //    {
+        //        ser.DoDeleteData("Inventory", sid);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        throw ex;
+        //    }
+        //}
 
         private void txtCost_Leave(object sender, EventArgs e)
         {
