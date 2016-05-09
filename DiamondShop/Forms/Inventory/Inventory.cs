@@ -23,39 +23,14 @@ namespace DiamondShop
         MemoryStream ms1;
         MemoryStream ms2;
         byte[] image1, image2;
+        string prefixCode = "";
         
         public Inventory()
         {
             InitializeComponent();
             Initial();
-
-            binder.BindControl(txtCode, "Code");
-            binder.BindControl(cmbShop, "Shop");
-            binder.BindControl(cmbJewelryType, "JewelryType");
-            binder.BindControl(cmbStatus, "Status");
-            binder.BindControl(cmbMaterial1, "Material1");
-            binder.BindControl(cmbMaterial2, "Material2");
-            binder.BindControl(txtMaterialWeight1, "MaterialWeight1");
-            binder.BindControl(txtMaterialWeight2, "MaterialWeight2");
-            binder.BindControl(txtPricePerGram1, "PricePerGram1");
-            binder.BindControl(txtPricePerGram2, "PricePerGram2");
-            binder.BindControl(txtMaterialCost1, "MaterialCost1");
-            binder.BindControl(txtMaterialCost2, "MaterialCost2");
-            binder.BindControl(txtMaterialNetCost, "MaterialNetCost");
-            binder.BindControl(txtLaborCost, "LaborCost");
-            binder.BindControl(txtCost1, "Cost1");
-            binder.BindControl(txtCost2, "Cost2");
-            binder.BindControl(txtCost3, "Cost3");
-            binder.BindControl(txtCost4, "Cost4");
-            binder.BindControl(txtCostDiamondCer, "CostDiamondCer");
-            binder.BindControl(txtGemstoneCer, "CostGemstoneCer");
-            binder.BindControl(txtRedCost, "RedCost");
-            binder.BindControl(txtMinBeforePremium, "MinBeforePremium");
-            binder.BindControl(txtMinPrice, "MinPrice");
-            binder.BindControl(txtPriceTag, "PriceTag");
-            binder.BindControl(txtMinPrice, "Remark");
-            binder.BindControl(txtUpdateBy, "EditByName");
-
+            BinderData();
+            
             txtUpdateBy.Text = ApplicationInfo.UserName;
         }
 
@@ -63,7 +38,26 @@ namespace DiamondShop
         {
             InitializeComponent();
             Initial();
+            BinderData();
 
+            txtUpdateBy.Text = ApplicationInfo.UserName;
+
+            this.id = id;
+            LoadData();
+        }
+
+        public Inventory(string prefix)
+        {
+            InitializeComponent();
+            Initial();
+            BinderData();
+
+            prefixCode = prefix;
+            txtUpdateBy.Text = ApplicationInfo.UserName;
+        }
+
+        private void BinderData()
+        {
             binder.BindControl(txtCode, "Code");
             binder.BindControl(cmbShop, "Shop");
             binder.BindControl(cmbJewelryType, "JewelryType");
@@ -88,13 +82,11 @@ namespace DiamondShop
             binder.BindControl(txtMinBeforePremium, "MinBeforePremium");
             binder.BindControl(txtMinPrice, "MinPrice");
             binder.BindControl(txtPriceTag, "PriceTag");
-            binder.BindControl(txtMinPrice, "Remark");
             binder.BindControl(txtUpdateBy, "EditByName");
-
-            txtUpdateBy.Text = ApplicationInfo.UserName;
-
-            this.id = id;
-            LoadData();
+            binder.BindControl(txtTechnician, "Technicial");
+            binder.BindControl(txtRemark, "Remark");
+            binder.BindControl(dtImportDate, "CreateDate");
+            binder.BindControl(txtSize, "Size");
         }
 
         protected override void Initial()
@@ -202,7 +194,7 @@ namespace DiamondShop
             {
                 if (id == 0)
                 {
-                    row.Code = GM.GetRunningNumber("CR");
+                    row.Code = GM.GetRunningNumber(prefixCode);
                     SetCreateBy(row);               
                     chkFlag = ser.DoInsertData("Inventory", tds);
                 }
@@ -244,7 +236,7 @@ namespace DiamondShop
             }
             else
             {
-                RequirePassword frm = new RequirePassword("3");
+                RequirePassword frm = new RequirePassword("1");
                 frm.ShowDialog();
                 isAuthorize = frm.isAuthorize;
                 frm.Close();

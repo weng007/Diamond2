@@ -43,21 +43,36 @@ namespace DiamondDAL.DAL
 
             return ds;
         }
-
-        public bool DoInsertData(dsCatalog tds)
+        public dsCatalog DoSearchByType(string prefix)
         {
             try
             {
-                dsCatalog.CatalogRow row = tds.Catalog[0];
-                SQL.ExecuteSP("SP_Catalog_Ins", row);
+                SQL.ClearParameter();
+                SQL.CreateParameter("CatalogType", prefix);
+                SQL.FillDataSetBySP("SP_Catalog_By_Type", ds.Catalog);
             }
             catch (Exception ex)
             {
                 throw ex;
             }
 
-            return true;
+            return ds;
         }
+
+        //public bool DoInsertData(dsCatalog tds)
+        //{
+        //    try
+        //    {
+        //        dsCatalog.CatalogRow row = tds.Catalog[0];
+        //        SQL.ExecuteSP("SP_Catalog_Ins", row);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        throw ex;
+        //    }
+
+        //    return true;
+        //}
 
         public bool DoUpdateData(dsCatalog tds)
         {

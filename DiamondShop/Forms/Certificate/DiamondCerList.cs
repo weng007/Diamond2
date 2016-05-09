@@ -62,6 +62,11 @@ namespace DiamondShop
             cmbShop.DisplayMember = "Detail";
             cmbShop.Refresh();
 
+            cmbColorType.DataSource = (GM.GetMasterTableDetail("C025", true)).Tables[0];
+            cmbColorType.ValueMember = "ID";
+            cmbColorType.DisplayMember = "Detail";
+            cmbColorType.Refresh();
+
             txtReportNumber.Select();
 
             gridDiamondCer.AutoGenerateColumns = false;
@@ -113,8 +118,10 @@ namespace DiamondShop
         {
             ser2 = GM.GetService2();
 
-            ds = ser2.DoSearchDiamondCer(txtReportNumber.Text, Convert.ToInt16(cmbShape.SelectedValue.ToString()), Convert.ToInt16(cmbLab.SelectedValue.ToString()), GM.ConvertStringToDouble(txtSWeight), 
-                GM.ConvertStringToDouble(txtEWeight), Convert.ToInt16(cmbSColor.SelectedValue.ToString()),
+            ds = ser2.DoSearchDiamondCer(txtCode.Text, txtReportNumber.Text, Convert.ToInt16(cmbShape.SelectedValue.ToString()), Convert.ToInt16(cmbLab.SelectedValue.ToString()), GM.ConvertStringToDouble(txtSWeight), 
+                GM.ConvertStringToDouble(txtEWeight),
+                Convert.ToInt16(cmbLab.SelectedValue.ToString()),
+                Convert.ToInt16(cmbSColor.SelectedValue.ToString()),
                 Convert.ToInt16(cmbEColor.SelectedValue.ToString()), Convert.ToInt16(cmbSClearity.SelectedValue.ToString())
                 , Convert.ToInt16(cmbEClearity.SelectedValue.ToString()), Convert.ToInt16(cmbStatus.SelectedValue.ToString()), Convert.ToInt16(cmbShop.SelectedValue.ToString()));
 
@@ -130,7 +137,7 @@ namespace DiamondShop
             }
         }
 
-        private void gridDiamondCer_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void gridDiamondCer_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             if (gridDiamondCer.RowCount > 0 && gridDiamondCer.SelectedRows.Count > 0)
             {

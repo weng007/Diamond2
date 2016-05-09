@@ -15,16 +15,18 @@ namespace DiamondDAL.DAL
         dsBuyBookDiamondCer ds2 = new dsBuyBookDiamondCer();
         int flag = 0;
 
-        public dsBuyBookDiamondCer DoSearchData(string reportNumber, int shape, int lab, double sWeight, double eWeight, int sColor,int eColor, int sClearity, int eClearity, int status, int shop)
+        public dsBuyBookDiamondCer DoSearchData(string code,string reportNumber, int shape, int lab, double sWeight, double eWeight, int colorType,int sColor,int eColor, int sClearity, int eClearity, int status, int shop)
         {
             try
             {
                 SQL.ClearParameter();
+                SQL.CreateParameter("Code", code);
                 SQL.CreateParameter("ReportNumber", reportNumber);
                 SQL.CreateParameter("Shape", shape);
                 SQL.CreateParameter("Lab", lab);
                 SQL.CreateParameter("SWeight", sWeight);
                 SQL.CreateParameter("EWeight", eWeight);
+                SQL.CreateParameter("ColorType", colorType);
                 SQL.CreateParameter("SColor", sColor);
                 SQL.CreateParameter("EColor", eColor);
                 SQL.CreateParameter("sClearity", sClearity);

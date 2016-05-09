@@ -16,10 +16,20 @@ namespace DiamondBiz.Biz
         //type 0 = Login, 1 = BuyBook
         public dsCatalog DoSearchData(string code)
         {
-
             try
             {
                 return dal.DoSearchData(code);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public dsCatalog DoSearchByType(string prefix)
+        {
+            try
+            {
+                return dal.DoSearchByType(prefix);
             }
             catch (Exception ex)
             {
@@ -38,17 +48,17 @@ namespace DiamondBiz.Biz
                 throw ex;
             }
         }
-        public bool DoInsertData(dsCatalog tds)
-        {
-            try
-            {
-                return dal.DoInsertData(tds);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
+        //public bool DoInsertData(dsCatalog tds)
+        //{
+        //    try
+        //    {
+        //        return dal.DoInsertData(tds);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        throw ex;
+        //    }
+        //}
 
         public bool DoUpdateData(dsCatalog tds)
         {

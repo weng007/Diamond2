@@ -51,6 +51,10 @@
             this.btnImage1 = new System.Windows.Forms.Button();
             this.btnImage2 = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.txtSize = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtInvRemark = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.txtMaterial2 = new System.Windows.Forms.TextBox();
             this.txtMaterial1 = new System.Windows.Forms.TextBox();
             this.txtStatus = new System.Windows.Forms.TextBox();
@@ -58,8 +62,6 @@
             this.txtShop = new System.Windows.Forms.TextBox();
             this.btnGemstone = new System.Windows.Forms.Button();
             this.btnDiamond = new System.Windows.Forms.Button();
-            this.txtSize = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.txtMaterialWeight2 = new System.Windows.Forms.TextBox();
             this.txtPriceTag = new System.Windows.Forms.TextBox();
@@ -86,8 +88,6 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.txtInvRemark = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -166,7 +166,7 @@
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Location = new System.Drawing.Point(364, 54);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(100, 27);
+            this.comboBox3.Size = new System.Drawing.Size(100, 21);
             this.comboBox3.TabIndex = 28;
             // 
             // textBox2
@@ -273,12 +273,11 @@
             this.btnImage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnImage1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnImage1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnImage1.Location = new System.Drawing.Point(23, 92);
+            this.btnImage1.Location = new System.Drawing.Point(35, 146);
             this.btnImage1.Name = "btnImage1";
             this.btnImage1.Size = new System.Drawing.Size(150, 150);
             this.btnImage1.TabIndex = 15;
             this.btnImage1.UseVisualStyleBackColor = false;
-            this.btnImage1.Click += new System.EventHandler(this.btnImage1_Click);
             // 
             // btnImage2
             // 
@@ -286,17 +285,18 @@
             this.btnImage2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnImage2.BackgroundImage")));
             this.btnImage2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnImage2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnImage2.Location = new System.Drawing.Point(196, 92);
+            this.btnImage2.Location = new System.Drawing.Point(208, 146);
             this.btnImage2.Name = "btnImage2";
             this.btnImage2.Size = new System.Drawing.Size(150, 150);
             this.btnImage2.TabIndex = 16;
             this.btnImage2.UseVisualStyleBackColor = false;
-            this.btnImage2.Click += new System.EventHandler(this.btnImage2_Click);
             // 
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.White;
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel7.Controls.Add(this.txtSize);
+            this.panel7.Controls.Add(this.label10);
             this.panel7.Controls.Add(this.txtInvRemark);
             this.panel7.Controls.Add(this.label12);
             this.panel7.Controls.Add(this.txtMaterial2);
@@ -306,8 +306,6 @@
             this.panel7.Controls.Add(this.txtShop);
             this.panel7.Controls.Add(this.btnGemstone);
             this.panel7.Controls.Add(this.btnDiamond);
-            this.panel7.Controls.Add(this.txtSize);
-            this.panel7.Controls.Add(this.label10);
             this.panel7.Controls.Add(this.label17);
             this.panel7.Controls.Add(this.txtMaterialWeight2);
             this.panel7.Controls.Add(this.txtPriceTag);
@@ -338,8 +336,44 @@
             this.panel7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel7.Location = new System.Drawing.Point(13, 69);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(956, 422);
+            this.panel7.Size = new System.Drawing.Size(956, 470);
             this.panel7.TabIndex = 37;
+            // 
+            // txtSize
+            // 
+            this.txtSize.Enabled = false;
+            this.txtSize.Location = new System.Drawing.Point(761, 60);
+            this.txtSize.Name = "txtSize";
+            this.txtSize.Size = new System.Drawing.Size(165, 27);
+            this.txtSize.TabIndex = 248;
+            // 
+            // label10
+            // 
+            this.label10.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.label10.Location = new System.Drawing.Point(707, 61);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(46, 26);
+            this.label10.TabIndex = 247;
+            this.label10.Text = "Size";
+            // 
+            // txtInvRemark
+            // 
+            this.txtInvRemark.BackColor = System.Drawing.Color.White;
+            this.txtInvRemark.Enabled = false;
+            this.txtInvRemark.Location = new System.Drawing.Point(428, 278);
+            this.txtInvRemark.Multiline = true;
+            this.txtInvRemark.Name = "txtInvRemark";
+            this.txtInvRemark.Size = new System.Drawing.Size(198, 70);
+            this.txtInvRemark.TabIndex = 245;
+            this.txtInvRemark.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label12
+            // 
+            this.label12.Location = new System.Drawing.Point(424, 254);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(120, 26);
+            this.label12.TabIndex = 246;
+            this.label12.Text = "Remark (Inventory)";
             // 
             // txtMaterial2
             // 
@@ -347,7 +381,6 @@
             this.txtMaterial2.Enabled = false;
             this.txtMaterial2.Location = new System.Drawing.Point(759, 188);
             this.txtMaterial2.Name = "txtMaterial2";
-            this.txtMaterial2.ReadOnly = true;
             this.txtMaterial2.Size = new System.Drawing.Size(165, 27);
             this.txtMaterial2.TabIndex = 228;
             // 
@@ -357,14 +390,13 @@
             this.txtMaterial1.Enabled = false;
             this.txtMaterial1.Location = new System.Drawing.Point(759, 114);
             this.txtMaterial1.Name = "txtMaterial1";
-            this.txtMaterial1.ReadOnly = true;
             this.txtMaterial1.Size = new System.Drawing.Size(165, 27);
             this.txtMaterial1.TabIndex = 170;
             // 
             // txtStatus
             // 
             this.txtStatus.Enabled = false;
-            this.txtStatus.Location = new System.Drawing.Point(419, 117);
+            this.txtStatus.Location = new System.Drawing.Point(430, 148);
             this.txtStatus.Name = "txtStatus";
             this.txtStatus.Size = new System.Drawing.Size(162, 27);
             this.txtStatus.TabIndex = 120;
@@ -372,7 +404,7 @@
             // txtJewelryType
             // 
             this.txtJewelryType.Enabled = false;
-            this.txtJewelryType.Location = new System.Drawing.Point(417, 55);
+            this.txtJewelryType.Location = new System.Drawing.Point(417, 60);
             this.txtJewelryType.Name = "txtJewelryType";
             this.txtJewelryType.Size = new System.Drawing.Size(162, 27);
             this.txtJewelryType.TabIndex = 112;
@@ -383,7 +415,6 @@
             this.txtShop.Enabled = false;
             this.txtShop.Location = new System.Drawing.Point(417, 19);
             this.txtShop.Name = "txtShop";
-            this.txtShop.ReadOnly = true;
             this.txtShop.Size = new System.Drawing.Size(162, 27);
             this.txtShop.TabIndex = 108;
             // 
@@ -411,27 +442,6 @@
             this.btnDiamond.TabIndex = 165;
             this.btnDiamond.UseVisualStyleBackColor = false;
             // 
-            // txtSize
-            // 
-            this.txtSize.BackColor = System.Drawing.Color.White;
-            this.txtSize.Enabled = false;
-            this.txtSize.Location = new System.Drawing.Point(761, 57);
-            this.txtSize.Name = "txtSize";
-            this.txtSize.ReadOnly = true;
-            this.txtSize.Size = new System.Drawing.Size(67, 27);
-            this.txtSize.TabIndex = 220;
-            this.txtSize.Text = "0";
-            this.txtSize.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label10
-            // 
-            this.label10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(684, 60);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(54, 24);
-            this.label10.TabIndex = 164;
-            this.label10.Text = "Size";
-            // 
             // label17
             // 
             this.label17.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -454,7 +464,7 @@
             // txtPriceTag
             // 
             this.txtPriceTag.Enabled = false;
-            this.txtPriceTag.Location = new System.Drawing.Point(226, 326);
+            this.txtPriceTag.Location = new System.Drawing.Point(239, 389);
             this.txtPriceTag.Name = "txtPriceTag";
             this.txtPriceTag.Size = new System.Drawing.Size(119, 27);
             this.txtPriceTag.TabIndex = 244;
@@ -464,7 +474,7 @@
             // label36
             // 
             this.label36.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label36.Location = new System.Drawing.Point(142, 326);
+            this.label36.Location = new System.Drawing.Point(155, 389);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(83, 29);
             this.label36.TabIndex = 157;
@@ -483,7 +493,7 @@
             // txtMinPrice
             // 
             this.txtMinPrice.Enabled = false;
-            this.txtMinPrice.Location = new System.Drawing.Point(226, 292);
+            this.txtMinPrice.Location = new System.Drawing.Point(239, 355);
             this.txtMinPrice.Name = "txtMinPrice";
             this.txtMinPrice.Size = new System.Drawing.Size(119, 27);
             this.txtMinPrice.TabIndex = 240;
@@ -493,7 +503,7 @@
             // label35
             // 
             this.label35.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label35.Location = new System.Drawing.Point(142, 288);
+            this.label35.Location = new System.Drawing.Point(155, 351);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(83, 29);
             this.label35.TabIndex = 155;
@@ -502,7 +512,7 @@
             // txtMinBeforePremium
             // 
             this.txtMinBeforePremium.Enabled = false;
-            this.txtMinBeforePremium.Location = new System.Drawing.Point(226, 258);
+            this.txtMinBeforePremium.Location = new System.Drawing.Point(239, 321);
             this.txtMinBeforePremium.Name = "txtMinBeforePremium";
             this.txtMinBeforePremium.Size = new System.Drawing.Size(119, 27);
             this.txtMinBeforePremium.TabIndex = 236;
@@ -512,7 +522,7 @@
             // label34
             // 
             this.label34.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label34.Location = new System.Drawing.Point(17, 258);
+            this.label34.Location = new System.Drawing.Point(30, 321);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(213, 29);
             this.label34.TabIndex = 153;
@@ -533,7 +543,6 @@
             this.txtImportDate.Enabled = false;
             this.txtImportDate.Location = new System.Drawing.Point(761, 19);
             this.txtImportDate.Name = "txtImportDate";
-            this.txtImportDate.ReadOnly = true;
             this.txtImportDate.Size = new System.Drawing.Size(165, 27);
             this.txtImportDate.TabIndex = 116;
             // 
@@ -550,15 +559,15 @@
             // 
             this.txtSaleDate.BackColor = System.Drawing.Color.White;
             this.txtSaleDate.Enabled = false;
-            this.txtSaleDate.Location = new System.Drawing.Point(419, 173);
+            this.txtSaleDate.Location = new System.Drawing.Point(430, 208);
             this.txtSaleDate.Name = "txtSaleDate";
-            this.txtSaleDate.ReadOnly = true;
             this.txtSaleDate.Size = new System.Drawing.Size(162, 27);
             this.txtSaleDate.TabIndex = 124;
             // 
             // label8
             // 
-            this.label8.Location = new System.Drawing.Point(416, 147);
+            this.label8.Enabled = false;
+            this.label8.Location = new System.Drawing.Point(427, 182);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(117, 24);
             this.label8.TabIndex = 113;
@@ -566,18 +575,17 @@
             // 
             // txtRemark
             // 
-            this.txtRemark.BackColor = System.Drawing.Color.White;
-            this.txtRemark.Location = new System.Drawing.Point(419, 227);
+            this.txtRemark.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.txtRemark.Location = new System.Drawing.Point(428, 380);
             this.txtRemark.Multiline = true;
             this.txtRemark.Name = "txtRemark";
-            this.txtRemark.ReadOnly = true;
             this.txtRemark.Size = new System.Drawing.Size(198, 70);
             this.txtRemark.TabIndex = 1;
             this.txtRemark.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label27
             // 
-            this.label27.Location = new System.Drawing.Point(415, 203);
+            this.label27.Location = new System.Drawing.Point(424, 356);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(120, 26);
             this.label27.TabIndex = 106;
@@ -586,7 +594,7 @@
             // label26
             // 
             this.label26.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label26.Location = new System.Drawing.Point(416, 93);
+            this.label26.Location = new System.Drawing.Point(427, 124);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(69, 22);
             this.label26.TabIndex = 105;
@@ -617,7 +625,7 @@
             // txtCode
             // 
             this.txtCode.Enabled = false;
-            this.txtCode.Location = new System.Drawing.Point(150, 55);
+            this.txtCode.Location = new System.Drawing.Point(150, 60);
             this.txtCode.Name = "txtCode";
             this.txtCode.Size = new System.Drawing.Size(162, 27);
             this.txtCode.TabIndex = 104;
@@ -628,7 +636,6 @@
             this.txtUpdateBy.Enabled = false;
             this.txtUpdateBy.Location = new System.Drawing.Point(150, 19);
             this.txtUpdateBy.Name = "txtUpdateBy";
-            this.txtUpdateBy.ReadOnly = true;
             this.txtUpdateBy.Size = new System.Drawing.Size(162, 27);
             this.txtUpdateBy.TabIndex = 100;
             // 
@@ -643,7 +650,7 @@
             // label24
             // 
             this.label24.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.label24.Location = new System.Drawing.Point(349, 58);
+            this.label24.Location = new System.Drawing.Point(349, 63);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(58, 26);
             this.label24.TabIndex = 80;
@@ -652,7 +659,7 @@
             // label15
             // 
             this.label15.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label15.Location = new System.Drawing.Point(58, 58);
+            this.label15.Location = new System.Drawing.Point(58, 63);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(64, 19);
             this.label15.TabIndex = 49;
@@ -670,32 +677,13 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // txtInvRemark
-            // 
-            this.txtInvRemark.BackColor = System.Drawing.Color.White;
-            this.txtInvRemark.Location = new System.Drawing.Point(419, 328);
-            this.txtInvRemark.Multiline = true;
-            this.txtInvRemark.Name = "txtInvRemark";
-            this.txtInvRemark.ReadOnly = true;
-            this.txtInvRemark.Size = new System.Drawing.Size(198, 70);
-            this.txtInvRemark.TabIndex = 245;
-            this.txtInvRemark.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label12
-            // 
-            this.label12.Location = new System.Drawing.Point(415, 304);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(120, 26);
-            this.label12.TabIndex = 246;
-            this.label12.Text = "Remark";
-            // 
             // Catalog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(195)))), ((int)(((byte)(157)))));
-            this.ClientSize = new System.Drawing.Size(979, 501);
+            this.ClientSize = new System.Drawing.Size(979, 551);
             this.Controls.Add(this.panel7);
             this.Name = "Catalog";
             this.Text = "Product";
@@ -759,8 +747,6 @@
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.TextBox txtSaleDate;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtSize;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button btnGemstone;
         private System.Windows.Forms.Button btnDiamond;
         private System.Windows.Forms.TextBox txtStatus;
@@ -770,5 +756,7 @@
         private System.Windows.Forms.TextBox txtMaterial1;
         private System.Windows.Forms.TextBox txtInvRemark;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox txtSize;
+        private System.Windows.Forms.Label label10;
     }
 }

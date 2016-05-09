@@ -23,40 +23,7 @@ namespace DiamondShop
             InitializeComponent();
             Initial();
 
-            binder.BindControl(txtBuyDate, "BuyDate");
-            binder.BindControl(txtCode, "Code");
-            binder.BindControl(txtSeller, "Seller");
-            binder.BindControl(txtReportNumber, "ReportNumber");
-            //binder.BindControl(txtle, "Lab");
-            binder.BindControl(txtWeight, "Weight");
-            binder.BindControl(txtShape, "Shape");
-            binder.BindControl(txtW, "W");
-            binder.BindControl(txtL, "L");
-            binder.BindControl(txtD, "D");
-            //binder.BindControl(txtColor, "ColorType");
-            binder.BindControl(txtColor, "Color");
-            binder.BindControl(txtCut, "Cut");
-            binder.BindControl(txtClearity, "Clearity");
-            binder.BindControl(txtPolish, "Polish");
-            binder.BindControl(txtSymmetry, "Symmetry");
-
-            binder.BindControl(txtFluorescent, "Fluorescent");
-            binder.BindControl(txtStatus, "Status");
-            //binder.BindControl(txts, "SoldTo");
-            //binder.BindControl(dtd, "DueDate");
-          
-            binder.BindControl(txtPrice, "Price");
-            binder.BindControl(txtRap, "Rap");
-            //binder.BindControl(txtt, "Total$");
-
-            binder.BindControl(txtUSDRate, "USDRate");
-            //binder.BindControl(txtt, "TotalBaht");
-            binder.BindControl(txtSetting, "Setting");
-            binder.BindControl(txtShop, "Shop");
-            //binder.BindControl(txtc, "Certificate");
-
-            binder.BindControl(txtNote, "Note");
-            binder.BindControl(txtNote1, "Note1");
+            BinderData();
 
 
         }
@@ -65,45 +32,38 @@ namespace DiamondShop
             InitializeComponent();
             Initial();
 
-            binder.BindControl(txtBuyDate, "BuyDate");
-            binder.BindControl(txtCode, "Code");
-            binder.BindControl(txtSeller, "Seller");
-            binder.BindControl(txtReportNumber, "ReportNumber");
-            //binder.BindControl(txtle, "Lab");
-            binder.BindControl(txtWeight, "Weight");
-            binder.BindControl(txtShape, "Shape");
-            binder.BindControl(txtW, "W");
-            binder.BindControl(txtL, "L");
-            binder.BindControl(txtD, "D");
-            //binder.BindControl(txtColor, "ColorType");
-            binder.BindControl(txtColor, "Color");
-            binder.BindControl(txtCut, "Cut");
-            binder.BindControl(txtClearity, "Clearity");
-            binder.BindControl(txtPolish, "Polish");
-            binder.BindControl(txtSymmetry, "Symmetry");
-
-            binder.BindControl(txtFluorescent, "Fluorescent");
-            binder.BindControl(txtStatus, "Status");
-            //binder.BindControl(txts, "SoldTo");
-            //binder.BindControl(dtd, "DueDate");
-
-            binder.BindControl(txtPrice, "Price");
-            binder.BindControl(txtRap, "Rap");
-            //binder.BindControl(txtt, "Total$");
-
-            binder.BindControl(txtUSDRate, "USDRate");
-            //binder.BindControl(txtt, "TotalBaht");
-            binder.BindControl(txtSetting, "Setting");
-            binder.BindControl(txtShop, "Shop");
-            //binder.BindControl(txtc, "Certificate");
-
-            binder.BindControl(txtNote, "Note");
-            binder.BindControl(txtNote1, "Note1");
+            BinderData();
 
             this.id = id;
             LoadData();
         }
 
+        private void BinderData()
+        {
+            binder.BindControl(txtBuyDate, "BuyDate");
+            binder.BindControl(txtCode, "Code");
+            binder.BindControl(txtSeller, "Seller");
+            binder.BindControl(txtReportNumber, "ReportNumber");
+            binder.BindControl(txtWeight, "Weight");
+            binder.BindControl(txtShape, "ShapeName");
+            binder.BindControl(txtW, "W");
+            binder.BindControl(txtL, "L");
+            binder.BindControl(txtD, "D");
+            binder.BindControl(txtColor, "ColorName");
+            binder.BindControl(txtCut, "CutName");
+            binder.BindControl(txtClearity, "ClearityName");
+            binder.BindControl(txtPolish, "PolishName");
+            binder.BindControl(txtSymmetry, "SymmetryName");
+            binder.BindControl(txtFluorescent, "FluorescentName");
+            binder.BindControl(txtStatus, "StatusName");
+            binder.BindControl(txtPrice, "Price");
+            binder.BindControl(txtRap, "Rap");
+            binder.BindControl(txtUSDRate, "USDRate");
+            binder.BindControl(txtSetting, "SettingName");
+            binder.BindControl(txtShop, "ShopName");
+            binder.BindControl(txtNote, "Note");
+            binder.BindControl(txtNote1, "Note1");
+        }
         protected override void LoadData()
         {
             ds = ser.DoSelectData("DiamondCer", id);
@@ -170,11 +130,11 @@ namespace DiamondShop
             {
                 message = "Please input GIA Number.\n";
             }
-            if(txtW.Text == "" || txtL.Text == "" || txtD.Text == ""
-            && GM.ConvertStringToDouble(txtW) == 0 || GM.ConvertStringToDouble(txtL) == 0 || GM.ConvertStringToDouble(txtD) == 0)
-            {
-                message += "Please input Measurement > 0.\n";
-            }
+            //if(txtW.Text == "" || txtL.Text == "" || txtD.Text == ""
+            //&& GM.ConvertStringToDouble(txtW) == 0 || GM.ConvertStringToDouble(txtL) == 0 || GM.ConvertStringToDouble(txtD) == 0)
+            //{
+            //    message += "Please input Measurement > 0.\n";
+            //}
             //if (txtCarat.Text == "" || GM.ConvertStringToDouble(txtCarat) == 0)
             //{
             //    message += "Please input Carat Weight > 0.\n";

@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CatalogList));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.btnSearch = new System.Windows.Forms.Button();
@@ -39,10 +38,6 @@
             this.txtCode = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.grdCatalog = new System.Windows.Forms.DataGridView();
             this.RowNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -58,8 +53,8 @@
             this.Weight4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MinPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PriceTag = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Shop = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ShopName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StatusName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -103,6 +98,7 @@
             this.btnSearch.Size = new System.Drawing.Size(105, 32);
             this.btnSearch.TabIndex = 8;
             this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // txtPrefix
             // 
@@ -132,64 +128,12 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.grdCatalog);
             this.panel2.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.Location = new System.Drawing.Point(5, 84);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1222, 472);
             this.panel2.TabIndex = 33;
-            // 
-            // label5
-            // 
-            this.label5.BackColor = System.Drawing.SystemColors.Control;
-            this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label5.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(660, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(121, 33);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "No Gems Cer.";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label4
-            // 
-            this.label4.BackColor = System.Drawing.SystemColors.Control;
-            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label4.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(540, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(121, 33);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Gems Cer.";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label2
-            // 
-            this.label2.BackColor = System.Drawing.SystemColors.Control;
-            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label2.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(410, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(131, 33);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "No Dia Cer.";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.SystemColors.Control;
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label1.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(291, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(120, 33);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Dia Cer.";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // grdCatalog
             // 
@@ -213,9 +157,9 @@
             this.Weight4,
             this.MinPrice,
             this.PriceTag,
-            this.Shop,
-            this.Status});
-            this.grdCatalog.Location = new System.Drawing.Point(0, 32);
+            this.ShopName,
+            this.StatusName});
+            this.grdCatalog.Location = new System.Drawing.Point(3, 0);
             this.grdCatalog.Name = "grdCatalog";
             this.grdCatalog.ReadOnly = true;
             this.grdCatalog.RowHeadersWidth = 10;
@@ -248,6 +192,7 @@
             this.Code.HeaderText = "Code";
             this.Code.Name = "Code";
             this.Code.ReadOnly = true;
+            this.Code.Width = 150;
             // 
             // Image1
             // 
@@ -261,73 +206,68 @@
             // 
             this.Amount1.DataPropertyName = "Amount1";
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Format = "dd/MM/yyyy";
             this.Amount1.DefaultCellStyle = dataGridViewCellStyle1;
-            this.Amount1.HeaderText = "Amount";
+            this.Amount1.HeaderText = "Amount DC.";
             this.Amount1.Name = "Amount1";
             this.Amount1.ReadOnly = true;
-            this.Amount1.Width = 60;
             // 
             // Weight1
             // 
             this.Weight1.DataPropertyName = "Weight1";
-            dataGridViewCellStyle2.Format = "dd/MM/yyyy";
-            this.Weight1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.Weight1.HeaderText = "Weight";
+            this.Weight1.HeaderText = "Weight DC.";
             this.Weight1.Name = "Weight1";
             this.Weight1.ReadOnly = true;
-            this.Weight1.Width = 60;
             // 
             // Amount2
             // 
             this.Amount2.DataPropertyName = "Amount2";
-            this.Amount2.HeaderText = "Amount";
+            this.Amount2.HeaderText = "NDCAmount";
             this.Amount2.Name = "Amount2";
             this.Amount2.ReadOnly = true;
-            this.Amount2.Width = 65;
+            this.Amount2.Width = 80;
             // 
             // Weight2
             // 
             this.Weight2.DataPropertyName = "Weight2";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle3.Format = "N2";
-            this.Weight2.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Weight2.HeaderText = "Weight";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle2.Format = "N2";
+            this.Weight2.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Weight2.HeaderText = "NDCWeight";
             this.Weight2.Name = "Weight2";
             this.Weight2.ReadOnly = true;
-            this.Weight2.Width = 65;
+            this.Weight2.Width = 80;
             // 
             // Amount3
             // 
             this.Amount3.DataPropertyName = "Amount3";
-            this.Amount3.HeaderText = "Amount";
+            this.Amount3.HeaderText = "GCAmount";
             this.Amount3.Name = "Amount3";
             this.Amount3.ReadOnly = true;
-            this.Amount3.Width = 60;
+            this.Amount3.Width = 70;
             // 
             // Weight3
             // 
             this.Weight3.DataPropertyName = "Weight3";
-            this.Weight3.HeaderText = "Weight";
+            this.Weight3.HeaderText = "GCWeight";
             this.Weight3.Name = "Weight3";
             this.Weight3.ReadOnly = true;
-            this.Weight3.Width = 60;
+            this.Weight3.Width = 70;
             // 
             // Amount4
             // 
             this.Amount4.DataPropertyName = "Amount4";
-            this.Amount4.HeaderText = "Amount";
+            this.Amount4.HeaderText = "NGCAmount";
             this.Amount4.Name = "Amount4";
             this.Amount4.ReadOnly = true;
-            this.Amount4.Width = 60;
+            this.Amount4.Width = 80;
             // 
             // Weight4
             // 
             this.Weight4.DataPropertyName = "Weight4";
-            this.Weight4.HeaderText = "Weight";
+            this.Weight4.HeaderText = "NGCWeight";
             this.Weight4.Name = "Weight4";
             this.Weight4.ReadOnly = true;
-            this.Weight4.Width = 60;
+            this.Weight4.Width = 80;
             // 
             // MinPrice
             // 
@@ -345,19 +285,19 @@
             this.PriceTag.ReadOnly = true;
             this.PriceTag.Width = 110;
             // 
-            // Shop
+            // ShopName
             // 
-            this.Shop.DataPropertyName = "Shop";
-            this.Shop.HeaderText = "Shop";
-            this.Shop.Name = "Shop";
-            this.Shop.ReadOnly = true;
+            this.ShopName.DataPropertyName = "ShopName";
+            this.ShopName.HeaderText = "Shop";
+            this.ShopName.Name = "ShopName";
+            this.ShopName.ReadOnly = true;
             // 
-            // Status
+            // StatusName
             // 
-            this.Status.DataPropertyName = "Status";
-            this.Status.HeaderText = "Status";
-            this.Status.Name = "Status";
-            this.Status.ReadOnly = true;
+            this.StatusName.DataPropertyName = "StatusName";
+            this.StatusName.HeaderText = "Status";
+            this.StatusName.Name = "StatusName";
+            this.StatusName.ReadOnly = true;
             // 
             // CatalogList
             // 
@@ -385,10 +325,8 @@
         private System.Windows.Forms.TextBox txtCode;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtPrefix;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataGridViewTextBoxColumn RowNum;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Code;
@@ -403,9 +341,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Weight4;
         private System.Windows.Forms.DataGridViewTextBoxColumn MinPrice;
         private System.Windows.Forms.DataGridViewTextBoxColumn PriceTag;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Shop;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Status;
-        private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ShopName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn StatusName;
     }
 }

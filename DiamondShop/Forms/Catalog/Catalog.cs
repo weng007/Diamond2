@@ -17,7 +17,7 @@ namespace DiamondShop
     public partial class Catalog : FormInfo
     {
         //Service1 ser = GM.GetService();
-        dsProduct tds = new dsProduct();
+        dsCatalog tds = new dsCatalog();
         MemoryStream ms1;
         MemoryStream ms2;
         byte[] image1, image2;
@@ -27,20 +27,7 @@ namespace DiamondShop
             InitializeComponent();
             Initial();
 
-            binder.BindControl(txtCode, "Code");
-            binder.BindControl(txtShop, "Shop");
-            binder.BindControl(txtJewelryType, "JewelryType");
-            binder.BindControl(txtStatus, "Status");
-            binder.BindControl(txtStatus, "Size");
-            binder.BindControl(txtMaterial1, "Material1");
-            binder.BindControl(txtMaterial2, "Material2");
-            binder.BindControl(txtMaterialWeight1, "MaterialWeight1");
-            binder.BindControl(txtMaterialWeight2, "MaterialWeight2");
-            binder.BindControl(txtMinBeforePremium, "MinBeforePremium");
-            binder.BindControl(txtMinPrice, "MinPrice");
-            binder.BindControl(txtPriceTag, "PriceTag");
-            binder.BindControl(txtInvRemark, "InvRemark");
-            binder.BindControl(txtRemark, "Remark");
+            BinderData();
 
             txtUpdateBy.Text = ApplicationInfo.UserName;
         }
@@ -50,10 +37,19 @@ namespace DiamondShop
             InitializeComponent();
             Initial();
 
+            BinderData();
+            txtUpdateBy.Text = ApplicationInfo.UserName;
+            this.id = id;
+            LoadData();
+        }
+
+        private void BinderData()
+        {
             binder.BindControl(txtCode, "Code");
-            binder.BindControl(txtShop, "Shop");
-            binder.BindControl(txtJewelryType, "JewelryType");
-            binder.BindControl(txtStatus, "Status");
+            binder.BindControl(txtShop, "ShopName");
+            binder.BindControl(txtJewelryType, "JewelryTypeName");
+            binder.BindControl(txtStatus, "StatusName");
+            binder.BindControl(txtSize, "Size");
             binder.BindControl(txtMaterial1, "Material1");
             binder.BindControl(txtMaterial2, "Material2");
             binder.BindControl(txtMaterialWeight1, "MaterialWeight1");
@@ -63,9 +59,8 @@ namespace DiamondShop
             binder.BindControl(txtPriceTag, "PriceTag");
             binder.BindControl(txtInvRemark, "InvRemark");
             binder.BindControl(txtRemark, "Remark");
-
-            this.id = id;
-            LoadData();
+            binder.BindControl(txtImportDate, "CreateDate");
+            binder.BindControl(txtUpdateBy, "EditByName");
         }
 
         protected override void Initial()
@@ -82,13 +77,13 @@ namespace DiamondShop
             tds.Clear();
             tds.Merge(ds);
 
-            if (tds.Product.Rows.Count > 0)
+            if (tds.Catalog.Rows.Count > 0)
             {
-                binder.BindValueToControl(tds.Product[0]);
+                binder.BindValueToControl(tds.Catalog[0]);
 
                 //Image
-                image1 = tds.Product[0].Image1;
-                image2 = tds.Product[0].Image2;
+                image1 = tds.Catalog[0].Image1;
+                image2 = tds.Catalog[0].Image2;
                 if(image1 !=  null)
                 {
                     ms1 = new MemoryStream(image1);
@@ -104,11 +99,6 @@ namespace DiamondShop
 
                 EnableDelete = true;
 
-                //gridDiamond.DataSource = tds.DiamondDetail;
-                //gridGemstone.DataSource = tds.GemstoneDetail;
-
-                //gridDiamond.Refresh();
-                //gridGemstone.Refresh();
             }
 
             txtMaterialWeight1.Text = GM.ConvertDoubleToString(txtMaterialWeight1);
@@ -120,34 +110,23 @@ namespace DiamondShop
 
         protected override bool SaveData()
         {
-            dsProduct.ProductRow row = null;
+            dsCatalog.CatalogRow row = null;
 
-            if (tds.Product.Rows.Count > 0)
+            if (tds.Catalog.Rows.Count > 0)
             {
-                row = tds.Product[0];
+                row = tds.Catalog[0];
             }
             else
             {
-                row = tds.Product.NewProductRow();
-                tds.Product.Rows.Add(row);
+                row = tds.Catalog.NewCatalogRow();
+                tds.Catalog.Rows.Add(row);
             }
             binder.BindValueToDataRow(row);
-            row.UserID = ApplicationInfo.UserID;
-            row.Image1 = image1;
-            row.Image2 = image2;
 
             try
             {
-                if (id == 0)
-                {
-                    SetCreateBy(row);               
-                    chkFlag = ser.DoInsertData("Product", tds);
-                }
-                else
-                {
                     SetEditBy(row);
-                    chkFlag = ser.DoUpdateData("Product", tds);
-                }
+                    chkFlag = ser.DoUpdateData("Catalog", tds);
 
                 tds.AcceptChanges();
             }
@@ -163,7 +142,7 @@ namespace DiamondShop
         {
             try
             {
-                chkFlag = ser.DoDeleteData("Product", id);
+                //chkFlag = ser.DoDeleteData("Product", id);
             }
             catch (Exception ex)
             {
@@ -177,26 +156,26 @@ namespace DiamondShop
         {
             message = "";
 
-            if (txtCode.Text == "")
+            if (txtRemark.Text == "")
             {
-                message += "Please input Code.\n";
+                message += "Please input Remark.\n";
             }
             //if (txtNetWeight.Text == "" || GM.ConvertStringToDouble(txtNetWeight) == 0)
             //{
             //    message += "Please input Net Weight > 0.\n";
             //}
-            if (txtSize.Text == "" || GM.ConvertStringToDouble(txtSize) == 0)
-            {
-                message += "Please input Size > 0.\n";
-            }
-            if (txtMaterialWeight1.Text == "" || GM.ConvertStringToDouble(txtMaterialWeight1) == 0)
-            {
-                message += "Please input Cost > 0.\n";
-            }
-            if (txtMinPrice.Text == "" || GM.ConvertStringToDouble(txtMinPrice) == 0)
-            {
-                message += "Please input Min Price > 0.\n";
-            }
+            //if (txtSize.Text == "" || GM.ConvertStringToDouble(txtSize) == 0)
+            //{
+            //    message += "Please input Size > 0.\n";
+            //}
+            //if (txtMaterialWeight1.Text == "" || GM.ConvertStringToDouble(txtMaterialWeight1) == 0)
+            //{
+            //    message += "Please input Cost > 0.\n";
+            //}
+            //if (txtMinPrice.Text == "" || GM.ConvertStringToDouble(txtMinPrice) == 0)
+            //{
+            //    message += "Please input Min Price > 0.\n";
+            //}
             //if (txtOpenPrice.Text == "" || GM.ConvertStringToDouble(txtOpenPrice) == 0)
             //{
             //    message += "Please input Open Price >0.\n";

@@ -28,6 +28,23 @@ namespace DiamondDAL.DAL
 
             return ds;
         }
+
+        public dsInventory DoSearchByType(string prefix)
+        {
+            try
+            {
+                SQL.ClearParameter();
+                SQL.CreateParameter("InventoryType", prefix);
+                SQL.FillDataSetBySP("SP_Inventory_By_Type", ds.Inventory);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return ds;
+        }
+
         public dsInventory DoSelectData(int id)
         {
             try

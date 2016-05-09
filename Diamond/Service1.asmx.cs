@@ -646,21 +646,21 @@ namespace Diamond
                     throw ex;
                 }
             }
-            else if (TableName == "Catalog")
-            {
-                CatalogBiz biz = GM.CatalogBiz();
-                dsCatalog ds1 = new dsCatalog();
-                ds1.Merge(ds);
+            //else if (TableName == "Catalog")
+            //{
+            //    CatalogBiz biz = GM.CatalogBiz();
+            //    dsCatalog ds1 = new dsCatalog();
+            //    ds1.Merge(ds);
 
-                try
-                {
-                    flag = biz.DoInsertData(ds1);
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
-            }
+            //    try
+            //    {
+            //        flag = biz.DoInsertData(ds1);
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        throw ex;
+            //    }
+            //}
             else if (TableName == "BBJewelryGemstoneCerDetail")
             {
                 BBJewelryGemstoneDetailBiz biz = GM.BBJewelryGemstoneDetailBiz();

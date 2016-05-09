@@ -168,25 +168,25 @@
             // txtSetting
             // 
             this.txtSetting.Enabled = false;
-            this.txtSetting.Location = new System.Drawing.Point(817, 90);
+            this.txtSetting.Location = new System.Drawing.Point(803, 90);
             this.txtSetting.Name = "txtSetting";
-            this.txtSetting.Size = new System.Drawing.Size(141, 27);
+            this.txtSetting.Size = new System.Drawing.Size(155, 27);
             this.txtSetting.TabIndex = 160;
             // 
             // txtShop
             // 
             this.txtShop.Enabled = false;
-            this.txtShop.Location = new System.Drawing.Point(817, 53);
+            this.txtShop.Location = new System.Drawing.Point(803, 53);
             this.txtShop.Name = "txtShop";
-            this.txtShop.Size = new System.Drawing.Size(141, 27);
+            this.txtShop.Size = new System.Drawing.Size(155, 27);
             this.txtShop.TabIndex = 156;
             // 
             // txtStatus
             // 
             this.txtStatus.Enabled = false;
-            this.txtStatus.Location = new System.Drawing.Point(817, 15);
+            this.txtStatus.Location = new System.Drawing.Point(803, 15);
             this.txtStatus.Name = "txtStatus";
-            this.txtStatus.Size = new System.Drawing.Size(141, 27);
+            this.txtStatus.Size = new System.Drawing.Size(155, 27);
             this.txtStatus.TabIndex = 152;
             // 
             // txtSymmetry
@@ -425,10 +425,10 @@
             // 
             // txtNote
             // 
-            this.txtNote.Location = new System.Drawing.Point(741, 166);
+            this.txtNote.Location = new System.Drawing.Point(727, 166);
             this.txtNote.Multiline = true;
             this.txtNote.Name = "txtNote";
-            this.txtNote.Size = new System.Drawing.Size(171, 65);
+            this.txtNote.Size = new System.Drawing.Size(172, 65);
             this.txtNote.TabIndex = 1;
             // 
             // label16
@@ -436,7 +436,7 @@
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label16.Location = new System.Drawing.Point(737, 136);
+            this.label16.Location = new System.Drawing.Point(723, 136);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(45, 19);
             this.label16.TabIndex = 109;
@@ -446,7 +446,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label13.Location = new System.Drawing.Point(737, 93);
+            this.label13.Location = new System.Drawing.Point(723, 93);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(66, 21);
             this.label13.TabIndex = 108;
@@ -456,7 +456,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label14.Location = new System.Drawing.Point(737, 56);
+            this.label14.Location = new System.Drawing.Point(723, 56);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(49, 21);
             this.label14.TabIndex = 106;
@@ -466,7 +466,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label15.Location = new System.Drawing.Point(737, 18);
+            this.label15.Location = new System.Drawing.Point(723, 18);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(59, 21);
             this.label15.TabIndex = 104;

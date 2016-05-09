@@ -375,9 +375,11 @@ namespace DiamondDS.DS {
             
             private global::System.Data.DataColumn columnEditBy;
             
-            private global::System.Data.DataColumn columnEditDate;
-            
             private global::System.Data.DataColumn columnEditByName;
+            
+            private global::System.Data.DataColumn columnSize;
+            
+            private global::System.Data.DataColumn columnEditDate;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -798,17 +800,25 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn EditDateColumn {
+            public global::System.Data.DataColumn EditByNameColumn {
                 get {
-                    return this.columnEditDate;
+                    return this.columnEditByName;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn EditByNameColumn {
+            public global::System.Data.DataColumn SizeColumn {
                 get {
-                    return this.columnEditByName;
+                    return this.columnSize;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn EditDateColumn {
+                get {
+                    return this.columnEditDate;
                 }
             }
             
@@ -897,8 +907,9 @@ namespace DiamondDS.DS {
                         int CreateBy, 
                         System.DateTime CreateDate, 
                         int EditBy, 
-                        System.DateTime EditDate, 
-                        string EditByName) {
+                        string EditByName, 
+                        double Size, 
+                        System.DateTime EditDate) {
                 InventoryRow rowInventoryRow = ((InventoryRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         RowNum,
@@ -949,8 +960,9 @@ namespace DiamondDS.DS {
                         CreateBy,
                         CreateDate,
                         EditBy,
-                        EditDate,
-                        EditByName};
+                        EditByName,
+                        Size,
+                        EditDate};
                 rowInventoryRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowInventoryRow);
                 return rowInventoryRow;
@@ -1028,8 +1040,9 @@ namespace DiamondDS.DS {
                 this.columnCreateBy = base.Columns["CreateBy"];
                 this.columnCreateDate = base.Columns["CreateDate"];
                 this.columnEditBy = base.Columns["EditBy"];
-                this.columnEditDate = base.Columns["EditDate"];
                 this.columnEditByName = base.Columns["EditByName"];
+                this.columnSize = base.Columns["Size"];
+                this.columnEditDate = base.Columns["EditDate"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1131,10 +1144,12 @@ namespace DiamondDS.DS {
                 base.Columns.Add(this.columnCreateDate);
                 this.columnEditBy = new global::System.Data.DataColumn("EditBy", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnEditBy);
-                this.columnEditDate = new global::System.Data.DataColumn("EditDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnEditDate);
                 this.columnEditByName = new global::System.Data.DataColumn("EditByName", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnEditByName);
+                this.columnSize = new global::System.Data.DataColumn("Size", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSize);
+                this.columnEditDate = new global::System.Data.DataColumn("EditDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEditDate);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnID}, true));
                 this.columnRowNum.ReadOnly = true;
@@ -1167,6 +1182,7 @@ namespace DiamondDS.DS {
                 this.columnTechnicial.MaxLength = 100;
                 this.columnRemark.MaxLength = 250;
                 this.columnIsDeleted.MaxLength = 1;
+                this.columnEditByName.MaxLength = 100;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2072,22 +2088,6 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public System.DateTime EditDate {
-                get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tableInventory.EditDateColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'EditDate\' in table \'Inventory\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableInventory.EditDateColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string EditByName {
                 get {
                     try {
@@ -2099,6 +2099,38 @@ namespace DiamondDS.DS {
                 }
                 set {
                     this[this.tableInventory.EditByNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double Size {
+                get {
+                    try {
+                        return ((double)(this[this.tableInventory.SizeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Size\' in table \'Inventory\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableInventory.SizeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public System.DateTime EditDate {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableInventory.EditDateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'EditDate\' in table \'Inventory\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableInventory.EditDateColumn] = value;
                 }
             }
             
@@ -2668,18 +2700,6 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsEditDateNull() {
-                return this.IsNull(this.tableInventory.EditDateColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetEditDateNull() {
-                this[this.tableInventory.EditDateColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsEditByNameNull() {
                 return this.IsNull(this.tableInventory.EditByNameColumn);
             }
@@ -2688,6 +2708,30 @@ namespace DiamondDS.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetEditByNameNull() {
                 this[this.tableInventory.EditByNameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsSizeNull() {
+                return this.IsNull(this.tableInventory.SizeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetSizeNull() {
+                this[this.tableInventory.SizeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsEditDateNull() {
+                return this.IsNull(this.tableInventory.EditDateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetEditDateNull() {
+                this[this.tableInventory.EditDateColumn] = global::System.Convert.DBNull;
             }
         }
         

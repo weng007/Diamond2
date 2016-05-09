@@ -231,14 +231,28 @@ namespace Diamond
         }
 
         [WebMethod]
-        public DataSet DoSearchDiamondCer(string reportNumber, int shape, int lab, double sWeight, double eWeight, int sColor,
+        public DataSet DoSearchCatalogByType(string prefix)
+        {
+            CatalogBiz biz = new CatalogBiz();
+
+            try
+            {
+                return biz.DoSearchByType(prefix);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        [WebMethod]
+        public DataSet DoSearchDiamondCer(string code,string reportNumber, int shape, int lab, double sWeight, double eWeight, int colorType,int sColor,
             int eColor, int sClearity, int eClearity, int status, int shop)
         {
             DiamondCerBiz biz = new DiamondCerBiz();
 
             try
             {
-                return biz.DoSearchData(reportNumber, shape, lab, sWeight, eWeight, sColor,
+                return biz.DoSearchData(code,reportNumber, shape, lab, sWeight, eWeight, colorType, sColor,
             eColor, sClearity, eClearity, status, shop);
             }
             catch (Exception ex)
@@ -275,6 +289,22 @@ namespace Diamond
                 throw ex;
             }
         }
+
+        [WebMethod]
+        public DataSet DoSearchInventoryByType(string prefix)
+        {
+            InventoryBiz biz = new InventoryBiz();
+
+            try
+            {
+                return biz.DoSearchByType(prefix);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
         [WebMethod]
         public DataSet DoSearchSell(string code, int jewelryType)
         {

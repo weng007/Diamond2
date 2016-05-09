@@ -27,6 +27,19 @@ namespace DiamondBiz.Biz
             }
         }
 
+        public dsInventory DoSearchByType(string prefix)
+        {
+
+            try
+            {
+                return dal.DoSearchByType(prefix);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
         public dsInventory DoSelectData(int id)
         {
             try

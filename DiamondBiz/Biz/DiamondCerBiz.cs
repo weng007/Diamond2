@@ -14,12 +14,12 @@ namespace DiamondBiz.Biz
         dsBuyBookDiamondCer ds2 = new dsBuyBookDiamondCer();
         DiamondCerDAL dal = new DiamondCerDAL();
 
-        public dsBuyBookDiamondCer DoSearchData(string reportNumber, int shape, int lab, double sWeight, double eWeight, int sColor,
+        public dsBuyBookDiamondCer DoSearchData(string code,string reportNumber, int shape, int lab, double sWeight, double eWeight, int colorType,int sColor,
             int eColor, int sClearity, int eClearity, int status, int shop)
         {
             try
             {
-                return dal.DoSearchData(reportNumber, shape, lab, sWeight, eWeight, sColor,
+                return dal.DoSearchData(code,reportNumber, shape, lab, sWeight, eWeight, colorType,sColor,
             eColor, sClearity, eClearity, status, shop);
             }
             catch (Exception ex)

@@ -39,7 +39,9 @@ namespace DiamondShop
         }
         protected override void DoLoadData()
         {
-            ds = ser.DoSelectData("Inventory", -1);
+            //ser2 = GM.GetService2();
+
+            ds = ser2.DoSearchInventoryByType(txtPrefix.Text);
 
             if (ds.Tables[0].Rows.Count > 0)
             {
@@ -84,7 +86,7 @@ namespace DiamondShop
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            Inventory frm = new Inventory();
+            Inventory frm = new Inventory(txtPrefix.Text);
             frm.ShowDialog();
             DoLoadData();
         }

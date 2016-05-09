@@ -59,7 +59,7 @@ namespace DiamondShop
         {
             ser2 = GM.GetService2();
 
-            ds = ser2.DoSearchBuyBookJewelry(txtCode.Text);
+            ds = ser2.DoSearchBuyBookJewelry(txtPrefix.Text + "-" + txtCode.Text);
 
             if (ds.Tables[0].Rows.Count > 0)
             {
