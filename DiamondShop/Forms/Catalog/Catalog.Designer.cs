@@ -51,6 +51,7 @@
             this.btnImage1 = new System.Windows.Forms.Button();
             this.btnImage2 = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.dtImportDate = new System.Windows.Forms.DateTimePicker();
             this.txtSize = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txtInvRemark = new System.Windows.Forms.TextBox();
@@ -72,7 +73,6 @@
             this.txtMinBeforePremium = new System.Windows.Forms.TextBox();
             this.label34 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.txtImportDate = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.txtSaleDate = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -272,6 +272,7 @@
             this.btnImage1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnImage1.BackgroundImage")));
             this.btnImage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnImage1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnImage1.Enabled = false;
             this.btnImage1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnImage1.Location = new System.Drawing.Point(35, 146);
             this.btnImage1.Name = "btnImage1";
@@ -284,6 +285,7 @@
             this.btnImage2.BackColor = System.Drawing.SystemColors.Control;
             this.btnImage2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnImage2.BackgroundImage")));
             this.btnImage2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnImage2.Enabled = false;
             this.btnImage2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnImage2.Location = new System.Drawing.Point(208, 146);
             this.btnImage2.Name = "btnImage2";
@@ -295,6 +297,7 @@
             // 
             this.panel7.BackColor = System.Drawing.Color.White;
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel7.Controls.Add(this.dtImportDate);
             this.panel7.Controls.Add(this.txtSize);
             this.panel7.Controls.Add(this.label10);
             this.panel7.Controls.Add(this.txtInvRemark);
@@ -316,7 +319,6 @@
             this.panel7.Controls.Add(this.txtMinBeforePremium);
             this.panel7.Controls.Add(this.label34);
             this.panel7.Controls.Add(this.label16);
-            this.panel7.Controls.Add(this.txtImportDate);
             this.panel7.Controls.Add(this.label11);
             this.panel7.Controls.Add(this.txtSaleDate);
             this.panel7.Controls.Add(this.label8);
@@ -339,13 +341,25 @@
             this.panel7.Size = new System.Drawing.Size(956, 470);
             this.panel7.TabIndex = 37;
             // 
+            // dtImportDate
+            // 
+            this.dtImportDate.CustomFormat = "dd/MM/yyyy";
+            this.dtImportDate.Enabled = false;
+            this.dtImportDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtImportDate.Location = new System.Drawing.Point(761, 19);
+            this.dtImportDate.Name = "dtImportDate";
+            this.dtImportDate.Size = new System.Drawing.Size(131, 27);
+            this.dtImportDate.TabIndex = 249;
+            // 
             // txtSize
             // 
             this.txtSize.Enabled = false;
             this.txtSize.Location = new System.Drawing.Point(761, 60);
             this.txtSize.Name = "txtSize";
-            this.txtSize.Size = new System.Drawing.Size(165, 27);
+            this.txtSize.Size = new System.Drawing.Size(67, 27);
             this.txtSize.TabIndex = 248;
+            this.txtSize.Text = "0";
+            this.txtSize.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label10
             // 
@@ -358,40 +372,41 @@
             // 
             // txtInvRemark
             // 
-            this.txtInvRemark.BackColor = System.Drawing.Color.White;
+            this.txtInvRemark.BackColor = System.Drawing.SystemColors.Window;
             this.txtInvRemark.Enabled = false;
             this.txtInvRemark.Location = new System.Drawing.Point(428, 278);
             this.txtInvRemark.Multiline = true;
             this.txtInvRemark.Name = "txtInvRemark";
             this.txtInvRemark.Size = new System.Drawing.Size(198, 70);
             this.txtInvRemark.TabIndex = 245;
-            this.txtInvRemark.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label12
             // 
             this.label12.Location = new System.Drawing.Point(424, 254);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(120, 26);
+            this.label12.Size = new System.Drawing.Size(168, 26);
             this.label12.TabIndex = 246;
             this.label12.Text = "Remark (Inventory)";
             // 
             // txtMaterial2
             // 
-            this.txtMaterial2.BackColor = System.Drawing.Color.White;
+            this.txtMaterial2.BackColor = System.Drawing.SystemColors.Window;
             this.txtMaterial2.Enabled = false;
             this.txtMaterial2.Location = new System.Drawing.Point(759, 188);
             this.txtMaterial2.Name = "txtMaterial2";
             this.txtMaterial2.Size = new System.Drawing.Size(165, 27);
             this.txtMaterial2.TabIndex = 228;
+            this.txtMaterial2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtMaterial1
             // 
-            this.txtMaterial1.BackColor = System.Drawing.Color.White;
+            this.txtMaterial1.BackColor = System.Drawing.SystemColors.Window;
             this.txtMaterial1.Enabled = false;
             this.txtMaterial1.Location = new System.Drawing.Point(759, 114);
             this.txtMaterial1.Name = "txtMaterial1";
             this.txtMaterial1.Size = new System.Drawing.Size(165, 27);
             this.txtMaterial1.TabIndex = 170;
+            this.txtMaterial1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtStatus
             // 
@@ -411,7 +426,7 @@
             // 
             // txtShop
             // 
-            this.txtShop.BackColor = System.Drawing.Color.White;
+            this.txtShop.BackColor = System.Drawing.SystemColors.Window;
             this.txtShop.Enabled = false;
             this.txtShop.Location = new System.Drawing.Point(417, 19);
             this.txtShop.Name = "txtShop";
@@ -537,15 +552,6 @@
             this.label16.TabIndex = 126;
             this.label16.Text = "Material1";
             // 
-            // txtImportDate
-            // 
-            this.txtImportDate.BackColor = System.Drawing.Color.White;
-            this.txtImportDate.Enabled = false;
-            this.txtImportDate.Location = new System.Drawing.Point(761, 19);
-            this.txtImportDate.Name = "txtImportDate";
-            this.txtImportDate.Size = new System.Drawing.Size(165, 27);
-            this.txtImportDate.TabIndex = 116;
-            // 
             // label11
             // 
             this.label11.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -557,7 +563,7 @@
             // 
             // txtSaleDate
             // 
-            this.txtSaleDate.BackColor = System.Drawing.Color.White;
+            this.txtSaleDate.BackColor = System.Drawing.SystemColors.Window;
             this.txtSaleDate.Enabled = false;
             this.txtSaleDate.Location = new System.Drawing.Point(430, 208);
             this.txtSaleDate.Name = "txtSaleDate";
@@ -566,7 +572,6 @@
             // 
             // label8
             // 
-            this.label8.Enabled = false;
             this.label8.Location = new System.Drawing.Point(427, 182);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(117, 24);
@@ -581,7 +586,6 @@
             this.txtRemark.Name = "txtRemark";
             this.txtRemark.Size = new System.Drawing.Size(198, 70);
             this.txtRemark.TabIndex = 1;
-            this.txtRemark.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label27
             // 
@@ -632,7 +636,7 @@
             // 
             // txtUpdateBy
             // 
-            this.txtUpdateBy.BackColor = System.Drawing.Color.White;
+            this.txtUpdateBy.BackColor = System.Drawing.SystemColors.Window;
             this.txtUpdateBy.Enabled = false;
             this.txtUpdateBy.Location = new System.Drawing.Point(150, 19);
             this.txtUpdateBy.Name = "txtUpdateBy";
@@ -733,7 +737,6 @@
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.TextBox txtRemark;
         private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.TextBox txtImportDate;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
@@ -758,5 +761,6 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txtSize;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.DateTimePicker dtImportDate;
     }
 }

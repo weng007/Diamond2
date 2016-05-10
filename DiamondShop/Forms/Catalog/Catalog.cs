@@ -59,7 +59,7 @@ namespace DiamondShop
             binder.BindControl(txtPriceTag, "PriceTag");
             binder.BindControl(txtInvRemark, "InvRemark");
             binder.BindControl(txtRemark, "Remark");
-            binder.BindControl(txtImportDate, "CreateDate");
+            binder.BindControl(dtImportDate, "CreateDate");
             binder.BindControl(txtUpdateBy, "EditByName");
         }
 
@@ -80,18 +80,17 @@ namespace DiamondShop
             if (tds.Catalog.Rows.Count > 0)
             {
                 binder.BindValueToControl(tds.Catalog[0]);
-
-                //Image
-                image1 = tds.Catalog[0].Image1;
-                image2 = tds.Catalog[0].Image2;
+                
                 if(image1 !=  null)
                 {
+                    image1 = tds.Catalog[0].Image1;
                     ms1 = new MemoryStream(image1);
                     Image backImage1 = Image.FromStream(ms1);
                     btnImage1.BackgroundImage = backImage1;
                 }
                 if (image2 != null)
                 {
+                    image2 = tds.Catalog[0].Image2;
                     ms2 = new MemoryStream(image2);
                     Image backImage2 = Image.FromStream(ms2);
                     btnImage2.BackgroundImage = backImage2;

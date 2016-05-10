@@ -326,7 +326,7 @@
             // 
             this.PriceGram1.DataPropertyName = "PriceGram1";
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle5.Format = "N";
+            dataGridViewCellStyle5.Format = "N0";
             this.PriceGram1.DefaultCellStyle = dataGridViewCellStyle5;
             this.PriceGram1.HeaderText = "ทอง 75% กรัมละ";
             this.PriceGram1.Name = "PriceGram1";
@@ -337,7 +337,7 @@
             // 
             this.Amount2.DataPropertyName = "Amount2";
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle6.Format = "N2";
+            dataGridViewCellStyle6.Format = "N0";
             this.Amount2.DefaultCellStyle = dataGridViewCellStyle6;
             this.Amount2.HeaderText = "กรัม";
             this.Amount2.Name = "Amount2";
@@ -359,7 +359,7 @@
             // 
             this.Total2.DataPropertyName = "Total2";
             dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle8.Format = "N2";
+            dataGridViewCellStyle8.Format = "N0";
             this.Total2.DefaultCellStyle = dataGridViewCellStyle8;
             this.Total2.HeaderText = "Total";
             this.Total2.Name = "Total2";
