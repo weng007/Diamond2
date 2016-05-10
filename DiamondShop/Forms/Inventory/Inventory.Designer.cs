@@ -70,24 +70,21 @@
             this.label33 = new System.Windows.Forms.Label();
             this.txtGemstoneCer = new System.Windows.Forms.TextBox();
             this.txt10 = new System.Windows.Forms.TextBox();
-            this.label32 = new System.Windows.Forms.Label();
             this.txtCostDiamondCer = new System.Windows.Forms.TextBox();
             this.txt9 = new System.Windows.Forms.TextBox();
-            this.label31 = new System.Windows.Forms.Label();
             this.txtCost4 = new System.Windows.Forms.TextBox();
             this.txt8 = new System.Windows.Forms.TextBox();
-            this.label30 = new System.Windows.Forms.Label();
             this.txtCost3 = new System.Windows.Forms.TextBox();
-            this.txt7 = new System.Windows.Forms.TextBox();
+            this.txtCost33 = new System.Windows.Forms.TextBox();
             this.label29 = new System.Windows.Forms.Label();
-            this.txt5 = new System.Windows.Forms.TextBox();
+            this.txtCost11 = new System.Windows.Forms.TextBox();
             this.txtCost1 = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
             this.txtCost2 = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
-            this.txt6 = new System.Windows.Forms.TextBox();
+            this.txtCost22 = new System.Windows.Forms.TextBox();
             this.chkMoreMaterial = new System.Windows.Forms.CheckBox();
-            this.txt3 = new System.Windows.Forms.TextBox();
+            this.txtMaterialNetCost1 = new System.Windows.Forms.TextBox();
             this.txtMaterialNetCost = new System.Windows.Forms.TextBox();
             this.label28 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -95,7 +92,7 @@
             this.txtMaterialWeight2 = new System.Windows.Forms.TextBox();
             this.txtPricePerGram22 = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
-            this.txt12 = new System.Windows.Forms.TextBox();
+            this.txtMaterialCost22 = new System.Windows.Forms.TextBox();
             this.cmbMaterial2 = new System.Windows.Forms.ComboBox();
             this.txtMaterialCost2 = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
@@ -103,11 +100,11 @@
             this.label18 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.txtPricePerGram11 = new System.Windows.Forms.TextBox();
-            this.txt2 = new System.Windows.Forms.TextBox();
+            this.txtMaterialCost11 = new System.Windows.Forms.TextBox();
             this.txtLaborCost = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.txtMaterialCost1 = new System.Windows.Forms.TextBox();
-            this.txt4 = new System.Windows.Forms.TextBox();
+            this.txtLaborCost1 = new System.Windows.Forms.TextBox();
             this.txtPricePerGram1 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -129,6 +126,9 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.label39 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -208,7 +208,7 @@
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Location = new System.Drawing.Point(364, 54);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(100, 21);
+            this.comboBox3.Size = new System.Drawing.Size(100, 27);
             this.comboBox3.TabIndex = 28;
             // 
             // textBox2
@@ -315,7 +315,7 @@
             this.btnImage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnImage1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnImage1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnImage1.Location = new System.Drawing.Point(679, 286);
+            this.btnImage1.Location = new System.Drawing.Point(653, 286);
             this.btnImage1.Name = "btnImage1";
             this.btnImage1.Size = new System.Drawing.Size(150, 150);
             this.btnImage1.TabIndex = 105;
@@ -328,7 +328,7 @@
             this.btnImage2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnImage2.BackgroundImage")));
             this.btnImage2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnImage2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnImage2.Location = new System.Drawing.Point(852, 286);
+            this.btnImage2.Location = new System.Drawing.Point(874, 286);
             this.btnImage2.Name = "btnImage2";
             this.btnImage2.Size = new System.Drawing.Size(150, 150);
             this.btnImage2.TabIndex = 106;
@@ -339,6 +339,9 @@
             // 
             this.panel7.BackColor = System.Drawing.Color.White;
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel7.Controls.Add(this.label32);
+            this.panel7.Controls.Add(this.label30);
+            this.panel7.Controls.Add(this.label39);
             this.panel7.Controls.Add(this.txtSize);
             this.panel7.Controls.Add(this.label38);
             this.panel7.Controls.Add(this.dtImportDate);
@@ -358,34 +361,31 @@
             this.panel7.Controls.Add(this.label33);
             this.panel7.Controls.Add(this.txtGemstoneCer);
             this.panel7.Controls.Add(this.txt10);
-            this.panel7.Controls.Add(this.label32);
             this.panel7.Controls.Add(this.txtCostDiamondCer);
             this.panel7.Controls.Add(this.txt9);
-            this.panel7.Controls.Add(this.label31);
             this.panel7.Controls.Add(this.txtCost4);
             this.panel7.Controls.Add(this.txt8);
-            this.panel7.Controls.Add(this.label30);
             this.panel7.Controls.Add(this.txtCost3);
-            this.panel7.Controls.Add(this.txt7);
+            this.panel7.Controls.Add(this.txtCost33);
             this.panel7.Controls.Add(this.label29);
-            this.panel7.Controls.Add(this.txt5);
+            this.panel7.Controls.Add(this.txtCost11);
             this.panel7.Controls.Add(this.txtCost1);
             this.panel7.Controls.Add(this.label23);
             this.panel7.Controls.Add(this.txtCost2);
             this.panel7.Controls.Add(this.label25);
-            this.panel7.Controls.Add(this.txt6);
+            this.panel7.Controls.Add(this.txtCost22);
             this.panel7.Controls.Add(this.chkMoreMaterial);
-            this.panel7.Controls.Add(this.txt3);
+            this.panel7.Controls.Add(this.txtMaterialNetCost1);
             this.panel7.Controls.Add(this.txtMaterialNetCost);
             this.panel7.Controls.Add(this.label28);
             this.panel7.Controls.Add(this.panel3);
             this.panel7.Controls.Add(this.label16);
             this.panel7.Controls.Add(this.txtPricePerGram11);
-            this.panel7.Controls.Add(this.txt2);
+            this.panel7.Controls.Add(this.txtMaterialCost11);
             this.panel7.Controls.Add(this.txtLaborCost);
             this.panel7.Controls.Add(this.label12);
             this.panel7.Controls.Add(this.txtMaterialCost1);
-            this.panel7.Controls.Add(this.txt4);
+            this.panel7.Controls.Add(this.txtLaborCost1);
             this.panel7.Controls.Add(this.txtPricePerGram1);
             this.panel7.Controls.Add(this.label10);
             this.panel7.Controls.Add(this.label11);
@@ -412,12 +412,12 @@
             this.panel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.panel7.Location = new System.Drawing.Point(13, 69);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(1037, 683);
+            this.panel7.Size = new System.Drawing.Size(1139, 689);
             this.panel7.TabIndex = 37;
             // 
             // txtSize
             // 
-            this.txtSize.Location = new System.Drawing.Point(392, 90);
+            this.txtSize.Location = new System.Drawing.Point(436, 90);
             this.txtSize.Name = "txtSize";
             this.txtSize.Size = new System.Drawing.Size(119, 27);
             this.txtSize.TabIndex = 201;
@@ -428,7 +428,7 @@
             // 
             this.label38.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label38.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label38.Location = new System.Drawing.Point(339, 90);
+            this.label38.Location = new System.Drawing.Point(383, 90);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(42, 29);
             this.label38.TabIndex = 202;
@@ -438,7 +438,7 @@
             // 
             this.dtImportDate.CustomFormat = "dd/MM/yyyy";
             this.dtImportDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtImportDate.Location = new System.Drawing.Point(697, 56);
+            this.dtImportDate.Location = new System.Drawing.Point(783, 50);
             this.dtImportDate.Name = "dtImportDate";
             this.dtImportDate.Size = new System.Drawing.Size(131, 27);
             this.dtImportDate.TabIndex = 20;
@@ -455,10 +455,11 @@
             // btnGemstone
             // 
             this.btnGemstone.BackColor = System.Drawing.Color.White;
+            this.btnGemstone.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGemstone.FlatAppearance.BorderSize = 0;
             this.btnGemstone.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGemstone.Image = ((System.Drawing.Image)(resources.GetObject("btnGemstone.Image")));
-            this.btnGemstone.Location = new System.Drawing.Point(850, 573);
+            this.btnGemstone.Location = new System.Drawing.Point(990, 583);
             this.btnGemstone.Name = "btnGemstone";
             this.btnGemstone.Size = new System.Drawing.Size(76, 86);
             this.btnGemstone.TabIndex = 164;
@@ -467,10 +468,11 @@
             // btnPrint
             // 
             this.btnPrint.BackColor = System.Drawing.Color.White;
+            this.btnPrint.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPrint.FlatAppearance.BorderSize = 0;
             this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPrint.Image = ((System.Drawing.Image)(resources.GetObject("btnPrint.Image")));
-            this.btnPrint.Location = new System.Drawing.Point(957, 574);
+            this.btnPrint.Location = new System.Drawing.Point(1001, 463);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(65, 96);
             this.btnPrint.TabIndex = 163;
@@ -479,18 +481,20 @@
             // btnDiamond
             // 
             this.btnDiamond.BackColor = System.Drawing.Color.White;
+            this.btnDiamond.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDiamond.FlatAppearance.BorderSize = 0;
             this.btnDiamond.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDiamond.Image = ((System.Drawing.Image)(resources.GetObject("btnDiamond.Image")));
-            this.btnDiamond.Location = new System.Drawing.Point(768, 574);
+            this.btnDiamond.Location = new System.Drawing.Point(897, 584);
             this.btnDiamond.Name = "btnDiamond";
             this.btnDiamond.Size = new System.Drawing.Size(76, 86);
             this.btnDiamond.TabIndex = 161;
             this.btnDiamond.UseVisualStyleBackColor = false;
+            this.btnDiamond.Click += new System.EventHandler(this.btnDiamond_Click);
             // 
             // txtTechnician
             // 
-            this.txtTechnician.Location = new System.Drawing.Point(174, 635);
+            this.txtTechnician.Location = new System.Drawing.Point(174, 629);
             this.txtTechnician.Name = "txtTechnician";
             this.txtTechnician.Size = new System.Drawing.Size(187, 27);
             this.txtTechnician.TabIndex = 80;
@@ -499,7 +503,7 @@
             // 
             this.label37.Font = new System.Drawing.Font("Cordia New", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label37.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label37.Location = new System.Drawing.Point(65, 635);
+            this.label37.Location = new System.Drawing.Point(65, 629);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(96, 29);
             this.label37.TabIndex = 159;
@@ -507,9 +511,10 @@
             // 
             // txtPriceTag
             // 
-            this.txtPriceTag.Location = new System.Drawing.Point(620, 640);
+            this.txtPriceTag.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.txtPriceTag.Location = new System.Drawing.Point(612, 647);
             this.txtPriceTag.Name = "txtPriceTag";
-            this.txtPriceTag.Size = new System.Drawing.Size(119, 27);
+            this.txtPriceTag.Size = new System.Drawing.Size(135, 27);
             this.txtPriceTag.TabIndex = 76;
             this.txtPriceTag.Text = "0";
             this.txtPriceTag.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -519,17 +524,18 @@
             // 
             this.label36.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label36.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label36.Location = new System.Drawing.Point(479, 640);
+            this.label36.Location = new System.Drawing.Point(471, 650);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(134, 29);
+            this.label36.Size = new System.Drawing.Size(134, 27);
             this.label36.TabIndex = 157;
             this.label36.Text = "Price Tag";
             // 
             // txtMinPrice
             // 
-            this.txtMinPrice.Location = new System.Drawing.Point(620, 606);
+            this.txtMinPrice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.txtMinPrice.Location = new System.Drawing.Point(612, 613);
             this.txtMinPrice.Name = "txtMinPrice";
-            this.txtMinPrice.Size = new System.Drawing.Size(119, 27);
+            this.txtMinPrice.Size = new System.Drawing.Size(135, 27);
             this.txtMinPrice.TabIndex = 72;
             this.txtMinPrice.Text = "0";
             this.txtMinPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -539,7 +545,7 @@
             // 
             this.label35.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label35.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label35.Location = new System.Drawing.Point(444, 606);
+            this.label35.Location = new System.Drawing.Point(432, 616);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(134, 29);
             this.label35.TabIndex = 155;
@@ -547,9 +553,11 @@
             // 
             // txtMinBeforePremium
             // 
-            this.txtMinBeforePremium.Location = new System.Drawing.Point(620, 572);
+            this.txtMinBeforePremium.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.txtMinBeforePremium.Enabled = false;
+            this.txtMinBeforePremium.Location = new System.Drawing.Point(612, 579);
             this.txtMinBeforePremium.Name = "txtMinBeforePremium";
-            this.txtMinBeforePremium.Size = new System.Drawing.Size(119, 27);
+            this.txtMinBeforePremium.Size = new System.Drawing.Size(135, 27);
             this.txtMinBeforePremium.TabIndex = 154;
             this.txtMinBeforePremium.Text = "0";
             this.txtMinBeforePremium.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -559,17 +567,18 @@
             // 
             this.label34.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label34.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label34.Location = new System.Drawing.Point(401, 572);
+            this.label34.Location = new System.Drawing.Point(393, 584);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(212, 29);
+            this.label34.Size = new System.Drawing.Size(212, 22);
             this.label34.TabIndex = 153;
             this.label34.Text = "Minimum Before Premium";
             // 
             // txtRedCost
             // 
-            this.txtRedCost.Location = new System.Drawing.Point(242, 582);
+            this.txtRedCost.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.txtRedCost.Location = new System.Drawing.Point(221, 579);
             this.txtRedCost.Name = "txtRedCost";
-            this.txtRedCost.Size = new System.Drawing.Size(119, 27);
+            this.txtRedCost.Size = new System.Drawing.Size(140, 27);
             this.txtRedCost.TabIndex = 68;
             this.txtRedCost.Text = "0";
             this.txtRedCost.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -577,17 +586,17 @@
             // 
             // label33
             // 
-            this.label33.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label33.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label33.Location = new System.Drawing.Point(66, 582);
+            this.label33.Location = new System.Drawing.Point(126, 582);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(165, 29);
+            this.label33.Size = new System.Drawing.Size(89, 29);
             this.label33.TabIndex = 150;
             this.label33.Text = "Red Cost";
             // 
             // txtGemstoneCer
             // 
-            this.txtGemstoneCer.Location = new System.Drawing.Point(242, 548);
+            this.txtGemstoneCer.Location = new System.Drawing.Point(242, 535);
             this.txtGemstoneCer.Name = "txtGemstoneCer";
             this.txtGemstoneCer.Size = new System.Drawing.Size(119, 27);
             this.txtGemstoneCer.TabIndex = 64;
@@ -597,7 +606,8 @@
             // 
             // txt10
             // 
-            this.txt10.Location = new System.Drawing.Point(448, 538);
+            this.txt10.Enabled = false;
+            this.txt10.Location = new System.Drawing.Point(434, 535);
             this.txt10.Name = "txt10";
             this.txt10.Size = new System.Drawing.Size(119, 27);
             this.txt10.TabIndex = 148;
@@ -605,19 +615,9 @@
             this.txt10.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txt10.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
             // 
-            // label32
-            // 
-            this.label32.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label32.Location = new System.Drawing.Point(66, 548);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(178, 29);
-            this.label32.TabIndex = 147;
-            this.label32.Text = "Certified Gemstone";
-            // 
             // txtCostDiamondCer
             // 
-            this.txtCostDiamondCer.Location = new System.Drawing.Point(242, 514);
+            this.txtCostDiamondCer.Location = new System.Drawing.Point(242, 499);
             this.txtCostDiamondCer.Name = "txtCostDiamondCer";
             this.txtCostDiamondCer.Size = new System.Drawing.Size(119, 27);
             this.txtCostDiamondCer.TabIndex = 60;
@@ -627,7 +627,8 @@
             // 
             // txt9
             // 
-            this.txt9.Location = new System.Drawing.Point(448, 504);
+            this.txt9.Enabled = false;
+            this.txt9.Location = new System.Drawing.Point(434, 499);
             this.txt9.Name = "txt9";
             this.txt9.Size = new System.Drawing.Size(119, 27);
             this.txt9.TabIndex = 145;
@@ -635,19 +636,9 @@
             this.txt9.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txt9.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
             // 
-            // label31
-            // 
-            this.label31.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label31.Location = new System.Drawing.Point(66, 514);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(165, 29);
-            this.label31.TabIndex = 144;
-            this.label31.Text = "Certified Diamond";
-            // 
             // txtCost4
             // 
-            this.txtCost4.Location = new System.Drawing.Point(242, 470);
+            this.txtCost4.Location = new System.Drawing.Point(242, 463);
             this.txtCost4.Name = "txtCost4";
             this.txtCost4.Size = new System.Drawing.Size(119, 27);
             this.txtCost4.TabIndex = 56;
@@ -657,23 +648,14 @@
             // 
             // txt8
             // 
-            this.txt8.Location = new System.Drawing.Point(448, 465);
+            this.txt8.Enabled = false;
+            this.txt8.Location = new System.Drawing.Point(434, 463);
             this.txt8.Name = "txt8";
             this.txt8.Size = new System.Drawing.Size(119, 27);
             this.txt8.TabIndex = 142;
             this.txt8.Text = "0";
             this.txt8.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txt8.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
-            // 
-            // label30
-            // 
-            this.label30.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label30.Location = new System.Drawing.Point(70, 463);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(161, 46);
-            this.label30.TabIndex = 141;
-            this.label30.Text = "Setting Without Certified Stone";
             // 
             // txtCost3
             // 
@@ -683,17 +665,19 @@
             this.txtCost3.TabIndex = 52;
             this.txtCost3.Text = "0";
             this.txtCost3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtCost3.TextChanged += new System.EventHandler(this.txtCost3_TextChanged);
             this.txtCost3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
             // 
-            // txt7
+            // txtCost33
             // 
-            this.txt7.Location = new System.Drawing.Point(448, 427);
-            this.txt7.Name = "txt7";
-            this.txt7.Size = new System.Drawing.Size(119, 27);
-            this.txt7.TabIndex = 139;
-            this.txt7.Text = "0";
-            this.txt7.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txt7.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
+            this.txtCost33.Enabled = false;
+            this.txtCost33.Location = new System.Drawing.Point(434, 427);
+            this.txtCost33.Name = "txtCost33";
+            this.txtCost33.Size = new System.Drawing.Size(119, 27);
+            this.txtCost33.TabIndex = 139;
+            this.txtCost33.Text = "0";
+            this.txtCost33.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtCost33.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
             // 
             // label29
             // 
@@ -705,15 +689,16 @@
             this.label29.TabIndex = 138;
             this.label29.Text = "ค่าอื่นๆ";
             // 
-            // txt5
+            // txtCost11
             // 
-            this.txt5.Location = new System.Drawing.Point(448, 359);
-            this.txt5.Name = "txt5";
-            this.txt5.Size = new System.Drawing.Size(119, 27);
-            this.txt5.TabIndex = 137;
-            this.txt5.Text = "0";
-            this.txt5.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txt5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
+            this.txtCost11.Enabled = false;
+            this.txtCost11.Location = new System.Drawing.Point(434, 359);
+            this.txtCost11.Name = "txtCost11";
+            this.txtCost11.Size = new System.Drawing.Size(119, 27);
+            this.txtCost11.TabIndex = 137;
+            this.txtCost11.Text = "0";
+            this.txtCost11.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtCost11.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
             // 
             // txtCost1
             // 
@@ -723,6 +708,7 @@
             this.txtCost1.TabIndex = 44;
             this.txtCost1.Text = "0";
             this.txtCost1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtCost1.TextChanged += new System.EventHandler(this.txtCost1_TextChanged);
             this.txtCost1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
             // 
             // label23
@@ -743,6 +729,7 @@
             this.txtCost2.TabIndex = 48;
             this.txtCost2.Text = "0";
             this.txtCost2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtCost2.TextChanged += new System.EventHandler(this.txtCost2_TextChanged);
             this.txtCost2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
             // 
             // label25
@@ -755,39 +742,42 @@
             this.label25.TabIndex = 133;
             this.label25.Text = "ค่าชุบ";
             // 
-            // txt6
+            // txtCost22
             // 
-            this.txt6.Location = new System.Drawing.Point(448, 393);
-            this.txt6.Name = "txt6";
-            this.txt6.Size = new System.Drawing.Size(119, 27);
-            this.txt6.TabIndex = 132;
-            this.txt6.Text = "0";
-            this.txt6.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txt6.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
+            this.txtCost22.Enabled = false;
+            this.txtCost22.Location = new System.Drawing.Point(434, 393);
+            this.txtCost22.Name = "txtCost22";
+            this.txtCost22.Size = new System.Drawing.Size(119, 27);
+            this.txtCost22.TabIndex = 132;
+            this.txtCost22.Text = "0";
+            this.txtCost22.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtCost22.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
             // 
             // chkMoreMaterial
             // 
             this.chkMoreMaterial.AutoSize = true;
-            this.chkMoreMaterial.Location = new System.Drawing.Point(423, 134);
+            this.chkMoreMaterial.Location = new System.Drawing.Point(1001, 75);
             this.chkMoreMaterial.Name = "chkMoreMaterial";
-            this.chkMoreMaterial.Size = new System.Drawing.Size(138, 25);
+            this.chkMoreMaterial.Size = new System.Drawing.Size(107, 25);
             this.chkMoreMaterial.TabIndex = 88;
-            this.chkMoreMaterial.Text = "More Material";
+            this.chkMoreMaterial.Text = "Material 2";
             this.chkMoreMaterial.UseVisualStyleBackColor = true;
             this.chkMoreMaterial.CheckedChanged += new System.EventHandler(this.chkMoreMaterial_CheckedChanged);
             // 
-            // txt3
+            // txtMaterialNetCost1
             // 
-            this.txt3.Location = new System.Drawing.Point(448, 291);
-            this.txt3.Name = "txt3";
-            this.txt3.Size = new System.Drawing.Size(119, 27);
-            this.txt3.TabIndex = 130;
-            this.txt3.Text = "0";
-            this.txt3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txt3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
+            this.txtMaterialNetCost1.Enabled = false;
+            this.txtMaterialNetCost1.Location = new System.Drawing.Point(434, 291);
+            this.txtMaterialNetCost1.Name = "txtMaterialNetCost1";
+            this.txtMaterialNetCost1.Size = new System.Drawing.Size(119, 27);
+            this.txtMaterialNetCost1.TabIndex = 130;
+            this.txtMaterialNetCost1.Text = "0";
+            this.txtMaterialNetCost1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtMaterialNetCost1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
             // 
             // txtMaterialNetCost
             // 
+            this.txtMaterialNetCost.Enabled = false;
             this.txtMaterialNetCost.Location = new System.Drawing.Point(242, 291);
             this.txtMaterialNetCost.Name = "txtMaterialNetCost";
             this.txtMaterialNetCost.Size = new System.Drawing.Size(119, 27);
@@ -812,13 +802,14 @@
             this.panel3.Controls.Add(this.txtMaterialWeight2);
             this.panel3.Controls.Add(this.txtPricePerGram22);
             this.panel3.Controls.Add(this.label21);
-            this.panel3.Controls.Add(this.txt12);
+            this.panel3.Controls.Add(this.txtMaterialCost22);
             this.panel3.Controls.Add(this.cmbMaterial2);
             this.panel3.Controls.Add(this.txtMaterialCost2);
             this.panel3.Controls.Add(this.label20);
             this.panel3.Controls.Add(this.txtPricePerGram2);
             this.panel3.Controls.Add(this.label18);
-            this.panel3.Location = new System.Drawing.Point(567, 112);
+            this.panel3.Enabled = false;
+            this.panel3.Location = new System.Drawing.Point(653, 106);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(455, 159);
             this.panel3.TabIndex = 127;
@@ -840,6 +831,7 @@
             this.txtMaterialWeight2.TabIndex = 96;
             this.txtMaterialWeight2.Text = "0";
             this.txtMaterialWeight2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtMaterialWeight2.TextChanged += new System.EventHandler(this.txtMaterialWeight2_TextChanged);
             this.txtMaterialWeight2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
             // 
             // txtPricePerGram22
@@ -850,6 +842,7 @@
             this.txtPricePerGram22.TabIndex = 164;
             this.txtPricePerGram22.Text = "0";
             this.txtPricePerGram22.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtPricePerGram22.TextChanged += new System.EventHandler(this.txtPricePerGram22_TextChanged);
             this.txtPricePerGram22.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
             // 
             // label21
@@ -861,15 +854,17 @@
             this.label21.TabIndex = 130;
             this.label21.Text = "Material2 Cost";
             // 
-            // txt12
+            // txtMaterialCost22
             // 
-            this.txt12.Location = new System.Drawing.Point(323, 117);
-            this.txt12.Name = "txt12";
-            this.txt12.Size = new System.Drawing.Size(119, 27);
-            this.txt12.TabIndex = 172;
-            this.txt12.Text = "0";
-            this.txt12.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txt12.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
+            this.txtMaterialCost22.Enabled = false;
+            this.txtMaterialCost22.Location = new System.Drawing.Point(323, 117);
+            this.txtMaterialCost22.Name = "txtMaterialCost22";
+            this.txtMaterialCost22.Size = new System.Drawing.Size(119, 27);
+            this.txtMaterialCost22.TabIndex = 172;
+            this.txtMaterialCost22.Text = "0";
+            this.txtMaterialCost22.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtMaterialCost22.TextChanged += new System.EventHandler(this.txtMaterialCost11_TextChanged);
+            this.txtMaterialCost22.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
             // 
             // cmbMaterial2
             // 
@@ -887,6 +882,7 @@
             this.txtMaterialCost2.TabIndex = 104;
             this.txtMaterialCost2.Text = "0";
             this.txtMaterialCost2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtMaterialCost2.TextChanged += new System.EventHandler(this.txtMaterialCost1_TextChanged);
             this.txtMaterialCost2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
             // 
             // label20
@@ -907,6 +903,7 @@
             this.txtPricePerGram2.TabIndex = 100;
             this.txtPricePerGram2.Text = "0";
             this.txtPricePerGram2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtPricePerGram2.TextChanged += new System.EventHandler(this.txtMaterialWeight2_TextChanged);
             this.txtPricePerGram2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
             // 
             // label18
@@ -931,23 +928,26 @@
             // 
             // txtPricePerGram11
             // 
-            this.txtPricePerGram11.Location = new System.Drawing.Point(401, 202);
+            this.txtPricePerGram11.Location = new System.Drawing.Point(402, 202);
             this.txtPricePerGram11.Name = "txtPricePerGram11";
             this.txtPricePerGram11.Size = new System.Drawing.Size(119, 27);
             this.txtPricePerGram11.TabIndex = 136;
             this.txtPricePerGram11.Text = "0";
             this.txtPricePerGram11.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtPricePerGram11.TextChanged += new System.EventHandler(this.txtPricePerGram11_TextChanged);
             this.txtPricePerGram11.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
             // 
-            // txt2
+            // txtMaterialCost11
             // 
-            this.txt2.Location = new System.Drawing.Point(401, 235);
-            this.txt2.Name = "txt2";
-            this.txt2.Size = new System.Drawing.Size(119, 27);
-            this.txt2.TabIndex = 144;
-            this.txt2.Text = "0";
-            this.txt2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txt2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
+            this.txtMaterialCost11.Enabled = false;
+            this.txtMaterialCost11.Location = new System.Drawing.Point(402, 235);
+            this.txtMaterialCost11.Name = "txtMaterialCost11";
+            this.txtMaterialCost11.Size = new System.Drawing.Size(119, 27);
+            this.txtMaterialCost11.TabIndex = 144;
+            this.txtMaterialCost11.Text = "0";
+            this.txtMaterialCost11.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtMaterialCost11.TextChanged += new System.EventHandler(this.txtMaterialCost11_TextChanged);
+            this.txtMaterialCost11.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
             // 
             // txtLaborCost
             // 
@@ -957,6 +957,7 @@
             this.txtLaborCost.TabIndex = 40;
             this.txtLaborCost.Text = "0";
             this.txtLaborCost.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtLaborCost.TextChanged += new System.EventHandler(this.txtLaborCost_TextChanged);
             this.txtLaborCost.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
             // 
             // label12
@@ -970,23 +971,26 @@
             // 
             // txtMaterialCost1
             // 
+            this.txtMaterialCost1.Enabled = false;
             this.txtMaterialCost1.Location = new System.Drawing.Point(196, 238);
             this.txtMaterialCost1.Name = "txtMaterialCost1";
             this.txtMaterialCost1.Size = new System.Drawing.Size(119, 27);
             this.txtMaterialCost1.TabIndex = 36;
             this.txtMaterialCost1.Text = "0";
             this.txtMaterialCost1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtMaterialCost1.TextChanged += new System.EventHandler(this.txtMaterialCost1_TextChanged);
             this.txtMaterialCost1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
             // 
-            // txt4
+            // txtLaborCost1
             // 
-            this.txt4.Location = new System.Drawing.Point(448, 325);
-            this.txt4.Name = "txt4";
-            this.txt4.Size = new System.Drawing.Size(119, 27);
-            this.txt4.TabIndex = 120;
-            this.txt4.Text = "0";
-            this.txt4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txt4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
+            this.txtLaborCost1.Enabled = false;
+            this.txtLaborCost1.Location = new System.Drawing.Point(434, 325);
+            this.txtLaborCost1.Name = "txtLaborCost1";
+            this.txtLaborCost1.Size = new System.Drawing.Size(119, 27);
+            this.txtLaborCost1.TabIndex = 120;
+            this.txtLaborCost1.Text = "0";
+            this.txtLaborCost1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtLaborCost1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
             // 
             // txtPricePerGram1
             // 
@@ -996,6 +1000,7 @@
             this.txtPricePerGram1.TabIndex = 32;
             this.txtPricePerGram1.Text = "0";
             this.txtPricePerGram1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtPricePerGram1.TextChanged += new System.EventHandler(this.txtMaterialWeight1_TextChanged);
             this.txtPricePerGram1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
             // 
             // label10
@@ -1012,7 +1017,7 @@
             // label11
             // 
             this.label11.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(574, 58);
+            this.label11.Location = new System.Drawing.Point(660, 52);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(117, 24);
             this.label11.TabIndex = 117;
@@ -1030,16 +1035,16 @@
             // txtRemark
             // 
             this.txtRemark.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.txtRemark.Location = new System.Drawing.Point(679, 478);
+            this.txtRemark.Location = new System.Drawing.Point(653, 475);
             this.txtRemark.Multiline = true;
             this.txtRemark.Name = "txtRemark";
-            this.txtRemark.Size = new System.Drawing.Size(323, 59);
+            this.txtRemark.Size = new System.Drawing.Size(320, 87);
             this.txtRemark.TabIndex = 84;
             // 
             // label27
             // 
             this.label27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label27.Location = new System.Drawing.Point(684, 454);
+            this.label27.Location = new System.Drawing.Point(649, 446);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(120, 26);
             this.label27.TabIndex = 106;
@@ -1049,7 +1054,7 @@
             // 
             this.label26.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label26.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label26.Location = new System.Drawing.Point(574, 22);
+            this.label26.Location = new System.Drawing.Point(660, 16);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(76, 26);
             this.label26.TabIndex = 105;
@@ -1058,7 +1063,7 @@
             // cmbShop
             // 
             this.cmbShop.FormattingEnabled = true;
-            this.cmbShop.Location = new System.Drawing.Point(392, 19);
+            this.cmbShop.Location = new System.Drawing.Point(436, 19);
             this.cmbShop.Name = "cmbShop";
             this.cmbShop.Size = new System.Drawing.Size(165, 29);
             this.cmbShop.TabIndex = 8;
@@ -1066,7 +1071,7 @@
             // cmbStatus
             // 
             this.cmbStatus.FormattingEnabled = true;
-            this.cmbStatus.Location = new System.Drawing.Point(697, 19);
+            this.cmbStatus.Location = new System.Drawing.Point(783, 13);
             this.cmbStatus.Name = "cmbStatus";
             this.cmbStatus.Size = new System.Drawing.Size(165, 29);
             this.cmbStatus.TabIndex = 16;
@@ -1074,7 +1079,7 @@
             // cmbJewelryType
             // 
             this.cmbJewelryType.FormattingEnabled = true;
-            this.cmbJewelryType.Location = new System.Drawing.Point(392, 55);
+            this.cmbJewelryType.Location = new System.Drawing.Point(436, 55);
             this.cmbJewelryType.Name = "cmbJewelryType";
             this.cmbJewelryType.Size = new System.Drawing.Size(165, 29);
             this.cmbJewelryType.TabIndex = 12;
@@ -1087,6 +1092,7 @@
             this.txtMaterialWeight1.TabIndex = 28;
             this.txtMaterialWeight1.Text = "0";
             this.txtMaterialWeight1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtMaterialWeight1.TextChanged += new System.EventHandler(this.txtMaterialWeight1_TextChanged);
             this.txtMaterialWeight1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
             this.txtMaterialWeight1.Leave += new System.EventHandler(this.txtCost_Leave);
             // 
@@ -1120,7 +1126,7 @@
             // 
             // label19
             // 
-            this.label19.Location = new System.Drawing.Point(328, 22);
+            this.label19.Location = new System.Drawing.Point(372, 22);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(58, 28);
             this.label19.TabIndex = 89;
@@ -1137,7 +1143,7 @@
             // label24
             // 
             this.label24.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.label24.Location = new System.Drawing.Point(328, 58);
+            this.label24.Location = new System.Drawing.Point(372, 58);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(58, 26);
             this.label24.TabIndex = 80;
@@ -1176,13 +1182,43 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // label39
+            // 
+            this.label39.Font = new System.Drawing.Font("Cordia New", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label39.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
+            this.label39.Location = new System.Drawing.Point(136, 464);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(100, 24);
+            this.label39.TabIndex = 203;
+            this.label39.Text = "ราคาตัวเรือน";
+            // 
+            // label30
+            // 
+            this.label30.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
+            this.label30.Location = new System.Drawing.Point(77, 538);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(143, 29);
+            this.label30.TabIndex = 204;
+            this.label30.Text = "Cer Dia && Gems.";
+            // 
+            // label32
+            // 
+            this.label32.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
+            this.label32.Location = new System.Drawing.Point(57, 502);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(179, 29);
+            this.label32.TabIndex = 205;
+            this.label32.Text = "Non Cer Dia && Gems.";
+            // 
             // Inventory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(195)))), ((int)(((byte)(157)))));
-            this.ClientSize = new System.Drawing.Size(1062, 764);
+            this.ClientSize = new System.Drawing.Size(1165, 767);
             this.Controls.Add(this.panel7);
             this.Name = "Inventory";
             this.Text = "Product";
@@ -1242,15 +1278,15 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtMaterialCost1;
-        private System.Windows.Forms.TextBox txt4;
+        private System.Windows.Forms.TextBox txtLaborCost1;
         private System.Windows.Forms.TextBox txtPricePerGram1;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox txtPricePerGram11;
-        private System.Windows.Forms.TextBox txt2;
+        private System.Windows.Forms.TextBox txtMaterialCost11;
         private System.Windows.Forms.TextBox txtLaborCost;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox txt3;
+        private System.Windows.Forms.TextBox txtMaterialNetCost1;
         private System.Windows.Forms.TextBox txtMaterialNetCost;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Panel panel3;
@@ -1258,31 +1294,28 @@
         private System.Windows.Forms.TextBox txtMaterialWeight2;
         private System.Windows.Forms.TextBox txtPricePerGram22;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TextBox txt12;
+        private System.Windows.Forms.TextBox txtMaterialCost22;
         private System.Windows.Forms.ComboBox cmbMaterial2;
         private System.Windows.Forms.TextBox txtMaterialCost2;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.TextBox txtPricePerGram2;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox txt5;
+        private System.Windows.Forms.TextBox txtCost11;
         private System.Windows.Forms.TextBox txtCost1;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.TextBox txtCost2;
         private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.TextBox txt6;
+        private System.Windows.Forms.TextBox txtCost22;
         private System.Windows.Forms.CheckBox chkMoreMaterial;
         private System.Windows.Forms.TextBox txtCost3;
-        private System.Windows.Forms.TextBox txt7;
+        private System.Windows.Forms.TextBox txtCost33;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.TextBox txtCostDiamondCer;
         private System.Windows.Forms.TextBox txt9;
-        private System.Windows.Forms.Label label31;
         private System.Windows.Forms.TextBox txtCost4;
         private System.Windows.Forms.TextBox txt8;
-        private System.Windows.Forms.Label label30;
         private System.Windows.Forms.TextBox txtGemstoneCer;
         private System.Windows.Forms.TextBox txt10;
-        private System.Windows.Forms.Label label32;
         private System.Windows.Forms.TextBox txtRedCost;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.TextBox txtPriceTag;
@@ -1300,5 +1333,8 @@
         private System.Windows.Forms.DateTimePicker dtImportDate;
         private System.Windows.Forms.TextBox txtSize;
         private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.Label label32;
     }
 }
