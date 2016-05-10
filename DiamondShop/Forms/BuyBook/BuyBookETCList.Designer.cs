@@ -193,12 +193,12 @@
             // 
             this.Price.DataPropertyName = "Price";
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle2.Format = "N2";
+            dataGridViewCellStyle2.Format = "N0";
             this.Price.DefaultCellStyle = dataGridViewCellStyle2;
             this.Price.HeaderText = "Price";
             this.Price.Name = "Price";
             this.Price.ReadOnly = true;
-            this.Price.Width = 120;
+            this.Price.Width = 125;
             // 
             // BuyBookETCList
             // 
