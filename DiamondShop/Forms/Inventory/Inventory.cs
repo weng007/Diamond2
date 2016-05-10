@@ -75,9 +75,9 @@ namespace DiamondShop
             binder.BindControl(txtCost1, "Cost1");
             binder.BindControl(txtCost2, "Cost2");
             binder.BindControl(txtCost3, "Cost3");
-            binder.BindControl(txtCost4, "Cost4");
-            binder.BindControl(txtCostDiamondCer, "CostDiamondCer");
-            binder.BindControl(txtGemstoneCer, "CostGemstoneCer");
+            binder.BindControl(txtCostBody, "CostBody");
+            binder.BindControl(txtNonCost, "CostNonCer");
+            binder.BindControl(txtCer, "CostCer");
             binder.BindControl(txtRedCost, "RedCost");
             //binder.BindControl(txtMinBeforePremium, "MinBeforePremium");
             binder.BindControl(txtMinPrice, "MinPrice");

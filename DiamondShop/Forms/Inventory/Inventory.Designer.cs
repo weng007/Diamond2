@@ -51,6 +51,9 @@
             this.btnImage1 = new System.Windows.Forms.Button();
             this.btnImage2 = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
             this.txtSize = new System.Windows.Forms.TextBox();
             this.label38 = new System.Windows.Forms.Label();
             this.dtImportDate = new System.Windows.Forms.DateTimePicker();
@@ -68,11 +71,11 @@
             this.label34 = new System.Windows.Forms.Label();
             this.txtRedCost = new System.Windows.Forms.TextBox();
             this.label33 = new System.Windows.Forms.Label();
-            this.txtGemstoneCer = new System.Windows.Forms.TextBox();
+            this.txtCer = new System.Windows.Forms.TextBox();
             this.txt10 = new System.Windows.Forms.TextBox();
-            this.txtCostDiamondCer = new System.Windows.Forms.TextBox();
+            this.txtNonCost = new System.Windows.Forms.TextBox();
             this.txt9 = new System.Windows.Forms.TextBox();
-            this.txtCost4 = new System.Windows.Forms.TextBox();
+            this.txtCostBody = new System.Windows.Forms.TextBox();
             this.txt8 = new System.Windows.Forms.TextBox();
             this.txtCost3 = new System.Windows.Forms.TextBox();
             this.txtCost33 = new System.Windows.Forms.TextBox();
@@ -126,9 +129,6 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.label39 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -208,7 +208,7 @@
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Location = new System.Drawing.Point(364, 54);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(100, 27);
+            this.comboBox3.Size = new System.Drawing.Size(100, 21);
             this.comboBox3.TabIndex = 28;
             // 
             // textBox2
@@ -359,11 +359,11 @@
             this.panel7.Controls.Add(this.label34);
             this.panel7.Controls.Add(this.txtRedCost);
             this.panel7.Controls.Add(this.label33);
-            this.panel7.Controls.Add(this.txtGemstoneCer);
+            this.panel7.Controls.Add(this.txtCer);
             this.panel7.Controls.Add(this.txt10);
-            this.panel7.Controls.Add(this.txtCostDiamondCer);
+            this.panel7.Controls.Add(this.txtNonCost);
             this.panel7.Controls.Add(this.txt9);
-            this.panel7.Controls.Add(this.txtCost4);
+            this.panel7.Controls.Add(this.txtCostBody);
             this.panel7.Controls.Add(this.txt8);
             this.panel7.Controls.Add(this.txtCost3);
             this.panel7.Controls.Add(this.txtCost33);
@@ -414,6 +414,36 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(1139, 689);
             this.panel7.TabIndex = 37;
+            // 
+            // label32
+            // 
+            this.label32.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
+            this.label32.Location = new System.Drawing.Point(57, 502);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(179, 29);
+            this.label32.TabIndex = 205;
+            this.label32.Text = "Non Cer Dia && Gems.";
+            // 
+            // label30
+            // 
+            this.label30.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
+            this.label30.Location = new System.Drawing.Point(77, 538);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(143, 29);
+            this.label30.TabIndex = 204;
+            this.label30.Text = "Cer Dia && Gems.";
+            // 
+            // label39
+            // 
+            this.label39.Font = new System.Drawing.Font("Cordia New", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label39.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
+            this.label39.Location = new System.Drawing.Point(136, 464);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(100, 24);
+            this.label39.TabIndex = 203;
+            this.label39.Text = "ราคาตัวเรือน";
             // 
             // txtSize
             // 
@@ -594,15 +624,15 @@
             this.label33.TabIndex = 150;
             this.label33.Text = "Red Cost";
             // 
-            // txtGemstoneCer
+            // txtCer
             // 
-            this.txtGemstoneCer.Location = new System.Drawing.Point(242, 535);
-            this.txtGemstoneCer.Name = "txtGemstoneCer";
-            this.txtGemstoneCer.Size = new System.Drawing.Size(119, 27);
-            this.txtGemstoneCer.TabIndex = 64;
-            this.txtGemstoneCer.Text = "0";
-            this.txtGemstoneCer.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtGemstoneCer.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
+            this.txtCer.Location = new System.Drawing.Point(242, 535);
+            this.txtCer.Name = "txtCer";
+            this.txtCer.Size = new System.Drawing.Size(119, 27);
+            this.txtCer.TabIndex = 64;
+            this.txtCer.Text = "0";
+            this.txtCer.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtCer.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
             // 
             // txt10
             // 
@@ -615,15 +645,15 @@
             this.txt10.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txt10.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
             // 
-            // txtCostDiamondCer
+            // txtNonCost
             // 
-            this.txtCostDiamondCer.Location = new System.Drawing.Point(242, 499);
-            this.txtCostDiamondCer.Name = "txtCostDiamondCer";
-            this.txtCostDiamondCer.Size = new System.Drawing.Size(119, 27);
-            this.txtCostDiamondCer.TabIndex = 60;
-            this.txtCostDiamondCer.Text = "0";
-            this.txtCostDiamondCer.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtCostDiamondCer.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
+            this.txtNonCost.Location = new System.Drawing.Point(242, 499);
+            this.txtNonCost.Name = "txtNonCost";
+            this.txtNonCost.Size = new System.Drawing.Size(119, 27);
+            this.txtNonCost.TabIndex = 60;
+            this.txtNonCost.Text = "0";
+            this.txtNonCost.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtNonCost.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
             // 
             // txt9
             // 
@@ -636,15 +666,15 @@
             this.txt9.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txt9.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
             // 
-            // txtCost4
+            // txtCostBody
             // 
-            this.txtCost4.Location = new System.Drawing.Point(242, 463);
-            this.txtCost4.Name = "txtCost4";
-            this.txtCost4.Size = new System.Drawing.Size(119, 27);
-            this.txtCost4.TabIndex = 56;
-            this.txtCost4.Text = "0";
-            this.txtCost4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtCost4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
+            this.txtCostBody.Location = new System.Drawing.Point(242, 463);
+            this.txtCostBody.Name = "txtCostBody";
+            this.txtCostBody.Size = new System.Drawing.Size(119, 27);
+            this.txtCostBody.TabIndex = 56;
+            this.txtCostBody.Text = "0";
+            this.txtCostBody.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtCostBody.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
             // 
             // txt8
             // 
@@ -1182,36 +1212,6 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // label39
-            // 
-            this.label39.Font = new System.Drawing.Font("Cordia New", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label39.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label39.Location = new System.Drawing.Point(136, 464);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(100, 24);
-            this.label39.TabIndex = 203;
-            this.label39.Text = "ราคาตัวเรือน";
-            // 
-            // label30
-            // 
-            this.label30.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label30.Location = new System.Drawing.Point(77, 538);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(143, 29);
-            this.label30.TabIndex = 204;
-            this.label30.Text = "Cer Dia && Gems.";
-            // 
-            // label32
-            // 
-            this.label32.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label32.Location = new System.Drawing.Point(57, 502);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(179, 29);
-            this.label32.TabIndex = 205;
-            this.label32.Text = "Non Cer Dia && Gems.";
-            // 
             // Inventory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1310,11 +1310,11 @@
         private System.Windows.Forms.TextBox txtCost3;
         private System.Windows.Forms.TextBox txtCost33;
         private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.TextBox txtCostDiamondCer;
+        private System.Windows.Forms.TextBox txtNonCost;
         private System.Windows.Forms.TextBox txt9;
-        private System.Windows.Forms.TextBox txtCost4;
+        private System.Windows.Forms.TextBox txtCostBody;
         private System.Windows.Forms.TextBox txt8;
-        private System.Windows.Forms.TextBox txtGemstoneCer;
+        private System.Windows.Forms.TextBox txtCer;
         private System.Windows.Forms.TextBox txt10;
         private System.Windows.Forms.TextBox txtRedCost;
         private System.Windows.Forms.Label label33;
