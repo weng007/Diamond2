@@ -329,11 +329,11 @@ namespace DiamondDS.DS {
             
             private global::System.Data.DataColumn columnCost3;
             
-            private global::System.Data.DataColumn columnCost4;
+            private global::System.Data.DataColumn columnCostBody;
             
-            private global::System.Data.DataColumn columnCostDiamondCer;
+            private global::System.Data.DataColumn columnCostNonCer;
             
-            private global::System.Data.DataColumn columnCostGemstoneCer;
+            private global::System.Data.DataColumn columnCostCer;
             
             private global::System.Data.DataColumn columnRedCost;
             
@@ -618,25 +618,25 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn Cost4Column {
+            public global::System.Data.DataColumn CostBodyColumn {
                 get {
-                    return this.columnCost4;
+                    return this.columnCostBody;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn CostDiamondCerColumn {
+            public global::System.Data.DataColumn CostNonCerColumn {
                 get {
-                    return this.columnCostDiamondCer;
+                    return this.columnCostNonCer;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn CostGemstoneCerColumn {
+            public global::System.Data.DataColumn CostCerColumn {
                 get {
-                    return this.columnCostGemstoneCer;
+                    return this.columnCostCer;
                 }
             }
             
@@ -894,9 +894,9 @@ namespace DiamondDS.DS {
                         decimal Cost1, 
                         decimal Cost2, 
                         decimal Cost3, 
-                        decimal Cost4, 
-                        decimal CostDiamondCer, 
-                        decimal CostGemstoneCer, 
+                        decimal CostBody, 
+                        decimal CostNonCer, 
+                        decimal CostCer, 
                         decimal RedCost, 
                         decimal MinPrice, 
                         decimal PriceTag, 
@@ -948,9 +948,9 @@ namespace DiamondDS.DS {
                         Cost1,
                         Cost2,
                         Cost3,
-                        Cost4,
-                        CostDiamondCer,
-                        CostGemstoneCer,
+                        CostBody,
+                        CostNonCer,
+                        CostCer,
                         RedCost,
                         MinPrice,
                         PriceTag,
@@ -1029,9 +1029,9 @@ namespace DiamondDS.DS {
                 this.columnCost1 = base.Columns["Cost1"];
                 this.columnCost2 = base.Columns["Cost2"];
                 this.columnCost3 = base.Columns["Cost3"];
-                this.columnCost4 = base.Columns["Cost4"];
-                this.columnCostDiamondCer = base.Columns["CostDiamondCer"];
-                this.columnCostGemstoneCer = base.Columns["CostGemstoneCer"];
+                this.columnCostBody = base.Columns["CostBody"];
+                this.columnCostNonCer = base.Columns["CostNonCer"];
+                this.columnCostCer = base.Columns["CostCer"];
                 this.columnRedCost = base.Columns["RedCost"];
                 this.columnMinPrice = base.Columns["MinPrice"];
                 this.columnPriceTag = base.Columns["PriceTag"];
@@ -1111,12 +1111,12 @@ namespace DiamondDS.DS {
                 base.Columns.Add(this.columnCost2);
                 this.columnCost3 = new global::System.Data.DataColumn("Cost3", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCost3);
-                this.columnCost4 = new global::System.Data.DataColumn("Cost4", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCost4);
-                this.columnCostDiamondCer = new global::System.Data.DataColumn("CostDiamondCer", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCostDiamondCer);
-                this.columnCostGemstoneCer = new global::System.Data.DataColumn("CostGemstoneCer", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCostGemstoneCer);
+                this.columnCostBody = new global::System.Data.DataColumn("CostBody", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCostBody);
+                this.columnCostNonCer = new global::System.Data.DataColumn("CostNonCer", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCostNonCer);
+                this.columnCostCer = new global::System.Data.DataColumn("CostCer", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCostCer);
                 this.columnRedCost = new global::System.Data.DataColumn("RedCost", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnRedCost);
                 this.columnMinPrice = new global::System.Data.DataColumn("MinPrice", typeof(decimal), null, global::System.Data.MappingType.Element);
@@ -1735,49 +1735,49 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public decimal Cost4 {
+            public decimal CostBody {
                 get {
                     try {
-                        return ((decimal)(this[this.tableInventory.Cost4Column]));
+                        return ((decimal)(this[this.tableInventory.CostBodyColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Cost4\' in table \'Inventory\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'CostBody\' in table \'Inventory\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableInventory.Cost4Column] = value;
+                    this[this.tableInventory.CostBodyColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public decimal CostDiamondCer {
+            public decimal CostNonCer {
                 get {
                     try {
-                        return ((decimal)(this[this.tableInventory.CostDiamondCerColumn]));
+                        return ((decimal)(this[this.tableInventory.CostNonCerColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'CostDiamondCer\' in table \'Inventory\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'CostNonCer\' in table \'Inventory\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableInventory.CostDiamondCerColumn] = value;
+                    this[this.tableInventory.CostNonCerColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public decimal CostGemstoneCer {
+            public decimal CostCer {
                 get {
                     try {
-                        return ((decimal)(this[this.tableInventory.CostGemstoneCerColumn]));
+                        return ((decimal)(this[this.tableInventory.CostCerColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'CostGemstoneCer\' in table \'Inventory\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'CostCer\' in table \'Inventory\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableInventory.CostGemstoneCerColumn] = value;
+                    this[this.tableInventory.CostCerColumn] = value;
                 }
             }
             
@@ -2455,38 +2455,38 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsCost4Null() {
-                return this.IsNull(this.tableInventory.Cost4Column);
+            public bool IsCostBodyNull() {
+                return this.IsNull(this.tableInventory.CostBodyColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetCost4Null() {
-                this[this.tableInventory.Cost4Column] = global::System.Convert.DBNull;
+            public void SetCostBodyNull() {
+                this[this.tableInventory.CostBodyColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsCostDiamondCerNull() {
-                return this.IsNull(this.tableInventory.CostDiamondCerColumn);
+            public bool IsCostNonCerNull() {
+                return this.IsNull(this.tableInventory.CostNonCerColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetCostDiamondCerNull() {
-                this[this.tableInventory.CostDiamondCerColumn] = global::System.Convert.DBNull;
+            public void SetCostNonCerNull() {
+                this[this.tableInventory.CostNonCerColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsCostGemstoneCerNull() {
-                return this.IsNull(this.tableInventory.CostGemstoneCerColumn);
+            public bool IsCostCerNull() {
+                return this.IsNull(this.tableInventory.CostCerColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetCostGemstoneCerNull() {
-                this[this.tableInventory.CostGemstoneCerColumn] = global::System.Convert.DBNull;
+            public void SetCostCerNull() {
+                this[this.tableInventory.CostCerColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
