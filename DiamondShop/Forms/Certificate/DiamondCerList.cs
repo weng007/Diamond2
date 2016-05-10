@@ -88,32 +88,6 @@ namespace DiamondShop
             }
         }
 
-        private void cmbColorGrade_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string color = "";
-
-            //if(cmbColorGrade.SelectedIndex == 0)
-            //{
-            //    cmbSColor.Enabled = false;
-            //    color = "C001";
-            //}
-            //else if(cmbColorGrade.SelectedIndex == 1)
-            //{
-            //    color = "C001";
-            //    cmbSColor.Enabled = true;     
-            //}
-            //else
-            //{
-            //    color = "C017";
-            //    cmbSColor.Enabled = true;
-            //}
-
-            cmbSColor.DataSource = (GM.GetMasterTableDetail(color,true)).Tables[0];
-            cmbSColor.ValueMember = "ID";
-            cmbSColor.DisplayMember = "Detail";
-            cmbSColor.Refresh();
-        }
-
         private void btnSearch_Click(object sender, EventArgs e)
         {
             ser2 = GM.GetService2();

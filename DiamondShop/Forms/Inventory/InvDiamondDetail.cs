@@ -56,14 +56,17 @@ namespace DiamondShop
             Shape.DataSource = (GM.GetMasterTableDetail("C019")).Tables[0];
             Shape.ValueMember = "ID";
             Shape.DisplayMember = "Detail";
+            Shape.DisplayIndex = 0;
 
             Color.DataSource = (GM.GetMasterTableDetail("C001")).Tables[0];
             Color.ValueMember = "ID";
             Color.DisplayMember = "Detail";
+            Color.DisplayIndex = 0;
 
             Clearity1.DataSource = (GM.GetMasterTableDetail("C002")).Tables[0];
             Clearity1.ValueMember = "ID";
             Clearity1.DisplayMember = "Detail";
+            Clearity1.DisplayIndex = 0;
 
             //cmbShape.Select();
 
@@ -186,21 +189,6 @@ namespace DiamondShop
             else { return false; }
         }
 
-        private void cmbColorGrade_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string color = "C017";
-
-            //if (cmbColorGrade.SelectedIndex == 0)
-            //{
-            //    color = "C001";
-            //}
-
-            //cmbColor.DataSource = (GM.GetMasterTableDetail(color)).Tables[0];
-            //cmbColor.ValueMember = "ID";
-            //cmbColor.DisplayMember = "Detail";
-            //cmbColor.Refresh();
-        }
-
         private void txtWeight_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
@@ -219,6 +207,14 @@ namespace DiamondShop
             {
                 datagridview.BeginEdit(true);
                 ((ComboBox)datagridview.EditingControl).DroppedDown = true;
+            }
+        }
+
+        private void grid1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(e.ColumnIndex == 10)
+            {
+                
             }
         }
     }

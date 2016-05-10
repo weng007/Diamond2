@@ -259,26 +259,6 @@ namespace DiamondShop
             //{
             //    message += "Please input Code.\n";
             //}
-            //if (txtNetWeight.Text == "" || GM.ConvertStringToDouble(txtNetWeight) == 0)
-            //{
-            //    message += "Please input Net Weight > 0.\n";
-            //}
-            //if (txtSize.Text == "" || GM.ConvertStringToDouble(txtSize) == 0)
-            //{
-            //    message += "Please input Size > 0.\n";
-            //}
-            //if (txtMaterialWeight1.Text == "" || GM.ConvertStringToDouble(txtMaterialWeight1) == 0)
-            //{
-            //    message += "Please input Cost > 0.\n";
-            //}
-            //if (txtMinPrice.Text == "" || GM.ConvertStringToDouble(txtMinPrice) == 0)
-            //{
-            //    message += "Please input Min Price > 0.\n";
-            //}
-            //if (txtOpenPrice.Text == "" || GM.ConvertStringToDouble(txtOpenPrice) == 0)
-            //{
-            //    message += "Please input Open Price >0.\n";
-            //}
 
             if (message == "") { return true; }
             else { return false; }
@@ -312,51 +292,6 @@ namespace DiamondShop
             }
         }
 
-        private void btnEdit_Click(object sender, EventArgs e)
-        {
-            //if (gridDiamond.RowCount > 0 && gridDiamond.SelectedRows.Count > 0)
-            //{
-            //    int id1 = 0;
-            //    id1 = (int)gridDiamond.SelectedRows[0].Cells["ID"].Value;
-            //    DiamondDetail frm = new DiamondDetail(id1);
-            //    frm.productID = Convert.ToInt16(tds.Product[0]["ID"].ToString());
-            //    frm.ShowDialog();
-            //}
-
-            LoadData();
-        }
-
-        private void btnDel_Click(object sender, EventArgs e)
-        {
-            //if (gridDiamond.SelectedRows.Count > 0)
-            //{
-            //    DeleteData(0, (int)gridDiamond.SelectedRows[0].Cells["ID"].Value);
-            //    LoadData();
-            //}
-        }
-
-        //private void DeleteData(int gridNum, int sid)
-        //{
-        //    if(gridNum == 0)
-        //    try
-        //    {
-        //        ser.DoDeleteData("Inventory", sid);
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        throw ex;
-        //    }
-        //    else if (gridNum == 1)
-        //    try
-        //    {
-        //        ser.DoDeleteData("Inventory", sid);
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        throw ex;
-        //    }
-        //}
-
         private void txtCost_Leave(object sender, EventArgs e)
         {
             txtMaterialWeight1.Text = GM.ConvertDoubleToString(txtMaterialWeight1);
@@ -379,17 +314,94 @@ namespace DiamondShop
         {
             if(chkMoreMaterial.Checked)
             {
-                panel3.Visible = true;
+                panel3.Enabled = true;
             }
             else
             {
-                panel3.Visible = false;
+                panel3.Enabled = false;
+
+                txtPricePerGram2.Text = "0";
+                txtPricePerGram22.Text = "0";
             }
         }
 
-        private void txtOpenPrice_Leave(object sender, EventArgs e)
+        private void txtMaterialWeight1_TextChanged(object sender, EventArgs e)
         {
-            //txtOpenPrice.Text = GM.ConvertDoubleToString(txtOpenPrice);
+            txtMaterialCost1.Text = (GM.ConvertStringToDouble(txtMaterialWeight1) * GM.ConvertStringToDouble(txtPricePerGram1)).ToString();
+            txtMaterialCost1.Text = GM.ConvertDoubleToString(txtMaterialCost1,0);
+
+            txtMaterialCost11.Text = (GM.ConvertStringToDouble(txtMaterialWeight1) * GM.ConvertStringToDouble(txtPricePerGram11)).ToString();
+            txtMaterialCost11.Text = GM.ConvertDoubleToString(txtMaterialCost11, 0);
+
+            txtPricePerGram1.Text = GM.ConvertDoubleToString(txtPricePerGram1, 0);
+        }
+
+        private void txtMaterialWeight2_TextChanged(object sender, EventArgs e)
+        {
+            txtMaterialCost2.Text = (GM.ConvertStringToDouble(txtMaterialWeight2) * GM.ConvertStringToDouble(txtPricePerGram2)).ToString();
+            txtMaterialCost2.Text = GM.ConvertDoubleToString(txtMaterialCost2, 0);
+
+            txtMaterialCost22.Text = (GM.ConvertStringToDouble(txtMaterialWeight2) * GM.ConvertStringToDouble(txtPricePerGram22)).ToString();
+            txtMaterialCost22.Text = GM.ConvertDoubleToString(txtMaterialCost22, 0);
+
+            txtPricePerGram2.Text = GM.ConvertDoubleToString(txtPricePerGram2, 0);
+        }
+
+        private void txtPricePerGram11_TextChanged(object sender, EventArgs e)
+        {
+            txtMaterialCost11.Text = (GM.ConvertStringToDouble(txtMaterialWeight1) * GM.ConvertStringToDouble(txtPricePerGram11)).ToString();
+            txtMaterialCost11.Text = GM.ConvertDoubleToString(txtMaterialCost11, 0);
+
+            txtPricePerGram11.Text = GM.ConvertDoubleToString(txtPricePerGram11, 0);
+        }
+
+        private void txtPricePerGram22_TextChanged(object sender, EventArgs e)
+        {
+            txtMaterialCost22.Text = (GM.ConvertStringToDouble(txtMaterialWeight2) * GM.ConvertStringToDouble(txtPricePerGram22)).ToString();
+            txtMaterialCost22.Text = GM.ConvertDoubleToString(txtMaterialCost22, 0);
+
+            txtPricePerGram22.Text = GM.ConvertDoubleToString(txtPricePerGram22, 0);
+        }
+
+        private void txtMaterialCost1_TextChanged(object sender, EventArgs e)
+        {
+            txtMaterialNetCost.Text = (GM.ConvertStringToDouble(txtMaterialCost1) + GM.ConvertStringToDouble(txtMaterialCost2)).ToString();
+            txtMaterialNetCost.Text = GM.ConvertDoubleToString(txtMaterialNetCost, 0);
+        }
+
+        private void txtMaterialCost11_TextChanged(object sender, EventArgs e)
+        {
+            txtMaterialNetCost1.Text = (GM.ConvertStringToDouble(txtMaterialCost11) + GM.ConvertStringToDouble(txtMaterialCost22)).ToString();
+            txtMaterialNetCost1.Text = GM.ConvertDoubleToString(txtMaterialNetCost1, 0);
+        }
+
+        private void txtLaborCost_TextChanged(object sender, EventArgs e)
+        {
+            txtLaborCost1.Text = (GM.ConvertStringToDouble(txtLaborCost) * 2).ToString();
+            txtLaborCost1.Text = GM.ConvertDoubleToString(txtLaborCost1, 0);
+        }
+
+        private void txtCost1_TextChanged(object sender, EventArgs e)
+        {
+            txtCost11.Text = (GM.ConvertStringToDouble(txtCost1) * 2).ToString();
+            txtCost11.Text = GM.ConvertDoubleToString(txtCost11, 0);
+        }
+
+        private void txtCost2_TextChanged(object sender, EventArgs e)
+        {
+            txtCost22.Text = (GM.ConvertStringToDouble(txtCost2) * 2).ToString();
+            txtCost22.Text = GM.ConvertDoubleToString(txtCost2, 0);
+        }
+
+        private void txtCost3_TextChanged(object sender, EventArgs e)
+        {
+            txtCost33.Text = (GM.ConvertStringToDouble(txtCost3) * 2).ToString();
+            txtCost33.Text = GM.ConvertDoubleToString(txtCost3, 0);
+        }
+
+        private void btnDiamond_Click(object sender, EventArgs e)
+        {
+            InvDiamondDetail frm = new InvDiamondDetail(id);
         }
     }
 }

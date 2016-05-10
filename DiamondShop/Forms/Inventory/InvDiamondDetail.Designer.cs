@@ -42,8 +42,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.grid2 = new System.Windows.Forms.DataGridView();
-            this.grid1 = new System.Windows.Forms.DataGridView();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Shape = new System.Windows.Forms.DataGridViewComboBoxColumn();
@@ -56,6 +54,8 @@
             this.Cost1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MinPricePerCarat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MinPrice1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.grid1 = new System.Windows.Forms.DataGridView();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.RowNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -67,6 +67,7 @@
             this.Clearity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cost = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MinPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Browse = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid2)).BeginInit();
@@ -235,44 +236,6 @@
             this.grid2.TabIndex = 47;
             this.grid2.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid2_CellEnter);
             // 
-            // grid1
-            // 
-            this.grid1.AllowUserToOrderColumns = true;
-            this.grid1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.grid1.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.grid1.ColumnHeadersHeight = 33;
-            this.grid1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.RowNum,
-            this.ID,
-            this.Code,
-            this.ReportNumber,
-            this.Lab,
-            this.ShapeName,
-            this.Weight,
-            this.ColorName,
-            this.Clearity,
-            this.Cost,
-            this.MinPrice});
-            this.grid1.Location = new System.Drawing.Point(12, 35);
-            this.grid1.Name = "grid1";
-            this.grid1.RowHeadersWidth = 10;
-            this.grid1.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grid1.RowTemplate.Height = 25;
-            this.grid1.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.grid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grid1.Size = new System.Drawing.Size(1226, 181);
-            this.grid1.TabIndex = 46;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(35)))), ((int)(((byte)(69)))));
-            this.panel4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel4.BackgroundImage")));
-            this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.panel4.Location = new System.Drawing.Point(12, 3);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(207, 32);
-            this.panel4.TabIndex = 45;
-            // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "RowNum";
@@ -368,6 +331,46 @@
             this.MinPrice1.Name = "MinPrice1";
             this.MinPrice1.Width = 150;
             // 
+            // grid1
+            // 
+            this.grid1.AllowUserToOrderColumns = true;
+            this.grid1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.grid1.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.grid1.ColumnHeadersHeight = 33;
+            this.grid1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.RowNum,
+            this.ID,
+            this.Code,
+            this.ReportNumber,
+            this.Lab,
+            this.ShapeName,
+            this.Weight,
+            this.ColorName,
+            this.Clearity,
+            this.Cost,
+            this.MinPrice,
+            this.Browse});
+            this.grid1.Location = new System.Drawing.Point(12, 35);
+            this.grid1.Name = "grid1";
+            this.grid1.RowHeadersWidth = 10;
+            this.grid1.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grid1.RowTemplate.Height = 25;
+            this.grid1.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.grid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.grid1.Size = new System.Drawing.Size(1226, 181);
+            this.grid1.TabIndex = 46;
+            this.grid1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid1_CellContentClick);
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(35)))), ((int)(((byte)(69)))));
+            this.panel4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel4.BackgroundImage")));
+            this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.panel4.Location = new System.Drawing.Point(12, 3);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(207, 32);
+            this.panel4.TabIndex = 45;
+            // 
             // RowNum
             // 
             this.RowNum.DataPropertyName = "RowNum";
@@ -452,6 +455,12 @@
             this.MinPrice.Name = "MinPrice";
             this.MinPrice.Width = 150;
             // 
+            // Browse
+            // 
+            this.Browse.HeaderText = "Browse Cer";
+            this.Browse.Name = "Browse";
+            this.Browse.Width = 80;
+            // 
             // InvDiamondDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -511,5 +520,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Clearity;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cost;
         private System.Windows.Forms.DataGridViewTextBoxColumn MinPrice;
+        private System.Windows.Forms.DataGridViewButtonColumn Browse;
     }
 }
