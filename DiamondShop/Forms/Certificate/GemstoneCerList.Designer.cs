@@ -29,6 +29,11 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GemstoneCerList));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnSearch = new System.Windows.Forms.Button();
             this.cmbLab = new System.Windows.Forms.ComboBox();
@@ -383,6 +388,8 @@
             // RowNum
             // 
             this.RowNum.DataPropertyName = "RowNum";
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            this.RowNum.DefaultCellStyle = dataGridViewCellStyle1;
             this.RowNum.HeaderText = "No.";
             this.RowNum.Name = "RowNum";
             this.RowNum.ReadOnly = true;
@@ -402,7 +409,7 @@
             this.LabName.HeaderText = "Lab";
             this.LabName.Name = "LabName";
             this.LabName.ReadOnly = true;
-            this.LabName.Width = 80;
+            this.LabName.Width = 90;
             // 
             // IdentificationName
             // 
@@ -411,7 +418,7 @@
             this.IdentificationName.Name = "IdentificationName";
             this.IdentificationName.ReadOnly = true;
             this.IdentificationName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.IdentificationName.Width = 120;
+            this.IdentificationName.Width = 140;
             // 
             // ShapeName
             // 
@@ -420,6 +427,7 @@
             this.ShapeName.Name = "ShapeName";
             this.ShapeName.ReadOnly = true;
             this.ShapeName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ShapeName.Width = 110;
             // 
             // CutName
             // 
@@ -427,11 +435,13 @@
             this.CutName.HeaderText = "Cut";
             this.CutName.Name = "CutName";
             this.CutName.ReadOnly = true;
-            this.CutName.Width = 80;
             // 
             // Weight
             // 
             this.Weight.DataPropertyName = "Weight";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle2.Format = "N0";
+            this.Weight.DefaultCellStyle = dataGridViewCellStyle2;
             this.Weight.HeaderText = "Weight";
             this.Weight.Name = "Weight";
             this.Weight.ReadOnly = true;
@@ -440,6 +450,9 @@
             // W
             // 
             this.W.DataPropertyName = "W";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle3.Format = "N0";
+            this.W.DefaultCellStyle = dataGridViewCellStyle3;
             this.W.HeaderText = "W";
             this.W.Name = "W";
             this.W.ReadOnly = true;
@@ -448,6 +461,9 @@
             // L
             // 
             this.L.DataPropertyName = "L";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle4.Format = "N0";
+            this.L.DefaultCellStyle = dataGridViewCellStyle4;
             this.L.HeaderText = "L";
             this.L.Name = "L";
             this.L.ReadOnly = true;
@@ -456,6 +472,9 @@
             // D
             // 
             this.D.DataPropertyName = "D";
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle5.Format = "N0";
+            this.D.DefaultCellStyle = dataGridViewCellStyle5;
             this.D.HeaderText = "D";
             this.D.Name = "D";
             this.D.ReadOnly = true;
@@ -482,7 +501,7 @@
             this.SettingName.HeaderText = "Setting";
             this.SettingName.Name = "SettingName";
             this.SettingName.ReadOnly = true;
-            this.SettingName.Width = 125;
+            this.SettingName.Width = 170;
             // 
             // StatusName
             // 
@@ -490,6 +509,7 @@
             this.StatusName.HeaderText = "Status";
             this.StatusName.Name = "StatusName";
             this.StatusName.ReadOnly = true;
+            this.StatusName.Width = 110;
             // 
             // BuyDate
             // 
@@ -497,7 +517,6 @@
             this.BuyDate.HeaderText = "Buy Date";
             this.BuyDate.Name = "BuyDate";
             this.BuyDate.ReadOnly = true;
-            this.BuyDate.Width = 90;
             // 
             // GemstoneCerList
             // 
