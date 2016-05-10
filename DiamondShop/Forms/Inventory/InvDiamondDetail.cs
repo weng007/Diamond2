@@ -221,5 +221,13 @@ namespace DiamondShop
                 ((ComboBox)datagridview.EditingControl).DroppedDown = true;
             }
         }
+
+        private void grid1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(e.ColumnIndex == 10)
+            {
+                
+            }
+        }
     }
 }
