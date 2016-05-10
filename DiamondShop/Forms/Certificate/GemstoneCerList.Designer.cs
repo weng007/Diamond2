@@ -55,6 +55,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.gridGemstone = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RowNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LabName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -344,6 +345,7 @@
             this.gridGemstone.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.gridGemstone.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridGemstone.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID,
             this.RowNum,
             this.Code,
             this.LabName,
@@ -368,6 +370,15 @@
             this.gridGemstone.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridGemstone.Size = new System.Drawing.Size(1289, 357);
             this.gridGemstone.TabIndex = 2;
+            this.gridGemstone.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.gridGemstone_MouseDoubleClick);
+            // 
+            // ID
+            // 
+            this.ID.DataPropertyName = "ID";
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Visible = false;
             // 
             // RowNum
             // 
@@ -383,7 +394,7 @@
             this.Code.HeaderText = "Code";
             this.Code.Name = "Code";
             this.Code.ReadOnly = true;
-            this.Code.Width = 120;
+            this.Code.Width = 150;
             // 
             // LabName
             // 
@@ -471,6 +482,7 @@
             this.SettingName.HeaderText = "Setting";
             this.SettingName.Name = "SettingName";
             this.SettingName.ReadOnly = true;
+            this.SettingName.Width = 125;
             // 
             // StatusName
             // 
@@ -535,6 +547,7 @@
         private System.Windows.Forms.ComboBox cmbLab;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn RowNum;
         private System.Windows.Forms.DataGridViewTextBoxColumn Code;
         private System.Windows.Forms.DataGridViewTextBoxColumn LabName;

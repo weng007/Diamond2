@@ -137,6 +137,18 @@ namespace DiamondShop
             cmbComment.Refresh();
         }
 
+        private void gridGemstone_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if (gridGemstone.RowCount > 0 && gridGemstone.SelectedRows.Count > 0)
+            {
+                id = (int)gridGemstone.SelectedRows[0].Cells["ID"].Value;
+                GemstoneCer frm = new GemstoneCer(id);
+                frm.ShowDialog();
+            }
+
+            DoLoadData();
+        }
+
         //private void gridGemstone_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         //{
         //    if (gridGemstone.RowCount > 0 && gridGemstone.SelectedRows.Count > 0)

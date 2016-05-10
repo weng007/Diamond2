@@ -341,6 +341,22 @@ namespace DiamondDS.DS {
             
             private global::System.Data.DataColumn columnStatusName;
             
+            private global::System.Data.DataColumn columnFluorescent;
+            
+            private global::System.Data.DataColumn columnFluorescentName;
+            
+            private global::System.Data.DataColumn columnSeller;
+            
+            private global::System.Data.DataColumn columnPrice;
+            
+            private global::System.Data.DataColumn columnRap;
+            
+            private global::System.Data.DataColumn columnUSDRate;
+            
+            private global::System.Data.DataColumn columnTotalUSD;
+            
+            private global::System.Data.DataColumn columnTotalBaht;
+            
             private global::System.Data.DataColumn columnBuyDate;
             
             private global::System.Data.DataColumn columnIsDeleted;
@@ -636,6 +652,70 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn FluorescentColumn {
+                get {
+                    return this.columnFluorescent;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn FluorescentNameColumn {
+                get {
+                    return this.columnFluorescentName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn SellerColumn {
+                get {
+                    return this.columnSeller;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn PriceColumn {
+                get {
+                    return this.columnPrice;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn RapColumn {
+                get {
+                    return this.columnRap;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn USDRateColumn {
+                get {
+                    return this.columnUSDRate;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn TotalUSDColumn {
+                get {
+                    return this.columnTotalUSD;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn TotalBahtColumn {
+                get {
+                    return this.columnTotalBaht;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn BuyDateColumn {
                 get {
                     return this.columnBuyDate;
@@ -750,6 +830,14 @@ namespace DiamondDS.DS {
                         string SettingName, 
                         int Status, 
                         string StatusName, 
+                        int Fluorescent, 
+                        string FluorescentName, 
+                        string Seller, 
+                        decimal Price, 
+                        double Rap, 
+                        double USDRate, 
+                        decimal TotalUSD, 
+                        decimal TotalBaht, 
                         System.DateTime BuyDate, 
                         string IsDeleted, 
                         int CreateBy, 
@@ -789,6 +877,14 @@ namespace DiamondDS.DS {
                         SettingName,
                         Status,
                         StatusName,
+                        Fluorescent,
+                        FluorescentName,
+                        Seller,
+                        Price,
+                        Rap,
+                        USDRate,
+                        TotalUSD,
+                        TotalBaht,
                         BuyDate,
                         IsDeleted,
                         CreateBy,
@@ -855,6 +951,14 @@ namespace DiamondDS.DS {
                 this.columnSettingName = base.Columns["SettingName"];
                 this.columnStatus = base.Columns["Status"];
                 this.columnStatusName = base.Columns["StatusName"];
+                this.columnFluorescent = base.Columns["Fluorescent"];
+                this.columnFluorescentName = base.Columns["FluorescentName"];
+                this.columnSeller = base.Columns["Seller"];
+                this.columnPrice = base.Columns["Price"];
+                this.columnRap = base.Columns["Rap"];
+                this.columnUSDRate = base.Columns["USDRate"];
+                this.columnTotalUSD = base.Columns["TotalUSD"];
+                this.columnTotalBaht = base.Columns["TotalBaht"];
                 this.columnBuyDate = base.Columns["BuyDate"];
                 this.columnIsDeleted = base.Columns["IsDeleted"];
                 this.columnCreateBy = base.Columns["CreateBy"];
@@ -928,6 +1032,22 @@ namespace DiamondDS.DS {
                 base.Columns.Add(this.columnStatus);
                 this.columnStatusName = new global::System.Data.DataColumn("StatusName", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnStatusName);
+                this.columnFluorescent = new global::System.Data.DataColumn("Fluorescent", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFluorescent);
+                this.columnFluorescentName = new global::System.Data.DataColumn("FluorescentName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFluorescentName);
+                this.columnSeller = new global::System.Data.DataColumn("Seller", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSeller);
+                this.columnPrice = new global::System.Data.DataColumn("Price", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPrice);
+                this.columnRap = new global::System.Data.DataColumn("Rap", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnRap);
+                this.columnUSDRate = new global::System.Data.DataColumn("USDRate", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnUSDRate);
+                this.columnTotalUSD = new global::System.Data.DataColumn("TotalUSD", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTotalUSD);
+                this.columnTotalBaht = new global::System.Data.DataColumn("TotalBaht", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTotalBaht);
                 this.columnBuyDate = new global::System.Data.DataColumn("BuyDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnBuyDate);
                 this.columnIsDeleted = new global::System.Data.DataColumn("IsDeleted", typeof(string), null, global::System.Data.MappingType.Element);
@@ -951,8 +1071,7 @@ namespace DiamondDS.DS {
                 this.columnID.Unique = true;
                 this.columnNote.MaxLength = 250;
                 this.columnNote1.MaxLength = 250;
-                this.columnRefID.AllowDBNull = false;
-                this.columnCode.MaxLength = 20;
+                this.columnCode.MaxLength = 30;
                 this.columnLabName.ReadOnly = true;
                 this.columnLabName.MaxLength = 100;
                 this.columnShapeName.ReadOnly = true;
@@ -974,11 +1093,10 @@ namespace DiamondDS.DS {
                 this.columnSettingName.MaxLength = 100;
                 this.columnStatusName.ReadOnly = true;
                 this.columnStatusName.MaxLength = 100;
+                this.columnFluorescentName.ReadOnly = true;
+                this.columnFluorescentName.MaxLength = 100;
+                this.columnSeller.MaxLength = 100;
                 this.columnIsDeleted.MaxLength = 1;
-                this.columnCreateBy.AllowDBNull = false;
-                this.columnCreateDate.AllowDBNull = false;
-                this.columnEditBy.AllowDBNull = false;
-                this.columnEditDate.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1182,7 +1300,12 @@ namespace DiamondDS.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public int RefID {
                 get {
-                    return ((int)(this[this.tableDiamondCer.RefIDColumn]));
+                    try {
+                        return ((int)(this[this.tableDiamondCer.RefIDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'RefID\' in table \'DiamondCer\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableDiamondCer.RefIDColumn] = value;
@@ -1607,6 +1730,134 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int Fluorescent {
+                get {
+                    try {
+                        return ((int)(this[this.tableDiamondCer.FluorescentColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Fluorescent\' in table \'DiamondCer\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDiamondCer.FluorescentColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string FluorescentName {
+                get {
+                    try {
+                        return ((string)(this[this.tableDiamondCer.FluorescentNameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'FluorescentName\' in table \'DiamondCer\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDiamondCer.FluorescentNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Seller {
+                get {
+                    try {
+                        return ((string)(this[this.tableDiamondCer.SellerColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Seller\' in table \'DiamondCer\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDiamondCer.SellerColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal Price {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableDiamondCer.PriceColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Price\' in table \'DiamondCer\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDiamondCer.PriceColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double Rap {
+                get {
+                    try {
+                        return ((double)(this[this.tableDiamondCer.RapColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Rap\' in table \'DiamondCer\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDiamondCer.RapColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double USDRate {
+                get {
+                    try {
+                        return ((double)(this[this.tableDiamondCer.USDRateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'USDRate\' in table \'DiamondCer\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDiamondCer.USDRateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal TotalUSD {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableDiamondCer.TotalUSDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TotalUSD\' in table \'DiamondCer\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDiamondCer.TotalUSDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal TotalBaht {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableDiamondCer.TotalBahtColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TotalBaht\' in table \'DiamondCer\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDiamondCer.TotalBahtColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public System.DateTime BuyDate {
                 get {
                     try {
@@ -1641,7 +1892,12 @@ namespace DiamondDS.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public int CreateBy {
                 get {
-                    return ((int)(this[this.tableDiamondCer.CreateByColumn]));
+                    try {
+                        return ((int)(this[this.tableDiamondCer.CreateByColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'CreateBy\' in table \'DiamondCer\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableDiamondCer.CreateByColumn] = value;
@@ -1652,7 +1908,12 @@ namespace DiamondDS.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public System.DateTime CreateDate {
                 get {
-                    return ((global::System.DateTime)(this[this.tableDiamondCer.CreateDateColumn]));
+                    try {
+                        return ((global::System.DateTime)(this[this.tableDiamondCer.CreateDateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'CreateDate\' in table \'DiamondCer\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableDiamondCer.CreateDateColumn] = value;
@@ -1663,7 +1924,12 @@ namespace DiamondDS.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public int EditBy {
                 get {
-                    return ((int)(this[this.tableDiamondCer.EditByColumn]));
+                    try {
+                        return ((int)(this[this.tableDiamondCer.EditByColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'EditBy\' in table \'DiamondCer\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableDiamondCer.EditByColumn] = value;
@@ -1674,7 +1940,12 @@ namespace DiamondDS.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public System.DateTime EditDate {
                 get {
-                    return ((global::System.DateTime)(this[this.tableDiamondCer.EditDateColumn]));
+                    try {
+                        return ((global::System.DateTime)(this[this.tableDiamondCer.EditDateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'EditDate\' in table \'DiamondCer\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableDiamondCer.EditDateColumn] = value;
@@ -1715,6 +1986,18 @@ namespace DiamondDS.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetNote1Null() {
                 this[this.tableDiamondCer.Note1Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsRefIDNull() {
+                return this.IsNull(this.tableDiamondCer.RefIDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetRefIDNull() {
+                this[this.tableDiamondCer.RefIDColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2031,6 +2314,102 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsFluorescentNull() {
+                return this.IsNull(this.tableDiamondCer.FluorescentColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetFluorescentNull() {
+                this[this.tableDiamondCer.FluorescentColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsFluorescentNameNull() {
+                return this.IsNull(this.tableDiamondCer.FluorescentNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetFluorescentNameNull() {
+                this[this.tableDiamondCer.FluorescentNameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsSellerNull() {
+                return this.IsNull(this.tableDiamondCer.SellerColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetSellerNull() {
+                this[this.tableDiamondCer.SellerColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsPriceNull() {
+                return this.IsNull(this.tableDiamondCer.PriceColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetPriceNull() {
+                this[this.tableDiamondCer.PriceColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsRapNull() {
+                return this.IsNull(this.tableDiamondCer.RapColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetRapNull() {
+                this[this.tableDiamondCer.RapColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsUSDRateNull() {
+                return this.IsNull(this.tableDiamondCer.USDRateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetUSDRateNull() {
+                this[this.tableDiamondCer.USDRateColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsTotalUSDNull() {
+                return this.IsNull(this.tableDiamondCer.TotalUSDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetTotalUSDNull() {
+                this[this.tableDiamondCer.TotalUSDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsTotalBahtNull() {
+                return this.IsNull(this.tableDiamondCer.TotalBahtColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetTotalBahtNull() {
+                this[this.tableDiamondCer.TotalBahtColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsBuyDateNull() {
                 return this.IsNull(this.tableDiamondCer.BuyDateColumn);
             }
@@ -2051,6 +2430,54 @@ namespace DiamondDS.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetIsDeletedNull() {
                 this[this.tableDiamondCer.IsDeletedColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsCreateByNull() {
+                return this.IsNull(this.tableDiamondCer.CreateByColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetCreateByNull() {
+                this[this.tableDiamondCer.CreateByColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsCreateDateNull() {
+                return this.IsNull(this.tableDiamondCer.CreateDateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetCreateDateNull() {
+                this[this.tableDiamondCer.CreateDateColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsEditByNull() {
+                return this.IsNull(this.tableDiamondCer.EditByColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetEditByNull() {
+                this[this.tableDiamondCer.EditByColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsEditDateNull() {
+                return this.IsNull(this.tableDiamondCer.EditDateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetEditDateNull() {
+                this[this.tableDiamondCer.EditDateColumn] = global::System.Convert.DBNull;
             }
         }
         

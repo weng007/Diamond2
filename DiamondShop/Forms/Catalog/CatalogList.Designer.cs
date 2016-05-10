@@ -221,10 +221,10 @@
             // Amount2
             // 
             this.Amount2.DataPropertyName = "Amount2";
-            this.Amount2.HeaderText = "NDCAmount";
+            this.Amount2.HeaderText = "Amount NDC.";
             this.Amount2.Name = "Amount2";
             this.Amount2.ReadOnly = true;
-            this.Amount2.Width = 80;
+            this.Amount2.Width = 110;
             // 
             // Weight2
             // 
@@ -232,42 +232,40 @@
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
             dataGridViewCellStyle2.Format = "N2";
             this.Weight2.DefaultCellStyle = dataGridViewCellStyle2;
-            this.Weight2.HeaderText = "NDCWeight";
+            this.Weight2.HeaderText = "Weight NDC.";
             this.Weight2.Name = "Weight2";
             this.Weight2.ReadOnly = true;
-            this.Weight2.Width = 80;
+            this.Weight2.Width = 110;
             // 
             // Amount3
             // 
             this.Amount3.DataPropertyName = "Amount3";
-            this.Amount3.HeaderText = "GCAmount";
+            this.Amount3.HeaderText = "Amount GC.";
             this.Amount3.Name = "Amount3";
             this.Amount3.ReadOnly = true;
-            this.Amount3.Width = 70;
             // 
             // Weight3
             // 
             this.Weight3.DataPropertyName = "Weight3";
-            this.Weight3.HeaderText = "GCWeight";
+            this.Weight3.HeaderText = "Weight GC.";
             this.Weight3.Name = "Weight3";
             this.Weight3.ReadOnly = true;
-            this.Weight3.Width = 70;
             // 
             // Amount4
             // 
             this.Amount4.DataPropertyName = "Amount4";
-            this.Amount4.HeaderText = "NGCAmount";
+            this.Amount4.HeaderText = "Amount NGC.";
             this.Amount4.Name = "Amount4";
             this.Amount4.ReadOnly = true;
-            this.Amount4.Width = 80;
+            this.Amount4.Width = 110;
             // 
             // Weight4
             // 
             this.Weight4.DataPropertyName = "Weight4";
-            this.Weight4.HeaderText = "NGCWeight";
+            this.Weight4.HeaderText = "Weight NGC.";
             this.Weight4.Name = "Weight4";
             this.Weight4.ReadOnly = true;
-            this.Weight4.Width = 80;
+            this.Weight4.Width = 110;
             // 
             // MinPrice
             // 

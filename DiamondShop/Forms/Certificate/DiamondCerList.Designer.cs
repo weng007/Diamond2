@@ -59,6 +59,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.gridDiamondCer = new System.Windows.Forms.DataGridView();
+            this.tds = new DiamondDS.DS.dsDiamondCer();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RowNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -78,7 +79,6 @@
             this.SettingName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StatusName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BuyDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tds = new DiamondDS.DS.dsDiamondCer();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -129,6 +129,7 @@
             this.cmbColorType.Name = "cmbColorType";
             this.cmbColorType.Size = new System.Drawing.Size(158, 29);
             this.cmbColorType.TabIndex = 75;
+            this.cmbColorType.SelectedIndexChanged += new System.EventHandler(this.cmbColorType_SelectedIndexChanged);
             // 
             // label13
             // 
@@ -421,6 +422,11 @@
             this.gridDiamondCer.TabIndex = 2;
             this.gridDiamondCer.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.gridDiamondCer_MouseDoubleClick);
             // 
+            // tds
+            // 
+            this.tds.DataSetName = "dsDiamondCer";
+            this.tds.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // ID
             // 
             this.ID.DataPropertyName = "ID";
@@ -443,11 +449,11 @@
             this.Code.HeaderText = "Code";
             this.Code.Name = "Code";
             this.Code.ReadOnly = true;
-            this.Code.Width = 120;
+            this.Code.Width = 150;
             // 
             // LabName
             // 
-            this.LabName.DataPropertyName = "LabNmae";
+            this.LabName.DataPropertyName = "LabName";
             this.LabName.HeaderText = "Lab";
             this.LabName.Name = "LabName";
             this.LabName.ReadOnly = true;
@@ -559,6 +565,7 @@
             this.SettingName.HeaderText = "Setting";
             this.SettingName.Name = "SettingName";
             this.SettingName.ReadOnly = true;
+            this.SettingName.Width = 125;
             // 
             // StatusName
             // 
@@ -575,11 +582,6 @@
             this.BuyDate.Name = "BuyDate";
             this.BuyDate.ReadOnly = true;
             this.BuyDate.Width = 90;
-            // 
-            // tds
-            // 
-            this.tds.DataSetName = "dsDiamondCer";
-            this.tds.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // DiamondCerList
             // 
@@ -631,6 +633,8 @@
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.TextBox txtCode;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.ComboBox cmbColorType;
+        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn RowNum;
         private System.Windows.Forms.DataGridViewTextBoxColumn Code;
@@ -650,7 +654,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn SettingName;
         private System.Windows.Forms.DataGridViewTextBoxColumn StatusName;
         private System.Windows.Forms.DataGridViewTextBoxColumn BuyDate;
-        private System.Windows.Forms.ComboBox cmbColorType;
-        private System.Windows.Forms.Label label13;
     }
 }

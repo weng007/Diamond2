@@ -126,10 +126,10 @@ namespace DiamondShop
         {
             message = "";
 
-            if (txtCode.Text == "")
-            {
-                message = "Please input GIA Number.\n";
-            }
+            //if (txtCode.Text == "")
+            //{
+            //    message = "Please input GIA Number.\n";
+            //}
             //if(txtW.Text == "" || txtL.Text == "" || txtD.Text == ""
             //&& GM.ConvertStringToDouble(txtW) == 0 || GM.ConvertStringToDouble(txtL) == 0 || GM.ConvertStringToDouble(txtD) == 0)
             //{

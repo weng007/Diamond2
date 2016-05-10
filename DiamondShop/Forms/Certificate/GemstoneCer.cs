@@ -18,49 +18,39 @@ namespace DiamondShop
     {
         //Service1 ser = GM.GetService();
         dsGemstoneCer tds = new dsGemstoneCer();
+        MemoryStream ms1;
+        byte[] image1;
 
         public GemstoneCer()
         {
             InitializeComponent();
             Initial();
 
-            binder.BindControl(dtBuyDate, "BuyDate");
-            binder.BindControl(txtSeller, "Seller");
-            binder.BindControl(txtCode, "Code");
-            binder.BindControl(txtSetting, "Setting");
-            binder.BindControl(txtShop, "Shop");
-            binder.BindControl(txtStatus, "Status");
-            binder.BindControl(txtReportNumber, "ReportNumber");
-            binder.BindControl(txtIdentification, "Identification");
-            binder.BindControl(dtReportDate, "ReportDate");
-            binder.BindControl(txtLab, "Lab");
-            binder.BindControl(txtOrigin, "Origin");
-            binder.BindControl(txtW, "W");
-            binder.BindControl(txtL, "L");
-            binder.BindControl(txtD, "D");
-            binder.BindControl(txtPriceCaratUSD, "PriceCaratUSD");
-            binder.BindControl(txtUSDRate, "USDRate");
-            binder.BindControl(txtPriceCaratBaht, "PriceCarat");
-            binder.BindControl(txtNote, "Note");
-            binder.BindControl(txtShape, "Shape");
+            BinderData();
 
         }
         public GemstoneCer(int id)
         {
             InitializeComponent();
             Initial();
+            BinderData();
+            this.id = id;
+            LoadData();
+        }
 
+        private void BinderData()
+        {
             binder.BindControl(dtBuyDate, "BuyDate");
             binder.BindControl(txtSeller, "Seller");
             binder.BindControl(txtCode, "Code");
-            binder.BindControl(txtSetting, "Setting");
-            binder.BindControl(txtShop, "Shop");
-            binder.BindControl(txtStatus, "Status");
+            binder.BindControl(txtSetting, "SettingName");
+            binder.BindControl(txtShop, "ShopName");
+            binder.BindControl(txtStatus, "StatusName");
             binder.BindControl(txtReportNumber, "ReportNumber");
-            binder.BindControl(txtIdentification, "Identification");
+            binder.BindControl(txtIdentification, "IdentificationName");
             binder.BindControl(dtReportDate, "ReportDate");
-            binder.BindControl(txtLab, "Lab");
-            binder.BindControl(txtOrigin, "Origin");
+            binder.BindControl(txtLab, "LabName");
+            binder.BindControl(txtOrigin, "OriginName");
             binder.BindControl(txtW, "W");
             binder.BindControl(txtL, "L");
             binder.BindControl(txtD, "D");
@@ -68,10 +58,9 @@ namespace DiamondShop
             binder.BindControl(txtUSDRate, "USDRate");
             binder.BindControl(txtPriceCaratBaht, "PriceCarat");
             binder.BindControl(txtNote, "Note");
-            binder.BindControl(txtShape, "Shape");
-
-            this.id = id;
-            LoadData();
+            binder.BindControl(txtShape, "ShapeName");
+            binder.BindControl(txtColor, "ColorName");
+            binder.BindControl(txtCut, "CutName");
         }
 
         protected override void LoadData()
@@ -84,6 +73,14 @@ namespace DiamondShop
             if (tds.GemstoneCer.Rows.Count > 0)
             {
                 binder.BindValueToControl(tds.GemstoneCer[0]);
+
+                image1 = tds.GemstoneCer[0].Image1;
+                if (image1 != null)
+                {
+                    ms1 = new MemoryStream(image1);
+                    Image backImage1 = Image.FromStream(ms1);
+                    btnImage1.BackgroundImage = backImage1;
+                }
             }
 
             base.LoadData();
@@ -106,16 +103,10 @@ namespace DiamondShop
 
             try
             {
-                if (id == 0)
-                {
-                    SetCreateBy(row);
-                    chkFlag = ser.DoInsertData("GemstoneCer", tds);
-                }
-                else
-                {
+                
                     SetEditBy(row);
                     chkFlag = ser.DoUpdateData("GemstoneCer", tds);
-                }
+                
 
                 tds.AcceptChanges();
             }
@@ -130,7 +121,7 @@ namespace DiamondShop
         {
             try
             {
-                chkFlag = ser.DoDeleteData("GemstoneCer", id);
+                //chkFlag = ser.DoDeleteData("GemstoneCer", id);
             }
             catch (Exception ex)
             {
@@ -144,15 +135,15 @@ namespace DiamondShop
         {
             message = "";
 
-            if (txtCode.Text == "")
-            {
-                message = "Please input GIA Number.\n";
-            }
-            if(txtW.Text == "" || txtL.Text == "" || txtD.Text == ""
-            && GM.ConvertStringToDouble(txtW) == 0 || GM.ConvertStringToDouble(txtL) == 0 || GM.ConvertStringToDouble(txtD) == 0)
-            {
-                message += "Please input Measurement > 0.\n";
-            }
+            //if (txtCode.Text == "")
+            //{
+            //    message = "Please input GIA Number.\n";
+            //}
+            //if(txtW.Text == "" || txtL.Text == "" || txtD.Text == ""
+            //&& GM.ConvertStringToDouble(txtW) == 0 || GM.ConvertStringToDouble(txtL) == 0 || GM.ConvertStringToDouble(txtD) == 0)
+            //{
+            //    message += "Please input Measurement > 0.\n";
+            //}
             //if (txtCarat.Text == "" || GM.ConvertStringToDouble(txtCarat) == 0)
             //{
             //    message += "Please input Carat Weight > 0.\n";
@@ -164,46 +155,6 @@ namespace DiamondShop
 
         protected override void Initial()
         {
-            //cmbCompanyCer.DataSource = (GM.GetMasterTableDetail("C020")).Tables[0];
-            //cmbCompanyCer.ValueMember = "ID";
-            //cmbCompanyCer.DisplayMember = "Detail";
-            //cmbCompanyCer.Refresh();
-
-            //cmbShapeAndCut.DataSource = (GM.GetMasterTableDetail("C019")).Tables[0];
-            //cmbShapeAndCut.ValueMember = "ID";
-            //cmbShapeAndCut.DisplayMember = "Detail";
-            //cmbShapeAndCut.Refresh();
-
-            //cmbClarity.DataSource = (GM.GetMasterTableDetail("C002")).Tables[0];
-            //cmbClarity.ValueMember = "ID";
-            //cmbClarity.DisplayMember = "Detail";
-            //cmbClarity.Refresh();
-
-            //cmbColorGrade.DataSource = (GM.GetMasterTableDetail("C025")).Tables[0];
-            //cmbColorGrade.ValueMember = "ID";
-            //cmbColorGrade.DisplayMember = "Detail";
-            //cmbColorGrade.Refresh();
-
-            //cmbCutGrade.DataSource = (GM.GetMasterTableDetail("C003")).Tables[0];
-            //cmbCutGrade.ValueMember = "ID";
-            //cmbCutGrade.DisplayMember = "Detail";
-            //cmbCutGrade.Refresh();
-
-            //cmbPolish.DataSource = (GM.GetMasterTableDetail("C003")).Tables[0];
-            //cmbPolish.ValueMember = "ID";
-            //cmbPolish.DisplayMember = "Detail";
-            //cmbPolish.Refresh();
-
-            //cmbSymmetry.DataSource = (GM.GetMasterTableDetail("C003")).Tables[0];
-            //cmbSymmetry.ValueMember = "ID";
-            //cmbSymmetry.DisplayMember = "Detail";
-            //cmbSymmetry.Refresh();
-
-            //cmbFluores.DataSource = (GM.GetMasterTableDetail("C018")).Tables[0];
-            //cmbFluores.ValueMember = "ID";
-            //cmbFluores.DisplayMember = "Detail";
-            //cmbFluores.Refresh();
-
             dtReportDate.Select();
 
             //SetFieldService.SetRequireField(txtCode, txtW, txtL, txtD, txtCarat);

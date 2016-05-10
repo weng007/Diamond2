@@ -33,7 +33,7 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="RefID" msprop:Generator_ColumnVarNameInTable="columnRefID" msprop:Generator_ColumnPropNameInRow="RefID" msprop:Generator_ColumnPropNameInTable="RefIDColumn" msprop:Generator_UserColumnName="RefID" type="xs:int" />
+              <xs:element name="RefID" msprop:Generator_ColumnVarNameInTable="columnRefID" msprop:Generator_ColumnPropNameInRow="RefID" msprop:Generator_ColumnPropNameInTable="RefIDColumn" msprop:Generator_UserColumnName="RefID" type="xs:int" minOccurs="0" />
               <xs:element name="Code" msprop:Generator_ColumnVarNameInTable="columnCode" msprop:Generator_ColumnPropNameInRow="Code" msprop:Generator_ColumnPropNameInTable="CodeColumn" msprop:Generator_UserColumnName="Code" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -42,7 +42,7 @@
                 </xs:simpleType>
               </xs:element>
               <xs:element name="Lab" msprop:Generator_ColumnVarNameInTable="columnLab" msprop:Generator_ColumnPropNameInRow="Lab" msprop:Generator_ColumnPropNameInTable="LabColumn" msprop:Generator_UserColumnName="Lab" type="xs:int" minOccurs="0" />
-              <xs:element name="LabName" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnLabName" msprop:Generator_ColumnPropNameInRow="LabName" msprop:Generator_ColumnPropNameInTable="LabNameColumn" msprop:Generator_UserColumnName="LabName" minOccurs="0">
+              <xs:element name="LabName" msprop:Generator_ColumnVarNameInTable="columnLabName" msprop:Generator_ColumnPropNameInRow="LabName" msprop:Generator_ColumnPropNameInTable="LabNameColumn" msprop:Generator_UserColumnName="LabName" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
@@ -133,10 +133,23 @@
                 </xs:simpleType>
               </xs:element>
               <xs:element name="BuyDate" msprop:Generator_ColumnVarNameInTable="columnBuyDate" msprop:Generator_ColumnPropNameInRow="BuyDate" msprop:Generator_ColumnPropNameInTable="BuyDateColumn" msprop:Generator_UserColumnName="BuyDate" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="CreateBy" msprop:Generator_ColumnVarNameInTable="columnCreateBy" msprop:Generator_ColumnPropNameInRow="CreateBy" msprop:Generator_ColumnPropNameInTable="CreateByColumn" msprop:Generator_UserColumnName="CreateBy" type="xs:int" />
-              <xs:element name="CreateDate" msprop:Generator_ColumnVarNameInTable="columnCreateDate" msprop:Generator_ColumnPropNameInRow="CreateDate" msprop:Generator_ColumnPropNameInTable="CreateDateColumn" msprop:Generator_UserColumnName="CreateDate" type="xs:dateTime" />
-              <xs:element name="EditBy" msprop:Generator_ColumnVarNameInTable="columnEditBy" msprop:Generator_ColumnPropNameInRow="EditBy" msprop:Generator_ColumnPropNameInTable="EditByColumn" msprop:Generator_UserColumnName="EditBy" type="xs:int" />
-              <xs:element name="EditDate" msprop:Generator_ColumnVarNameInTable="columnEditDate" msprop:Generator_ColumnPropNameInRow="EditDate" msprop:Generator_ColumnPropNameInTable="EditDateColumn" msprop:Generator_UserColumnName="EditDate" type="xs:dateTime" />
+              <xs:element name="Seller" msprop:Generator_ColumnVarNameInTable="columnSeller" msprop:Generator_ColumnPropNameInRow="Seller" msprop:Generator_ColumnPropNameInTable="SellerColumn" msprop:Generator_UserColumnName="Seller" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="USDRate" msprop:Generator_ColumnVarNameInTable="columnUSDRate" msprop:Generator_ColumnPropNameInRow="USDRate" msprop:Generator_ColumnPropNameInTable="USDRateColumn" msprop:Generator_UserColumnName="USDRate" type="xs:double" minOccurs="0" />
+              <xs:element name="PriceCaratUSD" msprop:Generator_ColumnVarNameInTable="columnPriceCaratUSD" msprop:Generator_ColumnPropNameInRow="PriceCaratUSD" msprop:Generator_ColumnPropNameInTable="PriceCaratUSDColumn" msprop:Generator_UserColumnName="PriceCaratUSD" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PriceCarat" msprop:Generator_ColumnVarNameInTable="columnPriceCarat" msprop:Generator_ColumnPropNameInRow="PriceCarat" msprop:Generator_ColumnPropNameInTable="PriceCaratColumn" msprop:Generator_UserColumnName="PriceCarat" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TotalUSD" msprop:Generator_ColumnVarNameInTable="columnTotalUSD" msprop:Generator_ColumnPropNameInRow="TotalUSD" msprop:Generator_ColumnPropNameInTable="TotalUSDColumn" msprop:Generator_UserColumnName="TotalUSD" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TotalBaht" msprop:Generator_ColumnVarNameInTable="columnTotalBaht" msprop:Generator_ColumnPropNameInRow="TotalBaht" msprop:Generator_ColumnPropNameInTable="TotalBahtColumn" msprop:Generator_UserColumnName="TotalBaht" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Image1" msprop:Generator_ColumnVarNameInTable="columnImage1" msprop:Generator_ColumnPropNameInRow="Image1" msprop:Generator_ColumnPropNameInTable="Image1Column" msprop:Generator_UserColumnName="Image1" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="CreateBy" msprop:Generator_ColumnVarNameInTable="columnCreateBy" msprop:Generator_ColumnPropNameInRow="CreateBy" msprop:Generator_ColumnPropNameInTable="CreateByColumn" msprop:Generator_UserColumnName="CreateBy" type="xs:int" minOccurs="0" />
+              <xs:element name="CreateDate" msprop:Generator_ColumnVarNameInTable="columnCreateDate" msprop:Generator_ColumnPropNameInRow="CreateDate" msprop:Generator_ColumnPropNameInTable="CreateDateColumn" msprop:Generator_UserColumnName="CreateDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="EditBy" msprop:Generator_ColumnVarNameInTable="columnEditBy" msprop:Generator_ColumnPropNameInRow="EditBy" msprop:Generator_ColumnPropNameInTable="EditByColumn" msprop:Generator_UserColumnName="EditBy" type="xs:int" minOccurs="0" />
+              <xs:element name="EditDate" msprop:Generator_ColumnVarNameInTable="columnEditDate" msprop:Generator_ColumnPropNameInRow="EditDate" msprop:Generator_ColumnPropNameInTable="EditDateColumn" msprop:Generator_UserColumnName="EditDate" type="xs:dateTime" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

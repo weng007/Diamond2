@@ -146,23 +146,23 @@
             // 
             // txtSetting
             // 
-            this.txtSetting.Location = new System.Drawing.Point(854, 91);
+            this.txtSetting.Location = new System.Drawing.Point(828, 91);
             this.txtSetting.Name = "txtSetting";
-            this.txtSetting.Size = new System.Drawing.Size(145, 27);
+            this.txtSetting.Size = new System.Drawing.Size(172, 27);
             this.txtSetting.TabIndex = 52;
             // 
             // txtShop
             // 
-            this.txtShop.Location = new System.Drawing.Point(854, 53);
+            this.txtShop.Location = new System.Drawing.Point(828, 53);
             this.txtShop.Name = "txtShop";
-            this.txtShop.Size = new System.Drawing.Size(145, 27);
+            this.txtShop.Size = new System.Drawing.Size(172, 27);
             this.txtShop.TabIndex = 48;
             // 
             // txtStatus
             // 
-            this.txtStatus.Location = new System.Drawing.Point(854, 15);
+            this.txtStatus.Location = new System.Drawing.Point(828, 15);
             this.txtStatus.Name = "txtStatus";
-            this.txtStatus.Size = new System.Drawing.Size(145, 27);
+            this.txtStatus.Size = new System.Drawing.Size(172, 27);
             this.txtStatus.TabIndex = 44;
             // 
             // txtLab
@@ -174,23 +174,23 @@
             // 
             // txtCut
             // 
-            this.txtCut.Location = new System.Drawing.Point(570, 165);
+            this.txtCut.Location = new System.Drawing.Point(537, 165);
             this.txtCut.Name = "txtCut";
-            this.txtCut.Size = new System.Drawing.Size(157, 27);
+            this.txtCut.Size = new System.Drawing.Size(175, 27);
             this.txtCut.TabIndex = 40;
             // 
             // txtShape
             // 
-            this.txtShape.Location = new System.Drawing.Point(570, 128);
+            this.txtShape.Location = new System.Drawing.Point(537, 128);
             this.txtShape.Name = "txtShape";
-            this.txtShape.Size = new System.Drawing.Size(157, 27);
+            this.txtShape.Size = new System.Drawing.Size(175, 27);
             this.txtShape.TabIndex = 36;
             // 
             // txtColor
             // 
-            this.txtColor.Location = new System.Drawing.Point(570, 91);
+            this.txtColor.Location = new System.Drawing.Point(537, 91);
             this.txtColor.Name = "txtColor";
-            this.txtColor.Size = new System.Drawing.Size(157, 27);
+            this.txtColor.Size = new System.Drawing.Size(175, 27);
             this.txtColor.TabIndex = 32;
             // 
             // linkFile
@@ -205,16 +205,16 @@
             // 
             // txtOrigin
             // 
-            this.txtOrigin.Location = new System.Drawing.Point(570, 53);
+            this.txtOrigin.Location = new System.Drawing.Point(537, 53);
             this.txtOrigin.Name = "txtOrigin";
-            this.txtOrigin.Size = new System.Drawing.Size(157, 27);
+            this.txtOrigin.Size = new System.Drawing.Size(175, 27);
             this.txtOrigin.TabIndex = 28;
             // 
             // txtIdentification
             // 
-            this.txtIdentification.Location = new System.Drawing.Point(570, 15);
+            this.txtIdentification.Location = new System.Drawing.Point(537, 15);
             this.txtIdentification.Name = "txtIdentification";
-            this.txtIdentification.Size = new System.Drawing.Size(157, 27);
+            this.txtIdentification.Size = new System.Drawing.Size(175, 27);
             this.txtIdentification.TabIndex = 8;
             // 
             // btnImage1
@@ -233,7 +233,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label5.Location = new System.Drawing.Point(463, 56);
+            this.label5.Location = new System.Drawing.Point(430, 56);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(56, 21);
             this.label5.TabIndex = 113;
@@ -286,6 +286,7 @@
             // 
             // txtNote1
             // 
+            this.txtNote1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txtNote1.Location = new System.Drawing.Point(529, 100);
             this.txtNote1.Multiline = true;
             this.txtNote1.Name = "txtNote1";
@@ -439,7 +440,8 @@
             // 
             // txtNote
             // 
-            this.txtNote.Location = new System.Drawing.Point(782, 158);
+            this.txtNote.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.txtNote.Location = new System.Drawing.Point(756, 158);
             this.txtNote.Multiline = true;
             this.txtNote.Name = "txtNote";
             this.txtNote.Size = new System.Drawing.Size(217, 65);
@@ -450,7 +452,7 @@
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label16.Location = new System.Drawing.Point(779, 136);
+            this.label16.Location = new System.Drawing.Point(753, 136);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(45, 19);
             this.label16.TabIndex = 109;
@@ -460,7 +462,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label13.Location = new System.Drawing.Point(779, 93);
+            this.label13.Location = new System.Drawing.Point(753, 93);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(66, 21);
             this.label13.TabIndex = 108;
@@ -470,7 +472,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label14.Location = new System.Drawing.Point(779, 56);
+            this.label14.Location = new System.Drawing.Point(753, 56);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(49, 21);
             this.label14.TabIndex = 106;
@@ -480,7 +482,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label15.Location = new System.Drawing.Point(779, 18);
+            this.label15.Location = new System.Drawing.Point(753, 18);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(59, 21);
             this.label15.TabIndex = 104;
@@ -490,7 +492,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label10.Location = new System.Drawing.Point(463, 171);
+            this.label10.Location = new System.Drawing.Point(430, 171);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(40, 21);
             this.label10.TabIndex = 98;
@@ -500,7 +502,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label9.Location = new System.Drawing.Point(463, 132);
+            this.label9.Location = new System.Drawing.Point(430, 132);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(60, 21);
             this.label9.TabIndex = 96;
@@ -510,7 +512,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label8.Location = new System.Drawing.Point(463, 94);
+            this.label8.Location = new System.Drawing.Point(430, 94);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(51, 21);
             this.label8.TabIndex = 94;
@@ -520,7 +522,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label7.Location = new System.Drawing.Point(434, 18);
+            this.label7.Location = new System.Drawing.Point(401, 18);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(115, 21);
             this.label7.TabIndex = 93;
@@ -585,6 +587,7 @@
             // 
             // txtCode
             // 
+            this.txtCode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.txtCode.Location = new System.Drawing.Point(169, 53);
             this.txtCode.Name = "txtCode";
             this.txtCode.Size = new System.Drawing.Size(157, 27);
