@@ -31,6 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BuyBookSettingList));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel4 = new System.Windows.Forms.Panel();
             this.cmbSettingType = new System.Windows.Forms.ComboBox();
             this.dtEBuyDate = new System.Windows.Forms.DateTimePicker();
@@ -202,6 +205,8 @@
             // RowNum
             // 
             this.RowNum.DataPropertyName = "RowNum";
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            this.RowNum.DefaultCellStyle = dataGridViewCellStyle1;
             this.RowNum.HeaderText = "No.";
             this.RowNum.Name = "RowNum";
             this.RowNum.ReadOnly = true;
@@ -233,9 +238,9 @@
             // SettingType
             // 
             this.SettingType.DataPropertyName = "SettingType";
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Format = "dd/MM/yyyy";
-            this.SettingType.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Format = "dd/MM/yyyy";
+            this.SettingType.DefaultCellStyle = dataGridViewCellStyle2;
             this.SettingType.HeaderText = "Type";
             this.SettingType.Name = "SettingType";
             this.SettingType.ReadOnly = true;
@@ -244,8 +249,8 @@
             // Material
             // 
             this.Material.DataPropertyName = "Material";
-            dataGridViewCellStyle2.Format = "dd/MM/yyyy";
-            this.Material.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.Format = "dd/MM/yyyy";
+            this.Material.DefaultCellStyle = dataGridViewCellStyle3;
             this.Material.HeaderText = "Material";
             this.Material.Name = "Material";
             this.Material.ReadOnly = true;
@@ -254,6 +259,9 @@
             // Weight
             // 
             this.Weight.DataPropertyName = "Weight";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle4.Format = "N2";
+            this.Weight.DefaultCellStyle = dataGridViewCellStyle4;
             this.Weight.HeaderText = "Weight";
             this.Weight.Name = "Weight";
             this.Weight.ReadOnly = true;
@@ -270,6 +278,9 @@
             // PricePerGram
             // 
             this.PricePerGram.DataPropertyName = "PricePerGram";
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle5.Format = "N0";
+            this.PricePerGram.DefaultCellStyle = dataGridViewCellStyle5;
             this.PricePerGram.HeaderText = "PricePerGram";
             this.PricePerGram.Name = "PricePerGram";
             this.PricePerGram.ReadOnly = true;

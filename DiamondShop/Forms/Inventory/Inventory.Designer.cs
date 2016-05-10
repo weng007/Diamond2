@@ -93,7 +93,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.label17 = new System.Windows.Forms.Label();
             this.txtMaterialWeight2 = new System.Windows.Forms.TextBox();
-            this.txt11 = new System.Windows.Forms.TextBox();
+            this.txtPricePerGram22 = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.txt12 = new System.Windows.Forms.TextBox();
             this.cmbMaterial2 = new System.Windows.Forms.ComboBox();
@@ -102,7 +102,7 @@
             this.txtPricePerGram2 = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.txt1 = new System.Windows.Forms.TextBox();
+            this.txtPricePerGram11 = new System.Windows.Forms.TextBox();
             this.txt2 = new System.Windows.Forms.TextBox();
             this.txtLaborCost = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -380,7 +380,7 @@
             this.panel7.Controls.Add(this.label28);
             this.panel7.Controls.Add(this.panel3);
             this.panel7.Controls.Add(this.label16);
-            this.panel7.Controls.Add(this.txt1);
+            this.panel7.Controls.Add(this.txtPricePerGram11);
             this.panel7.Controls.Add(this.txt2);
             this.panel7.Controls.Add(this.txtLaborCost);
             this.panel7.Controls.Add(this.label12);
@@ -810,7 +810,7 @@
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.label17);
             this.panel3.Controls.Add(this.txtMaterialWeight2);
-            this.panel3.Controls.Add(this.txt11);
+            this.panel3.Controls.Add(this.txtPricePerGram22);
             this.panel3.Controls.Add(this.label21);
             this.panel3.Controls.Add(this.txt12);
             this.panel3.Controls.Add(this.cmbMaterial2);
@@ -842,15 +842,15 @@
             this.txtMaterialWeight2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtMaterialWeight2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
             // 
-            // txt11
+            // txtPricePerGram22
             // 
-            this.txt11.Location = new System.Drawing.Point(323, 84);
-            this.txt11.Name = "txt11";
-            this.txt11.Size = new System.Drawing.Size(119, 27);
-            this.txt11.TabIndex = 164;
-            this.txt11.Text = "0";
-            this.txt11.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txt11.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
+            this.txtPricePerGram22.Location = new System.Drawing.Point(323, 84);
+            this.txtPricePerGram22.Name = "txtPricePerGram22";
+            this.txtPricePerGram22.Size = new System.Drawing.Size(119, 27);
+            this.txtPricePerGram22.TabIndex = 164;
+            this.txtPricePerGram22.Text = "0";
+            this.txtPricePerGram22.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtPricePerGram22.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
             // 
             // label21
             // 
@@ -929,15 +929,15 @@
             this.label16.TabIndex = 126;
             this.label16.Text = "Material1";
             // 
-            // txt1
+            // txtPricePerGram11
             // 
-            this.txt1.Location = new System.Drawing.Point(401, 202);
-            this.txt1.Name = "txt1";
-            this.txt1.Size = new System.Drawing.Size(119, 27);
-            this.txt1.TabIndex = 136;
-            this.txt1.Text = "0";
-            this.txt1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txt1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
+            this.txtPricePerGram11.Location = new System.Drawing.Point(401, 202);
+            this.txtPricePerGram11.Name = "txtPricePerGram11";
+            this.txtPricePerGram11.Size = new System.Drawing.Size(119, 27);
+            this.txtPricePerGram11.TabIndex = 136;
+            this.txtPricePerGram11.Text = "0";
+            this.txtPricePerGram11.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtPricePerGram11.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
             // 
             // txt2
             // 
@@ -1246,7 +1246,7 @@
         private System.Windows.Forms.TextBox txtPricePerGram1;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox txt1;
+        private System.Windows.Forms.TextBox txtPricePerGram11;
         private System.Windows.Forms.TextBox txt2;
         private System.Windows.Forms.TextBox txtLaborCost;
         private System.Windows.Forms.Label label12;
@@ -1256,7 +1256,7 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TextBox txtMaterialWeight2;
-        private System.Windows.Forms.TextBox txt11;
+        private System.Windows.Forms.TextBox txtPricePerGram22;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.TextBox txt12;
         private System.Windows.Forms.ComboBox cmbMaterial2;

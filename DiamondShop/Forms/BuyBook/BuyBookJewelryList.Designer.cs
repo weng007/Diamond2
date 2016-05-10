@@ -250,7 +250,7 @@
             // 
             this.Weight1.DataPropertyName = "Weight1";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle3.Format = "N0";
+            dataGridViewCellStyle3.Format = "N2";
             this.Weight1.DefaultCellStyle = dataGridViewCellStyle3;
             this.Weight1.HeaderText = "Weight DC.";
             this.Weight1.Name = "Weight1";
@@ -271,7 +271,7 @@
             // 
             this.Weight2.DataPropertyName = "Weight2";
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle5.Format = "N0";
+            dataGridViewCellStyle5.Format = "N2";
             this.Weight2.DefaultCellStyle = dataGridViewCellStyle5;
             this.Weight2.HeaderText = "Weight NDC.";
             this.Weight2.Name = "Weight2";
@@ -292,7 +292,7 @@
             // 
             this.Weight3.DataPropertyName = "Weight3";
             dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle7.Format = "N0";
+            dataGridViewCellStyle7.Format = "N2";
             this.Weight3.DefaultCellStyle = dataGridViewCellStyle7;
             this.Weight3.HeaderText = "Weight GC.";
             this.Weight3.Name = "Weight3";
@@ -313,7 +313,7 @@
             // 
             this.Weight4.DataPropertyName = "Weight4";
             dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle9.Format = "N0";
+            dataGridViewCellStyle9.Format = "N2";
             this.Weight4.DefaultCellStyle = dataGridViewCellStyle9;
             this.Weight4.HeaderText = "Weight NGC.";
             this.Weight4.Name = "Weight4";

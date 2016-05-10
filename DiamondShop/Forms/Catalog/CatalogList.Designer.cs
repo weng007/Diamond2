@@ -31,6 +31,15 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CatalogList));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.btnSearch = new System.Windows.Forms.Button();
@@ -173,6 +182,8 @@
             // RowNum
             // 
             this.RowNum.DataPropertyName = "RowNum";
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.RowNum.DefaultCellStyle = dataGridViewCellStyle1;
             this.RowNum.HeaderText = "No.";
             this.RowNum.Name = "RowNum";
             this.RowNum.ReadOnly = true;
@@ -205,8 +216,10 @@
             // Amount1
             // 
             this.Amount1.DataPropertyName = "Amount1";
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.Amount1.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Format = "N0";
+            this.Amount1.DefaultCellStyle = dataGridViewCellStyle2;
             this.Amount1.HeaderText = "Amount DC.";
             this.Amount1.Name = "Amount1";
             this.Amount1.ReadOnly = true;
@@ -214,6 +227,9 @@
             // Weight1
             // 
             this.Weight1.DataPropertyName = "Weight1";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle3.Format = "N2";
+            this.Weight1.DefaultCellStyle = dataGridViewCellStyle3;
             this.Weight1.HeaderText = "Weight DC.";
             this.Weight1.Name = "Weight1";
             this.Weight1.ReadOnly = true;
@@ -221,6 +237,9 @@
             // Amount2
             // 
             this.Amount2.DataPropertyName = "Amount2";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle4.Format = "N0";
+            this.Amount2.DefaultCellStyle = dataGridViewCellStyle4;
             this.Amount2.HeaderText = "Amount NDC.";
             this.Amount2.Name = "Amount2";
             this.Amount2.ReadOnly = true;
@@ -229,9 +248,9 @@
             // Weight2
             // 
             this.Weight2.DataPropertyName = "Weight2";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle2.Format = "N2";
-            this.Weight2.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle5.Format = "N2";
+            this.Weight2.DefaultCellStyle = dataGridViewCellStyle5;
             this.Weight2.HeaderText = "Weight NDC.";
             this.Weight2.Name = "Weight2";
             this.Weight2.ReadOnly = true;
@@ -240,6 +259,9 @@
             // Amount3
             // 
             this.Amount3.DataPropertyName = "Amount3";
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle6.Format = "N0";
+            this.Amount3.DefaultCellStyle = dataGridViewCellStyle6;
             this.Amount3.HeaderText = "Amount GC.";
             this.Amount3.Name = "Amount3";
             this.Amount3.ReadOnly = true;
@@ -247,6 +269,9 @@
             // Weight3
             // 
             this.Weight3.DataPropertyName = "Weight3";
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle7.Format = "N2";
+            this.Weight3.DefaultCellStyle = dataGridViewCellStyle7;
             this.Weight3.HeaderText = "Weight GC.";
             this.Weight3.Name = "Weight3";
             this.Weight3.ReadOnly = true;
@@ -254,6 +279,9 @@
             // Amount4
             // 
             this.Amount4.DataPropertyName = "Amount4";
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle8.Format = "N0";
+            this.Amount4.DefaultCellStyle = dataGridViewCellStyle8;
             this.Amount4.HeaderText = "Amount NGC.";
             this.Amount4.Name = "Amount4";
             this.Amount4.ReadOnly = true;
@@ -262,6 +290,9 @@
             // Weight4
             // 
             this.Weight4.DataPropertyName = "Weight4";
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle9.Format = "N2";
+            this.Weight4.DefaultCellStyle = dataGridViewCellStyle9;
             this.Weight4.HeaderText = "Weight NGC.";
             this.Weight4.Name = "Weight4";
             this.Weight4.ReadOnly = true;
@@ -270,6 +301,9 @@
             // MinPrice
             // 
             this.MinPrice.DataPropertyName = "MinPrice";
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle10.Format = "N0";
+            this.MinPrice.DefaultCellStyle = dataGridViewCellStyle10;
             this.MinPrice.HeaderText = "Min Price";
             this.MinPrice.Name = "MinPrice";
             this.MinPrice.ReadOnly = true;
@@ -278,6 +312,9 @@
             // PriceTag
             // 
             this.PriceTag.DataPropertyName = "PriceTag";
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle11.Format = "N0";
+            this.PriceTag.DefaultCellStyle = dataGridViewCellStyle11;
             this.PriceTag.HeaderText = "Price Tag";
             this.PriceTag.Name = "PriceTag";
             this.PriceTag.ReadOnly = true;
