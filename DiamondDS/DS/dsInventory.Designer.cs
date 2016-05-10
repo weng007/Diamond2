@@ -337,8 +337,6 @@ namespace DiamondDS.DS {
             
             private global::System.Data.DataColumn columnRedCost;
             
-            private global::System.Data.DataColumn columnMinBeforePremium;
-            
             private global::System.Data.DataColumn columnMinPrice;
             
             private global::System.Data.DataColumn columnPriceTag;
@@ -380,6 +378,10 @@ namespace DiamondDS.DS {
             private global::System.Data.DataColumn columnSize;
             
             private global::System.Data.DataColumn columnEditDate;
+            
+            private global::System.Data.DataColumn columnPricePerGram11;
+            
+            private global::System.Data.DataColumn columnPricePerGram22;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -648,14 +650,6 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn MinBeforePremiumColumn {
-                get {
-                    return this.columnMinBeforePremium;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn MinPriceColumn {
                 get {
                     return this.columnMinPrice;
@@ -824,6 +818,22 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn PricePerGram11Column {
+                get {
+                    return this.columnPricePerGram11;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn PricePerGram22Column {
+                get {
+                    return this.columnPricePerGram22;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -888,7 +898,6 @@ namespace DiamondDS.DS {
                         decimal CostDiamondCer, 
                         decimal CostGemstoneCer, 
                         decimal RedCost, 
-                        decimal MinBeforePremium, 
                         decimal MinPrice, 
                         decimal PriceTag, 
                         byte[] Image1, 
@@ -909,7 +918,9 @@ namespace DiamondDS.DS {
                         int EditBy, 
                         string EditByName, 
                         double Size, 
-                        System.DateTime EditDate) {
+                        System.DateTime EditDate, 
+                        string PricePerGram11, 
+                        string PricePerGram22) {
                 InventoryRow rowInventoryRow = ((InventoryRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         RowNum,
@@ -941,7 +952,6 @@ namespace DiamondDS.DS {
                         CostDiamondCer,
                         CostGemstoneCer,
                         RedCost,
-                        MinBeforePremium,
                         MinPrice,
                         PriceTag,
                         Image1,
@@ -962,7 +972,9 @@ namespace DiamondDS.DS {
                         EditBy,
                         EditByName,
                         Size,
-                        EditDate};
+                        EditDate,
+                        PricePerGram11,
+                        PricePerGram22};
                 rowInventoryRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowInventoryRow);
                 return rowInventoryRow;
@@ -1021,7 +1033,6 @@ namespace DiamondDS.DS {
                 this.columnCostDiamondCer = base.Columns["CostDiamondCer"];
                 this.columnCostGemstoneCer = base.Columns["CostGemstoneCer"];
                 this.columnRedCost = base.Columns["RedCost"];
-                this.columnMinBeforePremium = base.Columns["MinBeforePremium"];
                 this.columnMinPrice = base.Columns["MinPrice"];
                 this.columnPriceTag = base.Columns["PriceTag"];
                 this.columnImage1 = base.Columns["Image1"];
@@ -1043,6 +1054,8 @@ namespace DiamondDS.DS {
                 this.columnEditByName = base.Columns["EditByName"];
                 this.columnSize = base.Columns["Size"];
                 this.columnEditDate = base.Columns["EditDate"];
+                this.columnPricePerGram11 = base.Columns["PricePerGram11"];
+                this.columnPricePerGram22 = base.Columns["PricePerGram22"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1106,8 +1119,6 @@ namespace DiamondDS.DS {
                 base.Columns.Add(this.columnCostGemstoneCer);
                 this.columnRedCost = new global::System.Data.DataColumn("RedCost", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnRedCost);
-                this.columnMinBeforePremium = new global::System.Data.DataColumn("MinBeforePremium", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnMinBeforePremium);
                 this.columnMinPrice = new global::System.Data.DataColumn("MinPrice", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnMinPrice);
                 this.columnPriceTag = new global::System.Data.DataColumn("PriceTag", typeof(decimal), null, global::System.Data.MappingType.Element);
@@ -1150,6 +1161,10 @@ namespace DiamondDS.DS {
                 base.Columns.Add(this.columnSize);
                 this.columnEditDate = new global::System.Data.DataColumn("EditDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnEditDate);
+                this.columnPricePerGram11 = new global::System.Data.DataColumn("PricePerGram11", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPricePerGram11);
+                this.columnPricePerGram22 = new global::System.Data.DataColumn("PricePerGram22", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPricePerGram22);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnID}, true));
                 this.columnRowNum.ReadOnly = true;
@@ -1784,22 +1799,6 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public decimal MinBeforePremium {
-                get {
-                    try {
-                        return ((decimal)(this[this.tableInventory.MinBeforePremiumColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'MinBeforePremium\' in table \'Inventory\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableInventory.MinBeforePremiumColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public decimal MinPrice {
                 get {
                     try {
@@ -2131,6 +2130,38 @@ namespace DiamondDS.DS {
                 }
                 set {
                     this[this.tableInventory.EditDateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string PricePerGram11 {
+                get {
+                    try {
+                        return ((string)(this[this.tableInventory.PricePerGram11Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'PricePerGram11\' in table \'Inventory\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableInventory.PricePerGram11Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string PricePerGram22 {
+                get {
+                    try {
+                        return ((string)(this[this.tableInventory.PricePerGram22Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'PricePerGram22\' in table \'Inventory\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableInventory.PricePerGram22Column] = value;
                 }
             }
             
@@ -2472,18 +2503,6 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsMinBeforePremiumNull() {
-                return this.IsNull(this.tableInventory.MinBeforePremiumColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetMinBeforePremiumNull() {
-                this[this.tableInventory.MinBeforePremiumColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsMinPriceNull() {
                 return this.IsNull(this.tableInventory.MinPriceColumn);
             }
@@ -2732,6 +2751,30 @@ namespace DiamondDS.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetEditDateNull() {
                 this[this.tableInventory.EditDateColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsPricePerGram11Null() {
+                return this.IsNull(this.tableInventory.PricePerGram11Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetPricePerGram11Null() {
+                this[this.tableInventory.PricePerGram11Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsPricePerGram22Null() {
+                return this.IsNull(this.tableInventory.PricePerGram22Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetPricePerGram22Null() {
+                this[this.tableInventory.PricePerGram22Column] = global::System.Convert.DBNull;
             }
         }
         

@@ -79,7 +79,7 @@ namespace DiamondShop
             binder.BindControl(txtCostDiamondCer, "CostDiamondCer");
             binder.BindControl(txtGemstoneCer, "CostGemstoneCer");
             binder.BindControl(txtRedCost, "RedCost");
-            binder.BindControl(txtMinBeforePremium, "MinBeforePremium");
+            //binder.BindControl(txtMinBeforePremium, "MinBeforePremium");
             binder.BindControl(txtMinPrice, "MinPrice");
             binder.BindControl(txtPriceTag, "PriceTag");
             binder.BindControl(txtUpdateBy, "EditByName");
@@ -87,6 +87,8 @@ namespace DiamondShop
             binder.BindControl(txtRemark, "Remark");
             binder.BindControl(dtImportDate, "CreateDate");
             binder.BindControl(txtSize, "Size");
+            binder.BindControl(txtPricePerGram11, "PricePerGram11");
+            binder.BindControl(txtPricePerGram22, "PricePerGram22");
         }
 
         protected override void Initial()
