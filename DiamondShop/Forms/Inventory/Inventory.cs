@@ -40,6 +40,7 @@ namespace DiamondShop
             BinderData();
 
             txtUpdateBy.Text = ApplicationInfo.UserName;
+            btnDiamond.Enabled = true;
 
             this.id = id;
             LoadData();

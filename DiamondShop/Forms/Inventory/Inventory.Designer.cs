@@ -512,6 +512,7 @@
             // 
             this.btnDiamond.BackColor = System.Drawing.Color.White;
             this.btnDiamond.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDiamond.Enabled = false;
             this.btnDiamond.FlatAppearance.BorderSize = 0;
             this.btnDiamond.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDiamond.Image = ((System.Drawing.Image)(resources.GetObject("btnDiamond.Image")));
