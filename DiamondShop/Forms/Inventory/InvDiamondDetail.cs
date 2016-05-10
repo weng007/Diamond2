@@ -16,37 +16,21 @@ namespace DiamondShop
 {
     public partial class InvDiamondDetail : FormInfo
     {
-        //Service1 ser = GM.GetService();
         dsInvDiamondCerDetail tds = new dsInvDiamondCerDetail();
         dsInvDiamondDetail tds2 = new dsInvDiamondDetail();
         DataSet ds2 = new DataSet();
-        public int productID = 0;
+        int rowIndex;
 
         public InvDiamondDetail()
         {
-            InitializeComponent();
-            Initial();
 
-            //binder.BindControl(cmbShape, "Shape");
-            //binder.BindControl(txtWeight, "Weight");
-            //binder.BindControl(cmbColorGrade, "ColorGrade");
-            //binder.BindControl(cmbColor, "Color");
-            //binder.BindControl(cmbClarity, "Clarity");
-            //binder.BindControl(txtGIANumber, "GIANumber");
         }
 
         public InvDiamondDetail(int id)
         {
             InitializeComponent();
             Initial();
-
-            //binder.BindControl(cmbShape, "Shape");
-            //binder.BindControl(txtWeight, "Weight");
-            //binder.BindControl(cmbColorGrade, "ColorGrade");
-            //binder.BindControl(cmbColor, "Color");
-            //binder.BindControl(cmbClarity, "Clarity");
-            //binder.BindControl(txtGIANumber, "GIANumber");
-
+            
             this.id = id;
             LoadData();
         }
@@ -56,21 +40,16 @@ namespace DiamondShop
             Shape.DataSource = (GM.GetMasterTableDetail("C019")).Tables[0];
             Shape.ValueMember = "ID";
             Shape.DisplayMember = "Detail";
-            Shape.DisplayIndex = 0;
 
             Color.DataSource = (GM.GetMasterTableDetail("C001")).Tables[0];
             Color.ValueMember = "ID";
             Color.DisplayMember = "Detail";
-            Color.DisplayIndex = 0;
 
             Clearity1.DataSource = (GM.GetMasterTableDetail("C002")).Tables[0];
             Clearity1.ValueMember = "ID";
             Clearity1.DisplayMember = "Detail";
-            Clearity1.DisplayIndex = 0;
 
-            //cmbShape.Select();
-
-            //SetFieldService.SetRequireField(txtWeight, txtGIANumber);
+            grid2.Refresh();
         }
         protected override void LoadData()
         {
@@ -109,8 +88,6 @@ namespace DiamondShop
                 row = tds.InvDiamondCerDetail.NewInvDiamondCerDetailRow();
                 tds.InvDiamondCerDetail.Rows.Add(row);
             }
-            //binder.BindValueToDataRow(row);
-            //row.ProductID = productID;
 
             if (tds2.InvDiamondDetail.Rows.Count > 0)
             {
@@ -180,10 +157,6 @@ namespace DiamondShop
             //{
             //    message = "Please input Weight > 0.\n";
             //}
-            //if (txtGIANumber.Text == "")
-            //{
-            //    message += "Please input Certificate.\n";
-            //}
 
             if (message == "") { return true; }
             else { return false; }
@@ -216,6 +189,25 @@ namespace DiamondShop
             {
                 
             }
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            grid2.Rows.Add();
+            grid2.Refresh();
+        }
+
+        private void btnDel_Click(object sender, EventArgs e)
+        {
+            grid2.Rows.RemoveAt(rowIndex);
+        }
+
+        private void grid2_SelectionChanged(object sender, EventArgs e)
+        {
+            if(grid2.SelectedRows.Count > 0)
+            {
+                rowIndex = grid2.SelectedRows[0].Index;
+            }       
         }
     }
 }

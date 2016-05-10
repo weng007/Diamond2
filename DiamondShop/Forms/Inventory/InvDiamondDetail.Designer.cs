@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InvDiamondDetail));
             this.button1 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnAdd = new System.Windows.Forms.Button();
             this.txtSumMinPrice1 = new System.Windows.Forms.TextBox();
             this.txtSumCost1 = new System.Windows.Forms.TextBox();
             this.txtSumWeight1 = new System.Windows.Forms.TextBox();
@@ -55,7 +56,6 @@
             this.MinPricePerCarat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MinPrice1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grid1 = new System.Windows.Forms.DataGridView();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.RowNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -68,6 +68,8 @@
             this.Cost = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MinPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Browse = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.btnDel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid2)).BeginInit();
@@ -87,6 +89,8 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Controls.Add(this.btnDel);
+            this.panel3.Controls.Add(this.btnAdd);
             this.panel3.Controls.Add(this.txtSumMinPrice1);
             this.panel3.Controls.Add(this.txtSumCost1);
             this.panel3.Controls.Add(this.txtSumWeight1);
@@ -105,6 +109,21 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1247, 524);
             this.panel3.TabIndex = 73;
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAdd.BackgroundImage")));
+            this.btnAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnAdd.FlatAppearance.BorderSize = 0;
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.Location = new System.Drawing.Point(1194, 273);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(30, 30);
+            this.btnAdd.TabIndex = 120;
+            this.btnAdd.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // txtSumMinPrice1
             // 
@@ -149,7 +168,7 @@
             // txtSumMinPrice
             // 
             this.txtSumMinPrice.BackColor = System.Drawing.Color.White;
-            this.txtSumMinPrice.Location = new System.Drawing.Point(1090, 227);
+            this.txtSumMinPrice.Location = new System.Drawing.Point(1011, 227);
             this.txtSumMinPrice.Name = "txtSumMinPrice";
             this.txtSumMinPrice.ReadOnly = true;
             this.txtSumMinPrice.Size = new System.Drawing.Size(134, 30);
@@ -159,7 +178,7 @@
             // txtSumCost
             // 
             this.txtSumCost.BackColor = System.Drawing.Color.White;
-            this.txtSumCost.Location = new System.Drawing.Point(939, 227);
+            this.txtSumCost.Location = new System.Drawing.Point(860, 227);
             this.txtSumCost.Name = "txtSumCost";
             this.txtSumCost.ReadOnly = true;
             this.txtSumCost.Size = new System.Drawing.Size(136, 30);
@@ -169,7 +188,7 @@
             // txtSumWeight
             // 
             this.txtSumWeight.BackColor = System.Drawing.Color.White;
-            this.txtSumWeight.Location = new System.Drawing.Point(699, 227);
+            this.txtSumWeight.Location = new System.Drawing.Point(697, 227);
             this.txtSumWeight.Name = "txtSumWeight";
             this.txtSumWeight.ReadOnly = true;
             this.txtSumWeight.Size = new System.Drawing.Size(69, 30);
@@ -179,7 +198,7 @@
             // txtSumAmount
             // 
             this.txtSumAmount.BackColor = System.Drawing.Color.White;
-            this.txtSumAmount.Location = new System.Drawing.Point(617, 227);
+            this.txtSumAmount.Location = new System.Drawing.Point(615, 227);
             this.txtSumAmount.Name = "txtSumAmount";
             this.txtSumAmount.ReadOnly = true;
             this.txtSumAmount.Size = new System.Drawing.Size(76, 30);
@@ -208,6 +227,7 @@
             // 
             // grid2
             // 
+            this.grid2.AllowUserToAddRows = false;
             this.grid2.AllowUserToOrderColumns = true;
             this.grid2.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.grid2.BackgroundColor = System.Drawing.SystemColors.Control;
@@ -231,10 +251,11 @@
             this.grid2.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grid2.RowTemplate.Height = 25;
             this.grid2.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.grid2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grid2.Size = new System.Drawing.Size(1226, 197);
+            this.grid2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.grid2.Size = new System.Drawing.Size(1173, 197);
             this.grid2.TabIndex = 47;
             this.grid2.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid2_CellEnter);
+            this.grid2.SelectionChanged += new System.EventHandler(this.grid2_SelectionChanged);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -361,16 +382,6 @@
             this.grid1.TabIndex = 46;
             this.grid1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid1_CellContentClick);
             // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(35)))), ((int)(((byte)(69)))));
-            this.panel4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel4.BackgroundImage")));
-            this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.panel4.Location = new System.Drawing.Point(12, 3);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(207, 32);
-            this.panel4.TabIndex = 45;
-            // 
             // RowNum
             // 
             this.RowNum.DataPropertyName = "RowNum";
@@ -461,6 +472,31 @@
             this.Browse.Name = "Browse";
             this.Browse.Width = 80;
             // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(35)))), ((int)(((byte)(69)))));
+            this.panel4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel4.BackgroundImage")));
+            this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.panel4.Location = new System.Drawing.Point(12, 3);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(207, 32);
+            this.panel4.TabIndex = 45;
+            // 
+            // btnDel
+            // 
+            this.btnDel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDel.BackgroundImage")));
+            this.btnDel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnDel.FlatAppearance.BorderSize = 0;
+            this.btnDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDel.Location = new System.Drawing.Point(1194, 309);
+            this.btnDel.Name = "btnDel";
+            this.btnDel.Size = new System.Drawing.Size(30, 30);
+            this.btnDel.TabIndex = 121;
+            this.btnDel.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnDel.UseVisualStyleBackColor = true;
+            this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
+            // 
             // InvDiamondDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -521,5 +557,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Cost;
         private System.Windows.Forms.DataGridViewTextBoxColumn MinPrice;
         private System.Windows.Forms.DataGridViewButtonColumn Browse;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnDel;
     }
 }

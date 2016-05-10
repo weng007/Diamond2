@@ -67,16 +67,16 @@
             this.label36 = new System.Windows.Forms.Label();
             this.txtMinPrice = new System.Windows.Forms.TextBox();
             this.label35 = new System.Windows.Forms.Label();
-            this.txtMinBeforePremium = new System.Windows.Forms.TextBox();
+            this.txtRedCost1 = new System.Windows.Forms.TextBox();
             this.label34 = new System.Windows.Forms.Label();
             this.txtRedCost = new System.Windows.Forms.TextBox();
             this.label33 = new System.Windows.Forms.Label();
             this.txtCostCer = new System.Windows.Forms.TextBox();
-            this.txt10 = new System.Windows.Forms.TextBox();
+            this.txtCostCer1 = new System.Windows.Forms.TextBox();
             this.txtCostNonCer = new System.Windows.Forms.TextBox();
-            this.txt9 = new System.Windows.Forms.TextBox();
+            this.txtCostNonCer1 = new System.Windows.Forms.TextBox();
             this.txtCostBody = new System.Windows.Forms.TextBox();
-            this.txt8 = new System.Windows.Forms.TextBox();
+            this.txtCostBody1 = new System.Windows.Forms.TextBox();
             this.txtCost3 = new System.Windows.Forms.TextBox();
             this.txtCost33 = new System.Windows.Forms.TextBox();
             this.label29 = new System.Windows.Forms.Label();
@@ -355,16 +355,16 @@
             this.panel7.Controls.Add(this.label36);
             this.panel7.Controls.Add(this.txtMinPrice);
             this.panel7.Controls.Add(this.label35);
-            this.panel7.Controls.Add(this.txtMinBeforePremium);
+            this.panel7.Controls.Add(this.txtRedCost1);
             this.panel7.Controls.Add(this.label34);
             this.panel7.Controls.Add(this.txtRedCost);
             this.panel7.Controls.Add(this.label33);
             this.panel7.Controls.Add(this.txtCostCer);
-            this.panel7.Controls.Add(this.txt10);
+            this.panel7.Controls.Add(this.txtCostCer1);
             this.panel7.Controls.Add(this.txtCostNonCer);
-            this.panel7.Controls.Add(this.txt9);
+            this.panel7.Controls.Add(this.txtCostNonCer1);
             this.panel7.Controls.Add(this.txtCostBody);
-            this.panel7.Controls.Add(this.txt8);
+            this.panel7.Controls.Add(this.txtCostBody1);
             this.panel7.Controls.Add(this.txtCost3);
             this.panel7.Controls.Add(this.txtCost33);
             this.panel7.Controls.Add(this.label29);
@@ -541,7 +541,7 @@
             // 
             // txtPriceTag
             // 
-            this.txtPriceTag.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.txtPriceTag.BackColor = System.Drawing.Color.White;
             this.txtPriceTag.Location = new System.Drawing.Point(612, 647);
             this.txtPriceTag.Name = "txtPriceTag";
             this.txtPriceTag.Size = new System.Drawing.Size(135, 27);
@@ -562,7 +562,7 @@
             // 
             // txtMinPrice
             // 
-            this.txtMinPrice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.txtMinPrice.BackColor = System.Drawing.Color.White;
             this.txtMinPrice.Location = new System.Drawing.Point(612, 613);
             this.txtMinPrice.Name = "txtMinPrice";
             this.txtMinPrice.Size = new System.Drawing.Size(135, 27);
@@ -581,17 +581,17 @@
             this.label35.TabIndex = 155;
             this.label35.Text = "Minimum Price";
             // 
-            // txtMinBeforePremium
+            // txtRedCost1
             // 
-            this.txtMinBeforePremium.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.txtMinBeforePremium.Enabled = false;
-            this.txtMinBeforePremium.Location = new System.Drawing.Point(612, 579);
-            this.txtMinBeforePremium.Name = "txtMinBeforePremium";
-            this.txtMinBeforePremium.Size = new System.Drawing.Size(135, 27);
-            this.txtMinBeforePremium.TabIndex = 154;
-            this.txtMinBeforePremium.Text = "0";
-            this.txtMinBeforePremium.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtMinBeforePremium.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
+            this.txtRedCost1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.txtRedCost1.Enabled = false;
+            this.txtRedCost1.Location = new System.Drawing.Point(612, 579);
+            this.txtRedCost1.Name = "txtRedCost1";
+            this.txtRedCost1.Size = new System.Drawing.Size(135, 27);
+            this.txtRedCost1.TabIndex = 154;
+            this.txtRedCost1.Text = "0";
+            this.txtRedCost1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtRedCost1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
             // 
             // label34
             // 
@@ -606,6 +606,7 @@
             // txtRedCost
             // 
             this.txtRedCost.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.txtRedCost.Enabled = false;
             this.txtRedCost.Location = new System.Drawing.Point(221, 579);
             this.txtRedCost.Name = "txtRedCost";
             this.txtRedCost.Size = new System.Drawing.Size(140, 27);
@@ -626,66 +627,75 @@
             // 
             // txtCostCer
             // 
+            this.txtCostCer.Enabled = false;
             this.txtCostCer.Location = new System.Drawing.Point(242, 535);
             this.txtCostCer.Name = "txtCostCer";
             this.txtCostCer.Size = new System.Drawing.Size(119, 27);
             this.txtCostCer.TabIndex = 64;
             this.txtCostCer.Text = "0";
             this.txtCostCer.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtCostCer.TextChanged += new System.EventHandler(this.txtCostNonCer_TextChanged);
             this.txtCostCer.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
             // 
-            // txt10
+            // txtCostCer1
             // 
-            this.txt10.Enabled = false;
-            this.txt10.Location = new System.Drawing.Point(434, 535);
-            this.txt10.Name = "txt10";
-            this.txt10.Size = new System.Drawing.Size(119, 27);
-            this.txt10.TabIndex = 148;
-            this.txt10.Text = "0";
-            this.txt10.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txt10.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
+            this.txtCostCer1.Enabled = false;
+            this.txtCostCer1.Location = new System.Drawing.Point(434, 535);
+            this.txtCostCer1.Name = "txtCostCer1";
+            this.txtCostCer1.Size = new System.Drawing.Size(119, 27);
+            this.txtCostCer1.TabIndex = 148;
+            this.txtCostCer1.Text = "0";
+            this.txtCostCer1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtCostCer1.TextChanged += new System.EventHandler(this.txtCostBody1_TextChanged);
+            this.txtCostCer1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
             // 
             // txtCostNonCer
             // 
+            this.txtCostNonCer.Enabled = false;
             this.txtCostNonCer.Location = new System.Drawing.Point(242, 499);
             this.txtCostNonCer.Name = "txtCostNonCer";
             this.txtCostNonCer.Size = new System.Drawing.Size(119, 27);
             this.txtCostNonCer.TabIndex = 60;
             this.txtCostNonCer.Text = "0";
             this.txtCostNonCer.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtCostNonCer.TextChanged += new System.EventHandler(this.txtCostNonCer_TextChanged);
             this.txtCostNonCer.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
             // 
-            // txt9
+            // txtCostNonCer1
             // 
-            this.txt9.Enabled = false;
-            this.txt9.Location = new System.Drawing.Point(434, 499);
-            this.txt9.Name = "txt9";
-            this.txt9.Size = new System.Drawing.Size(119, 27);
-            this.txt9.TabIndex = 145;
-            this.txt9.Text = "0";
-            this.txt9.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txt9.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
+            this.txtCostNonCer1.Enabled = false;
+            this.txtCostNonCer1.Location = new System.Drawing.Point(434, 499);
+            this.txtCostNonCer1.Name = "txtCostNonCer1";
+            this.txtCostNonCer1.Size = new System.Drawing.Size(119, 27);
+            this.txtCostNonCer1.TabIndex = 145;
+            this.txtCostNonCer1.Text = "0";
+            this.txtCostNonCer1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtCostNonCer1.TextChanged += new System.EventHandler(this.txtCostBody1_TextChanged);
+            this.txtCostNonCer1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
             // 
             // txtCostBody
             // 
+            this.txtCostBody.Enabled = false;
             this.txtCostBody.Location = new System.Drawing.Point(242, 463);
             this.txtCostBody.Name = "txtCostBody";
             this.txtCostBody.Size = new System.Drawing.Size(119, 27);
             this.txtCostBody.TabIndex = 56;
             this.txtCostBody.Text = "0";
             this.txtCostBody.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtCostBody.TextChanged += new System.EventHandler(this.txtCostNonCer_TextChanged);
             this.txtCostBody.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
             // 
-            // txt8
+            // txtCostBody1
             // 
-            this.txt8.Enabled = false;
-            this.txt8.Location = new System.Drawing.Point(434, 463);
-            this.txt8.Name = "txt8";
-            this.txt8.Size = new System.Drawing.Size(119, 27);
-            this.txt8.TabIndex = 142;
-            this.txt8.Text = "0";
-            this.txt8.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txt8.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
+            this.txtCostBody1.Enabled = false;
+            this.txtCostBody1.Location = new System.Drawing.Point(434, 463);
+            this.txtCostBody1.Name = "txtCostBody1";
+            this.txtCostBody1.Size = new System.Drawing.Size(119, 27);
+            this.txtCostBody1.TabIndex = 142;
+            this.txtCostBody1.Text = "0";
+            this.txtCostBody1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtCostBody1.TextChanged += new System.EventHandler(this.txtCostBody1_TextChanged);
+            this.txtCostBody1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
             // 
             // txtCost3
             // 
@@ -707,6 +717,7 @@
             this.txtCost33.TabIndex = 139;
             this.txtCost33.Text = "0";
             this.txtCost33.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtCost33.TextChanged += new System.EventHandler(this.txtMaterialNetCost1_TextChanged);
             this.txtCost33.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
             // 
             // label29
@@ -728,6 +739,7 @@
             this.txtCost11.TabIndex = 137;
             this.txtCost11.Text = "0";
             this.txtCost11.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtCost11.TextChanged += new System.EventHandler(this.txtMaterialNetCost1_TextChanged);
             this.txtCost11.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
             // 
             // txtCost1
@@ -781,6 +793,7 @@
             this.txtCost22.TabIndex = 132;
             this.txtCost22.Text = "0";
             this.txtCost22.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtCost22.TextChanged += new System.EventHandler(this.txtMaterialNetCost1_TextChanged);
             this.txtCost22.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
             // 
             // chkMoreMaterial
@@ -803,6 +816,7 @@
             this.txtMaterialNetCost1.TabIndex = 130;
             this.txtMaterialNetCost1.Text = "0";
             this.txtMaterialNetCost1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtMaterialNetCost1.TextChanged += new System.EventHandler(this.txtMaterialNetCost1_TextChanged);
             this.txtMaterialNetCost1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
             // 
             // txtMaterialNetCost
@@ -1020,6 +1034,7 @@
             this.txtLaborCost1.TabIndex = 120;
             this.txtLaborCost1.Text = "0";
             this.txtLaborCost1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtLaborCost1.TextChanged += new System.EventHandler(this.txtMaterialNetCost1_TextChanged);
             this.txtLaborCost1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
             // 
             // txtPricePerGram1
@@ -1311,18 +1326,18 @@
         private System.Windows.Forms.TextBox txtCost33;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.TextBox txtCostNonCer;
-        private System.Windows.Forms.TextBox txt9;
+        private System.Windows.Forms.TextBox txtCostNonCer1;
         private System.Windows.Forms.TextBox txtCostBody;
-        private System.Windows.Forms.TextBox txt8;
+        private System.Windows.Forms.TextBox txtCostBody1;
         private System.Windows.Forms.TextBox txtCostCer;
-        private System.Windows.Forms.TextBox txt10;
+        private System.Windows.Forms.TextBox txtCostCer1;
         private System.Windows.Forms.TextBox txtRedCost;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.TextBox txtPriceTag;
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.TextBox txtMinPrice;
         private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.TextBox txtMinBeforePremium;
+        private System.Windows.Forms.TextBox txtRedCost1;
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.TextBox txtTechnician;
         private System.Windows.Forms.Label label37;
