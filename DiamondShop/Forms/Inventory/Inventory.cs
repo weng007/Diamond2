@@ -373,6 +373,18 @@ namespace DiamondShop
             }
         }
 
+        private void chkMoreMaterial_CheckedChanged(object sender, EventArgs e)
+        {
+            if(chkMoreMaterial.Checked)
+            {
+                panel3.Visible = true;
+            }
+            else
+            {
+                panel3.Visible = false;
+            }
+        }
+
         private void txtOpenPrice_Leave(object sender, EventArgs e)
         {
             //txtOpenPrice.Text = GM.ConvertDoubleToString(txtOpenPrice);
