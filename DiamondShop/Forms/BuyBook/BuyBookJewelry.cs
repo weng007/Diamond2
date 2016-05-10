@@ -70,6 +70,8 @@ namespace DiamondShop
 
             this.id = id;
             LoadData();
+
+            txtCost1_Leave(null, null);
         }
 
         protected override void Initial()
@@ -248,6 +250,14 @@ namespace DiamondShop
             }
         }
 
+        private void txtCost1_Leave(object sender, EventArgs e)
+        {
+            txtCost1.Text = GM.ConvertDoubleToString(txtCost1,0);
+            txtCost2.Text = GM.ConvertDoubleToString(txtCost2,0);
+            txtCost3.Text = GM.ConvertDoubleToString(txtCost3,0);
+            txtMinPrice.Text = GM.ConvertDoubleToString(txtMinPrice,0);
+        }
+        
         private void txtCost1_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))

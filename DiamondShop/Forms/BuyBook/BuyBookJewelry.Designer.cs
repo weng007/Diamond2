@@ -151,6 +151,9 @@
             this.txtMinPrice.Name = "txtMinPrice";
             this.txtMinPrice.Size = new System.Drawing.Size(146, 27);
             this.txtMinPrice.TabIndex = 127;
+            this.txtMinPrice.Text = "0";
+            this.txtMinPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtMinPrice.Leave += new System.EventHandler(this.txtCost1_Leave);
             // 
             // btnGemstone
             // 
@@ -277,6 +280,7 @@
             this.txtCost3.Text = "0";
             this.txtCost3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtCost3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCost1_KeyPress);
+            this.txtCost3.Leave += new System.EventHandler(this.txtCost1_Leave);
             // 
             // label5
             // 
@@ -320,6 +324,7 @@
             this.txtCost2.Text = "0";
             this.txtCost2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtCost2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCost1_KeyPress);
+            this.txtCost2.Leave += new System.EventHandler(this.txtCost1_Leave);
             // 
             // label2
             // 
@@ -341,6 +346,7 @@
             this.txtCost1.Text = "0";
             this.txtCost1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtCost1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCost1_KeyPress);
+            this.txtCost1.Leave += new System.EventHandler(this.txtCost1_Leave);
             // 
             // txtSize
             // 

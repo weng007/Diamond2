@@ -111,6 +111,23 @@ namespace DiamondShop
             return "0";
         }
 
+        public static string ConvertDoubleToString(TextBox txt, int digit)
+        {
+            if (digit == 0)
+            { 
+                if (txt.Text != "" && !txt.Text.Contains("-"))
+                {
+                    return string.Format("{0:0,0}", double.Parse(txt.Text));
+                }
+                else if (txt.Text.Contains("-"))
+                {
+                    return txt.Text;
+                }
+            }
+
+            return "0";
+        }
+
         public static string Encrypt(string str)
         {
             try
