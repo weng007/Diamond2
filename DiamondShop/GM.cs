@@ -117,7 +117,7 @@ namespace DiamondShop
             { 
                 if (txt.Text != "" && !txt.Text.Contains("-"))
                 {
-                    return string.Format("{0:0,0}", double.Parse(txt.Text));
+                    return string.Format("{0:#,###,0}", double.Parse(txt.Text));
                 }
                 else if (txt.Text.Contains("-"))
                 {

@@ -353,9 +353,9 @@ namespace DiamondShop
                 * GM.ConvertStringToDouble(txtWeight)).ToString();
         }
 
-        private void txtPrice_TextChanged(object sender, EventArgs e)
+        private void txtPrice_Leave(object sender, EventArgs e)
         {
-            txtTotal.Text = (GM.ConvertStringToDouble(txtRap) * 100 * (1 + GM.ConvertStringToDouble(txtPrice)/100.0)
+            txtTotal.Text = (GM.ConvertStringToDouble(txtRap) * 100 * (1 + GM.ConvertStringToDouble(txtPrice) / 100.0)
                 * GM.ConvertStringToDouble(txtWeight)).ToString();
         }
 
@@ -366,9 +366,9 @@ namespace DiamondShop
 
         private void txtTotalBaht_TextChanged(object sender, EventArgs e)
         {
-            txtPrice.Text = GM.ConvertDoubleToString(txtPrice);
-            txtTotal.Text = GM.ConvertDoubleToString(txtTotal);
-            txtTotalBaht.Text = GM.ConvertDoubleToString(txtTotalBaht);
+            txtPrice.Text = GM.ConvertDoubleToString(txtPrice,0);
+            txtTotal.Text = GM.ConvertDoubleToString(txtTotal,0);
+            txtTotalBaht.Text = GM.ConvertDoubleToString(txtTotalBaht,0);
         }
 
         private void btnUpload_Click(object sender, EventArgs e)

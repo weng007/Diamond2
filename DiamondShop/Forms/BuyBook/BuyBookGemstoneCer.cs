@@ -88,6 +88,8 @@ namespace DiamondShop
 
             this.id = id;
             LoadData();
+
+
         }
 
         protected override void Initial()
@@ -163,16 +165,6 @@ namespace DiamondShop
                     rdoYes.Checked = true;
                     rdoNo.Checked = false;
                 }
-
-                //if (tds.BuyBookGemstoneCer[0]["PayByUSD"].ToString() == "0")
-                //{
-                //    chkPayByUSD.Checked = false;
-                //}
-                //else
-                //{
-                //    chkPayByUSD.Checked = true;
-                //}
-
 
                 if (image1 != null)
                 {
@@ -331,9 +323,7 @@ namespace DiamondShop
                 txtUSDRate.Text = "0";
 
                 txtPriceCarat.Enabled = true;
-                         
-                //txtPriceCarat.Enabled = true;
-                //txtPriceCarat_TextChanged(null, null);
+                        
             }       
         }
 
@@ -373,9 +363,10 @@ namespace DiamondShop
 
         private void txtTotalBaht_TextChanged(object sender, EventArgs e)
         {
-            txtTotalUSD.Text = GM.ConvertDoubleToString(txtTotalUSD);
-            txtPriceCarat.Text = GM.ConvertDoubleToString(txtPriceCarat);
-            txtTotalBaht.Text = GM.ConvertDoubleToString(txtTotalBaht);
+            txtTotalUSD.Text = GM.ConvertDoubleToString(txtTotalUSD,0);
+            txtPriceCaratUSD.Text = GM.ConvertDoubleToString(txtPriceCaratUSD,0);
+            txtPriceCarat.Text = GM.ConvertDoubleToString(txtPriceCarat, 0);
+            txtTotalBaht.Text = GM.ConvertDoubleToString(txtTotalBaht,0);
         }
     }
 }
