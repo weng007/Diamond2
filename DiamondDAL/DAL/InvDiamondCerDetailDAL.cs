@@ -78,7 +78,7 @@ namespace DiamondDAL.DAL
         }
 
         public bool DoDeleteData(int id)
-        {
+        { 
             try
             {
                 SQL.ClearParameter();
