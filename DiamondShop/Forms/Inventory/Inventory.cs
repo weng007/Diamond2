@@ -384,13 +384,13 @@ namespace DiamondShop
         private void txtCost2_TextChanged(object sender, EventArgs e)
         {
             txtCost22.Text = (GM.ConvertStringToDouble(txtCost2) * 2).ToString();
-            txtCost22.Text = GM.ConvertDoubleToString(txtCost2, 0);
+            txtCost22.Text = GM.ConvertDoubleToString(txtCost22, 0);
         }
 
         private void txtCost3_TextChanged(object sender, EventArgs e)
         {
             txtCost33.Text = (GM.ConvertStringToDouble(txtCost3) * 2).ToString();
-            txtCost33.Text = GM.ConvertDoubleToString(txtCost3, 0);
+            txtCost33.Text = GM.ConvertDoubleToString(txtCost33, 0);
 
             txtCostBody.Text = (GM.ConvertStringToDouble(txtMaterialNetCost) + GM.ConvertStringToDouble(txtLaborCost) + GM.ConvertStringToDouble(txtCost1) +
                 GM.ConvertStringToDouble(txtCost2) + GM.ConvertStringToDouble(txtCost3)).ToString();
