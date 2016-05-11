@@ -11,7 +11,7 @@ namespace DiamondBiz.Biz
     {
         dsInvGemstoneDetail ds = new dsInvGemstoneDetail();
 
-        InventoryGemstoneDetailDAL dal = new InventoryGemstoneDetailDAL();
+        InvGemstoneDetailDAL dal = new InvGemstoneDetailDAL();
 
         public dsInvGemstoneDetail DoSelectData(int id)
         {
