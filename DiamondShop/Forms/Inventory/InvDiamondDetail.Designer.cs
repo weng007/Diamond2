@@ -258,6 +258,7 @@
             this.grid2.Size = new System.Drawing.Size(1226, 197);
             this.grid2.TabIndex = 47;
             this.grid2.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid2_CellEnter);
+            this.grid2.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid2_CellValueChanged);
             this.grid2.SelectionChanged += new System.EventHandler(this.grid2_SelectionChanged);
             // 
             // dataGridViewTextBoxColumn1
