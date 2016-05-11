@@ -328,7 +328,33 @@ namespace Diamond
             }
             else if (TableName == "InvDiamondCerDetail")
             {
-                InvDiamondDetailBiz biz = GM.InvDiamondDetailBiz();
+                InvDiamondCerDetailBiz biz = GM.InvDiamondCerDetailBiz();
+                try
+                {
+                    return biz.DoSelectData(id);
+
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            else if (TableName == "InvGemstoneCerDetail")
+            {
+                InvGemstoneCerDetailBiz biz = GM.InvGemstoneCerDetailBiz();
+                try
+                {
+                    return biz.DoSelectData(id);
+
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            else if (TableName == "InvGemstoneDetail")
+            {
+                InvGemstoneDetailBiz biz = GM.InvGemstoneDetailBiz();
                 try
                 {
                     return biz.DoSelectData(id);
@@ -753,13 +779,43 @@ namespace Diamond
             }
             else if (TableName == "InvDiamondCerDetail")
             {
-                InvDiamondDetailBiz biz = GM.InvDiamondDetailBiz();
+                InvDiamondCerDetailBiz biz = GM.InvDiamondCerDetailBiz();
                 dsInvDiamondCerDetail ds1 = new dsInvDiamondCerDetail();
                 ds1.Merge(ds);
 
                 try
                 {
-                    flag = biz.DoInsertDataCer(ds1);
+                    flag = biz.DoInsertData(ds1);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            else if (TableName == "InvGemstoneCerDetail")
+            {
+                InvGemstoneCerDetailBiz biz = GM.InvGemstoneCerDetailBiz();
+                dsInvGemstoneCerDetail ds1 = new dsInvGemstoneCerDetail();
+                ds1.Merge(ds);
+
+                try
+                {
+                    flag = biz.DoInsertData(ds1);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            else if (TableName == "InvGemstoneDetail")
+            {
+                InvGemstoneDetailBiz biz = GM.InvGemstoneDetailBiz();
+                dsInvGemstoneDetail ds1 = new dsInvGemstoneDetail();
+                ds1.Merge(ds);
+
+                try
+                {
+                    flag = biz.DoInsertData(ds1);
                 }
                 catch (Exception ex)
                 {
@@ -1185,13 +1241,43 @@ namespace Diamond
             }
             else if (TableName == "InvDiamondCerDetail")
             {
-                InvDiamondDetailBiz biz = GM.InvDiamondDetailBiz();
+                InvDiamondCerDetailBiz biz = GM.InvDiamondCerDetailBiz();
                 dsInvDiamondCerDetail ds1 = new dsInvDiamondCerDetail();
                 ds1.Merge(ds);
 
                 try
                 {
-                    flag = biz.DoUpdateDataCer(ds1);
+                    flag = biz.DoUpdateData(ds1);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            else if (TableName == "InvGemstoneCerDetail")
+            {
+                InvGemstoneCerDetailBiz biz = GM.InvGemstoneCerDetailBiz();
+                dsInvGemstoneCerDetail ds1 = new dsInvGemstoneCerDetail();
+                ds1.Merge(ds);
+
+                try
+                {
+                    flag = biz.DoUpdateData(ds1);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            else if (TableName == "InvGemstoneDetail")
+            {
+                InvGemstoneDetailBiz biz = GM.InvGemstoneDetailBiz();
+                dsInvGemstoneDetail ds1 = new dsInvGemstoneDetail();
+                ds1.Merge(ds);
+
+                try
+                {
+                    flag = biz.DoUpdateData(ds1);
                 }
                 catch (Exception ex)
                 {
@@ -1551,7 +1637,31 @@ namespace Diamond
             }
             else if (TableName == "InvDiamondCerDetail")
             {
-                InvDiamondDetailBiz biz = GM.InvDiamondDetailBiz();
+                InvDiamondCerDetailBiz biz = GM.InvDiamondCerDetailBiz();
+                try
+                {
+                    flag = biz.DoDeleteData(id);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            else if (TableName == "InvGemstoneCerDetail")
+            {
+                InvGemstoneCerDetailBiz biz = GM.InvGemstoneCerDetailBiz();
+                try
+                {
+                    flag = biz.DoDeleteData(id);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            else if (TableName == "InvGemstoneDetail")
+            {
+                InvGemstoneDetailBiz biz = GM.InvGemstoneDetailBiz();
                 try
                 {
                     flag = biz.DoDeleteData(id);

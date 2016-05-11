@@ -7,14 +7,13 @@ using DiamondDAL.DAL;
 
 namespace DiamondBiz.Biz
 {
-    public class InvDiamondDetailBiz
+    public class InvGemstoneDetailBiz
     {
-        //dsInvDiamondCerDetail ds = new dsInvDiamondCerDetail();
-        dsInvDiamondDetail ds = new dsInvDiamondDetail();
+        dsInvGemstoneDetail ds = new dsInvGemstoneDetail();
 
-        InventoryDiamondDetailDAL dal = new InventoryDiamondDetailDAL();
+        InventoryGemstoneDetailDAL dal = new InventoryGemstoneDetailDAL();
 
-        public dsInvDiamondDetail DoSelectData(int id)
+        public dsInvGemstoneDetail DoSelectData(int id)
         {
             try
             {
@@ -26,7 +25,7 @@ namespace DiamondBiz.Biz
             }
         }
 
-        public bool DoInsertData(dsInvDiamondDetail tds)
+        public bool DoInsertData(dsInvGemstoneDetail tds)
         {
             try
             {
@@ -38,7 +37,7 @@ namespace DiamondBiz.Biz
             }
         }
 
-        public bool DoUpdateData(dsInvDiamondDetail tds)
+        public bool DoUpdateData(dsInvGemstoneDetail tds)
         {
             try
             {

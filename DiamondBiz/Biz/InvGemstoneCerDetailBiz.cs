@@ -1,20 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
+using System.Text;  
 using DiamondDS.DS;
 using DiamondDAL.DAL;
 
 namespace DiamondBiz.Biz
 {
-    public class InvDiamondDetailBiz
+    public class InvGemstoneCerDetailBiz
     {
-        //dsInvDiamondCerDetail ds = new dsInvDiamondCerDetail();
-        dsInvDiamondDetail ds = new dsInvDiamondDetail();
+        dsInvGemstoneCerDetail ds = new dsInvGemstoneCerDetail();
 
-        InventoryDiamondDetailDAL dal = new InventoryDiamondDetailDAL();
+        InventoryGemstoneCerDetailDAL dal = new InventoryGemstoneCerDetailDAL();
 
-        public dsInvDiamondDetail DoSelectData(int id)
+        public dsInvGemstoneCerDetail DoSelectData(int id)
         {
             try
             {
@@ -26,7 +25,7 @@ namespace DiamondBiz.Biz
             }
         }
 
-        public bool DoInsertData(dsInvDiamondDetail tds)
+        public bool DoInsertData(dsInvGemstoneCerDetail tds)
         {
             try
             {
@@ -38,7 +37,7 @@ namespace DiamondBiz.Biz
             }
         }
 
-        public bool DoUpdateData(dsInvDiamondDetail tds)
+        public bool DoUpdateData(dsInvGemstoneCerDetail tds)
         {
             try
             {

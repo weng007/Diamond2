@@ -38,6 +38,9 @@ namespace Diamond
         static InventoryBiz bizInventory;
         static InvDiamondDetailBiz bizInvDiamondDetail;
         static BuyBookSettingBiz bizBuyBookSetting;
+        static InvDiamondCerDetailBiz bizInvDiamondCerDetai;
+        static InvGemstoneCerDetailBiz bizInvGemstoneCerDetai;
+        static InvGemstoneDetailBiz bizInvGemstoneDetai;
 
         //DS
         static dsPriceCode priceCodeDS;
@@ -254,6 +257,24 @@ namespace Diamond
             if (bizBuyBookSetting == null)
             { return new BuyBookSettingBiz(); }
             else { return bizBuyBookSetting; }
+        }
+        public static InvDiamondCerDetailBiz InvDiamondCerDetailBiz()
+        {
+            if (bizInvDiamondCerDetai == null)
+            { return new InvDiamondCerDetailBiz(); }
+            else { return bizInvDiamondCerDetai; }
+        }
+        public static InvGemstoneCerDetailBiz InvGemstoneCerDetailBiz()
+        {
+            if (bizInvGemstoneCerDetai == null)
+            { return new InvGemstoneCerDetailBiz(); }
+            else { return bizInvGemstoneCerDetai; }
+        }
+        public static InvGemstoneDetailBiz InvGemstoneDetailBiz()
+        {
+            if (bizInvGemstoneDetai == null)
+            { return new InvGemstoneDetailBiz(); }
+            else { return bizInvGemstoneDetai; }
         }
     }
 }

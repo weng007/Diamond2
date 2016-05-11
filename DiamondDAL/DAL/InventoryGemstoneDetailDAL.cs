@@ -7,21 +7,21 @@ using DiamondDS.DS;
 
 namespace DiamondDAL.DAL
 {
-    public class InventoryDiamondDetailDAL
+    public class InventoryGemstoneDetailDAL
     {
         SQLHelper SQL = new SQLHelper();
         //dsInvDiamondCerDetail ds = new dsInvDiamondCerDetail();
-        dsInvDiamondDetail ds = new dsInvDiamondDetail();
+        dsInvGemstoneDetail ds = new dsInvGemstoneDetail();
         int flag = 0;
 
 
-        public dsInvDiamondDetail DoSelectData(int id)
+        public dsInvGemstoneDetail DoSelectData(int id)
         {
             try
             {
                 SQL.ClearParameter();
                 SQL.CreateParameter("ID", id);
-                SQL.FillDataSetBySP("SP_InvDiamondDetail_Sel", ds.InvDiamondDetail);
+                SQL.FillDataSetBySP("SP_InvGemstoneDetail_Sel", ds.InvGemstoneDetail);
             }
             catch (Exception ex)
             {
@@ -31,12 +31,12 @@ namespace DiamondDAL.DAL
             return ds;
         }
 
-        public bool DoInsertData(dsInvDiamondDetail tds)
+        public bool DoInsertData(dsInvGemstoneDetail tds)
         {
             try
             {
-                dsInvDiamondDetail.InvDiamondDetailRow row = tds.InvDiamondDetail[0];
-                SQL.ExecuteSP("SP_InvDiamondDetail_Ins", row);
+                dsInvGemstoneDetail.InvGemstoneDetailRow row = tds.InvGemstoneDetail[0];
+                SQL.ExecuteSP("SP_InvGemstoneDetail_Ins", row);
             }
             catch (Exception ex)
             {
@@ -47,12 +47,12 @@ namespace DiamondDAL.DAL
         }
 
 
-        public bool DoUpdateData(dsInvDiamondDetail tds)
+        public bool DoUpdateData(dsInvGemstoneDetail tds)
         {
             try
             {
-                dsInvDiamondDetail.InvDiamondDetailRow row = tds.InvDiamondDetail[0];
-                flag = SQL.ExecuteSP("SP_InvDiamondDetail_Upd", row);
+                dsInvGemstoneDetail.InvGemstoneDetailRow row = tds.InvGemstoneDetail[0];
+                flag = SQL.ExecuteSP("SP_InvGemstoneDetail_Upd", row);
             }
             catch (Exception ex)
             {
@@ -68,7 +68,7 @@ namespace DiamondDAL.DAL
             {
                 SQL.ClearParameter();
                 SQL.CreateParameter("@ID", id);
-                flag = SQL.ExecuteSP("SP_InvDiamondDetail_Del");
+                flag = SQL.ExecuteSP("SP_InvGemstoneDetail_Del");
             }
             catch (Exception ex)
             {
