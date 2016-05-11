@@ -19,7 +19,7 @@ namespace DiamondShop
         dsInvDiamondCerDetail tds = new dsInvDiamondCerDetail();
         dsInvDiamondDetail tds2 = new dsInvDiamondDetail();
         DataSet ds2 = new DataSet();
-        int rowIndex;
+        int rowIndex, rowIndex1;
 
         public InvDiamondDetail()
         {
@@ -63,12 +63,14 @@ namespace DiamondShop
 
             if (tds.InvDiamondCerDetail.Rows.Count > 0)
             {
-                binder.BindValueToControl(tds.InvDiamondCerDetail[0]);
+                grid1.DataSource = tds.Tables[0];
+                grid1.Refresh();
             }
 
             if (tds2.InvDiamondDetail.Rows.Count > 0)
             {
-                binder.BindValueToControl(tds2.InvDiamondDetail[0]);
+                grid2.DataSource = tds2.Tables[0];
+                grid2.Refresh();
             }
 
             base.LoadData();
@@ -76,57 +78,41 @@ namespace DiamondShop
 
         protected override bool SaveData()
         {
-            dsInvDiamondCerDetail.InvDiamondCerDetailRow row = null;
-            dsInvDiamondDetail.InvDiamondDetailRow row2 = null;
-
-            if (tds.InvDiamondCerDetail.Rows.Count > 0)
-            {
-                row = tds.InvDiamondCerDetail[0];
-            }
-            else
-            {
-                row = tds.InvDiamondCerDetail.NewInvDiamondCerDetailRow();
-                tds.InvDiamondCerDetail.Rows.Add(row);
-            }
-
-            if (tds2.InvDiamondDetail.Rows.Count > 0)
-            {
-                row2 = tds2.InvDiamondDetail[0];
-            }
-            else
-            {
-                row2 = tds2.InvDiamondDetail.NewInvDiamondDetailRow();
-                tds2.InvDiamondDetail.Rows.Add(row);
-            }
-
-
             try
             {
-                if (id == 0)
+                //Cer Diamond
+                foreach (DataRow row in tds.Tables[0].Rows)
                 {
-                    SetCreateBy(row);
-                    chkFlag = ser.DoInsertData("InvDiamondCerDetail", tds);
-                }
-                else
-                {
-                    SetEditBy(row);
-                    chkFlag = ser.DoUpdateData("InvDiamondCerDetail", tds);
-                }
-
-                tds.AcceptChanges();
-
-                if (id == 0)
-                {
-                    SetCreateBy(row2);
-                    chkFlag = ser.DoInsertData("InvDiamondDetail", tds2);
-                }
-                else
-                {
-                    SetEditBy(row2);
-                    chkFlag = ser.DoUpdateData("InvDiamondDetail", tds2);
+                    if(row.RowState == DataRowState.Added)
+                    {
+                        SetCreateBy(row);
+                        chkFlag = ser.DoInsertData("InvDiamondCerDetail", tds);
+                    }
+                    else if(row.RowState == DataRowState.Modified)
+                    {
+                        SetEditBy(row);
+                        chkFlag = ser.DoUpdateData("InvDiamondCerDetail", tds);
+                    }
                 }
 
                 tds.AcceptChanges();
+
+                //Non Cer Diamond
+                foreach (DataRow row in tds2.Tables[0].Rows)
+                {
+                    if (row.RowState == DataRowState.Added)
+                    {
+                        SetCreateBy(row);
+                        chkFlag = ser.DoInsertData("InvDiamondDetail", tds2);
+                    }
+                    else if (row.RowState == DataRowState.Modified)
+                    {
+                        SetEditBy(row);
+                        chkFlag = ser.DoUpdateData("InvDiamondDetail", tds2);
+                    }
+                }
+
+                tds2.AcceptChanges();
             }
             catch (Exception ex)
             {
@@ -137,14 +123,14 @@ namespace DiamondShop
         }
         protected override bool DeleteData()
         {
-            try
-            {
-                chkFlag = ser.DoDeleteData("InvDiamondDetail", id);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
+            //try
+            //{
+            //    chkFlag = ser.DoDeleteData("InvDiamondDetail", id);
+            //}
+            //catch (Exception ex)
+            //{
+            //    throw ex;
+            //}
 
             return chkFlag;
         }
@@ -187,27 +173,57 @@ namespace DiamondShop
         {
             if(e.ColumnIndex == 10)
             {
-                
+                DiamondCerList frm = new DiamondCerList();
+                frm.ShowDialog();
             }
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            grid2.Rows.Add();
-            grid2.Refresh();
+            grid1.Rows.Add();
+
+            dsInvDiamondCerDetail.InvDiamondCerDetailRow row = null;
+            row = tds.InvDiamondCerDetail.NewInvDiamondCerDetailRow();
+            tds.InvDiamondCerDetail.Rows.Add(row);
+            tds.AcceptChanges();
         }
 
         private void btnDel_Click(object sender, EventArgs e)
         {
-            grid2.Rows.RemoveAt(rowIndex);
+            grid1.Rows.RemoveAt(rowIndex);
+            tds.AcceptChanges();
+        }
+
+        private void btnAdd1_Click(object sender, EventArgs e)
+        {
+            grid2.Rows.Add();
+
+            dsInvDiamondDetail.InvDiamondDetailRow row = null;
+            row = tds2.InvDiamondDetail.NewInvDiamondDetailRow();
+            tds2.InvDiamondDetail.Rows.Add(row);
+            tds2.AcceptChanges();
+        }
+
+        private void btnDel1_Click(object sender, EventArgs e)
+        {
+            grid2.Rows.RemoveAt(rowIndex1);
+            tds2.AcceptChanges();
+        }
+
+        private void grid1_SelectionChanged(object sender, EventArgs e)
+        {
+            if (grid1.SelectedRows.Count > 0)
+            {
+                rowIndex = grid1.SelectedRows[0].Index;
+            }
         }
 
         private void grid2_SelectionChanged(object sender, EventArgs e)
         {
-            if(grid2.SelectedRows.Count > 0)
+            if (grid2.SelectedRows.Count > 0)
             {
-                rowIndex = grid2.SelectedRows[0].Index;
-            }       
+                rowIndex1 = grid2.SelectedRows[0].Index;
+            }
         }
     }
 }

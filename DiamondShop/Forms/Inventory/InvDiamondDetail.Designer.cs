@@ -32,7 +32,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnDel = new System.Windows.Forms.Button();
-            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnAdd1 = new System.Windows.Forms.Button();
             this.txtSumMinPrice1 = new System.Windows.Forms.TextBox();
             this.txtSumCost1 = new System.Windows.Forms.TextBox();
             this.txtSumWeight1 = new System.Windows.Forms.TextBox();
@@ -40,7 +40,6 @@
             this.txtSumMinPrice = new System.Windows.Forms.TextBox();
             this.txtSumCost = new System.Windows.Forms.TextBox();
             this.txtSumWeight = new System.Windows.Forms.TextBox();
-            this.txtSumAmount = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.grid2 = new System.Windows.Forms.DataGridView();
@@ -90,7 +89,7 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Controls.Add(this.btnDel);
-            this.panel3.Controls.Add(this.btnAdd);
+            this.panel3.Controls.Add(this.btnAdd1);
             this.panel3.Controls.Add(this.txtSumMinPrice1);
             this.panel3.Controls.Add(this.txtSumCost1);
             this.panel3.Controls.Add(this.txtSumWeight1);
@@ -98,7 +97,6 @@
             this.panel3.Controls.Add(this.txtSumMinPrice);
             this.panel3.Controls.Add(this.txtSumCost);
             this.panel3.Controls.Add(this.txtSumWeight);
-            this.panel3.Controls.Add(this.txtSumAmount);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.label14);
             this.panel3.Controls.Add(this.grid2);
@@ -107,7 +105,7 @@
             this.panel3.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel3.Location = new System.Drawing.Point(12, 68);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1247, 524);
+            this.panel3.Size = new System.Drawing.Size(1285, 524);
             this.panel3.TabIndex = 73;
             // 
             // btnDel
@@ -117,28 +115,28 @@
             this.btnDel.FlatAppearance.BorderSize = 0;
             this.btnDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDel.Location = new System.Drawing.Point(1194, 309);
+            this.btnDel.Location = new System.Drawing.Point(1244, 309);
             this.btnDel.Name = "btnDel";
             this.btnDel.Size = new System.Drawing.Size(30, 30);
             this.btnDel.TabIndex = 121;
             this.btnDel.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btnDel.UseVisualStyleBackColor = true;
-            this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
+            this.btnDel.Click += new System.EventHandler(this.btnDel1_Click);
             // 
-            // btnAdd
+            // btnAdd1
             // 
-            this.btnAdd.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAdd.BackgroundImage")));
-            this.btnAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnAdd.FlatAppearance.BorderSize = 0;
-            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(1194, 273);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(30, 30);
-            this.btnAdd.TabIndex = 120;
-            this.btnAdd.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            this.btnAdd1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAdd1.BackgroundImage")));
+            this.btnAdd1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnAdd1.FlatAppearance.BorderSize = 0;
+            this.btnAdd1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd1.Location = new System.Drawing.Point(1244, 273);
+            this.btnAdd1.Name = "btnAdd1";
+            this.btnAdd1.Size = new System.Drawing.Size(30, 30);
+            this.btnAdd1.TabIndex = 120;
+            this.btnAdd1.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnAdd1.UseVisualStyleBackColor = true;
+            this.btnAdd1.Click += new System.EventHandler(this.btnAdd1_Click);
             // 
             // txtSumMinPrice1
             // 
@@ -203,22 +201,12 @@
             // txtSumWeight
             // 
             this.txtSumWeight.BackColor = System.Drawing.Color.White;
-            this.txtSumWeight.Location = new System.Drawing.Point(697, 227);
+            this.txtSumWeight.Location = new System.Drawing.Point(615, 227);
             this.txtSumWeight.Name = "txtSumWeight";
             this.txtSumWeight.ReadOnly = true;
-            this.txtSumWeight.Size = new System.Drawing.Size(69, 30);
+            this.txtSumWeight.Size = new System.Drawing.Size(78, 30);
             this.txtSumWeight.TabIndex = 113;
             this.txtSumWeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // txtSumAmount
-            // 
-            this.txtSumAmount.BackColor = System.Drawing.Color.White;
-            this.txtSumAmount.Location = new System.Drawing.Point(615, 227);
-            this.txtSumAmount.Name = "txtSumAmount";
-            this.txtSumAmount.ReadOnly = true;
-            this.txtSumAmount.Size = new System.Drawing.Size(76, 30);
-            this.txtSumAmount.TabIndex = 112;
-            this.txtSumAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label1
             // 
@@ -267,7 +255,7 @@
             this.grid2.RowTemplate.Height = 25;
             this.grid2.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.grid2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.grid2.Size = new System.Drawing.Size(1173, 197);
+            this.grid2.Size = new System.Drawing.Size(1226, 197);
             this.grid2.TabIndex = 47;
             this.grid2.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid2_CellEnter);
             this.grid2.SelectionChanged += new System.EventHandler(this.grid2_SelectionChanged);
@@ -396,6 +384,7 @@
             this.grid1.Size = new System.Drawing.Size(1226, 181);
             this.grid1.TabIndex = 46;
             this.grid1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid1_CellContentClick);
+            this.grid1.SelectionChanged += new System.EventHandler(this.grid1_SelectionChanged);
             // 
             // RowNum
             // 
@@ -502,7 +491,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(195)))), ((int)(((byte)(157)))));
-            this.ClientSize = new System.Drawing.Size(1270, 604);
+            this.ClientSize = new System.Drawing.Size(1303, 604);
             this.Controls.Add(this.panel3);
             this.Name = "InvDiamondDetail";
             this.Text = "GemstoneCer";
@@ -526,7 +515,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox txtSumWeight;
-        private System.Windows.Forms.TextBox txtSumAmount;
         private System.Windows.Forms.TextBox txtSumMinPrice;
         private System.Windows.Forms.TextBox txtSumCost;
         private System.Windows.Forms.TextBox txtSumWeight1;
@@ -557,7 +545,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Cost;
         private System.Windows.Forms.DataGridViewTextBoxColumn MinPrice;
         private System.Windows.Forms.DataGridViewButtonColumn Browse;
-        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnAdd1;
         private System.Windows.Forms.Button btnDel;
     }
 }
