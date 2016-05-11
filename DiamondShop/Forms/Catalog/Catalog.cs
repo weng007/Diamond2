@@ -309,6 +309,18 @@ namespace DiamondShop
             }
         }
 
+        private void btnDiamond_Click(object sender, EventArgs e)
+        {
+            DiamondDetailCatalog frm = new DiamondDetailCatalog();
+            frm.ShowDialog();
+        }
+
+        private void btnGemstone_Click(object sender, EventArgs e)
+        {
+            GemstoneDetailCatalog frm = new GemstoneDetailCatalog();
+            frm.ShowDialog();
+        }
+
         private void txtOpenPrice_Leave(object sender, EventArgs e)
         {
             //txtOpenPrice.Text = GM.ConvertDoubleToString(txtOpenPrice);

@@ -444,6 +444,7 @@
             this.btnGemstone.Size = new System.Drawing.Size(76, 86);
             this.btnGemstone.TabIndex = 166;
             this.btnGemstone.UseVisualStyleBackColor = false;
+            this.btnGemstone.Click += new System.EventHandler(this.btnGemstone_Click);
             // 
             // btnDiamond
             // 
@@ -456,6 +457,7 @@
             this.btnDiamond.Size = new System.Drawing.Size(76, 86);
             this.btnDiamond.TabIndex = 165;
             this.btnDiamond.UseVisualStyleBackColor = false;
+            this.btnDiamond.Click += new System.EventHandler(this.btnDiamond_Click);
             // 
             // label17
             // 
