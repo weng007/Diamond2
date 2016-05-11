@@ -19,7 +19,7 @@ namespace DiamondShop
         dsInvDiamondCerDetail tds = new dsInvDiamondCerDetail();
         dsInvDiamondDetail tds2 = new dsInvDiamondDetail();
         DataSet ds2 = new DataSet();
-        int rowIndex;
+        int rowIndex, rowIndex1;
 
         public InvDiamondDetail()
         {
@@ -123,14 +123,14 @@ namespace DiamondShop
         }
         protected override bool DeleteData()
         {
-            try
-            {
-                chkFlag = ser.DoDeleteData("InvDiamondDetail", id);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
+            //try
+            //{
+            //    chkFlag = ser.DoDeleteData("InvDiamondDetail", id);
+            //}
+            //catch (Exception ex)
+            //{
+            //    throw ex;
+            //}
 
             return chkFlag;
         }
@@ -173,11 +173,28 @@ namespace DiamondShop
         {
             if(e.ColumnIndex == 10)
             {
-                
+                DiamondCerList frm = new DiamondCerList();
+                frm.ShowDialog();
             }
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
+        {
+            grid1.Rows.Add();
+
+            dsInvDiamondCerDetail.InvDiamondCerDetailRow row = null;
+            row = tds.InvDiamondCerDetail.NewInvDiamondCerDetailRow();
+            tds.InvDiamondCerDetail.Rows.Add(row);
+            tds.AcceptChanges();
+        }
+
+        private void btnDel_Click(object sender, EventArgs e)
+        {
+            grid1.Rows.RemoveAt(rowIndex);
+            tds.AcceptChanges();
+        }
+
+        private void btnAdd1_Click(object sender, EventArgs e)
         {
             grid2.Rows.Add();
 
@@ -187,18 +204,26 @@ namespace DiamondShop
             tds2.AcceptChanges();
         }
 
-        private void btnDel_Click(object sender, EventArgs e)
+        private void btnDel1_Click(object sender, EventArgs e)
         {
-            grid2.Rows.RemoveAt(rowIndex);
+            grid2.Rows.RemoveAt(rowIndex1);
             tds2.AcceptChanges();
+        }
+
+        private void grid1_SelectionChanged(object sender, EventArgs e)
+        {
+            if (grid1.SelectedRows.Count > 0)
+            {
+                rowIndex = grid1.SelectedRows[0].Index;
+            }
         }
 
         private void grid2_SelectionChanged(object sender, EventArgs e)
         {
-            if(grid2.SelectedRows.Count > 0)
+            if (grid2.SelectedRows.Count > 0)
             {
-                rowIndex = grid2.SelectedRows[0].Index;
-            }       
+                rowIndex1 = grid2.SelectedRows[0].Index;
+            }
         }
     }
 }
