@@ -37,6 +37,7 @@ namespace Diamond
         static BBJewelryDiamondDetailBiz bizBBJewelryDiamondDetail;
         static InventoryBiz bizInventory;
         static InvDiamondDetailBiz bizInvDiamondDetail;
+        static BuyBookSettingBiz bizBuyBookSetting;
 
         //DS
         static dsPriceCode priceCodeDS;
@@ -247,6 +248,12 @@ namespace Diamond
             if (bizInvDiamondDetail == null)
             { return new InvDiamondDetailBiz(); }
             else { return bizInvDiamondDetail; }
+        }
+        public static BuyBookSettingBiz BuyBookSettingBiz()
+        {
+            if (bizBuyBookSetting == null)
+            { return new BuyBookSettingBiz(); }
+            else { return bizBuyBookSetting; }
         }
     }
 }

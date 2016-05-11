@@ -319,5 +319,20 @@ namespace Diamond
                 throw ex;
             }
         }
+
+        [WebMethod]
+        public DataSet DoSearchBuyBookSetting(int JewelryType, DateTime sBuyDate, DateTime eBuyDate)
+        {
+            BuyBookSettingBiz biz = new BuyBookSettingBiz();
+
+            try
+            {
+                return biz.DoSearchData(JewelryType, sBuyDate, eBuyDate);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

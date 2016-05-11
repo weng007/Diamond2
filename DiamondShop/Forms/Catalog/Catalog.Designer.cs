@@ -396,7 +396,6 @@
             this.txtMaterial2.Name = "txtMaterial2";
             this.txtMaterial2.Size = new System.Drawing.Size(165, 27);
             this.txtMaterial2.TabIndex = 228;
-            this.txtMaterial2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtMaterial1
             // 
@@ -406,7 +405,6 @@
             this.txtMaterial1.Name = "txtMaterial1";
             this.txtMaterial1.Size = new System.Drawing.Size(165, 27);
             this.txtMaterial1.TabIndex = 170;
-            this.txtMaterial1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtStatus
             // 

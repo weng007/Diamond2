@@ -93,6 +93,7 @@
             // dtReportDate
             // 
             this.dtReportDate.CustomFormat = "dd/MM/yyyy";
+            this.dtReportDate.Enabled = false;
             this.dtReportDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtReportDate.Location = new System.Drawing.Point(169, 17);
             this.dtReportDate.Name = "dtReportDate";
@@ -146,6 +147,7 @@
             // 
             // txtSetting
             // 
+            this.txtSetting.Enabled = false;
             this.txtSetting.Location = new System.Drawing.Point(828, 91);
             this.txtSetting.Name = "txtSetting";
             this.txtSetting.Size = new System.Drawing.Size(172, 27);
@@ -153,6 +155,7 @@
             // 
             // txtShop
             // 
+            this.txtShop.Enabled = false;
             this.txtShop.Location = new System.Drawing.Point(828, 53);
             this.txtShop.Name = "txtShop";
             this.txtShop.Size = new System.Drawing.Size(172, 27);
@@ -160,6 +163,7 @@
             // 
             // txtStatus
             // 
+            this.txtStatus.Enabled = false;
             this.txtStatus.Location = new System.Drawing.Point(828, 15);
             this.txtStatus.Name = "txtStatus";
             this.txtStatus.Size = new System.Drawing.Size(172, 27);
@@ -167,6 +171,7 @@
             // 
             // txtLab
             // 
+            this.txtLab.Enabled = false;
             this.txtLab.Location = new System.Drawing.Point(169, 128);
             this.txtLab.Name = "txtLab";
             this.txtLab.Size = new System.Drawing.Size(157, 27);
@@ -174,6 +179,7 @@
             // 
             // txtCut
             // 
+            this.txtCut.Enabled = false;
             this.txtCut.Location = new System.Drawing.Point(537, 165);
             this.txtCut.Name = "txtCut";
             this.txtCut.Size = new System.Drawing.Size(175, 27);
@@ -181,6 +187,7 @@
             // 
             // txtShape
             // 
+            this.txtShape.Enabled = false;
             this.txtShape.Location = new System.Drawing.Point(537, 128);
             this.txtShape.Name = "txtShape";
             this.txtShape.Size = new System.Drawing.Size(175, 27);
@@ -188,6 +195,7 @@
             // 
             // txtColor
             // 
+            this.txtColor.Enabled = false;
             this.txtColor.Location = new System.Drawing.Point(537, 91);
             this.txtColor.Name = "txtColor";
             this.txtColor.Size = new System.Drawing.Size(175, 27);
@@ -205,6 +213,7 @@
             // 
             // txtOrigin
             // 
+            this.txtOrigin.Enabled = false;
             this.txtOrigin.Location = new System.Drawing.Point(537, 53);
             this.txtOrigin.Name = "txtOrigin";
             this.txtOrigin.Size = new System.Drawing.Size(175, 27);
@@ -212,6 +221,7 @@
             // 
             // txtIdentification
             // 
+            this.txtIdentification.Enabled = false;
             this.txtIdentification.Location = new System.Drawing.Point(537, 15);
             this.txtIdentification.Name = "txtIdentification";
             this.txtIdentification.Size = new System.Drawing.Size(175, 27);
@@ -317,6 +327,7 @@
             // 
             // txtBahtPrice
             // 
+            this.txtBahtPrice.Enabled = false;
             this.txtBahtPrice.Location = new System.Drawing.Point(592, 57);
             this.txtBahtPrice.Name = "txtBahtPrice";
             this.txtBahtPrice.Size = new System.Drawing.Size(108, 27);
@@ -337,6 +348,7 @@
             // 
             // txtUSDPrice
             // 
+            this.txtUSDPrice.Enabled = false;
             this.txtUSDPrice.Location = new System.Drawing.Point(592, 18);
             this.txtUSDPrice.Name = "txtUSDPrice";
             this.txtUSDPrice.Size = new System.Drawing.Size(108, 27);
@@ -356,6 +368,7 @@
             // 
             // txtUSDRate
             // 
+            this.txtUSDRate.Enabled = false;
             this.txtUSDRate.Location = new System.Drawing.Point(396, 41);
             this.txtUSDRate.Name = "txtUSDRate";
             this.txtUSDRate.Size = new System.Drawing.Size(49, 27);
@@ -375,6 +388,7 @@
             // 
             // txtPriceCaratBaht
             // 
+            this.txtPriceCaratBaht.Enabled = false;
             this.txtPriceCaratBaht.Location = new System.Drawing.Point(190, 123);
             this.txtPriceCaratBaht.Name = "txtPriceCaratBaht";
             this.txtPriceCaratBaht.Size = new System.Drawing.Size(97, 27);
@@ -404,6 +418,7 @@
             // 
             // txtPriceCaratUSD
             // 
+            this.txtPriceCaratUSD.Enabled = false;
             this.txtPriceCaratUSD.Location = new System.Drawing.Point(190, 87);
             this.txtPriceCaratUSD.Name = "txtPriceCaratUSD";
             this.txtPriceCaratUSD.Size = new System.Drawing.Size(97, 27);
@@ -423,6 +438,7 @@
             // 
             // txtSeller
             // 
+            this.txtSeller.Enabled = false;
             this.txtSeller.Location = new System.Drawing.Point(190, 52);
             this.txtSeller.Name = "txtSeller";
             this.txtSeller.Size = new System.Drawing.Size(157, 27);
@@ -432,6 +448,7 @@
             // 
             this.dtBuyDate.CalendarFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtBuyDate.CustomFormat = "dd/MM/yyyy";
+            this.dtBuyDate.Enabled = false;
             this.dtBuyDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtBuyDate.Location = new System.Drawing.Point(190, 17);
             this.dtBuyDate.Name = "dtBuyDate";
@@ -560,6 +577,7 @@
             // 
             // txtReportNumber
             // 
+            this.txtReportNumber.Enabled = false;
             this.txtReportNumber.Location = new System.Drawing.Point(169, 91);
             this.txtReportNumber.Name = "txtReportNumber";
             this.txtReportNumber.Size = new System.Drawing.Size(157, 27);
@@ -588,6 +606,7 @@
             // txtCode
             // 
             this.txtCode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.txtCode.Enabled = false;
             this.txtCode.Location = new System.Drawing.Point(169, 53);
             this.txtCode.Name = "txtCode";
             this.txtCode.Size = new System.Drawing.Size(157, 27);
@@ -595,6 +614,7 @@
             // 
             // txtW
             // 
+            this.txtW.Enabled = false;
             this.txtW.Location = new System.Drawing.Point(175, 166);
             this.txtW.Name = "txtW";
             this.txtW.Size = new System.Drawing.Size(53, 27);
@@ -605,6 +625,7 @@
             // 
             // txtD
             // 
+            this.txtD.Enabled = false;
             this.txtD.Location = new System.Drawing.Point(336, 166);
             this.txtD.Name = "txtD";
             this.txtD.Size = new System.Drawing.Size(53, 27);
@@ -633,6 +654,7 @@
             // 
             // txtL
             // 
+            this.txtL.Enabled = false;
             this.txtL.Location = new System.Drawing.Point(255, 166);
             this.txtL.Name = "txtL";
             this.txtL.Size = new System.Drawing.Size(53, 27);

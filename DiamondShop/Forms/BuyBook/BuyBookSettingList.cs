@@ -36,7 +36,7 @@ namespace DiamondShop
 
         protected override void DoLoadData()
         {
-            ds = ser.DoSelectData("BuyBookSettingDetail", -1);
+            ds = ser.DoSelectData("BuyBookSetting", -1);
 
             if (ds.Tables[0].Rows.Count > 0)
             {
@@ -76,18 +76,18 @@ namespace DiamondShop
 
         protected override bool DoDeleteData()
         {
-            Popup.Popup winMessage = new Popup.Popup("Do you want to Delete data?");
-            winMessage.ShowDialog();
-            chkFlag = winMessage.result;
+            //Popup.Popup winMessage = new Popup.Popup("Do you want to Delete data?");
+            //winMessage.ShowDialog();
+            //chkFlag = winMessage.result;
 
-            if (chkFlag)
-            {
-                if (gridSetting.RowCount > 0 && gridSetting.SelectedRows.Count > 0)
-                {
-                    id = (int)gridSetting.SelectedRows[0].Cells["ID"].Value;
-                    chkFlag = ser.DoDeleteData("BuyBookSettingDetail", id);
-                }
-            }
+            //if (chkFlag)
+            //{
+            //    if (gridSetting.RowCount > 0 && gridSetting.SelectedRows.Count > 0)
+            //    {
+            //        id = (int)gridSetting.SelectedRows[0].Cells["ID"].Value;
+            //        chkFlag = ser.DoDeleteData("BuyBookSettingDetail", id);
+            //    }
+            //}
             return chkFlag;
         }
 
@@ -96,7 +96,7 @@ namespace DiamondShop
             if (gridSetting.RowCount > 0 && gridSetting.SelectedRows.Count > 0)
             {
                 id = (int)gridSetting.SelectedRows[0].Cells["ID"].Value;
-                BuyBookDiamondCer frm = new BuyBookDiamondCer(id);
+                BuyBookSetting frm = new BuyBookSetting(id);
                 frm.ShowDialog();
             }
 

@@ -50,8 +50,8 @@ namespace DiamondShop
             binder.BindControl(txtJewelryType, "JewelryTypeName");
             binder.BindControl(txtStatus, "StatusName");
             binder.BindControl(txtSize, "Size");
-            binder.BindControl(txtMaterial1, "Material1");
-            binder.BindControl(txtMaterial2, "Material2");
+            binder.BindControl(txtMaterial1, "Material1Name");
+            binder.BindControl(txtMaterial2, "Material2Name");
             binder.BindControl(txtMaterialWeight1, "MaterialWeight1");
             binder.BindControl(txtMaterialWeight2, "MaterialWeight2");
             binder.BindControl(txtMinBeforePremium, "MinBeforePremium");
@@ -66,7 +66,7 @@ namespace DiamondShop
         protected override void Initial()
         {
 
-            txtCode.Select();
+            txtRemark.Select();
 
             //SetFieldService.SetRequireField(txtCode, txtNetWeight, txtSize, txtMaterialWeight1, txtMinPrice, txtOpenPrice);
         }

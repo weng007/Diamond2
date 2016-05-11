@@ -34,6 +34,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel4 = new System.Windows.Forms.Panel();
             this.cmbSettingType = new System.Windows.Forms.ComboBox();
             this.dtEBuyDate = new System.Windows.Forms.DateTimePicker();
@@ -196,7 +198,7 @@
             this.gridSetting.ReadOnly = true;
             this.gridSetting.RowHeadersWidth = 10;
             this.gridSetting.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridSetting.RowTemplate.Height = 60;
+            this.gridSetting.RowTemplate.Height = 30;
             this.gridSetting.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridSetting.Size = new System.Drawing.Size(995, 424);
             this.gridSetting.TabIndex = 2;
@@ -223,6 +225,8 @@
             // BuyDate
             // 
             this.BuyDate.DataPropertyName = "BuyDate";
+            dataGridViewCellStyle2.Format = "dd/mm/yyyy";
+            this.BuyDate.DefaultCellStyle = dataGridViewCellStyle2;
             this.BuyDate.HeaderText = "Buy Date";
             this.BuyDate.Name = "BuyDate";
             this.BuyDate.ReadOnly = true;
@@ -238,9 +242,9 @@
             // SettingType
             // 
             this.SettingType.DataPropertyName = "SettingType";
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Format = "dd/MM/yyyy";
-            this.SettingType.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Format = "dd/MM/yyyy";
+            this.SettingType.DefaultCellStyle = dataGridViewCellStyle3;
             this.SettingType.HeaderText = "Type";
             this.SettingType.Name = "SettingType";
             this.SettingType.ReadOnly = true;
@@ -249,8 +253,8 @@
             // Material
             // 
             this.Material.DataPropertyName = "Material";
-            dataGridViewCellStyle3.Format = "dd/MM/yyyy";
-            this.Material.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle4.Format = "dd/MM/yyyy";
+            this.Material.DefaultCellStyle = dataGridViewCellStyle4;
             this.Material.HeaderText = "Material";
             this.Material.Name = "Material";
             this.Material.ReadOnly = true;
@@ -259,9 +263,9 @@
             // Weight
             // 
             this.Weight.DataPropertyName = "Weight";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle4.Format = "N2";
-            this.Weight.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle5.Format = "N2";
+            this.Weight.DefaultCellStyle = dataGridViewCellStyle5;
             this.Weight.HeaderText = "Weight";
             this.Weight.Name = "Weight";
             this.Weight.ReadOnly = true;
@@ -270,6 +274,9 @@
             // TotalBaht
             // 
             this.TotalBaht.DataPropertyName = "TotalBaht";
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle6.Format = "N0";
+            this.TotalBaht.DefaultCellStyle = dataGridViewCellStyle6;
             this.TotalBaht.HeaderText = "Total Baht";
             this.TotalBaht.Name = "TotalBaht";
             this.TotalBaht.ReadOnly = true;
@@ -278,9 +285,9 @@
             // PricePerGram
             // 
             this.PricePerGram.DataPropertyName = "PricePerGram";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle5.Format = "N0";
-            this.PricePerGram.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle7.Format = "N0";
+            this.PricePerGram.DefaultCellStyle = dataGridViewCellStyle7;
             this.PricePerGram.HeaderText = "PricePerGram";
             this.PricePerGram.Name = "PricePerGram";
             this.PricePerGram.ReadOnly = true;

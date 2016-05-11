@@ -155,7 +155,7 @@ namespace DiamondShop
 
         protected override void Initial()
         {
-            dtReportDate.Select();
+            txtNote.Select();
 
             //SetFieldService.SetRequireField(txtCode, txtW, txtL, txtD, txtCarat);
         }
