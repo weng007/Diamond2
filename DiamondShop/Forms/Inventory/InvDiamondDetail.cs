@@ -97,6 +97,8 @@ namespace DiamondShop
 
                 tds.AcceptChanges();
 
+
+
                 //Non Cer Diamond
                 foreach (DataRow row in tds2.Tables[0].Rows)
                 {
@@ -197,11 +199,6 @@ namespace DiamondShop
         private void btnAdd1_Click(object sender, EventArgs e)
         {
             grid2.Rows.Add();
-
-            dsInvDiamondDetail.InvDiamondDetailRow row = null;
-            row = tds2.InvDiamondDetail.NewInvDiamondDetailRow();
-            tds2.InvDiamondDetail.Rows.Add(row);
-            tds2.AcceptChanges();
         }
 
         private void btnDel1_Click(object sender, EventArgs e)
