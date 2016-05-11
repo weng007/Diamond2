@@ -12,7 +12,7 @@ namespace DiamondBiz.Biz
         //dsInvDiamondCerDetail ds = new dsInvDiamondCerDetail();
         dsInvDiamondDetail ds = new dsInvDiamondDetail();
 
-        InventoryDiamondDetailDAL dal = new InventoryDiamondDetailDAL();
+        InvDiamondDetailDAL dal = new InvDiamondDetailDAL();
 
         public dsInvDiamondDetail DoSelectData(int id)
         {
