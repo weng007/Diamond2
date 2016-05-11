@@ -55,6 +55,7 @@
             this.Cost1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MinPricePerCarat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MinPrice1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tds2 = new DiamondDS.DS.dsInvDiamondDetail();
             this.grid1 = new System.Windows.Forms.DataGridView();
             this.RowNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -68,11 +69,35 @@
             this.Cost = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MinPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Browse = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.rowNumDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.refIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.minPriceDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.reportNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.labDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.labNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.shapeDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.shapeNameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.weightDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colorDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colorNameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clearityDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clearityNameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.totalBahtDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.isDeletedDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.createByDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.createDateDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.editByDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.editDateDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tds = new DiamondDS.DS.dsInvDiamondCerDetail();
             this.panel4 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tds2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grid1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tds)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -258,7 +283,6 @@
             this.grid2.Size = new System.Drawing.Size(1226, 197);
             this.grid2.TabIndex = 47;
             this.grid2.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid2_CellEnter);
-            this.grid2.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid2_CellValueChanged);
             this.grid2.SelectionChanged += new System.EventHandler(this.grid2_SelectionChanged);
             // 
             // dataGridViewTextBoxColumn1
@@ -266,6 +290,7 @@
             this.dataGridViewTextBoxColumn1.DataPropertyName = "RowNum";
             this.dataGridViewTextBoxColumn1.HeaderText = "No.";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
             this.dataGridViewTextBoxColumn1.Width = 60;
             // 
             // dataGridViewTextBoxColumn2
@@ -273,6 +298,7 @@
             this.dataGridViewTextBoxColumn2.DataPropertyName = "ID";
             this.dataGridViewTextBoxColumn2.HeaderText = "ID";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
             this.dataGridViewTextBoxColumn2.Visible = false;
             // 
             // Shape
@@ -356,9 +382,16 @@
             this.MinPrice1.Name = "MinPrice1";
             this.MinPrice1.Width = 150;
             // 
+            // tds2
+            // 
+            this.tds2.DataSetName = "dsInvDiamondDetail";
+            this.tds2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // grid1
             // 
+            this.grid1.AllowUserToAddRows = false;
             this.grid1.AllowUserToOrderColumns = true;
+            this.grid1.AutoGenerateColumns = false;
             this.grid1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.grid1.BackgroundColor = System.Drawing.SystemColors.Control;
             this.grid1.ColumnHeadersHeight = 33;
@@ -374,7 +407,30 @@
             this.Clearity,
             this.Cost,
             this.MinPrice,
-            this.Browse});
+            this.Browse,
+            this.rowNumDataGridViewTextBoxColumn1,
+            this.iDDataGridViewTextBoxColumn1,
+            this.refIDDataGridViewTextBoxColumn,
+            this.minPriceDataGridViewTextBoxColumn1,
+            this.codeDataGridViewTextBoxColumn,
+            this.reportNumberDataGridViewTextBoxColumn,
+            this.labDataGridViewTextBoxColumn,
+            this.labNameDataGridViewTextBoxColumn,
+            this.shapeDataGridViewTextBoxColumn1,
+            this.shapeNameDataGridViewTextBoxColumn1,
+            this.weightDataGridViewTextBoxColumn1,
+            this.colorDataGridViewTextBoxColumn1,
+            this.colorNameDataGridViewTextBoxColumn1,
+            this.clearityDataGridViewTextBoxColumn1,
+            this.clearityNameDataGridViewTextBoxColumn1,
+            this.totalBahtDataGridViewTextBoxColumn,
+            this.isDeletedDataGridViewTextBoxColumn1,
+            this.createByDataGridViewTextBoxColumn1,
+            this.createDateDataGridViewTextBoxColumn1,
+            this.editByDataGridViewTextBoxColumn1,
+            this.editDateDataGridViewTextBoxColumn1});
+            this.grid1.DataMember = "InvDiamondCerDetail";
+            this.grid1.DataSource = this.tds;
             this.grid1.Location = new System.Drawing.Point(12, 35);
             this.grid1.Name = "grid1";
             this.grid1.RowHeadersWidth = 10;
@@ -392,6 +448,7 @@
             this.RowNum.DataPropertyName = "RowNum";
             this.RowNum.HeaderText = "No.";
             this.RowNum.Name = "RowNum";
+            this.RowNum.ReadOnly = true;
             this.RowNum.Width = 60;
             // 
             // ID
@@ -399,6 +456,7 @@
             this.ID.DataPropertyName = "ID";
             this.ID.HeaderText = "ID";
             this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
             this.ID.Visible = false;
             // 
             // Code
@@ -430,6 +488,7 @@
             this.ShapeName.DataPropertyName = "ShapeName";
             this.ShapeName.HeaderText = "Shape";
             this.ShapeName.Name = "ShapeName";
+            this.ShapeName.ReadOnly = true;
             this.ShapeName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.ShapeName.Width = 130;
             // 
@@ -445,6 +504,7 @@
             this.ColorName.DataPropertyName = "ColorName";
             this.ColorName.HeaderText = "Color";
             this.ColorName.Name = "ColorName";
+            this.ColorName.ReadOnly = true;
             this.ColorName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.ColorName.Width = 80;
             // 
@@ -477,6 +537,143 @@
             this.Browse.Name = "Browse";
             this.Browse.Width = 80;
             // 
+            // rowNumDataGridViewTextBoxColumn1
+            // 
+            this.rowNumDataGridViewTextBoxColumn1.DataPropertyName = "RowNum";
+            this.rowNumDataGridViewTextBoxColumn1.HeaderText = "RowNum";
+            this.rowNumDataGridViewTextBoxColumn1.Name = "rowNumDataGridViewTextBoxColumn1";
+            this.rowNumDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // iDDataGridViewTextBoxColumn1
+            // 
+            this.iDDataGridViewTextBoxColumn1.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn1.HeaderText = "ID";
+            this.iDDataGridViewTextBoxColumn1.Name = "iDDataGridViewTextBoxColumn1";
+            this.iDDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // refIDDataGridViewTextBoxColumn
+            // 
+            this.refIDDataGridViewTextBoxColumn.DataPropertyName = "RefID";
+            this.refIDDataGridViewTextBoxColumn.HeaderText = "RefID";
+            this.refIDDataGridViewTextBoxColumn.Name = "refIDDataGridViewTextBoxColumn";
+            // 
+            // minPriceDataGridViewTextBoxColumn1
+            // 
+            this.minPriceDataGridViewTextBoxColumn1.DataPropertyName = "MinPrice";
+            this.minPriceDataGridViewTextBoxColumn1.HeaderText = "MinPrice";
+            this.minPriceDataGridViewTextBoxColumn1.Name = "minPriceDataGridViewTextBoxColumn1";
+            // 
+            // codeDataGridViewTextBoxColumn
+            // 
+            this.codeDataGridViewTextBoxColumn.DataPropertyName = "Code";
+            this.codeDataGridViewTextBoxColumn.HeaderText = "Code";
+            this.codeDataGridViewTextBoxColumn.Name = "codeDataGridViewTextBoxColumn";
+            // 
+            // reportNumberDataGridViewTextBoxColumn
+            // 
+            this.reportNumberDataGridViewTextBoxColumn.DataPropertyName = "ReportNumber";
+            this.reportNumberDataGridViewTextBoxColumn.HeaderText = "ReportNumber";
+            this.reportNumberDataGridViewTextBoxColumn.Name = "reportNumberDataGridViewTextBoxColumn";
+            // 
+            // labDataGridViewTextBoxColumn
+            // 
+            this.labDataGridViewTextBoxColumn.DataPropertyName = "Lab";
+            this.labDataGridViewTextBoxColumn.HeaderText = "Lab";
+            this.labDataGridViewTextBoxColumn.Name = "labDataGridViewTextBoxColumn";
+            // 
+            // labNameDataGridViewTextBoxColumn
+            // 
+            this.labNameDataGridViewTextBoxColumn.DataPropertyName = "LabName";
+            this.labNameDataGridViewTextBoxColumn.HeaderText = "LabName";
+            this.labNameDataGridViewTextBoxColumn.Name = "labNameDataGridViewTextBoxColumn";
+            this.labNameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // shapeDataGridViewTextBoxColumn1
+            // 
+            this.shapeDataGridViewTextBoxColumn1.DataPropertyName = "Shape";
+            this.shapeDataGridViewTextBoxColumn1.HeaderText = "Shape";
+            this.shapeDataGridViewTextBoxColumn1.Name = "shapeDataGridViewTextBoxColumn1";
+            // 
+            // shapeNameDataGridViewTextBoxColumn1
+            // 
+            this.shapeNameDataGridViewTextBoxColumn1.DataPropertyName = "ShapeName";
+            this.shapeNameDataGridViewTextBoxColumn1.HeaderText = "ShapeName";
+            this.shapeNameDataGridViewTextBoxColumn1.Name = "shapeNameDataGridViewTextBoxColumn1";
+            this.shapeNameDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // weightDataGridViewTextBoxColumn1
+            // 
+            this.weightDataGridViewTextBoxColumn1.DataPropertyName = "Weight";
+            this.weightDataGridViewTextBoxColumn1.HeaderText = "Weight";
+            this.weightDataGridViewTextBoxColumn1.Name = "weightDataGridViewTextBoxColumn1";
+            // 
+            // colorDataGridViewTextBoxColumn1
+            // 
+            this.colorDataGridViewTextBoxColumn1.DataPropertyName = "Color";
+            this.colorDataGridViewTextBoxColumn1.HeaderText = "Color";
+            this.colorDataGridViewTextBoxColumn1.Name = "colorDataGridViewTextBoxColumn1";
+            // 
+            // colorNameDataGridViewTextBoxColumn1
+            // 
+            this.colorNameDataGridViewTextBoxColumn1.DataPropertyName = "ColorName";
+            this.colorNameDataGridViewTextBoxColumn1.HeaderText = "ColorName";
+            this.colorNameDataGridViewTextBoxColumn1.Name = "colorNameDataGridViewTextBoxColumn1";
+            this.colorNameDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // clearityDataGridViewTextBoxColumn1
+            // 
+            this.clearityDataGridViewTextBoxColumn1.DataPropertyName = "Clearity";
+            this.clearityDataGridViewTextBoxColumn1.HeaderText = "Clearity";
+            this.clearityDataGridViewTextBoxColumn1.Name = "clearityDataGridViewTextBoxColumn1";
+            // 
+            // clearityNameDataGridViewTextBoxColumn1
+            // 
+            this.clearityNameDataGridViewTextBoxColumn1.DataPropertyName = "ClearityName";
+            this.clearityNameDataGridViewTextBoxColumn1.HeaderText = "ClearityName";
+            this.clearityNameDataGridViewTextBoxColumn1.Name = "clearityNameDataGridViewTextBoxColumn1";
+            this.clearityNameDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // totalBahtDataGridViewTextBoxColumn
+            // 
+            this.totalBahtDataGridViewTextBoxColumn.DataPropertyName = "TotalBaht";
+            this.totalBahtDataGridViewTextBoxColumn.HeaderText = "TotalBaht";
+            this.totalBahtDataGridViewTextBoxColumn.Name = "totalBahtDataGridViewTextBoxColumn";
+            // 
+            // isDeletedDataGridViewTextBoxColumn1
+            // 
+            this.isDeletedDataGridViewTextBoxColumn1.DataPropertyName = "IsDeleted";
+            this.isDeletedDataGridViewTextBoxColumn1.HeaderText = "IsDeleted";
+            this.isDeletedDataGridViewTextBoxColumn1.Name = "isDeletedDataGridViewTextBoxColumn1";
+            // 
+            // createByDataGridViewTextBoxColumn1
+            // 
+            this.createByDataGridViewTextBoxColumn1.DataPropertyName = "CreateBy";
+            this.createByDataGridViewTextBoxColumn1.HeaderText = "CreateBy";
+            this.createByDataGridViewTextBoxColumn1.Name = "createByDataGridViewTextBoxColumn1";
+            // 
+            // createDateDataGridViewTextBoxColumn1
+            // 
+            this.createDateDataGridViewTextBoxColumn1.DataPropertyName = "CreateDate";
+            this.createDateDataGridViewTextBoxColumn1.HeaderText = "CreateDate";
+            this.createDateDataGridViewTextBoxColumn1.Name = "createDateDataGridViewTextBoxColumn1";
+            // 
+            // editByDataGridViewTextBoxColumn1
+            // 
+            this.editByDataGridViewTextBoxColumn1.DataPropertyName = "EditBy";
+            this.editByDataGridViewTextBoxColumn1.HeaderText = "EditBy";
+            this.editByDataGridViewTextBoxColumn1.Name = "editByDataGridViewTextBoxColumn1";
+            // 
+            // editDateDataGridViewTextBoxColumn1
+            // 
+            this.editDateDataGridViewTextBoxColumn1.DataPropertyName = "EditDate";
+            this.editDateDataGridViewTextBoxColumn1.HeaderText = "EditDate";
+            this.editDateDataGridViewTextBoxColumn1.Name = "editDateDataGridViewTextBoxColumn1";
+            // 
+            // tds
+            // 
+            this.tds.DataSetName = "dsInvDiamondCerDetail";
+            this.tds.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(35)))), ((int)(((byte)(69)))));
@@ -501,7 +698,9 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tds2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grid1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tds)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -548,5 +747,28 @@
         private System.Windows.Forms.DataGridViewButtonColumn Browse;
         private System.Windows.Forms.Button btnAdd1;
         private System.Windows.Forms.Button btnDel;
+        private DiamondDS.DS.dsInvDiamondCerDetail tds;
+        private DiamondDS.DS.dsInvDiamondDetail tds2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rowNumDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn refIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn minPriceDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn reportNumberDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn labDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn labNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn shapeDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn shapeNameDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn weightDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colorDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colorNameDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clearityDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clearityNameDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn totalBahtDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn isDeletedDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn createByDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn createDateDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn editByDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn editDateDataGridViewTextBoxColumn1;
     }
 }

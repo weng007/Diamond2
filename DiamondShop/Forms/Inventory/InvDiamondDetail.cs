@@ -16,14 +16,13 @@ namespace DiamondShop
 {
     public partial class InvDiamondDetail : FormInfo
     {
-        dsInvDiamondCerDetail tds = new dsInvDiamondCerDetail();
-        dsInvDiamondDetail tds2 = new dsInvDiamondDetail();
         DataSet ds2 = new DataSet();
         int rowIndex, rowIndex1;
 
         public InvDiamondDetail()
         {
-
+            InitializeComponent();
+            Initial();
         }
 
         public InvDiamondDetail(int id)
@@ -37,24 +36,32 @@ namespace DiamondShop
 
         protected override void Initial()
         {
-            Shape.DataSource = (GM.GetMasterTableDetail("C019")).Tables[0];
-            Shape.ValueMember = "ID";
-            Shape.DisplayMember = "Detail";
+            grid2.AutoGenerateColumns = false;
 
-            Color.DataSource = (GM.GetMasterTableDetail("C001")).Tables[0];
-            Color.ValueMember = "ID";
-            Color.DisplayMember = "Detail";
+            DataGridViewComboBoxColumn dgvcShape;
+            dgvcShape = (DataGridViewComboBoxColumn)grid2.Columns["Shape"];
+            dgvcShape.DataSource = (GM.GetMasterTableDetail("C019")).Tables[0];
+            dgvcShape.ValueMember = "ID";
+            dgvcShape.DisplayMember = "Detail";
 
-            Clearity1.DataSource = (GM.GetMasterTableDetail("C002")).Tables[0];
-            Clearity1.ValueMember = "ID";
-            Clearity1.DisplayMember = "Detail";
+            DataGridViewComboBoxColumn dgvcColor;
+            dgvcColor = (DataGridViewComboBoxColumn)grid2.Columns["Color"];
+            dgvcColor.DataSource = (GM.GetMasterTableDetail("C001")).Tables[0];
+            dgvcColor.ValueMember = "ID";
+            dgvcColor.DisplayMember = "Detail";
+
+            DataGridViewComboBoxColumn dgvcClearity1;
+            dgvcClearity1 = (DataGridViewComboBoxColumn)grid2.Columns["Clearity1"];
+            dgvcClearity1.DataSource = (GM.GetMasterTableDetail("C002")).Tables[0];
+            dgvcClearity1.ValueMember = "ID";
+            dgvcClearity1.DisplayMember = "Detail";
 
             grid2.Refresh();
         }
         protected override void LoadData()
         {
-            ds = ser.DoSelectData("InvDiamondCerDetail", id);
-            ds2 = ser.DoSelectData("InvDiamondDetail", id);
+            ds = ser.DoSelectData("InvDiamondCerDetail", -1);
+            ds2 = ser.DoSelectData("InvDiamondDetail", -1);
             tds.Clear();
             tds.Merge(ds);
             tds2.Clear();
@@ -98,6 +105,7 @@ namespace DiamondShop
                 tds.AcceptChanges();
 
 
+                BindingDataSet(tds2);
 
                 //Non Cer Diamond
                 foreach (DataRow row in tds2.Tables[0].Rows)
@@ -199,6 +207,7 @@ namespace DiamondShop
         private void btnAdd1_Click(object sender, EventArgs e)
         {
             grid2.Rows.Add();
+            tds2.Tables[0].Rows.Add();
         }
 
         private void btnDel1_Click(object sender, EventArgs e)
@@ -221,6 +230,20 @@ namespace DiamondShop
             {
                 rowIndex1 = grid2.SelectedRows[0].Index;
             }
+        }
+        
+        private dsInvDiamondDetail BindingDataSet(dsInvDiamondDetail tds2)
+        {
+            int i = 0;
+
+            foreach(DataGridViewRow row in grid2.Rows)
+            {
+                tds2.Tables[0].Rows[i]["Shape"] = row.Cells["Shape"].Value;
+                tds2.Tables[0].Rows[i]["Color"] = row.Cells["Color"].Value;
+                tds2.Tables[0].Rows[i]["Clearity"] = row.Cells["Clearity1"].Value;
+            }
+
+            return tds2;
         }
     }
 }
