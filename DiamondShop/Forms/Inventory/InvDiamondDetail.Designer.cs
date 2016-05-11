@@ -40,7 +40,6 @@
             this.txtSumMinPrice = new System.Windows.Forms.TextBox();
             this.txtSumCost = new System.Windows.Forms.TextBox();
             this.txtSumWeight = new System.Windows.Forms.TextBox();
-            this.txtSumAmount = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.grid2 = new System.Windows.Forms.DataGridView();
@@ -98,7 +97,6 @@
             this.panel3.Controls.Add(this.txtSumMinPrice);
             this.panel3.Controls.Add(this.txtSumCost);
             this.panel3.Controls.Add(this.txtSumWeight);
-            this.panel3.Controls.Add(this.txtSumAmount);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.label14);
             this.panel3.Controls.Add(this.grid2);
@@ -107,7 +105,7 @@
             this.panel3.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel3.Location = new System.Drawing.Point(12, 68);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1247, 524);
+            this.panel3.Size = new System.Drawing.Size(1285, 524);
             this.panel3.TabIndex = 73;
             // 
             // btnDel
@@ -117,7 +115,7 @@
             this.btnDel.FlatAppearance.BorderSize = 0;
             this.btnDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDel.Location = new System.Drawing.Point(1194, 309);
+            this.btnDel.Location = new System.Drawing.Point(1244, 309);
             this.btnDel.Name = "btnDel";
             this.btnDel.Size = new System.Drawing.Size(30, 30);
             this.btnDel.TabIndex = 121;
@@ -132,7 +130,7 @@
             this.btnAdd.FlatAppearance.BorderSize = 0;
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(1194, 273);
+            this.btnAdd.Location = new System.Drawing.Point(1244, 273);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(30, 30);
             this.btnAdd.TabIndex = 120;
@@ -203,22 +201,12 @@
             // txtSumWeight
             // 
             this.txtSumWeight.BackColor = System.Drawing.Color.White;
-            this.txtSumWeight.Location = new System.Drawing.Point(697, 227);
+            this.txtSumWeight.Location = new System.Drawing.Point(615, 227);
             this.txtSumWeight.Name = "txtSumWeight";
             this.txtSumWeight.ReadOnly = true;
-            this.txtSumWeight.Size = new System.Drawing.Size(69, 30);
+            this.txtSumWeight.Size = new System.Drawing.Size(78, 30);
             this.txtSumWeight.TabIndex = 113;
             this.txtSumWeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // txtSumAmount
-            // 
-            this.txtSumAmount.BackColor = System.Drawing.Color.White;
-            this.txtSumAmount.Location = new System.Drawing.Point(615, 227);
-            this.txtSumAmount.Name = "txtSumAmount";
-            this.txtSumAmount.ReadOnly = true;
-            this.txtSumAmount.Size = new System.Drawing.Size(76, 30);
-            this.txtSumAmount.TabIndex = 112;
-            this.txtSumAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label1
             // 
@@ -267,7 +255,7 @@
             this.grid2.RowTemplate.Height = 25;
             this.grid2.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.grid2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.grid2.Size = new System.Drawing.Size(1173, 197);
+            this.grid2.Size = new System.Drawing.Size(1226, 197);
             this.grid2.TabIndex = 47;
             this.grid2.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid2_CellEnter);
             this.grid2.SelectionChanged += new System.EventHandler(this.grid2_SelectionChanged);
@@ -502,7 +490,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(195)))), ((int)(((byte)(157)))));
-            this.ClientSize = new System.Drawing.Size(1270, 604);
+            this.ClientSize = new System.Drawing.Size(1303, 604);
             this.Controls.Add(this.panel3);
             this.Name = "InvDiamondDetail";
             this.Text = "GemstoneCer";
@@ -526,7 +514,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox txtSumWeight;
-        private System.Windows.Forms.TextBox txtSumAmount;
         private System.Windows.Forms.TextBox txtSumMinPrice;
         private System.Windows.Forms.TextBox txtSumCost;
         private System.Windows.Forms.TextBox txtSumWeight1;
