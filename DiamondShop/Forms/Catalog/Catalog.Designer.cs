@@ -434,6 +434,7 @@
             // btnGemstone
             // 
             this.btnGemstone.BackColor = System.Drawing.Color.White;
+            this.btnGemstone.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGemstone.FlatAppearance.BorderSize = 0;
             this.btnGemstone.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGemstone.Image = ((System.Drawing.Image)(resources.GetObject("btnGemstone.Image")));
@@ -447,6 +448,7 @@
             // btnDiamond
             // 
             this.btnDiamond.BackColor = System.Drawing.Color.White;
+            this.btnDiamond.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDiamond.FlatAppearance.BorderSize = 0;
             this.btnDiamond.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDiamond.Image = ((System.Drawing.Image)(resources.GetObject("btnDiamond.Image")));
