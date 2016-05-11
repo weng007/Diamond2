@@ -29,11 +29,13 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DiamondDetailCatalog));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.button1 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.txtSumWeight1 = new System.Windows.Forms.TextBox();
@@ -99,42 +101,50 @@
             // 
             // txtSumWeight1
             // 
-            this.txtSumWeight1.BackColor = System.Drawing.Color.White;
+            this.txtSumWeight1.BackColor = System.Drawing.SystemColors.Window;
+            this.txtSumWeight1.Enabled = false;
             this.txtSumWeight1.Location = new System.Drawing.Point(448, 480);
             this.txtSumWeight1.Name = "txtSumWeight1";
             this.txtSumWeight1.ReadOnly = true;
             this.txtSumWeight1.Size = new System.Drawing.Size(69, 30);
             this.txtSumWeight1.TabIndex = 117;
+            this.txtSumWeight1.Text = "0";
             this.txtSumWeight1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtSumAmount1
             // 
-            this.txtSumAmount1.BackColor = System.Drawing.Color.White;
+            this.txtSumAmount1.BackColor = System.Drawing.SystemColors.Window;
+            this.txtSumAmount1.Enabled = false;
             this.txtSumAmount1.Location = new System.Drawing.Point(366, 480);
             this.txtSumAmount1.Name = "txtSumAmount1";
             this.txtSumAmount1.ReadOnly = true;
             this.txtSumAmount1.Size = new System.Drawing.Size(76, 30);
             this.txtSumAmount1.TabIndex = 116;
+            this.txtSumAmount1.Text = "0";
             this.txtSumAmount1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtSumWeight
             // 
-            this.txtSumWeight.BackColor = System.Drawing.Color.White;
+            this.txtSumWeight.BackColor = System.Drawing.SystemColors.Window;
+            this.txtSumWeight.Enabled = false;
             this.txtSumWeight.Location = new System.Drawing.Point(711, 227);
             this.txtSumWeight.Name = "txtSumWeight";
             this.txtSumWeight.ReadOnly = true;
             this.txtSumWeight.Size = new System.Drawing.Size(69, 30);
             this.txtSumWeight.TabIndex = 113;
+            this.txtSumWeight.Text = "0";
             this.txtSumWeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtSumAmount
             // 
-            this.txtSumAmount.BackColor = System.Drawing.Color.White;
+            this.txtSumAmount.BackColor = System.Drawing.SystemColors.Window;
+            this.txtSumAmount.Enabled = false;
             this.txtSumAmount.Location = new System.Drawing.Point(629, 227);
             this.txtSumAmount.Name = "txtSumAmount";
             this.txtSumAmount.ReadOnly = true;
             this.txtSumAmount.Size = new System.Drawing.Size(76, 30);
             this.txtSumAmount.TabIndex = 112;
+            this.txtSumAmount.Text = "0";
             this.txtSumAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label1
@@ -182,7 +192,7 @@
             this.grid2.RowTemplate.Height = 25;
             this.grid2.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.grid2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grid2.Size = new System.Drawing.Size(933, 197);
+            this.grid2.Size = new System.Drawing.Size(790, 197);
             this.grid2.TabIndex = 47;
             // 
             // grid1
@@ -228,6 +238,8 @@
             // RowNum
             // 
             this.RowNum.DataPropertyName = "RowNum";
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            this.RowNum.DefaultCellStyle = dataGridViewCellStyle5;
             this.RowNum.HeaderText = "No.";
             this.RowNum.Name = "RowNum";
             this.RowNum.ReadOnly = true;
@@ -278,9 +290,9 @@
             // Amount
             // 
             this.Amount.DataPropertyName = "Amount";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle4.Format = "N0";
-            this.Amount.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle6.Format = "N0";
+            this.Amount.DefaultCellStyle = dataGridViewCellStyle6;
             this.Amount.HeaderText = "Amount";
             this.Amount.Name = "Amount";
             this.Amount.ReadOnly = true;
@@ -289,9 +301,9 @@
             // Weight
             // 
             this.Weight.DataPropertyName = "Weight";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle5.Format = "N2";
-            this.Weight.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle7.Format = "N2";
+            this.Weight.DefaultCellStyle = dataGridViewCellStyle7;
             this.Weight.HeaderText = "Weight";
             this.Weight.Name = "Weight";
             this.Weight.ReadOnly = true;
@@ -318,6 +330,8 @@
             // RowNum1
             // 
             this.RowNum1.DataPropertyName = "RowNum";
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            this.RowNum1.DefaultCellStyle = dataGridViewCellStyle1;
             this.RowNum1.HeaderText = "No.";
             this.RowNum1.Name = "RowNum1";
             this.RowNum1.ReadOnly = true;
@@ -343,9 +357,9 @@
             // WeightPerStone
             // 
             this.WeightPerStone.DataPropertyName = "WeightPerStone";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle1.Format = "N2";
-            this.WeightPerStone.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle2.Format = "N2";
+            this.WeightPerStone.DefaultCellStyle = dataGridViewCellStyle2;
             this.WeightPerStone.HeaderText = "Weight Per Stone";
             this.WeightPerStone.Name = "WeightPerStone";
             this.WeightPerStone.ReadOnly = true;
@@ -354,9 +368,9 @@
             // Amount1
             // 
             this.Amount1.DataPropertyName = "Amount";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle2.Format = "N0";
-            this.Amount1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle3.Format = "N0";
+            this.Amount1.DefaultCellStyle = dataGridViewCellStyle3;
             this.Amount1.HeaderText = "Amount";
             this.Amount1.Name = "Amount1";
             this.Amount1.ReadOnly = true;
@@ -365,9 +379,9 @@
             // Weight1
             // 
             this.Weight1.DataPropertyName = "Weight";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle3.Format = "N2";
-            this.Weight1.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle4.Format = "N2";
+            this.Weight1.DefaultCellStyle = dataGridViewCellStyle4;
             this.Weight1.HeaderText = "Weight";
             this.Weight1.Name = "Weight1";
             this.Weight1.ReadOnly = true;

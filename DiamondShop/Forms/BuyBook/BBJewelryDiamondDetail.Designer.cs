@@ -98,22 +98,26 @@
             // 
             // txtSumWeight1
             // 
-            this.txtSumWeight1.BackColor = System.Drawing.Color.White;
+            this.txtSumWeight1.BackColor = System.Drawing.SystemColors.Window;
+            this.txtSumWeight1.Enabled = false;
             this.txtSumWeight1.Location = new System.Drawing.Point(340, 477);
             this.txtSumWeight1.Name = "txtSumWeight1";
             this.txtSumWeight1.ReadOnly = true;
             this.txtSumWeight1.Size = new System.Drawing.Size(91, 30);
             this.txtSumWeight1.TabIndex = 122;
+            this.txtSumWeight1.Text = "0";
             this.txtSumWeight1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtSumAmount1
             // 
-            this.txtSumAmount1.BackColor = System.Drawing.Color.White;
+            this.txtSumAmount1.BackColor = System.Drawing.SystemColors.Window;
+            this.txtSumAmount1.Enabled = false;
             this.txtSumAmount1.Location = new System.Drawing.Point(240, 478);
             this.txtSumAmount1.Name = "txtSumAmount1";
             this.txtSumAmount1.ReadOnly = true;
             this.txtSumAmount1.Size = new System.Drawing.Size(87, 30);
             this.txtSumAmount1.TabIndex = 121;
+            this.txtSumAmount1.Text = "0";
             this.txtSumAmount1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // grid2
@@ -144,22 +148,26 @@
             // 
             // txtSumWeight
             // 
-            this.txtSumWeight.BackColor = System.Drawing.Color.White;
+            this.txtSumWeight.BackColor = System.Drawing.SystemColors.Window;
+            this.txtSumWeight.Enabled = false;
             this.txtSumWeight.Location = new System.Drawing.Point(620, 227);
             this.txtSumWeight.Name = "txtSumWeight";
             this.txtSumWeight.ReadOnly = true;
             this.txtSumWeight.Size = new System.Drawing.Size(91, 30);
             this.txtSumWeight.TabIndex = 113;
+            this.txtSumWeight.Text = "0";
             this.txtSumWeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtSumAmount
             // 
-            this.txtSumAmount.BackColor = System.Drawing.Color.White;
+            this.txtSumAmount.BackColor = System.Drawing.SystemColors.Window;
+            this.txtSumAmount.Enabled = false;
             this.txtSumAmount.Location = new System.Drawing.Point(520, 228);
             this.txtSumAmount.Name = "txtSumAmount";
             this.txtSumAmount.ReadOnly = true;
             this.txtSumAmount.Size = new System.Drawing.Size(87, 30);
             this.txtSumAmount.TabIndex = 112;
+            this.txtSumAmount.Text = "0";
             this.txtSumAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label1
