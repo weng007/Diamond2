@@ -100,7 +100,7 @@ namespace DiamondShop
                 //Non Cer Diamond
                 foreach (DataRow row in tds2.Tables[0].Rows)
                 {
-                    if (row.RowState == DataRowState.Added)
+                    if (row.RowState == DataRowState.Added || row.RowState == DataRowState.Unchanged)
                     {
                         SetCreateBy(row);
                         chkFlag = ser.DoInsertData("InvDiamondDetail", tds2);
