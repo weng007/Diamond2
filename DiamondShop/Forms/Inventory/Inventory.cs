@@ -416,6 +416,12 @@ namespace DiamondShop
             txtRedCost1.Text = GM.ConvertDoubleToString(txtRedCost1);
         }
 
+        private void btnGemstone_Click(object sender, EventArgs e)
+        {
+            InvGemstoneDetail frm = new InvGemstoneDetail(id);
+            frm.ShowDialog();
+        }
+
         private void btnDiamond_Click(object sender, EventArgs e)
         {
             InvDiamondDetail frm = new InvDiamondDetail(id);
