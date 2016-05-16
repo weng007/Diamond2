@@ -13,13 +13,26 @@ using DiamondDS;
 namespace DiamondShop
 {
     public partial class DiamondCerList : FormList
-    {       
+    {
+        public int mode = 0;
+        public int refID=0;
+
         public DiamondCerList()
         {
             InitializeComponent();
             Initial();
             DoLoadData();
         }
+
+        public DiamondCerList(int mode)
+        {
+            InitializeComponent();
+            Initial();
+            this.mode = mode;
+
+            DoLoadData();
+        }
+
         protected override void Initial()
         {
             cmbShape.DataSource = (GM.GetMasterTableDetail("C019",true)).Tables[0];
@@ -113,14 +126,21 @@ namespace DiamondShop
 
         private void gridDiamondCer_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            if (gridDiamondCer.RowCount > 0 && gridDiamondCer.SelectedRows.Count > 0)
+            if (mode == 0)
             {
-                id = (int)gridDiamondCer.SelectedRows[0].Cells["ID"].Value;
-                DiamondCer frm = new DiamondCer(id);
-                frm.ShowDialog();
+                if (gridDiamondCer.RowCount > 0 && gridDiamondCer.SelectedRows.Count > 0)
+                {
+                    id = (int)gridDiamondCer.SelectedRows[0].Cells["ID"].Value;
+                    DiamondCer frm = new DiamondCer(id);
+                    frm.ShowDialog();
+                }
+                DoLoadData();
             }
-
-            DoLoadData();
+            else //mode = 1 Search
+            {
+                refID = (int)gridDiamondCer.SelectedRows[0].Cells["ID"].Value;
+                this.Close();
+            }    
         }
 
         private void cmbColorType_SelectedIndexChanged(object sender, EventArgs e)

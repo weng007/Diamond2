@@ -29,17 +29,19 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InvDiamondDetail));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             this.button1 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.btnDel = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnDel1 = new System.Windows.Forms.Button();
             this.btnAdd1 = new System.Windows.Forms.Button();
             this.txtSumMinPrice1 = new System.Windows.Forms.TextBox();
             this.txtSumCost1 = new System.Windows.Forms.TextBox();
@@ -51,11 +53,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.grid2 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RowNum1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RefID1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ID1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Shape = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.WeightPerStone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Weight1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Color = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.Clearity1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
@@ -64,42 +67,21 @@
             this.MinPricePerCarat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MinPrice1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grid1 = new System.Windows.Forms.DataGridView();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.tds = new DiamondDS.DS.dsInvDiamondCerDetail();
+            this.tds2 = new DiamondDS.DS.dsInvDiamondDetail();
             this.RowNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ReportNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Lab = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LabName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ShapeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Weight = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColorName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Clearity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ClearityName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TotalBaht = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MinPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Browse = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.rowNumDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.refIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.minPriceDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.reportNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.labDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.labNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.shapeDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.shapeNameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.weightDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colorDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colorNameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clearityDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clearityNameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.totalBahtDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.isDeletedDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.createByDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.createDateDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.editByDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.editDateDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tds = new DiamondDS.DS.dsInvDiamondCerDetail();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.tds2 = new DiamondDS.DS.dsInvDiamondDetail();
+            this.RefID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid2)).BeginInit();
@@ -121,7 +103,9 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Controls.Add(this.btnDel);
+            this.panel3.Controls.Add(this.button2);
+            this.panel3.Controls.Add(this.btnAdd);
+            this.panel3.Controls.Add(this.btnDel1);
             this.panel3.Controls.Add(this.btnAdd1);
             this.panel3.Controls.Add(this.txtSumMinPrice1);
             this.panel3.Controls.Add(this.txtSumCost1);
@@ -141,25 +125,59 @@
             this.panel3.Size = new System.Drawing.Size(1285, 524);
             this.panel3.TabIndex = 73;
             // 
-            // btnDel
+            // button2
             // 
-            this.btnDel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDel.BackgroundImage")));
-            this.btnDel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnDel.FlatAppearance.BorderSize = 0;
-            this.btnDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDel.Location = new System.Drawing.Point(1244, 309);
-            this.btnDel.Name = "btnDel";
-            this.btnDel.Size = new System.Drawing.Size(30, 30);
-            this.btnDel.TabIndex = 121;
-            this.btnDel.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnDel.UseVisualStyleBackColor = true;
-            this.btnDel.Click += new System.EventHandler(this.btnDel1_Click);
+            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(1244, 71);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(30, 30);
+            this.button2.TabIndex = 123;
+            this.button2.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.btnDel_Click);
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAdd.BackgroundImage")));
+            this.btnAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAdd.FlatAppearance.BorderSize = 0;
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.Location = new System.Drawing.Point(1244, 35);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(30, 30);
+            this.btnAdd.TabIndex = 122;
+            this.btnAdd.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // btnDel1
+            // 
+            this.btnDel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDel1.BackgroundImage")));
+            this.btnDel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnDel1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDel1.FlatAppearance.BorderSize = 0;
+            this.btnDel1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDel1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDel1.Location = new System.Drawing.Point(1244, 309);
+            this.btnDel1.Name = "btnDel1";
+            this.btnDel1.Size = new System.Drawing.Size(30, 30);
+            this.btnDel1.TabIndex = 121;
+            this.btnDel1.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnDel1.UseVisualStyleBackColor = true;
+            this.btnDel1.Click += new System.EventHandler(this.btnDel1_Click);
             // 
             // btnAdd1
             // 
             this.btnAdd1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAdd1.BackgroundImage")));
             this.btnAdd1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnAdd1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAdd1.FlatAppearance.BorderSize = 0;
             this.btnAdd1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -290,11 +308,12 @@
             this.grid2.BackgroundColor = System.Drawing.SystemColors.Control;
             this.grid2.ColumnHeadersHeight = 33;
             this.grid2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
+            this.RowNum1,
+            this.RefID1,
+            this.ID1,
             this.Shape,
             this.WeightPerStone,
-            this.dataGridViewTextBoxColumn5,
+            this.Amount,
             this.Weight1,
             this.Color,
             this.Clearity1,
@@ -314,23 +333,30 @@
             this.grid2.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid2_CellEnter);
             this.grid2.SelectionChanged += new System.EventHandler(this.grid2_SelectionChanged);
             // 
-            // dataGridViewTextBoxColumn1
+            // RowNum1
             // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "RowNum";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridViewTextBoxColumn1.HeaderText = "No.";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 60;
+            this.RowNum1.DataPropertyName = "RowNum";
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            this.RowNum1.DefaultCellStyle = dataGridViewCellStyle9;
+            this.RowNum1.HeaderText = "No.";
+            this.RowNum1.Name = "RowNum1";
+            this.RowNum1.ReadOnly = true;
+            this.RowNum1.Width = 60;
             // 
-            // dataGridViewTextBoxColumn2
+            // RefID1
             // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "ID";
-            this.dataGridViewTextBoxColumn2.HeaderText = "ID";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Visible = false;
+            this.RefID1.DataPropertyName = "RefID";
+            this.RefID1.HeaderText = "RefID";
+            this.RefID1.Name = "RefID1";
+            this.RefID1.Visible = false;
+            // 
+            // ID1
+            // 
+            this.ID1.DataPropertyName = "ID";
+            this.ID1.HeaderText = "ID";
+            this.ID1.Name = "ID1";
+            this.ID1.ReadOnly = true;
+            this.ID1.Visible = false;
             // 
             // Shape
             // 
@@ -345,29 +371,29 @@
             // WeightPerStone
             // 
             this.WeightPerStone.DataPropertyName = "WeightPerStone";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle2.Format = "N2";
-            this.WeightPerStone.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle10.Format = "N2";
+            this.WeightPerStone.DefaultCellStyle = dataGridViewCellStyle10;
             this.WeightPerStone.HeaderText = "Weight Per Stone";
             this.WeightPerStone.Name = "WeightPerStone";
             this.WeightPerStone.Width = 150;
             // 
-            // dataGridViewTextBoxColumn5
+            // Amount
             // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "Amount";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle3.Format = "N0";
-            this.dataGridViewTextBoxColumn5.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridViewTextBoxColumn5.HeaderText = "Amount";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.Width = 80;
+            this.Amount.DataPropertyName = "Amount";
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle11.Format = "N0";
+            this.Amount.DefaultCellStyle = dataGridViewCellStyle11;
+            this.Amount.HeaderText = "Amount";
+            this.Amount.Name = "Amount";
+            this.Amount.Width = 80;
             // 
             // Weight1
             // 
             this.Weight1.DataPropertyName = "Weight";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle4.Format = "N2";
-            this.Weight1.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle12.Format = "N2";
+            this.Weight1.DefaultCellStyle = dataGridViewCellStyle12;
             this.Weight1.HeaderText = "Weight";
             this.Weight1.Name = "Weight1";
             this.Weight1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -396,9 +422,9 @@
             // CostPerCarat
             // 
             this.CostPerCarat.DataPropertyName = "CostPerCarat";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle5.Format = "N0";
-            this.CostPerCarat.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle13.Format = "N0";
+            this.CostPerCarat.DefaultCellStyle = dataGridViewCellStyle13;
             this.CostPerCarat.HeaderText = "Cost/Carat";
             this.CostPerCarat.Name = "CostPerCarat";
             this.CostPerCarat.Width = 130;
@@ -406,9 +432,9 @@
             // Cost1
             // 
             this.Cost1.DataPropertyName = "Cost";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle6.Format = "N0";
-            this.Cost1.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle14.Format = "N0";
+            this.Cost1.DefaultCellStyle = dataGridViewCellStyle14;
             this.Cost1.HeaderText = "Cost";
             this.Cost1.Name = "Cost1";
             this.Cost1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -417,9 +443,9 @@
             // MinPricePerCarat
             // 
             this.MinPricePerCarat.DataPropertyName = "MinPricePerCarat";
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle7.Format = "N0";
-            this.MinPricePerCarat.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle15.Format = "N0";
+            this.MinPricePerCarat.DefaultCellStyle = dataGridViewCellStyle15;
             this.MinPricePerCarat.HeaderText = "Min Price/Carat";
             this.MinPricePerCarat.Name = "MinPricePerCarat";
             this.MinPricePerCarat.Width = 120;
@@ -427,9 +453,9 @@
             // MinPrice1
             // 
             this.MinPrice1.DataPropertyName = "MinPrice";
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle8.Format = "N0";
-            this.MinPrice1.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle16.Format = "N0";
+            this.MinPrice1.DefaultCellStyle = dataGridViewCellStyle16;
             this.MinPrice1.HeaderText = "Min Price";
             this.MinPrice1.Name = "MinPrice1";
             this.MinPrice1.Width = 150;
@@ -438,7 +464,6 @@
             // 
             this.grid1.AllowUserToAddRows = false;
             this.grid1.AllowUserToOrderColumns = true;
-            this.grid1.AutoGenerateColumns = false;
             this.grid1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.grid1.BackgroundColor = System.Drawing.SystemColors.Control;
             this.grid1.ColumnHeadersHeight = 33;
@@ -447,37 +472,14 @@
             this.ID,
             this.Code,
             this.ReportNumber,
-            this.Lab,
+            this.LabName,
             this.ShapeName,
             this.Weight,
             this.ColorName,
-            this.Clearity,
-            this.Cost,
+            this.ClearityName,
+            this.TotalBaht,
             this.MinPrice,
-            this.Browse,
-            this.rowNumDataGridViewTextBoxColumn1,
-            this.iDDataGridViewTextBoxColumn1,
-            this.refIDDataGridViewTextBoxColumn,
-            this.minPriceDataGridViewTextBoxColumn1,
-            this.codeDataGridViewTextBoxColumn,
-            this.reportNumberDataGridViewTextBoxColumn,
-            this.labDataGridViewTextBoxColumn,
-            this.labNameDataGridViewTextBoxColumn,
-            this.shapeDataGridViewTextBoxColumn1,
-            this.shapeNameDataGridViewTextBoxColumn1,
-            this.weightDataGridViewTextBoxColumn1,
-            this.colorDataGridViewTextBoxColumn1,
-            this.colorNameDataGridViewTextBoxColumn1,
-            this.clearityDataGridViewTextBoxColumn1,
-            this.clearityNameDataGridViewTextBoxColumn1,
-            this.totalBahtDataGridViewTextBoxColumn,
-            this.isDeletedDataGridViewTextBoxColumn1,
-            this.createByDataGridViewTextBoxColumn1,
-            this.createDateDataGridViewTextBoxColumn1,
-            this.editByDataGridViewTextBoxColumn1,
-            this.editDateDataGridViewTextBoxColumn1});
-            this.grid1.DataMember = "InvDiamondCerDetail";
-            this.grid1.DataSource = this.tds;
+            this.RefID});
             this.grid1.Location = new System.Drawing.Point(12, 35);
             this.grid1.Name = "grid1";
             this.grid1.RowHeadersWidth = 10;
@@ -489,6 +491,26 @@
             this.grid1.TabIndex = 46;
             this.grid1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid1_CellContentClick);
             this.grid1.SelectionChanged += new System.EventHandler(this.grid1_SelectionChanged);
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(35)))), ((int)(((byte)(69)))));
+            this.panel4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel4.BackgroundImage")));
+            this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.panel4.Location = new System.Drawing.Point(12, 3);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(207, 32);
+            this.panel4.TabIndex = 45;
+            // 
+            // tds
+            // 
+            this.tds.DataSetName = "dsInvDiamondCerDetail";
+            this.tds.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tds2
+            // 
+            this.tds2.DataSetName = "dsInvDiamondDetail";
+            this.tds2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // RowNum
             // 
@@ -522,13 +544,13 @@
             this.ReportNumber.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.ReportNumber.Width = 180;
             // 
-            // Lab
+            // LabName
             // 
-            this.Lab.DataPropertyName = "Lab";
-            this.Lab.HeaderText = "Lab";
-            this.Lab.Name = "Lab";
-            this.Lab.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Lab.Width = 90;
+            this.LabName.DataPropertyName = "LabName";
+            this.LabName.HeaderText = "Lab";
+            this.LabName.Name = "LabName";
+            this.LabName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.LabName.Width = 90;
             // 
             // ShapeName
             // 
@@ -555,21 +577,21 @@
             this.ColorName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.ColorName.Width = 80;
             // 
-            // Clearity
+            // ClearityName
             // 
-            this.Clearity.DataPropertyName = "Clearity";
-            this.Clearity.HeaderText = "Clearity";
-            this.Clearity.Name = "Clearity";
-            this.Clearity.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Clearity.Width = 80;
+            this.ClearityName.DataPropertyName = "ClearityName";
+            this.ClearityName.HeaderText = "Clearity";
+            this.ClearityName.Name = "ClearityName";
+            this.ClearityName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ClearityName.Width = 80;
             // 
-            // Cost
+            // TotalBaht
             // 
-            this.Cost.DataPropertyName = "Cost";
-            this.Cost.HeaderText = "Cost";
-            this.Cost.Name = "Cost";
-            this.Cost.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Cost.Width = 150;
+            this.TotalBaht.DataPropertyName = "TotalBaht";
+            this.TotalBaht.HeaderText = "Cost";
+            this.TotalBaht.Name = "TotalBaht";
+            this.TotalBaht.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.TotalBaht.Width = 150;
             // 
             // MinPrice
             // 
@@ -578,163 +600,12 @@
             this.MinPrice.Name = "MinPrice";
             this.MinPrice.Width = 150;
             // 
-            // Browse
+            // RefID
             // 
-            this.Browse.HeaderText = "Browse Cer";
-            this.Browse.Name = "Browse";
-            this.Browse.Width = 80;
-            // 
-            // rowNumDataGridViewTextBoxColumn1
-            // 
-            this.rowNumDataGridViewTextBoxColumn1.DataPropertyName = "RowNum";
-            this.rowNumDataGridViewTextBoxColumn1.HeaderText = "RowNum";
-            this.rowNumDataGridViewTextBoxColumn1.Name = "rowNumDataGridViewTextBoxColumn1";
-            this.rowNumDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // iDDataGridViewTextBoxColumn1
-            // 
-            this.iDDataGridViewTextBoxColumn1.DataPropertyName = "ID";
-            this.iDDataGridViewTextBoxColumn1.HeaderText = "ID";
-            this.iDDataGridViewTextBoxColumn1.Name = "iDDataGridViewTextBoxColumn1";
-            this.iDDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // refIDDataGridViewTextBoxColumn
-            // 
-            this.refIDDataGridViewTextBoxColumn.DataPropertyName = "RefID";
-            this.refIDDataGridViewTextBoxColumn.HeaderText = "RefID";
-            this.refIDDataGridViewTextBoxColumn.Name = "refIDDataGridViewTextBoxColumn";
-            // 
-            // minPriceDataGridViewTextBoxColumn1
-            // 
-            this.minPriceDataGridViewTextBoxColumn1.DataPropertyName = "MinPrice";
-            this.minPriceDataGridViewTextBoxColumn1.HeaderText = "MinPrice";
-            this.minPriceDataGridViewTextBoxColumn1.Name = "minPriceDataGridViewTextBoxColumn1";
-            // 
-            // codeDataGridViewTextBoxColumn
-            // 
-            this.codeDataGridViewTextBoxColumn.DataPropertyName = "Code";
-            this.codeDataGridViewTextBoxColumn.HeaderText = "Code";
-            this.codeDataGridViewTextBoxColumn.Name = "codeDataGridViewTextBoxColumn";
-            // 
-            // reportNumberDataGridViewTextBoxColumn
-            // 
-            this.reportNumberDataGridViewTextBoxColumn.DataPropertyName = "ReportNumber";
-            this.reportNumberDataGridViewTextBoxColumn.HeaderText = "ReportNumber";
-            this.reportNumberDataGridViewTextBoxColumn.Name = "reportNumberDataGridViewTextBoxColumn";
-            // 
-            // labDataGridViewTextBoxColumn
-            // 
-            this.labDataGridViewTextBoxColumn.DataPropertyName = "Lab";
-            this.labDataGridViewTextBoxColumn.HeaderText = "Lab";
-            this.labDataGridViewTextBoxColumn.Name = "labDataGridViewTextBoxColumn";
-            // 
-            // labNameDataGridViewTextBoxColumn
-            // 
-            this.labNameDataGridViewTextBoxColumn.DataPropertyName = "LabName";
-            this.labNameDataGridViewTextBoxColumn.HeaderText = "LabName";
-            this.labNameDataGridViewTextBoxColumn.Name = "labNameDataGridViewTextBoxColumn";
-            this.labNameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // shapeDataGridViewTextBoxColumn1
-            // 
-            this.shapeDataGridViewTextBoxColumn1.DataPropertyName = "Shape";
-            this.shapeDataGridViewTextBoxColumn1.HeaderText = "Shape";
-            this.shapeDataGridViewTextBoxColumn1.Name = "shapeDataGridViewTextBoxColumn1";
-            // 
-            // shapeNameDataGridViewTextBoxColumn1
-            // 
-            this.shapeNameDataGridViewTextBoxColumn1.DataPropertyName = "ShapeName";
-            this.shapeNameDataGridViewTextBoxColumn1.HeaderText = "ShapeName";
-            this.shapeNameDataGridViewTextBoxColumn1.Name = "shapeNameDataGridViewTextBoxColumn1";
-            this.shapeNameDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // weightDataGridViewTextBoxColumn1
-            // 
-            this.weightDataGridViewTextBoxColumn1.DataPropertyName = "Weight";
-            this.weightDataGridViewTextBoxColumn1.HeaderText = "Weight";
-            this.weightDataGridViewTextBoxColumn1.Name = "weightDataGridViewTextBoxColumn1";
-            // 
-            // colorDataGridViewTextBoxColumn1
-            // 
-            this.colorDataGridViewTextBoxColumn1.DataPropertyName = "Color";
-            this.colorDataGridViewTextBoxColumn1.HeaderText = "Color";
-            this.colorDataGridViewTextBoxColumn1.Name = "colorDataGridViewTextBoxColumn1";
-            // 
-            // colorNameDataGridViewTextBoxColumn1
-            // 
-            this.colorNameDataGridViewTextBoxColumn1.DataPropertyName = "ColorName";
-            this.colorNameDataGridViewTextBoxColumn1.HeaderText = "ColorName";
-            this.colorNameDataGridViewTextBoxColumn1.Name = "colorNameDataGridViewTextBoxColumn1";
-            this.colorNameDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // clearityDataGridViewTextBoxColumn1
-            // 
-            this.clearityDataGridViewTextBoxColumn1.DataPropertyName = "Clearity";
-            this.clearityDataGridViewTextBoxColumn1.HeaderText = "Clearity";
-            this.clearityDataGridViewTextBoxColumn1.Name = "clearityDataGridViewTextBoxColumn1";
-            // 
-            // clearityNameDataGridViewTextBoxColumn1
-            // 
-            this.clearityNameDataGridViewTextBoxColumn1.DataPropertyName = "ClearityName";
-            this.clearityNameDataGridViewTextBoxColumn1.HeaderText = "ClearityName";
-            this.clearityNameDataGridViewTextBoxColumn1.Name = "clearityNameDataGridViewTextBoxColumn1";
-            this.clearityNameDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // totalBahtDataGridViewTextBoxColumn
-            // 
-            this.totalBahtDataGridViewTextBoxColumn.DataPropertyName = "TotalBaht";
-            this.totalBahtDataGridViewTextBoxColumn.HeaderText = "TotalBaht";
-            this.totalBahtDataGridViewTextBoxColumn.Name = "totalBahtDataGridViewTextBoxColumn";
-            // 
-            // isDeletedDataGridViewTextBoxColumn1
-            // 
-            this.isDeletedDataGridViewTextBoxColumn1.DataPropertyName = "IsDeleted";
-            this.isDeletedDataGridViewTextBoxColumn1.HeaderText = "IsDeleted";
-            this.isDeletedDataGridViewTextBoxColumn1.Name = "isDeletedDataGridViewTextBoxColumn1";
-            // 
-            // createByDataGridViewTextBoxColumn1
-            // 
-            this.createByDataGridViewTextBoxColumn1.DataPropertyName = "CreateBy";
-            this.createByDataGridViewTextBoxColumn1.HeaderText = "CreateBy";
-            this.createByDataGridViewTextBoxColumn1.Name = "createByDataGridViewTextBoxColumn1";
-            // 
-            // createDateDataGridViewTextBoxColumn1
-            // 
-            this.createDateDataGridViewTextBoxColumn1.DataPropertyName = "CreateDate";
-            this.createDateDataGridViewTextBoxColumn1.HeaderText = "CreateDate";
-            this.createDateDataGridViewTextBoxColumn1.Name = "createDateDataGridViewTextBoxColumn1";
-            // 
-            // editByDataGridViewTextBoxColumn1
-            // 
-            this.editByDataGridViewTextBoxColumn1.DataPropertyName = "EditBy";
-            this.editByDataGridViewTextBoxColumn1.HeaderText = "EditBy";
-            this.editByDataGridViewTextBoxColumn1.Name = "editByDataGridViewTextBoxColumn1";
-            // 
-            // editDateDataGridViewTextBoxColumn1
-            // 
-            this.editDateDataGridViewTextBoxColumn1.DataPropertyName = "EditDate";
-            this.editDateDataGridViewTextBoxColumn1.HeaderText = "EditDate";
-            this.editDateDataGridViewTextBoxColumn1.Name = "editDateDataGridViewTextBoxColumn1";
-            // 
-            // tds
-            // 
-            this.tds.DataSetName = "dsInvDiamondCerDetail";
-            this.tds.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(35)))), ((int)(((byte)(69)))));
-            this.panel4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel4.BackgroundImage")));
-            this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.panel4.Location = new System.Drawing.Point(12, 3);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(207, 32);
-            this.panel4.TabIndex = 45;
-            // 
-            // tds2
-            // 
-            this.tds2.DataSetName = "dsInvDiamondDetail";
-            this.tds2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.RefID.DataPropertyName = "RefID";
+            this.RefID.HeaderText = "RefID";
+            this.RefID.Name = "RefID";
+            this.RefID.Visible = false;
             // 
             // InvDiamondDetail
             // 
@@ -773,48 +644,18 @@
         private System.Windows.Forms.TextBox txtSumAmount1;
         private System.Windows.Forms.TextBox txtSumMinPrice1;
         private System.Windows.Forms.TextBox txtSumCost1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn RowNum;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Code;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ReportNumber;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Lab;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ShapeName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Weight;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColorName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Clearity;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cost;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MinPrice;
-        private System.Windows.Forms.DataGridViewButtonColumn Browse;
         private System.Windows.Forms.Button btnAdd1;
-        private System.Windows.Forms.Button btnDel;
+        private System.Windows.Forms.Button btnDel1;
         private DiamondDS.DS.dsInvDiamondCerDetail tds;
         private DiamondDS.DS.dsInvDiamondDetail tds2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn rowNumDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn refIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn minPriceDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn reportNumberDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn labDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn labNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn shapeDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn shapeNameDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn weightDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colorDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colorNameDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clearityDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clearityNameDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn totalBahtDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn isDeletedDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn createByDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn createDateDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn editByDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn editDateDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RowNum1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RefID1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID1;
         private System.Windows.Forms.DataGridViewComboBoxColumn Shape;
         private System.Windows.Forms.DataGridViewTextBoxColumn WeightPerStone;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Amount;
         private System.Windows.Forms.DataGridViewTextBoxColumn Weight1;
         private System.Windows.Forms.DataGridViewComboBoxColumn Color;
         private System.Windows.Forms.DataGridViewComboBoxColumn Clearity1;
@@ -822,5 +663,17 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Cost1;
         private System.Windows.Forms.DataGridViewTextBoxColumn MinPricePerCarat;
         private System.Windows.Forms.DataGridViewTextBoxColumn MinPrice1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RowNum;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Code;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ReportNumber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LabName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ShapeName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Weight;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColorName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ClearityName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TotalBaht;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MinPrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RefID;
     }
 }

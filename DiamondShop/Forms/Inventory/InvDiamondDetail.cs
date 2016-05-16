@@ -17,6 +17,7 @@ namespace DiamondShop
     public partial class InvDiamondDetail : FormInfo
     {
         DataSet ds2 = new DataSet();
+        DataSet tmp = new DataSet();
         int rowIndex, rowIndex1;
 
         public InvDiamondDetail()
@@ -36,48 +37,44 @@ namespace DiamondShop
 
         protected override void Initial()
         {
+            grid1.AutoGenerateColumns = false;
             grid2.AutoGenerateColumns = false;
 
-            DataGridViewComboBoxColumn dgvcShape;
-            dgvcShape = (DataGridViewComboBoxColumn)grid2.Columns["Shape"];
-            dgvcShape.DataSource = (GM.GetMasterTableDetail("C019")).Tables[0];
-            dgvcShape.ValueMember = "ID";
-            dgvcShape.DisplayMember = "Detail";
+            Shape = (DataGridViewComboBoxColumn)grid2.Columns["Shape"];
+            Shape.DataSource = (GM.GetMasterTableDetail("C019")).Tables[0];
+            Shape.ValueMember = "ID";
+            Shape.DisplayMember = "Detail";
 
-            DataGridViewComboBoxColumn dgvcColor;
-            dgvcColor = (DataGridViewComboBoxColumn)grid2.Columns["Color"];
-            dgvcColor.DataSource = (GM.GetMasterTableDetail("C001")).Tables[0];
-            dgvcColor.ValueMember = "ID";
-            dgvcColor.DisplayMember = "Detail";
+            Color = (DataGridViewComboBoxColumn)grid2.Columns["Color"];
+            Color.DataSource = (GM.GetMasterTableDetail("C017")).Tables[0];
+            Color.ValueMember = "ID";
+            Color.DisplayMember = "Detail";
 
-            DataGridViewComboBoxColumn dgvcClearity1;
-            dgvcClearity1 = (DataGridViewComboBoxColumn)grid2.Columns["Clearity1"];
-            dgvcClearity1.DataSource = (GM.GetMasterTableDetail("C002")).Tables[0];
-            dgvcClearity1.ValueMember = "ID";
-            dgvcClearity1.DisplayMember = "Detail";
+            Clearity1 = (DataGridViewComboBoxColumn)grid2.Columns["Clearity1"];
+            Clearity1.DataSource = (GM.GetMasterTableDetail("C002")).Tables[0];
+            Clearity1.ValueMember = "ID";
+            Clearity1.DisplayMember = "Detail";
 
             grid2.Refresh();
         }
         protected override void LoadData()
         {
             ds = ser.DoSelectData("InvDiamondCerDetail", -1);
-            ds2 = ser.DoSelectData("InvDiamondDetail", -1);
             tds.Clear();
             tds.Merge(ds);
+
+            ds2 = ser.DoSelectData("InvDiamondDetail", -1);          
             tds2.Clear();
             tds2.Merge(ds2);
 
-
             if (tds.InvDiamondCerDetail.Rows.Count > 0)
             {
-                grid1.DataSource = tds.Tables[0];
-                grid1.Refresh();
+                BindingGridDiamondDetail(grid1);
             }
 
             if (tds2.InvDiamondDetail.Rows.Count > 0)
             {
-                grid2.DataSource = tds2.Tables[0];
-                grid2.Refresh();
+                BindingGridDiamondDetail(grid2);
             }
 
             base.LoadData();
@@ -88,6 +85,7 @@ namespace DiamondShop
             try
             {
                 //Cer Diamond
+                BindingDSDiamondDetail(0);
                 foreach (DataRow row in tds.Tables[0].Rows)
                 {
                     if(row.RowState == DataRowState.Added)
@@ -105,8 +103,7 @@ namespace DiamondShop
                 tds.AcceptChanges();
 
 
-                BindingDataSet(tds2);
-
+                BindingDSDiamondDetail(1);
                 //Non Cer Diamond
                 foreach (DataRow row in tds2.Tables[0].Rows)
                 {
@@ -121,8 +118,6 @@ namespace DiamondShop
                         chkFlag = ser.DoUpdateData("InvDiamondDetail", tds2);
                     }
                 }
-
-                tds2.AcceptChanges();
             }
             catch (Exception ex)
             {
@@ -190,18 +185,35 @@ namespace DiamondShop
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            grid1.Rows.Add();
+            DiamondCerList frm = new DiamondCerList(1);
+            frm.ShowDialog();
 
-            dsInvDiamondCerDetail.InvDiamondCerDetailRow row = null;
-            row = tds.InvDiamondCerDetail.NewInvDiamondCerDetailRow();
-            tds.InvDiamondCerDetail.Rows.Add(row);
-            tds.AcceptChanges();
+            if (frm.refID != 0)
+            { 
+                tmp = ser.DoSelectData("DiamondCer", frm.refID);
+                tds.Clear();
+                tds.Merge(tmp);
+
+                grid1.Rows.Add();
+
+                grid1.Rows[rowIndex].Cells["RowNum"].Value = tds.Tables["DiamondCer"].Rows[0]["RowNum"].ToString();
+                grid1.Rows[rowIndex].Cells["Code"].Value = tds.Tables["DiamondCer"].Rows[0]["Code"].ToString();
+                grid1.Rows[rowIndex].Cells["ReportNumber"].Value = tds.Tables["DiamondCer"].Rows[0]["ReportNumber"].ToString();
+                grid1.Rows[rowIndex].Cells["LabName"].Value = tds.Tables["DiamondCer"].Rows[0]["LabName"].ToString();
+                grid1.Rows[rowIndex].Cells["ShapeName"].Value = tds.Tables["DiamondCer"].Rows[0]["ShapeName"].ToString();
+                grid1.Rows[rowIndex].Cells["Weight"].Value = tds.Tables["DiamondCer"].Rows[0]["Weight"].ToString();
+                grid1.Rows[rowIndex].Cells["ColorName"].Value = tds.Tables["DiamondCer"].Rows[0]["ColorName"].ToString();
+                grid1.Rows[rowIndex].Cells["ClearityName"].Value = tds.Tables["DiamondCer"].Rows[0]["ClearityName"].ToString();
+                grid1.Rows[rowIndex].Cells["MinPrice"].Value = 0;
+                grid1.Rows[rowIndex].Cells["TotalBaht"].Value = tds.Tables["DiamondCer"].Rows[0]["TotalBaht"].ToString();
+                grid1.Rows[rowIndex].Cells["RefID"].Value = frm.refID;
+            }
         }
 
         private void btnDel_Click(object sender, EventArgs e)
         {
-            grid1.Rows.RemoveAt(rowIndex);
-            tds.AcceptChanges();
+            grid2.Rows.RemoveAt(rowIndex1);
+            tds2.AcceptChanges();
         }
 
         private void btnAdd1_Click(object sender, EventArgs e)
@@ -231,19 +243,86 @@ namespace DiamondShop
                 rowIndex1 = grid2.SelectedRows[0].Index;
             }
         }
-        
-        private dsInvDiamondDetail BindingDataSet(dsInvDiamondDetail tds2)
+
+        #region Binding Grid, Dataset
+        private void BindingGridDiamondDetail(DataGridView grid)
+        {
+            int i = 0;
+            if(grid.Name == "grid1")
+            {
+                foreach (DataRow row in tds.Tables[0].Rows)
+                {
+                    grid1.Rows.Add();
+                    grid1.Rows[i].Cells["RowNum"].Value = row["RowNum"].ToString();
+                    grid1.Rows[i].Cells["Code"].Value = row["Code"].ToString();
+                    grid1.Rows[i].Cells["ReportNumber"].Value = row["ReportNumber"].ToString();
+                    grid1.Rows[i].Cells["LabName"].Value = row["LabName"].ToString();
+                    grid1.Rows[i].Cells["ShapeName"].Value = row["ShapeName"].ToString();
+                    grid1.Rows[i].Cells["Weight"].Value = row["Weight"].ToString();
+                    grid1.Rows[i].Cells["ColorName"].Value = row["ColorName"].ToString();
+                    grid1.Rows[i].Cells["ClearityName"].Value = row["ClearityName"].ToString();
+                    grid1.Rows[i].Cells["MinPrice"].Value = row["MinPrice"].ToString();
+                    grid1.Rows[i].Cells["TotalBaht"].Value = row["TotalBaht"].ToString();
+                    grid1.Rows[i].Cells["RefID"].Value = row["RefID"].ToString();
+                }   
+
+                i = 0;
+            }
+
+            if (grid.Name == "grid2")
+            {
+                foreach (DataRow row in tds2.Tables[0].Rows)
+                {
+                    grid2.Rows.Add();
+                    grid2.Rows[i].Cells["RowNum1"].Value = row["RowNum"].ToString();
+                    grid2.Rows[i].Cells["Shape"].Value = row["Shape"].ToString();
+                    grid2.Rows[i].Cells["WeightPerStone"].Value = row["WeightPerStone"].ToString();
+                    grid2.Rows[i].Cells["Amount"].Value = row["Amount"].ToString();
+                    grid2.Rows[i].Cells["Weigh1"].Value = row["Weight"].ToString();
+                    grid2.Rows[i].Cells["Color"].Value = row["Color"].ToString();
+                    grid2.Rows[i].Cells["Clearity1"].Value = row["Clearity"].ToString();
+                    grid2.Rows[i].Cells["CostPerCarat"].Value = row["CostPerCarat"].ToString();
+                    grid2.Rows[i].Cells["Cost1"].Value = row["Cost"].ToString();
+                    grid2.Rows[i].Cells["MinPricePerCarat"].Value = row["MinPricePerCarat"].ToString();
+                    grid2.Rows[i].Cells["MinPrice"].Value = row["MinPrice"].ToString();
+                    grid2.Rows[i].Cells["RefID1"].Value = row["RefID"].ToString();
+                }
+            }
+        }
+
+
+        private void BindingDSDiamondDetail(int type)
         {
             int i = 0;
 
-            foreach(DataGridViewRow row in grid2.Rows)
+            if(type == 0)
             {
-                tds2.Tables[0].Rows[i]["Shape"] = row.Cells["Shape"].Value;
-                tds2.Tables[0].Rows[i]["Color"] = row.Cells["Color"].Value;
-                tds2.Tables[0].Rows[i]["Clearity"] = row.Cells["Clearity1"].Value;
+                foreach (DataGridViewRow row in grid1.Rows)
+                {
+                    tds.Tables[0].Rows.Add();
+                    tds.Tables[0].Rows[i]["RefID"] = row.Cells["RefID"].Value;
+                    tds.Tables[0].Rows[i]["MinPrice"] = row.Cells["MinPrice"].Value;
+                }
             }
-
-            return tds2;
+            else
+            {
+                foreach (DataGridViewRow row in grid2.Rows)
+                {
+                    tds2.Tables[0].Rows.Add();
+                    tds2.Tables[0].Rows[i]["WeightPerStone"] = row.Cells["WeightPerStone"].Value;
+                    tds2.Tables[0].Rows[i]["Amount"] = row.Cells["Amount"].Value;
+                    tds2.Tables[0].Rows[i]["Weight"] = row.Cells["Weight1"].Value;
+                    tds2.Tables[0].Rows[i]["Shape"] = row.Cells["Shape"].Value;
+                    tds2.Tables[0].Rows[i]["Color"] = row.Cells["Color"].Value;
+                    tds2.Tables[0].Rows[i]["Clearity"] = row.Cells["Clearity1"].Value;
+                    tds2.Tables[0].Rows[i]["CostPerCarat"] = row.Cells["CostPerCarat"].Value;
+                    tds2.Tables[0].Rows[i]["Cost"] = row.Cells["Cost1"].Value;
+                    tds2.Tables[0].Rows[i]["MinPricePerCarat"] = row.Cells["MinPricePerCarat"].Value;
+                    tds2.Tables[0].Rows[i]["MinPrice"] = row.Cells["MinPrice1"].Value;
+                    tds2.Tables[0].Rows[i]["RefID"] = row.Cells["RefID1"].Value;
+                }
+            }       
         }
+        #endregion
     }
 }
