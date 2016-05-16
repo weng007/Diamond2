@@ -153,6 +153,18 @@ namespace DiamondShop.FormMaster
             }
         }
 
+        public void SetCreateBy(DataSet ds)
+        {
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                foreach (DataRow row in ds.Tables[0].Rows)
+                {
+                    row["CreateBy"] = ApplicationInfo.UserID;
+                    row["EditBy"] = ApplicationInfo.UserID;
+                }  
+            }
+        }
+
         public void SetEditBy(DataRow row)
         {
             if (row.Table.Columns.Contains("EditBy"))

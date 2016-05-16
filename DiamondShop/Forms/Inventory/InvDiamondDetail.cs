@@ -19,6 +19,10 @@ namespace DiamondShop
         DataSet ds2 = new DataSet();
         DataSet tmp = new DataSet();
         int rowIndex, rowIndex1;
+        int chkGrid;
+        dsInvDiamondCerDetail tds = new dsInvDiamondCerDetail();
+        dsDiamondCer tdsDiamondCer = new dsDiamondCer();
+        dsInvDiamondDetail tds2 = new dsInvDiamondDetail();
 
         public InvDiamondDetail()
         {
@@ -69,12 +73,16 @@ namespace DiamondShop
 
             if (tds.InvDiamondCerDetail.Rows.Count > 0)
             {
+                grid1.Rows.Clear();
                 BindingGridDiamondDetail(grid1);
+                BindingDSDiamondDetail(0);
             }
 
             if (tds2.InvDiamondDetail.Rows.Count > 0)
             {
+                grid2.Rows.Clear();
                 BindingGridDiamondDetail(grid2);
+                BindingDSDiamondDetail(1);
             }
 
             base.LoadData();
@@ -85,26 +93,21 @@ namespace DiamondShop
             try
             {
                 //Cer Diamond
-                BindingDSDiamondDetail(0);
                 foreach (DataRow row in tds.Tables[0].Rows)
                 {
-                    if(row.RowState == DataRowState.Added)
+                    if(row["RowNum"].ToString() == "")
                     {
                         SetCreateBy(row);
-                        chkFlag = ser.DoInsertData("InvDiamondCerDetail", tds);
                     }
-                    else if(row.RowState == DataRowState.Modified)
+                    else
                     {
                         SetEditBy(row);
-                        chkFlag = ser.DoUpdateData("InvDiamondCerDetail", tds);
-                    }
+                    }                 
                 }
 
+                chkFlag = ser.DoInsertData("InvDiamondCerDetail", tds);
                 tds.AcceptChanges();
 
-
-                BindingDSDiamondDetail(1);
-                //Non Cer Diamond
                 foreach (DataRow row in tds2.Tables[0].Rows)
                 {
                     if (row.RowState == DataRowState.Added || row.RowState == DataRowState.Unchanged)
@@ -118,6 +121,8 @@ namespace DiamondShop
                         chkFlag = ser.DoUpdateData("InvDiamondDetail", tds2);
                     }
                 }
+                tds2.AcceptChanges();
+
             }
             catch (Exception ex)
             {
@@ -128,14 +133,29 @@ namespace DiamondShop
         }
         protected override bool DeleteData()
         {
-            //try
-            //{
-            //    chkFlag = ser.DoDeleteData("InvDiamondDetail", id);
-            //}
-            //catch (Exception ex)
-            //{
-            //    throw ex;
-            //}
+            if(chkGrid == 0)
+            {
+                try
+                {
+                    chkFlag = ser.DoDeleteData("InvDiamondCerDetail", Convert.ToInt16(grid1.SelectedRows[0].Cells["ID"].Value.ToString()));
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            else
+            {
+                try
+                {
+                    chkFlag = ser.DoDeleteData("InvDiamondDetail", Convert.ToInt16(grid2.SelectedRows[0].Cells["ID"].Value.ToString()));
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            
 
             return chkFlag;
         }
@@ -178,8 +198,7 @@ namespace DiamondShop
         {
             if(e.ColumnIndex == 10)
             {
-                DiamondCerList frm = new DiamondCerList();
-                frm.ShowDialog();
+                
             }
         }
 
@@ -191,29 +210,37 @@ namespace DiamondShop
             if (frm.refID != 0)
             { 
                 tmp = ser.DoSelectData("DiamondCer", frm.refID);
-                tds.Clear();
-                tds.Merge(tmp);
+                tdsDiamondCer.Clear();
+                tdsDiamondCer.Merge(tmp);
 
                 grid1.Rows.Add();
+                rowIndex = grid1.Rows.GetLastRow(DataGridViewElementStates.Displayed);
 
-                grid1.Rows[rowIndex].Cells["RowNum"].Value = tds.Tables["DiamondCer"].Rows[0]["RowNum"].ToString();
-                grid1.Rows[rowIndex].Cells["Code"].Value = tds.Tables["DiamondCer"].Rows[0]["Code"].ToString();
-                grid1.Rows[rowIndex].Cells["ReportNumber"].Value = tds.Tables["DiamondCer"].Rows[0]["ReportNumber"].ToString();
-                grid1.Rows[rowIndex].Cells["LabName"].Value = tds.Tables["DiamondCer"].Rows[0]["LabName"].ToString();
-                grid1.Rows[rowIndex].Cells["ShapeName"].Value = tds.Tables["DiamondCer"].Rows[0]["ShapeName"].ToString();
-                grid1.Rows[rowIndex].Cells["Weight"].Value = tds.Tables["DiamondCer"].Rows[0]["Weight"].ToString();
-                grid1.Rows[rowIndex].Cells["ColorName"].Value = tds.Tables["DiamondCer"].Rows[0]["ColorName"].ToString();
-                grid1.Rows[rowIndex].Cells["ClearityName"].Value = tds.Tables["DiamondCer"].Rows[0]["ClearityName"].ToString();
+                grid1.Rows[rowIndex].Cells["Code"].Value = tdsDiamondCer.Tables[0].Rows[0]["Code"].ToString();
+                grid1.Rows[rowIndex].Cells["ReportNumber"].Value = tdsDiamondCer.Tables[0].Rows[0]["ReportNumber"].ToString();
+                grid1.Rows[rowIndex].Cells["LabName"].Value = tdsDiamondCer.Tables[0].Rows[0]["LabName"].ToString();
+                grid1.Rows[rowIndex].Cells["ShapeName"].Value = tdsDiamondCer.Tables[0].Rows[0]["ShapeName"].ToString();
+                grid1.Rows[rowIndex].Cells["Weight"].Value = tdsDiamondCer.Tables[0].Rows[0]["Weight"].ToString();
+                grid1.Rows[rowIndex].Cells["ColorName"].Value = tdsDiamondCer.Tables[0].Rows[0]["ColorName"].ToString();
+                grid1.Rows[rowIndex].Cells["ClearityName"].Value = tdsDiamondCer.Tables[0].Rows[0]["ClearityName"].ToString();
                 grid1.Rows[rowIndex].Cells["MinPrice"].Value = 0;
-                grid1.Rows[rowIndex].Cells["TotalBaht"].Value = tds.Tables["DiamondCer"].Rows[0]["TotalBaht"].ToString();
+                grid1.Rows[rowIndex].Cells["TotalBaht"].Value = tdsDiamondCer.Tables[0].Rows[0]["TotalBaht"].ToString();
                 grid1.Rows[rowIndex].Cells["RefID"].Value = frm.refID;
+
+                tds.Tables[0].Rows.Add();
+                tds.Tables[0].Rows[rowIndex]["RefID"] = frm.refID;
+                tds.Tables[0].Rows[rowIndex]["MinPrice"] = grid1.Rows[rowIndex].Cells["MinPrice"].Value;
+
+                tds.AcceptChanges();
             }
         }
 
         private void btnDel_Click(object sender, EventArgs e)
         {
-            grid2.Rows.RemoveAt(rowIndex1);
-            tds2.AcceptChanges();
+            grid1.Rows.RemoveAt(rowIndex);
+            tds.Tables[0].Rows[rowIndex].Delete();
+
+            DeleteDataGrid(0);
         }
 
         private void btnAdd1_Click(object sender, EventArgs e)
@@ -248,6 +275,7 @@ namespace DiamondShop
         private void BindingGridDiamondDetail(DataGridView grid)
         {
             int i = 0;
+
             if(grid.Name == "grid1")
             {
                 foreach (DataRow row in tds.Tables[0].Rows)
@@ -264,12 +292,14 @@ namespace DiamondShop
                     grid1.Rows[i].Cells["MinPrice"].Value = row["MinPrice"].ToString();
                     grid1.Rows[i].Cells["TotalBaht"].Value = row["TotalBaht"].ToString();
                     grid1.Rows[i].Cells["RefID"].Value = row["RefID"].ToString();
+
+                    i++;
                 }   
 
                 i = 0;
             }
 
-            if (grid.Name == "grid2")
+            else if (grid.Name == "grid2")
             {
                 foreach (DataRow row in tds2.Tables[0].Rows)
                 {
@@ -286,29 +316,40 @@ namespace DiamondShop
                     grid2.Rows[i].Cells["MinPricePerCarat"].Value = row["MinPricePerCarat"].ToString();
                     grid2.Rows[i].Cells["MinPrice"].Value = row["MinPrice"].ToString();
                     grid2.Rows[i].Cells["RefID1"].Value = row["RefID"].ToString();
+
+                    i++;
                 }
             }
         }
 
-
         private void BindingDSDiamondDetail(int type)
         {
             int i = 0;
+            tds.Clear();
+            tds2.Clear();
 
-            if(type == 0)
+            if (type == 0)
             {
+                
                 foreach (DataGridViewRow row in grid1.Rows)
                 {
                     tds.Tables[0].Rows.Add();
+                    tds.Tables[0].Rows[i]["RowNum"] = row.Cells["RowNum"].Value;
                     tds.Tables[0].Rows[i]["RefID"] = row.Cells["RefID"].Value;
                     tds.Tables[0].Rows[i]["MinPrice"] = row.Cells["MinPrice"].Value;
+
+                    i++;
                 }
+            
+                i = 0;
+                tds.AcceptChanges();
             }
             else
             {
                 foreach (DataGridViewRow row in grid2.Rows)
                 {
                     tds2.Tables[0].Rows.Add();
+                    tds2.Tables[0].Rows[i]["RowNum"] = row.Cells["RowNum1"].Value;
                     tds2.Tables[0].Rows[i]["WeightPerStone"] = row.Cells["WeightPerStone"].Value;
                     tds2.Tables[0].Rows[i]["Amount"] = row.Cells["Amount"].Value;
                     tds2.Tables[0].Rows[i]["Weight"] = row.Cells["Weight1"].Value;
@@ -320,9 +361,24 @@ namespace DiamondShop
                     tds2.Tables[0].Rows[i]["MinPricePerCarat"] = row.Cells["MinPricePerCarat"].Value;
                     tds2.Tables[0].Rows[i]["MinPrice"] = row.Cells["MinPrice1"].Value;
                     tds2.Tables[0].Rows[i]["RefID"] = row.Cells["RefID1"].Value;
+                    i++;
                 }
+
+                tds2.AcceptChanges();
             }       
         }
         #endregion
+
+        private void DeleteDataGrid(int type)
+        {
+            if(type == 0)
+            {
+                chkGrid = 0;
+            }
+            else
+            {
+                chkGrid = 1;
+            }
+        }
     }
 }
