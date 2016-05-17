@@ -154,8 +154,7 @@ namespace DiamondShop
                 {
                     throw ex;
                 }
-            }
-            
+            }            
 
             return chkFlag;
         }
@@ -325,8 +324,7 @@ namespace DiamondShop
             tds2.Clear();
 
             if (type == 0)
-            {
-                
+            {               
                 foreach (DataGridViewRow row in grid1.Rows)
                 {
                     tds.Tables[0].Rows.Add();
@@ -362,6 +360,7 @@ namespace DiamondShop
                     tds2.Tables[0].Rows[i]["MinPricePerCarat"] = row.Cells["MinPricePerCarat"].Value;
                     tds2.Tables[0].Rows[i]["MinPrice"] = row.Cells["MinPrice1"].Value;
                     tds2.Tables[0].Rows[i]["refID"] = row.Cells["refID2"].Value;
+
                     i++;
                 }
 
