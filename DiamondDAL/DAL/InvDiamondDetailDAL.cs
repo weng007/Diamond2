@@ -35,8 +35,17 @@ namespace DiamondDAL.DAL
         {
             try
             {
-                dsInvDiamondDetail.InvDiamondDetailRow row = tds.InvDiamondDetail[0];
-                SQL.ExecuteSP("SP_InvDiamondDetail_Ins", row);
+                foreach (dsInvDiamondDetail.InvDiamondDetailRow row in tds.Tables[0].Rows)
+                {
+                    if (row["RowNum"].ToString() == "")
+                    {
+                        SQL.ExecuteSP("SP_InvDiamondDetail_Ins", row);
+                    }
+                    else
+                    {
+                        SQL.ExecuteSP("SP_InvDiamondDetail_Upd", row);
+                    }
+                }
             }
             catch (Exception ex)
             {

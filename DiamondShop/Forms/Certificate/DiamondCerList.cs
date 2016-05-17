@@ -15,7 +15,7 @@ namespace DiamondShop
     public partial class DiamondCerList : FormList
     {
         public int mode = 0;
-        public int refID=0;
+        public int refID1=0;
 
         public DiamondCerList()
         {
@@ -138,7 +138,7 @@ namespace DiamondShop
             }
             else //mode = 1 Search
             {
-                refID = (int)gridDiamondCer.SelectedRows[0].Cells["ID"].Value;
+                refID1 = (int)gridDiamondCer.SelectedRows[0].Cells["ID"].Value;
                 this.Close();
             }    
         }

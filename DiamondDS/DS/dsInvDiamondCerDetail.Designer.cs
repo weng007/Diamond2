@@ -283,6 +283,8 @@ namespace DiamondDS.DS {
             
             private global::System.Data.DataColumn columnID;
             
+            private global::System.Data.DataColumn columnRefID1;
+            
             private global::System.Data.DataColumn columnRefID;
             
             private global::System.Data.DataColumn columnMinPrice;
@@ -367,6 +369,14 @@ namespace DiamondDS.DS {
             public global::System.Data.DataColumn IDColumn {
                 get {
                     return this.columnID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn RefID1Column {
+                get {
+                    return this.columnRefID1;
                 }
             }
             
@@ -561,6 +571,7 @@ namespace DiamondDS.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public InvDiamondCerDetailRow AddInvDiamondCerDetailRow(
                         long RowNum, 
+                        int RefID1, 
                         int RefID, 
                         decimal MinPrice, 
                         string Code, 
@@ -584,6 +595,7 @@ namespace DiamondDS.DS {
                 object[] columnValuesArray = new object[] {
                         RowNum,
                         null,
+                        RefID1,
                         RefID,
                         MinPrice,
                         Code,
@@ -634,6 +646,7 @@ namespace DiamondDS.DS {
             internal void InitVars() {
                 this.columnRowNum = base.Columns["RowNum"];
                 this.columnID = base.Columns["ID"];
+                this.columnRefID1 = base.Columns["RefID1"];
                 this.columnRefID = base.Columns["RefID"];
                 this.columnMinPrice = base.Columns["MinPrice"];
                 this.columnCode = base.Columns["Code"];
@@ -662,6 +675,8 @@ namespace DiamondDS.DS {
                 base.Columns.Add(this.columnRowNum);
                 this.columnID = new global::System.Data.DataColumn("ID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnID);
+                this.columnRefID1 = new global::System.Data.DataColumn("RefID1", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnRefID1);
                 this.columnRefID = new global::System.Data.DataColumn("RefID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnRefID);
                 this.columnMinPrice = new global::System.Data.DataColumn("MinPrice", typeof(decimal), null, global::System.Data.MappingType.Element);
@@ -707,6 +722,7 @@ namespace DiamondDS.DS {
                 this.columnID.AutoIncrementStep = -1;
                 this.columnID.AllowDBNull = false;
                 this.columnID.Unique = true;
+                this.columnRefID1.Caption = "RefID";
                 this.columnCode.MaxLength = 20;
                 this.columnReportNumber.MaxLength = 50;
                 this.columnLabName.ReadOnly = true;
@@ -882,6 +898,22 @@ namespace DiamondDS.DS {
                 }
                 set {
                     this[this.tableInvDiamondCerDetail.IDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int RefID1 {
+                get {
+                    try {
+                        return ((int)(this[this.tableInvDiamondCerDetail.RefID1Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'RefID1\' in table \'InvDiamondCerDetail\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableInvDiamondCerDetail.RefID1Column] = value;
                 }
             }
             
@@ -1199,6 +1231,18 @@ namespace DiamondDS.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetRowNumNull() {
                 this[this.tableInvDiamondCerDetail.RowNumColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsRefID1Null() {
+                return this.IsNull(this.tableInvDiamondCerDetail.RefID1Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetRefID1Null() {
+                this[this.tableInvDiamondCerDetail.RefID1Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

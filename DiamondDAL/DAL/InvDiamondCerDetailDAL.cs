@@ -60,11 +60,8 @@ namespace DiamondDAL.DAL
                     else
                     {
                         SQL.ExecuteSP("SP_InvDiamondCerDetail_Upd", row);
-                    }
-                    
-                }             
-                
-                //dsInvDiamondCerDetail.InvDiamondCerDetailRow row = tds.InvDiamondCerDetail[0];         
+                    }             
+                }                     
             }
             catch (Exception ex)
             {

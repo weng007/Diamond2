@@ -105,23 +105,23 @@ namespace DiamondShop
                     }                 
                 }
 
-                chkFlag = ser.DoInsertData("InvDiamondCerDetail", tds);
                 tds.AcceptChanges();
-
+                chkFlag = ser.DoInsertData("InvDiamondCerDetail", tds);
+                
                 foreach (DataRow row in tds2.Tables[0].Rows)
                 {
-                    if (row.RowState == DataRowState.Added || row.RowState == DataRowState.Unchanged)
+                    if (row["RowNum"].ToString() == "")
                     {
                         SetCreateBy(row);
-                        chkFlag = ser.DoInsertData("InvDiamondDetail", tds2);
                     }
-                    else if (row.RowState == DataRowState.Modified)
+                    else
                     {
                         SetEditBy(row);
-                        chkFlag = ser.DoUpdateData("InvDiamondDetail", tds2);
                     }
                 }
+
                 tds2.AcceptChanges();
+                chkFlag = ser.DoInsertData("InvDiamondDetail", tds);
 
             }
             catch (Exception ex)
@@ -199,9 +199,9 @@ namespace DiamondShop
             DiamondCerList frm = new DiamondCerList(1);
             frm.ShowDialog();
 
-            if (frm.refID != 0)
+            if (frm.refID1 != 0)
             { 
-                tmp = ser.DoSelectData("DiamondCer", frm.refID);
+                tmp = ser.DoSelectData("DiamondCer", frm.refID1);
                 tdsDiamondCer.Clear();
                 tdsDiamondCer.Merge(tmp);
 
@@ -217,10 +217,10 @@ namespace DiamondShop
                 grid1.Rows[rowIndex].Cells["ClearityName"].Value = tdsDiamondCer.Tables[0].Rows[0]["ClearityName"].ToString();
                 grid1.Rows[rowIndex].Cells["MinPrice"].Value = 0;
                 grid1.Rows[rowIndex].Cells["TotalBaht"].Value = tdsDiamondCer.Tables[0].Rows[0]["TotalBaht"].ToString();
-                grid1.Rows[rowIndex].Cells["RefID"].Value = frm.refID;
+                grid1.Rows[rowIndex].Cells["refID1"].Value = frm.refID1;
 
                 tds.Tables[0].Rows.Add();
-                tds.Tables[0].Rows[rowIndex]["RefID"] = frm.refID;
+                tds.Tables[0].Rows[rowIndex]["refID1"] = frm.refID1;
                 tds.Tables[0].Rows[rowIndex]["MinPrice"] = grid1.Rows[rowIndex].Cells["MinPrice"].Value;
 
                 tds.AcceptChanges();
@@ -284,12 +284,13 @@ namespace DiamondShop
                     grid1.Rows[i].Cells["ClearityName"].Value = row["ClearityName"].ToString();
                     grid1.Rows[i].Cells["MinPrice"].Value = row["MinPrice"].ToString();
                     grid1.Rows[i].Cells["TotalBaht"].Value = row["TotalBaht"].ToString();
-                    grid1.Rows[i].Cells["RefID"].Value = row["RefID"].ToString();
+                    grid1.Rows[i].Cells["refID1"].Value = row["refID1"].ToString();         
 
                     i++;
                 }   
 
                 i = 0;
+                CalSum(0);
             }
 
             else if (grid.Name == "grid2")
@@ -308,10 +309,11 @@ namespace DiamondShop
                     grid2.Rows[i].Cells["CostPerCarat"].Value = row["CostPerCarat"].ToString();
                     grid2.Rows[i].Cells["Cost1"].Value = row["Cost"].ToString();
                     grid2.Rows[i].Cells["MinPricePerCarat"].Value = row["MinPricePerCarat"].ToString();
-                    grid2.Rows[i].Cells["MinPrice"].Value = row["MinPrice"].ToString();
-                    grid2.Rows[i].Cells["RefID1"].Value = row["RefID"].ToString();
+                    grid2.Rows[i].Cells["MinPrice1"].Value = row["MinPrice"].ToString();
+                    grid2.Rows[i].Cells["refID2"].Value = row["refID"].ToString();
 
                     i++;
+                    CalSum(1);
                 }
             }
         }
@@ -330,7 +332,7 @@ namespace DiamondShop
                     tds.Tables[0].Rows.Add();
                     tds.Tables[0].Rows[i]["ID"] = row.Cells["ID"].Value;
                     tds.Tables[0].Rows[i]["RowNum"] = row.Cells["RowNum"].Value;
-                    tds.Tables[0].Rows[i]["RefID"] = row.Cells["RefID"].Value;
+                    tds.Tables[0].Rows[i]["refID1"] = row.Cells["refID1"].Value;
                     tds.Tables[0].Rows[i]["MinPrice"] = row.Cells["MinPrice"].Value;
 
                     i++;
@@ -356,7 +358,7 @@ namespace DiamondShop
                     tds2.Tables[0].Rows[i]["Cost"] = row.Cells["Cost1"].Value;
                     tds2.Tables[0].Rows[i]["MinPricePerCarat"] = row.Cells["MinPricePerCarat"].Value;
                     tds2.Tables[0].Rows[i]["MinPrice"] = row.Cells["MinPrice1"].Value;
-                    tds2.Tables[0].Rows[i]["RefID"] = row.Cells["RefID1"].Value;
+                    tds2.Tables[0].Rows[i]["refID"] = row.Cells["refID2"].Value;
                     i++;
                 }
 
@@ -384,6 +386,63 @@ namespace DiamondShop
             {
                 chkGrid = 1;
             }
+        }
+
+        private void grid1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if ((e.ColumnIndex == 9 || e.ColumnIndex == 10) && e.RowIndex != this.grid1.NewRowIndex && e.Value != null)
+            {
+                double d = double.Parse(e.Value.ToString());
+                e.Value = d.ToString("N0");
+            }
+        }
+
+        private void grid2_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if ((e.ColumnIndex == 8 || e.ColumnIndex == 9 || e.ColumnIndex == 10 || e.ColumnIndex == 11) && e.RowIndex != this.grid2.NewRowIndex && e.Value != null)
+            {
+                double d = double.Parse(e.Value.ToString());
+                e.Value = d.ToString("N0");
+            }
+        }
+
+        private void CalSum(int type)
+        {
+            if(type == 0)
+            {
+                txtSumWeight.Text = (grid1.Rows.Cast<DataGridViewRow>()
+                .Sum(t => Convert.ToDecimal(t.Cells["Weight"].Value))).ToString();
+
+                txtSumCost.Text = (grid1.Rows.Cast<DataGridViewRow>()
+                .Sum(t => Convert.ToDecimal(t.Cells["TotalBaht"].Value))).ToString();
+
+                txtSumMinPrice.Text = (grid1.Rows.Cast<DataGridViewRow>()
+                .Sum(t => Convert.ToDecimal(t.Cells["MinPrice"].Value))).ToString();
+
+                txtSumWeight.Text = GM.ConvertDoubleToString(txtSumWeight);
+                txtSumCost.Text = GM.ConvertDoubleToString(txtSumCost);
+                txtSumMinPrice.Text = GM.ConvertDoubleToString(txtSumMinPrice);
+            }
+            else 
+            {
+                txtSumAmount1.Text = (grid2.Rows.Cast<DataGridViewRow>()
+                .Sum(t => Convert.ToDecimal(t.Cells["Amount"].Value))).ToString();
+
+                txtSumWeight1.Text = (grid2.Rows.Cast<DataGridViewRow>()
+                .Sum(t => Convert.ToDecimal(t.Cells["Weight1"].Value))).ToString();
+
+                txtSumCost1.Text = (grid2.Rows.Cast<DataGridViewRow>()
+                .Sum(t => Convert.ToDecimal(t.Cells["Cost1"].Value))).ToString();
+
+                txtSumMinPrice1.Text = (grid2.Rows.Cast<DataGridViewRow>()
+                .Sum(t => Convert.ToDecimal(t.Cells["MinPrice1"].Value))).ToString();
+
+                txtSumAmount1.Text = GM.ConvertDoubleToString(txtSumAmount1);
+                txtSumWeight1.Text = GM.ConvertDoubleToString(txtSumWeight1);
+                txtSumCost1.Text = GM.ConvertDoubleToString(txtSumCost1);
+                txtSumMinPrice1.Text = GM.ConvertDoubleToString(txtSumMinPrice1);
+            }
+
         }
     }
 }
