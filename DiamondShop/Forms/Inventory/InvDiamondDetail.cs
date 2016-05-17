@@ -194,14 +194,6 @@ namespace DiamondShop
             }
         }
 
-        private void grid1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if(e.ColumnIndex == 10)
-            {
-                
-            }
-        }
-
         private void btnAdd_Click(object sender, EventArgs e)
         {
             DiamondCerList frm = new DiamondCerList(1);
@@ -281,6 +273,7 @@ namespace DiamondShop
                 foreach (DataRow row in tds.Tables[0].Rows)
                 {
                     grid1.Rows.Add();
+                    grid1.Rows[i].Cells["ID"].Value = row["ID"].ToString();
                     grid1.Rows[i].Cells["RowNum"].Value = row["RowNum"].ToString();
                     grid1.Rows[i].Cells["Code"].Value = row["Code"].ToString();
                     grid1.Rows[i].Cells["ReportNumber"].Value = row["ReportNumber"].ToString();
@@ -304,6 +297,7 @@ namespace DiamondShop
                 foreach (DataRow row in tds2.Tables[0].Rows)
                 {
                     grid2.Rows.Add();
+                    grid2.Rows[i].Cells["ID"].Value = row["ID"].ToString();
                     grid2.Rows[i].Cells["RowNum1"].Value = row["RowNum"].ToString();
                     grid2.Rows[i].Cells["Shape"].Value = row["Shape"].ToString();
                     grid2.Rows[i].Cells["WeightPerStone"].Value = row["WeightPerStone"].ToString();
@@ -334,6 +328,7 @@ namespace DiamondShop
                 foreach (DataGridViewRow row in grid1.Rows)
                 {
                     tds.Tables[0].Rows.Add();
+                    tds.Tables[0].Rows[i]["ID"] = row.Cells["ID"].Value;
                     tds.Tables[0].Rows[i]["RowNum"] = row.Cells["RowNum"].Value;
                     tds.Tables[0].Rows[i]["RefID"] = row.Cells["RefID"].Value;
                     tds.Tables[0].Rows[i]["MinPrice"] = row.Cells["MinPrice"].Value;
@@ -349,6 +344,7 @@ namespace DiamondShop
                 foreach (DataGridViewRow row in grid2.Rows)
                 {
                     tds2.Tables[0].Rows.Add();
+                    tds2.Tables[0].Rows[i]["ID"] = row.Cells["ID"].Value;
                     tds2.Tables[0].Rows[i]["RowNum"] = row.Cells["RowNum1"].Value;
                     tds2.Tables[0].Rows[i]["WeightPerStone"] = row.Cells["WeightPerStone"].Value;
                     tds2.Tables[0].Rows[i]["Amount"] = row.Cells["Amount"].Value;
@@ -368,6 +364,15 @@ namespace DiamondShop
             }       
         }
         #endregion
+
+        private void grid1_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 10)
+            {
+                grid1.RefreshEdit();
+                BindingDSDiamondDetail(0);
+            }
+        }
 
         private void DeleteDataGrid(int type)
         {

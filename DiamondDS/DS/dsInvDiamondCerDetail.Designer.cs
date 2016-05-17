@@ -706,7 +706,6 @@ namespace DiamondDS.DS {
                 this.columnID.AutoIncrementSeed = -1;
                 this.columnID.AutoIncrementStep = -1;
                 this.columnID.AllowDBNull = false;
-                this.columnID.ReadOnly = true;
                 this.columnID.Unique = true;
                 this.columnCode.MaxLength = 20;
                 this.columnReportNumber.MaxLength = 50;
