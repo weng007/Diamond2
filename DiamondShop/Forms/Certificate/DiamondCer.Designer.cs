@@ -427,10 +427,10 @@
             // txtNote
             // 
             this.txtNote.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.txtNote.Location = new System.Drawing.Point(707, 166);
+            this.txtNote.Location = new System.Drawing.Point(783, 128);
             this.txtNote.Multiline = true;
             this.txtNote.Name = "txtNote";
-            this.txtNote.Size = new System.Drawing.Size(172, 65);
+            this.txtNote.Size = new System.Drawing.Size(187, 103);
             this.txtNote.TabIndex = 1;
             // 
             // label16

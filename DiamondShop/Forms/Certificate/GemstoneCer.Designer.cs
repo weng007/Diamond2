@@ -269,7 +269,7 @@
             this.panel4.Controls.Add(this.label18);
             this.panel4.Controls.Add(this.txtSeller);
             this.panel4.Controls.Add(this.dtBuyDate);
-            this.panel4.Location = new System.Drawing.Point(210, 237);
+            this.panel4.Location = new System.Drawing.Point(210, 215);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(711, 173);
             this.panel4.TabIndex = 111;
@@ -458,10 +458,10 @@
             // txtNote
             // 
             this.txtNote.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.txtNote.Location = new System.Drawing.Point(756, 158);
+            this.txtNote.Location = new System.Drawing.Point(828, 128);
             this.txtNote.Multiline = true;
             this.txtNote.Name = "txtNote";
-            this.txtNote.Size = new System.Drawing.Size(217, 65);
+            this.txtNote.Size = new System.Drawing.Size(172, 65);
             this.txtNote.TabIndex = 56;
             // 
             // label16

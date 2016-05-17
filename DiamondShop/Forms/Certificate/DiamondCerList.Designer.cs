@@ -383,7 +383,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.gridDiamondCer);
-            this.panel2.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.Location = new System.Drawing.Point(5, 180);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1311, 397);
@@ -483,7 +483,7 @@
             this.Weight.HeaderText = "Weight";
             this.Weight.Name = "Weight";
             this.Weight.ReadOnly = true;
-            this.Weight.Width = 60;
+            this.Weight.Width = 90;
             // 
             // ColorName
             // 
@@ -566,7 +566,7 @@
             this.ReportNumber.HeaderText = "Report Number";
             this.ReportNumber.Name = "ReportNumber";
             this.ReportNumber.ReadOnly = true;
-            this.ReportNumber.Width = 130;
+            this.ReportNumber.Width = 160;
             // 
             // ShopName
             // 
@@ -598,6 +598,7 @@
             this.BuyDate.HeaderText = "Buy Date";
             this.BuyDate.Name = "BuyDate";
             this.BuyDate.ReadOnly = true;
+            this.BuyDate.Width = 120;
             // 
             // DiamondCerList
             // 

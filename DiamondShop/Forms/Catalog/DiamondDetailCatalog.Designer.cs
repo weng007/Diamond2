@@ -93,7 +93,7 @@
             this.panel3.Controls.Add(this.grid2);
             this.panel3.Controls.Add(this.grid1);
             this.panel3.Controls.Add(this.panel4);
-            this.panel3.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel3.Location = new System.Drawing.Point(12, 68);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(964, 524);

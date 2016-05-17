@@ -116,7 +116,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.gridETC);
-            this.panel2.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.Location = new System.Drawing.Point(5, 122);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(685, 427);
@@ -169,6 +169,7 @@
             this.BuyDate.HeaderText = "Buy Date";
             this.BuyDate.Name = "BuyDate";
             this.BuyDate.ReadOnly = true;
+            this.BuyDate.Width = 130;
             // 
             // Seller
             // 

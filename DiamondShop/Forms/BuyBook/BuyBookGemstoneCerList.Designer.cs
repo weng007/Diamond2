@@ -371,7 +371,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.gridGemstoneCer);
-            this.panel2.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.Location = new System.Drawing.Point(5, 189);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1311, 388);
@@ -542,7 +542,7 @@
             this.PriceCaratUSD.HeaderText = "Price /Carat USD";
             this.PriceCaratUSD.Name = "PriceCaratUSD";
             this.PriceCaratUSD.ReadOnly = true;
-            this.PriceCaratUSD.Width = 140;
+            this.PriceCaratUSD.Width = 170;
             // 
             // USDRate
             // 
@@ -553,6 +553,7 @@
             this.USDRate.HeaderText = "USD Rate";
             this.USDRate.Name = "USDRate";
             this.USDRate.ReadOnly = true;
+            this.USDRate.Width = 120;
             // 
             // TotalUSD
             // 
@@ -563,6 +564,7 @@
             this.TotalUSD.HeaderText = "Total USD";
             this.TotalUSD.Name = "TotalUSD";
             this.TotalUSD.ReadOnly = true;
+            this.TotalUSD.Width = 120;
             // 
             // PriceCarat
             // 
@@ -573,7 +575,7 @@
             this.PriceCarat.HeaderText = "Price /Carat Baht";
             this.PriceCarat.Name = "PriceCarat";
             this.PriceCarat.ReadOnly = true;
-            this.PriceCarat.Width = 140;
+            this.PriceCarat.Width = 170;
             // 
             // TotalBaht
             // 
@@ -584,6 +586,7 @@
             this.TotalBaht.HeaderText = "Total Baht";
             this.TotalBaht.Name = "TotalBaht";
             this.TotalBaht.ReadOnly = true;
+            this.TotalBaht.Width = 130;
             // 
             // Payment
             // 
@@ -625,7 +628,7 @@
             this.ReportNumber.HeaderText = "Report Number";
             this.ReportNumber.Name = "ReportNumber";
             this.ReportNumber.ReadOnly = true;
-            this.ReportNumber.Width = 135;
+            this.ReportNumber.Width = 160;
             // 
             // BuyDate
             // 
@@ -633,6 +636,7 @@
             this.BuyDate.HeaderText = "Buy Date";
             this.BuyDate.Name = "BuyDate";
             this.BuyDate.ReadOnly = true;
+            this.BuyDate.Width = 120;
             // 
             // BuyBookGemstoneCerList
             // 

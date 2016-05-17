@@ -544,7 +544,7 @@
             // txtPriceTag
             // 
             this.txtPriceTag.BackColor = System.Drawing.Color.White;
-            this.txtPriceTag.Location = new System.Drawing.Point(612, 647);
+            this.txtPriceTag.Location = new System.Drawing.Point(653, 647);
             this.txtPriceTag.Name = "txtPriceTag";
             this.txtPriceTag.Size = new System.Drawing.Size(135, 27);
             this.txtPriceTag.TabIndex = 76;
@@ -556,7 +556,7 @@
             // 
             this.label36.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label36.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label36.Location = new System.Drawing.Point(471, 650);
+            this.label36.Location = new System.Drawing.Point(512, 650);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(134, 27);
             this.label36.TabIndex = 157;
@@ -565,7 +565,7 @@
             // txtMinPrice
             // 
             this.txtMinPrice.BackColor = System.Drawing.Color.White;
-            this.txtMinPrice.Location = new System.Drawing.Point(612, 613);
+            this.txtMinPrice.Location = new System.Drawing.Point(653, 613);
             this.txtMinPrice.Name = "txtMinPrice";
             this.txtMinPrice.Size = new System.Drawing.Size(135, 27);
             this.txtMinPrice.TabIndex = 72;
@@ -577,7 +577,7 @@
             // 
             this.label35.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label35.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label35.Location = new System.Drawing.Point(432, 616);
+            this.label35.Location = new System.Drawing.Point(473, 616);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(134, 29);
             this.label35.TabIndex = 155;
@@ -587,7 +587,7 @@
             // 
             this.txtRedCost1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.txtRedCost1.Enabled = false;
-            this.txtRedCost1.Location = new System.Drawing.Point(612, 579);
+            this.txtRedCost1.Location = new System.Drawing.Point(653, 579);
             this.txtRedCost1.Name = "txtRedCost1";
             this.txtRedCost1.Size = new System.Drawing.Size(135, 27);
             this.txtRedCost1.TabIndex = 154;
@@ -599,7 +599,7 @@
             // 
             this.label34.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label34.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label34.Location = new System.Drawing.Point(393, 584);
+            this.label34.Location = new System.Drawing.Point(434, 584);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(212, 22);
             this.label34.TabIndex = 153;

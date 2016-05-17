@@ -198,7 +198,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.gridDiamond);
-            this.panel2.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.Location = new System.Drawing.Point(5, 155);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1311, 422);
@@ -273,7 +273,7 @@
             this.BuyDate.HeaderText = "Buy Date";
             this.BuyDate.Name = "BuyDate";
             this.BuyDate.ReadOnly = true;
-            this.BuyDate.Width = 90;
+            this.BuyDate.Width = 120;
             // 
             // Seller
             // 
@@ -301,7 +301,7 @@
             this.Amount.HeaderText = "Amount";
             this.Amount.Name = "Amount";
             this.Amount.ReadOnly = true;
-            this.Amount.Width = 60;
+            this.Amount.Width = 90;
             // 
             // Weight
             // 
@@ -341,7 +341,7 @@
             this.PriceCaratUSD.Name = "PriceCaratUSD";
             this.PriceCaratUSD.ReadOnly = true;
             this.PriceCaratUSD.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.PriceCaratUSD.Width = 150;
+            this.PriceCaratUSD.Width = 170;
             // 
             // PriceCaratB
             // 
@@ -353,7 +353,7 @@
             this.PriceCaratB.Name = "PriceCaratB";
             this.PriceCaratB.ReadOnly = true;
             this.PriceCaratB.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.PriceCaratB.Width = 150;
+            this.PriceCaratB.Width = 170;
             // 
             // MarketPrice
             // 
@@ -364,7 +364,7 @@
             this.MarketPrice.HeaderText = "Market Price Baht";
             this.MarketPrice.Name = "MarketPrice";
             this.MarketPrice.ReadOnly = true;
-            this.MarketPrice.Width = 150;
+            this.MarketPrice.Width = 190;
             // 
             // BuyBookDiamondList
             // 

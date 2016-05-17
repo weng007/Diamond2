@@ -180,7 +180,7 @@
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Location = new System.Drawing.Point(122, 123);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(100, 21);
+            this.comboBox3.Size = new System.Drawing.Size(100, 27);
             this.comboBox3.TabIndex = 28;
             // 
             // comboBox1
@@ -188,7 +188,7 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(122, 159);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(100, 21);
+            this.comboBox1.Size = new System.Drawing.Size(100, 27);
             this.comboBox1.TabIndex = 29;
             // 
             // panel2
@@ -254,7 +254,7 @@
             // label22
             // 
             this.label22.ForeColor = System.Drawing.Color.Red;
-            this.label22.Location = new System.Drawing.Point(474, 201);
+            this.label22.Location = new System.Drawing.Point(484, 201);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(149, 24);
             this.label22.TabIndex = 62;
@@ -263,7 +263,7 @@
             // txtDisplayName
             // 
             this.txtDisplayName.BackColor = System.Drawing.Color.LightBlue;
-            this.txtDisplayName.Location = new System.Drawing.Point(478, 171);
+            this.txtDisplayName.Location = new System.Drawing.Point(488, 171);
             this.txtDisplayName.Name = "txtDisplayName";
             this.txtDisplayName.Size = new System.Drawing.Size(165, 27);
             this.txtDisplayName.TabIndex = 32;
@@ -272,7 +272,7 @@
             // 
             this.label21.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label21.Location = new System.Drawing.Point(352, 174);
+            this.label21.Location = new System.Drawing.Point(361, 171);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(118, 24);
             this.label21.TabIndex = 61;
@@ -405,14 +405,14 @@
             // cmbStatus
             // 
             this.cmbStatus.FormattingEnabled = true;
-            this.cmbStatus.Location = new System.Drawing.Point(478, 122);
+            this.cmbStatus.Location = new System.Drawing.Point(488, 122);
             this.cmbStatus.Name = "cmbStatus";
             this.cmbStatus.Size = new System.Drawing.Size(165, 29);
             this.cmbStatus.TabIndex = 24;
             // 
             // txtLastName
             // 
-            this.txtLastName.Location = new System.Drawing.Point(478, 52);
+            this.txtLastName.Location = new System.Drawing.Point(488, 52);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(165, 27);
             this.txtLastName.TabIndex = 8;
@@ -420,7 +420,7 @@
             // cmbRole
             // 
             this.cmbRole.FormattingEnabled = true;
-            this.cmbRole.Location = new System.Drawing.Point(478, 86);
+            this.cmbRole.Location = new System.Drawing.Point(488, 86);
             this.cmbRole.Name = "cmbRole";
             this.cmbRole.Size = new System.Drawing.Size(165, 29);
             this.cmbRole.TabIndex = 16;
@@ -503,7 +503,6 @@
             this.ClientSize = new System.Drawing.Size(693, 387);
             this.Controls.Add(this.panel3);
             this.EnableDelete = true;
-            this.EnableEdit = false;
             this.Name = "User";
             this.Text = "User";
             this.Controls.SetChildIndex(this.panel3, 0);
