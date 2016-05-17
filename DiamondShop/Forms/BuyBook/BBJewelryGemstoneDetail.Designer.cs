@@ -52,6 +52,7 @@
             this.txtSumAmount = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.grid1 = new System.Windows.Forms.DataGridView();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.RowNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -63,7 +64,6 @@
             this.Weight = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Color = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.Origin = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.panel6 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid2)).BeginInit();
@@ -92,7 +92,7 @@
             this.panel3.Controls.Add(this.label14);
             this.panel3.Controls.Add(this.grid1);
             this.panel3.Controls.Add(this.panel6);
-            this.panel3.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel3.Location = new System.Drawing.Point(12, 68);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1270, 534);
@@ -224,10 +224,10 @@
             this.txtSumWeight.BackColor = System.Drawing.SystemColors.Window;
             this.txtSumWeight.Enabled = false;
             this.txtSumWeight.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSumWeight.Location = new System.Drawing.Point(929, 236);
+            this.txtSumWeight.Location = new System.Drawing.Point(867, 236);
             this.txtSumWeight.Name = "txtSumWeight";
             this.txtSumWeight.ReadOnly = true;
-            this.txtSumWeight.Size = new System.Drawing.Size(98, 27);
+            this.txtSumWeight.Size = new System.Drawing.Size(91, 27);
             this.txtSumWeight.TabIndex = 118;
             this.txtSumWeight.Text = "0";
             this.txtSumWeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -237,10 +237,10 @@
             this.txtSumAmount.BackColor = System.Drawing.SystemColors.Window;
             this.txtSumAmount.Enabled = false;
             this.txtSumAmount.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSumAmount.Location = new System.Drawing.Point(826, 236);
+            this.txtSumAmount.Location = new System.Drawing.Point(774, 236);
             this.txtSumAmount.Name = "txtSumAmount";
             this.txtSumAmount.ReadOnly = true;
-            this.txtSumAmount.Size = new System.Drawing.Size(97, 27);
+            this.txtSumAmount.Size = new System.Drawing.Size(87, 27);
             this.txtSumAmount.TabIndex = 117;
             this.txtSumAmount.Text = "0";
             this.txtSumAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -249,7 +249,7 @@
             // 
             this.label14.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label14.Location = new System.Drawing.Point(760, 239);
+            this.label14.Location = new System.Drawing.Point(713, 239);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(59, 24);
             this.label14.TabIndex = 116;
@@ -284,6 +284,16 @@
             this.grid1.TabIndex = 16;
             this.grid1.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid1_CellEnter);
             // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(35)))), ((int)(((byte)(69)))));
+            this.panel6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel6.BackgroundImage")));
+            this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.panel6.Location = new System.Drawing.Point(12, 3);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(207, 32);
+            this.panel6.TabIndex = 15;
+            // 
             // RowNum
             // 
             this.RowNum.DataPropertyName = "RowNum";
@@ -314,7 +324,7 @@
             this.ReportNumber.HeaderText = "Report Number";
             this.ReportNumber.Name = "ReportNumber";
             this.ReportNumber.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ReportNumber.Width = 200;
+            this.ReportNumber.Width = 150;
             // 
             // GemstoneType
             // 
@@ -352,6 +362,7 @@
             this.Amount.DefaultCellStyle = dataGridViewCellStyle5;
             this.Amount.HeaderText = "Amount";
             this.Amount.Name = "Amount";
+            this.Amount.Width = 90;
             // 
             // Weight
             // 
@@ -361,6 +372,7 @@
             this.Weight.DefaultCellStyle = dataGridViewCellStyle6;
             this.Weight.HeaderText = "Weight";
             this.Weight.Name = "Weight";
+            this.Weight.Width = 90;
             // 
             // Color
             // 
@@ -379,16 +391,6 @@
             this.Origin.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Origin.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Origin.Width = 170;
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(35)))), ((int)(((byte)(69)))));
-            this.panel6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel6.BackgroundImage")));
-            this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.panel6.Location = new System.Drawing.Point(12, 3);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(207, 32);
-            this.panel6.TabIndex = 15;
             // 
             // BBJewelryGemstoneDetail
             // 

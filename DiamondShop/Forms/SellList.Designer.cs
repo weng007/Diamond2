@@ -70,7 +70,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.gridSell);
-            this.panel2.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel2.Location = new System.Drawing.Point(5, 119);
             this.panel2.Name = "panel2";
@@ -85,7 +85,7 @@
             this.gridSell.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -220,6 +220,7 @@
             this.SoldDate.HeaderText = "Sold Date";
             this.SoldDate.Name = "SoldDate";
             this.SoldDate.ReadOnly = true;
+            this.SoldDate.Width = 120;
             // 
             // DisplayName
             // 
@@ -261,7 +262,7 @@
             this.Payment.HeaderText = "Payment";
             this.Payment.Name = "Payment";
             this.Payment.ReadOnly = true;
-            this.Payment.Width = 70;
+            this.Payment.Width = 150;
             // 
             // Seller
             // 
@@ -277,7 +278,7 @@
             this.ReceiveShop.HeaderText = "Received Product From";
             this.ReceiveShop.Name = "ReceiveShop";
             this.ReceiveShop.ReadOnly = true;
-            this.ReceiveShop.Width = 170;
+            this.ReceiveShop.Width = 230;
             // 
             // IsPrintCertificate
             // 
@@ -285,6 +286,7 @@
             this.IsPrintCertificate.HeaderText = "Print Cer.";
             this.IsPrintCertificate.Name = "IsPrintCertificate";
             this.IsPrintCertificate.ReadOnly = true;
+            this.IsPrintCertificate.Width = 150;
             // 
             // IsHavePrice
             // 
@@ -292,7 +294,7 @@
             this.IsHavePrice.HeaderText = "Print Price In Cer.";
             this.IsHavePrice.Name = "IsHavePrice";
             this.IsHavePrice.ReadOnly = true;
-            this.IsHavePrice.Width = 150;
+            this.IsHavePrice.Width = 170;
             // 
             // SellList
             // 

@@ -185,7 +185,7 @@
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.gridGold);
-            this.panel2.Font = new System.Drawing.Font("Angsana New", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel2.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.Location = new System.Drawing.Point(5, 124);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1311, 427);
@@ -196,9 +196,9 @@
             this.label4.BackColor = System.Drawing.SystemColors.Control;
             this.label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label4.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(830, 1);
+            this.label4.Location = new System.Drawing.Point(860, 1);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(459, 33);
+            this.label4.Size = new System.Drawing.Size(451, 33);
             this.label4.TabIndex = 6;
             this.label4.Text = "ทองคำ 99.99%";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -208,9 +208,9 @@
             this.label5.BackColor = System.Drawing.SystemColors.Control;
             this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label5.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(281, 1);
+            this.label5.Location = new System.Drawing.Point(310, 1);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(550, 33);
+            this.label5.Size = new System.Drawing.Size(551, 33);
             this.label5.TabIndex = 5;
             this.label5.Text = "ทองคำ 96.5%";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -243,7 +243,7 @@
             this.gridGold.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridGold.RowTemplate.Height = 30;
             this.gridGold.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridGold.Size = new System.Drawing.Size(1311, 396);
+            this.gridGold.Size = new System.Drawing.Size(1311, 391);
             this.gridGold.TabIndex = 3;
             this.gridGold.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.gridGold_MouseDoubleClick);
             // 
@@ -269,6 +269,7 @@
             this.BuyDate.HeaderText = "Buy Date";
             this.BuyDate.Name = "BuyDate";
             this.BuyDate.ReadOnly = true;
+            this.BuyDate.Width = 130;
             // 
             // Seller
             // 

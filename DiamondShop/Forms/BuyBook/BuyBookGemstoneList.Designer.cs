@@ -173,7 +173,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.gridGemstone);
-            this.panel2.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.Location = new System.Drawing.Point(5, 157);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1311, 422);
@@ -238,6 +238,7 @@
             this.BuyDate.HeaderText = "Buy Date";
             this.BuyDate.Name = "BuyDate";
             this.BuyDate.ReadOnly = true;
+            this.BuyDate.Width = 120;
             // 
             // Seller
             // 
@@ -302,7 +303,7 @@
             this.PriceCaratUSD.HeaderText = "Price /Carat USD";
             this.PriceCaratUSD.Name = "PriceCaratUSD";
             this.PriceCaratUSD.ReadOnly = true;
-            this.PriceCaratUSD.Width = 140;
+            this.PriceCaratUSD.Width = 170;
             // 
             // PriceCarat
             // 
@@ -313,7 +314,7 @@
             this.PriceCarat.HeaderText = "Price /Carat Baht";
             this.PriceCarat.Name = "PriceCarat";
             this.PriceCarat.ReadOnly = true;
-            this.PriceCarat.Width = 140;
+            this.PriceCarat.Width = 175;
             // 
             // MarketPrice
             // 
@@ -324,7 +325,7 @@
             this.MarketPrice.HeaderText = "Market Price Baht";
             this.MarketPrice.Name = "MarketPrice";
             this.MarketPrice.ReadOnly = true;
-            this.MarketPrice.Width = 140;
+            this.MarketPrice.Width = 175;
             // 
             // Remain
             // 

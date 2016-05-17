@@ -159,7 +159,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.gridJewelry);
-            this.panel2.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.Location = new System.Drawing.Point(5, 124);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1311, 427);
@@ -245,6 +245,7 @@
             this.Amount1.HeaderText = "Amount DC.";
             this.Amount1.Name = "Amount1";
             this.Amount1.ReadOnly = true;
+            this.Amount1.Width = 140;
             // 
             // Weight1
             // 
@@ -255,6 +256,7 @@
             this.Weight1.HeaderText = "Weight DC.";
             this.Weight1.Name = "Weight1";
             this.Weight1.ReadOnly = true;
+            this.Weight1.Width = 140;
             // 
             // Amount2
             // 
@@ -265,7 +267,7 @@
             this.Amount2.HeaderText = "Amount NDC.";
             this.Amount2.Name = "Amount2";
             this.Amount2.ReadOnly = true;
-            this.Amount2.Width = 120;
+            this.Amount2.Width = 145;
             // 
             // Weight2
             // 
@@ -276,7 +278,7 @@
             this.Weight2.HeaderText = "Weight NDC.";
             this.Weight2.Name = "Weight2";
             this.Weight2.ReadOnly = true;
-            this.Weight2.Width = 120;
+            this.Weight2.Width = 145;
             // 
             // Amount3
             // 
@@ -287,6 +289,7 @@
             this.Amount3.HeaderText = "Amount GC.";
             this.Amount3.Name = "Amount3";
             this.Amount3.ReadOnly = true;
+            this.Amount3.Width = 140;
             // 
             // Weight3
             // 
@@ -297,6 +300,7 @@
             this.Weight3.HeaderText = "Weight GC.";
             this.Weight3.Name = "Weight3";
             this.Weight3.ReadOnly = true;
+            this.Weight3.Width = 140;
             // 
             // Amount4
             // 
@@ -307,7 +311,7 @@
             this.Amount4.HeaderText = "Amount NGC.";
             this.Amount4.Name = "Amount4";
             this.Amount4.ReadOnly = true;
-            this.Amount4.Width = 120;
+            this.Amount4.Width = 145;
             // 
             // Weight4
             // 
@@ -318,7 +322,7 @@
             this.Weight4.HeaderText = "Weight NGC.";
             this.Weight4.Name = "Weight4";
             this.Weight4.ReadOnly = true;
-            this.Weight4.Width = 120;
+            this.Weight4.Width = 145;
             // 
             // CostBaht
             // 

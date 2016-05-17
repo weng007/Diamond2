@@ -75,7 +75,7 @@
             this.btnImage1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnImage1.BackgroundImage")));
             this.btnImage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnImage1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnImage1.Location = new System.Drawing.Point(83, 259);
+            this.btnImage1.Location = new System.Drawing.Point(30, 259);
             this.btnImage1.Name = "btnImage1";
             this.btnImage1.Size = new System.Drawing.Size(150, 150);
             this.btnImage1.TabIndex = 14;
@@ -123,7 +123,7 @@
             this.panel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.panel3.Location = new System.Drawing.Point(12, 71);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(738, 554);
+            this.panel3.Size = new System.Drawing.Size(738, 528);
             this.panel3.TabIndex = 1;
             // 
             // btnBrowseCustomer
@@ -135,7 +135,7 @@
             this.btnBrowseCustomer.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(109)))), ((int)(((byte)(65)))));
             this.btnBrowseCustomer.FlatAppearance.BorderSize = 0;
             this.btnBrowseCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBrowseCustomer.Location = new System.Drawing.Point(680, 185);
+            this.btnBrowseCustomer.Location = new System.Drawing.Point(676, 185);
             this.btnBrowseCustomer.Name = "btnBrowseCustomer";
             this.btnBrowseCustomer.Size = new System.Drawing.Size(30, 30);
             this.btnBrowseCustomer.TabIndex = 40;
@@ -144,7 +144,7 @@
             // txtCustomer
             // 
             this.txtCustomer.BackColor = System.Drawing.Color.White;
-            this.txtCustomer.Location = new System.Drawing.Point(513, 188);
+            this.txtCustomer.Location = new System.Drawing.Point(509, 188);
             this.txtCustomer.Name = "txtCustomer";
             this.txtCustomer.ReadOnly = true;
             this.txtCustomer.Size = new System.Drawing.Size(166, 27);
@@ -153,7 +153,7 @@
             // label8
             // 
             this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(418, 190);
+            this.label8.Location = new System.Drawing.Point(417, 188);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(86, 24);
             this.label8.TabIndex = 186;
@@ -166,7 +166,7 @@
             this.btnPrint.FlatAppearance.BorderSize = 0;
             this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPrint.Image = ((System.Drawing.Image)(resources.GetObject("btnPrint.Image")));
-            this.btnPrint.Location = new System.Drawing.Point(244, 455);
+            this.btnPrint.Location = new System.Drawing.Point(336, 414);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(65, 96);
             this.btnPrint.TabIndex = 184;
@@ -199,7 +199,7 @@
             // 
             // label6
             // 
-            this.label6.Location = new System.Drawing.Point(417, 384);
+            this.label6.Location = new System.Drawing.Point(417, 358);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(103, 25);
             this.label6.TabIndex = 180;
@@ -208,7 +208,7 @@
             // textBox2
             // 
             this.textBox2.BackColor = System.Drawing.Color.White;
-            this.textBox2.Location = new System.Drawing.Point(421, 410);
+            this.textBox2.Location = new System.Drawing.Point(421, 384);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
@@ -217,7 +217,7 @@
             // 
             // label4
             // 
-            this.label4.Location = new System.Drawing.Point(417, 259);
+            this.label4.Location = new System.Drawing.Point(417, 233);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(91, 25);
             this.label4.TabIndex = 178;
@@ -226,18 +226,18 @@
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.Location = new System.Drawing.Point(421, 285);
+            this.textBox1.Location = new System.Drawing.Point(424, 259);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(288, 83);
+            this.textBox1.Size = new System.Drawing.Size(285, 83);
             this.textBox1.TabIndex = 44;
             // 
             // dateTimePicker2
             // 
             this.dateTimePicker2.CustomFormat = "dd/MM/yyyy";
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker2.Location = new System.Drawing.Point(572, 57);
+            this.dateTimePicker2.Location = new System.Drawing.Point(510, 57);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(137, 27);
             this.dateTimePicker2.TabIndex = 8;
@@ -245,7 +245,7 @@
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(467, 59);
+            this.label3.Location = new System.Drawing.Point(417, 59);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(91, 25);
             this.label3.TabIndex = 175;
@@ -255,7 +255,7 @@
             // 
             this.dateTimePicker1.CustomFormat = "dd/MM/yyyy";
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(513, 151);
+            this.dateTimePicker1.Location = new System.Drawing.Point(509, 151);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(137, 27);
             this.dateTimePicker1.TabIndex = 36;
@@ -263,7 +263,7 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(377, 156);
+            this.label1.Location = new System.Drawing.Point(380, 153);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(124, 25);
             this.label1.TabIndex = 173;
@@ -294,7 +294,7 @@
             this.btnPending.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPending.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(109)))), ((int)(((byte)(65)))));
             this.btnPending.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPending.Location = new System.Drawing.Point(422, 501);
+            this.btnPending.Location = new System.Drawing.Point(453, 475);
             this.btnPending.Name = "btnPending";
             this.btnPending.Size = new System.Drawing.Size(120, 33);
             this.btnPending.TabIndex = 56;
@@ -308,7 +308,7 @@
             this.btnSold.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSold.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(109)))), ((int)(((byte)(65)))));
             this.btnSold.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSold.Location = new System.Drawing.Point(558, 501);
+            this.btnSold.Location = new System.Drawing.Point(589, 475);
             this.btnSold.Name = "btnSold";
             this.btnSold.Size = new System.Drawing.Size(120, 33);
             this.btnSold.TabIndex = 61;
@@ -318,7 +318,7 @@
             // 
             this.dtSaleDate.CustomFormat = "dd/MM/yyyy";
             this.dtSaleDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtSaleDate.Location = new System.Drawing.Point(572, 19);
+            this.dtSaleDate.Location = new System.Drawing.Point(510, 19);
             this.dtSaleDate.Name = "dtSaleDate";
             this.dtSaleDate.Size = new System.Drawing.Size(137, 27);
             this.dtSaleDate.TabIndex = 4;
@@ -350,7 +350,7 @@
             // cmbPayment
             // 
             this.cmbPayment.FormattingEnabled = true;
-            this.cmbPayment.Location = new System.Drawing.Point(513, 112);
+            this.cmbPayment.Location = new System.Drawing.Point(509, 112);
             this.cmbPayment.Name = "cmbPayment";
             this.cmbPayment.Size = new System.Drawing.Size(138, 29);
             this.cmbPayment.TabIndex = 32;
@@ -358,7 +358,7 @@
             // label5
             // 
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(417, 117);
+            this.label5.Location = new System.Drawing.Point(419, 116);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(85, 26);
             this.label5.TabIndex = 165;
@@ -374,18 +374,18 @@
             // 
             // txtRemark
             // 
-            this.txtRemark.Location = new System.Drawing.Point(23, 455);
+            this.txtRemark.Location = new System.Drawing.Point(79, 431);
             this.txtRemark.Multiline = true;
             this.txtRemark.Name = "txtRemark";
-            this.txtRemark.Size = new System.Drawing.Size(210, 79);
+            this.txtRemark.Size = new System.Drawing.Size(229, 79);
             this.txtRemark.TabIndex = 52;
             // 
             // label18
             // 
             this.label18.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(19, 427);
+            this.label18.Location = new System.Drawing.Point(26, 431);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(65, 25);
+            this.label18.Size = new System.Drawing.Size(51, 25);
             this.label18.TabIndex = 159;
             this.label18.Text = "Note";
             // 
@@ -427,7 +427,7 @@
             // 
             // label14
             // 
-            this.label14.Location = new System.Drawing.Point(468, 21);
+            this.label14.Location = new System.Drawing.Point(420, 21);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(90, 25);
             this.label14.TabIndex = 92;
@@ -450,7 +450,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(195)))), ((int)(((byte)(157)))));
-            this.ClientSize = new System.Drawing.Size(761, 637);
+            this.ClientSize = new System.Drawing.Size(761, 611);
             this.Controls.Add(this.panel3);
             this.Name = "Sell";
             this.Text = "Sale";

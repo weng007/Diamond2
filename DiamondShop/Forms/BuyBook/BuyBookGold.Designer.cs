@@ -145,7 +145,7 @@
             // 
             this.label25.AutoSize = true;
             this.label25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label25.Location = new System.Drawing.Point(73, 337);
+            this.label25.Location = new System.Drawing.Point(70, 337);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(120, 21);
             this.label25.TabIndex = 121;
@@ -175,7 +175,7 @@
             // 
             this.label23.AutoSize = true;
             this.label23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label23.Location = new System.Drawing.Point(347, 302);
+            this.label23.Location = new System.Drawing.Point(343, 302);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(120, 21);
             this.label23.TabIndex = 118;
@@ -195,7 +195,7 @@
             // 
             this.label20.AutoSize = true;
             this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label20.Location = new System.Drawing.Point(99, 302);
+            this.label20.Location = new System.Drawing.Point(104, 302);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(85, 21);
             this.label20.TabIndex = 116;
@@ -235,7 +235,7 @@
             // 
             this.label17.AutoSize = true;
             this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label17.Location = new System.Drawing.Point(401, 267);
+            this.label17.Location = new System.Drawing.Point(414, 267);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(49, 21);
             this.label17.TabIndex = 112;
@@ -245,7 +245,7 @@
             // 
             this.label18.AutoSize = true;
             this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label18.Location = new System.Drawing.Point(125, 267);
+            this.label18.Location = new System.Drawing.Point(140, 264);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(49, 21);
             this.label18.TabIndex = 111;
@@ -307,7 +307,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label13.Location = new System.Drawing.Point(382, 232);
+            this.label13.Location = new System.Drawing.Point(378, 232);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(85, 21);
             this.label13.TabIndex = 105;
@@ -317,7 +317,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label12.Location = new System.Drawing.Point(99, 232);
+            this.label12.Location = new System.Drawing.Point(103, 232);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(86, 21);
             this.label12.TabIndex = 104;
@@ -408,7 +408,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label5.Location = new System.Drawing.Point(475, 170);
+            this.label5.Location = new System.Drawing.Point(489, 170);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(54, 19);
             this.label5.TabIndex = 95;
@@ -419,7 +419,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label7.Location = new System.Drawing.Point(200, 170);
+            this.label7.Location = new System.Drawing.Point(213, 170);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(54, 19);
             this.label7.TabIndex = 94;
@@ -461,7 +461,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label2.Location = new System.Drawing.Point(29, 127);
+            this.label2.Location = new System.Drawing.Point(60, 130);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(129, 21);
             this.label2.TabIndex = 87;
