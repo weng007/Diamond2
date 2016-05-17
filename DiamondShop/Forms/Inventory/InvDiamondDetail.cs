@@ -330,7 +330,10 @@ namespace DiamondShop
                 foreach (DataGridViewRow row in grid1.Rows)
                 {
                     tds.Tables[0].Rows.Add();
-                    tds.Tables[0].Rows[i]["ID"] = row.Cells["ID"].Value;
+
+                    if (row.Cells["ID"] != null)
+                    { tds.Tables[0].Rows[i]["ID"] = row.Cells["ID"].Value; }
+                    
                     tds.Tables[0].Rows[i]["RowNum"] = row.Cells["RowNum"].Value;
                     tds.Tables[0].Rows[i]["refID1"] = row.Cells["refID1"].Value;
                     tds.Tables[0].Rows[i]["MinPrice"] = row.Cells["MinPrice"].Value;
@@ -374,6 +377,8 @@ namespace DiamondShop
                 grid1.RefreshEdit();
                 BindingDSDiamondDetail(0);
             }
+
+            CalSum(0);
         }
 
         private void DeleteDataGrid(int type)
