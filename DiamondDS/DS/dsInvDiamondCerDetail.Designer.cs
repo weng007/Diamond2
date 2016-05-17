@@ -723,6 +723,7 @@ namespace DiamondDS.DS {
                 this.columnID.AllowDBNull = false;
                 this.columnID.Unique = true;
                 this.columnRefID1.Caption = "RefID";
+                this.columnMinPrice.DefaultValue = ((decimal)(0m));
                 this.columnCode.MaxLength = 20;
                 this.columnReportNumber.MaxLength = 50;
                 this.columnLabName.ReadOnly = true;

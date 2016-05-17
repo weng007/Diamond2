@@ -21,7 +21,7 @@
               <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
               <xs:element name="RefID1" msdata:Caption="RefID" msprop:Generator_ColumnVarNameInTable="columnRefID1" msprop:Generator_ColumnPropNameInRow="RefID1" msprop:Generator_ColumnPropNameInTable="RefID1Column" msprop:Generator_UserColumnName="RefID1" type="xs:int" minOccurs="0" />
               <xs:element name="RefID" msprop:Generator_ColumnVarNameInTable="columnRefID" msprop:Generator_ColumnPropNameInRow="RefID" msprop:Generator_ColumnPropNameInTable="RefIDColumn" msprop:Generator_UserColumnName="RefID" type="xs:int" minOccurs="0" />
-              <xs:element name="MinPrice" msprop:Generator_ColumnVarNameInTable="columnMinPrice" msprop:Generator_ColumnPropNameInRow="MinPrice" msprop:Generator_ColumnPropNameInTable="MinPriceColumn" msprop:Generator_UserColumnName="MinPrice" type="xs:decimal" minOccurs="0" />
+              <xs:element name="MinPrice" msprop:Generator_ColumnVarNameInTable="columnMinPrice" msprop:Generator_ColumnPropNameInRow="MinPrice" msprop:Generator_ColumnPropNameInTable="MinPriceColumn" msprop:Generator_UserColumnName="MinPrice" type="xs:decimal" default="0" minOccurs="0" />
               <xs:element name="Code" msprop:Generator_ColumnVarNameInTable="columnCode" msprop:Generator_ColumnPropNameInRow="Code" msprop:Generator_ColumnPropNameInTable="CodeColumn" msprop:Generator_UserColumnName="Code" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">

@@ -554,7 +554,7 @@ namespace DiamondDS.DS {
                         int Shape, 
                         string ShapeName, 
                         double WeightPerStone, 
-                        double Amount, 
+                        short Amount, 
                         double Weight, 
                         int Color, 
                         string ColorName, 
@@ -655,7 +655,7 @@ namespace DiamondDS.DS {
                 base.Columns.Add(this.columnShapeName);
                 this.columnWeightPerStone = new global::System.Data.DataColumn("WeightPerStone", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnWeightPerStone);
-                this.columnAmount = new global::System.Data.DataColumn("Amount", typeof(double), null, global::System.Data.MappingType.Element);
+                this.columnAmount = new global::System.Data.DataColumn("Amount", typeof(short), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnAmount);
                 this.columnWeight = new global::System.Data.DataColumn("Weight", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnWeight);
@@ -687,19 +687,24 @@ namespace DiamondDS.DS {
                 base.Columns.Add(this.columnEditDate);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnID}, true));
-                this.columnRowNum.ReadOnly = true;
                 this.columnID.AutoIncrement = true;
                 this.columnID.AutoIncrementSeed = -1;
                 this.columnID.AutoIncrementStep = -1;
                 this.columnID.AllowDBNull = false;
-                this.columnID.ReadOnly = true;
                 this.columnID.Unique = true;
                 this.columnShapeName.ReadOnly = true;
                 this.columnShapeName.MaxLength = 100;
+                this.columnWeightPerStone.DefaultValue = ((double)(0D));
+                this.columnAmount.DefaultValue = ((short)(0));
+                this.columnWeight.DefaultValue = ((double)(0D));
                 this.columnColorName.ReadOnly = true;
                 this.columnColorName.MaxLength = 100;
                 this.columnClearityName.ReadOnly = true;
                 this.columnClearityName.MaxLength = 100;
+                this.columnCostPerCarat.DefaultValue = ((decimal)(0m));
+                this.columnCost.DefaultValue = ((decimal)(0m));
+                this.columnMinPricePerCarat.DefaultValue = ((decimal)(0m));
+                this.columnMinPrice.DefaultValue = ((decimal)(0m));
                 this.columnIsDeleted.MaxLength = 1;
             }
             
@@ -918,10 +923,10 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public double Amount {
+            public short Amount {
                 get {
                     try {
-                        return ((double)(this[this.tableInvDiamondDetail.AmountColumn]));
+                        return ((short)(this[this.tableInvDiamondDetail.AmountColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'Amount\' in table \'InvDiamondDetail\' is DBNull.", e);
