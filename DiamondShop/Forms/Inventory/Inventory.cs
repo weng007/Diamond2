@@ -41,6 +41,7 @@ namespace DiamondShop
 
             txtUpdateBy.Text = ApplicationInfo.UserName;
             btnDiamond.Enabled = true;
+            btnGemstone.Enabled = true;
 
             this.id = id;
             LoadData();

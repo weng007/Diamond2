@@ -486,6 +486,7 @@
             // 
             this.btnGemstone.BackColor = System.Drawing.Color.White;
             this.btnGemstone.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGemstone.Enabled = false;
             this.btnGemstone.FlatAppearance.BorderSize = 0;
             this.btnGemstone.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGemstone.Image = ((System.Drawing.Image)(resources.GetObject("btnGemstone.Image")));

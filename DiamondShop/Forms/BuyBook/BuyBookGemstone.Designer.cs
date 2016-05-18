@@ -157,7 +157,7 @@
             this.grid1.Location = new System.Drawing.Point(33, 183);
             this.grid1.Name = "grid1";
             this.grid1.RowHeadersWidth = 10;
-            this.grid1.Size = new System.Drawing.Size(235, 271);
+            this.grid1.Size = new System.Drawing.Size(249, 271);
             this.grid1.TabIndex = 192;
             // 
             // ActionDate
@@ -240,7 +240,7 @@
             // label20
             // 
             this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label20.Location = new System.Drawing.Point(637, 335);
+            this.label20.Location = new System.Drawing.Point(731, 281);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(106, 48);
             this.label20.TabIndex = 175;
@@ -295,7 +295,7 @@
             // 
             this.label17.AutoSize = true;
             this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label17.Location = new System.Drawing.Point(617, 220);
+            this.label17.Location = new System.Drawing.Point(728, 193);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(109, 21);
             this.label17.TabIndex = 161;
@@ -409,7 +409,7 @@
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.label21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label21.Location = new System.Drawing.Point(636, 127);
+            this.label21.Location = new System.Drawing.Point(660, 139);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(80, 19);
             this.label21.TabIndex = 149;
@@ -419,7 +419,7 @@
             // 
             this.dtDueDate.CustomFormat = "dd/MM/yyyy";
             this.dtDueDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtDueDate.Location = new System.Drawing.Point(735, 122);
+            this.dtDueDate.Location = new System.Drawing.Point(759, 134);
             this.dtDueDate.Name = "dtDueDate";
             this.dtDueDate.Size = new System.Drawing.Size(131, 27);
             this.dtDueDate.TabIndex = 44;
@@ -428,7 +428,7 @@
             // 
             this.rdoNo.AutoSize = true;
             this.rdoNo.Checked = true;
-            this.rdoNo.Location = new System.Drawing.Point(801, 90);
+            this.rdoNo.Location = new System.Drawing.Point(825, 102);
             this.rdoNo.Name = "rdoNo";
             this.rdoNo.Size = new System.Drawing.Size(50, 25);
             this.rdoNo.TabIndex = 40;
@@ -439,7 +439,7 @@
             // rdoYes
             // 
             this.rdoYes.AutoSize = true;
-            this.rdoYes.Location = new System.Drawing.Point(735, 90);
+            this.rdoYes.Location = new System.Drawing.Point(759, 102);
             this.rdoYes.Name = "rdoYes";
             this.rdoYes.Size = new System.Drawing.Size(55, 25);
             this.rdoYes.TabIndex = 36;
@@ -451,7 +451,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label12.Location = new System.Drawing.Point(636, 92);
+            this.label12.Location = new System.Drawing.Point(660, 104);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(78, 19);
             this.label12.TabIndex = 145;

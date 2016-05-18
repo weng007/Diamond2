@@ -49,17 +49,18 @@ namespace DiamondShop
             Shape.ValueMember = "ID";
             Shape.DisplayMember = "Detail";
             Shape.DefaultCellStyle.NullValue = (GM.GetMasterTableDetail("C019")).Tables[0].Rows[0][1];
-            grid2.RefreshEdit();
 
             Color = (DataGridViewComboBoxColumn)grid2.Columns["Color"];
             Color.DataSource = (GM.GetMasterTableDetail("C017")).Tables[0];
             Color.ValueMember = "ID";
             Color.DisplayMember = "Detail";
+            Color.DefaultCellStyle.NullValue = (GM.GetMasterTableDetail("C017")).Tables[0].Rows[0][1];
 
             Clearity1 = (DataGridViewComboBoxColumn)grid2.Columns["Clearity1"];
             Clearity1.DataSource = (GM.GetMasterTableDetail("C002")).Tables[0];
             Clearity1.ValueMember = "ID";
             Clearity1.DisplayMember = "Detail";
+            Clearity1.DefaultCellStyle.NullValue = (GM.GetMasterTableDetail("C002")).Tables[0].Rows[0][1];
 
             grid2.Refresh();
         }
@@ -118,6 +119,8 @@ namespace DiamondShop
                         row["RefID"] = id;
 
                         if (row["Shape"].ToString() == "") { row["Shape"] = 133; }
+                        if (row["Color"].ToString() == "") { row["Color"] = 126; }
+                        if (row["Clearity"].ToString() == "") { row["Clearity"] = 25; }
 
                         SetCreateBy(row);
                     }
@@ -144,7 +147,7 @@ namespace DiamondShop
             {
                 try
                 {
-                    chkFlag = ser.DoDeleteData("InvDiamondCerDetail", Convert.ToInt16(grid1.SelectedRows[0].Cells["ID"].Value.ToString()));
+                    chkFlag = ser.DoDeleteData("InvDiamondCerDetail", Convert.ToInt16(grid1.Rows[rowIndex].Cells["ID"].Value.ToString()));
                 }
                 catch (Exception ex)
                 {
@@ -155,7 +158,7 @@ namespace DiamondShop
             {
                 try
                 {
-                    chkFlag = ser.DoDeleteData("InvDiamondDetail", Convert.ToInt16(grid2.SelectedRows[0].Cells["ID"].Value.ToString()));
+                    chkFlag = ser.DoDeleteData("InvDiamondDetail", Convert.ToInt16(grid2.Rows[rowIndex1].Cells["ID1"].Value.ToString()));
                 }
                 catch (Exception ex)
                 {
@@ -190,6 +193,11 @@ namespace DiamondShop
                 datagridview.BeginEdit(true);
                 ((ComboBox)datagridview.EditingControl).DroppedDown = true;
             }
+
+            if (datagridview.Name == "grid1")
+            { rowIndex = e.RowIndex; }
+            else { rowIndex1 = e.RowIndex; }
+             
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -229,6 +237,7 @@ namespace DiamondShop
         {
             grid1.Rows.RemoveAt(rowIndex);
             tds.Tables[0].Rows[rowIndex].Delete();
+            tds.AcceptChanges();
 
             DeleteDataGrid(0);
         }
@@ -243,6 +252,7 @@ namespace DiamondShop
         {
             grid2.Rows.RemoveAt(rowIndex1);
             tds2.Tables[0].Rows[rowIndex1].Delete();
+            tds2.AcceptChanges();
 
             DeleteDataGrid(1);
         }
@@ -391,15 +401,52 @@ namespace DiamondShop
         {
             if (e.ColumnIndex == 10)
             {
-                grid1.RefreshEdit();
-                BindingDSDiamondDetail(0);
-            }
+                if (grid1.Rows[e.RowIndex].Cells[10].Value.ToString().Trim() == "")
+                {
+                    grid1.Rows[e.RowIndex].Cells[10].Value = 0;
+                }
 
+                grid1.RefreshEdit();
+                BindingDSDiamondDetail(0);          
+            }
+                   
             CalSum(0);
         }
 
         private void grid2_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
+            if(e.ColumnIndex == 3 || e.ColumnIndex == 4)
+            {              
+                if(grid2.Rows[e.RowIndex].Cells[3].Value.ToString().Trim() == "")
+                {
+                    grid2.Rows[e.RowIndex].Cells[3].Value = 0;
+                }
+                if (grid2.Rows[e.RowIndex].Cells[4].Value.ToString().Trim() == "")
+                {
+                    grid2.Rows[e.RowIndex].Cells[4].Value = 0;
+                }
+
+                grid2.Rows[e.RowIndex].Cells[5].Value = Convert.ToDecimal(grid2.Rows[e.RowIndex].Cells[3].Value) * Convert.ToInt16(grid2.Rows[e.RowIndex].Cells[4].Value);
+            }
+            else if(e.ColumnIndex == 8)
+            {
+                if (grid2.Rows[e.RowIndex].Cells[8].Value.ToString().Trim() == "")
+                {
+                    grid2.Rows[e.RowIndex].Cells[8].Value = 0;
+                }
+
+                grid2.Rows[e.RowIndex].Cells[9].Value = Convert.ToDecimal(grid2.Rows[e.RowIndex].Cells[5].Value) * Convert.ToInt32(grid2.Rows[e.RowIndex].Cells[8].Value);
+            }
+            else if(e.ColumnIndex == 10)
+            {
+                if (grid2.Rows[e.RowIndex].Cells[10].Value.ToString().Trim() == "")
+                {
+                    grid2.Rows[e.RowIndex].Cells[10].Value = 0;
+                }
+
+                grid2.Rows[e.RowIndex].Cells[11].Value = Convert.ToDecimal(grid2.Rows[e.RowIndex].Cells[5].Value) * Convert.ToInt32(grid2.Rows[e.RowIndex].Cells[10].Value);
+            }
+
             grid2.RefreshEdit();
             BindingDSDiamondDetail(1);
 
@@ -507,10 +554,12 @@ namespace DiamondShop
             if (type == 0)
             {
                 chkGrid = 0;
+                DeleteData();
             }
             else
             {
                 chkGrid = 1;
+                DeleteData();
             }
         }
     }
