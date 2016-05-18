@@ -315,7 +315,7 @@
             this.btnImage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnImage1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnImage1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnImage1.Location = new System.Drawing.Point(653, 286);
+            this.btnImage1.Location = new System.Drawing.Point(699, 286);
             this.btnImage1.Name = "btnImage1";
             this.btnImage1.Size = new System.Drawing.Size(150, 150);
             this.btnImage1.TabIndex = 105;
@@ -328,7 +328,7 @@
             this.btnImage2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnImage2.BackgroundImage")));
             this.btnImage2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnImage2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnImage2.Location = new System.Drawing.Point(874, 286);
+            this.btnImage2.Location = new System.Drawing.Point(920, 286);
             this.btnImage2.Name = "btnImage2";
             this.btnImage2.Size = new System.Drawing.Size(150, 150);
             this.btnImage2.TabIndex = 106;
@@ -490,7 +490,7 @@
             this.btnGemstone.FlatAppearance.BorderSize = 0;
             this.btnGemstone.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGemstone.Image = ((System.Drawing.Image)(resources.GetObject("btnGemstone.Image")));
-            this.btnGemstone.Location = new System.Drawing.Point(990, 583);
+            this.btnGemstone.Location = new System.Drawing.Point(1029, 583);
             this.btnGemstone.Name = "btnGemstone";
             this.btnGemstone.Size = new System.Drawing.Size(76, 86);
             this.btnGemstone.TabIndex = 164;
@@ -504,7 +504,7 @@
             this.btnPrint.FlatAppearance.BorderSize = 0;
             this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPrint.Image = ((System.Drawing.Image)(resources.GetObject("btnPrint.Image")));
-            this.btnPrint.Location = new System.Drawing.Point(1001, 463);
+            this.btnPrint.Location = new System.Drawing.Point(1047, 463);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(65, 96);
             this.btnPrint.TabIndex = 163;
@@ -518,7 +518,7 @@
             this.btnDiamond.FlatAppearance.BorderSize = 0;
             this.btnDiamond.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDiamond.Image = ((System.Drawing.Image)(resources.GetObject("btnDiamond.Image")));
-            this.btnDiamond.Location = new System.Drawing.Point(897, 584);
+            this.btnDiamond.Location = new System.Drawing.Point(936, 584);
             this.btnDiamond.Name = "btnDiamond";
             this.btnDiamond.Size = new System.Drawing.Size(76, 86);
             this.btnDiamond.TabIndex = 161;
@@ -967,7 +967,7 @@
             // 
             this.label16.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label16.Location = new System.Drawing.Point(37, 136);
+            this.label16.Location = new System.Drawing.Point(82, 136);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(117, 24);
             this.label16.TabIndex = 126;
@@ -975,7 +975,7 @@
             // 
             // txtPricePerGram11
             // 
-            this.txtPricePerGram11.Location = new System.Drawing.Point(402, 202);
+            this.txtPricePerGram11.Location = new System.Drawing.Point(434, 202);
             this.txtPricePerGram11.Name = "txtPricePerGram11";
             this.txtPricePerGram11.Size = new System.Drawing.Size(119, 27);
             this.txtPricePerGram11.TabIndex = 136;
@@ -987,7 +987,7 @@
             // txtMaterialCost11
             // 
             this.txtMaterialCost11.Enabled = false;
-            this.txtMaterialCost11.Location = new System.Drawing.Point(402, 235);
+            this.txtMaterialCost11.Location = new System.Drawing.Point(434, 235);
             this.txtMaterialCost11.Name = "txtMaterialCost11";
             this.txtMaterialCost11.Size = new System.Drawing.Size(119, 27);
             this.txtMaterialCost11.TabIndex = 144;
@@ -1019,7 +1019,7 @@
             // txtMaterialCost1
             // 
             this.txtMaterialCost1.Enabled = false;
-            this.txtMaterialCost1.Location = new System.Drawing.Point(196, 238);
+            this.txtMaterialCost1.Location = new System.Drawing.Point(241, 238);
             this.txtMaterialCost1.Name = "txtMaterialCost1";
             this.txtMaterialCost1.Size = new System.Drawing.Size(119, 27);
             this.txtMaterialCost1.TabIndex = 36;
@@ -1042,7 +1042,7 @@
             // 
             // txtPricePerGram1
             // 
-            this.txtPricePerGram1.Location = new System.Drawing.Point(196, 203);
+            this.txtPricePerGram1.Location = new System.Drawing.Point(241, 203);
             this.txtPricePerGram1.Name = "txtPricePerGram1";
             this.txtPricePerGram1.Size = new System.Drawing.Size(119, 27);
             this.txtPricePerGram1.TabIndex = 32;
@@ -1056,7 +1056,7 @@
             this.label10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label10.Location = new System.Drawing.Point(37, 206);
+            this.label10.Location = new System.Drawing.Point(82, 206);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(139, 27);
             this.label10.TabIndex = 118;
@@ -1083,7 +1083,7 @@
             // txtRemark
             // 
             this.txtRemark.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.txtRemark.Location = new System.Drawing.Point(653, 475);
+            this.txtRemark.Location = new System.Drawing.Point(699, 475);
             this.txtRemark.Multiline = true;
             this.txtRemark.Name = "txtRemark";
             this.txtRemark.Size = new System.Drawing.Size(320, 87);
@@ -1092,7 +1092,7 @@
             // label27
             // 
             this.label27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label27.Location = new System.Drawing.Point(649, 446);
+            this.label27.Location = new System.Drawing.Point(695, 446);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(120, 26);
             this.label27.TabIndex = 106;
@@ -1134,7 +1134,7 @@
             // 
             // txtMaterialWeight1
             // 
-            this.txtMaterialWeight1.Location = new System.Drawing.Point(196, 167);
+            this.txtMaterialWeight1.Location = new System.Drawing.Point(241, 167);
             this.txtMaterialWeight1.Name = "txtMaterialWeight1";
             this.txtMaterialWeight1.Size = new System.Drawing.Size(119, 27);
             this.txtMaterialWeight1.TabIndex = 28;
@@ -1149,7 +1149,7 @@
             this.label22.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label22.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label22.Location = new System.Drawing.Point(37, 171);
+            this.label22.Location = new System.Drawing.Point(82, 171);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(153, 26);
             this.label22.TabIndex = 96;
@@ -1183,7 +1183,7 @@
             // cmbMaterial1
             // 
             this.cmbMaterial1.FormattingEnabled = true;
-            this.cmbMaterial1.Location = new System.Drawing.Point(196, 131);
+            this.cmbMaterial1.Location = new System.Drawing.Point(241, 131);
             this.cmbMaterial1.Name = "cmbMaterial1";
             this.cmbMaterial1.Size = new System.Drawing.Size(165, 29);
             this.cmbMaterial1.TabIndex = 24;
@@ -1211,7 +1211,7 @@
             // 
             this.label14.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label14.Location = new System.Drawing.Point(37, 236);
+            this.label14.Location = new System.Drawing.Point(82, 236);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(134, 24);
             this.label14.TabIndex = 47;

@@ -179,7 +179,7 @@
             this.panel3.Controls.Add(this.txtL);
             this.panel3.Controls.Add(this.dtBuyDate);
             this.panel3.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.panel3.Location = new System.Drawing.Point(12, 68);
+            this.panel3.Location = new System.Drawing.Point(12, 77);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1001, 443);
             this.panel3.TabIndex = 74;
@@ -275,7 +275,7 @@
             this.txtNote.Location = new System.Drawing.Point(739, 368);
             this.txtNote.Multiline = true;
             this.txtNote.Name = "txtNote";
-            this.txtNote.Size = new System.Drawing.Size(186, 54);
+            this.txtNote.Size = new System.Drawing.Size(224, 54);
             this.txtNote.TabIndex = 112;
             // 
             // label30
@@ -355,7 +355,7 @@
             // 
             this.label25.AutoSize = true;
             this.label25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label25.Location = new System.Drawing.Point(399, 344);
+            this.label25.Location = new System.Drawing.Point(391, 344);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(66, 21);
             this.label25.TabIndex = 145;
@@ -407,7 +407,7 @@
             // 
             this.label22.AutoSize = true;
             this.label22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label22.Location = new System.Drawing.Point(399, 307);
+            this.label22.Location = new System.Drawing.Point(391, 307);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(49, 21);
             this.label22.TabIndex = 140;
@@ -417,7 +417,7 @@
             // 
             this.txtTotal.AccessibleDescription = "N";
             this.txtTotal.Enabled = false;
-            this.txtTotal.Location = new System.Drawing.Point(510, 269);
+            this.txtTotal.Location = new System.Drawing.Point(502, 269);
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.Size = new System.Drawing.Size(134, 27);
             this.txtTotal.TabIndex = 154;
@@ -449,7 +449,7 @@
             // 
             this.label20.AutoSize = true;
             this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label20.Location = new System.Drawing.Point(399, 237);
+            this.label20.Location = new System.Drawing.Point(391, 237);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(42, 21);
             this.label20.TabIndex = 136;
@@ -457,7 +457,7 @@
             // 
             // txtRap
             // 
-            this.txtRap.Location = new System.Drawing.Point(510, 234);
+            this.txtRap.Location = new System.Drawing.Point(502, 234);
             this.txtRap.Name = "txtRap";
             this.txtRap.Size = new System.Drawing.Size(61, 27);
             this.txtRap.TabIndex = 84;
@@ -470,7 +470,7 @@
             // 
             this.label19.AutoSize = true;
             this.label19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label19.Location = new System.Drawing.Point(577, 202);
+            this.label19.Location = new System.Drawing.Point(569, 202);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(22, 21);
             this.label19.TabIndex = 134;
@@ -480,7 +480,7 @@
             // 
             this.label18.AutoSize = true;
             this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label18.Location = new System.Drawing.Point(399, 202);
+            this.label18.Location = new System.Drawing.Point(391, 202);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(47, 21);
             this.label18.TabIndex = 133;
@@ -488,7 +488,7 @@
             // 
             // txtPrice
             // 
-            this.txtPrice.Location = new System.Drawing.Point(510, 199);
+            this.txtPrice.Location = new System.Drawing.Point(502, 199);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(61, 27);
             this.txtPrice.TabIndex = 80;
@@ -501,7 +501,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label16.Location = new System.Drawing.Point(399, 168);
+            this.label16.Location = new System.Drawing.Point(391, 168);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(70, 21);
             this.label16.TabIndex = 129;
@@ -511,7 +511,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label7.Location = new System.Drawing.Point(399, 129);
+            this.label7.Location = new System.Drawing.Point(391, 129);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(51, 21);
             this.label7.TabIndex = 125;
@@ -520,14 +520,14 @@
             // cmbColor
             // 
             this.cmbColor.FormattingEnabled = true;
-            this.cmbColor.Location = new System.Drawing.Point(510, 125);
+            this.cmbColor.Location = new System.Drawing.Point(502, 125);
             this.cmbColor.Name = "cmbColor";
             this.cmbColor.Size = new System.Drawing.Size(157, 29);
             this.cmbColor.TabIndex = 36;
             // 
             // txtWeight
             // 
-            this.txtWeight.Location = new System.Drawing.Point(510, 54);
+            this.txtWeight.Location = new System.Drawing.Point(502, 54);
             this.txtWeight.Name = "txtWeight";
             this.txtWeight.Size = new System.Drawing.Size(61, 27);
             this.txtWeight.TabIndex = 12;
@@ -587,7 +587,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label15.Location = new System.Drawing.Point(399, 380);
+            this.label15.Location = new System.Drawing.Point(391, 380);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(39, 21);
             this.label15.TabIndex = 104;
@@ -596,7 +596,7 @@
             // cmbLab
             // 
             this.cmbLab.FormattingEnabled = true;
-            this.cmbLab.Location = new System.Drawing.Point(510, 377);
+            this.cmbLab.Location = new System.Drawing.Point(502, 377);
             this.cmbLab.Name = "cmbLab";
             this.cmbLab.Size = new System.Drawing.Size(131, 29);
             this.cmbLab.TabIndex = 76;
@@ -632,7 +632,7 @@
             // cmbShop
             // 
             this.cmbShop.FormattingEnabled = true;
-            this.cmbShop.Location = new System.Drawing.Point(510, 304);
+            this.cmbShop.Location = new System.Drawing.Point(502, 304);
             this.cmbShop.Name = "cmbShop";
             this.cmbShop.Size = new System.Drawing.Size(157, 29);
             this.cmbShop.TabIndex = 64;
@@ -641,7 +641,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label10.Location = new System.Drawing.Point(399, 275);
+            this.label10.Location = new System.Drawing.Point(391, 275);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(62, 21);
             this.label10.TabIndex = 98;
@@ -650,7 +650,7 @@
             // cmbSetting
             // 
             this.cmbSetting.FormattingEnabled = true;
-            this.cmbSetting.Location = new System.Drawing.Point(510, 339);
+            this.cmbSetting.Location = new System.Drawing.Point(502, 339);
             this.cmbSetting.Name = "cmbSetting";
             this.cmbSetting.Size = new System.Drawing.Size(180, 29);
             this.cmbSetting.TabIndex = 72;
@@ -658,7 +658,7 @@
             // cmbClearity
             // 
             this.cmbClearity.FormattingEnabled = true;
-            this.cmbClearity.Location = new System.Drawing.Point(510, 162);
+            this.cmbClearity.Location = new System.Drawing.Point(502, 162);
             this.cmbClearity.Name = "cmbClearity";
             this.cmbClearity.Size = new System.Drawing.Size(180, 29);
             this.cmbClearity.TabIndex = 44;
@@ -667,7 +667,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label8.Location = new System.Drawing.Point(399, 57);
+            this.label8.Location = new System.Drawing.Point(391, 57);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(66, 21);
             this.label8.TabIndex = 94;
@@ -696,7 +696,7 @@
             // cmbShape
             // 
             this.cmbShape.FormattingEnabled = true;
-            this.cmbShape.Location = new System.Drawing.Point(510, 89);
+            this.cmbShape.Location = new System.Drawing.Point(502, 89);
             this.cmbShape.Name = "cmbShape";
             this.cmbShape.Size = new System.Drawing.Size(157, 29);
             this.cmbShape.TabIndex = 28;
@@ -706,7 +706,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label3.Location = new System.Drawing.Point(399, 92);
+            this.label3.Location = new System.Drawing.Point(391, 92);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(60, 21);
             this.label3.TabIndex = 88;
@@ -716,7 +716,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label2.Location = new System.Drawing.Point(370, 21);
+            this.label2.Location = new System.Drawing.Point(362, 21);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(130, 21);
             this.label2.TabIndex = 87;
@@ -724,7 +724,7 @@
             // 
             // txtReportNumber
             // 
-            this.txtReportNumber.Location = new System.Drawing.Point(510, 18);
+            this.txtReportNumber.Location = new System.Drawing.Point(502, 18);
             this.txtReportNumber.Name = "txtReportNumber";
             this.txtReportNumber.Size = new System.Drawing.Size(157, 27);
             this.txtReportNumber.TabIndex = 4;
@@ -843,7 +843,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(195)))), ((int)(((byte)(157)))));
-            this.ClientSize = new System.Drawing.Size(1025, 522);
+            this.ClientSize = new System.Drawing.Size(1025, 533);
             this.Controls.Add(this.panel3);
             this.Name = "BuyBookDiamondCer";
             this.Text = "DiamondCer";

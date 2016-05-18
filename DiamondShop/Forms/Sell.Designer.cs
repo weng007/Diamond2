@@ -166,7 +166,7 @@
             this.btnPrint.FlatAppearance.BorderSize = 0;
             this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPrint.Image = ((System.Drawing.Image)(resources.GetObject("btnPrint.Image")));
-            this.btnPrint.Location = new System.Drawing.Point(336, 414);
+            this.btnPrint.Location = new System.Drawing.Point(337, 429);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(65, 96);
             this.btnPrint.TabIndex = 184;
@@ -374,6 +374,7 @@
             // 
             // txtRemark
             // 
+            this.txtRemark.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txtRemark.Location = new System.Drawing.Point(79, 431);
             this.txtRemark.Multiline = true;
             this.txtRemark.Name = "txtRemark";

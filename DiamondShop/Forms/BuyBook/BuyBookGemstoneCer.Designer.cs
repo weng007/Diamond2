@@ -173,7 +173,7 @@
             this.panel3.Controls.Add(this.txtCode);
             this.panel3.Controls.Add(this.dtBuyDate);
             this.panel3.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.panel3.Location = new System.Drawing.Point(12, 68);
+            this.panel3.Location = new System.Drawing.Point(11, 77);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1003, 535);
             this.panel3.TabIndex = 74;
@@ -444,10 +444,10 @@
             // txtNote
             // 
             this.txtNote.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.txtNote.Location = new System.Drawing.Point(769, 412);
+            this.txtNote.Location = new System.Drawing.Point(717, 418);
             this.txtNote.Multiline = true;
             this.txtNote.Name = "txtNote";
-            this.txtNote.Size = new System.Drawing.Size(194, 87);
+            this.txtNote.Size = new System.Drawing.Size(254, 87);
             this.txtNote.TabIndex = 88;
             // 
             // label26
@@ -455,7 +455,7 @@
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.label26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label26.Location = new System.Drawing.Point(714, 420);
+            this.label26.Location = new System.Drawing.Point(714, 394);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(45, 19);
             this.label26.TabIndex = 171;
@@ -598,7 +598,7 @@
             this.dtDueDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtDueDate.Location = new System.Drawing.Point(832, 251);
             this.dtDueDate.Name = "dtDueDate";
-            this.dtDueDate.Size = new System.Drawing.Size(131, 27);
+            this.dtDueDate.Size = new System.Drawing.Size(136, 27);
             this.dtDueDate.TabIndex = 68;
             // 
             // rdoNo
@@ -797,7 +797,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(195)))), ((int)(((byte)(157)))));
-            this.ClientSize = new System.Drawing.Size(1024, 612);
+            this.ClientSize = new System.Drawing.Size(1025, 624);
             this.Controls.Add(this.panel3);
             this.Name = "BuyBookGemstoneCer";
             this.Text = "DiamondCer";
