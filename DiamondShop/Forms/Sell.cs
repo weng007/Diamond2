@@ -186,10 +186,10 @@ namespace DiamondShop
 
         private void btnProduct_Click(object sender, EventArgs e)
         {
-            ProductSearch frm = new ProductSearch();
-            frm.ShowDialog();
-            txtCode.Text = frm.code;
-            txtJewelryTypeName.Text = frm.jewelryTypename;
+            CatalogList frm = new CatalogList();
+            //frm.ShowDialog();
+            //txtCode.Text = frm.code;
+            //txtJewelryTypeName.Text = frm.jewelryTypename;
         }
 
         private void txtCost_KeyPress(object sender, KeyPressEventArgs e)
