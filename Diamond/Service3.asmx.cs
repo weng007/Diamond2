@@ -202,20 +202,6 @@ namespace Diamond
         }
 
         [WebMethod]
-        public DataSet DoSearchProduct(string code, int shop, int status, int jewelryType)
-        {
-            ProductBiz biz = new ProductBiz();
-
-            try
-            {
-                return biz.DoSearchData(code, shop, status, jewelryType);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-        [WebMethod]
         public DataSet DoSearchCatalog(string code)
         {
             CatalogBiz biz = new CatalogBiz();

@@ -15,8 +15,10 @@ namespace DiamondShop
 {
     public partial class BuyBookSetting : FormInfo
     {
-        //Service1 ser = GM.GetService();
         dsBuyBookSetting tds = new dsBuyBookSetting();
+        dsBuyBookSettingDetail tds2 = new dsBuyBookSettingDetail();
+        bool isAuthorize = false;
+        DataSet ds2 = new DataSet();
 
         public BuyBookSetting()
         {
@@ -30,12 +32,18 @@ namespace DiamondShop
         {
             InitializeComponent();
             Initial();
-
             BinderData();
 
             this.id = id;
             LoadData();
         }
+
+        protected override void Initial()
+        {
+            dtBuyDate.Select();
+            SetFieldService.SetRequireField(txtSeller);
+        }
+
         private void BinderData()
         {
             binder.BindControl(dtBuyDate, "BuyDate");
@@ -45,27 +53,29 @@ namespace DiamondShop
         }
         protected override void LoadData()
         {
-              ds = ser.DoSelectData("BuyBookSetting", id);
-              tds.Clear();
-              tds.Merge(ds);
+            ds = ser.DoSelectData("BuyBookSetting", id);
+            tds.Clear();
+            tds.Merge(ds);
 
-              if (tds.BBSetting.Rows.Count > 0)
-              {
+            ds2 = ser.DoSelectData("BuyBookSettingDetail", id);
+            tds2.Clear();
+            tds2.Merge(ds2);
+
+            if (tds.BBSetting.Rows.Count > 0)
+            {
                 binder.BindValueToControl(tds.BBSetting[0]);
-                //if(tds.DiamondCer[0]["Inscription"].ToString() == "0")
-                //{
-                //    //chkNo.Checked = true;
-                //    //chkYes.Checked = false;
-                //}
-                //else
-                //{
-                //    //chkYes.Checked = true;
-                //    //chkNo.Checked = false;
-                //}
-                  EnableDelete = true;
-              }
 
-              base.LoadData();
+                EnableSave = false;
+                EnableEdit = true;
+                EnableDelete = false;
+            }
+
+            if (tds2.BBSettingDetail.Rows.Count > 0)
+            {
+                binder.BindValueToControl(tds2.BBSettingDetail[0]);
+            }
+
+            base.LoadData();
         }
 
         protected override bool SaveData()
@@ -132,29 +142,30 @@ namespace DiamondShop
             else { return false; }
         }
 
-        protected override void Initial()
+        protected override void EditData()
         {
-            dtBuyDate.Select();
+            if (isAuthorize)
+            {
+                EnableSave = true;
+                EnableDelete = true;
+            }
+            else
+            {
+                RequirePassword frm = new RequirePassword("2");
+                frm.ShowDialog();
+                isAuthorize = frm.isAuthorize;
+                frm.Close();
 
-            SetFieldService.SetRequireField(txtSeller);
+                if (isAuthorize)
+                {
+                    EnableSave = true;
+                    EnableDelete = true;
+                    base.EditData();
+                }
+            }
         }
 
-        private void cmbColorGrade_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string color = "C017";
-
-            //if (cmbColorGrade.SelectedIndex == 0)
-            //{
-            //    color = "C001";
-            //}
-
-            //cmbColor.DataSource = (GM.GetMasterTableDetail(color)).Tables[0];
-            //cmbColor.ValueMember = "ID";
-            //cmbColor.DisplayMember = "Detail";
-            //cmbColor.Refresh();
-        }
-
-        private void txtCarat_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtBuyPrice_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
             {
@@ -162,16 +173,23 @@ namespace DiamondShop
             }
         }
 
-        private void cmbShapeAndCut_SelectedIndexChanged(object sender, EventArgs e)
+        private void btnAdd_Click(object sender, EventArgs e)
         {
-            //if(cmbShapeAndCut.SelectedIndex == 0)
-            //{
-            //    lbl1.Text = "-";
-            //}
-            //else
-            //{
-            //    lbl1.Text = "x";
-            //}
+            BuyBookSettingDetail frm = new BuyBookSettingDetail(id,0);
+            frm.ShowDialog();
+
+            LoadData();
+        }
+
+        private void gridSetting_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if(gridSetting.SelectedRows.Count > 0)
+            {
+                BuyBookSettingDetail frm = new BuyBookSettingDetail(id, 1);
+                frm.ShowDialog();
+
+                LoadData();
+            }
         }
     }
 }

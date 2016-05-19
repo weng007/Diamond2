@@ -15,7 +15,6 @@ namespace DiamondShop
 {
     public partial class BuyBookETC : FormInfo
     {
-        //Service1 ser = GM.GetService();
         dsBuyBookETC tds = new dsBuyBookETC();
         bool isAuthorize = false;
 
@@ -159,23 +158,6 @@ namespace DiamondShop
 
             if (message == "") { return true; }
             else { return false; }
-        }
-
-        
-
-        private void cmbColorGrade_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string color = "C017";
-
-            //if (cmbColorGrade.SelectedIndex == 0)
-            //{
-            //    color = "C001";
-            //}
-
-            //cmbColor.DataSource = (GM.GetMasterTableDetail(color)).Tables[0];
-            //cmbColor.ValueMember = "ID";
-            //cmbColor.DisplayMember = "Detail";
-            //cmbColor.Refresh();
         }
 
         private void txtPrice_KeyPress(object sender, KeyPressEventArgs e)

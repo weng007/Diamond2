@@ -16,9 +16,9 @@ namespace DiamondShop
 {
     public partial class BuyBookSettingDetail : FormInfo
     {
-        ////Service1 ser = GM.GetService();
         dsBuyBookSettingDetail tds = new dsBuyBookSettingDetail();
         MemoryStream ms1;
+        int mode = 0;
         byte[] image1;
 
         public BuyBookSettingDetail()
@@ -38,7 +38,7 @@ namespace DiamondShop
             binder.BindControl(txtUSDRate, "USDRate");
             binder.BindControl(txtTotalBaht, "TotalBaht");
         }
-        public BuyBookSettingDetail(int id)
+        public BuyBookSettingDetail(int id, int mode)
         {
             InitializeComponent();
             Initial();
@@ -55,12 +55,14 @@ namespace DiamondShop
             binder.BindControl(txtUSDRate, "USDRate");
             binder.BindControl(txtTotalBaht, "TotalBaht");
 
+
             this.id = id;
+            this.mode = mode;
             LoadData();
         }
         protected override void Initial()
         {
-            cmbSettingType.DataSource = (GM.GetMasterTableDetail("C005")).Tables[0];
+            cmbSettingType.DataSource = (GM.GetMasterTableDetail("C015")).Tables[0];
             cmbSettingType.ValueMember = "ID";
             cmbSettingType.DisplayMember = "Detail";
             cmbSettingType.Refresh();
@@ -70,9 +72,9 @@ namespace DiamondShop
             cmbMaterial.DisplayMember = "Detail";
             cmbMaterial.Refresh();
 
-            //dtDate.Select();
+            cmbSettingType.Select();
 
-            //SetFieldService.SetRequireField(txtAmount, txtMeasure1, txtMeasure2, txtMeasure3, txtCarat);
+            SetFieldService.SetRequireField(txtAmount,txtWeight);
         }
         protected override void LoadData()
         {
@@ -116,8 +118,10 @@ namespace DiamondShop
 
             try
             {
-                if (id == 0)
+                if (mode == 0)
                 {
+                    row.RefID = id;
+
                     SetCreateBy(row);
                     chkFlag = ser.DoInsertData("BBSettingDetail", tds);
                 }
@@ -154,59 +158,30 @@ namespace DiamondShop
         {
             message = "";
 
-            if (txtAmount.Text == "")
+            if (txtAmount.Text == "" || GM.ConvertStringToDouble(txtAmount) == 0)
             {
-                message = "Please input GIA Number.\n";
+                message = "Please input Amount > 0.\n";
             }
-            //if(txtMeasure1.Text == "" || txtMeasure2.Text == "" || txtMeasure3.Text == ""
-            //&& GM.ConvertStringToDouble(txtMeasure1) == 0 || GM.ConvertStringToDouble(txtMeasure2) == 0 || GM.ConvertStringToDouble(txtMeasure3) == 0)
-            //{
-            //    message += "Please input Measurement > 0.\n";
-            //}
-            //if (txtCarat.Text == "" || GM.ConvertStringToDouble(txtCarat) == 0)
-            //{
-            //    message += "Please input Carat Weight > 0.\n";
-            //}
+            if (txtWeight.Text == "" || GM.ConvertStringToDouble(txtWeight) == 0)
+            {
+                message += "Please input Weight > 0.\n";
+            }
+            if (txtTotalBaht.Text == "" || GM.ConvertStringToDouble(txtTotalBaht) == 0)
+            {
+                message += "Please input Total Baht > 0.\n";
+            }
 
             if (message == "") { return true; }
             else { return false; }
         }
 
-        
 
-        private void cmbColorGrade_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string color = "C017";
-
-            //if (cmbColorGrade.SelectedIndex == 0)
-            //{
-            //    color = "C001";
-            //}
-
-            //cmbColor.DataSource = (GM.GetMasterTableDetail(color)).Tables[0];
-            //cmbColor.ValueMember = "ID";
-            //cmbColor.DisplayMember = "Detail";
-            //cmbColor.Refresh();
-        }
-
-        private void txtCarat_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtAmount_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
             {
                 e.Handled = true;
             }
-        }
-
-        private void cmbShapeAndCut_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            //if(cmbShapeAndCut.SelectedIndex == 0)
-            //{
-            //    lbl1.Text = "-";
-            //}
-            //else
-            //{
-            //    lbl1.Text = "x";
-            //}
         }
     }
 }

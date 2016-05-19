@@ -153,30 +153,6 @@ namespace Diamond
                     throw ex;
                 }
             }
-            else if (TableName == "BuyBookSpecial")
-            {
-                BuyBookSpecialBiz biz = GM.GetBuyBookSpecialBiz();
-                try
-                {
-                    return biz.DoSelectData(id);
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
-            }
-            else if (TableName == "Product")
-            {
-                ProductBiz biz = GM.GetProductBiz();
-                try
-                {
-                    return biz.DoSelectData(id);
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
-            }
             else if (TableName == "DiamondCer")
             {
                 DiamondCerBiz biz = GM.GetDiamondBiz();
@@ -391,6 +367,20 @@ namespace Diamond
                     throw ex;
                 }
             }
+            else if (TableName == "BuyBookSettingDetail")
+            {
+                BuyBookSettingBiz biz = GM.BuyBookSettingBiz();
+                try
+                {
+                    return biz.DoSelectData(id);
+
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+
 
             return null;
         }
@@ -400,22 +390,7 @@ namespace Diamond
         [WebMethod]
         public bool DoInsertData(string TableName, DataSet ds)
         {
-            if (TableName == "PriceCode")
-            {
-                PriceCodeBiz biz = GM.GetPriceCodeBiz();
-                dsPriceCode ds1 = GM.GetDSPriceCode();
-                ds1.Merge(ds);
-
-                try
-                {
-                    flag = biz.DoInsertData(ds1);
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
-            }
-            else if (TableName == "User")
+            if (TableName == "User")
             {
                 UserBiz biz = GM.GetUserBiz();
                 dsUser ds1 = new dsUser();
@@ -508,7 +483,7 @@ namespace Diamond
             else if (TableName == "BuyBookGemstone")
             {
                 BuyBookGemstoneBiz biz = GM.GetBuyBookGemstoneBiz();
-                dsBuyBookGemstone ds1 = GM.GetDSBuyBookGemstone();
+                dsBuyBookGemstone ds1 = new dsBuyBookGemstone();
                 ds1.Merge(ds);
 
                 try
@@ -538,7 +513,7 @@ namespace Diamond
             else if (TableName == "BuyBookGold")
             {
                 BuyBookGoldBiz biz = GM.GetBuyBookGoldBiz();
-                dsBuyBookGold ds1 = GM.GetDSBuyBookGold();
+                dsBuyBookGold ds1 = new dsBuyBookGold();
                 ds1.Merge(ds);
 
                 try
@@ -565,55 +540,10 @@ namespace Diamond
                     throw ex;
                 }
             }
-            else if (TableName == "BuyBookSpecial")
-            {
-                BuyBookSpecialBiz biz = GM.GetBuyBookSpecialBiz();
-                dsBuyBookSpecial ds1 = GM.GetDSBuyBookSpecial();
-                ds1.Merge(ds);
-
-                try
-                {
-                    flag = biz.DoInsertData(ds1);
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
-            }
-            else if (TableName == "Product")
-            {
-                ProductBiz biz = GM.GetProductBiz();
-                dsProduct ds1 = GM.GetDSProduct();
-                ds1.Merge(ds);
-
-                try
-                {
-                    flag = biz.DoInsertData(ds1);
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
-            }
-            //else if (TableName == "DiamondCer")
-            //{
-            //    DiamondCerBiz biz = GM.GetDiamondBiz();
-            //    dsDiamondCer ds1 = GM.GetDSDiamondCer();
-            //    ds1.Merge(ds);
-
-            //    try
-            //    {
-            //        flag = biz.DoInsertData(ds1);
-            //    }
-            //    catch (Exception ex)
-            //    {
-            //        throw ex;
-            //    }
-            //}
             else if (TableName == "DiamondDetail")
             {
                 DiamondDetailBiz biz = GM.GetDiamondDetailBiz();
-                dsDiamondDetail ds1 = GM.GetDSDiamondDetail();
+                dsDiamondDetail ds1 = new dsDiamondDetail();
                 ds1.Merge(ds);
 
                 try
@@ -643,7 +573,7 @@ namespace Diamond
             else if (TableName == "GemstoneDetail")
             {
                 GemstoneDetailBiz biz = GM.GetGemstoneDetailBiz();
-                dsGemstoneDetail ds1 = GM.GetDSGemstoneDetail();
+                dsGemstoneDetail ds1 = new dsGemstoneDetail();
                 ds1.Merge(ds);
 
                 try
@@ -673,7 +603,7 @@ namespace Diamond
             else if (TableName == "Sell")
             {
                 SellBiz biz = GM.SellBiz();
-                dsSell ds1 = GM.GetDSSell();
+                dsSell ds1 = new dsSell();
                 ds1.Merge(ds);
 
                 try
@@ -860,23 +790,7 @@ namespace Diamond
         [WebMethod]
         public bool DoUpdateData(string TableName, DataSet ds)
         {
-            if (TableName == "PriceCode")
-            {
-                PriceCodeBiz biz = GM.GetPriceCodeBiz();
-                dsPriceCode ds1 = GM.GetDSPriceCode();
-                
-                ds1.Merge(ds);
-
-                try
-                {
-                    flag = biz.DoUpdateData(ds1);
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
-            }
-            else if (TableName == "User")
+            if (TableName == "User")
             {
                 UserBiz biz = GM.GetUserBiz();
                 dsUser ds1 = new dsUser();
@@ -1006,7 +920,7 @@ namespace Diamond
             else if (TableName == "BuyBookGold")
             {
                 BuyBookGoldBiz biz = GM.GetBuyBookGoldBiz();
-                dsBuyBookGold ds1 = GM.GetDSBuyBookGold();
+                dsBuyBookGold ds1 = new dsBuyBookGold();
 
                 ds1.Merge(ds);
 
@@ -1035,42 +949,10 @@ namespace Diamond
                     throw ex;
                 }
             }
-            else if (TableName == "BuyBookSpecial")
-            {
-                BuyBookSpecialBiz biz = GM.GetBuyBookSpecialBiz();
-                dsBuyBookSpecial ds1 = GM.GetDSBuyBookSpecial();
-
-                ds1.Merge(ds);
-
-                try
-                {
-                    flag = biz.DoUpdateData(ds1);
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
-            }
-            else if (TableName == "Product")
-            {
-                ProductBiz biz = GM.GetProductBiz();
-                dsProduct ds1 = GM.GetDSProduct();
-
-                ds1.Merge(ds);
-
-                try
-                {
-                    flag = biz.DoUpdateData(ds1);
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
-            }
             else if (TableName == "DiamondCer")
             {
                 DiamondCerBiz biz = GM.GetDiamondBiz();
-                dsDiamondCer ds1 = GM.GetDSDiamondCer();
+                dsDiamondCer ds1 = new dsDiamondCer();
 
                 ds1.Merge(ds);
 
@@ -1086,7 +968,7 @@ namespace Diamond
             else if (TableName == "DiamondDetail")
             {
                 DiamondDetailBiz biz = GM.GetDiamondDetailBiz();
-                dsDiamondDetail ds1 = GM.GetDSDiamondDetail();
+                dsDiamondDetail ds1 = new dsDiamondDetail();
 
                 ds1.Merge(ds);
 
@@ -1118,7 +1000,7 @@ namespace Diamond
             else if (TableName == "GemstoneDetail")
             {
                 GemstoneDetailBiz biz = GM.GetGemstoneDetailBiz();
-                dsGemstoneDetail ds1 = GM.GetDSGemstoneDetail();
+                dsGemstoneDetail ds1 = new dsGemstoneDetail();
 
                 ds1.Merge(ds);
 
@@ -1323,19 +1205,7 @@ namespace Diamond
         [WebMethod]
         public bool DoDeleteData(string TableName, int id)
         {
-            if (TableName == "PriceCode")
-            {
-                PriceCodeBiz biz = GM.GetPriceCodeBiz();
-                try
-                {
-                    flag = biz.DoDeleteData(id);
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
-            }
-            else if (TableName == "User")
+            if (TableName == "User")
             {
                 UserBiz biz = GM.GetUserBiz();
                 try
@@ -1455,42 +1325,6 @@ namespace Diamond
                     throw ex;
                 }
             }
-            else if (TableName == "BuyBookSpecial")
-            {
-                BuyBookSpecialBiz biz = GM.GetBuyBookSpecialBiz();
-                try
-                {
-                    flag = biz.DoDeleteData(id);
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
-            }
-            else if (TableName == "Product")
-            {
-                ProductBiz biz = GM.GetProductBiz();
-                try
-                {
-                    flag = biz.DoDeleteData(id);
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
-            }
-            //else if (TableName == "DiamondCer")
-            //{
-            //    DiamondCerBiz biz = GM.GetDiamondBiz();
-            //    try
-            //    {
-            //        flag = biz.DoDeleteData(id);
-            //    }
-            //    catch (Exception ex)
-            //    {
-            //        throw ex;
-            //    }
-            //}
             else if (TableName == "DiamondDetail")
             {
                 DiamondDetailBiz biz = GM.GetDiamondDetailBiz();
