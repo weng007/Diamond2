@@ -525,7 +525,7 @@ namespace Diamond
                     throw ex;
                 }
             }
-            else if (TableName == "BuyBookSettingDetail")
+            else if (TableName == "BBSettingDetail")
             {
                 BuyBookSettingDetailBiz biz = GM.GetBuyBookSettingDetailBiz();
                 dsBuyBookSettingDetail ds1 = new dsBuyBookSettingDetail();

@@ -84,11 +84,11 @@ namespace DiamondShop
 
             if (tds.BBSettingDetail.Rows.Count > 0)
             {
-                binder.BindValueToControl(tds.BBSettingDetail[0]);
-                image1 = tds.BBSettingDetail[0].Image1;
+                binder.BindValueToControl(tds.BBSettingDetail[0]);          
 
                 if (image1 != null)
                 {
+                    image1 = tds.BBSettingDetail[0].Image1;
                     ms1 = new MemoryStream(image1);
                     Image backImage1 = Image.FromStream(ms1);
                     btnImage1.BackgroundImage = backImage1;

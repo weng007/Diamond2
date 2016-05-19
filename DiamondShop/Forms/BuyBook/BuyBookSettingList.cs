@@ -24,14 +24,12 @@ namespace DiamondShop
 
         protected override void Initial()
         {
+            gridSetting.AutoGenerateColumns = false;
+
             cmbSettingType.DataSource = (GM.GetMasterTableDetail("C015")).Tables[0];
             cmbSettingType.ValueMember = "ID";
             cmbSettingType.DisplayMember = "Detail";
-            cmbSettingType.Refresh();
-
-            //txtSearch.Select();
-
-            gridSetting.AutoGenerateColumns = false;
+            cmbSettingType.Refresh();      
         }
 
         protected override void DoLoadData()
@@ -76,18 +74,6 @@ namespace DiamondShop
 
         protected override bool DoDeleteData()
         {
-            //Popup.Popup winMessage = new Popup.Popup("Do you want to Delete data?");
-            //winMessage.ShowDialog();
-            //chkFlag = winMessage.result;
-
-            //if (chkFlag)
-            //{
-            //    if (gridSetting.RowCount > 0 && gridSetting.SelectedRows.Count > 0)
-            //    {
-            //        id = (int)gridSetting.SelectedRows[0].Cells["ID"].Value;
-            //        chkFlag = ser.DoDeleteData("BuyBookSettingDetail", id);
-            //    }
-            //}
             return chkFlag;
         }
 

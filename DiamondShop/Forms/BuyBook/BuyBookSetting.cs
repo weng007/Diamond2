@@ -72,7 +72,7 @@ namespace DiamondShop
 
             if (tds2.BBSettingDetail.Rows.Count > 0)
             {
-                binder.BindValueToControl(tds2.BBSettingDetail[0]);
+                BindingGridBBSettingDetail();
             }
 
             base.LoadData();
@@ -142,6 +142,31 @@ namespace DiamondShop
             else { return false; }
         }
 
+        private void BindingGridBBSettingDetail()
+        {
+            int i = 0;
+            gridSetting.Rows.Clear();
+
+            foreach (DataRow row in tds2.Tables[0].Rows)
+            {
+                gridSetting.Rows.Add();
+                gridSetting.Rows[i].Cells["RowNum"].Value = row["RowNum"].ToString();
+                gridSetting.Rows[i].Cells["ID"].Value = row["ID"].ToString();
+                gridSetting.Rows[i].Cells["SettingType"].Value = row["SettingType"].ToString();
+                gridSetting.Rows[i].Cells["SettingTypeName"].Value = row["SettingTypeName"].ToString();
+                gridSetting.Rows[i].Cells["Material"].Value = row["Material"].ToString();
+                gridSetting.Rows[i].Cells["MaterialName"].Value = row["MaterialName"].ToString();
+                gridSetting.Rows[i].Cells["Amount"].Value = row["Amount"].ToString();
+                gridSetting.Rows[i].Cells["Weight"].Value = row["Weight"].ToString();
+                gridSetting.Rows[i].Cells["PricePerGram"].Value = row["PricePerGram"].ToString();
+                gridSetting.Rows[i].Cells["PricePerUnit"].Value = row["PricePerUnit"].ToString();
+                gridSetting.Rows[i].Cells["TotalBaht"].Value = row["TotalBaht"].ToString();
+                gridSetting.Rows[i].Cells["RefID"].Value = row["RefID"].ToString();
+
+                i++;
+            }
+        }
+
         protected override void EditData()
         {
             if (isAuthorize)
@@ -189,6 +214,19 @@ namespace DiamondShop
                 frm.ShowDialog();
 
                 LoadData();
+            }
+        }
+
+        private void gridSetting_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if ((e.ColumnIndex == 4 || e.ColumnIndex == 5 || e.ColumnIndex == 6 || e.ColumnIndex == 7 ||
+                e.ColumnIndex == 8) && e.RowIndex != this.gridSetting.NewRowIndex && e.Value != null
+                && e.Value.ToString() != "")
+            {
+                double d = double.Parse(e.Value.ToString());
+
+                if (e.ColumnIndex != 5) { e.Value = d.ToString("N0"); }
+                else { e.Value = d.ToString("N2"); }
             }
         }
     }
