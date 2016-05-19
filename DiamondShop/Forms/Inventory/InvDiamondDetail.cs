@@ -531,7 +531,7 @@ namespace DiamondShop
         {
             e.Control.KeyPress -= new KeyPressEventHandler(Column1_KeyPress);
             if (grid2.CurrentCell.ColumnIndex != 0 || grid2.CurrentCell.ColumnIndex != 1 || grid2.CurrentCell.ColumnIndex != 5 ||
-                grid2.CurrentCell.ColumnIndex != 6) 
+                 grid2.CurrentCell.ColumnIndex != 6) 
             {
                 TextBox tb = e.Control as TextBox;
                 if (tb != null)
