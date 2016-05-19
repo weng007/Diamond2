@@ -78,7 +78,7 @@
             this.ID1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GemstoneType = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.Shape = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Amount1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Weight1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Origin = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.CostPerCarat = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -314,7 +314,7 @@
             this.ID1,
             this.GemstoneType,
             this.Shape,
-            this.Amount1,
+            this.Amount,
             this.Weight1,
             this.Origin,
             this.CostPerCarat,
@@ -330,11 +330,11 @@
             this.grid2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.grid2.Size = new System.Drawing.Size(1245, 191);
             this.grid2.TabIndex = 17;
+            this.grid2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid2_CellClick);
             this.grid2.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid2_CellEndEdit);
             this.grid2.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid2_CellEnter);
             this.grid2.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.grid2_CellFormatting);
             this.grid2.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.grid2_EditingControlShowing);
-            this.grid2.SelectionChanged += new System.EventHandler(this.grid2_SelectionChanged);
             // 
             // grid1
             // 
@@ -367,11 +367,11 @@
             this.grid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.grid1.Size = new System.Drawing.Size(1245, 188);
             this.grid1.TabIndex = 16;
+            this.grid1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid2_CellClick);
             this.grid1.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid1_CellEndEdit);
             this.grid1.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid2_CellEnter);
             this.grid1.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.grid1_CellFormatting);
             this.grid1.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.grid1_EditingControlShowing);
-            this.grid1.SelectionChanged += new System.EventHandler(this.grid1_SelectionChanged);
             // 
             // RowNum
             // 
@@ -540,16 +540,16 @@
             this.Shape.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Shape.Width = 130;
             // 
-            // Amount1
+            // Amount
             // 
-            this.Amount1.DataPropertyName = "Amount";
+            this.Amount.DataPropertyName = "Amount";
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
             dataGridViewCellStyle1.Format = "N0";
             dataGridViewCellStyle1.NullValue = "0";
-            this.Amount1.DefaultCellStyle = dataGridViewCellStyle1;
-            this.Amount1.HeaderText = "Amount";
-            this.Amount1.Name = "Amount1";
-            this.Amount1.Width = 90;
+            this.Amount.DefaultCellStyle = dataGridViewCellStyle1;
+            this.Amount.HeaderText = "Amount";
+            this.Amount.Name = "Amount";
+            this.Amount.Width = 90;
             // 
             // Weight1
             // 
@@ -674,7 +674,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ID1;
         private System.Windows.Forms.DataGridViewComboBoxColumn GemstoneType;
         private System.Windows.Forms.DataGridViewComboBoxColumn Shape;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Amount1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Amount;
         private System.Windows.Forms.DataGridViewTextBoxColumn Weight1;
         private System.Windows.Forms.DataGridViewComboBoxColumn Origin;
         private System.Windows.Forms.DataGridViewTextBoxColumn CostPerCarat;

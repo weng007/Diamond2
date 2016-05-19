@@ -317,6 +317,8 @@ namespace DiamondDS.DS {
             
             private global::System.Data.DataColumn columnEditDate;
             
+            private global::System.Data.DataColumn columnRefID2;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public InvGemstoneDetailDataTable() {
@@ -504,6 +506,14 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn RefID2Column {
+                get {
+                    return this.columnRefID2;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -557,7 +567,8 @@ namespace DiamondDS.DS {
                         int CreateBy, 
                         System.DateTime CreateDate, 
                         int EditBy, 
-                        System.DateTime EditDate) {
+                        System.DateTime EditDate, 
+                        string RefID2) {
                 InvGemstoneDetailRow rowInvGemstoneDetailRow = ((InvGemstoneDetailRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         RowNum,
@@ -578,7 +589,8 @@ namespace DiamondDS.DS {
                         CreateBy,
                         CreateDate,
                         EditBy,
-                        EditDate};
+                        EditDate,
+                        RefID2};
                 rowInvGemstoneDetailRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowInvGemstoneDetailRow);
                 return rowInvGemstoneDetailRow;
@@ -627,6 +639,7 @@ namespace DiamondDS.DS {
                 this.columnCreateDate = base.Columns["CreateDate"];
                 this.columnEditBy = base.Columns["EditBy"];
                 this.columnEditDate = base.Columns["EditDate"];
+                this.columnRefID2 = base.Columns["RefID2"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -670,14 +683,14 @@ namespace DiamondDS.DS {
                 base.Columns.Add(this.columnEditBy);
                 this.columnEditDate = new global::System.Data.DataColumn("EditDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnEditDate);
+                this.columnRefID2 = new global::System.Data.DataColumn("RefID2", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnRefID2);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnID}, true));
-                this.columnRowNum.ReadOnly = true;
                 this.columnID.AutoIncrement = true;
                 this.columnID.AutoIncrementSeed = -1;
                 this.columnID.AutoIncrementStep = -1;
                 this.columnID.AllowDBNull = false;
-                this.columnID.ReadOnly = true;
                 this.columnID.Unique = true;
                 this.columnGemstoneTypeName.ReadOnly = true;
                 this.columnGemstoneTypeName.MaxLength = 100;
@@ -1127,6 +1140,22 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string RefID2 {
+                get {
+                    try {
+                        return ((string)(this[this.tableInvGemstoneDetail.RefID2Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'RefID2\' in table \'InvGemstoneDetail\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableInvGemstoneDetail.RefID2Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsRowNumNull() {
                 return this.IsNull(this.tableInvGemstoneDetail.RowNumColumn);
             }
@@ -1339,6 +1368,18 @@ namespace DiamondDS.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetEditDateNull() {
                 this[this.tableInvGemstoneDetail.EditDateColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsRefID2Null() {
+                return this.IsNull(this.tableInvGemstoneDetail.RefID2Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetRefID2Null() {
+                this[this.tableInvGemstoneDetail.RefID2Column] = global::System.Convert.DBNull;
             }
         }
         

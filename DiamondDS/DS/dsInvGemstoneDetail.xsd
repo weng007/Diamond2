@@ -5,7 +5,7 @@
       <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
           <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="DiamondShopConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="DiamondShopConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.DiamondDS.Properties.Settings.GlobalReference.Default.DiamondShopConnectionString" Provider="System.Data.SqlClient" />
-          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="DiamondShopConnectionString1" IsAppSettingsProperty="true" Modifier="Assembly" Name="DiamondShopConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.DiamondDS.Properties.Settings.GlobalReference.Default.DiamondShopConnectionString1" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="DiamondShopConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="DiamondShopConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.DiamondDS.Properties.Settings.GlobalReference.Default.DiamondShopConnectionString1" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables />
         <Sources />
@@ -18,8 +18,8 @@
         <xs:element name="InvGemstoneDetail" msprop:Generator_TableClassName="InvGemstoneDetailDataTable" msprop:Generator_TableVarName="tableInvGemstoneDetail" msprop:Generator_RowChangedName="InvGemstoneDetailRowChanged" msprop:Generator_TablePropName="InvGemstoneDetail" msprop:Generator_RowDeletingName="InvGemstoneDetailRowDeleting" msprop:Generator_RowChangingName="InvGemstoneDetailRowChanging" msprop:Generator_RowEvHandlerName="InvGemstoneDetailRowChangeEventHandler" msprop:Generator_RowDeletedName="InvGemstoneDetailRowDeleted" msprop:Generator_RowClassName="InvGemstoneDetailRow" msprop:Generator_UserTableName="InvGemstoneDetail" msprop:Generator_RowEvArgName="InvGemstoneDetailRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="RowNum" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnRowNum" msprop:Generator_ColumnPropNameInRow="RowNum" msprop:Generator_ColumnPropNameInTable="RowNumColumn" msprop:Generator_UserColumnName="RowNum" type="xs:long" minOccurs="0" />
-              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="RowNum" msprop:Generator_ColumnVarNameInTable="columnRowNum" msprop:Generator_ColumnPropNameInRow="RowNum" msprop:Generator_ColumnPropNameInTable="RowNumColumn" msprop:Generator_UserColumnName="RowNum" type="xs:long" minOccurs="0" />
+              <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
               <xs:element name="GemstoneType" msprop:Generator_ColumnVarNameInTable="columnGemstoneType" msprop:Generator_ColumnPropNameInRow="GemstoneType" msprop:Generator_ColumnPropNameInTable="GemstoneTypeColumn" msprop:Generator_UserColumnName="GemstoneType" type="xs:int" minOccurs="0" />
               <xs:element name="GemstoneTypeName" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnGemstoneTypeName" msprop:Generator_ColumnPropNameInRow="GemstoneTypeName" msprop:Generator_ColumnPropNameInTable="GemstoneTypeNameColumn" msprop:Generator_UserColumnName="GemstoneTypeName" minOccurs="0">
                 <xs:simpleType>
@@ -61,6 +61,7 @@
               <xs:element name="CreateDate" msprop:Generator_ColumnVarNameInTable="columnCreateDate" msprop:Generator_ColumnPropNameInRow="CreateDate" msprop:Generator_ColumnPropNameInTable="CreateDateColumn" msprop:Generator_UserColumnName="CreateDate" type="xs:dateTime" minOccurs="0" />
               <xs:element name="EditBy" msprop:Generator_ColumnVarNameInTable="columnEditBy" msprop:Generator_ColumnPropNameInRow="EditBy" msprop:Generator_ColumnPropNameInTable="EditByColumn" msprop:Generator_UserColumnName="EditBy" type="xs:int" minOccurs="0" />
               <xs:element name="EditDate" msprop:Generator_ColumnVarNameInTable="columnEditDate" msprop:Generator_ColumnPropNameInRow="EditDate" msprop:Generator_ColumnPropNameInTable="EditDateColumn" msprop:Generator_UserColumnName="EditDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="RefID2" msprop:Generator_ColumnVarNameInTable="columnRefID2" msprop:Generator_ColumnPropNameInRow="RefID2" msprop:Generator_ColumnPropNameInTable="RefID2Column" msprop:Generator_UserColumnName="RefID2" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

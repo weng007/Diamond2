@@ -35,8 +35,17 @@ namespace DiamondDAL.DAL
         {
             try
             {
-                dsInvGemstoneDetail.InvGemstoneDetailRow row = tds.InvGemstoneDetail[0];
-                SQL.ExecuteSP("SP_InvGemstoneDetail_Ins", row);
+                foreach (dsInvGemstoneDetail.InvGemstoneDetailRow row in tds.Tables[0].Rows)
+                {
+                    if (row["RowNum"].ToString() == "")
+                    {
+                        SQL.ExecuteSP("SP_InvGemstoneDetail_Ins", row);
+                    }
+                    else
+                    {
+                        SQL.ExecuteSP("SP_InvGemstoneDetail_Upd", row);
+                    }
+                }
             }
             catch (Exception ex)
             {

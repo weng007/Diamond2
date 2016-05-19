@@ -39,7 +39,7 @@ namespace DiamondShop
         }
         protected override void DoLoadData()
         {
-            //ser2 = GM.GetService2();
+            ser2 = GM.GetService2();
 
             ds = ser2.DoSearchInventoryByType(txtPrefix.Text);
 
