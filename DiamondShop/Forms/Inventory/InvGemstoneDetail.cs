@@ -204,7 +204,9 @@ namespace DiamondShop
                     if (row.Cells["RowNum"].Value != null)
                     { tds.Tables[0].Rows[i]["RowNum"] = row.Cells["RowNum"].Value; }
 
-                    tds.Tables[0].Rows[i]["refID"] = row.Cells["refID"].Value;
+                    if (row.Cells["refID"].Value != null)
+                    { tds.Tables[0].Rows[i]["refID"] = row.Cells["refID"].Value; }
+
                     tds.Tables[0].Rows[i]["refID1"] = row.Cells["refID1"].Value;
                     tds.Tables[0].Rows[i]["MinPrice"] = row.Cells["MinPrice"].Value;
 
