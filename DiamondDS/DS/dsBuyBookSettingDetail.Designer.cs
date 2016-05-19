@@ -283,6 +283,8 @@ namespace DiamondDS.DS {
             
             private global::System.Data.DataColumn columnID;
             
+            private global::System.Data.DataColumn columnSettingTypeName;
+            
             private global::System.Data.DataColumn columnSettingType;
             
             private global::System.Data.DataColumn columnAmount;
@@ -290,6 +292,8 @@ namespace DiamondDS.DS {
             private global::System.Data.DataColumn columnWeight;
             
             private global::System.Data.DataColumn columnLaborCost;
+            
+            private global::System.Data.DataColumn columnMaterialName;
             
             private global::System.Data.DataColumn columnMaterial;
             
@@ -370,6 +374,14 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn SettingTypeNameColumn {
+                get {
+                    return this.columnSettingTypeName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn SettingTypeColumn {
                 get {
                     return this.columnSettingType;
@@ -397,6 +409,14 @@ namespace DiamondDS.DS {
             public global::System.Data.DataColumn LaborCostColumn {
                 get {
                     return this.columnLaborCost;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn MaterialNameColumn {
+                get {
+                    return this.columnMaterialName;
                 }
             }
             
@@ -551,10 +571,12 @@ namespace DiamondDS.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public BBSettingDetailRow AddBBSettingDetailRow(
                         long RowNum, 
+                        string SettingTypeName, 
                         int SettingType, 
                         double Amount, 
                         double Weight, 
                         decimal LaborCost, 
+                        string MaterialName, 
                         int Material, 
                         decimal PricePerGram, 
                         decimal PricePerUnit, 
@@ -573,10 +595,12 @@ namespace DiamondDS.DS {
                 object[] columnValuesArray = new object[] {
                         RowNum,
                         null,
+                        SettingTypeName,
                         SettingType,
                         Amount,
                         Weight,
                         LaborCost,
+                        MaterialName,
                         Material,
                         PricePerGram,
                         PricePerUnit,
@@ -622,10 +646,12 @@ namespace DiamondDS.DS {
             internal void InitVars() {
                 this.columnRowNum = base.Columns["RowNum"];
                 this.columnID = base.Columns["ID"];
+                this.columnSettingTypeName = base.Columns["SettingTypeName"];
                 this.columnSettingType = base.Columns["SettingType"];
                 this.columnAmount = base.Columns["Amount"];
                 this.columnWeight = base.Columns["Weight"];
                 this.columnLaborCost = base.Columns["LaborCost"];
+                this.columnMaterialName = base.Columns["MaterialName"];
                 this.columnMaterial = base.Columns["Material"];
                 this.columnPricePerGram = base.Columns["PricePerGram"];
                 this.columnPricePerUnit = base.Columns["PricePerUnit"];
@@ -649,6 +675,8 @@ namespace DiamondDS.DS {
                 base.Columns.Add(this.columnRowNum);
                 this.columnID = new global::System.Data.DataColumn("ID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnID);
+                this.columnSettingTypeName = new global::System.Data.DataColumn("SettingTypeName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSettingTypeName);
                 this.columnSettingType = new global::System.Data.DataColumn("SettingType", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSettingType);
                 this.columnAmount = new global::System.Data.DataColumn("Amount", typeof(double), null, global::System.Data.MappingType.Element);
@@ -657,6 +685,8 @@ namespace DiamondDS.DS {
                 base.Columns.Add(this.columnWeight);
                 this.columnLaborCost = new global::System.Data.DataColumn("LaborCost", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnLaborCost);
+                this.columnMaterialName = new global::System.Data.DataColumn("MaterialName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMaterialName);
                 this.columnMaterial = new global::System.Data.DataColumn("Material", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnMaterial);
                 this.columnPricePerGram = new global::System.Data.DataColumn("PricePerGram", typeof(decimal), null, global::System.Data.MappingType.Element);
@@ -694,6 +724,8 @@ namespace DiamondDS.DS {
                 this.columnID.AllowDBNull = false;
                 this.columnID.ReadOnly = true;
                 this.columnID.Unique = true;
+                this.columnSettingTypeName.Caption = "SettingType";
+                this.columnMaterialName.Caption = "Material";
                 this.columnDetail.MaxLength = 250;
                 this.columnIsDeleted.MaxLength = 1;
             }
@@ -865,6 +897,22 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string SettingTypeName {
+                get {
+                    try {
+                        return ((string)(this[this.tableBBSettingDetail.SettingTypeNameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'SettingTypeName\' in table \'BBSettingDetail\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableBBSettingDetail.SettingTypeNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public int SettingType {
                 get {
                     try {
@@ -924,6 +972,22 @@ namespace DiamondDS.DS {
                 }
                 set {
                     this[this.tableBBSettingDetail.LaborCostColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string MaterialName {
+                get {
+                    try {
+                        return ((string)(this[this.tableBBSettingDetail.MaterialNameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'MaterialName\' in table \'BBSettingDetail\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableBBSettingDetail.MaterialNameColumn] = value;
                 }
             }
             
@@ -1165,6 +1229,18 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsSettingTypeNameNull() {
+                return this.IsNull(this.tableBBSettingDetail.SettingTypeNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetSettingTypeNameNull() {
+                this[this.tableBBSettingDetail.SettingTypeNameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsSettingTypeNull() {
                 return this.IsNull(this.tableBBSettingDetail.SettingTypeColumn);
             }
@@ -1209,6 +1285,18 @@ namespace DiamondDS.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetLaborCostNull() {
                 this[this.tableBBSettingDetail.LaborCostColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsMaterialNameNull() {
+                return this.IsNull(this.tableBBSettingDetail.MaterialNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetMaterialNameNull() {
+                this[this.tableBBSettingDetail.MaterialNameColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
