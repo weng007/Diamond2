@@ -193,11 +193,6 @@ namespace DiamondShop
                 datagridview.BeginEdit(true);
                 ((ComboBox)datagridview.EditingControl).DroppedDown = true;
             }
-
-            if (datagridview.Name == "grid1")
-            { rowIndex = e.RowIndex; }
-            else { rowIndex1 = e.RowIndex; }
-             
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -246,6 +241,8 @@ namespace DiamondShop
         {
             grid2.Rows.Add();
             tds2.Tables[0].Rows.Add();
+
+            tds2.AcceptChanges();
         }
 
         private void btnDel1_Click(object sender, EventArgs e)
@@ -332,8 +329,10 @@ namespace DiamondShop
 
                     if (row.Cells["RowNum"].Value != null)
                     { tds.Tables[0].Rows[i]["RowNum"] = row.Cells["RowNum"].Value; }
-                    
-                    tds.Tables[0].Rows[i]["refID"] = row.Cells["refID"].Value;
+
+                    if (row.Cells["RefID"].Value != null)
+                    { tds.Tables[0].Rows[i]["refID"] = row.Cells["refID"].Value; }
+                        
                     tds.Tables[0].Rows[i]["refID1"] = row.Cells["refID1"].Value;
                     tds.Tables[0].Rows[i]["MinPrice"] = row.Cells["MinPrice"].Value;
 
@@ -417,11 +416,11 @@ namespace DiamondShop
         {
             if(e.ColumnIndex == 3 || e.ColumnIndex == 4)
             {              
-                if(grid2.Rows[e.RowIndex].Cells[3].Value.ToString().Trim() == "")
+                if(grid2.Rows[e.RowIndex].Cells[3].Value !=null && grid2.Rows[e.RowIndex].Cells[3].Value.ToString().Trim() == "")
                 {
                     grid2.Rows[e.RowIndex].Cells[3].Value = 0;
                 }
-                if (grid2.Rows[e.RowIndex].Cells[4].Value.ToString().Trim() == "")
+                if (grid2.Rows[e.RowIndex].Cells[4].Value != null && grid2.Rows[e.RowIndex].Cells[4].Value.ToString().Trim() == "")
                 {
                     grid2.Rows[e.RowIndex].Cells[4].Value = 0;
                 }
@@ -430,7 +429,7 @@ namespace DiamondShop
             }
             else if(e.ColumnIndex == 8)
             {
-                if (grid2.Rows[e.RowIndex].Cells[8].Value.ToString().Trim() == "")
+                if (grid2.Rows[e.RowIndex].Cells[8].Value != null && grid2.Rows[e.RowIndex].Cells[8].Value.ToString().Trim() == "")
                 {
                     grid2.Rows[e.RowIndex].Cells[8].Value = 0;
                 }
@@ -439,7 +438,7 @@ namespace DiamondShop
             }
             else if(e.ColumnIndex == 10)
             {
-                if (grid2.Rows[e.RowIndex].Cells[10].Value.ToString().Trim() == "")
+                if (grid2.Rows[e.RowIndex].Cells[10].Value != null && grid2.Rows[e.RowIndex].Cells[10].Value.ToString().Trim() == "")
                 {
                     grid2.Rows[e.RowIndex].Cells[10].Value = 0;
                 }
@@ -511,22 +510,6 @@ namespace DiamondShop
 
         }
 
-        private void grid1_SelectionChanged(object sender, EventArgs e)
-        {
-            if (grid1.SelectedRows.Count > 0)
-            {
-                rowIndex = grid1.SelectedRows[0].Index;
-            }
-        }
-
-        private void grid2_SelectionChanged(object sender, EventArgs e)
-        {
-            if (grid2.SelectedRows.Count > 0)
-            {
-                rowIndex1 = grid2.SelectedRows[0].Index;
-            }
-        }
-
         private void grid2_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
         {
             e.Control.KeyPress -= new KeyPressEventHandler(Column1_KeyPress);
@@ -546,6 +529,24 @@ namespace DiamondShop
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '.')
             {
                 e.Handled = true;
+            }
+        }
+
+        private void grid2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var grid = (DataGridView)sender;
+
+            if (e.RowIndex >= 0)
+            {
+                if(grid.Name == "grid1")
+                {
+                    rowIndex = e.RowIndex;
+                }
+                else 
+                {
+                    rowIndex1 = e.RowIndex;
+                }
+               
             }
         }
 
