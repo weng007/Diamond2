@@ -141,7 +141,7 @@ namespace DiamondShop
                     grid2.Rows[i].Cells["MinPricePerCarat"].Value = row["MinPricePerCarat"].ToString();
                     grid2.Rows[i].Cells["MinPrice1"].Value = row["MinPrice"].ToString();
                     grid2.Rows[i].Cells["refID2"].Value = row["refID"].ToString();
-
+                     
                     i++;
                     CalSum(1);
                 }
