@@ -19,7 +19,7 @@ namespace DiamondShop
         DataSet ds2 = new DataSet();
         DataSet tmp = new DataSet();
         int rowIndex, rowIndex1;
-        int chkGrid;
+        int chkGrid, DelID;
         dsInvDiamondCerDetail tds = new dsInvDiamondCerDetail();
         dsDiamondCer tdsDiamondCer = new dsDiamondCer();
         dsInvDiamondDetail tds2 = new dsInvDiamondDetail();
@@ -147,7 +147,7 @@ namespace DiamondShop
             {
                 try
                 {
-                    chkFlag = ser.DoDeleteData("InvDiamondCerDetail", Convert.ToInt16(grid1.Rows[rowIndex].Cells["ID"].Value.ToString()));
+                    chkFlag = ser.DoDeleteData("InvDiamondCerDetail", DelID);
                 }
                 catch (Exception ex)
                 {
@@ -158,7 +158,7 @@ namespace DiamondShop
             {
                 try
                 {
-                    chkFlag = ser.DoDeleteData("InvDiamondDetail", Convert.ToInt16(grid2.Rows[rowIndex1].Cells["ID1"].Value.ToString()));
+                    chkFlag = ser.DoDeleteData("InvDiamondDetail", DelID);
                 }
                 catch (Exception ex)
                 {
@@ -230,11 +230,26 @@ namespace DiamondShop
 
         private void btnDel_Click(object sender, EventArgs e)
         {
-            grid1.Rows.RemoveAt(rowIndex);
-            tds.Tables[0].Rows[rowIndex].Delete();
-            tds.AcceptChanges();
+            try
+            {
+                if (grid1.Rows.Count > 0)
+                {
+                    if (Convert.ToInt16(grid1.Rows[rowIndex].Cells["ID"].Value.ToString()) > 0)
+                    {
+                        DeleteDataGrid(0);
+                    }
+                        
+                }
+                grid1.Rows.RemoveAt(rowIndex);
+                tds.Tables[0].Rows[rowIndex].Delete();
+                tds.AcceptChanges();
 
-            DeleteDataGrid(0);
+                
+            }
+            catch(Exception ex)
+            {
+
+            }
         }
 
         private void btnAdd1_Click(object sender, EventArgs e)
@@ -247,11 +262,25 @@ namespace DiamondShop
 
         private void btnDel1_Click(object sender, EventArgs e)
         {
-            grid2.Rows.RemoveAt(rowIndex1);
-            tds2.Tables[0].Rows[rowIndex1].Delete();
-            tds2.AcceptChanges();
+            try
+            {
+                if (grid2.Rows.Count > 0)
+                {
+                    if (Convert.ToInt16(grid2.Rows[rowIndex1].Cells["ID1"].Value.ToString()) > 0)
+                    {
+                        DeleteDataGrid(1);
+                    }
 
-            DeleteDataGrid(1);
+                }
+
+                grid2.Rows.RemoveAt(rowIndex1);
+                tds2.Tables[0].Rows[rowIndex1].Delete();
+                tds2.AcceptChanges();
+            }
+            catch (Exception ex)
+            {
+
+            }
         }
 
       
@@ -416,11 +445,11 @@ namespace DiamondShop
         {
             if(e.ColumnIndex == 3 || e.ColumnIndex == 4)
             {              
-                if(grid2.Rows[e.RowIndex].Cells[3].Value !=null && grid2.Rows[e.RowIndex].Cells[3].Value.ToString().Trim() == "")
+                if(grid2.Rows[e.RowIndex].Cells[3].Value ==null || grid2.Rows[e.RowIndex].Cells[3].Value.ToString().Trim() == "")
                 {
                     grid2.Rows[e.RowIndex].Cells[3].Value = 0;
                 }
-                if (grid2.Rows[e.RowIndex].Cells[4].Value != null && grid2.Rows[e.RowIndex].Cells[4].Value.ToString().Trim() == "")
+                if (grid2.Rows[e.RowIndex].Cells[4].Value == null || grid2.Rows[e.RowIndex].Cells[4].Value.ToString().Trim() == "")
                 {
                     grid2.Rows[e.RowIndex].Cells[4].Value = 0;
                 }
@@ -429,21 +458,21 @@ namespace DiamondShop
             }
             else if(e.ColumnIndex == 8)
             {
-                if (grid2.Rows[e.RowIndex].Cells[8].Value != null && grid2.Rows[e.RowIndex].Cells[8].Value.ToString().Trim() == "")
+                if (grid2.Rows[e.RowIndex].Cells[8].Value == null || grid2.Rows[e.RowIndex].Cells[8].Value.ToString().Trim() == "")
                 {
                     grid2.Rows[e.RowIndex].Cells[8].Value = 0;
                 }
 
-                grid2.Rows[e.RowIndex].Cells[9].Value = Convert.ToDecimal(grid2.Rows[e.RowIndex].Cells[5].Value) * Convert.ToInt32(grid2.Rows[e.RowIndex].Cells[8].Value);
+                grid2.Rows[e.RowIndex].Cells[9].Value = Convert.ToDecimal(grid2.Rows[e.RowIndex].Cells[5].Value) * Convert.ToDecimal(grid2.Rows[e.RowIndex].Cells[8].Value);
             }
             else if(e.ColumnIndex == 10)
             {
-                if (grid2.Rows[e.RowIndex].Cells[10].Value != null && grid2.Rows[e.RowIndex].Cells[10].Value.ToString().Trim() == "")
+                if (grid2.Rows[e.RowIndex].Cells[10].Value == null || grid2.Rows[e.RowIndex].Cells[10].Value.ToString().Trim() == "")
                 {
                     grid2.Rows[e.RowIndex].Cells[10].Value = 0;
                 }
 
-                grid2.Rows[e.RowIndex].Cells[11].Value = Convert.ToDecimal(grid2.Rows[e.RowIndex].Cells[5].Value) * Convert.ToInt32(grid2.Rows[e.RowIndex].Cells[10].Value);
+                grid2.Rows[e.RowIndex].Cells[11].Value = Convert.ToDecimal(grid2.Rows[e.RowIndex].Cells[5].Value) * Convert.ToDecimal(grid2.Rows[e.RowIndex].Cells[10].Value);
             }
 
             grid2.RefreshEdit();
@@ -532,21 +561,27 @@ namespace DiamondShop
             }
         }
 
-        private void grid2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void grid2_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             var grid = (DataGridView)sender;
 
             if (e.RowIndex >= 0)
             {
-                if(grid.Name == "grid1")
+                if (grid.Name == "grid1")
                 {
                     rowIndex = e.RowIndex;
+                    if (grid1.Rows[e.RowIndex].Cells["ID"].Value != null)
+                    { DelID = Convert.ToInt16(grid1.Rows[e.RowIndex].Cells["ID"].Value.ToString()); }              
                 }
-                else 
+                else
                 {
                     rowIndex1 = e.RowIndex;
+                    
+                    if(grid2.Rows[e.RowIndex].Cells["ID1"].Value != null)
+                    { DelID = Convert.ToInt16(grid2.Rows[e.RowIndex].Cells["ID1"].Value.ToString()); }
+                    
                 }
-               
+
             }
         }
 
