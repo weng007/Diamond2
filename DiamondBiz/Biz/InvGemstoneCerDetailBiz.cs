@@ -9,7 +9,7 @@ namespace DiamondBiz.Biz
 {
     public class InvGemstoneCerDetailBiz
     {
-        dsInvGemstoneCerDetail ds = new dsInvGemstoneCerDetail();
+        //dsInvGemstoneCerDetail ds = new dsInvGemstoneCerDetail();
 
         InvGemstoneCerDetailDAL dal = new InvGemstoneCerDetailDAL();
 

@@ -13,13 +13,24 @@ using DiamondDS;
 namespace DiamondShop
 {
     public partial class GemstoneCerList : FormList
-    {  
+    {
+        public int mode = 0;
+        public int refID1 = 0;
+
         public GemstoneCerList()
         {
             InitializeComponent();
             Initial();
             DoLoadData();
 
+        }
+        public GemstoneCerList(int mode)
+        {
+            InitializeComponent();
+            Initial();
+            this.mode = mode;
+
+            DoLoadData();
         }
         protected override void Initial()
         {
@@ -139,14 +150,21 @@ namespace DiamondShop
 
         private void gridGemstone_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            if (gridGemstone.RowCount > 0 && gridGemstone.SelectedRows.Count > 0)
+            if (mode == 0)
             {
-                id = (int)gridGemstone.SelectedRows[0].Cells["ID"].Value;
-                GemstoneCer frm = new GemstoneCer(id);
-                frm.ShowDialog();
+                if (gridGemstone.RowCount > 0 && gridGemstone.SelectedRows.Count > 0)
+                {
+                    id = (int)gridGemstone.SelectedRows[0].Cells["ID"].Value;
+                    GemstoneCer frm = new GemstoneCer(id);
+                    frm.ShowDialog();
+                }
+                DoLoadData();
             }
-
-            DoLoadData();
+            else //mode = 1 Search
+            {
+                refID1 = (int)gridGemstone.SelectedRows[0].Cells["ID"].Value;
+                this.Close();
+            }
         }
 
         //private void gridGemstone_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
