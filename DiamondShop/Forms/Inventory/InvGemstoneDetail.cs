@@ -141,7 +141,7 @@ namespace DiamondShop
                     grid2.Rows[i].Cells["MinPricePerCarat"].Value = row["MinPricePerCarat"].ToString();
                     grid2.Rows[i].Cells["MinPrice1"].Value = row["MinPrice"].ToString();
                     grid2.Rows[i].Cells["refID2"].Value = row["refID"].ToString();
-
+                     
                     i++;
                     CalSum(1);
                 }
@@ -204,7 +204,9 @@ namespace DiamondShop
                     if (row.Cells["RowNum"].Value != null)
                     { tds.Tables[0].Rows[i]["RowNum"] = row.Cells["RowNum"].Value; }
 
-                    tds.Tables[0].Rows[i]["refID"] = row.Cells["refID"].Value;
+                    if (row.Cells["refID"].Value != null)
+                    { tds.Tables[0].Rows[i]["refID"] = row.Cells["refID"].Value; }
+
                     tds.Tables[0].Rows[i]["refID1"] = row.Cells["refID1"].Value;
                     tds.Tables[0].Rows[i]["MinPrice"] = row.Cells["MinPrice"].Value;
 
@@ -369,17 +371,17 @@ namespace DiamondShop
         }
         private void grid2_CellEnter(object sender, DataGridViewCellEventArgs e)
         {
-             bool validClick = (e.RowIndex != -1 && e.ColumnIndex != -1); //Make sure the clicked row/column is valid.
-             var datagridview = sender as DataGridView;
+            bool validClick = (e.RowIndex != -1 && e.ColumnIndex != -1); //Make sure the clicked row/column is valid.
+            var datagridview = sender as DataGridView;
 
-                    // Check to make sure the cell clicked is the cell containing the combobox 
-             if (datagridview.Columns[e.ColumnIndex] is DataGridViewComboBoxColumn && validClick)
-             {
-                 datagridview.BeginEdit(true);
-                 ((ComboBox)datagridview.EditingControl).DroppedDown = true;
-             }
+            // Check to make sure the cell clicked is the cell containing the combobox 
+            if (datagridview.Columns[e.ColumnIndex] is DataGridViewComboBoxColumn && validClick)
+            {
+                datagridview.BeginEdit(true);
+                ((ComboBox)datagridview.EditingControl).DroppedDown = true;
+            }
 
-             if (datagridview.Name == "grid1")
+            if (datagridview.Name == "grid1")
              { rowIndex = e.RowIndex; }
              else { rowIndex1 = e.RowIndex; }
         }
