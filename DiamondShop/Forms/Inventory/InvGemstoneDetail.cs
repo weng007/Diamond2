@@ -486,6 +486,11 @@ namespace DiamondShop
                 double d = double.Parse(e.Value.ToString());
                 e.Value = d.ToString("N0");
             }
+            if ((e.ColumnIndex == 9) && e.RowIndex != this.grid1.NewRowIndex && e.Value != null)
+            {
+                double d = double.Parse(e.Value.ToString());
+                e.Value = d.ToString("N2");
+            }
         }
 
         private void grid2_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
@@ -494,6 +499,11 @@ namespace DiamondShop
             {
                 double d = double.Parse(e.Value.ToString());
                 e.Value = d.ToString("N0");
+            }
+            if ((e.ColumnIndex == 6) && e.RowIndex != this.grid1.NewRowIndex && e.Value != null)
+            {
+                double d = double.Parse(e.Value.ToString());
+                e.Value = d.ToString("N2");
             }
         }
 

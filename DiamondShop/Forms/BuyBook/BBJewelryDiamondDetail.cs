@@ -60,10 +60,10 @@ namespace DiamondShop
             Shape.DefaultCellStyle.NullValue = (GM.GetMasterTableDetail("C019")).Tables[0].Rows[0][1];
 
             Color = (DataGridViewComboBoxColumn)grid1.Columns["Color"];
-            Color.DataSource = (GM.GetMasterTableDetail("C001")).Tables[0];
+            Color.DataSource = (GM.GetMasterTableDetail("C017")).Tables[0];
             Color.ValueMember = "ID";
             Color.DisplayMember = "Detail";
-            Color.DefaultCellStyle.NullValue = (GM.GetMasterTableDetail("C001")).Tables[0].Rows[0][1];
+            Color.DefaultCellStyle.NullValue = (GM.GetMasterTableDetail("C017")).Tables[0].Rows[0][1];
 
             Clearity = (DataGridViewComboBoxColumn)grid1.Columns["Clearity"];
             Clearity.DataSource = (GM.GetMasterTableDetail("C002")).Tables[0];
@@ -172,8 +172,6 @@ namespace DiamondShop
         {
             if (type == 0)
             {
-                
-
                 txtSumWeight.Text = (grid1.Rows.Cast<DataGridViewRow>()
                 .Sum(t => Convert.ToDecimal(t.Cells["Weight"].Value))).ToString();
 
@@ -417,9 +415,9 @@ namespace DiamondShop
         private void btnAdd1_Click(object sender, EventArgs e)
         {
             grid2.Rows.Add();
-            tds.Tables[0].Rows.Add();
+            tds2.Tables[0].Rows.Add();
 
-            tds.AcceptChanges();
+            tds2.AcceptChanges();
         }
         private void btnDel1_Click(object sender, EventArgs e)
         {
@@ -427,14 +425,14 @@ namespace DiamondShop
             {
                 if (grid2.Rows.Count > 0)
                 {
-                    if (Convert.ToInt16(grid2.Rows[rowIndex].Cells["ID1"].Value.ToString()) > 0)
+                    if (Convert.ToInt16(grid2.Rows[rowIndex1].Cells["ID1"].Value.ToString()) > 0)
                     {
                         DeleteDataGrid(1);
                     }
 
                 }
-                grid2.Rows.RemoveAt(rowIndex);
-                tds.Tables[0].Rows[rowIndex].Delete();
+                grid2.Rows.RemoveAt(rowIndex1);
+                tds.Tables[0].Rows[rowIndex1].Delete();
                 tds.AcceptChanges();
 
 
@@ -454,13 +452,7 @@ namespace DiamondShop
                     grid1.Rows[e.RowIndex].Cells[6].Value = 0;
                 }
             }
-            else if (e.ColumnIndex == 7)
-            {
-                if (grid1.Rows[e.RowIndex].Cells[7].Value == null || grid1.Rows[e.RowIndex].Cells[7].Value.ToString().Trim() == "")
-                {
-                    grid1.Rows[e.RowIndex].Cells[7].Value = 0;
-                }
-            }
+
             grid1.RefreshEdit();
             BindingDSDiamondDetail(0);
 
@@ -489,15 +481,6 @@ namespace DiamondShop
             CalSum(1);
         }
 
-        private void grid1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
-        {
-            if ((e.ColumnIndex == 6) && e.RowIndex != this.grid1.NewRowIndex && e.Value != null)
-            {
-                double d = double.Parse(e.Value.ToString());
-                e.Value = d.ToString("N0");
-            }
-        }
-
         private void grid2_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             if ((e.ColumnIndex == 4) && e.RowIndex != this.grid2.NewRowIndex && e.Value != null
@@ -505,6 +488,12 @@ namespace DiamondShop
             {
                 double d = double.Parse(e.Value.ToString());
                 e.Value = d.ToString("N0");
+            }
+            if ((e.ColumnIndex == 5) && e.RowIndex != this.grid2.NewRowIndex && e.Value != null
+                && e.Value.ToString() != "")
+            {
+                double d = double.Parse(e.Value.ToString());
+                e.Value = d.ToString("N2");
             }
         }
 
@@ -552,6 +541,16 @@ namespace DiamondShop
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '.')
             {
                 e.Handled = true;
+            }
+        }
+
+        private void grid1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if ((e.ColumnIndex == 6) && e.RowIndex != this.grid1.NewRowIndex && e.Value != null
+                && e.Value.ToString() != "")
+            {
+                double d = double.Parse(e.Value.ToString());
+                e.Value = d.ToString("N2");
             }
         }
 

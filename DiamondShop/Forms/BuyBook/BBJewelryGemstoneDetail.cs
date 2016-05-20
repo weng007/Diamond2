@@ -424,7 +424,7 @@ namespace DiamondShop
             {
                 if (grid1.Rows.Count > 0)
                 {
-                    if (Convert.ToInt16(grid1.Rows[rowIndex].Cells["ID"].Value.ToString()) > 0)
+                    if (Convert.ToInt16(grid1.Rows[rowIndex1].Cells["ID"].Value.ToString()) > 0)
                     {
                         DeleteDataGrid(0);
                     }
@@ -445,9 +445,9 @@ namespace DiamondShop
         private void btnAdd1_Click(object sender, EventArgs e)
         {
             grid2.Rows.Add();
-            tds.Tables[0].Rows.Add();
+            tds2.Tables[0].Rows.Add();
 
-            tds.AcceptChanges();
+            tds2.AcceptChanges();
         }
 
         private void btnDel1_Click(object sender, EventArgs e)
@@ -456,15 +456,15 @@ namespace DiamondShop
             {
                 if (grid2.Rows.Count > 0)
                 {
-                    if (Convert.ToInt16(grid2.Rows[rowIndex].Cells["ID"].Value.ToString()) > 0)
+                    if (Convert.ToInt16(grid2.Rows[rowIndex1].Cells["ID1"].Value.ToString()) > 0)
                     {
                         DeleteDataGrid(1);
                     }
 
                 }
-                grid2.Rows.RemoveAt(rowIndex);
-                tds.Tables[0].Rows[rowIndex].Delete();
-                tds.AcceptChanges();
+                grid2.Rows.RemoveAt(rowIndex1);
+                tds2.Tables[0].Rows[rowIndex1].Delete();
+                tds2.AcceptChanges();
 
 
             }
@@ -514,10 +514,15 @@ namespace DiamondShop
 
         private void grid2_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            if ((e.ColumnIndex == 4) && e.RowIndex != this.grid1.NewRowIndex && e.Value != null)
+            if ((e.ColumnIndex == 4) && e.RowIndex != this.grid2.NewRowIndex && e.Value != null)
             {
                 double d = double.Parse(e.Value.ToString());
                 e.Value = d.ToString("N0");
+            }
+            if ((e.ColumnIndex == 5) && e.RowIndex != this.grid2.NewRowIndex && e.Value != null)
+            {
+                double d = double.Parse(e.Value.ToString());
+                e.Value = d.ToString("N2");
             }
         }
 
@@ -555,18 +560,27 @@ namespace DiamondShop
             }
         }
 
+        private void grid1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if ((e.ColumnIndex == 8) && e.RowIndex != this.grid1.NewRowIndex && e.Value != null)
+            {
+                double d = double.Parse(e.Value.ToString());
+                e.Value = d.ToString("N2");
+            }
+        }
+
         private void grid2_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex == 4)
             {
-                if (grid1.Rows[e.RowIndex].Cells[4].Value == null || grid1.Rows[e.RowIndex].Cells[4].Value.ToString().Trim() == "")
+                if (grid2.Rows[e.RowIndex].Cells[4].Value == null || grid2.Rows[e.RowIndex].Cells[4].Value.ToString().Trim() == "")
                 {
-                    grid1.Rows[e.RowIndex].Cells[4].Value = 0;
+                    grid2.Rows[e.RowIndex].Cells[4].Value = 0;
                 }
             }
             else if (e.ColumnIndex == 5)
             {
-                if (grid1.Rows[e.RowIndex].Cells[5].Value == null || grid1.Rows[e.RowIndex].Cells[5].Value.ToString().Trim() == "")
+                if (grid2.Rows[e.RowIndex].Cells[5].Value == null || grid2.Rows[e.RowIndex].Cells[5].Value.ToString().Trim() == "")
                 {
                     grid2.Rows[e.RowIndex].Cells[5].Value = 0;
                 }

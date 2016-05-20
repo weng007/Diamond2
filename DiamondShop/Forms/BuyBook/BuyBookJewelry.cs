@@ -21,6 +21,7 @@ namespace DiamondShop
         MemoryStream ms1;
         MemoryStream ms2;
         byte[] image1, image2;
+        bool isAuthorize = false;
 
         public BuyBookJewelry()
         {
@@ -127,10 +128,34 @@ namespace DiamondShop
                     Image backImage2 = Image.FromStream(ms2);
                     btnImage2.BackgroundImage = backImage2;
                 }
-                EnableDelete = true;
+                EnableSave = false;
+                EnableEdit = true;
+                EnableDelete = false;
             }
 
             base.LoadData();
+        }
+        protected override void EditData()
+        {
+            if (isAuthorize)
+            {
+                EnableSave = true;
+                EnableDelete = true;
+            }
+            else
+            {
+                RequirePassword frm = new RequirePassword("2");
+                frm.ShowDialog();
+                isAuthorize = frm.isAuthorize;
+                frm.Close();
+
+                if (isAuthorize)
+                {
+                    EnableSave = true;
+                    EnableDelete = true;
+                    base.EditData();
+                }
+            }
         }
 
         protected override bool SaveData()
