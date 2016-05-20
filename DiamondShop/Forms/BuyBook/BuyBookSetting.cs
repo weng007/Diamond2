@@ -34,6 +34,9 @@ namespace DiamondShop
             Initial();
             BinderData();
 
+            btnAdd.Enabled = true;
+            btnDel.Enabled = true;
+
             this.id = id;
             LoadData();
         }

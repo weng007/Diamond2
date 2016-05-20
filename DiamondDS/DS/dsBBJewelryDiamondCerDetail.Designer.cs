@@ -293,8 +293,6 @@ namespace DiamondDS.DS {
             
             private global::System.Data.DataColumn columnShapeName;
             
-            private global::System.Data.DataColumn columnAmount;
-            
             private global::System.Data.DataColumn columnWeight;
             
             private global::System.Data.DataColumn columnColor;
@@ -403,14 +401,6 @@ namespace DiamondDS.DS {
             public global::System.Data.DataColumn ShapeNameColumn {
                 get {
                     return this.columnShapeName;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn AmountColumn {
-                get {
-                    return this.columnAmount;
                 }
             }
             
@@ -546,7 +536,6 @@ namespace DiamondDS.DS {
                         string CompanyName, 
                         int Shape, 
                         string ShapeName, 
-                        double Amount, 
                         double Weight, 
                         int Color, 
                         string ColorName, 
@@ -567,7 +556,6 @@ namespace DiamondDS.DS {
                         CompanyName,
                         Shape,
                         ShapeName,
-                        Amount,
                         Weight,
                         Color,
                         ColorName,
@@ -615,7 +603,6 @@ namespace DiamondDS.DS {
                 this.columnCompanyName = base.Columns["CompanyName"];
                 this.columnShape = base.Columns["Shape"];
                 this.columnShapeName = base.Columns["ShapeName"];
-                this.columnAmount = base.Columns["Amount"];
                 this.columnWeight = base.Columns["Weight"];
                 this.columnColor = base.Columns["Color"];
                 this.columnColorName = base.Columns["ColorName"];
@@ -646,8 +633,6 @@ namespace DiamondDS.DS {
                 base.Columns.Add(this.columnShape);
                 this.columnShapeName = new global::System.Data.DataColumn("ShapeName", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnShapeName);
-                this.columnAmount = new global::System.Data.DataColumn("Amount", typeof(double), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnAmount);
                 this.columnWeight = new global::System.Data.DataColumn("Weight", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnWeight);
                 this.columnColor = new global::System.Data.DataColumn("Color", typeof(int), null, global::System.Data.MappingType.Element);
@@ -672,12 +657,10 @@ namespace DiamondDS.DS {
                 base.Columns.Add(this.columnEditDate);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnID}, true));
-                this.columnRowNum.ReadOnly = true;
                 this.columnID.AutoIncrement = true;
                 this.columnID.AutoIncrementSeed = -1;
                 this.columnID.AutoIncrementStep = -1;
                 this.columnID.AllowDBNull = false;
-                this.columnID.ReadOnly = true;
                 this.columnID.Unique = true;
                 this.columnReportNumber.MaxLength = 30;
                 this.columnCompanyName.ReadOnly = true;
@@ -688,13 +671,7 @@ namespace DiamondDS.DS {
                 this.columnColorName.MaxLength = 100;
                 this.columnClearityName.ReadOnly = true;
                 this.columnClearityName.MaxLength = 100;
-                this.columnRefID.AllowDBNull = false;
-                this.columnIsDeleted.AllowDBNull = false;
                 this.columnIsDeleted.MaxLength = 1;
-                this.columnCreateBy.AllowDBNull = false;
-                this.columnCreateDate.AllowDBNull = false;
-                this.columnEditBy.AllowDBNull = false;
-                this.columnEditDate.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -946,22 +923,6 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public double Amount {
-                get {
-                    try {
-                        return ((double)(this[this.tableBBJewelryDiamondCerDetail.AmountColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Amount\' in table \'BBJewelryDiamondCerDetail\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableBBJewelryDiamondCerDetail.AmountColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public double Weight {
                 get {
                     try {
@@ -1045,7 +1006,12 @@ namespace DiamondDS.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public int RefID {
                 get {
-                    return ((int)(this[this.tableBBJewelryDiamondCerDetail.RefIDColumn]));
+                    try {
+                        return ((int)(this[this.tableBBJewelryDiamondCerDetail.RefIDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'RefID\' in table \'BBJewelryDiamondCerDetail\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableBBJewelryDiamondCerDetail.RefIDColumn] = value;
@@ -1056,7 +1022,12 @@ namespace DiamondDS.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string IsDeleted {
                 get {
-                    return ((string)(this[this.tableBBJewelryDiamondCerDetail.IsDeletedColumn]));
+                    try {
+                        return ((string)(this[this.tableBBJewelryDiamondCerDetail.IsDeletedColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'IsDeleted\' in table \'BBJewelryDiamondCerDetail\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableBBJewelryDiamondCerDetail.IsDeletedColumn] = value;
@@ -1067,7 +1038,12 @@ namespace DiamondDS.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public int CreateBy {
                 get {
-                    return ((int)(this[this.tableBBJewelryDiamondCerDetail.CreateByColumn]));
+                    try {
+                        return ((int)(this[this.tableBBJewelryDiamondCerDetail.CreateByColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'CreateBy\' in table \'BBJewelryDiamondCerDetail\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableBBJewelryDiamondCerDetail.CreateByColumn] = value;
@@ -1078,7 +1054,13 @@ namespace DiamondDS.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public System.DateTime CreateDate {
                 get {
-                    return ((global::System.DateTime)(this[this.tableBBJewelryDiamondCerDetail.CreateDateColumn]));
+                    try {
+                        return ((global::System.DateTime)(this[this.tableBBJewelryDiamondCerDetail.CreateDateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'CreateDate\' in table \'BBJewelryDiamondCerDetail\' is DBNull." +
+                                "", e);
+                    }
                 }
                 set {
                     this[this.tableBBJewelryDiamondCerDetail.CreateDateColumn] = value;
@@ -1089,7 +1071,12 @@ namespace DiamondDS.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public int EditBy {
                 get {
-                    return ((int)(this[this.tableBBJewelryDiamondCerDetail.EditByColumn]));
+                    try {
+                        return ((int)(this[this.tableBBJewelryDiamondCerDetail.EditByColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'EditBy\' in table \'BBJewelryDiamondCerDetail\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableBBJewelryDiamondCerDetail.EditByColumn] = value;
@@ -1100,7 +1087,12 @@ namespace DiamondDS.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public System.DateTime EditDate {
                 get {
-                    return ((global::System.DateTime)(this[this.tableBBJewelryDiamondCerDetail.EditDateColumn]));
+                    try {
+                        return ((global::System.DateTime)(this[this.tableBBJewelryDiamondCerDetail.EditDateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'EditDate\' in table \'BBJewelryDiamondCerDetail\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableBBJewelryDiamondCerDetail.EditDateColumn] = value;
@@ -1181,18 +1173,6 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsAmountNull() {
-                return this.IsNull(this.tableBBJewelryDiamondCerDetail.AmountColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetAmountNull() {
-                this[this.tableBBJewelryDiamondCerDetail.AmountColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsWeightNull() {
                 return this.IsNull(this.tableBBJewelryDiamondCerDetail.WeightColumn);
             }
@@ -1249,6 +1229,78 @@ namespace DiamondDS.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetClearityNameNull() {
                 this[this.tableBBJewelryDiamondCerDetail.ClearityNameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsRefIDNull() {
+                return this.IsNull(this.tableBBJewelryDiamondCerDetail.RefIDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetRefIDNull() {
+                this[this.tableBBJewelryDiamondCerDetail.RefIDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsIsDeletedNull() {
+                return this.IsNull(this.tableBBJewelryDiamondCerDetail.IsDeletedColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetIsDeletedNull() {
+                this[this.tableBBJewelryDiamondCerDetail.IsDeletedColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsCreateByNull() {
+                return this.IsNull(this.tableBBJewelryDiamondCerDetail.CreateByColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetCreateByNull() {
+                this[this.tableBBJewelryDiamondCerDetail.CreateByColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsCreateDateNull() {
+                return this.IsNull(this.tableBBJewelryDiamondCerDetail.CreateDateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetCreateDateNull() {
+                this[this.tableBBJewelryDiamondCerDetail.CreateDateColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsEditByNull() {
+                return this.IsNull(this.tableBBJewelryDiamondCerDetail.EditByColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetEditByNull() {
+                this[this.tableBBJewelryDiamondCerDetail.EditByColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsEditDateNull() {
+                return this.IsNull(this.tableBBJewelryDiamondCerDetail.EditDateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetEditDateNull() {
+                this[this.tableBBJewelryDiamondCerDetail.EditDateColumn] = global::System.Convert.DBNull;
             }
         }
         

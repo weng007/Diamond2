@@ -7,20 +7,19 @@ using DiamondDS.DS;
 
 namespace DiamondDAL.DAL
 {
-    public class BBJewelryGemstoneDetailDAL
+    public class BBJewelryDiamondCerDetailDAL
     {
         SQLHelper SQL = new SQLHelper();
-        dsBBJewelryGemstoneDetail ds = new dsBBJewelryGemstoneDetail();
+        dsBBJewelryDiamondCerDetail ds = new dsBBJewelryDiamondCerDetail();
         int flag = 0;
 
-
-        public dsBBJewelryGemstoneDetail DoSelectData(int id)
+        public dsBBJewelryDiamondCerDetail DoSelectData(int id)
         {
             try
             {
                 SQL.ClearParameter();
                 SQL.CreateParameter("ID", id);
-                SQL.FillDataSetBySP("SP_BBJewelryGemstoneDetail_Sel", ds.BBJewelryGemstoneDetail);
+                SQL.FillDataSetBySP("SP_BBJewelryDiamondCerDetail_Sel", ds.BBJewelryDiamondCerDetail);
             }
             catch (Exception ex)
             {
@@ -28,21 +27,22 @@ namespace DiamondDAL.DAL
             }
 
             return ds;
-        } 
+        }
 
-        public bool DoInsertData(dsBBJewelryGemstoneDetail tds)
+        public bool DoInsertData(dsBBJewelryDiamondCerDetail tds)
         {
             try
             {
-                foreach (dsBBJewelryGemstoneDetail.BBJewelryGemstoneDetailRow row in tds.Tables[0].Rows)
+
+                foreach (dsBBJewelryDiamondCerDetail.BBJewelryDiamondCerDetailRow row in tds.Tables[0].Rows)
                 {
                     if (row["RowNum"].ToString() == "")
                     {
-                        SQL.ExecuteSP("SP_BBJewelryGemstoneDetail_Ins", row);
+                        SQL.ExecuteSP("SP_BBJewelryDiamondCerDetail_Ins", row);
                     }
                     else
                     {
-                        SQL.ExecuteSP("SP_BBJewelryGemstoneDetail_Upd", row);
+                        SQL.ExecuteSP("SP_BBJewelryDiamondCerDetail_Upd", row);
                     }
                 }
             }
@@ -54,13 +54,12 @@ namespace DiamondDAL.DAL
             return true;
         }
 
-        
-        public bool DoUpdateData(dsBBJewelryGemstoneDetail tds)
+        public bool DoUpdateData(dsBBJewelryDiamondCerDetail tds)
         {
             try
             {
-                dsBBJewelryGemstoneDetail.BBJewelryGemstoneDetailRow row = tds.BBJewelryGemstoneDetail[0];
-                flag = SQL.ExecuteSP("SP_BBJewelryGemstoneDetail_Upd", row);
+                dsBBJewelryDiamondCerDetail.BBJewelryDiamondCerDetailRow row = tds.BBJewelryDiamondCerDetail[0];
+                flag = SQL.ExecuteSP("SP_BBJewelryDiamondCerDetail_Upd", row);
             }
             catch (Exception ex)
             {
@@ -76,7 +75,7 @@ namespace DiamondDAL.DAL
             {
                 SQL.ClearParameter();
                 SQL.CreateParameter("@ID", id);
-                flag = SQL.ExecuteSP("SP_BBJewelryGemstoneDetail_Del");
+                flag = SQL.ExecuteSP("SP_BBJewelryDiamondCerDetail_Del");
             }
             catch (Exception ex)
             {

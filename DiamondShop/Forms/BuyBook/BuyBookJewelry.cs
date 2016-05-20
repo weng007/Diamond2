@@ -68,6 +68,9 @@ namespace DiamondShop
             binder.BindControl(txtRemark, "Remark");
             binder.BindControl(txtMinPrice, "MinPrice");
 
+            btnDiamond.Enabled = true;
+            btnGemstone.Enabled = true;
+
             this.id = id;
             LoadData();
 
@@ -212,13 +215,13 @@ namespace DiamondShop
 
         private void btnDiamond_Click(object sender, EventArgs e)
         {
-            BBJewelryDiamondDetail frm = new BBJewelryDiamondDetail();
+            BBJewelryDiamondDetail frm = new BBJewelryDiamondDetail(id);
             frm.ShowDialog();
         }
 
         private void btnGemstone_Click(object sender, EventArgs e)
         {
-            BBJewelryGemstoneDetail frm = new BBJewelryGemstoneDetail();
+            BBJewelryGemstoneDetail frm = new BBJewelryGemstoneDetail(id);
             frm.ShowDialog();
         }
 

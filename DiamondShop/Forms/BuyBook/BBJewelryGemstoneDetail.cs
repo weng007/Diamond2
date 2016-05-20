@@ -136,15 +136,15 @@ namespace DiamondShop
                     grid1.Rows.Add();
                     grid1.Rows[i].Cells["ID"].Value = row["ID"].ToString();
                     grid1.Rows[i].Cells["RowNum"].Value = row["RowNum"].ToString();
+                    grid1.Rows[i].Cells["Code"].Value = row["Code"].ToString();
                     grid1.Rows[i].Cells["ReportNumber"].Value = row["ReportNumber"].ToString();
                     grid1.Rows[i].Cells["GemstoneType"].Value = row["GemstoneType"].ToString();
                     grid1.Rows[i].Cells["Company"].Value = row["Company"].ToString();
                     grid1.Rows[i].Cells["Shape"].Value = row["Shape"].ToString();
-                    grid1.Rows[i].Cells["Amount"].Value = row["Amount"].ToString();
                     grid1.Rows[i].Cells["Weight"].Value = row["Weight"].ToString();
                     grid1.Rows[i].Cells["Color"].Value = row["Color"].ToString();
                     grid1.Rows[i].Cells["Origin"].Value = row["Origin"].ToString();
-                    grid1.Rows[i].Cells["refID"].Value = row["refID"].ToString();
+                    grid1.Rows[i].Cells["RefID"].Value = row["RefID"].ToString();
 
 
                     i++;
@@ -178,13 +178,10 @@ namespace DiamondShop
         {
             if (type == 0)
             {
-                txtSumAmount.Text = (grid1.Rows.Cast<DataGridViewRow>()
-               .Sum(t => Convert.ToDecimal(t.Cells["Amount"].Value))).ToString();
 
                 txtSumWeight.Text = (grid1.Rows.Cast<DataGridViewRow>()
                 .Sum(t => Convert.ToDecimal(t.Cells["Weight"].Value))).ToString();
 
-                txtSumAmount.Text = GM.ConvertDoubleToString(txtSumAmount);
                 txtSumWeight.Text = GM.ConvertDoubleToString(txtSumWeight);
             }
             else
@@ -218,6 +215,9 @@ namespace DiamondShop
                     if (row.Cells["RowNum"].Value != null)
                     { tds.Tables[0].Rows[i]["RowNum"] = row.Cells["RowNum"].Value; }
 
+                    if (row.Cells["Code"].Value != null)
+                    { tds.Tables[0].Rows[i]["Code"] = row.Cells["Code"].Value; }
+
                     if (row.Cells["RefID"].Value != null)
                     { tds.Tables[0].Rows[i]["refID"] = row.Cells["refID"].Value; }
 
@@ -233,9 +233,6 @@ namespace DiamondShop
                     if (row.Cells["Shape"].Value != null)
                     { tds.Tables[0].Rows[i]["Shape"] = row.Cells["Shape"].Value; }
 
-                    if (row.Cells["Amount"].Value != null)
-                    { tds.Tables[0].Rows[i]["Amount"] = row.Cells["Amount"].Value; }
-
                     if (row.Cells["Weight"].Value != null)
                     { tds.Tables[0].Rows[i]["Weight"] = row.Cells["Weight"].Value; }
 
@@ -243,7 +240,7 @@ namespace DiamondShop
                     { tds.Tables[0].Rows[i]["Color"] = row.Cells["Color"].Value; }
 
                     if (row.Cells["Origin"].Value != null)
-                    { tds2.Tables[0].Rows[i]["Origin"] = row.Cells["Origin"].Value; }
+                    { tds.Tables[0].Rows[i]["Origin"] = row.Cells["Origin"].Value; }
 
                     i++;
                 }
@@ -267,10 +264,10 @@ namespace DiamondShop
                     if (row.Cells["GemstoneType1"].Value != null)
                     { tds2.Tables[0].Rows[i]["GemstoneType"] = row.Cells["GemstoneType1"].Value; }
 
-                    if (row.Cells["Shape"].Value != null)
+                    if (row.Cells["Shape1"].Value != null)
                     { tds2.Tables[0].Rows[i]["Shape"] = row.Cells["Shape1"].Value; }
 
-                    if (row.Cells["Amount"].Value != null)
+                    if (row.Cells["Amount1"].Value != null)
                     { tds2.Tables[0].Rows[i]["Amount"] = row.Cells["Amount1"].Value; }
 
                     if (row.Cells["Weight1"].Value != null)
@@ -407,13 +404,6 @@ namespace DiamondShop
                     grid1.Rows[e.RowIndex].Cells[8].Value = 0;
                 }
             }
-            else if (e.ColumnIndex == 9)
-            {
-                if (grid1.Rows[e.RowIndex].Cells[9].Value == null || grid1.Rows[e.RowIndex].Cells[9].Value.ToString().Trim() == "")
-                {
-                    grid2.Rows[e.RowIndex].Cells[9].Value = 0;
-                }
-            }
             grid1.RefreshEdit();
             BindingDSDiamondDetail(0);
 
@@ -519,15 +509,6 @@ namespace DiamondShop
 
                 }
 
-            }
-        }
-
-        private void grid1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
-        {
-            if ((e.ColumnIndex == 8) && e.RowIndex != this.grid1.NewRowIndex && e.Value != null)
-            {
-                double d = double.Parse(e.Value.ToString());
-                e.Value = d.ToString("N0");
             }
         }
 

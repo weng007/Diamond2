@@ -239,10 +239,10 @@ namespace Diamond
             }
             else if (TableName == "BBJewelryGemstoneCerDetail")
             {
-                BBJewelryGemstoneDetailBiz biz = GM.BBJewelryGemstoneDetailBiz();
+                BBJewelryGemstoneCerDetailBiz biz = GM.BBJewelryGemstoneCerDetailBiz();
                 try
                 {
-                    return biz.DoSelectDataCer(id);
+                    return biz.DoSelectData(id);
 
                 }
                 catch (Exception ex)
@@ -265,10 +265,10 @@ namespace Diamond
             }
             else if (TableName == "BBJewelryDiamondCerDetail")
             {
-                BBJewelryDiamondDetailBiz biz = GM.BBJewelryDiamondDetailBiz();
+                BBJewelryDiamondCerDetailBiz biz = GM.BBJewelryDiamondCerDetailBiz();
                 try
                 {
-                    return biz.DoSelectDataCer(id);
+                    return biz.DoSelectData(id);
 
                 }
                 catch (Exception ex)
@@ -632,13 +632,13 @@ namespace Diamond
             //}
             else if (TableName == "BBJewelryGemstoneCerDetail")
             {
-                BBJewelryGemstoneDetailBiz biz = GM.BBJewelryGemstoneDetailBiz();
+                BBJewelryGemstoneCerDetailBiz biz = GM.BBJewelryGemstoneCerDetailBiz();
                 dsBBJewelryGemstoneCerDetail ds1 = new dsBBJewelryGemstoneCerDetail();
                 ds1.Merge(ds);
 
                 try
                 {
-                    flag = biz.DoInsertDataCer(ds1);
+                    flag = biz.DoInsertData(ds1);
                 }
                 catch (Exception ex)
                 {
@@ -662,13 +662,13 @@ namespace Diamond
             }
             else if (TableName == "BBJewelryDiamondCerDetail")
             {
-                BBJewelryDiamondDetailBiz biz = GM.BBJewelryDiamondDetailBiz();
+                BBJewelryDiamondCerDetailBiz biz = GM.BBJewelryDiamondCerDetailBiz();
                 dsBBJewelryDiamondCerDetail ds1 = new dsBBJewelryDiamondCerDetail();
                 ds1.Merge(ds);
 
                 try
                 {
-                    flag = biz.DoInsertDataCer(ds1);
+                    flag = biz.DoInsertData(ds1);
                 }
                 catch (Exception ex)
                 {
@@ -1047,20 +1047,20 @@ namespace Diamond
             }
             else if (TableName == "BBJewelryGemstoneCerDetail")
             {
-                BBJewelryGemstoneDetailBiz biz = GM.BBJewelryGemstoneDetailBiz();
+                BBJewelryGemstoneCerDetailBiz biz = GM.BBJewelryGemstoneCerDetailBiz();
                 dsBBJewelryGemstoneCerDetail ds1 = new dsBBJewelryGemstoneCerDetail();
                 ds1.Merge(ds);
 
                 try
                 {
-                    flag = biz.DoUpdateDataCer(ds1);
+                    flag = biz.DoUpdateData(ds1);
                 }
                 catch (Exception ex)
                 {
                     throw ex;
                 }
             }
-            else if (TableName == "BBJewelryGemstoneCerDetail")
+            else if (TableName == "BBJewelryGemstoneDetail")
             {
                 BBJewelryGemstoneDetailBiz biz = GM.BBJewelryGemstoneDetailBiz();
 
@@ -1078,13 +1078,13 @@ namespace Diamond
             }
             else if (TableName == "BBJewelryDiamondCerDetail")
             {
-                BBJewelryDiamondDetailBiz biz = GM.BBJewelryDiamondDetailBiz();
+                BBJewelryDiamondCerDetailBiz biz = GM.BBJewelryDiamondCerDetailBiz();
                 dsBBJewelryDiamondCerDetail ds1 = new dsBBJewelryDiamondCerDetail();
                 ds1.Merge(ds);
 
                 try
                 {
-                    flag = biz.DoUpdateDataCer(ds1);
+                    flag = biz.DoUpdateData(ds1);
                 }
                 catch (Exception ex)
                 {
@@ -1399,10 +1399,10 @@ namespace Diamond
             }
             else if (TableName == "BBJewelryGemstoneCerDetail")
             {
-                BBJewelryGemstoneDetailBiz biz = GM.BBJewelryGemstoneDetailBiz();
+                BBJewelryGemstoneCerDetailBiz biz = GM.BBJewelryGemstoneCerDetailBiz();
                 try
                 {
-                    flag = biz.DoDeleteDataCer(id);
+                    flag = biz.DoDeleteData(id);
                 }
                 catch (Exception ex)
                 {
@@ -1423,7 +1423,7 @@ namespace Diamond
             }
             else if (TableName == "BBJewelryDiamondCerDetail")
             {
-                BBJewelryDiamondDetailBiz biz = GM.BBJewelryDiamondDetailBiz();
+                BBJewelryDiamondCerDetailBiz biz = GM.BBJewelryDiamondCerDetailBiz();
                 try
                 {
                     flag = biz.DoDeleteData(id);

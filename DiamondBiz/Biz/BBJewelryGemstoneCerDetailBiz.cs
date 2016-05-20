@@ -5,18 +5,15 @@ using System.Text;
 using System.Threading.Tasks;
 using DiamondDS.DS;
 using DiamondDAL.DAL;
+
 namespace DiamondBiz.Biz
 {
-    public class BBJewelryGemstoneDetailBiz
+    public class BBJewelryGemstoneCerDetailBiz
     {
-        
-        dsBBJewelryGemstoneDetail ds = new dsBBJewelryGemstoneDetail();
+        dsBBJewelryGemstoneCerDetail ds = new dsBBJewelryGemstoneCerDetail();
+        BBJewelryGemstoneCerDetailDAL dal = new BBJewelryGemstoneCerDetailDAL();
 
-        BBJewelryGemstoneDetailDAL dal = new BBJewelryGemstoneDetailDAL();
-
-
-        
-        public dsBBJewelryGemstoneDetail DoSelectData(int id)
+        public dsBBJewelryGemstoneCerDetail DoSelectData(int id)
         {
             try
             {
@@ -27,9 +24,8 @@ namespace DiamondBiz.Biz
                 throw ex;
             }
         }
-        
 
-        public bool DoInsertData(dsBBJewelryGemstoneDetail tds)
+        public bool DoInsertData(dsBBJewelryGemstoneCerDetail tds)
         {
             try
             {
@@ -45,9 +41,7 @@ namespace DiamondBiz.Biz
             //return false;
         }
 
-        
-
-        public bool DoUpdateData(dsBBJewelryGemstoneDetail tds)
+        public bool DoUpdateData(dsBBJewelryGemstoneCerDetail tds)
         {
             try
             {

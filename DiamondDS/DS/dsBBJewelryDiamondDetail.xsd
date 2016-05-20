@@ -14,11 +14,11 @@
   <xs:element name="dsBBJewelryDiamondDetail" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsBBJewelryDiamondDetail" msprop:Generator_UserDSName="dsBBJewelryDiamondDetail">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="BBJewelryDiamondDetail" msprop:Generator_TableClassName="BBJewelryDiamondDetailDataTable" msprop:Generator_TableVarName="tableBBJewelryDiamondDetail" msprop:Generator_TablePropName="BBJewelryDiamondDetail" msprop:Generator_RowDeletingName="BBJewelryDiamondDetailRowDeleting" msprop:Generator_RowChangingName="BBJewelryDiamondDetailRowChanging" msprop:Generator_RowEvHandlerName="BBJewelryDiamondDetailRowChangeEventHandler" msprop:Generator_RowDeletedName="BBJewelryDiamondDetailRowDeleted" msprop:Generator_UserTableName="BBJewelryDiamondDetail" msprop:Generator_RowChangedName="BBJewelryDiamondDetailRowChanged" msprop:Generator_RowEvArgName="BBJewelryDiamondDetailRowChangeEvent" msprop:Generator_RowClassName="BBJewelryDiamondDetailRow">
+        <xs:element name="BBJewelryDiamondDetail" msprop:Generator_TableClassName="BBJewelryDiamondDetailDataTable" msprop:Generator_TableVarName="tableBBJewelryDiamondDetail" msprop:Generator_RowChangedName="BBJewelryDiamondDetailRowChanged" msprop:Generator_TablePropName="BBJewelryDiamondDetail" msprop:Generator_RowDeletingName="BBJewelryDiamondDetailRowDeleting" msprop:Generator_RowChangingName="BBJewelryDiamondDetailRowChanging" msprop:Generator_RowEvHandlerName="BBJewelryDiamondDetailRowChangeEventHandler" msprop:Generator_RowDeletedName="BBJewelryDiamondDetailRowDeleted" msprop:Generator_RowClassName="BBJewelryDiamondDetailRow" msprop:Generator_UserTableName="BBJewelryDiamondDetail" msprop:Generator_RowEvArgName="BBJewelryDiamondDetailRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="RowNum" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnRowNum" msprop:Generator_ColumnPropNameInRow="RowNum" msprop:Generator_ColumnPropNameInTable="RowNumColumn" msprop:Generator_UserColumnName="RowNum" type="xs:long" minOccurs="0" />
-              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="RowNum" msprop:Generator_ColumnVarNameInTable="columnRowNum" msprop:Generator_ColumnPropNameInRow="RowNum" msprop:Generator_ColumnPropNameInTable="RowNumColumn" msprop:Generator_UserColumnName="RowNum" type="xs:long" minOccurs="0" />
+              <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
               <xs:element name="Shape" msprop:Generator_ColumnVarNameInTable="columnShape" msprop:Generator_ColumnPropNameInRow="Shape" msprop:Generator_ColumnPropNameInTable="ShapeColumn" msprop:Generator_UserColumnName="Shape" type="xs:int" minOccurs="0" />
               <xs:element name="ShapeName" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnShapeName" msprop:Generator_ColumnPropNameInRow="ShapeName" msprop:Generator_ColumnPropNameInTable="ShapeNameColumn" msprop:Generator_UserColumnName="ShapeName" minOccurs="0">
                 <xs:simpleType>
@@ -45,18 +45,18 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="RefID" msprop:Generator_ColumnVarNameInTable="columnRefID" msprop:Generator_ColumnPropNameInRow="RefID" msprop:Generator_ColumnPropNameInTable="RefIDColumn" msprop:Generator_UserColumnName="RefID" type="xs:int" />
-              <xs:element name="IsDeleted" msprop:Generator_ColumnVarNameInTable="columnIsDeleted" msprop:Generator_ColumnPropNameInRow="IsDeleted" msprop:Generator_ColumnPropNameInTable="IsDeletedColumn" msprop:Generator_UserColumnName="IsDeleted">
+              <xs:element name="RefID" msprop:Generator_ColumnVarNameInTable="columnRefID" msprop:Generator_ColumnPropNameInRow="RefID" msprop:Generator_ColumnPropNameInTable="RefIDColumn" msprop:Generator_UserColumnName="RefID" type="xs:int" minOccurs="0" />
+              <xs:element name="IsDeleted" msprop:Generator_ColumnVarNameInTable="columnIsDeleted" msprop:Generator_ColumnPropNameInRow="IsDeleted" msprop:Generator_ColumnPropNameInTable="IsDeletedColumn" msprop:Generator_UserColumnName="IsDeleted" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="1" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="CreateBy" msprop:Generator_ColumnVarNameInTable="columnCreateBy" msprop:Generator_ColumnPropNameInRow="CreateBy" msprop:Generator_ColumnPropNameInTable="CreateByColumn" msprop:Generator_UserColumnName="CreateBy" type="xs:int" />
-              <xs:element name="CreateDate" msprop:Generator_ColumnVarNameInTable="columnCreateDate" msprop:Generator_ColumnPropNameInRow="CreateDate" msprop:Generator_ColumnPropNameInTable="CreateDateColumn" msprop:Generator_UserColumnName="CreateDate" type="xs:dateTime" />
-              <xs:element name="EditBy" msprop:Generator_ColumnVarNameInTable="columnEditBy" msprop:Generator_ColumnPropNameInRow="EditBy" msprop:Generator_ColumnPropNameInTable="EditByColumn" msprop:Generator_UserColumnName="EditBy" type="xs:int" />
-              <xs:element name="EditDate" msprop:Generator_ColumnVarNameInTable="columnEditDate" msprop:Generator_ColumnPropNameInRow="EditDate" msprop:Generator_ColumnPropNameInTable="EditDateColumn" msprop:Generator_UserColumnName="EditDate" type="xs:dateTime" />
+              <xs:element name="CreateBy" msprop:Generator_ColumnVarNameInTable="columnCreateBy" msprop:Generator_ColumnPropNameInRow="CreateBy" msprop:Generator_ColumnPropNameInTable="CreateByColumn" msprop:Generator_UserColumnName="CreateBy" type="xs:int" minOccurs="0" />
+              <xs:element name="CreateDate" msprop:Generator_ColumnVarNameInTable="columnCreateDate" msprop:Generator_ColumnPropNameInRow="CreateDate" msprop:Generator_ColumnPropNameInTable="CreateDateColumn" msprop:Generator_UserColumnName="CreateDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="EditBy" msprop:Generator_ColumnVarNameInTable="columnEditBy" msprop:Generator_ColumnPropNameInRow="EditBy" msprop:Generator_ColumnPropNameInTable="EditByColumn" msprop:Generator_UserColumnName="EditBy" type="xs:int" minOccurs="0" />
+              <xs:element name="EditDate" msprop:Generator_ColumnVarNameInTable="columnEditDate" msprop:Generator_ColumnPropNameInRow="EditDate" msprop:Generator_ColumnPropNameInTable="EditDateColumn" msprop:Generator_UserColumnName="EditDate" type="xs:dateTime" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

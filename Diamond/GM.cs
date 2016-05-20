@@ -31,6 +31,8 @@ namespace Diamond
         static CatalogBiz bizCatalog;
         static BBJewelryGemstoneDetailBiz bizBBJewelryGemstoneDetail;
         static BBJewelryDiamondDetailBiz bizBBJewelryDiamondDetail;
+        static BBJewelryDiamondCerDetailBiz bizBBJewelryDiamondCerDetail;
+        static BBJewelryGemstoneCerDetailBiz bizBBJewelryGemstoneCerDetail;
         static InventoryBiz bizInventory;
         static InvDiamondDetailBiz bizInvDiamondDetail;
         static BuyBookSettingBiz bizBuyBookSetting;
@@ -151,6 +153,18 @@ namespace Diamond
             if (bizBBJewelryDiamondDetail == null)
             { return new BBJewelryDiamondDetailBiz(); }
             else { return bizBBJewelryDiamondDetail; }
+        }
+        public static BBJewelryGemstoneCerDetailBiz BBJewelryGemstoneCerDetailBiz()
+        {
+            if (bizBBJewelryGemstoneCerDetail == null)
+            { return new BBJewelryGemstoneCerDetailBiz(); }
+            else { return bizBBJewelryGemstoneCerDetail; }
+        }
+        public static BBJewelryDiamondCerDetailBiz BBJewelryDiamondCerDetailBiz()
+        {
+            if (bizBBJewelryDiamondCerDetail == null)
+            { return new BBJewelryDiamondCerDetailBiz(); }
+            else { return bizBBJewelryDiamondCerDetail; }
         }
         public static InventoryBiz InventoryBiz()
         {

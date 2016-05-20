@@ -10,22 +10,12 @@ namespace DiamondBiz.Biz
 {
     public class BBJewelryDiamondDetailBiz
     {
-        dsBBJewelryDiamondCerDetail ds = new dsBBJewelryDiamondCerDetail();
-        dsBBJewelryDiamondDetail ds2 = new dsBBJewelryDiamondDetail();
+        
+        dsBBJewelryDiamondDetail ds = new dsBBJewelryDiamondDetail();
 
         BBJewelryDiamondDetailDAL dal = new BBJewelryDiamondDetailDAL();
 
-        public dsBBJewelryDiamondCerDetail DoSelectDataCer(int id)
-        {
-            try
-            {
-                return dal.DoSelectDataCer(id);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
+        
         public dsBBJewelryDiamondDetail DoSelectData(int id)
         {
             try
@@ -37,17 +27,7 @@ namespace DiamondBiz.Biz
                 throw ex;
             }
         }
-        public bool DoInsertDataCer(dsBBJewelryDiamondCerDetail tds)
-        {
-            try
-            {
-                return dal.DoInsertDataCer(tds);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
+        
         public bool DoInsertData(dsBBJewelryDiamondDetail tds)
         {
             try
@@ -60,17 +40,7 @@ namespace DiamondBiz.Biz
             }
         }
 
-        public bool DoUpdateDataCer(dsBBJewelryDiamondCerDetail tds)
-        {
-            try
-            {
-                return dal.DoUpdateDataCer(tds);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
+        
         public bool DoUpdateData(dsBBJewelryDiamondDetail tds)
         {
             try
@@ -83,17 +53,7 @@ namespace DiamondBiz.Biz
             }
         }
 
-        public bool DoDeleteDataCer(int id)
-        {
-            try
-            {
-                return dal.DoDeleteDataCer(id);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
+        
         public bool DoDeleteData(int id)
         {
             try

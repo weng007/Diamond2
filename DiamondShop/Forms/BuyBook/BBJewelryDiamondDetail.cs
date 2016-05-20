@@ -36,6 +36,7 @@ namespace DiamondShop
             InitializeComponent();
             Initial();
 
+
             this.id = id;
             LoadData();
         }
@@ -78,16 +79,16 @@ namespace DiamondShop
             Shape1.DefaultCellStyle.NullValue = (GM.GetMasterTableDetail("C019")).Tables[0].Rows[0][1];
 
             Color1 = (DataGridViewComboBoxColumn)grid2.Columns["Color1"];
-            Color1.DataSource = (GM.GetMasterTableDetail("C001")).Tables[0];
+            Color1.DataSource = (GM.GetMasterTableDetail("C017")).Tables[0];
             Color1.ValueMember = "ID";
             Color1.DisplayMember = "Detail";
-            Color1.DefaultCellStyle.NullValue = (GM.GetMasterTableDetail("C001")).Tables[0].Rows[0][1];
+            Color1.DefaultCellStyle.NullValue = (GM.GetMasterTableDetail("C017")).Tables[0].Rows[0][1];
 
             Clearity1 = (DataGridViewComboBoxColumn)grid2.Columns["Clearity1"];
             Clearity1.DataSource = (GM.GetMasterTableDetail("C002")).Tables[0];
             Clearity1.ValueMember = "ID";
             Clearity1.DisplayMember = "Detail";
-            Color1.DefaultCellStyle.NullValue = (GM.GetMasterTableDetail("C002")).Tables[0].Rows[0][1];
+            Clearity1.DefaultCellStyle.NullValue = (GM.GetMasterTableDetail("C002")).Tables[0].Rows[0][1];
 
             grid1.Refresh();
             grid2.Refresh();
@@ -134,11 +135,10 @@ namespace DiamondShop
                     grid1.Rows[i].Cells["ReportNumber"].Value = row["ReportNumber"].ToString();
                     grid1.Rows[i].Cells["Shape"].Value = row["Shape"].ToString();
                     grid1.Rows[i].Cells["Company"].Value = row["Company"].ToString();
-                    grid1.Rows[i].Cells["Amount"].Value = row["Amount"].ToString();
                     grid1.Rows[i].Cells["Weight"].Value = row["Weight"].ToString();
                     grid1.Rows[i].Cells["Color"].Value = row["Color"].ToString();
-                    grid1.Rows[i].Cells["ClearityName"].Value = row["ClearityName"].ToString();
-                    grid1.Rows[i].Cells["refID"].Value = row["refID"].ToString();
+                    grid1.Rows[i].Cells["Clearity"].Value = row["Clearity"].ToString();
+                    grid1.Rows[i].Cells["RefID"].Value = row["RefID"].ToString();
                     
 
                     i++;
@@ -155,12 +155,12 @@ namespace DiamondShop
                     grid2.Rows.Add();
                     grid2.Rows[i].Cells["ID1"].Value = row["ID"].ToString();
                     grid2.Rows[i].Cells["RowNum1"].Value = row["RowNum"].ToString();
-                    grid2.Rows[i].Cells["Shape"].Value = row["Shape"].ToString();
-                    grid2.Rows[i].Cells["Amount"].Value = row["Amount"].ToString();
+                    grid2.Rows[i].Cells["Shape1"].Value = row["Shape"].ToString();
+                    grid2.Rows[i].Cells["Amount1"].Value = row["Amount"].ToString();
                     grid2.Rows[i].Cells["Weight1"].Value = row["Weight"].ToString();
-                    grid2.Rows[i].Cells["Color"].Value = row["Color"].ToString();
+                    grid2.Rows[i].Cells["Color1"].Value = row["Color"].ToString();
                     grid2.Rows[i].Cells["Clearity1"].Value = row["Clearity"].ToString();
-                    grid2.Rows[i].Cells["refID2"].Value = row["refID"].ToString();
+                    grid2.Rows[i].Cells["RefID2"].Value = row["RefID"].ToString();
 
                     i++;
                     CalSum(1);
@@ -172,19 +172,17 @@ namespace DiamondShop
         {
             if (type == 0)
             {
-                txtSumAmount.Text = (grid1.Rows.Cast<DataGridViewRow>()
-               .Sum(t => Convert.ToDecimal(t.Cells["Amount"].Value))).ToString();
+                
 
                 txtSumWeight.Text = (grid1.Rows.Cast<DataGridViewRow>()
                 .Sum(t => Convert.ToDecimal(t.Cells["Weight"].Value))).ToString();
 
-                txtSumAmount.Text = GM.ConvertDoubleToString(txtSumAmount);
                 txtSumWeight.Text = GM.ConvertDoubleToString(txtSumWeight);
             }
             else
             {
                 txtSumAmount1.Text = (grid2.Rows.Cast<DataGridViewRow>()
-                .Sum(t => Convert.ToDecimal(t.Cells["Amount"].Value))).ToString();
+                .Sum(t => Convert.ToDecimal(t.Cells["Amount1"].Value))).ToString();
 
                 txtSumWeight1.Text = (grid2.Rows.Cast<DataGridViewRow>()
                 .Sum(t => Convert.ToDecimal(t.Cells["Weight1"].Value))).ToString();
@@ -213,16 +211,16 @@ namespace DiamondShop
                     { tds.Tables[0].Rows[i]["RowNum"] = row.Cells["RowNum"].Value; }
 
                     if (row.Cells["RefID"].Value != null)
-                    { tds.Tables[0].Rows[i]["refID"] = row.Cells["refID"].Value; }
+                    { tds.Tables[0].Rows[i]["RefID"] = row.Cells["RefID"].Value; }
 
                     if (row.Cells["ReportNumber"].Value != null)
                     { tds.Tables[0].Rows[i]["ReportNumber"] = row.Cells["ReportNumber"].Value; }
 
+                    if (row.Cells["Company"].Value != null)
+                    { tds.Tables[0].Rows[i]["Company"] = row.Cells["Company"].Value; }
+
                     if (row.Cells["Shape"].Value != null)
                     { tds.Tables[0].Rows[i]["Shape"] = row.Cells["Shape"].Value; }
-
-                    if (row.Cells["Amount"].Value != null)
-                    { tds.Tables[0].Rows[i]["Amount"] = row.Cells["Amount"].Value; }
 
                     if (row.Cells["Weight"].Value != null)
                     { tds.Tables[0].Rows[i]["Weight"] = row.Cells["Weight"].Value; }
@@ -231,7 +229,7 @@ namespace DiamondShop
                     { tds.Tables[0].Rows[i]["Color"] = row.Cells["Color"].Value; }
 
                     if (row.Cells["Clearity"].Value != null)
-                    { tds2.Tables[0].Rows[i]["Clearity"] = row.Cells["Clearity"].Value; }
+                    { tds.Tables[0].Rows[i]["Clearity"] = row.Cells["Clearity"].Value; }
 
                     i++;
                 }
@@ -252,23 +250,23 @@ namespace DiamondShop
                     if (row.Cells["RowNum1"].Value != null)
                     { tds2.Tables[0].Rows[i]["RowNum"] = row.Cells["RowNum1"].Value; }
 
-                    if (row.Cells["Amount"].Value != null)
+                    if (row.Cells["Amount1"].Value != null)
                     { tds2.Tables[0].Rows[i]["Amount"] = row.Cells["Amount1"].Value; }
 
                     if (row.Cells["Weight1"].Value != null)
                     { tds2.Tables[0].Rows[i]["Weight"] = row.Cells["Weight1"].Value; }
 
-                    if (row.Cells["Shape"].Value != null)
+                    if (row.Cells["Shape1"].Value != null)
                     { tds2.Tables[0].Rows[i]["Shape"] = row.Cells["Shape1"].Value; }
 
-                    if (row.Cells["Color"].Value != null)
+                    if (row.Cells["Color1"].Value != null)
                     { tds2.Tables[0].Rows[i]["Color"] = row.Cells["Color1"].Value; }
 
                     if (row.Cells["Clearity1"].Value != null)
                     { tds2.Tables[0].Rows[i]["Clearity"] = row.Cells["Clearity1"].Value; }
 
-                    if (row.Cells["refID2"].Value != null)
-                    { tds2.Tables[0].Rows[i]["refID"] = row.Cells["refID2"].Value; }
+                    if (row.Cells["RefID2"].Value != null)
+                    { tds2.Tables[0].Rows[i]["RefID"] = row.Cells["RefID2"].Value; }
 
                     i++;
                 }
@@ -429,7 +427,7 @@ namespace DiamondShop
             {
                 if (grid2.Rows.Count > 0)
                 {
-                    if (Convert.ToInt16(grid2.Rows[rowIndex].Cells["ID"].Value.ToString()) > 0)
+                    if (Convert.ToInt16(grid2.Rows[rowIndex].Cells["ID1"].Value.ToString()) > 0)
                     {
                         DeleteDataGrid(1);
                     }
@@ -460,7 +458,7 @@ namespace DiamondShop
             {
                 if (grid1.Rows[e.RowIndex].Cells[7].Value == null || grid1.Rows[e.RowIndex].Cells[7].Value.ToString().Trim() == "")
                 {
-                    grid2.Rows[e.RowIndex].Cells[7].Value = 0;
+                    grid1.Rows[e.RowIndex].Cells[7].Value = 0;
                 }
             }
             grid1.RefreshEdit();
@@ -473,14 +471,14 @@ namespace DiamondShop
         {
             if (e.ColumnIndex == 4)
             {
-                if (grid1.Rows[e.RowIndex].Cells[4].Value == null || grid1.Rows[e.RowIndex].Cells[4].Value.ToString().Trim() == "")
+                if (grid2.Rows[e.RowIndex].Cells[4].Value == null || grid2.Rows[e.RowIndex].Cells[4].Value.ToString().Trim() == "")
                 {
-                    grid1.Rows[e.RowIndex].Cells[4].Value = 0;
+                    grid2.Rows[e.RowIndex].Cells[4].Value = 0;
                 }
             }
             else if (e.ColumnIndex == 5)
             {
-                if (grid1.Rows[e.RowIndex].Cells[5].Value == null || grid1.Rows[e.RowIndex].Cells[5].Value.ToString().Trim() == "")
+                if (grid2.Rows[e.RowIndex].Cells[5].Value == null || grid2.Rows[e.RowIndex].Cells[5].Value.ToString().Trim() == "")
                 {
                     grid2.Rows[e.RowIndex].Cells[5].Value = 0;
                 }
