@@ -20,17 +20,17 @@ namespace DiamondDS.DS {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("dsPriceCode")]
+    [global::System.Xml.Serialization.XmlRootAttribute("dsInvGemstoneDetail")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class dsPriceCode : global::System.Data.DataSet {
+    public partial class dsInvGemstoneDetail : global::System.Data.DataSet {
         
-        private PriceCodeDataTable tablePriceCode;
+        private InvGemstoneDetailDataTable tableInvGemstoneDetail;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public dsPriceCode() {
+        public dsInvGemstoneDetail() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace DiamondDS.DS {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected dsPriceCode(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected dsInvGemstoneDetail(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace DiamondDS.DS {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["PriceCode"] != null)) {
-                    base.Tables.Add(new PriceCodeDataTable(ds.Tables["PriceCode"]));
+                if ((ds.Tables["InvGemstoneDetail"] != null)) {
+                    base.Tables.Add(new InvGemstoneDetailDataTable(ds.Tables["InvGemstoneDetail"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace DiamondDS.DS {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public PriceCodeDataTable PriceCode {
+        public InvGemstoneDetailDataTable InvGemstoneDetail {
             get {
-                return this.tablePriceCode;
+                return this.tableInvGemstoneDetail;
             }
         }
         
@@ -127,7 +127,7 @@ namespace DiamondDS.DS {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            dsPriceCode cln = ((dsPriceCode)(base.Clone()));
+            dsInvGemstoneDetail cln = ((dsInvGemstoneDetail)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace DiamondDS.DS {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["PriceCode"] != null)) {
-                    base.Tables.Add(new PriceCodeDataTable(ds.Tables["PriceCode"]));
+                if ((ds.Tables["InvGemstoneDetail"] != null)) {
+                    base.Tables.Add(new InvGemstoneDetailDataTable(ds.Tables["InvGemstoneDetail"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace DiamondDS.DS {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tablePriceCode = ((PriceCodeDataTable)(base.Tables["PriceCode"]));
+            this.tableInvGemstoneDetail = ((InvGemstoneDetailDataTable)(base.Tables["InvGemstoneDetail"]));
             if ((initTable == true)) {
-                if ((this.tablePriceCode != null)) {
-                    this.tablePriceCode.InitVars();
+                if ((this.tableInvGemstoneDetail != null)) {
+                    this.tableInvGemstoneDetail.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace DiamondDS.DS {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "dsPriceCode";
+            this.DataSetName = "dsInvGemstoneDetail";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/dsPriceCode.xsd";
+            this.Namespace = "http://tempuri.org/dsInvGemstoneDetail.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tablePriceCode = new PriceCodeDataTable();
-            base.Tables.Add(this.tablePriceCode);
+            this.tableInvGemstoneDetail = new InvGemstoneDetailDataTable();
+            base.Tables.Add(this.tableInvGemstoneDetail);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializePriceCode() {
+        private bool ShouldSerializeInvGemstoneDetail() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace DiamondDS.DS {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            dsPriceCode ds = new dsPriceCode();
+            dsInvGemstoneDetail ds = new dsInvGemstoneDetail();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,20 +270,42 @@ namespace DiamondDS.DS {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void PriceCodeRowChangeEventHandler(object sender, PriceCodeRowChangeEvent e);
+        public delegate void InvGemstoneDetailRowChangeEventHandler(object sender, InvGemstoneDetailRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class PriceCodeDataTable : global::System.Data.TypedTableBase<PriceCodeRow> {
+        public partial class InvGemstoneDetailDataTable : global::System.Data.TypedTableBase<InvGemstoneDetailRow> {
+            
+            private global::System.Data.DataColumn columnRowNum;
             
             private global::System.Data.DataColumn columnID;
             
-            private global::System.Data.DataColumn columnCode;
+            private global::System.Data.DataColumn columnGemstoneType;
             
-            private global::System.Data.DataColumn columnValue;
+            private global::System.Data.DataColumn columnGemstoneTypeName;
+            
+            private global::System.Data.DataColumn columnShape;
+            
+            private global::System.Data.DataColumn columnShapeName;
+            
+            private global::System.Data.DataColumn columnAmount;
+            
+            private global::System.Data.DataColumn columnWeight;
+            
+            private global::System.Data.DataColumn columnOrigin;
+            
+            private global::System.Data.DataColumn columnOriginName;
+            
+            private global::System.Data.DataColumn columnCostPerCarat;
+            
+            private global::System.Data.DataColumn columnCost;
+            
+            private global::System.Data.DataColumn columnMinPricePerCarat;
+            
+            private global::System.Data.DataColumn columnMinPrice;
             
             private global::System.Data.DataColumn columnIsDeleted;
             
@@ -295,10 +317,12 @@ namespace DiamondDS.DS {
             
             private global::System.Data.DataColumn columnEditDate;
             
+            private global::System.Data.DataColumn columnRefID2;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public PriceCodeDataTable() {
-                this.TableName = "PriceCode";
+            public InvGemstoneDetailDataTable() {
+                this.TableName = "InvGemstoneDetail";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -306,7 +330,7 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal PriceCodeDataTable(global::System.Data.DataTable table) {
+            internal InvGemstoneDetailDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -323,9 +347,17 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected PriceCodeDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected InvGemstoneDetailDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn RowNumColumn {
+                get {
+                    return this.columnRowNum;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -338,17 +370,97 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn CodeColumn {
+            public global::System.Data.DataColumn GemstoneTypeColumn {
                 get {
-                    return this.columnCode;
+                    return this.columnGemstoneType;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn ValueColumn {
+            public global::System.Data.DataColumn GemstoneTypeNameColumn {
                 get {
-                    return this.columnValue;
+                    return this.columnGemstoneTypeName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ShapeColumn {
+                get {
+                    return this.columnShape;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ShapeNameColumn {
+                get {
+                    return this.columnShapeName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn AmountColumn {
+                get {
+                    return this.columnAmount;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn WeightColumn {
+                get {
+                    return this.columnWeight;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn OriginColumn {
+                get {
+                    return this.columnOrigin;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn OriginNameColumn {
+                get {
+                    return this.columnOriginName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn CostPerCaratColumn {
+                get {
+                    return this.columnCostPerCarat;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn CostColumn {
+                get {
+                    return this.columnCost;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn MinPricePerCaratColumn {
+                get {
+                    return this.columnMinPricePerCarat;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn MinPriceColumn {
+                get {
+                    return this.columnMinPrice;
                 }
             }
             
@@ -394,6 +506,14 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn RefID2Column {
+                get {
+                    return this.columnRefID2;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -403,59 +523,90 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public PriceCodeRow this[int index] {
+            public InvGemstoneDetailRow this[int index] {
                 get {
-                    return ((PriceCodeRow)(this.Rows[index]));
+                    return ((InvGemstoneDetailRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event PriceCodeRowChangeEventHandler PriceCodeRowChanging;
+            public event InvGemstoneDetailRowChangeEventHandler InvGemstoneDetailRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event PriceCodeRowChangeEventHandler PriceCodeRowChanged;
+            public event InvGemstoneDetailRowChangeEventHandler InvGemstoneDetailRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event PriceCodeRowChangeEventHandler PriceCodeRowDeleting;
+            public event InvGemstoneDetailRowChangeEventHandler InvGemstoneDetailRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event PriceCodeRowChangeEventHandler PriceCodeRowDeleted;
+            public event InvGemstoneDetailRowChangeEventHandler InvGemstoneDetailRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddPriceCodeRow(PriceCodeRow row) {
+            public void AddInvGemstoneDetailRow(InvGemstoneDetailRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public PriceCodeRow AddPriceCodeRow(string Code, string Value, string IsDeleted, int CreateBy, System.DateTime CreateDate, int EditBy, System.DateTime EditDate) {
-                PriceCodeRow rowPriceCodeRow = ((PriceCodeRow)(this.NewRow()));
+            public InvGemstoneDetailRow AddInvGemstoneDetailRow(
+                        long RowNum, 
+                        int GemstoneType, 
+                        string GemstoneTypeName, 
+                        int Shape, 
+                        string ShapeName, 
+                        double Amount, 
+                        double Weight, 
+                        int Origin, 
+                        string OriginName, 
+                        decimal CostPerCarat, 
+                        decimal Cost, 
+                        decimal MinPricePerCarat, 
+                        decimal MinPrice, 
+                        string IsDeleted, 
+                        int CreateBy, 
+                        System.DateTime CreateDate, 
+                        int EditBy, 
+                        System.DateTime EditDate, 
+                        string RefID2) {
+                InvGemstoneDetailRow rowInvGemstoneDetailRow = ((InvGemstoneDetailRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
+                        RowNum,
                         null,
-                        Code,
-                        Value,
+                        GemstoneType,
+                        GemstoneTypeName,
+                        Shape,
+                        ShapeName,
+                        Amount,
+                        Weight,
+                        Origin,
+                        OriginName,
+                        CostPerCarat,
+                        Cost,
+                        MinPricePerCarat,
+                        MinPrice,
                         IsDeleted,
                         CreateBy,
                         CreateDate,
                         EditBy,
-                        EditDate};
-                rowPriceCodeRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowPriceCodeRow);
-                return rowPriceCodeRow;
+                        EditDate,
+                        RefID2};
+                rowInvGemstoneDetailRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowInvGemstoneDetailRow);
+                return rowInvGemstoneDetailRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public PriceCodeRow FindByID(int ID) {
-                return ((PriceCodeRow)(this.Rows.Find(new object[] {
+            public InvGemstoneDetailRow FindByID(int ID) {
+                return ((InvGemstoneDetailRow)(this.Rows.Find(new object[] {
                             ID})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                PriceCodeDataTable cln = ((PriceCodeDataTable)(base.Clone()));
+                InvGemstoneDetailDataTable cln = ((InvGemstoneDetailDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -463,31 +614,65 @@ namespace DiamondDS.DS {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new PriceCodeDataTable();
+                return new InvGemstoneDetailDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
+                this.columnRowNum = base.Columns["RowNum"];
                 this.columnID = base.Columns["ID"];
-                this.columnCode = base.Columns["Code"];
-                this.columnValue = base.Columns["Value"];
+                this.columnGemstoneType = base.Columns["GemstoneType"];
+                this.columnGemstoneTypeName = base.Columns["GemstoneTypeName"];
+                this.columnShape = base.Columns["Shape"];
+                this.columnShapeName = base.Columns["ShapeName"];
+                this.columnAmount = base.Columns["Amount"];
+                this.columnWeight = base.Columns["Weight"];
+                this.columnOrigin = base.Columns["Origin"];
+                this.columnOriginName = base.Columns["OriginName"];
+                this.columnCostPerCarat = base.Columns["CostPerCarat"];
+                this.columnCost = base.Columns["Cost"];
+                this.columnMinPricePerCarat = base.Columns["MinPricePerCarat"];
+                this.columnMinPrice = base.Columns["MinPrice"];
                 this.columnIsDeleted = base.Columns["IsDeleted"];
                 this.columnCreateBy = base.Columns["CreateBy"];
                 this.columnCreateDate = base.Columns["CreateDate"];
                 this.columnEditBy = base.Columns["EditBy"];
                 this.columnEditDate = base.Columns["EditDate"];
+                this.columnRefID2 = base.Columns["RefID2"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             private void InitClass() {
+                this.columnRowNum = new global::System.Data.DataColumn("RowNum", typeof(long), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnRowNum);
                 this.columnID = new global::System.Data.DataColumn("ID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnID);
-                this.columnCode = new global::System.Data.DataColumn("Code", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCode);
-                this.columnValue = new global::System.Data.DataColumn("Value", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnValue);
+                this.columnGemstoneType = new global::System.Data.DataColumn("GemstoneType", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnGemstoneType);
+                this.columnGemstoneTypeName = new global::System.Data.DataColumn("GemstoneTypeName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnGemstoneTypeName);
+                this.columnShape = new global::System.Data.DataColumn("Shape", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnShape);
+                this.columnShapeName = new global::System.Data.DataColumn("ShapeName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnShapeName);
+                this.columnAmount = new global::System.Data.DataColumn("Amount", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAmount);
+                this.columnWeight = new global::System.Data.DataColumn("Weight", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnWeight);
+                this.columnOrigin = new global::System.Data.DataColumn("Origin", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnOrigin);
+                this.columnOriginName = new global::System.Data.DataColumn("OriginName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnOriginName);
+                this.columnCostPerCarat = new global::System.Data.DataColumn("CostPerCarat", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCostPerCarat);
+                this.columnCost = new global::System.Data.DataColumn("Cost", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCost);
+                this.columnMinPricePerCarat = new global::System.Data.DataColumn("MinPricePerCarat", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMinPricePerCarat);
+                this.columnMinPrice = new global::System.Data.DataColumn("MinPrice", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMinPrice);
                 this.columnIsDeleted = new global::System.Data.DataColumn("IsDeleted", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnIsDeleted);
                 this.columnCreateBy = new global::System.Data.DataColumn("CreateBy", typeof(int), null, global::System.Data.MappingType.Element);
@@ -498,43 +683,48 @@ namespace DiamondDS.DS {
                 base.Columns.Add(this.columnEditBy);
                 this.columnEditDate = new global::System.Data.DataColumn("EditDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnEditDate);
+                this.columnRefID2 = new global::System.Data.DataColumn("RefID2", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnRefID2);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnID}, true));
                 this.columnID.AutoIncrement = true;
                 this.columnID.AutoIncrementSeed = -1;
                 this.columnID.AutoIncrementStep = -1;
                 this.columnID.AllowDBNull = false;
-                this.columnID.ReadOnly = true;
                 this.columnID.Unique = true;
-                this.columnCode.MaxLength = 4;
-                this.columnValue.MaxLength = 1;
+                this.columnGemstoneTypeName.ReadOnly = true;
+                this.columnGemstoneTypeName.MaxLength = 100;
+                this.columnShapeName.ReadOnly = true;
+                this.columnShapeName.MaxLength = 100;
+                this.columnOriginName.ReadOnly = true;
+                this.columnOriginName.MaxLength = 100;
                 this.columnIsDeleted.MaxLength = 1;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public PriceCodeRow NewPriceCodeRow() {
-                return ((PriceCodeRow)(this.NewRow()));
+            public InvGemstoneDetailRow NewInvGemstoneDetailRow() {
+                return ((InvGemstoneDetailRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new PriceCodeRow(builder);
+                return new InvGemstoneDetailRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(PriceCodeRow);
+                return typeof(InvGemstoneDetailRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.PriceCodeRowChanged != null)) {
-                    this.PriceCodeRowChanged(this, new PriceCodeRowChangeEvent(((PriceCodeRow)(e.Row)), e.Action));
+                if ((this.InvGemstoneDetailRowChanged != null)) {
+                    this.InvGemstoneDetailRowChanged(this, new InvGemstoneDetailRowChangeEvent(((InvGemstoneDetailRow)(e.Row)), e.Action));
                 }
             }
             
@@ -542,8 +732,8 @@ namespace DiamondDS.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.PriceCodeRowChanging != null)) {
-                    this.PriceCodeRowChanging(this, new PriceCodeRowChangeEvent(((PriceCodeRow)(e.Row)), e.Action));
+                if ((this.InvGemstoneDetailRowChanging != null)) {
+                    this.InvGemstoneDetailRowChanging(this, new InvGemstoneDetailRowChangeEvent(((InvGemstoneDetailRow)(e.Row)), e.Action));
                 }
             }
             
@@ -551,8 +741,8 @@ namespace DiamondDS.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.PriceCodeRowDeleted != null)) {
-                    this.PriceCodeRowDeleted(this, new PriceCodeRowChangeEvent(((PriceCodeRow)(e.Row)), e.Action));
+                if ((this.InvGemstoneDetailRowDeleted != null)) {
+                    this.InvGemstoneDetailRowDeleted(this, new InvGemstoneDetailRowChangeEvent(((InvGemstoneDetailRow)(e.Row)), e.Action));
                 }
             }
             
@@ -560,14 +750,14 @@ namespace DiamondDS.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.PriceCodeRowDeleting != null)) {
-                    this.PriceCodeRowDeleting(this, new PriceCodeRowChangeEvent(((PriceCodeRow)(e.Row)), e.Action));
+                if ((this.InvGemstoneDetailRowDeleting != null)) {
+                    this.InvGemstoneDetailRowDeleting(this, new InvGemstoneDetailRowChangeEvent(((InvGemstoneDetailRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemovePriceCodeRow(PriceCodeRow row) {
+            public void RemoveInvGemstoneDetailRow(InvGemstoneDetailRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -576,7 +766,7 @@ namespace DiamondDS.DS {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                dsPriceCode ds = new dsPriceCode();
+                dsInvGemstoneDetail ds = new dsInvGemstoneDetail();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -594,7 +784,7 @@ namespace DiamondDS.DS {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "PriceCodeDataTable";
+                attribute2.FixedValue = "InvGemstoneDetailDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -638,57 +828,233 @@ namespace DiamondDS.DS {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class PriceCodeRow : global::System.Data.DataRow {
+        public partial class InvGemstoneDetailRow : global::System.Data.DataRow {
             
-            private PriceCodeDataTable tablePriceCode;
+            private InvGemstoneDetailDataTable tableInvGemstoneDetail;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal PriceCodeRow(global::System.Data.DataRowBuilder rb) : 
+            internal InvGemstoneDetailRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tablePriceCode = ((PriceCodeDataTable)(this.Table));
+                this.tableInvGemstoneDetail = ((InvGemstoneDetailDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public long RowNum {
+                get {
+                    try {
+                        return ((long)(this[this.tableInvGemstoneDetail.RowNumColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'RowNum\' in table \'InvGemstoneDetail\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableInvGemstoneDetail.RowNumColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public int ID {
                 get {
-                    return ((int)(this[this.tablePriceCode.IDColumn]));
+                    return ((int)(this[this.tableInvGemstoneDetail.IDColumn]));
                 }
                 set {
-                    this[this.tablePriceCode.IDColumn] = value;
+                    this[this.tableInvGemstoneDetail.IDColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Code {
+            public int GemstoneType {
                 get {
                     try {
-                        return ((string)(this[this.tablePriceCode.CodeColumn]));
+                        return ((int)(this[this.tableInvGemstoneDetail.GemstoneTypeColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Code\' in table \'PriceCode\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'GemstoneType\' in table \'InvGemstoneDetail\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablePriceCode.CodeColumn] = value;
+                    this[this.tableInvGemstoneDetail.GemstoneTypeColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Value {
+            public string GemstoneTypeName {
                 get {
                     try {
-                        return ((string)(this[this.tablePriceCode.ValueColumn]));
+                        return ((string)(this[this.tableInvGemstoneDetail.GemstoneTypeNameColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Value\' in table \'PriceCode\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'GemstoneTypeName\' in table \'InvGemstoneDetail\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablePriceCode.ValueColumn] = value;
+                    this[this.tableInvGemstoneDetail.GemstoneTypeNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int Shape {
+                get {
+                    try {
+                        return ((int)(this[this.tableInvGemstoneDetail.ShapeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Shape\' in table \'InvGemstoneDetail\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableInvGemstoneDetail.ShapeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string ShapeName {
+                get {
+                    try {
+                        return ((string)(this[this.tableInvGemstoneDetail.ShapeNameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ShapeName\' in table \'InvGemstoneDetail\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableInvGemstoneDetail.ShapeNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double Amount {
+                get {
+                    try {
+                        return ((double)(this[this.tableInvGemstoneDetail.AmountColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Amount\' in table \'InvGemstoneDetail\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableInvGemstoneDetail.AmountColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double Weight {
+                get {
+                    try {
+                        return ((double)(this[this.tableInvGemstoneDetail.WeightColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Weight\' in table \'InvGemstoneDetail\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableInvGemstoneDetail.WeightColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int Origin {
+                get {
+                    try {
+                        return ((int)(this[this.tableInvGemstoneDetail.OriginColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Origin\' in table \'InvGemstoneDetail\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableInvGemstoneDetail.OriginColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string OriginName {
+                get {
+                    try {
+                        return ((string)(this[this.tableInvGemstoneDetail.OriginNameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'OriginName\' in table \'InvGemstoneDetail\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableInvGemstoneDetail.OriginNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal CostPerCarat {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableInvGemstoneDetail.CostPerCaratColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'CostPerCarat\' in table \'InvGemstoneDetail\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableInvGemstoneDetail.CostPerCaratColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal Cost {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableInvGemstoneDetail.CostColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Cost\' in table \'InvGemstoneDetail\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableInvGemstoneDetail.CostColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal MinPricePerCarat {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableInvGemstoneDetail.MinPricePerCaratColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'MinPricePerCarat\' in table \'InvGemstoneDetail\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableInvGemstoneDetail.MinPricePerCaratColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal MinPrice {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableInvGemstoneDetail.MinPriceColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'MinPrice\' in table \'InvGemstoneDetail\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableInvGemstoneDetail.MinPriceColumn] = value;
                 }
             }
             
@@ -697,14 +1063,14 @@ namespace DiamondDS.DS {
             public string IsDeleted {
                 get {
                     try {
-                        return ((string)(this[this.tablePriceCode.IsDeletedColumn]));
+                        return ((string)(this[this.tableInvGemstoneDetail.IsDeletedColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'IsDeleted\' in table \'PriceCode\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'IsDeleted\' in table \'InvGemstoneDetail\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablePriceCode.IsDeletedColumn] = value;
+                    this[this.tableInvGemstoneDetail.IsDeletedColumn] = value;
                 }
             }
             
@@ -713,14 +1079,14 @@ namespace DiamondDS.DS {
             public int CreateBy {
                 get {
                     try {
-                        return ((int)(this[this.tablePriceCode.CreateByColumn]));
+                        return ((int)(this[this.tableInvGemstoneDetail.CreateByColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'CreateBy\' in table \'PriceCode\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'CreateBy\' in table \'InvGemstoneDetail\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablePriceCode.CreateByColumn] = value;
+                    this[this.tableInvGemstoneDetail.CreateByColumn] = value;
                 }
             }
             
@@ -729,14 +1095,14 @@ namespace DiamondDS.DS {
             public System.DateTime CreateDate {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tablePriceCode.CreateDateColumn]));
+                        return ((global::System.DateTime)(this[this.tableInvGemstoneDetail.CreateDateColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'CreateDate\' in table \'PriceCode\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'CreateDate\' in table \'InvGemstoneDetail\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablePriceCode.CreateDateColumn] = value;
+                    this[this.tableInvGemstoneDetail.CreateDateColumn] = value;
                 }
             }
             
@@ -745,14 +1111,14 @@ namespace DiamondDS.DS {
             public int EditBy {
                 get {
                     try {
-                        return ((int)(this[this.tablePriceCode.EditByColumn]));
+                        return ((int)(this[this.tableInvGemstoneDetail.EditByColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'EditBy\' in table \'PriceCode\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'EditBy\' in table \'InvGemstoneDetail\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablePriceCode.EditByColumn] = value;
+                    this[this.tableInvGemstoneDetail.EditByColumn] = value;
                 }
             }
             
@@ -761,99 +1127,259 @@ namespace DiamondDS.DS {
             public System.DateTime EditDate {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tablePriceCode.EditDateColumn]));
+                        return ((global::System.DateTime)(this[this.tableInvGemstoneDetail.EditDateColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'EditDate\' in table \'PriceCode\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'EditDate\' in table \'InvGemstoneDetail\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablePriceCode.EditDateColumn] = value;
+                    this[this.tableInvGemstoneDetail.EditDateColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsCodeNull() {
-                return this.IsNull(this.tablePriceCode.CodeColumn);
+            public string RefID2 {
+                get {
+                    try {
+                        return ((string)(this[this.tableInvGemstoneDetail.RefID2Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'RefID2\' in table \'InvGemstoneDetail\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableInvGemstoneDetail.RefID2Column] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetCodeNull() {
-                this[this.tablePriceCode.CodeColumn] = global::System.Convert.DBNull;
+            public bool IsRowNumNull() {
+                return this.IsNull(this.tableInvGemstoneDetail.RowNumColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsValueNull() {
-                return this.IsNull(this.tablePriceCode.ValueColumn);
+            public void SetRowNumNull() {
+                this[this.tableInvGemstoneDetail.RowNumColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetValueNull() {
-                this[this.tablePriceCode.ValueColumn] = global::System.Convert.DBNull;
+            public bool IsGemstoneTypeNull() {
+                return this.IsNull(this.tableInvGemstoneDetail.GemstoneTypeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetGemstoneTypeNull() {
+                this[this.tableInvGemstoneDetail.GemstoneTypeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsGemstoneTypeNameNull() {
+                return this.IsNull(this.tableInvGemstoneDetail.GemstoneTypeNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetGemstoneTypeNameNull() {
+                this[this.tableInvGemstoneDetail.GemstoneTypeNameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsShapeNull() {
+                return this.IsNull(this.tableInvGemstoneDetail.ShapeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetShapeNull() {
+                this[this.tableInvGemstoneDetail.ShapeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsShapeNameNull() {
+                return this.IsNull(this.tableInvGemstoneDetail.ShapeNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetShapeNameNull() {
+                this[this.tableInvGemstoneDetail.ShapeNameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsAmountNull() {
+                return this.IsNull(this.tableInvGemstoneDetail.AmountColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetAmountNull() {
+                this[this.tableInvGemstoneDetail.AmountColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsWeightNull() {
+                return this.IsNull(this.tableInvGemstoneDetail.WeightColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetWeightNull() {
+                this[this.tableInvGemstoneDetail.WeightColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsOriginNull() {
+                return this.IsNull(this.tableInvGemstoneDetail.OriginColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetOriginNull() {
+                this[this.tableInvGemstoneDetail.OriginColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsOriginNameNull() {
+                return this.IsNull(this.tableInvGemstoneDetail.OriginNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetOriginNameNull() {
+                this[this.tableInvGemstoneDetail.OriginNameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsCostPerCaratNull() {
+                return this.IsNull(this.tableInvGemstoneDetail.CostPerCaratColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetCostPerCaratNull() {
+                this[this.tableInvGemstoneDetail.CostPerCaratColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsCostNull() {
+                return this.IsNull(this.tableInvGemstoneDetail.CostColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetCostNull() {
+                this[this.tableInvGemstoneDetail.CostColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsMinPricePerCaratNull() {
+                return this.IsNull(this.tableInvGemstoneDetail.MinPricePerCaratColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetMinPricePerCaratNull() {
+                this[this.tableInvGemstoneDetail.MinPricePerCaratColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsMinPriceNull() {
+                return this.IsNull(this.tableInvGemstoneDetail.MinPriceColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetMinPriceNull() {
+                this[this.tableInvGemstoneDetail.MinPriceColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsIsDeletedNull() {
-                return this.IsNull(this.tablePriceCode.IsDeletedColumn);
+                return this.IsNull(this.tableInvGemstoneDetail.IsDeletedColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetIsDeletedNull() {
-                this[this.tablePriceCode.IsDeletedColumn] = global::System.Convert.DBNull;
+                this[this.tableInvGemstoneDetail.IsDeletedColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsCreateByNull() {
-                return this.IsNull(this.tablePriceCode.CreateByColumn);
+                return this.IsNull(this.tableInvGemstoneDetail.CreateByColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetCreateByNull() {
-                this[this.tablePriceCode.CreateByColumn] = global::System.Convert.DBNull;
+                this[this.tableInvGemstoneDetail.CreateByColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsCreateDateNull() {
-                return this.IsNull(this.tablePriceCode.CreateDateColumn);
+                return this.IsNull(this.tableInvGemstoneDetail.CreateDateColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetCreateDateNull() {
-                this[this.tablePriceCode.CreateDateColumn] = global::System.Convert.DBNull;
+                this[this.tableInvGemstoneDetail.CreateDateColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsEditByNull() {
-                return this.IsNull(this.tablePriceCode.EditByColumn);
+                return this.IsNull(this.tableInvGemstoneDetail.EditByColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetEditByNull() {
-                this[this.tablePriceCode.EditByColumn] = global::System.Convert.DBNull;
+                this[this.tableInvGemstoneDetail.EditByColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsEditDateNull() {
-                return this.IsNull(this.tablePriceCode.EditDateColumn);
+                return this.IsNull(this.tableInvGemstoneDetail.EditDateColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetEditDateNull() {
-                this[this.tablePriceCode.EditDateColumn] = global::System.Convert.DBNull;
+                this[this.tableInvGemstoneDetail.EditDateColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsRefID2Null() {
+                return this.IsNull(this.tableInvGemstoneDetail.RefID2Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetRefID2Null() {
+                this[this.tableInvGemstoneDetail.RefID2Column] = global::System.Convert.DBNull;
             }
         }
         
@@ -861,22 +1387,22 @@ namespace DiamondDS.DS {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class PriceCodeRowChangeEvent : global::System.EventArgs {
+        public class InvGemstoneDetailRowChangeEvent : global::System.EventArgs {
             
-            private PriceCodeRow eventRow;
+            private InvGemstoneDetailRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public PriceCodeRowChangeEvent(PriceCodeRow row, global::System.Data.DataRowAction action) {
+            public InvGemstoneDetailRowChangeEvent(InvGemstoneDetailRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public PriceCodeRow Row {
+            public InvGemstoneDetailRow Row {
                 get {
                     return this.eventRow;
                 }
