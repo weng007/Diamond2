@@ -343,7 +343,7 @@
             this.grid2.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grid2.RowTemplate.Height = 25;
             this.grid2.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.grid2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.grid2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.grid2.Size = new System.Drawing.Size(1226, 197);
             this.grid2.TabIndex = 47;
             this.grid2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid2_CellClick);

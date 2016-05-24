@@ -552,6 +552,7 @@
             this.txtPriceTag.Text = "0";
             this.txtPriceTag.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtPriceTag.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
+            this.txtPriceTag.Leave += new System.EventHandler(this.txtPricePerGram1_Leave);
             // 
             // label36
             // 
@@ -573,6 +574,7 @@
             this.txtMinPrice.Text = "0";
             this.txtMinPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtMinPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
+            this.txtMinPrice.Leave += new System.EventHandler(this.txtPricePerGram1_Leave);
             // 
             // label35
             // 
@@ -710,6 +712,7 @@
             this.txtCost3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtCost3.TextChanged += new System.EventHandler(this.txtCost3_TextChanged);
             this.txtCost3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
+            this.txtCost3.Leave += new System.EventHandler(this.txtPricePerGram1_Leave);
             // 
             // txtCost33
             // 
@@ -722,6 +725,7 @@
             this.txtCost33.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtCost33.TextChanged += new System.EventHandler(this.txtMaterialNetCost1_TextChanged);
             this.txtCost33.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
+            this.txtCost33.Leave += new System.EventHandler(this.txtPricePerGram1_Leave);
             // 
             // label29
             // 
@@ -744,6 +748,7 @@
             this.txtCost11.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtCost11.TextChanged += new System.EventHandler(this.txtMaterialNetCost1_TextChanged);
             this.txtCost11.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
+            this.txtCost11.Leave += new System.EventHandler(this.txtPricePerGram1_Leave);
             // 
             // txtCost1
             // 
@@ -755,6 +760,7 @@
             this.txtCost1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtCost1.TextChanged += new System.EventHandler(this.txtCost1_TextChanged);
             this.txtCost1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
+            this.txtCost1.Leave += new System.EventHandler(this.txtPricePerGram1_Leave);
             // 
             // label23
             // 
@@ -776,6 +782,7 @@
             this.txtCost2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtCost2.TextChanged += new System.EventHandler(this.txtCost2_TextChanged);
             this.txtCost2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
+            this.txtCost2.Leave += new System.EventHandler(this.txtPricePerGram1_Leave);
             // 
             // label25
             // 
@@ -798,6 +805,7 @@
             this.txtCost22.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtCost22.TextChanged += new System.EventHandler(this.txtMaterialNetCost1_TextChanged);
             this.txtCost22.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
+            this.txtCost22.Leave += new System.EventHandler(this.txtPricePerGram1_Leave);
             // 
             // chkMoreMaterial
             // 
@@ -880,6 +888,7 @@
             this.txtMaterialWeight2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtMaterialWeight2.TextChanged += new System.EventHandler(this.txtMaterialWeight2_TextChanged);
             this.txtMaterialWeight2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
+            this.txtMaterialWeight2.Leave += new System.EventHandler(this.txtMaterialWeight1_Leave);
             // 
             // txtPricePerGram22
             // 
@@ -891,6 +900,7 @@
             this.txtPricePerGram22.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtPricePerGram22.TextChanged += new System.EventHandler(this.txtPricePerGram22_TextChanged);
             this.txtPricePerGram22.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
+            this.txtPricePerGram22.Leave += new System.EventHandler(this.txtPricePerGram1_Leave);
             // 
             // label21
             // 
@@ -923,6 +933,7 @@
             // 
             // txtMaterialCost2
             // 
+            this.txtMaterialCost2.Enabled = false;
             this.txtMaterialCost2.Location = new System.Drawing.Point(169, 119);
             this.txtMaterialCost2.Name = "txtMaterialCost2";
             this.txtMaterialCost2.Size = new System.Drawing.Size(119, 27);
@@ -952,6 +963,7 @@
             this.txtPricePerGram2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtPricePerGram2.TextChanged += new System.EventHandler(this.txtMaterialWeight2_TextChanged);
             this.txtPricePerGram2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
+            this.txtPricePerGram2.Leave += new System.EventHandler(this.txtPricePerGram1_Leave);
             // 
             // label18
             // 
@@ -983,6 +995,7 @@
             this.txtPricePerGram11.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtPricePerGram11.TextChanged += new System.EventHandler(this.txtPricePerGram11_TextChanged);
             this.txtPricePerGram11.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
+            this.txtPricePerGram11.Leave += new System.EventHandler(this.txtPricePerGram1_Leave);
             // 
             // txtMaterialCost11
             // 
@@ -1006,6 +1019,7 @@
             this.txtLaborCost.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtLaborCost.TextChanged += new System.EventHandler(this.txtLaborCost_TextChanged);
             this.txtLaborCost.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
+            this.txtLaborCost.Leave += new System.EventHandler(this.txtPricePerGram1_Leave);
             // 
             // label12
             // 
@@ -1039,6 +1053,7 @@
             this.txtLaborCost1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtLaborCost1.TextChanged += new System.EventHandler(this.txtMaterialNetCost1_TextChanged);
             this.txtLaborCost1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
+            this.txtLaborCost1.Leave += new System.EventHandler(this.txtPricePerGram1_Leave);
             // 
             // txtPricePerGram1
             // 
@@ -1050,6 +1065,7 @@
             this.txtPricePerGram1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtPricePerGram1.TextChanged += new System.EventHandler(this.txtMaterialWeight1_TextChanged);
             this.txtPricePerGram1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
+            this.txtPricePerGram1.Leave += new System.EventHandler(this.txtPricePerGram1_Leave);
             // 
             // label10
             // 
@@ -1142,7 +1158,7 @@
             this.txtMaterialWeight1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtMaterialWeight1.TextChanged += new System.EventHandler(this.txtMaterialWeight1_TextChanged);
             this.txtMaterialWeight1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
-            this.txtMaterialWeight1.Leave += new System.EventHandler(this.txtCost_Leave);
+            this.txtMaterialWeight1.Leave += new System.EventHandler(this.txtMaterialWeight1_Leave);
             // 
             // label22
             // 

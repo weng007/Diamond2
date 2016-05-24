@@ -390,104 +390,130 @@
             // mnCatDR
             // 
             this.mnCatDR.AccessibleDescription = "DR";
+            this.mnCatDR.Image = ((System.Drawing.Image)(resources.GetObject("mnCatDR.Image")));
+            this.mnCatDR.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mnCatDR.Name = "mnCatDR";
-            this.mnCatDR.Size = new System.Drawing.Size(226, 26);
+            this.mnCatDR.Size = new System.Drawing.Size(242, 38);
             this.mnCatDR.Text = "Diamond Ring";
             this.mnCatDR.Click += new System.EventHandler(this.mnCatDR_Click);
             // 
             // mnCatDE
             // 
             this.mnCatDE.AccessibleDescription = "DER";
+            this.mnCatDE.Image = ((System.Drawing.Image)(resources.GetObject("mnCatDE.Image")));
+            this.mnCatDE.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mnCatDE.Name = "mnCatDE";
-            this.mnCatDE.Size = new System.Drawing.Size(226, 26);
+            this.mnCatDE.Size = new System.Drawing.Size(242, 38);
             this.mnCatDE.Text = "Diamond Earrings";
             this.mnCatDE.Click += new System.EventHandler(this.mnCatDR_Click);
             // 
             // menuCatGR
             // 
             this.menuCatGR.AccessibleDescription = "GR";
+            this.menuCatGR.Image = ((System.Drawing.Image)(resources.GetObject("menuCatGR.Image")));
+            this.menuCatGR.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.menuCatGR.Name = "menuCatGR";
-            this.menuCatGR.Size = new System.Drawing.Size(226, 26);
+            this.menuCatGR.Size = new System.Drawing.Size(242, 38);
             this.menuCatGR.Text = "Gemstone Ring";
             this.menuCatGR.Click += new System.EventHandler(this.mnCatDR_Click);
             // 
             // mnCatGE
             // 
             this.mnCatGE.AccessibleDescription = "GER";
+            this.mnCatGE.Image = ((System.Drawing.Image)(resources.GetObject("mnCatGE.Image")));
+            this.mnCatGE.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mnCatGE.Name = "mnCatGE";
-            this.mnCatGE.Size = new System.Drawing.Size(226, 26);
+            this.mnCatGE.Size = new System.Drawing.Size(242, 38);
             this.mnCatGE.Text = "Gemstone Earrings";
             this.mnCatGE.Click += new System.EventHandler(this.mnCatDR_Click);
             // 
             // mnCatWR
             // 
             this.mnCatWR.AccessibleDescription = "WR";
+            this.mnCatWR.Image = ((System.Drawing.Image)(resources.GetObject("mnCatWR.Image")));
+            this.mnCatWR.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mnCatWR.Name = "mnCatWR";
-            this.mnCatWR.Size = new System.Drawing.Size(226, 26);
+            this.mnCatWR.Size = new System.Drawing.Size(242, 38);
             this.mnCatWR.Text = "Wedding Ring";
             this.mnCatWR.Click += new System.EventHandler(this.mnCatDR_Click);
             // 
             // mnCatIC
             // 
             this.mnCatIC.AccessibleDescription = "IC";
+            this.mnCatIC.Image = ((System.Drawing.Image)(resources.GetObject("mnCatIC.Image")));
+            this.mnCatIC.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mnCatIC.Name = "mnCatIC";
-            this.mnCatIC.Size = new System.Drawing.Size(226, 26);
+            this.mnCatIC.Size = new System.Drawing.Size(242, 38);
             this.mnCatIC.Text = "Intalian Chain";
             this.mnCatIC.Click += new System.EventHandler(this.mnCatDR_Click);
             // 
             // mnCatNL
             // 
             this.mnCatNL.AccessibleDescription = "NL";
+            this.mnCatNL.Image = ((System.Drawing.Image)(resources.GetObject("mnCatNL.Image")));
+            this.mnCatNL.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mnCatNL.Name = "mnCatNL";
-            this.mnCatNL.Size = new System.Drawing.Size(226, 26);
+            this.mnCatNL.Size = new System.Drawing.Size(242, 38);
             this.mnCatNL.Text = "Necklace";
             this.mnCatNL.Click += new System.EventHandler(this.mnCatDR_Click);
             // 
             // mnCatBL
             // 
             this.mnCatBL.AccessibleDescription = "BL";
+            this.mnCatBL.Image = ((System.Drawing.Image)(resources.GetObject("mnCatBL.Image")));
+            this.mnCatBL.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mnCatBL.Name = "mnCatBL";
-            this.mnCatBL.Size = new System.Drawing.Size(226, 26);
+            this.mnCatBL.Size = new System.Drawing.Size(242, 38);
             this.mnCatBL.Text = "Bracelace";
             this.mnCatBL.Click += new System.EventHandler(this.mnCatDR_Click);
             // 
             // mnCatCL
             // 
             this.mnCatCL.AccessibleDescription = "CL";
+            this.mnCatCL.Image = ((System.Drawing.Image)(resources.GetObject("mnCatCL.Image")));
+            this.mnCatCL.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mnCatCL.Name = "mnCatCL";
-            this.mnCatCL.Size = new System.Drawing.Size(226, 26);
+            this.mnCatCL.Size = new System.Drawing.Size(242, 38);
             this.mnCatCL.Text = "Cufflinks";
             this.mnCatCL.Click += new System.EventHandler(this.mnCatDR_Click);
             // 
             // mnCatBR
             // 
             this.mnCatBR.AccessibleDescription = "BR";
+            this.mnCatBR.Image = ((System.Drawing.Image)(resources.GetObject("mnCatBR.Image")));
+            this.mnCatBR.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mnCatBR.Name = "mnCatBR";
-            this.mnCatBR.Size = new System.Drawing.Size(226, 26);
+            this.mnCatBR.Size = new System.Drawing.Size(242, 38);
             this.mnCatBR.Text = "Brooch";
             this.mnCatBR.Click += new System.EventHandler(this.mnCatDR_Click);
             // 
             // mnCatPD
             // 
             this.mnCatPD.AccessibleDescription = "PD";
+            this.mnCatPD.Image = ((System.Drawing.Image)(resources.GetObject("mnCatPD.Image")));
+            this.mnCatPD.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mnCatPD.Name = "mnCatPD";
-            this.mnCatPD.Size = new System.Drawing.Size(226, 26);
+            this.mnCatPD.Size = new System.Drawing.Size(242, 38);
             this.mnCatPD.Text = "Pendant";
             this.mnCatPD.Click += new System.EventHandler(this.mnCatDR_Click);
             // 
             // mnCatSJ
             // 
             this.mnCatSJ.AccessibleDescription = "SJ";
+            this.mnCatSJ.Image = ((System.Drawing.Image)(resources.GetObject("mnCatSJ.Image")));
+            this.mnCatSJ.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mnCatSJ.Name = "mnCatSJ";
-            this.mnCatSJ.Size = new System.Drawing.Size(226, 26);
+            this.mnCatSJ.Size = new System.Drawing.Size(242, 38);
             this.mnCatSJ.Text = "Special Jewelry";
             this.mnCatSJ.Click += new System.EventHandler(this.mnCatDR_Click);
             // 
             // mnCatMTO
             // 
             this.mnCatMTO.AccessibleDescription = "MTO";
+            this.mnCatMTO.Image = ((System.Drawing.Image)(resources.GetObject("mnCatMTO.Image")));
+            this.mnCatMTO.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mnCatMTO.Name = "mnCatMTO";
-            this.mnCatMTO.Size = new System.Drawing.Size(226, 26);
+            this.mnCatMTO.Size = new System.Drawing.Size(242, 38);
             this.mnCatMTO.Text = "Made To Order";
             this.mnCatMTO.Click += new System.EventHandler(this.mnCatDR_Click);
             // 
@@ -572,6 +598,8 @@
             // mnInvDE
             // 
             this.mnInvDE.AccessibleDescription = "DER";
+            this.mnInvDE.Image = ((System.Drawing.Image)(resources.GetObject("mnInvDE.Image")));
+            this.mnInvDE.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mnInvDE.Name = "mnInvDE";
             this.mnInvDE.Size = new System.Drawing.Size(242, 38);
             this.mnInvDE.Text = "Diamond Earrings";
@@ -580,6 +608,8 @@
             // mnInvGR
             // 
             this.mnInvGR.AccessibleDescription = "GR";
+            this.mnInvGR.Image = ((System.Drawing.Image)(resources.GetObject("mnInvGR.Image")));
+            this.mnInvGR.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mnInvGR.Name = "mnInvGR";
             this.mnInvGR.Size = new System.Drawing.Size(242, 38);
             this.mnInvGR.Text = "Gemstone Ring";
@@ -588,6 +618,8 @@
             // mnInvGE
             // 
             this.mnInvGE.AccessibleDescription = "GER";
+            this.mnInvGE.Image = ((System.Drawing.Image)(resources.GetObject("mnInvGE.Image")));
+            this.mnInvGE.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mnInvGE.Name = "mnInvGE";
             this.mnInvGE.Size = new System.Drawing.Size(242, 38);
             this.mnInvGE.Text = "Gemstone Earrings";
@@ -596,6 +628,8 @@
             // mnInvWR
             // 
             this.mnInvWR.AccessibleDescription = "WR";
+            this.mnInvWR.Image = ((System.Drawing.Image)(resources.GetObject("mnInvWR.Image")));
+            this.mnInvWR.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mnInvWR.Name = "mnInvWR";
             this.mnInvWR.Size = new System.Drawing.Size(242, 38);
             this.mnInvWR.Text = "Wedding Ring";
@@ -604,6 +638,8 @@
             // mnInvIC
             // 
             this.mnInvIC.AccessibleDescription = "IC";
+            this.mnInvIC.Image = ((System.Drawing.Image)(resources.GetObject("mnInvIC.Image")));
+            this.mnInvIC.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mnInvIC.Name = "mnInvIC";
             this.mnInvIC.Size = new System.Drawing.Size(242, 38);
             this.mnInvIC.Text = "Intalian Chain";
@@ -612,6 +648,8 @@
             // mnInvNL
             // 
             this.mnInvNL.AccessibleDescription = "NL";
+            this.mnInvNL.Image = ((System.Drawing.Image)(resources.GetObject("mnInvNL.Image")));
+            this.mnInvNL.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mnInvNL.Name = "mnInvNL";
             this.mnInvNL.Size = new System.Drawing.Size(242, 38);
             this.mnInvNL.Text = "Necklace";
@@ -620,6 +658,8 @@
             // mnInvBL
             // 
             this.mnInvBL.AccessibleDescription = "BL";
+            this.mnInvBL.Image = ((System.Drawing.Image)(resources.GetObject("mnInvBL.Image")));
+            this.mnInvBL.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mnInvBL.Name = "mnInvBL";
             this.mnInvBL.Size = new System.Drawing.Size(242, 38);
             this.mnInvBL.Text = "Bracelace";
@@ -628,6 +668,8 @@
             // mnInvCL
             // 
             this.mnInvCL.AccessibleDescription = "CL";
+            this.mnInvCL.Image = ((System.Drawing.Image)(resources.GetObject("mnInvCL.Image")));
+            this.mnInvCL.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mnInvCL.Name = "mnInvCL";
             this.mnInvCL.Size = new System.Drawing.Size(242, 38);
             this.mnInvCL.Text = "Cufflinks";
@@ -636,6 +678,8 @@
             // mnInvBR
             // 
             this.mnInvBR.AccessibleDescription = "BR";
+            this.mnInvBR.Image = ((System.Drawing.Image)(resources.GetObject("mnInvBR.Image")));
+            this.mnInvBR.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mnInvBR.Name = "mnInvBR";
             this.mnInvBR.Size = new System.Drawing.Size(242, 38);
             this.mnInvBR.Text = "Brooch";
@@ -644,6 +688,8 @@
             // mnInvPD
             // 
             this.mnInvPD.AccessibleDescription = "PD";
+            this.mnInvPD.Image = ((System.Drawing.Image)(resources.GetObject("mnInvPD.Image")));
+            this.mnInvPD.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mnInvPD.Name = "mnInvPD";
             this.mnInvPD.Size = new System.Drawing.Size(242, 38);
             this.mnInvPD.Text = "Pendant";
@@ -652,6 +698,8 @@
             // mnInvSJ
             // 
             this.mnInvSJ.AccessibleDescription = "SJ";
+            this.mnInvSJ.Image = ((System.Drawing.Image)(resources.GetObject("mnInvSJ.Image")));
+            this.mnInvSJ.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mnInvSJ.Name = "mnInvSJ";
             this.mnInvSJ.Size = new System.Drawing.Size(242, 38);
             this.mnInvSJ.Text = "Special Jewelry";
@@ -660,6 +708,8 @@
             // mnInvMTO
             // 
             this.mnInvMTO.AccessibleDescription = "MTO";
+            this.mnInvMTO.Image = ((System.Drawing.Image)(resources.GetObject("mnInvMTO.Image")));
+            this.mnInvMTO.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mnInvMTO.Name = "mnInvMTO";
             this.mnInvMTO.Size = new System.Drawing.Size(242, 38);
             this.mnInvMTO.Text = "Made To Order";

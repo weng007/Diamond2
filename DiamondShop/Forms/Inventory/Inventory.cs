@@ -45,6 +45,8 @@ namespace DiamondShop
 
             this.id = id;
             LoadData();
+
+            SetFormatNumber();
         }
 
         public Inventory(string prefix)
@@ -133,14 +135,18 @@ namespace DiamondShop
             {
                 binder.BindValueToControl(tds.Inventory[0]);
 
-                if(image1 !=  null)
+                if (tds.Inventory[0].MoreMaterial == "0")
+                { chkMoreMaterial.Checked = false; }
+                else { chkMoreMaterial.Checked = true; }
+
+                if(tds.Inventory[0].Image1 !=  null)
                 {
                     image1 = tds.Inventory[0].Image1;
                     ms1 = new MemoryStream(image1);
                     Image backImage1 = Image.FromStream(ms1);
                     btnImage1.BackgroundImage = backImage1;
                 }
-                if (image2 != null)
+                if (tds.Inventory[0].Image2 != null)
                 {
                     image2 = tds.Inventory[0].Image2;
                     ms2 = new MemoryStream(image2);
@@ -170,7 +176,9 @@ namespace DiamondShop
                 tds.Inventory.Rows.Add(row);
             }
             binder.BindValueToDataRow(row);
+
             row.CreateBy = ApplicationInfo.UserID;
+            row.MoreMaterial = chkMoreMaterial.Checked?"1":"0";
             row.Image1 = image1;
             row.Image2 = image2;
 
@@ -241,10 +249,15 @@ namespace DiamondShop
             {
                 message = "Please input Price1 Per Gram > 0.\n";
             }
-            if (txtPricePerGram2.Text == "" || txtPricePerGram2.Text == "0" || txtPricePerGram22.Text == "" || txtPricePerGram22.Text == "0")
+
+            if (chkMoreMaterial.Checked)
             {
-                message += "Please input Price2 Per Gram > 0.\n";
+                if (txtPricePerGram2.Text == "" || txtPricePerGram2.Text == "0" || txtPricePerGram22.Text == "" || txtPricePerGram22.Text == "0")
+                {
+                    message += "Please input Price2 Per Gram > 0.\n";
+                }
             }
+
             if(txtMinPrice.Text =="" || txtMinPrice.Text=="0")
             {
                 message += "Please input Minimum Price > 0.\n";
@@ -286,16 +299,6 @@ namespace DiamondShop
             }
         }
 
-        private void txtCost_Leave(object sender, EventArgs e)
-        {
-            txtMaterialWeight1.Text = GM.ConvertDoubleToString(txtMaterialWeight1);
-        }
-
-        private void txtMinPrice_Leave(object sender, EventArgs e)
-        {
-            txtMinPrice.Text = GM.ConvertDoubleToString(txtMinPrice);
-        }
-
         private void txtNetWeight_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
@@ -322,109 +325,152 @@ namespace DiamondShop
         private void txtMaterialWeight1_TextChanged(object sender, EventArgs e)
         {
             txtMaterialCost1.Text = (GM.ConvertStringToDouble(txtMaterialWeight1) * GM.ConvertStringToDouble(txtPricePerGram1)).ToString();
-            txtMaterialCost1.Text = GM.ConvertDoubleToString(txtMaterialCost1,0);
-
             txtMaterialCost11.Text = (GM.ConvertStringToDouble(txtMaterialWeight1) * GM.ConvertStringToDouble(txtPricePerGram11)).ToString();
-            txtMaterialCost11.Text = GM.ConvertDoubleToString(txtMaterialCost11, 0);
 
-            txtPricePerGram1.Text = GM.ConvertDoubleToString(txtPricePerGram1, 0);
+            txtMaterialCost1.Text = GM.ConvertDoubleToString(txtMaterialCost1,0);
+            txtMaterialCost11.Text = GM.ConvertDoubleToString(txtMaterialCost11,0);
         }
 
         private void txtMaterialWeight2_TextChanged(object sender, EventArgs e)
         {
             txtMaterialCost2.Text = (GM.ConvertStringToDouble(txtMaterialWeight2) * GM.ConvertStringToDouble(txtPricePerGram2)).ToString();
-            txtMaterialCost2.Text = GM.ConvertDoubleToString(txtMaterialCost2, 0);
-
             txtMaterialCost22.Text = (GM.ConvertStringToDouble(txtMaterialWeight2) * GM.ConvertStringToDouble(txtPricePerGram22)).ToString();
-            txtMaterialCost22.Text = GM.ConvertDoubleToString(txtMaterialCost22, 0);
 
-            txtPricePerGram2.Text = GM.ConvertDoubleToString(txtPricePerGram2, 0);
+            txtMaterialCost2.Text = GM.ConvertDoubleToString(txtMaterialCost2,0);
+            txtMaterialCost22.Text = GM.ConvertDoubleToString(txtMaterialCost22,0);
         }
 
         private void txtPricePerGram11_TextChanged(object sender, EventArgs e)
         {
             txtMaterialCost11.Text = (GM.ConvertStringToDouble(txtMaterialWeight1) * GM.ConvertStringToDouble(txtPricePerGram11)).ToString();
-            txtMaterialCost11.Text = GM.ConvertDoubleToString(txtMaterialCost11, 0);
-
-            txtPricePerGram11.Text = GM.ConvertDoubleToString(txtPricePerGram11, 0);
+            txtMaterialCost11.Text = GM.ConvertDoubleToString(txtMaterialCost11,0);
         }
 
         private void txtPricePerGram22_TextChanged(object sender, EventArgs e)
         {
             txtMaterialCost22.Text = (GM.ConvertStringToDouble(txtMaterialWeight2) * GM.ConvertStringToDouble(txtPricePerGram22)).ToString();
-            txtMaterialCost22.Text = GM.ConvertDoubleToString(txtMaterialCost22, 0);
-
-            txtPricePerGram22.Text = GM.ConvertDoubleToString(txtPricePerGram22, 0);
+            txtMaterialCost22.Text = GM.ConvertDoubleToString(txtMaterialCost22,0);
         }
 
         private void txtMaterialCost1_TextChanged(object sender, EventArgs e)
         {
             txtMaterialNetCost.Text = (GM.ConvertStringToDouble(txtMaterialCost1) + GM.ConvertStringToDouble(txtMaterialCost2)).ToString();
-            txtMaterialNetCost.Text = GM.ConvertDoubleToString(txtMaterialNetCost, 0);
+            txtMaterialNetCost.Text = GM.ConvertDoubleToString(txtMaterialNetCost,0);
         }
 
         private void txtMaterialCost11_TextChanged(object sender, EventArgs e)
         {
             txtMaterialNetCost1.Text = (GM.ConvertStringToDouble(txtMaterialCost11) + GM.ConvertStringToDouble(txtMaterialCost22)).ToString();
-            txtMaterialNetCost1.Text = GM.ConvertDoubleToString(txtMaterialNetCost1, 0);
+            txtMaterialNetCost1.Text = GM.ConvertDoubleToString(txtMaterialNetCost1,0);
         }
 
         private void txtLaborCost_TextChanged(object sender, EventArgs e)
         {
             txtLaborCost1.Text = (GM.ConvertStringToDouble(txtLaborCost) * 2).ToString();
-            txtLaborCost1.Text = GM.ConvertDoubleToString(txtLaborCost1, 0);
         }
 
         private void txtCost1_TextChanged(object sender, EventArgs e)
         {
             txtCost11.Text = (GM.ConvertStringToDouble(txtCost1) * 2).ToString();
-            txtCost11.Text = GM.ConvertDoubleToString(txtCost11, 0);
         }
 
         private void txtCost2_TextChanged(object sender, EventArgs e)
         {
             txtCost22.Text = (GM.ConvertStringToDouble(txtCost2) * 2).ToString();
-            txtCost22.Text = GM.ConvertDoubleToString(txtCost22, 0);
         }
 
         private void txtCost3_TextChanged(object sender, EventArgs e)
         {
             txtCost33.Text = (GM.ConvertStringToDouble(txtCost3) * 2).ToString();
-            txtCost33.Text = GM.ConvertDoubleToString(txtCost33, 0);
-
             txtCostBody.Text = (GM.ConvertStringToDouble(txtMaterialNetCost) + GM.ConvertStringToDouble(txtLaborCost) + GM.ConvertStringToDouble(txtCost1) +
                 GM.ConvertStringToDouble(txtCost2) + GM.ConvertStringToDouble(txtCost3)).ToString();
-            txtCostBody.Text = GM.ConvertDoubleToString(txtCostBody, 0);
+
+            txtCostBody.Text = GM.ConvertDoubleToString(txtCostBody,0);
         }
 
         private void txtMaterialNetCost1_TextChanged(object sender, EventArgs e)
         {
             txtCostBody1.Text = (GM.ConvertStringToDouble(txtMaterialNetCost1) + GM.ConvertStringToDouble(txtLaborCost1) + GM.ConvertStringToDouble(txtCost11) +
                 GM.ConvertStringToDouble(txtCost22) + GM.ConvertStringToDouble(txtCost33)).ToString();
+            txtPricePerGram1_Leave(sender, e);
+
             txtCostBody1.Text = GM.ConvertDoubleToString(txtCostBody1, 0);
         }
 
         private void txtCostNonCer_TextChanged(object sender, EventArgs e)
         {
             txtRedCost.Text = (GM.ConvertStringToDouble(txtCostBody)+ GM.ConvertStringToDouble(txtCostNonCer) + GM.ConvertStringToDouble(txtCostCer)).ToString();
-            txtRedCost.Text = GM.ConvertDoubleToString(txtRedCost);
+            txtPricePerGram1_Leave(sender, e);
+
+            txtRedCost.Text = GM.ConvertDoubleToString(txtRedCost,0);
         }
 
         private void txtCostBody1_TextChanged(object sender, EventArgs e)
         {
             txtRedCost1.Text= (GM.ConvertStringToDouble(txtCostBody1) + GM.ConvertStringToDouble(txtCostNonCer1) + GM.ConvertStringToDouble(txtCostCer1)).ToString();
-            txtRedCost1.Text = GM.ConvertDoubleToString(txtRedCost1);
+            txtPricePerGram1_Leave(sender, e);
+
+            txtRedCost1.Text = GM.ConvertDoubleToString(txtRedCost1,0);
         }
 
-        private void btnGemstone_Click(object sender, EventArgs e)
+        private void txtPricePerGram1_Leave(object sender, EventArgs e)
         {
-            InvGemstoneDetail frm = new InvGemstoneDetail(id);
-            frm.ShowDialog();
+            TextBox txt = sender as TextBox;
+            txt.Text = GM.ConvertDoubleToString(txt,0);
+        }
+
+        private void txtMaterialWeight1_Leave(object sender, EventArgs e)
+        {
+            TextBox txt = sender as TextBox;
+            txt.Text = GM.ConvertDoubleToString(txt);
+        }
+
+        private void SetFormatNumber()
+        {
+            txtMaterialCost1.Text = GM.ConvertDoubleToString(txtMaterialCost1, 0);
+            txtMaterialCost2.Text = GM.ConvertDoubleToString(txtMaterialCost2, 0);
+
+            txtPricePerGram1.Text= GM.ConvertDoubleToString(txtPricePerGram1, 0);
+            txtPricePerGram11.Text = GM.ConvertDoubleToString(txtPricePerGram11, 0);
+            txtPricePerGram2.Text = GM.ConvertDoubleToString(txtPricePerGram2, 0);
+            txtPricePerGram22.Text = GM.ConvertDoubleToString(txtPricePerGram22, 0);
+
+            txtMaterialCost11.Text = GM.ConvertDoubleToString(txtMaterialCost11, 0);
+            txtMaterialCost22.Text = GM.ConvertDoubleToString(txtMaterialCost22, 0);
+
+            txtMaterialNetCost.Text = GM.ConvertDoubleToString(txtMaterialNetCost, 0);
+            txtMaterialNetCost1.Text = GM.ConvertDoubleToString(txtMaterialNetCost1, 0);
+
+            txtLaborCost.Text = GM.ConvertDoubleToString(txtLaborCost, 0);
+            txtCost1.Text = GM.ConvertDoubleToString(txtCost1, 0);
+            txtCost2.Text = GM.ConvertDoubleToString(txtCost2, 0);
+            txtCost3.Text = GM.ConvertDoubleToString(txtCost3, 0);
+
+            txtCostBody.Text = GM.ConvertDoubleToString(txtCostBody, 0);
+            txtCostBody1.Text = GM.ConvertDoubleToString(txtCostBody1, 0);
+
+            txtCostNonCer.Text = GM.ConvertDoubleToString(txtCostNonCer, 0);
+            txtCostNonCer1.Text = GM.ConvertDoubleToString(txtCostNonCer1, 0);
+
+            txtCostCer.Text = GM.ConvertDoubleToString(txtCostCer, 0);
+            txtCostCer1.Text = GM.ConvertDoubleToString(txtCostCer1, 0);
+
+            txtRedCost.Text = GM.ConvertDoubleToString(txtRedCost,0);
+            txtRedCost1.Text = GM.ConvertDoubleToString(txtRedCost1,0);
+
+            txtMinPrice.Text = GM.ConvertDoubleToString(txtMinPrice,0);
+            txtPriceTag.Text = GM.ConvertDoubleToString(txtPriceTag,0);
         }
 
         private void btnDiamond_Click(object sender, EventArgs e)
         {
             InvDiamondDetail frm = new InvDiamondDetail(id);
+            frm.ShowDialog();
+        }
+
+        private void btnGemstone_Click(object sender, EventArgs e)
+        {
+            InvGemstoneDetail frm = new InvGemstoneDetail(id);
             frm.ShowDialog();
         }
     }
