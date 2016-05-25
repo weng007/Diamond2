@@ -72,9 +72,9 @@
             this.panel2.Controls.Add(this.gridSell);
             this.panel2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel2.Location = new System.Drawing.Point(5, 119);
+            this.panel2.Location = new System.Drawing.Point(5, 123);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1329, 453);
+            this.panel2.Size = new System.Drawing.Size(1329, 449);
             this.panel2.TabIndex = 45;
             // 
             // gridSell
@@ -105,14 +105,14 @@
             this.ReceiveShop,
             this.IsPrintCertificate,
             this.IsHavePrice});
-            this.gridSell.Location = new System.Drawing.Point(7, 0);
+            this.gridSell.Location = new System.Drawing.Point(14, 14);
             this.gridSell.Name = "gridSell";
             this.gridSell.ReadOnly = true;
             this.gridSell.RowHeadersWidth = 10;
             this.gridSell.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridSell.RowTemplate.Height = 30;
             this.gridSell.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridSell.Size = new System.Drawing.Size(1322, 453);
+            this.gridSell.Size = new System.Drawing.Size(1315, 439);
             this.gridSell.TabIndex = 4;
             // 
             // RowNum
@@ -228,7 +228,7 @@
             this.panel4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel4.Location = new System.Drawing.Point(-1, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1322, 113);
+            this.panel4.Size = new System.Drawing.Size(1322, 133);
             this.panel4.TabIndex = 44;
             // 
             // btnAdd
@@ -239,7 +239,7 @@
             this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAdd.FlatAppearance.BorderColor = System.Drawing.Color.Linen;
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.Location = new System.Drawing.Point(13, 12);
+            this.btnAdd.Location = new System.Drawing.Point(20, 27);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(70, 90);
             this.btnAdd.TabIndex = 70;
@@ -249,7 +249,7 @@
             // cmbType
             // 
             this.cmbType.FormattingEnabled = true;
-            this.cmbType.Location = new System.Drawing.Point(483, 18);
+            this.cmbType.Location = new System.Drawing.Point(483, 22);
             this.cmbType.Name = "cmbType";
             this.cmbType.Size = new System.Drawing.Size(172, 29);
             this.cmbType.TabIndex = 4;
@@ -258,7 +258,7 @@
             // 
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(428, 21);
+            this.label4.Location = new System.Drawing.Point(428, 25);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(65, 26);
             this.label4.TabIndex = 46;
@@ -272,7 +272,7 @@
             this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSearch.FlatAppearance.BorderColor = System.Drawing.Color.Linen;
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.Location = new System.Drawing.Point(206, 67);
+            this.btnSearch.Location = new System.Drawing.Point(206, 71);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(105, 32);
             this.btnSearch.TabIndex = 8;
@@ -281,7 +281,7 @@
             // 
             // txtCode
             // 
-            this.txtCode.Location = new System.Drawing.Point(206, 20);
+            this.txtCode.Location = new System.Drawing.Point(206, 24);
             this.txtCode.Name = "txtCode";
             this.txtCode.Size = new System.Drawing.Size(188, 27);
             this.txtCode.TabIndex = 1;
@@ -290,7 +290,7 @@
             // 
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(142, 23);
+            this.label3.Location = new System.Drawing.Point(142, 27);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(62, 26);
             this.label3.TabIndex = 27;

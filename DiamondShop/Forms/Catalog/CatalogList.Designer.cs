@@ -84,7 +84,7 @@
             this.panel4.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.panel4.Location = new System.Drawing.Point(0, 1);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1298, 78);
+            this.panel4.Size = new System.Drawing.Size(1333, 78);
             this.panel4.TabIndex = 42;
             // 
             // btnClose
@@ -94,7 +94,7 @@
             this.btnClose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClose.BackgroundImage")));
             this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Location = new System.Drawing.Point(1260, 0);
+            this.btnClose.Location = new System.Drawing.Point(1295, 0);
             this.btnClose.Margin = new System.Windows.Forms.Padding(0);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(38, 32);
@@ -159,7 +159,7 @@
             this.panel2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.Location = new System.Drawing.Point(5, 84);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1281, 484);
+            this.panel2.Size = new System.Drawing.Size(1330, 492);
             this.panel2.TabIndex = 33;
             // 
             // gridCatalog
@@ -187,14 +187,14 @@
             this.ShopName,
             this.StatusName,
             this.JewelryTypeName});
-            this.gridCatalog.Location = new System.Drawing.Point(3, 0);
+            this.gridCatalog.Location = new System.Drawing.Point(15, 3);
             this.gridCatalog.Name = "gridCatalog";
             this.gridCatalog.ReadOnly = true;
             this.gridCatalog.RowHeadersWidth = 10;
             this.gridCatalog.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridCatalog.RowTemplate.Height = 60;
             this.gridCatalog.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridCatalog.Size = new System.Drawing.Size(1270, 481);
+            this.gridCatalog.Size = new System.Drawing.Size(1314, 489);
             this.gridCatalog.TabIndex = 2;
             this.gridCatalog.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.gridCatalog_MouseDoubleClick);
             // 
@@ -369,8 +369,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.PeachPuff;
-            this.ClientSize = new System.Drawing.Size(1299, 578);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(91)))), ((int)(((byte)(59)))));
+            this.ClientSize = new System.Drawing.Size(1335, 577);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
             this.Name = "CatalogList";

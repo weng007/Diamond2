@@ -417,9 +417,9 @@
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.gridDiamondCer);
             this.panel2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel2.Location = new System.Drawing.Point(5, 187);
+            this.panel2.Location = new System.Drawing.Point(1, 187);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1311, 388);
+            this.panel2.Size = new System.Drawing.Size(1335, 388);
             this.panel2.TabIndex = 34;
             // 
             // gridDiamondCer
@@ -456,7 +456,7 @@
             this.SettingName,
             this.ReportNumber,
             this.SoldToName});
-            this.gridDiamondCer.Location = new System.Drawing.Point(7, 0);
+            this.gridDiamondCer.Location = new System.Drawing.Point(19, 0);
             this.gridDiamondCer.Name = "gridDiamondCer";
             this.gridDiamondCer.ReadOnly = true;
             this.gridDiamondCer.RowHeadersWidth = 10;
@@ -465,7 +465,7 @@
             this.gridDiamondCer.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridDiamondCer.RowTemplate.Height = 30;
             this.gridDiamondCer.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridDiamondCer.Size = new System.Drawing.Size(1301, 385);
+            this.gridDiamondCer.Size = new System.Drawing.Size(1313, 388);
             this.gridDiamondCer.TabIndex = 2;
             this.gridDiamondCer.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.gridDiamondCer_MouseDoubleClick);
             // 
@@ -696,8 +696,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1328, 587);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(105)))), ((int)(((byte)(79)))));
+            this.ClientSize = new System.Drawing.Size(1335, 577);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
             this.Name = "BuyBookDiamondCerList";

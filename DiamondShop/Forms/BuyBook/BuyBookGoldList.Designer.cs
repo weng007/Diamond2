@@ -147,7 +147,7 @@
             this.btnAdd.FlatAppearance.BorderColor = System.Drawing.Color.Linen;
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
-            this.btnAdd.Location = new System.Drawing.Point(12, 11);
+            this.btnAdd.Location = new System.Drawing.Point(20, 27);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(70, 90);
             this.btnAdd.TabIndex = 69;
@@ -188,7 +188,7 @@
             this.panel2.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.Location = new System.Drawing.Point(5, 124);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1311, 427);
+            this.panel2.Size = new System.Drawing.Size(1331, 451);
             this.panel2.TabIndex = 33;
             // 
             // label4
@@ -196,9 +196,9 @@
             this.label4.BackColor = System.Drawing.SystemColors.Control;
             this.label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label4.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(860, 1);
+            this.label4.Location = new System.Drawing.Point(874, 1);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(451, 33);
+            this.label4.Size = new System.Drawing.Size(454, 33);
             this.label4.TabIndex = 6;
             this.label4.Text = "ทองคำ 99.99%";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -208,9 +208,9 @@
             this.label5.BackColor = System.Drawing.SystemColors.Control;
             this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label5.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(310, 1);
+            this.label5.Location = new System.Drawing.Point(323, 1);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(551, 33);
+            this.label5.Size = new System.Drawing.Size(553, 33);
             this.label5.TabIndex = 5;
             this.label5.Text = "ทองคำ 96.5%";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -236,14 +236,14 @@
             this.Price2,
             this.Total2,
             this.PriceGram2});
-            this.gridGold.Location = new System.Drawing.Point(0, 33);
+            this.gridGold.Location = new System.Drawing.Point(15, 33);
             this.gridGold.Name = "gridGold";
             this.gridGold.ReadOnly = true;
             this.gridGold.RowHeadersWidth = 10;
             this.gridGold.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridGold.RowTemplate.Height = 30;
             this.gridGold.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridGold.Size = new System.Drawing.Size(1311, 391);
+            this.gridGold.Size = new System.Drawing.Size(1313, 418);
             this.gridGold.TabIndex = 3;
             this.gridGold.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.gridGold_MouseDoubleClick);
             // 
@@ -382,8 +382,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1328, 565);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(91)))), ((int)(((byte)(59)))));
+            this.ClientSize = new System.Drawing.Size(1335, 577);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
             this.Name = "BuyBookGoldList";
