@@ -82,24 +82,6 @@ namespace DiamondShop
             DoLoadData();
         }
 
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
-            DoDeleteData();
-            DoLoadData();
-        }
-
-        private void btnEdit_Click(object sender, EventArgs e)
-        {
-            if (gridCustomer.RowCount > 0 && gridCustomer.SelectedRows.Count > 0)
-            {
-                id = (int)gridCustomer.SelectedRows[0].Cells["ID"].Value;
-                Customer frm = new Customer(id);
-                frm.ShowDialog();
-            }
-
-            DoLoadData();
-        }
-
         private void btnSearch_Click(object sender, EventArgs e)
         {
             DoSearchData();
@@ -121,6 +103,24 @@ namespace DiamondShop
                 gridCustomer.DataSource = null;
                 gridCustomer.Refresh();
             }
+        }
+
+        private void gridCustomer_UserDeletedRow(object sender, DataGridViewRowEventArgs e)
+        {
+            DoDeleteData();
+            DoLoadData();
+        }
+
+        private void gridCustomer_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if (gridCustomer.RowCount > 0 && gridCustomer.SelectedRows.Count > 0)
+            {
+                id = (int)gridCustomer.SelectedRows[0].Cells["ID"].Value;
+                Customer frm = new Customer(id);
+                frm.ShowDialog();
+            }
+
+            DoLoadData();
         }
     }
 }

@@ -16,7 +16,9 @@ namespace DiamondShop
     public partial class Customer : FormInfo
     {
         dsCustomer tds = new dsCustomer();
-        int seller = 0;
+        int refID = 0;
+        //int SellerName = 0;
+        //int custID = 0;
 
         public Customer()
         {
@@ -127,7 +129,7 @@ namespace DiamondShop
             }
 
             binder.BindValueToDataRow(row);
-            row.Seller = seller;
+            row.Seller = refID;
 
             try
             {
@@ -201,10 +203,11 @@ namespace DiamondShop
 
         private void btnSeller_Click(object sender, EventArgs e)
         {
-            SellerSearch frm = new SellerSearch();
+            SellerList frm = new SellerList(1);
             frm.ShowDialog();
-            txtSeller.Text = frm.fullName;
-            seller = frm.id;
+
+            refID = frm.refID1;
+            txtSeller.Text = frm.SellerName;
         }
     }
 }

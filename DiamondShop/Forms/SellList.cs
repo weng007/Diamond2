@@ -21,6 +21,7 @@ namespace DiamondShop
             Initial();
             DoLoadData();
         }
+
         protected override void Initial()
         {
             cmbType.DataSource = (GM.GetMasterTableDetail("C015",true)).Tables[0];

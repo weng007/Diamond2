@@ -28,19 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomerList));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.gridCustomer = new System.Windows.Forms.DataGridView();
-            this.RowNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SellerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Shop = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ContactNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EditDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tds = new DiamondDS.DS.dsCustomer();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnAdd = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -48,11 +39,20 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.tds = new DiamondDS.DS.dsCustomer();
+            this.RowNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Seller = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Shop = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MobilePhone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EditDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridCustomer)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tds)).BeginInit();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tds)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -77,9 +77,9 @@
             this.ID,
             this.Code,
             this.FullName,
-            this.SellerName,
+            this.Seller,
             this.Shop,
-            this.ContactNumber,
+            this.MobilePhone,
             this.EditDate});
             this.gridCustomer.Location = new System.Drawing.Point(15, 3);
             this.gridCustomer.Name = "gridCustomer";
@@ -90,77 +90,8 @@
             this.gridCustomer.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridCustomer.Size = new System.Drawing.Size(1034, 448);
             this.gridCustomer.TabIndex = 2;
-            // 
-            // RowNum
-            // 
-            this.RowNum.DataPropertyName = "RowNum";
-            this.RowNum.HeaderText = "No.";
-            this.RowNum.Name = "RowNum";
-            this.RowNum.ReadOnly = true;
-            this.RowNum.Width = 50;
-            // 
-            // ID
-            // 
-            this.ID.DataPropertyName = "ID";
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            this.ID.Visible = false;
-            // 
-            // Code
-            // 
-            this.Code.DataPropertyName = "Code";
-            this.Code.HeaderText = "Code";
-            this.Code.Name = "Code";
-            this.Code.ReadOnly = true;
-            this.Code.Width = 150;
-            // 
-            // FullName
-            // 
-            this.FullName.DataPropertyName = "FullName";
-            this.FullName.HeaderText = "Customer Name";
-            this.FullName.Name = "FullName";
-            this.FullName.ReadOnly = true;
-            this.FullName.Width = 170;
-            // 
-            // SellerName
-            // 
-            this.SellerName.DataPropertyName = "SellerName";
-            this.SellerName.HeaderText = "Seller";
-            this.SellerName.Name = "SellerName";
-            this.SellerName.ReadOnly = true;
-            this.SellerName.Width = 200;
-            // 
-            // Shop
-            // 
-            this.Shop.DataPropertyName = "Shop";
-            this.Shop.HeaderText = "Shop";
-            this.Shop.Name = "Shop";
-            this.Shop.ReadOnly = true;
-            this.Shop.Width = 160;
-            // 
-            // ContactNumber
-            // 
-            this.ContactNumber.DataPropertyName = "ContactNumber";
-            this.ContactNumber.HeaderText = "Tel";
-            this.ContactNumber.Name = "ContactNumber";
-            this.ContactNumber.ReadOnly = true;
-            this.ContactNumber.Width = 160;
-            // 
-            // EditDate
-            // 
-            this.EditDate.DataPropertyName = "EditDate";
-            dataGridViewCellStyle1.Format = "dd/MM/yyyy";
-            this.EditDate.DefaultCellStyle = dataGridViewCellStyle1;
-            this.EditDate.HeaderText = "Update Date";
-            this.EditDate.Name = "EditDate";
-            this.EditDate.ReadOnly = true;
-            this.EditDate.Width = 140;
-            // 
-            // tds
-            // 
-            this.tds.DataSetName = "dsCustomer";
-            this.tds.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.gridCustomer.UserDeletedRow += new System.Windows.Forms.DataGridViewRowEventHandler(this.gridCustomer_UserDeletedRow);
+            this.gridCustomer.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.gridCustomer_MouseDoubleClick);
             // 
             // panel4
             // 
@@ -175,7 +106,7 @@
             this.panel4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1057, 113);
+            this.panel4.Size = new System.Drawing.Size(1057, 120);
             this.panel4.TabIndex = 41;
             // 
             // btnAdd
@@ -243,6 +174,77 @@
             this.label3.TabIndex = 27;
             this.label3.Text = "Nick /First /Last Name";
             // 
+            // tds
+            // 
+            this.tds.DataSetName = "dsCustomer";
+            this.tds.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // RowNum
+            // 
+            this.RowNum.DataPropertyName = "RowNum";
+            this.RowNum.HeaderText = "No.";
+            this.RowNum.Name = "RowNum";
+            this.RowNum.ReadOnly = true;
+            this.RowNum.Width = 50;
+            // 
+            // ID
+            // 
+            this.ID.DataPropertyName = "ID";
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Visible = false;
+            // 
+            // Code
+            // 
+            this.Code.DataPropertyName = "Code";
+            this.Code.HeaderText = "Code";
+            this.Code.Name = "Code";
+            this.Code.ReadOnly = true;
+            this.Code.Width = 150;
+            // 
+            // FullName
+            // 
+            this.FullName.DataPropertyName = "FullName";
+            this.FullName.HeaderText = "Customer Name";
+            this.FullName.Name = "FullName";
+            this.FullName.ReadOnly = true;
+            this.FullName.Width = 170;
+            // 
+            // Seller
+            // 
+            this.Seller.DataPropertyName = "Seller";
+            this.Seller.HeaderText = "Seller";
+            this.Seller.Name = "Seller";
+            this.Seller.ReadOnly = true;
+            this.Seller.Width = 200;
+            // 
+            // Shop
+            // 
+            this.Shop.DataPropertyName = "Shop";
+            this.Shop.HeaderText = "Shop";
+            this.Shop.Name = "Shop";
+            this.Shop.ReadOnly = true;
+            this.Shop.Width = 160;
+            // 
+            // MobilePhone
+            // 
+            this.MobilePhone.DataPropertyName = "MobilePhone";
+            this.MobilePhone.HeaderText = "Tel";
+            this.MobilePhone.Name = "MobilePhone";
+            this.MobilePhone.ReadOnly = true;
+            this.MobilePhone.Width = 160;
+            // 
+            // EditDate
+            // 
+            this.EditDate.DataPropertyName = "EditDate";
+            dataGridViewCellStyle1.Format = "dd/MM/yyyy";
+            this.EditDate.DefaultCellStyle = dataGridViewCellStyle1;
+            this.EditDate.HeaderText = "Update Date";
+            this.EditDate.Name = "EditDate";
+            this.EditDate.ReadOnly = true;
+            this.EditDate.Width = 140;
+            // 
             // CustomerList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -257,9 +259,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.ds)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridCustomer)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tds)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tds)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -271,18 +273,18 @@
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel2;
-        private DiamondDS.DS.dsCustomer tds;
         private System.Windows.Forms.DataGridView gridCustomer;
         private System.Windows.Forms.ComboBox cmbShop;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnAdd;
+        private DiamondDS.DS.dsCustomer tds;
         private System.Windows.Forms.DataGridViewTextBoxColumn RowNum;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Code;
         private System.Windows.Forms.DataGridViewTextBoxColumn FullName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SellerName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Seller;
         private System.Windows.Forms.DataGridViewTextBoxColumn Shop;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ContactNumber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MobilePhone;
         private System.Windows.Forms.DataGridViewTextBoxColumn EditDate;
     }
 }
