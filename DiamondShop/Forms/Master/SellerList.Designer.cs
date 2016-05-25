@@ -32,6 +32,12 @@
             this.tds = new DiamondDS.DS.dsSeller();
             this.panel2 = new System.Windows.Forms.Panel();
             this.gridSeller = new System.Windows.Forms.DataGridView();
+            this.RowNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DisplayName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ShopName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RoleName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StatusName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
@@ -39,12 +45,6 @@
             this.cmbShop = new System.Windows.Forms.ComboBox();
             this.txtName = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.RowNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DisplayName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ShopName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RoleName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StatusName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tds)).BeginInit();
             this.panel2.SuspendLayout();
@@ -64,7 +64,7 @@
             this.panel2.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.Location = new System.Drawing.Point(5, 113);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(933, 440);
+            this.panel2.Size = new System.Drawing.Size(901, 465);
             this.panel2.TabIndex = 45;
             // 
             // gridSeller
@@ -80,17 +80,66 @@
             this.ShopName,
             this.RoleName,
             this.StatusName});
-            this.gridSeller.Location = new System.Drawing.Point(3, 3);
+            this.gridSeller.Location = new System.Drawing.Point(15, 3);
             this.gridSeller.Name = "gridSeller";
             this.gridSeller.ReadOnly = true;
             this.gridSeller.RowHeadersWidth = 10;
             this.gridSeller.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridSeller.RowTemplate.Height = 30;
             this.gridSeller.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridSeller.Size = new System.Drawing.Size(926, 434);
+            this.gridSeller.Size = new System.Drawing.Size(882, 460);
             this.gridSeller.TabIndex = 2;
             this.gridSeller.UserDeletedRow += new System.Windows.Forms.DataGridViewRowEventHandler(this.gridSeller_UserDeletedRow);
             this.gridSeller.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.gridSeller_MouseDoubleClick);
+            // 
+            // RowNum
+            // 
+            this.RowNum.DataPropertyName = "RowNum";
+            this.RowNum.HeaderText = "No.";
+            this.RowNum.Name = "RowNum";
+            this.RowNum.ReadOnly = true;
+            // 
+            // ID
+            // 
+            this.ID.DataPropertyName = "ID";
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Visible = false;
+            // 
+            // DisplayName
+            // 
+            this.DisplayName.DataPropertyName = "DisplayName";
+            this.DisplayName.HeaderText = "Name";
+            this.DisplayName.Name = "DisplayName";
+            this.DisplayName.ReadOnly = true;
+            this.DisplayName.Width = 300;
+            // 
+            // ShopName
+            // 
+            this.ShopName.DataPropertyName = "ShopName";
+            this.ShopName.HeaderText = "Shop";
+            this.ShopName.Name = "ShopName";
+            this.ShopName.ReadOnly = true;
+            this.ShopName.Width = 180;
+            // 
+            // RoleName
+            // 
+            this.RoleName.DataPropertyName = "RoleName";
+            this.RoleName.HeaderText = "Role";
+            this.RoleName.Name = "RoleName";
+            this.RoleName.ReadOnly = true;
+            this.RoleName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.RoleName.Width = 150;
+            // 
+            // StatusName
+            // 
+            this.StatusName.DataPropertyName = "StatusName";
+            this.StatusName.HeaderText = "Status";
+            this.StatusName.Name = "StatusName";
+            this.StatusName.ReadOnly = true;
+            this.StatusName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.StatusName.Width = 150;
             // 
             // panel4
             // 
@@ -105,7 +154,7 @@
             this.panel4.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(963, 113);
+            this.panel4.Size = new System.Drawing.Size(907, 113);
             this.panel4.TabIndex = 44;
             // 
             // btnAdd
@@ -117,7 +166,7 @@
             this.btnAdd.FlatAppearance.BorderColor = System.Drawing.Color.Linen;
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
-            this.btnAdd.Location = new System.Drawing.Point(12, 12);
+            this.btnAdd.Location = new System.Drawing.Point(20, 27);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(70, 90);
             this.btnAdd.TabIndex = 71;
@@ -174,60 +223,12 @@
             this.label3.TabIndex = 27;
             this.label3.Text = "Name";
             // 
-            // RowNum
-            // 
-            this.RowNum.DataPropertyName = "RowNum";
-            this.RowNum.HeaderText = "No.";
-            this.RowNum.Name = "RowNum";
-            this.RowNum.ReadOnly = true;
-            // 
-            // ID
-            // 
-            this.ID.DataPropertyName = "ID";
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            this.ID.Visible = false;
-            // 
-            // DisplayName
-            // 
-            this.DisplayName.DataPropertyName = "DisplayName";
-            this.DisplayName.HeaderText = "Name";
-            this.DisplayName.Name = "DisplayName";
-            this.DisplayName.ReadOnly = true;
-            this.DisplayName.Width = 300;
-            // 
-            // ShopName
-            // 
-            this.ShopName.DataPropertyName = "ShopName";
-            this.ShopName.HeaderText = "Shop";
-            this.ShopName.Name = "ShopName";
-            this.ShopName.ReadOnly = true;
-            this.ShopName.Width = 180;
-            // 
-            // RoleName
-            // 
-            this.RoleName.DataPropertyName = "RoleName";
-            this.RoleName.HeaderText = "Role";
-            this.RoleName.Name = "RoleName";
-            this.RoleName.ReadOnly = true;
-            this.RoleName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.RoleName.Width = 150;
-            // 
-            // StatusName
-            // 
-            this.StatusName.DataPropertyName = "StatusName";
-            this.StatusName.HeaderText = "Status";
-            this.StatusName.Name = "StatusName";
-            this.StatusName.ReadOnly = true;
-            this.StatusName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.StatusName.Width = 150;
-            // 
             // SellerList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(961, 565);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(138)))), ((int)(((byte)(86)))));
+            this.ClientSize = new System.Drawing.Size(1335, 577);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel4);
             this.Name = "SellerList";

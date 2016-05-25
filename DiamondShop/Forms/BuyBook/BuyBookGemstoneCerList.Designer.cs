@@ -251,7 +251,7 @@
             this.btnAdd.FlatAppearance.BorderColor = System.Drawing.Color.Linen;
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
-            this.btnAdd.Location = new System.Drawing.Point(17, 20);
+            this.btnAdd.Location = new System.Drawing.Point(20, 27);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(70, 90);
             this.btnAdd.TabIndex = 68;
@@ -372,9 +372,9 @@
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.gridGemstoneCer);
             this.panel2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel2.Location = new System.Drawing.Point(5, 189);
+            this.panel2.Location = new System.Drawing.Point(0, 189);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1311, 388);
+            this.panel2.Size = new System.Drawing.Size(1337, 388);
             this.panel2.TabIndex = 34;
             // 
             // gridGemstoneCer
@@ -409,14 +409,14 @@
             this.SettingName,
             this.ReportNumber,
             this.BuyDate});
-            this.gridGemstoneCer.Location = new System.Drawing.Point(7, 0);
+            this.gridGemstoneCer.Location = new System.Drawing.Point(20, 0);
             this.gridGemstoneCer.Name = "gridGemstoneCer";
             this.gridGemstoneCer.ReadOnly = true;
             this.gridGemstoneCer.RowHeadersWidth = 10;
             this.gridGemstoneCer.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridGemstoneCer.RowTemplate.Height = 30;
             this.gridGemstoneCer.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridGemstoneCer.Size = new System.Drawing.Size(1301, 385);
+            this.gridGemstoneCer.Size = new System.Drawing.Size(1314, 385);
             this.gridGemstoneCer.TabIndex = 2;
             this.gridGemstoneCer.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.gridGemstoneCer_MouseDoubleClick);
             // 
@@ -642,8 +642,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1328, 587);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(105)))), ((int)(((byte)(79)))));
+            this.ClientSize = new System.Drawing.Size(1335, 577);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
             this.Name = "BuyBookGemstoneCerList";

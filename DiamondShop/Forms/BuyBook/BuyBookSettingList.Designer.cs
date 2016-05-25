@@ -81,7 +81,7 @@
             // cmbSettingType
             // 
             this.cmbSettingType.FormattingEnabled = true;
-            this.cmbSettingType.Location = new System.Drawing.Point(238, 22);
+            this.cmbSettingType.Location = new System.Drawing.Point(238, 26);
             this.cmbSettingType.Name = "cmbSettingType";
             this.cmbSettingType.Size = new System.Drawing.Size(169, 29);
             this.cmbSettingType.TabIndex = 1;
@@ -90,7 +90,7 @@
             // 
             this.dtEBuyDate.CustomFormat = "dd/MM/yyyy";
             this.dtEBuyDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtEBuyDate.Location = new System.Drawing.Point(394, 63);
+            this.dtEBuyDate.Location = new System.Drawing.Point(394, 67);
             this.dtEBuyDate.Name = "dtEBuyDate";
             this.dtEBuyDate.Size = new System.Drawing.Size(131, 27);
             this.dtEBuyDate.TabIndex = 8;
@@ -99,7 +99,7 @@
             // 
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(375, 63);
+            this.label2.Location = new System.Drawing.Point(375, 67);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(16, 25);
             this.label2.TabIndex = 72;
@@ -109,7 +109,7 @@
             // 
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(144, 63);
+            this.label1.Location = new System.Drawing.Point(144, 67);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(87, 25);
             this.label1.TabIndex = 71;
@@ -119,7 +119,7 @@
             // 
             this.dtSBuyDate.CustomFormat = "dd/MM/yyyy";
             this.dtSBuyDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtSBuyDate.Location = new System.Drawing.Point(238, 63);
+            this.dtSBuyDate.Location = new System.Drawing.Point(238, 67);
             this.dtSBuyDate.Name = "dtSBuyDate";
             this.dtSBuyDate.Size = new System.Drawing.Size(131, 27);
             this.dtSBuyDate.TabIndex = 4;
@@ -133,7 +133,7 @@
             this.btnAdd.FlatAppearance.BorderColor = System.Drawing.Color.Linen;
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
-            this.btnAdd.Location = new System.Drawing.Point(12, 11);
+            this.btnAdd.Location = new System.Drawing.Point(20, 27);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(70, 90);
             this.btnAdd.TabIndex = 69;
@@ -148,7 +148,7 @@
             this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSearch.FlatAppearance.BorderColor = System.Drawing.Color.Linen;
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.Location = new System.Drawing.Point(561, 61);
+            this.btnSearch.Location = new System.Drawing.Point(561, 65);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(105, 32);
             this.btnSearch.TabIndex = 12;
@@ -159,7 +159,7 @@
             // 
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(158, 25);
+            this.label3.Location = new System.Drawing.Point(158, 29);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(73, 25);
             this.label3.TabIndex = 27;
@@ -172,7 +172,7 @@
             this.panel2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.Location = new System.Drawing.Point(5, 124);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1031, 427);
+            this.panel2.Size = new System.Drawing.Size(1045, 456);
             this.panel2.TabIndex = 33;
             // 
             // gridSetting
@@ -192,14 +192,14 @@
             this.Weight,
             this.TotalBaht,
             this.PricePerGram});
-            this.gridSetting.Location = new System.Drawing.Point(3, 0);
+            this.gridSetting.Location = new System.Drawing.Point(15, 6);
             this.gridSetting.Name = "gridSetting";
             this.gridSetting.ReadOnly = true;
             this.gridSetting.RowHeadersWidth = 10;
             this.gridSetting.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridSetting.RowTemplate.Height = 30;
             this.gridSetting.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridSetting.Size = new System.Drawing.Size(1025, 424);
+            this.gridSetting.Size = new System.Drawing.Size(1001, 447);
             this.gridSetting.TabIndex = 2;
             this.gridSetting.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.gridSetting_MouseDoubleClick);
             // 
@@ -294,8 +294,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1053, 565);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(91)))), ((int)(((byte)(59)))));
+            this.ClientSize = new System.Drawing.Size(1335, 577);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
             this.Name = "BuyBookSettingList";

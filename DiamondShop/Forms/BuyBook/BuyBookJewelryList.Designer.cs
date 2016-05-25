@@ -107,7 +107,7 @@
             this.btnAdd.FlatAppearance.BorderColor = System.Drawing.Color.Linen;
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
-            this.btnAdd.Location = new System.Drawing.Point(12, 11);
+            this.btnAdd.Location = new System.Drawing.Point(20, 27);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(70, 90);
             this.btnAdd.TabIndex = 69;
@@ -162,7 +162,7 @@
             this.panel2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.Location = new System.Drawing.Point(5, 124);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1311, 427);
+            this.panel2.Size = new System.Drawing.Size(1332, 451);
             this.panel2.TabIndex = 33;
             // 
             // gridJewelry
@@ -190,14 +190,14 @@
             this.ShopName,
             this.StatusName,
             this.Seller});
-            this.gridJewelry.Location = new System.Drawing.Point(3, 0);
+            this.gridJewelry.Location = new System.Drawing.Point(15, 13);
             this.gridJewelry.Name = "gridJewelry";
             this.gridJewelry.ReadOnly = true;
             this.gridJewelry.RowHeadersWidth = 10;
             this.gridJewelry.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridJewelry.RowTemplate.Height = 60;
             this.gridJewelry.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridJewelry.Size = new System.Drawing.Size(1305, 424);
+            this.gridJewelry.Size = new System.Drawing.Size(1314, 438);
             this.gridJewelry.TabIndex = 2;
             this.gridJewelry.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.gridJewelry_MouseDoubleClick);
             // 
@@ -373,8 +373,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1328, 565);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(91)))), ((int)(((byte)(59)))));
+            this.ClientSize = new System.Drawing.Size(1335, 577);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
             this.Name = "BuyBookJewelryList";

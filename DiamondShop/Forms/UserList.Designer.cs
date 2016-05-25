@@ -63,7 +63,7 @@
             this.panel4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(932, 113);
+            this.panel4.Size = new System.Drawing.Size(917, 126);
             this.panel4.TabIndex = 43;
             // 
             // btnAdd
@@ -75,7 +75,7 @@
             this.btnAdd.FlatAppearance.BorderColor = System.Drawing.Color.Linen;
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
-            this.btnAdd.Location = new System.Drawing.Point(12, 12);
+            this.btnAdd.Location = new System.Drawing.Point(20, 27);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(70, 90);
             this.btnAdd.TabIndex = 70;
@@ -86,7 +86,7 @@
             // 
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(396, 21);
+            this.label4.Location = new System.Drawing.Point(396, 25);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(51, 34);
             this.label4.TabIndex = 38;
@@ -95,7 +95,7 @@
             // cmbShop
             // 
             this.cmbShop.FormattingEnabled = true;
-            this.cmbShop.Location = new System.Drawing.Point(450, 18);
+            this.cmbShop.Location = new System.Drawing.Point(450, 22);
             this.cmbShop.Name = "cmbShop";
             this.cmbShop.Size = new System.Drawing.Size(142, 29);
             this.cmbShop.TabIndex = 4;
@@ -108,7 +108,7 @@
             this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSearch.FlatAppearance.BorderColor = System.Drawing.Color.Linen;
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.Location = new System.Drawing.Point(189, 72);
+            this.btnSearch.Location = new System.Drawing.Point(189, 76);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(106, 30);
             this.btnSearch.TabIndex = 8;
@@ -117,7 +117,7 @@
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(189, 20);
+            this.txtName.Location = new System.Drawing.Point(189, 24);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(168, 27);
             this.txtName.TabIndex = 1;
@@ -126,7 +126,7 @@
             // 
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(122, 23);
+            this.label3.Location = new System.Drawing.Point(122, 27);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(61, 26);
             this.label3.TabIndex = 27;
@@ -139,7 +139,7 @@
             this.panel2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.Location = new System.Drawing.Point(5, 113);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(912, 447);
+            this.panel2.Size = new System.Drawing.Size(912, 461);
             this.panel2.TabIndex = 2;
             // 
             // grid
@@ -155,7 +155,7 @@
             this.ShopName,
             this.RoleName,
             this.StatusName});
-            this.grid.Location = new System.Drawing.Point(3, 3);
+            this.grid.Location = new System.Drawing.Point(15, 22);
             this.grid.MultiSelect = false;
             this.grid.Name = "grid";
             this.grid.ReadOnly = true;
@@ -163,7 +163,7 @@
             this.grid.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grid.RowTemplate.Height = 30;
             this.grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grid.Size = new System.Drawing.Size(901, 437);
+            this.grid.Size = new System.Drawing.Size(815, 441);
             this.grid.TabIndex = 2;
             this.grid.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.grid_CellMouseDoubleClick);
             this.grid.UserDeletedRow += new System.Windows.Forms.DataGridViewRowEventHandler(this.grid_UserDeletedRow);
@@ -222,7 +222,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(929, 565);
+            this.ClientSize = new System.Drawing.Size(1335, 577);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
             this.Name = "UserList";

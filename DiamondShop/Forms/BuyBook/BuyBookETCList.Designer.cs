@@ -80,7 +80,7 @@
             this.btnAdd.FlatAppearance.BorderColor = System.Drawing.Color.Linen;
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
-            this.btnAdd.Location = new System.Drawing.Point(12, 11);
+            this.btnAdd.Location = new System.Drawing.Point(20, 27);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(70, 90);
             this.btnAdd.TabIndex = 69;
@@ -119,7 +119,7 @@
             this.panel2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.Location = new System.Drawing.Point(5, 122);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(685, 427);
+            this.panel2.Size = new System.Drawing.Size(705, 453);
             this.panel2.TabIndex = 33;
             // 
             // gridETC
@@ -136,14 +136,14 @@
             this.Seller,
             this.Detail,
             this.Price});
-            this.gridETC.Location = new System.Drawing.Point(3, 0);
+            this.gridETC.Location = new System.Drawing.Point(15, 10);
             this.gridETC.Name = "gridETC";
             this.gridETC.ReadOnly = true;
             this.gridETC.RowHeadersWidth = 10;
             this.gridETC.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridETC.RowTemplate.Height = 30;
             this.gridETC.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridETC.Size = new System.Drawing.Size(674, 424);
+            this.gridETC.Size = new System.Drawing.Size(681, 443);
             this.gridETC.TabIndex = 2;
             this.gridETC.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.gridETC_MouseDoubleClick);
             // 
@@ -205,8 +205,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(702, 558);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(91)))), ((int)(((byte)(59)))));
+            this.ClientSize = new System.Drawing.Size(711, 577);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
             this.Name = "BuyBookETCList";
