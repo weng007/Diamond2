@@ -72,11 +72,11 @@ namespace DiamondBiz.Biz
             }
         }
 
-        public dsSeller GetSellerName()
+        public dsSeller GetSeller()
         {
             try
             {
-                return dal.GetSellerName();
+                return dal.GetSeller();
             }
             catch (Exception ex)
             {

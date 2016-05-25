@@ -64,11 +64,11 @@ namespace DiamondShop
             return ds;
         }
 
-        public static DataSet GetSellerName()
+        public static DataSet GetSeller()
         {
             DataSet ds = new DataSet();
             ser2 = new Service2();
-            ds = ser2.GetSellerName().Copy();
+            ds = ser2.GetSeller().Copy();
 
             return ds;
         }

@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Sell));
             this.btnImage1 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtMaterial = new System.Windows.Forms.TextBox();
             this.txtNetPrice = new System.Windows.Forms.TextBox();
             this.btnBrowseCustomer = new System.Windows.Forms.Button();
             this.txtCustomer = new System.Windows.Forms.TextBox();
@@ -65,8 +67,6 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.label9 = new System.Windows.Forms.Label();
-            this.txtMaterial = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -76,6 +76,7 @@
             this.btnImage1.BackColor = System.Drawing.SystemColors.Control;
             this.btnImage1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnImage1.BackgroundImage")));
             this.btnImage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnImage1.Enabled = false;
             this.btnImage1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnImage1.Location = new System.Drawing.Point(30, 265);
             this.btnImage1.Name = "btnImage1";
@@ -130,6 +131,25 @@
             this.panel3.Size = new System.Drawing.Size(785, 658);
             this.panel3.TabIndex = 1;
             // 
+            // label9
+            // 
+            this.label9.Location = new System.Drawing.Point(463, 254);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(91, 25);
+            this.label9.TabIndex = 189;
+            this.label9.Text = "Material";
+            // 
+            // txtMaterial
+            // 
+            this.txtMaterial.BackColor = System.Drawing.Color.White;
+            this.txtMaterial.Enabled = false;
+            this.txtMaterial.Location = new System.Drawing.Point(470, 280);
+            this.txtMaterial.Multiline = true;
+            this.txtMaterial.Name = "txtMaterial";
+            this.txtMaterial.ReadOnly = true;
+            this.txtMaterial.Size = new System.Drawing.Size(285, 70);
+            this.txtMaterial.TabIndex = 188;
+            // 
             // txtNetPrice
             // 
             this.txtNetPrice.Location = new System.Drawing.Point(145, 165);
@@ -138,6 +158,7 @@
             this.txtNetPrice.TabIndex = 187;
             this.txtNetPrice.Text = "0";
             this.txtNetPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtNetPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetPrice_KeyPress);
             // 
             // btnBrowseCustomer
             // 
@@ -153,6 +174,7 @@
             this.btnBrowseCustomer.Size = new System.Drawing.Size(30, 30);
             this.btnBrowseCustomer.TabIndex = 40;
             this.btnBrowseCustomer.UseVisualStyleBackColor = false;
+            this.btnBrowseCustomer.Click += new System.EventHandler(this.btnBrowseCustomer_Click);
             // 
             // txtCustomer
             // 
@@ -188,6 +210,7 @@
             // 
             // txtPrice
             // 
+            this.txtPrice.BackColor = System.Drawing.SystemColors.Control;
             this.txtPrice.Enabled = false;
             this.txtPrice.Location = new System.Drawing.Point(145, 129);
             this.txtPrice.Name = "txtPrice";
@@ -297,7 +320,6 @@
             // 
             // txtJewelryTypeName
             // 
-            this.txtJewelryTypeName.BackColor = System.Drawing.Color.White;
             this.txtJewelryTypeName.Enabled = false;
             this.txtJewelryTypeName.Location = new System.Drawing.Point(145, 93);
             this.txtJewelryTypeName.Name = "txtJewelryTypeName";
@@ -455,25 +477,6 @@
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // label9
-            // 
-            this.label9.Location = new System.Drawing.Point(463, 254);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(91, 25);
-            this.label9.TabIndex = 189;
-            this.label9.Text = "Material";
-            // 
-            // txtMaterial
-            // 
-            this.txtMaterial.BackColor = System.Drawing.Color.White;
-            this.txtMaterial.Enabled = false;
-            this.txtMaterial.Location = new System.Drawing.Point(470, 280);
-            this.txtMaterial.Multiline = true;
-            this.txtMaterial.Name = "txtMaterial";
-            this.txtMaterial.ReadOnly = true;
-            this.txtMaterial.Size = new System.Drawing.Size(285, 70);
-            this.txtMaterial.TabIndex = 188;
             // 
             // Sell
             // 

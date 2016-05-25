@@ -20,40 +20,47 @@ namespace DiamondShop
         MemoryStream ms1;
         byte[] image1;
         int custID = 0;
+        int refID = 0;
 
         public Sell()
         {
             InitializeComponent();
             Initial();
 
-            binder.BindControl(dtSellDate, "Seller");
-            binder.BindControl(dtSellDate, "SaleDate");
-            binder.BindControl(txtCode, "Code");
-            binder.BindControl(cmbPayment, "Payment");
-            binder.BindControl(txtPrice, "NetPrice");
-            binder.BindControl(txtCustomer, "CustID");
+            binder.BindControl(cmbSeller, "Seller");
+            binder.BindControl(txtNetPrice, "NetPrice");
             binder.BindControl(cmbShopRecive, "ShopReceive");
-            binder.BindControl(txtNote, "Remark");
+            binder.BindControl(dtSellDate, "SellDate");
+            binder.BindControl(dtDueDate, "DueDate");
+            binder.BindControl(cmbPayment, "Payment");
+            binder.BindControl(dtPaymentDate, "PaymentDate");
+            binder.BindControl(txtNote, "Note");
         }
         public Sell(int id)
         {
             InitializeComponent();
             Initial();
 
-            binder.BindControl(dtSellDate, "Seller");
-            binder.BindControl(dtSellDate, "SaleDate");
-            binder.BindControl(txtCode, "Code");
-            binder.BindControl(cmbPayment, "Payment");
-            binder.BindControl(txtPrice, "NetPrice");
-            binder.BindControl(txtCustomer, "CustID");
+            binder.BindControl(cmbSeller, "Seller");
+            binder.BindControl(txtNetPrice, "NetPrice");
             binder.BindControl(cmbShopRecive, "ShopReceive");
-            binder.BindControl(txtNote, "Remark");
+            binder.BindControl(dtSellDate, "SellDate");
+            binder.BindControl(dtDueDate, "DueDate");
+            binder.BindControl(cmbPayment, "Payment");
+            binder.BindControl(dtPaymentDate, "PaymentDate");
+            binder.BindControl(txtNote, "Note");
 
             this.id = id;
             LoadData();
         }
         protected override void Initial()
         {
+            ds = GM.GetSeller();
+
+            cmbSeller.DataSource = ds.Tables[0];
+            cmbSeller.ValueMember = "ID";
+            cmbSeller.DisplayMember = "DisplayName";
+            cmbSeller.Refresh();
 
             cmbPayment.DataSource = (GM.GetMasterTableDetail("C027")).Tables[0];
             cmbPayment.ValueMember = "ID";
@@ -65,7 +72,9 @@ namespace DiamondShop
             cmbShopRecive.DisplayMember = "Detail";
             cmbShopRecive.Refresh();
 
-            SetFieldService.SetRequireField(txtPrice,txtCode,txtCustomer);
+            SetFormatNumber();
+
+            SetFieldService.SetRequireField(txtNetPrice,txtCode,txtCustomer);
         }
 
         protected override void LoadData()
@@ -106,6 +115,8 @@ namespace DiamondShop
                 tds.Sell.Rows.Add(row);
             }
             binder.BindValueToDataRow(row);
+            row.RefID = refID;
+            row.CustID = custID;
 
             try
             {
@@ -148,33 +159,17 @@ namespace DiamondShop
 
             message = "";
 
-            //if (txtCost.Text == "" || GM.ConvertStringToDouble(txtCost) == 0)
-            //{
-            //    message = "Please input Cost > 0.\n";
-            //}
-            //if (txtNetPrice.Text == "" || GM.ConvertStringToDouble(txtNetPrice) == 0)
-            //{
-            //    message += "Please input NetPrice > 0.\n";
-            //}
+            if (txtCode.Text == "")
+            {
+                message = "Please Choose Product.\n";
+            }
+            if (txtNetPrice.Text == "" || GM.ConvertStringToDouble(txtNetPrice) > 0)
+            {
+                message += "Please Input Net Price > 0.\n";
+            }
 
             if (message == "") { return true; }
             else { return false; }
-        }
-
-        private void btnCustomer_Click(object sender, EventArgs e)
-        {
-            CustomerSearch frm = new CustomerSearch();
-            frm.ShowDialog();
-            //txtCustomer.Text = frm.customerName;
-            custID = frm.id;
-        }
-
-        private void txtCost_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
-            {
-                e.Handled = true;
-            }
         }
 
         private void btnImage1_Click(object sender, EventArgs e)
@@ -191,45 +186,53 @@ namespace DiamondShop
             }
         }
 
-        private void txtCost_Leave(object sender, EventArgs e)
-        {
-            txtCost.Text = GM.ConvertDoubleToString(txtCost);
-        }
-
         private void txtNetPrice_Leave(object sender, EventArgs e)
         {
-            //txtNetPrice.Text = GM.ConvertDoubleToString(txtNetPrice);
+            txtNetPrice.Text = GM.ConvertDoubleToString(txtNetPrice,0);
         }
 
         private void cmbPayment_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(cmbPayment.SelectedIndex != 0)
+            if(cmbPayment.SelectedIndex == 0)
             {
-               
+                dtPaymentDate.Enabled = false;
             }
             else
             {
-
+                dtPaymentDate.Enabled = true;
             }
         }
 
         private void btnBrowseCatalog_Click(object sender, EventArgs e)
         {
-            CatalogList frm = new CatalogList();
+            CatalogList frm = new CatalogList(1);
             frm.ShowDialog();
-            
+
+            refID = frm.refID1;
+            txtCode.Text = frm.code1;
+            txtJewelryTypeName.Text = frm.typeName;
+            txtPrice.Text = frm.priceTag.ToString();
+        }
+        
+        private void SetFormatNumber()
+        {
+            txtPrice.Text = GM.ConvertDoubleToString(txtPrice, 0);
+            txtNetPrice.Text = GM.ConvertDoubleToString(txtNetPrice, 0);
         }
 
-        private void btnImage2_Click(object sender, EventArgs e)
+        private void txtNetPrice_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
             {
-                FileStream fs;
-                fs = new FileStream(openFileDialog1.FileName, FileMode.Open, FileAccess.Read);
-                image1 = new byte[fs.Length];
-                fs.Read(image2, 0, System.Convert.ToInt32(fs.Length));
-                fs.Close();
+                e.Handled = true;
             }
+        }
+
+        private void btnBrowseCustomer_Click(object sender, EventArgs e)
+        {
+            CustomerList frm = new CustomerList(1);
+            frm.ShowDialog();
+            custID = frm.id;
         }
     }
 }

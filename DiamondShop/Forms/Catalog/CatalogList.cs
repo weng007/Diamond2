@@ -14,7 +14,12 @@ namespace DiamondShop
 {
     public partial class CatalogList : FormList
     {
-        
+        public int mode = 0;
+        public int refID1 = 0;
+        public string code1="";
+        public string typeName="";
+        public decimal priceTag=0;
+
         public CatalogList()
         {
             InitializeComponent();
@@ -22,21 +27,28 @@ namespace DiamondShop
             DoLoadData();
         }
 
+        public CatalogList(int mode)
+        {
+            InitializeComponent();
+            Initial();
+            this.mode = mode;
+
+            DoLoadData();
+        }
+
         public CatalogList(string prefix)
         {
             InitializeComponent();
             Initial();
-
+            
             txtPrefix.Text = prefix;
             DoLoadData();
         }
 
         protected override void Initial()
         { 
-
             txtCode.Select();
-
-            grdCatalog.AutoGenerateColumns = false;
+            gridCatalog.AutoGenerateColumns = false;
         }
 
         protected override void DoLoadData()
@@ -45,13 +57,13 @@ namespace DiamondShop
 
             if (ds.Tables[0].Rows.Count > 0)
             {
-                grdCatalog.DataSource = ds.Tables[0];
-                grdCatalog.Refresh();
+                gridCatalog.DataSource = ds.Tables[0];
+                gridCatalog.Refresh();
             }
             else
             {
-                grdCatalog.DataSource = null;
-                grdCatalog.Refresh();
+                gridCatalog.DataSource = null;
+                gridCatalog.Refresh();
             }
         }
 
@@ -70,10 +82,10 @@ namespace DiamondShop
 
             if (ds.Tables[0].Rows.Count > 0)
             {
-                grdCatalog.DataSource = ds.Tables[0];
-                grdCatalog.Refresh();
+                gridCatalog.DataSource = ds.Tables[0];
+                gridCatalog.Refresh();
             }
-            else { grdCatalog.DataSource = null; grdCatalog.Refresh(); }
+            else { gridCatalog.DataSource = null; gridCatalog.Refresh(); }
         }
         private void btnSearch_Click(object sender, EventArgs e)
         {
@@ -88,22 +100,34 @@ namespace DiamondShop
 
             if (chkFlag)
             {
-                if (grdCatalog.RowCount > 0 && grdCatalog.SelectedRows.Count > 0)
+                if (gridCatalog.RowCount > 0 && gridCatalog.SelectedRows.Count > 0)
                 {
-                    id = (int)grdCatalog.SelectedRows[0].Cells["ID"].Value;
+                    id = (int)gridCatalog.SelectedRows[0].Cells["ID"].Value;
                     chkFlag = ser.DoDeleteData("Catalog", id);
                 }
             }
             return chkFlag;
         }
 
-        private void grdCatalog_MouseDoubleClick(object sender, MouseEventArgs e)
+        private void gridCatalog_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            if (grdCatalog.RowCount > 0 && grdCatalog.SelectedRows.Count > 0)
+            if (mode == 0)
             {
-                id = (int)grdCatalog.SelectedRows[0].Cells["ID"].Value;
-                Catalog frm = new Catalog(id);
-                frm.ShowDialog();
+                if (gridCatalog.RowCount > 0 && gridCatalog.SelectedRows.Count > 0)
+                {
+                    id = (int)gridCatalog.SelectedRows[0].Cells["ID"].Value;
+                    Catalog frm = new Catalog(id);
+                    frm.ShowDialog();
+                }
+            }
+            else //mode = 1 Search
+            {
+                refID1 = (int)gridCatalog.SelectedRows[0].Cells["ID"].Value;
+                code1 = gridCatalog.SelectedRows[0].Cells["Code"].Value.ToString();
+                typeName = gridCatalog.SelectedRows[0].Cells["JewelryTypeName"].Value.ToString();
+                priceTag = Convert.ToDecimal(gridCatalog.SelectedRows[0].Cells["PriceTag"].Value);
+
+                this.Close();
             }
 
             DoLoadData();

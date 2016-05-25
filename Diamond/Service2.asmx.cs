@@ -34,13 +34,13 @@ namespace Diamond
         }
 
         [WebMethod]
-        public dsSeller GetSellerName()
+        public dsSeller GetSeller()
         {
             SellerBiz biz = new SellerBiz();
 
             try
             {
-                return biz.GetSellerName();
+                return biz.GetSeller();
             }
             catch (Exception ex)
             {

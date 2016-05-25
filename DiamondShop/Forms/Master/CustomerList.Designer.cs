@@ -28,18 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomerList));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.gridCustomer = new System.Windows.Forms.DataGridView();
-            this.RowNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SellerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Shop = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ContactNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EditDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tds = new DiamondDS.DS.dsCustomer();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnAdd = new System.Windows.Forms.Button();
@@ -48,6 +40,14 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.RowNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SellerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Shop = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ContactNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EditDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridCustomer)).BeginInit();
@@ -59,7 +59,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.gridCustomer);
-            this.panel2.Font = new System.Drawing.Font("Agency FB", 15.75F);
+            this.panel2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.Location = new System.Drawing.Point(5, 119);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1121, 432);
@@ -88,74 +88,8 @@
             this.gridCustomer.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridCustomer.RowTemplate.Height = 30;
             this.gridCustomer.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridCustomer.Size = new System.Drawing.Size(1072, 429);
+            this.gridCustomer.Size = new System.Drawing.Size(1125, 429);
             this.gridCustomer.TabIndex = 2;
-            // 
-            // RowNum
-            // 
-            this.RowNum.DataPropertyName = "RowNum";
-            this.RowNum.HeaderText = "No.";
-            this.RowNum.Name = "RowNum";
-            this.RowNum.ReadOnly = true;
-            this.RowNum.Width = 50;
-            // 
-            // ID
-            // 
-            this.ID.DataPropertyName = "ID";
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            this.ID.Visible = false;
-            // 
-            // Code
-            // 
-            this.Code.DataPropertyName = "Code";
-            this.Code.HeaderText = "Code";
-            this.Code.Name = "Code";
-            this.Code.ReadOnly = true;
-            this.Code.Width = 150;
-            // 
-            // FullName
-            // 
-            this.FullName.DataPropertyName = "FullName";
-            this.FullName.HeaderText = "Customer Name";
-            this.FullName.Name = "FullName";
-            this.FullName.ReadOnly = true;
-            this.FullName.Width = 200;
-            // 
-            // SellerName
-            // 
-            this.SellerName.DataPropertyName = "SellerName";
-            this.SellerName.HeaderText = "Seller";
-            this.SellerName.Name = "SellerName";
-            this.SellerName.ReadOnly = true;
-            this.SellerName.Width = 200;
-            // 
-            // Shop
-            // 
-            this.Shop.DataPropertyName = "Shop";
-            this.Shop.HeaderText = "Shop";
-            this.Shop.Name = "Shop";
-            this.Shop.ReadOnly = true;
-            this.Shop.Width = 160;
-            // 
-            // ContactNumber
-            // 
-            this.ContactNumber.DataPropertyName = "ContactNumber";
-            this.ContactNumber.HeaderText = "Contact Number";
-            this.ContactNumber.Name = "ContactNumber";
-            this.ContactNumber.ReadOnly = true;
-            this.ContactNumber.Width = 150;
-            // 
-            // EditDate
-            // 
-            this.EditDate.DataPropertyName = "EditDate";
-            dataGridViewCellStyle1.Format = "dd/MM/yyyy";
-            this.EditDate.DefaultCellStyle = dataGridViewCellStyle1;
-            this.EditDate.HeaderText = "Update Date";
-            this.EditDate.Name = "EditDate";
-            this.EditDate.ReadOnly = true;
-            this.EditDate.Width = 120;
             // 
             // tds
             // 
@@ -243,12 +177,79 @@
             this.label3.TabIndex = 27;
             this.label3.Text = "Nick /First /Last Name";
             // 
+            // RowNum
+            // 
+            this.RowNum.DataPropertyName = "RowNum";
+            this.RowNum.HeaderText = "No.";
+            this.RowNum.Name = "RowNum";
+            this.RowNum.ReadOnly = true;
+            this.RowNum.Width = 50;
+            // 
+            // ID
+            // 
+            this.ID.DataPropertyName = "ID";
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Visible = false;
+            // 
+            // Code
+            // 
+            this.Code.DataPropertyName = "Code";
+            this.Code.HeaderText = "Code";
+            this.Code.Name = "Code";
+            this.Code.ReadOnly = true;
+            this.Code.Width = 150;
+            // 
+            // FullName
+            // 
+            this.FullName.DataPropertyName = "FullName";
+            this.FullName.HeaderText = "Customer Name";
+            this.FullName.Name = "FullName";
+            this.FullName.ReadOnly = true;
+            this.FullName.Width = 170;
+            // 
+            // SellerName
+            // 
+            this.SellerName.DataPropertyName = "SellerName";
+            this.SellerName.HeaderText = "Seller";
+            this.SellerName.Name = "SellerName";
+            this.SellerName.ReadOnly = true;
+            this.SellerName.Width = 200;
+            // 
+            // Shop
+            // 
+            this.Shop.DataPropertyName = "Shop";
+            this.Shop.HeaderText = "Shop";
+            this.Shop.Name = "Shop";
+            this.Shop.ReadOnly = true;
+            this.Shop.Width = 160;
+            // 
+            // ContactNumber
+            // 
+            this.ContactNumber.DataPropertyName = "ContactNumber";
+            this.ContactNumber.HeaderText = "Tel";
+            this.ContactNumber.Name = "ContactNumber";
+            this.ContactNumber.ReadOnly = true;
+            this.ContactNumber.Width = 160;
+            // 
+            // EditDate
+            // 
+            this.EditDate.DataPropertyName = "EditDate";
+            dataGridViewCellStyle1.Format = "dd/MM/yyyy";
+            this.EditDate.DefaultCellStyle = dataGridViewCellStyle1;
+            this.EditDate.HeaderText = "Update Date";
+            this.EditDate.Name = "EditDate";
+            this.EditDate.ReadOnly = true;
+            this.EditDate.Width = 140;
+            // 
             // CustomerList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1138, 565);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(1144, 488);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel4);
             this.Name = "CustomerList";
@@ -274,6 +275,7 @@
         private System.Windows.Forms.DataGridView gridCustomer;
         private System.Windows.Forms.ComboBox cmbShop;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.DataGridViewTextBoxColumn RowNum;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Code;
@@ -282,6 +284,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Shop;
         private System.Windows.Forms.DataGridViewTextBoxColumn ContactNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn EditDate;
-        private System.Windows.Forms.Button btnAdd;
     }
 }

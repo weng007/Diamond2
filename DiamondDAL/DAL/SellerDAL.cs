@@ -91,7 +91,7 @@ namespace DiamondDAL.DAL
             return Convert.ToBoolean(flag);
         }
 
-        public dsSeller GetSellerName()
+        public dsSeller GetSeller()
         {
             try
             {

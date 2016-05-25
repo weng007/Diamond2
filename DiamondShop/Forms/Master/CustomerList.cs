@@ -14,10 +14,21 @@ namespace DiamondShop
 {
     public partial class CustomerList : FormList
     {
+        int mode = 0;
+
         public CustomerList()
         {
             InitializeComponent();
             Initial();
+            DoLoadData();
+        }
+
+        public CustomerList(int mode)
+        {
+            InitializeComponent();
+            Initial();
+
+            this.mode = mode;
             DoLoadData();
         }
 
