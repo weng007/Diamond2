@@ -30,7 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Customer));
             this.panel3 = new System.Windows.Forms.Panel();
-            this.txtContactphone = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.dtAnniversary = new System.Windows.Forms.DateTimePicker();
+            this.txtTilte = new System.Windows.Forms.TextBox();
+            this.cmbGender = new System.Windows.Forms.ComboBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.dtBirthDate = new System.Windows.Forms.DateTimePicker();
+            this.txtMobilePhone = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.txtComment = new System.Windows.Forms.TextBox();
@@ -38,7 +45,7 @@
             this.txtAge = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtDisplayName = new System.Windows.Forms.TextBox();
-            this.btnSell = new System.Windows.Forms.Button();
+            this.btnSeller = new System.Windows.Forms.Button();
             this.txtSeller = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.cmbShop = new System.Windows.Forms.ComboBox();
@@ -48,7 +55,7 @@
             this.txtLastName = new System.Windows.Forms.TextBox();
             this.txtFirstName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.dtUpdatedate = new System.Windows.Forms.DateTimePicker();
+            this.dtUpdateDate = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -74,13 +81,6 @@
             this.panel9 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
             this.txtBracelet = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.dtBirthdate = new System.Windows.Forms.DateTimePicker();
-            this.cmbGender = new System.Windows.Forms.ComboBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.txtTilte = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.dtAnniversary = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -98,8 +98,8 @@
             this.panel3.Controls.Add(this.cmbGender);
             this.panel3.Controls.Add(this.label15);
             this.panel3.Controls.Add(this.label14);
-            this.panel3.Controls.Add(this.dtBirthdate);
-            this.panel3.Controls.Add(this.txtContactphone);
+            this.panel3.Controls.Add(this.dtBirthDate);
+            this.panel3.Controls.Add(this.txtMobilePhone);
             this.panel3.Controls.Add(this.label13);
             this.panel3.Controls.Add(this.label10);
             this.panel3.Controls.Add(this.txtComment);
@@ -107,7 +107,7 @@
             this.panel3.Controls.Add(this.txtAge);
             this.panel3.Controls.Add(this.label7);
             this.panel3.Controls.Add(this.txtDisplayName);
-            this.panel3.Controls.Add(this.btnSell);
+            this.panel3.Controls.Add(this.btnSeller);
             this.panel3.Controls.Add(this.txtSeller);
             this.panel3.Controls.Add(this.label8);
             this.panel3.Controls.Add(this.cmbShop);
@@ -117,7 +117,7 @@
             this.panel3.Controls.Add(this.txtLastName);
             this.panel3.Controls.Add(this.txtFirstName);
             this.panel3.Controls.Add(this.label2);
-            this.panel3.Controls.Add(this.dtUpdatedate);
+            this.panel3.Controls.Add(this.dtUpdateDate);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.label6);
             this.panel3.Controls.Add(this.label1);
@@ -127,17 +127,77 @@
             this.panel3.Size = new System.Drawing.Size(986, 242);
             this.panel3.TabIndex = 5;
             // 
-            // txtContactphone
+            // label16
             // 
-            this.txtContactphone.Location = new System.Drawing.Point(124, 150);
-            this.txtContactphone.Name = "txtContactphone";
-            this.txtContactphone.Size = new System.Drawing.Size(165, 27);
-            this.txtContactphone.TabIndex = 24;
+            this.label16.Location = new System.Drawing.Point(344, 169);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(111, 60);
+            this.label16.TabIndex = 180;
+            this.label16.Text = "Anniversary Date";
+            // 
+            // dtAnniversary
+            // 
+            this.dtAnniversary.CustomFormat = "dd/MM/yyyy";
+            this.dtAnniversary.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtAnniversary.Location = new System.Drawing.Point(461, 169);
+            this.dtAnniversary.Name = "dtAnniversary";
+            this.dtAnniversary.Size = new System.Drawing.Size(147, 27);
+            this.dtAnniversary.TabIndex = 179;
+            // 
+            // txtTilte
+            // 
+            this.txtTilte.Location = new System.Drawing.Point(124, 62);
+            this.txtTilte.Name = "txtTilte";
+            this.txtTilte.Size = new System.Drawing.Size(165, 27);
+            this.txtTilte.TabIndex = 178;
+            // 
+            // cmbGender
+            // 
+            this.cmbGender.FormattingEnabled = true;
+            this.cmbGender.Items.AddRange(new object[] {
+            "Man",
+            "Female"});
+            this.cmbGender.Location = new System.Drawing.Point(781, 94);
+            this.cmbGender.Name = "cmbGender";
+            this.cmbGender.Size = new System.Drawing.Size(144, 29);
+            this.cmbGender.TabIndex = 176;
+            // 
+            // label15
+            // 
+            this.label15.Location = new System.Drawing.Point(694, 100);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(70, 31);
+            this.label15.TabIndex = 177;
+            this.label15.Text = "Gender";
+            // 
+            // label14
+            // 
+            this.label14.Location = new System.Drawing.Point(676, 25);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(88, 24);
+            this.label14.TabIndex = 175;
+            this.label14.Text = "Birth Date";
+            // 
+            // dtBirthDate
+            // 
+            this.dtBirthDate.CustomFormat = "dd/MM/yyyy";
+            this.dtBirthDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtBirthDate.Location = new System.Drawing.Point(781, 24);
+            this.dtBirthDate.Name = "dtBirthDate";
+            this.dtBirthDate.Size = new System.Drawing.Size(144, 27);
+            this.dtBirthDate.TabIndex = 174;
+            // 
+            // txtMobilePhone
+            // 
+            this.txtMobilePhone.Location = new System.Drawing.Point(124, 150);
+            this.txtMobilePhone.Name = "txtMobilePhone";
+            this.txtMobilePhone.Size = new System.Drawing.Size(165, 27);
+            this.txtMobilePhone.TabIndex = 24;
             // 
             // label13
             // 
             this.label13.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(35, 152);
+            this.label13.Location = new System.Drawing.Point(36, 144);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(90, 51);
             this.label13.TabIndex = 173;
@@ -192,20 +252,20 @@
             this.txtDisplayName.Size = new System.Drawing.Size(99, 27);
             this.txtDisplayName.TabIndex = 16;
             // 
-            // btnSell
+            // btnSeller
             // 
-            this.btnSell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(202)))), ((int)(((byte)(119)))));
-            this.btnSell.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSell.BackgroundImage")));
-            this.btnSell.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnSell.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSell.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(109)))), ((int)(((byte)(65)))));
-            this.btnSell.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSell.Location = new System.Drawing.Point(265, 196);
-            this.btnSell.Name = "btnSell";
-            this.btnSell.Size = new System.Drawing.Size(34, 33);
-            this.btnSell.TabIndex = 28;
-            this.btnSell.UseVisualStyleBackColor = false;
-            this.btnSell.Click += new System.EventHandler(this.btnSell_Click);
+            this.btnSeller.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(202)))), ((int)(((byte)(119)))));
+            this.btnSeller.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSeller.BackgroundImage")));
+            this.btnSeller.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnSeller.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSeller.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(109)))), ((int)(((byte)(65)))));
+            this.btnSeller.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSeller.Location = new System.Drawing.Point(265, 196);
+            this.btnSeller.Name = "btnSeller";
+            this.btnSeller.Size = new System.Drawing.Size(34, 33);
+            this.btnSeller.TabIndex = 28;
+            this.btnSeller.UseVisualStyleBackColor = false;
+            this.btnSeller.Click += new System.EventHandler(this.btnSeller_Click);
             // 
             // txtSeller
             // 
@@ -280,14 +340,14 @@
             this.label2.Text = "Code";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // dtUpdatedate
+            // dtUpdateDate
             // 
-            this.dtUpdatedate.CustomFormat = "dd/MM/yyyy";
-            this.dtUpdatedate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtUpdatedate.Location = new System.Drawing.Point(461, 24);
-            this.dtUpdatedate.Name = "dtUpdatedate";
-            this.dtUpdatedate.Size = new System.Drawing.Size(147, 27);
-            this.dtUpdatedate.TabIndex = 1;
+            this.dtUpdateDate.CustomFormat = "dd/MM/yyyy";
+            this.dtUpdateDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtUpdateDate.Location = new System.Drawing.Point(461, 24);
+            this.dtUpdateDate.Name = "dtUpdateDate";
+            this.dtUpdateDate.Size = new System.Drawing.Size(147, 27);
+            this.dtUpdateDate.TabIndex = 1;
             // 
             // label3
             // 
@@ -307,9 +367,9 @@
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(36, 102);
+            this.label1.Location = new System.Drawing.Point(36, 97);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(82, 49);
+            this.label1.Size = new System.Drawing.Size(82, 50);
             this.label1.TabIndex = 35;
             this.label1.Text = "Display Name";
             // 
@@ -548,63 +608,6 @@
             this.txtBracelet.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtBracelet.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNecklace_KeyPress);
             // 
-            // label14
-            // 
-            this.label14.Location = new System.Drawing.Point(676, 25);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(88, 24);
-            this.label14.TabIndex = 175;
-            this.label14.Text = "Birth Date";
-            // 
-            // dtBirthdate
-            // 
-            this.dtBirthdate.CustomFormat = "dd/MM/yyyy";
-            this.dtBirthdate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtBirthdate.Location = new System.Drawing.Point(781, 24);
-            this.dtBirthdate.Name = "dtBirthdate";
-            this.dtBirthdate.Size = new System.Drawing.Size(144, 27);
-            this.dtBirthdate.TabIndex = 174;
-            // 
-            // cmbGender
-            // 
-            this.cmbGender.FormattingEnabled = true;
-            this.cmbGender.Location = new System.Drawing.Point(781, 94);
-            this.cmbGender.Name = "cmbGender";
-            this.cmbGender.Size = new System.Drawing.Size(144, 29);
-            this.cmbGender.TabIndex = 176;
-            // 
-            // label15
-            // 
-            this.label15.Location = new System.Drawing.Point(694, 100);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(70, 31);
-            this.label15.TabIndex = 177;
-            this.label15.Text = "Gender";
-            // 
-            // txtTilte
-            // 
-            this.txtTilte.Location = new System.Drawing.Point(124, 62);
-            this.txtTilte.Name = "txtTilte";
-            this.txtTilte.Size = new System.Drawing.Size(165, 27);
-            this.txtTilte.TabIndex = 178;
-            // 
-            // label16
-            // 
-            this.label16.Location = new System.Drawing.Point(344, 169);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(111, 60);
-            this.label16.TabIndex = 180;
-            this.label16.Text = "Anniversary Date";
-            // 
-            // dtAnniversary
-            // 
-            this.dtAnniversary.CustomFormat = "dd/MM/yyyy";
-            this.dtAnniversary.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtAnniversary.Location = new System.Drawing.Point(461, 169);
-            this.dtAnniversary.Name = "dtAnniversary";
-            this.dtAnniversary.Size = new System.Drawing.Size(147, 27);
-            this.dtAnniversary.TabIndex = 179;
-            // 
             // Customer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -651,14 +654,14 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtSeller;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button btnSell;
+        private System.Windows.Forms.Button btnSeller;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtComment;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtAge;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtDisplayName;
-        private System.Windows.Forms.DateTimePicker dtUpdatedate;
+        private System.Windows.Forms.DateTimePicker dtUpdateDate;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel8;
@@ -681,12 +684,12 @@
         private System.Windows.Forms.TextBox txtBracelet;
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.TextBox txtContactphone;
+        private System.Windows.Forms.TextBox txtMobilePhone;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.ComboBox cmbGender;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.DateTimePicker dtBirthdate;
+        private System.Windows.Forms.DateTimePicker dtBirthDate;
         private System.Windows.Forms.TextBox txtTilte;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.DateTimePicker dtAnniversary;
