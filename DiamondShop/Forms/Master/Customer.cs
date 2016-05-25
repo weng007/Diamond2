@@ -25,12 +25,14 @@ namespace DiamondShop
             Initial();
 
             binder.BindControl(txtCode, "Code");
-            binder.BindControl(cmbTitleName, "TitleName");
+            binder.BindControl(txtTilte, "TitleName");
             binder.BindControl(txtFirstName, "FirstName");
             binder.BindControl(txtLastName, "LastName");
-            binder.BindControl(txtNickName, "NickName");
-            binder.BindControl(txtAge, "Age");
-            binder.BindControl(txtMobilephone, "MobilePhone");
+            binder.BindControl(txtDisplayName, "NickName");
+            binder.BindControl(cmbGender, "Gender");
+            binder.BindControl(dtAnniversary, "AnniversaryDate");
+            binder.BindControl(dtBirthdate, "BirthDate");
+            binder.BindControl(txtContactphone, "MobilePhone");
             binder.BindControl(dtUpdatedate, "EditDate");
             binder.BindControl(cmbShop, "Shop");
             binder.BindControl(txtComment, "Comment");
@@ -54,12 +56,14 @@ namespace DiamondShop
             Initial();
 
             binder.BindControl(txtCode, "Code");
-            binder.BindControl(cmbTitleName, "TitleName");
+            binder.BindControl(txtTilte, "TitleName");
             binder.BindControl(txtFirstName, "FirstName");
             binder.BindControl(txtLastName, "LastName");
-            binder.BindControl(txtNickName, "NickName");
-            binder.BindControl(txtAge, "Age");
-            binder.BindControl(txtMobilephone, "MobilePhone");
+            binder.BindControl(txtDisplayName, "NickName");
+            binder.BindControl(cmbGender, "Gender");
+            binder.BindControl(dtAnniversary, "AnniversaryDate");
+            binder.BindControl(dtBirthdate, "BirthDate");
+            binder.BindControl(txtContactphone, "MobilePhone");
             binder.BindControl(dtUpdatedate, "EditDate");
             binder.BindControl(cmbShop, "Shop");
             binder.BindControl(txtComment, "Comment");
@@ -82,20 +86,15 @@ namespace DiamondShop
 
         protected override void Initial()
         {
+
             cmbShop.DataSource = (GM.GetMasterTableDetail("C007")).Tables[0];
             cmbShop.ValueMember = "ID";
             cmbShop.DisplayMember = "Detail";
             cmbShop.Refresh();
 
-            cmbTitleName.DataSource = (GM.GetMasterTableDetail("C021")).Tables[0];
-            cmbTitleName.ValueMember = "ID";
-            cmbTitleName.DisplayMember = "Detail";
-            cmbTitleName.Refresh();
+            txtTilte.Select();
 
-            txtCode.Select();
-
-            //SetFieldService.SetRequireField(txtFirstName, txtLastName
-            //    , txtNickName, txtAge, txtMobilephone, txtCode);
+            SetFieldService.SetRequireField(txtFirstName,txtLastName,dtBirthdate);
         }
 
         protected override void LoadData()
@@ -107,7 +106,7 @@ namespace DiamondShop
             if (tds.Customer.Rows.Count > 0)
             {
                 binder.BindValueToControl(tds.Customer[0]);
-                txtSeller.Text = tds.Customer[0].FullName;
+
                 EnableDelete = true;
             }
 
@@ -128,7 +127,8 @@ namespace DiamondShop
                 tds.Customer.Rows.Add(row);
             }
             binder.BindValueToDataRow(row);
-            row.Seller = sellerID;
+            //row.RefID = refID;
+            //row.CustID = custID;
 
             try
             {
@@ -179,27 +179,11 @@ namespace DiamondShop
             {
                 message += "Please input LastName.\n";
             }
-            if (txtNickName.Text == "")
+            if (dtBirthdate.Text == "")
             {
-                message += "Please input NickName.\n";
+                message += "Please input Birth Date.\n";
             }
-            if (txtSeller.Text == "")
-            {
-                message += "Please input Seller.\n";
-            }
-            if (txtCode.Text == "")
-            {
-                message += "Please input Code.\n";
-            }
-            if (txtAge.Text == "")
-            {
-                message += "Please input Age.\n";
-            }
-            if (txtMobilephone.Text == "")
-            {
-                message += "Please input Mobilephone.\n";
-            }
-
+           
             if (message == "") { return true; }
             else { return false; }
         }
