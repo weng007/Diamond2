@@ -124,18 +124,6 @@
     <value>81, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnSeller.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
-        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAFmSURBVDhPrdTPK0VBGMZxvwvJjwVbO/JfKNnJRlkp
-        W4lSYmMpSUpRFsreWhYSS5SSlJCdwoZLWEk5vo/OTHPfO3OLLD63e9555zmd806nIsuyf/XzMzXRG1OP
-        MeziHg/YxySaULKnXGAnDpElnKIbRftSgbr7GWJBoRu0we9NBU7DbTrBV3BtLcDvjQVW4QhqXkU1VvLr
-        mAvUIBnYjDfcQUNRrRKzeIcNfEQrkoENeMVmUHO6MIcdHOAKCvQTjwWKjoYe19atJWh4vpYKHISOjK1b
-        exgJa6lAmYeCY2vSh2VTKxuoQQyhB36K+X+9y2HU5jWvXKCjCTYG1xpa0WEOpQJ1Z23SmbRrjs6neuqC
-        WklgC/ReLvGEAfhmox8FXGMN7SgK1KMdIzy0W7BBzjrC3nN0hIGLwaLziXHYsFF8wPZvhIH6ctgGR9/D
-        GeijsZ3XYm7DwBez+BfPYaBecKzpNwpZllV8AxSbupNBj206AAAAAElFTkSuQmCC
-</value>
-  </data>
   <data name="label11.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAF8AAAAdCAYAAADM3LCSAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m

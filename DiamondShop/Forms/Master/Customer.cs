@@ -17,8 +17,6 @@ namespace DiamondShop
     {
         dsCustomer tds = new dsCustomer();
         int refID = 0;
-        //int SellerName = 0;
-        //int custID = 0;
 
         public Customer()
         {
@@ -29,11 +27,12 @@ namespace DiamondShop
             binder.BindControl(txtTilte, "TitleName");
             binder.BindControl(txtFirstName, "FirstName");
             binder.BindControl(txtLastName, "LastName");
-            binder.BindControl(txtDisplayName, "NickName");
+            binder.BindControl(txtDisplayName, "DisplayName");
             binder.BindControl(cmbGender, "Gender");
             binder.BindControl(dtAnniversary, "AnniversaryDate");
             binder.BindControl(dtBirthDate, "BirthDate");
             binder.BindControl(txtMobilePhone, "MobilePhone");
+            binder.BindControl(cmbSeller, "Seller");
             binder.BindControl(dtUpdateDate, "EditDate");
             binder.BindControl(cmbShop, "Shop");
             binder.BindControl(txtComment, "Comment");
@@ -60,11 +59,12 @@ namespace DiamondShop
             binder.BindControl(txtTilte, "TitleName");
             binder.BindControl(txtFirstName, "FirstName");
             binder.BindControl(txtLastName, "LastName");
-            binder.BindControl(txtDisplayName, "NickName");
+            binder.BindControl(txtDisplayName, "DisplayName");
             binder.BindControl(cmbGender, "Gender");
             binder.BindControl(dtAnniversary, "AnniversaryDate");
             binder.BindControl(dtBirthDate, "BirthDate");
             binder.BindControl(txtMobilePhone, "MobilePhone");
+            binder.BindControl(cmbSeller, "Seller");
             binder.BindControl(dtUpdateDate, "EditDate");
             binder.BindControl(cmbShop, "Shop");
             binder.BindControl(txtComment, "Comment");
@@ -87,6 +87,16 @@ namespace DiamondShop
 
         protected override void Initial()
         {
+            ds = GM.GetSeller();
+
+            cmbSeller.DataSource = ds.Tables[0];
+            cmbSeller.ValueMember = "ID";
+            cmbSeller.DisplayMember = "DisplayName";
+            cmbSeller.Refresh();
+
+            cmbGender.Items.Insert(0, "Man");
+            cmbGender.Items.Insert(1, "Female");
+
             cmbShop.DataSource = (GM.GetMasterTableDetail("C007")).Tables[0];
             cmbShop.ValueMember = "ID";
             cmbShop.DisplayMember = "Detail";
@@ -107,6 +117,7 @@ namespace DiamondShop
             if (tds.Customer.Rows.Count > 0)
             {
                 binder.BindValueToControl(tds.Customer[0]);
+                cmbGender.SelectedIndex = Convert.ToInt16(tds.Customer[0].Gender);
 
                 EnableDelete = true;
             }
@@ -125,16 +136,17 @@ namespace DiamondShop
             else
             {
                 row = tds.Customer.NewCustomerRow();
-                tds.Customer.Rows.Add(row);
+                tds.Customer.Rows.Add(row);           
             }
 
             binder.BindValueToDataRow(row);
-            row.Seller = refID;
+            row.Gender = cmbGender.SelectedIndex.ToString();
 
             try
             {
                 if (id == 0)
                 {
+                    row.Code = GM.GetRunningNumber("CUST");             
                     SetCreateBy(row);
                     chkFlag = ser.DoInsertData("Customer", tds);
                 }
@@ -201,13 +213,9 @@ namespace DiamondShop
             }
         }
 
-        private void btnSeller_Click(object sender, EventArgs e)
+        private void dtBirthDate_ValueChanged(object sender, EventArgs e)
         {
-            SellerList frm = new SellerList(1);
-            frm.ShowDialog();
-
-            refID = frm.refID1;
-            txtSeller.Text = frm.SellerName;
+            txtAge.Text = (DateTime.Today.Year - dtBirthDate.Value.Year).ToString();
         }
     }
 }

@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Customer));
             this.panel3 = new System.Windows.Forms.Panel();
+            this.cmbSeller = new System.Windows.Forms.ComboBox();
+            this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.dtAnniversary = new System.Windows.Forms.DateTimePicker();
             this.txtTilte = new System.Windows.Forms.TextBox();
@@ -45,8 +47,6 @@
             this.txtAge = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtDisplayName = new System.Windows.Forms.TextBox();
-            this.btnSeller = new System.Windows.Forms.Button();
-            this.txtSeller = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.cmbShop = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -92,6 +92,8 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Controls.Add(this.cmbSeller);
+            this.panel3.Controls.Add(this.label17);
             this.panel3.Controls.Add(this.label16);
             this.panel3.Controls.Add(this.dtAnniversary);
             this.panel3.Controls.Add(this.txtTilte);
@@ -107,8 +109,6 @@
             this.panel3.Controls.Add(this.txtAge);
             this.panel3.Controls.Add(this.label7);
             this.panel3.Controls.Add(this.txtDisplayName);
-            this.panel3.Controls.Add(this.btnSeller);
-            this.panel3.Controls.Add(this.txtSeller);
             this.panel3.Controls.Add(this.label8);
             this.panel3.Controls.Add(this.cmbShop);
             this.panel3.Controls.Add(this.label5);
@@ -122,16 +122,33 @@
             this.panel3.Controls.Add(this.label6);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel3.Location = new System.Drawing.Point(12, 71);
+            this.panel3.Location = new System.Drawing.Point(8, 69);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(986, 242);
+            this.panel3.Size = new System.Drawing.Size(1182, 242);
             this.panel3.TabIndex = 5;
+            // 
+            // cmbSeller
+            // 
+            this.cmbSeller.FormattingEnabled = true;
+            this.cmbSeller.Location = new System.Drawing.Point(451, 16);
+            this.cmbSeller.Name = "cmbSeller";
+            this.cmbSeller.Size = new System.Drawing.Size(165, 29);
+            this.cmbSeller.TabIndex = 182;
+            // 
+            // label17
+            // 
+            this.label17.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label17.Location = new System.Drawing.Point(841, 52);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(54, 24);
+            this.label17.TabIndex = 181;
+            this.label17.Text = "Years";
             // 
             // label16
             // 
-            this.label16.Location = new System.Drawing.Point(344, 169);
+            this.label16.Location = new System.Drawing.Point(385, 96);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(111, 60);
+            this.label16.Size = new System.Drawing.Size(157, 27);
             this.label16.TabIndex = 180;
             this.label16.Text = "Anniversary Date";
             // 
@@ -139,32 +156,29 @@
             // 
             this.dtAnniversary.CustomFormat = "dd/MM/yyyy";
             this.dtAnniversary.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtAnniversary.Location = new System.Drawing.Point(461, 169);
+            this.dtAnniversary.Location = new System.Drawing.Point(389, 126);
             this.dtAnniversary.Name = "dtAnniversary";
             this.dtAnniversary.Size = new System.Drawing.Size(147, 27);
             this.dtAnniversary.TabIndex = 179;
             // 
             // txtTilte
             // 
-            this.txtTilte.Location = new System.Drawing.Point(124, 62);
+            this.txtTilte.Location = new System.Drawing.Point(152, 52);
             this.txtTilte.Name = "txtTilte";
-            this.txtTilte.Size = new System.Drawing.Size(165, 27);
+            this.txtTilte.Size = new System.Drawing.Size(135, 27);
             this.txtTilte.TabIndex = 178;
             // 
             // cmbGender
             // 
             this.cmbGender.FormattingEnabled = true;
-            this.cmbGender.Items.AddRange(new object[] {
-            "Man",
-            "Female"});
-            this.cmbGender.Location = new System.Drawing.Point(781, 94);
+            this.cmbGender.Location = new System.Drawing.Point(781, 84);
             this.cmbGender.Name = "cmbGender";
-            this.cmbGender.Size = new System.Drawing.Size(144, 29);
+            this.cmbGender.Size = new System.Drawing.Size(114, 29);
             this.cmbGender.TabIndex = 176;
             // 
             // label15
             // 
-            this.label15.Location = new System.Drawing.Point(694, 100);
+            this.label15.Location = new System.Drawing.Point(694, 87);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(70, 31);
             this.label15.TabIndex = 177;
@@ -172,7 +186,7 @@
             // 
             // label14
             // 
-            this.label14.Location = new System.Drawing.Point(676, 25);
+            this.label14.Location = new System.Drawing.Point(676, 15);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(88, 24);
             this.label14.TabIndex = 175;
@@ -182,14 +196,15 @@
             // 
             this.dtBirthDate.CustomFormat = "dd/MM/yyyy";
             this.dtBirthDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtBirthDate.Location = new System.Drawing.Point(781, 24);
+            this.dtBirthDate.Location = new System.Drawing.Point(781, 14);
             this.dtBirthDate.Name = "dtBirthDate";
             this.dtBirthDate.Size = new System.Drawing.Size(144, 27);
             this.dtBirthDate.TabIndex = 174;
+            this.dtBirthDate.ValueChanged += new System.EventHandler(this.dtBirthDate_ValueChanged);
             // 
             // txtMobilePhone
             // 
-            this.txtMobilePhone.Location = new System.Drawing.Point(124, 150);
+            this.txtMobilePhone.Location = new System.Drawing.Point(152, 195);
             this.txtMobilePhone.Name = "txtMobilePhone";
             this.txtMobilePhone.Size = new System.Drawing.Size(165, 27);
             this.txtMobilePhone.TabIndex = 24;
@@ -197,15 +212,15 @@
             // label13
             // 
             this.label13.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(36, 144);
+            this.label13.Location = new System.Drawing.Point(72, 198);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(90, 51);
+            this.label13.Size = new System.Drawing.Size(63, 24);
             this.label13.TabIndex = 173;
-            this.label13.Text = "Contact Number";
+            this.label13.Text = "Tel";
             // 
             // label10
             // 
-            this.label10.Location = new System.Drawing.Point(694, 146);
+            this.label10.Location = new System.Drawing.Point(968, 24);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(98, 22);
             this.label10.TabIndex = 171;
@@ -214,15 +229,15 @@
             // txtComment
             // 
             this.txtComment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.txtComment.Location = new System.Drawing.Point(698, 171);
+            this.txtComment.Location = new System.Drawing.Point(972, 49);
             this.txtComment.Multiline = true;
             this.txtComment.Name = "txtComment";
-            this.txtComment.Size = new System.Drawing.Size(242, 54);
+            this.txtComment.Size = new System.Drawing.Size(188, 180);
             this.txtComment.TabIndex = 36;
             // 
             // label9
             // 
-            this.label9.Location = new System.Drawing.Point(331, 25);
+            this.label9.Location = new System.Drawing.Point(385, 166);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(119, 24);
             this.label9.TabIndex = 169;
@@ -230,16 +245,19 @@
             // 
             // txtAge
             // 
-            this.txtAge.Location = new System.Drawing.Point(781, 59);
+            this.txtAge.Enabled = false;
+            this.txtAge.Location = new System.Drawing.Point(781, 49);
             this.txtAge.Name = "txtAge";
             this.txtAge.Size = new System.Drawing.Size(54, 27);
             this.txtAge.TabIndex = 20;
+            this.txtAge.Text = "0";
+            this.txtAge.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtAge.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNecklace_KeyPress);
             // 
             // label7
             // 
             this.label7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label7.Location = new System.Drawing.Point(719, 62);
+            this.label7.Location = new System.Drawing.Point(719, 54);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(54, 24);
             this.label7.TabIndex = 167;
@@ -247,38 +265,14 @@
             // 
             // txtDisplayName
             // 
-            this.txtDisplayName.Location = new System.Drawing.Point(124, 104);
+            this.txtDisplayName.Location = new System.Drawing.Point(152, 159);
             this.txtDisplayName.Name = "txtDisplayName";
             this.txtDisplayName.Size = new System.Drawing.Size(99, 27);
             this.txtDisplayName.TabIndex = 16;
             // 
-            // btnSeller
-            // 
-            this.btnSeller.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(202)))), ((int)(((byte)(119)))));
-            this.btnSeller.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSeller.BackgroundImage")));
-            this.btnSeller.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnSeller.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSeller.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(109)))), ((int)(((byte)(65)))));
-            this.btnSeller.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSeller.Location = new System.Drawing.Point(265, 196);
-            this.btnSeller.Name = "btnSeller";
-            this.btnSeller.Size = new System.Drawing.Size(34, 33);
-            this.btnSeller.TabIndex = 28;
-            this.btnSeller.UseVisualStyleBackColor = false;
-            this.btnSeller.Click += new System.EventHandler(this.btnSeller_Click);
-            // 
-            // txtSeller
-            // 
-            this.txtSeller.BackColor = System.Drawing.Color.White;
-            this.txtSeller.Enabled = false;
-            this.txtSeller.Location = new System.Drawing.Point(123, 200);
-            this.txtSeller.Name = "txtSeller";
-            this.txtSeller.Size = new System.Drawing.Size(136, 27);
-            this.txtSeller.TabIndex = 9;
-            // 
             // label8
             // 
-            this.label8.Location = new System.Drawing.Point(57, 202);
+            this.label8.Location = new System.Drawing.Point(385, 18);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(63, 23);
             this.label8.TabIndex = 48;
@@ -287,22 +281,22 @@
             // cmbShop
             // 
             this.cmbShop.FormattingEnabled = true;
-            this.cmbShop.Location = new System.Drawing.Point(461, 129);
+            this.cmbShop.Location = new System.Drawing.Point(451, 52);
             this.cmbShop.Name = "cmbShop";
             this.cmbShop.Size = new System.Drawing.Size(165, 29);
             this.cmbShop.TabIndex = 32;
             // 
             // label5
             // 
-            this.label5.Location = new System.Drawing.Point(399, 138);
+            this.label5.Location = new System.Drawing.Point(385, 55);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(59, 31);
+            this.label5.Size = new System.Drawing.Size(59, 26);
             this.label5.TabIndex = 46;
             this.label5.Text = "Shop";
             // 
             // label4
             // 
-            this.label4.Location = new System.Drawing.Point(36, 62);
+            this.label4.Location = new System.Drawing.Point(56, 52);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(47, 19);
             this.label4.TabIndex = 45;
@@ -311,7 +305,8 @@
             // txtCode
             // 
             this.txtCode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.txtCode.Location = new System.Drawing.Point(124, 26);
+            this.txtCode.Enabled = false;
+            this.txtCode.Location = new System.Drawing.Point(152, 16);
             this.txtCode.Name = "txtCode";
             this.txtCode.Size = new System.Drawing.Size(165, 27);
             this.txtCode.TabIndex = 100;
@@ -319,21 +314,21 @@
             // txtLastName
             // 
             this.txtLastName.AccessibleDescription = "RW";
-            this.txtLastName.Location = new System.Drawing.Point(461, 94);
+            this.txtLastName.Location = new System.Drawing.Point(152, 123);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(165, 27);
             this.txtLastName.TabIndex = 12;
             // 
             // txtFirstName
             // 
-            this.txtFirstName.Location = new System.Drawing.Point(461, 59);
+            this.txtFirstName.Location = new System.Drawing.Point(152, 88);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(165, 27);
             this.txtFirstName.TabIndex = 8;
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(36, 30);
+            this.label2.Location = new System.Drawing.Point(56, 19);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(67, 19);
             this.label2.TabIndex = 41;
@@ -343,15 +338,16 @@
             // dtUpdateDate
             // 
             this.dtUpdateDate.CustomFormat = "dd/MM/yyyy";
+            this.dtUpdateDate.Enabled = false;
             this.dtUpdateDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtUpdateDate.Location = new System.Drawing.Point(461, 24);
+            this.dtUpdateDate.Location = new System.Drawing.Point(389, 193);
             this.dtUpdateDate.Name = "dtUpdateDate";
             this.dtUpdateDate.Size = new System.Drawing.Size(147, 27);
             this.dtUpdateDate.TabIndex = 1;
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(356, 62);
+            this.label3.Location = new System.Drawing.Point(39, 91);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(99, 19);
             this.label3.TabIndex = 34;
@@ -359,7 +355,7 @@
             // 
             // label6
             // 
-            this.label6.Location = new System.Drawing.Point(354, 97);
+            this.label6.Location = new System.Drawing.Point(39, 126);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(96, 24);
             this.label6.TabIndex = 37;
@@ -367,9 +363,9 @@
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(36, 97);
+            this.label1.Location = new System.Drawing.Point(23, 162);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(82, 50);
+            this.label1.Size = new System.Drawing.Size(116, 24);
             this.label1.TabIndex = 35;
             this.label1.Text = "Display Name";
             // 
@@ -613,7 +609,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(195)))), ((int)(((byte)(157)))));
-            this.ClientSize = new System.Drawing.Size(1010, 741);
+            this.ClientSize = new System.Drawing.Size(1206, 741);
             this.Controls.Add(this.panel12);
             this.Controls.Add(this.panel11);
             this.Controls.Add(this.panel4);
@@ -652,9 +648,7 @@
         private System.Windows.Forms.ComboBox cmbShop;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtSeller;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button btnSeller;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtComment;
         private System.Windows.Forms.Label label9;
@@ -693,5 +687,7 @@
         private System.Windows.Forms.TextBox txtTilte;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.DateTimePicker dtAnniversary;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.ComboBox cmbSeller;
     }
 }

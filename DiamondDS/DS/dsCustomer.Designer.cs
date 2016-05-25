@@ -287,8 +287,6 @@ namespace DiamondDS.DS {
             
             private global::System.Data.DataColumn columnTitleName;
             
-            private global::System.Data.DataColumn columnTitleName1;
-            
             private global::System.Data.DataColumn columnFirstName;
             
             private global::System.Data.DataColumn columnLastName;
@@ -409,14 +407,6 @@ namespace DiamondDS.DS {
             public global::System.Data.DataColumn TitleNameColumn {
                 get {
                     return this.columnTitleName;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn TitleName1Column {
-                get {
-                    return this.columnTitleName1;
                 }
             }
             
@@ -693,7 +683,6 @@ namespace DiamondDS.DS {
                         long RowNum, 
                         string Code, 
                         string TitleName, 
-                        string TitleName1, 
                         string FirstName, 
                         string LastName, 
                         string DisplayName, 
@@ -703,7 +692,7 @@ namespace DiamondDS.DS {
                         string MobilePhone, 
                         int Shop, 
                         string ShopName, 
-                        int SellerName, 
+                        string SellerName, 
                         string Comment, 
                         double Necklace, 
                         double Bracelet, 
@@ -729,7 +718,6 @@ namespace DiamondDS.DS {
                         null,
                         Code,
                         TitleName,
-                        TitleName1,
                         FirstName,
                         LastName,
                         DisplayName,
@@ -792,7 +780,6 @@ namespace DiamondDS.DS {
                 this.columnID = base.Columns["ID"];
                 this.columnCode = base.Columns["Code"];
                 this.columnTitleName = base.Columns["TitleName"];
-                this.columnTitleName1 = base.Columns["TitleName1"];
                 this.columnFirstName = base.Columns["FirstName"];
                 this.columnLastName = base.Columns["LastName"];
                 this.columnDisplayName = base.Columns["DisplayName"];
@@ -835,8 +822,6 @@ namespace DiamondDS.DS {
                 base.Columns.Add(this.columnCode);
                 this.columnTitleName = new global::System.Data.DataColumn("TitleName", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTitleName);
-                this.columnTitleName1 = new global::System.Data.DataColumn("TitleName1", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTitleName1);
                 this.columnFirstName = new global::System.Data.DataColumn("FirstName", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnFirstName);
                 this.columnLastName = new global::System.Data.DataColumn("LastName", typeof(string), null, global::System.Data.MappingType.Element);
@@ -855,7 +840,7 @@ namespace DiamondDS.DS {
                 base.Columns.Add(this.columnShop);
                 this.columnShopName = new global::System.Data.DataColumn("ShopName", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnShopName);
-                this.columnSellerName = new global::System.Data.DataColumn("SellerName", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnSellerName = new global::System.Data.DataColumn("SellerName", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSellerName);
                 this.columnComment = new global::System.Data.DataColumn("Comment", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnComment);
@@ -906,8 +891,6 @@ namespace DiamondDS.DS {
                 this.columnID.Unique = true;
                 this.columnCode.MaxLength = 50;
                 this.columnTitleName.MaxLength = 100;
-                this.columnTitleName1.ReadOnly = true;
-                this.columnTitleName1.MaxLength = 100;
                 this.columnFirstName.MaxLength = 50;
                 this.columnLastName.MaxLength = 80;
                 this.columnDisplayName.MaxLength = 80;
@@ -1119,22 +1102,6 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string TitleName1 {
-                get {
-                    try {
-                        return ((string)(this[this.tableCustomer.TitleName1Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'TitleName1\' in table \'Customer\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableCustomer.TitleName1Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string FirstName {
                 get {
                     try {
@@ -1279,10 +1246,10 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int SellerName {
+            public string SellerName {
                 get {
                     try {
-                        return ((int)(this[this.tableCustomer.SellerNameColumn]));
+                        return ((string)(this[this.tableCustomer.SellerNameColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'SellerName\' in table \'Customer\' is DBNull.", e);
@@ -1631,18 +1598,6 @@ namespace DiamondDS.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetTitleNameNull() {
                 this[this.tableCustomer.TitleNameColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsTitleName1Null() {
-                return this.IsNull(this.tableCustomer.TitleName1Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetTitleName1Null() {
-                this[this.tableCustomer.TitleName1Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
