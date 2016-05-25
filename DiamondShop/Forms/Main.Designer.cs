@@ -119,6 +119,9 @@
             this.imageList1.Images.SetKeyName(10, "TabCatalog.png");
             this.imageList1.Images.SetKeyName(11, "TabCerDiamond.png");
             this.imageList1.Images.SetKeyName(12, "TabCerGemstone.png");
+            this.imageList1.Images.SetKeyName(13, "TabCustomer.png");
+            this.imageList1.Images.SetKeyName(14, "TabSell.png");
+            this.imageList1.Images.SetKeyName(15, "TabInventory.png");
             // 
             // btnUser
             // 

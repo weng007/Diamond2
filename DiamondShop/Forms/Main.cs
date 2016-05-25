@@ -83,6 +83,13 @@ namespace DiamondShop
             SetFormList(frm, 9, "BuyBookETC");
         }
 
+        private void mnCatDR_Click(object sender, EventArgs e)
+        {
+            string prefix = ((ToolStripMenuItem)sender).AccessibleDescription;
+            CatalogList frm = new CatalogList(prefix);
+            SetFormList(frm, 10, "Catalog " + prefix);
+        }
+
         private void btnCerDiamond_Click(object sender, EventArgs e)
         {
             DiamondCerList frm = new DiamondCerList();
@@ -98,19 +105,20 @@ namespace DiamondShop
         private void btnCustomer_Click(object sender, EventArgs e)
         {
             CustomerList frm = new CustomerList();
-            SetFormList(frm, 5, "Customer");
+            SetFormList(frm, 13, "Customer");
         }
 
         private void btnSell_Click(object sender, EventArgs e)
         {
             SellList frm = new SellList();
-            SetFormList(frm, 6, "Sell");
+            SetFormList(frm, 14, "Sell");
         }
 
-        private void btnInventory_Click(object sender, EventArgs e)
+        private void mnInvDR_Click(object sender, EventArgs e)
         {
-            InventoryList frm = new InventoryList();
-            SetFormList(frm, 7, "Inventory");
+            string prefix = ((ToolStripMenuItem)sender).AccessibleDescription;
+            InventoryList frm = new InventoryList(prefix);
+            SetFormList(frm, 15, "Inventory " + prefix);
         }
 
         private void SetFormList(Form frm, int ImageIndex, string tabPageText)
@@ -196,20 +204,6 @@ namespace DiamondShop
         private void Main_Load(object sender, EventArgs e)
         {
             txtFullName.Text = ApplicationInfo.DisplayName;
-        }
-
-        private void mnInvDR_Click(object sender, EventArgs e)
-        {
-            string prefix = ((ToolStripMenuItem)sender).AccessibleDescription;
-            InventoryList frm = new InventoryList(prefix);
-            SetFormList(frm, 17, "Inventory " + prefix);
-        }
-
-        private void mnCatDR_Click(object sender, EventArgs e)
-        {
-            string prefix = ((ToolStripMenuItem)sender).AccessibleDescription;
-            CatalogList frm = new CatalogList(prefix);
-            SetFormList(frm, 10, "Catalog "+ prefix);
         }
     }
 }

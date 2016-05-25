@@ -16,11 +16,9 @@ namespace DiamondShop
 {
     public partial class Sell : FormInfo
     {
-        //Service1 ser = GM.GetService();
         dsSell tds = new dsSell();
         MemoryStream ms1;
-        MemoryStream ms2;
-        byte[] image1, image2;
+        byte[] image1;
         int custID = 0;
 
         public Sell()
@@ -28,28 +26,28 @@ namespace DiamondShop
             InitializeComponent();
             Initial();
 
-            binder.BindControl(dtSaleDate, "Seller");
-            binder.BindControl(dtSaleDate, "SaleDate");
+            binder.BindControl(dtSellDate, "Seller");
+            binder.BindControl(dtSellDate, "SaleDate");
             binder.BindControl(txtCode, "Code");
             binder.BindControl(cmbPayment, "Payment");
-            binder.BindControl(txtNetPrice, "NetPrice");
+            binder.BindControl(txtPrice, "NetPrice");
             binder.BindControl(txtCustomer, "CustID");
             binder.BindControl(cmbShopRecive, "ShopReceive");
-            binder.BindControl(txtRemark, "Remark");
+            binder.BindControl(txtNote, "Remark");
         }
         public Sell(int id)
         {
             InitializeComponent();
             Initial();
 
-            binder.BindControl(dtSaleDate, "Seller");
-            binder.BindControl(dtSaleDate, "SaleDate");
+            binder.BindControl(dtSellDate, "Seller");
+            binder.BindControl(dtSellDate, "SaleDate");
             binder.BindControl(txtCode, "Code");
             binder.BindControl(cmbPayment, "Payment");
-            binder.BindControl(txtNetPrice, "NetPrice");
+            binder.BindControl(txtPrice, "NetPrice");
             binder.BindControl(txtCustomer, "CustID");
             binder.BindControl(cmbShopRecive, "ShopReceive");
-            binder.BindControl(txtRemark, "Remark");
+            binder.BindControl(txtNote, "Remark");
 
             this.id = id;
             LoadData();
@@ -67,10 +65,7 @@ namespace DiamondShop
             cmbShopRecive.DisplayMember = "Detail";
             cmbShopRecive.Refresh();
 
-            txtCost.Text = GM.ConvertDoubleToString(txtCost);
-            //txtNetPrice.Text = GM.ConvertDoubleToString(txtNetPrice);
-
-            //SetFieldService.SetRequireField(txtNetPrice,txtCode,txtCustomer,txtCost);
+            SetFieldService.SetRequireField(txtPrice,txtCode,txtCustomer);
         }
 
         protected override void LoadData()
@@ -83,21 +78,13 @@ namespace DiamondShop
             {
                 binder.BindValueToControl(tds.Sell[0]);
 
-                ////Image
-                //image1 = tds.Sell[0].Image1;
-                //image2 = tds.Sell[0].Image2;
-                //if (image1 != null)
-                //{
-                //    ms1 = new MemoryStream(image1);
-                //    Image backImage1 = Image.FromStream(ms1);
-                //    btnImage1.BackgroundImage = backImage1;
-                //}
-                //if (image2 != null)
-                //{
-                //    ms2 = new MemoryStream(image2);
-                //    Image backImage2 = Image.FromStream(ms2);
-                //    //btnImage2.BackgroundImage = backImage2;
-                //}
+                if (image1 != null)
+                {
+                    image1 = tds.Sell[0].Image1;
+                    ms1 = new MemoryStream(image1);
+                    Image backImage1 = Image.FromStream(ms1);
+                    btnImage1.BackgroundImage = backImage1;
+                }
 
                 EnableDelete = true;
             }
@@ -119,8 +106,6 @@ namespace DiamondShop
                 tds.Sell.Rows.Add(row);
             }
             binder.BindValueToDataRow(row);
-            //row.Image1 = image1;
-            //row.Image2 = image2;
 
             try
             {
@@ -184,14 +169,6 @@ namespace DiamondShop
             custID = frm.id;
         }
 
-        private void btnProduct_Click(object sender, EventArgs e)
-        {
-            CatalogList frm = new CatalogList();
-            //frm.ShowDialog();
-            //txtCode.Text = frm.code;
-            //txtJewelryTypeName.Text = frm.jewelryTypename;
-        }
-
         private void txtCost_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
@@ -224,15 +201,32 @@ namespace DiamondShop
             //txtNetPrice.Text = GM.ConvertDoubleToString(txtNetPrice);
         }
 
+        private void cmbPayment_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(cmbPayment.SelectedIndex != 0)
+            {
+               
+            }
+            else
+            {
+
+            }
+        }
+
+        private void btnBrowseCatalog_Click(object sender, EventArgs e)
+        {
+            CatalogList frm = new CatalogList();
+            frm.ShowDialog();
+            
+        }
+
         private void btnImage2_Click(object sender, EventArgs e)
         {
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                //btnImage2.BackgroundImage = Image.FromFile(openFileDialog1.FileName);
-
                 FileStream fs;
                 fs = new FileStream(openFileDialog1.FileName, FileMode.Open, FileAccess.Read);
-                image2 = new byte[fs.Length];
+                image1 = new byte[fs.Length];
                 fs.Read(image2, 0, System.Convert.ToInt32(fs.Length));
                 fs.Close();
             }
