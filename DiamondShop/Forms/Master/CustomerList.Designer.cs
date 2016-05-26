@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomerList));
             this.panel2 = new System.Windows.Forms.Panel();
             this.gridCustomer = new System.Windows.Forms.DataGridView();
@@ -49,6 +49,7 @@
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.tds = new DiamondDS.DS.dsCustomer();
+            this.btnClose = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridCustomer)).BeginInit();
@@ -63,7 +64,7 @@
             this.panel2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.Location = new System.Drawing.Point(5, 123);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1052, 454);
+            this.panel2.Size = new System.Drawing.Size(1231, 454);
             this.panel2.TabIndex = 42;
             // 
             // gridCustomer
@@ -89,7 +90,7 @@
             this.gridCustomer.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridCustomer.RowTemplate.Height = 30;
             this.gridCustomer.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridCustomer.Size = new System.Drawing.Size(1034, 448);
+            this.gridCustomer.Size = new System.Drawing.Size(1207, 448);
             this.gridCustomer.TabIndex = 2;
             this.gridCustomer.UserDeletedRow += new System.Windows.Forms.DataGridViewRowEventHandler(this.gridCustomer_UserDeletedRow);
             this.gridCustomer.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.gridCustomer_MouseDoubleClick);
@@ -97,8 +98,8 @@
             // RowNum
             // 
             this.RowNum.DataPropertyName = "RowNum";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            this.RowNum.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            this.RowNum.DefaultCellStyle = dataGridViewCellStyle5;
             this.RowNum.HeaderText = "No.";
             this.RowNum.Name = "RowNum";
             this.RowNum.ReadOnly = true;
@@ -155,8 +156,8 @@
             // EditDate
             // 
             this.EditDate.DataPropertyName = "EditDate";
-            dataGridViewCellStyle2.Format = "dd/MM/yyyy";
-            this.EditDate.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Format = "dd/MM/yyyy";
+            this.EditDate.DefaultCellStyle = dataGridViewCellStyle6;
             this.EditDate.HeaderText = "Update Date";
             this.EditDate.Name = "EditDate";
             this.EditDate.ReadOnly = true;
@@ -248,13 +249,31 @@
             this.tds.DataSetName = "dsCustomer";
             this.tds.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // btnClose
+            // 
+            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClose.BackColor = System.Drawing.Color.Transparent;
+            this.btnClose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClose.BackgroundImage")));
+            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Location = new System.Drawing.Point(1224, 1);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(0);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(38, 32);
+            this.btnClose.TabIndex = 40;
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Visible = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
             // CustomerList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1335, 577);
+            this.ClientSize = new System.Drawing.Size(1263, 577);
+            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel4);
             this.Name = "CustomerList";
@@ -289,5 +308,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ShopName;
         private System.Windows.Forms.DataGridViewTextBoxColumn MobilePhone;
         private System.Windows.Forms.DataGridViewTextBoxColumn EditDate;
+        private System.Windows.Forms.Button btnClose;
     }
 }

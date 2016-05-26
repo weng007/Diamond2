@@ -29,24 +29,13 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SellList));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SellList));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tds = new DiamondDS.DS.dsSell();
             this.panel2 = new System.Windows.Forms.Panel();
             this.gridSell = new System.Windows.Forms.DataGridView();
-            this.RowNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoldDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DisplayName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.JewelryTypeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Payment = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Seller = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ReceiveShop = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IsPrintCertificate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IsHavePrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnAdd = new System.Windows.Forms.Button();
             this.cmbType = new System.Windows.Forms.ComboBox();
@@ -54,6 +43,18 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtCode = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.RowNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SellDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CustomerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.JewelryTypeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NetPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PaymentName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SellerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ShopReceiveName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IsPrintCerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IsPrintPriceName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tds)).BeginInit();
             this.panel2.SuspendLayout();
@@ -95,16 +96,16 @@
             this.gridSell.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.RowNum,
             this.ID,
-            this.SoldDate,
-            this.DisplayName,
+            this.SellDate,
+            this.CustomerName,
             this.Code,
             this.JewelryTypeName,
-            this.Price,
-            this.Payment,
-            this.Seller,
-            this.ReceiveShop,
-            this.IsPrintCertificate,
-            this.IsHavePrice});
+            this.NetPrice,
+            this.PaymentName,
+            this.SellerName,
+            this.ShopReceiveName,
+            this.IsPrintCerName,
+            this.IsPrintPriceName});
             this.gridSell.Location = new System.Drawing.Point(14, 14);
             this.gridSell.Name = "gridSell";
             this.gridSell.ReadOnly = true;
@@ -114,106 +115,7 @@
             this.gridSell.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridSell.Size = new System.Drawing.Size(1315, 439);
             this.gridSell.TabIndex = 4;
-            // 
-            // RowNum
-            // 
-            this.RowNum.DataPropertyName = "RowNum";
-            this.RowNum.HeaderText = "No.";
-            this.RowNum.Name = "RowNum";
-            this.RowNum.ReadOnly = true;
-            this.RowNum.Width = 70;
-            // 
-            // ID
-            // 
-            this.ID.DataPropertyName = "ID";
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            this.ID.Visible = false;
-            // 
-            // SoldDate
-            // 
-            this.SoldDate.DataPropertyName = "SoldDate";
-            dataGridViewCellStyle2.Format = "dd/MM/yyyy";
-            this.SoldDate.DefaultCellStyle = dataGridViewCellStyle2;
-            this.SoldDate.HeaderText = "Sold Date";
-            this.SoldDate.Name = "SoldDate";
-            this.SoldDate.ReadOnly = true;
-            this.SoldDate.Width = 120;
-            // 
-            // DisplayName
-            // 
-            this.DisplayName.DataPropertyName = "DisplayName";
-            this.DisplayName.HeaderText = "Customer";
-            this.DisplayName.Name = "DisplayName";
-            this.DisplayName.ReadOnly = true;
-            this.DisplayName.Width = 150;
-            // 
-            // Code
-            // 
-            this.Code.DataPropertyName = "Code";
-            this.Code.HeaderText = "Code";
-            this.Code.Name = "Code";
-            this.Code.ReadOnly = true;
-            this.Code.Width = 120;
-            // 
-            // JewelryTypeName
-            // 
-            this.JewelryTypeName.DataPropertyName = "JewelryTypeName";
-            this.JewelryTypeName.HeaderText = "Type";
-            this.JewelryTypeName.Name = "JewelryTypeName";
-            this.JewelryTypeName.ReadOnly = true;
-            this.JewelryTypeName.Width = 130;
-            // 
-            // Price
-            // 
-            this.Price.DataPropertyName = "Price";
-            this.Price.HeaderText = "Price";
-            this.Price.Name = "Price";
-            this.Price.ReadOnly = true;
-            // 
-            // Payment
-            // 
-            this.Payment.DataPropertyName = "Payment";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle3.Format = "N2";
-            this.Payment.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Payment.HeaderText = "Payment";
-            this.Payment.Name = "Payment";
-            this.Payment.ReadOnly = true;
-            this.Payment.Width = 150;
-            // 
-            // Seller
-            // 
-            this.Seller.DataPropertyName = "Seller";
-            this.Seller.HeaderText = "Seller";
-            this.Seller.Name = "Seller";
-            this.Seller.ReadOnly = true;
-            this.Seller.Width = 120;
-            // 
-            // ReceiveShop
-            // 
-            this.ReceiveShop.DataPropertyName = "ReceiveShop";
-            this.ReceiveShop.HeaderText = "Received Product From";
-            this.ReceiveShop.Name = "ReceiveShop";
-            this.ReceiveShop.ReadOnly = true;
-            this.ReceiveShop.Width = 230;
-            // 
-            // IsPrintCertificate
-            // 
-            this.IsPrintCertificate.DataPropertyName = "IsPrintCertificate";
-            this.IsPrintCertificate.HeaderText = "Print Cer.";
-            this.IsPrintCertificate.Name = "IsPrintCertificate";
-            this.IsPrintCertificate.ReadOnly = true;
-            this.IsPrintCertificate.Width = 150;
-            // 
-            // IsHavePrice
-            // 
-            this.IsHavePrice.DataPropertyName = "IsHavePrice";
-            this.IsHavePrice.HeaderText = "Print Price In Cer.";
-            this.IsHavePrice.Name = "IsHavePrice";
-            this.IsHavePrice.ReadOnly = true;
-            this.IsHavePrice.Width = 170;
+            this.gridSell.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.gridSell_MouseDoubleClick);
             // 
             // panel4
             // 
@@ -296,6 +198,109 @@
             this.label3.TabIndex = 27;
             this.label3.Text = "Code";
             // 
+            // RowNum
+            // 
+            this.RowNum.DataPropertyName = "RowNum";
+            this.RowNum.HeaderText = "No.";
+            this.RowNum.Name = "RowNum";
+            this.RowNum.ReadOnly = true;
+            this.RowNum.Width = 70;
+            // 
+            // ID
+            // 
+            this.ID.DataPropertyName = "ID";
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Visible = false;
+            // 
+            // SellDate
+            // 
+            this.SellDate.DataPropertyName = "SellDate";
+            dataGridViewCellStyle2.Format = "dd/MM/yyyy";
+            this.SellDate.DefaultCellStyle = dataGridViewCellStyle2;
+            this.SellDate.HeaderText = "Sold Date";
+            this.SellDate.Name = "SellDate";
+            this.SellDate.ReadOnly = true;
+            this.SellDate.Width = 120;
+            // 
+            // CustomerName
+            // 
+            this.CustomerName.DataPropertyName = "CustomerName";
+            this.CustomerName.HeaderText = "Customer";
+            this.CustomerName.Name = "CustomerName";
+            this.CustomerName.ReadOnly = true;
+            this.CustomerName.Width = 150;
+            // 
+            // Code
+            // 
+            this.Code.DataPropertyName = "Code";
+            this.Code.HeaderText = "Code";
+            this.Code.Name = "Code";
+            this.Code.ReadOnly = true;
+            this.Code.Width = 160;
+            // 
+            // JewelryTypeName
+            // 
+            this.JewelryTypeName.DataPropertyName = "JewelryTypeName";
+            this.JewelryTypeName.HeaderText = "Type";
+            this.JewelryTypeName.Name = "JewelryTypeName";
+            this.JewelryTypeName.ReadOnly = true;
+            this.JewelryTypeName.Width = 150;
+            // 
+            // NetPrice
+            // 
+            this.NetPrice.DataPropertyName = "NetPrice";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle3.Format = "N2";
+            this.NetPrice.DefaultCellStyle = dataGridViewCellStyle3;
+            this.NetPrice.HeaderText = "NetPrice";
+            this.NetPrice.Name = "NetPrice";
+            this.NetPrice.ReadOnly = true;
+            this.NetPrice.Width = 110;
+            // 
+            // PaymentName
+            // 
+            this.PaymentName.DataPropertyName = "PaymentName";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle4.Format = "N2";
+            this.PaymentName.DefaultCellStyle = dataGridViewCellStyle4;
+            this.PaymentName.HeaderText = "Payment";
+            this.PaymentName.Name = "PaymentName";
+            this.PaymentName.ReadOnly = true;
+            // 
+            // SellerName
+            // 
+            this.SellerName.DataPropertyName = "SellerName";
+            this.SellerName.HeaderText = "Seller";
+            this.SellerName.Name = "SellerName";
+            this.SellerName.ReadOnly = true;
+            this.SellerName.Width = 120;
+            // 
+            // ShopReceiveName
+            // 
+            this.ShopReceiveName.DataPropertyName = "ShopReceiveName";
+            this.ShopReceiveName.HeaderText = "Received Shop";
+            this.ShopReceiveName.Name = "ShopReceiveName";
+            this.ShopReceiveName.ReadOnly = true;
+            this.ShopReceiveName.Width = 150;
+            // 
+            // IsPrintCerName
+            // 
+            this.IsPrintCerName.DataPropertyName = "IsPrintCerName";
+            this.IsPrintCerName.HeaderText = "Print Cer.";
+            this.IsPrintCerName.Name = "IsPrintCerName";
+            this.IsPrintCerName.ReadOnly = true;
+            this.IsPrintCerName.Width = 150;
+            // 
+            // IsPrintPriceName
+            // 
+            this.IsPrintPriceName.DataPropertyName = "IsPrintPriceName";
+            this.IsPrintPriceName.HeaderText = "Price In Cer.";
+            this.IsPrintPriceName.Name = "IsPrintPriceName";
+            this.IsPrintPriceName.ReadOnly = true;
+            this.IsPrintPriceName.Width = 170;
+            // 
             // SellList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -331,15 +336,15 @@
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.DataGridViewTextBoxColumn RowNum;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SoldDate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DisplayName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SellDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CustomerName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Code;
         private System.Windows.Forms.DataGridViewTextBoxColumn JewelryTypeName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Price;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Payment;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Seller;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ReceiveShop;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IsPrintCertificate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IsHavePrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NetPrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PaymentName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SellerName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ShopReceiveName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IsPrintCerName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IsPrintPriceName;
     }
 }

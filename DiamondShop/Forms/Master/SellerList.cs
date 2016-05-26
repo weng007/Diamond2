@@ -14,22 +14,10 @@ namespace DiamondShop
 {
     public partial class SellerList : FormList
     {
-        public int mode = 0;
-        public int refID1 = 0;
-        public string SellerName = "";
         public SellerList()
         {
             InitializeComponent();
             Initial();
-            DoLoadData();
-        }
-
-        public SellerList(int mode)
-        {
-            InitializeComponent();
-            Initial();
-            this.mode = mode;
-
             DoLoadData();
         }
 
@@ -110,29 +98,6 @@ namespace DiamondShop
         private void gridSeller_UserDeletedRow(object sender, DataGridViewRowEventArgs e)
         {
             DoDeleteData();
-            DoLoadData();
-        }
-
-        private void gridSeller_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-            DoLoadData();
-            if (mode == 0)
-            {
-                if (gridSeller.RowCount > 0 && gridSeller.SelectedRows.Count > 0)
-                {
-                    id = (int)gridSeller.SelectedRows[0].Cells["ID"].Value;
-                    Seller frm = new Seller(id);
-                    frm.ShowDialog();
-                }
-            }
-            else //mode = 1 Search
-            {
-                refID1 = (int)gridSeller.SelectedRows[0].Cells["ID"].Value;
-                SellerName = gridSeller.SelectedRows[0].Cells["DisplayName"].Value.ToString();;
-
-                this.Close();
-            }
-
             DoLoadData();
         }
     }

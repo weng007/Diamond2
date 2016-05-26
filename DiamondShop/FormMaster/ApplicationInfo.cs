@@ -28,5 +28,12 @@ namespace DiamondShop.FormMaster
             get { return displayName; }
             set { displayName = value; }
         }
+
+        static string authorized = "";
+        public static string Authorized
+        {
+            get { return authorized; }
+            set { authorized = value; }
+        }
     }
 }

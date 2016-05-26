@@ -90,7 +90,6 @@
             this.gridSeller.Size = new System.Drawing.Size(882, 460);
             this.gridSeller.TabIndex = 2;
             this.gridSeller.UserDeletedRow += new System.Windows.Forms.DataGridViewRowEventHandler(this.gridSeller_UserDeletedRow);
-            this.gridSeller.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.gridSeller_MouseDoubleClick);
             // 
             // RowNum
             // 
@@ -166,7 +165,7 @@
             this.btnAdd.FlatAppearance.BorderColor = System.Drawing.Color.Linen;
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
-            this.btnAdd.Location = new System.Drawing.Point(20, 27);
+            this.btnAdd.Location = new System.Drawing.Point(20, 12);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(70, 90);
             this.btnAdd.TabIndex = 71;
@@ -181,7 +180,7 @@
             this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSearch.FlatAppearance.BorderColor = System.Drawing.Color.Linen;
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.Location = new System.Drawing.Point(204, 66);
+            this.btnSearch.Location = new System.Drawing.Point(264, 66);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(105, 32);
             this.btnSearch.TabIndex = 8;
@@ -192,7 +191,7 @@
             // 
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(415, 23);
+            this.label4.Location = new System.Drawing.Point(449, 23);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(51, 26);
             this.label4.TabIndex = 38;
@@ -201,27 +200,27 @@
             // cmbShop
             // 
             this.cmbShop.FormattingEnabled = true;
-            this.cmbShop.Location = new System.Drawing.Point(472, 20);
+            this.cmbShop.Location = new System.Drawing.Point(506, 20);
             this.cmbShop.Name = "cmbShop";
             this.cmbShop.Size = new System.Drawing.Size(146, 29);
             this.cmbShop.TabIndex = 4;
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(204, 20);
+            this.txtName.Location = new System.Drawing.Point(264, 20);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(171, 27);
+            this.txtName.Size = new System.Drawing.Size(146, 27);
             this.txtName.TabIndex = 1;
             // 
             // label3
             // 
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(140, 23);
+            this.label3.Location = new System.Drawing.Point(136, 23);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(58, 26);
+            this.label3.Size = new System.Drawing.Size(122, 26);
             this.label3.TabIndex = 27;
-            this.label3.Text = "Name";
+            this.label3.Text = "Display Name";
             // 
             // SellerList
             // 

@@ -93,6 +93,7 @@
             this.btnClose.BackColor = System.Drawing.Color.Transparent;
             this.btnClose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClose.BackgroundImage")));
             this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Location = new System.Drawing.Point(1295, 0);
             this.btnClose.Margin = new System.Windows.Forms.Padding(0);
@@ -101,6 +102,7 @@
             this.btnClose.TabIndex = 39;
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Visible = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // label6
             // 

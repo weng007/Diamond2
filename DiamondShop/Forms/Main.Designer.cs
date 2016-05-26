@@ -346,6 +346,7 @@
             this.btnMaster.Name = "btnMaster";
             this.btnMaster.Padding = new System.Windows.Forms.Padding(2);
             this.btnMaster.Size = new System.Drawing.Size(78, 95);
+            this.btnMaster.Visible = false;
             // 
             // menuUser
             // 
@@ -353,7 +354,7 @@
             this.menuUser.Image = ((System.Drawing.Image)(resources.GetObject("menuUser.Image")));
             this.menuUser.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.menuUser.Name = "menuUser";
-            this.menuUser.Size = new System.Drawing.Size(130, 38);
+            this.menuUser.Size = new System.Drawing.Size(168, 38);
             this.menuUser.Text = "User";
             this.menuUser.Click += new System.EventHandler(this.btnUser_Click);
             // 
@@ -363,7 +364,7 @@
             this.menuSeller.Image = ((System.Drawing.Image)(resources.GetObject("menuSeller.Image")));
             this.menuSeller.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.menuSeller.Name = "menuSeller";
-            this.menuSeller.Size = new System.Drawing.Size(130, 38);
+            this.menuSeller.Size = new System.Drawing.Size(168, 38);
             this.menuSeller.Text = "Seller";
             this.menuSeller.Click += new System.EventHandler(this.menuSeller_Click);
             // 
@@ -585,8 +586,9 @@
             this.btnInventory.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnInventory.Margin = new System.Windows.Forms.Padding(30, 0, 0, 0);
             this.btnInventory.Name = "btnInventory";
-            this.btnInventory.Padding = new System.Windows.Forms.Padding(10, 4, 4, 4);
-            this.btnInventory.Size = new System.Drawing.Size(88, 95);
+            this.btnInventory.Padding = new System.Windows.Forms.Padding(3, 4, 4, 4);
+            this.btnInventory.Size = new System.Drawing.Size(81, 95);
+            this.btnInventory.Visible = false;
             // 
             // mnInvDR
             // 
@@ -742,6 +744,7 @@
             this.btnBuyBook.Name = "btnBuyBook";
             this.btnBuyBook.Padding = new System.Windows.Forms.Padding(10, 4, 4, 4);
             this.btnBuyBook.Size = new System.Drawing.Size(88, 95);
+            this.btnBuyBook.Visible = false;
             // 
             // mnBBCD
             // 

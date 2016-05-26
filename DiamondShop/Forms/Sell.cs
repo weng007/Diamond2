@@ -27,13 +27,18 @@ namespace DiamondShop
             InitializeComponent();
             Initial();
 
+            binder.BindControl(txtCode, "Code");
+            binder.BindControl(txtJewelryTypeName, "JewelryTypeName");
+            binder.BindControl(txtPriceTag, "PriceTag");
             binder.BindControl(cmbSeller, "Seller");
             binder.BindControl(txtNetPrice, "NetPrice");
             binder.BindControl(cmbShopRecive, "ShopReceive");
             binder.BindControl(dtSellDate, "SellDate");
             binder.BindControl(dtDueDate, "DueDate");
+            binder.BindControl(txtNetPrice, "NetPrice");
             binder.BindControl(cmbPayment, "Payment");
             binder.BindControl(dtPaymentDate, "PaymentDate");
+            binder.BindControl(txtCustomer, "CustomerName");
             binder.BindControl(txtNote, "Note");
         }
         public Sell(int id)
@@ -41,13 +46,18 @@ namespace DiamondShop
             InitializeComponent();
             Initial();
 
+            binder.BindControl(txtCode, "Code");
+            binder.BindControl(txtJewelryTypeName, "JewelryTypeName");
+            binder.BindControl(txtPriceTag, "PriceTag");
             binder.BindControl(cmbSeller, "Seller");
             binder.BindControl(txtNetPrice, "NetPrice");
             binder.BindControl(cmbShopRecive, "ShopReceive");
             binder.BindControl(dtSellDate, "SellDate");
             binder.BindControl(dtDueDate, "DueDate");
+            binder.BindControl(txtNetPrice, "NetPrice");
             binder.BindControl(cmbPayment, "Payment");
             binder.BindControl(dtPaymentDate, "PaymentDate");
+            binder.BindControl(txtCustomer, "CustomerName");
             binder.BindControl(txtNote, "Note");
 
             this.id = id;
@@ -72,7 +82,7 @@ namespace DiamondShop
             cmbShopRecive.DisplayMember = "Detail";
             cmbShopRecive.Refresh();
 
-            SetFormatNumber();
+            
 
             SetFieldService.SetRequireField(txtNetPrice,txtCode,txtCustomer);
         }
@@ -99,6 +109,7 @@ namespace DiamondShop
             }
 
             base.LoadData();
+            SetFormatNumber();
         }
 
         protected override bool SaveData()
@@ -117,6 +128,7 @@ namespace DiamondShop
             binder.BindValueToDataRow(row);
             row.RefID = refID;
             row.CustID = custID;
+            row.ShopReceive = Convert.ToInt32(cmbShopRecive.SelectedValue.ToString());
 
             try
             {
@@ -163,9 +175,9 @@ namespace DiamondShop
             {
                 message = "Please Choose Product.\n";
             }
-            if (txtNetPrice.Text == "" || GM.ConvertStringToDouble(txtNetPrice) > 0)
+            if (txtNetPrice.Text == "" || GM.ConvertStringToDouble(txtNetPrice) == 0)
             {
-                message += "Please Input Net Price > 0.\n";
+                message += "Please Input NetPrice > 0.\n";
             }
 
             if (message == "") { return true; }
@@ -211,12 +223,13 @@ namespace DiamondShop
             refID = frm.refID1;
             txtCode.Text = frm.code1;
             txtJewelryTypeName.Text = frm.typeName;
-            txtPrice.Text = frm.priceTag.ToString();
+            txtPriceTag.Text = frm.priceTag.ToString();
+            txtPriceTag.Text = GM.ConvertDoubleToString(txtPriceTag, 0);
         }
         
         private void SetFormatNumber()
         {
-            txtPrice.Text = GM.ConvertDoubleToString(txtPrice, 0);
+            txtPriceTag.Text = GM.ConvertDoubleToString(txtPriceTag, 0);
             txtNetPrice.Text = GM.ConvertDoubleToString(txtNetPrice, 0);
         }
 
@@ -232,7 +245,14 @@ namespace DiamondShop
         {
             CustomerList frm = new CustomerList(1);
             frm.ShowDialog();
-            custID = frm.id;
+            custID = frm.custID;
+            txtCustomer.Text = frm.customerName;
+        }
+
+        private void txtPriceTag_Leave(object sender, EventArgs e)
+        {
+            TextBox txt = (TextBox)sender;
+            txt.Text = GM.ConvertDoubleToString(txt, 0);
         }
     }
 }

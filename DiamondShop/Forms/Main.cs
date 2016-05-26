@@ -21,6 +21,8 @@ namespace DiamondShop
         public Main()
         {
             InitializeComponent();
+
+            SetAuthorized();
         }
 
         private void btnUser_Click(object sender, EventArgs e)
@@ -204,6 +206,22 @@ namespace DiamondShop
         private void Main_Load(object sender, EventArgs e)
         {
             txtFullName.Text = ApplicationInfo.DisplayName;
+        }
+
+        private void SetAuthorized()
+        {
+            if (ApplicationInfo.Authorized == "Staff")
+            {
+                btnInventory.Visible = false;
+                btnBuyBook.Visible = false;
+                btnMaster.Visible = false;
+            }
+            else if (ApplicationInfo.Authorized == "Owner")
+            {
+                btnInventory.Visible = true;
+                btnBuyBook.Visible = true;
+                btnMaster.Visible = true;
+            }
         }
     }
 }

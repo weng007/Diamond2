@@ -27,7 +27,6 @@ namespace DiamondShop
             cmbType.DataSource = (GM.GetMasterTableDetail("C015",true)).Tables[0];
             cmbType.ValueMember = "ID";
             cmbType.DisplayMember = "Detail";
-            cmbType.Refresh();
 
             txtCode.Select();
 
@@ -48,45 +47,11 @@ namespace DiamondShop
                 gridSell.Refresh();
             }
         }
-        protected override bool DoDeleteData()
-        {
-            Popup.Popup winMessage = new Popup.Popup("Do you want to Delete data?");
-            winMessage.ShowDialog();
-            chkFlag = winMessage.result;
-
-            if (chkFlag)
-            {
-                if (gridSell.RowCount > 0 && gridSell.SelectedRows.Count > 0)
-                {
-                    id = (int)gridSell.SelectedRows[0].Cells["ID"].Value;
-                    chkFlag = ser.DoDeleteData("Sell", id);
-                }
-            }
-            return chkFlag;
-        }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
             Sell frm = new Sell();
             frm.ShowDialog();
-            DoLoadData();
-        }
-
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
-            DoDeleteData();
-            DoLoadData();
-        }
-
-    private void btnEdit_Click(object sender, EventArgs e)
-    {
-            if (gridSell.RowCount > 0 && gridSell.SelectedRows.Count > 0)
-            {
-                id = (int)gridSell.SelectedRows[0].Cells["ID"].Value;
-                Sell frm = new Sell(id);
-                frm.ShowDialog();
-            }
-
             DoLoadData();
         }
 
@@ -98,6 +63,16 @@ namespace DiamondShop
 
             gridSell.DataSource = ds.Tables[0];
             gridSell.Refresh();
+        }
+
+        private void gridSell_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if (gridSell.RowCount > 0 && gridSell.SelectedRows.Count > 0)
+            {
+                id = (int)gridSell.SelectedRows[0].Cells["ID"].Value;
+                Sell frm = new Sell(id);
+                frm.ShowDialog();
+            }
         }
     }
 }

@@ -38,7 +38,7 @@
             this.txtCustomer = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.btnPrint = new System.Windows.Forms.Button();
-            this.txtPrice = new System.Windows.Forms.TextBox();
+            this.txtPriceTag = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.cmbShopRecive = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -96,7 +96,7 @@
             this.panel3.Controls.Add(this.label8);
             this.panel3.Controls.Add(this.btnPrint);
             this.panel3.Controls.Add(this.btnImage1);
-            this.panel3.Controls.Add(this.txtPrice);
+            this.panel3.Controls.Add(this.txtPriceTag);
             this.panel3.Controls.Add(this.label7);
             this.panel3.Controls.Add(this.cmbShopRecive);
             this.panel3.Controls.Add(this.label6);
@@ -141,7 +141,6 @@
             // 
             // txtMaterial
             // 
-            this.txtMaterial.BackColor = System.Drawing.Color.White;
             this.txtMaterial.Enabled = false;
             this.txtMaterial.Location = new System.Drawing.Point(470, 280);
             this.txtMaterial.Multiline = true;
@@ -159,6 +158,7 @@
             this.txtNetPrice.Text = "0";
             this.txtNetPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtNetPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetPrice_KeyPress);
+            this.txtNetPrice.Leave += new System.EventHandler(this.txtPriceTag_Leave);
             // 
             // btnBrowseCustomer
             // 
@@ -208,16 +208,18 @@
             this.btnPrint.TabIndex = 184;
             this.btnPrint.UseVisualStyleBackColor = false;
             // 
-            // txtPrice
+            // txtPriceTag
             // 
-            this.txtPrice.BackColor = System.Drawing.SystemColors.Control;
-            this.txtPrice.Enabled = false;
-            this.txtPrice.Location = new System.Drawing.Point(145, 129);
-            this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(138, 27);
-            this.txtPrice.TabIndex = 24;
-            this.txtPrice.Text = "0";
-            this.txtPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtPriceTag.BackColor = System.Drawing.SystemColors.Control;
+            this.txtPriceTag.Enabled = false;
+            this.txtPriceTag.Location = new System.Drawing.Point(145, 129);
+            this.txtPriceTag.Name = "txtPriceTag";
+            this.txtPriceTag.Size = new System.Drawing.Size(138, 27);
+            this.txtPriceTag.TabIndex = 24;
+            this.txtPriceTag.Text = "0";
+            this.txtPriceTag.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtPriceTag.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetPrice_KeyPress);
+            this.txtPriceTag.Leave += new System.EventHandler(this.txtPriceTag_Leave);
             // 
             // label7
             // 
@@ -245,7 +247,6 @@
             // 
             // txtGemstone
             // 
-            this.txtGemstone.BackColor = System.Drawing.Color.White;
             this.txtGemstone.Enabled = false;
             this.txtGemstone.Location = new System.Drawing.Point(467, 518);
             this.txtGemstone.Multiline = true;
@@ -264,7 +265,6 @@
             // 
             // txtDiamond
             // 
-            this.txtDiamond.BackColor = System.Drawing.Color.White;
             this.txtDiamond.Enabled = false;
             this.txtDiamond.Location = new System.Drawing.Point(470, 393);
             this.txtDiamond.Multiline = true;
@@ -522,7 +522,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DateTimePicker dtPaymentDate;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtPrice;
+        private System.Windows.Forms.TextBox txtPriceTag;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox cmbShopRecive;
         private System.Windows.Forms.Label label6;

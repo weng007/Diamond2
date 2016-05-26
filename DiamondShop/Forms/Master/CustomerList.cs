@@ -15,6 +15,8 @@ namespace DiamondShop
     public partial class CustomerList : FormList
     {
         int mode = 0;
+        public int custID=0;
+        public string customerName = "";    
 
         public CustomerList()
         {
@@ -27,8 +29,9 @@ namespace DiamondShop
         {
             InitializeComponent();
             Initial();
-
             this.mode = mode;
+
+            btnClose.Visible = true;
             DoLoadData();
         }
 
@@ -113,14 +116,29 @@ namespace DiamondShop
 
         private void gridCustomer_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            if (gridCustomer.RowCount > 0 && gridCustomer.SelectedRows.Count > 0)
+            if (mode == 0)
             {
-                id = (int)gridCustomer.SelectedRows[0].Cells["ID"].Value;
-                Customer frm = new Customer(id);
-                frm.ShowDialog();
+                if (gridCustomer.RowCount > 0 && gridCustomer.SelectedRows.Count > 0)
+                {
+                    id = (int)gridCustomer.SelectedRows[0].Cells["ID"].Value;
+                    Customer frm = new Customer(id);
+                    frm.ShowDialog();
+                }
+            }
+            else //mode = 1 Search
+            {
+                custID = (int)gridCustomer.SelectedRows[0].Cells["ID"].Value;
+                customerName = gridCustomer.SelectedRows[0].Cells["DisplayName"].Value.ToString();
+
+                this.Close();
             }
 
             DoLoadData();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

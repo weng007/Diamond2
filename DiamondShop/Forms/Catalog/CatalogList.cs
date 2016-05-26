@@ -32,6 +32,7 @@ namespace DiamondShop
             InitializeComponent();
             Initial();
             this.mode = mode;
+            btnClose.Visible = true;
 
             DoLoadData();
         }
@@ -126,11 +127,16 @@ namespace DiamondShop
                 code1 = gridCatalog.SelectedRows[0].Cells["Code"].Value.ToString();
                 typeName = gridCatalog.SelectedRows[0].Cells["JewelryTypeName"].Value.ToString();
                 priceTag = Convert.ToDecimal(gridCatalog.SelectedRows[0].Cells["PriceTag"].Value);
-
+           
                 this.Close();
             }
 
             DoLoadData();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
