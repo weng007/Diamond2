@@ -94,7 +94,7 @@ namespace DiamondShop
 
         protected override void Initial()
         {
-            cmbSetting.DataSource = (GM.GetMasterTableDetail("C015")).Tables[0];
+            cmbSetting.DataSource = (GM.GetMasterTableDetail("C015",false)).Tables[0];
             cmbSetting.ValueMember = "ID";
             cmbSetting.DisplayMember = "Detail";
             cmbSetting.Refresh();

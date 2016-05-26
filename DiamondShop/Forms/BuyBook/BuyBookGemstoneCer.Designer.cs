@@ -175,7 +175,7 @@
             this.panel3.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.panel3.Location = new System.Drawing.Point(11, 77);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1003, 535);
+            this.panel3.Size = new System.Drawing.Size(1024, 535);
             this.panel3.TabIndex = 74;
             // 
             // cmbColor
@@ -199,7 +199,7 @@
             // cmbCut
             // 
             this.cmbCut.FormattingEnabled = true;
-            this.cmbCut.Location = new System.Drawing.Point(127, 198);
+            this.cmbCut.Location = new System.Drawing.Point(127, 160);
             this.cmbCut.Name = "cmbCut";
             this.cmbCut.Size = new System.Drawing.Size(188, 29);
             this.cmbCut.TabIndex = 200;
@@ -208,7 +208,7 @@
             // 
             this.label32.AutoSize = true;
             this.label32.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label32.Location = new System.Drawing.Point(29, 202);
+            this.label32.Location = new System.Drawing.Point(29, 164);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(40, 21);
             this.label32.TabIndex = 201;
@@ -236,7 +236,7 @@
             // 
             this.label30.AutoSize = true;
             this.label30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label30.Location = new System.Drawing.Point(29, 163);
+            this.label30.Location = new System.Drawing.Point(29, 125);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(60, 21);
             this.label30.TabIndex = 197;
@@ -245,7 +245,7 @@
             // cmbShape
             // 
             this.cmbShape.FormattingEnabled = true;
-            this.cmbShape.Location = new System.Drawing.Point(127, 160);
+            this.cmbShape.Location = new System.Drawing.Point(127, 122);
             this.cmbShape.Name = "cmbShape";
             this.cmbShape.Size = new System.Drawing.Size(188, 29);
             this.cmbShape.TabIndex = 196;
@@ -296,7 +296,7 @@
             this.btnImage1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnImage1.BackgroundImage")));
             this.btnImage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnImage1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnImage1.Location = new System.Drawing.Point(33, 294);
+            this.btnImage1.Location = new System.Drawing.Point(50, 270);
             this.btnImage1.Name = "btnImage1";
             this.btnImage1.Size = new System.Drawing.Size(150, 150);
             this.btnImage1.TabIndex = 190;
@@ -330,8 +330,9 @@
             // 
             // cmbSetting
             // 
+            this.cmbSetting.Enabled = false;
             this.cmbSetting.FormattingEnabled = true;
-            this.cmbSetting.Location = new System.Drawing.Point(127, 122);
+            this.cmbSetting.Location = new System.Drawing.Point(807, 84);
             this.cmbSetting.Name = "cmbSetting";
             this.cmbSetting.Size = new System.Drawing.Size(188, 29);
             this.cmbSetting.TabIndex = 32;
@@ -340,7 +341,7 @@
             // 
             this.label25.AutoSize = true;
             this.label25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label25.Location = new System.Drawing.Point(29, 125);
+            this.label25.Location = new System.Drawing.Point(709, 87);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(66, 21);
             this.label25.TabIndex = 185;
@@ -350,7 +351,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label8.Location = new System.Drawing.Point(802, 136);
+            this.label8.Location = new System.Drawing.Point(803, 168);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(125, 21);
             this.label8.TabIndex = 184;
@@ -358,7 +359,7 @@
             // 
             // txtW
             // 
-            this.txtW.Location = new System.Drawing.Point(754, 168);
+            this.txtW.Location = new System.Drawing.Point(755, 200);
             this.txtW.Name = "txtW";
             this.txtW.Size = new System.Drawing.Size(53, 27);
             this.txtW.TabIndex = 40;
@@ -368,7 +369,7 @@
             // 
             // txtD
             // 
-            this.txtD.Location = new System.Drawing.Point(915, 168);
+            this.txtD.Location = new System.Drawing.Point(916, 200);
             this.txtD.Name = "txtD";
             this.txtD.Size = new System.Drawing.Size(53, 27);
             this.txtD.TabIndex = 48;
@@ -379,7 +380,7 @@
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(893, 171);
+            this.label27.Location = new System.Drawing.Point(894, 203);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(18, 21);
             this.label27.TabIndex = 183;
@@ -388,7 +389,7 @@
             // lbl1
             // 
             this.lbl1.AutoSize = true;
-            this.lbl1.Location = new System.Drawing.Point(813, 171);
+            this.lbl1.Location = new System.Drawing.Point(814, 203);
             this.lbl1.Name = "lbl1";
             this.lbl1.Size = new System.Drawing.Size(18, 21);
             this.lbl1.TabIndex = 182;
@@ -396,7 +397,7 @@
             // 
             // txtL
             // 
-            this.txtL.Location = new System.Drawing.Point(834, 168);
+            this.txtL.Location = new System.Drawing.Point(835, 200);
             this.txtL.Name = "txtL";
             this.txtL.Size = new System.Drawing.Size(53, 27);
             this.txtL.TabIndex = 44;
@@ -425,8 +426,9 @@
             // 
             // cmbStatus
             // 
+            this.cmbStatus.Enabled = false;
             this.cmbStatus.FormattingEnabled = true;
-            this.cmbStatus.Location = new System.Drawing.Point(806, 85);
+            this.cmbStatus.Location = new System.Drawing.Point(807, 119);
             this.cmbStatus.Name = "cmbStatus";
             this.cmbStatus.Size = new System.Drawing.Size(164, 29);
             this.cmbStatus.TabIndex = 56;
@@ -435,7 +437,7 @@
             // 
             this.label20.AutoSize = true;
             this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label20.Location = new System.Drawing.Point(714, 88);
+            this.label20.Location = new System.Drawing.Point(715, 122);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(59, 21);
             this.label20.TabIndex = 175;
@@ -586,7 +588,7 @@
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.label21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label21.Location = new System.Drawing.Point(746, 257);
+            this.label21.Location = new System.Drawing.Point(747, 289);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(80, 19);
             this.label21.TabIndex = 149;
@@ -596,7 +598,7 @@
             // 
             this.dtDueDate.CustomFormat = "dd/MM/yyyy";
             this.dtDueDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtDueDate.Location = new System.Drawing.Point(832, 251);
+            this.dtDueDate.Location = new System.Drawing.Point(833, 286);
             this.dtDueDate.Name = "dtDueDate";
             this.dtDueDate.Size = new System.Drawing.Size(136, 27);
             this.dtDueDate.TabIndex = 68;
@@ -605,7 +607,7 @@
             // 
             this.rdoNo.AutoSize = true;
             this.rdoNo.Checked = true;
-            this.rdoNo.Location = new System.Drawing.Point(898, 220);
+            this.rdoNo.Location = new System.Drawing.Point(899, 248);
             this.rdoNo.Name = "rdoNo";
             this.rdoNo.Size = new System.Drawing.Size(50, 25);
             this.rdoNo.TabIndex = 64;
@@ -616,7 +618,7 @@
             // rdoYes
             // 
             this.rdoYes.AutoSize = true;
-            this.rdoYes.Location = new System.Drawing.Point(832, 220);
+            this.rdoYes.Location = new System.Drawing.Point(833, 248);
             this.rdoYes.Name = "rdoYes";
             this.rdoYes.Size = new System.Drawing.Size(55, 25);
             this.rdoYes.TabIndex = 60;
@@ -628,7 +630,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label12.Location = new System.Drawing.Point(747, 219);
+            this.label12.Location = new System.Drawing.Point(748, 251);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(78, 19);
             this.label12.TabIndex = 145;
@@ -696,7 +698,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label10.Location = new System.Drawing.Point(29, 238);
+            this.label10.Location = new System.Drawing.Point(29, 200);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(66, 21);
             this.label10.TabIndex = 120;
@@ -704,7 +706,7 @@
             // 
             // txtWeight
             // 
-            this.txtWeight.Location = new System.Drawing.Point(127, 235);
+            this.txtWeight.Location = new System.Drawing.Point(127, 197);
             this.txtWeight.Name = "txtWeight";
             this.txtWeight.Size = new System.Drawing.Size(98, 27);
             this.txtWeight.TabIndex = 16;
@@ -797,7 +799,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(195)))), ((int)(((byte)(157)))));
-            this.ClientSize = new System.Drawing.Size(1025, 624);
+            this.ClientSize = new System.Drawing.Size(1047, 624);
             this.Controls.Add(this.panel3);
             this.Name = "BuyBookGemstoneCer";
             this.Text = "DiamondCer";

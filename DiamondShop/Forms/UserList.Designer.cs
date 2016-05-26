@@ -215,6 +215,7 @@
             this.StatusName.HeaderText = "Status";
             this.StatusName.Name = "StatusName";
             this.StatusName.ReadOnly = true;
+            this.StatusName.Width = 120;
             // 
             // UserList
             // 
