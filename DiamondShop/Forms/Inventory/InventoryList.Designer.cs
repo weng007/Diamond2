@@ -85,14 +85,14 @@
             this.panel4.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.panel4.Location = new System.Drawing.Point(0, 1);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1291, 119);
+            this.panel4.Size = new System.Drawing.Size(1335, 119);
             this.panel4.TabIndex = 42;
             // 
             // label6
             // 
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(245, 25);
+            this.label6.Location = new System.Drawing.Point(246, 23);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(17, 25);
             this.label6.TabIndex = 71;
@@ -107,7 +107,7 @@
             this.btnAdd.FlatAppearance.BorderColor = System.Drawing.Color.Linen;
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
-            this.btnAdd.Location = new System.Drawing.Point(20, 27);
+            this.btnAdd.Location = new System.Drawing.Point(20, 21);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(70, 90);
             this.btnAdd.TabIndex = 70;
@@ -117,7 +117,7 @@
             // txtPrefix
             // 
             this.txtPrefix.Enabled = false;
-            this.txtPrefix.Location = new System.Drawing.Point(187, 23);
+            this.txtPrefix.Location = new System.Drawing.Point(188, 21);
             this.txtPrefix.Name = "txtPrefix";
             this.txtPrefix.Size = new System.Drawing.Size(52, 27);
             this.txtPrefix.TabIndex = 1;
@@ -130,7 +130,7 @@
             this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSearch.FlatAppearance.BorderColor = System.Drawing.Color.Linen;
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.Location = new System.Drawing.Point(187, 65);
+            this.btnSearch.Location = new System.Drawing.Point(188, 63);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(105, 32);
             this.btnSearch.TabIndex = 8;
@@ -139,7 +139,7 @@
             // 
             // txtCode
             // 
-            this.txtCode.Location = new System.Drawing.Point(263, 23);
+            this.txtCode.Location = new System.Drawing.Point(264, 21);
             this.txtCode.Name = "txtCode";
             this.txtCode.Size = new System.Drawing.Size(132, 27);
             this.txtCode.TabIndex = 4;
@@ -148,7 +148,7 @@
             // 
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(122, 26);
+            this.label3.Location = new System.Drawing.Point(123, 24);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(59, 25);
             this.label3.TabIndex = 27;
@@ -159,9 +159,9 @@
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.gridInventory);
             this.panel2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel2.Location = new System.Drawing.Point(5, 124);
+            this.panel2.Location = new System.Drawing.Point(0, 118);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1330, 453);
+            this.panel2.Size = new System.Drawing.Size(1335, 459);
             this.panel2.TabIndex = 33;
             // 
             // gridInventory
@@ -189,14 +189,14 @@
             this.PriceTag,
             this.ShopName,
             this.StatusName});
-            this.gridInventory.Location = new System.Drawing.Point(15, 11);
+            this.gridInventory.Location = new System.Drawing.Point(20, 11);
             this.gridInventory.Name = "gridInventory";
             this.gridInventory.ReadOnly = true;
             this.gridInventory.RowHeadersWidth = 10;
             this.gridInventory.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridInventory.RowTemplate.Height = 60;
             this.gridInventory.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridInventory.Size = new System.Drawing.Size(1313, 441);
+            this.gridInventory.Size = new System.Drawing.Size(1315, 448);
             this.gridInventory.TabIndex = 2;
             this.gridInventory.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.gridInventory_MouseDoubleClick);
             // 

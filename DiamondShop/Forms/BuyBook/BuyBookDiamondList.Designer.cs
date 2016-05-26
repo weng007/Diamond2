@@ -92,7 +92,7 @@
             // 
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(554, 23);
+            this.label1.Location = new System.Drawing.Point(554, 24);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(14, 26);
             this.label1.TabIndex = 76;
@@ -100,7 +100,7 @@
             // 
             // txtESize
             // 
-            this.txtESize.Location = new System.Drawing.Point(573, 20);
+            this.txtESize.Location = new System.Drawing.Point(573, 21);
             this.txtESize.Name = "txtESize";
             this.txtESize.Size = new System.Drawing.Size(54, 27);
             this.txtESize.TabIndex = 12;
@@ -110,7 +110,7 @@
             // 
             // txtCode
             // 
-            this.txtCode.Location = new System.Drawing.Point(245, 20);
+            this.txtCode.Location = new System.Drawing.Point(245, 21);
             this.txtCode.Name = "txtCode";
             this.txtCode.Size = new System.Drawing.Size(161, 27);
             this.txtCode.TabIndex = 1;
@@ -119,7 +119,7 @@
             // 
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(172, 23);
+            this.label12.Location = new System.Drawing.Point(172, 24);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(67, 31);
             this.label12.TabIndex = 74;
@@ -134,7 +134,7 @@
             this.btnAdd.FlatAppearance.BorderColor = System.Drawing.Color.Linen;
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
-            this.btnAdd.Location = new System.Drawing.Point(20, 27);
+            this.btnAdd.Location = new System.Drawing.Point(20, 21);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(70, 90);
             this.btnAdd.TabIndex = 68;
@@ -143,7 +143,7 @@
             // 
             // txtSSize
             // 
-            this.txtSSize.Location = new System.Drawing.Point(494, 20);
+            this.txtSSize.Location = new System.Drawing.Point(494, 21);
             this.txtSSize.Name = "txtSSize";
             this.txtSSize.Size = new System.Drawing.Size(54, 27);
             this.txtSSize.TabIndex = 8;
@@ -155,7 +155,7 @@
             // 
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(172, 58);
+            this.label5.Location = new System.Drawing.Point(172, 59);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(67, 26);
             this.label5.TabIndex = 51;
@@ -164,7 +164,7 @@
             // cmbShape
             // 
             this.cmbShape.FormattingEnabled = true;
-            this.cmbShape.Location = new System.Drawing.Point(245, 55);
+            this.cmbShape.Location = new System.Drawing.Point(245, 56);
             this.cmbShape.Name = "cmbShape";
             this.cmbShape.Size = new System.Drawing.Size(161, 29);
             this.cmbShape.TabIndex = 4;
@@ -173,7 +173,7 @@
             // 
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(444, 23);
+            this.label4.Location = new System.Drawing.Point(444, 24);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(44, 26);
             this.label4.TabIndex = 45;
@@ -187,7 +187,7 @@
             this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSearch.FlatAppearance.BorderColor = System.Drawing.Color.Linen;
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.Location = new System.Drawing.Point(245, 100);
+            this.btnSearch.Location = new System.Drawing.Point(245, 101);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(105, 32);
             this.btnSearch.TabIndex = 16;
@@ -232,7 +232,7 @@
             this.gridDiamond.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridDiamond.RowTemplate.Height = 30;
             this.gridDiamond.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridDiamond.Size = new System.Drawing.Size(1314, 419);
+            this.gridDiamond.Size = new System.Drawing.Size(1314, 422);
             this.gridDiamond.TabIndex = 2;
             this.gridDiamond.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridDiamond_CellContentDoubleClick);
             // 

@@ -85,7 +85,7 @@
             this.panel4.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1334, 152);
+            this.panel4.Size = new System.Drawing.Size(1334, 149);
             this.panel4.TabIndex = 40;
             // 
             // txtSize
@@ -134,7 +134,7 @@
             this.btnAdd.FlatAppearance.BorderColor = System.Drawing.Color.Linen;
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
-            this.btnAdd.Location = new System.Drawing.Point(20, 27);
+            this.btnAdd.Location = new System.Drawing.Point(20, 21);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(70, 90);
             this.btnAdd.TabIndex = 68;
@@ -179,9 +179,9 @@
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.gridGemstone);
             this.panel2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel2.Location = new System.Drawing.Point(0, 157);
+            this.panel2.Location = new System.Drawing.Point(0, 151);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1334, 422);
+            this.panel2.Size = new System.Drawing.Size(1334, 428);
             this.panel2.TabIndex = 34;
             // 
             // gridGemstone
@@ -212,7 +212,7 @@
             this.gridGemstone.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridGemstone.RowTemplate.Height = 30;
             this.gridGemstone.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridGemstone.Size = new System.Drawing.Size(1314, 418);
+            this.gridGemstone.Size = new System.Drawing.Size(1314, 425);
             this.gridGemstone.TabIndex = 2;
             this.gridGemstone.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.gridGemstone_MouseDoubleClick);
             // 

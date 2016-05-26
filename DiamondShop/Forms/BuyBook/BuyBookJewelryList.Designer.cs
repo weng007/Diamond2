@@ -91,7 +91,7 @@
             // 
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(251, 25);
+            this.label6.Location = new System.Drawing.Point(252, 23);
             this.label6.Margin = new System.Windows.Forms.Padding(0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(15, 25);
@@ -107,7 +107,7 @@
             this.btnAdd.FlatAppearance.BorderColor = System.Drawing.Color.Linen;
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
-            this.btnAdd.Location = new System.Drawing.Point(20, 27);
+            this.btnAdd.Location = new System.Drawing.Point(20, 21);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(70, 90);
             this.btnAdd.TabIndex = 69;
@@ -117,7 +117,7 @@
             // txtPrefix
             // 
             this.txtPrefix.Enabled = false;
-            this.txtPrefix.Location = new System.Drawing.Point(196, 23);
+            this.txtPrefix.Location = new System.Drawing.Point(197, 21);
             this.txtPrefix.Name = "txtPrefix";
             this.txtPrefix.Size = new System.Drawing.Size(52, 27);
             this.txtPrefix.TabIndex = 1;
@@ -131,7 +131,7 @@
             this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSearch.FlatAppearance.BorderColor = System.Drawing.Color.Linen;
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.Location = new System.Drawing.Point(196, 65);
+            this.btnSearch.Location = new System.Drawing.Point(197, 63);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(105, 32);
             this.btnSearch.TabIndex = 8;
@@ -140,7 +140,7 @@
             // 
             // txtCode
             // 
-            this.txtCode.Location = new System.Drawing.Point(269, 23);
+            this.txtCode.Location = new System.Drawing.Point(270, 21);
             this.txtCode.Name = "txtCode";
             this.txtCode.Size = new System.Drawing.Size(132, 27);
             this.txtCode.TabIndex = 4;
@@ -149,7 +149,7 @@
             // 
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(131, 26);
+            this.label3.Location = new System.Drawing.Point(132, 24);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(59, 25);
             this.label3.TabIndex = 27;
@@ -190,14 +190,14 @@
             this.ShopName,
             this.StatusName,
             this.Seller});
-            this.gridJewelry.Location = new System.Drawing.Point(15, 13);
+            this.gridJewelry.Location = new System.Drawing.Point(15, 6);
             this.gridJewelry.Name = "gridJewelry";
             this.gridJewelry.ReadOnly = true;
             this.gridJewelry.RowHeadersWidth = 10;
             this.gridJewelry.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridJewelry.RowTemplate.Height = 60;
             this.gridJewelry.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridJewelry.Size = new System.Drawing.Size(1314, 438);
+            this.gridJewelry.Size = new System.Drawing.Size(1314, 447);
             this.gridJewelry.TabIndex = 2;
             this.gridJewelry.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.gridJewelry_MouseDoubleClick);
             // 

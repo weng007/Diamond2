@@ -338,9 +338,9 @@
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.gridGemstone);
             this.panel2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel2.Location = new System.Drawing.Point(5, 184);
+            this.panel2.Location = new System.Drawing.Point(0, 184);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1331, 397);
+            this.panel2.Size = new System.Drawing.Size(1336, 397);
             this.panel2.TabIndex = 33;
             // 
             // gridGemstone
@@ -367,14 +367,14 @@
             this.SettingName,
             this.StatusName,
             this.BuyDate});
-            this.gridGemstone.Location = new System.Drawing.Point(7, 0);
+            this.gridGemstone.Location = new System.Drawing.Point(18, 0);
             this.gridGemstone.Name = "gridGemstone";
             this.gridGemstone.ReadOnly = true;
             this.gridGemstone.RowHeadersWidth = 10;
             this.gridGemstone.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridGemstone.RowTemplate.Height = 30;
             this.gridGemstone.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridGemstone.Size = new System.Drawing.Size(1321, 392);
+            this.gridGemstone.Size = new System.Drawing.Size(1317, 392);
             this.gridGemstone.TabIndex = 2;
             this.gridGemstone.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.gridGemstone_MouseDoubleClick);
             // 

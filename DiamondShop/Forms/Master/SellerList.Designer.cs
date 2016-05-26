@@ -80,14 +80,14 @@
             this.ShopName,
             this.RoleName,
             this.StatusName});
-            this.gridSeller.Location = new System.Drawing.Point(15, 3);
+            this.gridSeller.Location = new System.Drawing.Point(15, 16);
             this.gridSeller.Name = "gridSeller";
             this.gridSeller.ReadOnly = true;
             this.gridSeller.RowHeadersWidth = 10;
             this.gridSeller.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridSeller.RowTemplate.Height = 30;
             this.gridSeller.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridSeller.Size = new System.Drawing.Size(882, 460);
+            this.gridSeller.Size = new System.Drawing.Size(882, 447);
             this.gridSeller.TabIndex = 2;
             this.gridSeller.UserDeletedRow += new System.Windows.Forms.DataGridViewRowEventHandler(this.gridSeller_UserDeletedRow);
             // 
@@ -165,7 +165,7 @@
             this.btnAdd.FlatAppearance.BorderColor = System.Drawing.Color.Linen;
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
-            this.btnAdd.Location = new System.Drawing.Point(20, 12);
+            this.btnAdd.Location = new System.Drawing.Point(20, 21);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(70, 90);
             this.btnAdd.TabIndex = 71;

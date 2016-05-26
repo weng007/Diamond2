@@ -57,6 +57,156 @@ namespace Diamond
                     throw ex;
                 }
             }
+            else if (TableName == "Catalog")
+            {
+                CatalogBiz biz = GM.CatalogBiz();
+                try
+                {
+                    return biz.DoSelectData(id);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            else if (TableName == "DiamondCer")
+            {
+                DiamondCerBiz biz = GM.GetDiamondBiz();
+                try
+                {
+                    return biz.DoSelectData(id);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            else if (TableName == "DiamondDetail")
+            {
+                DiamondDetailBiz biz = GM.GetDiamondDetailBiz();
+                try
+                {
+                    return biz.DoSelectData(id);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            else if (TableName == "GemstoneCer")
+            {
+                GemstoneCerBiz biz = GM.GetGemstoneCerBiz();
+                try
+                {
+                    return biz.DoSelectData(id);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            else if (TableName == "GemstoneDetail")
+            {
+                GemstoneDetailBiz biz = GM.GetGemstoneDetailBiz();
+                try
+                {
+                    return biz.DoSelectData(id);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            else if (TableName == "Customer")
+            {
+                CustomerBiz biz = GM.GetCustomerBiz();
+                try
+                {
+                    return biz.DoSelectData(id);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            else if (TableName == "Sell")
+            {
+                SellBiz biz = GM.SellBiz();
+                try
+                {
+                    return biz.DoSelectData(id);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            else if (TableName == "Inventory")
+            {
+                InventoryBiz biz = GM.InventoryBiz();
+                try
+                {
+                    return biz.DoSelectData(id);
+
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            else if (TableName == "InvDiamondCerDetail")
+            {
+                InvDiamondCerDetailBiz biz = GM.InvDiamondCerDetailBiz();
+                try
+                {
+                    return biz.DoSelectData(id);
+
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            else if (TableName == "InvDiamondDetail")
+            {
+                InvDiamondDetailBiz biz = GM.InvDiamondDetailBiz();
+                try
+                {
+                    return biz.DoSelectData(id);
+
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            else if (TableName == "InvGemstoneCerDetail")
+            {
+                InvGemstoneCerDetailBiz biz = GM.InvGemstoneCerDetailBiz();
+                try
+                {
+                    return biz.DoSelectData(id);
+
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            else if (TableName == "InvGemstoneDetail")
+            {
+                InvGemstoneDetailBiz biz = GM.InvGemstoneDetailBiz();
+                try
+                {
+                    return biz.DoSelectData(id);
+
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            
             else if (TableName == "BuyBookDiamondCer")
             {
                 BuyBookDiamondCerBiz biz = GM.GetBuyBookDiamondCerBiz();
@@ -153,90 +303,10 @@ namespace Diamond
                     throw ex;
                 }
             }
-            else if (TableName == "DiamondCer")
-            {
-                DiamondCerBiz biz = GM.GetDiamondBiz();
-                try
-                {
-                    return biz.DoSelectData(id);
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
-            }
-            else if (TableName == "DiamondDetail")
-            {
-                DiamondDetailBiz biz = GM.GetDiamondDetailBiz();
-                try
-                {
-                    return biz.DoSelectData(id);
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
-            }
-            else if (TableName == "GemstoneCer")
-            {
-                GemstoneCerBiz biz = GM.GetGemstoneCerBiz();
-                try
-                {
-                    return biz.DoSelectData(id);
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
-            }
-            else if (TableName == "GemstoneDetail")
-            {
-                GemstoneDetailBiz biz = GM.GetGemstoneDetailBiz();
-                try
-                {
-                    return biz.DoSelectData(id);
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
-            }
-            else if (TableName == "Customer")
-            {
-                CustomerBiz biz = GM.GetCustomerBiz();
-                try
-                {
-                    return biz.DoSelectData(id);
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
-            }
-            else if (TableName == "Sell")
-            {
-                SellBiz biz = GM.SellBiz();
-                try
-                {
-                    return biz.DoSelectData(id);
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
-            }
-            else if (TableName == "Catalog")
-            {
-                CatalogBiz biz = GM.CatalogBiz();
-                try
-                {
-                    return biz.DoSelectData(id);
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
-            }
+            
+            
+            
+            
             else if (TableName == "BBJewelryGemstoneCerDetail")
             {
                 BBJewelryGemstoneCerDetailBiz biz = GM.BBJewelryGemstoneCerDetailBiz();
@@ -289,71 +359,7 @@ namespace Diamond
                     throw ex;
                 }
             }
-            else if (TableName == "Inventory")
-            {
-                InventoryBiz biz = GM.InventoryBiz();
-                try
-                {
-                    return biz.DoSelectData(id);
-
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
-            }
-            else if (TableName == "InvDiamondCerDetail")
-            {
-                InvDiamondCerDetailBiz biz = GM.InvDiamondCerDetailBiz();
-                try
-                {
-                    return biz.DoSelectData(id);
-
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
-            }
-            else if (TableName == "InvGemstoneCerDetail")
-            {
-                InvGemstoneCerDetailBiz biz = GM.InvGemstoneCerDetailBiz();
-                try
-                {
-                    return biz.DoSelectData(id);
-
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
-            }
-            else if (TableName == "InvGemstoneDetail")
-            {
-                InvGemstoneDetailBiz biz = GM.InvGemstoneDetailBiz();
-                try
-                {
-                    return biz.DoSelectData(id);
-
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
-            }
-            else if (TableName == "InvDiamondDetail")
-            {
-                InvDiamondDetailBiz biz = GM.InvDiamondDetailBiz();
-                try
-                {
-                    return biz.DoSelectData(id);
-
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
-            }
+            
             else if (TableName == "BuyBookSetting")
             {
                 BuyBookSettingBiz biz = GM.BuyBookSettingBiz();
@@ -420,6 +426,159 @@ namespace Diamond
                     throw ex;
                 }
             }
+            else if (TableName == "DiamondDetail")
+            {
+                DiamondDetailBiz biz = GM.GetDiamondDetailBiz();
+                dsDiamondDetail ds1 = new dsDiamondDetail();
+                ds1.Merge(ds);
+
+                try
+                {
+                    flag = biz.DoInsertData(ds1);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            else if (TableName == "GemstoneCer")
+            {
+                GemstoneCerBiz biz = GM.GetGemstoneCerBiz();
+                dsGemstoneCer ds1 = new dsGemstoneCer();
+                ds1.Merge(ds);
+
+                try
+                {
+                    flag = biz.DoInsertData(ds1);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            else if (TableName == "GemstoneDetail")
+            {
+                GemstoneDetailBiz biz = GM.GetGemstoneDetailBiz();
+                dsGemstoneDetail ds1 = new dsGemstoneDetail();
+                ds1.Merge(ds);
+
+                try
+                {
+                    flag = biz.DoInsertData(ds1);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            else if (TableName == "Customer")
+            {
+                CustomerBiz biz = GM.GetCustomerBiz();
+                dsCustomer ds1 = new dsCustomer();
+                ds1.Merge(ds);
+
+                try
+                {
+                    flag = biz.DoInsertData(ds1);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            else if (TableName == "Sell")
+            {
+                SellBiz biz = GM.SellBiz();
+                dsSell ds1 = new dsSell();
+                ds1.Merge(ds);
+
+                try
+                {
+                    flag = biz.DoInsertData(ds1);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            else if (TableName == "Inventory")
+            {
+                InventoryBiz biz = GM.InventoryBiz();
+                dsInventory ds1 = new dsInventory();
+
+                ds1.Merge(ds);
+
+
+                try
+                {
+                    flag = biz.DoInsertData(ds1);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            else if (TableName == "InvDiamondCerDetail")
+            {
+                InvDiamondCerDetailBiz biz = GM.InvDiamondCerDetailBiz();
+                dsInvDiamondCerDetail ds1 = new dsInvDiamondCerDetail();
+                ds1.Merge(ds);
+
+                try
+                {
+                    flag = biz.DoInsertData(ds1);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            else if (TableName == "InvDiamondDetail")
+            {
+                InvDiamondDetailBiz biz = GM.InvDiamondDetailBiz();
+                dsInvDiamondDetail ds1 = new dsInvDiamondDetail();
+                ds1.Merge(ds);
+
+                try
+                {
+                    flag = biz.DoInsertData(ds1);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            else if (TableName == "InvGemstoneCerDetail")
+            {
+                InvGemstoneCerDetailBiz biz = GM.InvGemstoneCerDetailBiz();
+                dsInvGemstoneCerDetail ds1 = new dsInvGemstoneCerDetail();
+                ds1.Merge(ds);
+
+                try
+                {
+                    flag = biz.DoInsertData(ds1);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            else if (TableName == "InvGemstoneDetail")
+            {
+                InvGemstoneDetailBiz biz = GM.InvGemstoneDetailBiz();
+                dsInvGemstoneDetail ds1 = new dsInvGemstoneDetail();
+                ds1.Merge(ds);
+
+                try
+                {
+                    flag = biz.DoInsertData(ds1);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            
             else if (TableName == "BuyBookDiamondCer")
             {
                 BuyBookDiamondCerBiz biz = GM.GetBuyBookDiamondCerBiz();
@@ -540,81 +699,9 @@ namespace Diamond
                     throw ex;
                 }
             }
-            else if (TableName == "DiamondDetail")
-            {
-                DiamondDetailBiz biz = GM.GetDiamondDetailBiz();
-                dsDiamondDetail ds1 = new dsDiamondDetail();
-                ds1.Merge(ds);
-
-                try
-                {
-                    flag = biz.DoInsertData(ds1);
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
-            }
-            else if (TableName == "GemstoneCer")
-            {
-                GemstoneCerBiz biz = GM.GetGemstoneCerBiz();
-                dsGemstoneCer ds1 = new dsGemstoneCer();
-                ds1.Merge(ds);
-
-                try
-                {
-                    flag = biz.DoInsertData(ds1);
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
-            }
-            else if (TableName == "GemstoneDetail")
-            {
-                GemstoneDetailBiz biz = GM.GetGemstoneDetailBiz();
-                dsGemstoneDetail ds1 = new dsGemstoneDetail();
-                ds1.Merge(ds);
-
-                try
-                {
-                    flag = biz.DoInsertData(ds1);
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
-            }
-            else if (TableName == "Customer")
-            {
-                CustomerBiz biz = GM.GetCustomerBiz();
-                dsCustomer ds1 = new dsCustomer();
-                ds1.Merge(ds);
-
-                try
-                {
-                    flag = biz.DoInsertData(ds1);
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
-            }
-            else if (TableName == "Sell")
-            {
-                SellBiz biz = GM.SellBiz();
-                dsSell ds1 = new dsSell();
-                ds1.Merge(ds);
-
-                try
-                {
-                    flag = biz.DoInsertData(ds1);
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
-            }
+            
+            
+            
             else if (TableName == "BBJewelryGemstoneCerDetail")
             {
                 BBJewelryGemstoneCerDetailBiz biz = GM.BBJewelryGemstoneCerDetailBiz();
@@ -675,83 +762,7 @@ namespace Diamond
                     throw ex;
                 }
             }
-            else if (TableName == "Inventory")
-            {
-                InventoryBiz biz = GM.InventoryBiz();
-                dsInventory ds1 = new dsInventory();
-
-                ds1.Merge(ds);
-
-
-                try
-                {
-                    flag = biz.DoInsertData(ds1);
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
-            }
-            else if (TableName == "InvDiamondCerDetail")
-            {
-                InvDiamondCerDetailBiz biz = GM.InvDiamondCerDetailBiz();
-                dsInvDiamondCerDetail ds1 = new dsInvDiamondCerDetail();
-                ds1.Merge(ds);
-
-                try
-                {
-                    flag = biz.DoInsertData(ds1);
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
-            }
-            else if (TableName == "InvGemstoneCerDetail")
-            {
-                InvGemstoneCerDetailBiz biz = GM.InvGemstoneCerDetailBiz();
-                dsInvGemstoneCerDetail ds1 = new dsInvGemstoneCerDetail();
-                ds1.Merge(ds);
-
-                try
-                {
-                    flag = biz.DoInsertData(ds1);
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
-            }
-            else if (TableName == "InvGemstoneDetail")
-            {
-                InvGemstoneDetailBiz biz = GM.InvGemstoneDetailBiz();
-                dsInvGemstoneDetail ds1 = new dsInvGemstoneDetail();
-                ds1.Merge(ds);
-
-                try
-                {
-                    flag = biz.DoInsertData(ds1);
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
-            }
-            else if (TableName == "InvDiamondDetail")
-            {
-                InvDiamondDetailBiz biz = GM.InvDiamondDetailBiz();
-                dsInvDiamondDetail ds1 = new dsInvDiamondDetail();
-                ds1.Merge(ds);
-
-                try
-                {
-                    flag = biz.DoInsertData(ds1);
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
-            }
+            
             else if (TableName == "BuyBookSetting")
             {
                 BuyBookSettingBiz biz = GM.BuyBookSettingBiz();
@@ -796,6 +807,117 @@ namespace Diamond
                 SellerBiz biz = GM.GetSellerBiz();
                 dsSeller ds1 = new dsSeller();
 
+                ds1.Merge(ds);
+
+                try
+                {
+                    flag = biz.DoUpdateData(ds1);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            else if (TableName == "Catalog")
+            {
+                CatalogBiz biz = GM.CatalogBiz();
+                dsCatalog ds1 = new dsCatalog();
+
+                ds1.Merge(ds);
+
+                try
+                {
+                    flag = biz.DoUpdateData(ds1);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            else if (TableName == "DiamondCer")
+            {
+                DiamondCerBiz biz = GM.GetDiamondBiz();
+                dsDiamondCer ds1 = new dsDiamondCer();
+
+                ds1.Merge(ds);
+
+                try
+                {
+                    flag = biz.DoUpdateData(ds1);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            else if (TableName == "DiamondDetail")
+            {
+                DiamondDetailBiz biz = GM.GetDiamondDetailBiz();
+                dsDiamondDetail ds1 = new dsDiamondDetail();
+
+                ds1.Merge(ds);
+
+                try
+                {
+                    flag = biz.DoUpdateData(ds1);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            else if (TableName == "GemstoneCer")
+            {
+                GemstoneCerBiz biz = GM.GetGemstoneCerBiz();
+                dsGemstoneCer ds1 = new dsGemstoneCer();
+
+                ds1.Merge(ds);
+
+                try
+                {
+                    flag = biz.DoUpdateData(ds1);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            else if (TableName == "GemstoneDetail")
+            {
+                GemstoneDetailBiz biz = GM.GetGemstoneDetailBiz();
+                dsGemstoneDetail ds1 = new dsGemstoneDetail();
+
+                ds1.Merge(ds);
+
+                try
+                {
+                    flag = biz.DoUpdateData(ds1);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            else if (TableName == "Customer")
+            {
+                CustomerBiz biz = GM.GetCustomerBiz();
+                dsCustomer ds1 = new dsCustomer();
+
+                ds1.Merge(ds);
+
+                try
+                {
+                    flag = biz.DoUpdateData(ds1);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            else if (TableName == "Sell")
+            {
+                SellBiz biz = GM.SellBiz();
+                dsSell ds1 = new dsSell();
                 ds1.Merge(ds);
 
                 try
@@ -934,102 +1056,9 @@ namespace Diamond
                     throw ex;
                 }
             }
-            else if (TableName == "DiamondCer")
-            {
-                DiamondCerBiz biz = GM.GetDiamondBiz();
-                dsDiamondCer ds1 = new dsDiamondCer();
-
-                ds1.Merge(ds);
-
-                try
-                {
-                    flag = biz.DoUpdateData(ds1);
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
-            }
-            else if (TableName == "DiamondDetail")
-            {
-                DiamondDetailBiz biz = GM.GetDiamondDetailBiz();
-                dsDiamondDetail ds1 = new dsDiamondDetail();
-
-                ds1.Merge(ds);
-
-                try
-                {
-                    flag = biz.DoUpdateData(ds1);
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
-            }
-            else if (TableName == "GemstoneCer")
-            {
-                GemstoneCerBiz biz = GM.GetGemstoneCerBiz();
-                dsGemstoneCer ds1 = new dsGemstoneCer();
-
-                ds1.Merge(ds);
-
-                try
-                {
-                    flag = biz.DoUpdateData(ds1);
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
-            }
-            else if (TableName == "GemstoneDetail")
-            {
-                GemstoneDetailBiz biz = GM.GetGemstoneDetailBiz();
-                dsGemstoneDetail ds1 = new dsGemstoneDetail();
-
-                ds1.Merge(ds);
-
-                try
-                {
-                    flag = biz.DoUpdateData(ds1);
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
-            }
-            else if (TableName == "Customer")
-            {
-                CustomerBiz biz = GM.GetCustomerBiz();
-                dsCustomer ds1 = new dsCustomer();
-
-                ds1.Merge(ds);
-
-                try
-                {
-                    flag = biz.DoUpdateData(ds1);
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
-            }
-            else if (TableName == "Catalog")
-            {
-                CatalogBiz biz = GM.CatalogBiz();
-                dsCatalog ds1 = new dsCatalog();
-
-                ds1.Merge(ds);
-
-                try
-                {
-                    flag = biz.DoUpdateData(ds1);
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
-            }
+            
+            
+            
             else if (TableName == "BBJewelryGemstoneCerDetail")
             {
                 BBJewelryGemstoneCerDetailBiz biz = GM.BBJewelryGemstoneCerDetailBiz();
@@ -1182,21 +1211,7 @@ namespace Diamond
                 }
             }
 
-            else if (TableName == "Sell")
-            {
-                SellBiz biz = GM.SellBiz();
-                dsSell ds1 = new dsSell();
-                ds1.Merge(ds);
-
-                try
-                {
-                    flag = biz.DoUpdateData(ds1);
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
-            }
+            
 
             return flag;
         }
@@ -1221,6 +1236,78 @@ namespace Diamond
             else if (TableName == "Seller")
             {
                 SellerBiz biz = GM.GetSellerBiz();
+                try
+                {
+                    flag = biz.DoDeleteData(id);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            else if (TableName == "Catalog")
+            {
+                CatalogBiz biz = GM.CatalogBiz();
+                try
+                {
+                    flag = biz.DoDeleteData(id);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            else if (TableName == "DiamondDetail")
+            {
+                DiamondDetailBiz biz = GM.GetDiamondDetailBiz();
+                try
+                {
+                    flag = biz.DoDeleteData(id);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            else if (TableName == "GemstoneCer")
+            {
+                GemstoneCerBiz biz = GM.GetGemstoneCerBiz();
+                try
+                {
+                    flag = biz.DoDeleteData(id);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            else if (TableName == "GemstoneDetail")
+            {
+                GemstoneDetailBiz biz = GM.GetGemstoneDetailBiz();
+                try
+                {
+                    flag = biz.DoDeleteData(id);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            else if (TableName == "Customer")
+            {
+                CustomerBiz biz = GM.GetCustomerBiz();
+                try
+                {
+                    flag = biz.DoDeleteData(id);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            else if (TableName == "Sell")
+            {
+                SellBiz biz = GM.SellBiz();
                 try
                 {
                     flag = biz.DoDeleteData(id);
@@ -1326,78 +1413,10 @@ namespace Diamond
                     throw ex;
                 }
             }
-            else if (TableName == "DiamondDetail")
-            {
-                DiamondDetailBiz biz = GM.GetDiamondDetailBiz();
-                try
-                {
-                    flag = biz.DoDeleteData(id);
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
-            }
-            else if (TableName == "GemstoneCer")
-            {
-                GemstoneCerBiz biz = GM.GetGemstoneCerBiz();
-                try
-                {
-                    flag = biz.DoDeleteData(id);
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
-            }
-            else if (TableName == "GemstoneDetail")
-            {
-                GemstoneDetailBiz biz = GM.GetGemstoneDetailBiz();
-                try
-                {
-                    flag = biz.DoDeleteData(id);
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
-            }
-            else if (TableName == "Customer")
-            {
-                CustomerBiz biz = GM.GetCustomerBiz();
-                try
-                {
-                    flag = biz.DoDeleteData(id);
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
-            }
-            else if (TableName == "Sell")
-            {
-                SellBiz biz = GM.SellBiz();
-                try
-                {
-                    flag = biz.DoDeleteData(id);
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
-            }
-            else if (TableName == "Catalog")
-            {
-                CatalogBiz biz = GM.CatalogBiz();
-                try
-                {
-                    flag = biz.DoDeleteData(id);
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
-            }
+            
+            
+            
+            
             else if (TableName == "BBJewelryGemstoneCerDetail")
             {
                 BBJewelryGemstoneCerDetailBiz biz = GM.BBJewelryGemstoneCerDetailBiz();
