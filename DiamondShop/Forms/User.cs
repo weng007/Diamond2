@@ -179,5 +179,23 @@ namespace DiamondShop
 
             return chkFlag;
         }
+
+        private void cmbRole_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(cmbRole.SelectedIndex == 1)
+            {   
+                lblInventory.Visible = true;
+                txtPassword2.Visible = true;
+                lblBuyBook.Visible = true;
+                txtPassword3.Visible = true;
+            }
+            else
+            {
+                lblInventory.Visible = false;
+                txtPassword2.Visible = false;
+                lblBuyBook.Visible = false;
+                txtPassword3.Visible = false;
+            }
+        }
     }
 }
