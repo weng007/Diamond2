@@ -206,58 +206,9 @@ namespace Diamond
                     throw ex;
                 }
             }
-            
             else if (TableName == "BuyBookDiamondCer")
             {
                 BuyBookDiamondCerBiz biz = GM.GetBuyBookDiamondCerBiz();
-                try
-                {
-                    return biz.DoSelectData(id);
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
-            }
-            else if (TableName == "BuyBookJewelry")
-            {
-                BuyBookJewelryBiz biz = GM.GetBuyBookJewelryBiz();
-                try
-                {
-                    return biz.DoSelectData(id);
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
-            }
-            else if (TableName == "BuyBookETC")
-            {
-                BuyBookETCBiz biz = GM.GetBuyBookETCBiz();
-                try
-                {
-                    return biz.DoSelectData(id);
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
-            }
-            else if (TableName == "BuyBookDiamond")
-            {
-                BuyBookDiamondBiz biz = GM.GetBuyBookDiamondBiz();
-                try
-                {
-                    return biz.DoSelectData(id);
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
-            }
-            else if (TableName == "BuyBookGemstone")
-            {
-                BuyBookGemstoneBiz biz = GM.GetBuyBookGemstoneBiz();
                 try
                 {
                     return biz.DoSelectData(id);
@@ -279,9 +230,9 @@ namespace Diamond
                     throw ex;
                 }
             }
-            else if (TableName == "BuyBookGold")
+            else if (TableName == "BuyBookJewelry")
             {
-                BuyBookGoldBiz biz = GM.GetBuyBookGoldBiz();
+                BuyBookJewelryBiz biz = GM.GetBuyBookJewelryBiz();
                 try
                 {
                     return biz.DoSelectData(id);
@@ -291,22 +242,6 @@ namespace Diamond
                     throw ex;
                 }
             }
-            else if (TableName == "BuyBookSettingDetail")
-            {
-                BuyBookSettingDetailBiz biz = GM.GetBuyBookSettingDetailBiz();
-                try
-                {
-                    return biz.DoSelectData(id);
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
-            }
-            
-            
-            
-            
             else if (TableName == "BBJewelryGemstoneCerDetail")
             {
                 BBJewelryGemstoneCerDetailBiz biz = GM.BBJewelryGemstoneCerDetailBiz();
@@ -359,7 +294,42 @@ namespace Diamond
                     throw ex;
                 }
             }
-            
+            else if (TableName == "BuyBookDiamond")
+            {
+                BuyBookDiamondBiz biz = GM.GetBuyBookDiamondBiz();
+                try
+                {
+                    return biz.DoSelectData(id);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            else if (TableName == "BuyBookGemstone")
+            {
+                BuyBookGemstoneBiz biz = GM.GetBuyBookGemstoneBiz();
+                try
+                {
+                    return biz.DoSelectData(id);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            else if (TableName == "BuyBookGold")
+            {
+                BuyBookGoldBiz biz = GM.GetBuyBookGoldBiz();
+                try
+                {
+                    return biz.DoSelectData(id);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
             else if (TableName == "BuyBookSetting")
             {
                 BuyBookSettingBiz biz = GM.BuyBookSettingBiz();
@@ -386,8 +356,30 @@ namespace Diamond
                     throw ex;
                 }
             }
-
-
+            else if (TableName == "BuyBookSettingDetail")
+            {
+                BuyBookSettingDetailBiz biz = GM.GetBuyBookSettingDetailBiz();
+                try
+                {
+                    return biz.DoSelectData(id);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            else if (TableName == "BuyBookETC")
+            {
+                BuyBookETCBiz biz = GM.GetBuyBookETCBiz();
+                try
+                {
+                    return biz.DoSelectData(id);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
             return null;
         }
         #endregion
@@ -594,66 +586,6 @@ namespace Diamond
                     throw ex;
                 }
             }
-            else if (TableName == "BuyBookJewelry")
-            {
-                BuyBookJewelryBiz biz = GM.GetBuyBookJewelryBiz();
-                dsBuyBookJewelry ds1 = new dsBuyBookJewelry();
-                ds1.Merge(ds);
-
-                try
-                {
-                    flag = biz.DoInsertData(ds1);
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
-            }
-            else if (TableName == "BuyBookETC")
-            {
-                BuyBookETCBiz biz =  GM.GetBuyBookETCBiz();
-                dsBuyBookETC ds1 = new dsBuyBookETC();
-                ds1.Merge(ds);
-
-                try
-                {
-                    flag = biz.DoInsertData(ds1);
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
-            }
-            else if (TableName == "BuyBookDiamond")
-            {
-                BuyBookDiamondBiz biz = GM.GetBuyBookDiamondBiz();
-                dsBuyBookDiamond ds1 = new dsBuyBookDiamond();
-                ds1.Merge(ds);
-
-                try
-                {
-                    flag = biz.DoInsertData(ds1);
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
-            }
-            else if (TableName == "BuyBookGemstone")
-            {
-                BuyBookGemstoneBiz biz = GM.GetBuyBookGemstoneBiz();
-                dsBuyBookGemstone ds1 = new dsBuyBookGemstone();
-                ds1.Merge(ds);
-
-                try
-                {
-                    flag = biz.DoInsertData(ds1);
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
-            }
             else if (TableName == "BuyBookGemstoneCer")
             {
                 BuyBookGemstoneCerBiz biz = GM.GetBuyBookGemstoneCerBiz();
@@ -669,10 +601,10 @@ namespace Diamond
                     throw ex;
                 }
             }
-            else if (TableName == "BuyBookGold")
+            else if (TableName == "BuyBookJewelry")
             {
-                BuyBookGoldBiz biz = GM.GetBuyBookGoldBiz();
-                dsBuyBookGold ds1 = new dsBuyBookGold();
+                BuyBookJewelryBiz biz = GM.GetBuyBookJewelryBiz();
+                dsBuyBookJewelry ds1 = new dsBuyBookJewelry();
                 ds1.Merge(ds);
 
                 try
@@ -684,24 +616,6 @@ namespace Diamond
                     throw ex;
                 }
             }
-            else if (TableName == "BBSettingDetail")
-            {
-                BuyBookSettingDetailBiz biz = GM.GetBuyBookSettingDetailBiz();
-                dsBuyBookSettingDetail ds1 = new dsBuyBookSettingDetail();
-                ds1.Merge(ds);
-
-                try
-                {
-                    flag = biz.DoInsertData(ds1);
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
-            }
-            
-            
-            
             else if (TableName == "BBJewelryGemstoneCerDetail")
             {
                 BBJewelryGemstoneCerDetailBiz biz = GM.BBJewelryGemstoneCerDetailBiz();
@@ -763,10 +677,86 @@ namespace Diamond
                 }
             }
             
+            else if (TableName == "BuyBookDiamond")
+            {
+                BuyBookDiamondBiz biz = GM.GetBuyBookDiamondBiz();
+                dsBuyBookDiamond ds1 = new dsBuyBookDiamond();
+                ds1.Merge(ds);
+
+                try
+                {
+                    flag = biz.DoInsertData(ds1);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            else if (TableName == "BuyBookGemstone")
+            {
+                BuyBookGemstoneBiz biz = GM.GetBuyBookGemstoneBiz();
+                dsBuyBookGemstone ds1 = new dsBuyBookGemstone();
+                ds1.Merge(ds);
+
+                try
+                {
+                    flag = biz.DoInsertData(ds1);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            
+            else if (TableName == "BuyBookGold")
+            {
+                BuyBookGoldBiz biz = GM.GetBuyBookGoldBiz();
+                dsBuyBookGold ds1 = new dsBuyBookGold();
+                ds1.Merge(ds);
+
+                try
+                {
+                    flag = biz.DoInsertData(ds1);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
             else if (TableName == "BuyBookSetting")
             {
                 BuyBookSettingBiz biz = GM.BuyBookSettingBiz();
                 dsBuyBookSetting ds1 = new dsBuyBookSetting();
+                ds1.Merge(ds);
+
+                try
+                {
+                    flag = biz.DoInsertData(ds1);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            else if (TableName == "BBSettingDetail")
+            {
+                BuyBookSettingDetailBiz biz = GM.GetBuyBookSettingDetailBiz();
+                dsBuyBookSettingDetail ds1 = new dsBuyBookSettingDetail();
+                ds1.Merge(ds);
+
+                try
+                {
+                    flag = biz.DoInsertData(ds1);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            else if (TableName == "BuyBookETC")
+            {
+                BuyBookETCBiz biz = GM.GetBuyBookETCBiz();
+                dsBuyBookETC ds1 = new dsBuyBookETC();
                 ds1.Merge(ds);
 
                 try
@@ -929,74 +919,86 @@ namespace Diamond
                     throw ex;
                 }
             }
+            else if (TableName == "Inventory")
+            {
+                InventoryBiz biz = GM.InventoryBiz();
+                dsInventory ds1 = new dsInventory();
+                ds1.Merge(ds);
+
+                try
+                {
+                    flag = biz.DoUpdateData(ds1);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            else if (TableName == "InvDiamondCerDetail")
+            {
+                InvDiamondCerDetailBiz biz = GM.InvDiamondCerDetailBiz();
+                dsInvDiamondCerDetail ds1 = new dsInvDiamondCerDetail();
+                ds1.Merge(ds);
+
+                try
+                {
+                    flag = biz.DoUpdateData(ds1);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            else if (TableName == "InvDiamondDetail")
+            {
+                InvDiamondDetailBiz biz = GM.InvDiamondDetailBiz();
+                dsInvDiamondDetail ds1 = new dsInvDiamondDetail();
+                ds1.Merge(ds);
+
+                try
+                {
+                    flag = biz.DoUpdateData(ds1);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            else if (TableName == "InvGemstoneCerDetail")
+            {
+                InvGemstoneCerDetailBiz biz = GM.InvGemstoneCerDetailBiz();
+                dsInvGemstoneCerDetail ds1 = new dsInvGemstoneCerDetail();
+                ds1.Merge(ds);
+
+                try
+                {
+                    flag = biz.DoUpdateData(ds1);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            else if (TableName == "InvGemstoneDetail")
+            {
+                InvGemstoneDetailBiz biz = GM.InvGemstoneDetailBiz();
+                dsInvGemstoneDetail ds1 = new dsInvGemstoneDetail();
+                ds1.Merge(ds);
+
+                try
+                {
+                    flag = biz.DoUpdateData(ds1);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            
             else if (TableName == "BuyBookDiamondCer")
             {
                 BuyBookDiamondCerBiz biz = GM.GetBuyBookDiamondCerBiz();
                 dsBuyBookDiamondCer ds1 = new dsBuyBookDiamondCer();
-                ds1.Merge(ds);
-
-                try
-                {
-                    flag = biz.DoUpdateData(ds1);
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
-            }
-            else if (TableName == "BuyBookJewelry")
-            {
-                BuyBookJewelryBiz biz = GM.GetBuyBookJewelryBiz();
-                dsBuyBookJewelry ds1 = new dsBuyBookJewelry();
-
-                ds1.Merge(ds);
-
-                try
-                {
-                    flag = biz.DoUpdateData(ds1);
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
-            }
-            else if (TableName == "BuyBookETC")
-            {
-                BuyBookETCBiz biz = GM.GetBuyBookETCBiz();
-                dsBuyBookETC ds1 = new dsBuyBookETC();
-
-                ds1.Merge(ds);
-
-                try
-                {
-                    flag = biz.DoUpdateData(ds1);
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
-            }
-            else if (TableName == "BuyBookDiamond")
-            {
-                BuyBookDiamondBiz biz = GM.GetBuyBookDiamondBiz();
-                dsBuyBookDiamond ds1 = new dsBuyBookDiamond();
-
-                ds1.Merge(ds);
-
-                try
-                {
-                    flag = biz.DoUpdateData(ds1);
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
-            }
-            else if (TableName == "BuyBookGemstone")
-            {
-                BuyBookGemstoneBiz biz = GM.GetBuyBookGemstoneBiz();
-                dsBuyBookGemstone ds1 = new dsBuyBookGemstone();
-
                 ds1.Merge(ds);
 
                 try
@@ -1024,10 +1026,10 @@ namespace Diamond
                     throw ex;
                 }
             }
-            else if (TableName == "BuyBookGold")
+            else if (TableName == "BuyBookJewelry")
             {
-                BuyBookGoldBiz biz = GM.GetBuyBookGoldBiz();
-                dsBuyBookGold ds1 = new dsBuyBookGold();
+                BuyBookJewelryBiz biz = GM.GetBuyBookJewelryBiz();
+                dsBuyBookJewelry ds1 = new dsBuyBookJewelry();
 
                 ds1.Merge(ds);
 
@@ -1040,25 +1042,7 @@ namespace Diamond
                     throw ex;
                 }
             }
-            else if (TableName == "BuyBookSettingDetail")
-            {
-                BuyBookSettingDetailBiz biz = GM.GetBuyBookSettingDetailBiz();
-                dsBuyBookSettingDetail ds1 =  new dsBuyBookSettingDetail();
 
-                ds1.Merge(ds);
-
-                try
-                {
-                    flag = biz.DoUpdateData(ds1);
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
-            }
-            
-            
-            
             else if (TableName == "BBJewelryGemstoneCerDetail")
             {
                 BBJewelryGemstoneCerDetailBiz biz = GM.BBJewelryGemstoneCerDetailBiz();
@@ -1120,10 +1104,11 @@ namespace Diamond
                     throw ex;
                 }
             }
-            else if (TableName == "Inventory")
+            else if (TableName == "BuyBookDiamond")
             {
-                InventoryBiz biz = GM.InventoryBiz();
-                dsInventory ds1 = new dsInventory();
+                BuyBookDiamondBiz biz = GM.GetBuyBookDiamondBiz();
+                dsBuyBookDiamond ds1 = new dsBuyBookDiamond();
+
                 ds1.Merge(ds);
 
                 try
@@ -1135,10 +1120,11 @@ namespace Diamond
                     throw ex;
                 }
             }
-            else if (TableName == "InvDiamondCerDetail")
+            else if (TableName == "BuyBookGemstone")
             {
-                InvDiamondCerDetailBiz biz = GM.InvDiamondCerDetailBiz();
-                dsInvDiamondCerDetail ds1 = new dsInvDiamondCerDetail();
+                BuyBookGemstoneBiz biz = GM.GetBuyBookGemstoneBiz();
+                dsBuyBookGemstone ds1 = new dsBuyBookGemstone();
+
                 ds1.Merge(ds);
 
                 try
@@ -1150,40 +1136,12 @@ namespace Diamond
                     throw ex;
                 }
             }
-            else if (TableName == "InvGemstoneCerDetail")
+           
+            else if (TableName == "BuyBookGold")
             {
-                InvGemstoneCerDetailBiz biz = GM.InvGemstoneCerDetailBiz();
-                dsInvGemstoneCerDetail ds1 = new dsInvGemstoneCerDetail();
-                ds1.Merge(ds);
+                BuyBookGoldBiz biz = GM.GetBuyBookGoldBiz();
+                dsBuyBookGold ds1 = new dsBuyBookGold();
 
-                try
-                {
-                    flag = biz.DoUpdateData(ds1);
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
-            }
-            else if (TableName == "InvGemstoneDetail")
-            {
-                InvGemstoneDetailBiz biz = GM.InvGemstoneDetailBiz();
-                dsInvGemstoneDetail ds1 = new dsInvGemstoneDetail();
-                ds1.Merge(ds);
-
-                try
-                {
-                    flag = biz.DoUpdateData(ds1);
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
-            }
-            else if (TableName == "InvDiamondDetail")
-            {
-                InvDiamondDetailBiz biz = GM.InvDiamondDetailBiz();
-                dsInvDiamondDetail ds1 = new dsInvDiamondDetail();
                 ds1.Merge(ds);
 
                 try
@@ -1210,9 +1168,38 @@ namespace Diamond
                     throw ex;
                 }
             }
+            else if (TableName == "BuyBookSettingDetail")
+            {
+                BuyBookSettingDetailBiz biz = GM.GetBuyBookSettingDetailBiz();
+                dsBuyBookSettingDetail ds1 =  new dsBuyBookSettingDetail();
 
-            
+                ds1.Merge(ds);
 
+                try
+                {
+                    flag = biz.DoUpdateData(ds1);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            else if (TableName == "BuyBookETC")
+            {
+                BuyBookETCBiz biz = GM.GetBuyBookETCBiz();
+                dsBuyBookETC ds1 = new dsBuyBookETC();
+
+                ds1.Merge(ds);
+
+                try
+                {
+                    flag = biz.DoUpdateData(ds1);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
             return flag;
         }
         #endregion
@@ -1317,57 +1304,70 @@ namespace Diamond
                     throw ex;
                 }
             }
+            else if (TableName == "Inventory")
+            {
+                InventoryBiz biz = GM.InventoryBiz();
+                try
+                {
+                    flag = biz.DoDeleteData(id);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            else if (TableName == "InvDiamondCerDetail")
+            {
+                InvDiamondCerDetailBiz biz = GM.InvDiamondCerDetailBiz();
+                try
+                {
+                    flag = biz.DoDeleteData(id);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            else if (TableName == "InvDiamondDetail")
+            {
+                InvDiamondDetailBiz biz = GM.InvDiamondDetailBiz();
+                try
+                {
+                    flag = biz.DoDeleteData(id);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            else if (TableName == "InvGemstoneCerDetail")
+            {
+                InvGemstoneCerDetailBiz biz = GM.InvGemstoneCerDetailBiz();
+                try
+                {
+                    flag = biz.DoDeleteData(id);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            else if (TableName == "InvGemstoneDetail")
+            {
+                InvGemstoneDetailBiz biz = GM.InvGemstoneDetailBiz();
+                try
+                {
+                    flag = biz.DoDeleteData(id);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            
             else if (TableName == "BuyBookDiamondCer")
             {
                 BuyBookDiamondCerBiz biz = GM.GetBuyBookDiamondCerBiz();
-                try
-                {
-                    flag = biz.DoDeleteData(id);
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
-            }
-            else if (TableName == "BuyBookJewelry")
-            {
-                BuyBookJewelryBiz biz = GM.GetBuyBookJewelryBiz();
-                try
-                {
-                    flag = biz.DoDeleteData(id);
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
-            }
-            else if (TableName == "BuyBookETC")
-            {
-                BuyBookETCBiz biz = GM.GetBuyBookETCBiz();
-                try
-                {
-                    flag = biz.DoDeleteData(id);
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
-            }
-            else if (TableName == "BuyBookDiamond")
-            {
-                BuyBookDiamondBiz biz = GM.GetBuyBookDiamondBiz();
-                try
-                {
-                    flag = biz.DoDeleteData(id);
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
-            }
-            else if (TableName == "BuyBookGemstone")
-            {
-                BuyBookGemstoneBiz biz = GM.GetBuyBookGemstoneBiz();
                 try
                 {
                     flag = biz.DoDeleteData(id);
@@ -1389,9 +1389,9 @@ namespace Diamond
                     throw ex;
                 }
             }
-            else if (TableName == "BuyBookGold")
+            else if (TableName == "BuyBookJewelry")
             {
-                BuyBookGoldBiz biz = GM.GetBuyBookGoldBiz();
+                BuyBookJewelryBiz biz = GM.GetBuyBookJewelryBiz();
                 try
                 {
                     flag = biz.DoDeleteData(id);
@@ -1401,22 +1401,6 @@ namespace Diamond
                     throw ex;
                 }
             }
-            else if (TableName == "BuyBookSettingDetail")
-            {
-                BuyBookSettingDetailBiz biz = GM.GetBuyBookSettingDetailBiz();
-                try
-                {
-                    flag = biz.DoDeleteData(id);
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
-            }
-            
-            
-            
-            
             else if (TableName == "BBJewelryGemstoneCerDetail")
             {
                 BBJewelryGemstoneCerDetailBiz biz = GM.BBJewelryGemstoneCerDetailBiz();
@@ -1465,9 +1449,9 @@ namespace Diamond
                     throw ex;
                 }
             }
-            else if (TableName == "BBJewelryDiamondDetail")
+            else if (TableName == "BuyBookDiamond")
             {
-                BBJewelryDiamondDetailBiz biz = GM.BBJewelryDiamondDetailBiz();
+                BuyBookDiamondBiz biz = GM.GetBuyBookDiamondBiz();
                 try
                 {
                     flag = biz.DoDeleteData(id);
@@ -1477,9 +1461,9 @@ namespace Diamond
                     throw ex;
                 }
             }
-            else if (TableName == "Inventory")
+            else if (TableName == "BuyBookGemstone")
             {
-                InventoryBiz biz = GM.InventoryBiz();
+                BuyBookGemstoneBiz biz = GM.GetBuyBookGemstoneBiz();
                 try
                 {
                     flag = biz.DoDeleteData(id);
@@ -1489,45 +1473,10 @@ namespace Diamond
                     throw ex;
                 }
             }
-            else if (TableName == "InvDiamondCerDetail")
+            
+            else if (TableName == "BuyBookGold")
             {
-                InvDiamondCerDetailBiz biz = GM.InvDiamondCerDetailBiz();
-                try
-                {
-                    flag = biz.DoDeleteData(id);
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
-            }
-            else if (TableName == "InvGemstoneCerDetail")
-            {
-                InvGemstoneCerDetailBiz biz = GM.InvGemstoneCerDetailBiz();
-                try
-                {
-                    flag = biz.DoDeleteData(id);
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
-            }
-            else if (TableName == "InvGemstoneDetail")
-            {
-                InvGemstoneDetailBiz biz = GM.InvGemstoneDetailBiz();
-                try
-                {
-                    flag = biz.DoDeleteData(id);
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
-            }
-            else if (TableName == "InvDiamondDetail")
-            {
-                InvDiamondDetailBiz biz = GM.InvDiamondDetailBiz();
+                BuyBookGoldBiz biz = GM.GetBuyBookGoldBiz();
                 try
                 {
                     flag = biz.DoDeleteData(id);
@@ -1549,9 +1498,21 @@ namespace Diamond
                     throw ex;
                 }
             }
-            else if (TableName == "Sell")
+            else if (TableName == "BuyBookSettingDetail")
             {
-                SellBiz biz = GM.SellBiz();
+                BuyBookSettingDetailBiz biz = GM.GetBuyBookSettingDetailBiz();
+                try
+                {
+                    flag = biz.DoDeleteData(id);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            else if (TableName == "BuyBookETC")
+            {
+                BuyBookETCBiz biz = GM.GetBuyBookETCBiz();
                 try
                 {
                     flag = biz.DoDeleteData(id);
