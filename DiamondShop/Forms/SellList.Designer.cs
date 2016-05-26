@@ -291,15 +291,15 @@
             this.IsPrintCerName.HeaderText = "Print Cer.";
             this.IsPrintCerName.Name = "IsPrintCerName";
             this.IsPrintCerName.ReadOnly = true;
-            this.IsPrintCerName.Width = 150;
+            this.IsPrintCerName.Width = 120;
             // 
             // IsPrintPriceName
             // 
             this.IsPrintPriceName.DataPropertyName = "IsPrintPriceName";
-            this.IsPrintPriceName.HeaderText = "Price In Cer.";
+            this.IsPrintPriceName.HeaderText = "Print Price";
             this.IsPrintPriceName.Name = "IsPrintPriceName";
             this.IsPrintPriceName.ReadOnly = true;
-            this.IsPrintPriceName.Width = 170;
+            this.IsPrintPriceName.Width = 120;
             // 
             // SellList
             // 
