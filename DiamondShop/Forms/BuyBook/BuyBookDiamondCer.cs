@@ -139,7 +139,7 @@ namespace DiamondShop
             cmbShop.DisplayMember = "Detail";
             cmbShop.Refresh();
 
-            cmbSetting.DataSource = (GM.GetMasterTableDetail("C015")).Tables[0];
+            cmbSetting.DataSource = (GM.GetMasterTableDetail("C015",false)).Tables[0];
             cmbSetting.ValueMember = "ID";
             cmbSetting.DisplayMember = "Detail";
             cmbSetting.Refresh();
@@ -191,6 +191,7 @@ namespace DiamondShop
                 EnableDelete = false;
               }
 
+              SetFormatNumber();
               base.LoadData();
         }
 
@@ -383,6 +384,11 @@ namespace DiamondShop
                     }
                 }
             }
+        }
+        
+        private void SetFormatNumber()
+        {
+            txtTotal.Text = GM.ConvertDoubleToString(txtTotal, 0);
         }
     }
 }

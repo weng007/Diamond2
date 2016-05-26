@@ -53,7 +53,7 @@ namespace DiamondShop
             }
             else
             {
-                ds.Tables[0].Rows.Add("0", "Select");
+                ds.Tables[0].Rows.Add("0", "-");
                 ds.Tables[0].DefaultView.Sort = "ID";
 
                 DataTable table = ds.Tables[0];
