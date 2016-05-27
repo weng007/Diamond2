@@ -234,7 +234,14 @@ namespace DiamondShop
         {
             try
             {
-                chkFlag = ser.DoDeleteData("BBJewelryDiamondDetail", DelID);
+                if (chkGrid == 0 && grid1.SelectedRows.Count > 0)
+                {
+                    chkFlag = ser.DoDeleteData("BBJewelryDiamondCerDetail", Convert.ToInt32(grid1.SelectedRows[0].Cells["ID"].Value));
+                }
+                else if(chkGrid == 1 && grid2.SelectedRows.Count> 0)
+                {
+                    chkFlag = ser.DoDeleteData("BBJewelryDiamondDetail", DelID);
+                }
             }
             catch (Exception ex)
             {
@@ -273,9 +280,11 @@ namespace DiamondShop
         {
             try
             {
-                if (grid1.Rows.Count > 0)
+                if (grid1.SelectedRows.Count > 0)
                 {
+                    DeleteDataGrid(0);
 
+                    LoadData();
                 }
             }
             catch (Exception ex)
@@ -415,7 +424,9 @@ namespace DiamondShop
 
         private void DeleteDataGrid(int type)
         {
-            chkGrid = 1;
+            if (type == 0)
+            { chkGrid = 0; }
+            else { chkGrid = 1; }
             DeleteData();
         }
     }
