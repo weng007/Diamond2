@@ -110,6 +110,7 @@ namespace DiamondShop
                 tds.BBJewelryDiamondCerDetail.Rows.Add(row);
             }
             binder.BindValueToDataRow(row);
+            
 
             try
             {
@@ -117,6 +118,7 @@ namespace DiamondShop
                 {
                     row.Code = GM.GetRunningNumber("JDC");
                     //พึ่งซื้อยังไม่ได้ขายให้ลูกค้า
+                    row.RefID = id;
 
                     SetCreateBy(row);
                     chkFlag = ser.DoInsertData("BBJewelryDiamondCerDetail", tds);
