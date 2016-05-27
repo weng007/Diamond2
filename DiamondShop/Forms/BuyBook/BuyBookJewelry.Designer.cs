@@ -139,7 +139,7 @@
             // 
             this.label19.AutoSize = true;
             this.label19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label19.Location = new System.Drawing.Point(575, 128);
+            this.label19.Location = new System.Drawing.Point(584, 128);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(79, 21);
             this.label19.TabIndex = 128;
@@ -147,7 +147,7 @@
             // 
             // txtMinPrice
             // 
-            this.txtMinPrice.Location = new System.Drawing.Point(656, 125);
+            this.txtMinPrice.Location = new System.Drawing.Point(665, 125);
             this.txtMinPrice.Name = "txtMinPrice";
             this.txtMinPrice.Size = new System.Drawing.Size(146, 27);
             this.txtMinPrice.TabIndex = 127;
@@ -217,7 +217,7 @@
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label18.Location = new System.Drawing.Point(574, 207);
+            this.label18.Location = new System.Drawing.Point(584, 207);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(69, 19);
             this.label18.TabIndex = 124;
@@ -226,7 +226,7 @@
             // txtRemark
             // 
             this.txtRemark.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.txtRemark.Location = new System.Drawing.Point(579, 232);
+            this.txtRemark.Location = new System.Drawing.Point(589, 232);
             this.txtRemark.Multiline = true;
             this.txtRemark.Name = "txtRemark";
             this.txtRemark.Size = new System.Drawing.Size(212, 93);
@@ -394,7 +394,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label13.Location = new System.Drawing.Point(575, 93);
+            this.label13.Location = new System.Drawing.Point(584, 93);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(49, 21);
             this.label13.TabIndex = 106;
@@ -402,7 +402,7 @@
             // 
             // txtSeller
             // 
-            this.txtSeller.Location = new System.Drawing.Point(656, 90);
+            this.txtSeller.Location = new System.Drawing.Point(665, 90);
             this.txtSeller.Name = "txtSeller";
             this.txtSeller.Size = new System.Drawing.Size(146, 27);
             this.txtSeller.TabIndex = 32;
@@ -411,7 +411,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label12.Location = new System.Drawing.Point(575, 60);
+            this.label12.Location = new System.Drawing.Point(584, 60);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(75, 21);
             this.label12.TabIndex = 104;
@@ -420,7 +420,7 @@
             // cmbMaterial
             // 
             this.cmbMaterial.FormattingEnabled = true;
-            this.cmbMaterial.Location = new System.Drawing.Point(656, 52);
+            this.cmbMaterial.Location = new System.Drawing.Point(665, 52);
             this.cmbMaterial.Name = "cmbMaterial";
             this.cmbMaterial.Size = new System.Drawing.Size(148, 29);
             this.cmbMaterial.TabIndex = 20;
@@ -448,7 +448,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label10.Location = new System.Drawing.Point(575, 23);
+            this.label10.Location = new System.Drawing.Point(584, 23);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(59, 21);
             this.label10.TabIndex = 100;
@@ -457,7 +457,7 @@
             // CmbStatus
             // 
             this.CmbStatus.FormattingEnabled = true;
-            this.CmbStatus.Location = new System.Drawing.Point(656, 14);
+            this.CmbStatus.Location = new System.Drawing.Point(665, 14);
             this.CmbStatus.Name = "CmbStatus";
             this.CmbStatus.Size = new System.Drawing.Size(148, 29);
             this.CmbStatus.TabIndex = 8;
@@ -477,7 +477,7 @@
             this.cmbType.FormattingEnabled = true;
             this.cmbType.Location = new System.Drawing.Point(380, 52);
             this.cmbType.Name = "cmbType";
-            this.cmbType.Size = new System.Drawing.Size(148, 29);
+            this.cmbType.Size = new System.Drawing.Size(173, 29);
             this.cmbType.TabIndex = 16;
             // 
             // label8
