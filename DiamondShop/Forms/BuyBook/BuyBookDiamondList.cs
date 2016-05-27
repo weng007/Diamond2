@@ -75,7 +75,7 @@ namespace DiamondShop
             }
         }
 
-        private void gridDiamond_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void gridDiamond_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             if (gridDiamond.RowCount > 0 && gridDiamond.SelectedRows.Count > 0)
             {
