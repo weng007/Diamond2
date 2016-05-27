@@ -738,8 +738,8 @@ namespace Diamond
 
             else if (TableName == "BBGemstoneStock")
             {
-                BuyBookGemstoneBiz biz = GM.GetBuyBookGemstoneBiz();
-                dsBuyBookGemstone ds1 = new dsBuyBookGemstone();
+                BBGemstoneStockBiz biz = GM.GetBBGemstoneStockBiz();
+                dsBBGemstoneStock ds1 = new dsBBGemstoneStock();
                 ds1.Merge(ds);
 
                 try

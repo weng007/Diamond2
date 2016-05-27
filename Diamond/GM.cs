@@ -210,5 +210,13 @@ namespace Diamond
             { return new BBDiamondStockBiz(); }
             else { return bbDiamondStockBiz; }
         }
+
+        private static BBGemstoneStockBiz bbGemstoneStockBiz;
+        public static BBGemstoneStockBiz GetBBGemstoneStockBiz()
+        {
+            if (bbGemstoneStockBiz == null)
+            { return new BBGemstoneStockBiz(); }
+            else { return bbGemstoneStockBiz; }
+        }
     }
 }
