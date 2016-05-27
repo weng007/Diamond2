@@ -238,7 +238,7 @@ namespace DiamondShop
                 {
                     chkFlag = ser.DoDeleteData("BBJewelryDiamondCerDetail", Convert.ToInt32(grid1.SelectedRows[0].Cells["ID"].Value));
                 }
-                else if(chkGrid == 1 && grid2.SelectedRows.Count> 0)
+                else if(chkGrid == 1 && grid2.Rows.Count > 0)
                 {
                     chkFlag = ser.DoDeleteData("BBJewelryDiamondDetail", DelID);
                 }
