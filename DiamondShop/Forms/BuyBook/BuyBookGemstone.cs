@@ -239,15 +239,6 @@ namespace DiamondShop
             {
                 message += "Please input  Weight > 0.\n";
             }
-            //if(txtMeasure1.Text == "" || txtMeasure2.Text == "" || txtMeasure3.Text == ""
-            //&& GM.ConvertStringToDouble(txtMeasure1) == 0 || GM.ConvertStringToDouble(txtMeasure2) == 0 || GM.ConvertStringToDouble(txtMeasure3) == 0)
-            //{
-            //    message += "Please input Measurement > 0.\n";
-            //}
-            //if (txtCarat.Text == "" || GM.ConvertStringToDouble(txtCarat) == 0)
-            //{
-            //    message += "Please input Carat Weight > 0.\n";
-            //}
 
             if (message == "") { return true; }
             else { return false; }
@@ -318,6 +309,7 @@ namespace DiamondShop
         {
             if (grid1.Rows.Count > 0)
             {
+                tds2.AcceptChanges();
                 for (int i = 0; i < grid1.Rows.Count; i++)
                 {
                     if (grid1.Rows[i].Cells[0].Value != null)

@@ -336,6 +336,7 @@ namespace DiamondShop
         {
             if (grid1.Rows.Count > 0)
             {
+                tds2.AcceptChanges();
                 for (int i = 0; i < grid1.Rows.Count; i++)
                 {
                     if (grid1.Rows[i].Cells[0].Value != null)

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BuyBookDiamond));
             this.dtBuyDate = new System.Windows.Forms.DateTimePicker();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -228,6 +228,7 @@
             this.grid1.Location = new System.Drawing.Point(33, 199);
             this.grid1.Name = "grid1";
             this.grid1.RowHeadersWidth = 10;
+            this.grid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grid1.Size = new System.Drawing.Size(235, 266);
             this.grid1.TabIndex = 76;
             this.grid1.Validated += new System.EventHandler(this.grid1_Validated);
@@ -241,9 +242,9 @@
             // Amount
             // 
             this.Amount.DataPropertyName = "Amount";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle2.NullValue = "0";
-            this.Amount.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle1.NullValue = "0";
+            this.Amount.DefaultCellStyle = dataGridViewCellStyle1;
             this.Amount.HeaderText = "คงเหลือ (ct)";
             this.Amount.Name = "Amount";
             this.Amount.Width = 120;
@@ -254,30 +255,35 @@
             this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
             this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
             this.iDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.iDDataGridViewTextBoxColumn.Visible = false;
             // 
             // actionDateDataGridViewTextBoxColumn
             // 
             this.actionDateDataGridViewTextBoxColumn.DataPropertyName = "ActionDate";
             this.actionDateDataGridViewTextBoxColumn.HeaderText = "ActionDate";
             this.actionDateDataGridViewTextBoxColumn.Name = "actionDateDataGridViewTextBoxColumn";
+            this.actionDateDataGridViewTextBoxColumn.Visible = false;
             // 
             // amountDataGridViewTextBoxColumn
             // 
             this.amountDataGridViewTextBoxColumn.DataPropertyName = "Amount";
             this.amountDataGridViewTextBoxColumn.HeaderText = "Amount";
             this.amountDataGridViewTextBoxColumn.Name = "amountDataGridViewTextBoxColumn";
+            this.amountDataGridViewTextBoxColumn.Visible = false;
             // 
             // refIDDataGridViewTextBoxColumn
             // 
             this.refIDDataGridViewTextBoxColumn.DataPropertyName = "RefID";
             this.refIDDataGridViewTextBoxColumn.HeaderText = "RefID";
             this.refIDDataGridViewTextBoxColumn.Name = "refIDDataGridViewTextBoxColumn";
+            this.refIDDataGridViewTextBoxColumn.Visible = false;
             // 
             // isDeletedDataGridViewTextBoxColumn
             // 
             this.isDeletedDataGridViewTextBoxColumn.DataPropertyName = "IsDeleted";
             this.isDeletedDataGridViewTextBoxColumn.HeaderText = "IsDeleted";
             this.isDeletedDataGridViewTextBoxColumn.Name = "isDeletedDataGridViewTextBoxColumn";
+            this.isDeletedDataGridViewTextBoxColumn.Visible = false;
             // 
             // tds2
             // 
@@ -782,9 +788,9 @@
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label16;
         private DiamondDS.DS.dsBBDiamondStock tds2;
+        private System.Windows.Forms.Label label19;
         private System.Windows.Forms.DataGridViewTextBoxColumn ActionDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn Amount;
-        private System.Windows.Forms.Label label19;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn actionDateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn amountDataGridViewTextBoxColumn;

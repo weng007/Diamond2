@@ -331,6 +331,18 @@ namespace Diamond
                     throw ex;
                 }
             }
+            else if (TableName == "BBGemstoneStock")
+            {
+                BBGemstoneStockBiz biz = GM.GetBBGemstoneStockBiz();
+                try
+                {
+                    return biz.DoSelectData(id);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
             else if (TableName == "BuyBookGold")
             {
                 BuyBookGoldBiz biz = GM.GetBuyBookGoldBiz();
