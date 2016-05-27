@@ -108,7 +108,7 @@
             this.txtESize.Location = new System.Drawing.Point(573, 21);
             this.txtESize.Name = "txtESize";
             this.txtESize.Size = new System.Drawing.Size(54, 27);
-            this.txtESize.TabIndex = 12;
+            this.txtESize.TabIndex = 6;
             this.txtESize.Text = "0";
             this.txtESize.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtESize.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSSize_KeyPress);
@@ -118,7 +118,7 @@
             this.txtCode.Location = new System.Drawing.Point(245, 21);
             this.txtCode.Name = "txtCode";
             this.txtCode.Size = new System.Drawing.Size(161, 27);
-            this.txtCode.TabIndex = 1;
+            this.txtCode.TabIndex = 2;
             // 
             // label12
             // 
@@ -151,7 +151,7 @@
             this.txtSSize.Location = new System.Drawing.Point(494, 21);
             this.txtSSize.Name = "txtSSize";
             this.txtSSize.Size = new System.Drawing.Size(54, 27);
-            this.txtSSize.TabIndex = 8;
+            this.txtSSize.TabIndex = 4;
             this.txtSSize.Text = "0";
             this.txtSSize.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtSSize.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSSize_KeyPress);
@@ -172,7 +172,7 @@
             this.cmbShape.Location = new System.Drawing.Point(245, 56);
             this.cmbShape.Name = "cmbShape";
             this.cmbShape.Size = new System.Drawing.Size(161, 29);
-            this.cmbShape.TabIndex = 4;
+            this.cmbShape.TabIndex = 8;
             // 
             // label4
             // 
@@ -195,7 +195,7 @@
             this.btnSearch.Location = new System.Drawing.Point(245, 101);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(105, 32);
-            this.btnSearch.TabIndex = 16;
+            this.btnSearch.TabIndex = 10;
             this.btnSearch.UseVisualStyleBackColor = false;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 

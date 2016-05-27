@@ -36,7 +36,6 @@ namespace DiamondShop
             binder.BindControl(cmbColor, "Color");
             binder.BindControl(cmbClearity, "Clearity");
             binder.BindControl(dtDueDate, "DueDate");
-            binder.BindControl(chkPayByUSD, "PayByUSD");
             binder.BindControl(txtPriceCaratUSD, "PriceCaratUSD");
             binder.BindControl(txtTotalUSD, "TotalUSD");
             binder.BindControl(txtUSDRate, "USDRate");
@@ -64,7 +63,6 @@ namespace DiamondShop
             binder.BindControl(cmbColor, "Color");
             binder.BindControl(cmbClearity, "Clearity");
             binder.BindControl(dtDueDate, "DueDate");
-            binder.BindControl(chkPayByUSD, "PayByUSD");
             binder.BindControl(txtPriceCaratUSD, "PriceCaratUSD");
             binder.BindControl(txtTotalUSD, "TotalUSD");
             binder.BindControl(txtUSDRate, "USDRate");
@@ -76,6 +74,8 @@ namespace DiamondShop
 
             this.id = id;
             LoadData();
+
+            SetFormatNumber();
         }
 
         protected override void Initial()
@@ -115,7 +115,14 @@ namespace DiamondShop
             {
                 binder.BindValueToControl(tds.BuyBookDiamond[0]);
 
-
+                if (tds.BuyBookDiamond[0]["PayByUSD"].ToString() == "0")
+                {
+                    chkPayByUSD.Checked = false;
+                }
+                else
+                {
+                    chkPayByUSD.Checked = true;
+                }
                 if (tds.BuyBookDiamond[0]["IsPaid"].ToString() == "0")
                 {
                     rdoPayment1.Checked = false;
@@ -290,8 +297,6 @@ namespace DiamondShop
 
                 txtPriceCarat.Enabled = true;
 
-                //txtPriceCarat.Enabled = true;
-                //txtPriceCarat_TextChanged(null, null);
             }
         }
 
@@ -323,9 +328,11 @@ namespace DiamondShop
 
         private void txtTotalBaht_TextChanged(object sender, EventArgs e)
         {
-            txtTotalUSD.Text = GM.ConvertDoubleToString(txtTotalUSD);
-            txtPriceCarat.Text = GM.ConvertDoubleToString(txtPriceCarat);
-            txtTotalBaht.Text = GM.ConvertDoubleToString(txtTotalBaht);
+            txtUSDRate.Text = GM.ConvertDoubleToString(txtUSDRate, 0);
+            txtTotalUSD.Text = GM.ConvertDoubleToString(txtTotalUSD, 0);
+            txtPriceCaratUSD.Text = GM.ConvertDoubleToString(txtPriceCaratUSD, 0);
+            txtPriceCarat.Text = GM.ConvertDoubleToString(txtPriceCarat, 0);
+            txtTotalBaht.Text = GM.ConvertDoubleToString(txtTotalBaht, 0);
         }
 
         private void txtAmount_KeyPress(object sender, KeyPressEventArgs e)
@@ -334,6 +341,17 @@ namespace DiamondShop
             {
                 e.Handled = true;
             }
+        }
+
+        private void SetFormatNumber()
+        {
+            txtUSDRate.Text = GM.ConvertDoubleToString(txtUSDRate, 0);
+            txtMarketPrice.Text = GM.ConvertDoubleToString(txtMarketPrice, 0);
+        }
+
+        private void txtMarketPrice_Leave(object sender, EventArgs e)
+        {
+            txtMarketPrice.Text = GM.ConvertDoubleToString(txtMarketPrice, 0);
         }
     }
 }

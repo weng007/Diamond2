@@ -74,7 +74,6 @@ namespace DiamondShop
             binder.BindControl(txtL, "L");
             binder.BindControl(txtD, "D");
             binder.BindControl(dtDueDate, "DueDate");
-            binder.BindControl(chkPayByUSD, "PayByUSD");
             binder.BindControl(txtPriceCaratUSD, "PriceCaratUSD");
             binder.BindControl(txtTotalUSD, "TotalUSD");
             binder.BindControl(txtUSDRate, "USDRate");
@@ -88,7 +87,6 @@ namespace DiamondShop
 
             this.id = id;
             LoadData();
-
 
         }
 
@@ -154,6 +152,15 @@ namespace DiamondShop
             {
                 binder.BindValueToControl(tds.BuyBookGemstoneCer[0]);
                 image1 = tds.BuyBookGemstoneCer[0].Image1;
+
+                if(tds.BuyBookGemstoneCer[0]["PayByUSD"].ToString() =="0")
+                {
+                    chkPayByUSD.Checked = false;
+                }
+                else
+                {
+                    chkPayByUSD.Checked = true;
+                }
 
                 if (tds.BuyBookGemstoneCer[0]["IsPaid"].ToString() == "0")
                 {

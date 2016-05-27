@@ -70,6 +70,7 @@ namespace DiamondShop
 
             this.id = id;
             LoadData();
+            SetFormatNumber();
         }
         protected override void Initial()
         {
@@ -110,7 +111,14 @@ namespace DiamondShop
             {
                 binder.BindValueToControl(tds.BuyBookGemstone[0]);
 
-
+                if (tds.BuyBookGemstone[0]["PayByUSD"].ToString() == "0")
+                {
+                    chkPayByUSD.Checked = false;
+                }
+                else
+                {
+                    chkPayByUSD.Checked = true;
+                }
                 if (tds.BuyBookGemstone[0]["IsPaid"].ToString() == "0")
                 {
                     rdoYes.Checked = false;
@@ -279,9 +287,16 @@ namespace DiamondShop
 
         private void txtTotalBaht_TextChanged(object sender, EventArgs e)
         {
-            txtTotalUSD.Text = GM.ConvertDoubleToString(txtTotalUSD);
-            txtPriceCarat.Text = GM.ConvertDoubleToString(txtPriceCarat);
-            txtTotalBaht.Text = GM.ConvertDoubleToString(txtTotalBaht);
+            txtUSDRate.Text = GM.ConvertDoubleToString(txtUSDRate,0);
+            txtTotalUSD.Text = GM.ConvertDoubleToString(txtTotalUSD,0);
+            txtPriceCarat.Text = GM.ConvertDoubleToString(txtPriceCarat,0);
+            txtTotalBaht.Text = GM.ConvertDoubleToString(txtTotalBaht,0);
+        }
+
+        private void SetFormatNumber()
+        {
+            txtUSDRate.Text = GM.ConvertDoubleToString(txtUSDRate, 0);
+            txtMarketPrice.Text = GM.ConvertDoubleToString(txtMarketPrice, 0);
         }
     }
 }
