@@ -115,16 +115,16 @@ namespace DiamondShop
             {
                 if (id == 0)
                 {
-                    //row.Code = GM.GetRunningNumber("JDC");
+                    row.Code = GM.GetRunningNumber("JDC");
                     //พึ่งซื้อยังไม่ได้ขายให้ลูกค้า
 
                     SetCreateBy(row);
-                    chkFlag = ser.DoInsertData("BuyBookDiamondCer", tds);
+                    chkFlag = ser.DoInsertData("BBJewelryDiamondCerDetail", tds);
                 }
                 else
                 {
                     SetEditBy(row);
-                    chkFlag = ser.DoUpdateData("BuyBookDiamondCer", tds);
+                    chkFlag = ser.DoUpdateData("BBJewelryDiamondCerDetail", tds);
                 }
 
                 tds.AcceptChanges();
@@ -140,7 +140,7 @@ namespace DiamondShop
         {
             try
             {
-                chkFlag = ser.DoDeleteData("BuyBookDiamondCer", id);
+                chkFlag = ser.DoDeleteData("BBJewelryDiamondCerDetail", id);
             }
             catch (Exception ex)
             {
