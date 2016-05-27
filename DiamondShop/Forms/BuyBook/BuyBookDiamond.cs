@@ -336,5 +336,19 @@ namespace DiamondShop
         {
             txtMarketPrice.Text = GM.ConvertDoubleToString(txtMarketPrice, 0);
         }
+
+        private void grid1_Leave(object sender, EventArgs e)
+        {
+            if(grid1.Rows.Count > 0)
+            {
+                for (int i = 0;i < grid1.Rows.Count;i++)
+                {
+                    tds2.Tables[0].Rows[i]["ActioneDate"] = grid1.Rows[i].Cells["ActionDate"].Value;
+                    tds2.Tables[0].Rows[i]["Amount"] = grid1.Rows[i].Cells["Amount"].Value;
+                }
+
+                tds2.AcceptChanges();
+            }
+        }
     }
 }

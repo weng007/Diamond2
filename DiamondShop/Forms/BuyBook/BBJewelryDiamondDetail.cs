@@ -253,7 +253,7 @@ namespace DiamondShop
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            BBJewelryDiamondDetailInfo frm = new BBJewelryDiamondDetailInfo();
+            BBJewelryDiamondDetailInfo frm = new BBJewelryDiamondDetailInfo(id);
             frm.ShowDialog();
 
             LoadData();

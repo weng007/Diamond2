@@ -36,8 +36,6 @@
             this.txtNote = new System.Windows.Forms.TextBox();
             this.label26 = new System.Windows.Forms.Label();
             this.grid1 = new System.Windows.Forms.DataGridView();
-            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cmbShop = new System.Windows.Forms.ComboBox();
             this.label20 = new System.Windows.Forms.Label();
             this.chkPayByUSD = new System.Windows.Forms.CheckBox();
@@ -80,6 +78,8 @@
             this.txtCode = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
+            this.ActiveDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid1)).BeginInit();
@@ -194,26 +194,14 @@
             // 
             this.grid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grid1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Date,
+            this.ActiveDate,
             this.Amount});
             this.grid1.Location = new System.Drawing.Point(33, 178);
             this.grid1.Name = "grid1";
             this.grid1.RowHeadersWidth = 10;
             this.grid1.Size = new System.Drawing.Size(235, 287);
             this.grid1.TabIndex = 76;
-            // 
-            // Date
-            // 
-            this.Date.DataPropertyName = "Date";
-            this.Date.HeaderText = "วันที่";
-            this.Date.Name = "Date";
-            // 
-            // Amount
-            // 
-            this.Amount.DataPropertyName = "Amount";
-            this.Amount.HeaderText = "คงเหลือ (ct)";
-            this.Amount.Name = "Amount";
-            this.Amount.Width = 120;
+            this.grid1.Leave += new System.EventHandler(this.grid1_Leave);
             // 
             // cmbShop
             // 
@@ -642,6 +630,19 @@
             this.button1.TabIndex = 32;
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // ActiveDate
+            // 
+            this.ActiveDate.DataPropertyName = "ActiveDate";
+            this.ActiveDate.HeaderText = "วันที่";
+            this.ActiveDate.Name = "ActiveDate";
+            // 
+            // Amount
+            // 
+            this.Amount.DataPropertyName = "Amount";
+            this.Amount.HeaderText = "คงเหลือ (ct)";
+            this.Amount.Name = "Amount";
+            this.Amount.Width = 120;
+            // 
             // BuyBookDiamond
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -710,8 +711,8 @@
         private System.Windows.Forms.DataGridView grid1;
         private System.Windows.Forms.TextBox txtNote;
         private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Date;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Amount;
         private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ActiveDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Amount;
     }
 }
