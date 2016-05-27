@@ -14,7 +14,7 @@
   <xs:element name="dsBuyBookDiamond" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsBuyBookDiamond" msprop:Generator_UserDSName="dsBuyBookDiamond">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="BuyBookDiamond" msprop:Generator_TableClassName="BuyBookDiamondDataTable" msprop:Generator_TableVarName="tableBuyBookDiamond" msprop:Generator_RowChangedName="BuyBookDiamondRowChanged" msprop:Generator_TablePropName="BuyBookDiamond" msprop:Generator_RowDeletingName="BuyBookDiamondRowDeleting" msprop:Generator_RowChangingName="BuyBookDiamondRowChanging" msprop:Generator_RowEvHandlerName="BuyBookDiamondRowChangeEventHandler" msprop:Generator_RowDeletedName="BuyBookDiamondRowDeleted" msprop:Generator_RowClassName="BuyBookDiamondRow" msprop:Generator_UserTableName="BuyBookDiamond" msprop:Generator_RowEvArgName="BuyBookDiamondRowChangeEvent">
+        <xs:element name="BuyBookDiamond" msprop:Generator_TableClassName="BuyBookDiamondDataTable" msprop:Generator_TableVarName="tableBuyBookDiamond" msprop:Generator_TablePropName="BuyBookDiamond" msprop:Generator_RowDeletingName="BuyBookDiamondRowDeleting" msprop:Generator_RowChangingName="BuyBookDiamondRowChanging" msprop:Generator_RowEvHandlerName="BuyBookDiamondRowChangeEventHandler" msprop:Generator_RowDeletedName="BuyBookDiamondRowDeleted" msprop:Generator_UserTableName="BuyBookDiamond" msprop:Generator_RowChangedName="BuyBookDiamondRowChanged" msprop:Generator_RowEvArgName="BuyBookDiamondRowChangeEvent" msprop:Generator_RowClassName="BuyBookDiamondRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="RowNum" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnRowNum" msprop:Generator_ColumnPropNameInRow="RowNum" msprop:Generator_ColumnPropNameInTable="RowNumColumn" msprop:Generator_UserColumnName="RowNum" type="xs:long" minOccurs="0" />
@@ -109,6 +109,7 @@
               <xs:element name="CreateDate" msprop:Generator_ColumnVarNameInTable="columnCreateDate" msprop:Generator_ColumnPropNameInRow="CreateDate" msprop:Generator_ColumnPropNameInTable="CreateDateColumn" msprop:Generator_UserColumnName="CreateDate" type="xs:dateTime" minOccurs="0" />
               <xs:element name="EditBy" msprop:Generator_ColumnVarNameInTable="columnEditBy" msprop:Generator_ColumnPropNameInRow="EditBy" msprop:Generator_ColumnPropNameInTable="EditByColumn" msprop:Generator_UserColumnName="EditBy" type="xs:int" minOccurs="0" />
               <xs:element name="EditDate" msprop:Generator_ColumnVarNameInTable="columnEditDate" msprop:Generator_ColumnPropNameInRow="EditDate" msprop:Generator_ColumnPropNameInTable="EditDateColumn" msprop:Generator_UserColumnName="EditDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Size" msprop:Generator_ColumnVarNameInTable="columnSize" msprop:Generator_ColumnPropNameInRow="Size" msprop:Generator_ColumnPropNameInTable="SizeColumn" msprop:Generator_UserColumnName="Size" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

@@ -543,7 +543,7 @@ namespace DiamondShop
         private void grid2_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
         {
             e.Control.KeyPress -= new KeyPressEventHandler(Column1_KeyPress);
-            if (grid2.CurrentCell.ColumnIndex != 0 || grid2.CurrentCell.ColumnIndex != 1)
+            if (grid2.CurrentCell.ColumnIndex == 4 || grid2.CurrentCell.ColumnIndex == 5)
             {
                 TextBox tb = e.Control as TextBox;
                 if (tb != null)

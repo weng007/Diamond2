@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BuyBookDiamond));
             this.dtBuyDate = new System.Windows.Forms.DateTimePicker();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -242,9 +242,9 @@
             // Amount
             // 
             this.Amount.DataPropertyName = "Amount";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle1.NullValue = "0";
-            this.Amount.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle3.NullValue = "0";
+            this.Amount.DefaultCellStyle = dataGridViewCellStyle3;
             this.Amount.HeaderText = "คงเหลือ (ct)";
             this.Amount.Name = "Amount";
             this.Amount.Width = 120;
@@ -352,8 +352,8 @@
             this.txtPriceCarat.TabIndex = 28;
             this.txtPriceCarat.Text = "0";
             this.txtPriceCarat.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtPriceCarat.TextChanged += new System.EventHandler(this.txtPriceCarat_TextChanged);
             this.txtPriceCarat.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAmount_KeyPress);
+            this.txtPriceCarat.Leave += new System.EventHandler(this.txtPriceCarat_Leave);
             // 
             // label13
             // 
@@ -513,8 +513,9 @@
             this.txtPriceCaratUSD.TabIndex = 24;
             this.txtPriceCaratUSD.Text = "0";
             this.txtPriceCaratUSD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtPriceCaratUSD.TextChanged += new System.EventHandler(this.txtPriceCaratUSD_TextChanged);
+            //this.txtPriceCaratUSD.TextChanged += new System.EventHandler(this.txtPriceCaratUSD_TextChanged);
             this.txtPriceCaratUSD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAmount_KeyPress);
+            this.txtPriceCaratUSD.Leave += new System.EventHandler(this.txtPriceCaratUSD_Leave);
             // 
             // cmbClearity
             // 

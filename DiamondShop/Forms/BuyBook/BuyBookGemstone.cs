@@ -262,15 +262,11 @@ namespace DiamondShop
                 txtUSDRate.Text = "0";
 
                 txtPriceCarat.Enabled = true;
+
             }
         }
 
         private void txtWeight_TextChanged(object sender, EventArgs e)
-        {
-            txtTotalUSD.Text = (GM.ConvertStringToDouble(txtWeight) * GM.ConvertStringToDouble(txtPriceCaratUSD)).ToString();
-        }
-
-        private void txtPriceCaratUSD_TextChanged(object sender, EventArgs e)
         {
             txtTotalUSD.Text = (GM.ConvertStringToDouble(txtWeight) * GM.ConvertStringToDouble(txtPriceCaratUSD)).ToString();
         }
@@ -281,14 +277,17 @@ namespace DiamondShop
             {
                 txtTotalBaht.Text = (GM.ConvertStringToDouble(txtTotalUSD) * GM.ConvertStringToDouble(txtUSDRate)).ToString();
             }
+            else
+            {
+                txtTotalBaht.Text = "0";
+            }
         }
 
-        private void txtPriceCarat_TextChanged(object sender, EventArgs e)
+        private void txtPriceCaratUSD_Leave(object sender, EventArgs e)
         {
-            if (!chkPayByUSD.Checked)
-            {
-                txtTotalBaht.Text = (GM.ConvertStringToDouble(txtPriceCarat) * GM.ConvertStringToDouble(txtWeight)).ToString();
-            }
+            txtTotalUSD.Text = (GM.ConvertStringToDouble(txtWeight) * GM.ConvertStringToDouble(txtPriceCaratUSD)).ToString();
+
+            txtPriceCaratUSD.Text = GM.ConvertDoubleToString(txtPriceCaratUSD, 0);
         }
 
         private void txtTotalBaht_TextChanged(object sender, EventArgs e)
@@ -304,7 +303,15 @@ namespace DiamondShop
             txtUSDRate.Text = GM.ConvertDoubleToString(txtUSDRate, 0);
             txtMarketPrice.Text = GM.ConvertDoubleToString(txtMarketPrice, 0);
         }
+        private void txtPriceCarat_Leave(object sender, EventArgs e)
+        {
+            if (!chkPayByUSD.Checked)
+            {
+                txtTotalBaht.Text = (GM.ConvertStringToDouble(txtPriceCarat) * GM.ConvertStringToDouble(txtWeight)).ToString();
 
+                txtPriceCarat.Text = GM.ConvertDoubleToString(txtPriceCarat, 0);
+            }
+        }
         private void grid1_Validated(object sender, EventArgs e)
         {
             if (grid1.Rows.Count > 0)
@@ -324,6 +331,11 @@ namespace DiamondShop
 
                 tds2.AcceptChanges();
             }
+        }
+
+        private void txtMarketPrice_Leave(object sender, EventArgs e)
+        {
+            txtMarketPrice.Text = GM.ConvertDoubleToString(txtMarketPrice, 0);
         }
     }
 }
