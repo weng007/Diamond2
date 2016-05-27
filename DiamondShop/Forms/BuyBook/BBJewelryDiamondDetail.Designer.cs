@@ -60,12 +60,12 @@
             this.RefID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ReportNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Company = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Shape = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Company = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Shape = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Weight = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColorType = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Color = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Clearity = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.ColorType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Color = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Clearity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid2)).BeginInit();
@@ -354,12 +354,7 @@
             this.grid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.grid1.Size = new System.Drawing.Size(1139, 181);
             this.grid1.TabIndex = 46;
-            this.grid1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid2_CellClick);
-            this.grid1.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid1_CellEndEdit);
-            this.grid1.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid2_CellEnter);
             this.grid1.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.grid1_CellFormatting);
-            this.grid1.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.grid1_DataError);
-            this.grid1.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.grid1_EditingControlShowing);
             // 
             // panel4
             // 
@@ -405,21 +400,17 @@
             // Company
             // 
             this.Company.DataPropertyName = "Company";
-            this.Company.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Company.HeaderText = "Company";
             this.Company.Name = "Company";
             this.Company.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Company.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Company.Width = 120;
             // 
             // Shape
             // 
             this.Shape.DataPropertyName = "Shape";
-            this.Shape.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Shape.HeaderText = "Shape";
             this.Shape.Name = "Shape";
             this.Shape.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Shape.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Shape.Width = 130;
             // 
             // Weight
@@ -435,31 +426,25 @@
             // ColorType
             // 
             this.ColorType.DataPropertyName = "ColorType";
-            this.ColorType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ColorType.HeaderText = "ColorType";
             this.ColorType.Name = "ColorType";
             this.ColorType.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ColorType.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.ColorType.Width = 170;
             // 
             // Color
             // 
             this.Color.DataPropertyName = "Color";
-            this.Color.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Color.HeaderText = "Color";
             this.Color.Name = "Color";
             this.Color.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Color.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Color.Width = 150;
             // 
             // Clearity
             // 
             this.Clearity.DataPropertyName = "Clearity";
-            this.Clearity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Clearity.HeaderText = "Clearity";
             this.Clearity.Name = "Clearity";
             this.Clearity.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Clearity.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Clearity.Width = 170;
             // 
             // BBJewelryDiamondDetail
@@ -509,11 +494,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn RefID;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn ReportNumber;
-        private System.Windows.Forms.DataGridViewComboBoxColumn Company;
-        private System.Windows.Forms.DataGridViewComboBoxColumn Shape;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Company;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Shape;
         private System.Windows.Forms.DataGridViewTextBoxColumn Weight;
-        private System.Windows.Forms.DataGridViewComboBoxColumn ColorType;
-        private System.Windows.Forms.DataGridViewComboBoxColumn Color;
-        private System.Windows.Forms.DataGridViewComboBoxColumn Clearity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColorType;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Color;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Clearity;
     }
 }

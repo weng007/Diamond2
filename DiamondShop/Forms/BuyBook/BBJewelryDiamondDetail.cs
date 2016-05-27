@@ -15,10 +15,8 @@ namespace DiamondShop
 {
     public partial class BBJewelryDiamondDetail : FormInfo
     {
-        ComboBox cmb;
         DataSet ds2 = new DataSet();
-        DataSet tmp = new DataSet();
-        int rowIndex, rowIndex1;
+        int rowIndex1;
         int chkGrid, DelID;
         dsBBJewelryDiamondCerDetail tds = new dsBBJewelryDiamondCerDetail();
         dsBBJewelryDiamondDetail tds2 = new dsBBJewelryDiamondDetail();
@@ -43,32 +41,6 @@ namespace DiamondShop
             grid1.AutoGenerateColumns = false;
             grid2.AutoGenerateColumns = false;
 
-            //grid1
-            Company.DataSource= (GM.GetMasterTableDetail("C020")).Tables[0];
-            Company.ValueMember = "ID";
-            Company.DisplayMember = "Detail";
-            Company.DefaultCellStyle.NullValue = (GM.GetMasterTableDetail("C020")).Tables[0].Rows[0][1];
-
-            Shape.DataSource = (GM.GetMasterTableDetail("C019")).Tables[0];
-            Shape.ValueMember = "ID";
-            Shape.DisplayMember = "Detail";
-            Shape.DefaultCellStyle.NullValue = (GM.GetMasterTableDetail("C019")).Tables[0].Rows[0][1];
-
-            ColorType.DataSource = (GM.GetMasterTableDetail("C025")).Tables[0];
-            ColorType.ValueMember = "ID";
-            ColorType.DisplayMember = "Detail";
-            ColorType.DefaultCellStyle.NullValue = (GM.GetMasterTableDetail("C025")).Tables[0].Rows[0][1];
-
-            Color.DataSource = (GM.GetMasterTableDetail("C001")).Tables[0];
-            Color.ValueMember = "ID";
-            Color.DisplayMember = "Detail";
-            Color.DefaultCellStyle.NullValue = (GM.GetMasterTableDetail("C001")).Tables[0].Rows[0][1];
-
-            Clearity.DataSource = (GM.GetMasterTableDetail("C002")).Tables[0];
-            Clearity.ValueMember = "ID";
-            Clearity.DisplayMember = "Detail";
-            Clearity.DefaultCellStyle.NullValue = (GM.GetMasterTableDetail("C002")).Tables[0].Rows[0][1];
-
             //grid2
             Shape1.DataSource = (GM.GetMasterTableDetail("C019")).Tables[0];
             Shape1.ValueMember = "ID";
@@ -85,7 +57,6 @@ namespace DiamondShop
             Clearity1.DisplayMember = "Detail";
             Clearity1.DefaultCellStyle.NullValue = (GM.GetMasterTableDetail("C002")).Tables[0].Rows[0][1];
 
-            grid1.Refresh();
             grid2.Refresh();
         }
         protected override void LoadData()
@@ -100,86 +71,38 @@ namespace DiamondShop
 
             if (tds.BBJewelryDiamondCerDetail.Rows.Count > 0)
             {
-                grid1.Rows.Clear();
-                BindingGridDiamondDetail(grid1);
-                BindingDSDiamondDetail(0);
+                grid1.DataSource = tds.Tables[0];
             }
 
             if (tds2.BBJewelryDiamondDetail.Rows.Count > 0)
             {
                 grid2.Rows.Clear();
-                BindingGridDiamondDetail(grid2);
-                BindingDSDiamondDetail(1);
+                BindingGridDiamondDetail();
+                BindingDSDiamondDetail();
             }
 
             base.LoadData();
         }
 
         #region Binding Grid, Dataset
-        private void BindingGridDiamondDetail(DataGridView grid)
+        private void BindingGridDiamondDetail()
         {
             int i = 0;
 
-            if (grid.Name == "grid1")
+            foreach (DataRow row in tds2.Tables[0].Rows)
             {
-                foreach (DataRow row in tds.Tables[0].Rows)
-                {
-                    grid1.Rows.Add();
-                    grid1.Rows[i].Cells["ID"].Value = row["ID"].ToString();
-                    grid1.Rows[i].Cells["RowNum"].Value = row["RowNum"].ToString();
-                    grid1.Rows[i].Cells["ReportNumber"].Value = row["ReportNumber"].ToString();
-                    grid1.Rows[i].Cells["Shape"].Value = row["Shape"].ToString();
-                    grid1.Rows[i].Cells["Company"].Value = row["Company"].ToString();
-                    grid1.Rows[i].Cells["Weight"].Value = row["Weight"].ToString();
-                    grid1.Rows[i].Cells["ColorType"].Value = row["ColorType"].ToString();
+                grid2.Rows.Add();
+                grid2.Rows[i].Cells["ID1"].Value = row["ID"].ToString();
+                grid2.Rows[i].Cells["RowNum1"].Value = row["RowNum"].ToString();
+                grid2.Rows[i].Cells["Shape1"].Value = row["Shape"].ToString();
+                grid2.Rows[i].Cells["Amount1"].Value = row["Amount"].ToString();
+                grid2.Rows[i].Cells["Weight1"].Value = row["Weight"].ToString();
+                grid2.Rows[i].Cells["Color1"].Value = row["Color"].ToString();
+                grid2.Rows[i].Cells["Clearity1"].Value = row["Clearity"].ToString();
+                grid2.Rows[i].Cells["RefID2"].Value = row["RefID"].ToString();
 
-                    if (grid1.Rows[i].Cells["ColorType"].Value.ToString() == "121")
-                    {
-                        DataGridViewComboBoxCell c = new DataGridViewComboBoxCell();
-                        c.FlatStyle = FlatStyle.Flat;
-                        c.DataSource = (GM.GetMasterTableDetail("C001")).Tables[0];
-                        c.ValueMember = "ID";
-                        c.DisplayMember = "Detail";
-                        grid1.Rows[i].Cells["Color"] = c;
-                    }
-                    else
-                    {
-                        DataGridViewComboBoxCell c = new DataGridViewComboBoxCell();
-                        c.FlatStyle = FlatStyle.Flat;
-                        c.DataSource = (GM.GetMasterTableDetail("C017")).Tables[0];
-                        c.ValueMember = "ID";
-                        c.DisplayMember = "Detail";
-                        grid1.Rows[i].Cells["Color"] = c;
-                    }
-
-                    grid1.Rows[i].Cells["Color"].Value = row["Color"].ToString();
-                    grid1.Rows[i].Cells["Clearity"].Value = row["Clearity"].ToString();
-                    grid1.Rows[i].Cells["RefID"].Value = row["RefID"].ToString();                  
-
-                    i++;
-                }
-
-                i = 0;
-                CalSum(0);
-            }
-
-            else if (grid.Name == "grid2")
-            {
-                foreach (DataRow row in tds2.Tables[0].Rows)
-                {
-                    grid2.Rows.Add();
-                    grid2.Rows[i].Cells["ID1"].Value = row["ID"].ToString();
-                    grid2.Rows[i].Cells["RowNum1"].Value = row["RowNum"].ToString();
-                    grid2.Rows[i].Cells["Shape1"].Value = row["Shape"].ToString();
-                    grid2.Rows[i].Cells["Amount1"].Value = row["Amount"].ToString();
-                    grid2.Rows[i].Cells["Weight1"].Value = row["Weight"].ToString();
-                    grid2.Rows[i].Cells["Color1"].Value = row["Color"].ToString();
-                    grid2.Rows[i].Cells["Clearity1"].Value = row["Clearity"].ToString();
-                    grid2.Rows[i].Cells["RefID2"].Value = row["RefID"].ToString();
-
-                    i++;
-                    CalSum(1);
-                }
+                i++;
+                CalSum(1);
             }
         }
 
@@ -205,120 +128,50 @@ namespace DiamondShop
             }
 
         }
-        private void BindingDSDiamondDetail(int type)
+        private void BindingDSDiamondDetail()
         {
             int i = 0;
 
-            if (type == 0)
+            tds2.Clear();
+            foreach (DataGridViewRow row in grid2.Rows)
             {
-                tds.Clear();
+                tds2.Tables[0].Rows.Add();
 
-                foreach (DataGridViewRow row in grid1.Rows)
-                {
-                    tds.Tables[0].Rows.Add();
+                if (row.Cells["ID1"].Value != null)
+                { tds2.Tables[0].Rows[i]["ID"] = row.Cells["ID1"].Value; }
 
-                    if (row.Cells["ID"].Value != null)
-                    { tds.Tables[0].Rows[i]["ID"] = row.Cells["ID"].Value; }
+                if (row.Cells["RowNum1"].Value != null)
+                { tds2.Tables[0].Rows[i]["RowNum"] = row.Cells["RowNum1"].Value; }
 
-                    if (row.Cells["RowNum"].Value != null)
-                    { tds.Tables[0].Rows[i]["RowNum"] = row.Cells["RowNum"].Value; }
+                if (row.Cells["Amount1"].Value != null)
+                { tds2.Tables[0].Rows[i]["Amount"] = row.Cells["Amount1"].Value; }
 
-                    if (row.Cells["RefID"].Value != null)
-                    { tds.Tables[0].Rows[i]["RefID"] = row.Cells["RefID"].Value; }
+                if (row.Cells["Weight1"].Value != null)
+                { tds2.Tables[0].Rows[i]["Weight"] = row.Cells["Weight1"].Value; }
 
-                    if (row.Cells["ReportNumber"].Value != null)
-                    { tds.Tables[0].Rows[i]["ReportNumber"] = row.Cells["ReportNumber"].Value; }
+                if (row.Cells["Shape1"].Value != null)
+                { tds2.Tables[0].Rows[i]["Shape"] = row.Cells["Shape1"].Value; }
 
-                    if (row.Cells["Company"].Value != null)
-                    { tds.Tables[0].Rows[i]["Company"] = row.Cells["Company"].Value; }
+                if (row.Cells["Color1"].Value != null)
+                { tds2.Tables[0].Rows[i]["Color"] = row.Cells["Color1"].Value; }
 
-                    if (row.Cells["Shape"].Value != null)
-                    { tds.Tables[0].Rows[i]["Shape"] = row.Cells["Shape"].Value; }
+                if (row.Cells["Clearity1"].Value != null)
+                { tds2.Tables[0].Rows[i]["Clearity"] = row.Cells["Clearity1"].Value; }
 
-                    if (row.Cells["Weight"].Value != null)
-                    { tds.Tables[0].Rows[i]["Weight"] = row.Cells["Weight"].Value; }
+                if (row.Cells["RefID2"].Value != null)
+                { tds2.Tables[0].Rows[i]["RefID"] = row.Cells["RefID2"].Value; }
 
-                    if (row.Cells["ColorType"].Value != null)
-                    { tds.Tables[0].Rows[i]["ColorType"] = row.Cells["ColorType"].Value; }
-
-                    if (row.Cells["Color"].Value != null)
-                    { tds.Tables[0].Rows[i]["Color"] = row.Cells["Color"].Value; }
-
-                    if (row.Cells["Clearity"].Value != null)
-                    { tds.Tables[0].Rows[i]["Clearity"] = row.Cells["Clearity"].Value; }
-
-                    i++;
-                }
-
-                i = 0;
-                tds.AcceptChanges();
-            }
-            else
-            {
-                tds2.Clear();
-                foreach (DataGridViewRow row in grid2.Rows)
-                {
-                    tds2.Tables[0].Rows.Add();
-
-                    if (row.Cells["ID1"].Value != null)
-                    { tds2.Tables[0].Rows[i]["ID"] = row.Cells["ID1"].Value; }
-
-                    if (row.Cells["RowNum1"].Value != null)
-                    { tds2.Tables[0].Rows[i]["RowNum"] = row.Cells["RowNum1"].Value; }
-
-                    if (row.Cells["Amount1"].Value != null)
-                    { tds2.Tables[0].Rows[i]["Amount"] = row.Cells["Amount1"].Value; }
-
-                    if (row.Cells["Weight1"].Value != null)
-                    { tds2.Tables[0].Rows[i]["Weight"] = row.Cells["Weight1"].Value; }
-
-                    if (row.Cells["Shape1"].Value != null)
-                    { tds2.Tables[0].Rows[i]["Shape"] = row.Cells["Shape1"].Value; }
-
-                    if (row.Cells["Color1"].Value != null)
-                    { tds2.Tables[0].Rows[i]["Color"] = row.Cells["Color1"].Value; }
-
-                    if (row.Cells["Clearity1"].Value != null)
-                    { tds2.Tables[0].Rows[i]["Clearity"] = row.Cells["Clearity1"].Value; }
-
-                    if (row.Cells["RefID2"].Value != null)
-                    { tds2.Tables[0].Rows[i]["RefID"] = row.Cells["RefID2"].Value; }
-
-                    i++;
-                }
+                i++;
+             }
 
                 tds2.AcceptChanges();
             }
-        }
         #endregion
 
         protected override bool SaveData()
         {
             try
             {
-                //Cer Diamond
-                foreach (DataRow row in tds.Tables[0].Rows)
-                {
-                    if (row["RowNum"].ToString() == "")
-                    {
-                        row["RefID"] = id;
-                        if (row["Company"].ToString() == "") { row["Company"] = 152; }
-                        if (row["Shape"].ToString() == "") { row["Shape"] = 133; }
-                        if (row["ColorType"].ToString() == "") { row["ColorType"] = 126; }
-                        if (row["Color"].ToString() == "") { row["Color"] = 1; }
-                        if (row["Clearity"].ToString() == "") { row["Clearity"] = 25; }
-                        if (row["Weight"].ToString() == "") { row["Weight"] = 0; }
-                        SetCreateBy(row);
-                    }
-                    else
-                    {
-                        SetEditBy(row);
-                    }
-                }
-                tds.AcceptChanges();
-                chkFlag = ser.DoInsertData("BBJewelryDiamondCerDetail", tds);
-
-
                 foreach (DataRow row in tds2.Tables[0].Rows)
                 {
                     if (row["RowNum"].ToString() == "")
@@ -350,27 +203,13 @@ namespace DiamondShop
         }
         protected override bool DeleteData()
         {
-            if (chkGrid == 0)
+            try
             {
-                try
-                {
-                    chkFlag = ser.DoDeleteData("BBJewelryDiamondCerDetail", DelID);
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
+                chkFlag = ser.DoDeleteData("BBJewelryDiamondDetail", DelID);
             }
-            else
+            catch (Exception ex)
             {
-                try
-                {
-                    chkFlag = ser.DoDeleteData("BBJewelryDiamondDetail", DelID);
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
+                throw ex;
             }
 
             return chkFlag;
@@ -386,10 +225,7 @@ namespace DiamondShop
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            grid1.Rows.Add();
-            tds.Tables[0].Rows.Add();
-
-            tds.AcceptChanges();
+            
         }
 
         private void btnAdd1_Click(object sender, EventArgs e)
@@ -397,6 +233,7 @@ namespace DiamondShop
             grid2.Rows.Add();
             tds2.Tables[0].Rows.Add();
 
+            grid2.RefreshEdit();
             tds2.AcceptChanges();
         }
 
@@ -406,14 +243,8 @@ namespace DiamondShop
             {
                 if (grid1.Rows.Count > 0)
                 {
-                    if (Convert.ToInt16(grid1.Rows[rowIndex].Cells["ID"].Value.ToString()) > 0)
-                    {
-                        DeleteDataGrid(0);
-                    }
+
                 }
-                grid1.Rows.RemoveAt(rowIndex);
-                tds.Tables[0].Rows[rowIndex].Delete();
-                tds.AcceptChanges();
             }
             catch (Exception ex)
             {
@@ -443,52 +274,6 @@ namespace DiamondShop
             }
         }
 
-        private void grid1_CellEndEdit(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.ColumnIndex == 6)
-            {
-                if (grid1.Rows[e.RowIndex].Cells[6].Value == null || grid1.Rows[e.RowIndex].Cells[6].Value.ToString().Trim() == "")
-                {
-                    grid1.Rows[e.RowIndex].Cells[6].Value = 0;
-                }
-            }
-            if (e.ColumnIndex == 7 && grid1.Rows[e.RowIndex].Cells["ColorType"].Value !=  null)
-            {
-                if (grid1.Rows[e.RowIndex].Cells["ColorType"].Value.ToString() == "121")
-                {
-                    DataGridViewComboBoxCell c = new DataGridViewComboBoxCell();
-                    c.FlatStyle = FlatStyle.Flat;
-                    c.DataSource = (GM.GetMasterTableDetail("C001")).Tables[0];
-                    c.ValueMember = "ID";
-                    c.DisplayMember = "Detail";
-                    grid1.Rows[e.RowIndex].Cells["Color"] = c;
-                }
-                else
-                {
-                    DataGridViewComboBoxCell c = new DataGridViewComboBoxCell();
-                    c.FlatStyle = FlatStyle.Flat;
-                    c.DataSource = (GM.GetMasterTableDetail("C017")).Tables[0];
-                    c.ValueMember = "ID";
-                    c.DisplayMember = "Detail";
-                    grid1.Rows[e.RowIndex].Cells["Color"] = c;
-                }
-            }
-            else if(grid1.Rows[e.RowIndex].Cells["ColorType"].Value == null)
-            {
-                DataGridViewComboBoxCell c = new DataGridViewComboBoxCell();
-                c.FlatStyle = FlatStyle.Flat;
-                c.DataSource = (GM.GetMasterTableDetail("C001")).Tables[0];
-                c.ValueMember = "ID";
-                c.DisplayMember = "Detail";
-                grid1.Rows[e.RowIndex].Cells["Color"] = c;
-            }
-
-            grid1.Refresh();
-            BindingDSDiamondDetail(0);
-
-            CalSum(0);
-        }
-
         private void grid2_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex == 4)
@@ -506,7 +291,7 @@ namespace DiamondShop
                 }
             }
             grid2.RefreshEdit();
-            BindingDSDiamondDetail(1);
+            BindingDSDiamondDetail();
 
             CalSum(1);
         }
@@ -537,23 +322,6 @@ namespace DiamondShop
             {
                 datagridview.BeginEdit(true);
                 ((ComboBox)datagridview.EditingControl).DroppedDown = true;
-            }
-        }
-
-        private void grid1_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
-        {
-            e.Control.KeyPress -= new KeyPressEventHandler(Column1_KeyPress);
-            if (grid1.CurrentCell.ColumnIndex == 6 )
-            {
-                TextBox tb = e.Control as TextBox;
-                if (tb != null)
-                {
-                    tb.KeyPress += new KeyPressEventHandler(Column1_KeyPress);
-                }
-            }
-            else if (grid1.CurrentCell.ColumnIndex == 7)
-            {
-                cmb = e.Control as ComboBox;
             }
         }
 
@@ -588,10 +356,6 @@ namespace DiamondShop
             }
         }
 
-        private void grid1_DataError(object sender, DataGridViewDataErrorEventArgs e)
-        {
-
-        }
 
         private void grid2_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -599,56 +363,17 @@ namespace DiamondShop
 
             if (e.RowIndex >= 0)
             {
-                if (grid.Name == "grid1")
-                {
-                    rowIndex = e.RowIndex;
-                    if (grid1.Rows[e.RowIndex].Cells["ID"].Value != null)
-                    { DelID = Convert.ToInt16(grid1.Rows[e.RowIndex].Cells["ID"].Value.ToString()); }
+                rowIndex1 = e.RowIndex;
 
-                    if (grid1.Rows[e.RowIndex].Cells["ColorType"].Value.ToString() == "121")
-                    {
-                        DataGridViewComboBoxCell c = new DataGridViewComboBoxCell();
-                        c.FlatStyle = FlatStyle.Flat;
-                        c.DataSource = (GM.GetMasterTableDetail("C001")).Tables[0];
-                        c.ValueMember = "ID";
-                        c.DisplayMember = "Detail";
-                        grid1.Rows[e.RowIndex].Cells["Color"] = c;
-                    }
-                    else
-                    {
-                        DataGridViewComboBoxCell c = new DataGridViewComboBoxCell();
-                        c.FlatStyle = FlatStyle.Flat;
-                        c.DataSource = (GM.GetMasterTableDetail("C017")).Tables[0];
-                        c.ValueMember = "ID";
-                        c.DisplayMember = "Detail";
-                        grid1.Rows[e.RowIndex].Cells["Color"] = c;
-                    }
-
-                }
-                else
-                {
-                    rowIndex1 = e.RowIndex;
-
-                    if (grid2.Rows[e.RowIndex].Cells["ID1"].Value != null)
-                    { DelID = Convert.ToInt16(grid2.Rows[e.RowIndex].Cells["ID1"].Value.ToString()); }
-
-                }
-
+                if (grid2.Rows[e.RowIndex].Cells["ID1"].Value != null)
+                { DelID = Convert.ToInt16(grid2.Rows[e.RowIndex].Cells["ID1"].Value.ToString()); }
             }
         }
 
         private void DeleteDataGrid(int type)
         {
-            if (type == 0)
-            {
-                chkGrid = 0;
-                DeleteData();
-            }
-            else
-            {
-                chkGrid = 1;
-                DeleteData();
-            }
+            chkGrid = 1;
+            DeleteData();
         }
     }
 }
