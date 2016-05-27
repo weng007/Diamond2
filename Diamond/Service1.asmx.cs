@@ -308,7 +308,7 @@ namespace Diamond
             }
             else if (TableName == "BBDiamondStock")
             {
-                BuyBookDiamondBiz biz = GM.GetBuyBookDiamondBiz();
+                BBDiamondStockBiz biz = GM.GetBBDiamondStockBiz();
                 try
                 {
                     return biz.DoSelectData(id);
@@ -693,6 +693,21 @@ namespace Diamond
             {
                 BuyBookDiamondBiz biz = GM.GetBuyBookDiamondBiz();
                 dsBuyBookDiamond ds1 = new dsBuyBookDiamond();
+                ds1.Merge(ds);
+
+                try
+                {
+                    flag = biz.DoInsertData(ds1);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            else if (TableName == "BBDiamondStock")
+            {
+                BBDiamondStockBiz biz = GM.GetBBDiamondStockBiz();
+                dsBBDiamondStock ds1 = new dsBBDiamondStock();
                 ds1.Merge(ds);
 
                 try

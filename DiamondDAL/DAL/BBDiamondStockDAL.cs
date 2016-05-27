@@ -33,8 +33,11 @@ namespace DiamondDAL.DAL
         {
             try
             {
-                dsBBDiamondStock.BBDiamondStockRow row = tds.BBDiamondStock[0];
-                SQL.ExecuteSP("SP_BBDiamondStock_Ins", row);
+                DoDeleteData(Convert.ToInt32(tds.BBDiamondStock.Rows[0]["RefID"].ToString()));
+                foreach (dsBBDiamondStock.BBDiamondStockRow row in tds.BBDiamondStock.Rows)
+                {
+                    SQL.ExecuteSP("SP_BBDiamondStock_Ins", row);
+                }
             }
             catch (Exception ex)
             {
@@ -44,35 +47,35 @@ namespace DiamondDAL.DAL
             return true;
         }
 
-        //public bool DoUpdateData(dsBuyBookETC tds)
-        //{
-        //    try
-        //    {
-        //        dsBuyBookETC.BuyBookETCRow row = tds.BuyBookETC[0];
-        //        flag = SQL.ExecuteSP("SP_BuyBookETC_Upd", row);
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        throw ex;
-        //    }
+        public bool DoUpdateData(dsBBDiamondStock tds)
+        {
+            try
+            {
+                dsBBDiamondStock.BBDiamondStockRow row = tds.BBDiamondStock[0];
+                flag = SQL.ExecuteSP("SP_BBDiamondStock_Upd", row);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
 
-        //    return Convert.ToBoolean(flag);
-        //}
+            return Convert.ToBoolean(flag);
+        }
 
-        //public bool DoDeleteData(int id)
-        //{
-        //    try
-        //    {
-        //        SQL.ClearParameter();
-        //        SQL.CreateParameter("@ID", id);
-        //        flag = SQL.ExecuteSP("SP_BuyBookETC_Del");
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        throw ex;
-        //    }
+        public bool DoDeleteData(int id)
+        {
+            try
+            {
+                SQL.ClearParameter();
+                SQL.CreateParameter("@ID", id);
+                flag = SQL.ExecuteSP("SP_BBDiamondStock_Del");
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
 
-        //    return Convert.ToBoolean(flag);
-        //}
+            return Convert.ToBoolean(flag);
+        }
     }
 }

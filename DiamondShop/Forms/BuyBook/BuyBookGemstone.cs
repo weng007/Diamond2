@@ -298,5 +298,25 @@ namespace DiamondShop
             txtUSDRate.Text = GM.ConvertDoubleToString(txtUSDRate, 0);
             txtMarketPrice.Text = GM.ConvertDoubleToString(txtMarketPrice, 0);
         }
+
+        private void grid1_Validated(object sender, EventArgs e)
+        {
+            if (grid1.Rows.Count > 0)
+            {
+                for (int i = 0; i < grid1.Rows.Count; i++)
+                {
+                    if (grid1.Rows[i].Cells[0].Value != null)
+                    {
+                        if (grid1.Rows[i].Cells["ActionDate"].Value != null)
+                        { tds2.Tables[0].Rows[i]["ActionDate"] = grid1.Rows[i].Cells["ActionDate"].Value; }
+                        if (grid1.Rows[i].Cells["Amount"].Value != null)
+                        { tds2.Tables[0].Rows[i]["Amount"] = grid1.Rows[i].Cells["Amount"].Value; }
+                        tds2.Tables[0].Rows[i]["RefID"] = id;
+                    }
+                }
+
+                tds2.AcceptChanges();
+            }
+        }
     }
 }

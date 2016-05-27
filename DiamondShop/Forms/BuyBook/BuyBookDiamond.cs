@@ -16,7 +16,7 @@ namespace DiamondShop
     public partial class BuyBookDiamond : FormInfo
     {
         dsBuyBookDiamond tds = new dsBuyBookDiamond();
-        dsBBDiamondStock tds2 = new dsBBDiamondStock();
+        
         DataSet ds2 = new DataSet();
         bool isAuthorize = false;
 
@@ -81,6 +81,8 @@ namespace DiamondShop
 
         protected override void Initial()
         {
+            grid1.AutoGenerateColumns = false;
+
             cmbShop.DataSource = (GM.GetMasterTableDetail("C007")).Tables[0];
             cmbShop.ValueMember = "ID";
             cmbShop.DisplayMember = "Detail";
@@ -145,19 +147,12 @@ namespace DiamondShop
                 EnableDelete = false;
             }
 
-            if(tds2.Tables[0].Rows.Count > 0)
-            {
-                grid1.DataSource = tds2.Tables[0];
-                grid1.Refresh();
-            }
-
             base.LoadData();
         }
 
         protected override bool SaveData()
         {
             dsBuyBookDiamond.BuyBookDiamondRow row = null;
-            dsBBDiamondStock.BBDiamondStockRow row1 = null;
 
             if (tds.BuyBookDiamond.Rows.Count > 0)
             {
@@ -189,12 +184,11 @@ namespace DiamondShop
                 //Delete Save Stock
                 if (tds2.BBDiamondStock.Rows.Count > 0)
                 {
-                    row1 = tds2.BBDiamondStock[0];
-                    row1.RefID = id;
-                    chkFlag = ser.DoInsertData("BBDiamondStock", tds);
+                    chkFlag = ser.DoInsertData("BBDiamondStock", tds2);
                 }
 
                 tds.AcceptChanges();
+                tds2.AcceptChanges();
             }
             catch (Exception ex)
             {
@@ -338,21 +332,19 @@ namespace DiamondShop
             txtMarketPrice.Text = GM.ConvertDoubleToString(txtMarketPrice, 0);
         }
 
-        private void grid1_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        private void grid1_Validated(object sender, EventArgs e)
         {
             if (grid1.Rows.Count > 0)
             {
-                tds2.Tables[0].Rows.Clear();
-
                 for (int i = 0; i < grid1.Rows.Count; i++)
                 {
                     if (grid1.Rows[i].Cells[0].Value != null)
                     {
-                        tds2.Tables[0].Rows.Add();
-                        if(grid1.Rows[i].Cells["ActionDate"].Value != null)
+                        if (grid1.Rows[i].Cells["ActionDate"].Value != null)
                         { tds2.Tables[0].Rows[i]["ActionDate"] = grid1.Rows[i].Cells["ActionDate"].Value; }
                         if (grid1.Rows[i].Cells["Amount"].Value != null)
                         { tds2.Tables[0].Rows[i]["Amount"] = grid1.Rows[i].Cells["Amount"].Value; }
+                        tds2.Tables[0].Rows[i]["RefID"] = id;
                     }
                 }
 

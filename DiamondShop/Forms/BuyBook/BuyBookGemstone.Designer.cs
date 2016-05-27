@@ -78,6 +78,7 @@
             this.txtCode = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
+            this.label19 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid1)).BeginInit();
@@ -96,6 +97,7 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.label19);
             this.panel3.Controls.Add(this.grid1);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.txtSize);
@@ -152,10 +154,11 @@
             this.grid1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ActionDate,
             this.Amount});
-            this.grid1.Location = new System.Drawing.Point(33, 183);
+            this.grid1.Enabled = false;
+            this.grid1.Location = new System.Drawing.Point(33, 200);
             this.grid1.Name = "grid1";
             this.grid1.RowHeadersWidth = 10;
-            this.grid1.Size = new System.Drawing.Size(249, 271);
+            this.grid1.Size = new System.Drawing.Size(249, 254);
             this.grid1.TabIndex = 192;
             // 
             // ActionDate
@@ -606,6 +609,16 @@
             this.button1.TabIndex = 32;
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.ForeColor = System.Drawing.Color.Red;
+            this.label19.Location = new System.Drawing.Point(58, 174);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(174, 21);
+            this.label19.TabIndex = 193;
+            this.label19.Text = "*Work only mode edit";
+            // 
             // BuyBookGemstone
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -675,5 +688,7 @@
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.DataGridViewTextBoxColumn ActionDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn Amount;
+        private System.Windows.Forms.Label label19;
+        
     }
 }
