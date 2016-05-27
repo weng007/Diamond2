@@ -14,13 +14,13 @@ using DiamondShop.DiamondService;
 
 namespace DiamondShop
 {
-    public partial class BuyBookJewelryDiamondDetail : FormInfo
+    public partial class BBJewelryDiamondDetailInfo : FormInfo
     {
         dsBBJewelryDiamondCerDetail tds = new dsBBJewelryDiamondCerDetail();
         bool isAuthorize = false;
         byte[] file;
 
-        public BuyBookJewelryDiamondDetail()
+        public BBJewelryDiamondDetailInfo()
         {
             InitializeComponent();
             Initial();
@@ -33,7 +33,7 @@ namespace DiamondShop
             binder.BindControl(cmbColor, "Color");
             binder.BindControl(cmbClearity, "Clearity");
         }
-        public BuyBookJewelryDiamondDetail(int id)
+        public BBJewelryDiamondDetailInfo(int id)
         {
             InitializeComponent();
             Initial();
