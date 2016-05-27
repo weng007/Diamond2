@@ -11,18 +11,16 @@ using DiamondShop.FormMaster;
 using DiamondDS.DS;
 using DiamondShop.DiamondService;
 
-
 namespace DiamondShop
 {
     public partial class BBJewelryDiamondDetail : FormInfo
     {
-
+        ComboBox cmb;
         DataSet ds2 = new DataSet();
         DataSet tmp = new DataSet();
         int rowIndex, rowIndex1;
         int chkGrid, DelID;
         dsBBJewelryDiamondCerDetail tds = new dsBBJewelryDiamondCerDetail();
-        //dsDiamondCer tdsBBjewelryDC = new dsDiamondCer();
         dsBBJewelryDiamondDetail tds2 = new dsBBJewelryDiamondDetail();
 
         public BBJewelryDiamondDetail()
@@ -36,7 +34,6 @@ namespace DiamondShop
             InitializeComponent();
             Initial();
 
-
             this.id = id;
             LoadData();
         }
@@ -47,44 +44,42 @@ namespace DiamondShop
             grid2.AutoGenerateColumns = false;
 
             //grid1
-            Company = (DataGridViewComboBoxColumn)grid1.Columns["Company"];
             Company.DataSource= (GM.GetMasterTableDetail("C020")).Tables[0];
             Company.ValueMember = "ID";
             Company.DisplayMember = "Detail";
             Company.DefaultCellStyle.NullValue = (GM.GetMasterTableDetail("C020")).Tables[0].Rows[0][1];
 
-            Shape = (DataGridViewComboBoxColumn)grid1.Columns["Shape"];
             Shape.DataSource = (GM.GetMasterTableDetail("C019")).Tables[0];
             Shape.ValueMember = "ID";
             Shape.DisplayMember = "Detail";
             Shape.DefaultCellStyle.NullValue = (GM.GetMasterTableDetail("C019")).Tables[0].Rows[0][1];
 
-            Color = (DataGridViewComboBoxColumn)grid1.Columns["Color"];
-            Color.DataSource = (GM.GetMasterTableDetail("C017")).Tables[0];
-            Color.ValueMember = "ID";
-            Color.DisplayMember = "Detail";
-            Color.DefaultCellStyle.NullValue = (GM.GetMasterTableDetail("C017")).Tables[0].Rows[0][1];
+            ColorType.DataSource = (GM.GetMasterTableDetail("C025")).Tables[0];
+            ColorType.ValueMember = "ID";
+            ColorType.DisplayMember = "Detail";
+            ColorType.DefaultCellStyle.NullValue = (GM.GetMasterTableDetail("C025")).Tables[0].Rows[0][1];
 
-            Clearity = (DataGridViewComboBoxColumn)grid1.Columns["Clearity"];
+            //Color.DataSource = (GM.GetMasterTableDetail("C001")).Tables[0];
+            //Color.ValueMember = "ID";
+            //Color.DisplayMember = "Detail";
+            //Color.DefaultCellStyle.NullValue = (GM.GetMasterTableDetail("C001")).Tables[0].Rows[0][1];
+
             Clearity.DataSource = (GM.GetMasterTableDetail("C002")).Tables[0];
             Clearity.ValueMember = "ID";
             Clearity.DisplayMember = "Detail";
             Clearity.DefaultCellStyle.NullValue = (GM.GetMasterTableDetail("C002")).Tables[0].Rows[0][1];
 
             //grid2
-            Shape1 = (DataGridViewComboBoxColumn)grid2.Columns["Shape1"];
             Shape1.DataSource = (GM.GetMasterTableDetail("C019")).Tables[0];
             Shape1.ValueMember = "ID";
             Shape1.DisplayMember = "Detail";
             Shape1.DefaultCellStyle.NullValue = (GM.GetMasterTableDetail("C019")).Tables[0].Rows[0][1];
 
-            Color1 = (DataGridViewComboBoxColumn)grid2.Columns["Color1"];
             Color1.DataSource = (GM.GetMasterTableDetail("C017")).Tables[0];
             Color1.ValueMember = "ID";
             Color1.DisplayMember = "Detail";
             Color1.DefaultCellStyle.NullValue = (GM.GetMasterTableDetail("C017")).Tables[0].Rows[0][1];
 
-            Clearity1 = (DataGridViewComboBoxColumn)grid2.Columns["Clearity1"];
             Clearity1.DataSource = (GM.GetMasterTableDetail("C002")).Tables[0];
             Clearity1.ValueMember = "ID";
             Clearity1.DisplayMember = "Detail";
@@ -136,10 +131,28 @@ namespace DiamondShop
                     grid1.Rows[i].Cells["Shape"].Value = row["Shape"].ToString();
                     grid1.Rows[i].Cells["Company"].Value = row["Company"].ToString();
                     grid1.Rows[i].Cells["Weight"].Value = row["Weight"].ToString();
+                    grid1.Rows[i].Cells["ColorType"].Value = row["ColorType"].ToString();
+
+                    if (grid1.Rows[i].Cells["ColorType"].Value.ToString() == "121")
+                    {
+                        DataGridViewComboBoxCell c = new DataGridViewComboBoxCell();
+                        c.DataSource = (GM.GetMasterTableDetail("C001")).Tables[0];
+                        c.ValueMember = "ID";
+                        c.DisplayMember = "Detail";
+                        grid1.Rows[i].Cells["Color"] = c;
+                    }
+                    else
+                    {
+                        DataGridViewComboBoxCell c = new DataGridViewComboBoxCell();
+                        c.DataSource = (GM.GetMasterTableDetail("C017")).Tables[0];
+                        c.ValueMember = "ID";
+                        c.DisplayMember = "Detail";
+                        grid1.Rows[i].Cells["Color"] = c;
+                    }
+
                     grid1.Rows[i].Cells["Color"].Value = row["Color"].ToString();
                     grid1.Rows[i].Cells["Clearity"].Value = row["Clearity"].ToString();
-                    grid1.Rows[i].Cells["RefID"].Value = row["RefID"].ToString();
-                    
+                    grid1.Rows[i].Cells["RefID"].Value = row["RefID"].ToString();                  
 
                     i++;
                 }
@@ -223,6 +236,9 @@ namespace DiamondShop
                     if (row.Cells["Weight"].Value != null)
                     { tds.Tables[0].Rows[i]["Weight"] = row.Cells["Weight"].Value; }
 
+                    if (row.Cells["ColorType"].Value != null)
+                    { tds.Tables[0].Rows[i]["ColorType"] = row.Cells["ColorType"].Value; }
+
                     if (row.Cells["Color"].Value != null)
                     { tds.Tables[0].Rows[i]["Color"] = row.Cells["Color"].Value; }
 
@@ -286,8 +302,10 @@ namespace DiamondShop
                         row["RefID"] = id;
                         if (row["Company"].ToString() == "") { row["Company"] = 152; }
                         if (row["Shape"].ToString() == "") { row["Shape"] = 133; }
-                        if (row["Color"].ToString() == "") { row["Color"] = 126; }
+                        if (row["ColorType"].ToString() == "") { row["ColorType"] = 126; }
+                        if (row["Color"].ToString() == "") { row["Color"] = 1; }
                         if (row["Clearity"].ToString() == "") { row["Clearity"] = 25; }
+                        if (row["Weight"].ToString() == "") { row["Weight"] = 0; }
                         SetCreateBy(row);
                     }
                     else
@@ -360,32 +378,24 @@ namespace DiamondShop
         {
             message = "";
 
-            //if (txtAmount.Text == "" || GM.ConvertStringToDouble(txtAmount) == 0)
-            //{
-            //    message += "Please input Amount > 0.\n";
-            //}
-
-            //if (txtWeight.Text == "" || GM.ConvertStringToDouble(txtWeight) == 0)
-            //{
-            //    message += "Please input Weight > 0.\n";
-            //}
-
             if (message == "") { return true; }
             else { return false; }
         }
 
-        //private void txtAmount_KeyPress(object sender, KeyPressEventArgs e)
-        //{
-        //    if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
-        //    {
-        //        e.Handled = true;
-        //    }
-        //}
         private void btnAdd_Click(object sender, EventArgs e)
         {
             grid1.Rows.Add();
             tds.Tables[0].Rows.Add();
+            rowIndex = grid1.Rows.GetLastRow(DataGridViewElementStates.Displayed);
 
+            DataGridViewComboBoxCell c = new DataGridViewComboBoxCell();
+            c.FlatStyle = FlatStyle.Flat;
+            c.DataSource = (GM.GetMasterTableDetail("C001")).Tables[0];
+            c.ValueMember = "ID";
+            c.DisplayMember = "Detail";
+            grid1.Rows[rowIndex].Cells["Color"] = c;
+            
+            grid1.Refresh();
             tds.AcceptChanges();
         }
 
@@ -399,13 +409,10 @@ namespace DiamondShop
                     {
                         DeleteDataGrid(0);
                     }
-
                 }
                 grid1.Rows.RemoveAt(rowIndex);
                 tds.Tables[0].Rows[rowIndex].Delete();
                 tds.AcceptChanges();
-
-
             }
             catch (Exception ex)
             {
@@ -434,8 +441,6 @@ namespace DiamondShop
                 grid2.Rows.RemoveAt(rowIndex1);
                 tds.Tables[0].Rows[rowIndex1].Delete();
                 tds.AcceptChanges();
-
-
             }
             catch (Exception ex)
             {
@@ -452,8 +457,39 @@ namespace DiamondShop
                     grid1.Rows[e.RowIndex].Cells[6].Value = 0;
                 }
             }
+            if (e.ColumnIndex == 7 && grid1.Rows[e.RowIndex].Cells["ColorType"].Value !=  null)
+            {
+                if (grid1.Rows[e.RowIndex].Cells["ColorType"].Value.ToString() == "121")
+                {
+                    DataGridViewComboBoxCell c = new DataGridViewComboBoxCell();
+                    c.FlatStyle = FlatStyle.Flat;
+                    c.DataSource = (GM.GetMasterTableDetail("C001")).Tables[0];
+                    c.ValueMember = "ID";
+                    c.DisplayMember = "Detail";
+                    grid1.Rows[e.RowIndex].Cells["Color"] = c;
+                }
+                else
+                {
+                    DataGridViewComboBoxCell c = new DataGridViewComboBoxCell();
+                    c.FlatStyle = FlatStyle.Flat;
+                    c.DataSource = (GM.GetMasterTableDetail("C017")).Tables[0];
+                    c.ValueMember = "ID";
+                    c.DisplayMember = "Detail";
+                    grid1.Rows[e.RowIndex].Cells["Color"] = c;
+                }
+            }
+            //Bug ค่า ColorType = Null
+            else if(e.ColumnIndex == 7)
+            {
+                DataGridViewComboBoxCell c = new DataGridViewComboBoxCell();
+                c.FlatStyle = FlatStyle.Flat;
+                c.DataSource = (GM.GetMasterTableDetail("C001")).Tables[0];
+                c.ValueMember = "ID";
+                c.DisplayMember = "Detail";
+                grid1.Rows[e.RowIndex].Cells["Color"] = c;
+            }
 
-            grid1.RefreshEdit();
+            grid1.Refresh();
             BindingDSDiamondDetail(0);
 
             CalSum(0);
@@ -513,7 +549,7 @@ namespace DiamondShop
         private void grid1_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
         {
             e.Control.KeyPress -= new KeyPressEventHandler(Column1_KeyPress);
-            if (grid1.CurrentCell.ColumnIndex != 0 || grid1.CurrentCell.ColumnIndex != 1 )
+            if (grid1.CurrentCell.ColumnIndex == 6 )
             {
                 TextBox tb = e.Control as TextBox;
                 if (tb != null)
@@ -521,12 +557,16 @@ namespace DiamondShop
                     tb.KeyPress += new KeyPressEventHandler(Column1_KeyPress);
                 }
             }
+            else if (grid1.CurrentCell.ColumnIndex == 7)
+            {
+                cmb = e.Control as ComboBox;
+            }
         }
 
         private void grid2_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
         {
             e.Control.KeyPress -= new KeyPressEventHandler(Column1_KeyPress);
-            if (grid2.CurrentCell.ColumnIndex != 0 || grid2.CurrentCell.ColumnIndex != 1)
+            if (grid2.CurrentCell.ColumnIndex == 4 || grid2.CurrentCell.ColumnIndex == 5)
             {
                 TextBox tb = e.Control as TextBox;
                 if (tb != null)
@@ -552,6 +592,11 @@ namespace DiamondShop
                 double d = double.Parse(e.Value.ToString());
                 e.Value = d.ToString("N2");
             }
+        }
+
+        private void grid1_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+
         }
 
         private void grid2_CellClick(object sender, DataGridViewCellEventArgs e)

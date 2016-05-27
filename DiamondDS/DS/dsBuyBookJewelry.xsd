@@ -14,7 +14,7 @@
   <xs:element name="dsBuyBookJewelry" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsBuyBookJewelry" msprop:Generator_UserDSName="dsBuyBookJewelry">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="BuyBookJewelry" msprop:Generator_TableClassName="BuyBookJewelryDataTable" msprop:Generator_TableVarName="tableBuyBookJewelry" msprop:Generator_TablePropName="BuyBookJewelry" msprop:Generator_RowDeletingName="BuyBookJewelryRowDeleting" msprop:Generator_RowChangingName="BuyBookJewelryRowChanging" msprop:Generator_RowEvHandlerName="BuyBookJewelryRowChangeEventHandler" msprop:Generator_RowDeletedName="BuyBookJewelryRowDeleted" msprop:Generator_UserTableName="BuyBookJewelry" msprop:Generator_RowChangedName="BuyBookJewelryRowChanged" msprop:Generator_RowEvArgName="BuyBookJewelryRowChangeEvent" msprop:Generator_RowClassName="BuyBookJewelryRow">
+        <xs:element name="BuyBookJewelry" msprop:Generator_TableClassName="BuyBookJewelryDataTable" msprop:Generator_TableVarName="tableBuyBookJewelry" msprop:Generator_RowChangedName="BuyBookJewelryRowChanged" msprop:Generator_TablePropName="BuyBookJewelry" msprop:Generator_RowDeletingName="BuyBookJewelryRowDeleting" msprop:Generator_RowChangingName="BuyBookJewelryRowChanging" msprop:Generator_RowEvHandlerName="BuyBookJewelryRowChangeEventHandler" msprop:Generator_RowDeletedName="BuyBookJewelryRowDeleted" msprop:Generator_RowClassName="BuyBookJewelryRow" msprop:Generator_UserTableName="BuyBookJewelry" msprop:Generator_RowEvArgName="BuyBookJewelryRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="RowNum" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnRowNum" msprop:Generator_ColumnPropNameInRow="RowNum" msprop:Generator_ColumnPropNameInTable="RowNumColumn" msprop:Generator_UserColumnName="RowNum" type="xs:long" minOccurs="0" />
@@ -78,8 +78,8 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Image1" msprop:Generator_ColumnVarNameInTable="columnImage1" msprop:Generator_ColumnPropNameInRow="Image1" msprop:Generator_ColumnPropNameInTable="Image1Column" msprop:Generator_UserColumnName="Image1" type="xs:base64Binary" minOccurs="0" />
-              <xs:element name="Image2" msprop:Generator_ColumnVarNameInTable="columnImage2" msprop:Generator_ColumnPropNameInRow="Image2" msprop:Generator_ColumnPropNameInTable="Image2Column" msprop:Generator_UserColumnName="Image2" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="Image1" msprop:nullValue="_null" msprop:Generator_ColumnPropNameInRow="Image1" msprop:Generator_ColumnVarNameInTable="columnImage1" msprop:Generator_ColumnPropNameInTable="Image1Column" msprop:Generator_UserColumnName="Image1" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="Image2" msprop:nullValue="_null" msprop:Generator_ColumnPropNameInRow="Image2" msprop:Generator_ColumnVarNameInTable="columnImage2" msprop:Generator_ColumnPropNameInTable="Image2Column" msprop:Generator_UserColumnName="Image2" type="xs:base64Binary" minOccurs="0" />
               <xs:element name="Remark" msprop:Generator_ColumnVarNameInTable="columnRemark" msprop:Generator_ColumnPropNameInRow="Remark" msprop:Generator_ColumnPropNameInTable="RemarkColumn" msprop:Generator_UserColumnName="Remark" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">

@@ -16,7 +16,6 @@ namespace DiamondShop
 {
     public partial class Catalog : FormInfo
     {
-        //Service1 ser = GM.GetService();
         dsCatalog tds = new dsCatalog();
         MemoryStream ms1;
         MemoryStream ms2;

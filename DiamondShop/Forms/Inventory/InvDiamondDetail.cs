@@ -207,7 +207,6 @@ namespace DiamondShop
                 tdsDiamondCer.Merge(tmp);
 
                 grid1.Rows.Add();
-                rowIndex = grid1.Rows.GetLastRow(DataGridViewElementStates.Displayed);
 
                 grid1.Rows[rowIndex].Cells["Code"].Value = tdsDiamondCer.Tables[0].Rows[0]["Code"].ToString();
                 grid1.Rows[rowIndex].Cells["ReportNumber"].Value = tdsDiamondCer.Tables[0].Rows[0]["ReportNumber"].ToString();

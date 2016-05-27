@@ -16,7 +16,6 @@ namespace DiamondShop
 {
     public partial class BuyBookJewelry : FormInfo
     {
-        //Service1 ser = GM.GetService();
         dsBuyBookJewelry tds = new dsBuyBookJewelry();
         MemoryStream ms1;
         MemoryStream ms2;
@@ -41,8 +40,6 @@ namespace DiamondShop
             binder.BindControl(txtCost2, "CostUSD");
             binder.BindControl(txtCost3, "CostYen");
             binder.BindControl(txtNote, "NoteForRate");
-            binder.BindControl(btnImage1, "Image1");
-            binder.BindControl(btnImage2, "Image2");
             binder.BindControl(txtRemark, "Remark");
             binder.BindControl(txtMinPrice, "MinPrice");
         }
@@ -64,8 +61,6 @@ namespace DiamondShop
             binder.BindControl(txtCost2, "CostUSD");
             binder.BindControl(txtCost3, "CostYen");
             binder.BindControl(txtNote, "NoteForRate");
-            binder.BindControl(btnImage1, "Image1");
-            binder.BindControl(btnImage2, "Image2");
             binder.BindControl(txtRemark, "Remark");
             binder.BindControl(txtMinPrice, "MinPrice");
 
@@ -113,21 +108,23 @@ namespace DiamondShop
 
             if (tds.BuyBookJewelry.Rows.Count > 0)
             {
-                binder.BindValueToControl(tds.BuyBookJewelry[0]);
-                image1 = tds.BuyBookJewelry[0].Image1;
-                image2 = tds.BuyBookJewelry[0].Image2;
-                if (image1 != null)
+                binder.BindValueToControl(tds.BuyBookJewelry[0]);            
+                
+                if (tds.BuyBookJewelry[0].Image1 != null)
                 {
+                    image1 = tds.BuyBookJewelry[0].Image1;
                     ms1 = new MemoryStream(image1);
                     Image backImage1 = Image.FromStream(ms1);
                     btnImage1.BackgroundImage = backImage1;
                 }
-                if (image2 != null)
+                if (tds.BuyBookJewelry[0].Image2 != null)
                 {
+                    image2 = tds.BuyBookJewelry[0].Image2;
                     ms2 = new MemoryStream(image2);
                     Image backImage2 = Image.FromStream(ms2);
                     btnImage2.BackgroundImage = backImage2;
                 }
+
                 EnableSave = false;
                 EnableEdit = true;
                 EnableDelete = false;
