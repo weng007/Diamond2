@@ -58,6 +58,7 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.RowNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RefID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ReportNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Company = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -100,7 +101,7 @@
             this.panel3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel3.Location = new System.Drawing.Point(12, 78);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1212, 524);
+            this.panel3.Size = new System.Drawing.Size(1254, 524);
             this.panel3.TabIndex = 73;
             // 
             // btnDel1
@@ -143,7 +144,7 @@
             this.btnDel.FlatAppearance.BorderSize = 0;
             this.btnDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDel.Location = new System.Drawing.Point(1160, 71);
+            this.btnDel.Location = new System.Drawing.Point(1211, 71);
             this.btnDel.Name = "btnDel";
             this.btnDel.Size = new System.Drawing.Size(30, 30);
             this.btnDel.TabIndex = 125;
@@ -159,7 +160,7 @@
             this.btnAdd.FlatAppearance.BorderSize = 0;
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(1160, 35);
+            this.btnAdd.Location = new System.Drawing.Point(1211, 35);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(30, 30);
             this.btnAdd.TabIndex = 124;
@@ -338,6 +339,7 @@
             this.grid1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.RowNum,
             this.RefID,
+            this.Code,
             this.ID,
             this.ReportNumber,
             this.Company,
@@ -352,7 +354,7 @@
             this.grid1.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grid1.RowTemplate.Height = 30;
             this.grid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.grid1.Size = new System.Drawing.Size(1139, 181);
+            this.grid1.Size = new System.Drawing.Size(1193, 181);
             this.grid1.TabIndex = 46;
             this.grid1.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.grid1_CellFormatting);
             // 
@@ -382,6 +384,13 @@
             this.RefID.Name = "RefID";
             this.RefID.Visible = false;
             // 
+            // Code
+            // 
+            this.Code.DataPropertyName = "Code";
+            this.Code.HeaderText = "Code";
+            this.Code.Name = "Code";
+            this.Code.Width = 150;
+            // 
             // ID
             // 
             this.ID.DataPropertyName = "ID";
@@ -403,7 +412,7 @@
             this.Company.HeaderText = "Company";
             this.Company.Name = "Company";
             this.Company.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Company.Width = 120;
+            this.Company.Width = 110;
             // 
             // Shape
             // 
@@ -422,6 +431,7 @@
             this.Weight.DefaultCellStyle = dataGridViewCellStyle5;
             this.Weight.HeaderText = "Weight";
             this.Weight.Name = "Weight";
+            this.Weight.Width = 90;
             // 
             // ColorType
             // 
@@ -429,7 +439,7 @@
             this.ColorType.HeaderText = "ColorType";
             this.ColorType.Name = "ColorType";
             this.ColorType.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ColorType.Width = 170;
+            this.ColorType.Width = 140;
             // 
             // Color
             // 
@@ -452,7 +462,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(195)))), ((int)(((byte)(157)))));
-            this.ClientSize = new System.Drawing.Size(1236, 613);
+            this.ClientSize = new System.Drawing.Size(1278, 613);
             this.Controls.Add(this.panel3);
             this.Name = "BBJewelryDiamondDetail";
             this.Text = "GemstoneCer";
@@ -492,6 +502,7 @@
         private System.Windows.Forms.DataGridViewComboBoxColumn Clearity1;
         private System.Windows.Forms.DataGridViewTextBoxColumn RowNum;
         private System.Windows.Forms.DataGridViewTextBoxColumn RefID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Code;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn ReportNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn Company;

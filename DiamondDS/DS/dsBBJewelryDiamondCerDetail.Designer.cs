@@ -285,6 +285,8 @@ namespace DiamondDS.DS {
             
             private global::System.Data.DataColumn columnReportNumber;
             
+            private global::System.Data.DataColumn columnCode;
+            
             private global::System.Data.DataColumn columnCompany;
             
             private global::System.Data.DataColumn columnCompanyName;
@@ -294,6 +296,8 @@ namespace DiamondDS.DS {
             private global::System.Data.DataColumn columnShapeName;
             
             private global::System.Data.DataColumn columnWeight;
+            
+            private global::System.Data.DataColumn columnColorTypeName;
             
             private global::System.Data.DataColumn columnColorType;
             
@@ -376,6 +380,14 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn CodeColumn {
+                get {
+                    return this.columnCode;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn CompanyColumn {
                 get {
                     return this.columnCompany;
@@ -411,6 +423,14 @@ namespace DiamondDS.DS {
             public global::System.Data.DataColumn WeightColumn {
                 get {
                     return this.columnWeight;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ColorTypeNameColumn {
+                get {
+                    return this.columnColorTypeName;
                 }
             }
             
@@ -542,11 +562,13 @@ namespace DiamondDS.DS {
             public BBJewelryDiamondCerDetailRow AddBBJewelryDiamondCerDetailRow(
                         long RowNum, 
                         string ReportNumber, 
+                        string Code, 
                         int Company, 
                         string CompanyName, 
                         int Shape, 
                         string ShapeName, 
                         double Weight, 
+                        string ColorTypeName, 
                         int ColorType, 
                         int Color, 
                         string ColorName, 
@@ -563,11 +585,13 @@ namespace DiamondDS.DS {
                         RowNum,
                         null,
                         ReportNumber,
+                        Code,
                         Company,
                         CompanyName,
                         Shape,
                         ShapeName,
                         Weight,
+                        ColorTypeName,
                         ColorType,
                         Color,
                         ColorName,
@@ -611,11 +635,13 @@ namespace DiamondDS.DS {
                 this.columnRowNum = base.Columns["RowNum"];
                 this.columnID = base.Columns["ID"];
                 this.columnReportNumber = base.Columns["ReportNumber"];
+                this.columnCode = base.Columns["Code"];
                 this.columnCompany = base.Columns["Company"];
                 this.columnCompanyName = base.Columns["CompanyName"];
                 this.columnShape = base.Columns["Shape"];
                 this.columnShapeName = base.Columns["ShapeName"];
                 this.columnWeight = base.Columns["Weight"];
+                this.columnColorTypeName = base.Columns["ColorTypeName"];
                 this.columnColorType = base.Columns["ColorType"];
                 this.columnColor = base.Columns["Color"];
                 this.columnColorName = base.Columns["ColorName"];
@@ -638,6 +664,8 @@ namespace DiamondDS.DS {
                 base.Columns.Add(this.columnID);
                 this.columnReportNumber = new global::System.Data.DataColumn("ReportNumber", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnReportNumber);
+                this.columnCode = new global::System.Data.DataColumn("Code", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCode);
                 this.columnCompany = new global::System.Data.DataColumn("Company", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCompany);
                 this.columnCompanyName = new global::System.Data.DataColumn("CompanyName", typeof(string), null, global::System.Data.MappingType.Element);
@@ -648,6 +676,8 @@ namespace DiamondDS.DS {
                 base.Columns.Add(this.columnShapeName);
                 this.columnWeight = new global::System.Data.DataColumn("Weight", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnWeight);
+                this.columnColorTypeName = new global::System.Data.DataColumn("ColorTypeName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnColorTypeName);
                 this.columnColorType = new global::System.Data.DataColumn("ColorType", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnColorType);
                 this.columnColor = new global::System.Data.DataColumn("Color", typeof(int), null, global::System.Data.MappingType.Element);
@@ -682,6 +712,7 @@ namespace DiamondDS.DS {
                 this.columnCompanyName.MaxLength = 100;
                 this.columnShapeName.ReadOnly = true;
                 this.columnShapeName.MaxLength = 100;
+                this.columnColorTypeName.Caption = "ColorType";
                 this.columnColorName.ReadOnly = true;
                 this.columnColorName.MaxLength = 100;
                 this.columnClearityName.ReadOnly = true;
@@ -873,6 +904,22 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Code {
+                get {
+                    try {
+                        return ((string)(this[this.tableBBJewelryDiamondCerDetail.CodeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Code\' in table \'BBJewelryDiamondCerDetail\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableBBJewelryDiamondCerDetail.CodeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public int Company {
                 get {
                     try {
@@ -949,6 +996,23 @@ namespace DiamondDS.DS {
                 }
                 set {
                     this[this.tableBBJewelryDiamondCerDetail.WeightColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string ColorTypeName {
+                get {
+                    try {
+                        return ((string)(this[this.tableBBJewelryDiamondCerDetail.ColorTypeNameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ColorTypeName\' in table \'BBJewelryDiamondCerDetail\' is DBNu" +
+                                "ll.", e);
+                    }
+                }
+                set {
+                    this[this.tableBBJewelryDiamondCerDetail.ColorTypeNameColumn] = value;
                 }
             }
             
@@ -1156,6 +1220,18 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsCodeNull() {
+                return this.IsNull(this.tableBBJewelryDiamondCerDetail.CodeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetCodeNull() {
+                this[this.tableBBJewelryDiamondCerDetail.CodeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsCompanyNull() {
                 return this.IsNull(this.tableBBJewelryDiamondCerDetail.CompanyColumn);
             }
@@ -1212,6 +1288,18 @@ namespace DiamondDS.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetWeightNull() {
                 this[this.tableBBJewelryDiamondCerDetail.WeightColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsColorTypeNameNull() {
+                return this.IsNull(this.tableBBJewelryDiamondCerDetail.ColorTypeNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetColorTypeNameNull() {
+                this[this.tableBBJewelryDiamondCerDetail.ColorTypeNameColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

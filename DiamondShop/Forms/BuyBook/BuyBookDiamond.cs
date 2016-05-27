@@ -15,8 +15,9 @@ namespace DiamondShop
 {
     public partial class BuyBookDiamond : FormInfo
     {
-        //Service1 ser = GM.GetService();
         dsBuyBookDiamond tds = new dsBuyBookDiamond();
+        dsBBDiamondStock tds2 = new dsBBDiamondStock();
+        DataSet ds2 = new DataSet();
         bool isAuthorize = false;
 
         public BuyBookDiamond()
@@ -111,6 +112,10 @@ namespace DiamondShop
             tds.Clear();
             tds.Merge(ds);
 
+            ds2 = ser.DoSelectData("BBDiamondStock", id);
+            tds2.Clear();
+            tds2.Merge(ds2);
+
             if (tds.BuyBookDiamond.Rows.Count > 0)
             {
                 binder.BindValueToControl(tds.BuyBookDiamond[0]);
@@ -137,6 +142,12 @@ namespace DiamondShop
                 EnableSave = false;
                 EnableEdit = true;
                 EnableDelete = false;
+            }
+
+            if(tds2.Tables[0].Rows.Count > 0)
+            {
+                grid1.DataSource = tds2.Tables[0];
+                grid1.Refresh();
             }
 
             base.LoadData();
