@@ -306,8 +306,8 @@ namespace DiamondShop
 
                 }
                 grid2.Rows.RemoveAt(rowIndex1);
-                tds.Tables[0].Rows[rowIndex1].Delete();
-                tds.AcceptChanges();
+                tds2.Tables[0].Rows[rowIndex1].Delete();
+                tds2.AcceptChanges();
             }
             catch (Exception ex)
             {
