@@ -439,6 +439,7 @@
             // dtImportDate
             // 
             this.dtImportDate.CustomFormat = "dd/MM/yyyy";
+            this.dtImportDate.Enabled = false;
             this.dtImportDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtImportDate.Location = new System.Drawing.Point(985, 17);
             this.dtImportDate.Name = "dtImportDate";
@@ -457,6 +458,7 @@
             // 
             // CmbStatus
             // 
+            this.CmbStatus.Enabled = false;
             this.CmbStatus.FormattingEnabled = true;
             this.CmbStatus.Location = new System.Drawing.Point(970, 89);
             this.CmbStatus.Name = "CmbStatus";
