@@ -19,6 +19,7 @@ namespace DiamondShop
         dsBBJewelryDiamondCerDetail tds = new dsBBJewelryDiamondCerDetail();
         bool isAuthorize = false;
         byte[] file;
+        int RefID;
 
         public BBJewelryDiamondDetailInfo()
         {
