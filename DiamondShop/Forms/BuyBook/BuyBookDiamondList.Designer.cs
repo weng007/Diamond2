@@ -35,6 +35,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.tds = new DiamondDS.DS.dsDiamondCer();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.txtESize = new System.Windows.Forms.TextBox();
@@ -61,13 +62,17 @@
             this.PriceCaratUSD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PriceCaratB = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MarketPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tds = new DiamondDS.DS.dsDiamondCer();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tds)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridDiamond)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tds)).BeginInit();
             this.SuspendLayout();
+            // 
+            // tds
+            // 
+            this.tds.DataSetName = "dsDiamondCer";
+            this.tds.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // panel4
             // 
@@ -234,7 +239,7 @@
             this.gridDiamond.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridDiamond.Size = new System.Drawing.Size(1314, 422);
             this.gridDiamond.TabIndex = 2;
-            this.gridDiamond.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridDiamond_CellContentDoubleClick);
+            this.gridDiamond.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.gridDiamond_MouseDoubleClick);
             // 
             // ID
             // 
@@ -307,7 +312,7 @@
             this.Weight.HeaderText = "Weight";
             this.Weight.Name = "Weight";
             this.Weight.ReadOnly = true;
-            this.Weight.Width = 60;
+            this.Weight.Width = 90;
             // 
             // ColorName
             // 
@@ -336,7 +341,7 @@
             this.PriceCaratUSD.Name = "PriceCaratUSD";
             this.PriceCaratUSD.ReadOnly = true;
             this.PriceCaratUSD.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.PriceCaratUSD.Width = 170;
+            this.PriceCaratUSD.Width = 165;
             // 
             // PriceCaratB
             // 
@@ -348,23 +353,18 @@
             this.PriceCaratB.Name = "PriceCaratB";
             this.PriceCaratB.ReadOnly = true;
             this.PriceCaratB.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.PriceCaratB.Width = 170;
+            this.PriceCaratB.Width = 165;
             // 
             // MarketPrice
             // 
             this.MarketPrice.DataPropertyName = "MarketPrice";
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle6.Format = "N2";
+            dataGridViewCellStyle6.Format = "N0";
             this.MarketPrice.DefaultCellStyle = dataGridViewCellStyle6;
             this.MarketPrice.HeaderText = "Market Price Baht";
             this.MarketPrice.Name = "MarketPrice";
             this.MarketPrice.ReadOnly = true;
-            this.MarketPrice.Width = 190;
-            // 
-            // tds
-            // 
-            this.tds.DataSetName = "dsDiamondCer";
-            this.tds.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.MarketPrice.Width = 180;
             // 
             // BuyBookDiamondList
             // 
@@ -377,11 +377,11 @@
             this.Name = "BuyBookDiamondList";
             this.Text = "DiamondCerList";
             ((System.ComponentModel.ISupportInitialize)(this.ds)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tds)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridDiamond)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tds)).EndInit();
             this.ResumeLayout(false);
 
         }
