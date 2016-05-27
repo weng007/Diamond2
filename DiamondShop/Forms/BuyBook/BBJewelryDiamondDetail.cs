@@ -365,6 +365,18 @@ namespace DiamondShop
                 ((ComboBox)datagridview.EditingControl).DroppedDown = true;
             }
         }
+        private void grid1_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
+        {
+            e.Control.KeyPress -= new KeyPressEventHandler(Column1_KeyPress);
+            if (grid1.CurrentCell.ColumnIndex == 7)
+            {
+                TextBox tb = e.Control as TextBox;
+                if (tb != null)
+                {
+                    tb.KeyPress += new KeyPressEventHandler(Column1_KeyPress);
+                }
+            }
+        }
 
         private void grid2_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
         {
@@ -421,7 +433,6 @@ namespace DiamondShop
                 LoadData();
             }
         }
-
         private void DeleteDataGrid(int type)
         {
             if (type == 0)

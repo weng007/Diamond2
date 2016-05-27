@@ -283,27 +283,17 @@ namespace DiamondShop
             txtTotalUSD.Text = (GM.ConvertStringToDouble(txtWeight) * GM.ConvertStringToDouble(txtPriceCaratUSD)).ToString();
         }
 
-        private void txtPriceCaratUSD_TextChanged(object sender, EventArgs e)
-        {
-            txtTotalUSD.Text = (GM.ConvertStringToDouble(txtWeight) * GM.ConvertStringToDouble(txtPriceCaratUSD)).ToString();
-        }
-
         private void txtUSDRate_TextChanged(object sender, EventArgs e)
         {
             if (chkPayByUSD.Checked)
             {
                 txtTotalBaht.Text = (GM.ConvertStringToDouble(txtTotalUSD) * GM.ConvertStringToDouble(txtUSDRate)).ToString();
             }
-        }
-
-        private void txtPriceCarat_TextChanged(object sender, EventArgs e)
-        {
-            if (!chkPayByUSD.Checked)
+            else
             {
-                txtTotalBaht.Text = (GM.ConvertStringToDouble(txtPriceCarat) * GM.ConvertStringToDouble(txtWeight)).ToString();
+                txtTotalBaht.Text = "0";
             }
         }
-
         private void txtTotalBaht_TextChanged(object sender, EventArgs e)
         {
             txtUSDRate.Text = GM.ConvertDoubleToString(txtUSDRate, 0);
@@ -351,6 +341,23 @@ namespace DiamondShop
 
                 tds2.AcceptChanges();
             }
+        }
+
+        private void txtPriceCarat_Leave(object sender, EventArgs e)
+        {
+            if (!chkPayByUSD.Checked)
+            {
+                txtTotalBaht.Text = (GM.ConvertStringToDouble(txtPriceCarat) * GM.ConvertStringToDouble(txtWeight)).ToString();
+                txtPriceCarat.Text = GM.ConvertDoubleToString(txtPriceCarat, 0);
+            }
+            
+        }
+
+        private void txtPriceCaratUSD_Leave(object sender, EventArgs e)
+        {
+            txtTotalUSD.Text = (GM.ConvertStringToDouble(txtWeight) * GM.ConvertStringToDouble(txtPriceCaratUSD)).ToString();
+
+            txtPriceCaratUSD.Text = GM.ConvertDoubleToString(txtPriceCaratUSD, 0);
         }
     }
 }

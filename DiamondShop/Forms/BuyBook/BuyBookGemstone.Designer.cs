@@ -273,6 +273,7 @@
             this.txtMarketPrice.TabIndex = 64;
             this.txtMarketPrice.Text = "0";
             this.txtMarketPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtMarketPrice.Leave += new System.EventHandler(this.txtMarketPrice_Leave);
             // 
             // cmbShop
             // 
@@ -382,7 +383,7 @@
             this.txtPriceCarat.TabIndex = 60;
             this.txtPriceCarat.Text = "0";
             this.txtPriceCarat.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtPriceCarat.TextChanged += new System.EventHandler(this.txtPriceCarat_TextChanged);
+            this.txtPriceCarat.Leave += new System.EventHandler(this.txtPriceCarat_Leave);
             // 
             // label13
             // 
@@ -537,7 +538,7 @@
             this.txtPriceCaratUSD.TabIndex = 52;
             this.txtPriceCaratUSD.Text = "0";
             this.txtPriceCaratUSD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtPriceCaratUSD.TextChanged += new System.EventHandler(this.txtPriceCaratUSD_TextChanged);
+            this.txtPriceCaratUSD.Leave += new System.EventHandler(this.txtPriceCaratUSD_Leave);
             // 
             // cmbOrigin
             // 

@@ -233,7 +233,7 @@ namespace DiamondShop
 
         private void SetFormatNumber()
         {
-            txtWeight.Text = GM.ConvertDoubleToString(txtWeight, 0);
+            txtWeight.Text = GM.ConvertDoubleToString(txtWeight);
         }
     }
 }

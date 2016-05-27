@@ -151,7 +151,7 @@ namespace DiamondShop
             if (tds.BuyBookGemstoneCer.Rows.Count > 0)
             {
                 binder.BindValueToControl(tds.BuyBookGemstoneCer[0]);
-                image1 = tds.BuyBookGemstoneCer[0].Image1;
+                
 
                 if(tds.BuyBookGemstoneCer[0]["PayByUSD"].ToString() =="0")
                 {
@@ -173,8 +173,9 @@ namespace DiamondShop
                     rdoNo.Checked = false;
                 }
 
-                if (image1 != null)
+                if (tds.BuyBookGemstoneCer[0].Image1 != null)
                 {
+                    image1 = tds.BuyBookGemstoneCer[0].Image1;
                     ms1 = new MemoryStream(image1);
                     Image backImage1 = Image.FromStream(ms1);
                     btnImage1.BackgroundImage = backImage1;
