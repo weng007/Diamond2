@@ -399,7 +399,7 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public BBDiamondStockRow AddBBDiamondStockRow(System.DateTime ActionDate, double Amount, int RefID, string IsDeleted) {
+            public BBDiamondStockRow AddBBDiamondStockRow(string ActionDate, double Amount, int RefID, string IsDeleted) {
                 BBDiamondStockRow rowBBDiamondStockRow = ((BBDiamondStockRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -448,7 +448,7 @@ namespace DiamondDS.DS {
             private void InitClass() {
                 this.columnID = new global::System.Data.DataColumn("ID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnID);
-                this.columnActionDate = new global::System.Data.DataColumn("ActionDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                this.columnActionDate = new global::System.Data.DataColumn("ActionDate", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnActionDate);
                 this.columnAmount = new global::System.Data.DataColumn("Amount", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnAmount);
@@ -620,10 +620,10 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public System.DateTime ActionDate {
+            public string ActionDate {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tableBBDiamondStock.ActionDateColumn]));
+                        return ((string)(this[this.tableBBDiamondStock.ActionDateColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'ActionDate\' in table \'BBDiamondStock\' is DBNull.", e);

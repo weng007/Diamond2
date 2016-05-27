@@ -156,6 +156,7 @@ namespace DiamondShop
         protected override bool SaveData()
         {
             dsBuyBookDiamond.BuyBookDiamondRow row = null;
+            dsBBDiamondStock.BBDiamondStockRow row1 = null;
 
             if (tds.BuyBookDiamond.Rows.Count > 0)
             {
@@ -166,6 +167,7 @@ namespace DiamondShop
                 row = tds.BuyBookDiamond.NewBuyBookDiamondRow();
                 tds.BuyBookDiamond.Rows.Add(row);
             }
+
             binder.BindValueToDataRow(row);
             row.IsPaid = rdoPayment1.Checked ? "1" : "0";
 
@@ -181,6 +183,14 @@ namespace DiamondShop
                 {
                     SetEditBy(row);
                     chkFlag = ser.DoUpdateData("BuyBookDiamond", tds);
+                }
+
+                //Delete Save Stock
+                if (tds2.BBDiamondStock.Rows.Count > 0)
+                {
+                    row1 = tds2.BBDiamondStock[0];
+                    row1.RefID = id;
+                    chkFlag = ser.DoInsertData("BBDiamondStock", tds);
                 }
 
                 tds.AcceptChanges();
