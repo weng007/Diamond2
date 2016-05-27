@@ -59,10 +59,10 @@ namespace DiamondShop
             ColorType.DisplayMember = "Detail";
             ColorType.DefaultCellStyle.NullValue = (GM.GetMasterTableDetail("C025")).Tables[0].Rows[0][1];
 
-            //Color.DataSource = (GM.GetMasterTableDetail("C001")).Tables[0];
-            //Color.ValueMember = "ID";
-            //Color.DisplayMember = "Detail";
-            //Color.DefaultCellStyle.NullValue = (GM.GetMasterTableDetail("C001")).Tables[0].Rows[0][1];
+            Color.DataSource = (GM.GetMasterTableDetail("C001")).Tables[0];
+            Color.ValueMember = "ID";
+            Color.DisplayMember = "Detail";
+            Color.DefaultCellStyle.NullValue = (GM.GetMasterTableDetail("C001")).Tables[0].Rows[0][1];
 
             Clearity.DataSource = (GM.GetMasterTableDetail("C002")).Tables[0];
             Clearity.ValueMember = "ID";
@@ -136,6 +136,7 @@ namespace DiamondShop
                     if (grid1.Rows[i].Cells["ColorType"].Value.ToString() == "121")
                     {
                         DataGridViewComboBoxCell c = new DataGridViewComboBoxCell();
+                        c.FlatStyle = FlatStyle.Flat;
                         c.DataSource = (GM.GetMasterTableDetail("C001")).Tables[0];
                         c.ValueMember = "ID";
                         c.DisplayMember = "Detail";
@@ -144,6 +145,7 @@ namespace DiamondShop
                     else
                     {
                         DataGridViewComboBoxCell c = new DataGridViewComboBoxCell();
+                        c.FlatStyle = FlatStyle.Flat;
                         c.DataSource = (GM.GetMasterTableDetail("C017")).Tables[0];
                         c.ValueMember = "ID";
                         c.DisplayMember = "Detail";
@@ -386,17 +388,16 @@ namespace DiamondShop
         {
             grid1.Rows.Add();
             tds.Tables[0].Rows.Add();
-            rowIndex = grid1.Rows.GetLastRow(DataGridViewElementStates.Displayed);
 
-            DataGridViewComboBoxCell c = new DataGridViewComboBoxCell();
-            c.FlatStyle = FlatStyle.Flat;
-            c.DataSource = (GM.GetMasterTableDetail("C001")).Tables[0];
-            c.ValueMember = "ID";
-            c.DisplayMember = "Detail";
-            grid1.Rows[rowIndex].Cells["Color"] = c;
-            
-            grid1.Refresh();
             tds.AcceptChanges();
+        }
+
+        private void btnAdd1_Click(object sender, EventArgs e)
+        {
+            grid2.Rows.Add();
+            tds2.Tables[0].Rows.Add();
+
+            tds2.AcceptChanges();
         }
 
         private void btnDel_Click(object sender, EventArgs e)
@@ -419,13 +420,7 @@ namespace DiamondShop
 
             }
         }
-        private void btnAdd1_Click(object sender, EventArgs e)
-        {
-            grid2.Rows.Add();
-            tds2.Tables[0].Rows.Add();
 
-            tds2.AcceptChanges();
-        }
         private void btnDel1_Click(object sender, EventArgs e)
         {
             try
@@ -478,8 +473,7 @@ namespace DiamondShop
                     grid1.Rows[e.RowIndex].Cells["Color"] = c;
                 }
             }
-            //Bug ค่า ColorType = Null
-            else if(e.ColumnIndex == 7)
+            else if(grid1.Rows[e.RowIndex].Cells["ColorType"].Value == null)
             {
                 DataGridViewComboBoxCell c = new DataGridViewComboBoxCell();
                 c.FlatStyle = FlatStyle.Flat;
@@ -610,6 +604,26 @@ namespace DiamondShop
                     rowIndex = e.RowIndex;
                     if (grid1.Rows[e.RowIndex].Cells["ID"].Value != null)
                     { DelID = Convert.ToInt16(grid1.Rows[e.RowIndex].Cells["ID"].Value.ToString()); }
+
+                    if (grid1.Rows[e.RowIndex].Cells["ColorType"].Value.ToString() == "121")
+                    {
+                        DataGridViewComboBoxCell c = new DataGridViewComboBoxCell();
+                        c.FlatStyle = FlatStyle.Flat;
+                        c.DataSource = (GM.GetMasterTableDetail("C001")).Tables[0];
+                        c.ValueMember = "ID";
+                        c.DisplayMember = "Detail";
+                        grid1.Rows[e.RowIndex].Cells["Color"] = c;
+                    }
+                    else
+                    {
+                        DataGridViewComboBoxCell c = new DataGridViewComboBoxCell();
+                        c.FlatStyle = FlatStyle.Flat;
+                        c.DataSource = (GM.GetMasterTableDetail("C017")).Tables[0];
+                        c.ValueMember = "ID";
+                        c.DisplayMember = "Detail";
+                        grid1.Rows[e.RowIndex].Cells["Color"] = c;
+                    }
+
                 }
                 else
                 {
