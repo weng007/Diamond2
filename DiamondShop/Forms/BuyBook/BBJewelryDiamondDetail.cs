@@ -401,6 +401,17 @@ namespace DiamondShop
             }
         }
 
+        private void grid1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if(grid1.SelectedRows.Count > 0)
+            {
+                BBJewelryDiamondDetailInfo frm = new BBJewelryDiamondDetailInfo(Convert.ToInt32(grid1.SelectedRows[0].Cells["ID"].Value), id);
+                frm.ShowDialog();
+
+                LoadData();
+            }
+        }
+
         private void DeleteDataGrid(int type)
         {
             chkGrid = 1;
