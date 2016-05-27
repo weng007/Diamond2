@@ -70,6 +70,12 @@ namespace DiamondShop
         {
             if (ValidateLogin())
             {
+                if(ApplicationInfo.Authorized == "Owner")
+                {
+                    ShopAll f = new ShopAll(0);
+                    f.ShowDialog();
+                }
+
                 Main frm = new Main();
                 frm.ShowDialog();
 
