@@ -295,6 +295,7 @@ namespace DiamondShop
                 {
                     if (row["RowNum"].ToString() == "")
                     {
+                        row["Code"] = GM.GetRunningNumber("JGC");
                         row["RefID"] = id;
                         if (row["GemstoneType"].ToString() == "") { row["GemstoneType"] = 94; }
                         if (row["Company"].ToString() == "") { row["Company"] = 156; }
@@ -529,7 +530,7 @@ namespace DiamondShop
         private void grid1_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
         {
             e.Control.KeyPress -= new KeyPressEventHandler(Column1_KeyPress);
-            if (grid1.CurrentCell.ColumnIndex != 0 || grid1.CurrentCell.ColumnIndex != 1)
+            if (grid1.CurrentCell.ColumnIndex == 8)
             {
                 TextBox tb = e.Control as TextBox;
                 if (tb != null)
