@@ -15,8 +15,9 @@ namespace DiamondShop
 {
     public partial class BuyBookDiamond : FormInfo
     {
-        //Service1 ser = GM.GetService();
         dsBuyBookDiamond tds = new dsBuyBookDiamond();
+        dsBBDiamondStock tds2 = new dsBBDiamondStock();
+        DataSet ds2 = new DataSet();
         bool isAuthorize = false;
 
         public BuyBookDiamond()
@@ -111,6 +112,10 @@ namespace DiamondShop
             tds.Clear();
             tds.Merge(ds);
 
+            ds2 = ser.DoSelectData("BBDiamondStock", id);
+            tds2.Clear();
+            tds2.Merge(ds2);
+
             if (tds.BuyBookDiamond.Rows.Count > 0)
             {
                 binder.BindValueToControl(tds.BuyBookDiamond[0]);
@@ -137,6 +142,12 @@ namespace DiamondShop
                 EnableSave = false;
                 EnableEdit = true;
                 EnableDelete = false;
+            }
+
+            if(tds2.Tables[0].Rows.Count > 0)
+            {
+                grid1.DataSource = tds2.Tables[0];
+                grid1.Refresh();
             }
 
             base.LoadData();
@@ -229,46 +240,8 @@ namespace DiamondShop
                 message += "Please input Weight > 0.\n";
             }
 
-            //if(txtMeasure1.Text == "" || txtMeasure2.Text == "" || txtMeasure3.Text == ""
-            //&& GM.ConvertStringToDouble(txtMeasure1) == 0 || GM.ConvertStringToDouble(txtMeasure2) == 0 || GM.ConvertStringToDouble(txtMeasure3) == 0)
-            //{
-            //    message += "Please input Measurement > 0.\n";
-            //}
-            //if (txtCarat.Text == "" || GM.ConvertStringToDouble(txtCarat) == 0)
-            //{
-            //    message += "Please input Carat Weight > 0.\n";
-            //}
-
             if (message == "") { return true; }
             else { return false; }
-        }
-
-        
-        private void cmbColorGrade_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string color = "C017";
-
-            //if (cmbColorGrade.SelectedIndex == 0)
-            //{
-            //    color = "C001";
-            //}
-
-            //cmbColor.DataSource = (GM.GetMasterTableDetail(color)).Tables[0];
-            //cmbColor.ValueMember = "ID";
-            //cmbColor.DisplayMember = "Detail";
-            //cmbColor.Refresh();
-        }
-
-        private void cmbShapeAndCut_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            //if(cmbShapeAndCut.SelectedIndex == 0)
-            //{
-            //    lbl1.Text = "-";
-            //}
-            //else
-            //{
-            //    lbl1.Text = "x";
-            //}
         }
 
         private void txtWeight_KeyPress(object sender, KeyPressEventArgs e)

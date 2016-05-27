@@ -18,6 +18,7 @@ namespace DiamondShop
         DataSet ds2 = new DataSet();
         int rowIndex1;
         int chkGrid, DelID;
+        bool isAuthorize = false;
         dsBBJewelryDiamondCerDetail tds = new dsBBJewelryDiamondCerDetail();
         dsBBJewelryDiamondDetail tds2 = new dsBBJewelryDiamondDetail();
 
@@ -81,7 +82,34 @@ namespace DiamondShop
                 BindingDSDiamondDetail();
             }
 
+            EnableSave = false;
+            EnableEdit = true;
+            EnableDelete = false;
+
             base.LoadData();
+        }
+
+        protected override void EditData()
+        {
+            if (isAuthorize)
+            {
+                EnableSave = true;
+                EnableDelete = true;
+            }
+            else
+            {
+                RequirePassword frm = new RequirePassword("2");
+                frm.ShowDialog();
+                isAuthorize = frm.isAuthorize;
+                frm.Close();
+
+                if (isAuthorize)
+                {
+                    EnableSave = true;
+                    EnableDelete = true;
+                    base.EditData();
+                }
+            }
         }
 
         #region Binding Grid, Dataset
