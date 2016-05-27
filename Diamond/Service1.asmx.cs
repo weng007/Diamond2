@@ -281,6 +281,7 @@ namespace Diamond
                     throw ex;
                 }
             }
+
             else if (TableName == "BBJewelryDiamondDetail")
             {
                 BBJewelryDiamondDetailBiz biz = GM.BBJewelryDiamondDetailBiz();

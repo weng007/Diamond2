@@ -379,7 +379,7 @@ namespace DiamondShop
 
         private void grid1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            if ((e.ColumnIndex == 6) && e.RowIndex != this.grid1.NewRowIndex && e.Value != null
+            if ((e.ColumnIndex == 7) && e.RowIndex != this.grid1.NewRowIndex && e.Value != null
                 && e.Value.ToString() != "")
             {
                 double d = double.Parse(e.Value.ToString());

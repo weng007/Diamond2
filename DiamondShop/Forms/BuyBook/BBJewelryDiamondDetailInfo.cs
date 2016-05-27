@@ -33,6 +33,7 @@ namespace DiamondShop
             binder.BindControl(cmbShape, "Shape");
             binder.BindControl(cmbColor, "Color");
             binder.BindControl(cmbClearity, "Clearity");
+            binder.BindControl(cmbCompany, "Company");
         }
         public BBJewelryDiamondDetailInfo(int id,int RefID)
         {
@@ -46,6 +47,7 @@ namespace DiamondShop
             binder.BindControl(cmbShape, "Shape");
             binder.BindControl(cmbColor, "Color");
             binder.BindControl(cmbClearity, "Clearity");
+            binder.BindControl(cmbCompany, "Company");
 
             this.id = id;
             this.RefID = RefID;
@@ -81,7 +83,7 @@ namespace DiamondShop
 
         protected override void LoadData()
         {
-              ds = ser.DoSelectData("BBJewelryDiamondCerDetail", id);
+              ds = ser.DoSelectData("BBJewelryDiamondCerDetail1", id);
               tds.Clear();
               tds.Merge(ds);
 
@@ -112,7 +114,7 @@ namespace DiamondShop
                 tds.BBJewelryDiamondCerDetail.Rows.Add(row);
             }
             binder.BindValueToDataRow(row);
-            
+            row.RefID = RefID;
 
             try
             {
@@ -120,7 +122,6 @@ namespace DiamondShop
                 {
                     row.Code = GM.GetRunningNumber("JDC");
                     //พึ่งซื้อยังไม่ได้ขายให้ลูกค้า
-                    row.RefID = id;
 
                     SetCreateBy(row);
                     chkFlag = ser.DoInsertData("BBJewelryDiamondCerDetail", tds);
