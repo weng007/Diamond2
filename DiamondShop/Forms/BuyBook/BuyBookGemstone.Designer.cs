@@ -327,7 +327,6 @@
             this.txtNote.Name = "txtNote";
             this.txtNote.Size = new System.Drawing.Size(250, 139);
             this.txtNote.TabIndex = 68;
-            this.txtNote.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label26
             // 

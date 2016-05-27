@@ -92,7 +92,7 @@ namespace DiamondShop
             cmbOrigin.DisplayMember = "Detail";
             cmbOrigin.Refresh();
 
-            cmbShop.DataSource = (GM.GetMasterTableDetail("C025")).Tables[0];
+            cmbShop.DataSource = (GM.GetMasterTableDetail("C007")).Tables[0];
             cmbShop.ValueMember = "ID";
             cmbShop.DisplayMember = "Detail";
             cmbShop.Refresh();
