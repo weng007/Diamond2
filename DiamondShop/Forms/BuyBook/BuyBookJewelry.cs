@@ -97,7 +97,7 @@ namespace DiamondShop
 
             dtBuyDate.Select();
 
-            SetFieldService.SetRequireField(txtSeller, txtWeight);
+            SetFieldService.SetRequireField(txtSeller, txtWeight, txtMinPrice);
         }
 
         protected override void LoadData()
@@ -220,6 +220,10 @@ namespace DiamondShop
             if (txtSeller.Text == "")
             {
                 message += "Please input Seller.\n";
+            }
+            if (txtMinPrice.Text == "" || GM.ConvertStringToDouble(txtMinPrice) == 0)
+            {
+                message += "Please input Min Price > 0.\n";
             }
             //if(txtMeasure1.Text == "" || txtMeasure2.Text == "" || txtMeasure3.Text == ""
             //&& GM.ConvertStringToDouble(txtMeasure1) == 0 || GM.ConvertStringToDouble(txtMeasure2) == 0 || GM.ConvertStringToDouble(txtMeasure3) == 0)
