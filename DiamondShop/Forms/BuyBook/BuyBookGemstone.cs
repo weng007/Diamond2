@@ -15,6 +15,7 @@ namespace DiamondShop
 {
     public partial class BuyBookGemstone : FormInfo
     {
+        DataSet ds2 = new DataSet();
         dsBuyBookGemstone tds = new dsBuyBookGemstone();
         bool isAuthorize = false;
 
@@ -74,6 +75,8 @@ namespace DiamondShop
         }
         protected override void Initial()
         {
+            grid1.AutoGenerateColumns = false;
+
             cmbShape.DataSource = (GM.GetMasterTableDetail("C019")).Tables[0];
             cmbShape.ValueMember = "ID";
             cmbShape.DisplayMember = "Detail";
@@ -107,8 +110,13 @@ namespace DiamondShop
             tds.Clear();
             tds.Merge(ds);
 
+            ds2 = ser.DoSelectData("BBGemstoneStock", id);
+            tds2.Clear();
+            tds2.Merge(ds2);
+
             if (tds.BuyBookGemstone.Rows.Count > 0)
             {
+                grid1.Enabled = true;
                 binder.BindValueToControl(tds.BuyBookGemstone[0]);
 
                 if (tds.BuyBookGemstone[0]["PayByUSD"].ToString() == "0")
@@ -168,7 +176,14 @@ namespace DiamondShop
                     chkFlag = ser.DoUpdateData("BuyBookGemstone", tds);
                 }
 
+                //Delete Save Stock
+                if (tds2.BBGemstoneStock.Rows.Count > 0)
+                {
+                    chkFlag = ser.DoInsertData("BBGemstoneStock", tds2);
+                }
+
                 tds.AcceptChanges();
+                tds2.AcceptChanges();
             }
             catch (Exception ex)
             {
@@ -297,6 +312,26 @@ namespace DiamondShop
         {
             txtUSDRate.Text = GM.ConvertDoubleToString(txtUSDRate, 0);
             txtMarketPrice.Text = GM.ConvertDoubleToString(txtMarketPrice, 0);
+        }
+
+        private void grid1_Validated(object sender, EventArgs e)
+        {
+            if (grid1.Rows.Count > 0)
+            {
+                for (int i = 0; i < grid1.Rows.Count; i++)
+                {
+                    if (grid1.Rows[i].Cells[0].Value != null)
+                    {
+                        if (grid1.Rows[i].Cells["ActionDate"].Value != null)
+                        { tds2.Tables[0].Rows[i]["ActionDate"] = grid1.Rows[i].Cells["ActionDate"].Value; }
+                        if (grid1.Rows[i].Cells["Amount"].Value != null)
+                        { tds2.Tables[0].Rows[i]["Amount"] = grid1.Rows[i].Cells["Amount"].Value; }
+                        tds2.Tables[0].Rows[i]["RefID"] = id;
+                    }
+                }
+
+                tds2.AcceptChanges();
+            }
         }
     }
 }

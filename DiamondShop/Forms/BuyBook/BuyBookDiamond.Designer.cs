@@ -28,15 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BuyBookDiamond));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dtBuyDate = new System.Windows.Forms.DateTimePicker();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label19 = new System.Windows.Forms.Label();
             this.txtMarketPrice = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.txtNote = new System.Windows.Forms.TextBox();
             this.label26 = new System.Windows.Forms.Label();
             this.grid1 = new System.Windows.Forms.DataGridView();
+            this.ActionDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.actionDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.amountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.refIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.isDeletedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tds2 = new DiamondDS.DS.dsBBDiamondStock();
             this.cmbShop = new System.Windows.Forms.ComboBox();
             this.label20 = new System.Windows.Forms.Label();
             this.chkPayByUSD = new System.Windows.Forms.CheckBox();
@@ -79,11 +88,10 @@
             this.txtCode = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
-            this.ActionDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tds2)).BeginInit();
             this.SuspendLayout();
             // 
             // dtBuyDate
@@ -99,6 +107,7 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.label19);
             this.panel3.Controls.Add(this.txtMarketPrice);
             this.panel3.Controls.Add(this.label16);
             this.panel3.Controls.Add(this.txtNote);
@@ -151,6 +160,16 @@
             this.panel3.Size = new System.Drawing.Size(945, 484);
             this.panel3.TabIndex = 74;
             // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.ForeColor = System.Drawing.Color.Red;
+            this.label19.Location = new System.Drawing.Point(61, 171);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(174, 21);
+            this.label19.TabIndex = 177;
+            this.label19.Text = "*Work only mode edit";
+            // 
             // txtMarketPrice
             // 
             this.txtMarketPrice.Location = new System.Drawing.Point(447, 405);
@@ -193,17 +212,77 @@
             // 
             // grid1
             // 
+            this.grid1.AutoGenerateColumns = false;
             this.grid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grid1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ActionDate,
-            this.Amount});
+            this.Amount,
+            this.iDDataGridViewTextBoxColumn,
+            this.actionDateDataGridViewTextBoxColumn,
+            this.amountDataGridViewTextBoxColumn,
+            this.refIDDataGridViewTextBoxColumn,
+            this.isDeletedDataGridViewTextBoxColumn});
+            this.grid1.DataMember = "BBDiamondStock";
+            this.grid1.DataSource = this.tds2;
             this.grid1.Enabled = false;
-            this.grid1.Location = new System.Drawing.Point(33, 178);
+            this.grid1.Location = new System.Drawing.Point(33, 199);
             this.grid1.Name = "grid1";
             this.grid1.RowHeadersWidth = 10;
-            this.grid1.Size = new System.Drawing.Size(235, 287);
+            this.grid1.Size = new System.Drawing.Size(235, 266);
             this.grid1.TabIndex = 76;
-            this.grid1.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid1_CellEndEdit);
+            this.grid1.Validated += new System.EventHandler(this.grid1_Validated);
+            // 
+            // ActionDate
+            // 
+            this.ActionDate.DataPropertyName = "ActionDate";
+            this.ActionDate.HeaderText = "วันที่";
+            this.ActionDate.Name = "ActionDate";
+            // 
+            // Amount
+            // 
+            this.Amount.DataPropertyName = "Amount";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle2.NullValue = "0";
+            this.Amount.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Amount.HeaderText = "คงเหลือ (ct)";
+            this.Amount.Name = "Amount";
+            this.Amount.Width = 120;
+            // 
+            // iDDataGridViewTextBoxColumn
+            // 
+            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
+            this.iDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // actionDateDataGridViewTextBoxColumn
+            // 
+            this.actionDateDataGridViewTextBoxColumn.DataPropertyName = "ActionDate";
+            this.actionDateDataGridViewTextBoxColumn.HeaderText = "ActionDate";
+            this.actionDateDataGridViewTextBoxColumn.Name = "actionDateDataGridViewTextBoxColumn";
+            // 
+            // amountDataGridViewTextBoxColumn
+            // 
+            this.amountDataGridViewTextBoxColumn.DataPropertyName = "Amount";
+            this.amountDataGridViewTextBoxColumn.HeaderText = "Amount";
+            this.amountDataGridViewTextBoxColumn.Name = "amountDataGridViewTextBoxColumn";
+            // 
+            // refIDDataGridViewTextBoxColumn
+            // 
+            this.refIDDataGridViewTextBoxColumn.DataPropertyName = "RefID";
+            this.refIDDataGridViewTextBoxColumn.HeaderText = "RefID";
+            this.refIDDataGridViewTextBoxColumn.Name = "refIDDataGridViewTextBoxColumn";
+            // 
+            // isDeletedDataGridViewTextBoxColumn
+            // 
+            this.isDeletedDataGridViewTextBoxColumn.DataPropertyName = "IsDeleted";
+            this.isDeletedDataGridViewTextBoxColumn.HeaderText = "IsDeleted";
+            this.isDeletedDataGridViewTextBoxColumn.Name = "isDeletedDataGridViewTextBoxColumn";
+            // 
+            // tds2
+            // 
+            this.tds2.DataSetName = "dsBBDiamondStock";
+            this.tds2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // cmbShop
             // 
@@ -632,22 +711,6 @@
             this.button1.TabIndex = 32;
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // ActionDate
-            // 
-            this.ActionDate.DataPropertyName = "ActionDate";
-            this.ActionDate.HeaderText = "วันที่";
-            this.ActionDate.Name = "ActionDate";
-            // 
-            // Amount
-            // 
-            this.Amount.DataPropertyName = "Amount";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle1.NullValue = "0";
-            this.Amount.DefaultCellStyle = dataGridViewCellStyle1;
-            this.Amount.HeaderText = "คงเหลือ (ct)";
-            this.Amount.Name = "Amount";
-            this.Amount.Width = 120;
-            // 
             // BuyBookDiamond
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -662,6 +725,7 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tds2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -717,7 +781,14 @@
         private System.Windows.Forms.TextBox txtNote;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label16;
+        private DiamondDS.DS.dsBBDiamondStock tds2;
         private System.Windows.Forms.DataGridViewTextBoxColumn ActionDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn Amount;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn actionDateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn amountDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn refIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn isDeletedDataGridViewTextBoxColumn;
     }
 }

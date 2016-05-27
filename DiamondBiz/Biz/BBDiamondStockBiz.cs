@@ -10,22 +10,10 @@ namespace DiamondBiz.Biz
     public class BBDiamondStockBiz
     {
         dsBBDiamondStock ds = new dsBBDiamondStock();
-        BuyBookETCDAL dal = new BuyBookETCDAL();
+        BBDiamondStockCDAL dal = new BBDiamondStockCDAL();
 
-        public dsBuyBookETC DoSearchData(string Seller)
-        {
 
-            try
-            {
-                return dal.DoSearchData(Seller);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-
-        public dsBuyBookETC DoSelectData(int id)
+        public dsBBDiamondStock DoSelectData(int id)
         {
             try
             {
@@ -36,7 +24,7 @@ namespace DiamondBiz.Biz
                 throw ex;
             }
         }
-        public bool DoInsertData(dsBuyBookETC tds)
+        public bool DoInsertData(dsBBDiamondStock tds)
         {
             try
             {
@@ -48,7 +36,7 @@ namespace DiamondBiz.Biz
             }
         }
 
-        public bool DoUpdateData(dsBuyBookETC tds)
+        public bool DoUpdateData(dsBBDiamondStock tds)
         {
             try
             {
