@@ -458,6 +458,7 @@
             // 
             // CmbStatus
             // 
+            this.CmbStatus.Enabled = false;
             this.CmbStatus.FormattingEnabled = true;
             this.CmbStatus.Location = new System.Drawing.Point(970, 89);
             this.CmbStatus.Name = "CmbStatus";
