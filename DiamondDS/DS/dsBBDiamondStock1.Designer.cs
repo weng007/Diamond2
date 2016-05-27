@@ -464,8 +464,6 @@ namespace DiamondDS.DS {
                 this.columnID.AllowDBNull = false;
                 this.columnID.ReadOnly = true;
                 this.columnID.Unique = true;
-                this.columnRefID.AllowDBNull = false;
-                this.columnIsDeleted.AllowDBNull = false;
                 this.columnIsDeleted.MaxLength = 1;
             }
             
@@ -654,7 +652,12 @@ namespace DiamondDS.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public int RefID {
                 get {
-                    return ((int)(this[this.tableBBDiamondStock.RefIDColumn]));
+                    try {
+                        return ((int)(this[this.tableBBDiamondStock.RefIDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'RefID\' in table \'BBDiamondStock\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableBBDiamondStock.RefIDColumn] = value;
@@ -665,7 +668,12 @@ namespace DiamondDS.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string IsDeleted {
                 get {
-                    return ((string)(this[this.tableBBDiamondStock.IsDeletedColumn]));
+                    try {
+                        return ((string)(this[this.tableBBDiamondStock.IsDeletedColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'IsDeleted\' in table \'BBDiamondStock\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableBBDiamondStock.IsDeletedColumn] = value;
@@ -694,6 +702,30 @@ namespace DiamondDS.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetAmountNull() {
                 this[this.tableBBDiamondStock.AmountColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsRefIDNull() {
+                return this.IsNull(this.tableBBDiamondStock.RefIDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetRefIDNull() {
+                this[this.tableBBDiamondStock.RefIDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsIsDeletedNull() {
+                return this.IsNull(this.tableBBDiamondStock.IsDeletedColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetIsDeletedNull() {
+                this[this.tableBBDiamondStock.IsDeletedColumn] = global::System.Convert.DBNull;
             }
         }
         
