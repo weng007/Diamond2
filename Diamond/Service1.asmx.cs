@@ -281,6 +281,19 @@ namespace Diamond
                     throw ex;
                 }
             }
+            else if (TableName == "BBJewelryDiamondCerDetail1")
+            {
+                BBJewelryDiamondCerDetailBiz biz = GM.BBJewelryDiamondCerDetailBiz();
+                try
+                {
+                    return biz.DoSelectData1(id);
+
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
 
             else if (TableName == "BBJewelryDiamondDetail")
             {
