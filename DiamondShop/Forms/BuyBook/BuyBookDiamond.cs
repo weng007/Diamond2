@@ -118,6 +118,7 @@ namespace DiamondShop
 
             if (tds.BuyBookDiamond.Rows.Count > 0)
             {
+                grid1.Enabled = true;
                 binder.BindValueToControl(tds.BuyBookDiamond[0]);
 
                 if (tds.BuyBookDiamond[0]["PayByUSD"].ToString() == "0")
@@ -337,14 +338,22 @@ namespace DiamondShop
             txtMarketPrice.Text = GM.ConvertDoubleToString(txtMarketPrice, 0);
         }
 
-        private void grid1_Leave(object sender, EventArgs e)
+        private void grid1_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
-            if(grid1.Rows.Count > 0)
+            if (grid1.Rows.Count > 0)
             {
-                for (int i = 0;i < grid1.Rows.Count;i++)
+                tds2.Tables[0].Rows.Clear();
+
+                for (int i = 0; i < grid1.Rows.Count; i++)
                 {
-                    tds2.Tables[0].Rows[i]["ActioneDate"] = grid1.Rows[i].Cells["ActionDate"].Value;
-                    tds2.Tables[0].Rows[i]["Amount"] = grid1.Rows[i].Cells["Amount"].Value;
+                    if (grid1.Rows[i].Cells[0].Value != null)
+                    {
+                        tds2.Tables[0].Rows.Add();
+                        if(grid1.Rows[i].Cells["ActionDate"].Value != null)
+                        { tds2.Tables[0].Rows[i]["ActionDate"] = grid1.Rows[i].Cells["ActionDate"].Value; }
+                        if (grid1.Rows[i].Cells["Amount"].Value != null)
+                        { tds2.Tables[0].Rows[i]["Amount"] = grid1.Rows[i].Cells["Amount"].Value; }
+                    }
                 }
 
                 tds2.AcceptChanges();
