@@ -73,6 +73,7 @@ namespace DiamondShop
             if (tds.BBJewelryDiamondCerDetail.Rows.Count > 0)
             {
                 grid1.DataSource = tds.Tables[0];
+                CalSum(0);
             }
 
             if (tds2.BBJewelryDiamondDetail.Rows.Count > 0)

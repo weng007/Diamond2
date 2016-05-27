@@ -55,7 +55,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.grid1 = new System.Windows.Forms.DataGridView();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.RowNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RefID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -67,6 +66,7 @@
             this.ColorTypeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColorName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ClearityName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel4 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid2)).BeginInit();
@@ -301,10 +301,10 @@
             this.txtSumWeight.BackColor = System.Drawing.SystemColors.Window;
             this.txtSumWeight.Enabled = false;
             this.txtSumWeight.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSumWeight.Location = new System.Drawing.Point(518, 227);
+            this.txtSumWeight.Location = new System.Drawing.Point(652, 227);
             this.txtSumWeight.Name = "txtSumWeight";
             this.txtSumWeight.ReadOnly = true;
-            this.txtSumWeight.Size = new System.Drawing.Size(101, 27);
+            this.txtSumWeight.Size = new System.Drawing.Size(93, 27);
             this.txtSumWeight.TabIndex = 113;
             this.txtSumWeight.Text = "0";
             this.txtSumWeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -323,7 +323,7 @@
             // 
             this.label14.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label14.Location = new System.Drawing.Point(453, 231);
+            this.label14.Location = new System.Drawing.Point(587, 231);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(59, 24);
             this.label14.TabIndex = 48;
@@ -358,16 +358,6 @@
             this.grid1.TabIndex = 46;
             this.grid1.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.grid1_CellFormatting);
             this.grid1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.grid1_MouseDoubleClick);
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(35)))), ((int)(((byte)(69)))));
-            this.panel4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel4.BackgroundImage")));
-            this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.panel4.Location = new System.Drawing.Point(12, 3);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(207, 32);
-            this.panel4.TabIndex = 45;
             // 
             // RowNum
             // 
@@ -457,6 +447,16 @@
             this.ClearityName.Name = "ClearityName";
             this.ClearityName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.ClearityName.Width = 170;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(35)))), ((int)(((byte)(69)))));
+            this.panel4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel4.BackgroundImage")));
+            this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.panel4.Location = new System.Drawing.Point(12, 3);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(207, 32);
+            this.panel4.TabIndex = 45;
             // 
             // BBJewelryDiamondDetail
             // 
