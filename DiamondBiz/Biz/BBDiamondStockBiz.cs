@@ -10,7 +10,7 @@ namespace DiamondBiz.Biz
     public class BBDiamondStockBiz
     {
         dsBBDiamondStock ds = new dsBBDiamondStock();
-        BBDiamondStockCDAL dal = new BBDiamondStockCDAL();
+        BBDiamondStockDAL dal = new BBDiamondStockDAL();
 
 
         public dsBBDiamondStock DoSelectData(int id)

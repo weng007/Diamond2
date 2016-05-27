@@ -734,7 +734,23 @@ namespace Diamond
                     throw ex;
                 }
             }
-            
+
+            else if (TableName == "BBGemstoneStock")
+            {
+                BuyBookGemstoneBiz biz = GM.GetBuyBookGemstoneBiz();
+                dsBuyBookGemstone ds1 = new dsBuyBookGemstone();
+                ds1.Merge(ds);
+
+                try
+                {
+                    flag = biz.DoInsertData(ds1);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+
             else if (TableName == "BuyBookGold")
             {
                 BuyBookGoldBiz biz = GM.GetBuyBookGoldBiz();

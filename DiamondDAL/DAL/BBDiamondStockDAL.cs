@@ -7,7 +7,7 @@ using DiamondDS.DS;
 
 namespace DiamondDAL.DAL
 {
-    public class BBDiamondStockCDAL
+    public class BBDiamondStockDAL
     {
         SQLHelper SQL = new SQLHelper();
         dsBBDiamondStock ds = new dsBBDiamondStock();
