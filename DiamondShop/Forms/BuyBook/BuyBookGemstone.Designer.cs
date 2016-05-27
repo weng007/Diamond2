@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BuyBookGemstone));
             this.dtBuyDate = new System.Windows.Forms.DateTimePicker();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label19 = new System.Windows.Forms.Label();
             this.grid1 = new System.Windows.Forms.DataGridView();
             this.ActionDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -76,12 +77,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txtCode = new System.Windows.Forms.TextBox();
+            this.tds2 = new DiamondDS.DS.dsBBGemstoneStock();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
-            this.label19 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tds2)).BeginInit();
             this.SuspendLayout();
             // 
             // dtBuyDate
@@ -148,6 +150,16 @@
             this.panel3.Size = new System.Drawing.Size(946, 477);
             this.panel3.TabIndex = 74;
             // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.ForeColor = System.Drawing.Color.Red;
+            this.label19.Location = new System.Drawing.Point(58, 172);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(174, 21);
+            this.label19.TabIndex = 193;
+            this.label19.Text = "*Work only mode edit";
+            // 
             // grid1
             // 
             this.grid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -160,6 +172,7 @@
             this.grid1.RowHeadersWidth = 10;
             this.grid1.Size = new System.Drawing.Size(249, 254);
             this.grid1.TabIndex = 192;
+            this.grid1.Validated += new System.EventHandler(this.grid1_Validated);
             // 
             // ActionDate
             // 
@@ -589,6 +602,11 @@
             this.txtCode.Size = new System.Drawing.Size(155, 27);
             this.txtCode.TabIndex = 100;
             // 
+            // tds2
+            // 
+            this.tds2.DataSetName = "dsBBGemstoneStock";
+            this.tds2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(35)))), ((int)(((byte)(69)))));
@@ -609,16 +627,6 @@
             this.button1.TabIndex = 32;
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.ForeColor = System.Drawing.Color.Red;
-            this.label19.Location = new System.Drawing.Point(58, 174);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(174, 21);
-            this.label19.TabIndex = 193;
-            this.label19.Text = "*Work only mode edit";
-            // 
             // BuyBookGemstone
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -633,6 +641,7 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tds2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -689,6 +698,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ActionDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn Amount;
         private System.Windows.Forms.Label label19;
-        
+        private DiamondDS.DS.dsBBGemstoneStock tds2;
     }
 }
