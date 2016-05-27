@@ -153,6 +153,7 @@
             this.txtMinPrice.TabIndex = 14;
             this.txtMinPrice.Text = "0";
             this.txtMinPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtMinPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCost1_KeyPress);
             this.txtMinPrice.Leave += new System.EventHandler(this.txtCost1_Leave);
             // 
             // btnGemstone
