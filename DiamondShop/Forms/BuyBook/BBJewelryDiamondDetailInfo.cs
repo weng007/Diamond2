@@ -34,7 +34,7 @@ namespace DiamondShop
             binder.BindControl(cmbColor, "Color");
             binder.BindControl(cmbClearity, "Clearity");
         }
-        public BBJewelryDiamondDetailInfo(int id)
+        public BBJewelryDiamondDetailInfo(int id,int RefID)
         {
             InitializeComponent();
             Initial();
@@ -48,6 +48,7 @@ namespace DiamondShop
             binder.BindControl(cmbClearity, "Clearity");
 
             this.id = id;
+            this.RefID = RefID;
             LoadData();
         }
 
