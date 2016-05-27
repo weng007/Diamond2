@@ -343,7 +343,7 @@
             this.Amount2.HeaderText = "กรัม";
             this.Amount2.Name = "Amount2";
             this.Amount2.ReadOnly = true;
-            this.Amount2.Width = 90;
+            this.Amount2.Width = 80;
             // 
             // Price2
             // 
