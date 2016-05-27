@@ -13,13 +13,28 @@ namespace DiamondDAL.DAL
         dsBBJewelryDiamondCerDetail ds = new dsBBJewelryDiamondCerDetail();
         int flag = 0;
 
-        public dsBBJewelryDiamondCerDetail DoSelectData(int id)
+        public dsBBJewelryDiamondCerDetail DoSelectData(int refid)
+        {
+            try
+            {
+                SQL.ClearParameter();
+                SQL.CreateParameter("RefID", refid);
+                SQL.FillDataSetBySP("SP_BBJewelryDiamondCerDetail_Sel", ds.BBJewelryDiamondCerDetail);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return ds;
+        }
+        public dsBBJewelryDiamondCerDetail DoSelectData1(int id)
         {
             try
             {
                 SQL.ClearParameter();
                 SQL.CreateParameter("ID", id);
-                SQL.FillDataSetBySP("SP_BBJewelryDiamondCerDetail_Sel", ds.BBJewelryDiamondCerDetail);
+                SQL.FillDataSetBySP("SP_BBJewelryDiamondCerDetail_Sel1", ds.BBJewelryDiamondCerDetail);
             }
             catch (Exception ex)
             {

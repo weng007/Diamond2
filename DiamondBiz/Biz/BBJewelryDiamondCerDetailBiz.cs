@@ -13,11 +13,23 @@ namespace DiamondBiz.Biz
         dsBBJewelryDiamondCerDetail ds = new dsBBJewelryDiamondCerDetail();
         BBJewelryDiamondCerDetailDAL dal = new BBJewelryDiamondCerDetailDAL();
 
-        public dsBBJewelryDiamondCerDetail DoSelectData(int id)
+        public dsBBJewelryDiamondCerDetail DoSelectData(int refid)
         {
             try
             {
-                return dal.DoSelectData(id);
+                return dal.DoSelectData(refid);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public dsBBJewelryDiamondCerDetail DoSelectData1(int id)
+        {
+            try
+            {
+                return dal.DoSelectData1(id);
             }
             catch (Exception ex)
             {
