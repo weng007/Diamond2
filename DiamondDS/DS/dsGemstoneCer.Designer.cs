@@ -357,6 +357,8 @@ namespace DiamondDS.DS {
             
             private global::System.Data.DataColumn columnImage1;
             
+            private global::System.Data.DataColumn columnCertificate;
+            
             private global::System.Data.DataColumn columnCreateBy;
             
             private global::System.Data.DataColumn columnCreateDate;
@@ -712,6 +714,14 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn CertificateColumn {
+                get {
+                    return this.columnCertificate;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn CreateByColumn {
                 get {
                     return this.columnCreateBy;
@@ -818,6 +828,7 @@ namespace DiamondDS.DS {
                         decimal TotalUSD, 
                         decimal TotalBaht, 
                         byte[] Image1, 
+                        byte[] Certificate, 
                         int CreateBy, 
                         System.DateTime CreateDate, 
                         int EditBy, 
@@ -863,6 +874,7 @@ namespace DiamondDS.DS {
                         TotalUSD,
                         TotalBaht,
                         Image1,
+                        Certificate,
                         CreateBy,
                         CreateDate,
                         EditBy,
@@ -935,6 +947,7 @@ namespace DiamondDS.DS {
                 this.columnTotalUSD = base.Columns["TotalUSD"];
                 this.columnTotalBaht = base.Columns["TotalBaht"];
                 this.columnImage1 = base.Columns["Image1"];
+                this.columnCertificate = base.Columns["Certificate"];
                 this.columnCreateBy = base.Columns["CreateBy"];
                 this.columnCreateDate = base.Columns["CreateDate"];
                 this.columnEditBy = base.Columns["EditBy"];
@@ -1022,6 +1035,8 @@ namespace DiamondDS.DS {
                 base.Columns.Add(this.columnTotalBaht);
                 this.columnImage1 = new global::System.Data.DataColumn("Image1", typeof(byte[]), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnImage1);
+                this.columnCertificate = new global::System.Data.DataColumn("Certificate", typeof(byte[]), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCertificate);
                 this.columnCreateBy = new global::System.Data.DataColumn("CreateBy", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCreateBy);
                 this.columnCreateDate = new global::System.Data.DataColumn("CreateDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
@@ -1043,24 +1058,15 @@ namespace DiamondDS.DS {
                 this.columnNote1.MaxLength = 250;
                 this.columnCode.MaxLength = 30;
                 this.columnLabName.MaxLength = 100;
-                this.columnIdentificationName.ReadOnly = true;
                 this.columnIdentificationName.MaxLength = 100;
-                this.columnShapeName.ReadOnly = true;
                 this.columnShapeName.MaxLength = 100;
-                this.columnCutName.ReadOnly = true;
                 this.columnCutName.MaxLength = 100;
-                this.columnColorName.ReadOnly = true;
                 this.columnColorName.MaxLength = 100;
-                this.columnCommentName.ReadOnly = true;
                 this.columnCommentName.MaxLength = 100;
-                this.columnOriginName.ReadOnly = true;
                 this.columnOriginName.MaxLength = 100;
                 this.columnReportNumber.MaxLength = 50;
-                this.columnShopName.ReadOnly = true;
                 this.columnShopName.MaxLength = 100;
-                this.columnSettingName.ReadOnly = true;
                 this.columnSettingName.MaxLength = 100;
-                this.columnStatusName.ReadOnly = true;
                 this.columnStatusName.MaxLength = 100;
                 this.columnSeller.MaxLength = 100;
             }
@@ -1824,6 +1830,22 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public byte[] Certificate {
+                get {
+                    try {
+                        return ((byte[])(this[this.tableGemstoneCer.CertificateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Certificate\' in table \'GemstoneCer\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGemstoneCer.CertificateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public int CreateBy {
                 get {
                     try {
@@ -2340,6 +2362,18 @@ namespace DiamondDS.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetImage1Null() {
                 this[this.tableGemstoneCer.Image1Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsCertificateNull() {
+                return this.IsNull(this.tableGemstoneCer.CertificateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetCertificateNull() {
+                this[this.tableGemstoneCer.CertificateColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

@@ -16,10 +16,11 @@ namespace DiamondShop
 {
     public partial class GemstoneCer : FormInfo
     {
-        //Service1 ser = GM.GetService();
         dsGemstoneCer tds = new dsGemstoneCer();
         MemoryStream ms1;
         byte[] image1;
+        MemoryStream ms;
+        byte[] file;
 
         public GemstoneCer()
         {
@@ -58,6 +59,7 @@ namespace DiamondShop
             binder.BindControl(txtUSDRate, "USDRate");
             binder.BindControl(txtPriceCaratBaht, "PriceCarat");
             binder.BindControl(txtNote, "Note");
+            binder.BindControl(txtNote1, "Note1");
             binder.BindControl(txtShape, "ShapeName");
             binder.BindControl(txtColor, "ColorName");
             binder.BindControl(txtCut, "CutName");
@@ -80,6 +82,12 @@ namespace DiamondShop
                     ms1 = new MemoryStream(image1);
                     Image backImage1 = Image.FromStream(ms1);
                     btnImage1.BackgroundImage = backImage1;
+                }
+
+                if (tds.GemstoneCer[0]["Certificate"].ToString() != "")
+                {
+                    file = (byte[])tds.GemstoneCer[0]["Certificate"];
+                    linkFile.Text = "Certificate";
                 }
             }
 
@@ -155,24 +163,15 @@ namespace DiamondShop
 
         protected override void Initial()
         {
+            //เปิดให้เห็นเฉพาะ Owner
+            if (ApplicationInfo.Authorized == "Owner")
+            {
+                panel4.Visible = true;
+            }
+
             txtNote.Select();
 
             //SetFieldService.SetRequireField(txtCode, txtW, txtL, txtD, txtCarat);
-        }
-
-        private void cmbColorGrade_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string color = "C017";
-
-            //if (cmbColorGrade.SelectedIndex == 0)
-            //{
-            //    color = "C001";
-            //}
-
-            //cmbColor.DataSource = (GM.GetMasterTableDetail(color)).Tables[0];
-            //cmbColor.ValueMember = "ID";
-            //cmbColor.DisplayMember = "Detail";
-            //cmbColor.Refresh();
         }
 
         private void txtCarat_KeyPress(object sender, KeyPressEventArgs e)
@@ -183,16 +182,22 @@ namespace DiamondShop
             }
         }
 
-        private void cmbShapeAndCut_SelectedIndexChanged(object sender, EventArgs e)
+        private void linkFile_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            //if(cmbShapeAndCut.SelectedIndex == 0)
-            //{
-            //    lbl1.Text = "-";
-            //}
-            //else
-            //{
-            //    lbl1.Text = "x";
-            //}
+            if (file != null && file.Length > 0)
+            {
+                System.IO.FileStream wFile;
+                if (!Directory.Exists(GM.Path))
+                {
+                    Directory.CreateDirectory("C:\\Project");
+                }
+                wFile = new FileStream("C:\\Project\\Certificate.pdf", FileMode.Create);
+                wFile.Write(file, 0, file.Length);
+                wFile.Flush();
+                wFile.Close();
+
+                System.Diagnostics.Process.Start(@"C:\\Project\\Certificate.pdf");
+            }
         }
     }
 }

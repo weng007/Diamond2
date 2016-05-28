@@ -20,7 +20,9 @@ namespace DiamondShop
         bool isAuthorize = false;
         MemoryStream ms1;
         byte[] image1;
-        
+        MemoryStream ms;
+        byte[] file;
+
         public BuyBookGemstoneCer()
         {
             InitializeComponent();
@@ -151,9 +153,15 @@ namespace DiamondShop
             if (tds.BuyBookGemstoneCer.Rows.Count > 0)
             {
                 binder.BindValueToControl(tds.BuyBookGemstoneCer[0]);
-                
 
-                if(tds.BuyBookGemstoneCer[0]["PayByUSD"].ToString() =="0")
+                if (tds.BuyBookGemstoneCer[0]["Certificate"].ToString() != "")
+                {
+                    file = (byte[])tds.BuyBookGemstoneCer[0]["Certificate"];
+                    linkFile.Text = "Certificate";
+                }
+
+
+                if (tds.BuyBookGemstoneCer[0]["PayByUSD"].ToString() =="0")
                 {
                     chkPayByUSD.Checked = false;
                 }
@@ -205,6 +213,12 @@ namespace DiamondShop
             binder.BindValueToDataRow(row);
             row.Image1 = image1;
             row.IsPaid = rdoYes.Checked ? "1" : "0";
+
+            //แนบ Certificate
+            if (file != null && file.Length > 0)
+            {
+                row.Certificate = file;
+            }
 
             try
             {
@@ -375,6 +389,45 @@ namespace DiamondShop
             txtPriceCaratUSD.Text = GM.ConvertDoubleToString(txtPriceCaratUSD,0);
             txtPriceCarat.Text = GM.ConvertDoubleToString(txtPriceCarat, 0);
             txtTotalBaht.Text = GM.ConvertDoubleToString(txtTotalBaht,0);
+        }
+
+        private void btnUpload_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.Filter = "Pdf Files|*.pdf";
+            if (openFileDialog1.ShowDialog() == DialogResult.OK && openFileDialog1.CheckFileExists)
+            {
+                using (var stream = new FileStream(openFileDialog1.InitialDirectory + openFileDialog1.FileName, FileMode.Open, FileAccess.Read))
+                {
+                    using (var reader = new BinaryReader(stream))
+                    {
+                        file = reader.ReadBytes((int)stream.Length);
+                    }
+                }
+
+                if (file.Length > 0)
+                {
+                    linkFile.Text = "Certificate";
+                }
+            }
+        }
+
+        private void linkFile_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+            if (file != null && file.Length > 0)
+            {
+                System.IO.FileStream wFile;
+                if (!Directory.Exists(GM.Path))
+                {
+                    Directory.CreateDirectory("C:\\Project");
+                }
+                wFile = new FileStream("C:\\Project\\Certificate.pdf", FileMode.Create);
+                wFile.Write(file, 0, file.Length);
+                wFile.Flush();
+                wFile.Close();
+
+                System.Diagnostics.Process.Start(@"C:\\Project\\Certificate.pdf");
+            }
         }
     }
 }

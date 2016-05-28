@@ -252,6 +252,7 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(954, 194);
             this.panel4.TabIndex = 111;
+            this.panel4.Visible = false;
             // 
             // linkFile
             // 
@@ -262,6 +263,7 @@
             this.linkFile.TabIndex = 122;
             this.linkFile.TabStop = true;
             this.linkFile.Text = "No File Attach";
+            this.linkFile.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkFile_LinkClicked);
             // 
             // txtNote1
             // 

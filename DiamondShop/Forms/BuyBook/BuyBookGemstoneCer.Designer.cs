@@ -273,12 +273,14 @@
             this.btnUpload.BackColor = System.Drawing.Color.Transparent;
             this.btnUpload.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnUpload.BackgroundImage")));
             this.btnUpload.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnUpload.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnUpload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpload.Location = new System.Drawing.Point(27, 472);
             this.btnUpload.Name = "btnUpload";
             this.btnUpload.Size = new System.Drawing.Size(102, 33);
             this.btnUpload.TabIndex = 192;
             this.btnUpload.UseVisualStyleBackColor = false;
+            this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
             // 
             // linkFile
             // 
@@ -289,6 +291,7 @@
             this.linkFile.TabIndex = 191;
             this.linkFile.TabStop = true;
             this.linkFile.Text = "No File Attach";
+            this.linkFile.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkFile_LinkClicked);
             // 
             // btnImage1
             // 
