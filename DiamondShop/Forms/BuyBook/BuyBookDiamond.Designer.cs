@@ -429,6 +429,7 @@
             this.txtUSDRate.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtUSDRate.TextChanged += new System.EventHandler(this.txtUSDRate_TextChanged);
             this.txtUSDRate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAmount_KeyPress);
+            this.txtUSDRate.Leave += new System.EventHandler(this.txtUSDRate_Leave);
             // 
             // label23
             // 
@@ -572,6 +573,7 @@
             this.txtWeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtWeight.TextChanged += new System.EventHandler(this.txtWeight_TextChanged);
             this.txtWeight.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAmount_KeyPress);
+            this.txtWeight.Leave += new System.EventHandler(this.txtWeight_Leave);
             // 
             // label9
             // 
@@ -602,6 +604,7 @@
             this.txtESize.Text = "0";
             this.txtESize.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtESize.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAmount_KeyPress);
+            this.txtESize.Leave += new System.EventHandler(this.txtESize_Leave);
             // 
             // label8
             // 
@@ -622,6 +625,7 @@
             this.txtSSize.Text = "0";
             this.txtSSize.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtSSize.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAmount_KeyPress);
+            this.txtSSize.Leave += new System.EventHandler(this.txtSSize_Leave);
             // 
             // label7
             // 

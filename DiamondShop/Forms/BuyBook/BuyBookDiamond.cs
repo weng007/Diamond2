@@ -76,7 +76,7 @@ namespace DiamondShop
             this.id = id;
             LoadData();
 
-            SetFormatNumber();
+            
         }
 
         protected override void Initial()
@@ -146,7 +146,7 @@ namespace DiamondShop
                 EnableEdit = true;
                 EnableDelete = false;
             }
-
+            SetFormatNumber();
             base.LoadData();
         }
 
@@ -293,11 +293,11 @@ namespace DiamondShop
                 txtTotalBaht.Text = "0";
             }
 
-            txtUSDRate.Text = GM.ConvertDoubleToString(txtUSDRate, 0);
+            txtUSDRate.Text = GM.ConvertDoubleToString(txtUSDRate);
         }
         private void txtTotalBaht_TextChanged(object sender, EventArgs e)
         {
-            txtUSDRate.Text = GM.ConvertDoubleToString(txtUSDRate, 0);
+            txtUSDRate.Text = GM.ConvertDoubleToString(txtUSDRate);
             txtTotalUSD.Text = GM.ConvertDoubleToString(txtTotalUSD, 0);
             txtPriceCaratUSD.Text = GM.ConvertDoubleToString(txtPriceCaratUSD, 0);
             txtPriceCarat.Text = GM.ConvertDoubleToString(txtPriceCarat, 0);
@@ -314,12 +314,14 @@ namespace DiamondShop
 
         private void SetFormatNumber()
         {
-            txtUSDRate.Text = GM.ConvertDoubleToString(txtUSDRate, 0);
+            txtTotalUSD.Text = GM.ConvertDoubleToString(txtTotalUSD, 0);
+            txtPriceCaratUSD.Text = GM.ConvertDoubleToString(txtPriceCaratUSD, 0);
             txtMarketPrice.Text = GM.ConvertDoubleToString(txtMarketPrice, 0);
             txtAmount.Text = GM.ConvertDoubleToString(txtAmount, 0);
-            txtWeight.Text = GM.ConvertDoubleToString(txtWeight, 0);
-            txtSSize.Text = GM.ConvertDoubleToString(txtSSize, 0);
-            txtESize.Text = GM.ConvertDoubleToString(txtESize, 0);
+            txtWeight.Text = GM.ConvertDoubleToString(txtWeight);
+            txtSSize.Text = GM.ConvertDoubleToString(txtSSize);
+            txtESize.Text = GM.ConvertDoubleToString(txtESize);
+            txtUSDRate.Text = GM.ConvertDoubleToString(txtUSDRate);
         }
 
         private void txtMarketPrice_Leave(object sender, EventArgs e)
@@ -355,6 +357,7 @@ namespace DiamondShop
                 txtTotalBaht.Text = (GM.ConvertStringToDouble(txtPriceCarat) * GM.ConvertStringToDouble(txtWeight)).ToString();
                 txtPriceCarat.Text = GM.ConvertDoubleToString(txtPriceCarat, 0);
                 txtUSDRate.Text = GM.ConvertDoubleToString(txtUSDRate);
+                txtTotalUSD.Text = GM.ConvertDoubleToString(txtTotalUSD, 0);
             }
             
         }
@@ -367,5 +370,24 @@ namespace DiamondShop
             txtUSDRate.Text = GM.ConvertDoubleToString(txtUSDRate);
         }
 
+        private void txtSSize_Leave(object sender, EventArgs e)
+        {
+            txtSSize.Text = GM.ConvertDoubleToString(txtSSize);
+        }
+
+        private void txtESize_Leave(object sender, EventArgs e)
+        {
+            txtESize.Text = GM.ConvertDoubleToString(txtESize);
+        }
+
+        private void txtWeight_Leave(object sender, EventArgs e)
+        {
+            txtWeight.Text = GM.ConvertDoubleToString(txtWeight);
+        }
+
+        private void txtUSDRate_Leave(object sender, EventArgs e)
+        {
+            txtUSDRate.Text = GM.ConvertDoubleToString(txtUSDRate);
+        }
     }
 }

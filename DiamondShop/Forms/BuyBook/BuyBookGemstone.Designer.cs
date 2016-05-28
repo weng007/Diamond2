@@ -268,6 +268,7 @@
             this.txtSize.Text = "0";
             this.txtSize.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtSize.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSize_KeyPress);
+            this.txtSize.Leave += new System.EventHandler(this.txtSize_Leave);
             // 
             // txtMarketPrice
             // 
@@ -463,7 +464,6 @@
             this.txtUSDRate.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtUSDRate.TextChanged += new System.EventHandler(this.txtUSDRate_TextChanged);
             this.txtUSDRate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSize_KeyPress);
-            //this.txtUSDRate.Leave += new System.EventHandler(this.txtUSDRate_Leave);
             // 
             // label23
             // 

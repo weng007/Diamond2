@@ -129,7 +129,7 @@ namespace DiamondShop
                 EnableEdit = true;
                 EnableDelete = false;
             }
-
+            SetFormatNumber();
             base.LoadData();
         }
         protected override void EditData()
@@ -286,7 +286,23 @@ namespace DiamondShop
             txtCost3.Text = GM.ConvertDoubleToString(txtCost3,0);
             txtMinPrice.Text = GM.ConvertDoubleToString(txtMinPrice,0);
         }
-        
+
+        private void txtWeight_Leave(object sender, EventArgs e)
+        {
+            txtWeight.Text = GM.ConvertDoubleToString(txtWeight);
+        }
+
+        private void txtSize_Leave(object sender, EventArgs e)
+        {
+            txtSize.Text = GM.ConvertDoubleToString(txtSize);
+        }
+
+        private void SetFormatNumber()
+        {
+            txtWeight.Text = GM.ConvertDoubleToString(txtWeight);
+            txtSize.Text = GM.ConvertDoubleToString(txtSize);
+        }
+
         private void txtCost1_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))

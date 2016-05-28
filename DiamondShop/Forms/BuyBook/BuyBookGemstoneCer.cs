@@ -193,7 +193,7 @@ namespace DiamondShop
                 EnableEdit = true;
                 EnableDelete = false;
             }
-
+            SetFormatNumber();
             base.LoadData();
         }
 
@@ -394,6 +394,18 @@ namespace DiamondShop
             txtTotalBaht.Text = GM.ConvertDoubleToString(txtTotalBaht,0);
             txtUSDRate.Text = GM.ConvertDoubleToString(txtUSDRate);
         }
+        private void SetFormatNumber()
+        {
+            txtWeight.Text = GM.ConvertDoubleToString(txtWeight);
+            txtTotalUSD.Text = GM.ConvertDoubleToString(txtTotalUSD, 0);
+            txtPriceCaratUSD.Text = GM.ConvertDoubleToString(txtPriceCaratUSD, 0);
+            txtPriceCarat.Text = GM.ConvertDoubleToString(txtPriceCarat, 0);
+            txtTotalBaht.Text = GM.ConvertDoubleToString(txtTotalBaht, 0);
+            txtUSDRate.Text = GM.ConvertDoubleToString(txtUSDRate);
+            txtW.Text = GM.ConvertDoubleToString(txtW);
+            txtL.Text = GM.ConvertDoubleToString(txtL);
+            txtD.Text = GM.ConvertDoubleToString(txtD);
+        }
 
         private void btnUpload_Click(object sender, EventArgs e)
         {
@@ -432,6 +444,21 @@ namespace DiamondShop
 
                 System.Diagnostics.Process.Start(@"C:\\Project\\Certificate.pdf");
             }
+        }
+
+        private void txtW_Leave(object sender, EventArgs e)
+        {
+            txtW.Text = GM.ConvertDoubleToString(txtW);
+        }
+
+        private void txtL_Leave(object sender, EventArgs e)
+        {
+            txtL.Text = GM.ConvertDoubleToString(txtL);
+        }
+
+        private void txtD_Leave(object sender, EventArgs e)
+        {
+            txtD.Text = GM.ConvertDoubleToString(txtD);
         }
     }
 }

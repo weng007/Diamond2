@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BuyBookETCList));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel4 = new System.Windows.Forms.Panel();
             this.txtSeller = new System.Windows.Forms.TextBox();
             this.btnAdd = new System.Windows.Forms.Button();
@@ -60,7 +60,7 @@
             this.panel4.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.panel4.Location = new System.Drawing.Point(0, 1);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(701, 117);
+            this.panel4.Size = new System.Drawing.Size(710, 117);
             this.panel4.TabIndex = 42;
             // 
             // txtSeller
@@ -143,7 +143,7 @@
             this.gridETC.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridETC.RowTemplate.Height = 30;
             this.gridETC.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridETC.Size = new System.Drawing.Size(681, 447);
+            this.gridETC.Size = new System.Drawing.Size(690, 447);
             this.gridETC.TabIndex = 2;
             this.gridETC.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.gridETC_MouseDoubleClick);
             // 
@@ -182,9 +182,9 @@
             // Detail
             // 
             this.Detail.DataPropertyName = "Detail";
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Format = "dd/MM/yyyy";
-            this.Detail.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Format = "dd/MM/yyyy";
+            this.Detail.DefaultCellStyle = dataGridViewCellStyle1;
             this.Detail.HeaderText = "Detail";
             this.Detail.Name = "Detail";
             this.Detail.ReadOnly = true;
@@ -193,9 +193,9 @@
             // Price
             // 
             this.Price.DataPropertyName = "Price";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle4.Format = "N0";
-            this.Price.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle2.Format = "N0";
+            this.Price.DefaultCellStyle = dataGridViewCellStyle2;
             this.Price.HeaderText = "Price";
             this.Price.Name = "Price";
             this.Price.ReadOnly = true;
@@ -206,7 +206,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(91)))), ((int)(((byte)(59)))));
-            this.ClientSize = new System.Drawing.Size(711, 577);
+            this.ClientSize = new System.Drawing.Size(717, 577);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
             this.Name = "BuyBookETCList";

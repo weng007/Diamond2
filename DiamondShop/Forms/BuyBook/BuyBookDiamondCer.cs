@@ -409,12 +409,6 @@ namespace DiamondShop
                 }
             }
         }
-        
-        private void SetFormatNumber()
-        {
-            txtTotal.Text = GM.ConvertDoubleToString(txtTotal, 0);
-            txtUSDRate.Text = GM.ConvertDoubleToString(txtUSDRate);
-        }
 
         private void linkFile_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -434,5 +428,29 @@ namespace DiamondShop
                 System.Diagnostics.Process.Start(@"C:\\Project\\Certificate.pdf");             
             }
         }
+
+        private void txtW_Leave(object sender, EventArgs e)
+        {
+            txtW.Text = GM.ConvertDoubleToString(txtW);
+        }
+
+        private void txtL_Leave(object sender, EventArgs e)
+        {
+            txtL.Text = GM.ConvertDoubleToString(txtL);
+        }
+
+        private void txtD_Leave(object sender, EventArgs e)
+        {
+            txtD.Text = GM.ConvertDoubleToString(txtD);
+        }
+        private void SetFormatNumber()
+        {
+            txtTotal.Text = GM.ConvertDoubleToString(txtTotal, 0);
+            txtUSDRate.Text = GM.ConvertDoubleToString(txtUSDRate);
+            txtW.Text = GM.ConvertDoubleToString(txtW);
+            txtL.Text = GM.ConvertDoubleToString(txtL);
+            txtD.Text = GM.ConvertDoubleToString(txtD);
+        }
+
     }
 }

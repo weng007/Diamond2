@@ -65,7 +65,7 @@ namespace DiamondShop
                 EnableEdit = true;
                 EnableDelete = false;
             }
-
+            SetFormatNumber();
             base.LoadData();
         }
 
@@ -166,6 +166,15 @@ namespace DiamondShop
             {
                 e.Handled = true;
             }
+        }
+
+        private void txtPrice_Leave(object sender, EventArgs e)
+        {
+            txtPrice.Text = GM.ConvertDoubleToString(txtPrice,0);
+        }
+        private void SetFormatNumber()
+        {
+            txtPrice.Text = GM.ConvertDoubleToString(txtPrice,0);
         }
     }
 }

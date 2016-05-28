@@ -779,6 +779,7 @@
             this.txtW.Text = "0";
             this.txtW.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtW.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtWeight_KeyPress);
+            this.txtW.Leave += new System.EventHandler(this.txtW_Leave);
             // 
             // txtD
             // 
@@ -789,6 +790,7 @@
             this.txtD.Text = "0";
             this.txtD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtWeight_KeyPress);
+            this.txtD.Leave += new System.EventHandler(this.txtD_Leave);
             // 
             // label17
             // 
@@ -817,6 +819,7 @@
             this.txtL.Text = "0";
             this.txtL.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtL.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtWeight_KeyPress);
+            this.txtL.Leave += new System.EventHandler(this.txtL_Leave);
             // 
             // panel1
             // 
