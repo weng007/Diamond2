@@ -48,6 +48,8 @@ namespace DiamondShop
                 grid.DataSource = null;
                 grid.Refresh();
             }
+
+            btnSearch_Click(null, null);
         }
 
         private void btnAdd_Click(object sender, EventArgs e)

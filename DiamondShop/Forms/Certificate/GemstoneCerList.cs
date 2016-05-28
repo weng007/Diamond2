@@ -44,11 +44,6 @@ namespace DiamondShop
             cmbShape.DisplayMember = "Detail";
             cmbShape.Refresh();
 
-            //cmbComment.DataSource = (GM.GetMasterTableDetail("C026", true)).Tables[0];
-            //cmbComment.ValueMember = "ID";
-            //cmbComment.DisplayMember = "Detail";
-            //cmbComment.Refresh();
-
             cmbLab.DataSource = (GM.GetMasterTableDetail("C026", true)).Tables[0];
             cmbLab.ValueMember = "ID";
             cmbLab.DisplayMember = "Detail";
@@ -87,6 +82,8 @@ namespace DiamondShop
                 gridGemstone.DataSource = null;
                 gridGemstone.Refresh();
             }
+
+            btnSearch_Click(null, null);
         }
 
         private void btnAdd_Click(object sender, EventArgs e)

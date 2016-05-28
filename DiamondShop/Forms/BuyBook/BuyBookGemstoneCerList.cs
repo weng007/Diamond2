@@ -72,6 +72,8 @@ namespace DiamondShop
                 gridGemstoneCer.DataSource = null;
                 gridGemstoneCer.Refresh();
             }
+
+            btnSearch_Click(null, null);
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -113,32 +115,6 @@ namespace DiamondShop
             }
 
             DoLoadData();
-        }
-
-        private void cmbColorGrade_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string color = "";
-
-            //if(cmbColorGrade.SelectedIndex == 0)
-            //{
-            //    cmbColor.Enabled = false;
-            //    color = "C001";
-            //}
-            //else if(cmbColorGrade.SelectedIndex == 1)
-            //{
-            //    color = "C001";
-            //    cmbColor.Enabled = true;     
-            //}
-            //else
-            //{
-            //    color = "C017";
-            //    cmbColor.Enabled = true;
-            //}
-
-            //cmbColor.DataSource = (GM.GetMasterTableDetail(color,true)).Tables[0];
-            //cmbColor.ValueMember = "ID";
-            //cmbColor.DisplayMember = "Detail";
-            //cmbColor.Refresh();
         }
 
         private void btnSearch_Click(object sender, EventArgs e)

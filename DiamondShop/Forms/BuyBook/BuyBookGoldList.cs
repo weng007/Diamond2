@@ -24,7 +24,6 @@ namespace DiamondShop
 
         protected override void Initial()
         {
-            //cmbPercentGold.SelectedIndex = 0;
             gridGold.AutoGenerateColumns = false;
         }
 
@@ -42,6 +41,8 @@ namespace DiamondShop
                 gridGold.DataSource = null;
                 gridGold.Refresh();
             }
+
+            btnSearch_Click(null, null);
         }
 
         private void btnSearch_Click(object sender, EventArgs e)

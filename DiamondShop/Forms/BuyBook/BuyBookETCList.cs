@@ -39,6 +39,8 @@ namespace DiamondShop
                 gridETC.Refresh();
             }
             else { gridETC.DataSource = null; gridETC.Refresh(); }
+
+            btnSearch_Click(null, null);
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
