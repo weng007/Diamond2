@@ -19,6 +19,7 @@ namespace DiamondShop
         dsBuyBookSettingDetail tds2 = new dsBuyBookSettingDetail();
         bool isAuthorize = false;
         DataSet ds2 = new DataSet();
+        int chk = 0;
 
         public BuyBookSetting()
         {
@@ -78,6 +79,7 @@ namespace DiamondShop
                 BindingGridBBSettingDetail();
             }
 
+            SetFormatNumber();
             base.LoadData();
         }
 
@@ -122,12 +124,24 @@ namespace DiamondShop
         {
             try
             {
-                chkFlag = ser.DoDeleteData("BuyBookSetting", id);
+                if(chk == 0)
+                {
+                    chkFlag = ser.DoDeleteData("BuyBookSetting", id);
+                }
+                else if(chk == 1)
+                {
+                    chkFlag = ser.DoDeleteData("BuyBookSettingDetail", Convert.ToInt32(gridSetting.SelectedRows[0].Cells["ID"].Value));
+
+                    chk = 0;
+                }
+                
             }
             catch (Exception ex)
             {
                 throw ex;
             }
+
+            LoadData();
 
             return chkFlag;
         }
@@ -213,7 +227,7 @@ namespace DiamondShop
         {
             if(gridSetting.SelectedRows.Count > 0)
             {
-                BuyBookSettingDetail frm = new BuyBookSettingDetail(id, 1);
+                BuyBookSettingDetail frm = new BuyBookSettingDetail(id,1);
                 frm.ShowDialog();
 
                 LoadData();
@@ -230,6 +244,30 @@ namespace DiamondShop
 
                 if (e.ColumnIndex != 5) { e.Value = d.ToString("N0"); }
                 else { e.Value = d.ToString("N2"); }
+            }
+        }
+
+        private void txtBuyPrice_Leave(object sender, EventArgs e)
+        {
+            txtBuyPrice.Text = GM.ConvertDoubleToString(txtBuyPrice, 0);
+        }
+
+        private void txtSalePrice_Leave(object sender, EventArgs e)
+        {
+            txtSalePrice.Text = GM.ConvertDoubleToString(txtSalePrice, 0);
+        }
+        private void SetFormatNumber()
+        {
+            txtBuyPrice.Text = GM.ConvertDoubleToString(txtBuyPrice, 0);
+            txtSalePrice.Text = GM.ConvertDoubleToString(txtSalePrice, 0);
+        }
+
+        private void btnDel_Click(object sender, EventArgs e)
+        {
+            if(gridSetting.SelectedRows.Count > 0)
+            {
+                chk = 1;
+                DeleteData();
             }
         }
     }

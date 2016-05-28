@@ -24,12 +24,7 @@ namespace DiamondShop
 
         protected override void Initial()
         {
-            gridSetting.AutoGenerateColumns = false;
-
-            cmbSettingType.DataSource = (GM.GetMasterTableDetail("C015")).Tables[0];
-            cmbSettingType.ValueMember = "ID";
-            cmbSettingType.DisplayMember = "Detail";
-            cmbSettingType.Refresh();      
+            gridSetting.AutoGenerateColumns = false;    
         }
 
         protected override void DoLoadData()
@@ -58,7 +53,7 @@ namespace DiamondShop
         {
             ser2 = GM.GetService2();
 
-            ds = ser2.DoSearchBuyBookSettingDetail(Convert.ToInt16(cmbSettingType.SelectedValue.ToString()), Convert.ToDateTime(dtSBuyDate.Text),Convert.ToDateTime(dtEBuyDate.Text));
+            ds = ser2.DoSearchBuyBookSetting(txtSeller.Text, Convert.ToDateTime(dtSBuyDate.Text),Convert.ToDateTime(dtEBuyDate.Text));
 
             if (ds.Tables[0].Rows.Count > 0)
             {

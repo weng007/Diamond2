@@ -55,6 +55,7 @@
             this.txtAmount = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -104,13 +105,15 @@
             this.btnImage1.Size = new System.Drawing.Size(150, 150);
             this.btnImage1.TabIndex = 109;
             this.btnImage1.UseVisualStyleBackColor = false;
+            this.btnImage1.Click += new System.EventHandler(this.btnImage1_Click);
             // 
             // txtTotalBaht
             // 
+            this.txtTotalBaht.Enabled = false;
             this.txtTotalBaht.Location = new System.Drawing.Point(285, 320);
             this.txtTotalBaht.Name = "txtTotalBaht";
             this.txtTotalBaht.Size = new System.Drawing.Size(118, 27);
-            this.txtTotalBaht.TabIndex = 104;
+            this.txtTotalBaht.TabIndex = 200;
             this.txtTotalBaht.Text = "0";
             this.txtTotalBaht.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtTotalBaht.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAmount_KeyPress);
@@ -131,10 +134,11 @@
             this.txtUSDRate.Location = new System.Drawing.Point(285, 285);
             this.txtUSDRate.Name = "txtUSDRate";
             this.txtUSDRate.Size = new System.Drawing.Size(64, 27);
-            this.txtUSDRate.TabIndex = 28;
+            this.txtUSDRate.TabIndex = 18;
             this.txtUSDRate.Text = "0";
             this.txtUSDRate.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtUSDRate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAmount_KeyPress);
+            this.txtUSDRate.Leave += new System.EventHandler(this.txtUSDRate_Leave);
             // 
             // lblll
             // 
@@ -152,10 +156,11 @@
             this.txtTotalUSD.Location = new System.Drawing.Point(285, 250);
             this.txtTotalUSD.Name = "txtTotalUSD";
             this.txtTotalUSD.Size = new System.Drawing.Size(118, 27);
-            this.txtTotalUSD.TabIndex = 100;
+            this.txtTotalUSD.TabIndex = 16;
             this.txtTotalUSD.Text = "0";
             this.txtTotalUSD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtTotalUSD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAmount_KeyPress);
+            this.txtTotalUSD.Leave += new System.EventHandler(this.txtTotalUSD_Leave);
             // 
             // TotalUSD
             // 
@@ -184,27 +189,29 @@
             this.txtDetail.Multiline = true;
             this.txtDetail.Name = "txtDetail";
             this.txtDetail.Size = new System.Drawing.Size(195, 115);
-            this.txtDetail.TabIndex = 32;
+            this.txtDetail.TabIndex = 20;
             // 
             // txtPricePerUnit
             // 
             this.txtPricePerUnit.Location = new System.Drawing.Point(467, 94);
             this.txtPricePerUnit.Name = "txtPricePerUnit";
             this.txtPricePerUnit.Size = new System.Drawing.Size(118, 27);
-            this.txtPricePerUnit.TabIndex = 24;
+            this.txtPricePerUnit.TabIndex = 14;
             this.txtPricePerUnit.Text = "0";
             this.txtPricePerUnit.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtPricePerUnit.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAmount_KeyPress);
+            this.txtPricePerUnit.Leave += new System.EventHandler(this.txtPricePerUnit_Leave);
             // 
             // txtPricePerGram
             // 
             this.txtPricePerGram.Location = new System.Drawing.Point(467, 57);
             this.txtPricePerGram.Name = "txtPricePerGram";
             this.txtPricePerGram.Size = new System.Drawing.Size(118, 27);
-            this.txtPricePerGram.TabIndex = 16;
+            this.txtPricePerGram.TabIndex = 12;
             this.txtPricePerGram.Text = "0";
             this.txtPricePerGram.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtPricePerGram.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAmount_KeyPress);
+            this.txtPricePerGram.Leave += new System.EventHandler(this.txtPricePerGram_Leave);
             // 
             // lblPricePerUnit
             // 
@@ -232,7 +239,7 @@
             this.cmbMaterial.Location = new System.Drawing.Point(467, 17);
             this.cmbMaterial.Name = "cmbMaterial";
             this.cmbMaterial.Size = new System.Drawing.Size(169, 29);
-            this.cmbMaterial.TabIndex = 12;
+            this.cmbMaterial.TabIndex = 10;
             // 
             // label4
             // 
@@ -259,10 +266,11 @@
             this.txtLaborCost.Location = new System.Drawing.Point(122, 133);
             this.txtLaborCost.Name = "txtLaborCost";
             this.txtLaborCost.Size = new System.Drawing.Size(118, 27);
-            this.txtLaborCost.TabIndex = 20;
+            this.txtLaborCost.TabIndex = 8;
             this.txtLaborCost.Text = "0";
             this.txtLaborCost.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtLaborCost.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAmount_KeyPress);
+            this.txtLaborCost.Leave += new System.EventHandler(this.txtLaborCost_Leave);
             // 
             // label2
             // 
@@ -279,18 +287,19 @@
             this.txtWeight.Location = new System.Drawing.Point(122, 97);
             this.txtWeight.Name = "txtWeight";
             this.txtWeight.Size = new System.Drawing.Size(87, 27);
-            this.txtWeight.TabIndex = 8;
+            this.txtWeight.TabIndex = 6;
             this.txtWeight.Text = "0";
             this.txtWeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtWeight.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAmount_KeyPress);
+            this.txtWeight.Leave += new System.EventHandler(this.txtWeight_Leave);
             // 
             // cmbSettingType
             // 
             this.cmbSettingType.FormattingEnabled = true;
             this.cmbSettingType.Location = new System.Drawing.Point(122, 20);
             this.cmbSettingType.Name = "cmbSettingType";
-            this.cmbSettingType.Size = new System.Drawing.Size(169, 29);
-            this.cmbSettingType.TabIndex = 1;
+            this.cmbSettingType.Size = new System.Drawing.Size(182, 29);
+            this.cmbSettingType.TabIndex = 2;
             // 
             // label1
             // 
@@ -321,6 +330,7 @@
             this.txtAmount.Text = "0";
             this.txtAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtAmount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAmount_KeyPress);
+            this.txtAmount.Leave += new System.EventHandler(this.txtAmount_Leave);
             // 
             // panel1
             // 
@@ -341,6 +351,10 @@
             this.button1.Size = new System.Drawing.Size(1089, 352);
             this.button1.TabIndex = 32;
             this.button1.UseVisualStyleBackColor = true;
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // BuyBookSettingDetail
             // 
@@ -387,5 +401,6 @@
         private System.Windows.Forms.TextBox txtPricePerUnit;
         private System.Windows.Forms.TextBox txtPricePerGram;
         private System.Windows.Forms.Button btnImage1;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }

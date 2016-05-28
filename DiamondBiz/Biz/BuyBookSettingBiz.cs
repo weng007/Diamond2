@@ -13,11 +13,11 @@ namespace DiamondBiz.Biz
         dsBuyBookSetting ds = new dsBuyBookSetting();
         BuyBookSettingDAL dal = new BuyBookSettingDAL();
 
-        public dsBuyBookSetting DoSearchData(int JewelryType, DateTime sBuyDate, DateTime eBuyDate)
+        public dsBuyBookSetting DoSearchData(string Seller, DateTime sBuyDate, DateTime eBuyDate)
         {
             try
             {
-                return dal.DoSearchData(JewelryType,sBuyDate, eBuyDate);
+                return dal.DoSearchData(Seller, sBuyDate, eBuyDate);
             }
             catch (Exception ex)
             {

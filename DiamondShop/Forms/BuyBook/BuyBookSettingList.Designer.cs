@@ -29,14 +29,11 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BuyBookSettingList));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.cmbSettingType = new System.Windows.Forms.ComboBox();
             this.dtEBuyDate = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -46,15 +43,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.gridSetting = new System.Windows.Forms.DataGridView();
+            this.txtSeller = new System.Windows.Forms.TextBox();
             this.RowNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BuyDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Seller = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SettingTypeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaterialName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Weight = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TotalBaht = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PricePerGram = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BuyPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SalePrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -64,7 +59,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(91)))), ((int)(((byte)(59)))));
-            this.panel4.Controls.Add(this.cmbSettingType);
+            this.panel4.Controls.Add(this.txtSeller);
             this.panel4.Controls.Add(this.dtEBuyDate);
             this.panel4.Controls.Add(this.label2);
             this.panel4.Controls.Add(this.label1);
@@ -77,14 +72,6 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1036, 117);
             this.panel4.TabIndex = 42;
-            // 
-            // cmbSettingType
-            // 
-            this.cmbSettingType.FormattingEnabled = true;
-            this.cmbSettingType.Location = new System.Drawing.Point(238, 21);
-            this.cmbSettingType.Name = "cmbSettingType";
-            this.cmbSettingType.Size = new System.Drawing.Size(169, 29);
-            this.cmbSettingType.TabIndex = 1;
             // 
             // dtEBuyDate
             // 
@@ -109,7 +96,7 @@
             // 
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(144, 62);
+            this.label1.Location = new System.Drawing.Point(145, 62);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(87, 25);
             this.label1.TabIndex = 71;
@@ -159,11 +146,11 @@
             // 
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(158, 24);
+            this.label3.Location = new System.Drawing.Point(178, 24);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(73, 25);
+            this.label3.Size = new System.Drawing.Size(57, 25);
             this.label3.TabIndex = 27;
-            this.label3.Text = "Type";
+            this.label3.Text = "Seller";
             // 
             // panel2
             // 
@@ -172,7 +159,7 @@
             this.panel2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.Location = new System.Drawing.Point(5, 124);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1045, 456);
+            this.panel2.Size = new System.Drawing.Size(1031, 456);
             this.panel2.TabIndex = 33;
             // 
             // gridSetting
@@ -187,11 +174,8 @@
             this.ID,
             this.BuyDate,
             this.Seller,
-            this.SettingTypeName,
-            this.MaterialName,
-            this.Weight,
-            this.TotalBaht,
-            this.PricePerGram});
+            this.BuyPrice,
+            this.SalePrice});
             this.gridSetting.Location = new System.Drawing.Point(15, 6);
             this.gridSetting.Name = "gridSetting";
             this.gridSetting.ReadOnly = true;
@@ -199,15 +183,22 @@
             this.gridSetting.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridSetting.RowTemplate.Height = 30;
             this.gridSetting.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridSetting.Size = new System.Drawing.Size(1001, 447);
+            this.gridSetting.Size = new System.Drawing.Size(646, 447);
             this.gridSetting.TabIndex = 2;
             this.gridSetting.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.gridSetting_MouseDoubleClick);
+            // 
+            // txtSeller
+            // 
+            this.txtSeller.Location = new System.Drawing.Point(238, 21);
+            this.txtSeller.Name = "txtSeller";
+            this.txtSeller.Size = new System.Drawing.Size(132, 27);
+            this.txtSeller.TabIndex = 73;
             // 
             // RowNum
             // 
             this.RowNum.DataPropertyName = "RowNum";
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            this.RowNum.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            this.RowNum.DefaultCellStyle = dataGridViewCellStyle1;
             this.RowNum.HeaderText = "No.";
             this.RowNum.Name = "RowNum";
             this.RowNum.ReadOnly = true;
@@ -224,8 +215,8 @@
             // BuyDate
             // 
             this.BuyDate.DataPropertyName = "BuyDate";
-            dataGridViewCellStyle8.Format = "dd/mm/yyyy";
-            this.BuyDate.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Format = "dd/mm/yyyy";
+            this.BuyDate.DefaultCellStyle = dataGridViewCellStyle2;
             this.BuyDate.HeaderText = "Buy Date";
             this.BuyDate.Name = "BuyDate";
             this.BuyDate.ReadOnly = true;
@@ -237,58 +228,29 @@
             this.Seller.HeaderText = "Seller";
             this.Seller.Name = "Seller";
             this.Seller.ReadOnly = true;
-            this.Seller.Width = 120;
+            this.Seller.Width = 170;
             // 
-            // SettingTypeName
+            // BuyPrice
             // 
-            this.SettingTypeName.DataPropertyName = "SettingTypeName";
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            this.SettingTypeName.DefaultCellStyle = dataGridViewCellStyle9;
-            this.SettingTypeName.HeaderText = "Type";
-            this.SettingTypeName.Name = "SettingTypeName";
-            this.SettingTypeName.ReadOnly = true;
-            this.SettingTypeName.Width = 150;
+            this.BuyPrice.DataPropertyName = "BuyPrice";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle3.Format = "N0";
+            this.BuyPrice.DefaultCellStyle = dataGridViewCellStyle3;
+            this.BuyPrice.HeaderText = "รับซื้อ";
+            this.BuyPrice.Name = "BuyPrice";
+            this.BuyPrice.ReadOnly = true;
+            this.BuyPrice.Width = 130;
             // 
-            // MaterialName
+            // SalePrice
             // 
-            this.MaterialName.DataPropertyName = "MaterialName";
-            this.MaterialName.HeaderText = "Material";
-            this.MaterialName.Name = "MaterialName";
-            this.MaterialName.ReadOnly = true;
-            this.MaterialName.Width = 150;
-            // 
-            // Weight
-            // 
-            this.Weight.DataPropertyName = "Weight";
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle10.Format = "N2";
-            this.Weight.DefaultCellStyle = dataGridViewCellStyle10;
-            this.Weight.HeaderText = "Weight";
-            this.Weight.Name = "Weight";
-            this.Weight.ReadOnly = true;
-            this.Weight.Width = 120;
-            // 
-            // TotalBaht
-            // 
-            this.TotalBaht.DataPropertyName = "TotalBaht";
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle11.Format = "N0";
-            this.TotalBaht.DefaultCellStyle = dataGridViewCellStyle11;
-            this.TotalBaht.HeaderText = "Total Baht";
-            this.TotalBaht.Name = "TotalBaht";
-            this.TotalBaht.ReadOnly = true;
-            this.TotalBaht.Width = 150;
-            // 
-            // PricePerGram
-            // 
-            this.PricePerGram.DataPropertyName = "PricePerGram";
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle12.Format = "N0";
-            this.PricePerGram.DefaultCellStyle = dataGridViewCellStyle12;
-            this.PricePerGram.HeaderText = "PricePerGram";
-            this.PricePerGram.Name = "PricePerGram";
-            this.PricePerGram.ReadOnly = true;
-            this.PricePerGram.Width = 130;
+            this.SalePrice.DataPropertyName = "SalePrice";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle4.Format = "N0";
+            this.SalePrice.DefaultCellStyle = dataGridViewCellStyle4;
+            this.SalePrice.HeaderText = "ขายอก";
+            this.SalePrice.Name = "SalePrice";
+            this.SalePrice.ReadOnly = true;
+            this.SalePrice.Width = 130;
             // 
             // BuyBookSettingList
             // 
@@ -302,6 +264,7 @@
             this.Text = "ProductList";
             ((System.ComponentModel.ISupportInitialize)(this.ds)).EndInit();
             this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridSetting)).EndInit();
             this.ResumeLayout(false);
@@ -319,15 +282,12 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker dtSBuyDate;
-        private System.Windows.Forms.ComboBox cmbSettingType;
+        private System.Windows.Forms.TextBox txtSeller;
         private System.Windows.Forms.DataGridViewTextBoxColumn RowNum;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn BuyDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn Seller;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SettingTypeName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaterialName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Weight;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TotalBaht;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PricePerGram;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BuyPrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SalePrice;
     }
 }

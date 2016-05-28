@@ -368,7 +368,7 @@ namespace Diamond
                     throw ex;
                 }
             }
-            else if (TableName == "BuyBookSetting")
+            else if (TableName == "BBSetting")
             {
                 BuyBookSettingBiz biz = GM.BuyBookSettingBiz();
                 try
@@ -381,7 +381,7 @@ namespace Diamond
                     throw ex;
                 }
             }
-            else if (TableName == "BuyBookSettingDetail")
+            else if (TableName == "BuyBookSetting")
             {
                 BuyBookSettingBiz biz = GM.BuyBookSettingBiz();
                 try
@@ -807,7 +807,7 @@ namespace Diamond
                     throw ex;
                 }
             }
-            else if (TableName == "BBSettingDetail")
+            else if (TableName == "BuyBookSettingDetail")
             {
                 BuyBookSettingDetailBiz biz = GM.GetBuyBookSettingDetailBiz();
                 dsBuyBookSettingDetail ds1 = new dsBuyBookSettingDetail();

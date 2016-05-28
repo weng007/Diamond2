@@ -14,12 +14,12 @@ namespace DiamondDAL.DAL
         dsBuyBookSetting ds = new dsBuyBookSetting();
         int flag = 0;
 
-        public dsBuyBookSetting DoSearchData(int JewelryType,DateTime sBuyDate, DateTime eBuyDate)
+        public dsBuyBookSetting DoSearchData(string Seller,DateTime sBuyDate, DateTime eBuyDate)
         {
             try
             {
                 SQL.ClearParameter();
-                SQL.CreateParameter("JewelryType", JewelryType);
+                SQL.CreateParameter("Seller", Seller);
                 SQL.CreateParameter("SBuyDate", sBuyDate);
                 SQL.CreateParameter("EBuyDate", eBuyDate);
                 SQL.FillDataSetBySP("SP_BBSetting_Search", ds.BBSetting);

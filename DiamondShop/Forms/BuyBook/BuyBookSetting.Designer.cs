@@ -76,7 +76,7 @@
             this.dtBuyDate.Location = new System.Drawing.Point(127, 17);
             this.dtBuyDate.Name = "dtBuyDate";
             this.dtBuyDate.Size = new System.Drawing.Size(131, 27);
-            this.dtBuyDate.TabIndex = 1;
+            this.dtBuyDate.TabIndex = 2;
             // 
             // panel3
             // 
@@ -116,6 +116,7 @@
             this.btnDel.TabIndex = 95;
             this.btnDel.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btnDel.UseVisualStyleBackColor = true;
+            this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
             // 
             // btnAdd
             // 
@@ -162,10 +163,11 @@
             this.txtBuyPrice.Location = new System.Drawing.Point(537, 383);
             this.txtBuyPrice.Name = "txtBuyPrice";
             this.txtBuyPrice.Size = new System.Drawing.Size(81, 27);
-            this.txtBuyPrice.TabIndex = 8;
+            this.txtBuyPrice.TabIndex = 6;
             this.txtBuyPrice.Text = "0";
             this.txtBuyPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtBuyPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBuyPrice_KeyPress);
+            this.txtBuyPrice.Leave += new System.EventHandler(this.txtBuyPrice_Leave);
             // 
             // txtSalePrice
             // 
@@ -173,10 +175,11 @@
             this.txtSalePrice.Location = new System.Drawing.Point(663, 383);
             this.txtSalePrice.Name = "txtSalePrice";
             this.txtSalePrice.Size = new System.Drawing.Size(81, 27);
-            this.txtSalePrice.TabIndex = 12;
+            this.txtSalePrice.TabIndex = 8;
             this.txtSalePrice.Text = "0";
             this.txtSalePrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtSalePrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBuyPrice_KeyPress);
+            this.txtSalePrice.Leave += new System.EventHandler(this.txtSalePrice_Leave);
             // 
             // label2
             // 
@@ -246,7 +249,7 @@
             this.SettingTypeName.Name = "SettingTypeName";
             this.SettingTypeName.ReadOnly = true;
             this.SettingTypeName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.SettingTypeName.Width = 150;
+            this.SettingTypeName.Width = 170;
             // 
             // MaterialName
             // 

@@ -307,13 +307,13 @@ namespace Diamond
         }
 
         [WebMethod]
-        public DataSet DoSearchBuyBookSetting(int JewelryType, DateTime sBuyDate, DateTime eBuyDate)
+        public DataSet DoSearchBuyBookSetting(string Seller, DateTime sBuyDate, DateTime eBuyDate)
         {
             BuyBookSettingBiz biz = new BuyBookSettingBiz();
 
             try
             {
-                return biz.DoSearchData(JewelryType, sBuyDate, eBuyDate);
+                return biz.DoSearchData(Seller, sBuyDate, eBuyDate);
             }
             catch (Exception ex)
             {

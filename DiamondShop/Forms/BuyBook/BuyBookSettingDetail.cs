@@ -58,7 +58,12 @@ namespace DiamondShop
 
             this.id = id;
             this.mode = mode;
-            LoadData();
+
+            if (mode == 1)
+            {
+                LoadData();
+            }
+            
         }
         protected override void Initial()
         {
@@ -86,7 +91,7 @@ namespace DiamondShop
             {
                 binder.BindValueToControl(tds.BBSettingDetail[0]);          
 
-                if (image1 != null)
+                if (tds.BBSettingDetail[0].Image1 != null)
                 {
                     image1 = tds.BBSettingDetail[0].Image1;
                     ms1 = new MemoryStream(image1);
@@ -97,6 +102,7 @@ namespace DiamondShop
                 EnableDelete = true;
             }
 
+            SetFormatNumber();
             base.LoadData();
         }
 
@@ -123,12 +129,12 @@ namespace DiamondShop
                     row.RefID = id;
 
                     SetCreateBy(row);
-                    chkFlag = ser.DoInsertData("BBSettingDetail", tds);
+                    chkFlag = ser.DoInsertData("BuyBookSettingDetail", tds);
                 }
                 else
                 {
                     SetEditBy(row);
-                    chkFlag = ser.DoUpdateData("BBSettingDetail", tds);
+                    chkFlag = ser.DoUpdateData("BuyBookSettingDetail", tds);
                 }
 
                 tds.AcceptChanges();
@@ -144,7 +150,7 @@ namespace DiamondShop
         {
             try
             {
-                chkFlag = ser.DoDeleteData("BBSettingDetail", id);
+                chkFlag = ser.DoDeleteData("BuyBookSettingDetail", id);
             }
             catch (Exception ex)
             {
@@ -183,5 +189,73 @@ namespace DiamondShop
                 e.Handled = true;
             }
         }
+
+        private void txtAmount_Leave(object sender, EventArgs e)
+        {
+            txtAmount.Text = GM.ConvertDoubleToString(txtAmount, 0);
+        }
+
+        private void txtWeight_Leave(object sender, EventArgs e)
+        {
+            txtWeight.Text = GM.ConvertDoubleToString(txtWeight);
+        }
+
+        private void txtLaborCost_Leave(object sender, EventArgs e)
+        {
+            txtLaborCost.Text = GM.ConvertDoubleToString(txtLaborCost,0);
+        }
+
+        private void txtPricePerUnit_Leave(object sender, EventArgs e)
+        {
+            txtPricePerUnit.Text = GM.ConvertDoubleToString(txtPricePerUnit, 0);
+        }
+
+        private void txtTotalUSD_Leave(object sender, EventArgs e)
+        {
+            txtTotalBaht.Text = (GM.ConvertStringToDouble(txtTotalUSD) * GM.ConvertStringToDouble(txtUSDRate)).ToString();
+
+            txtTotalUSD.Text = GM.ConvertDoubleToString(txtTotalUSD, 0);
+            txtTotalBaht.Text = GM.ConvertDoubleToString(txtTotalBaht, 0);
+        }
+
+        private void txtUSDRate_Leave(object sender, EventArgs e)
+        {
+            txtTotalBaht.Text = (GM.ConvertStringToDouble(txtTotalUSD) * GM.ConvertStringToDouble(txtUSDRate)).ToString();
+
+            txtUSDRate.Text = GM.ConvertDoubleToString(txtUSDRate);
+            txtTotalBaht.Text = GM.ConvertDoubleToString(txtTotalBaht, 0);
+        }
+        private void txtPricePerGram_Leave(object sender, EventArgs e)
+        {
+            txtPricePerGram.Text = GM.ConvertDoubleToString(txtPricePerGram, 0);
+        }
+
+        private void SetFormatNumber()
+        {
+            txtAmount.Text = GM.ConvertDoubleToString(txtAmount, 0);
+            txtWeight.Text = GM.ConvertDoubleToString(txtWeight);
+            txtLaborCost.Text = GM.ConvertDoubleToString(txtLaborCost, 0);
+            txtPricePerGram.Text = GM.ConvertDoubleToString(txtPricePerGram, 0);
+            txtPricePerUnit.Text = GM.ConvertDoubleToString(txtPricePerUnit, 0);
+            txtTotalUSD.Text = GM.ConvertDoubleToString(txtTotalUSD, 0);
+            txtUSDRate.Text = GM.ConvertDoubleToString(txtUSDRate);
+            txtTotalBaht.Text = GM.ConvertDoubleToString(txtTotalBaht, 0);
+        }
+
+        private void btnImage1_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                btnImage1.BackgroundImage = Image.FromFile(openFileDialog1.FileName);
+
+                FileStream fs;
+                fs = new FileStream(openFileDialog1.FileName, FileMode.Open, FileAccess.Read);
+                image1 = new byte[fs.Length];
+                fs.Read(image1, 0, System.Convert.ToInt32(fs.Length));
+                fs.Close();
+            }
+        }
+
+        
     }
 }
