@@ -392,8 +392,8 @@
             this.txtUSDRate.TabIndex = 38;
             this.txtUSDRate.Text = "0";
             this.txtUSDRate.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtUSDRate.TextChanged += new System.EventHandler(this.txtUSDRate_TextChanged);
             this.txtUSDRate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtWeight_KeyPress);
+            this.txtUSDRate.Leave += new System.EventHandler(this.txtUSDRate_Leave);
             // 
             // label23
             // 
@@ -497,7 +497,6 @@
             this.txtPrice.Text = "0";
             this.txtPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtWeight_KeyPress);
-            this.txtPrice.Leave += new System.EventHandler(this.txtPrice_Leave);
             // 
             // label16
             // 

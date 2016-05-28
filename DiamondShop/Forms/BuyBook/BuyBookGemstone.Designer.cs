@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BuyBookGemstone));
             this.dtBuyDate = new System.Windows.Forms.DateTimePicker();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -193,17 +193,17 @@
             // ActionDate
             // 
             this.ActionDate.DataPropertyName = "ActionDate";
-            dataGridViewCellStyle1.Format = "dd/MM/YYYY";
-            this.ActionDate.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Format = "dd/MM/YYYY";
+            this.ActionDate.DefaultCellStyle = dataGridViewCellStyle7;
             this.ActionDate.HeaderText = "วันที่";
             this.ActionDate.Name = "ActionDate";
             // 
             // Amount
             // 
             this.Amount.DataPropertyName = "Amount";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle2.NullValue = "0";
-            this.Amount.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle8.NullValue = "0";
+            this.Amount.DefaultCellStyle = dataGridViewCellStyle8;
             this.Amount.HeaderText = "คงเหลือ (ct)";
             this.Amount.Name = "Amount";
             this.Amount.Width = 120;
@@ -421,7 +421,6 @@
             this.txtTotalUSD.TabIndex = 104;
             this.txtTotalUSD.Text = "0";
             this.txtTotalUSD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtTotalUSD.TextChanged += new System.EventHandler(this.txtUSDRate_TextChanged);
             // 
             // label5
             // 
@@ -462,8 +461,8 @@
             this.txtUSDRate.TabIndex = 24;
             this.txtUSDRate.Text = "0";
             this.txtUSDRate.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtUSDRate.TextChanged += new System.EventHandler(this.txtUSDRate_TextChanged);
             this.txtUSDRate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSize_KeyPress);
+            this.txtUSDRate.Leave += new System.EventHandler(this.txtUSDRate_Leave);
             // 
             // label23
             // 

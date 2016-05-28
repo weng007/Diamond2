@@ -336,7 +336,7 @@ namespace DiamondShop
 
                 txtPriceCarat.Enabled = false;
                 txtPriceCarat.Text = "0";
-                txtUSDRate_TextChanged(null, null);
+                txtUSDRate_Leave(null, null);
             }
             else
             {
@@ -360,21 +360,6 @@ namespace DiamondShop
         private void txtWeight_TextChanged(object sender, EventArgs e)
         {
             txtTotalUSD.Text = (GM.ConvertStringToDouble(txtWeight) * GM.ConvertStringToDouble(txtPriceCaratUSD)).ToString();
-        }
-
-        private void txtPriceCaratUSD_TextChanged(object sender, EventArgs e)
-        {
-            txtTotalUSD.Text = (GM.ConvertStringToDouble(txtWeight) * GM.ConvertStringToDouble(txtPriceCaratUSD)).ToString();
-            txtUSDRate.Text = GM.ConvertDoubleToString(txtUSDRate);
-        }
-
-        private void txtUSDRate_TextChanged(object sender, EventArgs e)
-        {
-            if (chkPayByUSD.Checked)
-            {
-                txtTotalBaht.Text = (GM.ConvertStringToDouble(txtTotalUSD) * GM.ConvertStringToDouble(txtUSDRate)).ToString();
-                txtUSDRate.Text = GM.ConvertDoubleToString(txtUSDRate);
-            }
         }
 
         private void txtPriceCarat_TextChanged(object sender, EventArgs e)
@@ -459,6 +444,26 @@ namespace DiamondShop
         private void txtD_Leave(object sender, EventArgs e)
         {
             txtD.Text = GM.ConvertDoubleToString(txtD);
+        }
+
+        private void txtUSDRate_Leave(object sender, EventArgs e)
+        {
+            if (chkPayByUSD.Checked)
+            {
+                txtTotalBaht.Text = (GM.ConvertStringToDouble(txtTotalUSD) * GM.ConvertStringToDouble(txtUSDRate)).ToString();
+                txtUSDRate.Text = GM.ConvertDoubleToString(txtUSDRate);
+            }
+            else
+            {
+                txtTotalBaht.Text = "0";
+            }
+        }
+
+        private void txtPriceCaratUSD_Leave(object sender, EventArgs e)
+        {
+            txtTotalUSD.Text = (GM.ConvertStringToDouble(txtWeight) * GM.ConvertStringToDouble(txtPriceCaratUSD)).ToString();
+            txtUSDRate.Text = GM.ConvertDoubleToString(txtUSDRate);
+            txtTotalUSD.Text = GM.ConvertDoubleToString(txtTotalUSD);
         }
     }
 }

@@ -358,12 +358,6 @@ namespace DiamondShop
             txtUSDRate.Text = GM.ConvertDoubleToString(txtUSDRate);
         }
 
-        private void txtUSDRate_TextChanged(object sender, EventArgs e)
-        {
-            txtTotalBaht.Text = (GM.ConvertStringToDouble(txtTotal) * GM.ConvertStringToDouble(txtUSDRate)).ToString();
-            txtUSDRate.Text = GM.ConvertDoubleToString(txtUSDRate);
-        }
-
         private void txtWeight_TextChanged(object sender, EventArgs e)
         {
             txtTotal.Text = (GM.ConvertStringToDouble(txtRap) * 100 * (1 + GM.ConvertStringToDouble(txtPrice)/100.0)
@@ -375,6 +369,7 @@ namespace DiamondShop
         {
             txtTotal.Text = (GM.ConvertStringToDouble(txtRap) * 100 * (1 + GM.ConvertStringToDouble(txtPrice) / 100.0)
                 * GM.ConvertStringToDouble(txtWeight)).ToString();
+            txtPrice.Text = GM.ConvertDoubleToString(txtPrice, 0);
         }
 
         private void txtRap_TextChanged(object sender, EventArgs e)
@@ -384,10 +379,11 @@ namespace DiamondShop
 
         private void txtTotalBaht_TextChanged(object sender, EventArgs e)
         {
-            txtPrice.Text = GM.ConvertDoubleToString(txtPrice,0);
-            txtTotal.Text = GM.ConvertDoubleToString(txtTotal,0);
-            txtTotalBaht.Text = GM.ConvertDoubleToString(txtTotalBaht,0);
+            txtPrice.Text = GM.ConvertDoubleToString(txtPrice, 0);
+            txtTotal.Text = GM.ConvertDoubleToString(txtTotal, 0);
+            txtTotalBaht.Text = GM.ConvertDoubleToString(txtTotalBaht, 0);
             txtUSDRate.Text = GM.ConvertDoubleToString(txtUSDRate);
+
         }
 
         private void btnUpload_Click(object sender, EventArgs e)
@@ -445,6 +441,7 @@ namespace DiamondShop
         }
         private void SetFormatNumber()
         {
+            txtTotalBaht.Text = GM.ConvertDoubleToString(txtTotalBaht, 0);
             txtTotal.Text = GM.ConvertDoubleToString(txtTotal, 0);
             txtUSDRate.Text = GM.ConvertDoubleToString(txtUSDRate);
             txtW.Text = GM.ConvertDoubleToString(txtW);
@@ -452,5 +449,10 @@ namespace DiamondShop
             txtD.Text = GM.ConvertDoubleToString(txtD);
         }
 
+        private void txtUSDRate_Leave(object sender, EventArgs e)
+        {
+            txtTotalBaht.Text = (GM.ConvertStringToDouble(txtTotal) * GM.ConvertStringToDouble(txtUSDRate)).ToString();
+            txtUSDRate.Text = GM.ConvertDoubleToString(txtUSDRate);
+        }
     }
 }
