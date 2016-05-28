@@ -41,8 +41,6 @@ namespace DiamondShop
                 gridGold.DataSource = null;
                 gridGold.Refresh();
             }
-
-            btnSearch_Click(null, null);
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -62,22 +60,10 @@ namespace DiamondShop
             DoLoadData();
         }
 
-        private void btnEdit_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void btnDelete_Click(object sender, EventArgs e)
         {
             DoDeleteData();
             DoLoadData();
-        }
-
-        
-
-        private void panel4_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void gridGold_MouseDoubleClick(object sender, MouseEventArgs e)
