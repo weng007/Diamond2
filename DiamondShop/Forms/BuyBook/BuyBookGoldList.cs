@@ -24,7 +24,7 @@ namespace DiamondShop
 
         protected override void Initial()
         {
-            cmbPercentGold.SelectedIndex = 0;
+            //cmbPercentGold.SelectedIndex = 0;
             gridGold.AutoGenerateColumns = false;
         }
 
@@ -48,7 +48,7 @@ namespace DiamondShop
         {
             ser2 = GM.GetService2();
 
-            ds = ser2.DoSearchBuyBookGold(Convert.ToDateTime(dtSBuyDate.Text),Convert.ToDateTime( dtEBuyDate.Text), Convert.ToInt16(cmbPercentGold.SelectedIndex.ToString()));
+            ds = ser2.DoSearchBuyBookGold(Convert.ToDateTime(dtSBuyDate.Text),Convert.ToDateTime( dtEBuyDate.Text));
 
             gridGold.DataSource = ds.Tables[0];
             gridGold.Refresh();

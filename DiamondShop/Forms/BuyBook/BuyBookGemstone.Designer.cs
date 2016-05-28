@@ -267,6 +267,7 @@
             this.txtSize.TabIndex = 10;
             this.txtSize.Text = "0";
             this.txtSize.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtSize.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSize_KeyPress);
             // 
             // txtMarketPrice
             // 
@@ -276,6 +277,7 @@
             this.txtMarketPrice.TabIndex = 28;
             this.txtMarketPrice.Text = "0";
             this.txtMarketPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtMarketPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSize_KeyPress);
             this.txtMarketPrice.Leave += new System.EventHandler(this.txtMarketPrice_Leave);
             // 
             // cmbShop
@@ -386,6 +388,7 @@
             this.txtPriceCarat.TabIndex = 26;
             this.txtPriceCarat.Text = "0";
             this.txtPriceCarat.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtPriceCarat.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSize_KeyPress);
             this.txtPriceCarat.Leave += new System.EventHandler(this.txtPriceCarat_Leave);
             // 
             // label13
@@ -459,6 +462,8 @@
             this.txtUSDRate.Text = "0";
             this.txtUSDRate.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtUSDRate.TextChanged += new System.EventHandler(this.txtUSDRate_TextChanged);
+            this.txtUSDRate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSize_KeyPress);
+            //this.txtUSDRate.Leave += new System.EventHandler(this.txtUSDRate_Leave);
             // 
             // label23
             // 
@@ -541,6 +546,7 @@
             this.txtPriceCaratUSD.TabIndex = 22;
             this.txtPriceCaratUSD.Text = "0";
             this.txtPriceCaratUSD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtPriceCaratUSD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSize_KeyPress);
             this.txtPriceCaratUSD.Leave += new System.EventHandler(this.txtPriceCaratUSD_Leave);
             // 
             // cmbOrigin
@@ -598,6 +604,7 @@
             this.txtWeight.Text = "0";
             this.txtWeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtWeight.TextChanged += new System.EventHandler(this.txtWeight_TextChanged);
+            this.txtWeight.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSize_KeyPress);
             // 
             // label9
             // 
@@ -617,6 +624,7 @@
             this.txtAmount.TabIndex = 12;
             this.txtAmount.Text = "0";
             this.txtAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtAmount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSize_KeyPress);
             // 
             // label18
             // 

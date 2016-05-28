@@ -81,7 +81,7 @@
             this.dtBuyDate.Location = new System.Drawing.Point(162, 17);
             this.dtBuyDate.Name = "dtBuyDate";
             this.dtBuyDate.Size = new System.Drawing.Size(131, 27);
-            this.dtBuyDate.TabIndex = 1;
+            this.dtBuyDate.TabIndex = 2;
             // 
             // panel3
             // 
@@ -156,10 +156,11 @@
             this.txtPriceGram1.Location = new System.Drawing.Point(162, 334);
             this.txtPriceGram1.Name = "txtPriceGram1";
             this.txtPriceGram1.Size = new System.Drawing.Size(92, 27);
-            this.txtPriceGram1.TabIndex = 28;
+            this.txtPriceGram1.TabIndex = 16;
             this.txtPriceGram1.Text = "0";
             this.txtPriceGram1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtPriceGram1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBuyPrice_KeyPress);
+            this.txtPriceGram1.Leave += new System.EventHandler(this.txtPriceGram1_Leave);
             // 
             // label22
             // 
@@ -186,10 +187,11 @@
             this.txtPriceGram2.Location = new System.Drawing.Point(459, 299);
             this.txtPriceGram2.Name = "txtPriceGram2";
             this.txtPriceGram2.Size = new System.Drawing.Size(92, 27);
-            this.txtPriceGram2.TabIndex = 40;
+            this.txtPriceGram2.TabIndex = 22;
             this.txtPriceGram2.Text = "0";
             this.txtPriceGram2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtPriceGram2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBuyPrice_KeyPress);
+            this.txtPriceGram2.Leave += new System.EventHandler(this.txtPriceGram2_Leave);
             // 
             // label20
             // 
@@ -216,10 +218,11 @@
             this.txtPricePerGram.Location = new System.Drawing.Point(162, 299);
             this.txtPricePerGram.Name = "txtPricePerGram";
             this.txtPricePerGram.Size = new System.Drawing.Size(92, 27);
-            this.txtPricePerGram.TabIndex = 24;
+            this.txtPricePerGram.TabIndex = 14;
             this.txtPricePerGram.Text = "0";
             this.txtPricePerGram.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtPricePerGram.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBuyPrice_KeyPress);
+            this.txtPricePerGram.Leave += new System.EventHandler(this.txtPricePerGram_Leave);
             // 
             // label16
             // 
@@ -348,10 +351,11 @@
             this.txtPrice2.Location = new System.Drawing.Point(459, 229);
             this.txtPrice2.Name = "txtPrice2";
             this.txtPrice2.Size = new System.Drawing.Size(92, 27);
-            this.txtPrice2.TabIndex = 36;
+            this.txtPrice2.TabIndex = 20;
             this.txtPrice2.Text = "0";
             this.txtPrice2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtPrice2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBuyPrice_KeyPress);
+            this.txtPrice2.Leave += new System.EventHandler(this.txtPrice2_Leave);
             // 
             // label9
             // 
@@ -368,10 +372,11 @@
             this.txtPrice1.Location = new System.Drawing.Point(162, 229);
             this.txtPrice1.Name = "txtPrice1";
             this.txtPrice1.Size = new System.Drawing.Size(92, 27);
-            this.txtPrice1.TabIndex = 20;
+            this.txtPrice1.TabIndex = 12;
             this.txtPrice1.Text = "0";
             this.txtPrice1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtPrice1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBuyPrice_KeyPress);
+            this.txtPrice1.Leave += new System.EventHandler(this.txtPrice1_Leave);
             // 
             // label8
             // 
@@ -388,20 +393,22 @@
             this.txtAmount2.Location = new System.Drawing.Point(459, 194);
             this.txtAmount2.Name = "txtAmount2";
             this.txtAmount2.Size = new System.Drawing.Size(92, 27);
-            this.txtAmount2.TabIndex = 32;
+            this.txtAmount2.TabIndex = 18;
             this.txtAmount2.Text = "0";
             this.txtAmount2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtAmount2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBuyPrice_KeyPress);
+            this.txtAmount2.Leave += new System.EventHandler(this.txtAmount2_Leave);
             // 
             // txtAmount1
             // 
             this.txtAmount1.Location = new System.Drawing.Point(162, 194);
             this.txtAmount1.Name = "txtAmount1";
             this.txtAmount1.Size = new System.Drawing.Size(92, 27);
-            this.txtAmount1.TabIndex = 16;
+            this.txtAmount1.TabIndex = 10;
             this.txtAmount1.Text = "0";
             this.txtAmount1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtAmount1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBuyPrice_KeyPress);
+            this.txtAmount1.Leave += new System.EventHandler(this.txtAmount1_Leave);
             // 
             // label5
             // 
@@ -430,10 +437,11 @@
             this.txtSellPrice.Location = new System.Drawing.Point(306, 124);
             this.txtSellPrice.Name = "txtSellPrice";
             this.txtSellPrice.Size = new System.Drawing.Size(92, 27);
-            this.txtSellPrice.TabIndex = 12;
+            this.txtSellPrice.TabIndex = 8;
             this.txtSellPrice.Text = "0";
             this.txtSellPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtSellPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBuyPrice_KeyPress);
+            this.txtSellPrice.Leave += new System.EventHandler(this.txtSellPrice_Leave);
             // 
             // label4
             // 
@@ -472,10 +480,11 @@
             this.txtBuyPrice.Location = new System.Drawing.Point(162, 124);
             this.txtBuyPrice.Name = "txtBuyPrice";
             this.txtBuyPrice.Size = new System.Drawing.Size(92, 27);
-            this.txtBuyPrice.TabIndex = 8;
+            this.txtBuyPrice.TabIndex = 6;
             this.txtBuyPrice.Text = "0";
             this.txtBuyPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtBuyPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBuyPrice_KeyPress);
+            this.txtBuyPrice.Leave += new System.EventHandler(this.txtBuyPrice_Leave);
             // 
             // label1
             // 

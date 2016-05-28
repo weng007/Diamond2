@@ -39,14 +39,12 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.cmbPercentGold = new System.Windows.Forms.ComboBox();
             this.dtEBuyDate = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dtSBuyDate = new System.Windows.Forms.DateTimePicker();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -73,14 +71,12 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(91)))), ((int)(((byte)(59)))));
-            this.panel4.Controls.Add(this.cmbPercentGold);
             this.panel4.Controls.Add(this.dtEBuyDate);
             this.panel4.Controls.Add(this.label2);
             this.panel4.Controls.Add(this.label1);
             this.panel4.Controls.Add(this.dtSBuyDate);
             this.panel4.Controls.Add(this.btnAdd);
             this.panel4.Controls.Add(this.btnSearch);
-            this.panel4.Controls.Add(this.label3);
             this.panel4.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.panel4.Location = new System.Drawing.Point(0, 1);
             this.panel4.Name = "panel4";
@@ -88,23 +84,11 @@
             this.panel4.TabIndex = 42;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
-            // cmbPercentGold
-            // 
-            this.cmbPercentGold.FormattingEnabled = true;
-            this.cmbPercentGold.Items.AddRange(new object[] {
-            "All",
-            "96.5%",
-            "99.99%"});
-            this.cmbPercentGold.Location = new System.Drawing.Point(238, 24);
-            this.cmbPercentGold.Name = "cmbPercentGold";
-            this.cmbPercentGold.Size = new System.Drawing.Size(131, 29);
-            this.cmbPercentGold.TabIndex = 1;
-            // 
             // dtEBuyDate
             // 
             this.dtEBuyDate.CustomFormat = "dd/MM/yyyy";
             this.dtEBuyDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtEBuyDate.Location = new System.Drawing.Point(394, 63);
+            this.dtEBuyDate.Location = new System.Drawing.Point(394, 21);
             this.dtEBuyDate.Name = "dtEBuyDate";
             this.dtEBuyDate.Size = new System.Drawing.Size(131, 27);
             this.dtEBuyDate.TabIndex = 8;
@@ -113,7 +97,7 @@
             // 
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(375, 63);
+            this.label2.Location = new System.Drawing.Point(375, 21);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(16, 25);
             this.label2.TabIndex = 72;
@@ -123,7 +107,7 @@
             // 
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(144, 63);
+            this.label1.Location = new System.Drawing.Point(144, 21);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(87, 25);
             this.label1.TabIndex = 71;
@@ -133,7 +117,7 @@
             // 
             this.dtSBuyDate.CustomFormat = "dd/MM/yyyy";
             this.dtSBuyDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtSBuyDate.Location = new System.Drawing.Point(238, 63);
+            this.dtSBuyDate.Location = new System.Drawing.Point(238, 21);
             this.dtSBuyDate.Name = "dtSBuyDate";
             this.dtSBuyDate.Size = new System.Drawing.Size(131, 27);
             this.dtSBuyDate.TabIndex = 4;
@@ -162,22 +146,12 @@
             this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSearch.FlatAppearance.BorderColor = System.Drawing.Color.Linen;
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.Location = new System.Drawing.Point(561, 61);
+            this.btnSearch.Location = new System.Drawing.Point(561, 19);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(105, 32);
             this.btnSearch.TabIndex = 12;
             this.btnSearch.UseVisualStyleBackColor = false;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
-            // 
-            // label3
-            // 
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(145, 27);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(73, 25);
-            this.label3.TabIndex = 27;
-            this.label3.Text = "% ทองคำ";
             // 
             // panel2
             // 
@@ -400,7 +374,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.DateTimePicker dtEBuyDate;
         private System.Windows.Forms.Label label2;
@@ -409,7 +382,6 @@
         private System.Windows.Forms.DataGridView gridGold;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox cmbPercentGold;
         private System.Windows.Forms.DataGridViewTextBoxColumn RowNum;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn BuyDate;

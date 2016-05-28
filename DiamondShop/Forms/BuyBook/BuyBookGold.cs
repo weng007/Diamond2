@@ -59,6 +59,7 @@ namespace DiamondShop
 
             this.id = id;
             LoadData();
+            SetFormatNumber();
         }
 
         protected override void Initial()
@@ -174,47 +175,80 @@ namespace DiamondShop
             else { return false; }
         }
 
-        private void cmbColorGrade_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string color = "C017";
-
-            //if (cmbColorGrade.SelectedIndex == 0)
-            //{
-            //    color = "C001";
-            //}
-
-            //cmbColor.DataSource = (GM.GetMasterTableDetail(color)).Tables[0];
-            //cmbColor.ValueMember = "ID";
-            //cmbColor.DisplayMember = "Detail";
-            //cmbColor.Refresh();
-        }
-
-        //private void txtCarat_KeyPress(object sender, KeyPressEventArgs e)
-        //{
-        //    if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
-        //    {
-        //        e.Handled = true;
-        //    }
-        //}
-
-        private void cmbShapeAndCut_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            //if(cmbShapeAndCut.SelectedIndex == 0)
-            //{
-            //    lbl1.Text = "-";
-            //}
-            //else
-            //{
-            //    lbl1.Text = "x";
-            //}
-        }
-
         private void txtBuyPrice_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
             {
                 e.Handled = true;
             }
+        }
+        private void txtAmount1_Leave(object sender, EventArgs e)
+        {
+            txtTotal1.Text = (GM.ConvertStringToDouble(txtAmount1) * GM.ConvertStringToDouble(txtPrice1)).ToString();
+
+            txtAmount1.Text = GM.ConvertDoubleToString(txtAmount1);
+            txtTotal1.Text = GM.ConvertDoubleToString(txtTotal1);
+        }
+
+        private void txtPrice1_Leave(object sender, EventArgs e)
+        {
+            txtTotal1.Text = (GM.ConvertStringToDouble(txtAmount1) * GM.ConvertStringToDouble(txtPrice1)).ToString();
+
+            txtPrice1.Text = GM.ConvertDoubleToString(txtPrice1, 0);
+            txtTotal1.Text = GM.ConvertDoubleToString(txtTotal1);
+        }
+        private void txtAmount2_Leave(object sender, EventArgs e)
+        {
+            txtTotal2.Text = (GM.ConvertStringToDouble(txtAmount2) * GM.ConvertStringToDouble(txtPrice2)).ToString();
+
+            txtAmount2.Text = GM.ConvertDoubleToString(txtAmount2);
+            txtTotal2.Text = GM.ConvertDoubleToString(txtTotal2);
+        }
+        private void txtPrice2_Leave(object sender, EventArgs e)
+        {
+            txtTotal2.Text = (GM.ConvertStringToDouble(txtAmount2) * GM.ConvertStringToDouble(txtPrice2)).ToString();
+
+            txtPrice2.Text = GM.ConvertDoubleToString(txtPrice2, 0);
+            txtTotal2.Text = GM.ConvertDoubleToString(txtTotal2);
+        }
+        private void SetFormatNumber()
+        {
+            txtBuyPrice.Text = GM.ConvertDoubleToString(txtBuyPrice, 0);
+            txtSellPrice.Text = GM.ConvertDoubleToString(txtSellPrice, 0);
+            txtAmount1.Text = GM.ConvertDoubleToString(txtAmount1);
+            txtPrice1.Text = GM.ConvertDoubleToString(txtPrice1, 0);
+            txtTotal1.Text = GM.ConvertDoubleToString(txtTotal1, 0);
+            txtPricePerGram.Text = GM.ConvertDoubleToString(txtPricePerGram,0);
+            txtPriceGram1.Text = GM.ConvertDoubleToString(txtPriceGram1,0);
+
+            txtAmount2.Text = GM.ConvertDoubleToString(txtAmount2);
+            txtPrice2.Text = GM.ConvertDoubleToString(txtPrice2, 0);
+            txtTotal2.Text = GM.ConvertDoubleToString(txtTotal2, 0);
+            txtPriceGram2.Text = GM.ConvertDoubleToString(txtPriceGram2, 0);
+        }
+
+        private void txtBuyPrice_Leave(object sender, EventArgs e)
+        {
+            txtBuyPrice.Text = GM.ConvertDoubleToString(txtBuyPrice, 0);
+        }
+
+        private void txtSellPrice_Leave(object sender, EventArgs e)
+        {
+            txtSellPrice.Text = GM.ConvertDoubleToString(txtSellPrice, 0);
+        }
+
+        private void txtPricePerGram_Leave(object sender, EventArgs e)
+        {
+            txtPricePerGram.Text = GM.ConvertDoubleToString(txtPricePerGram, 0);
+        }
+
+        private void txtPriceGram1_Leave(object sender, EventArgs e)
+        {
+            txtPriceGram1.Text = GM.ConvertDoubleToString(txtPriceGram1, 0);
+        }
+        private void txtPriceGram2_Leave(object sender, EventArgs e)
+        {
+            txtPriceGram2.Text = GM.ConvertDoubleToString(txtPriceGram2, 0);
         }
     }
 }

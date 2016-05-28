@@ -738,13 +738,13 @@ namespace DiamondDS.DS {
                         int EditBy, 
                         System.DateTime EditDate, 
                         int Amount1, 
-                        int Weight1, 
+                        double Weight1, 
                         int Amount2, 
-                        int Weight2, 
+                        double Weight2, 
                         int Amount3, 
-                        int Weight3, 
+                        double Weight3, 
                         int Amount4, 
-                        int Weight4) {
+                        double Weight4) {
                 BuyBookJewelryRow rowBuyBookJewelryRow = ((BuyBookJewelryRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         RowNum,
@@ -911,19 +911,19 @@ namespace DiamondDS.DS {
                 base.Columns.Add(this.columnEditDate);
                 this.columnAmount1 = new global::System.Data.DataColumn("Amount1", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnAmount1);
-                this.columnWeight1 = new global::System.Data.DataColumn("Weight1", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnWeight1 = new global::System.Data.DataColumn("Weight1", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnWeight1);
                 this.columnAmount2 = new global::System.Data.DataColumn("Amount2", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnAmount2);
-                this.columnWeight2 = new global::System.Data.DataColumn("Weight2", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnWeight2 = new global::System.Data.DataColumn("Weight2", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnWeight2);
                 this.columnAmount3 = new global::System.Data.DataColumn("Amount3", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnAmount3);
-                this.columnWeight3 = new global::System.Data.DataColumn("Weight3", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnWeight3 = new global::System.Data.DataColumn("Weight3", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnWeight3);
                 this.columnAmount4 = new global::System.Data.DataColumn("Amount4", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnAmount4);
-                this.columnWeight4 = new global::System.Data.DataColumn("Weight4", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnWeight4 = new global::System.Data.DataColumn("Weight4", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnWeight4);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnID}, true));
@@ -1556,10 +1556,10 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int Weight1 {
+            public double Weight1 {
                 get {
                     try {
-                        return ((int)(this[this.tableBuyBookJewelry.Weight1Column]));
+                        return ((double)(this[this.tableBuyBookJewelry.Weight1Column]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'Weight1\' in table \'BuyBookJewelry\' is DBNull.", e);
@@ -1588,10 +1588,10 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int Weight2 {
+            public double Weight2 {
                 get {
                     try {
-                        return ((int)(this[this.tableBuyBookJewelry.Weight2Column]));
+                        return ((double)(this[this.tableBuyBookJewelry.Weight2Column]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'Weight2\' in table \'BuyBookJewelry\' is DBNull.", e);
@@ -1620,10 +1620,10 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int Weight3 {
+            public double Weight3 {
                 get {
                     try {
-                        return ((int)(this[this.tableBuyBookJewelry.Weight3Column]));
+                        return ((double)(this[this.tableBuyBookJewelry.Weight3Column]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'Weight3\' in table \'BuyBookJewelry\' is DBNull.", e);
@@ -1652,10 +1652,10 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int Weight4 {
+            public double Weight4 {
                 get {
                     try {
-                        return ((int)(this[this.tableBuyBookJewelry.Weight4Column]));
+                        return ((double)(this[this.tableBuyBookJewelry.Weight4Column]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'Weight4\' in table \'BuyBookJewelry\' is DBNull.", e);

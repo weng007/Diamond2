@@ -281,6 +281,7 @@ namespace DiamondShop
             {
                 txtTotalBaht.Text = "0";
             }
+            txtUSDRate.Text = GM.ConvertDoubleToString(txtUSDRate, 0);
         }
 
         private void txtPriceCaratUSD_Leave(object sender, EventArgs e)
@@ -303,6 +304,9 @@ namespace DiamondShop
             txtUSDRate.Text = GM.ConvertDoubleToString(txtUSDRate, 0);
             txtPriceCaratUSD.Text = GM.ConvertDoubleToString(txtPriceCaratUSD, 0);
             txtMarketPrice.Text = GM.ConvertDoubleToString(txtMarketPrice, 0);
+            txtAmount.Text = GM.ConvertDoubleToString(txtAmount, 0);
+            txtWeight.Text = GM.ConvertDoubleToString(txtWeight, 0);
+            txtSize.Text = GM.ConvertDoubleToString(txtSize, 0);
         }
         private void txtPriceCarat_Leave(object sender, EventArgs e)
         {
@@ -338,5 +342,15 @@ namespace DiamondShop
         {
             txtMarketPrice.Text = GM.ConvertDoubleToString(txtMarketPrice, 0);
         }
+
+        private void txtSize_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+        }
+
+        
     }
 }
