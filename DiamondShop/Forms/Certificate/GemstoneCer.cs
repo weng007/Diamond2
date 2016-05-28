@@ -19,6 +19,8 @@ namespace DiamondShop
         dsGemstoneCer tds = new dsGemstoneCer();
         MemoryStream ms1;
         byte[] image1;
+        MemoryStream ms;
+        byte[] file;
 
         public GemstoneCer()
         {
