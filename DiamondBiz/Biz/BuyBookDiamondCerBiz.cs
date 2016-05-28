@@ -21,6 +21,18 @@ namespace DiamondBiz.Biz
                 //เพื่อให้แสดงทั้งหมด
                 sColor = 0; eColor = 10000;
             }   
+            if(colorType != 0)
+            {
+                if (eColor == 0)
+                { eColor = 10000; }
+            }
+
+            //All
+            if (eClearity == 0)
+            {
+                //เพื่อให้แสดงทั้งหมด
+                sClearity = 0; eClearity = 10000;
+            }
 
             try
             {

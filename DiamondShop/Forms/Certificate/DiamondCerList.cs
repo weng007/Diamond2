@@ -99,6 +99,8 @@ namespace DiamondShop
                 gridDiamondCer.DataSource = null;
                 gridDiamondCer.Refresh();
             }
+
+            btnSearch_Click(null,null);
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -161,6 +163,7 @@ namespace DiamondShop
             }
             else
             {
+                cmbSColor.Enabled = true;
                 cmbEColor.Enabled = false;
                 color = "C017";
             }

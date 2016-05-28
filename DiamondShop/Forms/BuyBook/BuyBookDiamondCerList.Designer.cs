@@ -78,6 +78,7 @@
             this.LabName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ShapeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Weight = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColorTypeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColorName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ClearityName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CutName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -439,6 +440,7 @@
             this.LabName,
             this.ShapeName,
             this.Weight,
+            this.ColorTypeName,
             this.ColorName,
             this.ClearityName,
             this.CutName,
@@ -536,7 +538,15 @@
             this.Weight.HeaderText = "Weight";
             this.Weight.Name = "Weight";
             this.Weight.ReadOnly = true;
-            this.Weight.Width = 60;
+            this.Weight.Width = 70;
+            // 
+            // ColorTypeName
+            // 
+            this.ColorTypeName.DataPropertyName = "ColorTypeName";
+            this.ColorTypeName.HeaderText = "ColorType";
+            this.ColorTypeName.Name = "ColorTypeName";
+            this.ColorTypeName.ReadOnly = true;
+            this.ColorTypeName.Width = 150;
             // 
             // ColorName
             // 
@@ -754,6 +764,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn LabName;
         private System.Windows.Forms.DataGridViewTextBoxColumn ShapeName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Weight;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColorTypeName;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColorName;
         private System.Windows.Forms.DataGridViewTextBoxColumn ClearityName;
         private System.Windows.Forms.DataGridViewTextBoxColumn CutName;

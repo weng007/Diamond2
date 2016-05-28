@@ -17,6 +17,25 @@ namespace DiamondBiz.Biz
         public dsBuyBookDiamondCer DoSearchData(string code,string reportNumber, int shape, int lab, double sWeight, double eWeight, int colorType,int sColor,
             int eColor, int sClearity, int eClearity, int status, int shop)
         {
+            //All
+            if (colorType == 0)
+            {
+                //เพื่อให้แสดงทั้งหมด
+                sColor = 0; eColor = 10000;
+            }
+            if (colorType != 0)
+            {
+                if (eColor == 0)
+                { eColor = 10000; }
+            }
+
+            //All
+            if (eClearity == 0)
+            {
+                //เพื่อให้แสดงทั้งหมด
+                sClearity = 0; eClearity = 10000;
+            }
+
             try
             {
                 return dal.DoSearchData(code,reportNumber, shape, lab, sWeight, eWeight, colorType,sColor,
