@@ -116,6 +116,7 @@
             // 
             this.Shop2.AutoSize = true;
             this.Shop2.BackColor = System.Drawing.Color.Transparent;
+            this.Shop2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Shop2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Shop2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Shop2.Location = new System.Drawing.Point(602, 84);
@@ -130,6 +131,7 @@
             // 
             this.Shop1.AutoSize = true;
             this.Shop1.BackColor = System.Drawing.Color.Transparent;
+            this.Shop1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Shop1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Shop1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Shop1.Location = new System.Drawing.Point(345, 84);
@@ -236,6 +238,7 @@
             this.btnShopAll.Size = new System.Drawing.Size(232, 190);
             this.btnShopAll.TabIndex = 6;
             this.btnShopAll.UseVisualStyleBackColor = false;
+            this.btnShopAll.Click += new System.EventHandler(this.btnShopAll_Click);
             // 
             // panel13
             // 
@@ -268,6 +271,7 @@
             this.btnRestore.BackColor = System.Drawing.Color.Transparent;
             this.btnRestore.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRestore.BackgroundImage")));
             this.btnRestore.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnRestore.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRestore.FlatAppearance.BorderSize = 0;
             this.btnRestore.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRestore.Location = new System.Drawing.Point(744, 0);
@@ -276,6 +280,7 @@
             this.btnRestore.Size = new System.Drawing.Size(38, 32);
             this.btnRestore.TabIndex = 37;
             this.btnRestore.UseVisualStyleBackColor = false;
+            this.btnRestore.Click += new System.EventHandler(this.btnRestore_Click);
             // 
             // btnMinimize
             // 
@@ -283,6 +288,7 @@
             this.btnMinimize.BackColor = System.Drawing.Color.Transparent;
             this.btnMinimize.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMinimize.BackgroundImage")));
             this.btnMinimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMinimize.FlatAppearance.BorderSize = 0;
             this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMinimize.Location = new System.Drawing.Point(705, 0);
@@ -291,6 +297,7 @@
             this.btnMinimize.Size = new System.Drawing.Size(38, 32);
             this.btnMinimize.TabIndex = 37;
             this.btnMinimize.UseVisualStyleBackColor = false;
+            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
             // 
             // btnClose
             // 
@@ -298,6 +305,7 @@
             this.btnClose.BackColor = System.Drawing.Color.Transparent;
             this.btnClose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClose.BackgroundImage")));
             this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Location = new System.Drawing.Point(780, 0);
@@ -306,6 +314,7 @@
             this.btnClose.Size = new System.Drawing.Size(38, 32);
             this.btnClose.TabIndex = 34;
             this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // ShopAll
             // 

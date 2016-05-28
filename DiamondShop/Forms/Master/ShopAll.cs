@@ -79,5 +79,28 @@ namespace DiamondShop
                 }
             }
         }
+
+        private void btnShopAll_Click(object sender, EventArgs e)
+        {
+            Main frm = new Main();
+            frm.ShowDialog();
+
+            this.Close();
+        }
+
+        private void btnMinimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnRestore_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

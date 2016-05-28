@@ -74,12 +74,16 @@ namespace DiamondShop
                 {
                     ShopAll f = new ShopAll(0);
                     f.ShowDialog();
+
+                    this.Close();
                 }
+                else
+                {
+                    Main frm = new Main();
+                    frm.ShowDialog();
 
-                Main frm = new Main();
-                frm.ShowDialog();
-
-                this.Close();
+                    this.Close();
+                }             
             }      
         }
 
