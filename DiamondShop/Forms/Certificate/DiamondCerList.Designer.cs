@@ -34,6 +34,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel4 = new System.Windows.Forms.Panel();
             this.cmbColorType = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -71,7 +72,6 @@
             this.LabName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ShapeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Weight = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColorTypeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColorName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ClearityName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CutName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -404,7 +404,6 @@
             this.LabName,
             this.ShapeName,
             this.Weight,
-            this.ColorTypeName,
             this.ColorName,
             this.ClearityName,
             this.CutName,
@@ -486,13 +485,6 @@
             this.Weight.Name = "Weight";
             this.Weight.ReadOnly = true;
             this.Weight.Width = 90;
-            // 
-            // ColorTypeName
-            // 
-            this.ColorTypeName.DataPropertyName = "ColorTypeName";
-            this.ColorTypeName.HeaderText = "ColorType";
-            this.ColorTypeName.Name = "ColorTypeName";
-            this.ColorTypeName.ReadOnly = true;
             // 
             // ColorName
             // 
@@ -604,6 +596,8 @@
             // BuyDate
             // 
             this.BuyDate.DataPropertyName = "BuyDate";
+            dataGridViewCellStyle6.Format = "dd/MM/yyyy";
+            this.BuyDate.DefaultCellStyle = dataGridViewCellStyle6;
             this.BuyDate.HeaderText = "Buy Date";
             this.BuyDate.Name = "BuyDate";
             this.BuyDate.ReadOnly = true;
@@ -667,7 +661,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn LabName;
         private System.Windows.Forms.DataGridViewTextBoxColumn ShapeName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Weight;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColorTypeName;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColorName;
         private System.Windows.Forms.DataGridViewTextBoxColumn ClearityName;
         private System.Windows.Forms.DataGridViewTextBoxColumn CutName;

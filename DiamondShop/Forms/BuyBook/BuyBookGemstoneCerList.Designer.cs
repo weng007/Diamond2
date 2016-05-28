@@ -37,6 +37,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tds = new DiamondDS.DS.dsDiamondCer();
             this.panel4 = new System.Windows.Forms.Panel();
             this.cmbOrigin = new System.Windows.Forms.ComboBox();
@@ -601,6 +603,8 @@
             // DueDate
             // 
             this.DueDate.DataPropertyName = "DueDate";
+            dataGridViewCellStyle9.Format = "dd/MM/yyyy";
+            this.DueDate.DefaultCellStyle = dataGridViewCellStyle9;
             this.DueDate.HeaderText = "DueDate";
             this.DueDate.Name = "DueDate";
             this.DueDate.ReadOnly = true;
@@ -633,6 +637,8 @@
             // BuyDate
             // 
             this.BuyDate.DataPropertyName = "BuyDate";
+            dataGridViewCellStyle10.Format = "dd/MM/yyyy";
+            this.BuyDate.DefaultCellStyle = dataGridViewCellStyle10;
             this.BuyDate.HeaderText = "Buy Date";
             this.BuyDate.Name = "BuyDate";
             this.BuyDate.ReadOnly = true;

@@ -34,6 +34,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.txtSeller = new System.Windows.Forms.TextBox();
             this.dtEBuyDate = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -43,7 +44,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.gridSetting = new System.Windows.Forms.DataGridView();
-            this.txtSeller = new System.Windows.Forms.TextBox();
             this.RowNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BuyDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -72,6 +72,13 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1036, 117);
             this.panel4.TabIndex = 42;
+            // 
+            // txtSeller
+            // 
+            this.txtSeller.Location = new System.Drawing.Point(238, 21);
+            this.txtSeller.Name = "txtSeller";
+            this.txtSeller.Size = new System.Drawing.Size(132, 27);
+            this.txtSeller.TabIndex = 73;
             // 
             // dtEBuyDate
             // 
@@ -187,13 +194,6 @@
             this.gridSetting.TabIndex = 2;
             this.gridSetting.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.gridSetting_MouseDoubleClick);
             // 
-            // txtSeller
-            // 
-            this.txtSeller.Location = new System.Drawing.Point(238, 21);
-            this.txtSeller.Name = "txtSeller";
-            this.txtSeller.Size = new System.Drawing.Size(132, 27);
-            this.txtSeller.TabIndex = 73;
-            // 
             // RowNum
             // 
             this.RowNum.DataPropertyName = "RowNum";
@@ -215,7 +215,7 @@
             // BuyDate
             // 
             this.BuyDate.DataPropertyName = "BuyDate";
-            dataGridViewCellStyle2.Format = "dd/mm/yyyy";
+            dataGridViewCellStyle2.Format = "dd/MM/yyyy";
             this.BuyDate.DefaultCellStyle = dataGridViewCellStyle2;
             this.BuyDate.HeaderText = "Buy Date";
             this.BuyDate.Name = "BuyDate";
