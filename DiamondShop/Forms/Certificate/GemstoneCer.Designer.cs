@@ -204,6 +204,7 @@
             // linkFile
             // 
             this.linkFile.AutoSize = true;
+            this.linkFile.Cursor = System.Windows.Forms.Cursors.Hand;
             this.linkFile.Location = new System.Drawing.Point(79, 400);
             this.linkFile.Name = "linkFile";
             this.linkFile.Size = new System.Drawing.Size(122, 21);
@@ -232,6 +233,7 @@
             this.btnImage1.BackColor = System.Drawing.SystemColors.Control;
             this.btnImage1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnImage1.BackgroundImage")));
             this.btnImage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnImage1.Enabled = false;
             this.btnImage1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnImage1.Location = new System.Drawing.Point(61, 223);
             this.btnImage1.Name = "btnImage1";

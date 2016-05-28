@@ -82,6 +82,12 @@ namespace DiamondShop
                     Image backImage1 = Image.FromStream(ms1);
                     btnImage1.BackgroundImage = backImage1;
                 }
+
+                if (tds.GemstoneCer[0]["Certificate"].ToString() != "")
+                {
+                    file = (byte[])tds.GemstoneCer[0]["Certificate"];
+                    linkFile.Text = "Certificate";
+                }
             }
 
             base.LoadData();
@@ -172,6 +178,24 @@ namespace DiamondShop
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
             {
                 e.Handled = true;
+            }
+        }
+
+        private void linkFile_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            if (file != null && file.Length > 0)
+            {
+                System.IO.FileStream wFile;
+                if (!Directory.Exists(GM.Path))
+                {
+                    Directory.CreateDirectory("C:\\Project");
+                }
+                wFile = new FileStream("C:\\Project\\Certificate.pdf", FileMode.Create);
+                wFile.Write(file, 0, file.Length);
+                wFile.Flush();
+                wFile.Close();
+
+                System.Diagnostics.Process.Start(@"C:\\Project\\Certificate.pdf");
             }
         }
     }
