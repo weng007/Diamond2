@@ -388,8 +388,9 @@ namespace DiamondShop
 
         private void btnUpload_Click(object sender, EventArgs e)
         {
+            openFileDialog1.Filter = "Pdf Files|*.pdf";
             if (openFileDialog1.ShowDialog() == DialogResult.OK && openFileDialog1.CheckFileExists)
-            {
+            {      
                 using (var stream = new FileStream(openFileDialog1.InitialDirectory + openFileDialog1.FileName, FileMode.Open, FileAccess.Read))
                 {
                     using (var reader = new BinaryReader(stream))
@@ -412,13 +413,20 @@ namespace DiamondShop
 
         private void linkFile_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            
             if(file.Length > 0)
             {
-                string path = Directory.GetCurrentDirectory();
+                System.IO.FileStream wFile;
+                if (!Directory.Exists(GM.Path))
+                {
+                    Directory.CreateDirectory("C:\\Project");
+                }
+                wFile = new FileStream("C:\\Project\\Certificate.pdf", FileMode.Create);
+                wFile.Write(file, 0, file.Length);
+                wFile.Flush();
+                wFile.Close();
 
-                FileStream fs = new FileStream(@"F:\Project\Temp\Temp.pdf", FileMode.OpenOrCreate,FileAccess.ReadWrite);
-
-                fs.Flush(true);
+                System.Diagnostics.Process.Start(@"C:\\Project\\Certificate.pdf");             
             }
         }
     }

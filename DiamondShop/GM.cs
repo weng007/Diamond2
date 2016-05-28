@@ -22,6 +22,9 @@ namespace DiamondShop
         private static Service2 ser2;
         private static Service3 ser3;
 
+        //Path For Save Temp File
+        public static string Path = "C:\\Certificate";
+
         //Encrypt
         static readonly string PasswordHash = "IamPassword";
         static readonly string SaltKey = "unIcKeY@@";

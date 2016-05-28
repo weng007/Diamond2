@@ -14,7 +14,7 @@
   <xs:element name="dsBuyBookGemstoneCer" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsBuyBookGemstoneCer" msprop:Generator_UserDSName="dsBuyBookGemstoneCer">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="BuyBookGemstoneCer" msprop:Generator_TableClassName="BuyBookGemstoneCerDataTable" msprop:Generator_TableVarName="tableBuyBookGemstoneCer" msprop:Generator_TablePropName="BuyBookGemstoneCer" msprop:Generator_RowDeletingName="BuyBookGemstoneCerRowDeleting" msprop:Generator_RowChangingName="BuyBookGemstoneCerRowChanging" msprop:Generator_RowEvHandlerName="BuyBookGemstoneCerRowChangeEventHandler" msprop:Generator_RowDeletedName="BuyBookGemstoneCerRowDeleted" msprop:Generator_UserTableName="BuyBookGemstoneCer" msprop:Generator_RowChangedName="BuyBookGemstoneCerRowChanged" msprop:Generator_RowEvArgName="BuyBookGemstoneCerRowChangeEvent" msprop:Generator_RowClassName="BuyBookGemstoneCerRow">
+        <xs:element name="BuyBookGemstoneCer" msprop:Generator_TableClassName="BuyBookGemstoneCerDataTable" msprop:Generator_TableVarName="tableBuyBookGemstoneCer" msprop:Generator_RowChangedName="BuyBookGemstoneCerRowChanged" msprop:Generator_TablePropName="BuyBookGemstoneCer" msprop:Generator_RowDeletingName="BuyBookGemstoneCerRowDeleting" msprop:Generator_RowChangingName="BuyBookGemstoneCerRowChanging" msprop:Generator_RowEvHandlerName="BuyBookGemstoneCerRowChangeEventHandler" msprop:Generator_RowDeletedName="BuyBookGemstoneCerRowDeleted" msprop:Generator_RowClassName="BuyBookGemstoneCerRow" msprop:Generator_UserTableName="BuyBookGemstoneCer" msprop:Generator_RowEvArgName="BuyBookGemstoneCerRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="RowNum" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnRowNum" msprop:Generator_ColumnPropNameInRow="RowNum" msprop:Generator_ColumnPropNameInTable="RowNumColumn" msprop:Generator_UserColumnName="RowNum" type="xs:long" minOccurs="0" />
@@ -131,6 +131,7 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+              <xs:element name="Certificate" msprop:Generator_ColumnVarNameInTable="columnCertificate" msprop:Generator_ColumnPropNameInRow="Certificate" msprop:Generator_ColumnPropNameInTable="CertificateColumn" msprop:Generator_UserColumnName="Certificate" type="xs:base64Binary" minOccurs="0" />
               <xs:element name="IsDeleted" msprop:Generator_ColumnVarNameInTable="columnIsDeleted" msprop:Generator_ColumnPropNameInRow="IsDeleted" msprop:Generator_ColumnPropNameInTable="IsDeletedColumn" msprop:Generator_UserColumnName="IsDeleted" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
