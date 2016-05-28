@@ -355,17 +355,20 @@ namespace DiamondShop
         private void txtTotal_TextChanged(object sender, EventArgs e)
         {
             txtTotalBaht.Text = (GM.ConvertStringToDouble(txtTotal) * GM.ConvertStringToDouble(txtUSDRate)).ToString();
+            txtUSDRate.Text = GM.ConvertDoubleToString(txtUSDRate);
         }
 
         private void txtUSDRate_TextChanged(object sender, EventArgs e)
         {
             txtTotalBaht.Text = (GM.ConvertStringToDouble(txtTotal) * GM.ConvertStringToDouble(txtUSDRate)).ToString();
+            txtUSDRate.Text = GM.ConvertDoubleToString(txtUSDRate);
         }
 
         private void txtWeight_TextChanged(object sender, EventArgs e)
         {
             txtTotal.Text = (GM.ConvertStringToDouble(txtRap) * 100 * (1 + GM.ConvertStringToDouble(txtPrice)/100.0)
                 * GM.ConvertStringToDouble(txtWeight)).ToString();
+            txtUSDRate.Text = GM.ConvertDoubleToString(txtUSDRate);
         }
 
         private void txtPrice_Leave(object sender, EventArgs e)
@@ -384,6 +387,7 @@ namespace DiamondShop
             txtPrice.Text = GM.ConvertDoubleToString(txtPrice,0);
             txtTotal.Text = GM.ConvertDoubleToString(txtTotal,0);
             txtTotalBaht.Text = GM.ConvertDoubleToString(txtTotalBaht,0);
+            txtUSDRate.Text = GM.ConvertDoubleToString(txtUSDRate);
         }
 
         private void btnUpload_Click(object sender, EventArgs e)
@@ -409,6 +413,7 @@ namespace DiamondShop
         private void SetFormatNumber()
         {
             txtTotal.Text = GM.ConvertDoubleToString(txtTotal, 0);
+            txtUSDRate.Text = GM.ConvertDoubleToString(txtUSDRate);
         }
 
         private void linkFile_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
