@@ -13,13 +13,14 @@ namespace DiamondDAL.DAL
         dsBuyBookGemstone ds = new dsBuyBookGemstone();
         int flag = 0;
 
-        public dsBuyBookGemstone DoSearchData(string Code, double Size, string Shape)
+        public dsBuyBookGemstone DoSearchData(string Code, double Size, double ESize, string Shape)
         {
             try
             {
                 SQL.ClearParameter();
                 SQL.CreateParameter("Code", Code);
                 SQL.CreateParameter("Size", Size);
+                SQL.CreateParameter("ESize", ESize);
                 SQL.CreateParameter("Shape", Shape);
                 SQL.FillDataSetBySP("SP_BuyBookGemstone_Search", ds.BuyBookGemstone);
             }
