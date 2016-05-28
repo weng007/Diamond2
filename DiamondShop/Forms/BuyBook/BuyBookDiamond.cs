@@ -354,6 +354,7 @@ namespace DiamondShop
             {
                 txtTotalBaht.Text = (GM.ConvertStringToDouble(txtPriceCarat) * GM.ConvertStringToDouble(txtWeight)).ToString();
                 txtPriceCarat.Text = GM.ConvertDoubleToString(txtPriceCarat, 0);
+                txtUSDRate.Text = GM.ConvertDoubleToString(txtUSDRate);
             }
             
         }
@@ -363,6 +364,7 @@ namespace DiamondShop
             txtTotalUSD.Text = (GM.ConvertStringToDouble(txtWeight) * GM.ConvertStringToDouble(txtPriceCaratUSD)).ToString();
 
             txtPriceCaratUSD.Text = GM.ConvertDoubleToString(txtPriceCaratUSD, 0);
+            txtUSDRate.Text = GM.ConvertDoubleToString(txtUSDRate);
         }
 
     }

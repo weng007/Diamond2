@@ -365,6 +365,7 @@ namespace DiamondShop
         private void txtPriceCaratUSD_TextChanged(object sender, EventArgs e)
         {
             txtTotalUSD.Text = (GM.ConvertStringToDouble(txtWeight) * GM.ConvertStringToDouble(txtPriceCaratUSD)).ToString();
+            txtUSDRate.Text = GM.ConvertDoubleToString(txtUSDRate);
         }
 
         private void txtUSDRate_TextChanged(object sender, EventArgs e)
@@ -372,6 +373,7 @@ namespace DiamondShop
             if (chkPayByUSD.Checked)
             {
                 txtTotalBaht.Text = (GM.ConvertStringToDouble(txtTotalUSD) * GM.ConvertStringToDouble(txtUSDRate)).ToString();
+                txtUSDRate.Text = GM.ConvertDoubleToString(txtUSDRate);
             }
         }
 
@@ -380,6 +382,7 @@ namespace DiamondShop
             if (!chkPayByUSD.Checked)
             {
                 txtTotalBaht.Text = (GM.ConvertStringToDouble(txtPriceCarat) * GM.ConvertStringToDouble(txtWeight)).ToString();
+                txtUSDRate.Text = GM.ConvertDoubleToString(txtUSDRate);
             }
         }
 
@@ -389,6 +392,7 @@ namespace DiamondShop
             txtPriceCaratUSD.Text = GM.ConvertDoubleToString(txtPriceCaratUSD,0);
             txtPriceCarat.Text = GM.ConvertDoubleToString(txtPriceCarat, 0);
             txtTotalBaht.Text = GM.ConvertDoubleToString(txtTotalBaht,0);
+            txtUSDRate.Text = GM.ConvertDoubleToString(txtUSDRate);
         }
 
         private void btnUpload_Click(object sender, EventArgs e)

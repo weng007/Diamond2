@@ -281,7 +281,7 @@ namespace DiamondShop
             {
                 txtTotalBaht.Text = "0";
             }
-            txtUSDRate.Text = GM.ConvertDoubleToString(txtUSDRate, 0);
+            txtUSDRate.Text = GM.ConvertDoubleToString(txtUSDRate);
         }
 
         private void txtPriceCaratUSD_Leave(object sender, EventArgs e)
@@ -293,7 +293,7 @@ namespace DiamondShop
 
         private void txtTotalBaht_TextChanged(object sender, EventArgs e)
         {
-            txtUSDRate.Text = GM.ConvertDoubleToString(txtUSDRate,0);
+            txtUSDRate.Text = GM.ConvertDoubleToString(txtUSDRate);
             txtTotalUSD.Text = GM.ConvertDoubleToString(txtTotalUSD,0);
             txtPriceCarat.Text = GM.ConvertDoubleToString(txtPriceCarat,0);
             txtTotalBaht.Text = GM.ConvertDoubleToString(txtTotalBaht,0);
@@ -301,7 +301,7 @@ namespace DiamondShop
 
         private void SetFormatNumber()
         {
-            txtUSDRate.Text = GM.ConvertDoubleToString(txtUSDRate, 0);
+            txtUSDRate.Text = GM.ConvertDoubleToString(txtUSDRate);
             txtPriceCaratUSD.Text = GM.ConvertDoubleToString(txtPriceCaratUSD, 0);
             txtMarketPrice.Text = GM.ConvertDoubleToString(txtMarketPrice, 0);
             txtAmount.Text = GM.ConvertDoubleToString(txtAmount, 0);
