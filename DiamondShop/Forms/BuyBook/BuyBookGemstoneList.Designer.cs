@@ -287,7 +287,7 @@
             // 
             this.Weight.DataPropertyName = "Weight";
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle2.Format = "N0";
+            dataGridViewCellStyle2.Format = "N2";
             this.Weight.DefaultCellStyle = dataGridViewCellStyle2;
             this.Weight.HeaderText = "Weight";
             this.Weight.Name = "Weight";
