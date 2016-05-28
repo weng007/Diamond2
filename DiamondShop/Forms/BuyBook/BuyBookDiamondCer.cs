@@ -12,12 +12,14 @@ using DiamondShop.FormMaster;
 using DiamondDS.DS;
 using DiamondShop.DiamondService;
 
+
 namespace DiamondShop
 {
     public partial class BuyBookDiamondCer : FormInfo
     {
         dsBuyBookDiamondCer tds = new dsBuyBookDiamondCer();
         bool isAuthorize = false;
+        MemoryStream ms;
         byte[] file;
 
         public BuyBookDiamondCer()
@@ -164,6 +166,12 @@ namespace DiamondShop
               {
                 binder.BindValueToControl(tds.BuyBookDiamondCer[0]);
 
+                if (tds.BuyBookDiamondCer[0]["Certificate"].ToString() != "")
+                {
+                    file = (byte[])tds.BuyBookDiamondCer[0]["Certificate"];
+                    linkFile.Text = "Certificate";
+                }
+
                 if (tds.BuyBookDiamondCer[0]["IsInscription"].ToString() == "0")
                 {
                     rdoIns1.Checked = false;
@@ -211,6 +219,12 @@ namespace DiamondShop
             binder.BindValueToDataRow(row);
             row.IsInscription = rdoIns1.Checked ?"1":"0";
             row.IsPaid = rdoYes.Checked ? "1" : "0";
+
+            //แนบ Certificate
+            if (file != null && file.Length > 0)
+            {
+                row.Certificate = file;
+            }
 
             try
             {
@@ -374,7 +388,7 @@ namespace DiamondShop
 
         private void btnUpload_Click(object sender, EventArgs e)
         {
-            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            if (openFileDialog1.ShowDialog() == DialogResult.OK && openFileDialog1.CheckFileExists)
             {
                 using (var stream = new FileStream(openFileDialog1.InitialDirectory + openFileDialog1.FileName, FileMode.Open, FileAccess.Read))
                 {
@@ -383,12 +397,29 @@ namespace DiamondShop
                         file = reader.ReadBytes((int)stream.Length);
                     }
                 }
+
+                if(file.Length > 0)
+                {
+                    linkFile.Text = "Certificate";
+                }
             }
         }
         
         private void SetFormatNumber()
         {
             txtTotal.Text = GM.ConvertDoubleToString(txtTotal, 0);
+        }
+
+        private void linkFile_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            if(file.Length > 0)
+            {
+                string path = Directory.GetCurrentDirectory();
+
+                FileStream fs = new FileStream(@"F:\Project\Temp\Temp.pdf", FileMode.OpenOrCreate,FileAccess.ReadWrite);
+
+                fs.Flush(true);
+            }
         }
     }
 }

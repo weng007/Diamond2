@@ -546,6 +546,7 @@
             this.linkFile.TabIndex = 122;
             this.linkFile.TabStop = true;
             this.linkFile.Text = "No File Attach";
+            this.linkFile.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkFile_LinkClicked);
             // 
             // label26
             // 
