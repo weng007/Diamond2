@@ -28,13 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BuyBookGemstone));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BuyBookGemstone));
             this.dtBuyDate = new System.Windows.Forms.DateTimePicker();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label19 = new System.Windows.Forms.Label();
             this.grid1 = new System.Windows.Forms.DataGridView();
+            this.ActionDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.actionDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.amountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.refIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.isDeletedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tds2 = new DiamondDS.DS.dsBBGemstoneStock();
             this.label3 = new System.Windows.Forms.Label();
             this.txtSize = new System.Windows.Forms.TextBox();
@@ -80,13 +87,6 @@
             this.txtCode = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
-            this.ActionDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.actionDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.amountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.refIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.isDeletedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid1)).BeginInit();
@@ -189,6 +189,60 @@
             this.grid1.Size = new System.Drawing.Size(249, 254);
             this.grid1.TabIndex = 192;
             this.grid1.Validated += new System.EventHandler(this.grid1_Validated);
+            // 
+            // ActionDate
+            // 
+            this.ActionDate.DataPropertyName = "ActionDate";
+            dataGridViewCellStyle1.Format = "dd/MM/YYYY";
+            this.ActionDate.DefaultCellStyle = dataGridViewCellStyle1;
+            this.ActionDate.HeaderText = "วันที่";
+            this.ActionDate.Name = "ActionDate";
+            // 
+            // Amount
+            // 
+            this.Amount.DataPropertyName = "Amount";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle2.NullValue = "0";
+            this.Amount.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Amount.HeaderText = "คงเหลือ (ct)";
+            this.Amount.Name = "Amount";
+            this.Amount.Width = 120;
+            // 
+            // iDDataGridViewTextBoxColumn
+            // 
+            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
+            this.iDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.iDDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // actionDateDataGridViewTextBoxColumn
+            // 
+            this.actionDateDataGridViewTextBoxColumn.DataPropertyName = "ActionDate";
+            this.actionDateDataGridViewTextBoxColumn.HeaderText = "ActionDate";
+            this.actionDateDataGridViewTextBoxColumn.Name = "actionDateDataGridViewTextBoxColumn";
+            this.actionDateDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // amountDataGridViewTextBoxColumn
+            // 
+            this.amountDataGridViewTextBoxColumn.DataPropertyName = "Amount";
+            this.amountDataGridViewTextBoxColumn.HeaderText = "Amount";
+            this.amountDataGridViewTextBoxColumn.Name = "amountDataGridViewTextBoxColumn";
+            this.amountDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // refIDDataGridViewTextBoxColumn
+            // 
+            this.refIDDataGridViewTextBoxColumn.DataPropertyName = "RefID";
+            this.refIDDataGridViewTextBoxColumn.HeaderText = "RefID";
+            this.refIDDataGridViewTextBoxColumn.Name = "refIDDataGridViewTextBoxColumn";
+            this.refIDDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // isDeletedDataGridViewTextBoxColumn
+            // 
+            this.isDeletedDataGridViewTextBoxColumn.DataPropertyName = "IsDeleted";
+            this.isDeletedDataGridViewTextBoxColumn.HeaderText = "IsDeleted";
+            this.isDeletedDataGridViewTextBoxColumn.Name = "isDeletedDataGridViewTextBoxColumn";
+            this.isDeletedDataGridViewTextBoxColumn.Visible = false;
             // 
             // tds2
             // 
@@ -629,60 +683,6 @@
             this.button1.Size = new System.Drawing.Size(1089, 352);
             this.button1.TabIndex = 32;
             this.button1.UseVisualStyleBackColor = true;
-            // 
-            // ActionDate
-            // 
-            this.ActionDate.DataPropertyName = "ActionDate";
-            dataGridViewCellStyle1.Format = "dd/MM/YYYY";
-            this.ActionDate.DefaultCellStyle = dataGridViewCellStyle1;
-            this.ActionDate.HeaderText = "วันที่";
-            this.ActionDate.Name = "ActionDate";
-            // 
-            // Amount
-            // 
-            this.Amount.DataPropertyName = "Amount";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle2.NullValue = "0";
-            this.Amount.DefaultCellStyle = dataGridViewCellStyle2;
-            this.Amount.HeaderText = "คงเหลือ (ct)";
-            this.Amount.Name = "Amount";
-            this.Amount.Width = 120;
-            // 
-            // iDDataGridViewTextBoxColumn
-            // 
-            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
-            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
-            this.iDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.iDDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // actionDateDataGridViewTextBoxColumn
-            // 
-            this.actionDateDataGridViewTextBoxColumn.DataPropertyName = "ActionDate";
-            this.actionDateDataGridViewTextBoxColumn.HeaderText = "ActionDate";
-            this.actionDateDataGridViewTextBoxColumn.Name = "actionDateDataGridViewTextBoxColumn";
-            this.actionDateDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // amountDataGridViewTextBoxColumn
-            // 
-            this.amountDataGridViewTextBoxColumn.DataPropertyName = "Amount";
-            this.amountDataGridViewTextBoxColumn.HeaderText = "Amount";
-            this.amountDataGridViewTextBoxColumn.Name = "amountDataGridViewTextBoxColumn";
-            this.amountDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // refIDDataGridViewTextBoxColumn
-            // 
-            this.refIDDataGridViewTextBoxColumn.DataPropertyName = "RefID";
-            this.refIDDataGridViewTextBoxColumn.HeaderText = "RefID";
-            this.refIDDataGridViewTextBoxColumn.Name = "refIDDataGridViewTextBoxColumn";
-            this.refIDDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // isDeletedDataGridViewTextBoxColumn
-            // 
-            this.isDeletedDataGridViewTextBoxColumn.DataPropertyName = "IsDeleted";
-            this.isDeletedDataGridViewTextBoxColumn.HeaderText = "IsDeleted";
-            this.isDeletedDataGridViewTextBoxColumn.Name = "isDeletedDataGridViewTextBoxColumn";
-            this.isDeletedDataGridViewTextBoxColumn.Visible = false;
             // 
             // BuyBookGemstone
             // 
