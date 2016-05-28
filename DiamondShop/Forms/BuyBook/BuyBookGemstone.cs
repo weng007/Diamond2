@@ -301,6 +301,7 @@ namespace DiamondShop
         private void SetFormatNumber()
         {
             txtUSDRate.Text = GM.ConvertDoubleToString(txtUSDRate, 0);
+            txtPriceCaratUSD.Text = GM.ConvertDoubleToString(txtPriceCaratUSD, 0);
             txtMarketPrice.Text = GM.ConvertDoubleToString(txtMarketPrice, 0);
         }
         private void txtPriceCarat_Leave(object sender, EventArgs e)

@@ -59,6 +59,8 @@
             this.PriceCarat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MarketPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Remain = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtESize = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tds)).BeginInit();
             this.panel4.SuspendLayout();
@@ -74,6 +76,8 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(105)))), ((int)(((byte)(79)))));
+            this.panel4.Controls.Add(this.label2);
+            this.panel4.Controls.Add(this.txtESize);
             this.panel4.Controls.Add(this.txtSize);
             this.panel4.Controls.Add(this.label1);
             this.panel4.Controls.Add(this.txtCode);
@@ -334,6 +338,25 @@
             this.Remain.Name = "Remain";
             this.Remain.ReadOnly = true;
             // 
+            // txtESize
+            // 
+            this.txtESize.Location = new System.Drawing.Point(592, 20);
+            this.txtESize.Name = "txtESize";
+            this.txtESize.Size = new System.Drawing.Size(58, 27);
+            this.txtESize.TabIndex = 77;
+            this.txtESize.Text = "50";
+            this.txtESize.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(574, 23);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(12, 24);
+            this.label2.TabIndex = 78;
+            this.label2.Text = "-";
+            // 
             // BuyBookGemstoneList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -380,5 +403,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn PriceCarat;
         private System.Windows.Forms.DataGridViewTextBoxColumn MarketPrice;
         private System.Windows.Forms.DataGridViewTextBoxColumn Remain;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtESize;
     }
 }

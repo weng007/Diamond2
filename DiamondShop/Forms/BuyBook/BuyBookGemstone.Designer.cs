@@ -99,7 +99,7 @@
             this.dtBuyDate.Location = new System.Drawing.Point(127, 17);
             this.dtBuyDate.Name = "dtBuyDate";
             this.dtBuyDate.Size = new System.Drawing.Size(155, 27);
-            this.dtBuyDate.TabIndex = 1;
+            this.dtBuyDate.TabIndex = 2;
             // 
             // panel3
             // 
@@ -261,7 +261,7 @@
             this.txtSize.Location = new System.Drawing.Point(447, 52);
             this.txtSize.Name = "txtSize";
             this.txtSize.Size = new System.Drawing.Size(53, 27);
-            this.txtSize.TabIndex = 16;
+            this.txtSize.TabIndex = 10;
             this.txtSize.Text = "0";
             this.txtSize.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -270,7 +270,7 @@
             this.txtMarketPrice.Location = new System.Drawing.Point(448, 379);
             this.txtMarketPrice.Name = "txtMarketPrice";
             this.txtMarketPrice.Size = new System.Drawing.Size(131, 27);
-            this.txtMarketPrice.TabIndex = 64;
+            this.txtMarketPrice.TabIndex = 28;
             this.txtMarketPrice.Text = "0";
             this.txtMarketPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtMarketPrice.Leave += new System.EventHandler(this.txtMarketPrice_Leave);
@@ -281,7 +281,7 @@
             this.cmbShop.Location = new System.Drawing.Point(735, 52);
             this.cmbShop.Name = "cmbShop";
             this.cmbShop.Size = new System.Drawing.Size(156, 29);
-            this.cmbShop.TabIndex = 32;
+            this.cmbShop.TabIndex = 18;
             // 
             // label28
             // 
@@ -299,7 +299,7 @@
             this.cmbShape.Location = new System.Drawing.Point(127, 122);
             this.cmbShape.Name = "cmbShape";
             this.cmbShape.Size = new System.Drawing.Size(155, 29);
-            this.cmbShape.TabIndex = 12;
+            this.cmbShape.TabIndex = 6;
             // 
             // label25
             // 
@@ -327,7 +327,7 @@
             this.txtNote.Multiline = true;
             this.txtNote.Name = "txtNote";
             this.txtNote.Size = new System.Drawing.Size(250, 139);
-            this.txtNote.TabIndex = 68;
+            this.txtNote.TabIndex = 30;
             // 
             // label26
             // 
@@ -380,7 +380,7 @@
             this.txtPriceCarat.Location = new System.Drawing.Point(735, 220);
             this.txtPriceCarat.Name = "txtPriceCarat";
             this.txtPriceCarat.Size = new System.Drawing.Size(131, 27);
-            this.txtPriceCarat.TabIndex = 60;
+            this.txtPriceCarat.TabIndex = 26;
             this.txtPriceCarat.Text = "0";
             this.txtPriceCarat.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtPriceCarat.Leave += new System.EventHandler(this.txtPriceCarat_Leave);
@@ -452,7 +452,7 @@
             this.txtUSDRate.Location = new System.Drawing.Point(448, 290);
             this.txtUSDRate.Name = "txtUSDRate";
             this.txtUSDRate.Size = new System.Drawing.Size(61, 27);
-            this.txtUSDRate.TabIndex = 56;
+            this.txtUSDRate.TabIndex = 24;
             this.txtUSDRate.Text = "0";
             this.txtUSDRate.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtUSDRate.TextChanged += new System.EventHandler(this.txtUSDRate_TextChanged);
@@ -485,7 +485,7 @@
             this.dtDueDate.Location = new System.Drawing.Point(759, 134);
             this.dtDueDate.Name = "dtDueDate";
             this.dtDueDate.Size = new System.Drawing.Size(131, 27);
-            this.dtDueDate.TabIndex = 44;
+            this.dtDueDate.TabIndex = 20;
             // 
             // rdoNo
             // 
@@ -535,7 +535,7 @@
             this.txtPriceCaratUSD.Location = new System.Drawing.Point(448, 220);
             this.txtPriceCaratUSD.Name = "txtPriceCaratUSD";
             this.txtPriceCaratUSD.Size = new System.Drawing.Size(101, 27);
-            this.txtPriceCaratUSD.TabIndex = 52;
+            this.txtPriceCaratUSD.TabIndex = 22;
             this.txtPriceCaratUSD.Text = "0";
             this.txtPriceCaratUSD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtPriceCaratUSD.Leave += new System.EventHandler(this.txtPriceCaratUSD_Leave);
@@ -546,7 +546,7 @@
             this.cmbOrigin.Location = new System.Drawing.Point(735, 15);
             this.cmbOrigin.Name = "cmbOrigin";
             this.cmbOrigin.Size = new System.Drawing.Size(157, 29);
-            this.cmbOrigin.TabIndex = 28;
+            this.cmbOrigin.TabIndex = 16;
             // 
             // label11
             // 
@@ -564,7 +564,7 @@
             this.cmbIdentification.Location = new System.Drawing.Point(447, 14);
             this.cmbIdentification.Name = "cmbIdentification";
             this.cmbIdentification.Size = new System.Drawing.Size(157, 29);
-            this.cmbIdentification.TabIndex = 4;
+            this.cmbIdentification.TabIndex = 8;
             // 
             // label2
             // 
@@ -591,7 +591,7 @@
             this.txtWeight.Location = new System.Drawing.Point(447, 122);
             this.txtWeight.Name = "txtWeight";
             this.txtWeight.Size = new System.Drawing.Size(53, 27);
-            this.txtWeight.TabIndex = 24;
+            this.txtWeight.TabIndex = 14;
             this.txtWeight.Text = "0";
             this.txtWeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtWeight.TextChanged += new System.EventHandler(this.txtWeight_TextChanged);
@@ -611,7 +611,7 @@
             this.txtAmount.Location = new System.Drawing.Point(447, 87);
             this.txtAmount.Name = "txtAmount";
             this.txtAmount.Size = new System.Drawing.Size(107, 27);
-            this.txtAmount.TabIndex = 20;
+            this.txtAmount.TabIndex = 12;
             this.txtAmount.Text = "0";
             this.txtAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -630,7 +630,7 @@
             this.txtSeller.Location = new System.Drawing.Point(127, 52);
             this.txtSeller.Name = "txtSeller";
             this.txtSeller.Size = new System.Drawing.Size(155, 27);
-            this.txtSeller.TabIndex = 8;
+            this.txtSeller.TabIndex = 4;
             // 
             // label1
             // 
