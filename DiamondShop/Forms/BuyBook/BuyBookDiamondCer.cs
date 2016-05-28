@@ -352,40 +352,6 @@ namespace DiamondShop
             }
         }
 
-        private void txtTotal_TextChanged(object sender, EventArgs e)
-        {
-            txtTotalBaht.Text = (GM.ConvertStringToDouble(txtTotal) * GM.ConvertStringToDouble(txtUSDRate)).ToString();
-            txtUSDRate.Text = GM.ConvertDoubleToString(txtUSDRate);
-        }
-
-        private void txtWeight_TextChanged(object sender, EventArgs e)
-        {
-            txtTotal.Text = (GM.ConvertStringToDouble(txtRap) * 100 * (1 + GM.ConvertStringToDouble(txtPrice)/100.0)
-                * GM.ConvertStringToDouble(txtWeight)).ToString();
-            txtUSDRate.Text = GM.ConvertDoubleToString(txtUSDRate);
-        }
-
-        private void txtPrice_Leave(object sender, EventArgs e)
-        {
-            txtTotal.Text = (GM.ConvertStringToDouble(txtRap) * 100 * (1 + GM.ConvertStringToDouble(txtPrice) / 100.0)
-                * GM.ConvertStringToDouble(txtWeight)).ToString();
-            txtPrice.Text = GM.ConvertDoubleToString(txtPrice, 0);
-        }
-
-        private void txtRap_TextChanged(object sender, EventArgs e)
-        {
-            txtTotal.Text = (GM.ConvertStringToDouble(txtRap) * 100 * (1 + GM.ConvertStringToDouble(txtPrice)) * GM.ConvertStringToDouble(txtWeight)).ToString();
-        }
-
-        private void txtTotalBaht_TextChanged(object sender, EventArgs e)
-        {
-            txtPrice.Text = GM.ConvertDoubleToString(txtPrice, 0);
-            txtTotal.Text = GM.ConvertDoubleToString(txtTotal, 0);
-            txtTotalBaht.Text = GM.ConvertDoubleToString(txtTotalBaht, 0);
-            txtUSDRate.Text = GM.ConvertDoubleToString(txtUSDRate);
-
-        }
-
         private void btnUpload_Click(object sender, EventArgs e)
         {
             openFileDialog1.Filter = "Pdf Files|*.pdf";
@@ -425,34 +391,43 @@ namespace DiamondShop
             }
         }
 
-        private void txtW_Leave(object sender, EventArgs e)
+        private void txtWeight_Leave(object sender, EventArgs e)
         {
-            txtW.Text = GM.ConvertDoubleToString(txtW);
+            txtTotal.Text = (GM.ConvertStringToDouble(txtRap) * 100 * (1 + GM.ConvertStringToDouble(txtPrice) / 100.0)
+                * GM.ConvertStringToDouble(txtWeight)).ToString();
+            txtTotal.Text = GM.ConvertDoubleToString(txtTotal,0);
+        } 
+
+        private void txtPrice_Leave(object sender, EventArgs e)
+        {
+            txtTotal.Text = (GM.ConvertStringToDouble(txtRap) * 100 * (1 + GM.ConvertStringToDouble(txtPrice) / 100.0)
+                * GM.ConvertStringToDouble(txtWeight)).ToString();
+            txtTotal.Text = GM.ConvertDoubleToString(txtTotal,0);
         }
 
-        private void txtL_Leave(object sender, EventArgs e)
+        private void txtRap_Leave(object sender, EventArgs e)
         {
-            txtL.Text = GM.ConvertDoubleToString(txtL);
-        }
-
-        private void txtD_Leave(object sender, EventArgs e)
-        {
-            txtD.Text = GM.ConvertDoubleToString(txtD);
-        }
-        private void SetFormatNumber()
-        {
-            txtTotalBaht.Text = GM.ConvertDoubleToString(txtTotalBaht, 0);
+            txtTotal.Text = (GM.ConvertStringToDouble(txtRap) * 100 * (1 + GM.ConvertStringToDouble(txtPrice) / 100.0)
+                * GM.ConvertStringToDouble(txtWeight)).ToString();
             txtTotal.Text = GM.ConvertDoubleToString(txtTotal, 0);
-            txtUSDRate.Text = GM.ConvertDoubleToString(txtUSDRate);
-            txtW.Text = GM.ConvertDoubleToString(txtW);
-            txtL.Text = GM.ConvertDoubleToString(txtL);
-            txtD.Text = GM.ConvertDoubleToString(txtD);
         }
 
         private void txtUSDRate_Leave(object sender, EventArgs e)
         {
             txtTotalBaht.Text = (GM.ConvertStringToDouble(txtTotal) * GM.ConvertStringToDouble(txtUSDRate)).ToString();
-            txtUSDRate.Text = GM.ConvertDoubleToString(txtUSDRate);
+            txtTotalBaht.Text = GM.ConvertDoubleToString(txtTotalBaht,0);
+        }
+
+        private void txtTotal_TextChanged(object sender, EventArgs e)
+        {
+            txtTotalBaht.Text = (GM.ConvertStringToDouble(txtTotal) * GM.ConvertStringToDouble(txtUSDRate)).ToString();
+            txtTotalBaht.Text = GM.ConvertDoubleToString(txtTotalBaht, 0);
+        }
+
+        private void SetFormatNumber()
+        {
+            txtTotal.Text = GM.ConvertDoubleToString(txtTotal, 0);
+            txtTotalBaht.Text = GM.ConvertDoubleToString(txtTotalBaht, 0);          
         }
     }
 }

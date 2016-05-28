@@ -894,7 +894,7 @@ namespace DiamondDS.DS {
                         string IsInscription, 
                         System.DateTime DueDate, 
                         string IsPaid, 
-                        decimal Price, 
+                        double Price, 
                         double Rap, 
                         decimal _Total_, 
                         double USDRate, 
@@ -1118,7 +1118,7 @@ namespace DiamondDS.DS {
                 base.Columns.Add(this.columnDueDate);
                 this.columnIsPaid = new global::System.Data.DataColumn("IsPaid", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnIsPaid);
-                this.columnPrice = new global::System.Data.DataColumn("Price", typeof(decimal), null, global::System.Data.MappingType.Element);
+                this.columnPrice = new global::System.Data.DataColumn("Price", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPrice);
                 this.columnRap = new global::System.Data.DataColumn("Rap", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnRap);
@@ -1888,10 +1888,10 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public decimal Price {
+            public double Price {
                 get {
                     try {
-                        return ((decimal)(this[this.tableBuyBookDiamondCer.PriceColumn]));
+                        return ((double)(this[this.tableBuyBookDiamondCer.PriceColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'Price\' in table \'BuyBookDiamondCer\' is DBNull.", e);
