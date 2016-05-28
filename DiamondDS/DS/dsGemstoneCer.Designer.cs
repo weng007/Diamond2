@@ -1058,24 +1058,15 @@ namespace DiamondDS.DS {
                 this.columnNote1.MaxLength = 250;
                 this.columnCode.MaxLength = 30;
                 this.columnLabName.MaxLength = 100;
-                this.columnIdentificationName.ReadOnly = true;
                 this.columnIdentificationName.MaxLength = 100;
-                this.columnShapeName.ReadOnly = true;
                 this.columnShapeName.MaxLength = 100;
-                this.columnCutName.ReadOnly = true;
                 this.columnCutName.MaxLength = 100;
-                this.columnColorName.ReadOnly = true;
                 this.columnColorName.MaxLength = 100;
-                this.columnCommentName.ReadOnly = true;
                 this.columnCommentName.MaxLength = 100;
-                this.columnOriginName.ReadOnly = true;
                 this.columnOriginName.MaxLength = 100;
                 this.columnReportNumber.MaxLength = 50;
-                this.columnShopName.ReadOnly = true;
                 this.columnShopName.MaxLength = 100;
-                this.columnSettingName.ReadOnly = true;
                 this.columnSettingName.MaxLength = 100;
-                this.columnStatusName.ReadOnly = true;
                 this.columnStatusName.MaxLength = 100;
                 this.columnSeller.MaxLength = 100;
             }

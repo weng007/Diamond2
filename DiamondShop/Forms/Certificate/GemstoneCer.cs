@@ -59,6 +59,7 @@ namespace DiamondShop
             binder.BindControl(txtUSDRate, "USDRate");
             binder.BindControl(txtPriceCaratBaht, "PriceCarat");
             binder.BindControl(txtNote, "Note");
+            binder.BindControl(txtNote1, "Note1");
             binder.BindControl(txtShape, "ShapeName");
             binder.BindControl(txtColor, "ColorName");
             binder.BindControl(txtCut, "CutName");
