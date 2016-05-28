@@ -71,7 +71,7 @@ namespace DiamondShop
 
             this.id = id;
             LoadData();
-            SetFormatNumber();
+            
         }
         protected override void Initial()
         {
@@ -102,8 +102,6 @@ namespace DiamondShop
 
             SetFieldService.SetRequireField(txtSeller, txtWeight);
         }
-
-
         protected override void LoadData()
         {
             ds = ser.DoSelectData("BuyBookGemstone", id);
@@ -142,7 +140,7 @@ namespace DiamondShop
                 EnableEdit = true;
                 EnableDelete = false;
             }
-
+            SetFormatNumber();
             base.LoadData();
         }
 
@@ -305,8 +303,8 @@ namespace DiamondShop
             txtPriceCaratUSD.Text = GM.ConvertDoubleToString(txtPriceCaratUSD, 0);
             txtMarketPrice.Text = GM.ConvertDoubleToString(txtMarketPrice, 0);
             txtAmount.Text = GM.ConvertDoubleToString(txtAmount, 0);
-            txtWeight.Text = GM.ConvertDoubleToString(txtWeight, 0);
-            txtSize.Text = GM.ConvertDoubleToString(txtSize, 0);
+            txtWeight.Text = GM.ConvertDoubleToString(txtWeight);
+            txtSize.Text = GM.ConvertDoubleToString(txtSize);
         }
         private void txtPriceCarat_Leave(object sender, EventArgs e)
         {
@@ -351,6 +349,9 @@ namespace DiamondShop
             }
         }
 
-        
+        private void txtSize_Leave(object sender, EventArgs e)
+        {
+            txtSize.Text = GM.ConvertDoubleToString(txtSize);
+        }
     }
 }
