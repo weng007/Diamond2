@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 using System.Windows.Forms;
 using DiamondShop.FormMaster;
 using DiamondDS.DS;
@@ -15,8 +16,9 @@ namespace DiamondShop
 {
     public partial class DiamondCer : FormInfo
     {
-        //Service1 ser = GM.GetService();
         dsDiamondCer tds = new dsDiamondCer();
+        MemoryStream ms;
+        byte[] file;
 
         public DiamondCer()
         {
@@ -74,6 +76,12 @@ namespace DiamondShop
             if (tds.DiamondCer.Rows.Count > 0)
             {
                 binder.BindValueToControl(tds.DiamondCer[0]);
+
+                if (tds.DiamondCer[0]["Certificate"].ToString() != "")
+                {
+                    file = (byte[])tds.DiamondCer[0]["Certificate"];
+                    linkFile.Text = "Certificate";
+                }
             }
 
             base.LoadData();
@@ -135,10 +143,6 @@ namespace DiamondShop
             //{
             //    message += "Please input Measurement > 0.\n";
             //}
-            //if (txtCarat.Text == "" || GM.ConvertStringToDouble(txtCarat) == 0)
-            //{
-            //    message += "Please input Carat Weight > 0.\n";
-            //}
 
             if (message == "") { return true; }
             else { return false; }
@@ -146,64 +150,15 @@ namespace DiamondShop
 
         protected override void Initial()
         {
-            //cmbCompanyCer.DataSource = (GM.GetMasterTableDetail("C020")).Tables[0];
-            //cmbCompanyCer.ValueMember = "ID";
-            //cmbCompanyCer.DisplayMember = "Detail";
-            //cmbCompanyCer.Refresh();
-
-            //cmbShapeAndCut.DataSource = (GM.GetMasterTableDetail("C019")).Tables[0];
-            //cmbShapeAndCut.ValueMember = "ID";
-            //cmbShapeAndCut.DisplayMember = "Detail";
-            //cmbShapeAndCut.Refresh();
-
-            //cmbClarity.DataSource = (GM.GetMasterTableDetail("C002")).Tables[0];
-            //cmbClarity.ValueMember = "ID";
-            //cmbClarity.DisplayMember = "Detail";
-            //cmbClarity.Refresh();
-
-            //cmbColorGrade.DataSource = (GM.GetMasterTableDetail("C025")).Tables[0];
-            //cmbColorGrade.ValueMember = "ID";
-            //cmbColorGrade.DisplayMember = "Detail";
-            //cmbColorGrade.Refresh();
-
-            //cmbCutGrade.DataSource = (GM.GetMasterTableDetail("C003")).Tables[0];
-            //cmbCutGrade.ValueMember = "ID";
-            //cmbCutGrade.DisplayMember = "Detail";
-            //cmbCutGrade.Refresh();
-
-            //cmbPolish.DataSource = (GM.GetMasterTableDetail("C003")).Tables[0];
-            //cmbPolish.ValueMember = "ID";
-            //cmbPolish.DisplayMember = "Detail";
-            //cmbPolish.Refresh();
-
-            //cmbSymmetry.DataSource = (GM.GetMasterTableDetail("C003")).Tables[0];
-            //cmbSymmetry.ValueMember = "ID";
-            //cmbSymmetry.DisplayMember = "Detail";
-            //cmbSymmetry.Refresh();
-
-            //cmbFluores.DataSource = (GM.GetMasterTableDetail("C018")).Tables[0];
-            //cmbFluores.ValueMember = "ID";
-            //cmbFluores.DisplayMember = "Detail";
-            //cmbFluores.Refresh();
+            //เปิดให้เห็นเฉพาะ Owner
+            if(ApplicationInfo.Authorized == "Owner")
+            {
+                panel4.Visible = true;
+            }
 
             txtNote.Select();
 
             //SetFieldService.SetRequireField(txtCode, txtW, txtL, txtD, txtCarat);
-        }
-
-        private void cmbColorGrade_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string color = "C017";
-
-            //if (cmbColorGrade.SelectedIndex == 0)
-            //{
-            //    color = "C001";
-            //}
-
-            //cmbColor.DataSource = (GM.GetMasterTableDetail(color)).Tables[0];
-            //cmbColor.ValueMember = "ID";
-            //cmbColor.DisplayMember = "Detail";
-            //cmbColor.Refresh();
         }
 
         private void txtCarat_KeyPress(object sender, KeyPressEventArgs e)
@@ -214,16 +169,22 @@ namespace DiamondShop
             }
         }
 
-        private void cmbShapeAndCut_SelectedIndexChanged(object sender, EventArgs e)
+        private void linkFile_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            //if(cmbShapeAndCut.SelectedIndex == 0)
-            //{
-            //    lbl1.Text = "-";
-            //}
-            //else
-            //{
-            //    lbl1.Text = "x";
-            //}
+            if (file != null && file.Length > 0)
+            {
+                System.IO.FileStream wFile;
+                if (!Directory.Exists(GM.Path))
+                {
+                    Directory.CreateDirectory("C:\\Project");
+                }
+                wFile = new FileStream("C:\\Project\\Certificate.pdf", FileMode.Create);
+                wFile.Write(file, 0, file.Length);
+                wFile.Flush();
+                wFile.Close();
+
+                System.Diagnostics.Process.Start(@"C:\\Project\\Certificate.pdf");
+            }
         }
     }
 }

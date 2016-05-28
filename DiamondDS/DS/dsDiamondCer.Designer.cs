@@ -359,6 +359,8 @@ namespace DiamondDS.DS {
             
             private global::System.Data.DataColumn columnBuyDate;
             
+            private global::System.Data.DataColumn columnCertificate;
+            
             private global::System.Data.DataColumn columnIsDeleted;
             
             private global::System.Data.DataColumn columnCreateBy;
@@ -724,6 +726,14 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn CertificateColumn {
+                get {
+                    return this.columnCertificate;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn IsDeletedColumn {
                 get {
                     return this.columnIsDeleted;
@@ -839,6 +849,7 @@ namespace DiamondDS.DS {
                         decimal TotalUSD, 
                         decimal TotalBaht, 
                         System.DateTime BuyDate, 
+                        byte[] Certificate, 
                         string IsDeleted, 
                         int CreateBy, 
                         System.DateTime CreateDate, 
@@ -886,6 +897,7 @@ namespace DiamondDS.DS {
                         TotalUSD,
                         TotalBaht,
                         BuyDate,
+                        Certificate,
                         IsDeleted,
                         CreateBy,
                         CreateDate,
@@ -960,6 +972,7 @@ namespace DiamondDS.DS {
                 this.columnTotalUSD = base.Columns["TotalUSD"];
                 this.columnTotalBaht = base.Columns["TotalBaht"];
                 this.columnBuyDate = base.Columns["BuyDate"];
+                this.columnCertificate = base.Columns["Certificate"];
                 this.columnIsDeleted = base.Columns["IsDeleted"];
                 this.columnCreateBy = base.Columns["CreateBy"];
                 this.columnCreateDate = base.Columns["CreateDate"];
@@ -1050,6 +1063,8 @@ namespace DiamondDS.DS {
                 base.Columns.Add(this.columnTotalBaht);
                 this.columnBuyDate = new global::System.Data.DataColumn("BuyDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnBuyDate);
+                this.columnCertificate = new global::System.Data.DataColumn("Certificate", typeof(byte[]), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCertificate);
                 this.columnIsDeleted = new global::System.Data.DataColumn("IsDeleted", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnIsDeleted);
                 this.columnCreateBy = new global::System.Data.DataColumn("CreateBy", typeof(int), null, global::System.Data.MappingType.Element);
@@ -1874,6 +1889,22 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public byte[] Certificate {
+                get {
+                    try {
+                        return ((byte[])(this[this.tableDiamondCer.CertificateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Certificate\' in table \'DiamondCer\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDiamondCer.CertificateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string IsDeleted {
                 get {
                     try {
@@ -2418,6 +2449,18 @@ namespace DiamondDS.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetBuyDateNull() {
                 this[this.tableDiamondCer.BuyDateColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsCertificateNull() {
+                return this.IsNull(this.tableDiamondCer.CertificateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetCertificateNull() {
+                this[this.tableDiamondCer.CertificateColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

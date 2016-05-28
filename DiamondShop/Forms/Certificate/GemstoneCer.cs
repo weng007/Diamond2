@@ -16,7 +16,6 @@ namespace DiamondShop
 {
     public partial class GemstoneCer : FormInfo
     {
-        //Service1 ser = GM.GetService();
         dsGemstoneCer tds = new dsGemstoneCer();
         MemoryStream ms1;
         byte[] image1;
@@ -155,24 +154,15 @@ namespace DiamondShop
 
         protected override void Initial()
         {
+            //เปิดให้เห็นเฉพาะ Owner
+            if (ApplicationInfo.Authorized == "Owner")
+            {
+                panel4.Visible = true;
+            }
+
             txtNote.Select();
 
             //SetFieldService.SetRequireField(txtCode, txtW, txtL, txtD, txtCarat);
-        }
-
-        private void cmbColorGrade_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string color = "C017";
-
-            //if (cmbColorGrade.SelectedIndex == 0)
-            //{
-            //    color = "C001";
-            //}
-
-            //cmbColor.DataSource = (GM.GetMasterTableDetail(color)).Tables[0];
-            //cmbColor.ValueMember = "ID";
-            //cmbColor.DisplayMember = "Detail";
-            //cmbColor.Refresh();
         }
 
         private void txtCarat_KeyPress(object sender, KeyPressEventArgs e)
@@ -181,18 +171,6 @@ namespace DiamondShop
             {
                 e.Handled = true;
             }
-        }
-
-        private void cmbShapeAndCut_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            //if(cmbShapeAndCut.SelectedIndex == 0)
-            //{
-            //    lbl1.Text = "-";
-            //}
-            //else
-            //{
-            //    lbl1.Text = "x";
-            //}
         }
     }
 }

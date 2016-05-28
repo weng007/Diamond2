@@ -414,7 +414,7 @@ namespace DiamondShop
         private void linkFile_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             
-            if(file.Length > 0)
+            if(file != null && file.Length > 0)
             {
                 System.IO.FileStream wFile;
                 if (!Directory.Exists(GM.Path))
