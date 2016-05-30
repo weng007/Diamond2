@@ -359,6 +359,8 @@ namespace DiamondDS.DS {
             
             private global::System.Data.DataColumn columnCertificate;
             
+            private global::System.Data.DataColumn columnFileName;
+            
             private global::System.Data.DataColumn columnCreateBy;
             
             private global::System.Data.DataColumn columnCreateDate;
@@ -722,6 +724,14 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn FileNameColumn {
+                get {
+                    return this.columnFileName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn CreateByColumn {
                 get {
                     return this.columnCreateBy;
@@ -829,6 +839,7 @@ namespace DiamondDS.DS {
                         decimal TotalBaht, 
                         byte[] Image1, 
                         byte[] Certificate, 
+                        string FileName, 
                         int CreateBy, 
                         System.DateTime CreateDate, 
                         int EditBy, 
@@ -875,6 +886,7 @@ namespace DiamondDS.DS {
                         TotalBaht,
                         Image1,
                         Certificate,
+                        FileName,
                         CreateBy,
                         CreateDate,
                         EditBy,
@@ -948,6 +960,7 @@ namespace DiamondDS.DS {
                 this.columnTotalBaht = base.Columns["TotalBaht"];
                 this.columnImage1 = base.Columns["Image1"];
                 this.columnCertificate = base.Columns["Certificate"];
+                this.columnFileName = base.Columns["FileName"];
                 this.columnCreateBy = base.Columns["CreateBy"];
                 this.columnCreateDate = base.Columns["CreateDate"];
                 this.columnEditBy = base.Columns["EditBy"];
@@ -1037,6 +1050,8 @@ namespace DiamondDS.DS {
                 base.Columns.Add(this.columnImage1);
                 this.columnCertificate = new global::System.Data.DataColumn("Certificate", typeof(byte[]), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCertificate);
+                this.columnFileName = new global::System.Data.DataColumn("FileName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFileName);
                 this.columnCreateBy = new global::System.Data.DataColumn("CreateBy", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCreateBy);
                 this.columnCreateDate = new global::System.Data.DataColumn("CreateDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
@@ -1846,6 +1861,22 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string FileName {
+                get {
+                    if (this.IsFileNameNull()) {
+                        return null;
+                    }
+                    else {
+                        return ((string)(this[this.tableGemstoneCer.FileNameColumn]));
+                    }
+                }
+                set {
+                    this[this.tableGemstoneCer.FileNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public int CreateBy {
                 get {
                     try {
@@ -2374,6 +2405,18 @@ namespace DiamondDS.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetCertificateNull() {
                 this[this.tableGemstoneCer.CertificateColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsFileNameNull() {
+                return this.IsNull(this.tableGemstoneCer.FileNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetFileNameNull() {
+                this[this.tableGemstoneCer.FileNameColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

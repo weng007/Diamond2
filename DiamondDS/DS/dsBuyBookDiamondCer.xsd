@@ -164,6 +164,7 @@
                 </xs:simpleType>
               </xs:element>
               <xs:element name="Certificate" msprop:Generator_ColumnVarNameInTable="columnCertificate" msprop:Generator_ColumnPropNameInRow="Certificate" msprop:Generator_ColumnPropNameInTable="CertificateColumn" msprop:Generator_UserColumnName="Certificate" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="FileName" msprop:nullValue="_null" msprop:Generator_ColumnPropNameInRow="FileName" msprop:Generator_ColumnVarNameInTable="columnFileName" msprop:Generator_ColumnPropNameInTable="FileNameColumn" msprop:Generator_UserColumnName="FileName" type="xs:string" minOccurs="0" />
               <xs:element name="IsDeleted" msprop:Generator_ColumnVarNameInTable="columnIsDeleted" msprop:Generator_ColumnPropNameInRow="IsDeleted" msprop:Generator_ColumnPropNameInTable="IsDeletedColumn" msprop:Generator_UserColumnName="IsDeleted" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">

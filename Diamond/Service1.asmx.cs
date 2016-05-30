@@ -71,7 +71,7 @@ namespace Diamond
             }
             else if (TableName == "DiamondCer")
             {
-                DiamondCerBiz biz = GM.GetDiamondBiz();
+                DiamondCerBiz biz = GM.GetDiamondCerBiz();
                 try
                 {
                     return biz.DoSelectData(id);
@@ -895,7 +895,7 @@ namespace Diamond
             }
             else if (TableName == "DiamondCer")
             {
-                DiamondCerBiz biz = GM.GetDiamondBiz();
+                DiamondCerBiz biz = GM.GetDiamondCerBiz();
                 dsDiamondCer ds1 = new dsDiamondCer();
 
                 ds1.Merge(ds);

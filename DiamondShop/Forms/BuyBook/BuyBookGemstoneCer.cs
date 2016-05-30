@@ -22,6 +22,7 @@ namespace DiamondShop
         byte[] image1;
         MemoryStream ms;
         byte[] file;
+        string fileExtension ="";
 
         public BuyBookGemstoneCer()
         {
@@ -157,7 +158,7 @@ namespace DiamondShop
                 if (tds.BuyBookGemstoneCer[0]["Certificate"].ToString() != "")
                 {
                     file = (byte[])tds.BuyBookGemstoneCer[0]["Certificate"];
-                    linkFile.Text = "Certificate";
+                    linkFile.Text = tds.BuyBookGemstoneCer[0].FileName;
                 }
 
 
@@ -213,6 +214,7 @@ namespace DiamondShop
             binder.BindValueToDataRow(row);
             row.Image1 = image1;
             row.IsPaid = rdoYes.Checked ? "1" : "0";
+            row.FileName = linkFile.Text;
 
             //แนบ Certificate
             if (file != null && file.Length > 0)
@@ -294,6 +296,7 @@ namespace DiamondShop
 
         private void btnImage1_Click(object sender, EventArgs e)
         {
+            openFileDialog1.Filter = "Image files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png) | *.jpg; *.jpeg; *.jpe; *.jfif; *.png";
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 btnImage1.BackgroundImage = Image.FromFile(openFileDialog1.FileName);
@@ -419,20 +422,20 @@ namespace DiamondShop
                 {
                     Directory.CreateDirectory("C:\\Project");
                 }
-                wFile = new FileStream("C:\\Project\\Certificate.pdf", FileMode.Create);
+                wFile = new FileStream("C:\\Project\\" + linkFile.Text, FileMode.Create);
                 wFile.Write(file, 0, file.Length);
                 wFile.Flush();
                 wFile.Close();
 
-                System.Diagnostics.Process.Start(@"C:\\Project\\Certificate.pdf");
+                System.Diagnostics.Process.Start(@"C:\\Project\\" + linkFile.Text);
             }
         }
 
         private void btnUpload_Click(object sender, EventArgs e)
         {
-            if (openFileDialog1.ShowDialog() == DialogResult.OK && openFileDialog1.CheckFileExists)
+            if (openFileDialog2.ShowDialog() == DialogResult.OK && openFileDialog2.CheckFileExists)
             {
-                using (var stream = new FileStream(openFileDialog1.InitialDirectory + openFileDialog1.FileName, FileMode.Open, FileAccess.Read))
+                using (var stream = new FileStream(openFileDialog2.FileName, FileMode.Open, FileAccess.Read))
                 {
                     using (var reader = new BinaryReader(stream))
                     {
@@ -442,7 +445,7 @@ namespace DiamondShop
 
                 if (file.Length > 0)
                 {
-                    linkFile.Text = "Certificate";
+                    linkFile.Text = openFileDialog2.SafeFileName;
                 }
             }
         }

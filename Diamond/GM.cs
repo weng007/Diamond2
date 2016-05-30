@@ -100,7 +100,7 @@ namespace Diamond
             else { return bizBuyBookSettingDetail; }
         }
 
-        public static DiamondCerBiz GetDiamondBiz()
+        public static DiamondCerBiz GetDiamondCerBiz()
         {
             if (bizDiamondCer == null) { return new DiamondCerBiz(); }
             else { return bizDiamondCer; }

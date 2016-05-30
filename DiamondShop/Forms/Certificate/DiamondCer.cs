@@ -80,7 +80,7 @@ namespace DiamondShop
                 if (tds.DiamondCer[0]["Certificate"].ToString() != "")
                 {
                     file = (byte[])tds.DiamondCer[0]["Certificate"];
-                    linkFile.Text = "Certificate";
+                    linkFile.Text = tds.DiamondCer[0].FileName;
                 }
             }
 
@@ -178,12 +178,12 @@ namespace DiamondShop
                 {
                     Directory.CreateDirectory("C:\\Project");
                 }
-                wFile = new FileStream("C:\\Project\\Certificate.pdf", FileMode.Create);
+                wFile = new FileStream("C:\\Project\\Certificate"+linkFile.Text, FileMode.Create);
                 wFile.Write(file, 0, file.Length);
                 wFile.Flush();
                 wFile.Close();
 
-                System.Diagnostics.Process.Start(@"C:\\Project\\Certificate.pdf");
+                System.Diagnostics.Process.Start(@"C:\\Project\\"+linkFile.Text);
             }
         }
     }

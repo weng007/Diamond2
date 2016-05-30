@@ -169,7 +169,7 @@ namespace DiamondShop
                 if (tds.BuyBookDiamondCer[0]["Certificate"].ToString() != "")
                 {
                     file = (byte[])tds.BuyBookDiamondCer[0]["Certificate"];
-                    linkFile.Text = "Certificate";
+                    linkFile.Text = tds.BuyBookDiamondCer[0].FileName;
                 }
 
                 if (tds.BuyBookDiamondCer[0]["IsInscription"].ToString() == "0")
@@ -219,6 +219,7 @@ namespace DiamondShop
             binder.BindValueToDataRow(row);
             row.IsInscription = rdoIns1.Checked ?"1":"0";
             row.IsPaid = rdoYes.Checked ? "1" : "0";
+            row.FileName = linkFile.Text;
 
             //แนบ Certificate
             if (file != null && file.Length > 0)
@@ -356,7 +357,7 @@ namespace DiamondShop
         {
             if (openFileDialog1.ShowDialog() == DialogResult.OK && openFileDialog1.CheckFileExists)
             {      
-                using (var stream = new FileStream(openFileDialog1.InitialDirectory + openFileDialog1.FileName, FileMode.Open, FileAccess.Read))
+                using (var stream = new FileStream(openFileDialog1.SafeFileName, FileMode.Open, FileAccess.Read))
                 {
                     using (var reader = new BinaryReader(stream))
                     {
@@ -366,7 +367,7 @@ namespace DiamondShop
 
                 if(file.Length > 0)
                 {
-                    linkFile.Text = "Certificate";
+                    linkFile.Text = openFileDialog1.SafeFileName;
                 }
             }
         }
@@ -427,12 +428,12 @@ namespace DiamondShop
                 {
                     Directory.CreateDirectory("C:\\Project");
                 }
-                wFile = new FileStream("C:\\Project\\Certificate.pdf", FileMode.Create);
+                wFile = new FileStream("C:\\Project\\"+linkFile.Text, FileMode.Create);
                 wFile.Write(file, 0, file.Length);
                 wFile.Flush();
                 wFile.Close();
 
-                System.Diagnostics.Process.Start(@"C:\\Project\\Certificate.pdf");             
+                System.Diagnostics.Process.Start(@"C:\\Project\\"+linkFile.Text);             
             }
         }
     }
