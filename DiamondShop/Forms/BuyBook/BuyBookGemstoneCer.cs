@@ -345,6 +345,7 @@ namespace DiamondShop
                 txtUSDRate.Enabled = false;
                 txtUSDRate.Text = "0";
 
+                txtPriceCarat_Leave(null, null);
                 txtPriceCarat.Enabled = true;                       
             }       
         }
