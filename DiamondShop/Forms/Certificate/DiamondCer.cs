@@ -63,6 +63,8 @@ namespace DiamondShop
             binder.BindControl(txtUSDRate, "USDRate");
             binder.BindControl(txtSetting, "SettingName");
             binder.BindControl(txtShop, "ShopName");
+            binder.BindControl(txtUSDPrice, "TotalUSD");
+            binder.BindControl(txtBahtPrice, "TotalBaht");
             binder.BindControl(txtNote, "Note");
             binder.BindControl(txtNote1, "Note1");
         }
@@ -83,7 +85,7 @@ namespace DiamondShop
                     linkFile.Text = tds.DiamondCer[0].FileName;
                 }
             }
-
+            SetFormatNumber();
             base.LoadData();
         }
 
@@ -185,6 +187,12 @@ namespace DiamondShop
 
                 System.Diagnostics.Process.Start(@"C:\\Project\\"+linkFile.Text);
             }
+        }
+        private void SetFormatNumber()
+        {
+            txtRap.Text = GM.ConvertDoubleToString(txtRap, 0);
+            txtUSDPrice.Text = GM.ConvertDoubleToString(txtUSDPrice, 0);
+            txtBahtPrice.Text = GM.ConvertDoubleToString(txtBahtPrice, 0);
         }
     }
 }
