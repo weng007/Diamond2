@@ -305,7 +305,7 @@
             this.txtNote1.Multiline = true;
             this.txtNote1.Name = "txtNote1";
             this.txtNote1.Size = new System.Drawing.Size(171, 87);
-            this.txtNote1.TabIndex = 80;
+            this.txtNote1.TabIndex = 4;
             // 
             // label25
             // 
@@ -375,7 +375,7 @@
             this.txtUSDRate.Enabled = false;
             this.txtUSDRate.Location = new System.Drawing.Point(354, 41);
             this.txtUSDRate.Name = "txtUSDRate";
-            this.txtUSDRate.Size = new System.Drawing.Size(49, 27);
+            this.txtUSDRate.Size = new System.Drawing.Size(70, 27);
             this.txtUSDRate.TabIndex = 76;
             this.txtUSDRate.Text = "0";
             this.txtUSDRate.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -466,7 +466,7 @@
             this.txtNote.Multiline = true;
             this.txtNote.Name = "txtNote";
             this.txtNote.Size = new System.Drawing.Size(172, 65);
-            this.txtNote.TabIndex = 56;
+            this.txtNote.TabIndex = 2;
             // 
             // label16
             // 

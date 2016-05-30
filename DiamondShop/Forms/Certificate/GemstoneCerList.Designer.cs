@@ -129,6 +129,7 @@
             this.btnSearch.Size = new System.Drawing.Size(105, 32);
             this.btnSearch.TabIndex = 44;
             this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // cmbLab
             // 
@@ -451,7 +452,7 @@
             // 
             this.W.DataPropertyName = "W";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle3.Format = "N0";
+            dataGridViewCellStyle3.Format = "N2";
             this.W.DefaultCellStyle = dataGridViewCellStyle3;
             this.W.HeaderText = "W";
             this.W.Name = "W";
@@ -462,7 +463,7 @@
             // 
             this.L.DataPropertyName = "L";
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle4.Format = "N0";
+            dataGridViewCellStyle4.Format = "N2";
             this.L.DefaultCellStyle = dataGridViewCellStyle4;
             this.L.HeaderText = "L";
             this.L.Name = "L";
@@ -473,7 +474,7 @@
             // 
             this.D.DataPropertyName = "D";
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle5.Format = "N0";
+            dataGridViewCellStyle5.Format = "N2";
             this.D.DefaultCellStyle = dataGridViewCellStyle5;
             this.D.HeaderText = "D";
             this.D.Name = "D";

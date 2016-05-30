@@ -462,6 +462,9 @@ namespace DiamondShop
 
             txtMinPrice.Text = GM.ConvertDoubleToString(txtMinPrice,0);
             txtPriceTag.Text = GM.ConvertDoubleToString(txtPriceTag,0);
+
+            txtMaterialWeight1.Text = GM.ConvertDoubleToString(txtMaterialWeight1, 0);
+
         }
 
         private void btnDiamond_Click(object sender, EventArgs e)

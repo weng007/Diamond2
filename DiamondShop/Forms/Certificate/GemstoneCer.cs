@@ -63,6 +63,8 @@ namespace DiamondShop
             binder.BindControl(txtShape, "ShapeName");
             binder.BindControl(txtColor, "ColorName");
             binder.BindControl(txtCut, "CutName");
+            binder.BindControl(txtUSDPrice, "TotalUSD");
+            binder.BindControl(txtBahtPrice, "TotalBaht");
         }
 
         protected override void LoadData()
@@ -76,9 +78,10 @@ namespace DiamondShop
             {
                 binder.BindValueToControl(tds.GemstoneCer[0]);
 
-                image1 = tds.GemstoneCer[0].Image1;
-                if (image1 != null)
+                
+                if (tds.GemstoneCer[0].Image1 != null)
                 {
+                    image1 = tds.GemstoneCer[0].Image1;
                     ms1 = new MemoryStream(image1);
                     Image backImage1 = Image.FromStream(ms1);
                     btnImage1.BackgroundImage = backImage1;
@@ -90,7 +93,7 @@ namespace DiamondShop
                     linkFile.Text = tds.GemstoneCer[0].FileName;
                 }
             }
-
+            SetFormatNumber();
             base.LoadData();
         }
 
@@ -194,6 +197,14 @@ namespace DiamondShop
 
                 System.Diagnostics.Process.Start(@"C:\\Project\\"+linkFile.Text);
             }
+        }
+        private void SetFormatNumber()
+        {
+            txtPriceCaratUSD.Text = GM.ConvertDoubleToString(txtPriceCaratUSD, 0);
+            txtPriceCaratBaht.Text = GM.ConvertDoubleToString(txtPriceCaratBaht, 0);
+            txtUSDPrice.Text = GM.ConvertDoubleToString(txtUSDPrice, 0);
+            txtBahtPrice.Text = GM.ConvertDoubleToString(txtBahtPrice, 0);
+            txtUSDRate.Text = GM.ConvertDoubleToString(txtUSDRate);
         }
     }
 }

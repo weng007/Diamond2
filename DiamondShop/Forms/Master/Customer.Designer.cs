@@ -133,7 +133,7 @@
             this.cmbSeller.Location = new System.Drawing.Point(451, 16);
             this.cmbSeller.Name = "cmbSeller";
             this.cmbSeller.Size = new System.Drawing.Size(165, 29);
-            this.cmbSeller.TabIndex = 182;
+            this.cmbSeller.TabIndex = 12;
             // 
             // label17
             // 
@@ -159,18 +159,19 @@
             this.dtAnniversary.Location = new System.Drawing.Point(389, 126);
             this.dtAnniversary.Name = "dtAnniversary";
             this.dtAnniversary.Size = new System.Drawing.Size(147, 27);
-            this.dtAnniversary.TabIndex = 179;
+            this.dtAnniversary.TabIndex = 16;
             // 
             // txtTilte
             // 
             this.txtTilte.Location = new System.Drawing.Point(152, 52);
             this.txtTilte.Name = "txtTilte";
             this.txtTilte.Size = new System.Drawing.Size(135, 27);
-            this.txtTilte.TabIndex = 178;
+            this.txtTilte.TabIndex = 2;
             // 
             // cmbGender
             // 
             this.cmbGender.FormattingEnabled = true;
+            this.cmbGender.ItemHeight = 21;
             this.cmbGender.Location = new System.Drawing.Point(781, 84);
             this.cmbGender.Name = "cmbGender";
             this.cmbGender.Size = new System.Drawing.Size(114, 29);
@@ -199,7 +200,7 @@
             this.dtBirthDate.Location = new System.Drawing.Point(781, 14);
             this.dtBirthDate.Name = "dtBirthDate";
             this.dtBirthDate.Size = new System.Drawing.Size(144, 27);
-            this.dtBirthDate.TabIndex = 174;
+            this.dtBirthDate.TabIndex = 20;
             this.dtBirthDate.ValueChanged += new System.EventHandler(this.dtBirthDate_ValueChanged);
             // 
             // txtMobilePhone
@@ -207,7 +208,7 @@
             this.txtMobilePhone.Location = new System.Drawing.Point(152, 195);
             this.txtMobilePhone.Name = "txtMobilePhone";
             this.txtMobilePhone.Size = new System.Drawing.Size(165, 27);
-            this.txtMobilePhone.TabIndex = 24;
+            this.txtMobilePhone.TabIndex = 10;
             // 
             // label13
             // 
@@ -250,7 +251,7 @@
             this.txtAge.Name = "txtAge";
             this.txtAge.Size = new System.Drawing.Size(54, 27);
             this.txtAge.TabIndex = 20;
-            this.txtAge.Text = "0";
+            this.txtAge.Text = "22";
             this.txtAge.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtAge.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNecklace_KeyPress);
             // 
@@ -268,7 +269,7 @@
             this.txtDisplayName.Location = new System.Drawing.Point(152, 159);
             this.txtDisplayName.Name = "txtDisplayName";
             this.txtDisplayName.Size = new System.Drawing.Size(99, 27);
-            this.txtDisplayName.TabIndex = 16;
+            this.txtDisplayName.TabIndex = 8;
             // 
             // label8
             // 
@@ -284,7 +285,7 @@
             this.cmbShop.Location = new System.Drawing.Point(451, 52);
             this.cmbShop.Name = "cmbShop";
             this.cmbShop.Size = new System.Drawing.Size(165, 29);
-            this.cmbShop.TabIndex = 32;
+            this.cmbShop.TabIndex = 14;
             // 
             // label5
             // 
@@ -317,14 +318,14 @@
             this.txtLastName.Location = new System.Drawing.Point(152, 123);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(165, 27);
-            this.txtLastName.TabIndex = 12;
+            this.txtLastName.TabIndex = 6;
             // 
             // txtFirstName
             // 
             this.txtFirstName.Location = new System.Drawing.Point(152, 88);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(165, 27);
-            this.txtFirstName.TabIndex = 8;
+            this.txtFirstName.TabIndex = 4;
             // 
             // label2
             // 
@@ -343,7 +344,7 @@
             this.dtUpdateDate.Location = new System.Drawing.Point(389, 193);
             this.dtUpdateDate.Name = "dtUpdateDate";
             this.dtUpdateDate.Size = new System.Drawing.Size(147, 27);
-            this.dtUpdateDate.TabIndex = 1;
+            this.dtUpdateDate.TabIndex = 18;
             // 
             // label3
             // 
@@ -393,7 +394,7 @@
             this.txtNecklace.Location = new System.Drawing.Point(118, 17);
             this.txtNecklace.Name = "txtNecklace";
             this.txtNecklace.Size = new System.Drawing.Size(56, 27);
-            this.txtNecklace.TabIndex = 40;
+            this.txtNecklace.TabIndex = 26;
             this.txtNecklace.Text = "0";
             this.txtNecklace.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtNecklace.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNecklace_KeyPress);
@@ -467,7 +468,7 @@
             this.txtRing10.Location = new System.Drawing.Point(502, 72);
             this.txtRing10.Name = "txtRing10";
             this.txtRing10.Size = new System.Drawing.Size(49, 27);
-            this.txtRing10.TabIndex = 80;
+            this.txtRing10.TabIndex = 46;
             this.txtRing10.Text = "0";
             this.txtRing10.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtRing10.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNecklace_KeyPress);
@@ -477,7 +478,7 @@
             this.txtRing9.Location = new System.Drawing.Point(482, 35);
             this.txtRing9.Name = "txtRing9";
             this.txtRing9.Size = new System.Drawing.Size(49, 27);
-            this.txtRing9.TabIndex = 76;
+            this.txtRing9.TabIndex = 44;
             this.txtRing9.Text = "0";
             this.txtRing9.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtRing9.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNecklace_KeyPress);
@@ -487,7 +488,7 @@
             this.txtRing8.Location = new System.Drawing.Point(424, 9);
             this.txtRing8.Name = "txtRing8";
             this.txtRing8.Size = new System.Drawing.Size(49, 27);
-            this.txtRing8.TabIndex = 72;
+            this.txtRing8.TabIndex = 42;
             this.txtRing8.Text = "0";
             this.txtRing8.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtRing8.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNecklace_KeyPress);
@@ -497,7 +498,7 @@
             this.txtRing7.Location = new System.Drawing.Point(363, 9);
             this.txtRing7.Name = "txtRing7";
             this.txtRing7.Size = new System.Drawing.Size(49, 27);
-            this.txtRing7.TabIndex = 68;
+            this.txtRing7.TabIndex = 40;
             this.txtRing7.Text = "0";
             this.txtRing7.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtRing7.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNecklace_KeyPress);
@@ -507,7 +508,7 @@
             this.txtRing6.Location = new System.Drawing.Point(319, 98);
             this.txtRing6.Name = "txtRing6";
             this.txtRing6.Size = new System.Drawing.Size(49, 27);
-            this.txtRing6.TabIndex = 64;
+            this.txtRing6.TabIndex = 38;
             this.txtRing6.Text = "0";
             this.txtRing6.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtRing6.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNecklace_KeyPress);
@@ -517,7 +518,7 @@
             this.txtRing1.Location = new System.Drawing.Point(16, 72);
             this.txtRing1.Name = "txtRing1";
             this.txtRing1.Size = new System.Drawing.Size(49, 27);
-            this.txtRing1.TabIndex = 44;
+            this.txtRing1.TabIndex = 28;
             this.txtRing1.Text = "0";
             this.txtRing1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtRing1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNecklace_KeyPress);
@@ -527,7 +528,7 @@
             this.txtRing2.Location = new System.Drawing.Point(49, 36);
             this.txtRing2.Name = "txtRing2";
             this.txtRing2.Size = new System.Drawing.Size(49, 27);
-            this.txtRing2.TabIndex = 48;
+            this.txtRing2.TabIndex = 30;
             this.txtRing2.Text = "0";
             this.txtRing2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtRing2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNecklace_KeyPress);
@@ -537,7 +538,7 @@
             this.txtRing3.Location = new System.Drawing.Point(105, 9);
             this.txtRing3.Name = "txtRing3";
             this.txtRing3.Size = new System.Drawing.Size(49, 27);
-            this.txtRing3.TabIndex = 52;
+            this.txtRing3.TabIndex = 32;
             this.txtRing3.Text = "0";
             this.txtRing3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtRing3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNecklace_KeyPress);
@@ -547,7 +548,7 @@
             this.txtRing5.Location = new System.Drawing.Point(203, 98);
             this.txtRing5.Name = "txtRing5";
             this.txtRing5.Size = new System.Drawing.Size(49, 27);
-            this.txtRing5.TabIndex = 60;
+            this.txtRing5.TabIndex = 36;
             this.txtRing5.Text = "0";
             this.txtRing5.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtRing5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNecklace_KeyPress);
@@ -557,7 +558,7 @@
             this.txtRing4.Location = new System.Drawing.Point(166, 9);
             this.txtRing4.Name = "txtRing4";
             this.txtRing4.Size = new System.Drawing.Size(49, 27);
-            this.txtRing4.TabIndex = 56;
+            this.txtRing4.TabIndex = 34;
             this.txtRing4.Text = "0";
             this.txtRing4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtRing4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNecklace_KeyPress);
@@ -599,7 +600,7 @@
             this.txtBracelet.Location = new System.Drawing.Point(354, 71);
             this.txtBracelet.Name = "txtBracelet";
             this.txtBracelet.Size = new System.Drawing.Size(58, 27);
-            this.txtBracelet.TabIndex = 84;
+            this.txtBracelet.TabIndex = 48;
             this.txtBracelet.Text = "0";
             this.txtBracelet.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtBracelet.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNecklace_KeyPress);
