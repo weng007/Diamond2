@@ -853,7 +853,7 @@ namespace DiamondDS.DS {
                         int Fluorescent, 
                         string FluorescentName, 
                         string Seller, 
-                        decimal Price, 
+                        double Price, 
                         double Rap, 
                         double USDRate, 
                         decimal TotalUSD, 
@@ -1064,7 +1064,7 @@ namespace DiamondDS.DS {
                 base.Columns.Add(this.columnFluorescentName);
                 this.columnSeller = new global::System.Data.DataColumn("Seller", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSeller);
-                this.columnPrice = new global::System.Data.DataColumn("Price", typeof(decimal), null, global::System.Data.MappingType.Element);
+                this.columnPrice = new global::System.Data.DataColumn("Price", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPrice);
                 this.columnRap = new global::System.Data.DataColumn("Rap", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnRap);
@@ -1797,10 +1797,10 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public decimal Price {
+            public double Price {
                 get {
                     try {
-                        return ((decimal)(this[this.tableDiamondCer.PriceColumn]));
+                        return ((double)(this[this.tableDiamondCer.PriceColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'Price\' in table \'DiamondCer\' is DBNull.", e);

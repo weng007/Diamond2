@@ -14,7 +14,7 @@
   <xs:element name="dsDiamondCer" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsDiamondCer" msprop:Generator_UserDSName="dsDiamondCer">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="DiamondCer" msprop:Generator_TableClassName="DiamondCerDataTable" msprop:Generator_TableVarName="tableDiamondCer" msprop:Generator_RowChangedName="DiamondCerRowChanged" msprop:Generator_TablePropName="DiamondCer" msprop:Generator_RowDeletingName="DiamondCerRowDeleting" msprop:Generator_RowChangingName="DiamondCerRowChanging" msprop:Generator_RowEvHandlerName="DiamondCerRowChangeEventHandler" msprop:Generator_RowDeletedName="DiamondCerRowDeleted" msprop:Generator_RowClassName="DiamondCerRow" msprop:Generator_UserTableName="DiamondCer" msprop:Generator_RowEvArgName="DiamondCerRowChangeEvent">
+        <xs:element name="DiamondCer" msprop:Generator_TableClassName="DiamondCerDataTable" msprop:Generator_TableVarName="tableDiamondCer" msprop:Generator_TablePropName="DiamondCer" msprop:Generator_RowDeletingName="DiamondCerRowDeleting" msprop:Generator_RowChangingName="DiamondCerRowChanging" msprop:Generator_RowEvHandlerName="DiamondCerRowChangeEventHandler" msprop:Generator_RowDeletedName="DiamondCerRowDeleted" msprop:Generator_UserTableName="DiamondCer" msprop:Generator_RowChangedName="DiamondCerRowChanged" msprop:Generator_RowEvArgName="DiamondCerRowChangeEvent" msprop:Generator_RowClassName="DiamondCerRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="RowNum" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnRowNum" msprop:Generator_ColumnPropNameInRow="RowNum" msprop:Generator_ColumnPropNameInTable="RowNumColumn" msprop:Generator_UserColumnName="RowNum" type="xs:long" minOccurs="0" />
@@ -147,7 +147,7 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Price" msprop:Generator_ColumnVarNameInTable="columnPrice" msprop:Generator_ColumnPropNameInRow="Price" msprop:Generator_ColumnPropNameInTable="PriceColumn" msprop:Generator_UserColumnName="Price" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Price" msprop:Generator_ColumnVarNameInTable="columnPrice" msprop:Generator_ColumnPropNameInRow="Price" msprop:Generator_ColumnPropNameInTable="PriceColumn" msprop:Generator_UserColumnName="Price" type="xs:double" minOccurs="0" />
               <xs:element name="Rap" msprop:Generator_ColumnVarNameInTable="columnRap" msprop:Generator_ColumnPropNameInRow="Rap" msprop:Generator_ColumnPropNameInTable="RapColumn" msprop:Generator_UserColumnName="Rap" type="xs:double" minOccurs="0" />
               <xs:element name="USDRate" msprop:Generator_ColumnVarNameInTable="columnUSDRate" msprop:Generator_ColumnPropNameInRow="USDRate" msprop:Generator_ColumnPropNameInTable="USDRateColumn" msprop:Generator_UserColumnName="USDRate" type="xs:double" minOccurs="0" />
               <xs:element name="TotalUSD" msprop:Generator_ColumnVarNameInTable="columnTotalUSD" msprop:Generator_ColumnPropNameInRow="TotalUSD" msprop:Generator_ColumnPropNameInTable="TotalUSDColumn" msprop:Generator_UserColumnName="TotalUSD" type="xs:decimal" minOccurs="0" />
