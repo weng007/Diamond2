@@ -109,7 +109,7 @@ namespace DiamondShop
 
             ds = ser2.DoSearchDiamondCer(txtCode.Text, txtReportNumber.Text, Convert.ToInt16(cmbShape.SelectedValue.ToString()), Convert.ToInt16(cmbLab.SelectedValue.ToString()), GM.ConvertStringToDouble(txtSWeight), 
                 GM.ConvertStringToDouble(txtEWeight),
-                Convert.ToInt16(cmbLab.SelectedValue.ToString()),
+                Convert.ToInt16(cmbColorType.SelectedValue.ToString()),
                 Convert.ToInt16(cmbSColor.SelectedValue.ToString()),
                 Convert.ToInt16(cmbEColor.SelectedValue.ToString()), Convert.ToInt16(cmbSClearity.SelectedValue.ToString())
                 , Convert.ToInt16(cmbEClearity.SelectedValue.ToString()), Convert.ToInt16(cmbStatus.SelectedValue.ToString()), Convert.ToInt16(cmbShop.SelectedValue.ToString()));
