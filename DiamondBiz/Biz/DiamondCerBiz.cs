@@ -14,7 +14,7 @@ namespace DiamondBiz.Biz
         dsBuyBookDiamondCer ds2 = new dsBuyBookDiamondCer();
         DiamondCerDAL dal = new DiamondCerDAL();
 
-        public dsBuyBookDiamondCer DoSearchData(string code, string reportNumber, int shape, int lab, double sWeight, double eWeight, int colorType, int sColor,
+        public dsDiamondCer DoSearchData(string code, string reportNumber, int shape, int lab, double sWeight, double eWeight, int colorType, int sColor,
             int eColor, int sClearity, int eClearity, int status, int shop)
         {
             //All
