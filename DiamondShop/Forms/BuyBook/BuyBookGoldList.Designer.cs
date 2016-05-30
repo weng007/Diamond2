@@ -314,7 +314,7 @@
             // 
             this.Amount2.DataPropertyName = "Amount2";
             dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle7.Format = "N0";
+            dataGridViewCellStyle7.Format = "N2";
             this.Amount2.DefaultCellStyle = dataGridViewCellStyle7;
             this.Amount2.HeaderText = "กรัม";
             this.Amount2.Name = "Amount2";
