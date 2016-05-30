@@ -74,7 +74,7 @@
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.txtCode);
             this.panel3.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.panel3.Location = new System.Drawing.Point(12, 77);
+            this.panel3.Location = new System.Drawing.Point(12, 71);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(693, 222);
             this.panel3.TabIndex = 74;
@@ -115,7 +115,6 @@
             this.txtWeight.TabIndex = 10;
             this.txtWeight.Text = "0";
             this.txtWeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            //this.txtWeight.TextChanged += new System.EventHandler(this.txtWeight_TextChanged);
             this.txtWeight.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtWeight_KeyPress);
             // 
             // label14
@@ -181,7 +180,6 @@
             this.cmbShape.Name = "cmbShape";
             this.cmbShape.Size = new System.Drawing.Size(157, 29);
             this.cmbShape.TabIndex = 12;
-            //this.cmbShape.SelectedIndexChanged += new System.EventHandler(this.cmbShape_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -253,14 +251,14 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // BuyBookJewelryDiamondDetail
+            // BBJewelryDiamondDetailInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(195)))), ((int)(((byte)(157)))));
             this.ClientSize = new System.Drawing.Size(716, 312);
             this.Controls.Add(this.panel3);
-            this.Name = "BuyBookJewelryDiamondDetail";
+            this.Name = "BBJewelryDiamondDetailInfo";
             this.Text = "DiamondCer";
             this.Controls.SetChildIndex(this.panel3, 0);
             ((System.ComponentModel.ISupportInitialize)(this.ds)).EndInit();

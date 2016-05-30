@@ -410,7 +410,7 @@
             this.panel7.Controls.Add(this.label13);
             this.panel7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.panel7.Location = new System.Drawing.Point(13, 69);
+            this.panel7.Location = new System.Drawing.Point(13, 72);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(1139, 689);
             this.panel7.TabIndex = 37;
@@ -467,6 +467,7 @@
             // dtImportDate
             // 
             this.dtImportDate.CustomFormat = "dd/MM/yyyy";
+            this.dtImportDate.Enabled = false;
             this.dtImportDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtImportDate.Location = new System.Drawing.Point(783, 50);
             this.dtImportDate.Name = "dtImportDate";
@@ -476,6 +477,7 @@
             // dtUpdateDate
             // 
             this.dtUpdateDate.CustomFormat = "dd/MM/yyyy";
+            this.dtUpdateDate.Enabled = false;
             this.dtUpdateDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtUpdateDate.Location = new System.Drawing.Point(150, 53);
             this.dtUpdateDate.Name = "dtUpdateDate";
