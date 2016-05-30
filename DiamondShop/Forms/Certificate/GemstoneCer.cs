@@ -87,7 +87,7 @@ namespace DiamondShop
                 if (tds.GemstoneCer[0]["Certificate"].ToString() != "")
                 {
                     file = (byte[])tds.GemstoneCer[0]["Certificate"];
-                    linkFile.Text = "Certificate";
+                    linkFile.Text = tds.GemstoneCer[0].FileName;
                 }
             }
 
@@ -152,10 +152,6 @@ namespace DiamondShop
             //{
             //    message += "Please input Measurement > 0.\n";
             //}
-            //if (txtCarat.Text == "" || GM.ConvertStringToDouble(txtCarat) == 0)
-            //{
-            //    message += "Please input Carat Weight > 0.\n";
-            //}
 
             if (message == "") { return true; }
             else { return false; }
@@ -191,12 +187,12 @@ namespace DiamondShop
                 {
                     Directory.CreateDirectory("C:\\Project");
                 }
-                wFile = new FileStream("C:\\Project\\Certificate.pdf", FileMode.Create);
+                wFile = new FileStream("C:\\Project\\"+linkFile.Text, FileMode.Create);
                 wFile.Write(file, 0, file.Length);
                 wFile.Flush();
                 wFile.Close();
 
-                System.Diagnostics.Process.Start(@"C:\\Project\\Certificate.pdf");
+                System.Diagnostics.Process.Start(@"C:\\Project\\"+linkFile.Text);
             }
         }
     }
