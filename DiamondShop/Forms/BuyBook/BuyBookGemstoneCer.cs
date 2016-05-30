@@ -326,6 +326,14 @@ namespace DiamondShop
             cmbComment.DisplayMember = "Detail";
             cmbComment.Refresh();
         }
+        private void txtWeight_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+        }
+
 
         #region Calculate Money
         private void chkPayByUSD_CheckedChanged(object sender, EventArgs e)
@@ -350,14 +358,7 @@ namespace DiamondShop
             }       
         }
 
-        private void txtWeight_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
-            {
-                e.Handled = true;
-            }
-        }
-
+        
         private void txtWeight_Leave(object sender, EventArgs e)
         {
             if(chkPayByUSD.Checked)

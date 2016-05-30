@@ -361,7 +361,6 @@
             this.txtSize.Text = "0";
             this.txtSize.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtSize.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCost1_KeyPress);
-            this.txtSize.Leave += new System.EventHandler(this.txtSize_Leave);
             // 
             // label15
             // 
