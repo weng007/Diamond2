@@ -241,70 +241,6 @@ namespace DiamondShop
             if (message == "") { return true; }
             else { return false; }
         }
-
-        private void chkPayByUSD_CheckedChanged(object sender, EventArgs e)
-        {
-            if (chkPayByUSD.Checked)
-            {
-                txtPriceCaratUSD.Enabled = true;
-                txtUSDRate.Enabled = true;
-
-                txtPriceCarat.Enabled = false;
-                txtPriceCarat.Text = "0";
-                txtUSDRate_Leave(null, null);
-            }
-            else
-            {
-                txtPriceCaratUSD.Enabled = false;
-                txtUSDRate.Enabled = false;
-                txtUSDRate.Text = "0";
-
-                txtPriceCarat.Enabled = true;
-
-            }
-        }
-
-        private void txtWeight_TextChanged(object sender, EventArgs e)
-        {
-            txtTotalUSD.Text = (GM.ConvertStringToDouble(txtWeight) * GM.ConvertStringToDouble(txtPriceCaratUSD)).ToString();
-            txtTotalUSD.Text = GM.ConvertDoubleToString(txtTotalUSD, 0);
-        }
-
-        private void txtPriceCaratUSD_Leave(object sender, EventArgs e)
-        {
-            txtTotalUSD.Text = (GM.ConvertStringToDouble(txtWeight) * GM.ConvertStringToDouble(txtPriceCaratUSD)).ToString();
-
-            txtPriceCaratUSD.Text = GM.ConvertDoubleToString(txtPriceCaratUSD, 0);
-            txtTotalUSD.Text = GM.ConvertDoubleToString(txtTotalUSD, 0);
-        }
-
-        private void txtTotalBaht_TextChanged(object sender, EventArgs e)
-        {
-            txtUSDRate.Text = GM.ConvertDoubleToString(txtUSDRate);
-            txtTotalUSD.Text = GM.ConvertDoubleToString(txtTotalUSD,0);
-            txtPriceCarat.Text = GM.ConvertDoubleToString(txtPriceCarat,0);
-            txtTotalBaht.Text = GM.ConvertDoubleToString(txtTotalBaht,0);
-        }
-
-        private void SetFormatNumber()
-        {
-            txtUSDRate.Text = GM.ConvertDoubleToString(txtUSDRate);
-            txtTotalUSD.Text = GM.ConvertDoubleToString(txtTotalUSD, 0);
-            txtPriceCaratUSD.Text = GM.ConvertDoubleToString(txtPriceCaratUSD, 0);
-            txtMarketPrice.Text = GM.ConvertDoubleToString(txtMarketPrice, 0);
-            txtAmount.Text = GM.ConvertDoubleToString(txtAmount, 0);
-            txtWeight.Text = GM.ConvertDoubleToString(txtWeight);
-            txtSize.Text = GM.ConvertDoubleToString(txtSize);
-        }
-        private void txtPriceCarat_Leave(object sender, EventArgs e)
-        {
-            if (!chkPayByUSD.Checked)
-            {
-                txtTotalBaht.Text = (GM.ConvertStringToDouble(txtPriceCarat) * GM.ConvertStringToDouble(txtWeight)).ToString();
-
-                txtPriceCarat.Text = GM.ConvertDoubleToString(txtPriceCarat, 0);
-            }
-        }
         private void grid1_Validated(object sender, EventArgs e)
         {
             if (grid1.Rows.Count > 0)
@@ -325,12 +261,6 @@ namespace DiamondShop
                 tds2.AcceptChanges();
             }
         }
-
-        private void txtMarketPrice_Leave(object sender, EventArgs e)
-        {
-            txtMarketPrice.Text = GM.ConvertDoubleToString(txtMarketPrice, 0);
-        }
-
         private void txtSize_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
@@ -338,24 +268,85 @@ namespace DiamondShop
                 e.Handled = true;
             }
         }
-
-        private void txtSize_Leave(object sender, EventArgs e)
+        private void SetFormatNumber()
         {
-            txtSize.Text = GM.ConvertDoubleToString(txtSize);
+            txtTotalUSD.Text = GM.ConvertDoubleToString(txtTotalUSD);
+            txtPriceCaratUSD.Text = GM.ConvertDoubleToString(txtPriceCaratUSD, 0);
+            txtPriceCarat.Text = GM.ConvertDoubleToString(txtPriceCarat, 0);
+            txtTotalBaht.Text = GM.ConvertDoubleToString(txtTotalBaht, 0);
+            txtMarketPrice.Text = GM.ConvertDoubleToString(txtMarketPrice, 0);
+            //txtWeight.Text = GM.ConvertDoubleToString(txtWeight);
+        }
+        private void txtMarketPrice_Leave(object sender, EventArgs e)
+        {
+            txtMarketPrice.Text = GM.ConvertDoubleToString(txtMarketPrice, 0);
+        }
+
+        #region Calculate Money
+        private void chkPayByUSD_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkPayByUSD.Checked)
+            {
+                txtPriceCaratUSD.Enabled = true;
+                txtUSDRate.Enabled = true;
+
+                txtPriceCarat.Enabled = false;
+                txtPriceCarat.Text = "0";
+                txtUSDRate_Leave(null, null);
+            }
+            else
+            {
+                txtPriceCaratUSD.Enabled = false;
+                txtUSDRate.Enabled = false;
+                txtUSDRate.Text = "0";
+
+                txtPriceCarat_Leave(null, null);
+                txtPriceCarat.Enabled = true;
+            }
+        }
+
+
+        private void txtWeight_Leave(object sender, EventArgs e)
+        {
+            if (chkPayByUSD.Checked)
+            {
+                txtTotalUSD.Text = (GM.ConvertStringToDouble(txtWeight) * GM.ConvertStringToDouble(txtPriceCaratUSD)).ToString();
+                txtTotalBaht.Text = (GM.ConvertStringToDouble(txtTotalUSD) * GM.ConvertStringToDouble(txtUSDRate)).ToString();
+                txtTotalUSD.Text = GM.ConvertDoubleToString(txtTotalUSD);
+            }
+            else
+            {
+                txtTotalBaht.Text = (GM.ConvertStringToDouble(txtPriceCarat) * GM.ConvertStringToDouble(txtWeight)).ToString();
+            }
+
+        }
+
+        private void txtPriceCarat_Leave(object sender, EventArgs e)
+        {
+            txtTotalBaht.Text = (GM.ConvertStringToDouble(txtPriceCarat) * GM.ConvertStringToDouble(txtWeight)).ToString();
+            txtPriceCarat.Text = GM.ConvertDoubleToString(txtPriceCarat, 0);
+        }
+
+        private void txtPriceCaratUSD_Leave(object sender, EventArgs e)
+        {
+            txtTotalUSD.Text = (GM.ConvertStringToDouble(txtWeight) * GM.ConvertStringToDouble(txtPriceCaratUSD)).ToString();
+            txtTotalBaht.Text = (GM.ConvertStringToDouble(txtTotalUSD) * GM.ConvertStringToDouble(txtUSDRate)).ToString();
+            txtTotalUSD.Text = GM.ConvertDoubleToString(txtTotalUSD);
+            txtPriceCaratUSD.Text = GM.ConvertDoubleToString(txtPriceCaratUSD,0);
         }
 
         private void txtUSDRate_Leave(object sender, EventArgs e)
         {
-            if (chkPayByUSD.Checked)
-            {
-                txtTotalBaht.Text = (GM.ConvertStringToDouble(txtTotalUSD) * GM.ConvertStringToDouble(txtUSDRate)).ToString();
-            }
-            else
-            {
-                txtTotalBaht.Text = "0";
-            }
-            txtUSDRate.Text = GM.ConvertDoubleToString(txtUSDRate);
-            txtTotalUSD.Text = GM.ConvertDoubleToString(txtTotalUSD,0);
+            txtTotalBaht.Text = (GM.ConvertStringToDouble(txtTotalUSD) * GM.ConvertStringToDouble(txtUSDRate)).ToString();
         }
+
+        private void txtTotalBaht_TextChanged(object sender, EventArgs e)
+        {
+            txtTotalUSD.Text = GM.ConvertDoubleToString(txtTotalUSD);
+            txtPriceCaratUSD.Text = GM.ConvertDoubleToString(txtPriceCaratUSD, 0);
+            txtPriceCarat.Text = GM.ConvertDoubleToString(txtPriceCarat, 0);
+            txtTotalBaht.Text = GM.ConvertDoubleToString(txtTotalBaht, 0);
+        }
+        #endregion Calculate Money
     }
 }

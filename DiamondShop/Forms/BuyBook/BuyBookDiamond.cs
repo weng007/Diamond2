@@ -332,6 +332,7 @@ namespace DiamondShop
         private void txtPriceCarat_Leave(object sender, EventArgs e)
         {
             txtTotalBaht.Text = (GM.ConvertStringToDouble(txtPriceCarat) * GM.ConvertStringToDouble(txtWeight)).ToString();
+            txtPriceCarat.Text = GM.ConvertDoubleToString(txtPriceCarat, 0);
         }
 
         private void txtPriceCaratUSD_Leave(object sender, EventArgs e)
@@ -339,6 +340,7 @@ namespace DiamondShop
             txtTotalUSD.Text = (GM.ConvertStringToDouble(txtWeight) * GM.ConvertStringToDouble(txtPriceCaratUSD)).ToString();
             txtTotalBaht.Text = (GM.ConvertStringToDouble(txtTotalUSD) * GM.ConvertStringToDouble(txtUSDRate)).ToString();
             txtTotalUSD.Text = GM.ConvertDoubleToString(txtTotalUSD);
+            txtPriceCaratUSD.Text = GM.ConvertDoubleToString(txtPriceCaratUSD, 0);
         }
 
         private void txtUSDRate_Leave(object sender, EventArgs e)
@@ -354,5 +356,10 @@ namespace DiamondShop
             txtTotalBaht.Text = GM.ConvertDoubleToString(txtTotalBaht, 0);
         }
         #endregion Calculate Money
+
+        private void txtMarketPrice_Leave(object sender, EventArgs e)
+        {
+            txtMarketPrice.Text = GM.ConvertDoubleToString(txtMarketPrice, 0);
+        }
     }
 }

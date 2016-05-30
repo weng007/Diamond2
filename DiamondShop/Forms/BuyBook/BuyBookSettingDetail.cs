@@ -79,7 +79,7 @@ namespace DiamondShop
 
             cmbSettingType.Select();
 
-            SetFieldService.SetRequireField(txtAmount,txtWeight);
+            SetFieldService.SetRequireField(txtAmount,txtWeight, txtTotalUSD, txtUSDRate);
         }
         protected override void LoadData()
         {
@@ -172,9 +172,13 @@ namespace DiamondShop
             {
                 message += "Please input Weight > 0.\n";
             }
-            if (txtTotalBaht.Text == "" || GM.ConvertStringToDouble(txtTotalBaht) == 0)
+            if (txtTotalUSD.Text == "" || GM.ConvertStringToDouble(txtTotalUSD) == 0)
             {
-                message += "Please input Total Baht > 0.\n";
+                message += "Please input Total USD > 0.\n";
+            }
+            if (txtUSDRate.Text == "" || GM.ConvertStringToDouble(txtUSDRate) == 0)
+            {
+                message += "Please input USD Rate > 0.\n";
             }
 
             if (message == "") { return true; }
