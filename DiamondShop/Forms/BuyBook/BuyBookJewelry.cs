@@ -253,6 +253,7 @@ namespace DiamondShop
 
         private void btnImage1_Click(object sender, EventArgs e)
         {
+            openFileDialog1.Filter = "Image files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png) | *.jpg; *.jpeg; *.jpe; *.jfif; *.png";
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 btnImage1.BackgroundImage = Image.FromFile(openFileDialog1.FileName);
@@ -267,6 +268,7 @@ namespace DiamondShop
 
         private void btnImage2_Click(object sender, EventArgs e)
         {
+            openFileDialog1.Filter = "Image files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png) | *.jpg; *.jpeg; *.jpe; *.jfif; *.png";
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 btnImage2.BackgroundImage = Image.FromFile(openFileDialog1.FileName);
