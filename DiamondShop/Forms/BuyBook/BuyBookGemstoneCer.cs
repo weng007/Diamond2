@@ -327,6 +327,7 @@ namespace DiamondShop
             cmbComment.Refresh();
         }
 
+        #region Calculate Money
         private void chkPayByUSD_CheckedChanged(object sender, EventArgs e)
         {
             if(chkPayByUSD.Checked)
@@ -395,6 +396,8 @@ namespace DiamondShop
             txtPriceCarat.Text = GM.ConvertDoubleToString(txtPriceCarat, 0);
             txtTotalBaht.Text = GM.ConvertDoubleToString(txtTotalBaht, 0);
         }
+        #endregion Calculate Money
+
 
         private void SetFormatNumber()
         {
