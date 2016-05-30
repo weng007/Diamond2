@@ -395,21 +395,21 @@ namespace DiamondShop
         {
             txtTotal.Text = (GM.ConvertStringToDouble(txtRap) * 100 * (1 + GM.ConvertStringToDouble(txtPrice) / 100.0)
                 * GM.ConvertStringToDouble(txtWeight)).ToString();
-            txtTotal.Text = GM.ConvertDoubleToString(txtTotal,0);
+            txtTotal.Text = GM.ConvertDoubleToString(txtTotal);
         } 
 
         private void txtPrice_Leave(object sender, EventArgs e)
         {
             txtTotal.Text = (GM.ConvertStringToDouble(txtRap) * 100 * (1 + GM.ConvertStringToDouble(txtPrice) / 100.0)
                 * GM.ConvertStringToDouble(txtWeight)).ToString();
-            txtTotal.Text = GM.ConvertDoubleToString(txtTotal,0);
+            txtTotal.Text = GM.ConvertDoubleToString(txtTotal);
         }
 
         private void txtRap_Leave(object sender, EventArgs e)
         {
             txtTotal.Text = (GM.ConvertStringToDouble(txtRap) * 100 * (1 + GM.ConvertStringToDouble(txtPrice) / 100.0)
                 * GM.ConvertStringToDouble(txtWeight)).ToString();
-            txtTotal.Text = GM.ConvertDoubleToString(txtTotal, 0);
+            txtTotal.Text = GM.ConvertDoubleToString(txtTotal);
         }
 
         private void txtUSDRate_Leave(object sender, EventArgs e)
@@ -426,7 +426,7 @@ namespace DiamondShop
 
         private void SetFormatNumber()
         {
-            txtTotal.Text = GM.ConvertDoubleToString(txtTotal, 0);
+            txtTotal.Text = GM.ConvertDoubleToString(txtTotal);
             txtTotalBaht.Text = GM.ConvertDoubleToString(txtTotalBaht, 0);          
         }
     }
