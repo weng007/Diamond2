@@ -122,7 +122,7 @@
             this.panel3.Controls.Add(this.label6);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel3.Location = new System.Drawing.Point(8, 69);
+            this.panel3.Location = new System.Drawing.Point(8, 74);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1182, 242);
             this.panel3.TabIndex = 5;
