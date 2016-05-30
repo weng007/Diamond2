@@ -343,9 +343,9 @@ namespace DiamondShop
                 txtPriceCaratUSD.Enabled = false;
                 txtUSDRate.Enabled = false;
                 txtUSDRate.Text = "0";
+                txtTotalBaht.Text = "0";
 
-                txtPriceCarat.Enabled = true;
-                        
+                txtPriceCarat.Enabled = true;                       
             }       
         }
 
@@ -357,59 +357,56 @@ namespace DiamondShop
             }
         }
 
-        private void txtWeight_TextChanged(object sender, EventArgs e)
+        private void txtWeight_Leave(object sender, EventArgs e)
         {
-            txtTotalUSD.Text = (GM.ConvertStringToDouble(txtWeight) * GM.ConvertStringToDouble(txtPriceCaratUSD)).ToString();
+            if(chkPayByUSD.Checked)
+            {
+                txtTotalUSD.Text = (GM.ConvertStringToDouble(txtWeight) * GM.ConvertStringToDouble(txtPriceCaratUSD)).ToString();
+                txtTotalBaht.Text = (GM.ConvertStringToDouble(txtPriceCaratUSD) * GM.ConvertStringToDouble(txtUSDRate)).ToString();
+            }
+            else
+            {
+                txtTotalBaht.Text = (GM.ConvertStringToDouble(txtPriceCarat) * GM.ConvertStringToDouble(txtWeight)).ToString();
+            }
+            
         }
 
-        private void txtPriceCarat_TextChanged(object sender, EventArgs e)
+        private void txtPriceCarat_Leave(object sender, EventArgs e)
         {
             if (!chkPayByUSD.Checked)
             {
                 txtTotalBaht.Text = (GM.ConvertStringToDouble(txtPriceCarat) * GM.ConvertStringToDouble(txtWeight)).ToString();
-                txtUSDRate.Text = GM.ConvertDoubleToString(txtUSDRate);
+            }
+        }
+
+        private void txtPriceCaratUSD_Leave(object sender, EventArgs e)
+        {
+            txtTotalUSD.Text = (GM.ConvertStringToDouble(txtWeight) * GM.ConvertStringToDouble(txtPriceCaratUSD)).ToString();
+            txtTotalBaht.Text = (GM.ConvertStringToDouble(txtTotalUSD) * GM.ConvertStringToDouble(txtUSDRate)).ToString();
+        }
+
+        private void txtUSDRate_Leave(object sender, EventArgs e)
+        {
+            if (chkPayByUSD.Checked)
+            {
+                txtTotalBaht.Text = (GM.ConvertStringToDouble(txtTotalUSD) * GM.ConvertStringToDouble(txtUSDRate)).ToString();
             }
         }
 
         private void txtTotalBaht_TextChanged(object sender, EventArgs e)
         {
-            txtTotalUSD.Text = GM.ConvertDoubleToString(txtTotalUSD,0);
-            txtPriceCaratUSD.Text = GM.ConvertDoubleToString(txtPriceCaratUSD,0);
-            txtPriceCarat.Text = GM.ConvertDoubleToString(txtPriceCarat, 0);
-            txtTotalBaht.Text = GM.ConvertDoubleToString(txtTotalBaht,0);
-            txtUSDRate.Text = GM.ConvertDoubleToString(txtUSDRate);
-        }
-        private void SetFormatNumber()
-        {
-            txtWeight.Text = GM.ConvertDoubleToString(txtWeight);
             txtTotalUSD.Text = GM.ConvertDoubleToString(txtTotalUSD, 0);
             txtPriceCaratUSD.Text = GM.ConvertDoubleToString(txtPriceCaratUSD, 0);
             txtPriceCarat.Text = GM.ConvertDoubleToString(txtPriceCarat, 0);
             txtTotalBaht.Text = GM.ConvertDoubleToString(txtTotalBaht, 0);
-            txtUSDRate.Text = GM.ConvertDoubleToString(txtUSDRate);
-            txtW.Text = GM.ConvertDoubleToString(txtW);
-            txtL.Text = GM.ConvertDoubleToString(txtL);
-            txtD.Text = GM.ConvertDoubleToString(txtD);
         }
 
-        private void btnUpload_Click(object sender, EventArgs e)
+        private void SetFormatNumber()
         {
-            openFileDialog1.Filter = "Pdf Files|*.pdf";
-            if (openFileDialog1.ShowDialog() == DialogResult.OK && openFileDialog1.CheckFileExists)
-            {
-                using (var stream = new FileStream(openFileDialog1.InitialDirectory + openFileDialog1.FileName, FileMode.Open, FileAccess.Read))
-                {
-                    using (var reader = new BinaryReader(stream))
-                    {
-                        file = reader.ReadBytes((int)stream.Length);
-                    }
-                }
-
-                if (file.Length > 0)
-                {
-                    linkFile.Text = "Certificate";
-                }
-            }
+            txtTotalUSD.Text = GM.ConvertDoubleToString(txtTotalUSD, 0);
+            txtPriceCaratUSD.Text = GM.ConvertDoubleToString(txtPriceCaratUSD, 0);
+            txtPriceCarat.Text = GM.ConvertDoubleToString(txtPriceCarat, 0);
+            txtTotalBaht.Text = GM.ConvertDoubleToString(txtTotalBaht, 0);
         }
 
         private void linkFile_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -431,39 +428,24 @@ namespace DiamondShop
             }
         }
 
-        private void txtW_Leave(object sender, EventArgs e)
+        private void btnUpload_Click(object sender, EventArgs e)
         {
-            txtW.Text = GM.ConvertDoubleToString(txtW);
-        }
-
-        private void txtL_Leave(object sender, EventArgs e)
-        {
-            txtL.Text = GM.ConvertDoubleToString(txtL);
-        }
-
-        private void txtD_Leave(object sender, EventArgs e)
-        {
-            txtD.Text = GM.ConvertDoubleToString(txtD);
-        }
-
-        private void txtUSDRate_Leave(object sender, EventArgs e)
-        {
-            if (chkPayByUSD.Checked)
+            openFileDialog1.Filter = "Pdf Files|*.pdf";
+            if (openFileDialog1.ShowDialog() == DialogResult.OK && openFileDialog1.CheckFileExists)
             {
-                txtTotalBaht.Text = (GM.ConvertStringToDouble(txtTotalUSD) * GM.ConvertStringToDouble(txtUSDRate)).ToString();
-                txtUSDRate.Text = GM.ConvertDoubleToString(txtUSDRate);
-            }
-            else
-            {
-                txtTotalBaht.Text = "0";
-            }
-        }
+                using (var stream = new FileStream(openFileDialog1.InitialDirectory + openFileDialog1.FileName, FileMode.Open, FileAccess.Read))
+                {
+                    using (var reader = new BinaryReader(stream))
+                    {
+                        file = reader.ReadBytes((int)stream.Length);
+                    }
+                }
 
-        private void txtPriceCaratUSD_Leave(object sender, EventArgs e)
-        {
-            txtTotalUSD.Text = (GM.ConvertStringToDouble(txtWeight) * GM.ConvertStringToDouble(txtPriceCaratUSD)).ToString();
-            txtUSDRate.Text = GM.ConvertDoubleToString(txtUSDRate);
-            txtTotalUSD.Text = GM.ConvertDoubleToString(txtTotalUSD);
+                if (file.Length > 0)
+                {
+                    linkFile.Text = "Certificate";
+                }
+            }
         }
     }
 }

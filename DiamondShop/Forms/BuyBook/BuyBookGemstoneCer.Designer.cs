@@ -369,7 +369,6 @@
             this.txtW.Text = "0";
             this.txtW.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtW.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtWeight_KeyPress);
-            this.txtW.Leave += new System.EventHandler(this.txtW_Leave);
             // 
             // txtD
             // 
@@ -380,7 +379,6 @@
             this.txtD.Text = "0";
             this.txtD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtWeight_KeyPress);
-            this.txtD.Leave += new System.EventHandler(this.txtD_Leave);
             // 
             // label27
             // 
@@ -409,7 +407,6 @@
             this.txtL.Text = "0";
             this.txtL.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtL.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtWeight_KeyPress);
-            this.txtL.Leave += new System.EventHandler(this.txtL_Leave);
             // 
             // label7
             // 
@@ -502,8 +499,8 @@
             this.txtPriceCarat.TabIndex = 37;
             this.txtPriceCarat.Text = "0";
             this.txtPriceCarat.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtPriceCarat.TextChanged += new System.EventHandler(this.txtPriceCarat_TextChanged);
             this.txtPriceCarat.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtWeight_KeyPress);
+            this.txtPriceCarat.Leave += new System.EventHandler(this.txtPriceCarat_Leave);
             // 
             // label13
             // 
@@ -717,8 +714,8 @@
             this.txtWeight.TabIndex = 13;
             this.txtWeight.Text = "0";
             this.txtWeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtWeight.TextChanged += new System.EventHandler(this.txtWeight_TextChanged);
             this.txtWeight.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtWeight_KeyPress);
+            this.txtWeight.Leave += new System.EventHandler(this.txtWeight_Leave);
             // 
             // label18
             // 
