@@ -430,7 +430,6 @@ namespace DiamondShop
 
         private void btnUpload_Click(object sender, EventArgs e)
         {
-            openFileDialog1.Filter = "Pdf Files|*.pdf";
             if (openFileDialog1.ShowDialog() == DialogResult.OK && openFileDialog1.CheckFileExists)
             {
                 using (var stream = new FileStream(openFileDialog1.InitialDirectory + openFileDialog1.FileName, FileMode.Open, FileAccess.Read))
