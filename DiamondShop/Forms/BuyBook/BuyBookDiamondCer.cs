@@ -372,22 +372,11 @@ namespace DiamondShop
             }
         }
 
-        private void linkFile_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void txtAmount_KeyPress(object sender, KeyPressEventArgs e)
         {
-            
-            if(file != null && file.Length > 0)
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
             {
-                System.IO.FileStream wFile;
-                if (!Directory.Exists(GM.Path))
-                {
-                    Directory.CreateDirectory("C:\\Project");
-                }
-                wFile = new FileStream("C:\\Project\\Certificate.pdf", FileMode.Create);
-                wFile.Write(file, 0, file.Length);
-                wFile.Flush();
-                wFile.Close();
-
-                System.Diagnostics.Process.Start(@"C:\\Project\\Certificate.pdf");             
+                e.Handled = true;
             }
         }
 
@@ -428,6 +417,24 @@ namespace DiamondShop
         {
             txtTotal.Text = GM.ConvertDoubleToString(txtTotal);
             txtTotalBaht.Text = GM.ConvertDoubleToString(txtTotalBaht, 0);          
+        }
+        private void linkFile_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            
+            if(file != null && file.Length > 0)
+            {
+                System.IO.FileStream wFile;
+                if (!Directory.Exists(GM.Path))
+                {
+                    Directory.CreateDirectory("C:\\Project");
+                }
+                wFile = new FileStream("C:\\Project\\Certificate.pdf", FileMode.Create);
+                wFile.Write(file, 0, file.Length);
+                wFile.Flush();
+                wFile.Close();
+
+                System.Diagnostics.Process.Start(@"C:\\Project\\Certificate.pdf");             
+            }
         }
     }
 }

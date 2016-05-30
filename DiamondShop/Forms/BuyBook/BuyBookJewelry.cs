@@ -291,16 +291,10 @@ namespace DiamondShop
         {
             txtWeight.Text = GM.ConvertDoubleToString(txtWeight);
         }
-
-        private void txtSize_Leave(object sender, EventArgs e)
-        {
-            txtSize.Text = GM.ConvertDoubleToString(txtSize);
-        }
-
         private void SetFormatNumber()
         {
             txtWeight.Text = GM.ConvertDoubleToString(txtWeight);
-            txtSize.Text = GM.ConvertDoubleToString(txtSize);
+            //txtSize.Text = GM.ConvertDoubleToString(txtSize);
         }
 
         private void txtCost1_KeyPress(object sender, KeyPressEventArgs e)
