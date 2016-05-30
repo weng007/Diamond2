@@ -95,7 +95,7 @@
             this.panel3.Controls.Add(this.txtSeller);
             this.panel3.Controls.Add(this.dtBuyDate);
             this.panel3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel3.Location = new System.Drawing.Point(10, 69);
+            this.panel3.Location = new System.Drawing.Point(10, 72);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(976, 427);
             this.panel3.TabIndex = 74;
@@ -142,7 +142,7 @@
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label4.Location = new System.Drawing.Point(670, 359);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(65, 21);
+            this.label4.Size = new System.Drawing.Size(59, 21);
             this.label4.TabIndex = 92;
             this.label4.Text = "ขายออก";
             // 
@@ -153,7 +153,7 @@
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label3.Location = new System.Drawing.Point(555, 359);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 21);
+            this.label3.Size = new System.Drawing.Size(43, 21);
             this.label3.TabIndex = 91;
             this.label3.Text = "รับซื้อ";
             // 
@@ -188,7 +188,7 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label2.Location = new System.Drawing.Point(330, 386);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(201, 21);
+            this.label2.Size = new System.Drawing.Size(189, 21);
             this.label2.TabIndex = 88;
             this.label2.Text = "ทองคำแท่ง 96.5% ณ วันที่ซื้อ";
             // 

@@ -126,7 +126,7 @@
             this.panel3.Controls.Add(this.label13);
             this.panel3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.panel3.Location = new System.Drawing.Point(7, 70);
+            this.panel3.Location = new System.Drawing.Point(7, 72);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(785, 658);
             this.panel3.TabIndex = 1;

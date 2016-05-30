@@ -130,7 +130,7 @@
             this.panel3.Controls.Add(this.dtBuyDate);
             this.panel3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panel3.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.panel3.Location = new System.Drawing.Point(12, 68);
+            this.panel3.Location = new System.Drawing.Point(12, 72);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1147, 406);
             this.panel3.TabIndex = 74;
