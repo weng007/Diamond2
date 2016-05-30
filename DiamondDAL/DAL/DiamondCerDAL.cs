@@ -12,10 +12,9 @@ namespace DiamondDAL.DAL
     {
         SQLHelper SQL = new SQLHelper();
         dsDiamondCer ds = new dsDiamondCer();
-        dsBuyBookDiamondCer ds2 = new dsBuyBookDiamondCer();
         int flag = 0;
 
-        public dsBuyBookDiamondCer DoSearchData(string code,string reportNumber, int shape, int lab, double sWeight, double eWeight, int colorType,int sColor,int eColor, int sClearity, int eClearity, int status, int shop)
+        public dsDiamondCer DoSearchData(string code,string reportNumber, int shape, int lab, double sWeight, double eWeight, int colorType,int sColor,int eColor, int sClearity, int eClearity, int status, int shop)
         {
             try
             {
@@ -33,14 +32,14 @@ namespace DiamondDAL.DAL
                 SQL.CreateParameter("eClearity", eClearity);
                 SQL.CreateParameter("Status", status);
                 SQL.CreateParameter("Shop", shop);
-                SQL.FillDataSetBySP("SP_BuyBookDiamondCer_Search", ds2.BuyBookDiamondCer);
+                SQL.FillDataSetBySP("SP_DiamondCer_Search", ds.DiamondCer);
             }
             catch (Exception ex)
             {
                 throw ex;
             }
 
-            return ds2;
+            return ds;
         }
 
         public dsDiamondCer DoSelectData(int id)
