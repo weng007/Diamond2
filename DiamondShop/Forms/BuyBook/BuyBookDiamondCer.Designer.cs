@@ -341,7 +341,7 @@
             this.cmbCut.Location = new System.Drawing.Point(150, 162);
             this.cmbCut.Name = "cmbCut";
             this.cmbCut.Size = new System.Drawing.Size(165, 29);
-            this.cmbCut.TabIndex = 8;
+            this.cmbCut.TabIndex = 9;
             // 
             // label27
             // 
@@ -702,7 +702,7 @@
             this.cmbShape.Location = new System.Drawing.Point(502, 89);
             this.cmbShape.Name = "cmbShape";
             this.cmbShape.Size = new System.Drawing.Size(157, 29);
-            this.cmbShape.TabIndex = 28;
+            this.cmbShape.TabIndex = 8;
             this.cmbShape.SelectedIndexChanged += new System.EventHandler(this.cmbShape_SelectedIndexChanged);
             // 
             // label3
