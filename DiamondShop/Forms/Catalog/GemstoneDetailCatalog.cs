@@ -17,33 +17,20 @@ namespace DiamondShop
     public partial class GemstoneDetailCatalog : FormInfo
     {
         //Service1 ser = GM.GetService();
-        dsGemstoneDetail tds = new dsGemstoneDetail();
-        public int productID = 0;
+        DataSet ds2 = new DataSet();
+        DataSet tmp = new DataSet();
+        dsInvGemstoneCerDetail tds = new dsInvGemstoneCerDetail();
+        dsInvGemstoneDetail tds2 = new dsInvGemstoneDetail();
 
         public GemstoneDetailCatalog()
         {
             InitializeComponent();
-            Initial();
-
-            //binder.BindControl(cmbShape, "Shape");
-            //binder.BindControl(cmbGemstoneType, "GemstoneType");
-            //binder.BindControl(txtAmount, "Amount");
-            //binder.BindControl(txtWeight, "Weight");
-            //binder.BindControl(cmbOrigin, "Origin");
-            //binder.BindControl(txtCertificateNo, "CertificateNo");
         }
 
         public GemstoneDetailCatalog(int id)
         {
             InitializeComponent();
             Initial();
-
-            //binder.BindControl(cmbShape, "Shape");
-            //binder.BindControl(cmbGemstoneType, "GemstoneType");
-            //binder.BindControl(txtAmount, "Amount");
-            //binder.BindControl(txtWeight, "Weight");
-            //binder.BindControl(cmbOrigin, "Origin");
-            //binder.BindControl(txtCertificateNo, "CertificateNo");
 
             this.id = id;
             LoadData();
@@ -72,88 +59,111 @@ namespace DiamondShop
         }
         protected override void LoadData()
         {
-            ds = ser.DoSelectData("GemstoneDetail", id, 0);
+            ds = ser.DoSelectData("InvGemstoneCerDetail", id, 0);
             tds.Clear();
             tds.Merge(ds);
 
-            if (tds.GemstoneDetail.Rows.Count > 0)
+            ds2 = ser.DoSelectData("InvGemstoneDetail", id, 0);
+            tds2.Clear();
+            tds2.Merge(ds2);
+
+            if (tds.InvGemstoneCerDetail.Rows.Count > 0)
             {
-                binder.BindValueToControl(tds.GemstoneDetail[0]);
-                EnableDelete = true;
+                grid1.Rows.Clear();
+                BindingGridDiamondDetail(grid1);
+                BindingDSDiamondDetail(0);
+            }
+
+            if (tds2.InvGemstoneDetail.Rows.Count > 0)
+            {
+                grid2.Rows.Clear();
+                BindingGridDiamondDetail(grid2);
+                BindingDSDiamondDetail(1);
             }
 
             base.LoadData();
         }
 
-        protected override bool SaveData()
+        private void BindingGridDiamondDetail(DataGridView grid)
         {
-            dsGemstoneDetail.GemstoneDetailRow row = null;
+            int i = 0;
 
-            if (tds.GemstoneDetail.Rows.Count > 0)
+            if (grid.Name == "grid1")
             {
-                row = tds.GemstoneDetail[0];
+                foreach (DataRow row in tds.Tables[0].Rows)
+                {
+                    grid1.Rows.Add();
+                    grid1.Rows[i].Cells["ID"].Value = row["ID"].ToString();
+                    grid1.Rows[i].Cells["RowNum"].Value = row["RowNum"].ToString();
+                    grid1.Rows[i].Cells["Code"].Value = row["Code"].ToString();
+                    grid1.Rows[i].Cells["ReportNumber"].Value = row["ReportNumber"].ToString();
+                    grid1.Rows[i].Cells["IdentificationName"].Value = row["IdentificationName"].ToString();
+                    grid1.Rows[i].Cells["LabName"].Value = row["LabName"].ToString();
+                    grid1.Rows[i].Cells["ShapeName"].Value = row["ShapeName"].ToString();
+                    grid1.Rows[i].Cells["Weight"].Value = row["Weight"].ToString();
+                    grid1.Rows[i].Cells["ColorName"].Value = row["ColorName"].ToString();
+                    grid1.Rows[i].Cells["OriginName"].Value = row["OriginName"].ToString();
+                    grid1.Rows[i].Cells["MinPrice"].Value = row["MinPrice"].ToString();
+                    grid1.Rows[i].Cells["TotalBaht"].Value = row["TotalBaht"].ToString();
+                    grid1.Rows[i].Cells["refID"].Value = row["refID"].ToString();
+                    grid1.Rows[i].Cells["refID1"].Value = row["refID1"].ToString();
+
+                    i++;
+                }
+
+                i = 0;
+                CalSum(0);
+            }
+
+            else if (grid.Name == "grid2")
+            {
+                foreach (DataRow row in tds2.Tables[0].Rows)
+                {
+                    grid2.Rows.Add();
+                    grid2.Rows[i].Cells["ID1"].Value = row["ID"].ToString();
+                    grid2.Rows[i].Cells["RowNum1"].Value = row["RowNum"].ToString();
+                    grid2.Rows[i].Cells["GemstoneType"].Value = row["GemstoneType"].ToString();
+                    grid2.Rows[i].Cells["Shape"].Value = row["Shape"].ToString();
+                    //grid2.Rows[i].Cells["WeightPerStone"].Value = row["WeightPerStone"].ToString();
+                    grid2.Rows[i].Cells["Amount"].Value = row["Amount"].ToString();
+                    grid2.Rows[i].Cells["Weight1"].Value = row["Weight"].ToString();
+                    grid2.Rows[i].Cells["Origin"].Value = row["Origin"].ToString();
+                    grid2.Rows[i].Cells["CostPerCarat"].Value = row["CostPerCarat"].ToString();
+                    grid2.Rows[i].Cells["Cost1"].Value = row["Cost"].ToString();
+                    grid2.Rows[i].Cells["MinPricePerCarat"].Value = row["MinPricePerCarat"].ToString();
+                    grid2.Rows[i].Cells["MinPrice1"].Value = row["MinPrice"].ToString();
+                    grid2.Rows[i].Cells["refID2"].Value = row["refID"].ToString();
+
+                    i++;
+                    CalSum(1);
+                }
+            }
+        }
+
+        private void CalSum(int type)
+        {
+            if (type == 0)
+            {
+                txtSumWeight.Text = (grid1.Rows.Cast<DataGridViewRow>()
+                .Sum(t => Convert.ToDecimal(t.Cells["Weight"].Value))).ToString();
+
+                txtSumWeight.Text = GM.ConvertDoubleToString(txtSumWeight);
             }
             else
             {
-                row = tds.GemstoneDetail.NewGemstoneDetailRow();
-                tds.GemstoneDetail.Rows.Add(row);
-            }
-            binder.BindValueToDataRow(row);
-            row.ProductID = productID;
+                txtSumAmount1.Text = (grid2.Rows.Cast<DataGridViewRow>()
+                .Sum(t => Convert.ToDecimal(t.Cells["Amount"].Value))).ToString();
 
-            try
-            {
-                if (id == 0)
-                {
-                    SetCreateBy(row);
-                    chkFlag = ser.DoInsertData("GemstoneDetail", tds);
-                }
-                else
-                {
-                    SetEditBy(row);
-                    chkFlag = ser.DoUpdateData("GemstoneDetail", tds);
-                }
+                txtSumWeight1.Text = (grid2.Rows.Cast<DataGridViewRow>()
+                .Sum(t => Convert.ToDecimal(t.Cells["Weight1"].Value))).ToString();
 
-                tds.AcceptChanges();
-            }
-            catch (Exception ex)
-            {
-                throw ex;
+                txtSumAmount1.Text = GM.ConvertDoubleToString(txtSumAmount1);
+                txtSumWeight1.Text = GM.ConvertDoubleToString(txtSumWeight1);
             }
 
-            return chkFlag;
-        }
-        protected override bool DeleteData()
-        {
-            try
-            {
-                chkFlag = ser.DoDeleteData("GemstoneDetail", id);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-
-            return chkFlag;
         }
 
-        protected override bool ValidateData()
-        {
-            message = "";
-
-            //if (txtAmount.Text == "" || GM.ConvertStringToDouble(txtAmount) == 0)
-            //{
-            //    message += "Please input Amount > 0.\n";
-            //}
-
-            //if (txtWeight.Text == "" || GM.ConvertStringToDouble(txtWeight) == 0)
-            //{
-            //    message += "Please input Weight > 0.\n";
-            //}
-
-            if (message == "") { return true; }
-            else { return false; }
-        }
+        
 
         private void txtAmount_KeyPress(object sender, KeyPressEventArgs e)
         {
