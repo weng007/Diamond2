@@ -441,7 +441,7 @@ namespace DiamondShop
 
         private void grid2_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
-            if(e.ColumnIndex == 3 || e.ColumnIndex == 4)
+            if(e.ColumnIndex == 3 || e.ColumnIndex == 4 || e.ColumnIndex == 8 || e.ColumnIndex == 10)
             {              
                 if(grid2.Rows[e.RowIndex].Cells[3].Value ==null || grid2.Rows[e.RowIndex].Cells[3].Value.ToString().Trim() == "")
                 {
@@ -452,24 +452,20 @@ namespace DiamondShop
                     grid2.Rows[e.RowIndex].Cells[4].Value = 0;
                 }
 
-                grid2.Rows[e.RowIndex].Cells[5].Value = Convert.ToDecimal(grid2.Rows[e.RowIndex].Cells[3].Value) * Convert.ToInt16(grid2.Rows[e.RowIndex].Cells[4].Value);
-            }
-            else if(e.ColumnIndex == 8)
-            {
                 if (grid2.Rows[e.RowIndex].Cells[8].Value == null || grid2.Rows[e.RowIndex].Cells[8].Value.ToString().Trim() == "")
                 {
                     grid2.Rows[e.RowIndex].Cells[8].Value = 0;
                 }
 
-                grid2.Rows[e.RowIndex].Cells[9].Value = Convert.ToDecimal(grid2.Rows[e.RowIndex].Cells[5].Value) * Convert.ToDecimal(grid2.Rows[e.RowIndex].Cells[8].Value);
-            }
-            else if(e.ColumnIndex == 10)
-            {
+               
+
                 if (grid2.Rows[e.RowIndex].Cells[10].Value == null || grid2.Rows[e.RowIndex].Cells[10].Value.ToString().Trim() == "")
                 {
                     grid2.Rows[e.RowIndex].Cells[10].Value = 0;
-                }
+                }              
 
+                grid2.Rows[e.RowIndex].Cells[5].Value = Convert.ToDecimal(grid2.Rows[e.RowIndex].Cells[3].Value) * Convert.ToInt16(grid2.Rows[e.RowIndex].Cells[4].Value);
+                grid2.Rows[e.RowIndex].Cells[9].Value = Convert.ToDecimal(grid2.Rows[e.RowIndex].Cells[5].Value) * Convert.ToDecimal(grid2.Rows[e.RowIndex].Cells[8].Value);
                 grid2.Rows[e.RowIndex].Cells[11].Value = Convert.ToDecimal(grid2.Rows[e.RowIndex].Cells[5].Value) * Convert.ToDecimal(grid2.Rows[e.RowIndex].Cells[10].Value);
             }
 
