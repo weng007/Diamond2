@@ -53,10 +53,9 @@ namespace DiamondShop
             binder.BindControl(txtMaterial2, "Material2Name");
             binder.BindControl(txtMaterialWeight1, "MaterialWeight1");
             binder.BindControl(txtMaterialWeight2, "MaterialWeight2");
-            binder.BindControl(txtMinBeforePremium, "MinBeforePremium");
             binder.BindControl(txtMinPrice, "MinPrice");
             binder.BindControl(txtPriceTag, "PriceTag");
-            binder.BindControl(txtInvRemark, "InvRemark");
+            binder.BindControl(txtInvRemark, "RemarkInv");
             binder.BindControl(txtRemark, "Remark");
             binder.BindControl(dtImportDate, "CreateDate");
             binder.BindControl(txtUpdateBy, "EditByName");
@@ -80,14 +79,14 @@ namespace DiamondShop
             {
                 binder.BindValueToControl(tds.Catalog[0]);
                 
-                if(image1 !=  null)
+                if(tds.Catalog[0].Image1 !=  null)
                 {
                     image1 = tds.Catalog[0].Image1;
                     ms1 = new MemoryStream(image1);
                     Image backImage1 = Image.FromStream(ms1);
                     btnImage1.BackgroundImage = backImage1;
                 }
-                if (image2 != null)
+                if (tds.Catalog[0].Image2 != null)
                 {
                     image2 = tds.Catalog[0].Image2;
                     ms2 = new MemoryStream(image2);
@@ -210,32 +209,6 @@ namespace DiamondShop
                 fs.Close();
             }
         }
-
-        //private void gridDiamond_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        //{
-        //    string color = "";
-
-        //    if (e.ColumnIndex == 3)
-        //    {
-        //        if (gridDiamond.Rows[e.RowIndex].Cells["ColorGrade"].RowIndex == 0)
-        //        {
-        //            color = "C001";
-        //        }
-        //        else
-        //        {
-        //            color = "C017";
-        //        }
-
-        //        DataGridViewComboBoxColumn colColor;
-        //        colColor = (DataGridViewComboBoxColumn)gridDiamond.Columns["Color"];
-        //        colColor.ValueMember = "ID";
-        //        colColor.DisplayMember = "Detail";
-        //        colColor.Name = "Color";
-        //        colColor.DataSource = (GM.GetMasterTableDetail(color)).Tables[0];
-        //        colColor.DefaultCellStyle.NullValue = (GM.GetMasterTableDetail(color)).Tables[0].Rows[e.RowIndex]["Detail"];
-        //    }
-        //}
-
         private void btnAdd_Click(object sender, EventArgs e)
         {
             //DiamondDetail frm = new DiamondDetail();

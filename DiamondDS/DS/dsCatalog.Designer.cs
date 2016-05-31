@@ -1688,11 +1688,11 @@ namespace DiamondDS.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public byte[] Image2 {
                 get {
-                    try {
-                        return ((byte[])(this[this.tableCatalog.Image2Column]));
+                    if (this.IsImage2Null()) {
+                        return null;
                     }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Image2\' in table \'Catalog\' is DBNull.", e);
+                    else {
+                        return ((byte[])(this[this.tableCatalog.Image2Column]));
                     }
                 }
                 set {

@@ -5,7 +5,7 @@
       <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
           <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="DiamondShopConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="DiamondShopConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.DiamondDS.Properties.Settings.GlobalReference.Default.DiamondShopConnectionString" Provider="System.Data.SqlClient" />
-          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="DiamondShopConnectionString1" IsAppSettingsProperty="true" Modifier="Assembly" Name="DiamondShopConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.DiamondDS.Properties.Settings.GlobalReference.Default.DiamondShopConnectionString1" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="DiamondShopConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="DiamondShopConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.DiamondDS.Properties.Settings.GlobalReference.Default.DiamondShopConnectionString1" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables />
         <Sources />
@@ -15,7 +15,7 @@
   <xs:element name="dsInventory" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsInventory" msprop:Generator_UserDSName="dsInventory">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Inventory" msprop:Generator_TableClassName="InventoryDataTable" msprop:Generator_TableVarName="tableInventory" msprop:Generator_RowChangedName="InventoryRowChanged" msprop:Generator_TablePropName="Inventory" msprop:Generator_RowDeletingName="InventoryRowDeleting" msprop:Generator_RowChangingName="InventoryRowChanging" msprop:Generator_RowEvHandlerName="InventoryRowChangeEventHandler" msprop:Generator_RowDeletedName="InventoryRowDeleted" msprop:Generator_RowClassName="InventoryRow" msprop:Generator_UserTableName="Inventory" msprop:Generator_RowEvArgName="InventoryRowChangeEvent">
+        <xs:element name="Inventory" msprop:Generator_TableClassName="InventoryDataTable" msprop:Generator_TableVarName="tableInventory" msprop:Generator_TablePropName="Inventory" msprop:Generator_RowDeletingName="InventoryRowDeleting" msprop:Generator_RowChangingName="InventoryRowChanging" msprop:Generator_RowEvHandlerName="InventoryRowChangeEventHandler" msprop:Generator_RowDeletedName="InventoryRowDeleted" msprop:Generator_UserTableName="Inventory" msprop:Generator_RowChangedName="InventoryRowChanged" msprop:Generator_RowEvArgName="InventoryRowChangeEvent" msprop:Generator_RowClassName="InventoryRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="RowNum" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnRowNum" msprop:Generator_ColumnPropNameInRow="RowNum" msprop:Generator_ColumnPropNameInTable="RowNumColumn" msprop:Generator_UserColumnName="RowNum" type="xs:long" minOccurs="0" />

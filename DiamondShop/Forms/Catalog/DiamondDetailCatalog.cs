@@ -17,33 +17,21 @@ namespace DiamondShop
     public partial class DiamondDetailCatalog : FormInfo
     {
         //Service1 ser = GM.GetService();
-        dsDiamondDetail tds = new dsDiamondDetail();
-        public int productID = 0;
+        DataSet ds2 = new DataSet();
+        DataSet tmp = new DataSet();
+        dsInvDiamondCerDetail tds = new dsInvDiamondCerDetail();
+        dsInvDiamondDetail tds2 = new dsInvDiamondDetail();
 
         public DiamondDetailCatalog()
         {
             InitializeComponent();
             Initial();
-
-            //binder.BindControl(cmbShape, "Shape");
-            //binder.BindControl(txtWeight, "Weight");
-            //binder.BindControl(cmbColorGrade, "ColorGrade");
-            //binder.BindControl(cmbColor, "Color");
-            //binder.BindControl(cmbClarity, "Clarity");
-            //binder.BindControl(txtGIANumber, "GIANumber");
         }
 
         public DiamondDetailCatalog(int id)
         {
             InitializeComponent();
             Initial();
-
-            //binder.BindControl(cmbShape, "Shape");
-            //binder.BindControl(txtWeight, "Weight");
-            //binder.BindControl(cmbColorGrade, "ColorGrade");
-            //binder.BindControl(cmbColor, "Color");
-            //binder.BindControl(cmbClarity, "Clarity");
-            //binder.BindControl(txtGIANumber, "GIANumber");
 
             this.id = id;
             LoadData();
@@ -72,102 +60,160 @@ namespace DiamondShop
         }
         protected override void LoadData()
         {
-            ds = ser.DoSelectData("DiamondDetail", id, 0);
+            ds = ser.DoSelectData("InvDiamondCerDetail", id, 0);
             tds.Clear();
             tds.Merge(ds);
 
-            if (tds.DiamondDetail.Rows.Count > 0)
+            ds2 = ser.DoSelectData("InvDiamondDetail", id, 0);
+            tds2.Clear();
+            tds2.Merge(ds2);
+
+            if (tds.InvDiamondCerDetail.Rows.Count > 0)
             {
-                binder.BindValueToControl(tds.DiamondDetail[0]);
-                EnableDelete = true;
+                grid1.Rows.Clear();
+                BindingGridDiamondDetail(grid1);
+                //BindingDSDiamondDetail(0);
+            }
+
+            if (tds2.InvDiamondDetail.Rows.Count > 0)
+            {
+                grid2.Rows.Clear();
+                BindingGridDiamondDetail(grid2);
+                //BindingDSDiamondDetail(1);
             }
 
             base.LoadData();
         }
-
-        protected override bool SaveData()
+        #region Binding Grid, Dataset
+        private void BindingGridDiamondDetail(DataGridView grid)
         {
-            dsDiamondDetail.DiamondDetailRow row = null;
+            int i = 0;
 
-            if (tds.DiamondDetail.Rows.Count > 0)
+            if (grid.Name == "grid1")
             {
-                row = tds.DiamondDetail[0];
-            }
-            else
-            {
-                row = tds.DiamondDetail.NewDiamondDetailRow();
-                tds.DiamondDetail.Rows.Add(row);
-            }
-            binder.BindValueToDataRow(row);
-            row.ProductID = productID;
+                foreach (DataRow row in tds.Tables[0].Rows)
+                {
+                    grid1.Rows.Add();
+                    grid1.Rows[i].Cells["ID"].Value = row["ID"].ToString();
+                    grid1.Rows[i].Cells["RowNum"].Value = row["RowNum"].ToString();
+                    grid1.Rows[i].Cells["Code"].Value = row["Code"].ToString();
+                    grid1.Rows[i].Cells["ReportNumber"].Value = row["ReportNumber"].ToString();
+                    grid1.Rows[i].Cells["LabName"].Value = row["LabName"].ToString();
+                    grid1.Rows[i].Cells["ShapeName"].Value = row["ShapeName"].ToString();
+                    grid1.Rows[i].Cells["Weight"].Value = row["Weight"].ToString();
+                    grid1.Rows[i].Cells["ColorName"].Value = row["ColorName"].ToString();
+                    grid1.Rows[i].Cells["ClearityName"].Value = row["ClearityName"].ToString();
 
-            try
-            {
-                if (id == 0)
-                {
-                    SetCreateBy(row);
-                    chkFlag = ser.DoInsertData("DiamondDetail", tds);
-                }
-                else
-                {
-                    SetEditBy(row);
-                    chkFlag = ser.DoUpdateData("DiamondDetail", tds);
+                    i++;
                 }
 
-                tds.AcceptChanges();
+                i = 0;
+                CalSum(0);
             }
-            catch (Exception ex)
+
+            else if (grid.Name == "grid2")
             {
-                throw ex;
+                foreach (DataRow row in tds2.Tables[0].Rows)
+                {
+                    grid2.Rows.Add();
+                    grid2.Rows[i].Cells["ID1"].Value = row["ID"].ToString();
+                    grid2.Rows[i].Cells["RowNum1"].Value = row["RowNum"].ToString();
+                    grid2.Rows[i].Cells["Shape"].Value = row["Shape"].ToString();
+                    grid2.Rows[i].Cells["WeightPerStone"].Value = row["WeightPerStone"].ToString();
+                    grid2.Rows[i].Cells["Amount"].Value = row["Amount"].ToString();
+                    grid2.Rows[i].Cells["Weight1"].Value = row["Weight"].ToString();
+                    grid2.Rows[i].Cells["Color"].Value = row["Color"].ToString();
+                    grid2.Rows[i].Cells["Clearity1"].Value = row["Clearity"].ToString();
+
+                    i++;
+                    CalSum(1);
+                }
             }
-
-            return chkFlag;
-        }
-        protected override bool DeleteData()
-        {
-            try
-            {
-                chkFlag = ser.DoDeleteData("DiamondDetail", id);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-
-            return chkFlag;
         }
 
-        protected override bool ValidateData()
-        {
-            message = "";
+        //private void BindingDSDiamondDetail(int type)
+        //{
+        //    int i = 0;
 
-            //if (txtWeight.Text == "" || GM.ConvertStringToDouble(txtWeight)==0)
-            //{
-            //    message = "Please input Weight > 0.\n";
-            //}
-            //if (txtGIANumber.Text == "")
-            //{
-            //    message += "Please input Certificate.\n";
-            //}
+        //    if (type == 0)
+        //    {
+        //        tds.Clear();
 
-            if (message == "") { return true; }
-            else { return false; }
-        }
+        //        foreach (DataGridViewRow row in grid1.Rows)
+        //        {
+        //            tds.Tables[0].Rows.Add();
 
-        private void cmbColorGrade_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string color = "C017";
+        //            if (row.Cells["ID"].Value != null)
+        //            { tds.Tables[0].Rows[i]["ID"] = row.Cells["ID"].Value; }
 
-            //if (cmbColorGrade.SelectedIndex == 0)
-            //{
-            //    color = "C001";
-            //}
+        //            if (row.Cells["RowNum"].Value != null)
+        //            { tds.Tables[0].Rows[i]["RowNum"] = row.Cells["RowNum"].Value; }
 
-            //cmbColor.DataSource = (GM.GetMasterTableDetail(color)).Tables[0];
-            //cmbColor.ValueMember = "ID";
-            //cmbColor.DisplayMember = "Detail";
-            //cmbColor.Refresh();
-        }
+        //            if (row.Cells["RefID"].Value != null)
+        //            { tds.Tables[0].Rows[i]["refID"] = row.Cells["refID"].Value; }
+
+        //            tds.Tables[0].Rows[i]["refID1"] = row.Cells["refID1"].Value;
+        //            tds.Tables[0].Rows[i]["MinPrice"] = row.Cells["MinPrice"].Value;
+
+        //            i++;
+        //        }
+
+        //        i = 0;
+        //        tds.AcceptChanges();
+        //    }
+        //    else
+        //    {
+        //        tds2.Clear();
+        //        foreach (DataGridViewRow row in grid2.Rows)
+        //        {
+        //            tds2.Tables[0].Rows.Add();
+
+        //            if (row.Cells["ID1"].Value != null)
+        //            { tds2.Tables[0].Rows[i]["ID"] = row.Cells["ID1"].Value; }
+
+        //            if (row.Cells["RowNum1"].Value != null)
+        //            { tds2.Tables[0].Rows[i]["RowNum"] = row.Cells["RowNum1"].Value; }
+
+        //            if (row.Cells["WeightPerStone"].Value != null)
+        //            { tds2.Tables[0].Rows[i]["WeightPerStone"] = row.Cells["WeightPerStone"].Value; }
+
+        //            if (row.Cells["Amount"].Value != null)
+        //            { tds2.Tables[0].Rows[i]["Amount"] = row.Cells["Amount"].Value; }
+
+        //            if (row.Cells["Weight1"].Value != null)
+        //            { tds2.Tables[0].Rows[i]["Weight"] = row.Cells["Weight1"].Value; }
+
+        //            if (row.Cells["Shape"].Value != null)
+        //            { tds2.Tables[0].Rows[i]["Shape"] = row.Cells["Shape"].Value; }
+
+        //            if (row.Cells["Color"].Value != null)
+        //            { tds2.Tables[0].Rows[i]["Color"] = row.Cells["Color"].Value; }
+
+        //            if (row.Cells["Clearity1"].Value != null)
+        //            { tds2.Tables[0].Rows[i]["Clearity"] = row.Cells["Clearity1"].Value; }
+
+        //            if (row.Cells["CostPerCarat"].Value != null)
+        //            { tds2.Tables[0].Rows[i]["CostPerCarat"] = row.Cells["CostPerCarat"].Value; }
+
+        //            if (row.Cells["Cost1"].Value != null)
+        //            { tds2.Tables[0].Rows[i]["Cost"] = row.Cells["Cost1"].Value; }
+
+        //            if (row.Cells["MinPricePerCarat"].Value != null)
+        //            { tds2.Tables[0].Rows[i]["MinPricePerCarat"] = row.Cells["MinPricePerCarat"].Value; }
+
+        //            if (row.Cells["MinPrice1"].Value != null)
+        //            { tds2.Tables[0].Rows[i]["MinPrice"] = row.Cells["MinPrice1"].Value; }
+
+        //            if (row.Cells["refID2"].Value != null)
+        //            { tds2.Tables[0].Rows[i]["refID"] = row.Cells["refID2"].Value; }
+
+        //            i++;
+        //        }
+
+        //        tds2.AcceptChanges();
+        //    }
+        //}
+        #endregion
 
         private void txtWeight_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -175,6 +221,29 @@ namespace DiamondShop
             {
                 e.Handled = true;
             }
+        }
+
+        private void CalSum(int type)
+        {
+            if (type == 0)
+            {
+                txtSumWeight.Text = (grid1.Rows.Cast<DataGridViewRow>()
+                .Sum(t => Convert.ToDecimal(t.Cells["Weight"].Value))).ToString();
+
+                txtSumWeight.Text = GM.ConvertDoubleToString(txtSumWeight);
+            }
+            else
+            {
+                txtSumAmount1.Text = (grid2.Rows.Cast<DataGridViewRow>()
+                .Sum(t => Convert.ToDecimal(t.Cells["Amount"].Value))).ToString();
+
+                txtSumWeight1.Text = (grid2.Rows.Cast<DataGridViewRow>()
+                .Sum(t => Convert.ToDecimal(t.Cells["Weight1"].Value))).ToString();
+
+                txtSumAmount1.Text = GM.ConvertDoubleToString(txtSumAmount1);
+                txtSumWeight1.Text = GM.ConvertDoubleToString(txtSumWeight1);
+            }
+
         }
     }
 }
