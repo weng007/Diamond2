@@ -147,7 +147,7 @@ namespace DiamondShop
 
         protected override void LoadData()
         {
-            ds = ser.DoSelectData("BuyBookGemstoneCer", id);
+            ds = ser.DoSelectData("BuyBookGemstoneCer", id,0);
             tds.Clear();
             tds.Merge(ds);
 

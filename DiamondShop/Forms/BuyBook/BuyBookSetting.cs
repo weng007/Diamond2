@@ -57,11 +57,11 @@ namespace DiamondShop
         }
         protected override void LoadData()
         {
-            ds = ser.DoSelectData("BuyBookSetting", id);
+            ds = ser.DoSelectData("BuyBookSetting", id, 0);
             tds.Clear();
             tds.Merge(ds);
 
-            ds2 = ser.DoSelectData("BuyBookSettingDetail", id);
+            ds2 = ser.DoSelectData("BuyBookSettingDetail", id, 0);
             tds2.Clear();
             tds2.Merge(ds2);
 

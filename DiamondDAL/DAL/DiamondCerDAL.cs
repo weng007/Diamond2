@@ -14,7 +14,8 @@ namespace DiamondDAL.DAL
         dsDiamondCer ds = new dsDiamondCer();
         int flag = 0;
 
-        public dsDiamondCer DoSearchData(string code,string reportNumber, int shape, int lab, double sWeight, double eWeight, int colorType,int sColor,int eColor, int sClearity, int eClearity, int status, int shop)
+        public dsDiamondCer DoSearchData(string code,string reportNumber, int shape, int lab, double sWeight, double eWeight, int colorType,int sColor,int eColor, 
+            int sClearity, int eClearity, int status, int shop, int mode)
         {
             try
             {
@@ -32,6 +33,7 @@ namespace DiamondDAL.DAL
                 SQL.CreateParameter("eClearity", eClearity);
                 SQL.CreateParameter("Status", status);
                 SQL.CreateParameter("Shop", shop);
+                SQL.CreateParameter("Mode", mode);
                 SQL.FillDataSetBySP("SP_DiamondCer_Search", ds.DiamondCer);
             }
             catch (Exception ex)
@@ -42,12 +44,13 @@ namespace DiamondDAL.DAL
             return ds;
         }
 
-        public dsDiamondCer DoSelectData(int id)
+        public dsDiamondCer DoSelectData(int id, int mode)
         {
             try
             {
                 SQL.ClearParameter();
                 SQL.CreateParameter("ID", id);
+                SQL.CreateParameter("Mode", mode);
                 SQL.FillDataSetBySP("SP_DiamondCer_Sel", ds.DiamondCer);
             }
             catch (Exception ex)

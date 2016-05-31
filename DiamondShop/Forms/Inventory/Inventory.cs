@@ -40,8 +40,6 @@ namespace DiamondShop
             BinderData();
 
             txtUpdateBy.Text = ApplicationInfo.UserName;
-            btnDiamond.Enabled = true;
-            btnGemstone.Enabled = true;
 
             this.id = id;
             LoadData();
@@ -120,14 +118,14 @@ namespace DiamondShop
             cmbStatus.DisplayMember = "Detail";
             cmbStatus.Refresh();
 
-            txtCode.Select();
+            cmbShop.Select();
 
             SetFieldService.SetRequireField(txtPricePerGram1,txtPricePerGram11,txtPricePerGram2,txtPricePerGram22,txtMinPrice, txtPriceTag);
         }
 
         protected override void LoadData()
         {
-            ds = ser.DoSelectData("Inventory", id);
+            ds = ser.DoSelectData("Inventory", id, 0);
             tds.Clear();
             tds.Merge(ds);
 
@@ -225,6 +223,8 @@ namespace DiamondShop
             {
                 EnableSave = true;
                 EnableDelete = true;
+                btnDiamond.Enabled = true;
+                btnGemstone.Enabled = true;
             }
             else
             {
@@ -237,6 +237,8 @@ namespace DiamondShop
                 {
                     EnableSave = true;
                     EnableDelete = true;
+                    btnDiamond.Enabled = true;
+                    btnGemstone.Enabled = true;
                     base.EditData();
                 }
             }
@@ -390,6 +392,15 @@ namespace DiamondShop
             txtCostBody.Text = GM.ConvertDoubleToString(txtCostBody,0);
         }
 
+        private void txtMaterialNetCost_TextChanged(object sender, EventArgs e)
+        {
+            txtCostBody.Text = (GM.ConvertStringToDouble(txtMaterialNetCost) + GM.ConvertStringToDouble(txtLaborCost) + GM.ConvertStringToDouble(txtCost1) +
+                GM.ConvertStringToDouble(txtCost2) + GM.ConvertStringToDouble(txtCost3)).ToString();
+            txtPricePerGram1_Leave(sender, e);
+
+            txtCostBody.Text = GM.ConvertDoubleToString(txtCostBody, 0);
+        }
+
         private void txtMaterialNetCost1_TextChanged(object sender, EventArgs e)
         {
             txtCostBody1.Text = (GM.ConvertStringToDouble(txtMaterialNetCost1) + GM.ConvertStringToDouble(txtLaborCost1) + GM.ConvertStringToDouble(txtCost11) +
@@ -406,6 +417,8 @@ namespace DiamondShop
 
             txtRedCost.Text = GM.ConvertDoubleToString(txtRedCost,0);
         }
+
+
 
         private void txtCostBody1_TextChanged(object sender, EventArgs e)
         {
@@ -472,6 +485,8 @@ namespace DiamondShop
             InvDiamondDetail frm = new InvDiamondDetail(id);
             frm.ShowDialog();
         }
+
+
 
         private void btnGemstone_Click(object sender, EventArgs e)
         {

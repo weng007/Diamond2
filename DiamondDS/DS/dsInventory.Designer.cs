@@ -1833,11 +1833,11 @@ namespace DiamondDS.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public byte[] Image1 {
                 get {
-                    try {
-                        return ((byte[])(this[this.tableInventory.Image1Column]));
+                    if (this.IsImage1Null()) {
+                        return null;
                     }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Image1\' in table \'Inventory\' is DBNull.", e);
+                    else {
+                        return ((byte[])(this[this.tableInventory.Image1Column]));
                     }
                 }
                 set {
@@ -1849,11 +1849,11 @@ namespace DiamondDS.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public byte[] Image2 {
                 get {
-                    try {
-                        return ((byte[])(this[this.tableInventory.Image2Column]));
+                    if (this.IsImage2Null()) {
+                        return null;
                     }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Image2\' in table \'Inventory\' is DBNull.", e);
+                    else {
+                        return ((byte[])(this[this.tableInventory.Image2Column]));
                     }
                 }
                 set {

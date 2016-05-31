@@ -14,7 +14,8 @@ namespace DiamondDAL.DAL
         dsGemstoneCer ds = new dsGemstoneCer();
         int flag = 0;
 
-        public dsGemstoneCer DoSearchData(int identification, string code, string reportnumber, double sweight,double eweight, int shape, int comment,int lab,int origin, int status, int shop)
+        public dsGemstoneCer DoSearchData(int identification, string code, string reportnumber, double sweight,double eweight, int shape, int comment,int lab,
+            int origin, int status, int shop, int mode)
         {
             try
             {
@@ -30,7 +31,8 @@ namespace DiamondDAL.DAL
                 SQL.CreateParameter("Origin", origin);
                 SQL.CreateParameter("Status", status);
                 SQL.CreateParameter("Shop", shop);
-                SQL.FillDataSetBySP("SP_BuyBookGemstoneCer_Search", ds.GemstoneCer);
+                SQL.CreateParameter("Mode", mode);
+                SQL.FillDataSetBySP("SP_GemstoneCer_Search", ds.GemstoneCer);
             }
             catch (Exception ex)
             {
@@ -40,12 +42,13 @@ namespace DiamondDAL.DAL
             return ds;
         }
 
-        public dsGemstoneCer DoSelectData(int id)
+        public dsGemstoneCer DoSelectData(int id, int mode)
         {
             try
             {
                 SQL.ClearParameter();
                 SQL.CreateParameter("ID", id);
+                SQL.CreateParameter("Mode", mode);
                 SQL.FillDataSetBySP("SP_GemstoneCer_Sel", ds.GemstoneCer);
             }
             catch (Exception ex)

@@ -67,11 +67,11 @@ namespace DiamondShop
         }
         protected override void LoadData()
         {
-            ds = ser.DoSelectData("InvGemstoneCerDetail", id);
+            ds = ser.DoSelectData("InvGemstoneCerDetail", id, 0);
             tds.Clear();
             tds.Merge(ds);
 
-            ds2 = ser.DoSelectData("InvGemstoneDetail", id);
+            ds2 = ser.DoSelectData("InvGemstoneDetail", id, 0);
             tds2.Clear();
             tds2.Merge(ds2);
 
@@ -461,7 +461,8 @@ namespace DiamondShop
                 }
 
                 // Cost = Weight * Costpercarat
-                grid2.Rows[e.RowIndex].Cells[9].Value = Convert.ToDecimal(grid2.Rows[e.RowIndex].Cells[6].Value) * Convert.ToInt16(grid2.Rows[e.RowIndex].Cells[8].Value);
+                grid2.Rows[e.RowIndex].Cells[9].Value = Convert.ToDecimal(grid2.Rows[e.RowIndex].Cells[6].Value) * Convert.ToInt32(grid2.Rows[e.RowIndex].Cells[8].Value);
+                
             }
             else if (e.ColumnIndex == 10) // minPrice/carat 
             {
@@ -543,14 +544,14 @@ namespace DiamondShop
                 {
                     rowIndex = e.RowIndex;
                     if (grid1.Rows[e.RowIndex].Cells["ID"].Value != null)
-                    { DelID = Convert.ToInt16(grid1.Rows[e.RowIndex].Cells["ID"].Value.ToString()); }
+                    { DelID = Convert.ToInt32(grid1.Rows[e.RowIndex].Cells["ID"].Value.ToString()); }
                 }
                 else
                 {
                     rowIndex1 = e.RowIndex;
 
                     if (grid2.Rows[e.RowIndex].Cells["ID1"].Value != null)
-                    { DelID = Convert.ToInt16(grid2.Rows[e.RowIndex].Cells["ID1"].Value.ToString()); }
+                    { DelID = Convert.ToInt32(grid2.Rows[e.RowIndex].Cells["ID1"].Value.ToString()); }
 
                 }
 
@@ -563,9 +564,7 @@ namespace DiamondShop
             {
                 e.Handled = true;
             }
-        }
-
-        
+        }        
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
@@ -574,7 +573,7 @@ namespace DiamondShop
 
             if (frm.refID1 != 0)
             {
-                tmp = ser.DoSelectData("GemstoneCer", frm.refID1);
+                tmp = ser.DoSelectData("GemstoneCer", frm.refID1, 0);
                 tdsGemstoneCer.Clear();
                 tdsGemstoneCer.Merge(tmp);
 

@@ -66,11 +66,11 @@ namespace DiamondShop
         }
         protected override void LoadData()
         {
-            ds = ser.DoSelectData("InvDiamondCerDetail", id);
+            ds = ser.DoSelectData("InvDiamondCerDetail", id,0);
             tds.Clear();
             tds.Merge(ds);
 
-            ds2 = ser.DoSelectData("InvDiamondDetail", id);
+            ds2 = ser.DoSelectData("InvDiamondDetail", id, 0);
             tds2.Clear();
             tds2.Merge(ds2);
 
@@ -202,11 +202,12 @@ namespace DiamondShop
 
             if (frm.refID1 != 0)
             {
-                tmp = ser.DoSelectData("DiamondCer", frm.refID1);
+                tmp = ser.DoSelectData("DiamondCer", frm.refID1, 0);
                 tdsDiamondCer.Clear();
                 tdsDiamondCer.Merge(tmp);
 
                 grid1.Rows.Add();
+                rowIndex = grid1.Rows.GetLastRow(DataGridViewElementStates.Displayed);
 
                 grid1.Rows[rowIndex].Cells["Code"].Value = tdsDiamondCer.Tables[0].Rows[0]["Code"].ToString();
                 grid1.Rows[rowIndex].Cells["ReportNumber"].Value = tdsDiamondCer.Tables[0].Rows[0]["ReportNumber"].ToString();
@@ -233,7 +234,7 @@ namespace DiamondShop
             {
                 if (grid1.Rows.Count > 0)
                 {
-                    if (Convert.ToInt16(grid1.Rows[rowIndex].Cells["ID"].Value.ToString()) > 0)
+                    if (grid1.Rows[rowIndex].Cells["ID"].Value != null && Convert.ToInt16(grid1.Rows[rowIndex].Cells["ID"].Value.ToString()) > 0)
                     {
                         DeleteDataGrid(0);
                     }
@@ -265,7 +266,7 @@ namespace DiamondShop
             {
                 if (grid2.Rows.Count > 0)
                 {
-                    if (Convert.ToInt16(grid2.Rows[rowIndex1].Cells["ID1"].Value.ToString()) > 0)
+                    if (grid2.Rows[rowIndex1].Cells["ID1"].Value != null && Convert.ToInt16(grid2.Rows[rowIndex1].Cells["ID1"].Value.ToString()) > 0)
                     {
                         DeleteDataGrid(1);
                     }
@@ -281,8 +282,6 @@ namespace DiamondShop
 
             }
         }
-
-      
 
         #region Binding Grid, Dataset
         private void BindingGridDiamondDetail(DataGridView grid)

@@ -15,7 +15,7 @@ namespace DiamondBiz.Biz
         DiamondCerDAL dal = new DiamondCerDAL();
 
         public dsDiamondCer DoSearchData(string code, string reportNumber, int shape, int lab, double sWeight, double eWeight, int colorType, int sColor,
-            int eColor, int sClearity, int eClearity, int status, int shop)
+            int eColor, int sClearity, int eClearity, int status, int shop, int mode)
         {
             //All
             if (colorType == 0)
@@ -38,7 +38,7 @@ namespace DiamondBiz.Biz
 
             try
             {
-                return dal.DoSearchData(code, reportNumber, shape, lab, sWeight, eWeight, colorType, sColor, eColor, sClearity, eClearity, status, shop);
+                return dal.DoSearchData(code, reportNumber, shape, lab, sWeight, eWeight, colorType, sColor, eColor, sClearity, eClearity, status, shop, mode);
             }
             catch (Exception ex)
             {
@@ -46,11 +46,11 @@ namespace DiamondBiz.Biz
             }
         }
 
-        public dsDiamondCer DoSelectData(int id)
+        public dsDiamondCer DoSelectData(int id, int mode)
         {
             try
             {
-                return dal.DoSelectData(id);
+                return dal.DoSelectData(id, mode);
             }
             catch (Exception ex)
             {

@@ -841,6 +841,7 @@
             this.txtMaterialNetCost.TabIndex = 140;
             this.txtMaterialNetCost.Text = "0";
             this.txtMaterialNetCost.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtMaterialNetCost.TextChanged += new System.EventHandler(this.txtMaterialNetCost_TextChanged);
             this.txtMaterialNetCost.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
             // 
             // label28
@@ -897,7 +898,7 @@
             this.txtPricePerGram22.Location = new System.Drawing.Point(323, 84);
             this.txtPricePerGram22.Name = "txtPricePerGram22";
             this.txtPricePerGram22.Size = new System.Drawing.Size(119, 27);
-            this.txtPricePerGram22.TabIndex = 92;
+            this.txtPricePerGram22.TabIndex = 192;
             this.txtPricePerGram22.Text = "0";
             this.txtPricePerGram22.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtPricePerGram22.TextChanged += new System.EventHandler(this.txtPricePerGram22_TextChanged);
@@ -960,7 +961,7 @@
             this.txtPricePerGram2.Location = new System.Drawing.Point(169, 84);
             this.txtPricePerGram2.Name = "txtPricePerGram2";
             this.txtPricePerGram2.Size = new System.Drawing.Size(119, 27);
-            this.txtPricePerGram2.TabIndex = 90;
+            this.txtPricePerGram2.TabIndex = 191;
             this.txtPricePerGram2.Text = "0";
             this.txtPricePerGram2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtPricePerGram2.TextChanged += new System.EventHandler(this.txtMaterialWeight2_TextChanged);
@@ -1136,6 +1137,7 @@
             // 
             // cmbStatus
             // 
+            this.cmbStatus.Enabled = false;
             this.cmbStatus.FormattingEnabled = true;
             this.cmbStatus.Location = new System.Drawing.Point(783, 13);
             this.cmbStatus.Name = "cmbStatus";
@@ -1183,7 +1185,8 @@
             // 
             // txtUpdateBy
             // 
-            this.txtUpdateBy.BackColor = System.Drawing.Color.White;
+            this.txtUpdateBy.BackColor = System.Drawing.SystemColors.Window;
+            this.txtUpdateBy.Enabled = false;
             this.txtUpdateBy.Location = new System.Drawing.Point(150, 19);
             this.txtUpdateBy.Name = "txtUpdateBy";
             this.txtUpdateBy.ReadOnly = true;
