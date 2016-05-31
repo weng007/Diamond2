@@ -13,11 +13,12 @@ namespace DiamondBiz.Biz
         dsGemstoneCer ds = new dsGemstoneCer();
         GemstoneCerDAL dal = new GemstoneCerDAL();
 
-        public dsGemstoneCer DoSearchData(int identification, string code, string reportnumber, double sweight, double eweight, int shape, int comment, int lab, int origin, int status, int shop)
+        public dsGemstoneCer DoSearchData(int identification, string code, string reportnumber, double sweight, double eweight, int shape, int comment, 
+            int lab, int origin, int status, int shop,int mode)
         {
             try
             {
-                return dal.DoSearchData(identification, code, reportnumber, sweight, eweight, shape, comment, lab, origin, status, shop);
+                return dal.DoSearchData(identification, code, reportnumber, sweight, eweight, shape, comment, lab, origin, status, shop,mode);
             }
             catch (Exception ex)
             {
@@ -25,11 +26,11 @@ namespace DiamondBiz.Biz
             }
         }
 
-        public dsGemstoneCer DoSelectData(int id)
+        public dsGemstoneCer DoSelectData(int id, int mode)
         {
             try
             {
-                return dal.DoSelectData(id);
+                return dal.DoSelectData(id, mode);
             }
             catch (Exception ex)
             {

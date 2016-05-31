@@ -30,6 +30,7 @@ namespace DiamondShop
             Initial();
             this.mode = mode;
 
+            btnClose.Visible = true;
             DoLoadData();
         }
         protected override void Initial()
@@ -70,7 +71,7 @@ namespace DiamondShop
         }
         protected override void DoLoadData()
         {
-            ds = ser.DoSelectData("GemstoneCer", -1);
+            ds = ser.DoSelectData("GemstoneCer", -1, mode);
 
             if (ds.Tables[0].Rows.Count > 0)
             {
@@ -105,7 +106,7 @@ namespace DiamondShop
                  Convert.ToInt16(cmbLab.SelectedValue.ToString()),
                  Convert.ToInt16(cmbOrigin.SelectedValue.ToString()),
                  Convert.ToInt16(cmbStatus.SelectedValue.ToString()), 
-                 Convert.ToInt16(cmbShop.SelectedValue.ToString()));
+                 Convert.ToInt16(cmbShop.SelectedValue.ToString()),mode);
 
             gridGemstone.DataSource = ds.Tables[0];
             gridGemstone.Refresh();
@@ -164,16 +165,9 @@ namespace DiamondShop
             }
         }
 
-        //private void gridGemstone_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
-        //{
-        //    if (gridGemstone.RowCount > 0 && gridGemstone.SelectedRows.Count > 0)
-        //    {
-        //        //id = (int)gridGemstone.SelectedRows[0].Cells["ID"].Value;
-        //        //GemstoneCer frm = new GemstoneCer(id);
-        //        //frm.ShowDialog();
-        //    }
-
-        //    DoLoadData();
-        //}
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

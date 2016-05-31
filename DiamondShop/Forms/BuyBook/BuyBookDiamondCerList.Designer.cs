@@ -633,6 +633,7 @@
             this.Cost.HeaderText = "Cost";
             this.Cost.Name = "Cost";
             this.Cost.ReadOnly = true;
+            this.Cost.Width = 120;
             // 
             // USDRate
             // 

@@ -36,7 +36,7 @@ namespace DiamondShop
 
         protected override void DoLoadData()
         {
-            ds = ser.DoSelectData("User", -1);
+            ds = ser.DoSelectData("User", -1, 0);
 
             if (ds.Tables[0].Rows.Count > 0)
             {

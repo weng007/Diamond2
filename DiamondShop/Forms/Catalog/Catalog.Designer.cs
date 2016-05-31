@@ -372,7 +372,7 @@
             // 
             // txtInvRemark
             // 
-            this.txtInvRemark.BackColor = System.Drawing.SystemColors.Window;
+            this.txtInvRemark.BackColor = System.Drawing.SystemColors.Control;
             this.txtInvRemark.Enabled = false;
             this.txtInvRemark.Location = new System.Drawing.Point(418, 270);
             this.txtInvRemark.Multiline = true;

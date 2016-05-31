@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DiamondShop.FormMaster;
 using DiamondDS;
+using DiamondShop.DiamondService1;
 
 namespace DiamondShop
 {
@@ -30,6 +31,7 @@ namespace DiamondShop
             Initial();
             this.mode = mode;
 
+            btnClose.Visible = true;
             DoLoadData();
         }
 
@@ -87,7 +89,7 @@ namespace DiamondShop
 
         protected override void DoLoadData()
         {
-            ds = ser.DoSelectData("DiamondCer", -1);
+            ds = ser.DoSelectData("DiamondCer", -1, mode);
 
             if (ds.Tables[0].Rows.Count > 0)
             {
@@ -107,12 +109,14 @@ namespace DiamondShop
         {
             ser2 = GM.GetService2();
 
-            ds = ser2.DoSearchDiamondCer(txtCode.Text, txtReportNumber.Text, Convert.ToInt16(cmbShape.SelectedValue.ToString()), Convert.ToInt16(cmbLab.SelectedValue.ToString()), GM.ConvertStringToDouble(txtSWeight), 
+            ds = ser2.DoSearchDiamondCer(txtCode.Text, txtReportNumber.Text, Convert.ToInt16(cmbShape.SelectedValue.ToString()), 
+                Convert.ToInt16(cmbLab.SelectedValue.ToString()), GM.ConvertStringToDouble(txtSWeight), 
                 GM.ConvertStringToDouble(txtEWeight),
                 Convert.ToInt16(cmbColorType.SelectedValue.ToString()),
                 Convert.ToInt16(cmbSColor.SelectedValue.ToString()),
                 Convert.ToInt16(cmbEColor.SelectedValue.ToString()), Convert.ToInt16(cmbSClearity.SelectedValue.ToString())
-                , Convert.ToInt16(cmbEClearity.SelectedValue.ToString()), Convert.ToInt16(cmbStatus.SelectedValue.ToString()), Convert.ToInt16(cmbShop.SelectedValue.ToString()));
+                , Convert.ToInt16(cmbEClearity.SelectedValue.ToString()), Convert.ToInt16(cmbStatus.SelectedValue.ToString()), 
+                Convert.ToInt16(cmbShop.SelectedValue.ToString()),mode);
 
             gridDiamondCer.DataSource = ds.Tables[0];
             gridDiamondCer.Refresh();
@@ -177,6 +181,11 @@ namespace DiamondShop
             cmbEColor.ValueMember = "ID";
             cmbEColor.DisplayMember = "Detail";
             cmbEColor.Refresh();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -158,7 +158,7 @@ namespace DiamondShop
 
         protected override void LoadData()
         {
-              ds = ser.DoSelectData("BuyBookDiamondCer", id);
+              ds = ser.DoSelectData("BuyBookDiamondCer", id, 0);
               tds.Clear();
               tds.Merge(ds);
 
@@ -357,7 +357,7 @@ namespace DiamondShop
         {
             if (openFileDialog1.ShowDialog() == DialogResult.OK && openFileDialog1.CheckFileExists)
             {      
-                using (var stream = new FileStream(openFileDialog1.SafeFileName, FileMode.Open, FileAccess.Read))
+                using (var stream = new FileStream(openFileDialog1.FileName, FileMode.Open, FileAccess.Read))
                 {
                     using (var reader = new BinaryReader(stream))
                     {

@@ -232,14 +232,14 @@ namespace Diamond
         }
         [WebMethod]
         public DataSet DoSearchDiamondCer(string code,string reportNumber, int shape, int lab, double sWeight, double eWeight, int colorType,int sColor,
-            int eColor, int sClearity, int eClearity, int status, int shop)
+            int eColor, int sClearity, int eClearity, int status, int shop, int mode)
         {
             DiamondCerBiz biz = new DiamondCerBiz();
 
             try
             {
                 return biz.DoSearchData(code,reportNumber, shape, lab, sWeight, eWeight, colorType, sColor,
-            eColor, sClearity, eClearity, status, shop);
+            eColor, sClearity, eClearity, status, shop, mode);
             }
             catch (Exception ex)
             {
@@ -247,13 +247,14 @@ namespace Diamond
             }
         }
         [WebMethod]
-        public DataSet DoSearchGemstoneCer(int identification, string code, string reportnumber, double sweight, double eweight, int shape, int comment, int lab, int origin, int status, int shop)
+        public DataSet DoSearchGemstoneCer(int identification, string code, string reportnumber, double sweight, 
+            double eweight, int shape, int comment, int lab, int origin, int status, int shop, int mode)
         {
             GemstoneCerBiz biz = new GemstoneCerBiz();
 
             try
             {
-                return biz.DoSearchData(identification, code, reportnumber, sweight, eweight,shape, comment, lab, origin, status, shop);
+                return biz.DoSearchData(identification, code, reportnumber, sweight, eweight,shape, comment, lab, origin, status, shop,mode);
             }
             catch (Exception ex)
             {

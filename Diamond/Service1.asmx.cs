@@ -30,7 +30,7 @@ namespace Diamond
 
         #region DoSelectData
         [WebMethod]
-        public DataSet DoSelectData(string TableName, int id)
+        public DataSet DoSelectData(string TableName, int id, int mode)
         {
             
             if (TableName == "User")
@@ -74,7 +74,7 @@ namespace Diamond
                 DiamondCerBiz biz = GM.GetDiamondCerBiz();
                 try
                 {
-                    return biz.DoSelectData(id);
+                    return biz.DoSelectData(id,mode);
                 }
                 catch (Exception ex)
                 {
@@ -98,7 +98,7 @@ namespace Diamond
                 GemstoneCerBiz biz = GM.GetGemstoneCerBiz();
                 try
                 {
-                    return biz.DoSelectData(id);
+                    return biz.DoSelectData(id,mode);
                 }
                 catch (Exception ex)
                 {

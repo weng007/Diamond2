@@ -608,7 +608,7 @@
             this.DueDate.HeaderText = "DueDate";
             this.DueDate.Name = "DueDate";
             this.DueDate.ReadOnly = true;
-            this.DueDate.Width = 90;
+            this.DueDate.Width = 120;
             // 
             // ShopName
             // 

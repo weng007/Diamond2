@@ -99,11 +99,11 @@ namespace DiamondShop
         protected override void LoadData()
         {
 
-            ds = ser.DoSelectData("BBJewelryGemstoneCerDetail", id);
+            ds = ser.DoSelectData("BBJewelryGemstoneCerDetail", id, 0);
             tds.Clear();
             tds.Merge(ds);
 
-            ds2 = ser.DoSelectData("BBJewelryGemstoneDetail", id);
+            ds2 = ser.DoSelectData("BBJewelryGemstoneDetail", id, 0);
             tds2.Clear();
             tds2.Merge(ds2);
 

@@ -83,7 +83,7 @@
             this.btnOK.Location = new System.Drawing.Point(244, 139);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(51, 27);
-            this.btnOK.TabIndex = 8;
+            this.btnOK.TabIndex = 3;
             this.btnOK.UseVisualStyleBackColor = false;
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
@@ -92,7 +92,7 @@
             this.txtPassword.Location = new System.Drawing.Point(123, 93);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(155, 26);
-            this.txtPassword.TabIndex = 4;
+            this.txtPassword.TabIndex = 2;
             this.txtPassword.UseSystemPasswordChar = true;
             this.txtPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPassword_KeyPress);
             // 
