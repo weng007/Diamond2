@@ -31,6 +31,7 @@ namespace DiamondShop
         {
             InitializeComponent();
             Initial();
+
             this.mode = mode;
             btnClose.Visible = true;
 
