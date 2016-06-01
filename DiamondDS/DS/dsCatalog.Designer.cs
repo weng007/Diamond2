@@ -746,8 +746,8 @@ namespace DiamondDS.DS {
                         int Amount4, 
                         int Weight4, 
                         double MinPremium, 
-                        int MinPrice, 
-                        int PriceTag, 
+                        double MinPrice, 
+                        double PriceTag, 
                         double MaterialWeight1, 
                         double MaterialWeight2, 
                         string Material1Name, 
@@ -913,9 +913,9 @@ namespace DiamondDS.DS {
                 base.Columns.Add(this.columnWeight4);
                 this.columnMinPremium = new global::System.Data.DataColumn("MinPremium", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnMinPremium);
-                this.columnMinPrice = new global::System.Data.DataColumn("MinPrice", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnMinPrice = new global::System.Data.DataColumn("MinPrice", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnMinPrice);
-                this.columnPriceTag = new global::System.Data.DataColumn("PriceTag", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnPriceTag = new global::System.Data.DataColumn("PriceTag", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPriceTag);
                 this.columnMaterialWeight1 = new global::System.Data.DataColumn("MaterialWeight1", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnMaterialWeight1);
@@ -973,17 +973,10 @@ namespace DiamondDS.DS {
                 this.columnWeight3.ReadOnly = true;
                 this.columnAmount4.ReadOnly = true;
                 this.columnWeight4.ReadOnly = true;
-                this.columnMinPrice.ReadOnly = true;
-                this.columnPriceTag.ReadOnly = true;
-                this.columnMaterial1Name.ReadOnly = true;
                 this.columnMaterial1Name.MaxLength = 100;
-                this.columnMaterial2Name.ReadOnly = true;
                 this.columnMaterial2Name.MaxLength = 100;
-                this.columnJewelryTypeName.ReadOnly = true;
                 this.columnJewelryTypeName.MaxLength = 100;
-                this.columnShopName.ReadOnly = true;
                 this.columnShopName.MaxLength = 100;
-                this.columnStatusName.ReadOnly = true;
                 this.columnStatusName.MaxLength = 100;
                 this.columnRemarkInv.MaxLength = 250;
                 this.columnDisplayName.MaxLength = 100;
@@ -1397,10 +1390,10 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int MinPrice {
+            public double MinPrice {
                 get {
                     try {
-                        return ((int)(this[this.tableCatalog.MinPriceColumn]));
+                        return ((double)(this[this.tableCatalog.MinPriceColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'MinPrice\' in table \'Catalog\' is DBNull.", e);
@@ -1413,10 +1406,10 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int PriceTag {
+            public double PriceTag {
                 get {
                     try {
-                        return ((int)(this[this.tableCatalog.PriceTagColumn]));
+                        return ((double)(this[this.tableCatalog.PriceTagColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'PriceTag\' in table \'Catalog\' is DBNull.", e);

@@ -298,7 +298,7 @@ namespace DiamondShop
 
         private void btnGemstone_Click(object sender, EventArgs e)
         {
-            GemstoneDetailCatalog frm = new GemstoneDetailCatalog();
+            GemstoneDetailCatalog frm = new GemstoneDetailCatalog(Convert.ToInt32(tds.Tables[0].Rows[0]["RefID"].ToString()));
             frm.ShowDialog();
         }
 
