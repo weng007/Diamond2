@@ -62,7 +62,7 @@ namespace DiamondShop
                 gridCustomer.Refresh();
             }
 
-            btnSearch_Click(null, null);
+            //btnSearch_Click(null, null);
         }
         protected override bool DoDeleteData()
         {
