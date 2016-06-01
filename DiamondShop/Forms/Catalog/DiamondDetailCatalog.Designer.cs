@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DiamondDetailCatalog));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.button1 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.txtSumWeight1 = new System.Windows.Forms.TextBox();
@@ -42,26 +42,26 @@
             this.txtSumWeight = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.grid2 = new System.Windows.Forms.DataGridView();
             this.grid1 = new System.Windows.Forms.DataGridView();
-            this.RowNum1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ID1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Shape = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.WeightPerStone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Amount1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Weight1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Color = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Clearity1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RowNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ReportNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Company = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LabName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ShapeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Weight = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColorName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Clearity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ClearityName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.RowNum1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ID1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ShapeName1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.WeightPerStone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Weight1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColorName1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ClearityName1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid2)).BeginInit();
@@ -154,16 +154,6 @@
             this.label14.TabIndex = 48;
             this.label14.Text = "Total";
             // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(35)))), ((int)(((byte)(69)))));
-            this.panel4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel4.BackgroundImage")));
-            this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.panel4.Location = new System.Drawing.Point(12, 3);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(207, 32);
-            this.panel4.TabIndex = 45;
-            // 
             // grid2
             // 
             this.grid2.AllowUserToAddRows = false;
@@ -175,12 +165,12 @@
             this.grid2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.RowNum1,
             this.ID1,
-            this.Shape,
+            this.ShapeName1,
             this.WeightPerStone,
-            this.Amount1,
+            this.Amount,
             this.Weight1,
-            this.Color,
-            this.Clearity1});
+            this.ColorName1,
+            this.ClearityName1});
             this.grid2.Location = new System.Drawing.Point(12, 273);
             this.grid2.Name = "grid2";
             this.grid2.ReadOnly = true;
@@ -205,11 +195,11 @@
             this.ID,
             this.Code,
             this.ReportNumber,
-            this.Company,
+            this.LabName,
             this.ShapeName,
             this.Weight,
             this.ColorName,
-            this.Clearity});
+            this.ClearityName});
             this.grid1.Location = new System.Drawing.Point(12, 35);
             this.grid1.Name = "grid1";
             this.grid1.ReadOnly = true;
@@ -220,85 +210,6 @@
             this.grid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grid1.Size = new System.Drawing.Size(1001, 181);
             this.grid1.TabIndex = 46;
-            // 
-            // RowNum1
-            // 
-            this.RowNum1.DataPropertyName = "RowNum";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            this.RowNum1.DefaultCellStyle = dataGridViewCellStyle1;
-            this.RowNum1.HeaderText = "No.";
-            this.RowNum1.Name = "RowNum1";
-            this.RowNum1.ReadOnly = true;
-            this.RowNum1.Width = 60;
-            // 
-            // ID1
-            // 
-            this.ID1.DataPropertyName = "ID";
-            this.ID1.HeaderText = "ID";
-            this.ID1.Name = "ID1";
-            this.ID1.ReadOnly = true;
-            this.ID1.Visible = false;
-            // 
-            // Shape
-            // 
-            this.Shape.DataPropertyName = "Shape";
-            this.Shape.HeaderText = "Shape";
-            this.Shape.Name = "Shape";
-            this.Shape.ReadOnly = true;
-            this.Shape.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Shape.Width = 130;
-            // 
-            // WeightPerStone
-            // 
-            this.WeightPerStone.DataPropertyName = "WeightPerStone";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle2.Format = "N2";
-            this.WeightPerStone.DefaultCellStyle = dataGridViewCellStyle2;
-            this.WeightPerStone.HeaderText = "Weight/Stone";
-            this.WeightPerStone.Name = "WeightPerStone";
-            this.WeightPerStone.ReadOnly = true;
-            this.WeightPerStone.Width = 150;
-            // 
-            // Amount1
-            // 
-            this.Amount1.DataPropertyName = "Amount";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle3.Format = "N0";
-            this.Amount1.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Amount1.HeaderText = "Amount";
-            this.Amount1.Name = "Amount1";
-            this.Amount1.ReadOnly = true;
-            this.Amount1.Width = 80;
-            // 
-            // Weight1
-            // 
-            this.Weight1.DataPropertyName = "Weight";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle4.Format = "N2";
-            this.Weight1.DefaultCellStyle = dataGridViewCellStyle4;
-            this.Weight1.HeaderText = "Weight";
-            this.Weight1.Name = "Weight1";
-            this.Weight1.ReadOnly = true;
-            this.Weight1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Weight1.Width = 80;
-            // 
-            // Color
-            // 
-            this.Color.DataPropertyName = "Color";
-            this.Color.HeaderText = "Color";
-            this.Color.Name = "Color";
-            this.Color.ReadOnly = true;
-            this.Color.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Color.Width = 120;
-            // 
-            // Clearity1
-            // 
-            this.Clearity1.DataPropertyName = "Clearity";
-            this.Clearity1.HeaderText = "Clearity";
-            this.Clearity1.Name = "Clearity1";
-            this.Clearity1.ReadOnly = true;
-            this.Clearity1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Clearity1.Width = 150;
             // 
             // RowNum
             // 
@@ -335,13 +246,13 @@
             this.ReportNumber.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.ReportNumber.Width = 180;
             // 
-            // Company
+            // LabName
             // 
-            this.Company.DataPropertyName = "Lab";
-            this.Company.HeaderText = "Company";
-            this.Company.Name = "Company";
-            this.Company.ReadOnly = true;
-            this.Company.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.LabName.DataPropertyName = "LabName";
+            this.LabName.HeaderText = "Company";
+            this.LabName.Name = "LabName";
+            this.LabName.ReadOnly = true;
+            this.LabName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // ShapeName
             // 
@@ -372,14 +283,103 @@
             this.ColorName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.ColorName.Width = 120;
             // 
-            // Clearity
+            // ClearityName
             // 
-            this.Clearity.DataPropertyName = "Clearity";
-            this.Clearity.HeaderText = "Clearity";
-            this.Clearity.Name = "Clearity";
-            this.Clearity.ReadOnly = true;
-            this.Clearity.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Clearity.Width = 150;
+            this.ClearityName.DataPropertyName = "ClearityName";
+            this.ClearityName.HeaderText = "Clearity";
+            this.ClearityName.Name = "ClearityName";
+            this.ClearityName.ReadOnly = true;
+            this.ClearityName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ClearityName.Width = 150;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(35)))), ((int)(((byte)(69)))));
+            this.panel4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel4.BackgroundImage")));
+            this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.panel4.Location = new System.Drawing.Point(12, 3);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(207, 32);
+            this.panel4.TabIndex = 45;
+            // 
+            // RowNum1
+            // 
+            this.RowNum1.DataPropertyName = "RowNum";
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            this.RowNum1.DefaultCellStyle = dataGridViewCellStyle1;
+            this.RowNum1.HeaderText = "No.";
+            this.RowNum1.Name = "RowNum1";
+            this.RowNum1.ReadOnly = true;
+            this.RowNum1.Width = 60;
+            // 
+            // ID1
+            // 
+            this.ID1.DataPropertyName = "ID";
+            this.ID1.HeaderText = "ID";
+            this.ID1.Name = "ID1";
+            this.ID1.ReadOnly = true;
+            this.ID1.Visible = false;
+            // 
+            // ShapeName1
+            // 
+            this.ShapeName1.DataPropertyName = "ShapeName";
+            this.ShapeName1.HeaderText = "Shape";
+            this.ShapeName1.Name = "ShapeName1";
+            this.ShapeName1.ReadOnly = true;
+            this.ShapeName1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ShapeName1.Width = 130;
+            // 
+            // WeightPerStone
+            // 
+            this.WeightPerStone.DataPropertyName = "WeightPerStone";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle2.Format = "N2";
+            this.WeightPerStone.DefaultCellStyle = dataGridViewCellStyle2;
+            this.WeightPerStone.HeaderText = "Weight/Stone";
+            this.WeightPerStone.Name = "WeightPerStone";
+            this.WeightPerStone.ReadOnly = true;
+            this.WeightPerStone.Width = 150;
+            // 
+            // Amount
+            // 
+            this.Amount.DataPropertyName = "Amount";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle3.Format = "N0";
+            this.Amount.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Amount.HeaderText = "Amount";
+            this.Amount.Name = "Amount";
+            this.Amount.ReadOnly = true;
+            this.Amount.Width = 80;
+            // 
+            // Weight1
+            // 
+            this.Weight1.DataPropertyName = "Weight";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle4.Format = "N2";
+            this.Weight1.DefaultCellStyle = dataGridViewCellStyle4;
+            this.Weight1.HeaderText = "Weight";
+            this.Weight1.Name = "Weight1";
+            this.Weight1.ReadOnly = true;
+            this.Weight1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Weight1.Width = 80;
+            // 
+            // ColorName1
+            // 
+            this.ColorName1.DataPropertyName = "ColorName";
+            this.ColorName1.HeaderText = "Color";
+            this.ColorName1.Name = "ColorName1";
+            this.ColorName1.ReadOnly = true;
+            this.ColorName1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ColorName1.Width = 120;
+            // 
+            // ClearityName1
+            // 
+            this.ClearityName1.DataPropertyName = "ClearityName";
+            this.ClearityName1.HeaderText = "Clearity";
+            this.ClearityName1.Name = "ClearityName1";
+            this.ClearityName1.ReadOnly = true;
+            this.ClearityName1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ClearityName1.Width = 150;
             // 
             // DiamondDetailCatalog
             // 
@@ -412,22 +412,22 @@
         private System.Windows.Forms.TextBox txtSumAmount1;
         private System.Windows.Forms.DataGridView grid2;
         private System.Windows.Forms.DataGridView grid1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn RowNum1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Shape;
-        private System.Windows.Forms.DataGridViewTextBoxColumn WeightPerStone;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Amount1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Weight1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Color;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Clearity1;
         private System.Windows.Forms.DataGridViewTextBoxColumn RowNum;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Code;
         private System.Windows.Forms.DataGridViewTextBoxColumn ReportNumber;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Company;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LabName;
         private System.Windows.Forms.DataGridViewTextBoxColumn ShapeName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Weight;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColorName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Clearity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ClearityName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RowNum1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ShapeName1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn WeightPerStone;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Amount;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Weight1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColorName1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ClearityName1;
     }
 }

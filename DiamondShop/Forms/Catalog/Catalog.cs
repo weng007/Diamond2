@@ -79,8 +79,8 @@ namespace DiamondShop
             if (tds.Catalog.Rows.Count > 0)
             {
                 binder.BindValueToControl(tds.Catalog[0]);
-                
-                if(tds.Catalog[0].Image1 !=  null)
+
+                if (tds.Catalog[0].Image1 !=  null)
                 {
                     image1 = tds.Catalog[0].Image1;
                     ms1 = new MemoryStream(image1);
@@ -292,7 +292,7 @@ namespace DiamondShop
 
         private void btnDiamond_Click(object sender, EventArgs e)
         {
-            DiamondDetailCatalog frm = new DiamondDetailCatalog();
+            DiamondDetailCatalog frm = new DiamondDetailCatalog(Convert.ToInt32(tds.Tables[0].Rows[0]["RefID"].ToString()));
             frm.ShowDialog();
         }
 

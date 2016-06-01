@@ -98,12 +98,12 @@ namespace DiamondShop
                     grid2.Rows.Add();
                     grid2.Rows[i].Cells["ID1"].Value = row["ID"].ToString();
                     grid2.Rows[i].Cells["RowNum1"].Value = row["RowNum"].ToString();
-                    grid2.Rows[i].Cells["Shape"].Value = row["Shape"].ToString();
+                    grid2.Rows[i].Cells["ShapeName1"].Value = row["ShapeName"].ToString();
                     grid2.Rows[i].Cells["WeightPerStone"].Value = row["WeightPerStone"].ToString();
                     grid2.Rows[i].Cells["Amount"].Value = row["Amount"].ToString();
                     grid2.Rows[i].Cells["Weight1"].Value = row["Weight"].ToString();
-                    grid2.Rows[i].Cells["Color"].Value = row["Color"].ToString();
-                    grid2.Rows[i].Cells["Clearity1"].Value = row["Clearity"].ToString();
+                    grid2.Rows[i].Cells["ColorName1"].Value = row["ColorName"].ToString();
+                    grid2.Rows[i].Cells["ClearityName1"].Value = row["ClearityName"].ToString();
 
                     i++;
                     CalSum(1);
