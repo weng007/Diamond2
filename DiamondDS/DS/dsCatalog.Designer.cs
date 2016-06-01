@@ -311,6 +311,8 @@ namespace DiamondDS.DS {
             
             private global::System.Data.DataColumn columnWeight4;
             
+            private global::System.Data.DataColumn columnMinPremium;
+            
             private global::System.Data.DataColumn columnMinPrice;
             
             private global::System.Data.DataColumn columnPriceTag;
@@ -511,6 +513,14 @@ namespace DiamondDS.DS {
             public global::System.Data.DataColumn Weight4Column {
                 get {
                     return this.columnWeight4;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn MinPremiumColumn {
+                get {
+                    return this.columnMinPremium;
                 }
             }
             
@@ -735,6 +745,7 @@ namespace DiamondDS.DS {
                         int Weight3, 
                         int Amount4, 
                         int Weight4, 
+                        double MinPremium, 
                         int MinPrice, 
                         int PriceTag, 
                         double MaterialWeight1, 
@@ -774,6 +785,7 @@ namespace DiamondDS.DS {
                         Weight3,
                         Amount4,
                         Weight4,
+                        MinPremium,
                         MinPrice,
                         PriceTag,
                         MaterialWeight1,
@@ -840,6 +852,7 @@ namespace DiamondDS.DS {
                 this.columnWeight3 = base.Columns["Weight3"];
                 this.columnAmount4 = base.Columns["Amount4"];
                 this.columnWeight4 = base.Columns["Weight4"];
+                this.columnMinPremium = base.Columns["MinPremium"];
                 this.columnMinPrice = base.Columns["MinPrice"];
                 this.columnPriceTag = base.Columns["PriceTag"];
                 this.columnMaterialWeight1 = base.Columns["MaterialWeight1"];
@@ -898,6 +911,8 @@ namespace DiamondDS.DS {
                 base.Columns.Add(this.columnAmount4);
                 this.columnWeight4 = new global::System.Data.DataColumn("Weight4", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnWeight4);
+                this.columnMinPremium = new global::System.Data.DataColumn("MinPremium", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMinPremium);
                 this.columnMinPrice = new global::System.Data.DataColumn("MinPrice", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnMinPrice);
                 this.columnPriceTag = new global::System.Data.DataColumn("PriceTag", typeof(int), null, global::System.Data.MappingType.Element);
@@ -1361,6 +1376,22 @@ namespace DiamondDS.DS {
                 }
                 set {
                     this[this.tableCatalog.Weight4Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double MinPremium {
+                get {
+                    try {
+                        return ((double)(this[this.tableCatalog.MinPremiumColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'MinPremium\' in table \'Catalog\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCatalog.MinPremiumColumn] = value;
                 }
             }
             
@@ -1878,6 +1909,18 @@ namespace DiamondDS.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetWeight4Null() {
                 this[this.tableCatalog.Weight4Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsMinPremiumNull() {
+                return this.IsNull(this.tableCatalog.MinPremiumColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetMinPremiumNull() {
+                this[this.tableCatalog.MinPremiumColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

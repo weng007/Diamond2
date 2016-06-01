@@ -908,7 +908,7 @@ namespace DiamondDS.DS {
                         decimal CostNonCer, 
                         decimal CostCer, 
                         decimal RedCost, 
-                        string MinPremium, 
+                        double MinPremium, 
                         decimal MinPrice, 
                         decimal PriceTag, 
                         byte[] Image1, 
@@ -1132,7 +1132,7 @@ namespace DiamondDS.DS {
                 base.Columns.Add(this.columnCostCer);
                 this.columnRedCost = new global::System.Data.DataColumn("RedCost", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnRedCost);
-                this.columnMinPremium = new global::System.Data.DataColumn("MinPremium", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnMinPremium = new global::System.Data.DataColumn("MinPremium", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnMinPremium);
                 this.columnMinPrice = new global::System.Data.DataColumn("MinPrice", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnMinPrice);
@@ -1814,10 +1814,10 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string MinPremium {
+            public double MinPremium {
                 get {
                     try {
-                        return ((string)(this[this.tableInventory.MinPremiumColumn]));
+                        return ((double)(this[this.tableInventory.MinPremiumColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'MinPremium\' in table \'Inventory\' is DBNull.", e);

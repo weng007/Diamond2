@@ -44,7 +44,7 @@ namespace DiamondShop
             this.id = id;
             LoadData();
 
-            SetFormatNumber();
+            
         }
 
         public Inventory(string prefix)
@@ -81,6 +81,7 @@ namespace DiamondShop
             binder.BindControl(txtCostCer, "CostCer");
             binder.BindControl(txtRedCost, "RedCost");
             binder.BindControl(txtMinPrice, "MinPrice");
+            binder.BindControl(txtRedCost1, "MinPremium");
             binder.BindControl(txtPriceTag, "PriceTag");
             binder.BindControl(txtUpdateBy, "EditByName");
             binder.BindControl(txtTechnician, "Technicial");
@@ -156,7 +157,7 @@ namespace DiamondShop
                 EnableEdit = true;
                 EnableDelete = false;
             }
-
+            SetFormatNumber();
             base.LoadData();
         }
 

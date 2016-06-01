@@ -54,6 +54,7 @@ namespace DiamondShop
             binder.BindControl(txtMaterialWeight1, "MaterialWeight1");
             binder.BindControl(txtMaterialWeight2, "MaterialWeight2");
             binder.BindControl(txtMinPrice, "MinPrice");
+            binder.BindControl(txtMinBeforePremium, "MinPremium");
             binder.BindControl(txtPriceTag, "PriceTag");
             binder.BindControl(txtInvRemark, "RemarkInv");
             binder.BindControl(txtRemark, "Remark");
@@ -98,12 +99,20 @@ namespace DiamondShop
 
             }
 
-            txtMaterialWeight1.Text = GM.ConvertDoubleToString(txtMaterialWeight1);
-            txtMinPrice.Text = GM.ConvertDoubleToString(txtMinPrice);
-            //txtOpenPrice.Text = GM.ConvertDoubleToString(txtOpenPrice);
+
+            SetFormatNumber();
 
             base.LoadData();
         }
+
+        private void SetFormatNumber()
+        {
+            txtMaterialWeight1.Text = GM.ConvertDoubleToString(txtMaterialWeight1);
+            txtMinPrice.Text = GM.ConvertDoubleToString(txtMinPrice);
+            txtMinBeforePremium.Text = GM.ConvertDoubleToString(txtMinBeforePremium);
+            txtPriceTag.Text = GM.ConvertDoubleToString(txtPriceTag);
+        }
+
 
         protected override bool SaveData()
         {
