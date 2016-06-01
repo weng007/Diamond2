@@ -83,7 +83,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label16.Location = new System.Drawing.Point(31, 166);
+            this.label16.Location = new System.Drawing.Point(381, 129);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(70, 21);
             this.label16.TabIndex = 129;
@@ -93,7 +93,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label7.Location = new System.Drawing.Point(391, 129);
+            this.label7.Location = new System.Drawing.Point(39, 167);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(51, 21);
             this.label7.TabIndex = 125;
@@ -102,14 +102,14 @@
             // cmbColor
             // 
             this.cmbColor.FormattingEnabled = true;
-            this.cmbColor.Location = new System.Drawing.Point(502, 125);
+            this.cmbColor.Location = new System.Drawing.Point(150, 163);
             this.cmbColor.Name = "cmbColor";
-            this.cmbColor.Size = new System.Drawing.Size(157, 29);
-            this.cmbColor.TabIndex = 14;
+            this.cmbColor.Size = new System.Drawing.Size(165, 29);
+            this.cmbColor.TabIndex = 8;
             // 
             // txtWeight
             // 
-            this.txtWeight.Location = new System.Drawing.Point(502, 54);
+            this.txtWeight.Location = new System.Drawing.Point(478, 54);
             this.txtWeight.Name = "txtWeight";
             this.txtWeight.Size = new System.Drawing.Size(61, 27);
             this.txtWeight.TabIndex = 10;
@@ -158,10 +158,10 @@
             // cmbClearity
             // 
             this.cmbClearity.FormattingEnabled = true;
-            this.cmbClearity.Location = new System.Drawing.Point(150, 163);
+            this.cmbClearity.Location = new System.Drawing.Point(478, 126);
             this.cmbClearity.Name = "cmbClearity";
             this.cmbClearity.Size = new System.Drawing.Size(180, 29);
-            this.cmbClearity.TabIndex = 8;
+            this.cmbClearity.TabIndex = 14;
             // 
             // label8
             // 
@@ -176,7 +176,7 @@
             // cmbShape
             // 
             this.cmbShape.FormattingEnabled = true;
-            this.cmbShape.Location = new System.Drawing.Point(502, 89);
+            this.cmbShape.Location = new System.Drawing.Point(478, 89);
             this.cmbShape.Name = "cmbShape";
             this.cmbShape.Size = new System.Drawing.Size(157, 29);
             this.cmbShape.TabIndex = 12;
