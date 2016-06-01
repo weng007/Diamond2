@@ -41,18 +41,18 @@
               <xs:element name="Amount4" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnAmount4" msprop:Generator_ColumnPropNameInRow="Amount4" msprop:Generator_ColumnPropNameInTable="Amount4Column" msprop:Generator_UserColumnName="Amount4" type="xs:int" minOccurs="0" />
               <xs:element name="Weight4" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnWeight4" msprop:Generator_ColumnPropNameInRow="Weight4" msprop:Generator_ColumnPropNameInTable="Weight4Column" msprop:Generator_UserColumnName="Weight4" type="xs:int" minOccurs="0" />
               <xs:element name="MinPremium" msprop:Generator_ColumnVarNameInTable="columnMinPremium" msprop:Generator_ColumnPropNameInRow="MinPremium" msprop:Generator_ColumnPropNameInTable="MinPremiumColumn" msprop:Generator_UserColumnName="MinPremium" type="xs:double" minOccurs="0" />
-              <xs:element name="MinPrice" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnMinPrice" msprop:Generator_ColumnPropNameInRow="MinPrice" msprop:Generator_ColumnPropNameInTable="MinPriceColumn" msprop:Generator_UserColumnName="MinPrice" type="xs:int" minOccurs="0" />
-              <xs:element name="PriceTag" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnPriceTag" msprop:Generator_ColumnPropNameInRow="PriceTag" msprop:Generator_ColumnPropNameInTable="PriceTagColumn" msprop:Generator_UserColumnName="PriceTag" type="xs:int" minOccurs="0" />
+              <xs:element name="MinPrice" msprop:Generator_ColumnVarNameInTable="columnMinPrice" msprop:Generator_ColumnPropNameInRow="MinPrice" msprop:Generator_ColumnPropNameInTable="MinPriceColumn" msprop:Generator_UserColumnName="MinPrice" type="xs:double" minOccurs="0" />
+              <xs:element name="PriceTag" msprop:Generator_ColumnVarNameInTable="columnPriceTag" msprop:Generator_ColumnPropNameInRow="PriceTag" msprop:Generator_ColumnPropNameInTable="PriceTagColumn" msprop:Generator_UserColumnName="PriceTag" type="xs:double" minOccurs="0" />
               <xs:element name="MaterialWeight1" msprop:Generator_ColumnVarNameInTable="columnMaterialWeight1" msprop:Generator_ColumnPropNameInRow="MaterialWeight1" msprop:Generator_ColumnPropNameInTable="MaterialWeight1Column" msprop:Generator_UserColumnName="MaterialWeight1" type="xs:double" minOccurs="0" />
               <xs:element name="MaterialWeight2" msprop:Generator_ColumnVarNameInTable="columnMaterialWeight2" msprop:Generator_ColumnPropNameInRow="MaterialWeight2" msprop:Generator_ColumnPropNameInTable="MaterialWeight2Column" msprop:Generator_UserColumnName="MaterialWeight2" type="xs:double" minOccurs="0" />
-              <xs:element name="Material1Name" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnMaterial1Name" msprop:Generator_ColumnPropNameInRow="Material1Name" msprop:Generator_ColumnPropNameInTable="Material1NameColumn" msprop:Generator_UserColumnName="Material1Name" minOccurs="0">
+              <xs:element name="Material1Name" msprop:Generator_ColumnVarNameInTable="columnMaterial1Name" msprop:Generator_ColumnPropNameInRow="Material1Name" msprop:Generator_ColumnPropNameInTable="Material1NameColumn" msprop:Generator_UserColumnName="Material1Name" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Material2Name" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnMaterial2Name" msprop:Generator_ColumnPropNameInRow="Material2Name" msprop:Generator_ColumnPropNameInTable="Material2NameColumn" msprop:Generator_UserColumnName="Material2Name" minOccurs="0">
+              <xs:element name="Material2Name" msprop:Generator_ColumnVarNameInTable="columnMaterial2Name" msprop:Generator_ColumnPropNameInRow="Material2Name" msprop:Generator_ColumnPropNameInTable="Material2NameColumn" msprop:Generator_UserColumnName="Material2Name" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
@@ -62,7 +62,7 @@
               <xs:element name="Material1" msprop:Generator_ColumnVarNameInTable="columnMaterial1" msprop:Generator_ColumnPropNameInRow="Material1" msprop:Generator_ColumnPropNameInTable="Material1Column" msprop:Generator_UserColumnName="Material1" type="xs:int" minOccurs="0" />
               <xs:element name="Material2" msprop:Generator_ColumnVarNameInTable="columnMaterial2" msprop:Generator_ColumnPropNameInRow="Material2" msprop:Generator_ColumnPropNameInTable="Material2Column" msprop:Generator_UserColumnName="Material2" type="xs:int" minOccurs="0" />
               <xs:element name="JewelryType" msprop:Generator_ColumnVarNameInTable="columnJewelryType" msprop:Generator_ColumnPropNameInRow="JewelryType" msprop:Generator_ColumnPropNameInTable="JewelryTypeColumn" msprop:Generator_UserColumnName="JewelryType" type="xs:int" minOccurs="0" />
-              <xs:element name="JewelryTypeName" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnJewelryTypeName" msprop:Generator_ColumnPropNameInRow="JewelryTypeName" msprop:Generator_ColumnPropNameInTable="JewelryTypeNameColumn" msprop:Generator_UserColumnName="JewelryTypeName" minOccurs="0">
+              <xs:element name="JewelryTypeName" msprop:Generator_ColumnVarNameInTable="columnJewelryTypeName" msprop:Generator_ColumnPropNameInRow="JewelryTypeName" msprop:Generator_ColumnPropNameInTable="JewelryTypeNameColumn" msprop:Generator_UserColumnName="JewelryTypeName" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
@@ -71,7 +71,7 @@
               </xs:element>
               <xs:element name="Size" msprop:Generator_ColumnVarNameInTable="columnSize" msprop:Generator_ColumnPropNameInRow="Size" msprop:Generator_ColumnPropNameInTable="SizeColumn" msprop:Generator_UserColumnName="Size" type="xs:double" minOccurs="0" />
               <xs:element name="Shop" msprop:Generator_ColumnVarNameInTable="columnShop" msprop:Generator_ColumnPropNameInRow="Shop" msprop:Generator_ColumnPropNameInTable="ShopColumn" msprop:Generator_UserColumnName="Shop" type="xs:int" minOccurs="0" />
-              <xs:element name="ShopName" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnShopName" msprop:Generator_ColumnPropNameInRow="ShopName" msprop:Generator_ColumnPropNameInTable="ShopNameColumn" msprop:Generator_UserColumnName="ShopName" minOccurs="0">
+              <xs:element name="ShopName" msprop:Generator_ColumnVarNameInTable="columnShopName" msprop:Generator_ColumnPropNameInRow="ShopName" msprop:Generator_ColumnPropNameInTable="ShopNameColumn" msprop:Generator_UserColumnName="ShopName" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
@@ -79,7 +79,7 @@
                 </xs:simpleType>
               </xs:element>
               <xs:element name="Status" msprop:Generator_ColumnVarNameInTable="columnStatus" msprop:Generator_ColumnPropNameInRow="Status" msprop:Generator_ColumnPropNameInTable="StatusColumn" msprop:Generator_UserColumnName="Status" type="xs:int" minOccurs="0" />
-              <xs:element name="StatusName" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnStatusName" msprop:Generator_ColumnPropNameInRow="StatusName" msprop:Generator_ColumnPropNameInTable="StatusNameColumn" msprop:Generator_UserColumnName="StatusName" minOccurs="0">
+              <xs:element name="StatusName" msprop:Generator_ColumnVarNameInTable="columnStatusName" msprop:Generator_ColumnPropNameInRow="StatusName" msprop:Generator_ColumnPropNameInTable="StatusNameColumn" msprop:Generator_UserColumnName="StatusName" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
