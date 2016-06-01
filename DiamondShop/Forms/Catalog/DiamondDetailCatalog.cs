@@ -16,7 +16,6 @@ namespace DiamondShop
 {
     public partial class DiamondDetailCatalog : FormInfo
     {
-        //Service1 ser = GM.GetService();
         DataSet ds2 = new DataSet();
         DataSet tmp = new DataSet();
         dsInvDiamondCerDetail tds = new dsInvDiamondCerDetail();
@@ -39,24 +38,7 @@ namespace DiamondShop
 
         protected override void Initial()
         {
-            //cmbColorGrade.DataSource = (GM.GetMasterTableDetail("C025")).Tables[0];
-            //cmbColorGrade.ValueMember = "ID";
-            //cmbColorGrade.DisplayMember = "Detail";
-            //cmbColorGrade.Refresh();
 
-            //cmbShape.DataSource = (GM.GetMasterTableDetail("C019")).Tables[0];
-            //cmbShape.ValueMember = "ID";
-            //cmbShape.DisplayMember = "Detail";
-            //cmbShape.Refresh();
-
-            //cmbClarity.DataSource = (GM.GetMasterTableDetail("C002")).Tables[0];
-            //cmbClarity.ValueMember = "ID";
-            //cmbClarity.DisplayMember = "Detail";
-            //cmbClarity.Refresh();
-
-            //cmbShape.Select();
-
-            //SetFieldService.SetRequireField(txtWeight, txtGIANumber);
         }
         protected override void LoadData()
         {
@@ -72,19 +54,17 @@ namespace DiamondShop
             {
                 grid1.Rows.Clear();
                 BindingGridDiamondDetail(grid1);
-                //BindingDSDiamondDetail(0);
             }
 
             if (tds2.InvDiamondDetail.Rows.Count > 0)
             {
                 grid2.Rows.Clear();
                 BindingGridDiamondDetail(grid2);
-                //BindingDSDiamondDetail(1);
             }
 
             base.LoadData();
         }
-        #region Binding Grid, Dataset
+
         private void BindingGridDiamondDetail(DataGridView grid)
         {
             int i = 0;
@@ -128,98 +108,6 @@ namespace DiamondShop
                     i++;
                     CalSum(1);
                 }
-            }
-        }
-
-        //private void BindingDSDiamondDetail(int type)
-        //{
-        //    int i = 0;
-
-        //    if (type == 0)
-        //    {
-        //        tds.Clear();
-
-        //        foreach (DataGridViewRow row in grid1.Rows)
-        //        {
-        //            tds.Tables[0].Rows.Add();
-
-        //            if (row.Cells["ID"].Value != null)
-        //            { tds.Tables[0].Rows[i]["ID"] = row.Cells["ID"].Value; }
-
-        //            if (row.Cells["RowNum"].Value != null)
-        //            { tds.Tables[0].Rows[i]["RowNum"] = row.Cells["RowNum"].Value; }
-
-        //            if (row.Cells["RefID"].Value != null)
-        //            { tds.Tables[0].Rows[i]["refID"] = row.Cells["refID"].Value; }
-
-        //            tds.Tables[0].Rows[i]["refID1"] = row.Cells["refID1"].Value;
-        //            tds.Tables[0].Rows[i]["MinPrice"] = row.Cells["MinPrice"].Value;
-
-        //            i++;
-        //        }
-
-        //        i = 0;
-        //        tds.AcceptChanges();
-        //    }
-        //    else
-        //    {
-        //        tds2.Clear();
-        //        foreach (DataGridViewRow row in grid2.Rows)
-        //        {
-        //            tds2.Tables[0].Rows.Add();
-
-        //            if (row.Cells["ID1"].Value != null)
-        //            { tds2.Tables[0].Rows[i]["ID"] = row.Cells["ID1"].Value; }
-
-        //            if (row.Cells["RowNum1"].Value != null)
-        //            { tds2.Tables[0].Rows[i]["RowNum"] = row.Cells["RowNum1"].Value; }
-
-        //            if (row.Cells["WeightPerStone"].Value != null)
-        //            { tds2.Tables[0].Rows[i]["WeightPerStone"] = row.Cells["WeightPerStone"].Value; }
-
-        //            if (row.Cells["Amount"].Value != null)
-        //            { tds2.Tables[0].Rows[i]["Amount"] = row.Cells["Amount"].Value; }
-
-        //            if (row.Cells["Weight1"].Value != null)
-        //            { tds2.Tables[0].Rows[i]["Weight"] = row.Cells["Weight1"].Value; }
-
-        //            if (row.Cells["Shape"].Value != null)
-        //            { tds2.Tables[0].Rows[i]["Shape"] = row.Cells["Shape"].Value; }
-
-        //            if (row.Cells["Color"].Value != null)
-        //            { tds2.Tables[0].Rows[i]["Color"] = row.Cells["Color"].Value; }
-
-        //            if (row.Cells["Clearity1"].Value != null)
-        //            { tds2.Tables[0].Rows[i]["Clearity"] = row.Cells["Clearity1"].Value; }
-
-        //            if (row.Cells["CostPerCarat"].Value != null)
-        //            { tds2.Tables[0].Rows[i]["CostPerCarat"] = row.Cells["CostPerCarat"].Value; }
-
-        //            if (row.Cells["Cost1"].Value != null)
-        //            { tds2.Tables[0].Rows[i]["Cost"] = row.Cells["Cost1"].Value; }
-
-        //            if (row.Cells["MinPricePerCarat"].Value != null)
-        //            { tds2.Tables[0].Rows[i]["MinPricePerCarat"] = row.Cells["MinPricePerCarat"].Value; }
-
-        //            if (row.Cells["MinPrice1"].Value != null)
-        //            { tds2.Tables[0].Rows[i]["MinPrice"] = row.Cells["MinPrice1"].Value; }
-
-        //            if (row.Cells["refID2"].Value != null)
-        //            { tds2.Tables[0].Rows[i]["refID"] = row.Cells["refID2"].Value; }
-
-        //            i++;
-        //        }
-
-        //        tds2.AcceptChanges();
-        //    }
-        //}
-        #endregion
-
-        private void txtWeight_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
-            {
-                e.Handled = true;
             }
         }
 

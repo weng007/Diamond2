@@ -337,6 +337,8 @@ namespace DiamondDS.DS {
             
             private global::System.Data.DataColumn columnRedCost;
             
+            private global::System.Data.DataColumn columnMinPremium;
+            
             private global::System.Data.DataColumn columnMinPrice;
             
             private global::System.Data.DataColumn columnPriceTag;
@@ -650,6 +652,14 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn MinPremiumColumn {
+                get {
+                    return this.columnMinPremium;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn MinPriceColumn {
                 get {
                     return this.columnMinPrice;
@@ -898,6 +908,7 @@ namespace DiamondDS.DS {
                         decimal CostNonCer, 
                         decimal CostCer, 
                         decimal RedCost, 
+                        string MinPremium, 
                         decimal MinPrice, 
                         decimal PriceTag, 
                         byte[] Image1, 
@@ -952,6 +963,7 @@ namespace DiamondDS.DS {
                         CostNonCer,
                         CostCer,
                         RedCost,
+                        MinPremium,
                         MinPrice,
                         PriceTag,
                         Image1,
@@ -1033,6 +1045,7 @@ namespace DiamondDS.DS {
                 this.columnCostNonCer = base.Columns["CostNonCer"];
                 this.columnCostCer = base.Columns["CostCer"];
                 this.columnRedCost = base.Columns["RedCost"];
+                this.columnMinPremium = base.Columns["MinPremium"];
                 this.columnMinPrice = base.Columns["MinPrice"];
                 this.columnPriceTag = base.Columns["PriceTag"];
                 this.columnImage1 = base.Columns["Image1"];
@@ -1119,6 +1132,8 @@ namespace DiamondDS.DS {
                 base.Columns.Add(this.columnCostCer);
                 this.columnRedCost = new global::System.Data.DataColumn("RedCost", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnRedCost);
+                this.columnMinPremium = new global::System.Data.DataColumn("MinPremium", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMinPremium);
                 this.columnMinPrice = new global::System.Data.DataColumn("MinPrice", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnMinPrice);
                 this.columnPriceTag = new global::System.Data.DataColumn("PriceTag", typeof(decimal), null, global::System.Data.MappingType.Element);
@@ -1794,6 +1809,22 @@ namespace DiamondDS.DS {
                 }
                 set {
                     this[this.tableInventory.RedCostColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string MinPremium {
+                get {
+                    try {
+                        return ((string)(this[this.tableInventory.MinPremiumColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'MinPremium\' in table \'Inventory\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableInventory.MinPremiumColumn] = value;
                 }
             }
             
@@ -2499,6 +2530,18 @@ namespace DiamondDS.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetRedCostNull() {
                 this[this.tableInventory.RedCostColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsMinPremiumNull() {
+                return this.IsNull(this.tableInventory.MinPremiumColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetMinPremiumNull() {
+                this[this.tableInventory.MinPremiumColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

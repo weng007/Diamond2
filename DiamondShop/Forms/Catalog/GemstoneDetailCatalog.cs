@@ -16,7 +16,6 @@ namespace DiamondShop
 {
     public partial class GemstoneDetailCatalog : FormInfo
     {
-        //Service1 ser = GM.GetService();
         DataSet ds2 = new DataSet();
         DataSet tmp = new DataSet();
         dsInvGemstoneCerDetail tds = new dsInvGemstoneCerDetail();
@@ -38,24 +37,7 @@ namespace DiamondShop
 
         protected override void Initial()
         {
-            //cmbOrigin.DataSource = (GM.GetMasterTableDetail("C024")).Tables[0];
-            //cmbOrigin.ValueMember = "ID";
-            //cmbOrigin.DisplayMember = "Detail";
-            //cmbOrigin.Refresh();
 
-            //cmbShape.DataSource = (GM.GetMasterTableDetail("C019")).Tables[0];
-            //cmbShape.ValueMember = "ID";
-            //cmbShape.DisplayMember = "Detail";
-            //cmbShape.Refresh();
-
-            //cmbGemstoneType.DataSource = (GM.GetMasterTableDetail("C006")).Tables[0];
-            //cmbGemstoneType.ValueMember = "ID";
-            //cmbGemstoneType.DisplayMember = "Detail";
-            //cmbGemstoneType.Refresh();
-
-            //cmbShape.Select();
-
-            //SetFieldService.SetRequireField(txtAmount, txtWeight);
         }
         protected override void LoadData()
         {
@@ -71,14 +53,12 @@ namespace DiamondShop
             {
                 grid1.Rows.Clear();
                 BindingGridDiamondDetail(grid1);
-                BindingDSDiamondDetail(0);
             }
 
             if (tds2.InvGemstoneDetail.Rows.Count > 0)
             {
                 grid2.Rows.Clear();
                 BindingGridDiamondDetail(grid2);
-                BindingDSDiamondDetail(1);
             }
 
             base.LoadData();
@@ -124,7 +104,6 @@ namespace DiamondShop
                     grid2.Rows[i].Cells["RowNum1"].Value = row["RowNum"].ToString();
                     grid2.Rows[i].Cells["GemstoneType"].Value = row["GemstoneType"].ToString();
                     grid2.Rows[i].Cells["Shape"].Value = row["Shape"].ToString();
-                    //grid2.Rows[i].Cells["WeightPerStone"].Value = row["WeightPerStone"].ToString();
                     grid2.Rows[i].Cells["Amount"].Value = row["Amount"].ToString();
                     grid2.Rows[i].Cells["Weight1"].Value = row["Weight"].ToString();
                     grid2.Rows[i].Cells["Origin"].Value = row["Origin"].ToString();
@@ -159,17 +138,6 @@ namespace DiamondShop
 
                 txtSumAmount1.Text = GM.ConvertDoubleToString(txtSumAmount1);
                 txtSumWeight1.Text = GM.ConvertDoubleToString(txtSumWeight1);
-            }
-
-        }
-
-        
-
-        private void txtAmount_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
-            {
-                e.Handled = true;
             }
         }
     }
