@@ -1146,6 +1146,7 @@
             // 
             // cmbJewelryType
             // 
+            this.cmbJewelryType.Enabled = false;
             this.cmbJewelryType.FormattingEnabled = true;
             this.cmbJewelryType.Location = new System.Drawing.Point(436, 55);
             this.cmbJewelryType.Name = "cmbJewelryType";

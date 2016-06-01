@@ -200,7 +200,7 @@ namespace DiamondShop
             DiamondCerList frm = new DiamondCerList(1);
             frm.ShowDialog();
 
-            if (frm.refID1 != 0)
+            if (frm.refID1 != 0 && CheckDataExist(frm.refID1))
             {
                 tmp = ser.DoSelectData("DiamondCer", frm.refID1, 0);
                 tdsDiamondCer.Clear();
@@ -591,6 +591,22 @@ namespace DiamondShop
                 chkGrid = 1;
                 DeleteData();
             }
+        }
+
+        private bool CheckDataExist(int tmp)
+        {
+            if(grid1.Rows.Count > 0)
+            {
+                for(int i = 0; i < grid1.Rows.Count; i++)
+                {
+                    if(tmp == Convert.ToInt32(grid1.Rows[i].Cells["RefID1"].Value))
+                    {
+                        return false;
+                    }
+                }
+            }
+
+            return true;
         }
     }
 }

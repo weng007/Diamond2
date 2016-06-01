@@ -571,7 +571,7 @@ namespace DiamondShop
             GemstoneCerList frm = new GemstoneCerList(1);
             frm.ShowDialog();
 
-            if (frm.refID1 != 0)
+            if (frm.refID1 != 0 && CheckDataExist(frm.refID1))
             {
                 tmp = ser.DoSelectData("GemstoneCer", frm.refID1, 0);
                 tdsGemstoneCer.Clear();
@@ -600,8 +600,20 @@ namespace DiamondShop
             }
         }
 
-        
+        private bool CheckDataExist(int tmp)
+        {
+            if (grid1.Rows.Count > 0)
+            {
+                for (int i = 0; i < grid1.Rows.Count; i++)
+                {
+                    if (tmp == Convert.ToInt32(grid1.Rows[i].Cells["RefID1"].Value))
+                    {
+                        return false;
+                    }
+                }
+            }
 
-
+            return true;
+        }
     }
 }
