@@ -95,6 +95,7 @@
             this.mnBBST = new System.Windows.Forms.ToolStripMenuItem();
             this.mnBBETC = new System.Windows.Forms.ToolStripMenuItem();
             this.btnAccounting = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnLogout = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -278,6 +279,7 @@
             // panel2
             // 
             this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
+            this.panel2.Controls.Add(this.btnLogout);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.txtFullName);
             this.panel2.Location = new System.Drawing.Point(1066, 36);
@@ -309,7 +311,7 @@
             this.txtFullName.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFullName.Location = new System.Drawing.Point(16, 15);
             this.txtFullName.Name = "txtFullName";
-            this.txtFullName.Size = new System.Drawing.Size(256, 27);
+            this.txtFullName.Size = new System.Drawing.Size(189, 27);
             this.txtFullName.TabIndex = 11;
             // 
             // menuStrip1
@@ -354,7 +356,7 @@
             this.menuUser.Image = ((System.Drawing.Image)(resources.GetObject("menuUser.Image")));
             this.menuUser.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.menuUser.Name = "menuUser";
-            this.menuUser.Size = new System.Drawing.Size(168, 38);
+            this.menuUser.Size = new System.Drawing.Size(130, 38);
             this.menuUser.Text = "User";
             this.menuUser.Click += new System.EventHandler(this.btnUser_Click);
             // 
@@ -364,7 +366,7 @@
             this.menuSeller.Image = ((System.Drawing.Image)(resources.GetObject("menuSeller.Image")));
             this.menuSeller.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.menuSeller.Name = "menuSeller";
-            this.menuSeller.Size = new System.Drawing.Size(168, 38);
+            this.menuSeller.Size = new System.Drawing.Size(130, 38);
             this.menuSeller.Text = "Seller";
             this.menuSeller.Click += new System.EventHandler(this.menuSeller_Click);
             // 
@@ -835,6 +837,14 @@
             this.btnAccounting.Padding = new System.Windows.Forms.Padding(10, 4, 4, 4);
             this.btnAccounting.Size = new System.Drawing.Size(88, 95);
             // 
+            // btnLogout
+            // 
+            this.btnLogout.Location = new System.Drawing.Point(224, 15);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(53, 27);
+            this.btnLogout.TabIndex = 13;
+            this.btnLogout.UseVisualStyleBackColor = true;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -930,6 +940,7 @@
         private System.Windows.Forms.ToolStripMenuItem mnCatSJ;
         private System.Windows.Forms.ToolStripMenuItem mnCatMTO;
         private System.Windows.Forms.ToolStripMenuItem mnInvMTO;
+        private System.Windows.Forms.Button btnLogout;
     }
 }
 
