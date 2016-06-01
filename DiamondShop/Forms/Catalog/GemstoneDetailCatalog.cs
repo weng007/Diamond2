@@ -83,10 +83,6 @@ namespace DiamondShop
                     grid1.Rows[i].Cells["Weight"].Value = row["Weight"].ToString();
                     grid1.Rows[i].Cells["ColorName"].Value = row["ColorName"].ToString();
                     grid1.Rows[i].Cells["OriginName"].Value = row["OriginName"].ToString();
-                    grid1.Rows[i].Cells["MinPrice"].Value = row["MinPrice"].ToString();
-                    grid1.Rows[i].Cells["TotalBaht"].Value = row["TotalBaht"].ToString();
-                    grid1.Rows[i].Cells["refID"].Value = row["refID"].ToString();
-                    grid1.Rows[i].Cells["refID1"].Value = row["refID1"].ToString();
 
                     i++;
                 }
@@ -102,16 +98,11 @@ namespace DiamondShop
                     grid2.Rows.Add();
                     grid2.Rows[i].Cells["ID1"].Value = row["ID"].ToString();
                     grid2.Rows[i].Cells["RowNum1"].Value = row["RowNum"].ToString();
-                    grid2.Rows[i].Cells["GemstoneType"].Value = row["GemstoneType"].ToString();
-                    grid2.Rows[i].Cells["Shape"].Value = row["Shape"].ToString();
-                    grid2.Rows[i].Cells["Amount"].Value = row["Amount"].ToString();
+                    grid2.Rows[i].Cells["GemstoneTypeName"].Value = row["GemstoneTypeName"].ToString();
+                    grid2.Rows[i].Cells["ShapeName1"].Value = row["ShapeName"].ToString();
+                    grid2.Rows[i].Cells["Amount1"].Value = row["Amount"].ToString();
                     grid2.Rows[i].Cells["Weight1"].Value = row["Weight"].ToString();
-                    grid2.Rows[i].Cells["Origin"].Value = row["Origin"].ToString();
-                    grid2.Rows[i].Cells["CostPerCarat"].Value = row["CostPerCarat"].ToString();
-                    grid2.Rows[i].Cells["Cost1"].Value = row["Cost"].ToString();
-                    grid2.Rows[i].Cells["MinPricePerCarat"].Value = row["MinPricePerCarat"].ToString();
-                    grid2.Rows[i].Cells["MinPrice1"].Value = row["MinPrice"].ToString();
-                    grid2.Rows[i].Cells["refID2"].Value = row["refID"].ToString();
+                    grid2.Rows[i].Cells["OriginName1"].Value = row["OriginName"].ToString();
 
                     i++;
                     CalSum(1);
@@ -131,7 +122,7 @@ namespace DiamondShop
             else
             {
                 txtSumAmount1.Text = (grid2.Rows.Cast<DataGridViewRow>()
-                .Sum(t => Convert.ToDecimal(t.Cells["Amount"].Value))).ToString();
+                .Sum(t => Convert.ToDecimal(t.Cells["Amount1"].Value))).ToString();
 
                 txtSumWeight1.Text = (grid2.Rows.Cast<DataGridViewRow>()
                 .Sum(t => Convert.ToDecimal(t.Cells["Weight1"].Value))).ToString();
