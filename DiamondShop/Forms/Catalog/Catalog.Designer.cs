@@ -647,18 +647,18 @@
             // 
             // label19
             // 
-            this.label19.Location = new System.Drawing.Point(349, 23);
+            this.label19.Location = new System.Drawing.Point(358, 23);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(62, 22);
+            this.label19.Size = new System.Drawing.Size(53, 22);
             this.label19.TabIndex = 89;
             this.label19.Text = "Shop";
             // 
             // label24
             // 
             this.label24.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.label24.Location = new System.Drawing.Point(349, 60);
+            this.label24.Location = new System.Drawing.Point(358, 60);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(58, 26);
+            this.label24.Size = new System.Drawing.Size(53, 26);
             this.label24.TabIndex = 80;
             this.label24.Text = "Type";
             // 
