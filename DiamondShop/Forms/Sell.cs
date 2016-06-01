@@ -11,16 +11,19 @@ using System.Windows.Forms;
 using DiamondShop.FormMaster;
 using DiamondDS.DS;
 using DiamondShop.DiamondService;
+using DiamondShop.DiamondService1;
 
 namespace DiamondShop
 {
     public partial class Sell : FormInfo
     {
+        Service2 ser1;
         dsSell tds = new dsSell();
         MemoryStream ms1;
         byte[] image1;
         int custID = 0;
         int refID = 0;
+        string isPrintPrice = "1";
 
         public Sell()
         {
@@ -82,9 +85,7 @@ namespace DiamondShop
             cmbShopRecive.DataSource = (GM.GetMasterTableDetail("C007")).Tables[0];
             cmbShopRecive.ValueMember = "ID";
             cmbShopRecive.DisplayMember = "Detail";
-            cmbShopRecive.Refresh();
-
-            
+            cmbShopRecive.Refresh();          
 
             SetFieldService.SetRequireField(txtNetPrice,txtCode,txtCustomer);
         }
@@ -101,6 +102,9 @@ namespace DiamondShop
 
                 refID = tds.Sell[0].RefID;
                 custID = tds.Sell[0].CustID;
+                chkIsPrintPrice.Checked = tds.Sell[0].IsPrintPrice=="1"?true:false;
+
+                SetJewelryDetail();
 
                 if (tds.Sell[0].Image1 != null)
                 {
@@ -133,8 +137,7 @@ namespace DiamondShop
             binder.BindValueToDataRow(row);
             row.RefID = refID;
             row.CustID = custID;
-            row.ShopReceive = Convert.ToInt32(cmbShopRecive.SelectedValue.ToString());
-            row.Seller = Convert.ToInt32(cmbSeller.SelectedValue.ToString());
+            row.IsPrintPrice = chkIsPrintPrice.Checked?"1":"0";
 
             try
             {
@@ -233,6 +236,57 @@ namespace DiamondShop
             }
 
         }
+
+        private void SetJewelryDetail()
+        {
+            DataSet tmp = new DataSet();
+            ser1 = GM.GetService1();
+
+            ds = ser1.GetJewelryDetail(refID);
+
+            if(ds.Tables[1].Rows.Count > 0)
+            {
+                txtMaterial.Text = ds.Tables[1].Rows[0]["Material1Name"].ToString() + "  "+ds.Tables[1].Rows[0]["MaterialWeight1"].ToString()+" gram";
+                if (ds.Tables[1].Rows[0]["Material2Name"].ToString() != "")
+                {
+                    txtMaterial.Text += "\r\n" + ds.Tables[1].Rows[0]["Material2Name"].ToString() + "  " + ds.Tables[1].Rows[0]["MaterialWeight2"].ToString()+" gram";
+                }
+            }
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+                {
+                    txtDiamond.Text += ds.Tables[0].Rows[i]["ShapeName"].ToString() + "  " + ds.Tables[0].Rows[i]["Amount"].ToString()+" เม็ด" + "  " +
+                        ds.Tables[0].Rows[i]["Weight"].ToString()+" ct" + "\r\n";
+                }
+            }
+            if (ds.Tables[2].Rows.Count > 0)
+            {
+                for (int i = 0; i < ds.Tables[2].Rows.Count; i++)
+                {
+                    txtGemstone.Text += ds.Tables[2].Rows[i]["ShapeName"].ToString() + "  " + ds.Tables[2].Rows[i]["Amount"].ToString() + " เม็ด"+"  " +
+                        ds.Tables[2].Rows[i]["Weight"].ToString()+" ct" + "\r\n";
+                }
+            }
+            if (ds.Tables[3].Rows.Count > 0)
+            {
+                for (int i = 0; i < ds.Tables[3].Rows.Count; i++)
+                {
+                    txtCertified.Text += ds.Tables[3].Rows[i]["ReportNumber"].ToString() + "  " + ds.Tables[3].Rows[i]["Type"].ToString() + "  " +
+                        ds.Tables[3].Rows[i]["LabName"].ToString() + "  "+ds.Tables[3].Rows[i]["ShapeName"].ToString() + "  " +
+                        ds.Tables[3].Rows[i]["Weight"].ToString() + "  " + ds.Tables[3].Rows[i]["Detail"].ToString() + "\r\n";
+                }
+            }
+            if (ds.Tables[4].Rows.Count > 0)
+            {
+                for (int i = 0; i < ds.Tables[4].Rows.Count; i++)
+                {
+                    txtCertified.Text += ds.Tables[4].Rows[i]["ReportNumber"].ToString() + "  " + ds.Tables[4].Rows[i]["Type"].ToString() + "  " +
+                       ds.Tables[4].Rows[i]["LabName"].ToString() + "  " + ds.Tables[4].Rows[i]["ShapeName"].ToString() + "  " +
+                       ds.Tables[4].Rows[i]["Weight"].ToString() + "  " + ds.Tables[4].Rows[i]["Detail"].ToString() + "\r\n";
+                }
+            }
+        }
         
         private void SetFormatNumber()
         {
@@ -260,6 +314,16 @@ namespace DiamondShop
         {
             TextBox txt = (TextBox)sender;
             txt.Text = GM.ConvertDoubleToString(txt, 0);
+        }
+
+        private void btnPending_Click(object sender, EventArgs e)
+        {
+            ser1.UpdateJewelryStatus(refID, "Pending");
+        }
+
+        private void btnSold_Click(object sender, EventArgs e)
+        {
+            ser1.UpdateJewelryStatus(refID, "Sold");
         }
     }
 }

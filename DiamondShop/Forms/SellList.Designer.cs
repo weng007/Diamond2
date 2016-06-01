@@ -33,6 +33,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tds = new DiamondDS.DS.dsSell();
             this.panel2 = new System.Windows.Forms.Panel();
             this.gridSell = new System.Windows.Forms.DataGridView();
@@ -201,10 +202,12 @@
             // RowNum
             // 
             this.RowNum.DataPropertyName = "RowNum";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.RowNum.DefaultCellStyle = dataGridViewCellStyle2;
             this.RowNum.HeaderText = "No.";
             this.RowNum.Name = "RowNum";
             this.RowNum.ReadOnly = true;
-            this.RowNum.Width = 70;
+            this.RowNum.Width = 60;
             // 
             // ID
             // 
@@ -217,8 +220,8 @@
             // SellDate
             // 
             this.SellDate.DataPropertyName = "SellDate";
-            dataGridViewCellStyle2.Format = "dd/MM/yyyy";
-            this.SellDate.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.Format = "dd/MM/yyyy";
+            this.SellDate.DefaultCellStyle = dataGridViewCellStyle3;
             this.SellDate.HeaderText = "Sold Date";
             this.SellDate.Name = "SellDate";
             this.SellDate.ReadOnly = true;
@@ -251,9 +254,9 @@
             // NetPrice
             // 
             this.NetPrice.DataPropertyName = "NetPrice";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle3.Format = "N2";
-            this.NetPrice.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle4.Format = "N0";
+            this.NetPrice.DefaultCellStyle = dataGridViewCellStyle4;
             this.NetPrice.HeaderText = "NetPrice";
             this.NetPrice.Name = "NetPrice";
             this.NetPrice.ReadOnly = true;
@@ -262,9 +265,8 @@
             // PaymentName
             // 
             this.PaymentName.DataPropertyName = "PaymentName";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle4.Format = "N2";
-            this.PaymentName.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.Format = "N2";
+            this.PaymentName.DefaultCellStyle = dataGridViewCellStyle5;
             this.PaymentName.HeaderText = "Payment";
             this.PaymentName.Name = "PaymentName";
             this.PaymentName.ReadOnly = true;

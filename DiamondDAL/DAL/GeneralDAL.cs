@@ -40,6 +40,39 @@ namespace DiamondDAL.DAL
 
             return code;
         }
-       
+
+        public DataSet GetJewelryDetail(int id)
+        {
+            try
+            {
+                SQL.ClearParameter();
+                SQL.CreateParameter("@RefID", id);
+                SQL.FillDataSetBySP2("SP_Sell_Detail", ds);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return ds;
+        }
+
+        public int UpdateJewelryStatus(int id, int status)
+        {
+            try
+            {
+                SQL.ClearParameter();
+                SQL.CreateParameter("@ID", id);
+                SQL.CreateParameter("@Status", status);
+                flag = SQL.ExecuteSP("SP_Sell_Upd_JewelryStatus");
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return flag;
+        }
+
     }
 }

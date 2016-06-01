@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Services;
 using DiamondDS.DS;
 using DiamondBiz.Biz;
+using System.Data;
 
 namespace Diamond
 {
@@ -55,6 +56,34 @@ namespace Diamond
             try
             {
                 return biz.GetRunningNumber(subject);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        [WebMethod]
+        public DataSet GetJewelryDetail(int id)
+        {
+            GeneralCBiz biz = new GeneralCBiz();
+            try
+            {
+                return biz.GetJewelryDetail(id);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        [WebMethod]
+        public int UpdateJewelryStatus(int id, string status)
+        {
+            GeneralCBiz biz = new GeneralCBiz();
+            try
+            {
+                return biz.UpdateJewelryStatus(id,status);
             }
             catch (Exception ex)
             {

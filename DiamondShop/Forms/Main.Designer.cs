@@ -44,6 +44,7 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnLogout = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.txtFullName = new System.Windows.Forms.TextBox();
@@ -95,7 +96,6 @@
             this.mnBBST = new System.Windows.Forms.ToolStripMenuItem();
             this.mnBBETC = new System.Windows.Forms.ToolStripMenuItem();
             this.btnAccounting = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnLogout = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -287,6 +287,17 @@
             this.panel2.Size = new System.Drawing.Size(288, 91);
             this.panel2.TabIndex = 10;
             // 
+            // btnLogout
+            // 
+            this.btnLogout.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.Location = new System.Drawing.Point(210, 15);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(64, 27);
+            this.btnLogout.TabIndex = 13;
+            this.btnLogout.Text = "Logout";
+            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Firebrick;
@@ -311,7 +322,7 @@
             this.txtFullName.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFullName.Location = new System.Drawing.Point(16, 15);
             this.txtFullName.Name = "txtFullName";
-            this.txtFullName.Size = new System.Drawing.Size(189, 27);
+            this.txtFullName.Size = new System.Drawing.Size(175, 27);
             this.txtFullName.TabIndex = 11;
             // 
             // menuStrip1
@@ -836,14 +847,6 @@
             this.btnAccounting.Name = "btnAccounting";
             this.btnAccounting.Padding = new System.Windows.Forms.Padding(10, 4, 4, 4);
             this.btnAccounting.Size = new System.Drawing.Size(88, 95);
-            // 
-            // btnLogout
-            // 
-            this.btnLogout.Location = new System.Drawing.Point(224, 15);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(53, 27);
-            this.btnLogout.TabIndex = 13;
-            this.btnLogout.UseVisualStyleBackColor = true;
             // 
             // Main
             // 

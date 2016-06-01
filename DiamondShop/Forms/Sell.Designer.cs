@@ -31,12 +31,17 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Sell));
             this.btnImage1 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtCertified = new System.Windows.Forms.TextBox();
+            this.chkIsPrintPrice = new System.Windows.Forms.CheckBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtCerNo = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtMaterial = new System.Windows.Forms.TextBox();
             this.txtNetPrice = new System.Windows.Forms.TextBox();
             this.btnBrowseCustomer = new System.Windows.Forms.Button();
             this.txtCustomer = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.btnPrint = new System.Windows.Forms.Button();
             this.txtPriceTag = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -67,8 +72,8 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.txtCerNo = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtStatus = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -80,7 +85,7 @@
             this.btnImage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnImage1.Enabled = false;
             this.btnImage1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnImage1.Location = new System.Drawing.Point(30, 293);
+            this.btnImage1.Location = new System.Drawing.Point(30, 335);
             this.btnImage1.Name = "btnImage1";
             this.btnImage1.Size = new System.Drawing.Size(150, 150);
             this.btnImage1.TabIndex = 14;
@@ -89,6 +94,12 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Controls.Add(this.label12);
+            this.panel3.Controls.Add(this.txtStatus);
+            this.panel3.Controls.Add(this.label11);
+            this.panel3.Controls.Add(this.txtCertified);
+            this.panel3.Controls.Add(this.chkIsPrintPrice);
+            this.panel3.Controls.Add(this.label8);
             this.panel3.Controls.Add(this.label10);
             this.panel3.Controls.Add(this.txtCerNo);
             this.panel3.Controls.Add(this.label9);
@@ -96,7 +107,6 @@
             this.panel3.Controls.Add(this.txtNetPrice);
             this.panel3.Controls.Add(this.btnBrowseCustomer);
             this.panel3.Controls.Add(this.txtCustomer);
-            this.panel3.Controls.Add(this.label8);
             this.panel3.Controls.Add(this.btnPrint);
             this.panel3.Controls.Add(this.btnImage1);
             this.panel3.Controls.Add(this.txtPriceTag);
@@ -131,25 +141,83 @@
             this.panel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.panel3.Location = new System.Drawing.Point(7, 72);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(785, 674);
+            this.panel3.Size = new System.Drawing.Size(943, 651);
             this.panel3.TabIndex = 1;
+            // 
+            // label11
+            // 
+            this.label11.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(542, 279);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(122, 25);
+            this.label11.TabIndex = 195;
+            this.label11.Text = "Certified Stone";
+            // 
+            // txtCertified
+            // 
+            this.txtCertified.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCertified.Location = new System.Drawing.Point(546, 306);
+            this.txtCertified.Multiline = true;
+            this.txtCertified.Name = "txtCertified";
+            this.txtCertified.ReadOnly = true;
+            this.txtCertified.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtCertified.Size = new System.Drawing.Size(368, 110);
+            this.txtCertified.TabIndex = 194;
+            // 
+            // chkIsPrintPrice
+            // 
+            this.chkIsPrintPrice.AutoSize = true;
+            this.chkIsPrintPrice.Checked = true;
+            this.chkIsPrintPrice.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkIsPrintPrice.Location = new System.Drawing.Point(56, 515);
+            this.chkIsPrintPrice.Name = "chkIsPrintPrice";
+            this.chkIsPrintPrice.Size = new System.Drawing.Size(104, 25);
+            this.chkIsPrintPrice.TabIndex = 193;
+            this.chkIsPrintPrice.Text = "Print Price";
+            this.chkIsPrintPrice.UseVisualStyleBackColor = true;
+            // 
+            // label8
+            // 
+            this.label8.Location = new System.Drawing.Point(417, 207);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(90, 25);
+            this.label8.TabIndex = 192;
+            this.label8.Text = "Customer";
+            // 
+            // label10
+            // 
+            this.label10.Location = new System.Drawing.Point(382, 24);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(125, 25);
+            this.label10.TabIndex = 191;
+            this.label10.Text = "Certificate No.";
+            // 
+            // txtCerNo
+            // 
+            this.txtCerNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.txtCerNo.Enabled = false;
+            this.txtCerNo.Location = new System.Drawing.Point(513, 21);
+            this.txtCerNo.Name = "txtCerNo";
+            this.txtCerNo.ReadOnly = true;
+            this.txtCerNo.Size = new System.Drawing.Size(167, 27);
+            this.txtCerNo.TabIndex = 190;
             // 
             // label9
             // 
-            this.label9.Location = new System.Drawing.Point(463, 267);
+            this.label9.Location = new System.Drawing.Point(780, 29);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(91, 25);
+            this.label9.Size = new System.Drawing.Size(87, 25);
             this.label9.TabIndex = 189;
             this.label9.Text = "Material";
             // 
             // txtMaterial
             // 
-            this.txtMaterial.Enabled = false;
-            this.txtMaterial.Location = new System.Drawing.Point(470, 293);
+            this.txtMaterial.Location = new System.Drawing.Point(725, 57);
             this.txtMaterial.Multiline = true;
             this.txtMaterial.Name = "txtMaterial";
             this.txtMaterial.ReadOnly = true;
-            this.txtMaterial.Size = new System.Drawing.Size(285, 70);
+            this.txtMaterial.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtMaterial.Size = new System.Drawing.Size(196, 135);
             this.txtMaterial.TabIndex = 188;
             // 
             // txtNetPrice
@@ -172,7 +240,7 @@
             this.btnBrowseCustomer.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(109)))), ((int)(((byte)(65)))));
             this.btnBrowseCustomer.FlatAppearance.BorderSize = 0;
             this.btnBrowseCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBrowseCustomer.Location = new System.Drawing.Point(726, 202);
+            this.btnBrowseCustomer.Location = new System.Drawing.Point(683, 202);
             this.btnBrowseCustomer.Name = "btnBrowseCustomer";
             this.btnBrowseCustomer.Size = new System.Drawing.Size(30, 30);
             this.btnBrowseCustomer.TabIndex = 40;
@@ -183,20 +251,11 @@
             // 
             this.txtCustomer.BackColor = System.Drawing.Color.White;
             this.txtCustomer.Enabled = false;
-            this.txtCustomer.Location = new System.Drawing.Point(556, 205);
+            this.txtCustomer.Location = new System.Drawing.Point(513, 205);
             this.txtCustomer.Name = "txtCustomer";
             this.txtCustomer.ReadOnly = true;
             this.txtCustomer.Size = new System.Drawing.Size(166, 27);
             this.txtCustomer.TabIndex = 185;
-            // 
-            // label8
-            // 
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(464, 205);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(86, 24);
-            this.label8.TabIndex = 186;
-            this.label8.Text = "Customer";
             // 
             // btnPrint
             // 
@@ -205,7 +264,7 @@
             this.btnPrint.FlatAppearance.BorderSize = 0;
             this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPrint.Image = ((System.Drawing.Image)(resources.GetObject("btnPrint.Image")));
-            this.btnPrint.Location = new System.Drawing.Point(30, 446);
+            this.btnPrint.Location = new System.Drawing.Point(35, 538);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(65, 96);
             this.btnPrint.TabIndex = 184;
@@ -242,7 +301,7 @@
             // 
             // label6
             // 
-            this.label6.Location = new System.Drawing.Point(466, 503);
+            this.label6.Location = new System.Drawing.Point(238, 434);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(103, 25);
             this.label6.TabIndex = 180;
@@ -250,17 +309,17 @@
             // 
             // txtGemstone
             // 
-            this.txtGemstone.Enabled = false;
-            this.txtGemstone.Location = new System.Drawing.Point(470, 531);
+            this.txtGemstone.Location = new System.Drawing.Point(239, 462);
             this.txtGemstone.Multiline = true;
             this.txtGemstone.Name = "txtGemstone";
             this.txtGemstone.ReadOnly = true;
-            this.txtGemstone.Size = new System.Drawing.Size(285, 73);
+            this.txtGemstone.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtGemstone.Size = new System.Drawing.Size(276, 110);
             this.txtGemstone.TabIndex = 48;
             // 
             // label4
             // 
-            this.label4.Location = new System.Drawing.Point(463, 380);
+            this.label4.Location = new System.Drawing.Point(238, 278);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(91, 25);
             this.label4.TabIndex = 178;
@@ -268,19 +327,19 @@
             // 
             // txtDiamond
             // 
-            this.txtDiamond.Enabled = false;
-            this.txtDiamond.Location = new System.Drawing.Point(470, 406);
+            this.txtDiamond.Location = new System.Drawing.Point(242, 306);
             this.txtDiamond.Multiline = true;
             this.txtDiamond.Name = "txtDiamond";
             this.txtDiamond.ReadOnly = true;
-            this.txtDiamond.Size = new System.Drawing.Size(285, 83);
+            this.txtDiamond.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtDiamond.Size = new System.Drawing.Size(276, 110);
             this.txtDiamond.TabIndex = 44;
             // 
             // dtDueDate
             // 
             this.dtDueDate.CustomFormat = "dd/MM/yyyy";
             this.dtDueDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtDueDate.Location = new System.Drawing.Point(556, 94);
+            this.dtDueDate.Location = new System.Drawing.Point(513, 94);
             this.dtDueDate.Name = "dtDueDate";
             this.dtDueDate.Size = new System.Drawing.Size(137, 27);
             this.dtDueDate.TabIndex = 10;
@@ -288,7 +347,7 @@
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(463, 96);
+            this.label3.Location = new System.Drawing.Point(420, 96);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(91, 25);
             this.label3.TabIndex = 175;
@@ -299,7 +358,7 @@
             this.dtPaymentDate.CustomFormat = "dd/MM/yyyy";
             this.dtPaymentDate.Enabled = false;
             this.dtPaymentDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtPaymentDate.Location = new System.Drawing.Point(556, 168);
+            this.dtPaymentDate.Location = new System.Drawing.Point(513, 168);
             this.dtPaymentDate.Name = "dtPaymentDate";
             this.dtPaymentDate.Size = new System.Drawing.Size(137, 27);
             this.dtPaymentDate.TabIndex = 14;
@@ -307,7 +366,7 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(427, 170);
+            this.label1.Location = new System.Drawing.Point(384, 170);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(124, 25);
             this.label1.TabIndex = 173;
@@ -338,11 +397,12 @@
             this.btnPending.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPending.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(109)))), ((int)(((byte)(65)))));
             this.btnPending.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPending.Location = new System.Drawing.Point(499, 625);
+            this.btnPending.Location = new System.Drawing.Point(652, 594);
             this.btnPending.Name = "btnPending";
             this.btnPending.Size = new System.Drawing.Size(120, 33);
             this.btnPending.TabIndex = 56;
             this.btnPending.UseVisualStyleBackColor = false;
+            this.btnPending.Click += new System.EventHandler(this.btnPending_Click);
             // 
             // btnSold
             // 
@@ -352,17 +412,18 @@
             this.btnSold.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSold.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(109)))), ((int)(((byte)(65)))));
             this.btnSold.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSold.Location = new System.Drawing.Point(635, 625);
+            this.btnSold.Location = new System.Drawing.Point(794, 594);
             this.btnSold.Name = "btnSold";
             this.btnSold.Size = new System.Drawing.Size(120, 33);
             this.btnSold.TabIndex = 61;
             this.btnSold.UseVisualStyleBackColor = false;
+            this.btnSold.Click += new System.EventHandler(this.btnSold_Click);
             // 
             // dtSellDate
             // 
             this.dtSellDate.CustomFormat = "dd/MM/yyyy";
             this.dtSellDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtSellDate.Location = new System.Drawing.Point(556, 56);
+            this.dtSellDate.Location = new System.Drawing.Point(513, 56);
             this.dtSellDate.Name = "dtSellDate";
             this.dtSellDate.Size = new System.Drawing.Size(137, 27);
             this.dtSellDate.TabIndex = 8;
@@ -394,7 +455,7 @@
             // cmbPayment
             // 
             this.cmbPayment.FormattingEnabled = true;
-            this.cmbPayment.Location = new System.Drawing.Point(556, 129);
+            this.cmbPayment.Location = new System.Drawing.Point(513, 129);
             this.cmbPayment.Name = "cmbPayment";
             this.cmbPayment.Size = new System.Drawing.Size(138, 29);
             this.cmbPayment.TabIndex = 12;
@@ -403,7 +464,7 @@
             // label5
             // 
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(466, 133);
+            this.label5.Location = new System.Drawing.Point(423, 133);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(85, 26);
             this.label5.TabIndex = 165;
@@ -420,18 +481,19 @@
             // txtNote
             // 
             this.txtNote.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.txtNote.Location = new System.Drawing.Point(207, 295);
+            this.txtNote.Location = new System.Drawing.Point(546, 462);
             this.txtNote.Multiline = true;
             this.txtNote.Name = "txtNote";
-            this.txtNote.Size = new System.Drawing.Size(203, 133);
+            this.txtNote.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtNote.Size = new System.Drawing.Size(368, 110);
             this.txtNote.TabIndex = 16;
             // 
             // label18
             // 
             this.label18.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(203, 267);
+            this.label18.Location = new System.Drawing.Point(542, 435);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(51, 25);
+            this.label18.Size = new System.Drawing.Size(80, 24);
             this.label18.TabIndex = 159;
             this.label18.Text = "Note";
             // 
@@ -463,7 +525,7 @@
             // 
             // label14
             // 
-            this.label14.Location = new System.Drawing.Point(466, 58);
+            this.label14.Location = new System.Drawing.Point(423, 58);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(90, 25);
             this.label14.TabIndex = 92;
@@ -481,30 +543,31 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // txtCerNo
+            // label12
             // 
-            this.txtCerNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.txtCerNo.Enabled = false;
-            this.txtCerNo.Location = new System.Drawing.Point(556, 21);
-            this.txtCerNo.Name = "txtCerNo";
-            this.txtCerNo.ReadOnly = true;
-            this.txtCerNo.Size = new System.Drawing.Size(167, 27);
-            this.txtCerNo.TabIndex = 190;
+            this.label12.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(31, 262);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(73, 26);
+            this.label12.TabIndex = 197;
+            this.label12.Text = "Status";
             // 
-            // label10
+            // txtStatus
             // 
-            this.label10.Location = new System.Drawing.Point(425, 24);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(125, 25);
-            this.label10.TabIndex = 191;
-            this.label10.Text = "Certificate No.";
+            this.txtStatus.BackColor = System.Drawing.SystemColors.Window;
+            this.txtStatus.Enabled = false;
+            this.txtStatus.Location = new System.Drawing.Point(30, 291);
+            this.txtStatus.Name = "txtStatus";
+            this.txtStatus.ReadOnly = true;
+            this.txtStatus.Size = new System.Drawing.Size(150, 27);
+            this.txtStatus.TabIndex = 196;
             // 
             // Sell
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(195)))), ((int)(((byte)(157)))));
-            this.ClientSize = new System.Drawing.Size(800, 758);
+            this.ClientSize = new System.Drawing.Size(961, 734);
             this.Controls.Add(this.panel3);
             this.Name = "Sell";
             this.Text = "Sale";
@@ -552,12 +615,17 @@
         private System.Windows.Forms.TextBox txtDiamond;
         private System.Windows.Forms.Button btnPrint;
         private System.Windows.Forms.TextBox txtCustomer;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnBrowseCustomer;
         private System.Windows.Forms.TextBox txtNetPrice;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtMaterial;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtCerNo;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.CheckBox chkIsPrintPrice;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox txtCertified;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox txtStatus;
     }
 }

@@ -223,5 +223,13 @@ namespace DiamondShop
                 btnMaster.Visible = true;
             }
         }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
+            Login frm = new Login();
+            frm.ShowDialog();            
+        }
     }
 }

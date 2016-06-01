@@ -317,6 +317,10 @@ namespace DiamondDS.DS {
             
             private global::System.Data.DataColumn columnImage1;
             
+            private global::System.Data.DataColumn columnIsPrintPrice;
+            
+            private global::System.Data.DataColumn columnIsPrintCer;
+            
             private global::System.Data.DataColumn columnRefID;
             
             private global::System.Data.DataColumn columnIsDeleted;
@@ -516,6 +520,22 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn IsPrintPriceColumn {
+                get {
+                    return this.columnIsPrintPrice;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn IsPrintCerColumn {
+                get {
+                    return this.columnIsPrintCer;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn RefIDColumn {
                 get {
                     return this.columnRefID;
@@ -618,6 +638,8 @@ namespace DiamondDS.DS {
                         int JewelryType, 
                         string JewelryTypeName, 
                         byte[] Image1, 
+                        string IsPrintPrice, 
+                        string IsPrintCer, 
                         int RefID, 
                         string IsDeleted, 
                         int CreateBy, 
@@ -645,6 +667,8 @@ namespace DiamondDS.DS {
                         JewelryType,
                         JewelryTypeName,
                         Image1,
+                        IsPrintPrice,
+                        IsPrintCer,
                         RefID,
                         IsDeleted,
                         CreateBy,
@@ -699,6 +723,8 @@ namespace DiamondDS.DS {
                 this.columnJewelryType = base.Columns["JewelryType"];
                 this.columnJewelryTypeName = base.Columns["JewelryTypeName"];
                 this.columnImage1 = base.Columns["Image1"];
+                this.columnIsPrintPrice = base.Columns["IsPrintPrice"];
+                this.columnIsPrintCer = base.Columns["IsPrintCer"];
                 this.columnRefID = base.Columns["RefID"];
                 this.columnIsDeleted = base.Columns["IsDeleted"];
                 this.columnCreateBy = base.Columns["CreateBy"];
@@ -748,6 +774,10 @@ namespace DiamondDS.DS {
                 base.Columns.Add(this.columnJewelryTypeName);
                 this.columnImage1 = new global::System.Data.DataColumn("Image1", typeof(byte[]), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnImage1);
+                this.columnIsPrintPrice = new global::System.Data.DataColumn("IsPrintPrice", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnIsPrintPrice);
+                this.columnIsPrintCer = new global::System.Data.DataColumn("IsPrintCer", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnIsPrintCer);
                 this.columnRefID = new global::System.Data.DataColumn("RefID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnRefID);
                 this.columnIsDeleted = new global::System.Data.DataColumn("IsDeleted", typeof(string), null, global::System.Data.MappingType.Element);
@@ -776,6 +806,7 @@ namespace DiamondDS.DS {
                 this.columnShopReceiveName.Caption = "ShopReceive";
                 this.columnNote.MaxLength = 300;
                 this.columnJewelryTypeName.MaxLength = 100;
+                this.columnIsPrintPrice.Caption = "IsPrintCer";
                 this.columnIsDeleted.MaxLength = 1;
             }
             
@@ -1218,6 +1249,38 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string IsPrintPrice {
+                get {
+                    if (this.IsIsPrintPriceNull()) {
+                        return null;
+                    }
+                    else {
+                        return ((string)(this[this.tableSell.IsPrintPriceColumn]));
+                    }
+                }
+                set {
+                    this[this.tableSell.IsPrintPriceColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string IsPrintCer {
+                get {
+                    if (this.IsIsPrintCerNull()) {
+                        return null;
+                    }
+                    else {
+                        return ((string)(this[this.tableSell.IsPrintCerColumn]));
+                    }
+                }
+                set {
+                    this[this.tableSell.IsPrintCerColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public int RefID {
                 get {
                     try {
@@ -1526,6 +1589,30 @@ namespace DiamondDS.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetImage1Null() {
                 this[this.tableSell.Image1Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsIsPrintPriceNull() {
+                return this.IsNull(this.tableSell.IsPrintPriceColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetIsPrintPriceNull() {
+                this[this.tableSell.IsPrintPriceColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsIsPrintCerNull() {
+                return this.IsNull(this.tableSell.IsPrintCerColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetIsPrintCerNull() {
+                this[this.tableSell.IsPrintCerColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
