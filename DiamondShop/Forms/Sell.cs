@@ -97,7 +97,7 @@ namespace DiamondShop
             {
                 binder.BindValueToControl(tds.Sell[0]);
 
-                if (image1 != null)
+                if (tds.Sell[0].Image1 != null)
                 {
                     image1 = tds.Sell[0].Image1;
                     ms1 = new MemoryStream(image1);
@@ -184,20 +184,6 @@ namespace DiamondShop
             else { return false; }
         }
 
-        private void btnImage1_Click(object sender, EventArgs e)
-        {
-            if (openFileDialog1.ShowDialog() == DialogResult.OK)
-            {
-                btnImage1.BackgroundImage = Image.FromFile(openFileDialog1.FileName);
-
-                FileStream fs;
-                fs = new FileStream(openFileDialog1.FileName, FileMode.Open, FileAccess.Read);
-                image1 = new byte[fs.Length];
-                fs.Read(image1, 0, System.Convert.ToInt32(fs.Length));
-                fs.Close();
-            }
-        }
-
         private void txtNetPrice_Leave(object sender, EventArgs e)
         {
             txtNetPrice.Text = GM.ConvertDoubleToString(txtNetPrice,0);
@@ -225,6 +211,20 @@ namespace DiamondShop
             txtJewelryTypeName.Text = frm.typeName;
             txtPriceTag.Text = frm.priceTag.ToString();
             txtPriceTag.Text = GM.ConvertDoubleToString(txtPriceTag, 0);
+
+            //Bind Image
+            if (frm.image1 != null)
+            {
+                image1 = frm.image1;
+                ms1 = new MemoryStream(image1);
+                Image backImage1 = Image.FromStream(ms1);
+                btnImage1.BackgroundImage = backImage1;
+            }
+            else
+            {
+                btnImage1.BackgroundImage = null;
+            }
+
         }
         
         private void SetFormatNumber()
