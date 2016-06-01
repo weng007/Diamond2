@@ -154,7 +154,7 @@
             this.txtNetPrice.Location = new System.Drawing.Point(145, 165);
             this.txtNetPrice.Name = "txtNetPrice";
             this.txtNetPrice.Size = new System.Drawing.Size(138, 27);
-            this.txtNetPrice.TabIndex = 187;
+            this.txtNetPrice.TabIndex = 4;
             this.txtNetPrice.Text = "0";
             this.txtNetPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtNetPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetPrice_KeyPress);
@@ -235,7 +235,7 @@
             this.cmbShopRecive.Location = new System.Drawing.Point(145, 201);
             this.cmbShopRecive.Name = "cmbShopRecive";
             this.cmbShopRecive.Size = new System.Drawing.Size(167, 29);
-            this.cmbShopRecive.TabIndex = 28;
+            this.cmbShopRecive.TabIndex = 6;
             // 
             // label6
             // 
@@ -280,7 +280,7 @@
             this.dtDueDate.Location = new System.Drawing.Point(556, 57);
             this.dtDueDate.Name = "dtDueDate";
             this.dtDueDate.Size = new System.Drawing.Size(137, 27);
-            this.dtDueDate.TabIndex = 8;
+            this.dtDueDate.TabIndex = 10;
             // 
             // label3
             // 
@@ -299,7 +299,7 @@
             this.dtPaymentDate.Location = new System.Drawing.Point(555, 151);
             this.dtPaymentDate.Name = "dtPaymentDate";
             this.dtPaymentDate.Size = new System.Drawing.Size(137, 27);
-            this.dtPaymentDate.TabIndex = 36;
+            this.dtPaymentDate.TabIndex = 14;
             // 
             // label1
             // 
@@ -316,7 +316,7 @@
             this.cmbSeller.Location = new System.Drawing.Point(145, 18);
             this.cmbSeller.Name = "cmbSeller";
             this.cmbSeller.Size = new System.Drawing.Size(167, 29);
-            this.cmbSeller.TabIndex = 1;
+            this.cmbSeller.TabIndex = 2;
             // 
             // txtJewelryTypeName
             // 
@@ -362,7 +362,7 @@
             this.dtSellDate.Location = new System.Drawing.Point(556, 19);
             this.dtSellDate.Name = "dtSellDate";
             this.dtSellDate.Size = new System.Drawing.Size(137, 27);
-            this.dtSellDate.TabIndex = 4;
+            this.dtSellDate.TabIndex = 8;
             // 
             // label2
             // 
@@ -394,7 +394,7 @@
             this.cmbPayment.Location = new System.Drawing.Point(555, 112);
             this.cmbPayment.Name = "cmbPayment";
             this.cmbPayment.Size = new System.Drawing.Size(138, 29);
-            this.cmbPayment.TabIndex = 32;
+            this.cmbPayment.TabIndex = 12;
             this.cmbPayment.SelectedIndexChanged += new System.EventHandler(this.cmbPayment_SelectedIndexChanged);
             // 
             // label5
@@ -421,7 +421,7 @@
             this.txtNote.Multiline = true;
             this.txtNote.Name = "txtNote";
             this.txtNote.Size = new System.Drawing.Size(203, 133);
-            this.txtNote.TabIndex = 52;
+            this.txtNote.TabIndex = 16;
             // 
             // label18
             // 
