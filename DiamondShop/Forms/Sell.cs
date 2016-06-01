@@ -28,6 +28,7 @@ namespace DiamondShop
             Initial();
 
             binder.BindControl(txtCode, "Code");
+            binder.BindControl(txtCerNo, "CerNo");
             binder.BindControl(txtJewelryTypeName, "JewelryTypeName");
             binder.BindControl(txtPriceTag, "PriceTag");
             binder.BindControl(cmbSeller, "Seller");
@@ -47,6 +48,7 @@ namespace DiamondShop
             Initial();
 
             binder.BindControl(txtCode, "Code");
+            binder.BindControl(txtCerNo, "CerNo");
             binder.BindControl(txtJewelryTypeName, "JewelryTypeName");
             binder.BindControl(txtPriceTag, "PriceTag");
             binder.BindControl(cmbSeller, "Seller");
@@ -97,6 +99,9 @@ namespace DiamondShop
             {
                 binder.BindValueToControl(tds.Sell[0]);
 
+                refID = tds.Sell[0].RefID;
+                custID = tds.Sell[0].CustID;
+
                 if (tds.Sell[0].Image1 != null)
                 {
                     image1 = tds.Sell[0].Image1;
@@ -107,9 +112,9 @@ namespace DiamondShop
 
                 EnableDelete = true;
             }
-
-            base.LoadData();
             SetFormatNumber();
+            base.LoadData();
+            
         }
 
         protected override bool SaveData()
@@ -129,11 +134,13 @@ namespace DiamondShop
             row.RefID = refID;
             row.CustID = custID;
             row.ShopReceive = Convert.ToInt32(cmbShopRecive.SelectedValue.ToString());
+            row.Seller = Convert.ToInt32(cmbSeller.SelectedValue.ToString());
 
             try
             {
                 if (id == 0)
                 {
+                    row.CerNo = GM.GetRunningNumber("JAS");
                     SetCreateBy(row);
                     chkFlag = ser.DoInsertData("Sell", tds);
                 }
