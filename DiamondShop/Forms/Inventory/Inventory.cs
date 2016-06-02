@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DiamondShop.FormMaster;
 using DiamondShop.DiamondService;
+using DiamondShop.DiamondService1;
 using DiamondDS.DS;
 
 
@@ -17,7 +18,9 @@ namespace DiamondShop
 {
     public partial class Inventory : FormInfo
     {
+
         dsInventory tds = new dsInventory();
+        Service2 ser1;
         bool isAuthorize = false;
         MemoryStream ms1;
         MemoryStream ms2;
@@ -195,6 +198,8 @@ namespace DiamondShop
                 if (tds.Inventory[0].MoreMaterial == "0")
                 { chkMoreMaterial.Checked = false; }
                 else { chkMoreMaterial.Checked = true; }
+
+                SetPrice();
 
                 if(tds.Inventory[0].Image1 !=  null)
                 {
@@ -545,12 +550,22 @@ namespace DiamondShop
             frm.ShowDialog();
         }
 
-
-
         private void btnGemstone_Click(object sender, EventArgs e)
         {
             InvGemstoneDetail frm = new InvGemstoneDetail(id);
             frm.ShowDialog();
+        }
+
+        private void SetPrice()
+        {
+            //ser1.
+            //SQL.ClearParameter();
+            //SQL.FillDataSet(string.Format("Select (dbo.fns_Tax('{0}'))  AS Amount", tax)
+            //    , ds.Tables[0]);
+            //if (ds.Tables[0].Rows.Count > 0 && !ds.Tables[0].Rows[0].IsNull("Amount"))
+            //{
+            //    value = decimal.Parse(ds.Tables[0].Rows[0]["Amount"].ToString());
+            //}
         }
     }
 }
