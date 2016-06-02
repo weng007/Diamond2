@@ -5,6 +5,7 @@
       <Image Name="Image1">
         <Source>Embedded</Source>
         <Value>Product</Value>
+        <Sizing>Fit</Sizing>
         <Top>0cm</Top>
         <Left>0cm</Left>
         <Height>25.83333in</Height>

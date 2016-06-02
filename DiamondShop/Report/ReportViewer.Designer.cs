@@ -50,7 +50,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(590, 32);
+            this.panel1.Size = new System.Drawing.Size(1029, 32);
             this.panel1.TabIndex = 50;
             // 
             // btnMinimize
@@ -61,7 +61,7 @@
             this.btnMinimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinimize.Location = new System.Drawing.Point(477, 0);
+            this.btnMinimize.Location = new System.Drawing.Point(916, 0);
             this.btnMinimize.Margin = new System.Windows.Forms.Padding(0);
             this.btnMinimize.Name = "btnMinimize";
             this.btnMinimize.Size = new System.Drawing.Size(38, 32);
@@ -77,7 +77,7 @@
             this.btnRestore.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnRestore.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRestore.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRestore.Location = new System.Drawing.Point(516, 0);
+            this.btnRestore.Location = new System.Drawing.Point(955, 0);
             this.btnRestore.Margin = new System.Windows.Forms.Padding(0);
             this.btnRestore.Name = "btnRestore";
             this.btnRestore.Size = new System.Drawing.Size(38, 32);
@@ -93,7 +93,7 @@
             this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Location = new System.Drawing.Point(554, 0);
+            this.btnClose.Location = new System.Drawing.Point(993, 0);
             this.btnClose.Margin = new System.Windows.Forms.Padding(0);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(38, 32);
@@ -105,7 +105,7 @@
             // 
             this.reportViewer1.Location = new System.Drawing.Point(12, 38);
             this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(566, 503);
+            this.reportViewer1.Size = new System.Drawing.Size(1005, 579);
             this.reportViewer1.TabIndex = 51;
             // 
             // ReportViewer
@@ -113,7 +113,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(195)))), ((int)(((byte)(157)))));
-            this.ClientSize = new System.Drawing.Size(590, 550);
+            this.ClientSize = new System.Drawing.Size(1029, 629);
             this.Controls.Add(this.reportViewer1);
             this.Controls.Add(this.panel1);
             this.Name = "ReportViewer";
