@@ -29,12 +29,13 @@ namespace DiamondDAL.DAL
 
             return ds;
         }
-        public dsCatalog DoSelectData(int id)
+        public dsCatalog DoSelectData(int id, int mode)
         {
             try
             {
                 SQL.ClearParameter();
                 SQL.CreateParameter("ID", id);
+                SQL.CreateParameter("Mode", mode);
                 SQL.FillDataSetBySP("SP_Catalog_Sel", ds.Catalog);
             }
             catch (Exception ex)

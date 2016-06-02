@@ -271,6 +271,7 @@
             this.btnPrint.Size = new System.Drawing.Size(65, 96);
             this.btnPrint.TabIndex = 184;
             this.btnPrint.UseVisualStyleBackColor = false;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
             // txtPriceTag
             // 

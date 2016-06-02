@@ -62,7 +62,7 @@ namespace Diamond
                 CatalogBiz biz = GM.CatalogBiz();
                 try
                 {
-                    return biz.DoSelectData(id);
+                    return biz.DoSelectData(id,0);
                 }
                 catch (Exception ex)
                 {

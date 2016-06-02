@@ -37,11 +37,11 @@ namespace DiamondBiz.Biz
             }
         }
 
-        public dsCatalog DoSelectData(int id)
+        public dsCatalog DoSelectData(int id, int mode)
         {
             try
             {
-                return dal.DoSelectData(id);
+                return dal.DoSelectData(id, mode);
             }
             catch (Exception ex)
             {
