@@ -34,7 +34,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.tds = new DiamondDS.DS.dsSell();
             this.panel2 = new System.Windows.Forms.Panel();
             this.gridSell = new System.Windows.Forms.DataGridView();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -44,6 +43,7 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtCode = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.tds = new DiamondDS.DS.dsSell();
             this.RowNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SellDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,16 +57,11 @@
             this.IsPrintCerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IsPrintPriceName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tds)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridSell)).BeginInit();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tds)).BeginInit();
             this.SuspendLayout();
-            // 
-            // tds
-            // 
-            this.tds.DataSetName = "dsSell";
-            this.tds.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // panel2
             // 
@@ -199,6 +194,11 @@
             this.label3.TabIndex = 27;
             this.label3.Text = "Code";
             // 
+            // tds
+            // 
+            this.tds.DataSetName = "dsSell";
+            this.tds.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // RowNum
             // 
             this.RowNum.DataPropertyName = "RowNum";
@@ -219,7 +219,7 @@
             // 
             // SellDate
             // 
-            this.SellDate.DataPropertyName = "RealSellDate";
+            this.SellDate.DataPropertyName = "SellDate";
             dataGridViewCellStyle3.Format = "dd/MM/yyyy";
             this.SellDate.DefaultCellStyle = dataGridViewCellStyle3;
             this.SellDate.HeaderText = "Sold Date";
@@ -315,11 +315,11 @@
             this.Name = "SellList";
             this.Text = "SaleList";
             ((System.ComponentModel.ISupportInitialize)(this.ds)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tds)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridSell)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tds)).EndInit();
             this.ResumeLayout(false);
 
         }
