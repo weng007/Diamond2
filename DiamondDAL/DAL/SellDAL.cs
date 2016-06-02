@@ -19,7 +19,7 @@ namespace DiamondDAL.DAL
             {
                 SQL.ClearParameter();
                 SQL.CreateParameter("Code", code);
-                SQL.CreateParameter("JewelryType", jewelryType);
+                SQL.CreateParameter("Type", jewelryType);
                 SQL.FillDataSetBySP("SP_Sell_Search", ds.Sell);
             }
             catch (Exception ex)

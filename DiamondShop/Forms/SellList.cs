@@ -61,7 +61,7 @@ namespace DiamondShop
         {
             ser2 = GM.GetService2();
 
-            ds = ser2.DoSearchSell(txtCode.Text, Convert.ToInt16(cmbType.SelectedValue.ToString()));
+            ds = ser2.DoSearchSell(txtCode.Text, Convert.ToInt32(cmbType.SelectedValue.ToString()));
 
             gridSell.DataSource = ds.Tables[0];
             gridSell.Refresh();
