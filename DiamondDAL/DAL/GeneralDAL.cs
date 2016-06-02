@@ -74,5 +74,20 @@ namespace DiamondDAL.DAL
             return flag;
         }
 
+        public DataSet GetPriceDaimondAndGemstone(int id)
+        {
+            try
+            {
+                SQL.ClearParameter();
+                SQL.CreateParameter("@ID", id);
+                SQL.FillDataSet(string.Format("Select * FROM dbo.fn_GetPriceDiamondAndGemstone('{0}')", id), ds);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return ds;
+        }
     }
 }

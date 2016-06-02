@@ -548,24 +548,33 @@ namespace DiamondShop
         {
             InvDiamondDetail frm = new InvDiamondDetail(id);
             frm.ShowDialog();
+
+            LoadData();
         }
 
         private void btnGemstone_Click(object sender, EventArgs e)
         {
             InvGemstoneDetail frm = new InvGemstoneDetail(id);
             frm.ShowDialog();
+
+            LoadData();
         }
 
         private void SetPrice()
         {
-            //ser1.
-            //SQL.ClearParameter();
-            //SQL.FillDataSet(string.Format("Select (dbo.fns_Tax('{0}'))  AS Amount", tax)
-            //    , ds.Tables[0]);
-            //if (ds.Tables[0].Rows.Count > 0 && !ds.Tables[0].Rows[0].IsNull("Amount"))
-            //{
-            //    value = decimal.Parse(ds.Tables[0].Rows[0]["Amount"].ToString());
-            //}
+            ser1 = GM.GetService1();
+            ds = ser1.GetPriceDaimondAndGemstone(id);
+
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                
+                txtCostNonCer.Text = Convert.ToString(Convert.ToDouble(ds.Tables[0].Rows[2]["DiamondCost"]) + Convert.ToDouble(ds.Tables[0].Rows[3]["GemstoneCost"]));
+                txtCostNonCer1.Text = Convert.ToString(Convert.ToDouble(ds.Tables[0].Rows[2]["DiamondPrice"]) + Convert.ToDouble(ds.Tables[0].Rows[3]["GemstonePrice"]));
+                txtCostCer.Text = Convert.ToString(Convert.ToDouble(ds.Tables[0].Rows[2]["DiamondCerCost"]) + Convert.ToDouble(ds.Tables[0].Rows[3]["GemstoneCerCost"]));
+                txtCostCer1.Text = Convert.ToString(Convert.ToDouble(ds.Tables[0].Rows[2]["DiamondCerPrice"]) + Convert.ToDouble(ds.Tables[0].Rows[3]["GemstoneCerPrice"]));
+                
+            }
+            //txtCostNonCer.Text =
         }
     }
 }

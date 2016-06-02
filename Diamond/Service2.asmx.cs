@@ -90,5 +90,19 @@ namespace Diamond
                 throw ex;
             }
         }
+
+        [WebMethod]
+        public DataSet GetPriceDaimondAndGemstone(int id)
+        {
+            GeneralCBiz biz = new GeneralCBiz();
+            try
+            {
+                return biz.GetPriceDaimondAndGemstone(id);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

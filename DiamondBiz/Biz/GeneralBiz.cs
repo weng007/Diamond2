@@ -63,5 +63,17 @@ namespace DiamondBiz.Biz
                 throw ex;
             }
         }
+        
+        public DataSet GetPriceDaimondAndGemstone(int id)
+        {
+            try
+            {
+                return dal.GetPriceDaimondAndGemstone(id);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }
