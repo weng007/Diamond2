@@ -571,7 +571,7 @@ namespace DiamondShop
                 txtCostNonCer.Text = Convert.ToString(Convert.ToDouble(ds.Tables[0].Rows[2]["DiamondCost"]) + Convert.ToDouble(ds.Tables[0].Rows[3]["GemstoneCost"]));
                 txtCostNonCer1.Text = Convert.ToString(Convert.ToDouble(ds.Tables[0].Rows[2]["DiamondPrice"]) + Convert.ToDouble(ds.Tables[0].Rows[3]["GemstonePrice"]));
                 txtCostCer.Text = Convert.ToString(Convert.ToDouble(ds.Tables[0].Rows[2]["DiamondCerCost"]) + Convert.ToDouble(ds.Tables[0].Rows[3]["GemstoneCerCost"]));
-                txtCostCer1.Text = Convert.ToString(Convert.ToDouble(ds.Tables[0].Rows[2]["DiamondCerPrice"]) + Convert.ToDouble(ds.Tables[0].Rows[3]["GemstoneCerPrice"]));
+                txtCostCer1.Text = Convert.ToString(Convert.ToDouble(ds.Tables[0].Rows[2]["DiamondCerPrice"]) + Convert.ToDouble(ds.Tables[0].Rows[3][1]));
                 
             }
             //txtCostNonCer.Text =
