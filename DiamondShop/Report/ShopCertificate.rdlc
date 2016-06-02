@@ -5,10 +5,11 @@
       <Image Name="Image1">
         <Source>Embedded</Source>
         <Value>ShopCer</Value>
-        <Top>0cm</Top>
-        <Left>0cm</Left>
-        <Height>25.83333in</Height>
-        <Width>18.20833in</Width>
+        <Sizing>FitProportional</Sizing>
+        <Top>0.635cm</Top>
+        <Left>0.635cm</Left>
+        <Height>7.03125in</Height>
+        <Width>4.91666in</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -16,10 +17,10 @@
         </Style>
       </Image>
     </ReportItems>
-    <Height>65.61667cm</Height>
+    <Height>18.83834cm</Height>
     <Style />
   </Body>
-  <Width>46.24917cm</Width>
+  <Width>13.41438cm</Width>
   <Page>
     <PageHeight>21cm</PageHeight>
     <PageWidth>14.8cm</PageWidth>
