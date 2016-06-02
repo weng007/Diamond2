@@ -74,7 +74,7 @@
             this.label34 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.txtSaleDate = new System.Windows.Forms.TextBox();
+            this.txtSellDate = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txtRemark = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
@@ -320,7 +320,7 @@
             this.panel7.Controls.Add(this.label34);
             this.panel7.Controls.Add(this.label16);
             this.panel7.Controls.Add(this.label11);
-            this.panel7.Controls.Add(this.txtSaleDate);
+            this.panel7.Controls.Add(this.txtSellDate);
             this.panel7.Controls.Add(this.label8);
             this.panel7.Controls.Add(this.btnImage2);
             this.panel7.Controls.Add(this.btnImage1);
@@ -563,14 +563,14 @@
             this.label11.TabIndex = 117;
             this.label11.Text = "Import Date";
             // 
-            // txtSaleDate
+            // txtSellDate
             // 
-            this.txtSaleDate.BackColor = System.Drawing.SystemColors.Window;
-            this.txtSaleDate.Enabled = false;
-            this.txtSaleDate.Location = new System.Drawing.Point(420, 192);
-            this.txtSaleDate.Name = "txtSaleDate";
-            this.txtSaleDate.Size = new System.Drawing.Size(162, 27);
-            this.txtSaleDate.TabIndex = 124;
+            this.txtSellDate.BackColor = System.Drawing.SystemColors.Window;
+            this.txtSellDate.Enabled = false;
+            this.txtSellDate.Location = new System.Drawing.Point(420, 192);
+            this.txtSellDate.Name = "txtSellDate";
+            this.txtSellDate.Size = new System.Drawing.Size(162, 27);
+            this.txtSellDate.TabIndex = 124;
             // 
             // label8
             // 
@@ -750,7 +750,7 @@
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.TextBox txtMinBeforePremium;
         private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.TextBox txtSaleDate;
+        private System.Windows.Forms.TextBox txtSellDate;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnGemstone;
         private System.Windows.Forms.Button btnDiamond;

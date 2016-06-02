@@ -349,6 +349,8 @@ namespace DiamondDS.DS {
             
             private global::System.Data.DataColumn columnCode;
             
+            private global::System.Data.DataColumn columnSellDate;
+            
             private global::System.Data.DataColumn columnImportdate;
             
             private global::System.Data.DataColumn columnImage1;
@@ -670,6 +672,14 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn SellDateColumn {
+                get {
+                    return this.columnSellDate;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn ImportdateColumn {
                 get {
                     return this.columnImportdate;
@@ -764,6 +774,7 @@ namespace DiamondDS.DS {
                         string RemarkInv, 
                         string DisplayName, 
                         string Code, 
+                        string SellDate, 
                         System.DateTime Importdate, 
                         byte[] Image1, 
                         byte[] Image2) {
@@ -804,6 +815,7 @@ namespace DiamondDS.DS {
                         RemarkInv,
                         DisplayName,
                         Code,
+                        SellDate,
                         Importdate,
                         Image1,
                         Image2};
@@ -871,6 +883,7 @@ namespace DiamondDS.DS {
                 this.columnRemarkInv = base.Columns["RemarkInv"];
                 this.columnDisplayName = base.Columns["DisplayName"];
                 this.columnCode = base.Columns["Code"];
+                this.columnSellDate = base.Columns["SellDate"];
                 this.columnImportdate = base.Columns["Importdate"];
                 this.columnImage1 = base.Columns["Image1"];
                 this.columnImage2 = base.Columns["Image2"];
@@ -949,6 +962,8 @@ namespace DiamondDS.DS {
                 base.Columns.Add(this.columnDisplayName);
                 this.columnCode = new global::System.Data.DataColumn("Code", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCode);
+                this.columnSellDate = new global::System.Data.DataColumn("SellDate", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSellDate);
                 this.columnImportdate = new global::System.Data.DataColumn("Importdate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnImportdate);
                 this.columnImage1 = new global::System.Data.DataColumn("Image1", typeof(byte[]), null, global::System.Data.MappingType.Element);
@@ -1678,6 +1693,22 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string SellDate {
+                get {
+                    if (this.IsSellDateNull()) {
+                        return null;
+                    }
+                    else {
+                        return ((string)(this[this.tableCatalog.SellDateColumn]));
+                    }
+                }
+                set {
+                    this[this.tableCatalog.SellDateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public System.DateTime Importdate {
                 get {
                     try {
@@ -2130,6 +2161,18 @@ namespace DiamondDS.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetCodeNull() {
                 this[this.tableCatalog.CodeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsSellDateNull() {
+                return this.IsNull(this.tableCatalog.SellDateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetSellDateNull() {
+                this[this.tableCatalog.SellDateColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

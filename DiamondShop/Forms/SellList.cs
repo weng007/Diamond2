@@ -34,7 +34,7 @@ namespace DiamondShop
         }
         protected override void DoLoadData()
         {
-            ds = ser.DoSelectData("Sell", -1, 0);
+            ds = ser.DoSelectData("Sell", -1,0);
 
             if (ds.Tables[0].Rows.Count > 0)
             {
@@ -47,7 +47,7 @@ namespace DiamondShop
                 gridSell.Refresh();
             }
 
-            ////btnSearch_Click(null, null);
+            //btnSearch_Click(null, null);
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -75,6 +75,8 @@ namespace DiamondShop
                 Sell frm = new Sell(id);
                 frm.ShowDialog();
             }
+
+            DoLoadData();
         }
     }
 }

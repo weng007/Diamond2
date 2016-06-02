@@ -272,7 +272,15 @@ namespace DiamondShop
         {
             try
             {
-                chkFlag = ser.DoDeleteData("Inventory", id);
+                if (cmbStatus.SelectedIndex == 0)
+                {
+                    chkFlag = ser.DoDeleteData("Inventory", id);
+                }
+                else
+                {
+                    Popup.Popup pop = new Popup.Popup("Jewelry ไม่อยู่ในสถานะลบได้");
+                    pop.ShowDialog();
+                }
             }
             catch (Exception ex)
             {

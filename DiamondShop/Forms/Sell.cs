@@ -168,7 +168,15 @@ namespace DiamondShop
         {
             try
             {
-                chkFlag = ser.DoDeleteData("Sell", id);
+                if (txtStatus.Text == "Shop")
+                {
+                    chkFlag = ser.DoDeleteData("Sell", id);
+                }
+                else
+                {
+                    Popup.Popup pop = new Popup.Popup("รายการขายนี้ไม่อยู่ในสถานะลบได้");
+                    pop.ShowDialog();
+                }
             }
             catch (Exception ex)
             {

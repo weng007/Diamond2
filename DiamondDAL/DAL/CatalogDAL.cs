@@ -13,12 +13,13 @@ namespace DiamondDAL.DAL
         dsCatalog ds = new dsCatalog();
         int flag = 0;
 
-        public dsCatalog DoSearchData(string code)
+        public dsCatalog DoSearchData(string code, int mode)
         {
             try
             {
                 SQL.ClearParameter();
                 SQL.CreateParameter("Code", code);
+                SQL.CreateParameter("Mode", mode);
                 SQL.FillDataSetBySP("SP_Catalog_Search", ds.Catalog);
             }
             catch (Exception ex)
@@ -43,12 +44,13 @@ namespace DiamondDAL.DAL
 
             return ds;
         }
-        public dsCatalog DoSearchByType(string prefix)
+        public dsCatalog DoSearchByType(string prefix, int mode)
         {
             try
             {
                 SQL.ClearParameter();
                 SQL.CreateParameter("CatalogType", prefix);
+                SQL.CreateParameter("Mode", mode);
                 SQL.FillDataSetBySP("SP_Catalog_By_Type", ds.Catalog);
             }
             catch (Exception ex)

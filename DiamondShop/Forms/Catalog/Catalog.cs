@@ -58,6 +58,7 @@ namespace DiamondShop
             binder.BindControl(txtPriceTag, "PriceTag");
             binder.BindControl(txtInvRemark, "RemarkInv");
             binder.BindControl(txtRemark, "Remark");
+            binder.BindControl(txtSellDate, "SellDate");
             binder.BindControl(dtImportDate, "CreateDate");
             binder.BindControl(txtUpdateBy, "EditByName");
         }
@@ -94,11 +95,7 @@ namespace DiamondShop
                     Image backImage2 = Image.FromStream(ms2);
                     btnImage2.BackgroundImage = backImage2;
                 }              
-
-                EnableDelete = true;
-
             }
-
 
             SetFormatNumber();
 
@@ -170,22 +167,6 @@ namespace DiamondShop
             //{
             //    message += "Please input Net Weight > 0.\n";
             //}
-            //if (txtSize.Text == "" || GM.ConvertStringToDouble(txtSize) == 0)
-            //{
-            //    message += "Please input Size > 0.\n";
-            //}
-            //if (txtMaterialWeight1.Text == "" || GM.ConvertStringToDouble(txtMaterialWeight1) == 0)
-            //{
-            //    message += "Please input Cost > 0.\n";
-            //}
-            //if (txtMinPrice.Text == "" || GM.ConvertStringToDouble(txtMinPrice) == 0)
-            //{
-            //    message += "Please input Min Price > 0.\n";
-            //}
-            //if (txtOpenPrice.Text == "" || GM.ConvertStringToDouble(txtOpenPrice) == 0)
-            //{
-            //    message += "Please input Open Price >0.\n";
-            //}
 
             if (message == "") { return true; }
             else { return false; }
@@ -218,59 +199,6 @@ namespace DiamondShop
                 fs.Close();
             }
         }
-        private void btnAdd_Click(object sender, EventArgs e)
-        {
-            //DiamondDetail frm = new DiamondDetail();
-
-            //if (tds.Product.Rows.Count > 0)
-            //{
-            //    frm.productID = Convert.ToInt16(tds.Product[0]["ID"].ToString());
-            //    frm.ShowDialog();
-
-            //    LoadData();
-            //}
-        }
-
-        private void btnEdit_Click(object sender, EventArgs e)
-        {
-            //if (gridDiamond.RowCount > 0 && gridDiamond.SelectedRows.Count > 0)
-            //{
-            //    int id1 = 0;
-            //    id1 = (int)gridDiamond.SelectedRows[0].Cells["ID"].Value;
-            //    DiamondDetail frm = new DiamondDetail(id1);
-            //    frm.productID = Convert.ToInt16(tds.Product[0]["ID"].ToString());
-            //    frm.ShowDialog();
-            //}
-
-            LoadData();
-        }
-
-        private void btnDel_Click(object sender, EventArgs e)
-        {
-   
-        }
-
-        private void DeleteData(int gridNum, int sid)
-        {
-            if(gridNum == 0)
-            try
-            {
-                ser.DoDeleteData("DiamondDetail", sid);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-            else if (gridNum == 1)
-            try
-            {
-                ser.DoDeleteData("GemstoneDetail", sid);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
 
         private void txtCost_Leave(object sender, EventArgs e)
         {
@@ -300,11 +228,6 @@ namespace DiamondShop
         {
             GemstoneDetailCatalog frm = new GemstoneDetailCatalog(Convert.ToInt32(tds.Tables[0].Rows[0]["RefID"].ToString()));
             frm.ShowDialog();
-        }
-
-        private void txtOpenPrice_Leave(object sender, EventArgs e)
-        {
-            //txtOpenPrice.Text = GM.ConvertDoubleToString(txtOpenPrice);
         }
     }
 }

@@ -202,13 +202,13 @@ namespace Diamond
         }
 
         [WebMethod]
-        public DataSet DoSearchCatalog(string code)
+        public DataSet DoSearchCatalog(string code, int mode)
         {
             CatalogBiz biz = new CatalogBiz();
 
             try
             {
-                return biz.DoSearchData(code);
+                return biz.DoSearchData(code, mode);
             }
             catch (Exception ex)
             {
@@ -217,13 +217,13 @@ namespace Diamond
         }
 
         [WebMethod]
-        public DataSet DoSearchCatalogByType(string prefix)
+        public DataSet DoSearchCatalogByType(string prefix, int mode)
         {
             CatalogBiz biz = new CatalogBiz();
 
             try
             {
-                return biz.DoSearchByType(prefix);
+                return biz.DoSearchByType(prefix, mode);
             }
             catch (Exception ex)
             {
