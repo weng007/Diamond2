@@ -23,18 +23,27 @@ namespace DiamondShop.Report
             InitializeComponent();
         }
 
-        public ReportViewer(int id)
+        public ReportViewer(int id, int report)
         {
             InitializeComponent();
             ser1 = GM.GetService1();
             
+           
             ds = ser1.GetReportJewelry(id);
 
             ReportDataSource datasource = new ReportDataSource("Jewelry", ds.Tables[0]);
             this.reportViewer1.LocalReport.DataSources.Clear();
-            this.reportViewer1.LocalReport.ReportPath = "..\\Report\\Product.rdlc";
-            this.reportViewer1.LocalReport.DataSources.Add(datasource);
-            
+
+            if (report == 0)
+            {
+                this.reportViewer1.LocalReport.ReportPath = "..\\Report\\Product.rdlc";
+            }
+            else if (report == 1)
+            {
+                this.reportViewer1.LocalReport.ReportPath = "..\\Report\\ShopCertificate.rdlc";
+            }
+
+            this.reportViewer1.LocalReport.DataSources.Add(datasource);      
             this.reportViewer1.RefreshReport();
         }
 

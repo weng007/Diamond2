@@ -352,7 +352,7 @@ namespace DiamondShop
 
         private void btnPrint_Click(object sender, EventArgs e)
         {
-            Report.ReportViewer report = new Report.ReportViewer(id);
+            Report.ReportViewer report = new Report.ReportViewer(id,1);
             report.ShowDialog();
         }
     }
