@@ -297,6 +297,8 @@ namespace DiamondShop
                 EnableDelete = true;
                 btnDiamond.Enabled = true;
                 btnGemstone.Enabled = true;
+
+                base.EditData();
             }
             else
             {
