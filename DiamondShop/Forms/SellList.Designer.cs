@@ -219,7 +219,7 @@
             // 
             // SellDate
             // 
-            this.SellDate.DataPropertyName = "SellDate";
+            this.SellDate.DataPropertyName = "RealSellDate";
             dataGridViewCellStyle3.Format = "dd/MM/yyyy";
             this.SellDate.DefaultCellStyle = dataGridViewCellStyle3;
             this.SellDate.HeaderText = "Sold Date";

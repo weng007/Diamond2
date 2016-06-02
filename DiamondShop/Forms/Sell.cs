@@ -204,6 +204,7 @@ namespace DiamondShop
             if(cmbPayment.SelectedIndex == 0)
             {
                 dtPaymentDate.Enabled = false;
+                dtPaymentDate.Value = DateTime.MinValue.AddYears(1899);
             }
             else
             {
@@ -221,6 +222,7 @@ namespace DiamondShop
             txtJewelryTypeName.Text = frm.typeName;
             txtPriceTag.Text = frm.priceTag.ToString();
             txtPriceTag.Text = GM.ConvertDoubleToString(txtPriceTag, 0);
+            SetJewelryDetail();
 
             //Bind Image
             if (frm.image1 != null)
@@ -324,6 +326,11 @@ namespace DiamondShop
         private void btnSold_Click(object sender, EventArgs e)
         {
             ser1.UpdateJewelryStatus(refID, "Sold");
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            ser1.UpdateJewelryStatus(refID, "Shop");
         }
     }
 }

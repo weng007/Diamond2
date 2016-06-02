@@ -35,6 +35,7 @@
             this.inventoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consignmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.accountingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -42,7 +43,6 @@
             this.btnRestore = new System.Windows.Forms.Button();
             this.btnMinimize = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnLogout = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -155,6 +155,19 @@
             this.accountingToolStripMenuItem.Size = new System.Drawing.Size(81, 112);
             this.accountingToolStripMenuItem.Text = "Accounting";
             // 
+            // tabControl1
+            // 
+            this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.tabControl1.ImageList = this.imageList1;
+            this.tabControl1.Location = new System.Drawing.Point(0, 132);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(0);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.Padding = new System.Drawing.Point(0, 0);
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(1366, 637);
+            this.tabControl1.TabIndex = 12;
+            this.tabControl1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.tabControl1_MouseUp);
+            // 
             // panel1
             // 
             this.panel1.AutoSize = true;
@@ -263,19 +276,6 @@
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // tabControl1
-            // 
-            this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.tabControl1.ImageList = this.imageList1;
-            this.tabControl1.Location = new System.Drawing.Point(0, 132);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(0);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.Padding = new System.Drawing.Point(0, 0);
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1366, 637);
-            this.tabControl1.TabIndex = 12;
-            this.tabControl1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.tabControl1_MouseUp);
-            // 
             // panel2
             // 
             this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
@@ -289,12 +289,13 @@
             // 
             // btnLogout
             // 
+            this.btnLogout.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLogout.BackgroundImage")));
+            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.Location = new System.Drawing.Point(210, 15);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(64, 27);
             this.btnLogout.TabIndex = 13;
-            this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = true;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 

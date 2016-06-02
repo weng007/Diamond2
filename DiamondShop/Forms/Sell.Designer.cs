@@ -74,6 +74,7 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.label12 = new System.Windows.Forms.Label();
             this.txtStatus = new System.Windows.Forms.TextBox();
+            this.btnCancel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -94,6 +95,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Controls.Add(this.btnCancel);
             this.panel3.Controls.Add(this.label12);
             this.panel3.Controls.Add(this.txtStatus);
             this.panel3.Controls.Add(this.label11);
@@ -562,6 +564,21 @@
             this.txtStatus.Size = new System.Drawing.Size(150, 27);
             this.txtStatus.TabIndex = 196;
             // 
+            // btnCancel
+            // 
+            this.btnCancel.BackColor = System.Drawing.Color.Transparent;
+            this.btnCancel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCancel.BackgroundImage")));
+            this.btnCancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCancel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(109)))), ((int)(((byte)(65)))));
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel.Location = new System.Drawing.Point(595, 594);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(35, 33);
+            this.btnCancel.TabIndex = 198;
+            this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
             // Sell
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -627,5 +644,6 @@
         private System.Windows.Forms.TextBox txtCertified;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txtStatus;
+        private System.Windows.Forms.Button btnCancel;
     }
 }
