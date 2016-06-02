@@ -179,7 +179,7 @@ namespace DiamondShop
                 txtSumMinPrice1.Text = (grid2.Rows.Cast<DataGridViewRow>()
                 .Sum(t => Convert.ToDecimal(t.Cells["MinPrice1"].Value))).ToString();
 
-                txtSumAmount1.Text = GM.ConvertDoubleToString(txtSumAmount1);
+                txtSumAmount1.Text = GM.ConvertDoubleToString(txtSumAmount1,0);
                 txtSumWeight1.Text = GM.ConvertDoubleToString(txtSumWeight1);
                 txtSumCost1.Text = GM.ConvertDoubleToString(txtSumCost1, 0);
                 txtSumMinPrice1.Text = GM.ConvertDoubleToString(txtSumMinPrice1, 0);
