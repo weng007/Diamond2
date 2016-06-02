@@ -568,11 +568,11 @@ namespace DiamondShop
             if (ds.Tables[0].Rows.Count > 0)
             {
                 
-                txtCostNonCer.Text = Convert.ToString(Convert.ToDouble(ds.Tables[0].Rows[2]["DiamondCost"]) + Convert.ToDouble(ds.Tables[0].Rows[3]["GemstoneCost"]));
-                txtCostNonCer1.Text = Convert.ToString(Convert.ToDouble(ds.Tables[0].Rows[2]["DiamondPrice"]) + Convert.ToDouble(ds.Tables[0].Rows[3]["GemstonePrice"]));
-                txtCostCer.Text = Convert.ToString(Convert.ToDouble(ds.Tables[0].Rows[2]["DiamondCerCost"]) + Convert.ToDouble(ds.Tables[0].Rows[3]["GemstoneCerCost"]));
-                txtCostCer1.Text = Convert.ToString(Convert.ToDouble(ds.Tables[0].Rows[2]["DiamondCerPrice"]) + Convert.ToDouble(ds.Tables[0].Rows[3][1]));
-                
+                txtCostNonCer.Text = Convert.ToString(Convert.ToDouble(ds.Tables[0].Rows[0]["Cost"]) + Convert.ToDouble(ds.Tables[0].Rows[1]["Cost"]));
+                txtCostNonCer1.Text = Convert.ToString(Convert.ToDouble(ds.Tables[0].Rows[0]["Price"]) + Convert.ToDouble(ds.Tables[0].Rows[1]["Price"]));
+                txtCostCer.Text = Convert.ToString(Convert.ToDouble(ds.Tables[0].Rows[2]["Cost"]) + Convert.ToDouble(ds.Tables[0].Rows[3]["Cost"]));
+                txtCostCer1.Text = Convert.ToString(Convert.ToDouble(ds.Tables[0].Rows[2]["Price"]) + Convert.ToDouble(ds.Tables[0].Rows[3]["Price"]));
+
             }
             //txtCostNonCer.Text =
         }
