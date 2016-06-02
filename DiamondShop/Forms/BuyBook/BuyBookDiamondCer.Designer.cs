@@ -293,9 +293,9 @@
             // txtSoldToName
             // 
             this.txtSoldToName.Enabled = false;
-            this.txtSoldToName.Location = new System.Drawing.Point(150, 342);
+            this.txtSoldToName.Location = new System.Drawing.Point(149, 342);
             this.txtSoldToName.Name = "txtSoldToName";
-            this.txtSoldToName.Size = new System.Drawing.Size(165, 27);
+            this.txtSoldToName.Size = new System.Drawing.Size(166, 27);
             this.txtSoldToName.TabIndex = 200;
             // 
             // label29
