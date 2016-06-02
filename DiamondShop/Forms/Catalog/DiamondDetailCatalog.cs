@@ -128,7 +128,7 @@ namespace DiamondShop
                 txtSumWeight1.Text = (grid2.Rows.Cast<DataGridViewRow>()
                 .Sum(t => Convert.ToDecimal(t.Cells["Weight1"].Value))).ToString();
 
-                txtSumAmount1.Text = GM.ConvertDoubleToString(txtSumAmount1);
+                txtSumAmount1.Text = GM.ConvertDoubleToString(txtSumAmount1,0);
                 txtSumWeight1.Text = GM.ConvertDoubleToString(txtSumWeight1);
             }
 
