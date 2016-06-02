@@ -57,6 +57,7 @@
               <xs:element name="IsPrintPrice" msdata:Caption="IsPrintCer" msprop:nullValue="_null" msprop:Generator_ColumnPropNameInRow="IsPrintPrice" msprop:Generator_ColumnVarNameInTable="columnIsPrintPrice" msprop:Generator_ColumnPropNameInTable="IsPrintPriceColumn" msprop:Generator_UserColumnName="IsPrintPrice" type="xs:string" minOccurs="0" />
               <xs:element name="IsPrintCer" msprop:nullValue="_null" msprop:Generator_ColumnPropNameInRow="IsPrintCer" msprop:Generator_ColumnVarNameInTable="columnIsPrintCer" msprop:Generator_ColumnPropNameInTable="IsPrintCerColumn" msprop:Generator_UserColumnName="IsPrintCer" type="xs:string" minOccurs="0" />
               <xs:element name="RefID" msprop:Generator_ColumnVarNameInTable="columnRefID" msprop:Generator_ColumnPropNameInRow="RefID" msprop:Generator_ColumnPropNameInTable="RefIDColumn" msprop:Generator_UserColumnName="RefID" type="xs:int" minOccurs="0" />
+              <xs:element name="StatusName" msprop:Generator_ColumnVarNameInTable="columnStatusName" msprop:Generator_ColumnPropNameInRow="StatusName" msprop:Generator_ColumnPropNameInTable="StatusNameColumn" msprop:Generator_UserColumnName="StatusName" type="xs:string" minOccurs="0" />
               <xs:element name="IsDeleted" msprop:Generator_ColumnVarNameInTable="columnIsDeleted" msprop:Generator_ColumnPropNameInRow="IsDeleted" msprop:Generator_ColumnPropNameInTable="IsDeletedColumn" msprop:Generator_UserColumnName="IsDeleted" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">

@@ -323,6 +323,8 @@ namespace DiamondDS.DS {
             
             private global::System.Data.DataColumn columnRefID;
             
+            private global::System.Data.DataColumn columnStatusName;
+            
             private global::System.Data.DataColumn columnIsDeleted;
             
             private global::System.Data.DataColumn columnCreateBy;
@@ -544,6 +546,14 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn StatusNameColumn {
+                get {
+                    return this.columnStatusName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn IsDeletedColumn {
                 get {
                     return this.columnIsDeleted;
@@ -641,6 +651,7 @@ namespace DiamondDS.DS {
                         string IsPrintPrice, 
                         string IsPrintCer, 
                         int RefID, 
+                        string StatusName, 
                         string IsDeleted, 
                         int CreateBy, 
                         System.DateTime CreateDate, 
@@ -670,6 +681,7 @@ namespace DiamondDS.DS {
                         IsPrintPrice,
                         IsPrintCer,
                         RefID,
+                        StatusName,
                         IsDeleted,
                         CreateBy,
                         CreateDate,
@@ -726,6 +738,7 @@ namespace DiamondDS.DS {
                 this.columnIsPrintPrice = base.Columns["IsPrintPrice"];
                 this.columnIsPrintCer = base.Columns["IsPrintCer"];
                 this.columnRefID = base.Columns["RefID"];
+                this.columnStatusName = base.Columns["StatusName"];
                 this.columnIsDeleted = base.Columns["IsDeleted"];
                 this.columnCreateBy = base.Columns["CreateBy"];
                 this.columnCreateDate = base.Columns["CreateDate"];
@@ -780,6 +793,8 @@ namespace DiamondDS.DS {
                 base.Columns.Add(this.columnIsPrintCer);
                 this.columnRefID = new global::System.Data.DataColumn("RefID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnRefID);
+                this.columnStatusName = new global::System.Data.DataColumn("StatusName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnStatusName);
                 this.columnIsDeleted = new global::System.Data.DataColumn("IsDeleted", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnIsDeleted);
                 this.columnCreateBy = new global::System.Data.DataColumn("CreateBy", typeof(int), null, global::System.Data.MappingType.Element);
@@ -1297,6 +1312,22 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string StatusName {
+                get {
+                    try {
+                        return ((string)(this[this.tableSell.StatusNameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'StatusName\' in table \'Sell\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSell.StatusNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string IsDeleted {
                 get {
                     try {
@@ -1625,6 +1656,18 @@ namespace DiamondDS.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetRefIDNull() {
                 this[this.tableSell.RefIDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsStatusNameNull() {
+                return this.IsNull(this.tableSell.StatusNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetStatusNameNull() {
+                this[this.tableSell.StatusNameColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

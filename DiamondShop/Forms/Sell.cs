@@ -44,6 +44,7 @@ namespace DiamondShop
             binder.BindControl(dtPaymentDate, "PaymentDate");
             binder.BindControl(txtCustomer, "CustomerName");
             binder.BindControl(txtNote, "Note");
+            binder.BindControl(txtStatus, "StatusName");
         }
         public Sell(int id)
         {
@@ -64,6 +65,7 @@ namespace DiamondShop
             binder.BindControl(dtPaymentDate, "PaymentDate");
             binder.BindControl(txtCustomer, "CustomerName");
             binder.BindControl(txtNote, "Note");
+            binder.BindControl(txtStatus, "StatusName");
 
             this.id = id;
             LoadData();
@@ -236,13 +238,17 @@ namespace DiamondShop
             {
                 btnImage1.BackgroundImage = null;
             }
-
         }
 
         private void SetJewelryDetail()
         {
             DataSet tmp = new DataSet();
             ser1 = GM.GetService1();
+
+            txtMaterial.Text = "";
+            txtDiamond.Text = "";
+            txtGemstone.Text = "";
+            txtCertified.Text = "";
 
             ds = ser1.GetJewelryDetail(refID);
 
@@ -321,16 +327,19 @@ namespace DiamondShop
         private void btnPending_Click(object sender, EventArgs e)
         {
             ser1.UpdateJewelryStatus(refID, "Pending");
+            LoadData();
         }
 
         private void btnSold_Click(object sender, EventArgs e)
         {
             ser1.UpdateJewelryStatus(refID, "Sold");
+            LoadData();
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
             ser1.UpdateJewelryStatus(refID, "Shop");
+            LoadData();
         }
     }
 }
