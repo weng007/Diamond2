@@ -29,21 +29,14 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReportViewer));
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnMinimize = new System.Windows.Forms.Button();
             this.btnRestore = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // reportViewer1
-            // 
-            this.reportViewer1.Location = new System.Drawing.Point(34, 59);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(831, 543);
-            this.reportViewer1.TabIndex = 0;
             // 
             // panel1
             // 
@@ -74,6 +67,7 @@
             this.btnMinimize.Size = new System.Drawing.Size(38, 32);
             this.btnMinimize.TabIndex = 37;
             this.btnMinimize.UseVisualStyleBackColor = false;
+            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
             // 
             // btnRestore
             // 
@@ -89,6 +83,7 @@
             this.btnRestore.Size = new System.Drawing.Size(38, 32);
             this.btnRestore.TabIndex = 36;
             this.btnRestore.UseVisualStyleBackColor = false;
+            this.btnRestore.Click += new System.EventHandler(this.btnRestore_Click);
             // 
             // btnClose
             // 
@@ -104,16 +99,23 @@
             this.btnClose.Size = new System.Drawing.Size(38, 32);
             this.btnClose.TabIndex = 35;
             this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // reportViewer1
+            // 
+            this.reportViewer1.Location = new System.Drawing.Point(12, 38);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.Size = new System.Drawing.Size(879, 500);
+            this.reportViewer1.TabIndex = 51;
             // 
             // ReportViewer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(195)))), ((int)(((byte)(157)))));
-            this.BackgroundImage = null;
             this.ClientSize = new System.Drawing.Size(903, 550);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.reportViewer1);
+            this.Controls.Add(this.panel1);
             this.Name = "ReportViewer";
             this.Text = "ReportViewer";
             this.Load += new System.EventHandler(this.ReportViewer_Load);
@@ -125,11 +127,10 @@
         }
 
         #endregion
-
-        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnMinimize;
         private System.Windows.Forms.Button btnRestore;
         private System.Windows.Forms.Button btnClose;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
     }
 }

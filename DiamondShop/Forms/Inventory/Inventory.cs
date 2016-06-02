@@ -560,21 +560,24 @@ namespace DiamondShop
             LoadData();
         }
 
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            Report.ReportViewer report = new Report.ReportViewer(id);
+            report.ShowDialog();
+        }
+
         private void SetPrice()
         {
             ser1 = GM.GetService1();
             ds = ser1.GetPriceDaimondAndGemstone(id);
 
             if (ds.Tables[0].Rows.Count > 0)
-            {
-                
+            {            
                 txtCostNonCer.Text = Convert.ToString(Convert.ToDouble(ds.Tables[0].Rows[0]["Cost"]) + Convert.ToDouble(ds.Tables[0].Rows[1]["Cost"]));
                 txtCostNonCer1.Text = Convert.ToString(Convert.ToDouble(ds.Tables[0].Rows[0]["Price"]) + Convert.ToDouble(ds.Tables[0].Rows[1]["Price"]));
                 txtCostCer.Text = Convert.ToString(Convert.ToDouble(ds.Tables[0].Rows[2]["Cost"]) + Convert.ToDouble(ds.Tables[0].Rows[3]["Cost"]));
                 txtCostCer1.Text = Convert.ToString(Convert.ToDouble(ds.Tables[0].Rows[2]["Price"]) + Convert.ToDouble(ds.Tables[0].Rows[3]["Price"]));
-
             }
-            //txtCostNonCer.Text =
         }
     }
 }

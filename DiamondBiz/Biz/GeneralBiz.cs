@@ -75,5 +75,17 @@ namespace DiamondBiz.Biz
                 throw ex;
             }
         }
+
+        public DataSet GetReportJewelry(int id)
+        {
+            try
+            {
+                return dal.GetReportJewelry(id);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }
