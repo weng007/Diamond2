@@ -138,6 +138,8 @@ namespace DiamondShop
             {
                 EnableSave = true;
                 EnableDelete = true;
+
+                base.EditData();
             }
             else
             {
