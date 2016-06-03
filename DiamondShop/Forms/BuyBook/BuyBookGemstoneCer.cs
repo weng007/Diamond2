@@ -249,7 +249,15 @@ namespace DiamondShop
         {
             try
             {
-                chkFlag = ser.DoDeleteData("BuyBookGemstoneCer", id);
+                if (cmbStatus.SelectedIndex == 0)
+                {
+                    chkFlag = ser.DoDeleteData("BuyBookGemstoneCer", id);
+                }
+                else
+                {
+                    Popup.Popup pop = new Popup.Popup("Diamond Cer ไม่อยู่ในสถานะลบได้");
+                    pop.ShowDialog();
+                }         
             }
             catch (Exception ex)
             {
