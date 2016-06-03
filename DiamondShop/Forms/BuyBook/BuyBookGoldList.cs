@@ -49,8 +49,12 @@ namespace DiamondShop
 
             ds = ser2.DoSearchBuyBookGold(Convert.ToDateTime(dtSBuyDate.Text),Convert.ToDateTime( dtEBuyDate.Text));
 
-            gridGold.DataSource = ds.Tables[0];
-            gridGold.Refresh();
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                gridGold.DataSource = ds.Tables[0];
+                gridGold.Refresh();
+            }
+            else { gridGold.DataSource = null; gridGold.Refresh(); }
         }
 
         private void btnAdd_Click(object sender, EventArgs e)

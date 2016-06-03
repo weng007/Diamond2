@@ -58,11 +58,10 @@ namespace DiamondShop
         private void DoSearchData()
         {
             ser2 = GM.GetService2();
+            ds = ser2.DoSearchBuyBookETC(txtSeller.Text);
 
             if (ds.Tables[0].Rows.Count > 0)
             {
-                ds = ser2.DoSearchBuyBookETC(txtSeller.Text);
-
                 gridETC.DataSource = ds.Tables[0];
                 gridETC.Refresh();
             }
