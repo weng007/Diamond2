@@ -68,8 +68,12 @@ namespace DiamondShop
 
             ds = ser2.DoSearchBuyBookGemstone(txtCode.Text, GM.ConvertStringToDouble(txtSize), GM.ConvertStringToDouble(txtESize), cmbShape.SelectedValue.ToString());
 
-            gridGemstone.DataSource = ds.Tables[0];
-            gridGemstone.Refresh();
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                gridGemstone.DataSource = ds.Tables[0];
+                gridGemstone.Refresh();
+            }
+            else { gridGemstone.DataSource = null; gridGemstone.Refresh(); }
         }
 
         private void txtSize_KeyPress(object sender, KeyPressEventArgs e)

@@ -63,8 +63,12 @@ namespace DiamondShop
 
             ds = ser2.DoSearchSell(txtCode.Text, Convert.ToInt32(cmbType.SelectedValue.ToString()));
 
-            gridSell.DataSource = ds.Tables[0];
-            gridSell.Refresh();
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                gridSell.DataSource = ds.Tables[0];
+                gridSell.Refresh();
+            }
+            else { gridSell.DataSource = null; gridSell.Refresh(); }
         }
 
         private void gridSell_MouseDoubleClick(object sender, MouseEventArgs e)
