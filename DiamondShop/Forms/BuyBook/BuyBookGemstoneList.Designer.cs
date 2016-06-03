@@ -303,7 +303,7 @@
             this.OriginName.HeaderText = "Origin";
             this.OriginName.Name = "OriginName";
             this.OriginName.ReadOnly = true;
-            this.OriginName.Width = 80;
+            this.OriginName.Width = 120;
             // 
             // Amount
             // 
@@ -331,7 +331,7 @@
             // 
             this.Size.DataPropertyName = "Size";
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle5.Format = "N0";
+            dataGridViewCellStyle5.Format = "N2";
             this.Size.DefaultCellStyle = dataGridViewCellStyle5;
             this.Size.HeaderText = "Size";
             this.Size.Name = "Size";
