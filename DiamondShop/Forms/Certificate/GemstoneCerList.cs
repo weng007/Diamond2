@@ -108,8 +108,12 @@ namespace DiamondShop
                  Convert.ToInt16(cmbStatus.SelectedValue.ToString()), 
                  Convert.ToInt16(cmbShop.SelectedValue.ToString()),mode);
 
-            gridGemstone.DataSource = ds.Tables[0];
-            gridGemstone.Refresh();
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                gridGemstone.DataSource = ds.Tables[0];
+                gridGemstone.Refresh();
+            }
+            else { gridGemstone.DataSource = null; gridGemstone.Refresh(); }
         }
 
         private void txtWeightTo_KeyPress(object sender, KeyPressEventArgs e)

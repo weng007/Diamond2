@@ -64,8 +64,12 @@ namespace DiamondShop
 
             ds = ser2.DoSearchBuyBookDiamond(txtCode.Text, GM.ConvertStringToDouble(txtSSize), GM.ConvertStringToDouble(txtESize), Convert.ToInt16(cmbShape.SelectedValue.ToString()));
 
-            gridDiamond.DataSource = ds.Tables[0];
-            gridDiamond.Refresh();
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                gridDiamond.DataSource = ds.Tables[0];
+                gridDiamond.Refresh();
+            }
+            else { gridDiamond.DataSource = null; gridDiamond.Refresh(); }
 
         }
 

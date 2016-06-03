@@ -118,8 +118,12 @@ namespace DiamondShop
                 , Convert.ToInt16(cmbEClearity.SelectedValue.ToString()), Convert.ToInt16(cmbStatus.SelectedValue.ToString()), 
                 Convert.ToInt16(cmbShop.SelectedValue.ToString()),mode);
 
-            gridDiamondCer.DataSource = ds.Tables[0];
-            gridDiamondCer.Refresh();
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                gridDiamondCer.DataSource = ds.Tables[0];
+                gridDiamondCer.Refresh();
+            }
+            else { gridDiamondCer.DataSource = null; gridDiamondCer.Refresh(); }
         }
 
         private void txtWeightTo_KeyPress(object sender, KeyPressEventArgs e)
