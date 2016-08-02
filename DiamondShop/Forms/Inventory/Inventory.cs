@@ -207,7 +207,7 @@ namespace DiamondShop
                     ms1 = new MemoryStream(image1);
                     Image backImage1 = Image.FromStream(ms1);
                     btnImage1.BackgroundImage = backImage1;
-                 }
+                }
                 if (tds.Inventory[0].Image2 != null)
                 {
                     image2 = tds.Inventory[0].Image2;
