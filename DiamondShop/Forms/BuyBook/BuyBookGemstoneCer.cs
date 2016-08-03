@@ -90,7 +90,7 @@ namespace DiamondShop
 
             this.id = id;
             LoadData();
-
+            SetControlEnable(false);
         }
 
         protected override void Initial()
@@ -273,6 +273,7 @@ namespace DiamondShop
             {
                 EnableSave = true;
                 EnableDelete = true;
+                SetControlEnable(true);
             }
             else
             {
@@ -285,6 +286,7 @@ namespace DiamondShop
                 {
                     EnableSave = true;
                     EnableDelete = true;
+                    SetControlEnable(true);
                     base.EditData();
                 }
             }
@@ -458,6 +460,36 @@ namespace DiamondShop
                     linkFile.Text = openFileDialog2.SafeFileName;
                 }
             }
+        }
+        private void SetControlEnable(bool status)
+        {
+            dtBuyDate.Enabled = status;
+            txtSeller.Enabled = status;
+            txtCode.Enabled = status;
+            cmbShape.Enabled = status;
+            cmbCut.Enabled = status;
+            txtWeight.Enabled = status;
+            txtReportNumber.Enabled = status;
+            cmbIdentification.Enabled = status;
+            cmbColor.Enabled = status;
+            cmbLab.Enabled = status;
+            cmbOrigin.Enabled = status;
+            cmbComment.Enabled = status;
+            dtReportDate.Enabled = status;
+            cmbShop.Enabled = status;
+            txtW.Enabled = status;
+            txtL.Enabled = status;
+            txtD.Enabled = status;
+            rdoYes.Enabled = status;
+            rdoNo.Enabled = status;
+            dtDueDate.Enabled = status;
+            txtUSDRate.Enabled = status;
+            txtTotalBaht.Enabled = status;
+            txtNote.Enabled = status;
+            chkPayByUSD.Enabled = status;
+            txtPriceCaratUSD.Enabled = status;
+            btnUpload.Enabled = status;
+            btnImage1.Enabled = status;
         }
     }
 }

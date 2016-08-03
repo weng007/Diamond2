@@ -45,7 +45,8 @@ namespace DiamondShop
             txtUpdateBy.Text = ApplicationInfo.UserName;
 
             this.id = id;
-            LoadData();         
+            LoadData();
+            SetControlEnable(false);
         }
 
         public Inventory(string prefix)
@@ -297,7 +298,7 @@ namespace DiamondShop
                 EnableDelete = true;
                 btnDiamond.Enabled = true;
                 btnGemstone.Enabled = true;
-
+                SetControlEnable(true);
                 base.EditData();
             }
             else
@@ -313,6 +314,7 @@ namespace DiamondShop
                     EnableDelete = true;
                     btnDiamond.Enabled = true;
                     btnGemstone.Enabled = true;
+                    SetControlEnable(true);
                     base.EditData();
                 }
             }
@@ -588,6 +590,38 @@ namespace DiamondShop
                 txtCostCer.Text = Convert.ToString(Convert.ToDouble(ds.Tables[0].Rows[2]["Cost"]) + Convert.ToDouble(ds.Tables[0].Rows[3]["Cost"]));
                 txtCostCer1.Text = Convert.ToString(Convert.ToDouble(ds.Tables[0].Rows[2]["Price"]) + Convert.ToDouble(ds.Tables[0].Rows[3]["Price"]));
             }
+        }
+        private void SetControlEnable(bool status)
+        {
+            dtUpdateDate.Enabled = status;
+            txtCode.Enabled = status;
+            cmbShop.Enabled = status;
+            txtSize.Enabled = status;
+            dtImportDate.Enabled = status;
+            cmbMaterial2.Enabled = status;
+            txtMaterialWeight2.Enabled = status;
+            txtPricePerGram2.Enabled = status;
+            txtPricePerGram22.Enabled = status;
+            txtMaterialCost2.Enabled = status;
+            txtMaterialCost22.Enabled = status;
+            cmbMaterial1.Enabled = status;
+            txtMaterialWeight1.Enabled = status;
+            txtPricePerGram1.Enabled = status;
+            txtPricePerGram11.Enabled = status;
+            txtLaborCost.Enabled = status;
+            txtCost1.Enabled = status;
+            txtCost2.Enabled = status;
+            txtCost3.Enabled = status;
+            txtCostBody.Enabled = status;
+            txtTechnician.Enabled = status;
+            txtMinPrice.Enabled = status;
+            txtPriceTag.Enabled = status;
+            btnDiamond.Enabled = status;
+            btnGemstone.Enabled = status;
+            btnImage1.Enabled = status;
+            btnImage2.Enabled = status;
+            txtRemark.Enabled = status;
+            chkMoreMaterial.Enabled = status;
         }
     }
 }

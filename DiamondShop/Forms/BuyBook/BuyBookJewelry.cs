@@ -317,6 +317,23 @@ namespace DiamondShop
         private void SetControlEnable(bool status)
         {
             dtBuyDate.Enabled = status;
+            txtCode.Enabled = status;
+            txtCost1.Enabled = status;
+            txtCost2.Enabled = status;
+            txtCost3.Enabled = status;
+            cmbShop.Enabled = status;
+            cmbType.Enabled = status;
+            cmbMaterial.Enabled = status;
+            txtWeight.Enabled = status;
+            txtSize.Enabled = status;
+            txtMinPrice.Enabled = status;
+            txtSeller.Enabled = status;
+            txtNote.Enabled = status;
+            txtRemark.Enabled = status;
+            btnImage1.Enabled = status;
+            btnImage2.Enabled = status;
+            btnDiamond.Enabled = status;
+            btnGemstone.Enabled = status;
         }
     }
 }

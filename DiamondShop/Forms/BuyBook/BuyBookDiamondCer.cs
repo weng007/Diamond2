@@ -92,6 +92,7 @@ namespace DiamondShop
 
             this.id = id;
             LoadData();
+            SetControlEnable(false);
         }
 
         protected override void Initial()
@@ -282,6 +283,7 @@ namespace DiamondShop
             {
                 EnableSave = true;
                 EnableDelete = true;
+                SetControlEnable(true);
             }
             else
             {
@@ -294,6 +296,7 @@ namespace DiamondShop
                 {
                     EnableSave = true;
                     EnableDelete = true;
+                    SetControlEnable(true);
                     base.EditData();
                 }
             }
@@ -444,6 +447,39 @@ namespace DiamondShop
 
                 System.Diagnostics.Process.Start(@"C:\\Project\\"+linkFile.Text);             
             }
+        }
+        private void SetControlEnable(bool status)
+        {
+            dtBuyDate.Enabled = status;
+            txtSeller.Enabled = status;
+            txtCode.Enabled = status;
+            txtPrice.Enabled = status;
+            cmbColorType.Enabled = status;
+            cmbCut.Enabled = status;
+            cmbPolish.Enabled = status;
+            cmbSymmetry.Enabled = status;
+            cmbFluorescent.Enabled = status;
+            cmbLab.Enabled = status;
+            txtReportNumber.Enabled = status;
+            txtWeight.Enabled = status;
+            cmbShape.Enabled = status;
+            cmbColor.Enabled = status;
+            cmbClearity.Enabled = status;
+            cmbShop.Enabled = status;
+            txtPrice.Enabled = status;
+            txtRap.Enabled = status;
+            txtW.Enabled = status;
+            txtL.Enabled = status;
+            txtD.Enabled = status;
+            rdoIns1.Enabled = status;
+            rdoIns2.Enabled = status;
+            rdoYes.Enabled = status;
+            rdoNo.Enabled = status;
+            dtDueDate.Enabled = status;
+            txtUSDRate.Enabled = status;
+            txtTotalBaht.Enabled = status;
+            txtNote.Enabled = status;
+            btnUpload.Enabled = status;
         }
     }
 }

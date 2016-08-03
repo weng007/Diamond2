@@ -60,6 +60,7 @@ namespace DiamondShop
             this.id = id;
             LoadData();
             SetFormatNumber();
+            SetControlEnable(false);
         }
 
         protected override void Initial()
@@ -145,6 +146,7 @@ namespace DiamondShop
             {
                 EnableSave = true;
                 EnableDelete = true;
+                SetControlEnable(true);
             }
             else
             {
@@ -157,6 +159,7 @@ namespace DiamondShop
                 {
                     EnableSave = true;
                     EnableDelete = true;
+                    SetControlEnable(true);
                     base.EditData();
                 }
             }
@@ -249,6 +252,22 @@ namespace DiamondShop
         private void txtPriceGram2_Leave(object sender, EventArgs e)
         {
             txtPriceGram2.Text = GM.ConvertDoubleToString(txtPriceGram2, 0);
+        }
+
+        private void SetControlEnable(bool status)
+        {
+            dtBuyDate.Enabled = status;
+            txtSeller.Enabled = status;
+            txtBuyPrice.Enabled = status;
+            txtSellPrice.Enabled = status;
+            txtAmount1.Enabled = status;
+            txtPrice1.Enabled = status;
+            txtPricePerGram.Enabled = status;
+            txtPriceGram1.Enabled = status;
+            txtAmount2.Enabled = status;
+            txtPrice2.Enabled = status;
+            txtPriceGram2.Enabled = status;
+            txtSeller.Enabled = status;
         }
     }
 }

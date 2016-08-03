@@ -40,6 +40,7 @@ namespace DiamondShop
 
             this.id = id;
             LoadData();
+            SetControlEnable(false);
         }
 
         protected override void Initial()
@@ -190,7 +191,7 @@ namespace DiamondShop
             {
                 EnableSave = true;
                 EnableDelete = true;
-
+                SetControlEnable(true);
                 base.EditData();
             }
             else
@@ -204,6 +205,7 @@ namespace DiamondShop
                 {
                     EnableSave = true;
                     EnableDelete = true;
+                    SetControlEnable(true);
                     base.EditData();
                 }
             }
@@ -271,6 +273,16 @@ namespace DiamondShop
                 chk = 1;
                 DeleteData();
             }
+        }
+        private void SetControlEnable(bool status)
+        {
+            dtBuyDate.Enabled = status;
+            txtSeller.Enabled = status;
+            txtBuyPrice.Enabled = status;
+            txtSalePrice.Enabled = status;
+            btnAdd.Enabled = status;
+            btnDel.Enabled = status;
+            gridSetting.Enabled = status;
         }
     }
 }
