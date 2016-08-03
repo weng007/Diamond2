@@ -71,6 +71,8 @@ namespace DiamondShop
             LoadData();
 
             txtCost1_Leave(null, null);
+
+            SetControlEnable(false);
         }
 
         protected override void Initial()
@@ -138,6 +140,7 @@ namespace DiamondShop
             {
                 EnableSave = true;
                 EnableDelete = true;
+                SetControlEnable(true);
 
                 base.EditData();
             }
@@ -152,6 +155,8 @@ namespace DiamondShop
                 {
                     EnableSave = true;
                     EnableDelete = true;
+                    SetControlEnable(true);
+
                     base.EditData();
                 }
             }
@@ -307,6 +312,11 @@ namespace DiamondShop
             {
                 e.Handled = true;
             }
+        }
+
+        private void SetControlEnable(bool status)
+        {
+            dtBuyDate.Enabled = status;
         }
     }
 }
