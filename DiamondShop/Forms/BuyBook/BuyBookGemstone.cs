@@ -43,6 +43,9 @@ namespace DiamondShop
             binder.BindControl(cmbShape, "Shape");
             binder.BindControl(txtMarketPrice, "MarketPrice");
             binder.BindControl(txtNote, "Note");
+            binder.BindControl(dtPayDate, "PayDate");
+
+            dtDueDate.Value = dtBuyDate.Value.AddDays(30);
         }
         public BuyBookGemstone(int id)
         {
@@ -68,6 +71,7 @@ namespace DiamondShop
             binder.BindControl(cmbShape, "Shape");
             binder.BindControl(txtMarketPrice, "MarketPrice");
             binder.BindControl(txtNote, "Note");
+            binder.BindControl(dtPayDate, "PayDate");
 
             this.id = id;
             LoadData();
@@ -374,6 +378,12 @@ namespace DiamondShop
             grid1.Enabled = status;
             chkPayByUSD.Enabled = status;
             cmbIdentification.Enabled = status;
+            dtPayDate.Enabled = status;
+        }
+
+        private void dtDueDate_ValueChanged(object sender, EventArgs e)
+        {
+            dtDueDate.Value = dtBuyDate.Value.AddDays(30);
         }
     }
 }

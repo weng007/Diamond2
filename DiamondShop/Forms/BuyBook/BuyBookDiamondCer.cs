@@ -48,13 +48,13 @@ namespace DiamondShop
             binder.BindControl(cmbShop, "Shop");
             binder.BindControl(cmbSetting, "Setting");
             binder.BindControl(cmbLab, "Lab");
-            binder.BindControl(txtW, "W");
-            binder.BindControl(txtL, "L");
-            binder.BindControl(txtD, "D");
             binder.BindControl(dtDueDate, "DueDate");
             binder.BindControl(txtUSDRate, "USDRate");
             binder.BindControl(txtTotalBaht, "TotalBaht");
             binder.BindControl(txtNote, "Note");
+            binder.BindControl(dtPayDate, "PayDate");
+
+            dtDueDate.Value = dtBuyDate.Value.AddDays(30);
         }
         public BuyBookDiamondCer(int id)
         {
@@ -82,13 +82,11 @@ namespace DiamondShop
             binder.BindControl(cmbShop, "Shop");
             binder.BindControl(cmbSetting, "Setting");
             binder.BindControl(cmbLab, "Lab");
-            binder.BindControl(txtW, "W");
-            binder.BindControl(txtL, "L");
-            binder.BindControl(txtD, "D");
             binder.BindControl(dtDueDate, "DueDate");
             binder.BindControl(txtUSDRate, "USDRate");
             binder.BindControl(txtTotalBaht, "TotalBaht");
             binder.BindControl(txtNote, "Note");
+            binder.BindControl(dtPayDate, "PayDate");
 
             this.id = id;
             LoadData();
@@ -468,9 +466,6 @@ namespace DiamondShop
             cmbShop.Enabled = status;
             txtPrice.Enabled = status;
             txtRap.Enabled = status;
-            txtW.Enabled = status;
-            txtL.Enabled = status;
-            txtD.Enabled = status;
             rdoIns1.Enabled = status;
             rdoIns2.Enabled = status;
             rdoYes.Enabled = status;
@@ -480,6 +475,12 @@ namespace DiamondShop
             txtTotalBaht.Enabled = status;
             txtNote.Enabled = status;
             btnUpload.Enabled = status;
+            dtPayDate.Enabled = status;
+        }
+
+        private void dtDueDate_ValueChanged(object sender, EventArgs e)
+        {
+            dtDueDate.Value = dtBuyDate.Value.AddDays(30);
         }
     }
 }

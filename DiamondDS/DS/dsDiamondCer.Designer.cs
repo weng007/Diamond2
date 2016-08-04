@@ -321,12 +321,6 @@ namespace DiamondDS.DS {
             
             private global::System.Data.DataColumn columnSymmetryName;
             
-            private global::System.Data.DataColumn columnW;
-            
-            private global::System.Data.DataColumn columnL;
-            
-            private global::System.Data.DataColumn columnD;
-            
             private global::System.Data.DataColumn columnReportNumber;
             
             private global::System.Data.DataColumn columnShop;
@@ -576,30 +570,6 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn WColumn {
-                get {
-                    return this.columnW;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn LColumn {
-                get {
-                    return this.columnL;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn DColumn {
-                get {
-                    return this.columnD;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn ReportNumberColumn {
                 get {
                     return this.columnReportNumber;
@@ -840,9 +810,6 @@ namespace DiamondDS.DS {
                         string PolishName, 
                         int Symmetry, 
                         string SymmetryName, 
-                        double W, 
-                        double L, 
-                        double D, 
                         string ReportNumber, 
                         int Shop, 
                         string ShopName, 
@@ -889,9 +856,6 @@ namespace DiamondDS.DS {
                         PolishName,
                         Symmetry,
                         SymmetryName,
-                        W,
-                        L,
-                        D,
                         ReportNumber,
                         Shop,
                         ShopName,
@@ -965,9 +929,6 @@ namespace DiamondDS.DS {
                 this.columnPolishName = base.Columns["PolishName"];
                 this.columnSymmetry = base.Columns["Symmetry"];
                 this.columnSymmetryName = base.Columns["SymmetryName"];
-                this.columnW = base.Columns["W"];
-                this.columnL = base.Columns["L"];
-                this.columnD = base.Columns["D"];
                 this.columnReportNumber = base.Columns["ReportNumber"];
                 this.columnShop = base.Columns["Shop"];
                 this.columnShopName = base.Columns["ShopName"];
@@ -1038,12 +999,6 @@ namespace DiamondDS.DS {
                 base.Columns.Add(this.columnSymmetry);
                 this.columnSymmetryName = new global::System.Data.DataColumn("SymmetryName", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSymmetryName);
-                this.columnW = new global::System.Data.DataColumn("W", typeof(double), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnW);
-                this.columnL = new global::System.Data.DataColumn("L", typeof(double), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnL);
-                this.columnD = new global::System.Data.DataColumn("D", typeof(double), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnD);
                 this.columnReportNumber = new global::System.Data.DataColumn("ReportNumber", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnReportNumber);
                 this.columnShop = new global::System.Data.DataColumn("Shop", typeof(int), null, global::System.Data.MappingType.Element);
@@ -1584,54 +1539,6 @@ namespace DiamondDS.DS {
                 }
                 set {
                     this[this.tableDiamondCer.SymmetryNameColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public double W {
-                get {
-                    try {
-                        return ((double)(this[this.tableDiamondCer.WColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'W\' in table \'DiamondCer\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableDiamondCer.WColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public double L {
-                get {
-                    try {
-                        return ((double)(this[this.tableDiamondCer.LColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'L\' in table \'DiamondCer\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableDiamondCer.LColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public double D {
-                get {
-                    try {
-                        return ((double)(this[this.tableDiamondCer.DColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'D\' in table \'DiamondCer\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableDiamondCer.DColumn] = value;
                 }
             }
             
@@ -2241,42 +2148,6 @@ namespace DiamondDS.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetSymmetryNameNull() {
                 this[this.tableDiamondCer.SymmetryNameColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsWNull() {
-                return this.IsNull(this.tableDiamondCer.WColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetWNull() {
-                this[this.tableDiamondCer.WColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsLNull() {
-                return this.IsNull(this.tableDiamondCer.LColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetLNull() {
-                this[this.tableDiamondCer.LColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsDNull() {
-                return this.IsNull(this.tableDiamondCer.DColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetDNull() {
-                this[this.tableDiamondCer.DColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

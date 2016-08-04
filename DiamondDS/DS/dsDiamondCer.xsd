@@ -14,7 +14,7 @@
   <xs:element name="dsDiamondCer" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsDiamondCer" msprop:Generator_UserDSName="dsDiamondCer">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="DiamondCer" msprop:Generator_TableClassName="DiamondCerDataTable" msprop:Generator_TableVarName="tableDiamondCer" msprop:Generator_TablePropName="DiamondCer" msprop:Generator_RowDeletingName="DiamondCerRowDeleting" msprop:Generator_RowChangingName="DiamondCerRowChanging" msprop:Generator_RowEvHandlerName="DiamondCerRowChangeEventHandler" msprop:Generator_RowDeletedName="DiamondCerRowDeleted" msprop:Generator_UserTableName="DiamondCer" msprop:Generator_RowChangedName="DiamondCerRowChanged" msprop:Generator_RowEvArgName="DiamondCerRowChangeEvent" msprop:Generator_RowClassName="DiamondCerRow">
+        <xs:element name="DiamondCer" msprop:Generator_TableClassName="DiamondCerDataTable" msprop:Generator_TableVarName="tableDiamondCer" msprop:Generator_RowChangedName="DiamondCerRowChanged" msprop:Generator_TablePropName="DiamondCer" msprop:Generator_RowDeletingName="DiamondCerRowDeleting" msprop:Generator_RowChangingName="DiamondCerRowChanging" msprop:Generator_RowEvHandlerName="DiamondCerRowChangeEventHandler" msprop:Generator_RowDeletedName="DiamondCerRowDeleted" msprop:Generator_RowClassName="DiamondCerRow" msprop:Generator_UserTableName="DiamondCer" msprop:Generator_RowEvArgName="DiamondCerRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="RowNum" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnRowNum" msprop:Generator_ColumnPropNameInRow="RowNum" msprop:Generator_ColumnPropNameInTable="RowNumColumn" msprop:Generator_UserColumnName="RowNum" type="xs:long" minOccurs="0" />
@@ -98,9 +98,6 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="W" msprop:Generator_ColumnVarNameInTable="columnW" msprop:Generator_ColumnPropNameInRow="W" msprop:Generator_ColumnPropNameInTable="WColumn" msprop:Generator_UserColumnName="W" type="xs:double" minOccurs="0" />
-              <xs:element name="L" msprop:Generator_ColumnVarNameInTable="columnL" msprop:Generator_ColumnPropNameInRow="L" msprop:Generator_ColumnPropNameInTable="LColumn" msprop:Generator_UserColumnName="L" type="xs:double" minOccurs="0" />
-              <xs:element name="D" msprop:Generator_ColumnVarNameInTable="columnD" msprop:Generator_ColumnPropNameInRow="D" msprop:Generator_ColumnPropNameInTable="DColumn" msprop:Generator_UserColumnName="D" type="xs:double" minOccurs="0" />
               <xs:element name="ReportNumber" msprop:Generator_ColumnVarNameInTable="columnReportNumber" msprop:Generator_ColumnPropNameInRow="ReportNumber" msprop:Generator_ColumnPropNameInTable="ReportNumberColumn" msprop:Generator_UserColumnName="ReportNumber" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">

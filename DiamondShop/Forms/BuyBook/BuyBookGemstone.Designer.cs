@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BuyBookGemstone));
             this.dtBuyDate = new System.Windows.Forms.DateTimePicker();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -87,6 +87,8 @@
             this.txtCode = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.dtPayDate = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid1)).BeginInit();
@@ -106,6 +108,8 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.label7);
+            this.panel3.Controls.Add(this.dtPayDate);
             this.panel3.Controls.Add(this.label19);
             this.panel3.Controls.Add(this.grid1);
             this.panel3.Controls.Add(this.label3);
@@ -161,7 +165,7 @@
             // 
             this.label19.AutoSize = true;
             this.label19.ForeColor = System.Drawing.Color.Red;
-            this.label19.Location = new System.Drawing.Point(58, 172);
+            this.label19.Location = new System.Drawing.Point(58, 198);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(174, 21);
             this.label19.TabIndex = 193;
@@ -182,28 +186,28 @@
             this.grid1.DataMember = "BBGemstoneStock";
             this.grid1.DataSource = this.tds2;
             this.grid1.Enabled = false;
-            this.grid1.Location = new System.Drawing.Point(33, 200);
+            this.grid1.Location = new System.Drawing.Point(33, 226);
             this.grid1.Name = "grid1";
             this.grid1.RowHeadersWidth = 10;
             this.grid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grid1.Size = new System.Drawing.Size(249, 254);
+            this.grid1.Size = new System.Drawing.Size(249, 228);
             this.grid1.TabIndex = 192;
             this.grid1.Validated += new System.EventHandler(this.grid1_Validated);
             // 
             // ActionDate
             // 
             this.ActionDate.DataPropertyName = "ActionDate";
-            dataGridViewCellStyle1.Format = "dd/MM/YYYY";
-            this.ActionDate.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Format = "dd/MM/YYYY";
+            this.ActionDate.DefaultCellStyle = dataGridViewCellStyle3;
             this.ActionDate.HeaderText = "วันที่";
             this.ActionDate.Name = "ActionDate";
             // 
             // Amount
             // 
             this.Amount.DataPropertyName = "Amount";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle2.NullValue = "0";
-            this.Amount.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle4.NullValue = "0";
+            this.Amount.DefaultCellStyle = dataGridViewCellStyle4;
             this.Amount.HeaderText = "คงเหลือ (ct)";
             this.Amount.Name = "Amount";
             this.Amount.Width = 120;
@@ -301,7 +305,7 @@
             // cmbShape
             // 
             this.cmbShape.FormattingEnabled = true;
-            this.cmbShape.Location = new System.Drawing.Point(127, 122);
+            this.cmbShape.Location = new System.Drawing.Point(127, 154);
             this.cmbShape.Name = "cmbShape";
             this.cmbShape.Size = new System.Drawing.Size(155, 29);
             this.cmbShape.TabIndex = 6;
@@ -310,7 +314,7 @@
             // 
             this.label25.AutoSize = true;
             this.label25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label25.Location = new System.Drawing.Point(29, 125);
+            this.label25.Location = new System.Drawing.Point(29, 157);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(60, 21);
             this.label25.TabIndex = 185;
@@ -476,11 +480,11 @@
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.label21.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label21.Location = new System.Drawing.Point(660, 139);
+            this.label21.Location = new System.Drawing.Point(28, 55);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(80, 19);
+            this.label21.Size = new System.Drawing.Size(86, 21);
             this.label21.TabIndex = 149;
             this.label21.Text = "Due Date";
             // 
@@ -488,10 +492,11 @@
             // 
             this.dtDueDate.CustomFormat = "dd/MM/yyyy";
             this.dtDueDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtDueDate.Location = new System.Drawing.Point(759, 134);
+            this.dtDueDate.Location = new System.Drawing.Point(127, 50);
             this.dtDueDate.Name = "dtDueDate";
-            this.dtDueDate.Size = new System.Drawing.Size(131, 27);
+            this.dtDueDate.Size = new System.Drawing.Size(155, 27);
             this.dtDueDate.TabIndex = 20;
+            this.dtDueDate.ValueChanged += new System.EventHandler(this.dtDueDate_ValueChanged);
             // 
             // rdoNo
             // 
@@ -628,7 +633,7 @@
             // 
             this.label18.AutoSize = true;
             this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label18.Location = new System.Drawing.Point(29, 55);
+            this.label18.Location = new System.Drawing.Point(29, 87);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(49, 21);
             this.label18.TabIndex = 112;
@@ -636,7 +641,7 @@
             // 
             // txtSeller
             // 
-            this.txtSeller.Location = new System.Drawing.Point(127, 52);
+            this.txtSeller.Location = new System.Drawing.Point(127, 84);
             this.txtSeller.Name = "txtSeller";
             this.txtSeller.Size = new System.Drawing.Size(155, 27);
             this.txtSeller.TabIndex = 4;
@@ -645,7 +650,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label1.Location = new System.Drawing.Point(29, 87);
+            this.label1.Location = new System.Drawing.Point(29, 119);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(54, 21);
             this.label1.TabIndex = 85;
@@ -664,7 +669,7 @@
             // txtCode
             // 
             this.txtCode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.txtCode.Location = new System.Drawing.Point(127, 87);
+            this.txtCode.Location = new System.Drawing.Point(127, 119);
             this.txtCode.Name = "txtCode";
             this.txtCode.ReadOnly = true;
             this.txtCode.Size = new System.Drawing.Size(155, 27);
@@ -689,6 +694,26 @@
             this.button1.Size = new System.Drawing.Size(1089, 352);
             this.button1.TabIndex = 32;
             this.button1.UseVisualStyleBackColor = true;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
+            this.label7.Location = new System.Drawing.Point(659, 138);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(78, 19);
+            this.label7.TabIndex = 195;
+            this.label7.Text = "Pay Date";
+            // 
+            // dtPayDate
+            // 
+            this.dtPayDate.CustomFormat = "dd/MM/yyyy";
+            this.dtPayDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtPayDate.Location = new System.Drawing.Point(756, 133);
+            this.dtPayDate.Name = "dtPayDate";
+            this.dtPayDate.Size = new System.Drawing.Size(136, 27);
+            this.dtPayDate.TabIndex = 194;
             // 
             // BuyBookGemstone
             // 
@@ -767,5 +792,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn amountDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn refIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn isDeletedDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.DateTimePicker dtPayDate;
     }
 }

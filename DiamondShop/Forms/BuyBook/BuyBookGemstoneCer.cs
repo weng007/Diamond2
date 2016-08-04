@@ -41,9 +41,6 @@ namespace DiamondShop
             binder.BindControl(dtReportDate, "ReportDate");
             binder.BindControl(cmbLab, "Lab");
             binder.BindControl(cmbOrigin, "Origin");
-            binder.BindControl(txtW, "W");
-            binder.BindControl(txtL, "L");
-            binder.BindControl(txtD, "D");
             binder.BindControl(dtDueDate, "DueDate");
             binder.BindControl(txtPriceCaratUSD, "PriceCaratUSD");
             binder.BindControl(txtTotalUSD, "TotalUSD");
@@ -55,6 +52,9 @@ namespace DiamondShop
             binder.BindControl(cmbComment, "Comment");
             binder.BindControl(cmbCut, "Cut");
             binder.BindControl(cmbColor, "Color");
+            binder.BindControl(dtPayDate, "PayDate");
+
+            dtDueDate.Value = dtBuyDate.Value.AddDays(30);
         }
         public BuyBookGemstoneCer(int id)
         {
@@ -73,9 +73,6 @@ namespace DiamondShop
             binder.BindControl(dtReportDate, "ReportDate");
             binder.BindControl(cmbLab, "Lab");
             binder.BindControl(cmbOrigin, "Origin");
-            binder.BindControl(txtW, "W");
-            binder.BindControl(txtL, "L");
-            binder.BindControl(txtD, "D");
             binder.BindControl(dtDueDate, "DueDate");
             binder.BindControl(txtPriceCaratUSD, "PriceCaratUSD");
             binder.BindControl(txtTotalUSD, "TotalUSD");
@@ -87,6 +84,7 @@ namespace DiamondShop
             binder.BindControl(cmbComment, "Comment");
             binder.BindControl(cmbCut, "Cut");
             binder.BindControl(cmbColor, "Color");
+            binder.BindControl(dtPayDate, "PayDate");
 
             this.id = id;
             LoadData();
@@ -477,9 +475,6 @@ namespace DiamondShop
             cmbComment.Enabled = status;
             dtReportDate.Enabled = status;
             cmbShop.Enabled = status;
-            txtW.Enabled = status;
-            txtL.Enabled = status;
-            txtD.Enabled = status;
             rdoYes.Enabled = status;
             rdoNo.Enabled = status;
             dtDueDate.Enabled = status;
@@ -490,6 +485,12 @@ namespace DiamondShop
             txtPriceCaratUSD.Enabled = status;
             btnUpload.Enabled = status;
             btnImage1.Enabled = status;
+            dtPayDate.Enabled = status;
+        }
+
+        private void dtDueDate_ValueChanged(object sender, EventArgs e)
+        {
+            dtDueDate.Value = dtBuyDate.Value.AddDays(30);
         }
     }
 }

@@ -341,6 +341,8 @@ namespace DiamondDS.DS {
             
             private global::System.Data.DataColumn columnEditDate;
             
+            private global::System.Data.DataColumn columnPayDate;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public BuyBookGemstoneDataTable() {
@@ -624,6 +626,14 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn PayDateColumn {
+                get {
+                    return this.columnPayDate;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -689,7 +699,8 @@ namespace DiamondDS.DS {
                         int CreateBy, 
                         System.DateTime CreateDate, 
                         int EditBy, 
-                        System.DateTime EditDate) {
+                        System.DateTime EditDate, 
+                        string PayDate) {
                 BuyBookGemstoneRow rowBuyBookGemstoneRow = ((BuyBookGemstoneRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         RowNum,
@@ -722,7 +733,8 @@ namespace DiamondDS.DS {
                         CreateBy,
                         CreateDate,
                         EditBy,
-                        EditDate};
+                        EditDate,
+                        PayDate};
                 rowBuyBookGemstoneRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowBuyBookGemstoneRow);
                 return rowBuyBookGemstoneRow;
@@ -783,6 +795,7 @@ namespace DiamondDS.DS {
                 this.columnCreateDate = base.Columns["CreateDate"];
                 this.columnEditBy = base.Columns["EditBy"];
                 this.columnEditDate = base.Columns["EditDate"];
+                this.columnPayDate = base.Columns["PayDate"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -850,6 +863,8 @@ namespace DiamondDS.DS {
                 base.Columns.Add(this.columnEditBy);
                 this.columnEditDate = new global::System.Data.DataColumn("EditDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnEditDate);
+                this.columnPayDate = new global::System.Data.DataColumn("PayDate", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPayDate);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnID}, true));
                 this.columnRowNum.ReadOnly = true;
@@ -1506,6 +1521,22 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string PayDate {
+                get {
+                    try {
+                        return ((string)(this[this.tableBuyBookGemstone.PayDateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'PayDate\' in table \'BuyBookGemstone\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableBuyBookGemstone.PayDateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsRowNumNull() {
                 return this.IsNull(this.tableBuyBookGemstone.RowNumColumn);
             }
@@ -1862,6 +1893,18 @@ namespace DiamondDS.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetEditDateNull() {
                 this[this.tableBuyBookGemstone.EditDateColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsPayDateNull() {
+                return this.IsNull(this.tableBuyBookGemstone.PayDateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetPayDateNull() {
+                this[this.tableBuyBookGemstone.PayDateColumn] = global::System.Convert.DBNull;
             }
         }
         

@@ -45,6 +45,7 @@ namespace DiamondShop
             //binder.BindControl(txtTotalThaiBaht, "TotalThaiBaht");
             binder.BindControl(txtMarketPrice, "MarketPrice");
             binder.BindControl(txtNote, "Note");
+            binder.BindControl(dtPayDate, "PayDate");
 
             dtDueDate.Value = dtBuyDate.Value.AddDays(30);
 
@@ -74,6 +75,7 @@ namespace DiamondShop
             //binder.BindControl(txtTotalThaiBaht, "TotalThaiBaht");
             binder.BindControl(txtMarketPrice, "MarketPrice");
             binder.BindControl(txtNote, "Note");
+            binder.BindControl(dtPayDate, "PayDate");
 
             this.id = id;
             LoadData();
@@ -389,6 +391,7 @@ namespace DiamondShop
             grid1.Enabled = status;
             chkPayByUSD.Enabled = status;
             txtPriceCaratUSD.Enabled = status;
+            dtPayDate.Enabled = status;
         }
 
         private void dtBuyDate_ValueChanged(object sender, EventArgs e)
