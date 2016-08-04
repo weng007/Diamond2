@@ -46,6 +46,8 @@ namespace DiamondShop
             binder.BindControl(txtMarketPrice, "MarketPrice");
             binder.BindControl(txtNote, "Note");
 
+            dtDueDate.Value = dtBuyDate.Value.AddDays(30);
+
         }
         public BuyBookDiamond(int id)
         {
@@ -387,6 +389,11 @@ namespace DiamondShop
             grid1.Enabled = status;
             chkPayByUSD.Enabled = status;
             txtPriceCaratUSD.Enabled = status;
+        }
+
+        private void dtBuyDate_ValueChanged(object sender, EventArgs e)
+        {
+            dtDueDate.Value = dtBuyDate.Value.AddDays(30);
         }
     }
 }
