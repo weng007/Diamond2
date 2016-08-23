@@ -91,6 +91,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.openFileDialog2 = new System.Windows.Forms.OpenFileDialog();
+            this.btnImportExcel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -108,6 +109,7 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.btnImportExcel);
             this.panel3.Controls.Add(this.label9);
             this.panel3.Controls.Add(this.dtPayDate);
             this.panel3.Controls.Add(this.cmbColor);
@@ -404,7 +406,7 @@
             // txtNote
             // 
             this.txtNote.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.txtNote.Location = new System.Drawing.Point(717, 418);
+            this.txtNote.Location = new System.Drawing.Point(741, 378);
             this.txtNote.Multiline = true;
             this.txtNote.Name = "txtNote";
             this.txtNote.Size = new System.Drawing.Size(254, 87);
@@ -415,7 +417,7 @@
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.label26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label26.Location = new System.Drawing.Point(714, 394);
+            this.label26.Location = new System.Drawing.Point(738, 354);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(45, 19);
             this.label26.TabIndex = 171;
@@ -756,6 +758,19 @@
             // 
             this.openFileDialog2.FileName = "openFileDialog1";
             // 
+            // btnImportExcel
+            // 
+            this.btnImportExcel.BackColor = System.Drawing.Color.Transparent;
+            this.btnImportExcel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnImportExcel.BackgroundImage")));
+            this.btnImportExcel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnImportExcel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnImportExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnImportExcel.Location = new System.Drawing.Point(893, 482);
+            this.btnImportExcel.Name = "btnImportExcel";
+            this.btnImportExcel.Size = new System.Drawing.Size(102, 33);
+            this.btnImportExcel.TabIndex = 206;
+            this.btnImportExcel.UseVisualStyleBackColor = false;
+            // 
             // BuyBookGemstoneCer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -837,5 +852,6 @@
         private System.Windows.Forms.OpenFileDialog openFileDialog2;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DateTimePicker dtPayDate;
+        private System.Windows.Forms.Button btnImportExcel;
     }
 }

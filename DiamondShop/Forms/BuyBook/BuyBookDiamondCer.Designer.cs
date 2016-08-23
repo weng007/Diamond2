@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BuyBookDiamondCer));
             this.dtBuyDate = new System.Windows.Forms.DateTimePicker();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnImportExcel = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.dtPayDate = new System.Windows.Forms.DateTimePicker();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -94,6 +95,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.openFileDialog2 = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -113,6 +115,7 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.btnImportExcel);
             this.panel3.Controls.Add(this.label9);
             this.panel3.Controls.Add(this.dtPayDate);
             this.panel3.Controls.Add(this.groupBox2);
@@ -175,6 +178,20 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1001, 469);
             this.panel3.TabIndex = 74;
+            // 
+            // btnImportExcel
+            // 
+            this.btnImportExcel.BackColor = System.Drawing.Color.Transparent;
+            this.btnImportExcel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnImportExcel.BackgroundImage")));
+            this.btnImportExcel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnImportExcel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnImportExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnImportExcel.Location = new System.Drawing.Point(876, 419);
+            this.btnImportExcel.Name = "btnImportExcel";
+            this.btnImportExcel.Size = new System.Drawing.Size(102, 33);
+            this.btnImportExcel.TabIndex = 203;
+            this.btnImportExcel.UseVisualStyleBackColor = false;
+            this.btnImportExcel.Click += new System.EventHandler(this.btnImportExcel_Click);
             // 
             // label9
             // 
@@ -796,6 +813,10 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // openFileDialog2
+            // 
+            this.openFileDialog2.FileName = "openFileDialog2";
+            // 
             // BuyBookDiamondCer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -884,5 +905,7 @@
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DateTimePicker dtPayDate;
+        private System.Windows.Forms.Button btnImportExcel;
+        private System.Windows.Forms.OpenFileDialog openFileDialog2;
     }
 }

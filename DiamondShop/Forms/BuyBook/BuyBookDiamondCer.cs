@@ -11,6 +11,8 @@ using System.Windows.Forms;
 using DiamondShop.FormMaster;
 using DiamondDS.DS;
 using DiamondShop.DiamondService;
+using System.Data.OleDb;
+using System.Data.SqlClient;
 
 
 namespace DiamondShop
@@ -19,6 +21,7 @@ namespace DiamondShop
     {
         dsBuyBookDiamondCer tds = new dsBuyBookDiamondCer();
         bool isAuthorize = false;
+        string FilePath;
         MemoryStream ms;
         byte[] file;
 
@@ -485,6 +488,28 @@ namespace DiamondShop
         private void dtDueDate_ValueChanged(object sender, EventArgs e)
         {
             dtDueDate.Value = dtBuyDate.Value.AddDays(30);
+        }
+
+        private void btnImportExcel_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog2.ShowDialog() == DialogResult.OK && openFileDialog2.CheckFileExists)
+            {
+                using (var stream = new FileStream(openFileDialog2.FileName, FileMode.Open, FileAccess.Read))
+                {
+                    using (var reader = new BinaryReader(stream))
+                    {
+                        file = reader.ReadBytes((int)stream.Length);
+                    }
+                }
+
+                if (file.Length > 0)
+                {
+                    FilePath = openFileDialog2.FileName;
+                }
+            }
+            BuyBookDiamonCrExcel frm = new BuyBookDiamonCrExcel(id,FilePath);
+            frm.ShowDialog();
+
         }
     }
 }
