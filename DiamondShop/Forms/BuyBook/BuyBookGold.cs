@@ -36,6 +36,7 @@ namespace DiamondShop
             binder.BindControl(txtPricePerGram, "PricePerGram");
             binder.BindControl(txtPriceGram1, "PriceGram1");
             binder.BindControl(txtPriceGram2, "PriceGram2");
+            binder.BindControl(dtPayDate, "PayDate");
 
         }
         public BuyBookGold(int id)
@@ -56,6 +57,7 @@ namespace DiamondShop
             binder.BindControl(txtPricePerGram, "PricePerGram");
             binder.BindControl(txtPriceGram1, "PriceGram1");
             binder.BindControl(txtPriceGram2, "PriceGram2");
+            binder.BindControl(dtPayDate, "PayDate");
 
             this.id = id;
             LoadData();
@@ -85,6 +87,16 @@ namespace DiamondShop
                 EnableEdit = true;
                 EnableDelete = false;
             }
+            if (tds.BuyBookGold[0]["IsPaid"].ToString() == "0")
+            {
+                rdoYes.Checked = false;
+                rdoNo.Checked = true;
+            }
+            else
+            {
+                rdoYes.Checked = true;
+                rdoNo.Checked = false;
+            }
 
             base.LoadData();
         }
@@ -103,7 +115,7 @@ namespace DiamondShop
                 tds.BuyBookGold.Rows.Add(row);
             }
             binder.BindValueToDataRow(row);
-
+            row.IsPaid = rdoYes.Checked ? "1" : "0";
             try
             {
                 if (id == 0)

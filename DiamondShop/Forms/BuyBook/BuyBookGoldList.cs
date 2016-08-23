@@ -41,13 +41,15 @@ namespace DiamondShop
                 gridGold.DataSource = null;
                 gridGold.Refresh();
             }
+
+            btnSearch_Click(null, null);
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
             ser2 = GM.GetService2();
 
-            ds = ser2.DoSearchBuyBookGold(Convert.ToDateTime(dtSBuyDate.Text),Convert.ToDateTime( dtEBuyDate.Text));
+            ds = ser2.DoSearchBuyBookGold(dtSBuyDate.Value,dtEBuyDate.Value);
 
             if (ds.Tables[0].Rows.Count > 0)
             {

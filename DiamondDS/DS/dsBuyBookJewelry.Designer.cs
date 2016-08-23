@@ -349,6 +349,10 @@ namespace DiamondDS.DS {
             
             private global::System.Data.DataColumn columnAmount4;
             
+            private global::System.Data.DataColumn columnIsPaid;
+            
+            private global::System.Data.DataColumn columnPayDate;
+            
             private global::System.Data.DataColumn columnWeight4;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -666,6 +670,22 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn IsPaidColumn {
+                get {
+                    return this.columnIsPaid;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn PayDateColumn {
+                get {
+                    return this.columnPayDate;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn Weight4Column {
                 get {
                     return this.columnWeight4;
@@ -744,6 +764,8 @@ namespace DiamondDS.DS {
                         int Amount3, 
                         double Weight3, 
                         int Amount4, 
+                        string IsPaid, 
+                        System.DateTime PayDate, 
                         double Weight4) {
                 BuyBookJewelryRow rowBuyBookJewelryRow = ((BuyBookJewelryRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
@@ -782,6 +804,8 @@ namespace DiamondDS.DS {
                         Amount3,
                         Weight3,
                         Amount4,
+                        IsPaid,
+                        PayDate,
                         Weight4};
                 rowBuyBookJewelryRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowBuyBookJewelryRow);
@@ -847,6 +871,8 @@ namespace DiamondDS.DS {
                 this.columnAmount3 = base.Columns["Amount3"];
                 this.columnWeight3 = base.Columns["Weight3"];
                 this.columnAmount4 = base.Columns["Amount4"];
+                this.columnIsPaid = base.Columns["IsPaid"];
+                this.columnPayDate = base.Columns["PayDate"];
                 this.columnWeight4 = base.Columns["Weight4"];
             }
             
@@ -923,6 +949,10 @@ namespace DiamondDS.DS {
                 base.Columns.Add(this.columnWeight3);
                 this.columnAmount4 = new global::System.Data.DataColumn("Amount4", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnAmount4);
+                this.columnIsPaid = new global::System.Data.DataColumn("IsPaid", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnIsPaid);
+                this.columnPayDate = new global::System.Data.DataColumn("PayDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPayDate);
                 this.columnWeight4 = new global::System.Data.DataColumn("Weight4", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnWeight4);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
@@ -1652,6 +1682,38 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string IsPaid {
+                get {
+                    try {
+                        return ((string)(this[this.tableBuyBookJewelry.IsPaidColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'IsPaid\' in table \'BuyBookJewelry\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableBuyBookJewelry.IsPaidColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public System.DateTime PayDate {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableBuyBookJewelry.PayDateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'PayDate\' in table \'BuyBookJewelry\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableBuyBookJewelry.PayDateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public double Weight4 {
                 get {
                     try {
@@ -2072,6 +2134,30 @@ namespace DiamondDS.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetAmount4Null() {
                 this[this.tableBuyBookJewelry.Amount4Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsIsPaidNull() {
+                return this.IsNull(this.tableBuyBookJewelry.IsPaidColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetIsPaidNull() {
+                this[this.tableBuyBookJewelry.IsPaidColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsPayDateNull() {
+                return this.IsNull(this.tableBuyBookJewelry.PayDateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetPayDateNull() {
+                this[this.tableBuyBookJewelry.PayDateColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

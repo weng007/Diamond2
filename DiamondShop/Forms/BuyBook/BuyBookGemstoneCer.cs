@@ -140,7 +140,7 @@ namespace DiamondShop
 
             dtBuyDate.Select();
 
-            SetFieldService.SetRequireField(txtWeight);
+            SetFieldService.SetRequireField(txtWeight, txtUSDRate);
         }
 
         protected override void LoadData()
@@ -297,6 +297,10 @@ namespace DiamondShop
             {
                 message += "Please input  Weight > 0.\n";
             }
+            if (txtUSDRate.Text == "" || GM.ConvertStringToDouble(txtUSDRate) == 0)
+            {
+                message += "Please input USDRate > 0.\n";
+            }
 
             if (message == "") { return true; }
             else { return false; }
@@ -352,8 +356,6 @@ namespace DiamondShop
             if(chkPayByUSD.Checked)
             {
                 txtPriceCaratUSD.Enabled = true;
-                txtUSDRate.Enabled = true;
-
                 txtPriceCarat.Enabled = false;
                 txtPriceCarat.Text = "0";
                 txtUSDRate_Leave(null, null);
@@ -361,9 +363,6 @@ namespace DiamondShop
             else
             {
                 txtPriceCaratUSD.Enabled = false;
-                txtUSDRate.Enabled = false;
-                txtUSDRate.Text = "0";
-
                 txtPriceCarat_Leave(null, null);
                 txtPriceCarat.Enabled = true;                       
             }       
@@ -401,7 +400,11 @@ namespace DiamondShop
 
         private void txtUSDRate_Leave(object sender, EventArgs e)
         {
-            txtTotalBaht.Text = (GM.ConvertStringToDouble(txtTotalUSD) * GM.ConvertStringToDouble(txtUSDRate)).ToString();
+            if (chkPayByUSD.Checked)
+            {
+                txtTotalBaht.Text = (GM.ConvertStringToDouble(txtTotalUSD) * GM.ConvertStringToDouble(txtUSDRate)).ToString();
+            }
+            
         }
 
         private void txtTotalBaht_TextChanged(object sender, EventArgs e)

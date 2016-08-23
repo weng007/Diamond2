@@ -35,7 +35,7 @@ namespace DiamondShop
             SellerList frm = new SellerList();
             SetFormList(frm, 1, "Seller");
         }
-  
+        
 
         private void menuCerDiamond_Click(object sender, EventArgs e)
         {
@@ -122,7 +122,16 @@ namespace DiamondShop
             InventoryList frm = new InventoryList(prefix);
             SetFormList(frm, 15, "Inventory " + prefix);
         }
-
+        private void MenuPayment_Click(object sender, EventArgs e)
+        {
+            PaymentList frm = new PaymentList();
+            SetFormList(frm, 16, "Payment");
+        }
+        private void menuExchangeRate_Click(object sender, EventArgs e)
+        {
+            ExchangeRate frm = new ExchangeRate();
+            frm.ShowDialog();
+        }
         private void SetFormList(Form frm, int ImageIndex, string tabPageText)
         {
             //Check ว่ามี Tabpage นั้นเปิดอยู่แล้วหรือยัง
@@ -231,5 +240,7 @@ namespace DiamondShop
             Login frm = new Login();
             frm.ShowDialog();            
         }
+
+       
     }
 }

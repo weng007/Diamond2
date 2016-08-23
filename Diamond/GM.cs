@@ -40,6 +40,8 @@ namespace Diamond
         static InvDiamondCerDetailBiz bizInvDiamondCerDetai;
         static InvGemstoneCerDetailBiz bizInvGemstoneCerDetai;
         static InvGemstoneDetailBiz bizInvGemstoneDetai;
+        static ExchangeRateBiz bizExchangeRate;
+        static BuyBookPaymentBiz bizBuyBookPayment;
 
         public static MasterTableDetailBiz GetMasterTableDetailBiz()
         {
@@ -217,6 +219,18 @@ namespace Diamond
             if (bbGemstoneStockBiz == null)
             { return new BBGemstoneStockBiz(); }
             else { return bbGemstoneStockBiz; }
+        }
+        public static ExchangeRateBiz GetExchangeRateBiz()
+        {
+            if (bizExchangeRate == null)
+            { return new ExchangeRateBiz(); }
+            else { return bizExchangeRate; }
+        }
+        public static BuyBookPaymentBiz GetBuyBookPaymentBiz()
+        {
+            if (bizBuyBookPayment == null)
+            { return new BuyBookPaymentBiz(); }
+            else { return bizBuyBookPayment; }
         }
     }
 }

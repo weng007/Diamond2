@@ -70,6 +70,11 @@
             this.txtSeller = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
+            this.label26 = new System.Windows.Forms.Label();
+            this.dtPayDate = new System.Windows.Forms.DateTimePicker();
+            this.rdoNo = new System.Windows.Forms.RadioButton();
+            this.rdoYes = new System.Windows.Forms.RadioButton();
+            this.label27 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -87,9 +92,14 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.label26);
             this.panel3.Controls.Add(this.label24);
+            this.panel3.Controls.Add(this.dtPayDate);
+            this.panel3.Controls.Add(this.rdoNo);
             this.panel3.Controls.Add(this.label25);
+            this.panel3.Controls.Add(this.rdoYes);
             this.panel3.Controls.Add(this.txtPriceGram1);
+            this.panel3.Controls.Add(this.label27);
             this.panel3.Controls.Add(this.label22);
             this.panel3.Controls.Add(this.label23);
             this.panel3.Controls.Add(this.txtPriceGram2);
@@ -137,7 +147,7 @@
             this.label24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label24.Location = new System.Drawing.Point(260, 337);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(36, 21);
+            this.label24.Size = new System.Drawing.Size(38, 21);
             this.label24.TabIndex = 122;
             this.label24.Text = "บาท";
             // 
@@ -147,7 +157,7 @@
             this.label25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label25.Location = new System.Drawing.Point(37, 337);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(116, 21);
+            this.label25.Size = new System.Drawing.Size(120, 21);
             this.label25.TabIndex = 121;
             this.label25.Text = "ทอง 75% กรัมละ";
             // 
@@ -168,7 +178,7 @@
             this.label22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label22.Location = new System.Drawing.Point(557, 302);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(36, 21);
+            this.label22.Size = new System.Drawing.Size(38, 21);
             this.label22.TabIndex = 119;
             this.label22.Text = "บาท";
             // 
@@ -178,7 +188,7 @@
             this.label23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label23.Location = new System.Drawing.Point(333, 302);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(116, 21);
+            this.label23.Size = new System.Drawing.Size(120, 21);
             this.label23.TabIndex = 118;
             this.label23.Text = "ทอง 75% กรัมละ";
             // 
@@ -199,7 +209,7 @@
             this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label20.Location = new System.Drawing.Point(71, 302);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(81, 21);
+            this.label20.Size = new System.Drawing.Size(85, 21);
             this.label20.TabIndex = 116;
             this.label20.Text = "ราคากรัมละ";
             // 
@@ -209,7 +219,7 @@
             this.label21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label21.Location = new System.Drawing.Point(260, 302);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(36, 21);
+            this.label21.Size = new System.Drawing.Size(38, 21);
             this.label21.TabIndex = 115;
             this.label21.Text = "บาท";
             // 
@@ -230,7 +240,7 @@
             this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label16.Location = new System.Drawing.Point(557, 267);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(36, 21);
+            this.label16.Size = new System.Drawing.Size(38, 21);
             this.label16.TabIndex = 113;
             this.label16.Text = "บาท";
             // 
@@ -260,7 +270,7 @@
             this.label19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label19.Location = new System.Drawing.Point(260, 267);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(36, 21);
+            this.label19.Size = new System.Drawing.Size(38, 21);
             this.label19.TabIndex = 110;
             this.label19.Text = "บาท";
             // 
@@ -292,7 +302,7 @@
             this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label15.Location = new System.Drawing.Point(557, 232);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(36, 21);
+            this.label15.Size = new System.Drawing.Size(38, 21);
             this.label15.TabIndex = 107;
             this.label15.Text = "บาท";
             // 
@@ -302,7 +312,7 @@
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label14.Location = new System.Drawing.Point(557, 197);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(36, 21);
+            this.label14.Size = new System.Drawing.Size(37, 21);
             this.label14.TabIndex = 106;
             this.label14.Text = "กรัม";
             // 
@@ -312,7 +322,7 @@
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label13.Location = new System.Drawing.Point(368, 232);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(81, 21);
+            this.label13.Size = new System.Drawing.Size(85, 21);
             this.label13.TabIndex = 105;
             this.label13.Text = "ราคากรัมละ";
             // 
@@ -322,7 +332,7 @@
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label12.Location = new System.Drawing.Point(70, 232);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(81, 21);
+            this.label12.Size = new System.Drawing.Size(86, 21);
             this.label12.TabIndex = 104;
             this.label12.Text = "ราคาบาทละ";
             // 
@@ -332,7 +342,7 @@
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label11.Location = new System.Drawing.Point(260, 232);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(36, 21);
+            this.label11.Size = new System.Drawing.Size(38, 21);
             this.label11.TabIndex = 103;
             this.label11.Text = "บาท";
             // 
@@ -342,7 +352,7 @@
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label10.Location = new System.Drawing.Point(260, 197);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(36, 21);
+            this.label10.Size = new System.Drawing.Size(38, 21);
             this.label10.TabIndex = 102;
             this.label10.Text = "บาท";
             // 
@@ -450,7 +460,7 @@
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label4.Location = new System.Drawing.Point(320, 100);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(61, 19);
+            this.label4.Size = new System.Drawing.Size(68, 19);
             this.label4.TabIndex = 90;
             this.label4.Text = "ขายออก";
             // 
@@ -461,7 +471,7 @@
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label3.Location = new System.Drawing.Point(185, 100);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 19);
+            this.label3.Size = new System.Drawing.Size(48, 19);
             this.label3.TabIndex = 88;
             this.label3.Text = "รับซื้อ";
             // 
@@ -471,7 +481,7 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label2.Location = new System.Drawing.Point(27, 130);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(126, 21);
+            this.label2.Size = new System.Drawing.Size(129, 21);
             this.label2.TabIndex = 87;
             this.label2.Text = "ทองคำแท่ง 96.5%";
             // 
@@ -533,6 +543,59 @@
             this.button1.TabIndex = 32;
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.label26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
+            this.label26.Location = new System.Drawing.Point(361, 58);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(78, 19);
+            this.label26.TabIndex = 205;
+            this.label26.Text = "Pay Date";
+            // 
+            // dtPayDate
+            // 
+            this.dtPayDate.CustomFormat = "dd/MM/yyyy";
+            this.dtPayDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtPayDate.Location = new System.Drawing.Point(458, 53);
+            this.dtPayDate.Name = "dtPayDate";
+            this.dtPayDate.Size = new System.Drawing.Size(136, 27);
+            this.dtPayDate.TabIndex = 204;
+            // 
+            // rdoNo
+            // 
+            this.rdoNo.AutoSize = true;
+            this.rdoNo.Checked = true;
+            this.rdoNo.Location = new System.Drawing.Point(527, 22);
+            this.rdoNo.Name = "rdoNo";
+            this.rdoNo.Size = new System.Drawing.Size(50, 25);
+            this.rdoNo.TabIndex = 202;
+            this.rdoNo.TabStop = true;
+            this.rdoNo.Text = "No";
+            this.rdoNo.UseVisualStyleBackColor = true;
+            // 
+            // rdoYes
+            // 
+            this.rdoYes.AutoSize = true;
+            this.rdoYes.Location = new System.Drawing.Point(461, 22);
+            this.rdoYes.Name = "rdoYes";
+            this.rdoYes.Size = new System.Drawing.Size(55, 25);
+            this.rdoYes.TabIndex = 201;
+            this.rdoYes.Text = "Yes";
+            this.rdoYes.UseVisualStyleBackColor = true;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.label27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
+            this.label27.Location = new System.Drawing.Point(362, 24);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(78, 19);
+            this.label27.TabIndex = 203;
+            this.label27.Text = "Payment";
+            // 
             // BuyBookGold
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -593,5 +656,10 @@
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.TextBox txtPriceGram1;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.DateTimePicker dtPayDate;
+        private System.Windows.Forms.RadioButton rdoNo;
+        private System.Windows.Forms.RadioButton rdoYes;
+        private System.Windows.Forms.Label label27;
     }
 }

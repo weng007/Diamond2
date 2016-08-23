@@ -41,6 +41,8 @@ namespace DiamondShop
                 gridSetting.DataSource = null;
                 gridSetting.Refresh();
             }
+
+            btnSearch_Click(null, null);
         }
         private void btnAdd_Click(object sender, EventArgs e)
         {
@@ -53,7 +55,7 @@ namespace DiamondShop
         {
             ser2 = GM.GetService2();
 
-            ds = ser2.DoSearchBuyBookSetting(txtSeller.Text, Convert.ToDateTime(dtSBuyDate.Text),Convert.ToDateTime(dtEBuyDate.Text));
+            ds = ser2.DoSearchBuyBookSetting(txtSeller.Text, dtSBuyDate.Value, dtEBuyDate.Value);
 
             if (ds.Tables[0].Rows.Count > 0)
             {
