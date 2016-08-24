@@ -14,7 +14,7 @@
   <xs:element name="dsBuyBookGemstoneCer" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsBuyBookGemstoneCer" msprop:Generator_UserDSName="dsBuyBookGemstoneCer">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="BuyBookGemstoneCer" msprop:Generator_TableClassName="BuyBookGemstoneCerDataTable" msprop:Generator_TableVarName="tableBuyBookGemstoneCer" msprop:Generator_TablePropName="BuyBookGemstoneCer" msprop:Generator_RowDeletingName="BuyBookGemstoneCerRowDeleting" msprop:Generator_RowChangingName="BuyBookGemstoneCerRowChanging" msprop:Generator_RowEvHandlerName="BuyBookGemstoneCerRowChangeEventHandler" msprop:Generator_RowDeletedName="BuyBookGemstoneCerRowDeleted" msprop:Generator_UserTableName="BuyBookGemstoneCer" msprop:Generator_RowChangedName="BuyBookGemstoneCerRowChanged" msprop:Generator_RowEvArgName="BuyBookGemstoneCerRowChangeEvent" msprop:Generator_RowClassName="BuyBookGemstoneCerRow">
+        <xs:element name="BuyBookGemstoneCer" msprop:Generator_TableClassName="BuyBookGemstoneCerDataTable" msprop:Generator_TableVarName="tableBuyBookGemstoneCer" msprop:Generator_RowChangedName="BuyBookGemstoneCerRowChanged" msprop:Generator_TablePropName="BuyBookGemstoneCer" msprop:Generator_RowDeletingName="BuyBookGemstoneCerRowDeleting" msprop:Generator_RowChangingName="BuyBookGemstoneCerRowChanging" msprop:Generator_RowEvHandlerName="BuyBookGemstoneCerRowChangeEventHandler" msprop:Generator_RowDeletedName="BuyBookGemstoneCerRowDeleted" msprop:Generator_RowClassName="BuyBookGemstoneCerRow" msprop:Generator_UserTableName="BuyBookGemstoneCer" msprop:Generator_RowEvArgName="BuyBookGemstoneCerRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="RowNum" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnRowNum" msprop:Generator_ColumnPropNameInRow="RowNum" msprop:Generator_ColumnPropNameInTable="RowNumColumn" msprop:Generator_UserColumnName="RowNum" type="xs:long" minOccurs="0" />
@@ -92,9 +92,6 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="W" msprop:Generator_ColumnVarNameInTable="columnW" msprop:Generator_ColumnPropNameInRow="W" msprop:Generator_ColumnPropNameInTable="WColumn" msprop:Generator_UserColumnName="W" type="xs:double" minOccurs="0" />
-              <xs:element name="L" msprop:Generator_ColumnVarNameInTable="columnL" msprop:Generator_ColumnPropNameInRow="L" msprop:Generator_ColumnPropNameInTable="LColumn" msprop:Generator_UserColumnName="L" type="xs:double" minOccurs="0" />
-              <xs:element name="D" msprop:Generator_ColumnVarNameInTable="columnD" msprop:Generator_ColumnPropNameInRow="D" msprop:Generator_ColumnPropNameInTable="DColumn" msprop:Generator_UserColumnName="D" type="xs:double" minOccurs="0" />
               <xs:element name="PayByUSD" msprop:Generator_ColumnVarNameInTable="columnPayByUSD" msprop:Generator_ColumnPropNameInRow="PayByUSD" msprop:Generator_ColumnPropNameInTable="PayByUSDColumn" msprop:Generator_UserColumnName="PayByUSD" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -132,7 +129,7 @@
                 </xs:simpleType>
               </xs:element>
               <xs:element name="Certificate" msprop:Generator_ColumnVarNameInTable="columnCertificate" msprop:Generator_ColumnPropNameInRow="Certificate" msprop:Generator_ColumnPropNameInTable="CertificateColumn" msprop:Generator_UserColumnName="Certificate" type="xs:base64Binary" minOccurs="0" />
-              <xs:element name="FileName" msprop:Generator_ColumnVarNameInTable="columnFileName" msprop:Generator_ColumnPropNameInRow="FileName" msprop:nullValue="_null" msprop:Generator_ColumnPropNameInTable="FileNameColumn" msprop:Generator_UserColumnName="FileName" type="xs:string" minOccurs="0" />
+              <xs:element name="FileName" msprop:nullValue="_null" msprop:Generator_ColumnPropNameInRow="FileName" msprop:Generator_ColumnVarNameInTable="columnFileName" msprop:Generator_ColumnPropNameInTable="FileNameColumn" msprop:Generator_UserColumnName="FileName" type="xs:string" minOccurs="0" />
               <xs:element name="IsDeleted" msprop:Generator_ColumnVarNameInTable="columnIsDeleted" msprop:Generator_ColumnPropNameInRow="IsDeleted" msprop:Generator_ColumnPropNameInTable="IsDeletedColumn" msprop:Generator_UserColumnName="IsDeleted" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -148,6 +145,7 @@
               <xs:element name="Cut" msprop:Generator_ColumnVarNameInTable="columnCut" msprop:Generator_ColumnPropNameInRow="Cut" msprop:Generator_ColumnPropNameInTable="CutColumn" msprop:Generator_UserColumnName="Cut" type="xs:string" minOccurs="0" />
               <xs:element name="Color" msprop:Generator_ColumnVarNameInTable="columnColor" msprop:Generator_ColumnPropNameInRow="Color" msprop:Generator_ColumnPropNameInTable="ColorColumn" msprop:Generator_UserColumnName="Color" type="xs:string" minOccurs="0" />
               <xs:element name="Payment" msprop:Generator_ColumnVarNameInTable="columnPayment" msprop:Generator_ColumnPropNameInRow="Payment" msprop:Generator_ColumnPropNameInTable="PaymentColumn" msprop:Generator_UserColumnName="Payment" type="xs:string" minOccurs="0" />
+              <xs:element name="PayDate" msprop:Generator_ColumnVarNameInTable="columnPayDate" msprop:Generator_ColumnPropNameInRow="PayDate" msprop:Generator_ColumnPropNameInTable="PayDateColumn" msprop:Generator_UserColumnName="PayDate" type="xs:dateTime" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

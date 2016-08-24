@@ -52,9 +52,6 @@ namespace DiamondShop
             binder.BindControl(dtReportDate, "ReportDate");
             binder.BindControl(txtLab, "LabName");
             binder.BindControl(txtOrigin, "OriginName");
-            binder.BindControl(txtW, "W");
-            binder.BindControl(txtL, "L");
-            binder.BindControl(txtD, "D");
             binder.BindControl(txtPriceCaratUSD, "PriceCaratUSD");
             binder.BindControl(txtUSDRate, "USDRate");
             binder.BindControl(txtPriceCaratBaht, "PriceCarat");

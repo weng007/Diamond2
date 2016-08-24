@@ -63,6 +63,11 @@
             this.btnEdit = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
+            this.label26 = new System.Windows.Forms.Label();
+            this.dtPayDate = new System.Windows.Forms.DateTimePicker();
+            this.rdoNo = new System.Windows.Forms.RadioButton();
+            this.rdoYes = new System.Windows.Forms.RadioButton();
+            this.label27 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridSetting)).BeginInit();
@@ -82,6 +87,11 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.label26);
+            this.panel3.Controls.Add(this.dtPayDate);
+            this.panel3.Controls.Add(this.rdoNo);
+            this.panel3.Controls.Add(this.rdoYes);
+            this.panel3.Controls.Add(this.label27);
             this.panel3.Controls.Add(this.btnDel);
             this.panel3.Controls.Add(this.btnAdd);
             this.panel3.Controls.Add(this.label4);
@@ -142,7 +152,7 @@
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label4.Location = new System.Drawing.Point(670, 359);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(59, 21);
+            this.label4.Size = new System.Drawing.Size(65, 21);
             this.label4.TabIndex = 92;
             this.label4.Text = "ขายออก";
             // 
@@ -153,7 +163,7 @@
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label3.Location = new System.Drawing.Point(555, 359);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(43, 21);
+            this.label3.Size = new System.Drawing.Size(46, 21);
             this.label3.TabIndex = 91;
             this.label3.Text = "รับซื้อ";
             // 
@@ -188,7 +198,7 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label2.Location = new System.Drawing.Point(330, 386);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(189, 21);
+            this.label2.Size = new System.Drawing.Size(201, 21);
             this.label2.TabIndex = 88;
             this.label2.Text = "ทองคำแท่ง 96.5% ณ วันที่ซื้อ";
             // 
@@ -401,6 +411,59 @@
             this.button1.TabIndex = 32;
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.label26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
+            this.label26.Location = new System.Drawing.Point(313, 58);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(78, 19);
+            this.label26.TabIndex = 210;
+            this.label26.Text = "Pay Date";
+            // 
+            // dtPayDate
+            // 
+            this.dtPayDate.CustomFormat = "dd/MM/yyyy";
+            this.dtPayDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtPayDate.Location = new System.Drawing.Point(410, 53);
+            this.dtPayDate.Name = "dtPayDate";
+            this.dtPayDate.Size = new System.Drawing.Size(136, 27);
+            this.dtPayDate.TabIndex = 209;
+            // 
+            // rdoNo
+            // 
+            this.rdoNo.AutoSize = true;
+            this.rdoNo.Checked = true;
+            this.rdoNo.Location = new System.Drawing.Point(478, 17);
+            this.rdoNo.Name = "rdoNo";
+            this.rdoNo.Size = new System.Drawing.Size(50, 25);
+            this.rdoNo.TabIndex = 207;
+            this.rdoNo.TabStop = true;
+            this.rdoNo.Text = "No";
+            this.rdoNo.UseVisualStyleBackColor = true;
+            // 
+            // rdoYes
+            // 
+            this.rdoYes.AutoSize = true;
+            this.rdoYes.Location = new System.Drawing.Point(412, 17);
+            this.rdoYes.Name = "rdoYes";
+            this.rdoYes.Size = new System.Drawing.Size(55, 25);
+            this.rdoYes.TabIndex = 206;
+            this.rdoYes.Text = "Yes";
+            this.rdoYes.UseVisualStyleBackColor = true;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.label27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
+            this.label27.Location = new System.Drawing.Point(313, 19);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(78, 19);
+            this.label27.TabIndex = 208;
+            this.label27.Text = "Payment";
+            // 
             // BuyBookSetting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -449,5 +512,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn RefID;
         private System.Windows.Forms.DataGridViewTextBoxColumn SettingType;
         private System.Windows.Forms.DataGridViewTextBoxColumn Material;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.DateTimePicker dtPayDate;
+        private System.Windows.Forms.RadioButton rdoNo;
+        private System.Windows.Forms.RadioButton rdoYes;
+        private System.Windows.Forms.Label label27;
     }
 }

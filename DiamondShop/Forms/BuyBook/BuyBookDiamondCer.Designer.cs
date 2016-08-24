@@ -31,6 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BuyBookDiamondCer));
             this.dtBuyDate = new System.Windows.Forms.DateTimePicker();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnImportExcel = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.dtPayDate = new System.Windows.Forms.DateTimePicker();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.rdoYes = new System.Windows.Forms.RadioButton();
             this.rdoNo = new System.Windows.Forms.RadioButton();
@@ -81,7 +84,6 @@
             this.cmbClearity = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.cmbShape = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -90,14 +92,10 @@
             this.cmbPolish = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtCode = new System.Windows.Forms.TextBox();
-            this.txtW = new System.Windows.Forms.TextBox();
-            this.txtD = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.lbl1 = new System.Windows.Forms.Label();
-            this.txtL = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.openFileDialog2 = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -117,6 +115,9 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.btnImportExcel);
+            this.panel3.Controls.Add(this.label9);
+            this.panel3.Controls.Add(this.dtPayDate);
             this.panel3.Controls.Add(this.groupBox2);
             this.panel3.Controls.Add(this.groupBox1);
             this.panel3.Controls.Add(this.btnUpload);
@@ -163,7 +164,6 @@
             this.panel3.Controls.Add(this.cmbClearity);
             this.panel3.Controls.Add(this.label8);
             this.panel3.Controls.Add(this.label5);
-            this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.cmbShape);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.label2);
@@ -172,24 +172,53 @@
             this.panel3.Controls.Add(this.cmbPolish);
             this.panel3.Controls.Add(this.label6);
             this.panel3.Controls.Add(this.txtCode);
-            this.panel3.Controls.Add(this.txtW);
-            this.panel3.Controls.Add(this.txtD);
-            this.panel3.Controls.Add(this.label17);
-            this.panel3.Controls.Add(this.lbl1);
-            this.panel3.Controls.Add(this.txtL);
             this.panel3.Controls.Add(this.dtBuyDate);
             this.panel3.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.panel3.Location = new System.Drawing.Point(12, 72);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1001, 443);
+            this.panel3.Size = new System.Drawing.Size(1001, 469);
             this.panel3.TabIndex = 74;
+            // 
+            // btnImportExcel
+            // 
+            this.btnImportExcel.BackColor = System.Drawing.Color.Transparent;
+            this.btnImportExcel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnImportExcel.BackgroundImage")));
+            this.btnImportExcel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnImportExcel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnImportExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnImportExcel.Location = new System.Drawing.Point(876, 419);
+            this.btnImportExcel.Name = "btnImportExcel";
+            this.btnImportExcel.Size = new System.Drawing.Size(102, 33);
+            this.btnImportExcel.TabIndex = 203;
+            this.btnImportExcel.UseVisualStyleBackColor = false;
+            this.btnImportExcel.Click += new System.EventHandler(this.btnImportExcel_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
+            this.label9.Location = new System.Drawing.Point(732, 159);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(78, 19);
+            this.label9.TabIndex = 202;
+            this.label9.Text = "Pay Date";
+            // 
+            // dtPayDate
+            // 
+            this.dtPayDate.CustomFormat = "dd/MM/yyyy";
+            this.dtPayDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtPayDate.Location = new System.Drawing.Point(832, 154);
+            this.dtPayDate.Name = "dtPayDate";
+            this.dtPayDate.Size = new System.Drawing.Size(131, 27);
+            this.dtPayDate.TabIndex = 201;
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.rdoYes);
             this.groupBox2.Controls.Add(this.rdoNo);
             this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.groupBox2.Location = new System.Drawing.Point(739, 153);
+            this.groupBox2.Location = new System.Drawing.Point(739, 76);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(200, 58);
             this.groupBox2.TabIndex = 157;
@@ -225,7 +254,7 @@
             this.groupBox1.Controls.Add(this.rdoIns2);
             this.groupBox1.Controls.Add(this.rdoIns1);
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.groupBox1.Location = new System.Drawing.Point(739, 84);
+            this.groupBox1.Location = new System.Drawing.Point(739, 7);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(200, 58);
             this.groupBox1.TabIndex = 156;
@@ -263,7 +292,7 @@
             this.btnUpload.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnUpload.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnUpload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpload.Location = new System.Drawing.Point(33, 395);
+            this.btnUpload.Location = new System.Drawing.Point(33, 425);
             this.btnUpload.Name = "btnUpload";
             this.btnUpload.Size = new System.Drawing.Size(102, 33);
             this.btnUpload.TabIndex = 155;
@@ -273,7 +302,7 @@
             // txtNote
             // 
             this.txtNote.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.txtNote.Location = new System.Drawing.Point(739, 368);
+            this.txtNote.Location = new System.Drawing.Point(739, 291);
             this.txtNote.Multiline = true;
             this.txtNote.Name = "txtNote";
             this.txtNote.Size = new System.Drawing.Size(224, 54);
@@ -284,7 +313,7 @@
             this.label30.AutoSize = true;
             this.label30.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.label30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label30.Location = new System.Drawing.Point(735, 346);
+            this.label30.Location = new System.Drawing.Point(735, 269);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(45, 19);
             this.label30.TabIndex = 153;
@@ -293,7 +322,7 @@
             // txtSoldToName
             // 
             this.txtSoldToName.Enabled = false;
-            this.txtSoldToName.Location = new System.Drawing.Point(149, 342);
+            this.txtSoldToName.Location = new System.Drawing.Point(149, 375);
             this.txtSoldToName.Name = "txtSoldToName";
             this.txtSoldToName.Size = new System.Drawing.Size(166, 27);
             this.txtSoldToName.TabIndex = 200;
@@ -302,7 +331,7 @@
             // 
             this.label29.AutoSize = true;
             this.label29.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label29.Location = new System.Drawing.Point(29, 344);
+            this.label29.Location = new System.Drawing.Point(29, 377);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(64, 21);
             this.label29.TabIndex = 151;
@@ -330,7 +359,7 @@
             // cmbFluorescent
             // 
             this.cmbFluorescent.FormattingEnabled = true;
-            this.cmbFluorescent.Location = new System.Drawing.Point(149, 269);
+            this.cmbFluorescent.Location = new System.Drawing.Point(149, 302);
             this.cmbFluorescent.Name = "cmbFluorescent";
             this.cmbFluorescent.Size = new System.Drawing.Size(165, 29);
             this.cmbFluorescent.TabIndex = 14;
@@ -338,7 +367,7 @@
             // cmbCut
             // 
             this.cmbCut.FormattingEnabled = true;
-            this.cmbCut.Location = new System.Drawing.Point(150, 162);
+            this.cmbCut.Location = new System.Drawing.Point(150, 195);
             this.cmbCut.Name = "cmbCut";
             this.cmbCut.Size = new System.Drawing.Size(165, 29);
             this.cmbCut.TabIndex = 9;
@@ -347,7 +376,7 @@
             // 
             this.label27.AutoSize = true;
             this.label27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label27.Location = new System.Drawing.Point(29, 168);
+            this.label27.Location = new System.Drawing.Point(29, 201);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(40, 21);
             this.label27.TabIndex = 146;
@@ -365,7 +394,7 @@
             // 
             // txtTotalBaht
             // 
-            this.txtTotalBaht.Location = new System.Drawing.Point(832, 304);
+            this.txtTotalBaht.Location = new System.Drawing.Point(832, 227);
             this.txtTotalBaht.Name = "txtTotalBaht";
             this.txtTotalBaht.Size = new System.Drawing.Size(131, 27);
             this.txtTotalBaht.TabIndex = 158;
@@ -377,7 +406,7 @@
             // 
             this.label24.AutoSize = true;
             this.label24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label24.Location = new System.Drawing.Point(732, 310);
+            this.label24.Location = new System.Drawing.Point(732, 233);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(90, 21);
             this.label24.TabIndex = 143;
@@ -385,7 +414,7 @@
             // 
             // txtUSDRate
             // 
-            this.txtUSDRate.Location = new System.Drawing.Point(832, 269);
+            this.txtUSDRate.Location = new System.Drawing.Point(832, 192);
             this.txtUSDRate.Name = "txtUSDRate";
             this.txtUSDRate.Size = new System.Drawing.Size(61, 27);
             this.txtUSDRate.TabIndex = 38;
@@ -398,7 +427,7 @@
             // 
             this.label23.AutoSize = true;
             this.label23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label23.Location = new System.Drawing.Point(732, 272);
+            this.label23.Location = new System.Drawing.Point(732, 195);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(83, 21);
             this.label23.TabIndex = 141;
@@ -429,11 +458,11 @@
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.label21.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label21.Location = new System.Drawing.Point(732, 235);
+            this.label21.Location = new System.Drawing.Point(28, 56);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(80, 19);
+            this.label21.Size = new System.Drawing.Size(86, 21);
             this.label21.TabIndex = 138;
             this.label21.Text = "Due Date";
             // 
@@ -441,10 +470,11 @@
             // 
             this.dtDueDate.CustomFormat = "dd/MM/yyyy";
             this.dtDueDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtDueDate.Location = new System.Drawing.Point(832, 229);
+            this.dtDueDate.Location = new System.Drawing.Point(150, 51);
             this.dtDueDate.Name = "dtDueDate";
             this.dtDueDate.Size = new System.Drawing.Size(131, 27);
             this.dtDueDate.TabIndex = 40;
+            this.dtDueDate.ValueChanged += new System.EventHandler(this.dtDueDate_ValueChanged);
             // 
             // label20
             // 
@@ -540,7 +570,7 @@
             // linkFile
             // 
             this.linkFile.AutoSize = true;
-            this.linkFile.Location = new System.Drawing.Point(152, 401);
+            this.linkFile.Location = new System.Drawing.Point(152, 431);
             this.linkFile.Name = "linkFile";
             this.linkFile.Size = new System.Drawing.Size(122, 21);
             this.linkFile.TabIndex = 122;
@@ -552,7 +582,7 @@
             // 
             this.label26.AutoSize = true;
             this.label26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label26.Location = new System.Drawing.Point(29, 58);
+            this.label26.Location = new System.Drawing.Point(29, 91);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(49, 21);
             this.label26.TabIndex = 113;
@@ -560,7 +590,7 @@
             // 
             // txtSeller
             // 
-            this.txtSeller.Location = new System.Drawing.Point(150, 54);
+            this.txtSeller.Location = new System.Drawing.Point(150, 87);
             this.txtSeller.Name = "txtSeller";
             this.txtSeller.Size = new System.Drawing.Size(150, 27);
             this.txtSeller.TabIndex = 2;
@@ -569,7 +599,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label14.Location = new System.Drawing.Point(29, 129);
+            this.label14.Location = new System.Drawing.Point(29, 162);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(92, 21);
             this.label14.TabIndex = 106;
@@ -579,7 +609,7 @@
             // 
             this.cmbColorType.AccessibleDescription = "";
             this.cmbColorType.FormattingEnabled = true;
-            this.cmbColorType.Location = new System.Drawing.Point(150, 125);
+            this.cmbColorType.Location = new System.Drawing.Point(150, 158);
             this.cmbColorType.Name = "cmbColorType";
             this.cmbColorType.Size = new System.Drawing.Size(165, 29);
             this.cmbColorType.TabIndex = 4;
@@ -589,7 +619,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label15.Location = new System.Drawing.Point(30, 310);
+            this.label15.Location = new System.Drawing.Point(30, 343);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(39, 21);
             this.label15.TabIndex = 104;
@@ -598,7 +628,7 @@
             // cmbLab
             // 
             this.cmbLab.FormattingEnabled = true;
-            this.cmbLab.Location = new System.Drawing.Point(149, 307);
+            this.cmbLab.Location = new System.Drawing.Point(149, 340);
             this.cmbLab.Name = "cmbLab";
             this.cmbLab.Size = new System.Drawing.Size(132, 29);
             this.cmbLab.TabIndex = 16;
@@ -607,7 +637,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label12.Location = new System.Drawing.Point(29, 237);
+            this.label12.Location = new System.Drawing.Point(29, 270);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(86, 21);
             this.label12.TabIndex = 102;
@@ -616,7 +646,7 @@
             // cmbSymmetry
             // 
             this.cmbSymmetry.FormattingEnabled = true;
-            this.cmbSymmetry.Location = new System.Drawing.Point(150, 234);
+            this.cmbSymmetry.Location = new System.Drawing.Point(150, 267);
             this.cmbSymmetry.Name = "cmbSymmetry";
             this.cmbSymmetry.Size = new System.Drawing.Size(165, 29);
             this.cmbSymmetry.TabIndex = 12;
@@ -625,7 +655,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label11.Location = new System.Drawing.Point(29, 205);
+            this.label11.Location = new System.Drawing.Point(29, 238);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(51, 21);
             this.label11.TabIndex = 100;
@@ -680,21 +710,11 @@
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label5.Location = new System.Drawing.Point(29, 275);
+            this.label5.Location = new System.Drawing.Point(29, 308);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(108, 21);
             this.label5.TabIndex = 91;
             this.label5.Text = "Fluorescense";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label4.Location = new System.Drawing.Point(787, 16);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(125, 21);
-            this.label4.TabIndex = 90;
-            this.label4.Text = "Measurements";
             // 
             // cmbShape
             // 
@@ -736,7 +756,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label1.Location = new System.Drawing.Point(29, 94);
+            this.label1.Location = new System.Drawing.Point(29, 127);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(54, 21);
             this.label1.TabIndex = 85;
@@ -745,7 +765,7 @@
             // cmbPolish
             // 
             this.cmbPolish.FormattingEnabled = true;
-            this.cmbPolish.Location = new System.Drawing.Point(150, 199);
+            this.cmbPolish.Location = new System.Drawing.Point(150, 232);
             this.cmbPolish.Name = "cmbPolish";
             this.cmbPolish.Size = new System.Drawing.Size(164, 29);
             this.cmbPolish.TabIndex = 10;
@@ -764,58 +784,10 @@
             // 
             this.txtCode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.txtCode.Enabled = false;
-            this.txtCode.Location = new System.Drawing.Point(150, 90);
+            this.txtCode.Location = new System.Drawing.Point(150, 123);
             this.txtCode.Name = "txtCode";
             this.txtCode.Size = new System.Drawing.Size(150, 27);
             this.txtCode.TabIndex = 150;
-            // 
-            // txtW
-            // 
-            this.txtW.Location = new System.Drawing.Point(739, 48);
-            this.txtW.Name = "txtW";
-            this.txtW.Size = new System.Drawing.Size(53, 27);
-            this.txtW.TabIndex = 22;
-            this.txtW.Text = "0";
-            this.txtW.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtW.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtWeight_KeyPress);
-            // 
-            // txtD
-            // 
-            this.txtD.Location = new System.Drawing.Point(900, 48);
-            this.txtD.Name = "txtD";
-            this.txtD.Size = new System.Drawing.Size(53, 27);
-            this.txtD.TabIndex = 26;
-            this.txtD.Text = "0";
-            this.txtD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtWeight_KeyPress);
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(878, 51);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(18, 21);
-            this.label17.TabIndex = 76;
-            this.label17.Text = "x";
-            // 
-            // lbl1
-            // 
-            this.lbl1.AutoSize = true;
-            this.lbl1.Location = new System.Drawing.Point(798, 51);
-            this.lbl1.Name = "lbl1";
-            this.lbl1.Size = new System.Drawing.Size(18, 21);
-            this.lbl1.TabIndex = 75;
-            this.lbl1.Text = "x";
-            // 
-            // txtL
-            // 
-            this.txtL.Location = new System.Drawing.Point(819, 48);
-            this.txtL.Name = "txtL";
-            this.txtL.Size = new System.Drawing.Size(53, 27);
-            this.txtL.TabIndex = 24;
-            this.txtL.Text = "0";
-            this.txtL.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtL.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtWeight_KeyPress);
             // 
             // panel1
             // 
@@ -841,12 +813,16 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // openFileDialog2
+            // 
+            this.openFileDialog2.FileName = "openFileDialog2";
+            // 
             // BuyBookDiamondCer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(195)))), ((int)(((byte)(157)))));
-            this.ClientSize = new System.Drawing.Size(1025, 533);
+            this.ClientSize = new System.Drawing.Size(1025, 553);
             this.Controls.Add(this.panel3);
             this.Name = "BuyBookDiamondCer";
             this.Text = "DiamondCer";
@@ -866,11 +842,6 @@
         #endregion
         private System.Windows.Forms.DateTimePicker dtBuyDate;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox txtW;
-        private System.Windows.Forms.TextBox txtD;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label lbl1;
-        private System.Windows.Forms.TextBox txtL;
         private System.Windows.Forms.TextBox txtCode;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel1;
@@ -879,7 +850,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtReportNumber;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cmbShape;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label12;
@@ -933,5 +903,9 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.DateTimePicker dtPayDate;
+        private System.Windows.Forms.Button btnImportExcel;
+        private System.Windows.Forms.OpenFileDialog openFileDialog2;
     }
 }

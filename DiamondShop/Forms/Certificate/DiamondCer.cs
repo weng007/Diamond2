@@ -48,9 +48,6 @@ namespace DiamondShop
             binder.BindControl(txtReportNumber, "ReportNumber");
             binder.BindControl(txtWeight, "Weight");
             binder.BindControl(txtShape, "ShapeName");
-            binder.BindControl(txtW, "W");
-            binder.BindControl(txtL, "L");
-            binder.BindControl(txtD, "D");
             binder.BindControl(txtColor, "ColorName");
             binder.BindControl(txtCut, "CutName");
             binder.BindControl(txtClearity, "ClearityName");

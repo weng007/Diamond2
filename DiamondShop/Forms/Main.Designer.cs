@@ -52,6 +52,7 @@
             this.btnMaster = new System.Windows.Forms.ToolStripMenuItem();
             this.menuUser = new System.Windows.Forms.ToolStripMenuItem();
             this.menuSeller = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuExchangeRate = new System.Windows.Forms.ToolStripMenuItem();
             this.btnCatalog = new System.Windows.Forms.ToolStripMenuItem();
             this.mnCatDR = new System.Windows.Forms.ToolStripMenuItem();
             this.mnCatDE = new System.Windows.Forms.ToolStripMenuItem();
@@ -96,6 +97,7 @@
             this.mnBBST = new System.Windows.Forms.ToolStripMenuItem();
             this.mnBBETC = new System.Windows.Forms.ToolStripMenuItem();
             this.btnAccounting = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuPayment = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -354,7 +356,8 @@
             // 
             this.btnMaster.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuUser,
-            this.menuSeller});
+            this.menuSeller,
+            this.menuExchangeRate});
             this.btnMaster.Image = ((System.Drawing.Image)(resources.GetObject("btnMaster.Image")));
             this.btnMaster.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnMaster.Name = "btnMaster";
@@ -368,7 +371,7 @@
             this.menuUser.Image = ((System.Drawing.Image)(resources.GetObject("menuUser.Image")));
             this.menuUser.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.menuUser.Name = "menuUser";
-            this.menuUser.Size = new System.Drawing.Size(130, 38);
+            this.menuUser.Size = new System.Drawing.Size(203, 38);
             this.menuUser.Text = "User";
             this.menuUser.Click += new System.EventHandler(this.btnUser_Click);
             // 
@@ -378,9 +381,17 @@
             this.menuSeller.Image = ((System.Drawing.Image)(resources.GetObject("menuSeller.Image")));
             this.menuSeller.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.menuSeller.Name = "menuSeller";
-            this.menuSeller.Size = new System.Drawing.Size(130, 38);
+            this.menuSeller.Size = new System.Drawing.Size(203, 38);
             this.menuSeller.Text = "Seller";
             this.menuSeller.Click += new System.EventHandler(this.menuSeller_Click);
+            // 
+            // menuExchangeRate
+            // 
+            this.menuExchangeRate.Font = new System.Drawing.Font("Century Gothic", 11.25F);
+            this.menuExchangeRate.Name = "menuExchangeRate";
+            this.menuExchangeRate.Size = new System.Drawing.Size(203, 38);
+            this.menuExchangeRate.Text = "Exchange Rate";
+            this.menuExchangeRate.Click += new System.EventHandler(this.menuExchangeRate_Click);
             // 
             // btnCatalog
             // 
@@ -843,11 +854,21 @@
             // 
             // btnAccounting
             // 
+            this.btnAccounting.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.MenuPayment});
             this.btnAccounting.Image = ((System.Drawing.Image)(resources.GetObject("btnAccounting.Image")));
             this.btnAccounting.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnAccounting.Name = "btnAccounting";
             this.btnAccounting.Padding = new System.Windows.Forms.Padding(10, 4, 4, 4);
             this.btnAccounting.Size = new System.Drawing.Size(88, 95);
+            // 
+            // MenuPayment
+            // 
+            this.MenuPayment.Font = new System.Drawing.Font("Century Gothic", 11.25F);
+            this.MenuPayment.Name = "MenuPayment";
+            this.MenuPayment.Size = new System.Drawing.Size(152, 24);
+            this.MenuPayment.Text = "Payment";
+            this.MenuPayment.Click += new System.EventHandler(this.MenuPayment_Click);
             // 
             // Main
             // 
@@ -945,6 +966,8 @@
         private System.Windows.Forms.ToolStripMenuItem mnCatMTO;
         private System.Windows.Forms.ToolStripMenuItem mnInvMTO;
         private System.Windows.Forms.Button btnLogout;
+        private System.Windows.Forms.ToolStripMenuItem MenuPayment;
+        private System.Windows.Forms.ToolStripMenuItem menuExchangeRate;
     }
 }
 

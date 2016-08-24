@@ -72,6 +72,11 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.label20 = new System.Windows.Forms.Label();
+            this.dtPayDate = new System.Windows.Forms.DateTimePicker();
+            this.rdoNo = new System.Windows.Forms.RadioButton();
+            this.rdoYes = new System.Windows.Forms.RadioButton();
+            this.label21 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -89,6 +94,11 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.label20);
+            this.panel3.Controls.Add(this.dtPayDate);
+            this.panel3.Controls.Add(this.rdoNo);
+            this.panel3.Controls.Add(this.rdoYes);
+            this.panel3.Controls.Add(this.label21);
             this.panel3.Controls.Add(this.label19);
             this.panel3.Controls.Add(this.txtMinPrice);
             this.panel3.Controls.Add(this.btnGemstone);
@@ -556,6 +566,59 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
+            this.label20.Location = new System.Drawing.Point(870, 164);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(78, 19);
+            this.label20.TabIndex = 200;
+            this.label20.Text = "Pay Date";
+            // 
+            // dtPayDate
+            // 
+            this.dtPayDate.CustomFormat = "dd/MM/yyyy";
+            this.dtPayDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtPayDate.Location = new System.Drawing.Point(967, 159);
+            this.dtPayDate.Name = "dtPayDate";
+            this.dtPayDate.Size = new System.Drawing.Size(136, 27);
+            this.dtPayDate.TabIndex = 199;
+            // 
+            // rdoNo
+            // 
+            this.rdoNo.AutoSize = true;
+            this.rdoNo.Checked = true;
+            this.rdoNo.Location = new System.Drawing.Point(1036, 128);
+            this.rdoNo.Name = "rdoNo";
+            this.rdoNo.Size = new System.Drawing.Size(50, 25);
+            this.rdoNo.TabIndex = 197;
+            this.rdoNo.TabStop = true;
+            this.rdoNo.Text = "No";
+            this.rdoNo.UseVisualStyleBackColor = true;
+            // 
+            // rdoYes
+            // 
+            this.rdoYes.AutoSize = true;
+            this.rdoYes.Location = new System.Drawing.Point(970, 128);
+            this.rdoYes.Name = "rdoYes";
+            this.rdoYes.Size = new System.Drawing.Size(55, 25);
+            this.rdoYes.TabIndex = 196;
+            this.rdoYes.Text = "Yes";
+            this.rdoYes.UseVisualStyleBackColor = true;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.label21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
+            this.label21.Location = new System.Drawing.Point(871, 130);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(78, 19);
+            this.label21.TabIndex = 198;
+            this.label21.Text = "Payment";
+            // 
             // BuyBookJewelry
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -618,5 +681,10 @@
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.TextBox txtMinPrice;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.DateTimePicker dtPayDate;
+        private System.Windows.Forms.RadioButton rdoNo;
+        private System.Windows.Forms.RadioButton rdoYes;
+        private System.Windows.Forms.Label label21;
     }
 }

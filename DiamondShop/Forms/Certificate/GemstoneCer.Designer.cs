@@ -71,18 +71,12 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtReportNumber = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txtCode = new System.Windows.Forms.TextBox();
-            this.txtW = new System.Windows.Forms.TextBox();
-            this.txtD = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.lbl1 = new System.Windows.Forms.Label();
-            this.txtL = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
@@ -126,18 +120,12 @@
             this.panel3.Controls.Add(this.label9);
             this.panel3.Controls.Add(this.label8);
             this.panel3.Controls.Add(this.label7);
-            this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.txtReportNumber);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.label6);
             this.panel3.Controls.Add(this.txtCode);
-            this.panel3.Controls.Add(this.txtW);
-            this.panel3.Controls.Add(this.txtD);
-            this.panel3.Controls.Add(this.label17);
-            this.panel3.Controls.Add(this.lbl1);
-            this.panel3.Controls.Add(this.txtL);
             this.panel3.Controls.Add(this.dtReportDate);
             this.panel3.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.panel3.Location = new System.Drawing.Point(12, 72);
@@ -301,6 +289,7 @@
             // txtNote1
             // 
             this.txtNote1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.txtNote1.Enabled = false;
             this.txtNote1.Location = new System.Drawing.Point(513, 100);
             this.txtNote1.Multiline = true;
             this.txtNote1.Name = "txtNote1";
@@ -549,16 +538,6 @@
             this.label7.TabIndex = 93;
             this.label7.Text = "Identification";
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label4.Location = new System.Drawing.Point(29, 171);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(125, 21);
-            this.label4.TabIndex = 90;
-            this.label4.Text = "Measurements";
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -616,57 +595,6 @@
             this.txtCode.Size = new System.Drawing.Size(157, 27);
             this.txtCode.TabIndex = 100;
             // 
-            // txtW
-            // 
-            this.txtW.Enabled = false;
-            this.txtW.Location = new System.Drawing.Point(169, 166);
-            this.txtW.Name = "txtW";
-            this.txtW.Size = new System.Drawing.Size(53, 27);
-            this.txtW.TabIndex = 16;
-            this.txtW.Text = "0";
-            this.txtW.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtW.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCarat_KeyPress);
-            // 
-            // txtD
-            // 
-            this.txtD.Enabled = false;
-            this.txtD.Location = new System.Drawing.Point(330, 166);
-            this.txtD.Name = "txtD";
-            this.txtD.Size = new System.Drawing.Size(53, 27);
-            this.txtD.TabIndex = 24;
-            this.txtD.Text = "0";
-            this.txtD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCarat_KeyPress);
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(308, 169);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(18, 21);
-            this.label17.TabIndex = 76;
-            this.label17.Text = "x";
-            // 
-            // lbl1
-            // 
-            this.lbl1.AutoSize = true;
-            this.lbl1.Location = new System.Drawing.Point(228, 169);
-            this.lbl1.Name = "lbl1";
-            this.lbl1.Size = new System.Drawing.Size(18, 21);
-            this.lbl1.TabIndex = 75;
-            this.lbl1.Text = "x";
-            // 
-            // txtL
-            // 
-            this.txtL.Enabled = false;
-            this.txtL.Location = new System.Drawing.Point(249, 166);
-            this.txtL.Name = "txtL";
-            this.txtL.Size = new System.Drawing.Size(53, 27);
-            this.txtL.TabIndex = 20;
-            this.txtL.Text = "0";
-            this.txtL.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtL.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCarat_KeyPress);
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(35)))), ((int)(((byte)(69)))));
@@ -710,11 +638,6 @@
         #endregion
         private System.Windows.Forms.DateTimePicker dtReportDate;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox txtW;
-        private System.Windows.Forms.TextBox txtD;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label lbl1;
-        private System.Windows.Forms.TextBox txtL;
         private System.Windows.Forms.TextBox txtCode;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel1;
@@ -722,7 +645,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtReportNumber;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;

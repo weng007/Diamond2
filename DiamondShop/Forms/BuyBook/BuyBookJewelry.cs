@@ -42,6 +42,7 @@ namespace DiamondShop
             binder.BindControl(txtNote, "NoteForRate");
             binder.BindControl(txtRemark, "Remark");
             binder.BindControl(txtMinPrice, "MinPrice");
+            binder.BindControl(dtPayDate, "PayDate");
         }
         public BuyBookJewelry(int id)
         {
@@ -63,6 +64,7 @@ namespace DiamondShop
             binder.BindControl(txtNote, "NoteForRate");
             binder.BindControl(txtRemark, "Remark");
             binder.BindControl(txtMinPrice, "MinPrice");
+            binder.BindControl(dtPayDate, "PayDate");
 
             btnDiamond.Enabled = true;
             btnGemstone.Enabled = true;
@@ -126,6 +128,16 @@ namespace DiamondShop
                     Image backImage2 = Image.FromStream(ms2);
                     btnImage2.BackgroundImage = backImage2;
                 }
+                if (tds.BuyBookJewelry[0]["IsPaid"].ToString() == "0")
+                {
+                    rdoYes.Checked = false;
+                    rdoNo.Checked = true;
+                }
+                else
+                {
+                    rdoYes.Checked = true;
+                    rdoNo.Checked = false;
+                }
 
                 EnableSave = false;
                 EnableEdit = true;
@@ -176,6 +188,7 @@ namespace DiamondShop
                 tds.BuyBookJewelry.Rows.Add(row);
             }
             binder.BindValueToDataRow(row);
+            row.IsPaid = rdoYes.Checked ? "1" : "0";
             row.Image1 = image1;
             row.Image2 = image2;
 

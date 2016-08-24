@@ -50,7 +50,7 @@ namespace DiamondShop
             }
             else { gridInventory.DataSource = null; gridInventory.Refresh(); }
 
-            //btnSearch_Click(null, null);
+            btnSearch_Click(null, null);
         }
 
         private void DoSearchData()

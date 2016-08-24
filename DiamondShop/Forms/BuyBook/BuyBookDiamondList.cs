@@ -47,7 +47,7 @@ namespace DiamondShop
                 gridDiamond.Refresh();
             }
 
-            //btnSearch_Click(null, null);
+            btnSearch_Click(null, null);
         }
 
         private void btnAdd_Click(object sender, EventArgs e)

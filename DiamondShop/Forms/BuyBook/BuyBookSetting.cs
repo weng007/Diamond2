@@ -55,6 +55,7 @@ namespace DiamondShop
             binder.BindControl(txtSeller, "Seller");
             binder.BindControl(txtBuyPrice, "BuyPrice");
             binder.BindControl(txtSalePrice, "SalePrice");
+            binder.BindControl(dtPayDate, "PayDate");
         }
         protected override void LoadData()
         {
@@ -73,6 +74,16 @@ namespace DiamondShop
                 EnableSave = false;
                 EnableEdit = true;
                 EnableDelete = false;
+            }
+            if (tds.BBSetting[0]["IsPaid"].ToString() == "0")
+            {
+                rdoYes.Checked = false;
+                rdoNo.Checked = true;
+            }
+            else
+            {
+                rdoYes.Checked = true;
+                rdoNo.Checked = false;
             }
 
             if (tds2.BBSettingDetail.Rows.Count > 0)
@@ -98,7 +109,7 @@ namespace DiamondShop
                 tds.BBSetting.Rows.Add(row);
             }
             binder.BindValueToDataRow(row);
-
+            row.IsPaid = rdoYes.Checked ? "1" : "0";
             try
             {
                 if (id == 0)

@@ -14,7 +14,7 @@
   <xs:element name="dsBuyBookETC" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsBuyBookETC" msprop:Generator_UserDSName="dsBuyBookETC">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="BuyBookETC" msprop:Generator_TableClassName="BuyBookETCDataTable" msprop:Generator_TableVarName="tableBuyBookETC" msprop:Generator_RowChangedName="BuyBookETCRowChanged" msprop:Generator_TablePropName="BuyBookETC" msprop:Generator_RowDeletingName="BuyBookETCRowDeleting" msprop:Generator_RowChangingName="BuyBookETCRowChanging" msprop:Generator_RowEvHandlerName="BuyBookETCRowChangeEventHandler" msprop:Generator_RowDeletedName="BuyBookETCRowDeleted" msprop:Generator_RowClassName="BuyBookETCRow" msprop:Generator_UserTableName="BuyBookETC" msprop:Generator_RowEvArgName="BuyBookETCRowChangeEvent">
+        <xs:element name="BuyBookETC" msprop:Generator_TableClassName="BuyBookETCDataTable" msprop:Generator_TableVarName="tableBuyBookETC" msprop:Generator_TablePropName="BuyBookETC" msprop:Generator_RowDeletingName="BuyBookETCRowDeleting" msprop:Generator_RowChangingName="BuyBookETCRowChanging" msprop:Generator_RowEvHandlerName="BuyBookETCRowChangeEventHandler" msprop:Generator_RowDeletedName="BuyBookETCRowDeleted" msprop:Generator_UserTableName="BuyBookETC" msprop:Generator_RowChangedName="BuyBookETCRowChanged" msprop:Generator_RowEvArgName="BuyBookETCRowChangeEvent" msprop:Generator_RowClassName="BuyBookETCRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="RowNum" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnRowNum" msprop:Generator_ColumnPropNameInRow="RowNum" msprop:Generator_ColumnPropNameInTable="RowNumColumn" msprop:Generator_UserColumnName="RowNum" type="xs:long" minOccurs="0" />
@@ -46,6 +46,8 @@
               <xs:element name="CreateDate" msprop:Generator_ColumnVarNameInTable="columnCreateDate" msprop:Generator_ColumnPropNameInRow="CreateDate" msprop:Generator_ColumnPropNameInTable="CreateDateColumn" msprop:Generator_UserColumnName="CreateDate" type="xs:dateTime" minOccurs="0" />
               <xs:element name="EditBy" msprop:Generator_ColumnVarNameInTable="columnEditBy" msprop:Generator_ColumnPropNameInRow="EditBy" msprop:Generator_ColumnPropNameInTable="EditByColumn" msprop:Generator_UserColumnName="EditBy" type="xs:int" minOccurs="0" />
               <xs:element name="EditDate" msprop:Generator_ColumnVarNameInTable="columnEditDate" msprop:Generator_ColumnPropNameInRow="EditDate" msprop:Generator_ColumnPropNameInTable="EditDateColumn" msprop:Generator_UserColumnName="EditDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="IsPaid" msprop:Generator_ColumnVarNameInTable="columnIsPaid" msprop:Generator_ColumnPropNameInRow="IsPaid" msprop:Generator_ColumnPropNameInTable="IsPaidColumn" msprop:Generator_UserColumnName="IsPaid" type="xs:string" minOccurs="0" />
+              <xs:element name="PayDate" msprop:Generator_ColumnVarNameInTable="columnPayDate" msprop:Generator_ColumnPropNameInRow="PayDate" msprop:Generator_ColumnPropNameInTable="PayDateColumn" msprop:Generator_UserColumnName="PayDate" type="xs:dateTime" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

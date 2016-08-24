@@ -11,6 +11,8 @@ using System.Windows.Forms;
 using DiamondShop.FormMaster;
 using DiamondDS.DS;
 using DiamondShop.DiamondService;
+using System.Data.OleDb;
+using System.Data.SqlClient;
 
 
 namespace DiamondShop
@@ -19,6 +21,7 @@ namespace DiamondShop
     {
         dsBuyBookDiamondCer tds = new dsBuyBookDiamondCer();
         bool isAuthorize = false;
+        string FilePath;
         MemoryStream ms;
         byte[] file;
 
@@ -48,13 +51,13 @@ namespace DiamondShop
             binder.BindControl(cmbShop, "Shop");
             binder.BindControl(cmbSetting, "Setting");
             binder.BindControl(cmbLab, "Lab");
-            binder.BindControl(txtW, "W");
-            binder.BindControl(txtL, "L");
-            binder.BindControl(txtD, "D");
             binder.BindControl(dtDueDate, "DueDate");
             binder.BindControl(txtUSDRate, "USDRate");
             binder.BindControl(txtTotalBaht, "TotalBaht");
             binder.BindControl(txtNote, "Note");
+            binder.BindControl(dtPayDate, "PayDate");
+
+            dtDueDate.Value = dtBuyDate.Value.AddDays(30);
         }
         public BuyBookDiamondCer(int id)
         {
@@ -82,13 +85,11 @@ namespace DiamondShop
             binder.BindControl(cmbShop, "Shop");
             binder.BindControl(cmbSetting, "Setting");
             binder.BindControl(cmbLab, "Lab");
-            binder.BindControl(txtW, "W");
-            binder.BindControl(txtL, "L");
-            binder.BindControl(txtD, "D");
             binder.BindControl(dtDueDate, "DueDate");
             binder.BindControl(txtUSDRate, "USDRate");
             binder.BindControl(txtTotalBaht, "TotalBaht");
             binder.BindControl(txtNote, "Note");
+            binder.BindControl(dtPayDate, "PayDate");
 
             this.id = id;
             LoadData();
@@ -154,7 +155,7 @@ namespace DiamondShop
 
             dtBuyDate.Select();
 
-            SetFieldService.SetRequireField(txtWeight, txtPrice, txtRap);
+            SetFieldService.SetRequireField(txtWeight, txtPrice, txtRap, txtUSDRate);
         }
 
         protected override void LoadData()
@@ -320,6 +321,10 @@ namespace DiamondShop
             {
                 message += "Please Input Rap > 0.\n";
             }
+            if (txtUSDRate.Text == "" || GM.ConvertStringToDouble(txtUSDRate) == 0)
+            {
+                message += "Please input USDRate > 0.\n";
+            }
 
             if (message == "") { return true; }
             else { return false; }
@@ -415,8 +420,8 @@ namespace DiamondShop
 
         private void txtUSDRate_Leave(object sender, EventArgs e)
         {
-            txtTotalBaht.Text = (GM.ConvertStringToDouble(txtTotal) * GM.ConvertStringToDouble(txtUSDRate)).ToString();
-            txtTotalBaht.Text = GM.ConvertDoubleToString(txtTotalBaht,0);
+                txtTotalBaht.Text = (GM.ConvertStringToDouble(txtTotal) * GM.ConvertStringToDouble(txtUSDRate)).ToString();
+                txtTotalBaht.Text = GM.ConvertDoubleToString(txtTotalBaht, 0);
         }
 
         private void txtTotal_TextChanged(object sender, EventArgs e)
@@ -468,9 +473,6 @@ namespace DiamondShop
             cmbShop.Enabled = status;
             txtPrice.Enabled = status;
             txtRap.Enabled = status;
-            txtW.Enabled = status;
-            txtL.Enabled = status;
-            txtD.Enabled = status;
             rdoIns1.Enabled = status;
             rdoIns2.Enabled = status;
             rdoYes.Enabled = status;
@@ -480,6 +482,34 @@ namespace DiamondShop
             txtTotalBaht.Enabled = status;
             txtNote.Enabled = status;
             btnUpload.Enabled = status;
+            dtPayDate.Enabled = status;
+        }
+
+        private void dtDueDate_ValueChanged(object sender, EventArgs e)
+        {
+            dtDueDate.Value = dtBuyDate.Value.AddDays(30);
+        }
+
+        private void btnImportExcel_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog2.ShowDialog() == DialogResult.OK && openFileDialog2.CheckFileExists)
+            {
+                using (var stream = new FileStream(openFileDialog2.FileName, FileMode.Open, FileAccess.Read))
+                {
+                    using (var reader = new BinaryReader(stream))
+                    {
+                        file = reader.ReadBytes((int)stream.Length);
+                    }
+                }
+
+                if (file.Length > 0)
+                {
+                    FilePath = openFileDialog2.FileName;
+                }
+            }
+            BuyBookDiamonCrExcel frm = new BuyBookDiamonCrExcel(id,FilePath);
+            frm.ShowDialog();
+
         }
     }
 }

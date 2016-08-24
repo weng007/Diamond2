@@ -27,6 +27,7 @@ namespace DiamondShop
             binder.BindControl(txtSeller, "Seller");
             binder.BindControl(txtDetail, "Detail");
             binder.BindControl(txtPrice, "Price");
+            binder.BindControl(dtPayDate, "PayDate");
 
         }
         public BuyBookETC(int id)
@@ -38,6 +39,7 @@ namespace DiamondShop
             binder.BindControl(txtSeller, "Seller");
             binder.BindControl(txtDetail, "Detail");
             binder.BindControl(txtPrice, "Price");
+            binder.BindControl(dtPayDate, "PayDate");
 
             this.id = id;
             LoadData();
@@ -66,6 +68,16 @@ namespace DiamondShop
                 EnableEdit = true;
                 EnableDelete = false;
             }
+            if (tds.BuyBookETC[0]["IsPaid"].ToString() == "0")
+            {
+                rdoYes.Checked = false;
+                rdoNo.Checked = true;
+            }
+            else
+            {
+                rdoYes.Checked = true;
+                rdoNo.Checked = false;
+            }
             SetFormatNumber();
             base.LoadData();
         }
@@ -84,7 +96,7 @@ namespace DiamondShop
                 tds.BuyBookETC.Rows.Add(row);
             }
             binder.BindValueToDataRow(row);
-
+            row.IsPaid = rdoYes.Checked ? "1" : "0";
             try
             {
                 if (id == 0)

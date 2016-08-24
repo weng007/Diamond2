@@ -41,9 +41,6 @@ namespace DiamondShop
             binder.BindControl(dtReportDate, "ReportDate");
             binder.BindControl(cmbLab, "Lab");
             binder.BindControl(cmbOrigin, "Origin");
-            binder.BindControl(txtW, "W");
-            binder.BindControl(txtL, "L");
-            binder.BindControl(txtD, "D");
             binder.BindControl(dtDueDate, "DueDate");
             binder.BindControl(txtPriceCaratUSD, "PriceCaratUSD");
             binder.BindControl(txtTotalUSD, "TotalUSD");
@@ -55,6 +52,9 @@ namespace DiamondShop
             binder.BindControl(cmbComment, "Comment");
             binder.BindControl(cmbCut, "Cut");
             binder.BindControl(cmbColor, "Color");
+            binder.BindControl(dtPayDate, "PayDate");
+
+            dtDueDate.Value = dtBuyDate.Value.AddDays(30);
         }
         public BuyBookGemstoneCer(int id)
         {
@@ -73,9 +73,6 @@ namespace DiamondShop
             binder.BindControl(dtReportDate, "ReportDate");
             binder.BindControl(cmbLab, "Lab");
             binder.BindControl(cmbOrigin, "Origin");
-            binder.BindControl(txtW, "W");
-            binder.BindControl(txtL, "L");
-            binder.BindControl(txtD, "D");
             binder.BindControl(dtDueDate, "DueDate");
             binder.BindControl(txtPriceCaratUSD, "PriceCaratUSD");
             binder.BindControl(txtTotalUSD, "TotalUSD");
@@ -87,6 +84,7 @@ namespace DiamondShop
             binder.BindControl(cmbComment, "Comment");
             binder.BindControl(cmbCut, "Cut");
             binder.BindControl(cmbColor, "Color");
+            binder.BindControl(dtPayDate, "PayDate");
 
             this.id = id;
             LoadData();
@@ -142,7 +140,7 @@ namespace DiamondShop
 
             dtBuyDate.Select();
 
-            SetFieldService.SetRequireField(txtWeight);
+            SetFieldService.SetRequireField(txtWeight, txtUSDRate);
         }
 
         protected override void LoadData()
@@ -299,6 +297,10 @@ namespace DiamondShop
             {
                 message += "Please input  Weight > 0.\n";
             }
+            if (txtUSDRate.Text == "" || GM.ConvertStringToDouble(txtUSDRate) == 0)
+            {
+                message += "Please input USDRate > 0.\n";
+            }
 
             if (message == "") { return true; }
             else { return false; }
@@ -354,8 +356,6 @@ namespace DiamondShop
             if(chkPayByUSD.Checked)
             {
                 txtPriceCaratUSD.Enabled = true;
-                txtUSDRate.Enabled = true;
-
                 txtPriceCarat.Enabled = false;
                 txtPriceCarat.Text = "0";
                 txtUSDRate_Leave(null, null);
@@ -363,9 +363,6 @@ namespace DiamondShop
             else
             {
                 txtPriceCaratUSD.Enabled = false;
-                txtUSDRate.Enabled = false;
-                txtUSDRate.Text = "0";
-
                 txtPriceCarat_Leave(null, null);
                 txtPriceCarat.Enabled = true;                       
             }       
@@ -403,7 +400,11 @@ namespace DiamondShop
 
         private void txtUSDRate_Leave(object sender, EventArgs e)
         {
-            txtTotalBaht.Text = (GM.ConvertStringToDouble(txtTotalUSD) * GM.ConvertStringToDouble(txtUSDRate)).ToString();
+            if (chkPayByUSD.Checked)
+            {
+                txtTotalBaht.Text = (GM.ConvertStringToDouble(txtTotalUSD) * GM.ConvertStringToDouble(txtUSDRate)).ToString();
+            }
+            
         }
 
         private void txtTotalBaht_TextChanged(object sender, EventArgs e)
@@ -477,9 +478,6 @@ namespace DiamondShop
             cmbComment.Enabled = status;
             dtReportDate.Enabled = status;
             cmbShop.Enabled = status;
-            txtW.Enabled = status;
-            txtL.Enabled = status;
-            txtD.Enabled = status;
             rdoYes.Enabled = status;
             rdoNo.Enabled = status;
             dtDueDate.Enabled = status;
@@ -490,6 +488,12 @@ namespace DiamondShop
             txtPriceCaratUSD.Enabled = status;
             btnUpload.Enabled = status;
             btnImage1.Enabled = status;
+            dtPayDate.Enabled = status;
+        }
+
+        private void dtDueDate_ValueChanged(object sender, EventArgs e)
+        {
+            dtDueDate.Value = dtBuyDate.Value.AddDays(30);
         }
     }
 }

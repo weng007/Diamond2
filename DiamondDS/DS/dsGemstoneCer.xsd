@@ -14,7 +14,7 @@
   <xs:element name="dsGemstoneCer" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsGemstoneCer" msprop:Generator_UserDSName="dsGemstoneCer">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="GemstoneCer" msprop:Generator_TableClassName="GemstoneCerDataTable" msprop:Generator_TableVarName="tableGemstoneCer" msprop:Generator_TablePropName="GemstoneCer" msprop:Generator_RowDeletingName="GemstoneCerRowDeleting" msprop:Generator_RowChangingName="GemstoneCerRowChanging" msprop:Generator_RowEvHandlerName="GemstoneCerRowChangeEventHandler" msprop:Generator_RowDeletedName="GemstoneCerRowDeleted" msprop:Generator_UserTableName="GemstoneCer" msprop:Generator_RowChangedName="GemstoneCerRowChanged" msprop:Generator_RowEvArgName="GemstoneCerRowChangeEvent" msprop:Generator_RowClassName="GemstoneCerRow">
+        <xs:element name="GemstoneCer" msprop:Generator_TableClassName="GemstoneCerDataTable" msprop:Generator_TableVarName="tableGemstoneCer" msprop:Generator_RowChangedName="GemstoneCerRowChanged" msprop:Generator_TablePropName="GemstoneCer" msprop:Generator_RowDeletingName="GemstoneCerRowDeleting" msprop:Generator_RowChangingName="GemstoneCerRowChanging" msprop:Generator_RowEvHandlerName="GemstoneCerRowChangeEventHandler" msprop:Generator_RowDeletedName="GemstoneCerRowDeleted" msprop:Generator_RowClassName="GemstoneCerRow" msprop:Generator_UserTableName="GemstoneCer" msprop:Generator_RowEvArgName="GemstoneCerRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="RowNum" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnRowNum" msprop:Generator_ColumnPropNameInRow="RowNum" msprop:Generator_ColumnPropNameInTable="RowNumColumn" msprop:Generator_UserColumnName="RowNum" type="xs:long" minOccurs="0" />
@@ -98,9 +98,6 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="W" msprop:Generator_ColumnVarNameInTable="columnW" msprop:Generator_ColumnPropNameInRow="W" msprop:Generator_ColumnPropNameInTable="WColumn" msprop:Generator_UserColumnName="W" type="xs:double" minOccurs="0" />
-              <xs:element name="L" msprop:Generator_ColumnVarNameInTable="columnL" msprop:Generator_ColumnPropNameInRow="L" msprop:Generator_ColumnPropNameInTable="LColumn" msprop:Generator_UserColumnName="L" type="xs:double" minOccurs="0" />
-              <xs:element name="D" msprop:Generator_ColumnVarNameInTable="columnD" msprop:Generator_ColumnPropNameInRow="D" msprop:Generator_ColumnPropNameInTable="DColumn" msprop:Generator_UserColumnName="D" type="xs:double" minOccurs="0" />
               <xs:element name="ReportNumber" msprop:Generator_ColumnVarNameInTable="columnReportNumber" msprop:Generator_ColumnPropNameInRow="ReportNumber" msprop:Generator_ColumnPropNameInTable="ReportNumberColumn" msprop:Generator_UserColumnName="ReportNumber" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">

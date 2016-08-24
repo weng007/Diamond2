@@ -418,6 +418,30 @@ namespace Diamond
                     throw ex;
                 }
             }
+            else if (TableName == "ExchangeRate")
+            {
+                ExchangeRateBiz biz = GM.GetExchangeRateBiz();
+                try
+                {
+                    return biz.DoSelectData();
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            else if (TableName == "BuyBookPayment")
+            {
+                BuyBookPaymentBiz biz = GM.GetBuyBookPaymentBiz();
+                try
+                {
+                    return biz.DoSelectData(id);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
             return null;
         }
         #endregion
@@ -1257,6 +1281,38 @@ namespace Diamond
             {
                 BuyBookETCBiz biz = GM.GetBuyBookETCBiz();
                 dsBuyBookETC ds1 = new dsBuyBookETC();
+
+                ds1.Merge(ds);
+
+                try
+                {
+                    flag = biz.DoUpdateData(ds1);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            else if (TableName == "ExchangeRate")
+            {
+                ExchangeRateBiz biz = GM.GetExchangeRateBiz();
+                dsExchangeRate ds1 = new dsExchangeRate();
+
+                ds1.Merge(ds);
+
+                try
+                {
+                    flag = biz.DoUpdateData(ds1);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            else if (TableName == "BuyBookPayment")
+            {
+                BuyBookPaymentBiz biz = GM.GetBuyBookPaymentBiz();
+                dsBuyBookPayment ds1 = new dsBuyBookPayment();
 
                 ds1.Merge(ds);
 

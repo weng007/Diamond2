@@ -42,9 +42,11 @@ namespace DiamondShop
             binder.BindControl(txtUSDRate, "USDRate");
             binder.BindControl(txtTotalBaht, "TotalBaht");
             binder.BindControl(txtPriceCarat, "PriceCarat");
+            binder.BindControl(chkPayByUSD, "PayByUSD");
             //binder.BindControl(txtTotalThaiBaht, "TotalThaiBaht");
             binder.BindControl(txtMarketPrice, "MarketPrice");
             binder.BindControl(txtNote, "Note");
+            binder.BindControl(dtPayDate, "PayDate");
 
             dtDueDate.Value = dtBuyDate.Value.AddDays(30);
 
@@ -71,9 +73,11 @@ namespace DiamondShop
             binder.BindControl(txtUSDRate, "USDRate");
             binder.BindControl(txtTotalBaht, "TotalBaht");
             binder.BindControl(txtPriceCarat, "PriceCarat");
+            binder.BindControl(chkPayByUSD, "PayByUSD");
             //binder.BindControl(txtTotalThaiBaht, "TotalThaiBaht");
             binder.BindControl(txtMarketPrice, "MarketPrice");
             binder.BindControl(txtNote, "Note");
+            binder.BindControl(dtPayDate, "PayDate");
 
             this.id = id;
             LoadData();
@@ -107,7 +111,7 @@ namespace DiamondShop
 
             dtBuyDate.Select();
 
-            SetFieldService.SetRequireField(txtWeight, txtSeller);
+            SetFieldService.SetRequireField(txtWeight, txtSeller,txtUSDRate);
         }
 
         protected override void LoadData()
@@ -248,6 +252,10 @@ namespace DiamondShop
             {
                 message += "Please input Weight > 0.\n";
             }
+            if (txtUSDRate.Text == "" || GM.ConvertStringToDouble(txtUSDRate) == 0)
+            {
+                message += "Please input USDRate > 0.\n";
+            }
 
             if (message == "") { return true; }
             else { return false; }
@@ -300,8 +308,6 @@ namespace DiamondShop
             if (chkPayByUSD.Checked)
             {
                 txtPriceCaratUSD.Enabled = true;
-                txtUSDRate.Enabled = true;
-
                 txtPriceCarat.Enabled = false;
                 txtPriceCarat.Text = "0";
                 txtUSDRate_Leave(null, null);
@@ -309,9 +315,6 @@ namespace DiamondShop
             else
             {
                 txtPriceCaratUSD.Enabled = false;
-                txtUSDRate.Enabled = false;
-                txtUSDRate.Text = "0";
-
                 txtPriceCarat_Leave(null, null);
                 txtPriceCarat.Enabled = true;
             }
@@ -349,7 +352,10 @@ namespace DiamondShop
 
         private void txtUSDRate_Leave(object sender, EventArgs e)
         {
-            txtTotalBaht.Text = (GM.ConvertStringToDouble(txtTotalUSD) * GM.ConvertStringToDouble(txtUSDRate)).ToString();
+            if (chkPayByUSD.Checked)
+            {
+                txtTotalBaht.Text = (GM.ConvertStringToDouble(txtTotalUSD) * GM.ConvertStringToDouble(txtUSDRate)).ToString();
+            }
         }
 
         private void txtTotalBaht_TextChanged(object sender, EventArgs e)
@@ -389,6 +395,7 @@ namespace DiamondShop
             grid1.Enabled = status;
             chkPayByUSD.Enabled = status;
             txtPriceCaratUSD.Enabled = status;
+            dtPayDate.Enabled = status;
         }
 
         private void dtBuyDate_ValueChanged(object sender, EventArgs e)

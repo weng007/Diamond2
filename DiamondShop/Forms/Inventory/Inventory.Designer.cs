@@ -208,7 +208,7 @@
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Location = new System.Drawing.Point(364, 54);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(100, 21);
+            this.comboBox3.Size = new System.Drawing.Size(100, 27);
             this.comboBox3.TabIndex = 28;
             // 
             // textBox2
@@ -636,7 +636,7 @@
             // txtCostCer
             // 
             this.txtCostCer.Enabled = false;
-            this.txtCostCer.Location = new System.Drawing.Point(242, 535);
+            this.txtCostCer.Location = new System.Drawing.Point(242, 502);
             this.txtCostCer.Name = "txtCostCer";
             this.txtCostCer.Size = new System.Drawing.Size(119, 27);
             this.txtCostCer.TabIndex = 64;
@@ -648,7 +648,7 @@
             // txtCostCer1
             // 
             this.txtCostCer1.Enabled = false;
-            this.txtCostCer1.Location = new System.Drawing.Point(434, 535);
+            this.txtCostCer1.Location = new System.Drawing.Point(434, 502);
             this.txtCostCer1.Name = "txtCostCer1";
             this.txtCostCer1.Size = new System.Drawing.Size(119, 27);
             this.txtCostCer1.TabIndex = 148;
@@ -660,7 +660,7 @@
             // txtCostNonCer
             // 
             this.txtCostNonCer.Enabled = false;
-            this.txtCostNonCer.Location = new System.Drawing.Point(242, 499);
+            this.txtCostNonCer.Location = new System.Drawing.Point(242, 540);
             this.txtCostNonCer.Name = "txtCostNonCer";
             this.txtCostNonCer.Size = new System.Drawing.Size(119, 27);
             this.txtCostNonCer.TabIndex = 60;
@@ -672,7 +672,7 @@
             // txtCostNonCer1
             // 
             this.txtCostNonCer1.Enabled = false;
-            this.txtCostNonCer1.Location = new System.Drawing.Point(434, 499);
+            this.txtCostNonCer1.Location = new System.Drawing.Point(434, 540);
             this.txtCostNonCer1.Name = "txtCostNonCer1";
             this.txtCostNonCer1.Size = new System.Drawing.Size(119, 27);
             this.txtCostNonCer1.TabIndex = 145;

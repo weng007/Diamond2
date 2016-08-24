@@ -321,5 +321,20 @@ namespace Diamond
                 throw ex;
             }
         }
+
+        [WebMethod]
+        public DataSet DoSearchBuyBookPayment(string Seller, string tableName, DateTime sBuyDate, DateTime eBuyDate, string IsPaid, DateTime sPayDate, DateTime ePayDate)
+        {
+            BuyBookPaymentBiz biz = new BuyBookPaymentBiz();
+
+            try
+            {
+                return biz.DoSearchData(Seller, tableName, sBuyDate, eBuyDate, IsPaid, sPayDate, ePayDate);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }
