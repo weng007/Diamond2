@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:import namespace="http://tempuri.org/dsUser.xsd" />
+      <s:import namespace="http://tempuri.org/dsSeller.xsd" />
+      <s:import schemaLocation="http://localhost:8888/DiamondService/Service2.asmx?schema=dsSeller" namespace="http://tempuri.org/dsSeller.xsd" />
+      <s:import schemaLocation="http://localhost:8888/DiamondService/Service2.asmx?schema=dsUser" namespace="http://tempuri.org/dsUser.xsd" />
+      <s:element name="DoAuthenticate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="type" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DoAuthenticateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DoAuthenticateResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/dsUser.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSeller">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetSellerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSellerResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/dsSeller.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRunningNumber">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="subject" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRunningNumberResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetRunningNumberResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetJewelryDetail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetJewelryDetailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetJewelryDetailResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateJewelryStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="status" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateJewelryStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateJewelryStatusResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPriceDaimondAndGemstone">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPriceDaimondAndGemstoneResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPriceDaimondAndGemstoneResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetReportJewelry">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetReportJewelryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetReportJewelryResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="DoAuthenticateSoapIn">
+    <wsdl:part name="parameters" element="tns:DoAuthenticate" />
+  </wsdl:message>
+  <wsdl:message name="DoAuthenticateSoapOut">
+    <wsdl:part name="parameters" element="tns:DoAuthenticateResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSellerSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSeller" />
+  </wsdl:message>
+  <wsdl:message name="GetSellerSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSellerResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRunningNumberSoapIn">
+    <wsdl:part name="parameters" element="tns:GetRunningNumber" />
+  </wsdl:message>
+  <wsdl:message name="GetRunningNumberSoapOut">
+    <wsdl:part name="parameters" element="tns:GetRunningNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetJewelryDetailSoapIn">
+    <wsdl:part name="parameters" element="tns:GetJewelryDetail" />
+  </wsdl:message>
+  <wsdl:message name="GetJewelryDetailSoapOut">
+    <wsdl:part name="parameters" element="tns:GetJewelryDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateJewelryStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateJewelryStatus" />
+  </wsdl:message>
+  <wsdl:message name="UpdateJewelryStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateJewelryStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPriceDaimondAndGemstoneSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPriceDaimondAndGemstone" />
+  </wsdl:message>
+  <wsdl:message name="GetPriceDaimondAndGemstoneSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPriceDaimondAndGemstoneResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetReportJewelrySoapIn">
+    <wsdl:part name="parameters" element="tns:GetReportJewelry" />
+  </wsdl:message>
+  <wsdl:message name="GetReportJewelrySoapOut">
+    <wsdl:part name="parameters" element="tns:GetReportJewelryResponse" />
+  </wsdl:message>
+  <wsdl:portType name="Service2Soap">
+    <wsdl:operation name="DoAuthenticate">
+      <wsdl:input message="tns:DoAuthenticateSoapIn" />
+      <wsdl:output message="tns:DoAuthenticateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSeller">
+      <wsdl:input message="tns:GetSellerSoapIn" />
+      <wsdl:output message="tns:GetSellerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRunningNumber">
+      <wsdl:input message="tns:GetRunningNumberSoapIn" />
+      <wsdl:output message="tns:GetRunningNumberSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJewelryDetail">
+      <wsdl:input message="tns:GetJewelryDetailSoapIn" />
+      <wsdl:output message="tns:GetJewelryDetailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateJewelryStatus">
+      <wsdl:input message="tns:UpdateJewelryStatusSoapIn" />
+      <wsdl:output message="tns:UpdateJewelryStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPriceDaimondAndGemstone">
+      <wsdl:input message="tns:GetPriceDaimondAndGemstoneSoapIn" />
+      <wsdl:output message="tns:GetPriceDaimondAndGemstoneSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReportJewelry">
+      <wsdl:input message="tns:GetReportJewelrySoapIn" />
+      <wsdl:output message="tns:GetReportJewelrySoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Service2Soap" type="tns:Service2Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="DoAuthenticate">
+      <soap:operation soapAction="http://tempuri.org/DoAuthenticate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSeller">
+      <soap:operation soapAction="http://tempuri.org/GetSeller" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRunningNumber">
+      <soap:operation soapAction="http://tempuri.org/GetRunningNumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJewelryDetail">
+      <soap:operation soapAction="http://tempuri.org/GetJewelryDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateJewelryStatus">
+      <soap:operation soapAction="http://tempuri.org/UpdateJewelryStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPriceDaimondAndGemstone">
+      <soap:operation soapAction="http://tempuri.org/GetPriceDaimondAndGemstone" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReportJewelry">
+      <soap:operation soapAction="http://tempuri.org/GetReportJewelry" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Service2Soap12" type="tns:Service2Soap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="DoAuthenticate">
+      <soap12:operation soapAction="http://tempuri.org/DoAuthenticate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSeller">
+      <soap12:operation soapAction="http://tempuri.org/GetSeller" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRunningNumber">
+      <soap12:operation soapAction="http://tempuri.org/GetRunningNumber" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJewelryDetail">
+      <soap12:operation soapAction="http://tempuri.org/GetJewelryDetail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateJewelryStatus">
+      <soap12:operation soapAction="http://tempuri.org/UpdateJewelryStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPriceDaimondAndGemstone">
+      <soap12:operation soapAction="http://tempuri.org/GetPriceDaimondAndGemstone" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReportJewelry">
+      <soap12:operation soapAction="http://tempuri.org/GetReportJewelry" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service2">
+    <wsdl:port name="Service2Soap" binding="tns:Service2Soap">
+      <soap:address location="http://localhost:8888/DiamondService/Service2.asmx" />
+    </wsdl:port>
+    <wsdl:port name="Service2Soap12" binding="tns:Service2Soap12">
+      <soap12:address location="http://localhost:8888/DiamondService/Service2.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
