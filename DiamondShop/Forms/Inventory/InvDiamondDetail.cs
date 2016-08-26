@@ -110,7 +110,7 @@ namespace DiamondShop
                 }
 
                 tds.AcceptChanges();
-                chkFlag = ser.DoInsertData("InvDiamondCerDetail", tds);
+                chkFlag = ser.DoInsertData("InvDiamondCerDetail", tds,0);
 
                 foreach (DataRow row in tds2.Tables[0].Rows)
                 {
@@ -131,7 +131,7 @@ namespace DiamondShop
                 }
 
                 tds2.AcceptChanges();
-                chkFlag = ser.DoInsertData("InvDiamondDetail", tds2);
+                chkFlag = ser.DoInsertData("InvDiamondDetail", tds2,0);
 
             }
             catch (Exception ex)

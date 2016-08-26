@@ -11,6 +11,7 @@ namespace DiamondDAL.DAL
     {
         SQLHelper SQL = new SQLHelper();
         dsBuyBookDiamondCer ds = new dsBuyBookDiamondCer();
+        dsBuyBookDiamondCer_Excel ds2 = new dsBuyBookDiamondCer_Excel();
         int flag = 0;
 
         public dsBuyBookDiamondCer DoSearchData(string code, string reportNumber, int shape, int lab, double sWeight, double eWeight, int colorType, int sColor,
@@ -62,8 +63,8 @@ namespace DiamondDAL.DAL
         {
             try
             {
-                dsBuyBookDiamondCer.BuyBookDiamondCerRow row = tds.BuyBookDiamondCer[0];
-                SQL.ExecuteSP("SP_BuyBookDiamondCer_Ins", row);
+                    dsBuyBookDiamondCer.BuyBookDiamondCerRow row = tds.BuyBookDiamondCer[0];
+                    SQL.ExecuteSP("SP_BuyBookDiamondCer_Ins", row);
             }
             catch(Exception ex)
             {
@@ -72,6 +73,26 @@ namespace DiamondDAL.DAL
 
             return true;
         }
+
+        public bool DoInsertData(dsBuyBookDiamondCer_Excel tds)
+        {
+            try
+            {
+                //    row["Payment"]
+
+                foreach (dsBuyBookDiamondCer_Excel.BuyBookDiamondCer_ExcelRow row in tds.BuyBookDiamondCer_Excel.Rows)
+                {
+                    SQL.ExecuteSP("SP_BuyBookDiamondCer_ImpEx", row);
+                }
+            }
+           catch(Exception ex)
+           {
+                throw ex;
+           }
+
+           return true;
+        }
+
 
         public bool DoUpdateData(dsBuyBookDiamondCer tds)
         {

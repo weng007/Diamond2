@@ -285,7 +285,7 @@ namespace DiamondShop
                 }
 
                 tds.AcceptChanges();
-                chkFlag = ser.DoInsertData("InvGemstoneCerDetail", tds);
+                chkFlag = ser.DoInsertData("InvGemstoneCerDetail", tds,0);
 
                 foreach (DataRow row in tds2.Tables[0].Rows)
                 {
@@ -306,7 +306,7 @@ namespace DiamondShop
                 }
 
                 tds2.AcceptChanges();
-                chkFlag = ser.DoInsertData("InvGemstoneDetail", tds2);
+                chkFlag = ser.DoInsertData("InvGemstoneDetail", tds2,0);
 
             }
             catch (Exception ex)

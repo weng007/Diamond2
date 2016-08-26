@@ -251,7 +251,7 @@ namespace DiamondShop
                 {
                     row.Code = GM.GetRunningNumber(prefixCode);
                     SetCreateBy(row);               
-                    chkFlag = ser.DoInsertData("Inventory", tds);
+                    chkFlag = ser.DoInsertData("Inventory", tds,0);
                 }
                 else
                 {

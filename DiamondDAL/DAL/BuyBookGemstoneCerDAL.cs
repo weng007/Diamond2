@@ -11,6 +11,7 @@ namespace DiamondDAL.DAL
     {
         SQLHelper SQL = new SQLHelper();
         dsBuyBookGemstoneCer ds = new dsBuyBookGemstoneCer();
+        dsBuyBookGemstoneCer_Excel ds2 = new dsBuyBookGemstoneCer_Excel();
         int flag = 0;
 
         public dsBuyBookGemstoneCer DoSearchData(string code, string reportNumber, int shape, int lab, double sWeight, double eWeight, int identification, int comment, int origin,int status, int shop)
@@ -61,6 +62,24 @@ namespace DiamondDAL.DAL
             {
                 dsBuyBookGemstoneCer.BuyBookGemstoneCerRow row = tds.BuyBookGemstoneCer[0];
                 SQL.ExecuteSP("SP_BuyBookGemstoneCer_Ins", row);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return true;
+        }
+        public bool DoInsertData(dsBuyBookGemstoneCer_Excel tds)
+        {
+            try
+            {
+                //    row["Payment"]
+
+                foreach (dsBuyBookGemstoneCer_Excel.BuyBookGemstoneCer_ExcelRow row in tds.BuyBookGemstoneCer_Excel.Rows)
+                {
+                    SQL.ExecuteSP("SP_BuyBookGemstoneCer_ImpEx", row);
+                }
             }
             catch (Exception ex)
             {

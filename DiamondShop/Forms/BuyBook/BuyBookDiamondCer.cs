@@ -238,7 +238,7 @@ namespace DiamondShop
                     row.SoldTo = 0;
 
                     SetCreateBy(row);
-                    chkFlag = ser.DoInsertData("BuyBookDiamondCer", tds);
+                    chkFlag = ser.DoInsertData("BuyBookDiamondCer", tds,0);
                 }
                 else
                 {
@@ -507,7 +507,7 @@ namespace DiamondShop
                     FilePath = openFileDialog2.FileName;
                 }
             }
-            BuyBookDiamonCrExcel frm = new BuyBookDiamonCrExcel(id,FilePath);
+            BuyBookDiamonCerExcel frm = new BuyBookDiamonCerExcel(id,FilePath);
             frm.ShowDialog();
 
         }

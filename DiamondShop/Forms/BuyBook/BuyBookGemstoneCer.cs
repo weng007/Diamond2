@@ -23,6 +23,7 @@ namespace DiamondShop
         MemoryStream ms;
         byte[] file;
         string fileExtension ="";
+        string FilePath;
 
         public BuyBookGemstoneCer()
         {
@@ -226,7 +227,7 @@ namespace DiamondShop
                 {
                     row.Code = GM.GetRunningNumber("GC");
                     SetCreateBy(row);
-                    chkFlag = ser.DoInsertData("BuyBookGemstoneCer", tds);
+                    chkFlag = ser.DoInsertData("BuyBookGemstoneCer", tds,0);
                 }
                 else
                 {
@@ -494,6 +495,27 @@ namespace DiamondShop
         private void dtDueDate_ValueChanged(object sender, EventArgs e)
         {
             dtDueDate.Value = dtBuyDate.Value.AddDays(30);
+        }
+
+        private void btnImportExcel_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog3.ShowDialog() == DialogResult.OK && openFileDialog3.CheckFileExists)
+            {
+                using (var stream = new FileStream(openFileDialog3.FileName, FileMode.Open, FileAccess.Read))
+                {
+                    using (var reader = new BinaryReader(stream))
+                    {
+                        file = reader.ReadBytes((int)stream.Length);
+                    }
+                }
+
+                if (file.Length > 0)
+                {
+                    FilePath = openFileDialog3.FileName;
+                }
+            }
+            BuyBookGemstoneCerExcel frm = new BuyBookGemstoneCerExcel(id, FilePath);
+            frm.ShowDialog();
         }
     }
 }

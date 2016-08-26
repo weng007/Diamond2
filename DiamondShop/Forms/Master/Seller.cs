@@ -110,7 +110,7 @@ namespace DiamondShop
                 if (id == 0)
                 {
                     SetCreateBy(row);
-                    chkFlag = ser.DoInsertData("Seller", tds);
+                    chkFlag = ser.DoInsertData("Seller", tds,0);
                 }
                 else
                 {

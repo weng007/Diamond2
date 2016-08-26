@@ -47,6 +47,17 @@ namespace DiamondBiz.Biz
                 throw ex;
             }
         }
+        public bool DoInsertData(dsBuyBookGemstoneCer_Excel tds)
+        {
+            try
+            {
+                return dal.DoInsertData(tds);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
 
         public bool DoUpdateData(dsBuyBookGemstoneCer tds)
         {

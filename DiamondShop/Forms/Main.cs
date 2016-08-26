@@ -127,6 +127,31 @@ namespace DiamondShop
             PaymentList frm = new PaymentList();
             SetFormList(frm, 16, "Payment");
         }
+        private void btnReportBuying_Click(object sender, EventArgs e)
+        {
+            ReportBuyingList frm = new ReportBuyingList();
+            frm.ShowDialog();
+        }
+        private void btnReportSelling_Click(object sender, EventArgs e)
+        {
+            ReportSellingList frm = new ReportSellingList();
+            frm.ShowDialog();
+        }
+        private void btnReportInventory_Click(object sender, EventArgs e)
+        {
+            ReportInventoryList frm = new ReportInventoryList();
+            frm.ShowDialog();
+        }
+        private void btnReportDebt_Click(object sender, EventArgs e)
+        {
+            ReportDebtList frm = new ReportDebtList();
+            frm.ShowDialog();
+        }
+        private void btnReportCustomer_Click(object sender, EventArgs e)
+        {
+            ReportCustomerList frm = new ReportCustomerList();
+            frm.ShowDialog();
+        }
         private void menuExchangeRate_Click(object sender, EventArgs e)
         {
             ExchangeRate frm = new ExchangeRate();
@@ -240,7 +265,5 @@ namespace DiamondShop
             Login frm = new Login();
             frm.ShowDialog();            
         }
-
-       
     }
 }

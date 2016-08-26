@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BuyBookGemstoneCer));
             this.dtBuyDate = new System.Windows.Forms.DateTimePicker();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnImportExcel = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.dtPayDate = new System.Windows.Forms.DateTimePicker();
             this.cmbColor = new System.Windows.Forms.ComboBox();
@@ -91,7 +92,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.openFileDialog2 = new System.Windows.Forms.OpenFileDialog();
-            this.btnImportExcel = new System.Windows.Forms.Button();
+            this.openFileDialog3 = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -172,6 +173,20 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1024, 535);
             this.panel3.TabIndex = 74;
+            // 
+            // btnImportExcel
+            // 
+            this.btnImportExcel.BackColor = System.Drawing.Color.Transparent;
+            this.btnImportExcel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnImportExcel.BackgroundImage")));
+            this.btnImportExcel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnImportExcel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnImportExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnImportExcel.Location = new System.Drawing.Point(893, 482);
+            this.btnImportExcel.Name = "btnImportExcel";
+            this.btnImportExcel.Size = new System.Drawing.Size(102, 33);
+            this.btnImportExcel.TabIndex = 206;
+            this.btnImportExcel.UseVisualStyleBackColor = false;
+            this.btnImportExcel.Click += new System.EventHandler(this.btnImportExcel_Click);
             // 
             // label9
             // 
@@ -758,18 +773,9 @@
             // 
             this.openFileDialog2.FileName = "openFileDialog1";
             // 
-            // btnImportExcel
+            // openFileDialog3
             // 
-            this.btnImportExcel.BackColor = System.Drawing.Color.Transparent;
-            this.btnImportExcel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnImportExcel.BackgroundImage")));
-            this.btnImportExcel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnImportExcel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnImportExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnImportExcel.Location = new System.Drawing.Point(893, 482);
-            this.btnImportExcel.Name = "btnImportExcel";
-            this.btnImportExcel.Size = new System.Drawing.Size(102, 33);
-            this.btnImportExcel.TabIndex = 206;
-            this.btnImportExcel.UseVisualStyleBackColor = false;
+            this.openFileDialog3.FileName = "openFileDialog3";
             // 
             // BuyBookGemstoneCer
             // 
@@ -853,5 +859,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DateTimePicker dtPayDate;
         private System.Windows.Forms.Button btnImportExcel;
+        private System.Windows.Forms.OpenFileDialog openFileDialog3;
     }
 }

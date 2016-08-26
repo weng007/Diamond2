@@ -118,5 +118,58 @@ namespace Diamond
                 throw ex;
             }
         }
+
+        [WebMethod]
+        public DataSet GetReportBuying(int TableName, DateTime SBuyDate, DateTime EBuyDate, float SWeight, float EWeight, int Shape, int Status, DateTime SDueDate, DateTime EDueDate, string IsPaid)
+        {
+            GeneralCBiz biz = new GeneralCBiz();
+            try
+            {
+                return biz.GetReportBuying(TableName, SBuyDate, EBuyDate, SWeight, EWeight, Shape, Status, SDueDate, EDueDate, IsPaid);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        [WebMethod]
+        public DataSet GetReportSelling(int JewelryType, int Seller , DateTime SSellDate, DateTime ESellDate )
+        {
+            GeneralCBiz biz = new GeneralCBiz();
+            try
+            {
+                return biz.GetReportSelling(JewelryType, Seller, SSellDate, ESellDate);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        [WebMethod]
+        public DataSet GetReportDebt(int TableName , string Seller, DateTime SDueDate, DateTime EDueDate)
+        {
+            GeneralCBiz biz = new GeneralCBiz();
+            try
+            {
+                return biz.GetReportDebt(TableName, Seller, SDueDate, EDueDate);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        [WebMethod]
+        public DataSet GetReportCustomer(DateTime SBirthDate, DateTime EBirthDate, DateTime SAnniDate, DateTime EAnniDate, string DisplayName)
+        {
+            GeneralCBiz biz = new GeneralCBiz();
+            try
+            {
+                return biz.GetReportCustomer(SBirthDate, EBirthDate, SAnniDate, EAnniDate, DisplayName);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

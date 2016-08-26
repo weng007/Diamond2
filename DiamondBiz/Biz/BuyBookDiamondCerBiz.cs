@@ -67,6 +67,18 @@ namespace DiamondBiz.Biz
             }
         }
 
+        public bool DoInsertData(dsBuyBookDiamondCer_Excel tds)
+        {
+            try
+            {
+                return dal.DoInsertData(tds);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
         public bool DoUpdateData(dsBuyBookDiamondCer tds)
         {
             try

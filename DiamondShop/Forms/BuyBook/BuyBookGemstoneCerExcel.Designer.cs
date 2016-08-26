@@ -1,6 +1,6 @@
 ﻿namespace DiamondShop
 {
-    partial class BuyBookDiamonCerExcel
+    partial class BuyBookGemstoneCerExcel
     {
         /// <summary>
         /// Required designer variable.
@@ -28,32 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BuyBookDiamonCerExcel));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BuyBookGemstoneCerExcel));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.button1 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.grid1 = new System.Windows.Forms.DataGridView();
             this.Seller = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColorType = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cut = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Polish = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Symmetry = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fluorescent = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Lab = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ReportNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Weight = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Shape = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cut = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Weight = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ReportNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Identification = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Color = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Clearity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Lab = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Origin = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Comment = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Shop = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Rap = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Inscription = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Payment = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PayByUSD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PriceCaratUSD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PriceCaratBaht = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.USDRate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TotalBaht = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TotalUSD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TotalBath = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Note = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel3.SuspendLayout();
@@ -90,25 +88,23 @@
             this.grid1.ColumnHeadersHeight = 33;
             this.grid1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Seller,
-            this.ColorType,
-            this.Cut,
-            this.Polish,
-            this.Symmetry,
-            this.Fluorescent,
-            this.Lab,
-            this.ReportNumber,
-            this.Weight,
             this.Shape,
+            this.Cut,
+            this.Weight,
+            this.ReportNumber,
+            this.Identification,
             this.Color,
-            this.Clearity,
+            this.Lab,
+            this.Origin,
+            this.Comment,
             this.Shop,
-            this.Price,
-            this.Rap,
-            this.Total,
-            this.Inscription,
             this.Payment,
+            this.PayByUSD,
+            this.PriceCaratUSD,
+            this.PriceCaratBaht,
             this.USDRate,
-            this.TotalBaht,
+            this.TotalUSD,
+            this.TotalBath,
             this.Note});
             this.grid1.Location = new System.Drawing.Point(12, 35);
             this.grid1.Name = "grid1";
@@ -130,12 +126,14 @@
             this.Seller.ReadOnly = true;
             this.Seller.Width = 130;
             // 
-            // ColorType
+            // Shape
             // 
-            this.ColorType.DataPropertyName = "ColorType";
-            this.ColorType.HeaderText = "Color Type";
-            this.ColorType.Name = "ColorType";
-            this.ColorType.ReadOnly = true;
+            this.Shape.DataPropertyName = "Shape";
+            this.Shape.HeaderText = "Shape";
+            this.Shape.Name = "Shape";
+            this.Shape.ReadOnly = true;
+            this.Shape.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Shape.Width = 150;
             // 
             // Cut
             // 
@@ -145,41 +143,14 @@
             this.Cut.ReadOnly = true;
             this.Cut.Width = 60;
             // 
-            // Polish
+            // Weight
             // 
-            this.Polish.DataPropertyName = "Polish";
-            this.Polish.HeaderText = "Polish";
-            this.Polish.Name = "Polish";
-            this.Polish.ReadOnly = true;
-            this.Polish.Visible = false;
-            this.Polish.Width = 60;
-            // 
-            // Symmetry
-            // 
-            this.Symmetry.DataPropertyName = "Symmetry";
-            this.Symmetry.HeaderText = "Symmetry";
-            this.Symmetry.Name = "Symmetry";
-            this.Symmetry.ReadOnly = true;
-            this.Symmetry.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Symmetry.Width = 90;
-            // 
-            // Fluorescent
-            // 
-            this.Fluorescent.DataPropertyName = "Fluorescent";
-            this.Fluorescent.HeaderText = "Fluorescent";
-            this.Fluorescent.Name = "Fluorescent";
-            this.Fluorescent.ReadOnly = true;
-            this.Fluorescent.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Fluorescent.Width = 109;
-            // 
-            // Lab
-            // 
-            this.Lab.DataPropertyName = "Lab";
-            this.Lab.HeaderText = "Lab";
-            this.Lab.Name = "Lab";
-            this.Lab.ReadOnly = true;
-            this.Lab.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Lab.Width = 90;
+            this.Weight.DataPropertyName = "Weight";
+            this.Weight.HeaderText = "Weight";
+            this.Weight.Name = "Weight";
+            this.Weight.ReadOnly = true;
+            this.Weight.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Weight.Width = 90;
             // 
             // ReportNumber
             // 
@@ -191,23 +162,12 @@
             this.ReportNumber.ReadOnly = true;
             this.ReportNumber.Width = 150;
             // 
-            // Weight
+            // Identification
             // 
-            this.Weight.DataPropertyName = "Weight";
-            this.Weight.HeaderText = "Weight";
-            this.Weight.Name = "Weight";
-            this.Weight.ReadOnly = true;
-            this.Weight.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Weight.Width = 90;
-            // 
-            // Shape
-            // 
-            this.Shape.DataPropertyName = "Shape";
-            this.Shape.HeaderText = "Shape";
-            this.Shape.Name = "Shape";
-            this.Shape.ReadOnly = true;
-            this.Shape.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Shape.Width = 150;
+            this.Identification.DataPropertyName = "Identification";
+            this.Identification.HeaderText = "Identification";
+            this.Identification.Name = "Identification";
+            this.Identification.ReadOnly = true;
             // 
             // Color
             // 
@@ -218,12 +178,30 @@
             this.Color.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Color.Width = 120;
             // 
-            // Clearity
+            // Lab
             // 
-            this.Clearity.DataPropertyName = "Clearity";
-            this.Clearity.HeaderText = "Clearity";
-            this.Clearity.Name = "Clearity";
-            this.Clearity.ReadOnly = true;
+            this.Lab.DataPropertyName = "Lab";
+            this.Lab.HeaderText = "Lab";
+            this.Lab.Name = "Lab";
+            this.Lab.ReadOnly = true;
+            this.Lab.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Lab.Width = 90;
+            // 
+            // Origin
+            // 
+            this.Origin.DataPropertyName = "Origin";
+            this.Origin.HeaderText = "Origin";
+            this.Origin.Name = "Origin";
+            this.Origin.ReadOnly = true;
+            // 
+            // Comment
+            // 
+            this.Comment.DataPropertyName = "Comment";
+            this.Comment.HeaderText = "Comment";
+            this.Comment.Name = "Comment";
+            this.Comment.ReadOnly = true;
+            this.Comment.Visible = false;
+            this.Comment.Width = 60;
             // 
             // Shop
             // 
@@ -232,40 +210,33 @@
             this.Shop.Name = "Shop";
             this.Shop.ReadOnly = true;
             // 
-            // Price
-            // 
-            this.Price.DataPropertyName = "Price";
-            this.Price.HeaderText = "Price";
-            this.Price.Name = "Price";
-            this.Price.ReadOnly = true;
-            // 
-            // Rap
-            // 
-            this.Rap.DataPropertyName = "Rap";
-            this.Rap.HeaderText = "Rap";
-            this.Rap.Name = "Rap";
-            this.Rap.ReadOnly = true;
-            // 
-            // Total
-            // 
-            this.Total.DataPropertyName = "Total";
-            this.Total.HeaderText = "Total";
-            this.Total.Name = "Total";
-            this.Total.ReadOnly = true;
-            // 
-            // Inscription
-            // 
-            this.Inscription.DataPropertyName = "Inscription";
-            this.Inscription.HeaderText = "Inscription";
-            this.Inscription.Name = "Inscription";
-            this.Inscription.ReadOnly = true;
-            // 
             // Payment
             // 
             this.Payment.DataPropertyName = "Payment";
             this.Payment.HeaderText = "Payment";
             this.Payment.Name = "Payment";
             this.Payment.ReadOnly = true;
+            // 
+            // PayByUSD
+            // 
+            this.PayByUSD.DataPropertyName = "PayByUSD";
+            this.PayByUSD.HeaderText = "PayByUSD";
+            this.PayByUSD.Name = "PayByUSD";
+            this.PayByUSD.ReadOnly = true;
+            // 
+            // PriceCaratUSD
+            // 
+            this.PriceCaratUSD.DataPropertyName = "PriceCaratUSD";
+            this.PriceCaratUSD.HeaderText = "PriceCaratUSD";
+            this.PriceCaratUSD.Name = "PriceCaratUSD";
+            this.PriceCaratUSD.ReadOnly = true;
+            // 
+            // PriceCaratBaht
+            // 
+            this.PriceCaratBaht.DataPropertyName = "PriceCaratBaht";
+            this.PriceCaratBaht.HeaderText = "PriceCaratBaht";
+            this.PriceCaratBaht.Name = "PriceCaratBaht";
+            this.PriceCaratBaht.ReadOnly = true;
             // 
             // USDRate
             // 
@@ -274,12 +245,19 @@
             this.USDRate.Name = "USDRate";
             this.USDRate.ReadOnly = true;
             // 
-            // TotalBaht
+            // TotalUSD
             // 
-            this.TotalBaht.DataPropertyName = "TotalBaht";
-            this.TotalBaht.HeaderText = "TotalBaht";
-            this.TotalBaht.Name = "TotalBaht";
-            this.TotalBaht.ReadOnly = true;
+            this.TotalUSD.DataPropertyName = "TotalUSD";
+            this.TotalUSD.HeaderText = "TotalUSD";
+            this.TotalUSD.Name = "TotalUSD";
+            this.TotalUSD.ReadOnly = true;
+            // 
+            // TotalBath
+            // 
+            this.TotalBath.DataPropertyName = "TotalBath";
+            this.TotalBath.HeaderText = "TotalBath";
+            this.TotalBath.Name = "TotalBath";
+            this.TotalBath.ReadOnly = true;
             // 
             // Note
             // 
@@ -288,14 +266,14 @@
             this.Note.Name = "Note";
             this.Note.ReadOnly = true;
             // 
-            // BuyBookDiamonCerExcel
+            // BuyBookGemstoneCerExcel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(195)))), ((int)(((byte)(157)))));
             this.ClientSize = new System.Drawing.Size(1278, 454);
             this.Controls.Add(this.panel3);
-            this.Name = "BuyBookDiamonCerExcel";
+            this.Name = "BuyBookGemstoneCerExcel";
             this.Text = "GemstoneCer";
             this.Controls.SetChildIndex(this.panel3, 0);
             ((System.ComponentModel.ISupportInitialize)(this.ds)).EndInit();
@@ -311,25 +289,23 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.DataGridView grid1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Seller;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColorType;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cut;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Polish;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Symmetry;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Fluorescent;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Lab;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ReportNumber;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Weight;
         private System.Windows.Forms.DataGridViewTextBoxColumn Shape;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cut;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Weight;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ReportNumber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Identification;
         private System.Windows.Forms.DataGridViewTextBoxColumn Color;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Clearity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Lab;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Origin;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Comment;
         private System.Windows.Forms.DataGridViewTextBoxColumn Shop;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Price;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Rap;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Total;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Inscription;
         private System.Windows.Forms.DataGridViewTextBoxColumn Payment;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PayByUSD;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PriceCaratUSD;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PriceCaratBaht;
         private System.Windows.Forms.DataGridViewTextBoxColumn USDRate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TotalBaht;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TotalUSD;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TotalBath;
         private System.Windows.Forms.DataGridViewTextBoxColumn Note;
     }
 }

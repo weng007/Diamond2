@@ -105,5 +105,104 @@ namespace DiamondDAL.DAL
 
             return ds;
         }
+
+        public DataSet GetReportBuying(int TableName, DateTime SBuyDate, DateTime EBuyDate, float SWeight, float EWeight,int Shape,int Status,DateTime SDueDate, DateTime EDueDate,string IsPaid)
+        {
+            try
+            {
+                SQL.ClearParameter();
+                SQL.CreateParameter("@TableName", TableName);
+                SQL.CreateParameter("@SBuyDate", SBuyDate);
+                SQL.CreateParameter("@EBuyDate", EBuyDate);
+                SQL.CreateParameter("@SWeight", SWeight);
+                SQL.CreateParameter("@EWeight", EWeight);
+                SQL.CreateParameter("@Shape", Shape);
+                SQL.CreateParameter("@Status", Status);
+                SQL.CreateParameter("@SDueDate", SDueDate);
+                SQL.CreateParameter("@EDueDate", EDueDate);
+                SQL.CreateParameter("@IsPaid", IsPaid);
+                SQL.FillDataSetBySP2("SP_Rpt_Buying", ds);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return ds;
+        }
+        public DataSet GetReportSelling(int JewelryType, int Seller, DateTime SSellDate, DateTime ESellDate)
+        {
+            try
+            {
+                SQL.ClearParameter();
+                SQL.CreateParameter("@JewelryType", JewelryType);
+                SQL.CreateParameter("@Seller", Seller);
+                SQL.CreateParameter("@SSellDate", SSellDate);
+                SQL.CreateParameter("@ESellDate", ESellDate);
+                SQL.FillDataSetBySP2("SP_Rpt_Selling", ds);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return ds;
+        }
+        public DataSet GetReportInventory(int Status, DateTime SImpDate, DateTime EImpDate, float SPriceTag,float EPricetag)
+        {
+            try
+            {
+                SQL.ClearParameter();
+                SQL.CreateParameter("@Status", Status);
+                SQL.CreateParameter("@SImpDate", SImpDate);
+                SQL.CreateParameter("@EImpDate", EImpDate);
+                SQL.CreateParameter("@SPriceTag", SPriceTag);
+                SQL.CreateParameter("@EPricetag", EPricetag);
+                SQL.FillDataSetBySP2("SP_Rpt_Selling", ds);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return ds;
+        }
+        public DataSet GetReportDebt(int TableName, string Seller, DateTime SDueDate, DateTime EDueDate)
+        {
+            try
+            {
+                SQL.ClearParameter();
+                SQL.CreateParameter("@TableName", TableName);
+                SQL.CreateParameter("@Seller", Seller);
+                SQL.CreateParameter("@SDueDate", SDueDate);
+                SQL.CreateParameter("@EDueDate", EDueDate);
+                SQL.FillDataSetBySP2("SP_Rpt_Debt", ds);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return ds;
+        }
+        public DataSet GetReportCustomer(DateTime SBirthDate, DateTime EBirthDate, DateTime SAnniDate, DateTime EAnniDate, string DisplayName)
+        {
+            try
+            {
+                SQL.ClearParameter();
+                SQL.CreateParameter("@SBirthDate", SBirthDate);
+                SQL.CreateParameter("@EBirthDate", EBirthDate);
+                SQL.CreateParameter("@SAnniDate", SAnniDate);
+                SQL.CreateParameter("@EAnniDate", EAnniDate);
+                SQL.CreateParameter("@DisplayName", DisplayName);
+                SQL.FillDataSetBySP2("SP_Rpt_Debt", ds);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return ds;
+        }
     }
 }

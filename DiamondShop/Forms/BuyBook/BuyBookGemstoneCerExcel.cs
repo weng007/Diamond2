@@ -13,20 +13,20 @@ using DiamondShop.DiamondService;
 
 namespace DiamondShop
 {
-    public partial class BuyBookDiamonCerExcel : FormInfo
+    public partial class BuyBookGemstoneCerExcel : FormInfo
     {
         DataSet ds2 = new DataSet();
-        dsBuyBookDiamondCer_Excel tds = new dsBuyBookDiamondCer_Excel();
+        dsBuyBookGemstoneCer_Excel tds = new dsBuyBookGemstoneCer_Excel();
         bool isAuthorize = false;
         string FilePath;
 
-        public BuyBookDiamonCerExcel()
+        public BuyBookGemstoneCerExcel()
         {
             InitializeComponent();
             Initial();
         }
 
-        public BuyBookDiamonCerExcel(int id,string FilePath)
+        public BuyBookGemstoneCerExcel(int id,string FilePath)
         {
             InitializeComponent();
             Initial();
@@ -42,7 +42,7 @@ namespace DiamondShop
         }
         protected override void LoadData()
         {
-            ds.Tables.Add(ExcelService.GetExcel(FilePath,0));
+            ds.Tables.Add(ExcelService.GetExcel(FilePath,1));
 
             grid1.DataSource = ds.Tables[0];
             grid1.Refresh();
@@ -86,62 +86,56 @@ namespace DiamondShop
                 if (row.Cells["Seller"].Value != null)
                 { tds.Tables[0].Rows[i]["Seller"] = row.Cells["Seller"].Value; }
 
-                if (row.Cells["ReportNumber"].Value != null)
-                { tds.Tables[0].Rows[i]["ReportNumber"] = row.Cells["ReportNumber"].Value; }
-
-                if (row.Cells["Lab"].Value != null)
-                { tds.Tables[0].Rows[i]["Lab"] = row.Cells["Lab"].Value; }
-
-                if (row.Cells["Weight"].Value != null)
-                { tds.Tables[0].Rows[i]["Weight"] = row.Cells["Weight"].Value; }
-
                 if (row.Cells["Shape"].Value != null)
                 { tds.Tables[0].Rows[i]["Shape"] = row.Cells["Shape"].Value; }
-
-                if (row.Cells["ColorType"].Value != null)
-                { tds.Tables[0].Rows[i]["ColorType"] = row.Cells["ColorType"].Value; }
-
-                if (row.Cells["Color"].Value != null)
-                { tds.Tables[0].Rows[i]["Color"] = row.Cells["Color"].Value; }
 
                 if (row.Cells["Cut"].Value != null)
                 { tds.Tables[0].Rows[i]["Cut"] = row.Cells["Cut"].Value; }
 
-                if (row.Cells["Clearity"].Value != null)
-                { tds.Tables[0].Rows[i]["Clearity"] = row.Cells["Clearity"].Value; }
+                if (row.Cells["Weight"].Value != null)
+                { tds.Tables[0].Rows[i]["Weight"] = row.Cells["Weight"].Value; }
 
-                if (row.Cells["Polish"].Value != null)
-                { tds.Tables[0].Rows[i]["Polish"] = row.Cells["Polish"].Value; }
+                if (row.Cells["ReportNumber"].Value != null)
+                { tds.Tables[0].Rows[i]["ReportNumber"] = row.Cells["ReportNumber"].Value; }
 
-                if (row.Cells["Symmetry"].Value != null)
-                { tds.Tables[0].Rows[i]["Symmetry"] = row.Cells["Symmetry"].Value; }
+                if (row.Cells["Identification"].Value != null)
+                { tds.Tables[0].Rows[i]["Identification"] = row.Cells["Identification"].Value; }
 
-                if (row.Cells["Fluorescent"].Value != null)
-                { tds.Tables[0].Rows[i]["Fluorescent"] = row.Cells["Fluorescent"].Value; }
+                if (row.Cells["Color"].Value != null)
+                { tds.Tables[0].Rows[i]["Color"] = row.Cells["Color"].Value; }
 
-                if (row.Cells["Inscription"].Value != null)
-                { tds.Tables[0].Rows[i]["IsInscription"] = row.Cells["Inscription"].Value; }
+                if (row.Cells["Lab"].Value != null)
+                { tds.Tables[0].Rows[i]["Lab"] = row.Cells["Lab"].Value; }
+
+                if (row.Cells["Origin"].Value != null)
+                { tds.Tables[0].Rows[i]["Origin"] = row.Cells["Origin"].Value; }
+
+                if (row.Cells["Comment"].Value != null)
+                { tds.Tables[0].Rows[i]["Comment"] = row.Cells["Comment"].Value; }
+
+                if (row.Cells["Shop"].Value != null)
+                { tds.Tables[0].Rows[i]["Shop"] = row.Cells["Shop"].Value; }
 
                 if (row.Cells["Payment"].Value != null)
                 { tds.Tables[0].Rows[i]["IsPaid"] = row.Cells["Payment"].Value; }
 
-                if (row.Cells["Price"].Value != null)
-                { tds.Tables[0].Rows[i]["Price"] = row.Cells["Price"].Value; }
+                if (row.Cells["PayByUSD"].Value != null)
+                { tds.Tables[0].Rows[i]["PayByUSD"] = row.Cells["PayByUSD"].Value; }
 
-                if (row.Cells["Rap"].Value != null)
-                { tds.Tables[0].Rows[i]["Rap"] = row.Cells["Rap"].Value; }
+                if (row.Cells["PriceCaratUSD"].Value != null)
+                { tds.Tables[0].Rows[i]["PriceCaratUSD"] = row.Cells["PriceCaratUSD"].Value; }
+
+                if (row.Cells["PriceCaratBaht"].Value != null)
+                { tds.Tables[0].Rows[i]["PriceCarat"] = row.Cells["PriceCaratBaht"].Value; }
 
                 if (row.Cells["USDRate"].Value != null)
                 { tds.Tables[0].Rows[i]["USDRate"] = row.Cells["USDRate"].Value; }
 
-                if (row.Cells["TotalBaht"].Value != null)
-                { tds.Tables[0].Rows[i]["TotalBaht"] = row.Cells["TotalBaht"].Value; }
+                if (row.Cells["TotalUSD"].Value != null)
+                { tds.Tables[0].Rows[i]["TotalUSD"] = row.Cells["TotalUSD"].Value; }
 
-                if (row.Cells["Total"].Value != null)
-                { tds.Tables[0].Rows[i]["Total$"] = row.Cells["Total"].Value; }
-
-                if (row.Cells["Shop"].Value != null)
-                { tds.Tables[0].Rows[i]["Shop"] = row.Cells["Shop"].Value; }
+                if (row.Cells["TotalBath"].Value != null)
+                { tds.Tables[0].Rows[i]["TotalBaht"] = row.Cells["TotalBath"].Value; }
 
                 if (row.Cells["Note"].Value != null)
                 { tds.Tables[0].Rows[i]["Note"] = row.Cells["Note"].Value; }
@@ -159,12 +153,12 @@ namespace DiamondShop
                 BindingDSDiamondDetail();
                 foreach (DataRow row in tds.Tables[0].Rows)
                 {
-                    row["Code"] = GM.GetRunningNumber("DC");
+                    row["Code"] = GM.GetRunningNumber("GC");
                     SetCreateBy(row);
                     SetEditBy(row);
                 }
                 tds.AcceptChanges();
-                chkFlag = ser.DoInsertData("BuyBookDiamondCer", tds,1);
+                chkFlag = ser.DoInsertData("BuyBookGemstoneCer", tds,1);
 
             }
             catch (Exception ex)

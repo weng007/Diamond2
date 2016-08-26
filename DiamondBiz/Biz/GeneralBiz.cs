@@ -87,5 +87,61 @@ namespace DiamondBiz.Biz
                 throw ex;
             }
         }
+        public DataSet GetReportBuying(int TableName, DateTime SBuyDate, DateTime EBuyDate, float SWeight, float EWeight, int Shape, int Status, DateTime SDueDate, DateTime EDueDate, string IsPaid)
+        {
+            try
+            {
+                return dal.GetReportBuying(TableName, SBuyDate, EBuyDate, SWeight, EWeight, Shape, Status, SDueDate, EDueDate, IsPaid);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public DataSet GetReportSelling(int JewelryType, int Seller, DateTime SSellDate, DateTime ESellDate)
+        {
+            try
+            {
+                return dal.GetReportSelling(JewelryType, Seller, SSellDate, ESellDate);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public DataSet GetReportInventory(int Status, DateTime SImpDate, DateTime EImpDate, float SPriceTag, float EPricetag)
+        {
+            try
+            {
+                return dal.GetReportInventory(Status, SImpDate, EImpDate, SPriceTag, EPricetag);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public DataSet GetReportDebt(int TableName, string Seller, DateTime SDueDate, DateTime EDueDate)
+        {
+            try
+            {
+                return dal.GetReportDebt(TableName, Seller, SDueDate, EDueDate);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public DataSet GetReportCustomer(DateTime SBirthDate, DateTime EBirthDate, DateTime SAnniDate, DateTime EAnniDate, string DisplayName)
+        {
+            try
+            {
+                return dal.GetReportCustomer(SBirthDate,EBirthDate,SAnniDate,EAnniDate,DisplayName);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

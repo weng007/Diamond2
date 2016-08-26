@@ -147,7 +147,7 @@ namespace DiamondShop
                 {
                     row.CerNo = GM.GetRunningNumber("JAS");
                     SetCreateBy(row);
-                    chkFlag = ser.DoInsertData("Sell", tds);
+                    chkFlag = ser.DoInsertData("Sell", tds,0);
                 }
                 else
                 {

@@ -98,6 +98,12 @@
             this.mnBBETC = new System.Windows.Forms.ToolStripMenuItem();
             this.btnAccounting = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuPayment = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnReportBuying = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnReportSelling = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnReportInventory = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnReportDebt = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnReportCustomer = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -344,7 +350,8 @@
             this.btnInventory,
             this.btnOrderFactory,
             this.btnBuyBook,
-            this.btnAccounting});
+            this.btnAccounting,
+            this.toolStripMenuItem2});
             this.menuStrip1.Location = new System.Drawing.Point(2, 35);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(6, 0, 0, 0);
@@ -866,9 +873,63 @@
             // 
             this.MenuPayment.Font = new System.Drawing.Font("Century Gothic", 11.25F);
             this.MenuPayment.Name = "MenuPayment";
-            this.MenuPayment.Size = new System.Drawing.Size(152, 24);
+            this.MenuPayment.Size = new System.Drawing.Size(140, 24);
             this.MenuPayment.Text = "Payment";
             this.MenuPayment.Click += new System.EventHandler(this.MenuPayment_Click);
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnReportBuying,
+            this.btnReportSelling,
+            this.btnReportInventory,
+            this.btnReportDebt,
+            this.btnReportCustomer});
+            this.toolStripMenuItem2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem2.Image")));
+            this.toolStripMenuItem2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Padding = new System.Windows.Forms.Padding(10, 4, 4, 4);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(88, 95);
+            // 
+            // btnReportBuying
+            // 
+            this.btnReportBuying.Font = new System.Drawing.Font("Century Gothic", 11.25F);
+            this.btnReportBuying.Name = "btnReportBuying";
+            this.btnReportBuying.Size = new System.Drawing.Size(200, 24);
+            this.btnReportBuying.Text = "Report Buying";
+            this.btnReportBuying.Click += new System.EventHandler(this.btnReportBuying_Click);
+            // 
+            // btnReportSelling
+            // 
+            this.btnReportSelling.Font = new System.Drawing.Font("Century Gothic", 11.25F);
+            this.btnReportSelling.Name = "btnReportSelling";
+            this.btnReportSelling.Size = new System.Drawing.Size(200, 24);
+            this.btnReportSelling.Text = "Report Selling";
+            this.btnReportSelling.Click += new System.EventHandler(this.btnReportSelling_Click);
+            // 
+            // btnReportInventory
+            // 
+            this.btnReportInventory.Font = new System.Drawing.Font("Century Gothic", 11.25F);
+            this.btnReportInventory.Name = "btnReportInventory";
+            this.btnReportInventory.Size = new System.Drawing.Size(200, 24);
+            this.btnReportInventory.Text = "Report Inventory";
+            this.btnReportInventory.Click += new System.EventHandler(this.btnReportInventory_Click);
+            // 
+            // btnReportDebt
+            // 
+            this.btnReportDebt.Font = new System.Drawing.Font("Century Gothic", 11.25F);
+            this.btnReportDebt.Name = "btnReportDebt";
+            this.btnReportDebt.Size = new System.Drawing.Size(200, 24);
+            this.btnReportDebt.Text = "Report Debt";
+            this.btnReportDebt.Click += new System.EventHandler(this.btnReportDebt_Click);
+            // 
+            // btnReportCustomer
+            // 
+            this.btnReportCustomer.Font = new System.Drawing.Font("Century Gothic", 11.25F);
+            this.btnReportCustomer.Name = "btnReportCustomer";
+            this.btnReportCustomer.Size = new System.Drawing.Size(200, 24);
+            this.btnReportCustomer.Text = "Report Customer";
+            this.btnReportCustomer.Click += new System.EventHandler(this.btnReportCustomer_Click);
             // 
             // Main
             // 
@@ -968,6 +1029,12 @@
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.ToolStripMenuItem MenuPayment;
         private System.Windows.Forms.ToolStripMenuItem menuExchangeRate;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem btnReportBuying;
+        private System.Windows.Forms.ToolStripMenuItem btnReportSelling;
+        private System.Windows.Forms.ToolStripMenuItem btnReportInventory;
+        private System.Windows.Forms.ToolStripMenuItem btnReportDebt;
+        private System.Windows.Forms.ToolStripMenuItem btnReportCustomer;
     }
 }
 
