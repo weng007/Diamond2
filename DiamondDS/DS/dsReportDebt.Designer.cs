@@ -20,17 +20,17 @@ namespace DiamondDS.DS {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("dsBuyBookGold")]
+    [global::System.Xml.Serialization.XmlRootAttribute("dsReportDebt")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class dsBuyBookGold : global::System.Data.DataSet {
+    public partial class dsReportDebt : global::System.Data.DataSet {
         
-        private BuyBookGoldDataTable tableBuyBookGold;
+        private ReportDebtDataTable tableReportDebt;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public dsBuyBookGold() {
+        public dsReportDebt() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace DiamondDS.DS {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected dsBuyBookGold(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected dsReportDebt(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace DiamondDS.DS {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["BuyBookGold"] != null)) {
-                    base.Tables.Add(new BuyBookGoldDataTable(ds.Tables["BuyBookGold"]));
+                if ((ds.Tables["ReportDebt"] != null)) {
+                    base.Tables.Add(new ReportDebtDataTable(ds.Tables["ReportDebt"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace DiamondDS.DS {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public BuyBookGoldDataTable BuyBookGold {
+        public ReportDebtDataTable ReportDebt {
             get {
-                return this.tableBuyBookGold;
+                return this.tableReportDebt;
             }
         }
         
@@ -127,7 +127,7 @@ namespace DiamondDS.DS {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            dsBuyBookGold cln = ((dsBuyBookGold)(base.Clone()));
+            dsReportDebt cln = ((dsReportDebt)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace DiamondDS.DS {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["BuyBookGold"] != null)) {
-                    base.Tables.Add(new BuyBookGoldDataTable(ds.Tables["BuyBookGold"]));
+                if ((ds.Tables["ReportDebt"] != null)) {
+                    base.Tables.Add(new ReportDebtDataTable(ds.Tables["ReportDebt"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace DiamondDS.DS {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableBuyBookGold = ((BuyBookGoldDataTable)(base.Tables["BuyBookGold"]));
+            this.tableReportDebt = ((ReportDebtDataTable)(base.Tables["ReportDebt"]));
             if ((initTable == true)) {
-                if ((this.tableBuyBookGold != null)) {
-                    this.tableBuyBookGold.InitVars();
+                if ((this.tableReportDebt != null)) {
+                    this.tableReportDebt.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace DiamondDS.DS {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "dsBuyBookGold";
+            this.DataSetName = "dsReportDebt";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/dsBuyBookGold.xsd";
+            this.Namespace = "http://tempuri.org/dsReportDebt.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableBuyBookGold = new BuyBookGoldDataTable();
-            base.Tables.Add(this.tableBuyBookGold);
+            this.tableReportDebt = new ReportDebtDataTable();
+            base.Tables.Add(this.tableReportDebt);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializeBuyBookGold() {
+        private bool ShouldSerializeReportDebt() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace DiamondDS.DS {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            dsBuyBookGold ds = new dsBuyBookGold();
+            dsReportDebt ds = new dsReportDebt();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,65 +270,45 @@ namespace DiamondDS.DS {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void BuyBookGoldRowChangeEventHandler(object sender, BuyBookGoldRowChangeEvent e);
+        public delegate void ReportDebtRowChangeEventHandler(object sender, ReportDebtRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class BuyBookGoldDataTable : global::System.Data.TypedTableBase<BuyBookGoldRow> {
-            
-            private global::System.Data.DataColumn columnRowNum;
+        public partial class ReportDebtDataTable : global::System.Data.TypedTableBase<ReportDebtRow> {
             
             private global::System.Data.DataColumn columnID;
             
-            private global::System.Data.DataColumn columnBuyDate;
+            private global::System.Data.DataColumn columnIsPaid;
+            
+            private global::System.Data.DataColumn columnPayment;
+            
+            private global::System.Data.DataColumn columnCode;
+            
+            private global::System.Data.DataColumn columnBuybookType;
             
             private global::System.Data.DataColumn columnSeller;
             
-            private global::System.Data.DataColumn columnBuyPrice;
-            
-            private global::System.Data.DataColumn columnSellPrice;
-            
-            private global::System.Data.DataColumn columnAmount1;
-            
-            private global::System.Data.DataColumn columnAmount2;
-            
-            private global::System.Data.DataColumn columnPrice1;
-            
-            private global::System.Data.DataColumn columnPrice2;
-            
-            private global::System.Data.DataColumn columnTotal1;
-            
-            private global::System.Data.DataColumn columnTotal2;
-            
-            private global::System.Data.DataColumn columnPricePerGram;
-            
-            private global::System.Data.DataColumn columnPriceGram1;
-            
-            private global::System.Data.DataColumn columnPriceGram2;
-            
-            private global::System.Data.DataColumn columnIsDeleted;
-            
-            private global::System.Data.DataColumn columnCreateBy;
-            
-            private global::System.Data.DataColumn columnCreateDate;
-            
-            private global::System.Data.DataColumn columnEditBy;
-            
-            private global::System.Data.DataColumn columnIsPaid;
+            private global::System.Data.DataColumn columnBuyDate;
             
             private global::System.Data.DataColumn columnPayDate;
             
-            private global::System.Data.DataColumn columnEditDate;
+            private global::System.Data.DataColumn columnWeight;
             
-            private global::System.Data.DataColumn columnBuyer;
+            private global::System.Data.DataColumn columnTotalBaht;
+            
+            private global::System.Data.DataColumn columnDetail;
+            
+            private global::System.Data.DataColumn columnRemark;
+            
+            private global::System.Data.DataColumn columnTableName;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public BuyBookGoldDataTable() {
-                this.TableName = "BuyBookGold";
+            public ReportDebtDataTable() {
+                this.TableName = "ReportDebt";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -336,7 +316,7 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal BuyBookGoldDataTable(global::System.Data.DataTable table) {
+            internal ReportDebtDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -353,17 +333,9 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected BuyBookGoldDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected ReportDebtDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn RowNumColumn {
-                get {
-                    return this.columnRowNum;
-                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -371,142 +343,6 @@ namespace DiamondDS.DS {
             public global::System.Data.DataColumn IDColumn {
                 get {
                     return this.columnID;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn BuyDateColumn {
-                get {
-                    return this.columnBuyDate;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn SellerColumn {
-                get {
-                    return this.columnSeller;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn BuyPriceColumn {
-                get {
-                    return this.columnBuyPrice;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn SellPriceColumn {
-                get {
-                    return this.columnSellPrice;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn Amount1Column {
-                get {
-                    return this.columnAmount1;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn Amount2Column {
-                get {
-                    return this.columnAmount2;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn Price1Column {
-                get {
-                    return this.columnPrice1;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn Price2Column {
-                get {
-                    return this.columnPrice2;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn Total1Column {
-                get {
-                    return this.columnTotal1;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn Total2Column {
-                get {
-                    return this.columnTotal2;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn PricePerGramColumn {
-                get {
-                    return this.columnPricePerGram;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn PriceGram1Column {
-                get {
-                    return this.columnPriceGram1;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn PriceGram2Column {
-                get {
-                    return this.columnPriceGram2;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn IsDeletedColumn {
-                get {
-                    return this.columnIsDeleted;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn CreateByColumn {
-                get {
-                    return this.columnCreateBy;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn CreateDateColumn {
-                get {
-                    return this.columnCreateDate;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn EditByColumn {
-                get {
-                    return this.columnEditBy;
                 }
             }
             
@@ -520,6 +356,46 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn PaymentColumn {
+                get {
+                    return this.columnPayment;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn CodeColumn {
+                get {
+                    return this.columnCode;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn BuybookTypeColumn {
+                get {
+                    return this.columnBuybookType;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn SellerColumn {
+                get {
+                    return this.columnSeller;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn BuyDateColumn {
+                get {
+                    return this.columnBuyDate;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn PayDateColumn {
                 get {
                     return this.columnPayDate;
@@ -528,17 +404,41 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn EditDateColumn {
+            public global::System.Data.DataColumn WeightColumn {
                 get {
-                    return this.columnEditDate;
+                    return this.columnWeight;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn BuyerColumn {
+            public global::System.Data.DataColumn TotalBahtColumn {
                 get {
-                    return this.columnBuyer;
+                    return this.columnTotalBaht;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn DetailColumn {
+                get {
+                    return this.columnDetail;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn RemarkColumn {
+                get {
+                    return this.columnRemark;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn TableNameColumn {
+                get {
+                    return this.columnTableName;
                 }
             }
             
@@ -553,96 +453,57 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public BuyBookGoldRow this[int index] {
+            public ReportDebtRow this[int index] {
                 get {
-                    return ((BuyBookGoldRow)(this.Rows[index]));
+                    return ((ReportDebtRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event BuyBookGoldRowChangeEventHandler BuyBookGoldRowChanging;
+            public event ReportDebtRowChangeEventHandler ReportDebtRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event BuyBookGoldRowChangeEventHandler BuyBookGoldRowChanged;
+            public event ReportDebtRowChangeEventHandler ReportDebtRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event BuyBookGoldRowChangeEventHandler BuyBookGoldRowDeleting;
+            public event ReportDebtRowChangeEventHandler ReportDebtRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event BuyBookGoldRowChangeEventHandler BuyBookGoldRowDeleted;
+            public event ReportDebtRowChangeEventHandler ReportDebtRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddBuyBookGoldRow(BuyBookGoldRow row) {
+            public void AddReportDebtRow(ReportDebtRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public BuyBookGoldRow AddBuyBookGoldRow(
-                        long RowNum, 
-                        System.DateTime BuyDate, 
-                        string Seller, 
-                        decimal BuyPrice, 
-                        decimal SellPrice, 
-                        double Amount1, 
-                        double Amount2, 
-                        decimal Price1, 
-                        decimal Price2, 
-                        decimal Total1, 
-                        decimal Total2, 
-                        decimal PricePerGram, 
-                        decimal PriceGram1, 
-                        decimal PriceGram2, 
-                        string IsDeleted, 
-                        int CreateBy, 
-                        System.DateTime CreateDate, 
-                        int EditBy, 
-                        string IsPaid, 
-                        System.DateTime PayDate, 
-                        System.DateTime EditDate, 
-                        string Buyer) {
-                BuyBookGoldRow rowBuyBookGoldRow = ((BuyBookGoldRow)(this.NewRow()));
+            public ReportDebtRow AddReportDebtRow(int ID, string IsPaid, string Payment, string Code, string BuybookType, string Seller, System.DateTime BuyDate, System.DateTime PayDate, double Weight, decimal TotalBaht, string Detail, string Remark, string TableName) {
+                ReportDebtRow rowReportDebtRow = ((ReportDebtRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        RowNum,
-                        null,
-                        BuyDate,
-                        Seller,
-                        BuyPrice,
-                        SellPrice,
-                        Amount1,
-                        Amount2,
-                        Price1,
-                        Price2,
-                        Total1,
-                        Total2,
-                        PricePerGram,
-                        PriceGram1,
-                        PriceGram2,
-                        IsDeleted,
-                        CreateBy,
-                        CreateDate,
-                        EditBy,
+                        ID,
                         IsPaid,
+                        Payment,
+                        Code,
+                        BuybookType,
+                        Seller,
+                        BuyDate,
                         PayDate,
-                        EditDate,
-                        Buyer};
-                rowBuyBookGoldRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowBuyBookGoldRow);
-                return rowBuyBookGoldRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public BuyBookGoldRow FindByID(int ID) {
-                return ((BuyBookGoldRow)(this.Rows.Find(new object[] {
-                            ID})));
+                        Weight,
+                        TotalBaht,
+                        Detail,
+                        Remark,
+                        TableName};
+                rowReportDebtRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowReportDebtRow);
+                return rowReportDebtRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                BuyBookGoldDataTable cln = ((BuyBookGoldDataTable)(base.Clone()));
+                ReportDebtDataTable cln = ((ReportDebtDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -650,123 +511,103 @@ namespace DiamondDS.DS {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new BuyBookGoldDataTable();
+                return new ReportDebtDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
-                this.columnRowNum = base.Columns["RowNum"];
                 this.columnID = base.Columns["ID"];
-                this.columnBuyDate = base.Columns["BuyDate"];
-                this.columnSeller = base.Columns["Seller"];
-                this.columnBuyPrice = base.Columns["BuyPrice"];
-                this.columnSellPrice = base.Columns["SellPrice"];
-                this.columnAmount1 = base.Columns["Amount1"];
-                this.columnAmount2 = base.Columns["Amount2"];
-                this.columnPrice1 = base.Columns["Price1"];
-                this.columnPrice2 = base.Columns["Price2"];
-                this.columnTotal1 = base.Columns["Total1"];
-                this.columnTotal2 = base.Columns["Total2"];
-                this.columnPricePerGram = base.Columns["PricePerGram"];
-                this.columnPriceGram1 = base.Columns["PriceGram1"];
-                this.columnPriceGram2 = base.Columns["PriceGram2"];
-                this.columnIsDeleted = base.Columns["IsDeleted"];
-                this.columnCreateBy = base.Columns["CreateBy"];
-                this.columnCreateDate = base.Columns["CreateDate"];
-                this.columnEditBy = base.Columns["EditBy"];
                 this.columnIsPaid = base.Columns["IsPaid"];
+                this.columnPayment = base.Columns["Payment"];
+                this.columnCode = base.Columns["Code"];
+                this.columnBuybookType = base.Columns["BuybookType"];
+                this.columnSeller = base.Columns["Seller"];
+                this.columnBuyDate = base.Columns["BuyDate"];
                 this.columnPayDate = base.Columns["PayDate"];
-                this.columnEditDate = base.Columns["EditDate"];
-                this.columnBuyer = base.Columns["Buyer"];
+                this.columnWeight = base.Columns["Weight"];
+                this.columnTotalBaht = base.Columns["TotalBaht"];
+                this.columnDetail = base.Columns["Detail"];
+                this.columnRemark = base.Columns["Remark"];
+                this.columnTableName = base.Columns["TableName"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             private void InitClass() {
-                this.columnRowNum = new global::System.Data.DataColumn("RowNum", typeof(long), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnRowNum);
                 this.columnID = new global::System.Data.DataColumn("ID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnID);
-                this.columnBuyDate = new global::System.Data.DataColumn("BuyDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnBuyDate);
-                this.columnSeller = new global::System.Data.DataColumn("Seller", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSeller);
-                this.columnBuyPrice = new global::System.Data.DataColumn("BuyPrice", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnBuyPrice);
-                this.columnSellPrice = new global::System.Data.DataColumn("SellPrice", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSellPrice);
-                this.columnAmount1 = new global::System.Data.DataColumn("Amount1", typeof(double), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnAmount1);
-                this.columnAmount2 = new global::System.Data.DataColumn("Amount2", typeof(double), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnAmount2);
-                this.columnPrice1 = new global::System.Data.DataColumn("Price1", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPrice1);
-                this.columnPrice2 = new global::System.Data.DataColumn("Price2", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPrice2);
-                this.columnTotal1 = new global::System.Data.DataColumn("Total1", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTotal1);
-                this.columnTotal2 = new global::System.Data.DataColumn("Total2", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTotal2);
-                this.columnPricePerGram = new global::System.Data.DataColumn("PricePerGram", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPricePerGram);
-                this.columnPriceGram1 = new global::System.Data.DataColumn("PriceGram1", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPriceGram1);
-                this.columnPriceGram2 = new global::System.Data.DataColumn("PriceGram2", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPriceGram2);
-                this.columnIsDeleted = new global::System.Data.DataColumn("IsDeleted", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnIsDeleted);
-                this.columnCreateBy = new global::System.Data.DataColumn("CreateBy", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCreateBy);
-                this.columnCreateDate = new global::System.Data.DataColumn("CreateDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCreateDate);
-                this.columnEditBy = new global::System.Data.DataColumn("EditBy", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnEditBy);
                 this.columnIsPaid = new global::System.Data.DataColumn("IsPaid", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnIsPaid);
+                this.columnPayment = new global::System.Data.DataColumn("Payment", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPayment);
+                this.columnCode = new global::System.Data.DataColumn("Code", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCode);
+                this.columnBuybookType = new global::System.Data.DataColumn("BuybookType", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBuybookType);
+                this.columnSeller = new global::System.Data.DataColumn("Seller", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSeller);
+                this.columnBuyDate = new global::System.Data.DataColumn("BuyDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBuyDate);
                 this.columnPayDate = new global::System.Data.DataColumn("PayDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPayDate);
-                this.columnEditDate = new global::System.Data.DataColumn("EditDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnEditDate);
-                this.columnBuyer = new global::System.Data.DataColumn("Buyer", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnBuyer);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnID}, true));
-                this.columnRowNum.ReadOnly = true;
-                this.columnID.AutoIncrement = true;
-                this.columnID.AutoIncrementSeed = -1;
-                this.columnID.AutoIncrementStep = -1;
-                this.columnID.AllowDBNull = false;
+                this.columnWeight = new global::System.Data.DataColumn("Weight", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnWeight);
+                this.columnTotalBaht = new global::System.Data.DataColumn("TotalBaht", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTotalBaht);
+                this.columnDetail = new global::System.Data.DataColumn("Detail", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDetail);
+                this.columnRemark = new global::System.Data.DataColumn("Remark", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnRemark);
+                this.columnTableName = new global::System.Data.DataColumn("TableName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTableName);
                 this.columnID.ReadOnly = true;
-                this.columnID.Unique = true;
+                this.columnIsPaid.ReadOnly = true;
+                this.columnIsPaid.MaxLength = 1;
+                this.columnPayment.ReadOnly = true;
+                this.columnPayment.MaxLength = 10;
+                this.columnCode.ReadOnly = true;
+                this.columnCode.MaxLength = 30;
+                this.columnBuybookType.ReadOnly = true;
+                this.columnBuybookType.MaxLength = 100;
+                this.columnSeller.ReadOnly = true;
                 this.columnSeller.MaxLength = 100;
-                this.columnIsDeleted.MaxLength = 1;
+                this.columnBuyDate.ReadOnly = true;
+                this.columnPayDate.ReadOnly = true;
+                this.columnWeight.ReadOnly = true;
+                this.columnTotalBaht.ReadOnly = true;
+                this.columnDetail.ReadOnly = true;
+                this.columnDetail.MaxLength = 423;
+                this.columnRemark.ReadOnly = true;
+                this.columnRemark.MaxLength = 250;
+                this.columnTableName.ReadOnly = true;
+                this.columnTableName.MaxLength = 18;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public BuyBookGoldRow NewBuyBookGoldRow() {
-                return ((BuyBookGoldRow)(this.NewRow()));
+            public ReportDebtRow NewReportDebtRow() {
+                return ((ReportDebtRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new BuyBookGoldRow(builder);
+                return new ReportDebtRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(BuyBookGoldRow);
+                return typeof(ReportDebtRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.BuyBookGoldRowChanged != null)) {
-                    this.BuyBookGoldRowChanged(this, new BuyBookGoldRowChangeEvent(((BuyBookGoldRow)(e.Row)), e.Action));
+                if ((this.ReportDebtRowChanged != null)) {
+                    this.ReportDebtRowChanged(this, new ReportDebtRowChangeEvent(((ReportDebtRow)(e.Row)), e.Action));
                 }
             }
             
@@ -774,8 +615,8 @@ namespace DiamondDS.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.BuyBookGoldRowChanging != null)) {
-                    this.BuyBookGoldRowChanging(this, new BuyBookGoldRowChangeEvent(((BuyBookGoldRow)(e.Row)), e.Action));
+                if ((this.ReportDebtRowChanging != null)) {
+                    this.ReportDebtRowChanging(this, new ReportDebtRowChangeEvent(((ReportDebtRow)(e.Row)), e.Action));
                 }
             }
             
@@ -783,8 +624,8 @@ namespace DiamondDS.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.BuyBookGoldRowDeleted != null)) {
-                    this.BuyBookGoldRowDeleted(this, new BuyBookGoldRowChangeEvent(((BuyBookGoldRow)(e.Row)), e.Action));
+                if ((this.ReportDebtRowDeleted != null)) {
+                    this.ReportDebtRowDeleted(this, new ReportDebtRowChangeEvent(((ReportDebtRow)(e.Row)), e.Action));
                 }
             }
             
@@ -792,14 +633,14 @@ namespace DiamondDS.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.BuyBookGoldRowDeleting != null)) {
-                    this.BuyBookGoldRowDeleting(this, new BuyBookGoldRowChangeEvent(((BuyBookGoldRow)(e.Row)), e.Action));
+                if ((this.ReportDebtRowDeleting != null)) {
+                    this.ReportDebtRowDeleting(this, new ReportDebtRowChangeEvent(((ReportDebtRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemoveBuyBookGoldRow(BuyBookGoldRow row) {
+            public void RemoveReportDebtRow(ReportDebtRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -808,7 +649,7 @@ namespace DiamondDS.DS {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                dsBuyBookGold ds = new dsBuyBookGold();
+                dsReportDebt ds = new dsReportDebt();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -826,7 +667,7 @@ namespace DiamondDS.DS {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "BuyBookGoldDataTable";
+                attribute2.FixedValue = "ReportDebtDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -870,313 +711,30 @@ namespace DiamondDS.DS {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class BuyBookGoldRow : global::System.Data.DataRow {
+        public partial class ReportDebtRow : global::System.Data.DataRow {
             
-            private BuyBookGoldDataTable tableBuyBookGold;
+            private ReportDebtDataTable tableReportDebt;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal BuyBookGoldRow(global::System.Data.DataRowBuilder rb) : 
+            internal ReportDebtRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableBuyBookGold = ((BuyBookGoldDataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public long RowNum {
-                get {
-                    try {
-                        return ((long)(this[this.tableBuyBookGold.RowNumColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'RowNum\' in table \'BuyBookGold\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableBuyBookGold.RowNumColumn] = value;
-                }
+                this.tableReportDebt = ((ReportDebtDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public int ID {
                 get {
-                    return ((int)(this[this.tableBuyBookGold.IDColumn]));
-                }
-                set {
-                    this[this.tableBuyBookGold.IDColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public System.DateTime BuyDate {
-                get {
                     try {
-                        return ((global::System.DateTime)(this[this.tableBuyBookGold.BuyDateColumn]));
+                        return ((int)(this[this.tableReportDebt.IDColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'BuyDate\' in table \'BuyBookGold\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'ID\' in table \'ReportDebt\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableBuyBookGold.BuyDateColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Seller {
-                get {
-                    try {
-                        return ((string)(this[this.tableBuyBookGold.SellerColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Seller\' in table \'BuyBookGold\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableBuyBookGold.SellerColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public decimal BuyPrice {
-                get {
-                    try {
-                        return ((decimal)(this[this.tableBuyBookGold.BuyPriceColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'BuyPrice\' in table \'BuyBookGold\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableBuyBookGold.BuyPriceColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public decimal SellPrice {
-                get {
-                    try {
-                        return ((decimal)(this[this.tableBuyBookGold.SellPriceColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'SellPrice\' in table \'BuyBookGold\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableBuyBookGold.SellPriceColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public double Amount1 {
-                get {
-                    try {
-                        return ((double)(this[this.tableBuyBookGold.Amount1Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Amount1\' in table \'BuyBookGold\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableBuyBookGold.Amount1Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public double Amount2 {
-                get {
-                    try {
-                        return ((double)(this[this.tableBuyBookGold.Amount2Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Amount2\' in table \'BuyBookGold\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableBuyBookGold.Amount2Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public decimal Price1 {
-                get {
-                    try {
-                        return ((decimal)(this[this.tableBuyBookGold.Price1Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Price1\' in table \'BuyBookGold\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableBuyBookGold.Price1Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public decimal Price2 {
-                get {
-                    try {
-                        return ((decimal)(this[this.tableBuyBookGold.Price2Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Price2\' in table \'BuyBookGold\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableBuyBookGold.Price2Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public decimal Total1 {
-                get {
-                    try {
-                        return ((decimal)(this[this.tableBuyBookGold.Total1Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Total1\' in table \'BuyBookGold\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableBuyBookGold.Total1Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public decimal Total2 {
-                get {
-                    try {
-                        return ((decimal)(this[this.tableBuyBookGold.Total2Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Total2\' in table \'BuyBookGold\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableBuyBookGold.Total2Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public decimal PricePerGram {
-                get {
-                    try {
-                        return ((decimal)(this[this.tableBuyBookGold.PricePerGramColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'PricePerGram\' in table \'BuyBookGold\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableBuyBookGold.PricePerGramColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public decimal PriceGram1 {
-                get {
-                    try {
-                        return ((decimal)(this[this.tableBuyBookGold.PriceGram1Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'PriceGram1\' in table \'BuyBookGold\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableBuyBookGold.PriceGram1Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public decimal PriceGram2 {
-                get {
-                    try {
-                        return ((decimal)(this[this.tableBuyBookGold.PriceGram2Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'PriceGram2\' in table \'BuyBookGold\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableBuyBookGold.PriceGram2Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string IsDeleted {
-                get {
-                    try {
-                        return ((string)(this[this.tableBuyBookGold.IsDeletedColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'IsDeleted\' in table \'BuyBookGold\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableBuyBookGold.IsDeletedColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int CreateBy {
-                get {
-                    try {
-                        return ((int)(this[this.tableBuyBookGold.CreateByColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'CreateBy\' in table \'BuyBookGold\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableBuyBookGold.CreateByColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public System.DateTime CreateDate {
-                get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tableBuyBookGold.CreateDateColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'CreateDate\' in table \'BuyBookGold\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableBuyBookGold.CreateDateColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int EditBy {
-                get {
-                    try {
-                        return ((int)(this[this.tableBuyBookGold.EditByColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'EditBy\' in table \'BuyBookGold\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableBuyBookGold.EditByColumn] = value;
+                    this[this.tableReportDebt.IDColumn] = value;
                 }
             }
             
@@ -1185,14 +743,94 @@ namespace DiamondDS.DS {
             public string IsPaid {
                 get {
                     try {
-                        return ((string)(this[this.tableBuyBookGold.IsPaidColumn]));
+                        return ((string)(this[this.tableReportDebt.IsPaidColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'IsPaid\' in table \'BuyBookGold\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'IsPaid\' in table \'ReportDebt\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableBuyBookGold.IsPaidColumn] = value;
+                    this[this.tableReportDebt.IsPaidColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Payment {
+                get {
+                    try {
+                        return ((string)(this[this.tableReportDebt.PaymentColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Payment\' in table \'ReportDebt\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableReportDebt.PaymentColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Code {
+                get {
+                    try {
+                        return ((string)(this[this.tableReportDebt.CodeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Code\' in table \'ReportDebt\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableReportDebt.CodeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string BuybookType {
+                get {
+                    try {
+                        return ((string)(this[this.tableReportDebt.BuybookTypeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'BuybookType\' in table \'ReportDebt\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableReportDebt.BuybookTypeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Seller {
+                get {
+                    try {
+                        return ((string)(this[this.tableReportDebt.SellerColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Seller\' in table \'ReportDebt\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableReportDebt.SellerColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public System.DateTime BuyDate {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableReportDebt.BuyDateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'BuyDate\' in table \'ReportDebt\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableReportDebt.BuyDateColumn] = value;
                 }
             }
             
@@ -1201,311 +839,251 @@ namespace DiamondDS.DS {
             public System.DateTime PayDate {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tableBuyBookGold.PayDateColumn]));
+                        return ((global::System.DateTime)(this[this.tableReportDebt.PayDateColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'PayDate\' in table \'BuyBookGold\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'PayDate\' in table \'ReportDebt\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableBuyBookGold.PayDateColumn] = value;
+                    this[this.tableReportDebt.PayDateColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public System.DateTime EditDate {
+            public double Weight {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tableBuyBookGold.EditDateColumn]));
+                        return ((double)(this[this.tableReportDebt.WeightColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'EditDate\' in table \'BuyBookGold\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Weight\' in table \'ReportDebt\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableBuyBookGold.EditDateColumn] = value;
+                    this[this.tableReportDebt.WeightColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Buyer {
+            public decimal TotalBaht {
                 get {
                     try {
-                        return ((string)(this[this.tableBuyBookGold.BuyerColumn]));
+                        return ((decimal)(this[this.tableReportDebt.TotalBahtColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Buyer\' in table \'BuyBookGold\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'TotalBaht\' in table \'ReportDebt\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableBuyBookGold.BuyerColumn] = value;
+                    this[this.tableReportDebt.TotalBahtColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsRowNumNull() {
-                return this.IsNull(this.tableBuyBookGold.RowNumColumn);
+            public string Detail {
+                get {
+                    try {
+                        return ((string)(this[this.tableReportDebt.DetailColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Detail\' in table \'ReportDebt\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableReportDebt.DetailColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetRowNumNull() {
-                this[this.tableBuyBookGold.RowNumColumn] = global::System.Convert.DBNull;
+            public string Remark {
+                get {
+                    try {
+                        return ((string)(this[this.tableReportDebt.RemarkColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Remark\' in table \'ReportDebt\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableReportDebt.RemarkColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsBuyDateNull() {
-                return this.IsNull(this.tableBuyBookGold.BuyDateColumn);
+            public string TableName {
+                get {
+                    try {
+                        return ((string)(this[this.tableReportDebt.TableNameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TableName\' in table \'ReportDebt\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableReportDebt.TableNameColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetBuyDateNull() {
-                this[this.tableBuyBookGold.BuyDateColumn] = global::System.Convert.DBNull;
+            public bool IsIDNull() {
+                return this.IsNull(this.tableReportDebt.IDColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsSellerNull() {
-                return this.IsNull(this.tableBuyBookGold.SellerColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetSellerNull() {
-                this[this.tableBuyBookGold.SellerColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsBuyPriceNull() {
-                return this.IsNull(this.tableBuyBookGold.BuyPriceColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetBuyPriceNull() {
-                this[this.tableBuyBookGold.BuyPriceColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsSellPriceNull() {
-                return this.IsNull(this.tableBuyBookGold.SellPriceColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetSellPriceNull() {
-                this[this.tableBuyBookGold.SellPriceColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsAmount1Null() {
-                return this.IsNull(this.tableBuyBookGold.Amount1Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetAmount1Null() {
-                this[this.tableBuyBookGold.Amount1Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsAmount2Null() {
-                return this.IsNull(this.tableBuyBookGold.Amount2Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetAmount2Null() {
-                this[this.tableBuyBookGold.Amount2Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsPrice1Null() {
-                return this.IsNull(this.tableBuyBookGold.Price1Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetPrice1Null() {
-                this[this.tableBuyBookGold.Price1Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsPrice2Null() {
-                return this.IsNull(this.tableBuyBookGold.Price2Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetPrice2Null() {
-                this[this.tableBuyBookGold.Price2Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsTotal1Null() {
-                return this.IsNull(this.tableBuyBookGold.Total1Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetTotal1Null() {
-                this[this.tableBuyBookGold.Total1Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsTotal2Null() {
-                return this.IsNull(this.tableBuyBookGold.Total2Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetTotal2Null() {
-                this[this.tableBuyBookGold.Total2Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsPricePerGramNull() {
-                return this.IsNull(this.tableBuyBookGold.PricePerGramColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetPricePerGramNull() {
-                this[this.tableBuyBookGold.PricePerGramColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsPriceGram1Null() {
-                return this.IsNull(this.tableBuyBookGold.PriceGram1Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetPriceGram1Null() {
-                this[this.tableBuyBookGold.PriceGram1Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsPriceGram2Null() {
-                return this.IsNull(this.tableBuyBookGold.PriceGram2Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetPriceGram2Null() {
-                this[this.tableBuyBookGold.PriceGram2Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsIsDeletedNull() {
-                return this.IsNull(this.tableBuyBookGold.IsDeletedColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetIsDeletedNull() {
-                this[this.tableBuyBookGold.IsDeletedColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsCreateByNull() {
-                return this.IsNull(this.tableBuyBookGold.CreateByColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetCreateByNull() {
-                this[this.tableBuyBookGold.CreateByColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsCreateDateNull() {
-                return this.IsNull(this.tableBuyBookGold.CreateDateColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetCreateDateNull() {
-                this[this.tableBuyBookGold.CreateDateColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsEditByNull() {
-                return this.IsNull(this.tableBuyBookGold.EditByColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetEditByNull() {
-                this[this.tableBuyBookGold.EditByColumn] = global::System.Convert.DBNull;
+            public void SetIDNull() {
+                this[this.tableReportDebt.IDColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsIsPaidNull() {
-                return this.IsNull(this.tableBuyBookGold.IsPaidColumn);
+                return this.IsNull(this.tableReportDebt.IsPaidColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetIsPaidNull() {
-                this[this.tableBuyBookGold.IsPaidColumn] = global::System.Convert.DBNull;
+                this[this.tableReportDebt.IsPaidColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsPaymentNull() {
+                return this.IsNull(this.tableReportDebt.PaymentColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetPaymentNull() {
+                this[this.tableReportDebt.PaymentColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsCodeNull() {
+                return this.IsNull(this.tableReportDebt.CodeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetCodeNull() {
+                this[this.tableReportDebt.CodeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsBuybookTypeNull() {
+                return this.IsNull(this.tableReportDebt.BuybookTypeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetBuybookTypeNull() {
+                this[this.tableReportDebt.BuybookTypeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsSellerNull() {
+                return this.IsNull(this.tableReportDebt.SellerColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetSellerNull() {
+                this[this.tableReportDebt.SellerColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsBuyDateNull() {
+                return this.IsNull(this.tableReportDebt.BuyDateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetBuyDateNull() {
+                this[this.tableReportDebt.BuyDateColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsPayDateNull() {
-                return this.IsNull(this.tableBuyBookGold.PayDateColumn);
+                return this.IsNull(this.tableReportDebt.PayDateColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetPayDateNull() {
-                this[this.tableBuyBookGold.PayDateColumn] = global::System.Convert.DBNull;
+                this[this.tableReportDebt.PayDateColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsEditDateNull() {
-                return this.IsNull(this.tableBuyBookGold.EditDateColumn);
+            public bool IsWeightNull() {
+                return this.IsNull(this.tableReportDebt.WeightColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetEditDateNull() {
-                this[this.tableBuyBookGold.EditDateColumn] = global::System.Convert.DBNull;
+            public void SetWeightNull() {
+                this[this.tableReportDebt.WeightColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsBuyerNull() {
-                return this.IsNull(this.tableBuyBookGold.BuyerColumn);
+            public bool IsTotalBahtNull() {
+                return this.IsNull(this.tableReportDebt.TotalBahtColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetBuyerNull() {
-                this[this.tableBuyBookGold.BuyerColumn] = global::System.Convert.DBNull;
+            public void SetTotalBahtNull() {
+                this[this.tableReportDebt.TotalBahtColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsDetailNull() {
+                return this.IsNull(this.tableReportDebt.DetailColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetDetailNull() {
+                this[this.tableReportDebt.DetailColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsRemarkNull() {
+                return this.IsNull(this.tableReportDebt.RemarkColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetRemarkNull() {
+                this[this.tableReportDebt.RemarkColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsTableNameNull() {
+                return this.IsNull(this.tableReportDebt.TableNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetTableNameNull() {
+                this[this.tableReportDebt.TableNameColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -1513,22 +1091,22 @@ namespace DiamondDS.DS {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class BuyBookGoldRowChangeEvent : global::System.EventArgs {
+        public class ReportDebtRowChangeEvent : global::System.EventArgs {
             
-            private BuyBookGoldRow eventRow;
+            private ReportDebtRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public BuyBookGoldRowChangeEvent(BuyBookGoldRow row, global::System.Data.DataRowAction action) {
+            public ReportDebtRowChangeEvent(ReportDebtRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public BuyBookGoldRow Row {
+            public ReportDebtRow Row {
                 get {
                     return this.eventRow;
                 }

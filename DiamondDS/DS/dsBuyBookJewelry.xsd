@@ -14,7 +14,7 @@
   <xs:element name="dsBuyBookJewelry" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsBuyBookJewelry" msprop:Generator_UserDSName="dsBuyBookJewelry">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="BuyBookJewelry" msprop:Generator_TableClassName="BuyBookJewelryDataTable" msprop:Generator_TableVarName="tableBuyBookJewelry" msprop:Generator_TablePropName="BuyBookJewelry" msprop:Generator_RowDeletingName="BuyBookJewelryRowDeleting" msprop:Generator_RowChangingName="BuyBookJewelryRowChanging" msprop:Generator_RowEvHandlerName="BuyBookJewelryRowChangeEventHandler" msprop:Generator_RowDeletedName="BuyBookJewelryRowDeleted" msprop:Generator_UserTableName="BuyBookJewelry" msprop:Generator_RowChangedName="BuyBookJewelryRowChanged" msprop:Generator_RowEvArgName="BuyBookJewelryRowChangeEvent" msprop:Generator_RowClassName="BuyBookJewelryRow">
+        <xs:element name="BuyBookJewelry" msprop:Generator_TableClassName="BuyBookJewelryDataTable" msprop:Generator_TableVarName="tableBuyBookJewelry" msprop:Generator_RowChangedName="BuyBookJewelryRowChanged" msprop:Generator_TablePropName="BuyBookJewelry" msprop:Generator_RowDeletingName="BuyBookJewelryRowDeleting" msprop:Generator_RowChangingName="BuyBookJewelryRowChanging" msprop:Generator_RowEvHandlerName="BuyBookJewelryRowChangeEventHandler" msprop:Generator_RowDeletedName="BuyBookJewelryRowDeleted" msprop:Generator_RowClassName="BuyBookJewelryRow" msprop:Generator_UserTableName="BuyBookJewelry" msprop:Generator_RowEvArgName="BuyBookJewelryRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="RowNum" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnRowNum" msprop:Generator_ColumnPropNameInRow="RowNum" msprop:Generator_ColumnPropNameInTable="RowNumColumn" msprop:Generator_UserColumnName="RowNum" type="xs:long" minOccurs="0" />
@@ -109,6 +109,7 @@
               <xs:element name="IsPaid" msprop:Generator_ColumnVarNameInTable="columnIsPaid" msprop:Generator_ColumnPropNameInRow="IsPaid" msprop:Generator_ColumnPropNameInTable="IsPaidColumn" msprop:Generator_UserColumnName="IsPaid" type="xs:string" minOccurs="0" />
               <xs:element name="PayDate" msprop:Generator_ColumnVarNameInTable="columnPayDate" msprop:Generator_ColumnPropNameInRow="PayDate" msprop:Generator_ColumnPropNameInTable="PayDateColumn" msprop:Generator_UserColumnName="PayDate" type="xs:dateTime" minOccurs="0" />
               <xs:element name="Weight4" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnWeight4" msprop:Generator_ColumnPropNameInRow="Weight4" msprop:Generator_ColumnPropNameInTable="Weight4Column" msprop:Generator_UserColumnName="Weight4" type="xs:double" minOccurs="0" />
+              <xs:element name="Buyer" msprop:Generator_ColumnVarNameInTable="columnBuyer" msprop:Generator_ColumnPropNameInRow="Buyer" msprop:Generator_ColumnPropNameInTable="BuyerColumn" msprop:Generator_UserColumnName="Buyer" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

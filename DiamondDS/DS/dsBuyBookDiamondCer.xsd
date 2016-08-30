@@ -14,7 +14,7 @@
   <xs:element name="dsBuyBookDiamondCer" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsBuyBookDiamondCer" msprop:Generator_UserDSName="dsBuyBookDiamondCer">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="BuyBookDiamondCer" msprop:Generator_TableClassName="BuyBookDiamondCerDataTable" msprop:Generator_TableVarName="tableBuyBookDiamondCer" msprop:Generator_RowChangedName="BuyBookDiamondCerRowChanged" msprop:Generator_TablePropName="BuyBookDiamondCer" msprop:Generator_RowDeletingName="BuyBookDiamondCerRowDeleting" msprop:Generator_RowChangingName="BuyBookDiamondCerRowChanging" msprop:Generator_RowEvHandlerName="BuyBookDiamondCerRowChangeEventHandler" msprop:Generator_RowDeletedName="BuyBookDiamondCerRowDeleted" msprop:Generator_RowClassName="BuyBookDiamondCerRow" msprop:Generator_UserTableName="BuyBookDiamondCer" msprop:Generator_RowEvArgName="BuyBookDiamondCerRowChangeEvent">
+        <xs:element name="BuyBookDiamondCer" msprop:Generator_TableClassName="BuyBookDiamondCerDataTable" msprop:Generator_TableVarName="tableBuyBookDiamondCer" msprop:Generator_TablePropName="BuyBookDiamondCer" msprop:Generator_RowDeletingName="BuyBookDiamondCerRowDeleting" msprop:Generator_RowChangingName="BuyBookDiamondCerRowChanging" msprop:Generator_RowEvHandlerName="BuyBookDiamondCerRowChangeEventHandler" msprop:Generator_RowDeletedName="BuyBookDiamondCerRowDeleted" msprop:Generator_UserTableName="BuyBookDiamondCer" msprop:Generator_RowChangedName="BuyBookDiamondCerRowChanged" msprop:Generator_RowEvArgName="BuyBookDiamondCerRowChangeEvent" msprop:Generator_RowClassName="BuyBookDiamondCerRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="RowNum" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnRowNum" msprop:Generator_ColumnPropNameInRow="RowNum" msprop:Generator_ColumnPropNameInTable="RowNumColumn" msprop:Generator_UserColumnName="RowNum" type="xs:long" minOccurs="0" />
@@ -175,6 +175,7 @@
               <xs:element name="EditDate" msprop:Generator_ColumnVarNameInTable="columnEditDate" msprop:Generator_ColumnPropNameInRow="EditDate" msprop:Generator_ColumnPropNameInTable="EditDateColumn" msprop:Generator_UserColumnName="EditDate" type="xs:dateTime" minOccurs="0" />
               <xs:element name="Note" msprop:Generator_ColumnVarNameInTable="columnNote" msprop:Generator_ColumnPropNameInRow="Note" msprop:Generator_ColumnPropNameInTable="NoteColumn" msprop:Generator_UserColumnName="Note" type="xs:string" minOccurs="0" />
               <xs:element name="PayDate" msprop:Generator_ColumnVarNameInTable="columnPayDate" msprop:Generator_ColumnPropNameInRow="PayDate" msprop:Generator_ColumnPropNameInTable="PayDateColumn" msprop:Generator_UserColumnName="PayDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Buyer" msprop:Generator_ColumnVarNameInTable="columnBuyer" msprop:Generator_ColumnPropNameInRow="Buyer" msprop:Generator_ColumnPropNameInTable="BuyerColumn" msprop:Generator_UserColumnName="Buyer" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
