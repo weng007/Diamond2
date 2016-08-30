@@ -43,7 +43,7 @@ namespace DiamondShop
             }
             if (chkFlag)
             {
-                dsUser ds = ser1.DoAuthenticate(txtUserName.Text.Trim(), GM.Encrypt(txtPassword.Text.Trim()),"0");
+                dsUser ds = ser1.DoAuthenticate(txtUserName.Text.Trim(), GM.Encrypt(txtPassword.Text.Trim()), "0");
 
                 if (ds.Tables[0].Rows.Count > 0)
                 {
