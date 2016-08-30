@@ -106,7 +106,7 @@ namespace DiamondDAL.DAL
             return ds;
         }
 
-        public DataSet GetReportBuying(int TableName, DateTime SBuyDate, DateTime EBuyDate, float SWeight, float EWeight,int Shape,int Status,DateTime SDueDate, DateTime EDueDate,string IsPaid)
+        public DataSet GetReportBuying(int TableName, DateTime SBuyDate, DateTime EBuyDate, float SWeight, float EWeight,int Shape,int Status,DateTime SDueDate, DateTime EDueDate,int IsPaid)
         {
             try
             {
@@ -158,7 +158,7 @@ namespace DiamondDAL.DAL
                 SQL.CreateParameter("@EImpDate", EImpDate);
                 SQL.CreateParameter("@SPriceTag", SPriceTag);
                 SQL.CreateParameter("@EPricetag", EPricetag);
-                SQL.FillDataSetBySP2("SP_Rpt_Selling", ds);
+                SQL.FillDataSetBySP2("SP_Rpt_Inventory", ds);
             }
             catch (Exception ex)
             {
@@ -195,7 +195,7 @@ namespace DiamondDAL.DAL
                 SQL.CreateParameter("@SAnniDate", SAnniDate);
                 SQL.CreateParameter("@EAnniDate", EAnniDate);
                 SQL.CreateParameter("@DisplayName", DisplayName);
-                SQL.FillDataSetBySP2("SP_Rpt_Debt", ds);
+                SQL.FillDataSetBySP2("SP_Rpt_Customer", ds);
             }
             catch (Exception ex)
             {

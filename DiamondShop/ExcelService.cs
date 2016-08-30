@@ -22,8 +22,8 @@ namespace DiamondShop
 
             //Check จำนวน Column
             int maxColumn = 0;
-            if (mode == 0) { maxColumn = 21; }
-            else if (mode == 1) { maxColumn = 19; }
+            if (mode == 0) { maxColumn = 22; }
+            else if (mode == 1) { maxColumn = 20; }
 
 
             DataTable dt = GetDatatable(mode);
@@ -87,6 +87,7 @@ namespace DiamondShop
             {
                 dt.Columns.Add("Seller");
                 dt.Columns.Add("ColorType");
+                dt.Columns.Add("Shape");
                 dt.Columns.Add("Cut");
                 dt.Columns.Add("Polish");
                 dt.Columns.Add("Symmetry");
@@ -94,7 +95,6 @@ namespace DiamondShop
                 dt.Columns.Add("Lab");
                 dt.Columns.Add("ReportNumber");
                 dt.Columns.Add("Weight");
-                dt.Columns.Add("Shape");
                 dt.Columns.Add("Color");
                 dt.Columns.Add("Clearity");
                 dt.Columns.Add("Shop");
@@ -106,6 +106,7 @@ namespace DiamondShop
                 dt.Columns.Add("USDRate");
                 dt.Columns.Add("TotalBaht");
                 dt.Columns.Add("Note");
+                dt.Columns.Add("Buyer");
             }
             else if (mode == 1)
             {
@@ -128,6 +129,7 @@ namespace DiamondShop
                 dt.Columns.Add("TotalUSD");
                 dt.Columns.Add("TotalBath");
                 dt.Columns.Add("Note");
+                dt.Columns.Add("Buyer");
             }
             
 

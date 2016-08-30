@@ -59,9 +59,9 @@
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label8.Location = new System.Drawing.Point(279, 43);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(38, 19);
+            this.label8.Size = new System.Drawing.Size(43, 19);
             this.label8.TabIndex = 97;
-            this.label8.Text = "USD";
+            this.label8.Text = "Baht";
             // 
             // label7
             // 
@@ -70,9 +70,9 @@
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label7.Location = new System.Drawing.Point(66, 43);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(70, 19);
+            this.label7.Size = new System.Drawing.Size(65, 19);
             this.label7.TabIndex = 96;
-            this.label7.Text = "1 Bath =";
+            this.label7.Text = "1 USD =";
             // 
             // txtRate
             // 

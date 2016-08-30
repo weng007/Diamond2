@@ -75,6 +75,14 @@ namespace DiamondShop
 
             return ds;
         }
+        public static DataSet GetBuyer()
+        {
+            DataSet ds = new DataSet();
+            ser2 = new Service2();
+            ds = ser2.GetBuyer().Copy();
+
+            return ds;
+        }
 
         public static Service1 GetService()
         {

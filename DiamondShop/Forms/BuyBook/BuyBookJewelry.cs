@@ -43,6 +43,7 @@ namespace DiamondShop
             binder.BindControl(txtRemark, "Remark");
             binder.BindControl(txtMinPrice, "MinPrice");
             binder.BindControl(dtPayDate, "PayDate");
+            binder.BindControl(cmbBuyer, "Buyer");
         }
         public BuyBookJewelry(int id)
         {
@@ -65,6 +66,7 @@ namespace DiamondShop
             binder.BindControl(txtRemark, "Remark");
             binder.BindControl(txtMinPrice, "MinPrice");
             binder.BindControl(dtPayDate, "PayDate");
+            binder.BindControl(cmbBuyer, "Buyer");
 
             btnDiamond.Enabled = true;
             btnGemstone.Enabled = true;
@@ -79,6 +81,13 @@ namespace DiamondShop
 
         protected override void Initial()
         {
+            ds = GM.GetBuyer();
+
+            cmbBuyer.DataSource = ds.Tables[0];
+            cmbBuyer.ValueMember = "ID";
+            cmbBuyer.DisplayMember = "DisplayName";
+            cmbBuyer.Refresh();
+
             cmbShop.DataSource = (GM.GetMasterTableDetail("C007")).Tables[0];
             cmbShop.ValueMember = "ID";
             cmbShop.DisplayMember = "Detail";
@@ -198,7 +207,7 @@ namespace DiamondShop
                 {
                     row.Code = GM.GetRunningNumber("JWR");
                     SetCreateBy(row);
-                    chkFlag = ser.DoInsertData("BuyBookJewelry", tds);
+                    chkFlag = ser.DoInsertData("BuyBookJewelry", tds,0);
                 }
                 else
                 {
@@ -347,6 +356,7 @@ namespace DiamondShop
             btnImage2.Enabled = status;
             btnDiamond.Enabled = status;
             btnGemstone.Enabled = status;
+            cmbBuyer.Enabled = status;
         }
     }
 }

@@ -55,6 +55,7 @@
             this.USDRate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TotalBaht = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Note = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Buyer = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid1)).BeginInit();
@@ -109,7 +110,8 @@
             this.Payment,
             this.USDRate,
             this.TotalBaht,
-            this.Note});
+            this.Note,
+            this.Buyer});
             this.grid1.Location = new System.Drawing.Point(12, 35);
             this.grid1.Name = "grid1";
             this.grid1.ReadOnly = true;
@@ -288,6 +290,14 @@
             this.Note.Name = "Note";
             this.Note.ReadOnly = true;
             // 
+            // Buyer
+            // 
+            this.Buyer.DataPropertyName = "Buyer";
+            this.Buyer.HeaderText = "Buyer";
+            this.Buyer.Name = "Buyer";
+            this.Buyer.ReadOnly = true;
+            this.Buyer.Width = 110;
+            // 
             // BuyBookDiamonCerExcel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -331,5 +341,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn USDRate;
         private System.Windows.Forms.DataGridViewTextBoxColumn TotalBaht;
         private System.Windows.Forms.DataGridViewTextBoxColumn Note;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Buyer;
     }
 }

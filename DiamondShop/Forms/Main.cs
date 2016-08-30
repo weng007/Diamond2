@@ -139,7 +139,7 @@ namespace DiamondShop
         }
         private void btnReportInventory_Click(object sender, EventArgs e)
         {
-            ReportInventoryList frm = new ReportInventoryList();
+            ReportInventory frm = new ReportInventory();
             frm.ShowDialog();
         }
         private void btnReportDebt_Click(object sender, EventArgs e)

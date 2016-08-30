@@ -129,7 +129,7 @@ namespace DiamondShop
                     row.RefID = id;
 
                     SetCreateBy(row);
-                    chkFlag = ser.DoInsertData("BuyBookSettingDetail", tds);
+                    chkFlag = ser.DoInsertData("BuyBookSettingDetail", tds,0);
                 }
                 else
                 {

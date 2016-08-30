@@ -96,6 +96,8 @@
             this.button1 = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.openFileDialog2 = new System.Windows.Forms.OpenFileDialog();
+            this.cmbBuyer = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -115,6 +117,8 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.cmbBuyer);
+            this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.btnImportExcel);
             this.panel3.Controls.Add(this.label9);
             this.panel3.Controls.Add(this.dtPayDate);
@@ -176,7 +180,7 @@
             this.panel3.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.panel3.Location = new System.Drawing.Point(12, 72);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1001, 469);
+            this.panel3.Size = new System.Drawing.Size(1001, 488);
             this.panel3.TabIndex = 74;
             // 
             // btnImportExcel
@@ -185,10 +189,11 @@
             this.btnImportExcel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnImportExcel.BackgroundImage")));
             this.btnImportExcel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnImportExcel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnImportExcel.FlatAppearance.BorderSize = 0;
             this.btnImportExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnImportExcel.Location = new System.Drawing.Point(876, 419);
+            this.btnImportExcel.Location = new System.Drawing.Point(889, 358);
             this.btnImportExcel.Name = "btnImportExcel";
-            this.btnImportExcel.Size = new System.Drawing.Size(102, 33);
+            this.btnImportExcel.Size = new System.Drawing.Size(72, 92);
             this.btnImportExcel.TabIndex = 203;
             this.btnImportExcel.UseVisualStyleBackColor = false;
             this.btnImportExcel.Click += new System.EventHandler(this.btnImportExcel_Click);
@@ -292,7 +297,7 @@
             this.btnUpload.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnUpload.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnUpload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpload.Location = new System.Drawing.Point(33, 425);
+            this.btnUpload.Location = new System.Drawing.Point(503, 442);
             this.btnUpload.Name = "btnUpload";
             this.btnUpload.Size = new System.Drawing.Size(102, 33);
             this.btnUpload.TabIndex = 155;
@@ -322,7 +327,7 @@
             // txtSoldToName
             // 
             this.txtSoldToName.Enabled = false;
-            this.txtSoldToName.Location = new System.Drawing.Point(149, 375);
+            this.txtSoldToName.Location = new System.Drawing.Point(149, 377);
             this.txtSoldToName.Name = "txtSoldToName";
             this.txtSoldToName.Size = new System.Drawing.Size(166, 27);
             this.txtSoldToName.TabIndex = 200;
@@ -331,7 +336,7 @@
             // 
             this.label29.AutoSize = true;
             this.label29.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label29.Location = new System.Drawing.Point(29, 377);
+            this.label29.Location = new System.Drawing.Point(29, 379);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(64, 21);
             this.label29.TabIndex = 151;
@@ -361,7 +366,7 @@
             this.cmbFluorescent.FormattingEnabled = true;
             this.cmbFluorescent.Location = new System.Drawing.Point(149, 302);
             this.cmbFluorescent.Name = "cmbFluorescent";
-            this.cmbFluorescent.Size = new System.Drawing.Size(165, 29);
+            this.cmbFluorescent.Size = new System.Drawing.Size(166, 29);
             this.cmbFluorescent.TabIndex = 14;
             // 
             // cmbCut
@@ -570,7 +575,7 @@
             // linkFile
             // 
             this.linkFile.AutoSize = true;
-            this.linkFile.Location = new System.Drawing.Point(152, 431);
+            this.linkFile.Location = new System.Drawing.Point(622, 448);
             this.linkFile.Name = "linkFile";
             this.linkFile.Size = new System.Drawing.Size(122, 21);
             this.linkFile.TabIndex = 122;
@@ -767,7 +772,7 @@
             this.cmbPolish.FormattingEnabled = true;
             this.cmbPolish.Location = new System.Drawing.Point(150, 232);
             this.cmbPolish.Name = "cmbPolish";
-            this.cmbPolish.Size = new System.Drawing.Size(164, 29);
+            this.cmbPolish.Size = new System.Drawing.Size(165, 29);
             this.cmbPolish.TabIndex = 10;
             // 
             // label6
@@ -817,12 +822,30 @@
             // 
             this.openFileDialog2.FileName = "openFileDialog2";
             // 
+            // cmbBuyer
+            // 
+            this.cmbBuyer.FormattingEnabled = true;
+            this.cmbBuyer.Location = new System.Drawing.Point(149, 412);
+            this.cmbBuyer.Name = "cmbBuyer";
+            this.cmbBuyer.Size = new System.Drawing.Size(166, 29);
+            this.cmbBuyer.TabIndex = 220;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
+            this.label4.Location = new System.Drawing.Point(29, 415);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(52, 21);
+            this.label4.TabIndex = 221;
+            this.label4.Text = "Buyer";
+            // 
             // BuyBookDiamondCer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(195)))), ((int)(((byte)(157)))));
-            this.ClientSize = new System.Drawing.Size(1025, 553);
+            this.ClientSize = new System.Drawing.Size(1025, 572);
             this.Controls.Add(this.panel3);
             this.Name = "BuyBookDiamondCer";
             this.Text = "DiamondCer";
@@ -907,5 +930,7 @@
         private System.Windows.Forms.DateTimePicker dtPayDate;
         private System.Windows.Forms.Button btnImportExcel;
         private System.Windows.Forms.OpenFileDialog openFileDialog2;
+        private System.Windows.Forms.ComboBox cmbBuyer;
+        private System.Windows.Forms.Label label4;
     }
 }

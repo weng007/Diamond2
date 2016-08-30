@@ -140,6 +140,9 @@ namespace DiamondShop
                 if (row.Cells["Note"].Value != null)
                 { tds.Tables[0].Rows[i]["Note"] = row.Cells["Note"].Value; }
 
+                if (row.Cells["Buyer"].Value != null)
+                { tds.Tables[0].Rows[i]["Buyer"] = row.Cells["Buyer"].Value; }
+
                 i++;
             }
 

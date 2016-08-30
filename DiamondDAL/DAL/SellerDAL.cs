@@ -105,5 +105,19 @@ namespace DiamondDAL.DAL
 
             return ds;
         }
+        public dsSeller GetBuyer()
+        {
+            try
+            {
+                SQL.ClearParameter();
+                SQL.FillDataSetBySP("SP_Buyer_Sel", ds.Seller);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return ds;
+        }
     }
 }

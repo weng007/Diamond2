@@ -29,6 +29,8 @@ namespace DiamondShop
         {
             InitializeComponent();
             Initial();
+            ds = ser.DoSelectData("ExchangeRate", id, 0);
+            txtUSDRate.Text = ds.Tables[0].Rows[0]["USDRate"].ToString();
 
             binder.BindControl(dtBuyDate, "BuyDate");
             binder.BindControl(txtSeller, "Seller");
@@ -54,6 +56,7 @@ namespace DiamondShop
             binder.BindControl(cmbCut, "Cut");
             binder.BindControl(cmbColor, "Color");
             binder.BindControl(dtPayDate, "PayDate");
+            binder.BindControl(cmbBuyer, "Buyer");
 
             dtDueDate.Value = dtBuyDate.Value.AddDays(30);
         }
@@ -86,14 +89,23 @@ namespace DiamondShop
             binder.BindControl(cmbCut, "Cut");
             binder.BindControl(cmbColor, "Color");
             binder.BindControl(dtPayDate, "PayDate");
+            binder.BindControl(cmbBuyer, "Buyer");
 
             this.id = id;
+            btnImportExcel.Enabled = false;
             LoadData();
             SetControlEnable(false);
         }
 
         protected override void Initial()
         {
+            ds = GM.GetBuyer();
+
+            cmbBuyer.DataSource = ds.Tables[0];
+            cmbBuyer.ValueMember = "ID";
+            cmbBuyer.DisplayMember = "DisplayName";
+            cmbBuyer.Refresh();
+
             cmbSetting.DataSource = (GM.GetMasterTableDetail("C015",false)).Tables[0];
             cmbSetting.ValueMember = "ID";
             cmbSetting.DisplayMember = "Detail";
@@ -490,6 +502,7 @@ namespace DiamondShop
             btnUpload.Enabled = status;
             btnImage1.Enabled = status;
             dtPayDate.Enabled = status;
+            cmbBuyer.Enabled = status;
         }
 
         private void dtDueDate_ValueChanged(object sender, EventArgs e)

@@ -83,5 +83,16 @@ namespace DiamondBiz.Biz
                 throw ex;
             }
         }
+        public dsSeller GetBuyer()
+        {
+            try
+            {
+                return dal.GetBuyer();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

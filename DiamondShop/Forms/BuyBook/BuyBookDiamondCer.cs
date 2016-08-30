@@ -29,6 +29,12 @@ namespace DiamondShop
         {
             InitializeComponent();
             Initial();
+            ds = ser.DoSelectData("ExchangeRate", id, 0);
+            txtUSDRate.Text = ds.Tables[0].Rows[0]["USDRate"].ToString();
+
+            cmbCut.SelectedIndex = 1;
+            cmbPolish.SelectedIndex = 1;
+            cmbSymmetry.SelectedIndex = 1;
 
             binder.BindControl(dtBuyDate, "BuyDate");
             binder.BindControl(txtSeller, "Seller");
@@ -56,6 +62,7 @@ namespace DiamondShop
             binder.BindControl(txtTotalBaht, "TotalBaht");
             binder.BindControl(txtNote, "Note");
             binder.BindControl(dtPayDate, "PayDate");
+            binder.BindControl(cmbBuyer, "Buyer");
 
             dtDueDate.Value = dtBuyDate.Value.AddDays(30);
         }
@@ -90,14 +97,23 @@ namespace DiamondShop
             binder.BindControl(txtTotalBaht, "TotalBaht");
             binder.BindControl(txtNote, "Note");
             binder.BindControl(dtPayDate, "PayDate");
+            binder.BindControl(cmbBuyer, "Buyer");
 
             this.id = id;
+            btnImportExcel.Enabled = false;
             LoadData();
             SetControlEnable(false);
         }
 
         protected override void Initial()
         {
+            ds = GM.GetBuyer();
+
+            cmbBuyer.DataSource = ds.Tables[0];
+            cmbBuyer.ValueMember = "ID";
+            cmbBuyer.DisplayMember = "DisplayName";
+            cmbBuyer.Refresh();
+
             cmbColorType.DataSource = (GM.GetMasterTableDetail("C025")).Tables[0];
             cmbColorType.ValueMember = "ID";
             cmbColorType.DisplayMember = "Detail";
@@ -483,6 +499,7 @@ namespace DiamondShop
             txtNote.Enabled = status;
             btnUpload.Enabled = status;
             dtPayDate.Enabled = status;
+            cmbBuyer.Enabled = status;
         }
 
         private void dtDueDate_ValueChanged(object sender, EventArgs e)

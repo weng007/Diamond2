@@ -310,7 +310,7 @@ namespace DiamondShop
                     }
                 }
                 tds.AcceptChanges();
-                chkFlag = ser.DoInsertData("BBJewelryGemstoneCerDetail", tds);
+                chkFlag = ser.DoInsertData("BBJewelryGemstoneCerDetail", tds,0);
 
 
                 foreach (DataRow row in tds2.Tables[0].Rows)
@@ -332,7 +332,7 @@ namespace DiamondShop
                 }
 
                 tds2.AcceptChanges();
-                chkFlag = ser.DoInsertData("BBJewelryGemstoneDetail", tds2);
+                chkFlag = ser.DoInsertData("BBJewelryGemstoneDetail", tds2,0);
 
             }
             catch (Exception ex)

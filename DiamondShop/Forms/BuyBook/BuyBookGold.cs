@@ -37,6 +37,7 @@ namespace DiamondShop
             binder.BindControl(txtPriceGram1, "PriceGram1");
             binder.BindControl(txtPriceGram2, "PriceGram2");
             binder.BindControl(dtPayDate, "PayDate");
+            binder.BindControl(cmbBuyer, "Buyer");
 
         }
         public BuyBookGold(int id)
@@ -58,6 +59,7 @@ namespace DiamondShop
             binder.BindControl(txtPriceGram1, "PriceGram1");
             binder.BindControl(txtPriceGram2, "PriceGram2");
             binder.BindControl(dtPayDate, "PayDate");
+            binder.BindControl(cmbBuyer, "Buyer");
 
             this.id = id;
             LoadData();
@@ -67,6 +69,12 @@ namespace DiamondShop
 
         protected override void Initial()
         {
+            ds = GM.GetBuyer();
+
+            cmbBuyer.DataSource = ds.Tables[0];
+            cmbBuyer.ValueMember = "ID";
+            cmbBuyer.DisplayMember = "DisplayName";
+            cmbBuyer.Refresh();
 
             dtBuyDate.Select();
 
@@ -121,7 +129,7 @@ namespace DiamondShop
                 if (id == 0)
                 {
                     SetCreateBy(row);
-                    chkFlag = ser.DoInsertData("BuyBookGold", tds);
+                    chkFlag = ser.DoInsertData("BuyBookGold", tds,0);
                 }
                 else
                 {
@@ -280,6 +288,7 @@ namespace DiamondShop
             txtPrice2.Enabled = status;
             txtPriceGram2.Enabled = status;
             txtSeller.Enabled = status;
+            cmbBuyer.Enabled = status;
         }
     }
 }

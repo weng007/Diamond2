@@ -220,7 +220,7 @@ namespace DiamondShop
                 }
 
                 tds2.AcceptChanges();
-                chkFlag = ser.DoInsertData("BBJewelryDiamondDetail", tds2);
+                chkFlag = ser.DoInsertData("BBJewelryDiamondDetail", tds2,0);
 
             }
             catch (Exception ex)

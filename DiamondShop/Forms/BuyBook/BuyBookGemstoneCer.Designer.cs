@@ -93,6 +93,8 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.openFileDialog2 = new System.Windows.Forms.OpenFileDialog();
             this.openFileDialog3 = new System.Windows.Forms.OpenFileDialog();
+            this.cmbBuyer = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -110,6 +112,8 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.cmbBuyer);
+            this.panel3.Controls.Add(this.label8);
             this.panel3.Controls.Add(this.btnImportExcel);
             this.panel3.Controls.Add(this.label9);
             this.panel3.Controls.Add(this.dtPayDate);
@@ -171,7 +175,7 @@
             this.panel3.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.panel3.Location = new System.Drawing.Point(11, 71);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1024, 535);
+            this.panel3.Size = new System.Drawing.Size(1024, 565);
             this.panel3.TabIndex = 74;
             // 
             // btnImportExcel
@@ -180,10 +184,11 @@
             this.btnImportExcel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnImportExcel.BackgroundImage")));
             this.btnImportExcel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnImportExcel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnImportExcel.FlatAppearance.BorderSize = 0;
             this.btnImportExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnImportExcel.Location = new System.Drawing.Point(893, 482);
+            this.btnImportExcel.Location = new System.Drawing.Point(925, 434);
             this.btnImportExcel.Name = "btnImportExcel";
-            this.btnImportExcel.Size = new System.Drawing.Size(102, 33);
+            this.btnImportExcel.Size = new System.Drawing.Size(72, 92);
             this.btnImportExcel.TabIndex = 206;
             this.btnImportExcel.UseVisualStyleBackColor = false;
             this.btnImportExcel.Click += new System.EventHandler(this.btnImportExcel_Click);
@@ -305,7 +310,7 @@
             this.btnUpload.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnUpload.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnUpload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpload.Location = new System.Drawing.Point(27, 482);
+            this.btnUpload.Location = new System.Drawing.Point(27, 515);
             this.btnUpload.Name = "btnUpload";
             this.btnUpload.Size = new System.Drawing.Size(102, 33);
             this.btnUpload.TabIndex = 192;
@@ -315,7 +320,7 @@
             // linkFile
             // 
             this.linkFile.AutoSize = true;
-            this.linkFile.Location = new System.Drawing.Point(146, 488);
+            this.linkFile.Location = new System.Drawing.Point(146, 521);
             this.linkFile.Name = "linkFile";
             this.linkFile.Size = new System.Drawing.Size(122, 21);
             this.linkFile.TabIndex = 191;
@@ -329,7 +334,7 @@
             this.btnImage1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnImage1.BackgroundImage")));
             this.btnImage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnImage1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnImage1.Location = new System.Drawing.Point(50, 290);
+            this.btnImage1.Location = new System.Drawing.Point(50, 323);
             this.btnImage1.Name = "btnImage1";
             this.btnImage1.Size = new System.Drawing.Size(150, 150);
             this.btnImage1.TabIndex = 190;
@@ -421,10 +426,10 @@
             // txtNote
             // 
             this.txtNote.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.txtNote.Location = new System.Drawing.Point(741, 378);
+            this.txtNote.Location = new System.Drawing.Point(565, 434);
             this.txtNote.Multiline = true;
             this.txtNote.Name = "txtNote";
-            this.txtNote.Size = new System.Drawing.Size(254, 87);
+            this.txtNote.Size = new System.Drawing.Size(254, 91);
             this.txtNote.TabIndex = 41;
             // 
             // label26
@@ -432,7 +437,7 @@
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.label26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label26.Location = new System.Drawing.Point(738, 354);
+            this.label26.Location = new System.Drawing.Point(562, 410);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(45, 19);
             this.label26.TabIndex = 171;
@@ -444,7 +449,7 @@
             this.chkPayByUSD.Checked = true;
             this.chkPayByUSD.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkPayByUSD.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.chkPayByUSD.Location = new System.Drawing.Point(351, 284);
+            this.chkPayByUSD.Location = new System.Drawing.Point(351, 317);
             this.chkPayByUSD.Name = "chkPayByUSD";
             this.chkPayByUSD.Size = new System.Drawing.Size(112, 23);
             this.chkPayByUSD.TabIndex = 72;
@@ -456,7 +461,7 @@
             // 
             this.label17.AutoSize = true;
             this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label17.Location = new System.Drawing.Point(562, 309);
+            this.label17.Location = new System.Drawing.Point(562, 342);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(162, 21);
             this.label17.TabIndex = 161;
@@ -465,7 +470,7 @@
             // txtPriceCarat
             // 
             this.txtPriceCarat.Enabled = false;
-            this.txtPriceCarat.Location = new System.Drawing.Point(566, 333);
+            this.txtPriceCarat.Location = new System.Drawing.Point(566, 366);
             this.txtPriceCarat.Name = "txtPriceCarat";
             this.txtPriceCarat.Size = new System.Drawing.Size(105, 27);
             this.txtPriceCarat.TabIndex = 37;
@@ -478,7 +483,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label13.Location = new System.Drawing.Point(485, 358);
+            this.label13.Location = new System.Drawing.Point(485, 391);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(41, 21);
             this.label13.TabIndex = 157;
@@ -488,7 +493,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label14.Location = new System.Drawing.Point(233, 358);
+            this.label14.Location = new System.Drawing.Point(233, 391);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(84, 21);
             this.label14.TabIndex = 156;
@@ -497,7 +502,7 @@
             // txtTotalUSD
             // 
             this.txtTotalUSD.Enabled = false;
-            this.txtTotalUSD.Location = new System.Drawing.Point(351, 355);
+            this.txtTotalUSD.Location = new System.Drawing.Point(351, 388);
             this.txtTotalUSD.Name = "txtTotalUSD";
             this.txtTotalUSD.Size = new System.Drawing.Size(131, 27);
             this.txtTotalUSD.TabIndex = 104;
@@ -509,7 +514,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label5.Location = new System.Drawing.Point(485, 322);
+            this.label5.Location = new System.Drawing.Point(485, 355);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(41, 21);
             this.label5.TabIndex = 154;
@@ -518,7 +523,7 @@
             // txtTotalBaht
             // 
             this.txtTotalBaht.Enabled = false;
-            this.txtTotalBaht.Location = new System.Drawing.Point(351, 438);
+            this.txtTotalBaht.Location = new System.Drawing.Point(351, 471);
             this.txtTotalBaht.Name = "txtTotalBaht";
             this.txtTotalBaht.Size = new System.Drawing.Size(131, 27);
             this.txtTotalBaht.TabIndex = 108;
@@ -530,7 +535,7 @@
             // 
             this.label24.AutoSize = true;
             this.label24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label24.Location = new System.Drawing.Point(233, 441);
+            this.label24.Location = new System.Drawing.Point(233, 474);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(90, 21);
             this.label24.TabIndex = 152;
@@ -538,7 +543,7 @@
             // 
             // txtUSDRate
             // 
-            this.txtUSDRate.Location = new System.Drawing.Point(351, 390);
+            this.txtUSDRate.Location = new System.Drawing.Point(351, 423);
             this.txtUSDRate.Name = "txtUSDRate";
             this.txtUSDRate.Size = new System.Drawing.Size(61, 27);
             this.txtUSDRate.TabIndex = 35;
@@ -551,7 +556,7 @@
             // 
             this.label23.AutoSize = true;
             this.label23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label23.Location = new System.Drawing.Point(233, 393);
+            this.label23.Location = new System.Drawing.Point(233, 426);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(83, 21);
             this.label23.TabIndex = 150;
@@ -615,7 +620,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label4.Location = new System.Drawing.Point(233, 322);
+            this.label4.Location = new System.Drawing.Point(233, 355);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(109, 21);
             this.label4.TabIndex = 126;
@@ -623,7 +628,7 @@
             // 
             // txtPriceCaratUSD
             // 
-            this.txtPriceCaratUSD.Location = new System.Drawing.Point(351, 319);
+            this.txtPriceCaratUSD.Location = new System.Drawing.Point(351, 352);
             this.txtPriceCaratUSD.Name = "txtPriceCaratUSD";
             this.txtPriceCaratUSD.Size = new System.Drawing.Size(131, 27);
             this.txtPriceCaratUSD.TabIndex = 33;
@@ -777,12 +782,30 @@
             // 
             this.openFileDialog3.FileName = "openFileDialog3";
             // 
+            // cmbBuyer
+            // 
+            this.cmbBuyer.FormattingEnabled = true;
+            this.cmbBuyer.Location = new System.Drawing.Point(127, 265);
+            this.cmbBuyer.Name = "cmbBuyer";
+            this.cmbBuyer.Size = new System.Drawing.Size(155, 29);
+            this.cmbBuyer.TabIndex = 224;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
+            this.label8.Location = new System.Drawing.Point(28, 268);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(52, 21);
+            this.label8.TabIndex = 225;
+            this.label8.Text = "Buyer";
+            // 
             // BuyBookGemstoneCer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(195)))), ((int)(((byte)(157)))));
-            this.ClientSize = new System.Drawing.Size(1047, 624);
+            this.ClientSize = new System.Drawing.Size(1047, 648);
             this.Controls.Add(this.panel3);
             this.Name = "BuyBookGemstoneCer";
             this.Text = "DiamondCer";
@@ -860,5 +883,7 @@
         private System.Windows.Forms.DateTimePicker dtPayDate;
         private System.Windows.Forms.Button btnImportExcel;
         private System.Windows.Forms.OpenFileDialog openFileDialog3;
+        private System.Windows.Forms.ComboBox cmbBuyer;
+        private System.Windows.Forms.Label label8;
     }
 }

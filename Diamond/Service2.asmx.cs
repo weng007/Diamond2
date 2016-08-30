@@ -48,6 +48,20 @@ namespace Diamond
                 throw ex;
             }
         }
+        [WebMethod]
+        public dsSeller GetBuyer()
+        {
+            SellerBiz biz = new SellerBiz();
+
+            try
+            {
+                return biz.GetBuyer();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
 
         [WebMethod]
         public string GetRunningNumber(string subject)
@@ -120,7 +134,7 @@ namespace Diamond
         }
 
         [WebMethod]
-        public DataSet GetReportBuying(int TableName, DateTime SBuyDate, DateTime EBuyDate, float SWeight, float EWeight, int Shape, int Status, DateTime SDueDate, DateTime EDueDate, string IsPaid)
+        public DataSet GetReportBuying(int TableName, DateTime SBuyDate, DateTime EBuyDate, float SWeight, float EWeight, int Shape, int Status, DateTime SDueDate, DateTime EDueDate, int IsPaid)
         {
             GeneralCBiz biz = new GeneralCBiz();
             try
@@ -165,6 +179,19 @@ namespace Diamond
             try
             {
                 return biz.GetReportCustomer(SBirthDate, EBirthDate, SAnniDate, EAnniDate, DisplayName);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        [WebMethod]
+        public DataSet GetReportInventory(int Status, DateTime SImpDate, DateTime EImpDate, float SPriceTag, float EPricetag)
+        {
+            GeneralCBiz biz = new GeneralCBiz();
+            try
+            {
+                return biz.GetReportInventory(Status, SImpDate, EImpDate, SPriceTag, EPricetag);
             }
             catch (Exception ex)
             {

@@ -33,6 +33,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BuyBookGemstone));
             this.dtBuyDate = new System.Windows.Forms.DateTimePicker();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.dtPayDate = new System.Windows.Forms.DateTimePicker();
             this.label19 = new System.Windows.Forms.Label();
             this.grid1 = new System.Windows.Forms.DataGridView();
             this.ActionDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -87,8 +89,8 @@
             this.txtCode = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.dtPayDate = new System.Windows.Forms.DateTimePicker();
+            this.cmbBuyer = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid1)).BeginInit();
@@ -108,6 +110,8 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.cmbBuyer);
+            this.panel3.Controls.Add(this.label8);
             this.panel3.Controls.Add(this.label7);
             this.panel3.Controls.Add(this.dtPayDate);
             this.panel3.Controls.Add(this.label19);
@@ -158,14 +162,34 @@
             this.panel3.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.panel3.Location = new System.Drawing.Point(12, 71);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(946, 477);
+            this.panel3.Size = new System.Drawing.Size(946, 508);
             this.panel3.TabIndex = 74;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
+            this.label7.Location = new System.Drawing.Point(659, 138);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(78, 19);
+            this.label7.TabIndex = 195;
+            this.label7.Text = "Pay Date";
+            // 
+            // dtPayDate
+            // 
+            this.dtPayDate.CustomFormat = "dd/MM/yyyy";
+            this.dtPayDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtPayDate.Location = new System.Drawing.Point(756, 133);
+            this.dtPayDate.Name = "dtPayDate";
+            this.dtPayDate.Size = new System.Drawing.Size(136, 27);
+            this.dtPayDate.TabIndex = 194;
             // 
             // label19
             // 
             this.label19.AutoSize = true;
             this.label19.ForeColor = System.Drawing.Color.Red;
-            this.label19.Location = new System.Drawing.Point(58, 198);
+            this.label19.Location = new System.Drawing.Point(58, 235);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(174, 21);
             this.label19.TabIndex = 193;
@@ -186,7 +210,7 @@
             this.grid1.DataMember = "BBGemstoneStock";
             this.grid1.DataSource = this.tds2;
             this.grid1.Enabled = false;
-            this.grid1.Location = new System.Drawing.Point(33, 226);
+            this.grid1.Location = new System.Drawing.Point(33, 263);
             this.grid1.Name = "grid1";
             this.grid1.RowHeadersWidth = 10;
             this.grid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -275,7 +299,7 @@
             // 
             // txtMarketPrice
             // 
-            this.txtMarketPrice.Location = new System.Drawing.Point(448, 379);
+            this.txtMarketPrice.Location = new System.Drawing.Point(448, 419);
             this.txtMarketPrice.Name = "txtMarketPrice";
             this.txtMarketPrice.Size = new System.Drawing.Size(131, 27);
             this.txtMarketPrice.TabIndex = 28;
@@ -323,7 +347,7 @@
             // label20
             // 
             this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label20.Location = new System.Drawing.Point(340, 379);
+            this.label20.Location = new System.Drawing.Point(340, 419);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(106, 48);
             this.label20.TabIndex = 175;
@@ -332,7 +356,7 @@
             // txtNote
             // 
             this.txtNote.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.txtNote.Location = new System.Drawing.Point(664, 315);
+            this.txtNote.Location = new System.Drawing.Point(664, 353);
             this.txtNote.Multiline = true;
             this.txtNote.Name = "txtNote";
             this.txtNote.Size = new System.Drawing.Size(250, 139);
@@ -343,7 +367,7 @@
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.label26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label26.Location = new System.Drawing.Point(660, 290);
+            this.label26.Location = new System.Drawing.Point(660, 328);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(45, 19);
             this.label26.TabIndex = 171;
@@ -355,7 +379,7 @@
             this.chkPayByUSD.Checked = true;
             this.chkPayByUSD.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkPayByUSD.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.chkPayByUSD.Location = new System.Drawing.Point(448, 185);
+            this.chkPayByUSD.Location = new System.Drawing.Point(448, 225);
             this.chkPayByUSD.Name = "chkPayByUSD";
             this.chkPayByUSD.Size = new System.Drawing.Size(112, 23);
             this.chkPayByUSD.TabIndex = 48;
@@ -367,7 +391,7 @@
             // 
             this.label17.AutoSize = true;
             this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label17.Location = new System.Drawing.Point(620, 223);
+            this.label17.Location = new System.Drawing.Point(620, 263);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(109, 21);
             this.label17.TabIndex = 161;
@@ -377,7 +401,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label15.Location = new System.Drawing.Point(867, 223);
+            this.label15.Location = new System.Drawing.Point(867, 263);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(47, 21);
             this.label15.TabIndex = 160;
@@ -386,7 +410,7 @@
             // txtPriceCarat
             // 
             this.txtPriceCarat.Enabled = false;
-            this.txtPriceCarat.Location = new System.Drawing.Point(735, 220);
+            this.txtPriceCarat.Location = new System.Drawing.Point(735, 260);
             this.txtPriceCarat.Name = "txtPriceCarat";
             this.txtPriceCarat.Size = new System.Drawing.Size(131, 27);
             this.txtPriceCarat.TabIndex = 26;
@@ -399,7 +423,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label13.Location = new System.Drawing.Point(555, 258);
+            this.label13.Location = new System.Drawing.Point(555, 298);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(41, 21);
             this.label13.TabIndex = 157;
@@ -409,7 +433,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label14.Location = new System.Drawing.Point(346, 258);
+            this.label14.Location = new System.Drawing.Point(346, 298);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(84, 21);
             this.label14.TabIndex = 156;
@@ -418,7 +442,7 @@
             // txtTotalUSD
             // 
             this.txtTotalUSD.Enabled = false;
-            this.txtTotalUSD.Location = new System.Drawing.Point(448, 255);
+            this.txtTotalUSD.Location = new System.Drawing.Point(448, 295);
             this.txtTotalUSD.Name = "txtTotalUSD";
             this.txtTotalUSD.Size = new System.Drawing.Size(101, 27);
             this.txtTotalUSD.TabIndex = 104;
@@ -429,7 +453,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label5.Location = new System.Drawing.Point(555, 223);
+            this.label5.Location = new System.Drawing.Point(555, 263);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(41, 21);
             this.label5.TabIndex = 154;
@@ -438,7 +462,7 @@
             // txtTotalBaht
             // 
             this.txtTotalBaht.Enabled = false;
-            this.txtTotalBaht.Location = new System.Drawing.Point(448, 336);
+            this.txtTotalBaht.Location = new System.Drawing.Point(448, 376);
             this.txtTotalBaht.Name = "txtTotalBaht";
             this.txtTotalBaht.Size = new System.Drawing.Size(131, 27);
             this.txtTotalBaht.TabIndex = 108;
@@ -450,7 +474,7 @@
             // 
             this.label24.AutoSize = true;
             this.label24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label24.Location = new System.Drawing.Point(340, 339);
+            this.label24.Location = new System.Drawing.Point(340, 379);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(90, 21);
             this.label24.TabIndex = 152;
@@ -458,7 +482,7 @@
             // 
             // txtUSDRate
             // 
-            this.txtUSDRate.Location = new System.Drawing.Point(448, 290);
+            this.txtUSDRate.Location = new System.Drawing.Point(448, 330);
             this.txtUSDRate.Name = "txtUSDRate";
             this.txtUSDRate.Size = new System.Drawing.Size(61, 27);
             this.txtUSDRate.TabIndex = 24;
@@ -471,7 +495,7 @@
             // 
             this.label23.AutoSize = true;
             this.label23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label23.Location = new System.Drawing.Point(347, 290);
+            this.label23.Location = new System.Drawing.Point(347, 330);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(83, 21);
             this.label23.TabIndex = 150;
@@ -535,7 +559,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label4.Location = new System.Drawing.Point(321, 226);
+            this.label4.Location = new System.Drawing.Point(321, 266);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(109, 21);
             this.label4.TabIndex = 126;
@@ -543,7 +567,7 @@
             // 
             // txtPriceCaratUSD
             // 
-            this.txtPriceCaratUSD.Location = new System.Drawing.Point(448, 220);
+            this.txtPriceCaratUSD.Location = new System.Drawing.Point(448, 260);
             this.txtPriceCaratUSD.Name = "txtPriceCaratUSD";
             this.txtPriceCaratUSD.Size = new System.Drawing.Size(101, 27);
             this.txtPriceCaratUSD.TabIndex = 22;
@@ -695,32 +719,30 @@
             this.button1.TabIndex = 32;
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // label7
+            // cmbBuyer
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label7.Location = new System.Drawing.Point(659, 138);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(78, 19);
-            this.label7.TabIndex = 195;
-            this.label7.Text = "Pay Date";
+            this.cmbBuyer.FormattingEnabled = true;
+            this.cmbBuyer.Location = new System.Drawing.Point(127, 191);
+            this.cmbBuyer.Name = "cmbBuyer";
+            this.cmbBuyer.Size = new System.Drawing.Size(155, 29);
+            this.cmbBuyer.TabIndex = 222;
             // 
-            // dtPayDate
+            // label8
             // 
-            this.dtPayDate.CustomFormat = "dd/MM/yyyy";
-            this.dtPayDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtPayDate.Location = new System.Drawing.Point(756, 133);
-            this.dtPayDate.Name = "dtPayDate";
-            this.dtPayDate.Size = new System.Drawing.Size(136, 27);
-            this.dtPayDate.TabIndex = 194;
+            this.label8.AutoSize = true;
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
+            this.label8.Location = new System.Drawing.Point(28, 194);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(52, 21);
+            this.label8.TabIndex = 223;
+            this.label8.Text = "Buyer";
             // 
             // BuyBookGemstone
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(195)))), ((int)(((byte)(157)))));
-            this.ClientSize = new System.Drawing.Size(970, 565);
+            this.ClientSize = new System.Drawing.Size(970, 591);
             this.Controls.Add(this.panel3);
             this.Name = "BuyBookGemstone";
             this.Text = "DiamondCer";
@@ -794,5 +816,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn isDeletedDataGridViewTextBoxColumn;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DateTimePicker dtPayDate;
+        private System.Windows.Forms.ComboBox cmbBuyer;
+        private System.Windows.Forms.Label label8;
     }
 }

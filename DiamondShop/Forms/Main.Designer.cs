@@ -395,6 +395,8 @@
             // menuExchangeRate
             // 
             this.menuExchangeRate.Font = new System.Drawing.Font("Century Gothic", 11.25F);
+            this.menuExchangeRate.Image = ((System.Drawing.Image)(resources.GetObject("menuExchangeRate.Image")));
+            this.menuExchangeRate.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.menuExchangeRate.Name = "menuExchangeRate";
             this.menuExchangeRate.Size = new System.Drawing.Size(203, 38);
             this.menuExchangeRate.Text = "Exchange Rate";
@@ -872,8 +874,10 @@
             // MenuPayment
             // 
             this.MenuPayment.Font = new System.Drawing.Font("Century Gothic", 11.25F);
+            this.MenuPayment.Image = ((System.Drawing.Image)(resources.GetObject("MenuPayment.Image")));
+            this.MenuPayment.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.MenuPayment.Name = "MenuPayment";
-            this.MenuPayment.Size = new System.Drawing.Size(140, 24);
+            this.MenuPayment.Size = new System.Drawing.Size(168, 38);
             this.MenuPayment.Text = "Payment";
             this.MenuPayment.Click += new System.EventHandler(this.MenuPayment_Click);
             // 
@@ -894,40 +898,50 @@
             // btnReportBuying
             // 
             this.btnReportBuying.Font = new System.Drawing.Font("Century Gothic", 11.25F);
+            this.btnReportBuying.Image = ((System.Drawing.Image)(resources.GetObject("btnReportBuying.Image")));
+            this.btnReportBuying.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnReportBuying.Name = "btnReportBuying";
-            this.btnReportBuying.Size = new System.Drawing.Size(200, 24);
+            this.btnReportBuying.Size = new System.Drawing.Size(216, 38);
             this.btnReportBuying.Text = "Report Buying";
             this.btnReportBuying.Click += new System.EventHandler(this.btnReportBuying_Click);
             // 
             // btnReportSelling
             // 
             this.btnReportSelling.Font = new System.Drawing.Font("Century Gothic", 11.25F);
+            this.btnReportSelling.Image = ((System.Drawing.Image)(resources.GetObject("btnReportSelling.Image")));
+            this.btnReportSelling.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnReportSelling.Name = "btnReportSelling";
-            this.btnReportSelling.Size = new System.Drawing.Size(200, 24);
+            this.btnReportSelling.Size = new System.Drawing.Size(216, 38);
             this.btnReportSelling.Text = "Report Selling";
             this.btnReportSelling.Click += new System.EventHandler(this.btnReportSelling_Click);
             // 
             // btnReportInventory
             // 
             this.btnReportInventory.Font = new System.Drawing.Font("Century Gothic", 11.25F);
+            this.btnReportInventory.Image = ((System.Drawing.Image)(resources.GetObject("btnReportInventory.Image")));
+            this.btnReportInventory.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnReportInventory.Name = "btnReportInventory";
-            this.btnReportInventory.Size = new System.Drawing.Size(200, 24);
+            this.btnReportInventory.Size = new System.Drawing.Size(216, 38);
             this.btnReportInventory.Text = "Report Inventory";
             this.btnReportInventory.Click += new System.EventHandler(this.btnReportInventory_Click);
             // 
             // btnReportDebt
             // 
             this.btnReportDebt.Font = new System.Drawing.Font("Century Gothic", 11.25F);
+            this.btnReportDebt.Image = ((System.Drawing.Image)(resources.GetObject("btnReportDebt.Image")));
+            this.btnReportDebt.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnReportDebt.Name = "btnReportDebt";
-            this.btnReportDebt.Size = new System.Drawing.Size(200, 24);
+            this.btnReportDebt.Size = new System.Drawing.Size(216, 38);
             this.btnReportDebt.Text = "Report Debt";
             this.btnReportDebt.Click += new System.EventHandler(this.btnReportDebt_Click);
             // 
             // btnReportCustomer
             // 
             this.btnReportCustomer.Font = new System.Drawing.Font("Century Gothic", 11.25F);
+            this.btnReportCustomer.Image = ((System.Drawing.Image)(resources.GetObject("btnReportCustomer.Image")));
+            this.btnReportCustomer.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnReportCustomer.Name = "btnReportCustomer";
-            this.btnReportCustomer.Size = new System.Drawing.Size(200, 24);
+            this.btnReportCustomer.Size = new System.Drawing.Size(216, 38);
             this.btnReportCustomer.Text = "Report Customer";
             this.btnReportCustomer.Click += new System.EventHandler(this.btnReportCustomer_Click);
             // 

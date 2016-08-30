@@ -23,6 +23,8 @@ namespace DiamondShop
         {
             InitializeComponent();
             Initial();
+            ds = ser.DoSelectData("ExchangeRate", id, 0);
+            txtUSDRate.Text = ds.Tables[0].Rows[0]["USDRate"].ToString();
 
             binder.BindControl(dtBuyDate, "BuyDate");
             binder.BindControl(txtSeller, "Seller");
@@ -44,6 +46,7 @@ namespace DiamondShop
             binder.BindControl(txtMarketPrice, "MarketPrice");
             binder.BindControl(txtNote, "Note");
             binder.BindControl(dtPayDate, "PayDate");
+            binder.BindControl(cmbBuyer, "Buyer");
 
             dtDueDate.Value = dtBuyDate.Value.AddDays(30);
         }
@@ -72,6 +75,7 @@ namespace DiamondShop
             binder.BindControl(txtMarketPrice, "MarketPrice");
             binder.BindControl(txtNote, "Note");
             binder.BindControl(dtPayDate, "PayDate");
+            binder.BindControl(cmbBuyer, "Buyer");
 
             this.id = id;
             LoadData();
@@ -80,6 +84,13 @@ namespace DiamondShop
         protected override void Initial()
         {
             grid1.AutoGenerateColumns = false;
+
+            ds = GM.GetBuyer();
+
+            cmbBuyer.DataSource = ds.Tables[0];
+            cmbBuyer.ValueMember = "ID";
+            cmbBuyer.DisplayMember = "DisplayName";
+            cmbBuyer.Refresh();
 
             cmbShape.DataSource = (GM.GetMasterTableDetail("C019")).Tables[0];
             cmbShape.ValueMember = "ID";
@@ -170,7 +181,7 @@ namespace DiamondShop
                 {
                     row.Code = GM.GetRunningNumber("NGC");
                     SetCreateBy(row);
-                    chkFlag = ser.DoInsertData("BuyBookGemstone", tds);
+                    chkFlag = ser.DoInsertData("BuyBookGemstone", tds,0);
                 }
                 else
                 {
@@ -181,7 +192,7 @@ namespace DiamondShop
                 //Delete Save Stock
                 if (tds2.BBGemstoneStock.Rows.Count > 0)
                 {
-                    chkFlag = ser.DoInsertData("BBGemstoneStock", tds2);
+                    chkFlag = ser.DoInsertData("BBGemstoneStock", tds2,0);
                 }
 
                 tds.AcceptChanges();
@@ -381,6 +392,7 @@ namespace DiamondShop
             chkPayByUSD.Enabled = status;
             cmbIdentification.Enabled = status;
             dtPayDate.Enabled = status;
+            cmbBuyer.Enabled = status;
         }
 
         private void dtDueDate_ValueChanged(object sender, EventArgs e)

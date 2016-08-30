@@ -99,7 +99,7 @@ namespace DiamondShop
                 { tds.Tables[0].Rows[i]["Shape"] = row.Cells["Shape"].Value; }
 
                 if (row.Cells["ColorType"].Value != null)
-                { tds.Tables[0].Rows[i]["ColorType"] = row.Cells["ColorType"].Value; }
+                { tds.Tables[0].Rows[i]["ColorType"] = row.Cells["ColorType"].Value;}
 
                 if (row.Cells["Color"].Value != null)
                 { tds.Tables[0].Rows[i]["Color"] = row.Cells["Color"].Value; }
@@ -145,6 +145,9 @@ namespace DiamondShop
 
                 if (row.Cells["Note"].Value != null)
                 { tds.Tables[0].Rows[i]["Note"] = row.Cells["Note"].Value; }
+
+                if (row.Cells["Buyer"].Value != null)
+                { tds.Tables[0].Rows[i]["Buyer"] = row.Cells["Buyer"].Value; }
 
                 i++;
             }

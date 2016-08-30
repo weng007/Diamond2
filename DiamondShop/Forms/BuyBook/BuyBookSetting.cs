@@ -45,6 +45,13 @@ namespace DiamondShop
 
         protected override void Initial()
         {
+            ds = GM.GetBuyer();
+
+            cmbBuyer.DataSource = ds.Tables[0];
+            cmbBuyer.ValueMember = "ID";
+            cmbBuyer.DisplayMember = "DisplayName";
+            cmbBuyer.Refresh();
+
             dtBuyDate.Select();
             SetFieldService.SetRequireField(txtSeller);
         }
@@ -56,6 +63,7 @@ namespace DiamondShop
             binder.BindControl(txtBuyPrice, "BuyPrice");
             binder.BindControl(txtSalePrice, "SalePrice");
             binder.BindControl(dtPayDate, "PayDate");
+            binder.BindControl(cmbBuyer , "Buyer");
         }
         protected override void LoadData()
         {
@@ -115,7 +123,7 @@ namespace DiamondShop
                 if (id == 0)
                 {
                     SetCreateBy(row);
-                    chkFlag = ser.DoInsertData("BuyBookSetting", tds);
+                    chkFlag = ser.DoInsertData("BuyBookSetting", tds,0);
                 }
                 else
                 {
@@ -294,6 +302,7 @@ namespace DiamondShop
             btnAdd.Enabled = status;
             btnDel.Enabled = status;
             gridSetting.Enabled = status;
+            cmbBuyer.Enabled = status;
         }
     }
 }

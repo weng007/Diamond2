@@ -35,6 +35,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.cmbSeller = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dtESaleDate = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
@@ -49,7 +50,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.dsReportSelling = new DiamondShop.Report.DS.dsReportSelling();
             this.dsReportSellingBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.cmbSeller = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsReportSellingBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.reportSellingBindingSource)).BeginInit();
@@ -79,21 +79,20 @@
             this.panel2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel2.Location = new System.Drawing.Point(5, 147);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1329, 464);
+            this.panel2.Size = new System.Drawing.Size(1329, 599);
             this.panel2.TabIndex = 45;
             // 
             // reportViewer1
             // 
             this.reportViewer1.Location = new System.Drawing.Point(7, 3);
             this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(1327, 458);
+            this.reportViewer1.Size = new System.Drawing.Size(1327, 596);
             this.reportViewer1.TabIndex = 0;
             this.reportViewer1.Load += new System.EventHandler(this.reportViewer1_Load);
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(161)))), ((int)(((byte)(118)))));
-            this.panel4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel4.BackgroundImage")));
             this.panel4.Controls.Add(this.cmbSeller);
             this.panel4.Controls.Add(this.label2);
             this.panel4.Controls.Add(this.dtESaleDate);
@@ -109,6 +108,14 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1318, 107);
             this.panel4.TabIndex = 44;
+            // 
+            // cmbSeller
+            // 
+            this.cmbSeller.FormattingEnabled = true;
+            this.cmbSeller.Location = new System.Drawing.Point(112, 68);
+            this.cmbSeller.Name = "cmbSeller";
+            this.cmbSeller.Size = new System.Drawing.Size(172, 29);
+            this.cmbSeller.TabIndex = 114;
             // 
             // label2
             // 
@@ -209,7 +216,7 @@
             // panel1
             // 
             this.panel1.AutoSize = true;
-            this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.panel1.Controls.Add(this.button1);
@@ -245,21 +252,12 @@
             this.dsReportSellingBindingSource1.DataSource = this.dsReportSelling;
             this.dsReportSellingBindingSource1.Position = 0;
             // 
-            // cmbSeller
-            // 
-            this.cmbSeller.FormattingEnabled = true;
-            this.cmbSeller.Location = new System.Drawing.Point(112, 68);
-            this.cmbSeller.Name = "cmbSeller";
-            this.cmbSeller.Size = new System.Drawing.Size(172, 29);
-            this.cmbSeller.TabIndex = 114;
-            // 
             // ReportSellingList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1351, 625);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(161)))), ((int)(((byte)(118)))));
+            this.ClientSize = new System.Drawing.Size(1351, 758);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel4);

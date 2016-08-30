@@ -459,7 +459,7 @@
             this.SettingName,
             this.ReportNumber,
             this.SoldToName});
-            this.gridDiamondCer.Location = new System.Drawing.Point(19, 0);
+            this.gridDiamondCer.Location = new System.Drawing.Point(15, 3);
             this.gridDiamondCer.Name = "gridDiamondCer";
             this.gridDiamondCer.ReadOnly = true;
             this.gridDiamondCer.RowHeadersWidth = 10;
@@ -606,7 +606,7 @@
             // 
             this.Price.DataPropertyName = "Price";
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle4.Format = "N0";
+            dataGridViewCellStyle4.Format = "N2";
             this.Price.DefaultCellStyle = dataGridViewCellStyle4;
             this.Price.HeaderText = "Price";
             this.Price.Name = "Price";

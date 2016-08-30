@@ -31,6 +31,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BuyBookJewelry));
             this.dtBuyDate = new System.Windows.Forms.DateTimePicker();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label20 = new System.Windows.Forms.Label();
+            this.dtPayDate = new System.Windows.Forms.DateTimePicker();
+            this.rdoNo = new System.Windows.Forms.RadioButton();
+            this.rdoYes = new System.Windows.Forms.RadioButton();
+            this.label21 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.txtMinPrice = new System.Windows.Forms.TextBox();
             this.btnGemstone = new System.Windows.Forms.Button();
@@ -72,11 +77,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.label20 = new System.Windows.Forms.Label();
-            this.dtPayDate = new System.Windows.Forms.DateTimePicker();
-            this.rdoNo = new System.Windows.Forms.RadioButton();
-            this.rdoYes = new System.Windows.Forms.RadioButton();
-            this.label21 = new System.Windows.Forms.Label();
+            this.cmbBuyer = new System.Windows.Forms.ComboBox();
+            this.label22 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -94,6 +96,8 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.cmbBuyer);
+            this.panel3.Controls.Add(this.label22);
             this.panel3.Controls.Add(this.label20);
             this.panel3.Controls.Add(this.dtPayDate);
             this.panel3.Controls.Add(this.rdoNo);
@@ -145,6 +149,59 @@
             this.panel3.Size = new System.Drawing.Size(1147, 406);
             this.panel3.TabIndex = 74;
             // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
+            this.label20.Location = new System.Drawing.Point(870, 201);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(78, 19);
+            this.label20.TabIndex = 200;
+            this.label20.Text = "Pay Date";
+            // 
+            // dtPayDate
+            // 
+            this.dtPayDate.CustomFormat = "dd/MM/yyyy";
+            this.dtPayDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtPayDate.Location = new System.Drawing.Point(967, 196);
+            this.dtPayDate.Name = "dtPayDate";
+            this.dtPayDate.Size = new System.Drawing.Size(136, 27);
+            this.dtPayDate.TabIndex = 199;
+            // 
+            // rdoNo
+            // 
+            this.rdoNo.AutoSize = true;
+            this.rdoNo.Checked = true;
+            this.rdoNo.Location = new System.Drawing.Point(1036, 165);
+            this.rdoNo.Name = "rdoNo";
+            this.rdoNo.Size = new System.Drawing.Size(50, 25);
+            this.rdoNo.TabIndex = 197;
+            this.rdoNo.TabStop = true;
+            this.rdoNo.Text = "No";
+            this.rdoNo.UseVisualStyleBackColor = true;
+            // 
+            // rdoYes
+            // 
+            this.rdoYes.AutoSize = true;
+            this.rdoYes.Location = new System.Drawing.Point(970, 165);
+            this.rdoYes.Name = "rdoYes";
+            this.rdoYes.Size = new System.Drawing.Size(55, 25);
+            this.rdoYes.TabIndex = 196;
+            this.rdoYes.Text = "Yes";
+            this.rdoYes.UseVisualStyleBackColor = true;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.label21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
+            this.label21.Location = new System.Drawing.Point(871, 167);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(78, 19);
+            this.label21.TabIndex = 198;
+            this.label21.Text = "Payment";
+            // 
             // label19
             // 
             this.label19.AutoSize = true;
@@ -174,7 +231,7 @@
             this.btnGemstone.FlatAppearance.BorderSize = 0;
             this.btnGemstone.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGemstone.Image = ((System.Drawing.Image)(resources.GetObject("btnGemstone.Image")));
-            this.btnGemstone.Location = new System.Drawing.Point(1009, 276);
+            this.btnGemstone.Location = new System.Drawing.Point(1009, 298);
             this.btnGemstone.Name = "btnGemstone";
             this.btnGemstone.Size = new System.Drawing.Size(76, 86);
             this.btnGemstone.TabIndex = 56;
@@ -189,7 +246,7 @@
             this.btnDiamond.FlatAppearance.BorderSize = 0;
             this.btnDiamond.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDiamond.Image = ((System.Drawing.Image)(resources.GetObject("btnDiamond.Image")));
-            this.btnDiamond.Location = new System.Drawing.Point(907, 276);
+            this.btnDiamond.Location = new System.Drawing.Point(907, 298);
             this.btnDiamond.Name = "btnDiamond";
             this.btnDiamond.Size = new System.Drawing.Size(76, 86);
             this.btnDiamond.TabIndex = 52;
@@ -228,7 +285,7 @@
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label18.Location = new System.Drawing.Point(584, 207);
+            this.label18.Location = new System.Drawing.Point(584, 229);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(69, 19);
             this.label18.TabIndex = 124;
@@ -237,7 +294,7 @@
             // txtRemark
             // 
             this.txtRemark.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.txtRemark.Location = new System.Drawing.Point(589, 232);
+            this.txtRemark.Location = new System.Drawing.Point(589, 254);
             this.txtRemark.Multiline = true;
             this.txtRemark.Name = "txtRemark";
             this.txtRemark.Size = new System.Drawing.Size(222, 117);
@@ -453,16 +510,16 @@
             this.dtImportDate.CustomFormat = "dd/MM/yyyy";
             this.dtImportDate.Enabled = false;
             this.dtImportDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtImportDate.Location = new System.Drawing.Point(985, 17);
+            this.dtImportDate.Location = new System.Drawing.Point(970, 17);
             this.dtImportDate.Name = "dtImportDate";
-            this.dtImportDate.Size = new System.Drawing.Size(131, 27);
+            this.dtImportDate.Size = new System.Drawing.Size(146, 27);
             this.dtImportDate.TabIndex = 12;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label10.Location = new System.Drawing.Point(889, 98);
+            this.label10.Location = new System.Drawing.Point(889, 132);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(59, 21);
             this.label10.TabIndex = 100;
@@ -472,7 +529,7 @@
             // 
             this.CmbStatus.Enabled = false;
             this.CmbStatus.FormattingEnabled = true;
-            this.CmbStatus.Location = new System.Drawing.Point(970, 89);
+            this.CmbStatus.Location = new System.Drawing.Point(970, 126);
             this.CmbStatus.Name = "CmbStatus";
             this.CmbStatus.Size = new System.Drawing.Size(146, 29);
             this.CmbStatus.TabIndex = 8;
@@ -566,58 +623,23 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // label20
+            // cmbBuyer
             // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label20.Location = new System.Drawing.Point(870, 164);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(78, 19);
-            this.label20.TabIndex = 200;
-            this.label20.Text = "Pay Date";
+            this.cmbBuyer.FormattingEnabled = true;
+            this.cmbBuyer.Location = new System.Drawing.Point(970, 89);
+            this.cmbBuyer.Name = "cmbBuyer";
+            this.cmbBuyer.Size = new System.Drawing.Size(156, 29);
+            this.cmbBuyer.TabIndex = 226;
             // 
-            // dtPayDate
+            // label22
             // 
-            this.dtPayDate.CustomFormat = "dd/MM/yyyy";
-            this.dtPayDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtPayDate.Location = new System.Drawing.Point(967, 159);
-            this.dtPayDate.Name = "dtPayDate";
-            this.dtPayDate.Size = new System.Drawing.Size(136, 27);
-            this.dtPayDate.TabIndex = 199;
-            // 
-            // rdoNo
-            // 
-            this.rdoNo.AutoSize = true;
-            this.rdoNo.Checked = true;
-            this.rdoNo.Location = new System.Drawing.Point(1036, 128);
-            this.rdoNo.Name = "rdoNo";
-            this.rdoNo.Size = new System.Drawing.Size(50, 25);
-            this.rdoNo.TabIndex = 197;
-            this.rdoNo.TabStop = true;
-            this.rdoNo.Text = "No";
-            this.rdoNo.UseVisualStyleBackColor = true;
-            // 
-            // rdoYes
-            // 
-            this.rdoYes.AutoSize = true;
-            this.rdoYes.Location = new System.Drawing.Point(970, 128);
-            this.rdoYes.Name = "rdoYes";
-            this.rdoYes.Size = new System.Drawing.Size(55, 25);
-            this.rdoYes.TabIndex = 196;
-            this.rdoYes.Text = "Yes";
-            this.rdoYes.UseVisualStyleBackColor = true;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.label21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label21.Location = new System.Drawing.Point(871, 130);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(78, 19);
-            this.label21.TabIndex = 198;
-            this.label21.Text = "Payment";
+            this.label22.AutoSize = true;
+            this.label22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
+            this.label22.Location = new System.Drawing.Point(889, 94);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(52, 21);
+            this.label22.TabIndex = 227;
+            this.label22.Text = "Buyer";
             // 
             // BuyBookJewelry
             // 
@@ -686,5 +708,7 @@
         private System.Windows.Forms.RadioButton rdoNo;
         private System.Windows.Forms.RadioButton rdoYes;
         private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.ComboBox cmbBuyer;
+        private System.Windows.Forms.Label label22;
     }
 }

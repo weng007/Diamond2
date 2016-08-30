@@ -124,7 +124,7 @@ namespace DiamondShop
                     //พึ่งซื้อยังไม่ได้ขายให้ลูกค้า
 
                     SetCreateBy(row);
-                    chkFlag = ser.DoInsertData("BBJewelryDiamondCerDetail", tds);
+                    chkFlag = ser.DoInsertData("BBJewelryDiamondCerDetail", tds,0);
                 }
                 else
                 {

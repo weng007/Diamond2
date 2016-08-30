@@ -31,6 +31,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BuyBookETC));
             this.dtBuyDate = new System.Windows.Forms.DateTimePicker();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label26 = new System.Windows.Forms.Label();
+            this.dtPayDate = new System.Windows.Forms.DateTimePicker();
+            this.rdoNo = new System.Windows.Forms.RadioButton();
+            this.rdoYes = new System.Windows.Forms.RadioButton();
+            this.label27 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.txtPrice = new System.Windows.Forms.TextBox();
@@ -41,11 +46,8 @@
             this.txtSeller = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
-            this.label26 = new System.Windows.Forms.Label();
-            this.dtPayDate = new System.Windows.Forms.DateTimePicker();
-            this.rdoNo = new System.Windows.Forms.RadioButton();
-            this.rdoYes = new System.Windows.Forms.RadioButton();
-            this.label27 = new System.Windows.Forms.Label();
+            this.cmbBuyer = new System.Windows.Forms.ComboBox();
+            this.label28 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -63,6 +65,8 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.cmbBuyer);
+            this.panel3.Controls.Add(this.label28);
             this.panel3.Controls.Add(this.label26);
             this.panel3.Controls.Add(this.dtPayDate);
             this.panel3.Controls.Add(this.rdoNo);
@@ -80,106 +84,8 @@
             this.panel3.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.panel3.Location = new System.Drawing.Point(12, 71);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(631, 254);
+            this.panel3.Size = new System.Drawing.Size(631, 294);
             this.panel3.TabIndex = 74;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label8.Location = new System.Drawing.Point(275, 204);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(43, 19);
-            this.label8.TabIndex = 97;
-            this.label8.Text = "Baht";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label7.Location = new System.Drawing.Point(63, 204);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(47, 19);
-            this.label7.TabIndex = 96;
-            this.label7.Text = "Price";
-            // 
-            // txtPrice
-            // 
-            this.txtPrice.Location = new System.Drawing.Point(127, 201);
-            this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(131, 27);
-            this.txtPrice.TabIndex = 12;
-            this.txtPrice.Text = "0";
-            this.txtPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrice_KeyPress);
-            this.txtPrice.Leave += new System.EventHandler(this.txtPrice_Leave);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label5.Location = new System.Drawing.Point(29, 91);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(56, 21);
-            this.label5.TabIndex = 94;
-            this.label5.Text = "Detail";
-            // 
-            // txtDetail
-            // 
-            this.txtDetail.Location = new System.Drawing.Point(127, 88);
-            this.txtDetail.Multiline = true;
-            this.txtDetail.Name = "txtDetail";
-            this.txtDetail.Size = new System.Drawing.Size(279, 83);
-            this.txtDetail.TabIndex = 8;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label1.Location = new System.Drawing.Point(29, 56);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 21);
-            this.label1.TabIndex = 85;
-            this.label1.Text = "Seller";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label6.Location = new System.Drawing.Point(29, 22);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(81, 21);
-            this.label6.TabIndex = 84;
-            this.label6.Text = "Buy Date";
-            // 
-            // txtSeller
-            // 
-            this.txtSeller.Location = new System.Drawing.Point(127, 53);
-            this.txtSeller.Name = "txtSeller";
-            this.txtSeller.Size = new System.Drawing.Size(157, 27);
-            this.txtSeller.TabIndex = 4;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(35)))), ((int)(((byte)(69)))));
-            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.panel1.Location = new System.Drawing.Point(3, 5);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(272, 32);
-            this.panel1.TabIndex = 4;
-            // 
-            // button1
-            // 
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button1.Location = new System.Drawing.Point(16, 50);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(1089, 352);
-            this.button1.TabIndex = 32;
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // label26
             // 
@@ -234,12 +140,128 @@
             this.label27.TabIndex = 213;
             this.label27.Text = "Payment";
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
+            this.label8.Location = new System.Drawing.Point(275, 246);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(43, 19);
+            this.label8.TabIndex = 97;
+            this.label8.Text = "Baht";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
+            this.label7.Location = new System.Drawing.Point(63, 246);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(47, 19);
+            this.label7.TabIndex = 96;
+            this.label7.Text = "Price";
+            // 
+            // txtPrice
+            // 
+            this.txtPrice.Location = new System.Drawing.Point(127, 243);
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.Size = new System.Drawing.Size(131, 27);
+            this.txtPrice.TabIndex = 12;
+            this.txtPrice.Text = "0";
+            this.txtPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrice_KeyPress);
+            this.txtPrice.Leave += new System.EventHandler(this.txtPrice_Leave);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
+            this.label5.Location = new System.Drawing.Point(29, 133);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(56, 21);
+            this.label5.TabIndex = 94;
+            this.label5.Text = "Detail";
+            // 
+            // txtDetail
+            // 
+            this.txtDetail.Location = new System.Drawing.Point(127, 130);
+            this.txtDetail.Multiline = true;
+            this.txtDetail.Name = "txtDetail";
+            this.txtDetail.Size = new System.Drawing.Size(279, 83);
+            this.txtDetail.TabIndex = 8;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
+            this.label1.Location = new System.Drawing.Point(29, 56);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(49, 21);
+            this.label1.TabIndex = 85;
+            this.label1.Text = "Seller";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
+            this.label6.Location = new System.Drawing.Point(29, 22);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(81, 21);
+            this.label6.TabIndex = 84;
+            this.label6.Text = "Buy Date";
+            // 
+            // txtSeller
+            // 
+            this.txtSeller.Location = new System.Drawing.Point(127, 53);
+            this.txtSeller.Name = "txtSeller";
+            this.txtSeller.Size = new System.Drawing.Size(157, 27);
+            this.txtSeller.TabIndex = 4;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(35)))), ((int)(((byte)(69)))));
+            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.panel1.Location = new System.Drawing.Point(3, 5);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(272, 32);
+            this.panel1.TabIndex = 4;
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button1.Location = new System.Drawing.Point(16, 50);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(1089, 352);
+            this.button1.TabIndex = 32;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // cmbBuyer
+            // 
+            this.cmbBuyer.FormattingEnabled = true;
+            this.cmbBuyer.Location = new System.Drawing.Point(127, 89);
+            this.cmbBuyer.Name = "cmbBuyer";
+            this.cmbBuyer.Size = new System.Drawing.Size(157, 29);
+            this.cmbBuyer.TabIndex = 216;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
+            this.label28.Location = new System.Drawing.Point(27, 92);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(52, 21);
+            this.label28.TabIndex = 217;
+            this.label28.Text = "Buyer";
+            // 
             // BuyBookETC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(195)))), ((int)(((byte)(157)))));
-            this.ClientSize = new System.Drawing.Size(655, 336);
+            this.ClientSize = new System.Drawing.Size(655, 377);
             this.Controls.Add(this.panel3);
             this.Name = "BuyBookETC";
             this.Text = "DiamondCer";
@@ -270,5 +292,7 @@
         private System.Windows.Forms.RadioButton rdoNo;
         private System.Windows.Forms.RadioButton rdoYes;
         private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.ComboBox cmbBuyer;
+        private System.Windows.Forms.Label label28;
     }
 }

@@ -68,6 +68,7 @@ namespace DiamondShop
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
+            Application.UseWaitCursor = true;
             ser1 = GM.GetService1();
 
             ds = ser1.GetReportSelling(Convert.ToInt32(cmbType.SelectedValue), Convert.ToInt32(cmbSeller.SelectedValue), dtSSaleDate.Value, dtESaleDate.Value);
@@ -78,6 +79,7 @@ namespace DiamondShop
 
             this.reportViewer1.LocalReport.DataSources.Add(datasource);
             this.reportViewer1.RefreshReport();
+            Application.UseWaitCursor = false;
         }
 
         private void btnClose_Click(object sender, EventArgs e)

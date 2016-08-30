@@ -29,14 +29,19 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BuyBookSetting));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dtBuyDate = new System.Windows.Forms.DateTimePicker();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label26 = new System.Windows.Forms.Label();
+            this.dtPayDate = new System.Windows.Forms.DateTimePicker();
+            this.rdoNo = new System.Windows.Forms.RadioButton();
+            this.rdoYes = new System.Windows.Forms.RadioButton();
+            this.label27 = new System.Windows.Forms.Label();
             this.btnDel = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
@@ -63,11 +68,8 @@
             this.btnEdit = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
-            this.label26 = new System.Windows.Forms.Label();
-            this.dtPayDate = new System.Windows.Forms.DateTimePicker();
-            this.rdoNo = new System.Windows.Forms.RadioButton();
-            this.rdoYes = new System.Windows.Forms.RadioButton();
-            this.label27 = new System.Windows.Forms.Label();
+            this.cmbBuyer = new System.Windows.Forms.ComboBox();
+            this.label22 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridSetting)).BeginInit();
@@ -87,6 +89,8 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.cmbBuyer);
+            this.panel3.Controls.Add(this.label22);
             this.panel3.Controls.Add(this.label26);
             this.panel3.Controls.Add(this.dtPayDate);
             this.panel3.Controls.Add(this.rdoNo);
@@ -109,6 +113,59 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(976, 427);
             this.panel3.TabIndex = 74;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.label26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
+            this.label26.Location = new System.Drawing.Point(680, 58);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(78, 19);
+            this.label26.TabIndex = 210;
+            this.label26.Text = "Pay Date";
+            // 
+            // dtPayDate
+            // 
+            this.dtPayDate.CustomFormat = "dd/MM/yyyy";
+            this.dtPayDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtPayDate.Location = new System.Drawing.Point(777, 53);
+            this.dtPayDate.Name = "dtPayDate";
+            this.dtPayDate.Size = new System.Drawing.Size(136, 27);
+            this.dtPayDate.TabIndex = 209;
+            // 
+            // rdoNo
+            // 
+            this.rdoNo.AutoSize = true;
+            this.rdoNo.Checked = true;
+            this.rdoNo.Location = new System.Drawing.Point(845, 17);
+            this.rdoNo.Name = "rdoNo";
+            this.rdoNo.Size = new System.Drawing.Size(50, 25);
+            this.rdoNo.TabIndex = 207;
+            this.rdoNo.TabStop = true;
+            this.rdoNo.Text = "No";
+            this.rdoNo.UseVisualStyleBackColor = true;
+            // 
+            // rdoYes
+            // 
+            this.rdoYes.AutoSize = true;
+            this.rdoYes.Location = new System.Drawing.Point(779, 17);
+            this.rdoYes.Name = "rdoYes";
+            this.rdoYes.Size = new System.Drawing.Size(55, 25);
+            this.rdoYes.TabIndex = 206;
+            this.rdoYes.Text = "Yes";
+            this.rdoYes.UseVisualStyleBackColor = true;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.label27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
+            this.label27.Location = new System.Drawing.Point(680, 19);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(78, 19);
+            this.label27.TabIndex = 208;
+            this.label27.Text = "Payment";
             // 
             // btnDel
             // 
@@ -237,8 +294,8 @@
             // RowNum
             // 
             this.RowNum.DataPropertyName = "RowNum";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            this.RowNum.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            this.RowNum.DefaultCellStyle = dataGridViewCellStyle7;
             this.RowNum.HeaderText = "No.";
             this.RowNum.Name = "RowNum";
             this.RowNum.ReadOnly = true;
@@ -272,9 +329,9 @@
             // Amount
             // 
             this.Amount.DataPropertyName = "Amount";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle2.Format = "N0";
-            this.Amount.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle8.Format = "N0";
+            this.Amount.DefaultCellStyle = dataGridViewCellStyle8;
             this.Amount.HeaderText = "Amount";
             this.Amount.Name = "Amount";
             this.Amount.ReadOnly = true;
@@ -283,9 +340,9 @@
             // Weight
             // 
             this.Weight.DataPropertyName = "Weight";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle3.Format = "N2";
-            this.Weight.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle9.Format = "N2";
+            this.Weight.DefaultCellStyle = dataGridViewCellStyle9;
             this.Weight.HeaderText = "Weight";
             this.Weight.Name = "Weight";
             this.Weight.ReadOnly = true;
@@ -294,9 +351,9 @@
             // PricePerGram
             // 
             this.PricePerGram.DataPropertyName = "PricePerGram";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle4.Format = "N0";
-            this.PricePerGram.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle10.Format = "N0";
+            this.PricePerGram.DefaultCellStyle = dataGridViewCellStyle10;
             this.PricePerGram.HeaderText = "Price/Gram";
             this.PricePerGram.Name = "PricePerGram";
             this.PricePerGram.ReadOnly = true;
@@ -305,9 +362,9 @@
             // PricePerUnit
             // 
             this.PricePerUnit.DataPropertyName = "PricePerUnit";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle5.Format = "N0";
-            this.PricePerUnit.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle11.Format = "N0";
+            this.PricePerUnit.DefaultCellStyle = dataGridViewCellStyle11;
             this.PricePerUnit.HeaderText = "Price/Unit";
             this.PricePerUnit.Name = "PricePerUnit";
             this.PricePerUnit.ReadOnly = true;
@@ -315,9 +372,9 @@
             // TotalBaht
             // 
             this.TotalBaht.DataPropertyName = "TotalBaht";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle6.Format = "N0";
-            this.TotalBaht.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle12.Format = "N0";
+            this.TotalBaht.DefaultCellStyle = dataGridViewCellStyle12;
             this.TotalBaht.HeaderText = "TotalBaht";
             this.TotalBaht.Name = "TotalBaht";
             this.TotalBaht.ReadOnly = true;
@@ -411,58 +468,23 @@
             this.button1.TabIndex = 32;
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // label26
+            // cmbBuyer
             // 
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.label26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label26.Location = new System.Drawing.Point(313, 58);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(78, 19);
-            this.label26.TabIndex = 210;
-            this.label26.Text = "Pay Date";
+            this.cmbBuyer.FormattingEnabled = true;
+            this.cmbBuyer.Location = new System.Drawing.Point(380, 14);
+            this.cmbBuyer.Name = "cmbBuyer";
+            this.cmbBuyer.Size = new System.Drawing.Size(156, 29);
+            this.cmbBuyer.TabIndex = 228;
             // 
-            // dtPayDate
+            // label22
             // 
-            this.dtPayDate.CustomFormat = "dd/MM/yyyy";
-            this.dtPayDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtPayDate.Location = new System.Drawing.Point(410, 53);
-            this.dtPayDate.Name = "dtPayDate";
-            this.dtPayDate.Size = new System.Drawing.Size(136, 27);
-            this.dtPayDate.TabIndex = 209;
-            // 
-            // rdoNo
-            // 
-            this.rdoNo.AutoSize = true;
-            this.rdoNo.Checked = true;
-            this.rdoNo.Location = new System.Drawing.Point(478, 17);
-            this.rdoNo.Name = "rdoNo";
-            this.rdoNo.Size = new System.Drawing.Size(50, 25);
-            this.rdoNo.TabIndex = 207;
-            this.rdoNo.TabStop = true;
-            this.rdoNo.Text = "No";
-            this.rdoNo.UseVisualStyleBackColor = true;
-            // 
-            // rdoYes
-            // 
-            this.rdoYes.AutoSize = true;
-            this.rdoYes.Location = new System.Drawing.Point(412, 17);
-            this.rdoYes.Name = "rdoYes";
-            this.rdoYes.Size = new System.Drawing.Size(55, 25);
-            this.rdoYes.TabIndex = 206;
-            this.rdoYes.Text = "Yes";
-            this.rdoYes.UseVisualStyleBackColor = true;
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.label27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label27.Location = new System.Drawing.Point(313, 19);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(78, 19);
-            this.label27.TabIndex = 208;
-            this.label27.Text = "Payment";
+            this.label22.AutoSize = true;
+            this.label22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
+            this.label22.Location = new System.Drawing.Point(315, 19);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(52, 21);
+            this.label22.TabIndex = 229;
+            this.label22.Text = "Buyer";
             // 
             // BuyBookSetting
             // 
@@ -517,5 +539,7 @@
         private System.Windows.Forms.RadioButton rdoNo;
         private System.Windows.Forms.RadioButton rdoYes;
         private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.ComboBox cmbBuyer;
+        private System.Windows.Forms.Label label22;
     }
 }
