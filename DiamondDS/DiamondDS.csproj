@@ -43,6 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DS\dsBBDiamondStock.Designer.cs" />
+    <Compile Include="DS\dsBBGemstoneStock.Designer.cs" />
     <Compile Include="DS\dsBBJewelryDiamondCerDetail.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -63,6 +65,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsBBJewelryGemstoneDetail.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DS\dsBuyBookDiamond.cs">
+      <DependentUpon>dsBuyBookDiamond.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DS\dsBuyBookDiamond.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -81,10 +86,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsBuyBookETC.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DS\dsBuyBookGemstone.cs">
+      <DependentUpon>dsBuyBookGemstone.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DS\dsBuyBookGemstone.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dsBuyBookGemstone.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS\dsBuyBookGemstoneCer.cs">
+      <DependentUpon>dsBuyBookGemstoneCer.xsd</DependentUpon>
     </Compile>
     <Compile Include="DS\dsBuyBookGemstoneCer.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -100,6 +111,19 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dsBuyBookJewelry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS\dsBuyBookPayment.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsBuyBookPayment.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS\dsBuyBookSetting.cs">
+      <DependentUpon>dsBuyBookSetting.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS\dsBuyBookSetting.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsBuyBookSetting.xsd</DependentUpon>
     </Compile>
     <Compile Include="DS\dsBuyBookSettingDetail.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -121,6 +145,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsCustomer.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DS\dsDiamondCer.cs">
+      <DependentUpon>dsDiamondCer.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DS\dsDiamondCer.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -130,6 +157,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dsDiamondDetail.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS\dsExchangeRate.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsExchangeRate.xsd</DependentUpon>
     </Compile>
     <Compile Include="DS\dsGemstoneCer.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -141,25 +173,38 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsGemstoneDetail.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DS\dsInvDiamondCerDetail.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsInvDiamondCerDetail.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS\dsInvDiamondDetail.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsInvDiamondDetail.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS\dsInventory.cs">
+      <DependentUpon>dsInventory.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DS\dsInventory.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dsInventory.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DS\dsInvGemstoneCerDetail1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsInvGemstoneCerDetail.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS\dsInvGemstoneDetail.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsInvGemstoneDetail.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DS\dsMasterTableDetail.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dsMasterTableDetail.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="DS\dsPriceCode.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>dsPriceCode.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="DS\dsProduct.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>dsProduct.xsd</DependentUpon>
     </Compile>
     <Compile Include="DS\dsSell.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -188,6 +233,28 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="DS\dsBBDiamondStock.xsc">
+      <DependentUpon>dsBBDiamondStock.xsd</DependentUpon>
+    </None>
+    <None Include="DS\dsBBDiamondStock.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsBBDiamondStock1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DS\dsBBDiamondStock.xss">
+      <DependentUpon>dsBBDiamondStock.xsd</DependentUpon>
+    </None>
+    <None Include="DS\dsBBGemstoneStock.xsc">
+      <DependentUpon>dsBBGemstoneStock.xsd</DependentUpon>
+    </None>
+    <None Include="DS\dsBBGemstoneStock.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsBBGemstoneStock1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DS\dsBBGemstoneStock.xss">
+      <DependentUpon>dsBBGemstoneStock.xsd</DependentUpon>
+    </None>
     <None Include="DS\dsBBJewelryDiamondCerDetail.xsc">
       <DependentUpon>dsBBJewelryDiamondCerDetail.xsd</DependentUpon>
     </None>
@@ -309,6 +376,28 @@
     <None Include="DS\dsBuyBookJewelry.xss">
       <DependentUpon>dsBuyBookJewelry.xsd</DependentUpon>
     </None>
+    <None Include="DS\dsBuyBookPayment.xsc">
+      <DependentUpon>dsBuyBookPayment.xsd</DependentUpon>
+    </None>
+    <None Include="DS\dsBuyBookPayment.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsBuyBookPayment.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS\dsBuyBookPayment.xss">
+      <DependentUpon>dsBuyBookPayment.xsd</DependentUpon>
+    </None>
+    <None Include="DS\dsBuyBookSetting.xsc">
+      <DependentUpon>dsBuyBookSetting.xsd</DependentUpon>
+    </None>
+    <None Include="DS\dsBuyBookSetting.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsBuyBookSetting.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DS\dsBuyBookSetting.xss">
+      <DependentUpon>dsBuyBookSetting.xsd</DependentUpon>
+    </None>
     <None Include="DS\dsBuyBookSettingDetail.xsc">
       <DependentUpon>dsBuyBookSettingDetail.xsd</DependentUpon>
     </None>
@@ -375,6 +464,17 @@
     <None Include="DS\dsDiamondDetail.xss">
       <DependentUpon>dsDiamondDetail.xsd</DependentUpon>
     </None>
+    <None Include="DS\dsExchangeRate.xsc">
+      <DependentUpon>dsExchangeRate.xsd</DependentUpon>
+    </None>
+    <None Include="DS\dsExchangeRate.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsExchangeRate.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS\dsExchangeRate.xss">
+      <DependentUpon>dsExchangeRate.xsd</DependentUpon>
+    </None>
     <None Include="DS\dsGemstoneCer.xsc">
       <DependentUpon>dsGemstoneCer.xsd</DependentUpon>
     </None>
@@ -397,6 +497,28 @@
     <None Include="DS\dsGemstoneDetail.xss">
       <DependentUpon>dsGemstoneDetail.xsd</DependentUpon>
     </None>
+    <None Include="DS\dsInvDiamondCerDetail.xsc">
+      <DependentUpon>dsInvDiamondCerDetail.xsd</DependentUpon>
+    </None>
+    <None Include="DS\dsInvDiamondCerDetail.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsInvDiamondCerDetail.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DS\dsInvDiamondCerDetail.xss">
+      <DependentUpon>dsInvDiamondCerDetail.xsd</DependentUpon>
+    </None>
+    <None Include="DS\dsInvDiamondDetail.xsc">
+      <DependentUpon>dsInvDiamondDetail.xsd</DependentUpon>
+    </None>
+    <None Include="DS\dsInvDiamondDetail.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsInvDiamondDetail.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DS\dsInvDiamondDetail.xss">
+      <DependentUpon>dsInvDiamondDetail.xsd</DependentUpon>
+    </None>
     <None Include="DS\dsInventory.xsc">
       <DependentUpon>dsInventory.xsd</DependentUpon>
     </None>
@@ -408,6 +530,28 @@
     <None Include="DS\dsInventory.xss">
       <DependentUpon>dsInventory.xsd</DependentUpon>
     </None>
+    <None Include="DS\dsInvGemstoneCerDetail.xsc">
+      <DependentUpon>dsInvGemstoneCerDetail.xsd</DependentUpon>
+    </None>
+    <None Include="DS\dsInvGemstoneCerDetail.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsInvGemstoneCerDetail1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS\dsInvGemstoneCerDetail.xss">
+      <DependentUpon>dsInvGemstoneCerDetail.xsd</DependentUpon>
+    </None>
+    <None Include="DS\dsInvGemstoneDetail.xsc">
+      <DependentUpon>dsInvGemstoneDetail.xsd</DependentUpon>
+    </None>
+    <None Include="DS\dsInvGemstoneDetail.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsInvGemstoneDetail.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS\dsInvGemstoneDetail.xss">
+      <DependentUpon>dsInvGemstoneDetail.xsd</DependentUpon>
+    </None>
     <None Include="DS\dsMasterTableDetail.xsc">
       <DependentUpon>dsMasterTableDetail.xsd</DependentUpon>
     </None>
@@ -418,28 +562,6 @@
     </None>
     <None Include="DS\dsMasterTableDetail.xss">
       <DependentUpon>dsMasterTableDetail.xsd</DependentUpon>
-    </None>
-    <None Include="DS\dsPriceCode.xsc">
-      <DependentUpon>dsPriceCode.xsd</DependentUpon>
-    </None>
-    <None Include="DS\dsPriceCode.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>dsPriceCode.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="DS\dsPriceCode.xss">
-      <DependentUpon>dsPriceCode.xsd</DependentUpon>
-    </None>
-    <None Include="DS\dsProduct.xsc">
-      <DependentUpon>dsProduct.xsd</DependentUpon>
-    </None>
-    <None Include="DS\dsProduct.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>dsProduct.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="DS\dsProduct.xss">
-      <DependentUpon>dsProduct.xsd</DependentUpon>
     </None>
     <None Include="DS\dsSell.xsc">
       <DependentUpon>dsSell.xsd</DependentUpon>

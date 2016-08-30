@@ -70,6 +70,8 @@ namespace DiamondShop.DiamondService2 {
         
         private System.Threading.SendOrPostCallback DoSearchBuyBookSettingOperationCompleted;
         
+        private System.Threading.SendOrPostCallback DoSearchBuyBookPaymentOperationCompleted;
+        
         private bool useDefaultCredentialsSetExplicitly;
         
         /// <remarks/>
@@ -167,6 +169,9 @@ namespace DiamondShop.DiamondService2 {
         
         /// <remarks/>
         public event DoSearchBuyBookSettingCompletedEventHandler DoSearchBuyBookSettingCompleted;
+        
+        /// <remarks/>
+        public event DoSearchBuyBookPaymentCompletedEventHandler DoSearchBuyBookPaymentCompleted;
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/DoSearchCustomer", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
@@ -875,6 +880,47 @@ namespace DiamondShop.DiamondService2 {
         }
         
         /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/DoSearchBuyBookPayment", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataSet DoSearchBuyBookPayment(string Seller, string tableName, System.DateTime sBuyDate, System.DateTime eBuyDate, string IsPaid, System.DateTime sPayDate, System.DateTime ePayDate) {
+            object[] results = this.Invoke("DoSearchBuyBookPayment", new object[] {
+                        Seller,
+                        tableName,
+                        sBuyDate,
+                        eBuyDate,
+                        IsPaid,
+                        sPayDate,
+                        ePayDate});
+            return ((System.Data.DataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void DoSearchBuyBookPaymentAsync(string Seller, string tableName, System.DateTime sBuyDate, System.DateTime eBuyDate, string IsPaid, System.DateTime sPayDate, System.DateTime ePayDate) {
+            this.DoSearchBuyBookPaymentAsync(Seller, tableName, sBuyDate, eBuyDate, IsPaid, sPayDate, ePayDate, null);
+        }
+        
+        /// <remarks/>
+        public void DoSearchBuyBookPaymentAsync(string Seller, string tableName, System.DateTime sBuyDate, System.DateTime eBuyDate, string IsPaid, System.DateTime sPayDate, System.DateTime ePayDate, object userState) {
+            if ((this.DoSearchBuyBookPaymentOperationCompleted == null)) {
+                this.DoSearchBuyBookPaymentOperationCompleted = new System.Threading.SendOrPostCallback(this.OnDoSearchBuyBookPaymentOperationCompleted);
+            }
+            this.InvokeAsync("DoSearchBuyBookPayment", new object[] {
+                        Seller,
+                        tableName,
+                        sBuyDate,
+                        eBuyDate,
+                        IsPaid,
+                        sPayDate,
+                        ePayDate}, this.DoSearchBuyBookPaymentOperationCompleted, userState);
+        }
+        
+        private void OnDoSearchBuyBookPaymentOperationCompleted(object arg) {
+            if ((this.DoSearchBuyBookPaymentCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.DoSearchBuyBookPaymentCompleted(this, new DoSearchBuyBookPaymentCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
         public new void CancelAsync(object userState) {
             base.CancelAsync(userState);
         }
@@ -1400,6 +1446,32 @@ namespace DiamondShop.DiamondService2 {
         private object[] results;
         
         internal DoSearchBuyBookSettingCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Data.DataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Data.DataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    public delegate void DoSearchBuyBookPaymentCompletedEventHandler(object sender, DoSearchBuyBookPaymentCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class DoSearchBuyBookPaymentCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal DoSearchBuyBookPaymentCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }

@@ -4,7 +4,7 @@
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="DiamondShopConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="DiamondShopConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.DiamondShop.Properties.Settings.GlobalReference.Default.DiamondShopConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="DiamondShopConnectionString" IsAppSettingsProperty="true" Modifier="Assembly" Name="DiamondShopConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.DiamondShop.Properties.Settings.GlobalReference.Default.DiamondShopConnectionString" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables />
         <Sources />
@@ -14,7 +14,7 @@
   <xs:element name="DiamondShopDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="DiamondShopDataSet" msprop:Generator_UserDSName="DiamondShopDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="SP_RPT_Jewelry" msprop:Generator_TableClassName="SP_RPT_JewelryDataTable" msprop:Generator_TableVarName="tableSP_RPT_Jewelry" msprop:Generator_RowChangedName="SP_RPT_JewelryRowChanged" msprop:Generator_TablePropName="SP_RPT_Jewelry" msprop:Generator_RowDeletingName="SP_RPT_JewelryRowDeleting" msprop:Generator_RowChangingName="SP_RPT_JewelryRowChanging" msprop:Generator_RowEvHandlerName="SP_RPT_JewelryRowChangeEventHandler" msprop:Generator_RowDeletedName="SP_RPT_JewelryRowDeleted" msprop:Generator_RowClassName="SP_RPT_JewelryRow" msprop:Generator_UserTableName="SP_RPT_Jewelry" msprop:Generator_RowEvArgName="SP_RPT_JewelryRowChangeEvent">
+        <xs:element name="SP_RPT_Jewelry" msprop:Generator_TableClassName="SP_RPT_JewelryDataTable" msprop:Generator_TableVarName="tableSP_RPT_Jewelry" msprop:Generator_TablePropName="SP_RPT_Jewelry" msprop:Generator_RowDeletingName="SP_RPT_JewelryRowDeleting" msprop:Generator_RowChangingName="SP_RPT_JewelryRowChanging" msprop:Generator_RowEvHandlerName="SP_RPT_JewelryRowChangeEventHandler" msprop:Generator_RowDeletedName="SP_RPT_JewelryRowDeleted" msprop:Generator_UserTableName="SP_RPT_Jewelry" msprop:Generator_RowChangedName="SP_RPT_JewelryRowChanged" msprop:Generator_RowEvArgName="SP_RPT_JewelryRowChangeEvent" msprop:Generator_RowClassName="SP_RPT_JewelryRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
