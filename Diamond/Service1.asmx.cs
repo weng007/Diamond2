@@ -448,7 +448,7 @@ namespace Diamond
 
         #region DoInsertData
         [WebMethod]
-        public bool DoInsertData(string TableName, DataSet ds)
+        public bool DoInsertData(string TableName, DataSet ds, int mode)
         {
             if (TableName == "User")
             {
@@ -637,11 +637,16 @@ namespace Diamond
             {
                 BuyBookDiamondCerBiz biz = GM.GetBuyBookDiamondCerBiz();
                 dsBuyBookDiamondCer ds1 = new dsBuyBookDiamondCer();
+                dsBuyBookDiamondCer_Excel ds2 = new dsBuyBookDiamondCer_Excel();
+                ds2.Merge(ds);
                 ds1.Merge(ds);
 
                 try
                 {
-                    flag = biz.DoInsertData(ds1);
+                    if (mode == 0)
+                    { flag = biz.DoInsertData(ds1); }
+                    else
+                    { flag = biz.DoInsertData(ds2); }                   
                 }
                 catch (Exception ex)
                 {
@@ -652,11 +657,16 @@ namespace Diamond
             {
                 BuyBookGemstoneCerBiz biz = GM.GetBuyBookGemstoneCerBiz();
                 dsBuyBookGemstoneCer ds1 = new dsBuyBookGemstoneCer();
+                dsBuyBookGemstoneCer_Excel ds2 = new dsBuyBookGemstoneCer_Excel();
+                ds2.Merge(ds);
                 ds1.Merge(ds);
 
                 try
                 {
-                    flag = biz.DoInsertData(ds1);
+                    if (mode == 0)
+                    { flag = biz.DoInsertData(ds1); }
+                    else
+                    { flag = biz.DoInsertData(ds2); }
                 }
                 catch (Exception ex)
                 {
