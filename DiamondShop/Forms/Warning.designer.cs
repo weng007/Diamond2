@@ -99,7 +99,7 @@
             // txtReadDate
             // 
             this.txtReadDate.BackColor = System.Drawing.SystemColors.Window;
-            this.txtReadDate.Location = new System.Drawing.Point(524, 18);
+            this.txtReadDate.Location = new System.Drawing.Point(524, 19);
             this.txtReadDate.Name = "txtReadDate";
             this.txtReadDate.Size = new System.Drawing.Size(150, 27);
             this.txtReadDate.TabIndex = 214;
