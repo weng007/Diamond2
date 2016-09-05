@@ -25,7 +25,7 @@ public class SQLHelper : IDisposable
             //string password = ini.Read("DataBase", "Password");
 
             //ชั่วคราว
-            
+            //string server = "WENG-PC\\MSSQLSERVER,1433";
             string server = ".";
             string dbName = "DiamondShop";
             string userName = "sa2";

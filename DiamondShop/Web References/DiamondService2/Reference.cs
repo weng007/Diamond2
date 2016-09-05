@@ -34,8 +34,6 @@ namespace DiamondShop.DiamondService2 {
         
         private System.Threading.SendOrPostCallback DoSearchUserOperationCompleted;
         
-        private System.Threading.SendOrPostCallback DoSearchSellerOperationCompleted;
-        
         private System.Threading.SendOrPostCallback DoSearchBuyBookDiamondCerOperationCompleted;
         
         private System.Threading.SendOrPostCallback DoSearchBuyBookJewelryOperationCompleted;
@@ -71,6 +69,10 @@ namespace DiamondShop.DiamondService2 {
         private System.Threading.SendOrPostCallback DoSearchBuyBookSettingOperationCompleted;
         
         private System.Threading.SendOrPostCallback DoSearchBuyBookPaymentOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback DoSearchWarningOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback DoSearchTransferOperationCompleted;
         
         private bool useDefaultCredentialsSetExplicitly;
         
@@ -115,9 +117,6 @@ namespace DiamondShop.DiamondService2 {
         
         /// <remarks/>
         public event DoSearchUserCompletedEventHandler DoSearchUserCompleted;
-        
-        /// <remarks/>
-        public event DoSearchSellerCompletedEventHandler DoSearchSellerCompleted;
         
         /// <remarks/>
         public event DoSearchBuyBookDiamondCerCompletedEventHandler DoSearchBuyBookDiamondCerCompleted;
@@ -172,6 +171,12 @@ namespace DiamondShop.DiamondService2 {
         
         /// <remarks/>
         public event DoSearchBuyBookPaymentCompletedEventHandler DoSearchBuyBookPaymentCompleted;
+        
+        /// <remarks/>
+        public event DoSearchWarningCompletedEventHandler DoSearchWarningCompleted;
+        
+        /// <remarks/>
+        public event DoSearchTransferCompletedEventHandler DoSearchTransferCompleted;
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/DoSearchCustomer", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
@@ -236,39 +241,8 @@ namespace DiamondShop.DiamondService2 {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/DoSearchSeller", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public System.Data.DataSet DoSearchSeller(string search, int shop) {
-            object[] results = this.Invoke("DoSearchSeller", new object[] {
-                        search,
-                        shop});
-            return ((System.Data.DataSet)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void DoSearchSellerAsync(string search, int shop) {
-            this.DoSearchSellerAsync(search, shop, null);
-        }
-        
-        /// <remarks/>
-        public void DoSearchSellerAsync(string search, int shop, object userState) {
-            if ((this.DoSearchSellerOperationCompleted == null)) {
-                this.DoSearchSellerOperationCompleted = new System.Threading.SendOrPostCallback(this.OnDoSearchSellerOperationCompleted);
-            }
-            this.InvokeAsync("DoSearchSeller", new object[] {
-                        search,
-                        shop}, this.DoSearchSellerOperationCompleted, userState);
-        }
-        
-        private void OnDoSearchSellerOperationCompleted(object arg) {
-            if ((this.DoSearchSellerCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.DoSearchSellerCompleted(this, new DoSearchSellerCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/DoSearchBuyBookDiamondCer", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public System.Data.DataSet DoSearchBuyBookDiamondCer(string code, string reportNumber, int shape, int lab, double sWeight, double eWeight, int colorType, int sColor, int eColor, int sClearity, int eClearity, int status, int shop) {
+        public System.Data.DataSet DoSearchBuyBookDiamondCer(string code, string reportNumber, int shape, int lab, double sWeight, double eWeight, int colorType, int sColor, int eColor, int sClearity, int eClearity, int status, int shop, string code2) {
             object[] results = this.Invoke("DoSearchBuyBookDiamondCer", new object[] {
                         code,
                         reportNumber,
@@ -282,17 +256,18 @@ namespace DiamondShop.DiamondService2 {
                         sClearity,
                         eClearity,
                         status,
-                        shop});
+                        shop,
+                        code2});
             return ((System.Data.DataSet)(results[0]));
         }
         
         /// <remarks/>
-        public void DoSearchBuyBookDiamondCerAsync(string code, string reportNumber, int shape, int lab, double sWeight, double eWeight, int colorType, int sColor, int eColor, int sClearity, int eClearity, int status, int shop) {
-            this.DoSearchBuyBookDiamondCerAsync(code, reportNumber, shape, lab, sWeight, eWeight, colorType, sColor, eColor, sClearity, eClearity, status, shop, null);
+        public void DoSearchBuyBookDiamondCerAsync(string code, string reportNumber, int shape, int lab, double sWeight, double eWeight, int colorType, int sColor, int eColor, int sClearity, int eClearity, int status, int shop, string code2) {
+            this.DoSearchBuyBookDiamondCerAsync(code, reportNumber, shape, lab, sWeight, eWeight, colorType, sColor, eColor, sClearity, eClearity, status, shop, code2, null);
         }
         
         /// <remarks/>
-        public void DoSearchBuyBookDiamondCerAsync(string code, string reportNumber, int shape, int lab, double sWeight, double eWeight, int colorType, int sColor, int eColor, int sClearity, int eClearity, int status, int shop, object userState) {
+        public void DoSearchBuyBookDiamondCerAsync(string code, string reportNumber, int shape, int lab, double sWeight, double eWeight, int colorType, int sColor, int eColor, int sClearity, int eClearity, int status, int shop, string code2, object userState) {
             if ((this.DoSearchBuyBookDiamondCerOperationCompleted == null)) {
                 this.DoSearchBuyBookDiamondCerOperationCompleted = new System.Threading.SendOrPostCallback(this.OnDoSearchBuyBookDiamondCerOperationCompleted);
             }
@@ -309,7 +284,8 @@ namespace DiamondShop.DiamondService2 {
                         sClearity,
                         eClearity,
                         status,
-                        shop}, this.DoSearchBuyBookDiamondCerOperationCompleted, userState);
+                        shop,
+                        code2}, this.DoSearchBuyBookDiamondCerOperationCompleted, userState);
         }
         
         private void OnDoSearchBuyBookDiamondCerOperationCompleted(object arg) {
@@ -321,24 +297,26 @@ namespace DiamondShop.DiamondService2 {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/DoSearchBuyBookJewelry", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public System.Data.DataSet DoSearchBuyBookJewelry(string code) {
+        public System.Data.DataSet DoSearchBuyBookJewelry(string code, string code2) {
             object[] results = this.Invoke("DoSearchBuyBookJewelry", new object[] {
-                        code});
+                        code,
+                        code2});
             return ((System.Data.DataSet)(results[0]));
         }
         
         /// <remarks/>
-        public void DoSearchBuyBookJewelryAsync(string code) {
-            this.DoSearchBuyBookJewelryAsync(code, null);
+        public void DoSearchBuyBookJewelryAsync(string code, string code2) {
+            this.DoSearchBuyBookJewelryAsync(code, code2, null);
         }
         
         /// <remarks/>
-        public void DoSearchBuyBookJewelryAsync(string code, object userState) {
+        public void DoSearchBuyBookJewelryAsync(string code, string code2, object userState) {
             if ((this.DoSearchBuyBookJewelryOperationCompleted == null)) {
                 this.DoSearchBuyBookJewelryOperationCompleted = new System.Threading.SendOrPostCallback(this.OnDoSearchBuyBookJewelryOperationCompleted);
             }
             this.InvokeAsync("DoSearchBuyBookJewelry", new object[] {
-                        code}, this.DoSearchBuyBookJewelryOperationCompleted, userState);
+                        code,
+                        code2}, this.DoSearchBuyBookJewelryOperationCompleted, userState);
         }
         
         private void OnDoSearchBuyBookJewelryOperationCompleted(object arg) {
@@ -350,24 +328,24 @@ namespace DiamondShop.DiamondService2 {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/DoSearchBuyBookETC", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public System.Data.DataSet DoSearchBuyBookETC(string seller) {
+        public System.Data.DataSet DoSearchBuyBookETC(string User) {
             object[] results = this.Invoke("DoSearchBuyBookETC", new object[] {
-                        seller});
+                        User});
             return ((System.Data.DataSet)(results[0]));
         }
         
         /// <remarks/>
-        public void DoSearchBuyBookETCAsync(string seller) {
-            this.DoSearchBuyBookETCAsync(seller, null);
+        public void DoSearchBuyBookETCAsync(string User) {
+            this.DoSearchBuyBookETCAsync(User, null);
         }
         
         /// <remarks/>
-        public void DoSearchBuyBookETCAsync(string seller, object userState) {
+        public void DoSearchBuyBookETCAsync(string User, object userState) {
             if ((this.DoSearchBuyBookETCOperationCompleted == null)) {
                 this.DoSearchBuyBookETCOperationCompleted = new System.Threading.SendOrPostCallback(this.OnDoSearchBuyBookETCOperationCompleted);
             }
             this.InvokeAsync("DoSearchBuyBookETC", new object[] {
-                        seller}, this.DoSearchBuyBookETCOperationCompleted, userState);
+                        User}, this.DoSearchBuyBookETCOperationCompleted, userState);
         }
         
         private void OnDoSearchBuyBookETCOperationCompleted(object arg) {
@@ -379,22 +357,23 @@ namespace DiamondShop.DiamondService2 {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/DoSearchBuyBookDiamond", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public System.Data.DataSet DoSearchBuyBookDiamond(string code, double sSize, double eSize, int shape) {
+        public System.Data.DataSet DoSearchBuyBookDiamond(string code, double sSize, double eSize, int shape, string code2) {
             object[] results = this.Invoke("DoSearchBuyBookDiamond", new object[] {
                         code,
                         sSize,
                         eSize,
-                        shape});
+                        shape,
+                        code2});
             return ((System.Data.DataSet)(results[0]));
         }
         
         /// <remarks/>
-        public void DoSearchBuyBookDiamondAsync(string code, double sSize, double eSize, int shape) {
-            this.DoSearchBuyBookDiamondAsync(code, sSize, eSize, shape, null);
+        public void DoSearchBuyBookDiamondAsync(string code, double sSize, double eSize, int shape, string code2) {
+            this.DoSearchBuyBookDiamondAsync(code, sSize, eSize, shape, code2, null);
         }
         
         /// <remarks/>
-        public void DoSearchBuyBookDiamondAsync(string code, double sSize, double eSize, int shape, object userState) {
+        public void DoSearchBuyBookDiamondAsync(string code, double sSize, double eSize, int shape, string code2, object userState) {
             if ((this.DoSearchBuyBookDiamondOperationCompleted == null)) {
                 this.DoSearchBuyBookDiamondOperationCompleted = new System.Threading.SendOrPostCallback(this.OnDoSearchBuyBookDiamondOperationCompleted);
             }
@@ -402,7 +381,8 @@ namespace DiamondShop.DiamondService2 {
                         code,
                         sSize,
                         eSize,
-                        shape}, this.DoSearchBuyBookDiamondOperationCompleted, userState);
+                        shape,
+                        code2}, this.DoSearchBuyBookDiamondOperationCompleted, userState);
         }
         
         private void OnDoSearchBuyBookDiamondOperationCompleted(object arg) {
@@ -414,22 +394,23 @@ namespace DiamondShop.DiamondService2 {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/DoSearchBuyBookGemstone", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public System.Data.DataSet DoSearchBuyBookGemstone(string Code, double Size, double ESize, string Shape) {
+        public System.Data.DataSet DoSearchBuyBookGemstone(string Code, double Size, double ESize, string Shape, string Code2) {
             object[] results = this.Invoke("DoSearchBuyBookGemstone", new object[] {
                         Code,
                         Size,
                         ESize,
-                        Shape});
+                        Shape,
+                        Code2});
             return ((System.Data.DataSet)(results[0]));
         }
         
         /// <remarks/>
-        public void DoSearchBuyBookGemstoneAsync(string Code, double Size, double ESize, string Shape) {
-            this.DoSearchBuyBookGemstoneAsync(Code, Size, ESize, Shape, null);
+        public void DoSearchBuyBookGemstoneAsync(string Code, double Size, double ESize, string Shape, string Code2) {
+            this.DoSearchBuyBookGemstoneAsync(Code, Size, ESize, Shape, Code2, null);
         }
         
         /// <remarks/>
-        public void DoSearchBuyBookGemstoneAsync(string Code, double Size, double ESize, string Shape, object userState) {
+        public void DoSearchBuyBookGemstoneAsync(string Code, double Size, double ESize, string Shape, string Code2, object userState) {
             if ((this.DoSearchBuyBookGemstoneOperationCompleted == null)) {
                 this.DoSearchBuyBookGemstoneOperationCompleted = new System.Threading.SendOrPostCallback(this.OnDoSearchBuyBookGemstoneOperationCompleted);
             }
@@ -437,7 +418,8 @@ namespace DiamondShop.DiamondService2 {
                         Code,
                         Size,
                         ESize,
-                        Shape}, this.DoSearchBuyBookGemstoneOperationCompleted, userState);
+                        Shape,
+                        Code2}, this.DoSearchBuyBookGemstoneOperationCompleted, userState);
         }
         
         private void OnDoSearchBuyBookGemstoneOperationCompleted(object arg) {
@@ -449,7 +431,7 @@ namespace DiamondShop.DiamondService2 {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/DoSearchBuyBookGemstoneCer", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public System.Data.DataSet DoSearchBuyBookGemstoneCer(string code, string reportNumber, int shape, int lab, double sWeight, double eWeight, int identification, int comment, int origin, int status, int shop) {
+        public System.Data.DataSet DoSearchBuyBookGemstoneCer(string code, string reportNumber, int shape, int lab, double sWeight, double eWeight, int identification, int comment, int origin, int status, int shop, string code2) {
             object[] results = this.Invoke("DoSearchBuyBookGemstoneCer", new object[] {
                         code,
                         reportNumber,
@@ -461,17 +443,18 @@ namespace DiamondShop.DiamondService2 {
                         comment,
                         origin,
                         status,
-                        shop});
+                        shop,
+                        code2});
             return ((System.Data.DataSet)(results[0]));
         }
         
         /// <remarks/>
-        public void DoSearchBuyBookGemstoneCerAsync(string code, string reportNumber, int shape, int lab, double sWeight, double eWeight, int identification, int comment, int origin, int status, int shop) {
-            this.DoSearchBuyBookGemstoneCerAsync(code, reportNumber, shape, lab, sWeight, eWeight, identification, comment, origin, status, shop, null);
+        public void DoSearchBuyBookGemstoneCerAsync(string code, string reportNumber, int shape, int lab, double sWeight, double eWeight, int identification, int comment, int origin, int status, int shop, string code2) {
+            this.DoSearchBuyBookGemstoneCerAsync(code, reportNumber, shape, lab, sWeight, eWeight, identification, comment, origin, status, shop, code2, null);
         }
         
         /// <remarks/>
-        public void DoSearchBuyBookGemstoneCerAsync(string code, string reportNumber, int shape, int lab, double sWeight, double eWeight, int identification, int comment, int origin, int status, int shop, object userState) {
+        public void DoSearchBuyBookGemstoneCerAsync(string code, string reportNumber, int shape, int lab, double sWeight, double eWeight, int identification, int comment, int origin, int status, int shop, string code2, object userState) {
             if ((this.DoSearchBuyBookGemstoneCerOperationCompleted == null)) {
                 this.DoSearchBuyBookGemstoneCerOperationCompleted = new System.Threading.SendOrPostCallback(this.OnDoSearchBuyBookGemstoneCerOperationCompleted);
             }
@@ -486,7 +469,8 @@ namespace DiamondShop.DiamondService2 {
                         comment,
                         origin,
                         status,
-                        shop}, this.DoSearchBuyBookGemstoneCerOperationCompleted, userState);
+                        shop,
+                        code2}, this.DoSearchBuyBookGemstoneCerOperationCompleted, userState);
         }
         
         private void OnDoSearchBuyBookGemstoneCerOperationCompleted(object arg) {
@@ -848,26 +832,26 @@ namespace DiamondShop.DiamondService2 {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/DoSearchBuyBookSetting", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public System.Data.DataSet DoSearchBuyBookSetting(string Seller, System.DateTime sBuyDate, System.DateTime eBuyDate) {
+        public System.Data.DataSet DoSearchBuyBookSetting(string User, System.DateTime sBuyDate, System.DateTime eBuyDate) {
             object[] results = this.Invoke("DoSearchBuyBookSetting", new object[] {
-                        Seller,
+                        User,
                         sBuyDate,
                         eBuyDate});
             return ((System.Data.DataSet)(results[0]));
         }
         
         /// <remarks/>
-        public void DoSearchBuyBookSettingAsync(string Seller, System.DateTime sBuyDate, System.DateTime eBuyDate) {
-            this.DoSearchBuyBookSettingAsync(Seller, sBuyDate, eBuyDate, null);
+        public void DoSearchBuyBookSettingAsync(string User, System.DateTime sBuyDate, System.DateTime eBuyDate) {
+            this.DoSearchBuyBookSettingAsync(User, sBuyDate, eBuyDate, null);
         }
         
         /// <remarks/>
-        public void DoSearchBuyBookSettingAsync(string Seller, System.DateTime sBuyDate, System.DateTime eBuyDate, object userState) {
+        public void DoSearchBuyBookSettingAsync(string User, System.DateTime sBuyDate, System.DateTime eBuyDate, object userState) {
             if ((this.DoSearchBuyBookSettingOperationCompleted == null)) {
                 this.DoSearchBuyBookSettingOperationCompleted = new System.Threading.SendOrPostCallback(this.OnDoSearchBuyBookSettingOperationCompleted);
             }
             this.InvokeAsync("DoSearchBuyBookSetting", new object[] {
-                        Seller,
+                        User,
                         sBuyDate,
                         eBuyDate}, this.DoSearchBuyBookSettingOperationCompleted, userState);
         }
@@ -881,9 +865,9 @@ namespace DiamondShop.DiamondService2 {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/DoSearchBuyBookPayment", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public System.Data.DataSet DoSearchBuyBookPayment(string Seller, string tableName, System.DateTime sBuyDate, System.DateTime eBuyDate, string IsPaid, System.DateTime sPayDate, System.DateTime ePayDate) {
+        public System.Data.DataSet DoSearchBuyBookPayment(string User, string tableName, System.DateTime sBuyDate, System.DateTime eBuyDate, string IsPaid, System.DateTime sPayDate, System.DateTime ePayDate) {
             object[] results = this.Invoke("DoSearchBuyBookPayment", new object[] {
-                        Seller,
+                        User,
                         tableName,
                         sBuyDate,
                         eBuyDate,
@@ -894,17 +878,17 @@ namespace DiamondShop.DiamondService2 {
         }
         
         /// <remarks/>
-        public void DoSearchBuyBookPaymentAsync(string Seller, string tableName, System.DateTime sBuyDate, System.DateTime eBuyDate, string IsPaid, System.DateTime sPayDate, System.DateTime ePayDate) {
-            this.DoSearchBuyBookPaymentAsync(Seller, tableName, sBuyDate, eBuyDate, IsPaid, sPayDate, ePayDate, null);
+        public void DoSearchBuyBookPaymentAsync(string User, string tableName, System.DateTime sBuyDate, System.DateTime eBuyDate, string IsPaid, System.DateTime sPayDate, System.DateTime ePayDate) {
+            this.DoSearchBuyBookPaymentAsync(User, tableName, sBuyDate, eBuyDate, IsPaid, sPayDate, ePayDate, null);
         }
         
         /// <remarks/>
-        public void DoSearchBuyBookPaymentAsync(string Seller, string tableName, System.DateTime sBuyDate, System.DateTime eBuyDate, string IsPaid, System.DateTime sPayDate, System.DateTime ePayDate, object userState) {
+        public void DoSearchBuyBookPaymentAsync(string User, string tableName, System.DateTime sBuyDate, System.DateTime eBuyDate, string IsPaid, System.DateTime sPayDate, System.DateTime ePayDate, object userState) {
             if ((this.DoSearchBuyBookPaymentOperationCompleted == null)) {
                 this.DoSearchBuyBookPaymentOperationCompleted = new System.Threading.SendOrPostCallback(this.OnDoSearchBuyBookPaymentOperationCompleted);
             }
             this.InvokeAsync("DoSearchBuyBookPayment", new object[] {
-                        Seller,
+                        User,
                         tableName,
                         sBuyDate,
                         eBuyDate,
@@ -917,6 +901,88 @@ namespace DiamondShop.DiamondService2 {
             if ((this.DoSearchBuyBookPaymentCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.DoSearchBuyBookPaymentCompleted(this, new DoSearchBuyBookPaymentCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/DoSearchWarning", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataSet DoSearchWarning(string Sender, int Receiver, int MessageStatus, int FactoryStatus, int Shop) {
+            object[] results = this.Invoke("DoSearchWarning", new object[] {
+                        Sender,
+                        Receiver,
+                        MessageStatus,
+                        FactoryStatus,
+                        Shop});
+            return ((System.Data.DataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void DoSearchWarningAsync(string Sender, int Receiver, int MessageStatus, int FactoryStatus, int Shop) {
+            this.DoSearchWarningAsync(Sender, Receiver, MessageStatus, FactoryStatus, Shop, null);
+        }
+        
+        /// <remarks/>
+        public void DoSearchWarningAsync(string Sender, int Receiver, int MessageStatus, int FactoryStatus, int Shop, object userState) {
+            if ((this.DoSearchWarningOperationCompleted == null)) {
+                this.DoSearchWarningOperationCompleted = new System.Threading.SendOrPostCallback(this.OnDoSearchWarningOperationCompleted);
+            }
+            this.InvokeAsync("DoSearchWarning", new object[] {
+                        Sender,
+                        Receiver,
+                        MessageStatus,
+                        FactoryStatus,
+                        Shop}, this.DoSearchWarningOperationCompleted, userState);
+        }
+        
+        private void OnDoSearchWarningOperationCompleted(object arg) {
+            if ((this.DoSearchWarningCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.DoSearchWarningCompleted(this, new DoSearchWarningCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/DoSearchTransfer", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataSet DoSearchTransfer(int Sender, int Receiver, int TransferStatus, int SShop, int EShop, System.DateTime SSendDate, System.DateTime ESendDate, System.DateTime SReceiveDate, System.DateTime EReceiveDate) {
+            object[] results = this.Invoke("DoSearchTransfer", new object[] {
+                        Sender,
+                        Receiver,
+                        TransferStatus,
+                        SShop,
+                        EShop,
+                        SSendDate,
+                        ESendDate,
+                        SReceiveDate,
+                        EReceiveDate});
+            return ((System.Data.DataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void DoSearchTransferAsync(int Sender, int Receiver, int TransferStatus, int SShop, int EShop, System.DateTime SSendDate, System.DateTime ESendDate, System.DateTime SReceiveDate, System.DateTime EReceiveDate) {
+            this.DoSearchTransferAsync(Sender, Receiver, TransferStatus, SShop, EShop, SSendDate, ESendDate, SReceiveDate, EReceiveDate, null);
+        }
+        
+        /// <remarks/>
+        public void DoSearchTransferAsync(int Sender, int Receiver, int TransferStatus, int SShop, int EShop, System.DateTime SSendDate, System.DateTime ESendDate, System.DateTime SReceiveDate, System.DateTime EReceiveDate, object userState) {
+            if ((this.DoSearchTransferOperationCompleted == null)) {
+                this.DoSearchTransferOperationCompleted = new System.Threading.SendOrPostCallback(this.OnDoSearchTransferOperationCompleted);
+            }
+            this.InvokeAsync("DoSearchTransfer", new object[] {
+                        Sender,
+                        Receiver,
+                        TransferStatus,
+                        SShop,
+                        EShop,
+                        SSendDate,
+                        ESendDate,
+                        SReceiveDate,
+                        EReceiveDate}, this.DoSearchTransferOperationCompleted, userState);
+        }
+        
+        private void OnDoSearchTransferOperationCompleted(object arg) {
+            if ((this.DoSearchTransferCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.DoSearchTransferCompleted(this, new DoSearchTransferCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -978,32 +1044,6 @@ namespace DiamondShop.DiamondService2 {
         private object[] results;
         
         internal DoSearchUserCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public System.Data.DataSet Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((System.Data.DataSet)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    public delegate void DoSearchSellerCompletedEventHandler(object sender, DoSearchSellerCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class DoSearchSellerCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal DoSearchSellerCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }
@@ -1472,6 +1512,58 @@ namespace DiamondShop.DiamondService2 {
         private object[] results;
         
         internal DoSearchBuyBookPaymentCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Data.DataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Data.DataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void DoSearchWarningCompletedEventHandler(object sender, DoSearchWarningCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class DoSearchWarningCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal DoSearchWarningCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Data.DataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Data.DataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void DoSearchTransferCompletedEventHandler(object sender, DoSearchTransferCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class DoSearchTransferCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal DoSearchTransferCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }

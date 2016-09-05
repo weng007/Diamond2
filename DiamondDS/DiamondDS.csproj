@@ -246,10 +246,15 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsSell.xsd</DependentUpon>
     </Compile>
-    <Compile Include="DS\dsSeller.Designer.cs">
+    <Compile Include="DS\dsTransfer.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>dsSeller.xsd</DependentUpon>
+      <DependentUpon>dsTransfer.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS\dsTransferDetail.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsTransferDetail.xsd</DependentUpon>
     </Compile>
     <Compile Include="DS\dsUser.cs">
       <DependentUpon>dsUser.xsd</DependentUpon>
@@ -258,6 +263,14 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dsUser.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS\dsWarning.cs">
+      <DependentUpon>dsWarning.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS\dsWarning.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsWarning.xsd</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
@@ -686,16 +699,27 @@
     <None Include="DS\dsSell.xss">
       <DependentUpon>dsSell.xsd</DependentUpon>
     </None>
-    <None Include="DS\dsSeller.xsc">
-      <DependentUpon>dsSeller.xsd</DependentUpon>
+    <None Include="DS\dsTransfer.xsc">
+      <DependentUpon>dsTransfer.xsd</DependentUpon>
     </None>
-    <None Include="DS\dsSeller.xsd">
+    <None Include="DS\dsTransfer.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>dsSeller.Designer.cs</LastGenOutput>
+      <LastGenOutput>dsTransfer.Designer.cs</LastGenOutput>
     </None>
-    <None Include="DS\dsSeller.xss">
-      <DependentUpon>dsSeller.xsd</DependentUpon>
+    <None Include="DS\dsTransfer.xss">
+      <DependentUpon>dsTransfer.xsd</DependentUpon>
+    </None>
+    <None Include="DS\dsTransferDetail.xsc">
+      <DependentUpon>dsTransferDetail.xsd</DependentUpon>
+    </None>
+    <None Include="DS\dsTransferDetail.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsTransferDetail.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS\dsTransferDetail.xss">
+      <DependentUpon>dsTransferDetail.xsd</DependentUpon>
     </None>
     <None Include="DS\dsUser.xsc">
       <DependentUpon>dsUser.xsd</DependentUpon>
@@ -707,6 +731,17 @@
     </None>
     <None Include="DS\dsUser.xss">
       <DependentUpon>dsUser.xsd</DependentUpon>
+    </None>
+    <None Include="DS\dsWarning.xsc">
+      <DependentUpon>dsWarning.xsd</DependentUpon>
+    </None>
+    <None Include="DS\dsWarning.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsWarning.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS\dsWarning.xss">
+      <DependentUpon>dsWarning.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
