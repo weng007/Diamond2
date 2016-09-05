@@ -275,5 +275,10 @@ namespace DiamondShop
             Login frm = new Login();
             frm.ShowDialog();            
         }
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

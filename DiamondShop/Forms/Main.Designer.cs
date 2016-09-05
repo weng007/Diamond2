@@ -68,8 +68,8 @@
             this.mnCatSJ = new System.Windows.Forms.ToolStripMenuItem();
             this.mnCatMTO = new System.Windows.Forms.ToolStripMenuItem();
             this.btnCerDiamond = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnCerGemstone = new System.Windows.Forms.ToolStripMenuItem();
             this.btnCustomer = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnCerGemstone = new System.Windows.Forms.ToolStripMenuItem();
             this.btnSell = new System.Windows.Forms.ToolStripMenuItem();
             this.btnConsign = new System.Windows.Forms.ToolStripMenuItem();
             this.btnInventory = new System.Windows.Forms.ToolStripMenuItem();
@@ -86,6 +86,7 @@
             this.mnInvPD = new System.Windows.Forms.ToolStripMenuItem();
             this.mnInvSJ = new System.Windows.Forms.ToolStripMenuItem();
             this.mnInvMTO = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnTransfer = new System.Windows.Forms.ToolStripMenuItem();
             this.btnOrderFactory = new System.Windows.Forms.ToolStripMenuItem();
             this.btnBuyBook = new System.Windows.Forms.ToolStripMenuItem();
             this.mnBBCD = new System.Windows.Forms.ToolStripMenuItem();
@@ -104,7 +105,6 @@
             this.btnReportInventory = new System.Windows.Forms.ToolStripMenuItem();
             this.btnReportDebt = new System.Windows.Forms.ToolStripMenuItem();
             this.btnReportCustomer = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnTransfer = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -175,6 +175,7 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1366, 637);
             this.tabControl1.TabIndex = 12;
+            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             this.tabControl1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.tabControl1_MouseUp);
             // 
             // panel1
@@ -345,10 +346,10 @@
             this.btnMaster,
             this.btnCatalog,
             this.btnCerDiamond,
-            this.btnCerGemstone,
             this.btnCustomer,
-            this.btnSell,
+            this.btnCerGemstone,
             this.btnConsign,
+            this.btnSell,
             this.btnInventory,
             this.btnTransfer,
             this.btnOrderFactory,
@@ -565,15 +566,6 @@
             this.btnCerDiamond.Size = new System.Drawing.Size(78, 95);
             this.btnCerDiamond.Click += new System.EventHandler(this.btnCerDiamond_Click);
             // 
-            // btnCerGemstone
-            // 
-            this.btnCerGemstone.Image = ((System.Drawing.Image)(resources.GetObject("btnCerGemstone.Image")));
-            this.btnCerGemstone.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.btnCerGemstone.Name = "btnCerGemstone";
-            this.btnCerGemstone.Padding = new System.Windows.Forms.Padding(2);
-            this.btnCerGemstone.Size = new System.Drawing.Size(78, 95);
-            this.btnCerGemstone.Click += new System.EventHandler(this.btnCerGemstone_Click);
-            // 
             // btnCustomer
             // 
             this.btnCustomer.Image = ((System.Drawing.Image)(resources.GetObject("btnCustomer.Image")));
@@ -582,6 +574,15 @@
             this.btnCustomer.Padding = new System.Windows.Forms.Padding(2);
             this.btnCustomer.Size = new System.Drawing.Size(78, 95);
             this.btnCustomer.Click += new System.EventHandler(this.btnCustomer_Click);
+            // 
+            // btnCerGemstone
+            // 
+            this.btnCerGemstone.Image = ((System.Drawing.Image)(resources.GetObject("btnCerGemstone.Image")));
+            this.btnCerGemstone.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.btnCerGemstone.Name = "btnCerGemstone";
+            this.btnCerGemstone.Padding = new System.Windows.Forms.Padding(2);
+            this.btnCerGemstone.Size = new System.Drawing.Size(78, 95);
+            this.btnCerGemstone.Click += new System.EventHandler(this.btnCerGemstone_Click);
             // 
             // btnSell
             // 
@@ -755,6 +756,15 @@
             this.mnInvMTO.Text = "Made To Order";
             this.mnInvMTO.Click += new System.EventHandler(this.mnInvDR_Click);
             // 
+            // btnTransfer
+            // 
+            this.btnTransfer.Image = ((System.Drawing.Image)(resources.GetObject("btnTransfer.Image")));
+            this.btnTransfer.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.btnTransfer.Name = "btnTransfer";
+            this.btnTransfer.Padding = new System.Windows.Forms.Padding(10, 4, 4, 4);
+            this.btnTransfer.Size = new System.Drawing.Size(88, 95);
+            this.btnTransfer.Click += new System.EventHandler(this.btnTransfer_Click);
+            // 
             // btnOrderFactory
             // 
             this.btnOrderFactory.Image = ((System.Drawing.Image)(resources.GetObject("btnOrderFactory.Image")));
@@ -878,7 +888,7 @@
             this.MenuPayment.Image = ((System.Drawing.Image)(resources.GetObject("MenuPayment.Image")));
             this.MenuPayment.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.MenuPayment.Name = "MenuPayment";
-            this.MenuPayment.Size = new System.Drawing.Size(168, 38);
+            this.MenuPayment.Size = new System.Drawing.Size(156, 38);
             this.MenuPayment.Text = "Payment";
             this.MenuPayment.Click += new System.EventHandler(this.MenuPayment_Click);
             // 
@@ -945,15 +955,6 @@
             this.btnReportCustomer.Size = new System.Drawing.Size(216, 38);
             this.btnReportCustomer.Text = "Report Customer";
             this.btnReportCustomer.Click += new System.EventHandler(this.btnReportCustomer_Click);
-            // 
-            // btnTransfer
-            // 
-            this.btnTransfer.Image = ((System.Drawing.Image)(resources.GetObject("btnTransfer.Image")));
-            this.btnTransfer.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.btnTransfer.Name = "btnTransfer";
-            this.btnTransfer.Padding = new System.Windows.Forms.Padding(10, 4, 4, 4);
-            this.btnTransfer.Size = new System.Drawing.Size(88, 95);
-            this.btnTransfer.Click += new System.EventHandler(this.btnTransfer_Click);
             // 
             // Main
             // 
