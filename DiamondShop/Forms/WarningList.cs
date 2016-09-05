@@ -28,24 +28,24 @@ namespace DiamondShop
 
         protected override void Initial()
         {
-            ds = GM.GetSeller();
+            ds = GM.GetBuyer();
+            DataRow row = ds.Tables[0].NewRow();
+            row["ID"] = 0;
+            row["DisplayName"] = "All";
+            ds.Tables[0].Rows.Add(row);
 
             cmbReceiver.DataSource = ds.Tables[0];
             cmbReceiver.ValueMember = "ID";
             cmbReceiver.DisplayMember = "DisplayName";
+            cmbReceiver.SelectedIndex = ds.Tables[0].Rows.Count - 1;
             cmbReceiver.Refresh();
 
-            cmbMessageStatus.DataSource = (GM.GetMasterTableDetail("C033")).Tables[0];
-            cmbMessageStatus.ValueMember = "ID";
-            cmbMessageStatus.DisplayMember = "Detail";
-            cmbMessageStatus.Refresh();
-
-            cmbFactoryStatus.DataSource = (GM.GetMasterTableDetail("C034")).Tables[0];
+            cmbFactoryStatus.DataSource = (GM.GetMasterTableDetail("C034",true)).Tables[0];
             cmbFactoryStatus.ValueMember = "ID";
             cmbFactoryStatus.DisplayMember = "Detail";
             cmbFactoryStatus.Refresh();
 
-            cmbShop.DataSource = (GM.GetMasterTableDetail("C007")).Tables[0];
+            cmbShop.DataSource = (GM.GetMasterTableDetail("C007",true)).Tables[0];
             cmbShop.ValueMember = "ID";
             cmbShop.DisplayMember = "Detail";
             cmbShop.Refresh();

@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel3 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.txtCancelDate = new System.Windows.Forms.TextBox();
             this.txtConfirmDate = new System.Windows.Forms.TextBox();
             this.txtReadDate = new System.Windows.Forms.TextBox();
@@ -43,11 +45,11 @@
             this.cmbReceiver = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtSender = new System.Windows.Forms.TextBox();
-            this.cmbMessageStatus = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.txtMessageStatus = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -55,6 +57,9 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Controls.Add(this.txtMessageStatus);
+            this.panel3.Controls.Add(this.button2);
+            this.panel3.Controls.Add(this.button1);
             this.panel3.Controls.Add(this.txtCancelDate);
             this.panel3.Controls.Add(this.txtConfirmDate);
             this.panel3.Controls.Add(this.txtReadDate);
@@ -69,7 +74,6 @@
             this.panel3.Controls.Add(this.cmbReceiver);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.txtSender);
-            this.panel3.Controls.Add(this.cmbMessageStatus);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.label25);
             this.panel3.Controls.Add(this.label15);
@@ -77,12 +81,31 @@
             this.panel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.panel3.Location = new System.Drawing.Point(7, 72);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(707, 252);
+            this.panel3.Size = new System.Drawing.Size(707, 284);
             this.panel3.TabIndex = 1;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(232, 231);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(97, 34);
+            this.button2.TabIndex = 218;
+            this.button2.Text = "Cancel";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(111, 231);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(97, 34);
+            this.button1.TabIndex = 217;
+            this.button1.Text = "Confirm";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // txtCancelDate
             // 
             this.txtCancelDate.BackColor = System.Drawing.SystemColors.Window;
+            this.txtCancelDate.Enabled = false;
             this.txtCancelDate.Location = new System.Drawing.Point(524, 94);
             this.txtCancelDate.Name = "txtCancelDate";
             this.txtCancelDate.Size = new System.Drawing.Size(150, 27);
@@ -91,6 +114,7 @@
             // txtConfirmDate
             // 
             this.txtConfirmDate.BackColor = System.Drawing.SystemColors.Window;
+            this.txtConfirmDate.Enabled = false;
             this.txtConfirmDate.Location = new System.Drawing.Point(524, 56);
             this.txtConfirmDate.Name = "txtConfirmDate";
             this.txtConfirmDate.Size = new System.Drawing.Size(150, 27);
@@ -99,6 +123,7 @@
             // txtReadDate
             // 
             this.txtReadDate.BackColor = System.Drawing.SystemColors.Window;
+            this.txtReadDate.Enabled = false;
             this.txtReadDate.Location = new System.Drawing.Point(524, 19);
             this.txtReadDate.Name = "txtReadDate";
             this.txtReadDate.Size = new System.Drawing.Size(150, 27);
@@ -125,18 +150,19 @@
             // txtNote
             // 
             this.txtNote.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.txtNote.Location = new System.Drawing.Point(423, 133);
+            this.txtNote.Location = new System.Drawing.Point(423, 152);
             this.txtNote.Multiline = true;
             this.txtNote.Name = "txtNote";
             this.txtNote.Size = new System.Drawing.Size(251, 103);
             this.txtNote.TabIndex = 208;
+            this.txtNote.TextChanged += new System.EventHandler(this.txtNote_TextChanged);
             // 
             // label16
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label16.Location = new System.Drawing.Point(372, 141);
+            this.label16.Location = new System.Drawing.Point(372, 160);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(45, 19);
             this.label16.TabIndex = 209;
@@ -145,14 +171,15 @@
             // cmbShop
             // 
             this.cmbShop.FormattingEnabled = true;
-            this.cmbShop.Location = new System.Drawing.Point(162, 174);
+            this.cmbShop.Location = new System.Drawing.Point(162, 133);
             this.cmbShop.Name = "cmbShop";
             this.cmbShop.Size = new System.Drawing.Size(167, 29);
             this.cmbShop.TabIndex = 206;
+            this.cmbShop.SelectedValueChanged += new System.EventHandler(this.CmbFactoryStatus_SelectedValueChanged);
             // 
             // label4
             // 
-            this.label4.Location = new System.Drawing.Point(78, 177);
+            this.label4.Location = new System.Drawing.Point(78, 136);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(134, 28);
             this.label4.TabIndex = 207;
@@ -161,14 +188,15 @@
             // cmbFactoryStatus
             // 
             this.cmbFactoryStatus.FormattingEnabled = true;
-            this.cmbFactoryStatus.Location = new System.Drawing.Point(162, 135);
+            this.cmbFactoryStatus.Location = new System.Drawing.Point(162, 94);
             this.cmbFactoryStatus.Name = "cmbFactoryStatus";
             this.cmbFactoryStatus.Size = new System.Drawing.Size(167, 29);
             this.cmbFactoryStatus.TabIndex = 204;
+            this.cmbFactoryStatus.SelectedValueChanged += new System.EventHandler(this.CmbFactoryStatus_SelectedValueChanged);
             // 
             // label7
             // 
-            this.label7.Location = new System.Drawing.Point(34, 138);
+            this.label7.Location = new System.Drawing.Point(34, 97);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(134, 28);
             this.label7.TabIndex = 205;
@@ -181,6 +209,7 @@
             this.cmbReceiver.Name = "cmbReceiver";
             this.cmbReceiver.Size = new System.Drawing.Size(167, 29);
             this.cmbReceiver.TabIndex = 203;
+            this.cmbReceiver.SelectedValueChanged += new System.EventHandler(this.CmbFactoryStatus_SelectedValueChanged);
             // 
             // label2
             // 
@@ -193,18 +222,11 @@
             // txtSender
             // 
             this.txtSender.BackColor = System.Drawing.SystemColors.Window;
+            this.txtSender.Enabled = false;
             this.txtSender.Location = new System.Drawing.Point(162, 20);
             this.txtSender.Name = "txtSender";
             this.txtSender.Size = new System.Drawing.Size(167, 27);
             this.txtSender.TabIndex = 201;
-            // 
-            // cmbMessageStatus
-            // 
-            this.cmbMessageStatus.FormattingEnabled = true;
-            this.cmbMessageStatus.Location = new System.Drawing.Point(162, 95);
-            this.cmbMessageStatus.Name = "cmbMessageStatus";
-            this.cmbMessageStatus.Size = new System.Drawing.Size(167, 29);
-            this.cmbMessageStatus.TabIndex = 6;
             // 
             // label3
             // 
@@ -217,7 +239,7 @@
             // 
             // label25
             // 
-            this.label25.Location = new System.Drawing.Point(25, 98);
+            this.label25.Location = new System.Drawing.Point(25, 183);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(134, 28);
             this.label25.TabIndex = 163;
@@ -235,12 +257,21 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // txtMessageStatus
+            // 
+            this.txtMessageStatus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.txtMessageStatus.Enabled = false;
+            this.txtMessageStatus.Location = new System.Drawing.Point(162, 181);
+            this.txtMessageStatus.Name = "txtMessageStatus";
+            this.txtMessageStatus.Size = new System.Drawing.Size(167, 27);
+            this.txtMessageStatus.TabIndex = 219;
+            // 
             // Warning
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(195)))), ((int)(((byte)(157)))));
-            this.ClientSize = new System.Drawing.Size(724, 334);
+            this.ClientSize = new System.Drawing.Size(724, 368);
             this.Controls.Add(this.panel3);
             this.Name = "Warning";
             this.Text = "Sale";
@@ -259,7 +290,6 @@
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox cmbMessageStatus;
         private System.Windows.Forms.ComboBox cmbShop;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cmbFactoryStatus;
@@ -274,5 +304,8 @@
         private System.Windows.Forms.TextBox txtCancelDate;
         private System.Windows.Forms.TextBox txtConfirmDate;
         private System.Windows.Forms.TextBox txtReadDate;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txtMessageStatus;
     }
 }

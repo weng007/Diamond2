@@ -556,9 +556,9 @@ namespace DiamondDS.DS {
                         int MessageStatus, 
                         int FactoryStatus, 
                         int Shop, 
-                        string ReadDate, 
-                        string ConfirmDate, 
-                        string CancelDate, 
+                        System.DateTime ReadDate, 
+                        System.DateTime ConfirmDate, 
+                        System.DateTime CancelDate, 
                         string Note, 
                         string IsDeleted, 
                         int CreateBy, 
@@ -659,11 +659,11 @@ namespace DiamondDS.DS {
                 base.Columns.Add(this.columnFactoryStatus);
                 this.columnShop = new global::System.Data.DataColumn("Shop", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnShop);
-                this.columnReadDate = new global::System.Data.DataColumn("ReadDate", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnReadDate = new global::System.Data.DataColumn("ReadDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnReadDate);
-                this.columnConfirmDate = new global::System.Data.DataColumn("ConfirmDate", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnConfirmDate = new global::System.Data.DataColumn("ConfirmDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnConfirmDate);
-                this.columnCancelDate = new global::System.Data.DataColumn("CancelDate", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnCancelDate = new global::System.Data.DataColumn("CancelDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCancelDate);
                 this.columnNote = new global::System.Data.DataColumn("Note", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnNote);
@@ -695,9 +695,6 @@ namespace DiamondDS.DS {
                 this.columnID.ReadOnly = true;
                 this.columnID.Unique = true;
                 this.columnSender.MaxLength = 30;
-                this.columnReadDate.MaxLength = 30;
-                this.columnConfirmDate.MaxLength = 30;
-                this.columnCancelDate.MaxLength = 30;
                 this.columnIsDeleted.MaxLength = 1;
             }
             
@@ -948,10 +945,10 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string ReadDate {
+            public System.DateTime ReadDate {
                 get {
                     try {
-                        return ((string)(this[this.tableWarning.ReadDateColumn]));
+                        return ((global::System.DateTime)(this[this.tableWarning.ReadDateColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'ReadDate\' in table \'Warning\' is DBNull.", e);
@@ -964,10 +961,10 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string ConfirmDate {
+            public System.DateTime ConfirmDate {
                 get {
                     try {
-                        return ((string)(this[this.tableWarning.ConfirmDateColumn]));
+                        return ((global::System.DateTime)(this[this.tableWarning.ConfirmDateColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'ConfirmDate\' in table \'Warning\' is DBNull.", e);
@@ -980,10 +977,10 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string CancelDate {
+            public System.DateTime CancelDate {
                 get {
                     try {
-                        return ((string)(this[this.tableWarning.CancelDateColumn]));
+                        return ((global::System.DateTime)(this[this.tableWarning.CancelDateColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'CancelDate\' in table \'Warning\' is DBNull.", e);

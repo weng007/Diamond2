@@ -45,11 +45,11 @@ namespace DiamondShop
         {
             binder.BindControl(txtSender, "Sender");
             binder.BindControl(cmbReceiver, "Receiver");
+            binder.BindControl(txtMessageStatus, "MessageStatus");
+            binder.BindControl(cmbFactoryStatus, "FactoryStatus");
             binder.BindControl(txtReadDate, "ReadDate");
             binder.BindControl(txtConfirmDate, "ConfirmDate");
             binder.BindControl(txtCancelDate, "CancelDate");
-            binder.BindControl(cmbMessageStatus, "MessageStatus");
-            binder.BindControl(cmbFactoryStatus, "FactoryStatus");
             binder.BindControl(cmbShop, "Shop");
             binder.BindControl(txtNote, "Note");
         }
@@ -62,10 +62,6 @@ namespace DiamondShop
             cmbReceiver.DisplayMember = "DisplayName";
             cmbReceiver.Refresh();
 
-            cmbMessageStatus.DataSource = (GM.GetMasterTableDetail("C033")).Tables[0];
-            cmbMessageStatus.ValueMember = "ID";
-            cmbMessageStatus.DisplayMember = "Detail";
-            cmbMessageStatus.Refresh();
 
             cmbFactoryStatus.DataSource = (GM.GetMasterTableDetail("C034")).Tables[0];
             cmbFactoryStatus.ValueMember = "ID";
@@ -92,12 +88,6 @@ namespace DiamondShop
             {
                 binder.BindValueToControl(tds.Warning[0]);
 
-                //refID = tds.Warning[0].RefID;
-                //custID = tds.Sell[0].CustID;
-                //chkIsPrintPrice.Checked = tds.Sell[0].IsPrintPrice == "1" ? true : false;
-
-                //SetJewelryDetail();
-
                 EnableDelete = true;
             }
             SetFormatNumber();
@@ -111,8 +101,6 @@ namespace DiamondShop
         private void CmbFactoryStatus_SelectedValueChanged(object sender, EventArgs e)
         {
             isEdit = true;
-
-            cmbFactoryStatus.SelectedValueChanged -= CmbFactoryStatus_SelectedValueChanged;
         }
 
         protected override bool SaveData()
@@ -128,13 +116,16 @@ namespace DiamondShop
                 row = tds.Warning.NewWarningRow();
                 tds.Warning.Rows.Add(row);
             }
+            
             binder.BindValueToDataRow(row);
+            row.ReadDate = DateTime.MinValue.AddYears(1900);
+            row.ConfirmDate = DateTime.MinValue.AddYears(1900);
+            row.CancelDate = DateTime.MinValue.AddYears(1900);
 
             try
             {
                 if (id == 0)
                 {
-                    //row.CerNo = GM.GetRunningNumber("JAS");
                     SetCreateBy(row);
                     chkFlag = ser.DoInsertData("Warning", tds, 0);
                 }
@@ -157,15 +148,8 @@ namespace DiamondShop
         {
             try
             {
-                //if (txtStatus.Text == "Shop")
-                //{
                     chkFlag = ser.DoDeleteData("Warning", id);
-                //}
-                //else
-                //{
-                //    Popup.Popup pop = new Popup.Popup("รายการขายนี้ไม่อยู่ในสถานะลบได้");
-                //    pop.ShowDialog();
-                //}
+
             }
             catch (Exception ex)
             {
@@ -184,60 +168,11 @@ namespace DiamondShop
             //{
             //    message = "Please Choose Product.\n";
             //}
-            //if (txtNetPrice.Text == "" || GM.ConvertStringToDouble(txtNetPrice) == 0)
-            //{
-            //    message += "Please Input NetPrice > 0.\n";
-            //}
 
             if (message == "") { return true; }
             else { return false; }
         }
-
-        private void txtNetPrice_Leave(object sender, EventArgs e)
-        {
-            //txtNetPrice.Text = GM.ConvertDoubleToString(txtNetPrice,0);
-        }
-
-        private void cmbPayment_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            //if(cmbPayment.SelectedIndex == 0)
-            //{
-            //    dtPaymentDate.Enabled = false;
-            //    dtPaymentDate.Value = DateTime.MinValue.AddYears(1899);
-            //}
-            //else
-            //{
-            //    dtPaymentDate.Enabled = true;
-            //}
-        }
-
-        private void btnBrowseCatalog_Click(object sender, EventArgs e)
-        {
-            //CatalogList frm = new CatalogList(1);
-            //frm.ShowDialog();
-
-            //refID = frm.refID1;
-            //txtCode.Text = frm.code1;
-            //txtJewelryTypeName.Text = frm.typeName;
-            //txtPriceTag.Text = frm.priceTag.ToString();
-            //txtPriceTag.Text = GM.ConvertDoubleToString(txtPriceTag, 0);
-            //SetJewelryDetail();
-
-            ////Bind Image
-            //if (frm.image1 != null)
-            //{
-            //    image1 = frm.image1;
-            //    ms1 = new MemoryStream(image1);
-            //    Image backImage1 = Image.FromStream(ms1);
-            //    btnImage1.BackgroundImage = backImage1;
-            //}
-            //else
-            //{
-            //    btnImage1.BackgroundImage = null;
-            //}
-        }
-
-        
+  
         private void SetFormatNumber()
         {
             //txtPriceTag.Text = GM.ConvertDoubleToString(txtPriceTag, 0);
@@ -251,43 +186,9 @@ namespace DiamondShop
                 e.Handled = true;
             }
         }
-
-        private void btnBrowseCustomer_Click(object sender, EventArgs e)
+        private void txtNote_TextChanged(object sender, EventArgs e)
         {
-            CustomerList frm = new CustomerList(1);
-            frm.ShowDialog();
-            custID = frm.custID;
-            //txtCustomer.Text = frm.customerName;
-        }
-
-        private void txtPriceTag_Leave(object sender, EventArgs e)
-        {
-            TextBox txt = (TextBox)sender;
-            txt.Text = GM.ConvertDoubleToString(txt, 0);
-        }
-
-        private void btnPending_Click(object sender, EventArgs e)
-        {
-            ser1.UpdateJewelryStatus(refID, "Pending");
-            LoadData();
-        }
-
-        private void btnSold_Click(object sender, EventArgs e)
-        {
-            ser1.UpdateJewelryStatus(refID, "Sold");
-            LoadData();
-        }
-
-        private void btnCancel_Click(object sender, EventArgs e)
-        {
-            ser1.UpdateJewelryStatus(refID, "Shop");
-            LoadData();
-        }
-
-        private void btnPrint_Click(object sender, EventArgs e)
-        {
-            Report.ReportViewer report = new Report.ReportViewer(id);
-            report.ShowDialog();
+            isEdit = true;
         }
     }
 }
