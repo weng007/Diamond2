@@ -13,7 +13,7 @@ namespace DiamondBiz.Biz
         BuyBookDiamondCerDAL dal = new BuyBookDiamondCerDAL();
 
         public dsBuyBookDiamondCer DoSearchData(string code, string reportNumber, int shape, int lab, double sWeight, double eWeight, int colorType, int sColor,
-            int eColor, int sClearity, int eClearity, int status, int shop)
+            int eColor, int sClearity, int eClearity, int status, int shop,string code2)
         {
             //All
             if(colorType == 0)
@@ -36,7 +36,7 @@ namespace DiamondBiz.Biz
 
             try
             {
-                return dal.DoSearchData(code, reportNumber, shape, lab, sWeight, eWeight, colorType, sColor, eColor, sClearity, eClearity, status, shop);
+                return dal.DoSearchData(code, reportNumber, shape, lab, sWeight, eWeight, colorType, sColor, eColor, sClearity, eClearity, status, shop,code2);
             }
             catch (Exception ex)
             {

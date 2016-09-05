@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BuyBookDiamondCerList));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -39,6 +39,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tds = new DiamondDS.DS.dsDiamondCer();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnSearch = new System.Windows.Forms.Button();
@@ -71,10 +74,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.gridDiamondCer = new System.Windows.Forms.DataGridView();
+            this.txtCode2 = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RowNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StatusName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Code2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BuyDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LabName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ShapeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -97,6 +103,9 @@
             this.SettingName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ReportNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SoldToName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.W = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.L = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.D = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tds)).BeginInit();
             this.panel4.SuspendLayout();
@@ -112,6 +121,8 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(105)))), ((int)(((byte)(79)))));
+            this.panel4.Controls.Add(this.txtCode2);
+            this.panel4.Controls.Add(this.label14);
             this.panel4.Controls.Add(this.btnSearch);
             this.panel4.Controls.Add(this.cmbColorType);
             this.panel4.Controls.Add(this.label13);
@@ -154,7 +165,7 @@
             this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSearch.FlatAppearance.BorderColor = System.Drawing.Color.Linen;
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.Location = new System.Drawing.Point(918, 130);
+            this.btnSearch.Location = new System.Drawing.Point(918, 133);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(105, 32);
             this.btnSearch.TabIndex = 52;
@@ -164,7 +175,7 @@
             // cmbColorType
             // 
             this.cmbColorType.FormattingEnabled = true;
-            this.cmbColorType.Location = new System.Drawing.Point(534, 59);
+            this.cmbColorType.Location = new System.Drawing.Point(534, 95);
             this.cmbColorType.Name = "cmbColorType";
             this.cmbColorType.Size = new System.Drawing.Size(154, 29);
             this.cmbColorType.TabIndex = 24;
@@ -174,7 +185,7 @@
             // 
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(436, 62);
+            this.label13.Location = new System.Drawing.Point(436, 98);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(92, 26);
             this.label13.TabIndex = 75;
@@ -200,7 +211,7 @@
             // cmbShop
             // 
             this.cmbShop.FormattingEnabled = true;
-            this.cmbShop.Location = new System.Drawing.Point(918, 52);
+            this.cmbShop.Location = new System.Drawing.Point(917, 95);
             this.cmbShop.Name = "cmbShop";
             this.cmbShop.Size = new System.Drawing.Size(148, 29);
             this.cmbShop.TabIndex = 48;
@@ -209,7 +220,7 @@
             // 
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(843, 55);
+            this.label11.Location = new System.Drawing.Point(842, 98);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(69, 26);
             this.label11.TabIndex = 72;
@@ -218,7 +229,7 @@
             // cmbStatus
             // 
             this.cmbStatus.FormattingEnabled = true;
-            this.cmbStatus.Location = new System.Drawing.Point(918, 13);
+            this.cmbStatus.Location = new System.Drawing.Point(917, 56);
             this.cmbStatus.Name = "cmbStatus";
             this.cmbStatus.Size = new System.Drawing.Size(148, 29);
             this.cmbStatus.TabIndex = 44;
@@ -227,7 +238,7 @@
             // 
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(843, 16);
+            this.label10.Location = new System.Drawing.Point(842, 59);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(69, 26);
             this.label10.TabIndex = 70;
@@ -271,7 +282,7 @@
             // 
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(595, 23);
+            this.label1.Location = new System.Drawing.Point(595, 59);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(16, 26);
             this.label1.TabIndex = 65;
@@ -281,7 +292,7 @@
             // 
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(633, 99);
+            this.label9.Location = new System.Drawing.Point(633, 135);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(16, 26);
             this.label9.TabIndex = 64;
@@ -290,7 +301,7 @@
             // cmbEColor
             // 
             this.cmbEColor.FormattingEnabled = true;
-            this.cmbEColor.Location = new System.Drawing.Point(655, 96);
+            this.cmbEColor.Location = new System.Drawing.Point(655, 132);
             this.cmbEColor.Name = "cmbEColor";
             this.cmbEColor.Size = new System.Drawing.Size(105, 29);
             this.cmbEColor.TabIndex = 32;
@@ -298,7 +309,7 @@
             // cmbEClearity
             // 
             this.cmbEClearity.FormattingEnabled = true;
-            this.cmbEClearity.Location = new System.Drawing.Point(714, 133);
+            this.cmbEClearity.Location = new System.Drawing.Point(1096, 18);
             this.cmbEClearity.Name = "cmbEClearity";
             this.cmbEClearity.Size = new System.Drawing.Size(147, 29);
             this.cmbEClearity.TabIndex = 40;
@@ -307,7 +318,7 @@
             // 
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(694, 136);
+            this.label8.Location = new System.Drawing.Point(1076, 21);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(16, 26);
             this.label8.TabIndex = 61;
@@ -315,7 +326,7 @@
             // 
             // txtEWeight
             // 
-            this.txtEWeight.Location = new System.Drawing.Point(616, 20);
+            this.txtEWeight.Location = new System.Drawing.Point(616, 56);
             this.txtEWeight.Name = "txtEWeight";
             this.txtEWeight.Size = new System.Drawing.Size(52, 27);
             this.txtEWeight.TabIndex = 20;
@@ -325,7 +336,7 @@
             // 
             // txtSWeight
             // 
-            this.txtSWeight.Location = new System.Drawing.Point(534, 20);
+            this.txtSWeight.Location = new System.Drawing.Point(534, 56);
             this.txtSWeight.Name = "txtSWeight";
             this.txtSWeight.Size = new System.Drawing.Size(54, 27);
             this.txtSWeight.TabIndex = 16;
@@ -336,7 +347,7 @@
             // cmbSColor
             // 
             this.cmbSColor.FormattingEnabled = true;
-            this.cmbSColor.Location = new System.Drawing.Point(535, 96);
+            this.cmbSColor.Location = new System.Drawing.Point(535, 132);
             this.cmbSColor.Name = "cmbSColor";
             this.cmbSColor.Size = new System.Drawing.Size(91, 29);
             this.cmbSColor.TabIndex = 28;
@@ -345,7 +356,7 @@
             // 
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(454, 99);
+            this.label6.Location = new System.Drawing.Point(454, 135);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(75, 26);
             this.label6.TabIndex = 53;
@@ -373,7 +384,7 @@
             // 
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(454, 136);
+            this.label2.Location = new System.Drawing.Point(837, 21);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(80, 26);
             this.label2.TabIndex = 49;
@@ -382,7 +393,7 @@
             // cmbSClearity
             // 
             this.cmbSClearity.FormattingEnabled = true;
-            this.cmbSClearity.Location = new System.Drawing.Point(535, 133);
+            this.cmbSClearity.Location = new System.Drawing.Point(917, 18);
             this.cmbSClearity.Name = "cmbSClearity";
             this.cmbSClearity.Size = new System.Drawing.Size(153, 29);
             this.cmbSClearity.TabIndex = 36;
@@ -391,7 +402,7 @@
             // 
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(454, 23);
+            this.label4.Location = new System.Drawing.Point(454, 59);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(76, 26);
             this.label4.TabIndex = 45;
@@ -437,6 +448,7 @@
             this.RowNum,
             this.StatusName,
             this.Code,
+            this.Code2,
             this.BuyDate,
             this.LabName,
             this.ShapeName,
@@ -458,19 +470,39 @@
             this.ShopName,
             this.SettingName,
             this.ReportNumber,
-            this.SoldToName});
+            this.SoldToName,
+            this.W,
+            this.L,
+            this.D});
             this.gridDiamondCer.Location = new System.Drawing.Point(15, 3);
             this.gridDiamondCer.Name = "gridDiamondCer";
             this.gridDiamondCer.ReadOnly = true;
             this.gridDiamondCer.RowHeadersWidth = 10;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridDiamondCer.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridDiamondCer.RowsDefaultCellStyle = dataGridViewCellStyle13;
             this.gridDiamondCer.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridDiamondCer.RowTemplate.Height = 30;
             this.gridDiamondCer.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridDiamondCer.Size = new System.Drawing.Size(1313, 388);
             this.gridDiamondCer.TabIndex = 2;
             this.gridDiamondCer.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.gridDiamondCer_MouseDoubleClick);
+            // 
+            // txtCode2
+            // 
+            this.txtCode2.Location = new System.Drawing.Point(534, 18);
+            this.txtCode2.Name = "txtCode2";
+            this.txtCode2.Size = new System.Drawing.Size(161, 27);
+            this.txtCode2.TabIndex = 76;
+            // 
+            // label14
+            // 
+            this.label14.BackColor = System.Drawing.Color.Transparent;
+            this.label14.ForeColor = System.Drawing.Color.White;
+            this.label14.Location = new System.Drawing.Point(449, 21);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(67, 31);
+            this.label14.TabIndex = 77;
+            this.label14.Text = "Code2";
             // 
             // ID
             // 
@@ -506,6 +538,14 @@
             this.Code.Name = "Code";
             this.Code.ReadOnly = true;
             this.Code.Width = 150;
+            // 
+            // Code2
+            // 
+            this.Code2.DataPropertyName = "Code2";
+            this.Code2.HeaderText = "Code2";
+            this.Code2.Name = "Code2";
+            this.Code2.ReadOnly = true;
+            this.Code2.Width = 150;
             // 
             // BuyDate
             // 
@@ -678,7 +718,7 @@
             // ShopName
             // 
             this.ShopName.DataPropertyName = "ShopName";
-            this.ShopName.HeaderText = "Shop";
+            this.ShopName.HeaderText = "Location";
             this.ShopName.Name = "ShopName";
             this.ShopName.ReadOnly = true;
             this.ShopName.Width = 90;
@@ -705,6 +745,39 @@
             this.SoldToName.HeaderText = "Sold To";
             this.SoldToName.Name = "SoldToName";
             this.SoldToName.ReadOnly = true;
+            // 
+            // W
+            // 
+            this.W.DataPropertyName = "W";
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle10.Format = "N2";
+            dataGridViewCellStyle10.NullValue = "0";
+            this.W.DefaultCellStyle = dataGridViewCellStyle10;
+            this.W.HeaderText = "W";
+            this.W.Name = "W";
+            this.W.ReadOnly = true;
+            // 
+            // L
+            // 
+            this.L.DataPropertyName = "L";
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle11.Format = "N2";
+            dataGridViewCellStyle11.NullValue = "0";
+            this.L.DefaultCellStyle = dataGridViewCellStyle11;
+            this.L.HeaderText = "L";
+            this.L.Name = "L";
+            this.L.ReadOnly = true;
+            // 
+            // D
+            // 
+            this.D.DataPropertyName = "D";
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle12.Format = "N2";
+            dataGridViewCellStyle12.NullValue = "D";
+            this.D.DefaultCellStyle = dataGridViewCellStyle12;
+            this.D.HeaderText = "D";
+            this.D.Name = "D";
+            this.D.ReadOnly = true;
             // 
             // BuyBookDiamondCerList
             // 
@@ -760,10 +833,13 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.DataGridViewTextBoxColumn Total;
+        private System.Windows.Forms.TextBox txtCode2;
+        private System.Windows.Forms.Label label14;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn RowNum;
         private System.Windows.Forms.DataGridViewTextBoxColumn StatusName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Code;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Code2;
         private System.Windows.Forms.DataGridViewTextBoxColumn BuyDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn LabName;
         private System.Windows.Forms.DataGridViewTextBoxColumn ShapeName;
@@ -786,5 +862,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn SettingName;
         private System.Windows.Forms.DataGridViewTextBoxColumn ReportNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn SoldToName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn W;
+        private System.Windows.Forms.DataGridViewTextBoxColumn L;
+        private System.Windows.Forms.DataGridViewTextBoxColumn D;
     }
 }

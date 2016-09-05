@@ -35,6 +35,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.grid1 = new System.Windows.Forms.DataGridView();
             this.Seller = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Code2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColorType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cut = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Polish = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,6 +57,9 @@
             this.TotalBaht = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Note = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Buyer = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.W = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.L = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.D = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid1)).BeginInit();
@@ -91,6 +95,7 @@
             this.grid1.ColumnHeadersHeight = 33;
             this.grid1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Seller,
+            this.Code2,
             this.ColorType,
             this.Cut,
             this.Polish,
@@ -111,7 +116,10 @@
             this.USDRate,
             this.TotalBaht,
             this.Note,
-            this.Buyer});
+            this.Buyer,
+            this.W,
+            this.L,
+            this.D});
             this.grid1.Location = new System.Drawing.Point(12, 35);
             this.grid1.Name = "grid1";
             this.grid1.ReadOnly = true;
@@ -131,6 +139,13 @@
             this.Seller.Name = "Seller";
             this.Seller.ReadOnly = true;
             this.Seller.Width = 130;
+            // 
+            // Code2
+            // 
+            this.Code2.DataPropertyName = "Code2";
+            this.Code2.HeaderText = "Code2";
+            this.Code2.Name = "Code2";
+            this.Code2.ReadOnly = true;
             // 
             // ColorType
             // 
@@ -298,6 +313,27 @@
             this.Buyer.ReadOnly = true;
             this.Buyer.Width = 110;
             // 
+            // W
+            // 
+            this.W.DataPropertyName = "W";
+            this.W.HeaderText = "W";
+            this.W.Name = "W";
+            this.W.ReadOnly = true;
+            // 
+            // L
+            // 
+            this.L.DataPropertyName = "L";
+            this.L.HeaderText = "L";
+            this.L.Name = "L";
+            this.L.ReadOnly = true;
+            // 
+            // D
+            // 
+            this.D.DataPropertyName = "D";
+            this.D.HeaderText = "D";
+            this.D.Name = "D";
+            this.D.ReadOnly = true;
+            // 
             // BuyBookDiamonCerExcel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -321,6 +357,7 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.DataGridView grid1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Seller;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Code2;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColorType;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cut;
         private System.Windows.Forms.DataGridViewTextBoxColumn Polish;
@@ -342,5 +379,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TotalBaht;
         private System.Windows.Forms.DataGridViewTextBoxColumn Note;
         private System.Windows.Forms.DataGridViewTextBoxColumn Buyer;
+        private System.Windows.Forms.DataGridViewTextBoxColumn W;
+        private System.Windows.Forms.DataGridViewTextBoxColumn L;
+        private System.Windows.Forms.DataGridViewTextBoxColumn D;
     }
 }

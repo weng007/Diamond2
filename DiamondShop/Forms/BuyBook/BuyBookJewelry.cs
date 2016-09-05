@@ -44,6 +44,7 @@ namespace DiamondShop
             binder.BindControl(txtMinPrice, "MinPrice");
             binder.BindControl(dtPayDate, "PayDate");
             binder.BindControl(cmbBuyer, "Buyer");
+            binder.BindControl(txtCode2, "Code2");
         }
         public BuyBookJewelry(int id)
         {
@@ -67,6 +68,7 @@ namespace DiamondShop
             binder.BindControl(txtMinPrice, "MinPrice");
             binder.BindControl(dtPayDate, "PayDate");
             binder.BindControl(cmbBuyer, "Buyer");
+            binder.BindControl(txtCode2, "Code2");
 
             btnDiamond.Enabled = true;
             btnGemstone.Enabled = true;
@@ -357,6 +359,7 @@ namespace DiamondShop
             btnDiamond.Enabled = status;
             btnGemstone.Enabled = status;
             cmbBuyer.Enabled = status;
+            txtCode2.Enabled = status;
         }
     }
 }

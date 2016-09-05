@@ -13,12 +13,13 @@ namespace DiamondDAL.DAL
         dsBuyBookJewelry ds = new dsBuyBookJewelry();
         int flag = 0;
 
-        public dsBuyBookJewelry DoSearchData(string code)
+        public dsBuyBookJewelry DoSearchData(string code, string code2)
         {
             try
             {
                 SQL.ClearParameter();
                 SQL.CreateParameter("Code", code);
+                SQL.CreateParameter("Code2", code2);
                 SQL.FillDataSetBySP("SP_BuyBookJewelry_Search", ds.BuyBookJewelry);
             }
             catch (Exception ex)

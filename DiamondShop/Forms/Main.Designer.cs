@@ -49,9 +49,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtFullName = new System.Windows.Forms.TextBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.btnActivity = new System.Windows.Forms.ToolStripMenuItem();
             this.btnMaster = new System.Windows.Forms.ToolStripMenuItem();
             this.menuUser = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuSeller = new System.Windows.Forms.ToolStripMenuItem();
             this.menuExchangeRate = new System.Windows.Forms.ToolStripMenuItem();
             this.btnCatalog = new System.Windows.Forms.ToolStripMenuItem();
             this.mnCatDR = new System.Windows.Forms.ToolStripMenuItem();
@@ -104,6 +104,7 @@
             this.btnReportInventory = new System.Windows.Forms.ToolStripMenuItem();
             this.btnReportDebt = new System.Windows.Forms.ToolStripMenuItem();
             this.btnReportCustomer = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnTransfer = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -290,9 +291,9 @@
             this.panel2.Controls.Add(this.btnLogout);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.txtFullName);
-            this.panel2.Location = new System.Drawing.Point(1066, 36);
+            this.panel2.Location = new System.Drawing.Point(1137, 36);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(288, 91);
+            this.panel2.Size = new System.Drawing.Size(222, 91);
             this.panel2.TabIndex = 10;
             // 
             // btnLogout
@@ -300,7 +301,7 @@
             this.btnLogout.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLogout.BackgroundImage")));
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogout.Location = new System.Drawing.Point(210, 15);
+            this.btnLogout.Location = new System.Drawing.Point(151, 15);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(64, 27);
             this.btnLogout.TabIndex = 13;
@@ -320,18 +321,18 @@
             // 
             this.label2.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label2.Image = ((System.Drawing.Image)(resources.GetObject("label2.Image")));
-            this.label2.Location = new System.Drawing.Point(34, 2);
+            this.label2.Location = new System.Drawing.Point(3, 2);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(230, 28);
+            this.label2.Size = new System.Drawing.Size(145, 28);
             this.label2.TabIndex = 0;
             // 
             // txtFullName
             // 
             this.txtFullName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtFullName.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFullName.Location = new System.Drawing.Point(16, 15);
+            this.txtFullName.Location = new System.Drawing.Point(12, 15);
             this.txtFullName.Name = "txtFullName";
-            this.txtFullName.Size = new System.Drawing.Size(175, 27);
+            this.txtFullName.Size = new System.Drawing.Size(124, 27);
             this.txtFullName.TabIndex = 11;
             // 
             // menuStrip1
@@ -340,6 +341,7 @@
             this.menuStrip1.BackColor = System.Drawing.Color.Transparent;
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnActivity,
             this.btnMaster,
             this.btnCatalog,
             this.btnCerDiamond,
@@ -348,6 +350,7 @@
             this.btnSell,
             this.btnConsign,
             this.btnInventory,
+            this.btnTransfer,
             this.btnOrderFactory,
             this.btnBuyBook,
             this.btnAccounting,
@@ -355,15 +358,23 @@
             this.menuStrip1.Location = new System.Drawing.Point(2, 35);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(6, 0, 0, 0);
-            this.menuStrip1.Size = new System.Drawing.Size(1061, 95);
+            this.menuStrip1.Size = new System.Drawing.Size(1132, 95);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // btnActivity
+            // 
+            this.btnActivity.Image = ((System.Drawing.Image)(resources.GetObject("btnActivity.Image")));
+            this.btnActivity.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.btnActivity.Name = "btnActivity";
+            this.btnActivity.Padding = new System.Windows.Forms.Padding(2);
+            this.btnActivity.Size = new System.Drawing.Size(78, 95);
+            this.btnActivity.Click += new System.EventHandler(this.btnActivity_Click);
             // 
             // btnMaster
             // 
             this.btnMaster.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuUser,
-            this.menuSeller,
             this.menuExchangeRate});
             this.btnMaster.Image = ((System.Drawing.Image)(resources.GetObject("btnMaster.Image")));
             this.btnMaster.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
@@ -381,16 +392,6 @@
             this.menuUser.Size = new System.Drawing.Size(203, 38);
             this.menuUser.Text = "User";
             this.menuUser.Click += new System.EventHandler(this.btnUser_Click);
-            // 
-            // menuSeller
-            // 
-            this.menuSeller.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuSeller.Image = ((System.Drawing.Image)(resources.GetObject("menuSeller.Image")));
-            this.menuSeller.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.menuSeller.Name = "menuSeller";
-            this.menuSeller.Size = new System.Drawing.Size(203, 38);
-            this.menuSeller.Text = "Seller";
-            this.menuSeller.Click += new System.EventHandler(this.menuSeller_Click);
             // 
             // menuExchangeRate
             // 
@@ -945,6 +946,15 @@
             this.btnReportCustomer.Text = "Report Customer";
             this.btnReportCustomer.Click += new System.EventHandler(this.btnReportCustomer_Click);
             // 
+            // btnTransfer
+            // 
+            this.btnTransfer.Image = ((System.Drawing.Image)(resources.GetObject("btnTransfer.Image")));
+            this.btnTransfer.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.btnTransfer.Name = "btnTransfer";
+            this.btnTransfer.Padding = new System.Windows.Forms.Padding(10, 4, 4, 4);
+            this.btnTransfer.Size = new System.Drawing.Size(88, 95);
+            this.btnTransfer.Click += new System.EventHandler(this.btnTransfer_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1005,7 +1015,6 @@
         private System.Windows.Forms.ToolStripMenuItem btnAccounting;
         private System.Windows.Forms.ToolStripMenuItem btnMaster;
         private System.Windows.Forms.ToolStripMenuItem menuUser;
-        private System.Windows.Forms.ToolStripMenuItem menuSeller;
         private System.Windows.Forms.ToolStripMenuItem mnBBCD;
         private System.Windows.Forms.ToolStripMenuItem mnBBCG;
         private System.Windows.Forms.ToolStripMenuItem mnBBJW;
@@ -1049,6 +1058,8 @@
         private System.Windows.Forms.ToolStripMenuItem btnReportInventory;
         private System.Windows.Forms.ToolStripMenuItem btnReportDebt;
         private System.Windows.Forms.ToolStripMenuItem btnReportCustomer;
+        private System.Windows.Forms.ToolStripMenuItem btnActivity;
+        private System.Windows.Forms.ToolStripMenuItem btnTransfer;
     }
 }
 

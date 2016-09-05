@@ -97,7 +97,7 @@ namespace DiamondShop
                 Convert.ToInt16(cmbColorType.SelectedValue.ToString()), Convert.ToInt16(cmbSColor.SelectedValue.ToString()),
                 Convert.ToInt16(cmbEColor.SelectedValue.ToString()), Convert.ToInt16(cmbSClearity.SelectedValue.ToString()),
                 Convert.ToInt16(cmbEClearity.SelectedValue.ToString()), Convert.ToInt16(cmbStatus.SelectedValue.ToString()),
-                Convert.ToInt16(cmbShop.SelectedValue.ToString()));
+                Convert.ToInt16(cmbShop.SelectedValue.ToString()),txtCode2.Text);
 
             if (ds.Tables[0].Rows.Count > 0)
             {

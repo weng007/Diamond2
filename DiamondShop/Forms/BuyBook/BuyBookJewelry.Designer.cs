@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BuyBookJewelry));
             this.dtBuyDate = new System.Windows.Forms.DateTimePicker();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.cmbBuyer = new System.Windows.Forms.ComboBox();
+            this.label22 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.dtPayDate = new System.Windows.Forms.DateTimePicker();
             this.rdoNo = new System.Windows.Forms.RadioButton();
@@ -77,8 +79,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.cmbBuyer = new System.Windows.Forms.ComboBox();
-            this.label22 = new System.Windows.Forms.Label();
+            this.txtCode2 = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -96,6 +98,8 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.label23);
+            this.panel3.Controls.Add(this.txtCode2);
             this.panel3.Controls.Add(this.cmbBuyer);
             this.panel3.Controls.Add(this.label22);
             this.panel3.Controls.Add(this.label20);
@@ -148,6 +152,24 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1147, 406);
             this.panel3.TabIndex = 74;
+            // 
+            // cmbBuyer
+            // 
+            this.cmbBuyer.FormattingEnabled = true;
+            this.cmbBuyer.Location = new System.Drawing.Point(970, 89);
+            this.cmbBuyer.Name = "cmbBuyer";
+            this.cmbBuyer.Size = new System.Drawing.Size(156, 29);
+            this.cmbBuyer.TabIndex = 226;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
+            this.label22.Location = new System.Drawing.Point(889, 94);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(52, 21);
+            this.label22.TabIndex = 227;
+            this.label22.Text = "Buyer";
             // 
             // label20
             // 
@@ -206,7 +228,7 @@
             // 
             this.label19.AutoSize = true;
             this.label19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label19.Location = new System.Drawing.Point(584, 129);
+            this.label19.Location = new System.Drawing.Point(584, 171);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(79, 21);
             this.label19.TabIndex = 128;
@@ -214,7 +236,7 @@
             // 
             // txtMinPrice
             // 
-            this.txtMinPrice.Location = new System.Drawing.Point(665, 126);
+            this.txtMinPrice.Location = new System.Drawing.Point(665, 168);
             this.txtMinPrice.Name = "txtMinPrice";
             this.txtMinPrice.Size = new System.Drawing.Size(146, 27);
             this.txtMinPrice.TabIndex = 14;
@@ -421,7 +443,7 @@
             // 
             // txtSize
             // 
-            this.txtSize.Location = new System.Drawing.Point(763, 89);
+            this.txtSize.Location = new System.Drawing.Point(763, 131);
             this.txtSize.Name = "txtSize";
             this.txtSize.Size = new System.Drawing.Size(48, 27);
             this.txtSize.TabIndex = 12;
@@ -433,7 +455,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label15.Location = new System.Drawing.Point(705, 92);
+            this.label15.Location = new System.Drawing.Point(705, 134);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(38, 21);
             this.label15.TabIndex = 110;
@@ -441,7 +463,7 @@
             // 
             // txtWeight
             // 
-            this.txtWeight.Location = new System.Drawing.Point(763, 52);
+            this.txtWeight.Location = new System.Drawing.Point(763, 94);
             this.txtWeight.Name = "txtWeight";
             this.txtWeight.Size = new System.Drawing.Size(48, 27);
             this.txtWeight.TabIndex = 10;
@@ -454,7 +476,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label14.Location = new System.Drawing.Point(608, 55);
+            this.label14.Location = new System.Drawing.Point(608, 97);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(135, 21);
             this.label14.TabIndex = 108;
@@ -481,7 +503,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label12.Location = new System.Drawing.Point(584, 22);
+            this.label12.Location = new System.Drawing.Point(584, 64);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(75, 21);
             this.label12.TabIndex = 104;
@@ -490,7 +512,7 @@
             // cmbMaterial
             // 
             this.cmbMaterial.FormattingEnabled = true;
-            this.cmbMaterial.Location = new System.Drawing.Point(665, 14);
+            this.cmbMaterial.Location = new System.Drawing.Point(665, 56);
             this.cmbMaterial.Name = "cmbMaterial";
             this.cmbMaterial.Size = new System.Drawing.Size(146, 29);
             this.cmbMaterial.TabIndex = 8;
@@ -538,7 +560,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label9.Location = new System.Drawing.Point(325, 55);
+            this.label9.Location = new System.Drawing.Point(325, 57);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(47, 21);
             this.label9.TabIndex = 98;
@@ -547,7 +569,7 @@
             // cmbType
             // 
             this.cmbType.FormattingEnabled = true;
-            this.cmbType.Location = new System.Drawing.Point(378, 50);
+            this.cmbType.Location = new System.Drawing.Point(378, 52);
             this.cmbType.Name = "cmbType";
             this.cmbType.Size = new System.Drawing.Size(173, 29);
             this.cmbType.TabIndex = 6;
@@ -556,16 +578,16 @@
             // 
             this.label8.AutoSize = true;
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label8.Location = new System.Drawing.Point(325, 22);
+            this.label8.Location = new System.Drawing.Point(580, 23);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(49, 21);
+            this.label8.Size = new System.Drawing.Size(78, 21);
             this.label8.TabIndex = 96;
-            this.label8.Text = "Shop";
+            this.label8.Text = "Location";
             // 
             // cmbShop
             // 
             this.cmbShop.FormattingEnabled = true;
-            this.cmbShop.Location = new System.Drawing.Point(378, 14);
+            this.cmbShop.Location = new System.Drawing.Point(665, 19);
             this.cmbShop.Name = "cmbShop";
             this.cmbShop.Size = new System.Drawing.Size(150, 29);
             this.cmbShop.TabIndex = 4;
@@ -623,23 +645,23 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // cmbBuyer
+            // txtCode2
             // 
-            this.cmbBuyer.FormattingEnabled = true;
-            this.cmbBuyer.Location = new System.Drawing.Point(970, 89);
-            this.cmbBuyer.Name = "cmbBuyer";
-            this.cmbBuyer.Size = new System.Drawing.Size(156, 29);
-            this.cmbBuyer.TabIndex = 226;
+            this.txtCode2.Location = new System.Drawing.Point(378, 17);
+            this.txtCode2.Name = "txtCode2";
+            this.txtCode2.Size = new System.Drawing.Size(122, 27);
+            this.txtCode2.TabIndex = 228;
+            this.txtCode2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // label22
+            // label23
             // 
-            this.label22.AutoSize = true;
-            this.label22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label22.Location = new System.Drawing.Point(889, 94);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(52, 21);
-            this.label22.TabIndex = 227;
-            this.label22.Text = "Buyer";
+            this.label23.AutoSize = true;
+            this.label23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
+            this.label23.Location = new System.Drawing.Point(313, 20);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(63, 21);
+            this.label23.TabIndex = 229;
+            this.label23.Text = "Code2";
             // 
             // BuyBookJewelry
             // 
@@ -710,5 +732,7 @@
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.ComboBox cmbBuyer;
         private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.TextBox txtCode2;
     }
 }

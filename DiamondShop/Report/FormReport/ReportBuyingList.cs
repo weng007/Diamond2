@@ -24,6 +24,8 @@ namespace DiamondShop
             InitializeComponent();
             Initial();
             DoLoadData();
+            dtSBuyDate.Value = dtSBuyDate.Value.AddDays(-90);
+            dtSDueDate.Value = dtSDueDate.Value.AddDays(-90);
         }
 
         protected override void Initial()
@@ -40,7 +42,7 @@ namespace DiamondShop
             //cmbSeller.SelectedIndex = ds.Tables[0].Rows.Count-1;
             //cmbSeller.Refresh();
 
-            cmbType.DataSource = (GM.GetMasterTableDetail("C015", true)).Tables[0];
+            cmbType.DataSource = (GM.GetMasterTableDetail("C030", true)).Tables[0];
             cmbType.ValueMember = "ID";
             cmbType.DisplayMember = "Detail";
             cmbType.Refresh();

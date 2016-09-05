@@ -66,7 +66,7 @@ namespace DiamondShop
         {
             ser2 = GM.GetService2();
 
-            ds = ser2.DoSearchBuyBookGemstone(txtCode.Text, GM.ConvertStringToDouble(txtSize), GM.ConvertStringToDouble(txtESize), cmbShape.SelectedValue.ToString());
+            ds = ser2.DoSearchBuyBookGemstone(txtCode.Text, GM.ConvertStringToDouble(txtSize), GM.ConvertStringToDouble(txtESize), cmbShape.SelectedValue.ToString(),txtCode2.Text);
 
             if (ds.Tables[0].Rows.Count > 0)
             {

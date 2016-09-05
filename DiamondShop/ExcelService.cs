@@ -107,6 +107,10 @@ namespace DiamondShop
                 dt.Columns.Add("TotalBaht");
                 dt.Columns.Add("Note");
                 dt.Columns.Add("Buyer");
+                dt.Columns.Add("W");
+                dt.Columns.Add("L");
+                dt.Columns.Add("D");
+                dt.Columns.Add("Code2");
             }
             else if (mode == 1)
             {
@@ -130,8 +134,11 @@ namespace DiamondShop
                 dt.Columns.Add("TotalBath");
                 dt.Columns.Add("Note");
                 dt.Columns.Add("Buyer");
+                dt.Columns.Add("W");
+                dt.Columns.Add("L");
+                dt.Columns.Add("D");
+                dt.Columns.Add("Code2");
             }
-            
 
             return dt;
         }

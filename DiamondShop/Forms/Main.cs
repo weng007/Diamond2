@@ -30,11 +30,11 @@ namespace DiamondShop
             UserList frm = new UserList();
             SetFormList(frm,0,"User");
         }
-        private void menuSeller_Click(object sender, EventArgs e)
-        {
-            SellerList frm = new SellerList();
-            SetFormList(frm, 1, "Seller");
-        }
+        //private void menuSeller_Click(object sender, EventArgs e)
+        //{
+        //    SellerList frm = new SellerList();
+        //    SetFormList(frm, 1, "Seller");
+        //}
         
 
         private void menuCerDiamond_Click(object sender, EventArgs e)
@@ -126,6 +126,16 @@ namespace DiamondShop
         {
             PaymentList frm = new PaymentList();
             SetFormList(frm, 16, "Payment");
+        }
+        private void btnActivity_Click(object sender, EventArgs e)
+        {
+            WarningList frm = new WarningList();
+            SetFormList(frm, 17, "Warning");
+        }
+        private void btnTransfer_Click(object sender, EventArgs e)
+        {
+            TransferList frm = new TransferList();
+            SetFormList(frm, 18, "Transfer");
         }
         private void btnReportBuying_Click(object sender, EventArgs e)
         {

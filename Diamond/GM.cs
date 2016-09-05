@@ -14,7 +14,7 @@ namespace Diamond
         //Biz
         static MasterTableDetailBiz bizMasterTableDetail;
         static UserBiz bizUser;
-        static SellerBiz bizSeller;
+        //static SellerBiz bizSeller;
         static BuyBookDiamondCerBiz bizBuyBookDiamondCer;
         static BuyBookDiamondBiz bizBuyBookDiamond;
         static BuyBookGemstoneBiz bizBuyBookGemstone;
@@ -42,6 +42,9 @@ namespace Diamond
         static InvGemstoneDetailBiz bizInvGemstoneDetai;
         static ExchangeRateBiz bizExchangeRate;
         static BuyBookPaymentBiz bizBuyBookPayment;
+        static WarningBiz bizWarning;
+        static TransferBiz bizTransfer;
+        static TransferDetailBiz bizTransferDetail;
 
         public static MasterTableDetailBiz GetMasterTableDetailBiz()
         {
@@ -54,11 +57,11 @@ namespace Diamond
             if (bizUser == null) { return new UserBiz(); }
             else { return bizUser; }
         }
-        public static SellerBiz GetSellerBiz()
-        {
-            if (bizSeller == null) { return new SellerBiz(); }
-            else { return bizSeller; }
-        }
+        //public static SellerBiz GetSellerBiz()
+        //{
+        //    if (bizSeller == null) { return new SellerBiz(); }
+        //    else { return bizSeller; }
+        //}
         public static BuyBookDiamondCerBiz GetBuyBookDiamondCerBiz()
         {
             if (bizBuyBookDiamondCer == null) { return new BuyBookDiamondCerBiz(); }
@@ -231,6 +234,24 @@ namespace Diamond
             if (bizBuyBookPayment == null)
             { return new BuyBookPaymentBiz(); }
             else { return bizBuyBookPayment; }
+        }
+        public static WarningBiz GetWarningBiz()
+        {
+            if (bizWarning == null)
+            { return new WarningBiz(); }
+            else { return bizWarning; }
+        }
+        public static TransferBiz GetTransferBiz()
+        {
+            if (bizTransfer == null)
+            { return new TransferBiz(); }
+            else { return bizTransfer; }
+        }
+        public static TransferDetailBiz GetTransferDetailBiz()
+        {
+            if (bizTransferDetail == null)
+            { return new TransferDetailBiz(); }
+            else { return bizTransferDetail; }
         }
     }
 }

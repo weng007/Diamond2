@@ -12,12 +12,12 @@ namespace DiamondBiz.Biz
         dsBuyBookJewelry ds = new dsBuyBookJewelry();
         BuyBookJewelryDAL dal = new BuyBookJewelryDAL();
 
-        public dsBuyBookJewelry DoSearchData(string code)
+        public dsBuyBookJewelry DoSearchData(string code,string code2)
         {
 
             try
             {
-                return dal.DoSearchData(code);
+                return dal.DoSearchData(code, code2);
             }
             catch (Exception ex)
             {

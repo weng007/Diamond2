@@ -23,9 +23,11 @@ namespace DiamondShop
         {
             InitializeComponent();
             Initial();
+            ds = ser.DoSelectData("ExchangeRate", id, 0);
+            txtUSDRate.Text = ds.Tables[0].Rows[0]["USDRate"].ToString();
 
             binder.BindControl(dtPayDate, "PayDate");
-            //binder.BindControl(txtPrice, "Price");
+            binder.BindControl(txtUSDRate, "USDRete");
 
         }
         public Payment(int id,Decimal TotalPrice)
@@ -34,7 +36,7 @@ namespace DiamondShop
             Initial();
             this.TotalPrice = TotalPrice;
             binder.BindControl(dtPayDate, "PayDate");
-            //binder.BindControl(txtPrice, "Price");
+            binder.BindControl(txtUSDRate, "USDRete");
 
             this.id = id;
             LoadData();
@@ -65,6 +67,8 @@ namespace DiamondShop
                 EnableEdit = true;
                 EnableDelete = false;
             }
+            ds = ser.DoSelectData("ExchangeRate", id, 0);
+            txtUSDRate.Text = ds.Tables[0].Rows[0]["USDRate"].ToString();
             SetFormatNumber();
             base.LoadData();
         }

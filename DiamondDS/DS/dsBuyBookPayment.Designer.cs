@@ -315,6 +315,8 @@ namespace DiamondDS.DS {
             
             private global::System.Data.DataColumn columnTableName;
             
+            private global::System.Data.DataColumn columnUSDRate;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public BuyBookPaymentDataTable() {
@@ -494,6 +496,14 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn USDRateColumn {
+                get {
+                    return this.columnUSDRate;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -547,7 +557,8 @@ namespace DiamondDS.DS {
                         string OriginName, 
                         string Detail, 
                         string Remark, 
-                        string TableName) {
+                        string TableName, 
+                        decimal USDRate) {
                 BuyBookPaymentRow rowBuyBookPaymentRow = ((BuyBookPaymentRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         ID,
@@ -567,7 +578,8 @@ namespace DiamondDS.DS {
                         OriginName,
                         Detail,
                         Remark,
-                        TableName};
+                        TableName,
+                        USDRate};
                 rowBuyBookPaymentRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowBuyBookPaymentRow);
                 return rowBuyBookPaymentRow;
@@ -608,6 +620,7 @@ namespace DiamondDS.DS {
                 this.columnDetail = base.Columns["Detail"];
                 this.columnRemark = base.Columns["Remark"];
                 this.columnTableName = base.Columns["TableName"];
+                this.columnUSDRate = base.Columns["USDRate"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -649,6 +662,8 @@ namespace DiamondDS.DS {
                 base.Columns.Add(this.columnRemark);
                 this.columnTableName = new global::System.Data.DataColumn("TableName", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTableName);
+                this.columnUSDRate = new global::System.Data.DataColumn("USDRate", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnUSDRate);
                 this.columnID.ReadOnly = true;
                 this.columnIsPaid.MaxLength = 1;
                 this.columnPayment.ReadOnly = true;
@@ -1105,6 +1120,22 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal USDRate {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableBuyBookPayment.USDRateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'USDRate\' in table \'BuyBookPayment\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableBuyBookPayment.USDRateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsIDNull() {
                 return this.IsNull(this.tableBuyBookPayment.IDColumn);
             }
@@ -1317,6 +1348,18 @@ namespace DiamondDS.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetTableNameNull() {
                 this[this.tableBuyBookPayment.TableNameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsUSDRateNull() {
+                return this.IsNull(this.tableBuyBookPayment.USDRateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetUSDRateNull() {
+                this[this.tableBuyBookPayment.USDRateColumn] = global::System.Convert.DBNull;
             }
         }
         

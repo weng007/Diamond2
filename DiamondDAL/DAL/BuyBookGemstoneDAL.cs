@@ -13,7 +13,7 @@ namespace DiamondDAL.DAL
         dsBuyBookGemstone ds = new dsBuyBookGemstone();
         int flag = 0;
 
-        public dsBuyBookGemstone DoSearchData(string Code, double Size, double ESize, string Shape)
+        public dsBuyBookGemstone DoSearchData(string Code, double Size, double ESize, string Shape, string Code2)
         {
             try
             {
@@ -22,6 +22,7 @@ namespace DiamondDAL.DAL
                 SQL.CreateParameter("Size", Size);
                 SQL.CreateParameter("ESize", ESize);
                 SQL.CreateParameter("Shape", Shape);
+                SQL.CreateParameter("Code2", Code2);
                 SQL.FillDataSetBySP("SP_BuyBookGemstone_Search", ds.BuyBookGemstone);
             }
             catch (Exception ex)

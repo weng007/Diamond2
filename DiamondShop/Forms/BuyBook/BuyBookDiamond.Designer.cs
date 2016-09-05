@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BuyBookDiamond));
             this.dtBuyDate = new System.Windows.Forms.DateTimePicker();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -92,6 +92,8 @@
             this.txtCode = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
+            this.label25 = new System.Windows.Forms.Label();
+            this.txtCode2 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid1)).BeginInit();
@@ -112,6 +114,8 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.label25);
+            this.panel3.Controls.Add(this.txtCode2);
             this.panel3.Controls.Add(this.cmbBuyer);
             this.panel3.Controls.Add(this.label28);
             this.panel3.Controls.Add(this.label22);
@@ -172,7 +176,7 @@
             // cmbBuyer
             // 
             this.cmbBuyer.FormattingEnabled = true;
-            this.cmbBuyer.Location = new System.Drawing.Point(137, 197);
+            this.cmbBuyer.Location = new System.Drawing.Point(447, 47);
             this.cmbBuyer.Name = "cmbBuyer";
             this.cmbBuyer.Size = new System.Drawing.Size(157, 29);
             this.cmbBuyer.TabIndex = 218;
@@ -181,7 +185,7 @@
             // 
             this.label28.AutoSize = true;
             this.label28.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label28.Location = new System.Drawing.Point(27, 200);
+            this.label28.Location = new System.Drawing.Point(347, 50);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(52, 21);
             this.label28.TabIndex = 219;
@@ -289,9 +293,9 @@
             // Amount
             // 
             this.Amount.DataPropertyName = "Amount";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle1.NullValue = "0";
-            this.Amount.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle2.NullValue = "0";
+            this.Amount.DefaultCellStyle = dataGridViewCellStyle2;
             this.Amount.HeaderText = "คงเหลือ (ct)";
             this.Amount.Name = "Amount";
             this.Amount.Width = 120;
@@ -340,7 +344,7 @@
             // cmbShop
             // 
             this.cmbShop.FormattingEnabled = true;
-            this.cmbShop.Location = new System.Drawing.Point(137, 160);
+            this.cmbShop.Location = new System.Drawing.Point(447, 10);
             this.cmbShop.Name = "cmbShop";
             this.cmbShop.Size = new System.Drawing.Size(157, 29);
             this.cmbShop.TabIndex = 6;
@@ -349,11 +353,11 @@
             // 
             this.label20.AutoSize = true;
             this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label20.Location = new System.Drawing.Point(29, 163);
+            this.label20.Location = new System.Drawing.Point(349, 13);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(49, 21);
+            this.label20.Size = new System.Drawing.Size(78, 21);
             this.label20.TabIndex = 165;
-            this.label20.Text = "Shop";
+            this.label20.Text = "Location";
             // 
             // chkPayByUSD
             // 
@@ -601,7 +605,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label10.Location = new System.Drawing.Point(347, 125);
+            this.label10.Location = new System.Drawing.Point(347, 192);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(66, 21);
             this.label10.TabIndex = 120;
@@ -609,7 +613,7 @@
             // 
             // txtWeight
             // 
-            this.txtWeight.Location = new System.Drawing.Point(447, 122);
+            this.txtWeight.Location = new System.Drawing.Point(447, 189);
             this.txtWeight.Name = "txtWeight";
             this.txtWeight.Size = new System.Drawing.Size(53, 27);
             this.txtWeight.TabIndex = 16;
@@ -622,7 +626,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label9.Location = new System.Drawing.Point(347, 90);
+            this.label9.Location = new System.Drawing.Point(347, 157);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(75, 21);
             this.label9.TabIndex = 118;
@@ -630,7 +634,7 @@
             // 
             // txtAmount
             // 
-            this.txtAmount.Location = new System.Drawing.Point(447, 87);
+            this.txtAmount.Location = new System.Drawing.Point(447, 154);
             this.txtAmount.Name = "txtAmount";
             this.txtAmount.Size = new System.Drawing.Size(79, 27);
             this.txtAmount.TabIndex = 14;
@@ -640,7 +644,7 @@
             // 
             // txtESize
             // 
-            this.txtESize.Location = new System.Drawing.Point(525, 52);
+            this.txtESize.Location = new System.Drawing.Point(525, 119);
             this.txtESize.Name = "txtESize";
             this.txtESize.Size = new System.Drawing.Size(53, 27);
             this.txtESize.TabIndex = 12;
@@ -652,7 +656,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label8.Location = new System.Drawing.Point(506, 55);
+            this.label8.Location = new System.Drawing.Point(506, 122);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(15, 21);
             this.label8.TabIndex = 115;
@@ -660,7 +664,7 @@
             // 
             // txtSSize
             // 
-            this.txtSSize.Location = new System.Drawing.Point(447, 52);
+            this.txtSSize.Location = new System.Drawing.Point(447, 119);
             this.txtSSize.Name = "txtSSize";
             this.txtSSize.Size = new System.Drawing.Size(53, 27);
             this.txtSSize.TabIndex = 10;
@@ -672,7 +676,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label7.Location = new System.Drawing.Point(347, 55);
+            this.label7.Location = new System.Drawing.Point(347, 122);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(38, 21);
             this.label7.TabIndex = 113;
@@ -698,7 +702,7 @@
             // cmbShape
             // 
             this.cmbShape.FormattingEnabled = true;
-            this.cmbShape.Location = new System.Drawing.Point(447, 15);
+            this.cmbShape.Location = new System.Drawing.Point(447, 82);
             this.cmbShape.Name = "cmbShape";
             this.cmbShape.Size = new System.Drawing.Size(174, 29);
             this.cmbShape.TabIndex = 8;
@@ -707,7 +711,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label3.Location = new System.Drawing.Point(347, 22);
+            this.label3.Location = new System.Drawing.Point(347, 89);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(60, 21);
             this.label3.TabIndex = 88;
@@ -761,6 +765,23 @@
             this.button1.Size = new System.Drawing.Size(1089, 352);
             this.button1.TabIndex = 32;
             this.button1.UseVisualStyleBackColor = true;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
+            this.label25.Location = new System.Drawing.Point(30, 164);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(63, 21);
+            this.label25.TabIndex = 221;
+            this.label25.Text = "Code2";
+            // 
+            // txtCode2
+            // 
+            this.txtCode2.Location = new System.Drawing.Point(137, 161);
+            this.txtCode2.Name = "txtCode2";
+            this.txtCode2.Size = new System.Drawing.Size(157, 27);
+            this.txtCode2.TabIndex = 220;
             // 
             // BuyBookDiamond
             // 
@@ -845,5 +866,7 @@
         private System.Windows.Forms.DateTimePicker dtPayDate;
         private System.Windows.Forms.ComboBox cmbBuyer;
         private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.TextBox txtCode2;
     }
 }

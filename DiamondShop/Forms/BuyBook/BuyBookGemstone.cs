@@ -47,6 +47,7 @@ namespace DiamondShop
             binder.BindControl(txtNote, "Note");
             binder.BindControl(dtPayDate, "PayDate");
             binder.BindControl(cmbBuyer, "Buyer");
+            binder.BindControl(txtCode2, "Code2");
 
             dtDueDate.Value = dtBuyDate.Value.AddDays(30);
         }
@@ -76,6 +77,7 @@ namespace DiamondShop
             binder.BindControl(txtNote, "Note");
             binder.BindControl(dtPayDate, "PayDate");
             binder.BindControl(cmbBuyer, "Buyer");
+            binder.BindControl(txtCode2, "Code2");
 
             this.id = id;
             LoadData();
@@ -393,6 +395,7 @@ namespace DiamondShop
             cmbIdentification.Enabled = status;
             dtPayDate.Enabled = status;
             cmbBuyer.Enabled = status;
+            txtCode2.Enabled = status;
         }
 
         private void dtDueDate_ValueChanged(object sender, EventArgs e)

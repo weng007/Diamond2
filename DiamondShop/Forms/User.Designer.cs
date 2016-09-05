@@ -180,7 +180,7 @@
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Location = new System.Drawing.Point(122, 123);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(100, 21);
+            this.comboBox3.Size = new System.Drawing.Size(100, 27);
             this.comboBox3.TabIndex = 28;
             // 
             // comboBox1
@@ -188,7 +188,7 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(122, 159);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(100, 21);
+            this.comboBox1.Size = new System.Drawing.Size(100, 27);
             this.comboBox1.TabIndex = 29;
             // 
             // panel2
@@ -442,9 +442,9 @@
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label4.Location = new System.Drawing.Point(360, 17);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(66, 26);
+            this.label4.Size = new System.Drawing.Size(99, 26);
             this.label4.TabIndex = 39;
-            this.label4.Text = "Shop";
+            this.label4.Text = "Location";
             // 
             // dtBirthDate
             // 

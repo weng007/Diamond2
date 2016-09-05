@@ -45,18 +45,18 @@ namespace Diamond
                     throw ex;
                 }
             }
-            else if (TableName == "Seller")
-            {
-                SellerBiz biz = GM.GetSellerBiz();
-                try
-                {
-                    return biz.DoSelectData(id);
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
-            }
+            //else if (TableName == "Seller")
+            //{
+            //    SellerBiz biz = GM.GetSellerBiz();
+            //    try
+            //    {
+            //        return biz.DoSelectData(id);
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        throw ex;
+            //    }
+            //}
             else if (TableName == "Catalog")
             {
                 CatalogBiz biz = GM.CatalogBiz();
@@ -442,6 +442,42 @@ namespace Diamond
                     throw ex;
                 }
             }
+            else if (TableName == "Warning")
+            {
+                WarningBiz biz = GM.GetWarningBiz();
+                try
+                {
+                    return biz.DoSelectData(id);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            else if (TableName == "Transfer")
+            {
+                TransferBiz biz = GM.GetTransferBiz();
+                try
+                {
+                    return biz.DoSelectData(id);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            else if (TableName == "TransferDetail")
+            {
+                TransferDetailBiz biz = GM.GetTransferDetailBiz();
+                try
+                {
+                    return biz.DoSelectData(id);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
             return null;
         }
         #endregion
@@ -465,21 +501,21 @@ namespace Diamond
                     throw ex;
                 }
             }
-            else if (TableName == "Seller")
-            {
-                SellerBiz biz = GM.GetSellerBiz();
-                dsSeller ds1 = new dsSeller();
-                ds1.Merge(ds);
+            //else if (TableName == "Seller")
+            //{
+            //    SellerBiz biz = GM.GetSellerBiz();
+            //    dsSeller ds1 = new dsSeller();
+            //    ds1.Merge(ds);
 
-                try
-                {
-                    flag = biz.DoInsertData(ds1);
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
-            }
+            //    try
+            //    {
+            //        flag = biz.DoInsertData(ds1);
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        throw ex;
+            //    }
+            //}
             else if (TableName == "DiamondDetail")
             {
                 DiamondDetailBiz biz = GM.GetDiamondDetailBiz();
@@ -871,6 +907,51 @@ namespace Diamond
                     throw ex;
                 }
             }
+            else if (TableName == "Warning")
+            {
+                WarningBiz biz = GM.GetWarningBiz();
+                dsWarning ds1 = new dsWarning();
+                ds1.Merge(ds);
+
+                try
+                {
+                    flag = biz.DoInsertData(ds1);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            else if (TableName == "Transfer")
+            {
+                TransferBiz biz = GM.GetTransferBiz();
+                dsTransfer ds1 = new dsTransfer();
+                ds1.Merge(ds);
+
+                try
+                {
+                    flag = biz.DoInsertData(ds1);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            else if (TableName == "TransferDetail")
+            {
+                TransferDetailBiz biz = GM.GetTransferDetailBiz();
+                dsTransferDetail ds1 = new dsTransferDetail();
+                ds1.Merge(ds);
+
+                try
+                {
+                    flag = biz.DoInsertData(ds1);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
             return flag;
         }
         #endregion
@@ -895,22 +976,22 @@ namespace Diamond
                     throw ex;
                 }
             }
-            else if (TableName == "Seller")
-            {
-                SellerBiz biz = GM.GetSellerBiz();
-                dsSeller ds1 = new dsSeller();
+            //else if (TableName == "Seller")
+            //{
+            //    SellerBiz biz = GM.GetSellerBiz();
+            //    dsSeller ds1 = new dsSeller();
 
-                ds1.Merge(ds);
+            //    ds1.Merge(ds);
 
-                try
-                {
-                    flag = biz.DoUpdateData(ds1);
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
-            }
+            //    try
+            //    {
+            //        flag = biz.DoUpdateData(ds1);
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        throw ex;
+            //    }
+            //}
             else if (TableName == "Catalog")
             {
                 CatalogBiz biz = GM.CatalogBiz();
@@ -1335,6 +1416,54 @@ namespace Diamond
                     throw ex;
                 }
             }
+            else if (TableName == "Warning")
+            {
+                WarningBiz biz = GM.GetWarningBiz();
+                dsWarning ds1 = new dsWarning();
+
+                ds1.Merge(ds);
+
+                try
+                {
+                    flag = biz.DoUpdateData(ds1);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            else if (TableName == "Transfer")
+            {
+                TransferBiz biz = GM.GetTransferBiz();
+                dsTransfer ds1 = new dsTransfer();
+
+                ds1.Merge(ds);
+
+                try
+                {
+                    flag = biz.DoUpdateData(ds1);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            else if (TableName == "TransferDetail")
+            {
+                TransferDetailBiz biz = GM.GetTransferDetailBiz();
+                dsTransferDetail ds1 = new dsTransferDetail();
+
+                ds1.Merge(ds);
+
+                try
+                {
+                    flag = biz.DoUpdateData(ds1);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
             return flag;
         }
         #endregion
@@ -1355,18 +1484,18 @@ namespace Diamond
                     throw ex;
                 }
             }
-            else if (TableName == "Seller")
-            {
-                SellerBiz biz = GM.GetSellerBiz();
-                try
-                {
-                    flag = biz.DoDeleteData(id);
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
-            }
+            //else if (TableName == "Seller")
+            //{
+            //    SellerBiz biz = GM.GetSellerBiz();
+            //    try
+            //    {
+            //        flag = biz.DoDeleteData(id);
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        throw ex;
+            //    }
+            //}
             else if (TableName == "Catalog")
             {
                 CatalogBiz biz = GM.CatalogBiz();
@@ -1648,6 +1777,42 @@ namespace Diamond
             else if (TableName == "BuyBookETC")
             {
                 BuyBookETCBiz biz = GM.GetBuyBookETCBiz();
+                try
+                {
+                    flag = biz.DoDeleteData(id);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            else if (TableName == "Warning")
+            {
+                WarningBiz biz = GM.GetWarningBiz();
+                try
+                {
+                    flag = biz.DoDeleteData(id);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            else if (TableName == "Transfer")
+            {
+                TransferBiz biz = GM.GetTransferBiz();
+                try
+                {
+                    flag = biz.DoDeleteData(id);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            else if (TableName == "TransferDetail")
+            {
+                TransferDetailBiz biz = GM.GetTransferDetailBiz();
                 try
                 {
                     flag = biz.DoDeleteData(id);

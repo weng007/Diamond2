@@ -54,6 +54,7 @@
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RowNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Code2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BuyDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Seller = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ShapeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -65,6 +66,8 @@
             this.PriceCaratUSD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PriceCaratB = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MarketPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtCode2 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tds)).BeginInit();
             this.panel4.SuspendLayout();
@@ -80,6 +83,8 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(105)))), ((int)(((byte)(79)))));
+            this.panel4.Controls.Add(this.txtCode2);
+            this.panel4.Controls.Add(this.label2);
             this.panel4.Controls.Add(this.label1);
             this.panel4.Controls.Add(this.txtESize);
             this.panel4.Controls.Add(this.txtCode);
@@ -100,7 +105,7 @@
             // 
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(607, 24);
+            this.label1.Location = new System.Drawing.Point(607, 57);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(14, 26);
             this.label1.TabIndex = 76;
@@ -108,7 +113,7 @@
             // 
             // txtESize
             // 
-            this.txtESize.Location = new System.Drawing.Point(626, 21);
+            this.txtESize.Location = new System.Drawing.Point(626, 54);
             this.txtESize.Name = "txtESize";
             this.txtESize.Size = new System.Drawing.Size(54, 27);
             this.txtESize.TabIndex = 6;
@@ -151,7 +156,7 @@
             // 
             // txtSSize
             // 
-            this.txtSSize.Location = new System.Drawing.Point(547, 21);
+            this.txtSSize.Location = new System.Drawing.Point(547, 54);
             this.txtSSize.Name = "txtSSize";
             this.txtSSize.Size = new System.Drawing.Size(54, 27);
             this.txtSSize.TabIndex = 4;
@@ -181,7 +186,7 @@
             // 
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(497, 23);
+            this.label4.Location = new System.Drawing.Point(497, 56);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(49, 26);
             this.label4.TabIndex = 45;
@@ -223,6 +228,7 @@
             this.ID,
             this.RowNum,
             this.Code,
+            this.Code2,
             this.BuyDate,
             this.Seller,
             this.ShapeName,
@@ -270,6 +276,13 @@
             this.Code.Name = "Code";
             this.Code.ReadOnly = true;
             this.Code.Width = 160;
+            // 
+            // Code2
+            // 
+            this.Code2.DataPropertyName = "Code2";
+            this.Code2.HeaderText = "Code2";
+            this.Code2.Name = "Code2";
+            this.Code2.ReadOnly = true;
             // 
             // BuyDate
             // 
@@ -381,6 +394,23 @@
             this.MarketPrice.ReadOnly = true;
             this.MarketPrice.Width = 180;
             // 
+            // txtCode2
+            // 
+            this.txtCode2.Location = new System.Drawing.Point(547, 20);
+            this.txtCode2.Name = "txtCode2";
+            this.txtCode2.Size = new System.Drawing.Size(161, 27);
+            this.txtCode2.TabIndex = 77;
+            // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(474, 23);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(67, 31);
+            this.label2.TabIndex = 78;
+            this.label2.Text = "Code2";
+            // 
             // BuyBookDiamondList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -419,6 +449,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn RowNum;
         private System.Windows.Forms.DataGridViewTextBoxColumn Code;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Code2;
         private System.Windows.Forms.DataGridViewTextBoxColumn BuyDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn Seller;
         private System.Windows.Forms.DataGridViewTextBoxColumn ShapeName;
@@ -430,5 +461,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn PriceCaratUSD;
         private System.Windows.Forms.DataGridViewTextBoxColumn PriceCaratB;
         private System.Windows.Forms.DataGridViewTextBoxColumn MarketPrice;
+        private System.Windows.Forms.TextBox txtCode2;
+        private System.Windows.Forms.Label label2;
     }
 }

@@ -49,9 +49,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.gridJewelry = new System.Windows.Forms.DataGridView();
+            this.txtCode2 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.RowNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Code2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Image1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.Amount1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Weight1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -75,6 +78,8 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(91)))), ((int)(((byte)(59)))));
+            this.panel4.Controls.Add(this.label1);
+            this.panel4.Controls.Add(this.txtCode2);
             this.panel4.Controls.Add(this.label6);
             this.panel4.Controls.Add(this.btnAdd);
             this.panel4.Controls.Add(this.txtPrefix);
@@ -176,6 +181,7 @@
             this.RowNum,
             this.ID,
             this.Code,
+            this.Code2,
             this.Image1,
             this.Amount1,
             this.Weight1,
@@ -200,6 +206,23 @@
             this.gridJewelry.Size = new System.Drawing.Size(1314, 447);
             this.gridJewelry.TabIndex = 2;
             this.gridJewelry.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.gridJewelry_MouseDoubleClick);
+            // 
+            // txtCode2
+            // 
+            this.txtCode2.Location = new System.Drawing.Point(501, 22);
+            this.txtCode2.Name = "txtCode2";
+            this.txtCode2.Size = new System.Drawing.Size(132, 27);
+            this.txtCode2.TabIndex = 71;
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(429, 25);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(67, 25);
+            this.label1.TabIndex = 72;
+            this.label1.Text = "Code2";
             // 
             // RowNum
             // 
@@ -226,6 +249,13 @@
             this.Code.Name = "Code";
             this.Code.ReadOnly = true;
             this.Code.Width = 150;
+            // 
+            // Code2
+            // 
+            this.Code2.DataPropertyName = "Code2";
+            this.Code2.HeaderText = "Code2";
+            this.Code2.Name = "Code2";
+            this.Code2.ReadOnly = true;
             // 
             // Image1
             // 
@@ -349,7 +379,7 @@
             // ShopName
             // 
             this.ShopName.DataPropertyName = "ShopName";
-            this.ShopName.HeaderText = "Shop";
+            this.ShopName.HeaderText = "Location";
             this.ShopName.Name = "ShopName";
             this.ShopName.ReadOnly = true;
             // 
@@ -398,9 +428,12 @@
         private System.Windows.Forms.TextBox txtPrefix;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtCode2;
         private System.Windows.Forms.DataGridViewTextBoxColumn RowNum;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Code;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Code2;
         private System.Windows.Forms.DataGridViewImageColumn Image1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Amount1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Weight1;

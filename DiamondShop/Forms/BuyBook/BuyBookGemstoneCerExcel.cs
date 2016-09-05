@@ -143,6 +143,18 @@ namespace DiamondShop
                 if (row.Cells["Buyer"].Value != null)
                 { tds.Tables[0].Rows[i]["Buyer"] = row.Cells["Buyer"].Value; }
 
+                if (row.Cells["W"].Value != null)
+                { tds.Tables[0].Rows[i]["W"] = row.Cells["W"].Value; }
+
+                if (row.Cells["L"].Value != null)
+                { tds.Tables[0].Rows[i]["L"] = row.Cells["L"].Value; }
+
+                if (row.Cells["D"].Value != null)
+                { tds.Tables[0].Rows[i]["D"] = row.Cells["D"].Value; }
+
+                if (row.Cells["Code2"].Value != null)
+                { tds.Tables[0].Rows[i]["Code2"] = row.Cells["Code2"].Value; }
+
                 i++;
             }
 

@@ -37,6 +37,7 @@
             this.Seller = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Shape = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cut = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Code2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Weight = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ReportNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Identification = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,6 +55,9 @@
             this.TotalBath = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Note = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Buyer = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.W = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.L = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.D = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid1)).BeginInit();
@@ -91,6 +95,7 @@
             this.Seller,
             this.Shape,
             this.Cut,
+            this.Code2,
             this.Weight,
             this.ReportNumber,
             this.Identification,
@@ -107,7 +112,10 @@
             this.TotalUSD,
             this.TotalBath,
             this.Note,
-            this.Buyer});
+            this.Buyer,
+            this.W,
+            this.L,
+            this.D});
             this.grid1.Location = new System.Drawing.Point(12, 35);
             this.grid1.Name = "grid1";
             this.grid1.ReadOnly = true;
@@ -144,6 +152,13 @@
             this.Cut.Name = "Cut";
             this.Cut.ReadOnly = true;
             this.Cut.Width = 60;
+            // 
+            // Code2
+            // 
+            this.Code2.DataPropertyName = "Code2";
+            this.Code2.HeaderText = "Code2";
+            this.Code2.Name = "Code2";
+            this.Code2.ReadOnly = true;
             // 
             // Weight
             // 
@@ -276,6 +291,27 @@
             this.Buyer.ReadOnly = true;
             this.Buyer.Width = 110;
             // 
+            // W
+            // 
+            this.W.DataPropertyName = "W";
+            this.W.HeaderText = "W";
+            this.W.Name = "W";
+            this.W.ReadOnly = true;
+            // 
+            // L
+            // 
+            this.L.DataPropertyName = "L";
+            this.L.HeaderText = "L";
+            this.L.Name = "L";
+            this.L.ReadOnly = true;
+            // 
+            // D
+            // 
+            this.D.DataPropertyName = "D";
+            this.D.HeaderText = "D";
+            this.D.Name = "D";
+            this.D.ReadOnly = true;
+            // 
             // BuyBookGemstoneCerExcel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -301,6 +337,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Seller;
         private System.Windows.Forms.DataGridViewTextBoxColumn Shape;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cut;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Code2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Weight;
         private System.Windows.Forms.DataGridViewTextBoxColumn ReportNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn Identification;
@@ -318,5 +355,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TotalBath;
         private System.Windows.Forms.DataGridViewTextBoxColumn Note;
         private System.Windows.Forms.DataGridViewTextBoxColumn Buyer;
+        private System.Windows.Forms.DataGridViewTextBoxColumn W;
+        private System.Windows.Forms.DataGridViewTextBoxColumn L;
+        private System.Windows.Forms.DataGridViewTextBoxColumn D;
     }
 }

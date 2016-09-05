@@ -24,6 +24,7 @@ namespace DiamondShop
             InitializeComponent();
             Initial();
             DoLoadData();
+            dtSSaleDate.Value = dtSSaleDate.Value.AddDays(-90);
         }
 
         protected override void Initial()

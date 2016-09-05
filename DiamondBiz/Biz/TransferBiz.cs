@@ -8,24 +8,23 @@ using DiamondDAL.DAL;
 
 namespace DiamondBiz.Biz
 {
-    public class SellerBiz
+    public class TransferBiz
     {
-        dsSeller ds = new dsSeller();
-        SellerDAL dal = new SellerDAL();
+        dsTransfer ds = new dsTransfer();
+        TransferDAL dal = new TransferDAL();
 
-        public dsSeller DoSearchData(string search, int shop)
+        public dsTransfer DoSearchData(int Sender, int Receiver, int TransferStatus, int SShop, int EShop, DateTime SSendDate, DateTime ESendDate, DateTime SReceiveDate, DateTime EReceiveDate)
         {
             try
             {
-                return dal.DoSearchData(search, shop);
+                return dal.DoSearchData(Sender, Receiver, TransferStatus,  SShop, EShop, SSendDate, ESendDate, SReceiveDate, EReceiveDate);
             }
             catch (Exception ex)
             {
                 throw ex;
             }
         }
-
-        public dsSeller DoSelectData(int id)
+        public dsTransfer DoSelectData(int id)
         {
             try
             {
@@ -36,7 +35,7 @@ namespace DiamondBiz.Biz
                 throw ex;
             }
         }
-        public bool DoInsertData(dsSeller tds)
+        public bool DoInsertData(dsTransfer tds)
         {
             try
             {
@@ -48,7 +47,7 @@ namespace DiamondBiz.Biz
             }
         }
 
-        public bool DoUpdateData(dsSeller tds)
+        public bool DoUpdateData(dsTransfer tds)
         {
             try
             {
@@ -65,29 +64,6 @@ namespace DiamondBiz.Biz
             try
             {
                 return dal.DoDeleteData(id);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-
-        public dsSeller GetSeller()
-        {
-            try
-            {
-                return dal.GetSeller();
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-        public dsSeller GetBuyer()
-        {
-            try
-            {
-                return dal.GetBuyer();
             }
             catch (Exception ex)
             {

@@ -35,9 +35,9 @@ namespace Diamond
         }
 
         [WebMethod]
-        public dsSeller GetSeller()
+        public dsUser GetSeller()
         {
-            SellerBiz biz = new SellerBiz();
+            UserBiz biz = new UserBiz();
 
             try
             {
@@ -49,9 +49,9 @@ namespace Diamond
             }
         }
         [WebMethod]
-        public dsSeller GetBuyer()
+        public dsUser GetBuyer()
         {
-            SellerBiz biz = new SellerBiz();
+            UserBiz biz = new UserBiz();
 
             try
             {
@@ -192,6 +192,19 @@ namespace Diamond
             try
             {
                 return biz.GetReportInventory(Status, SImpDate, EImpDate, SPriceTag, EPricetag);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        [WebMethod]
+        public DataSet GetReportCertificate(int id)
+        {
+            GeneralCBiz biz = new GeneralCBiz();
+            try
+            {
+                return biz.GetReportCertificate(id);
             }
             catch (Exception ex)
             {
