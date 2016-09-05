@@ -82,6 +82,8 @@ namespace DiamondShop
 
         protected override void LoadData()
         {
+            
+
             ds = ser.DoSelectData("Warning", id, 0);
             tds.Clear();
             tds.Merge(ds);
@@ -100,7 +102,17 @@ namespace DiamondShop
             }
             SetFormatNumber();
             base.LoadData();
-            
+
+
+            cmbFactoryStatus.SelectedValueChanged += CmbFactoryStatus_SelectedValueChanged;
+
+        }
+
+        private void CmbFactoryStatus_SelectedValueChanged(object sender, EventArgs e)
+        {
+            isEdit = true;
+
+            cmbFactoryStatus.SelectedValueChanged -= CmbFactoryStatus_SelectedValueChanged;
         }
 
         protected override bool SaveData()

@@ -100,9 +100,14 @@ namespace DiamondShop
                 id = (int)gridWarning.SelectedRows[0].Cells["ID"].Value;
                 Warning frm = new Warning(id);
                 frm.ShowDialog();
+
+                if (frm.isEdit)
+                {
+                    DoLoadData();
+                }
             }
 
-            DoLoadData();
+            
         }
 
         private void timer1_Tick(object sender, EventArgs e)
