@@ -55,7 +55,6 @@ namespace DiamondShop
             binder.BindControl(cmbComment, "Comment");
             binder.BindControl(cmbCut, "Cut");
             binder.BindControl(cmbColor, "Color");
-            binder.BindControl(dtPayDate, "PayDate");
             binder.BindControl(cmbBuyer, "Buyer");
             binder.BindControl(txtCode2, "Code2");
 
@@ -89,7 +88,6 @@ namespace DiamondShop
             binder.BindControl(cmbComment, "Comment");
             binder.BindControl(cmbCut, "Cut");
             binder.BindControl(cmbColor, "Color");
-            binder.BindControl(dtPayDate, "PayDate");
             binder.BindControl(cmbBuyer, "Buyer");
             binder.BindControl(txtCode2, "Code2");
 
@@ -97,6 +95,8 @@ namespace DiamondShop
             btnImportExcel.Enabled = false;
             LoadData();
             SetControlEnable(false);
+
+            isEdit = false;
         }
 
         protected override void Initial()
@@ -106,6 +106,7 @@ namespace DiamondShop
             cmbBuyer.DataSource = ds.Tables[0];
             cmbBuyer.ValueMember = "ID";
             cmbBuyer.DisplayMember = "DisplayName";
+            cmbBuyer.SelectedIndex = ds.Tables[0].Rows.Count - 1;
             cmbBuyer.Refresh();
 
             cmbSetting.DataSource = (GM.GetMasterTableDetail("C015",false)).Tables[0];
@@ -167,6 +168,7 @@ namespace DiamondShop
             if (tds.BuyBookGemstoneCer.Rows.Count > 0)
             {
                 binder.BindValueToControl(tds.BuyBookGemstoneCer[0]);
+                txtPayDate.Text = string.Format("{0:d/M/yyyy}", tds.BuyBookGemstoneCer[0]["PayDate"]);
 
                 if (tds.BuyBookGemstoneCer[0]["Certificate"].ToString() != "")
                 {
@@ -209,6 +211,8 @@ namespace DiamondShop
             }
             SetFormatNumber();
             base.LoadData();
+
+            cmbShape.SelectedValueChanged += cmbShape_SelectedValueChanged;
         }
 
         protected override bool SaveData()
@@ -228,6 +232,14 @@ namespace DiamondShop
             row.Image1 = image1;
             row.IsPaid = rdoYes.Checked ? "1" : "0";
             row.FileName = linkFile.Text;
+            if (txtPayDate.Text == "")
+            {
+                row.PayDate = DateTime.MinValue.AddYears(1900);
+            }
+            else
+            {
+                row.PayDate = Convert.ToDateTime(txtPayDate.Text.ToString());
+            }
 
             //แนบ Certificate
             if (file != null && file.Length > 0)
@@ -290,7 +302,7 @@ namespace DiamondShop
             }
             else
             {
-                RequirePassword frm = new RequirePassword("2");
+                RequirePassword frm = new RequirePassword("2",0);
                 frm.ShowDialog();
                 isAuthorize = frm.isAuthorize;
                 frm.Close();
@@ -316,6 +328,11 @@ namespace DiamondShop
             {
                 message += "Please input USDRate > 0.\n";
             }
+            if (rdoYes.Checked == true && txtPayDate.Text == "")
+            {
+                message += "Please input Paydate";
+            }
+
 
             if (message == "") { return true; }
             else { return false; }
@@ -428,12 +445,19 @@ namespace DiamondShop
             txtPriceCaratUSD.Text = GM.ConvertDoubleToString(txtPriceCaratUSD, 0);
             txtPriceCarat.Text = GM.ConvertDoubleToString(txtPriceCarat, 0);
             txtTotalBaht.Text = GM.ConvertDoubleToString(txtTotalBaht, 0);
+
+            isEdit = true;
         }
         #endregion Calculate Money
 
 
         private void SetFormatNumber()
         {
+            //ดักเคส MinValue
+            if (txtPayDate.Text != "" && Convert.ToDateTime(txtPayDate.Text).Year == 1901)
+            {
+                txtPayDate.Text = "";
+            }
             txtTotalUSD.Text = GM.ConvertDoubleToString(txtTotalUSD);
             txtPriceCaratUSD.Text = GM.ConvertDoubleToString(txtPriceCaratUSD, 0);
             txtPriceCarat.Text = GM.ConvertDoubleToString(txtPriceCarat, 0);
@@ -503,7 +527,6 @@ namespace DiamondShop
             txtPriceCaratUSD.Enabled = status;
             btnUpload.Enabled = status;
             btnImage1.Enabled = status;
-            dtPayDate.Enabled = status;
             cmbBuyer.Enabled = status;
             txtCode2.Enabled = status;
         }
@@ -511,6 +534,7 @@ namespace DiamondShop
         private void dtDueDate_ValueChanged(object sender, EventArgs e)
         {
             dtDueDate.Value = dtBuyDate.Value.AddDays(30);
+            isEdit = true;
         }
 
         private void btnImportExcel_Click(object sender, EventArgs e)
@@ -532,6 +556,38 @@ namespace DiamondShop
             }
             BuyBookGemstoneCerExcel frm = new BuyBookGemstoneCerExcel(id, FilePath);
             frm.ShowDialog();
+        }
+
+        private void txtNote_TextChanged(object sender, EventArgs e)
+        {
+            isEdit = true;
+        }
+
+        private void cmbShape_SelectedValueChanged(object sender, EventArgs e)
+        {
+            isEdit = true;
+        }
+
+        private void rdoYes_CheckedChanged(object sender, EventArgs e)
+        {
+            isEdit = true;
+        }
+
+        private void dtBuyDate_ValueChanged(object sender, EventArgs e)
+        {
+            isEdit = true;
+        }
+
+        private void btnChooseDate_Click(object sender, EventArgs e)
+        {
+            monthCalendar1.Visible = true;
+        }
+
+        private void monthCalendar1_DateSelected(object sender, DateRangeEventArgs e)
+        {
+            txtPayDate.Text = monthCalendar1.SelectionRange.Start.ToShortDateString();
+            monthCalendar1.Visible = false;
+            isEdit = true;
         }
     }
 }

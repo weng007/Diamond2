@@ -159,8 +159,13 @@ namespace DiamondShop
                     id = (int)gridGemstone.SelectedRows[0].Cells["ID"].Value;
                     GemstoneCer frm = new GemstoneCer(id);
                     frm.ShowDialog();
+
+                    if (frm.isEdit)
+                    {
+                        DoLoadData();
+                    }
                 }
-                DoLoadData();
+                
             }
             else //mode = 1 Search
             {

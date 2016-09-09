@@ -75,9 +75,12 @@ namespace DiamondShop
                 id = (int)gridETC.SelectedRows[0].Cells["ID"].Value;
                 BuyBookETC frm = new BuyBookETC(id);
                 frm.ShowDialog();
-            }
 
-            DoLoadData();
+                if (frm.isEdit)
+                {
+                    DoLoadData();
+                }
+            }
         }
     }
 }

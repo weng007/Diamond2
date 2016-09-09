@@ -337,13 +337,13 @@ namespace Diamond
             }
         }
         [WebMethod]
-        public DataSet DoSearchWarning(string Sender, int Receiver, int MessageStatus, int FactoryStatus, int Shop)
+        public DataSet DoSearchWarning(int Sender, int Receiver, int MessageStatus, int FactoryStatus, int Shop, int loginID)
         {
             WarningBiz biz = new WarningBiz();
 
             try
             {
-                return biz.DoSearchData(Sender, Receiver, MessageStatus, FactoryStatus, Shop);
+                return biz.DoSearchData(Sender, Receiver, MessageStatus, FactoryStatus, Shop, loginID);
             }
             catch (Exception ex)
             {
@@ -358,6 +358,20 @@ namespace Diamond
             try
             {
                 return biz.DoSearchData(Sender, Receiver, TransferStatus, SShop, EShop, SSendDate, ESendDate, SReceiveDate, EReceiveDate);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        [WebMethod]
+        public DataSet DoSearchOrder(string CustName, string Code, int Seller, int JewelryType)
+        {
+            OrderBiz biz = new OrderBiz();
+
+            try
+            {
+                return biz.DoSearchData(CustName, Code, Seller, JewelryType);
             }
             catch (Exception ex)
             {

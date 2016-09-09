@@ -20,13 +20,13 @@ namespace Diamond
     public class Service2 : System.Web.Services.WebService
     {
         [WebMethod]
-        public dsUser DoAuthenticate(string userName, string password,string type)
+        public dsUser DoAuthenticate(string userName, string password,string type, int Shop)
         {
             UserBiz biz = new UserBiz();
 
             try
             {
-                return biz.DoAuthenticate(userName, password, type);
+                return biz.DoAuthenticate(userName, password, type, Shop);
             }
             catch(Exception ex)
             {
@@ -205,6 +205,19 @@ namespace Diamond
             try
             {
                 return biz.GetReportCertificate(id);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        [WebMethod]
+        public int UpdateMessageStatus(int id, string Flag)
+        {
+            GeneralCBiz biz = new GeneralCBiz();
+            try
+            {
+                return biz.UpdateMessageStatus(id, Flag);
             }
             catch (Exception ex)
             {

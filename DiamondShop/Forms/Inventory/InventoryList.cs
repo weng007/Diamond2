@@ -106,9 +106,12 @@ namespace DiamondShop
                 id = (int)gridInventory.SelectedRows[0].Cells["ID"].Value;
                 Inventory frm = new Inventory(id);
                 frm.ShowDialog();
-            }
 
-            DoLoadData();
+                if (frm.isEdit)
+                {
+                    DoLoadData();
+                }
+            }
         }
     }
 }

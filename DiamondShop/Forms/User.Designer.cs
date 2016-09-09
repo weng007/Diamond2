@@ -180,7 +180,7 @@
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Location = new System.Drawing.Point(122, 123);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(100, 27);
+            this.comboBox3.Size = new System.Drawing.Size(100, 21);
             this.comboBox3.TabIndex = 28;
             // 
             // comboBox1
@@ -188,7 +188,7 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(122, 159);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(100, 27);
+            this.comboBox1.Size = new System.Drawing.Size(100, 21);
             this.comboBox1.TabIndex = 29;
             // 
             // panel2
@@ -267,6 +267,7 @@
             this.txtDisplayName.Name = "txtDisplayName";
             this.txtDisplayName.Size = new System.Drawing.Size(165, 27);
             this.txtDisplayName.TabIndex = 10;
+            this.txtDisplayName.TextChanged += new System.EventHandler(this.txtTitleName_TextChanged);
             // 
             // label21
             // 
@@ -316,6 +317,7 @@
             this.txtTitleName.Name = "txtTitleName";
             this.txtTitleName.Size = new System.Drawing.Size(165, 27);
             this.txtTitleName.TabIndex = 0;
+            this.txtTitleName.TextChanged += new System.EventHandler(this.txtTitleName_TextChanged);
             // 
             // dtStartDate
             // 
@@ -325,6 +327,7 @@
             this.dtStartDate.Name = "dtStartDate";
             this.dtStartDate.Size = new System.Drawing.Size(139, 27);
             this.dtStartDate.TabIndex = 22;
+            this.dtStartDate.ValueChanged += new System.EventHandler(this.dtBirthDate_ValueChanged);
             // 
             // label18
             // 
@@ -343,6 +346,7 @@
             this.txtPassword3.TabIndex = 18;
             this.txtPassword3.UseSystemPasswordChar = true;
             this.txtPassword3.Visible = false;
+            this.txtPassword3.TextChanged += new System.EventHandler(this.txtTitleName_TextChanged);
             // 
             // label15
             // 
@@ -360,6 +364,7 @@
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(139, 27);
             this.txtUserName.TabIndex = 12;
+            this.txtUserName.TextChanged += new System.EventHandler(this.txtTitleName_TextChanged);
             // 
             // label16
             // 
@@ -378,6 +383,7 @@
             this.txtPassword2.TabIndex = 16;
             this.txtPassword2.UseSystemPasswordChar = true;
             this.txtPassword2.Visible = false;
+            this.txtPassword2.TextChanged += new System.EventHandler(this.txtTitleName_TextChanged);
             // 
             // txtPassword1
             // 
@@ -387,6 +393,7 @@
             this.txtPassword1.Size = new System.Drawing.Size(93, 27);
             this.txtPassword1.TabIndex = 14;
             this.txtPassword1.UseSystemPasswordChar = true;
+            this.txtPassword1.TextChanged += new System.EventHandler(this.txtTitleName_TextChanged);
             // 
             // cmbShop
             // 
@@ -395,6 +402,7 @@
             this.cmbShop.Name = "cmbShop";
             this.cmbShop.Size = new System.Drawing.Size(165, 29);
             this.cmbShop.TabIndex = 20;
+            this.cmbShop.SelectedValueChanged += new System.EventHandler(this.cmbShop_SelectedValueChanged);
             // 
             // label17
             // 
@@ -413,6 +421,7 @@
             this.cmbStatus.Name = "cmbStatus";
             this.cmbStatus.Size = new System.Drawing.Size(165, 29);
             this.cmbStatus.TabIndex = 8;
+            this.cmbStatus.SelectedValueChanged += new System.EventHandler(this.cmbShop_SelectedValueChanged);
             // 
             // txtLastName
             // 
@@ -420,6 +429,7 @@
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(165, 27);
             this.txtLastName.TabIndex = 4;
+            this.txtLastName.TextChanged += new System.EventHandler(this.txtTitleName_TextChanged);
             // 
             // cmbRole
             // 
@@ -429,6 +439,7 @@
             this.cmbRole.Size = new System.Drawing.Size(165, 29);
             this.cmbRole.TabIndex = 6;
             this.cmbRole.SelectedIndexChanged += new System.EventHandler(this.cmbRole_SelectedIndexChanged);
+            this.cmbRole.SelectedValueChanged += new System.EventHandler(this.cmbShop_SelectedValueChanged);
             // 
             // txtFirstName
             // 
@@ -436,6 +447,7 @@
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(165, 27);
             this.txtFirstName.TabIndex = 2;
+            this.txtFirstName.TextChanged += new System.EventHandler(this.txtTitleName_TextChanged);
             // 
             // label4
             // 
@@ -454,6 +466,7 @@
             this.dtBirthDate.Name = "dtBirthDate";
             this.dtBirthDate.Size = new System.Drawing.Size(139, 27);
             this.dtBirthDate.TabIndex = 20;
+            this.dtBirthDate.ValueChanged += new System.EventHandler(this.dtBirthDate_ValueChanged);
             // 
             // label10
             // 

@@ -41,6 +41,7 @@ namespace DiamondShop
             this.id = id;
             LoadData();
             SetControlEnable(false);
+            isEdit = false;
         }
 
         protected override void Initial()
@@ -50,6 +51,7 @@ namespace DiamondShop
             cmbBuyer.DataSource = ds.Tables[0];
             cmbBuyer.ValueMember = "ID";
             cmbBuyer.DisplayMember = "DisplayName";
+            cmbBuyer.SelectedIndex = ds.Tables[0].Rows.Count - 1;
             cmbBuyer.Refresh();
 
             dtBuyDate.Select();
@@ -62,7 +64,6 @@ namespace DiamondShop
             binder.BindControl(txtSeller, "Seller");
             binder.BindControl(txtBuyPrice, "BuyPrice");
             binder.BindControl(txtSalePrice, "SalePrice");
-            binder.BindControl(dtPayDate, "PayDate");
             binder.BindControl(cmbBuyer , "Buyer");
         }
         protected override void LoadData()
@@ -78,6 +79,7 @@ namespace DiamondShop
             if (tds.BBSetting.Rows.Count > 0)
             {
                 binder.BindValueToControl(tds.BBSetting[0]);
+                txtPayDate.Text = string.Format("{0:d/M/yyyy}", tds.BBSetting[0]["PayDate"]);
 
                 EnableSave = false;
                 EnableEdit = true;
@@ -101,6 +103,7 @@ namespace DiamondShop
 
             SetFormatNumber();
             base.LoadData();
+            cmbBuyer.SelectedValueChanged += cmbBuyer_SelectedValueChanged;
         }
 
         protected override bool SaveData()
@@ -118,6 +121,14 @@ namespace DiamondShop
             }
             binder.BindValueToDataRow(row);
             row.IsPaid = rdoYes.Checked ? "1" : "0";
+            if (txtPayDate.Text == "")
+            {
+                row.PayDate = DateTime.MinValue.AddYears(1900);
+            }
+            else
+            {
+                row.PayDate = Convert.ToDateTime(txtPayDate.Text.ToString());
+            }
             try
             {
                 if (id == 0)
@@ -174,6 +185,10 @@ namespace DiamondShop
             {
                 message = "Please input Seller.\n";
             }
+            if (rdoYes.Checked == true && txtPayDate.Text == "")
+            {
+                message += "Please input Paydate";
+            }
 
             if (message == "") { return true; }
             else { return false; }
@@ -215,7 +230,7 @@ namespace DiamondShop
             }
             else
             {
-                RequirePassword frm = new RequirePassword("2");
+                RequirePassword frm = new RequirePassword("2",0);
                 frm.ShowDialog();
                 isAuthorize = frm.isAuthorize;
                 frm.Close();
@@ -281,6 +296,11 @@ namespace DiamondShop
         }
         private void SetFormatNumber()
         {
+            //ดักเคส MinValue
+            if (txtPayDate.Text != "" && Convert.ToDateTime(txtPayDate.Text).Year == 1901)
+            {
+                txtPayDate.Text = "";
+            }
             txtBuyPrice.Text = GM.ConvertDoubleToString(txtBuyPrice, 0);
             txtSalePrice.Text = GM.ConvertDoubleToString(txtSalePrice, 0);
         }
@@ -303,6 +323,38 @@ namespace DiamondShop
             btnDel.Enabled = status;
             gridSetting.Enabled = status;
             cmbBuyer.Enabled = status;
+        }
+
+        private void txtSeller_TextChanged(object sender, EventArgs e)
+        {
+            isEdit = true;
+        }
+
+        private void cmbBuyer_SelectedValueChanged(object sender, EventArgs e)
+        {
+            isEdit = true;
+        }
+
+        private void rdoYes_CheckedChanged(object sender, EventArgs e)
+        {
+            isEdit = true;
+        }
+
+        private void dtPayDate_ValueChanged(object sender, EventArgs e)
+        {
+            isEdit = true;
+        }
+
+        private void btnChooseDate_Click(object sender, EventArgs e)
+        {
+            monthCalendar1.Visible = true;
+        }
+
+        private void monthCalendar1_DateSelected(object sender, DateRangeEventArgs e)
+        {
+            txtPayDate.Text = monthCalendar1.SelectionRange.Start.ToShortDateString();
+            monthCalendar1.Visible = false;
+            isEdit = true;
         }
     }
 }

@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Payment));
-            this.dtPayDate = new System.Windows.Forms.DateTimePicker();
             this.panel3 = new System.Windows.Forms.Panel();
             this.txtUSDRate = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
@@ -42,24 +41,21 @@
             this.label6 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
+            this.btnChooseDate = new System.Windows.Forms.Button();
+            this.txtPayDate = new System.Windows.Forms.TextBox();
+            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dtPayDate
-            // 
-            this.dtPayDate.CustomFormat = "dd/MM/yyyy";
-            this.dtPayDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtPayDate.Location = new System.Drawing.Point(195, 13);
-            this.dtPayDate.Name = "dtPayDate";
-            this.dtPayDate.Size = new System.Drawing.Size(131, 27);
-            this.dtPayDate.TabIndex = 1;
-            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.btnChooseDate);
+            this.panel3.Controls.Add(this.txtPayDate);
+            this.panel3.Controls.Add(this.monthCalendar1);
             this.panel3.Controls.Add(this.txtUSDRate);
             this.panel3.Controls.Add(this.label23);
             this.panel3.Controls.Add(this.groupBox2);
@@ -67,7 +63,6 @@
             this.panel3.Controls.Add(this.label7);
             this.panel3.Controls.Add(this.txtPrice);
             this.panel3.Controls.Add(this.label6);
-            this.panel3.Controls.Add(this.dtPayDate);
             this.panel3.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.panel3.Location = new System.Drawing.Point(12, 74);
             this.panel3.Name = "panel3";
@@ -82,6 +77,7 @@
             this.txtUSDRate.TabIndex = 159;
             this.txtUSDRate.Text = "0";
             this.txtUSDRate.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtUSDRate.TextChanged += new System.EventHandler(this.txtUSDRate_TextChanged);
             // 
             // label23
             // 
@@ -115,6 +111,7 @@
             this.rdoYes.TabIndex = 100;
             this.rdoYes.Text = "Yes";
             this.rdoYes.UseVisualStyleBackColor = true;
+            this.rdoYes.CheckedChanged += new System.EventHandler(this.rdoYes_CheckedChanged);
             // 
             // rdoNo
             // 
@@ -128,6 +125,7 @@
             this.rdoNo.TabStop = true;
             this.rdoNo.Text = "No";
             this.rdoNo.UseVisualStyleBackColor = true;
+            this.rdoNo.CheckedChanged += new System.EventHandler(this.rdoYes_CheckedChanged);
             // 
             // label8
             // 
@@ -159,6 +157,7 @@
             this.txtPrice.TabIndex = 12;
             this.txtPrice.Text = "0";
             this.txtPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtPrice.TextChanged += new System.EventHandler(this.txtUSDRate_TextChanged);
             this.txtPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrice_KeyPress);
             this.txtPrice.Leave += new System.EventHandler(this.txtPrice_Leave);
             // 
@@ -192,6 +191,32 @@
             this.button1.TabIndex = 32;
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // btnChooseDate
+            // 
+            this.btnChooseDate.Location = new System.Drawing.Point(311, 13);
+            this.btnChooseDate.Name = "btnChooseDate";
+            this.btnChooseDate.Size = new System.Drawing.Size(34, 28);
+            this.btnChooseDate.TabIndex = 251;
+            this.btnChooseDate.UseVisualStyleBackColor = true;
+            this.btnChooseDate.Click += new System.EventHandler(this.btnChooseDate_Click);
+            // 
+            // txtPayDate
+            // 
+            this.txtPayDate.Location = new System.Drawing.Point(182, 14);
+            this.txtPayDate.Name = "txtPayDate";
+            this.txtPayDate.Size = new System.Drawing.Size(123, 27);
+            this.txtPayDate.TabIndex = 250;
+            this.txtPayDate.TextChanged += new System.EventHandler(this.txtPayDate_TextChanged);
+            // 
+            // monthCalendar1
+            // 
+            this.monthCalendar1.Location = new System.Drawing.Point(118, 48);
+            this.monthCalendar1.MaxSelectionCount = 1;
+            this.monthCalendar1.Name = "monthCalendar1";
+            this.monthCalendar1.TabIndex = 249;
+            this.monthCalendar1.Visible = false;
+            this.monthCalendar1.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar1_DateSelected);
+            // 
             // Payment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -213,7 +238,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.DateTimePicker dtPayDate;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel1;
@@ -226,5 +250,8 @@
         private System.Windows.Forms.RadioButton rdoNo;
         private System.Windows.Forms.TextBox txtUSDRate;
         private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Button btnChooseDate;
+        private System.Windows.Forms.TextBox txtPayDate;
+        private System.Windows.Forms.MonthCalendar monthCalendar1;
     }
 }

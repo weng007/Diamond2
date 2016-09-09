@@ -134,6 +134,7 @@
             this.cmbSeller.Name = "cmbSeller";
             this.cmbSeller.Size = new System.Drawing.Size(165, 29);
             this.cmbSeller.TabIndex = 12;
+            this.cmbSeller.SelectedValueChanged += new System.EventHandler(this.cmbSeller_SelectedValueChanged);
             // 
             // label17
             // 
@@ -160,6 +161,7 @@
             this.dtAnniversary.Name = "dtAnniversary";
             this.dtAnniversary.Size = new System.Drawing.Size(147, 27);
             this.dtAnniversary.TabIndex = 16;
+            this.dtAnniversary.ValueChanged += new System.EventHandler(this.dtAnniversary_ValueChanged);
             // 
             // txtTilte
             // 
@@ -167,6 +169,7 @@
             this.txtTilte.Name = "txtTilte";
             this.txtTilte.Size = new System.Drawing.Size(135, 27);
             this.txtTilte.TabIndex = 2;
+            this.txtTilte.TextChanged += new System.EventHandler(this.txtCode_TextChanged);
             // 
             // cmbGender
             // 
@@ -176,6 +179,7 @@
             this.cmbGender.Name = "cmbGender";
             this.cmbGender.Size = new System.Drawing.Size(114, 29);
             this.cmbGender.TabIndex = 176;
+            this.cmbGender.SelectedValueChanged += new System.EventHandler(this.cmbSeller_SelectedValueChanged);
             // 
             // label15
             // 
@@ -209,6 +213,7 @@
             this.txtMobilePhone.Name = "txtMobilePhone";
             this.txtMobilePhone.Size = new System.Drawing.Size(165, 27);
             this.txtMobilePhone.TabIndex = 10;
+            this.txtMobilePhone.TextChanged += new System.EventHandler(this.txtCode_TextChanged);
             // 
             // label13
             // 
@@ -235,6 +240,7 @@
             this.txtComment.Name = "txtComment";
             this.txtComment.Size = new System.Drawing.Size(188, 180);
             this.txtComment.TabIndex = 36;
+            this.txtComment.TextChanged += new System.EventHandler(this.txtCode_TextChanged);
             // 
             // label9
             // 
@@ -253,6 +259,7 @@
             this.txtAge.TabIndex = 20;
             this.txtAge.Text = "22";
             this.txtAge.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtAge.TextChanged += new System.EventHandler(this.txtCode_TextChanged);
             this.txtAge.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNecklace_KeyPress);
             // 
             // label7
@@ -270,6 +277,7 @@
             this.txtDisplayName.Name = "txtDisplayName";
             this.txtDisplayName.Size = new System.Drawing.Size(99, 27);
             this.txtDisplayName.TabIndex = 8;
+            this.txtDisplayName.TextChanged += new System.EventHandler(this.txtCode_TextChanged);
             // 
             // label8
             // 
@@ -286,6 +294,7 @@
             this.cmbShop.Name = "cmbShop";
             this.cmbShop.Size = new System.Drawing.Size(165, 29);
             this.cmbShop.TabIndex = 14;
+            this.cmbShop.SelectedValueChanged += new System.EventHandler(this.cmbSeller_SelectedValueChanged);
             // 
             // label5
             // 
@@ -311,6 +320,7 @@
             this.txtCode.Name = "txtCode";
             this.txtCode.Size = new System.Drawing.Size(165, 27);
             this.txtCode.TabIndex = 100;
+            this.txtCode.TextChanged += new System.EventHandler(this.txtCode_TextChanged);
             // 
             // txtLastName
             // 
@@ -319,6 +329,7 @@
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(165, 27);
             this.txtLastName.TabIndex = 6;
+            this.txtLastName.TextChanged += new System.EventHandler(this.txtCode_TextChanged);
             // 
             // txtFirstName
             // 
@@ -326,6 +337,7 @@
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(165, 27);
             this.txtFirstName.TabIndex = 4;
+            this.txtFirstName.TextChanged += new System.EventHandler(this.txtCode_TextChanged);
             // 
             // label2
             // 
@@ -345,6 +357,7 @@
             this.dtUpdateDate.Name = "dtUpdateDate";
             this.dtUpdateDate.Size = new System.Drawing.Size(147, 27);
             this.dtUpdateDate.TabIndex = 18;
+            this.dtUpdateDate.ValueChanged += new System.EventHandler(this.dtAnniversary_ValueChanged);
             // 
             // label3
             // 
@@ -397,6 +410,7 @@
             this.txtNecklace.TabIndex = 26;
             this.txtNecklace.Text = "0";
             this.txtNecklace.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtNecklace.TextChanged += new System.EventHandler(this.txtCode_TextChanged);
             this.txtNecklace.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNecklace_KeyPress);
             // 
             // panel10
@@ -471,6 +485,7 @@
             this.txtRing10.TabIndex = 46;
             this.txtRing10.Text = "0";
             this.txtRing10.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtRing10.TextChanged += new System.EventHandler(this.txtCode_TextChanged);
             this.txtRing10.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNecklace_KeyPress);
             // 
             // txtRing9
@@ -481,6 +496,7 @@
             this.txtRing9.TabIndex = 44;
             this.txtRing9.Text = "0";
             this.txtRing9.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtRing9.TextChanged += new System.EventHandler(this.txtCode_TextChanged);
             this.txtRing9.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNecklace_KeyPress);
             // 
             // txtRing8
@@ -491,6 +507,7 @@
             this.txtRing8.TabIndex = 42;
             this.txtRing8.Text = "0";
             this.txtRing8.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtRing8.TextChanged += new System.EventHandler(this.txtCode_TextChanged);
             this.txtRing8.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNecklace_KeyPress);
             // 
             // txtRing7
@@ -501,6 +518,7 @@
             this.txtRing7.TabIndex = 40;
             this.txtRing7.Text = "0";
             this.txtRing7.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtRing7.TextChanged += new System.EventHandler(this.txtCode_TextChanged);
             this.txtRing7.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNecklace_KeyPress);
             // 
             // txtRing6
@@ -511,6 +529,7 @@
             this.txtRing6.TabIndex = 38;
             this.txtRing6.Text = "0";
             this.txtRing6.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtRing6.TextChanged += new System.EventHandler(this.txtCode_TextChanged);
             this.txtRing6.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNecklace_KeyPress);
             // 
             // txtRing1
@@ -521,6 +540,7 @@
             this.txtRing1.TabIndex = 28;
             this.txtRing1.Text = "0";
             this.txtRing1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtRing1.TextChanged += new System.EventHandler(this.txtCode_TextChanged);
             this.txtRing1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNecklace_KeyPress);
             // 
             // txtRing2
@@ -531,6 +551,7 @@
             this.txtRing2.TabIndex = 30;
             this.txtRing2.Text = "0";
             this.txtRing2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtRing2.TextChanged += new System.EventHandler(this.txtCode_TextChanged);
             this.txtRing2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNecklace_KeyPress);
             // 
             // txtRing3
@@ -541,6 +562,7 @@
             this.txtRing3.TabIndex = 32;
             this.txtRing3.Text = "0";
             this.txtRing3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtRing3.TextChanged += new System.EventHandler(this.txtCode_TextChanged);
             this.txtRing3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNecklace_KeyPress);
             // 
             // txtRing5
@@ -551,6 +573,7 @@
             this.txtRing5.TabIndex = 36;
             this.txtRing5.Text = "0";
             this.txtRing5.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtRing5.TextChanged += new System.EventHandler(this.txtCode_TextChanged);
             this.txtRing5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNecklace_KeyPress);
             // 
             // txtRing4
@@ -561,6 +584,7 @@
             this.txtRing4.TabIndex = 34;
             this.txtRing4.Text = "0";
             this.txtRing4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtRing4.TextChanged += new System.EventHandler(this.txtCode_TextChanged);
             this.txtRing4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNecklace_KeyPress);
             // 
             // panel12
@@ -603,6 +627,7 @@
             this.txtBracelet.TabIndex = 48;
             this.txtBracelet.Text = "0";
             this.txtBracelet.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtBracelet.TextChanged += new System.EventHandler(this.txtCode_TextChanged);
             this.txtBracelet.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNecklace_KeyPress);
             // 
             // Customer

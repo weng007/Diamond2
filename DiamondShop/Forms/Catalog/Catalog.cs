@@ -40,6 +40,8 @@ namespace DiamondShop
             txtUpdateBy.Text = ApplicationInfo.UserName;
             this.id = id;
             LoadData();
+
+            isEdit = false;
         }
 
         private void BinderData()
@@ -100,6 +102,7 @@ namespace DiamondShop
             SetFormatNumber();
 
             base.LoadData();
+
         }
 
         private void SetFormatNumber()
@@ -222,6 +225,16 @@ namespace DiamondShop
         {
             DiamondDetailCatalog frm = new DiamondDetailCatalog(Convert.ToInt32(tds.Tables[0].Rows[0]["RefID"].ToString()));
             frm.ShowDialog();
+        }
+
+        private void txtUpdateBy_TextChanged(object sender, EventArgs e)
+        {
+            isEdit = true;
+        }
+
+        private void dtImportDate_ValueChanged(object sender, EventArgs e)
+        {
+            isEdit = true;
         }
 
         private void btnGemstone_Click(object sender, EventArgs e)

@@ -83,6 +83,7 @@ namespace DiamondShop
 
             this.id = id;
             LoadData();
+            isEdit = false;
         }
 
         protected override void Initial()
@@ -123,6 +124,7 @@ namespace DiamondShop
             }
 
             base.LoadData();
+            cmbSeller.SelectedValueChanged += cmbSeller_SelectedValueChanged;
         }
 
         protected override bool SaveData()
@@ -216,6 +218,22 @@ namespace DiamondShop
         private void dtBirthDate_ValueChanged(object sender, EventArgs e)
         {
             txtAge.Text = (DateTime.Today.Year - dtBirthDate.Value.Year).ToString();
+            isEdit = true;
+        }
+
+        private void txtCode_TextChanged(object sender, EventArgs e)
+        {
+            isEdit = true;
+        }
+
+        private void dtAnniversary_ValueChanged(object sender, EventArgs e)
+        {
+            isEdit = true;
+        }
+
+        private void cmbSeller_SelectedValueChanged(object sender, EventArgs e)
+        {
+            isEdit = true;
         }
     }
 }

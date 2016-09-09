@@ -45,6 +45,7 @@ namespace Diamond
         static WarningBiz bizWarning;
         static TransferBiz bizTransfer;
         static TransferDetailBiz bizTransferDetail;
+        static OrderBiz bizOrder;
 
         public static MasterTableDetailBiz GetMasterTableDetailBiz()
         {
@@ -252,6 +253,12 @@ namespace Diamond
             if (bizTransferDetail == null)
             { return new TransferDetailBiz(); }
             else { return bizTransferDetail; }
+        }
+        public static OrderBiz GetOrderBiz()
+        {
+            if (bizOrder == null)
+            { return new OrderBiz(); }
+            else { return bizOrder; }
         }
     }
 }

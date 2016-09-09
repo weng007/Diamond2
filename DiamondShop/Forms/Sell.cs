@@ -69,6 +69,7 @@ namespace DiamondShop
 
             this.id = id;
             LoadData();
+            isEdit = false;
         }
         protected override void Initial()
         {
@@ -120,7 +121,9 @@ namespace DiamondShop
             }
             SetFormatNumber();
             base.LoadData();
-            
+
+            cmbSeller.SelectedValueChanged += cmbSeller_SelectedValueChanged;
+
         }
 
         protected override bool SaveData()
@@ -354,6 +357,26 @@ namespace DiamondShop
         {
             Report.ReportViewer report = new Report.ReportViewer(id);
             report.ShowDialog();
+        }
+
+        private void txtCode_TextAlignChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCode_TextChanged(object sender, EventArgs e)
+        {
+            isEdit = true;
+        }
+
+        private void cmbSeller_SelectedValueChanged(object sender, EventArgs e)
+        {
+            isEdit = true;
+        }
+
+        private void dtSellDate_ValueChanged(object sender, EventArgs e)
+        {
+            isEdit = true;
         }
     }
 }

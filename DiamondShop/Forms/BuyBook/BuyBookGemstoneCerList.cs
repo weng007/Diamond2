@@ -154,9 +154,12 @@ namespace DiamondShop
                 id = (int)gridGemstoneCer.SelectedRows[0].Cells["ID"].Value;
                 BuyBookGemstoneCer frm = new BuyBookGemstoneCer(id);
                 frm.ShowDialog();
-            }
 
-            DoLoadData();
+                if (frm.isEdit)
+                {
+                    DoLoadData();
+                }
+            }
         }
 
         private void cmbIdentification_SelectedIndexChanged(object sender, EventArgs e)

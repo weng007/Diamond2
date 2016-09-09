@@ -82,9 +82,12 @@ namespace DiamondShop
                 id = (int)gridSetting.SelectedRows[0].Cells["ID"].Value;
                 BuyBookSetting frm = new BuyBookSetting(id);
                 frm.ShowDialog();
-            }
 
-            DoLoadData();
+                if (frm.isEdit)
+                {
+                    DoLoadData();
+                }
+            }
         }
     }
 }

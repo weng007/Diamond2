@@ -50,6 +50,8 @@
             this.txtFullName = new System.Windows.Forms.TextBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.btnActivity = new System.Windows.Forms.ToolStripMenuItem();
+            this.warningToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.calendarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnMaster = new System.Windows.Forms.ToolStripMenuItem();
             this.menuUser = new System.Windows.Forms.ToolStripMenuItem();
             this.menuExchangeRate = new System.Windows.Forms.ToolStripMenuItem();
@@ -70,8 +72,8 @@
             this.btnCerDiamond = new System.Windows.Forms.ToolStripMenuItem();
             this.btnCustomer = new System.Windows.Forms.ToolStripMenuItem();
             this.btnCerGemstone = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnSell = new System.Windows.Forms.ToolStripMenuItem();
             this.btnConsign = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnSell = new System.Windows.Forms.ToolStripMenuItem();
             this.btnInventory = new System.Windows.Forms.ToolStripMenuItem();
             this.mnInvDR = new System.Windows.Forms.ToolStripMenuItem();
             this.mnInvDE = new System.Windows.Forms.ToolStripMenuItem();
@@ -132,6 +134,11 @@
             this.imageList1.Images.SetKeyName(13, "TabCustomer.png");
             this.imageList1.Images.SetKeyName(14, "TabSell.png");
             this.imageList1.Images.SetKeyName(15, "TabInventory.png");
+            this.imageList1.Images.SetKeyName(16, "TabPayment.png");
+            this.imageList1.Images.SetKeyName(17, "TabWarning.png");
+            this.imageList1.Images.SetKeyName(18, "TabCalendar.png");
+            this.imageList1.Images.SetKeyName(19, "TabTransfer.png");
+            this.imageList1.Images.SetKeyName(20, "TabOrder.png");
             // 
             // btnUser
             // 
@@ -175,7 +182,6 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1366, 637);
             this.tabControl1.TabIndex = 12;
-            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             this.tabControl1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.tabControl1_MouseUp);
             // 
             // panel1
@@ -292,9 +298,9 @@
             this.panel2.Controls.Add(this.btnLogout);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.txtFullName);
-            this.panel2.Location = new System.Drawing.Point(1137, 36);
+            this.panel2.Location = new System.Drawing.Point(1103, 36);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(222, 91);
+            this.panel2.Size = new System.Drawing.Size(251, 91);
             this.panel2.TabIndex = 10;
             // 
             // btnLogout
@@ -302,7 +308,7 @@
             this.btnLogout.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLogout.BackgroundImage")));
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogout.Location = new System.Drawing.Point(151, 15);
+            this.btnLogout.Location = new System.Drawing.Point(176, 15);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(64, 27);
             this.btnLogout.TabIndex = 13;
@@ -315,16 +321,16 @@
             this.panel3.Controls.Add(this.label2);
             this.panel3.Location = new System.Drawing.Point(0, 56);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(288, 35);
+            this.panel3.Size = new System.Drawing.Size(251, 35);
             this.panel3.TabIndex = 12;
             // 
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label2.Image = ((System.Drawing.Image)(resources.GetObject("label2.Image")));
-            this.label2.Location = new System.Drawing.Point(3, 2);
+            this.label2.Location = new System.Drawing.Point(30, 1);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(145, 28);
+            this.label2.Size = new System.Drawing.Size(195, 28);
             this.label2.TabIndex = 0;
             // 
             // txtFullName
@@ -333,7 +339,7 @@
             this.txtFullName.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFullName.Location = new System.Drawing.Point(12, 15);
             this.txtFullName.Name = "txtFullName";
-            this.txtFullName.Size = new System.Drawing.Size(124, 27);
+            this.txtFullName.Size = new System.Drawing.Size(158, 27);
             this.txtFullName.TabIndex = 11;
             // 
             // menuStrip1
@@ -359,18 +365,40 @@
             this.menuStrip1.Location = new System.Drawing.Point(2, 35);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(6, 0, 0, 0);
-            this.menuStrip1.Size = new System.Drawing.Size(1132, 95);
+            this.menuStrip1.Size = new System.Drawing.Size(1098, 95);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // btnActivity
             // 
+            this.btnActivity.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.warningToolStripMenuItem,
+            this.calendarToolStripMenuItem});
             this.btnActivity.Image = ((System.Drawing.Image)(resources.GetObject("btnActivity.Image")));
             this.btnActivity.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnActivity.Name = "btnActivity";
             this.btnActivity.Padding = new System.Windows.Forms.Padding(2);
             this.btnActivity.Size = new System.Drawing.Size(78, 95);
-            this.btnActivity.Click += new System.EventHandler(this.btnActivity_Click);
+            // 
+            // warningToolStripMenuItem
+            // 
+            this.warningToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 11.25F);
+            this.warningToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("warningToolStripMenuItem.Image")));
+            this.warningToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.warningToolStripMenuItem.Name = "warningToolStripMenuItem";
+            this.warningToolStripMenuItem.Size = new System.Drawing.Size(168, 38);
+            this.warningToolStripMenuItem.Text = "Warning";
+            this.warningToolStripMenuItem.Click += new System.EventHandler(this.warningToolStripMenuItem_Click);
+            // 
+            // calendarToolStripMenuItem
+            // 
+            this.calendarToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 11.25F);
+            this.calendarToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("calendarToolStripMenuItem.Image")));
+            this.calendarToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.calendarToolStripMenuItem.Name = "calendarToolStripMenuItem";
+            this.calendarToolStripMenuItem.Size = new System.Drawing.Size(168, 38);
+            this.calendarToolStripMenuItem.Text = "Calendar";
+            this.calendarToolStripMenuItem.Click += new System.EventHandler(this.calendarToolStripMenuItem_Click);
             // 
             // btnMaster
             // 
@@ -584,6 +612,15 @@
             this.btnCerGemstone.Size = new System.Drawing.Size(78, 95);
             this.btnCerGemstone.Click += new System.EventHandler(this.btnCerGemstone_Click);
             // 
+            // btnConsign
+            // 
+            this.btnConsign.Image = ((System.Drawing.Image)(resources.GetObject("btnConsign.Image")));
+            this.btnConsign.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.btnConsign.Name = "btnConsign";
+            this.btnConsign.Padding = new System.Windows.Forms.Padding(2);
+            this.btnConsign.Size = new System.Drawing.Size(78, 95);
+            this.btnConsign.Visible = false;
+            // 
             // btnSell
             // 
             this.btnSell.Image = ((System.Drawing.Image)(resources.GetObject("btnSell.Image")));
@@ -592,14 +629,6 @@
             this.btnSell.Padding = new System.Windows.Forms.Padding(2);
             this.btnSell.Size = new System.Drawing.Size(78, 95);
             this.btnSell.Click += new System.EventHandler(this.btnSell_Click);
-            // 
-            // btnConsign
-            // 
-            this.btnConsign.Image = ((System.Drawing.Image)(resources.GetObject("btnConsign.Image")));
-            this.btnConsign.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.btnConsign.Name = "btnConsign";
-            this.btnConsign.Padding = new System.Windows.Forms.Padding(2);
-            this.btnConsign.Size = new System.Drawing.Size(78, 95);
             // 
             // btnInventory
             // 
@@ -620,7 +649,7 @@
             this.btnInventory.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInventory.Image = ((System.Drawing.Image)(resources.GetObject("btnInventory.Image")));
             this.btnInventory.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.btnInventory.Margin = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnInventory.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnInventory.Name = "btnInventory";
             this.btnInventory.Padding = new System.Windows.Forms.Padding(3, 4, 4, 4);
             this.btnInventory.Size = new System.Drawing.Size(81, 95);
@@ -772,6 +801,7 @@
             this.btnOrderFactory.Name = "btnOrderFactory";
             this.btnOrderFactory.Padding = new System.Windows.Forms.Padding(10, 4, 4, 4);
             this.btnOrderFactory.Size = new System.Drawing.Size(88, 95);
+            this.btnOrderFactory.Click += new System.EventHandler(this.btnOrderFactory_Click);
             // 
             // btnBuyBook
             // 
@@ -1061,6 +1091,8 @@
         private System.Windows.Forms.ToolStripMenuItem btnReportCustomer;
         private System.Windows.Forms.ToolStripMenuItem btnActivity;
         private System.Windows.Forms.ToolStripMenuItem btnTransfer;
+        private System.Windows.Forms.ToolStripMenuItem warningToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem calendarToolStripMenuItem;
     }
 }
 

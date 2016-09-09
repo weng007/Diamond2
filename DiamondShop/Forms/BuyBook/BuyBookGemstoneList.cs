@@ -91,9 +91,12 @@ namespace DiamondShop
                 id = (int)gridGemstone.SelectedRows[0].Cells["ID"].Value;
                 BuyBookGemstone frm = new BuyBookGemstone(id);
                 frm.ShowDialog();
-            }
 
-            DoLoadData();
+                if (frm.isEdit)
+                {
+                    DoLoadData();
+                }
+            }
         }
     }
 }

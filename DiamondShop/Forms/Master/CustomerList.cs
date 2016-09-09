@@ -16,7 +16,8 @@ namespace DiamondShop
     {
         int mode = 0;
         public int custID=0;
-        public string customerName = "";    
+        public string customerName = "";
+        public string Tel = "";
 
         public CustomerList()
         {
@@ -125,17 +126,21 @@ namespace DiamondShop
                     id = (int)gridCustomer.SelectedRows[0].Cells["ID"].Value;
                     Customer frm = new Customer(id);
                     frm.ShowDialog();
+
+                    if (frm.isEdit)
+                    {
+                        DoLoadData();
+                    }
                 }
             }
             else //mode = 1 Search
             {
                 custID = (int)gridCustomer.SelectedRows[0].Cells["ID"].Value;
                 customerName = gridCustomer.SelectedRows[0].Cells["DisplayName"].Value.ToString();
+                Tel = gridCustomer.SelectedRows[0].Cells["MobilePhone"].Value.ToString();
 
                 this.Close();
             }
-
-            DoLoadData();
         }
 
         private void btnClose_Click(object sender, EventArgs e)

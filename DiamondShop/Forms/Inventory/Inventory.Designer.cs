@@ -453,12 +453,13 @@
             this.txtSize.TabIndex = 10;
             this.txtSize.Text = "0";
             this.txtSize.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtSize.TextChanged += new System.EventHandler(this.txtRedCost_TextChanged);
             // 
             // label38
             // 
             this.label38.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label38.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label38.Location = new System.Drawing.Point(383, 90);
+            this.label38.Location = new System.Drawing.Point(386, 90);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(42, 29);
             this.label38.TabIndex = 202;
@@ -473,6 +474,7 @@
             this.dtImportDate.Name = "dtImportDate";
             this.dtImportDate.Size = new System.Drawing.Size(131, 27);
             this.dtImportDate.TabIndex = 14;
+            this.dtImportDate.ValueChanged += new System.EventHandler(this.dtUpdateDate_ValueChanged);
             // 
             // dtUpdateDate
             // 
@@ -483,6 +485,7 @@
             this.dtUpdateDate.Name = "dtUpdateDate";
             this.dtUpdateDate.Size = new System.Drawing.Size(131, 27);
             this.dtUpdateDate.TabIndex = 4;
+            this.dtUpdateDate.ValueChanged += new System.EventHandler(this.dtUpdateDate_ValueChanged);
             // 
             // btnGemstone
             // 
@@ -534,6 +537,7 @@
             this.txtTechnician.Name = "txtTechnician";
             this.txtTechnician.Size = new System.Drawing.Size(187, 27);
             this.txtTechnician.TabIndex = 32;
+            this.txtTechnician.TextChanged += new System.EventHandler(this.txtRedCost_TextChanged);
             // 
             // label37
             // 
@@ -554,6 +558,7 @@
             this.txtPriceTag.TabIndex = 38;
             this.txtPriceTag.Text = "0";
             this.txtPriceTag.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtPriceTag.TextChanged += new System.EventHandler(this.txtRedCost_TextChanged);
             this.txtPriceTag.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
             this.txtPriceTag.Leave += new System.EventHandler(this.txtPricePerGram1_Leave);
             // 
@@ -576,6 +581,7 @@
             this.txtMinPrice.TabIndex = 36;
             this.txtMinPrice.Text = "0";
             this.txtMinPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtMinPrice.TextChanged += new System.EventHandler(this.txtRedCost_TextChanged);
             this.txtMinPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
             this.txtMinPrice.Leave += new System.EventHandler(this.txtPricePerGram1_Leave);
             // 
@@ -599,6 +605,7 @@
             this.txtRedCost1.TabIndex = 154;
             this.txtRedCost1.Text = "0";
             this.txtRedCost1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtRedCost1.TextChanged += new System.EventHandler(this.txtRedCost_TextChanged);
             this.txtRedCost1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
             // 
             // label34
@@ -621,6 +628,7 @@
             this.txtRedCost.TabIndex = 68;
             this.txtRedCost.Text = "0";
             this.txtRedCost.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtRedCost.TextChanged += new System.EventHandler(this.txtRedCost_TextChanged);
             this.txtRedCost.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
             // 
             // label33
@@ -1108,6 +1116,7 @@
             this.txtRemark.Name = "txtRemark";
             this.txtRemark.Size = new System.Drawing.Size(320, 87);
             this.txtRemark.TabIndex = 40;
+            this.txtRemark.TextChanged += new System.EventHandler(this.txtRedCost_TextChanged);
             // 
             // label27
             // 
@@ -1130,11 +1139,13 @@
             // 
             // cmbShop
             // 
+            this.cmbShop.Enabled = false;
             this.cmbShop.FormattingEnabled = true;
             this.cmbShop.Location = new System.Drawing.Point(436, 19);
             this.cmbShop.Name = "cmbShop";
             this.cmbShop.Size = new System.Drawing.Size(165, 29);
             this.cmbShop.TabIndex = 6;
+            this.cmbShop.SelectedValueChanged += new System.EventHandler(this.cmbShop_SelectedValueChanged);
             // 
             // cmbStatus
             // 
@@ -1144,6 +1155,7 @@
             this.cmbStatus.Name = "cmbStatus";
             this.cmbStatus.Size = new System.Drawing.Size(165, 29);
             this.cmbStatus.TabIndex = 12;
+            this.cmbStatus.SelectedValueChanged += new System.EventHandler(this.cmbShop_SelectedValueChanged);
             // 
             // cmbJewelryType
             // 
@@ -1153,6 +1165,7 @@
             this.cmbJewelryType.Name = "cmbJewelryType";
             this.cmbJewelryType.Size = new System.Drawing.Size(165, 29);
             this.cmbJewelryType.TabIndex = 8;
+            this.cmbJewelryType.SelectedValueChanged += new System.EventHandler(this.cmbShop_SelectedValueChanged);
             // 
             // txtMaterialWeight1
             // 
@@ -1194,14 +1207,15 @@
             this.txtUpdateBy.ReadOnly = true;
             this.txtUpdateBy.Size = new System.Drawing.Size(162, 27);
             this.txtUpdateBy.TabIndex = 2;
+            this.txtUpdateBy.TextChanged += new System.EventHandler(this.txtRedCost_TextChanged);
             // 
             // label19
             // 
-            this.label19.Location = new System.Drawing.Point(372, 22);
+            this.label19.Location = new System.Drawing.Point(344, 22);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(58, 28);
+            this.label19.Size = new System.Drawing.Size(86, 28);
             this.label19.TabIndex = 89;
-            this.label19.Text = "Shop";
+            this.label19.Text = "Location";
             // 
             // cmbMaterial1
             // 
@@ -1210,11 +1224,12 @@
             this.cmbMaterial1.Name = "cmbMaterial1";
             this.cmbMaterial1.Size = new System.Drawing.Size(165, 29);
             this.cmbMaterial1.TabIndex = 16;
+            this.cmbMaterial1.SelectedValueChanged += new System.EventHandler(this.cmbShop_SelectedValueChanged);
             // 
             // label24
             // 
             this.label24.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.label24.Location = new System.Drawing.Point(372, 58);
+            this.label24.Location = new System.Drawing.Point(377, 58);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(58, 26);
             this.label24.TabIndex = 80;

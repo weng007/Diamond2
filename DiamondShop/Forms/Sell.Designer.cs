@@ -31,6 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Sell));
             this.btnImage1 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtStatus = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.txtCertified = new System.Windows.Forms.TextBox();
             this.chkIsPrintPrice = new System.Windows.Forms.CheckBox();
@@ -72,9 +75,6 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.label12 = new System.Windows.Forms.Label();
-            this.txtStatus = new System.Windows.Forms.TextBox();
-            this.btnCancel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -146,6 +146,41 @@
             this.panel3.Size = new System.Drawing.Size(943, 651);
             this.panel3.TabIndex = 1;
             // 
+            // btnCancel
+            // 
+            this.btnCancel.BackColor = System.Drawing.Color.Transparent;
+            this.btnCancel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCancel.BackgroundImage")));
+            this.btnCancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCancel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(109)))), ((int)(((byte)(65)))));
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel.Location = new System.Drawing.Point(595, 594);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(35, 33);
+            this.btnCancel.TabIndex = 198;
+            this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // label12
+            // 
+            this.label12.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(31, 262);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(73, 26);
+            this.label12.TabIndex = 197;
+            this.label12.Text = "Status";
+            // 
+            // txtStatus
+            // 
+            this.txtStatus.BackColor = System.Drawing.SystemColors.Window;
+            this.txtStatus.Enabled = false;
+            this.txtStatus.Location = new System.Drawing.Point(30, 291);
+            this.txtStatus.Name = "txtStatus";
+            this.txtStatus.ReadOnly = true;
+            this.txtStatus.Size = new System.Drawing.Size(150, 27);
+            this.txtStatus.TabIndex = 196;
+            this.txtStatus.TextChanged += new System.EventHandler(this.txtCode_TextChanged);
+            // 
             // label11
             // 
             this.label11.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -165,6 +200,7 @@
             this.txtCertified.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtCertified.Size = new System.Drawing.Size(368, 110);
             this.txtCertified.TabIndex = 194;
+            this.txtCertified.TextChanged += new System.EventHandler(this.txtCode_TextChanged);
             // 
             // chkIsPrintPrice
             // 
@@ -203,6 +239,7 @@
             this.txtCerNo.ReadOnly = true;
             this.txtCerNo.Size = new System.Drawing.Size(167, 27);
             this.txtCerNo.TabIndex = 190;
+            this.txtCerNo.TextChanged += new System.EventHandler(this.txtCode_TextChanged);
             // 
             // label9
             // 
@@ -221,6 +258,7 @@
             this.txtMaterial.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtMaterial.Size = new System.Drawing.Size(196, 135);
             this.txtMaterial.TabIndex = 188;
+            this.txtMaterial.TextChanged += new System.EventHandler(this.txtCode_TextChanged);
             // 
             // txtNetPrice
             // 
@@ -230,6 +268,7 @@
             this.txtNetPrice.TabIndex = 4;
             this.txtNetPrice.Text = "0";
             this.txtNetPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtNetPrice.TextChanged += new System.EventHandler(this.txtCode_TextChanged);
             this.txtNetPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetPrice_KeyPress);
             this.txtNetPrice.Leave += new System.EventHandler(this.txtPriceTag_Leave);
             // 
@@ -258,6 +297,7 @@
             this.txtCustomer.ReadOnly = true;
             this.txtCustomer.Size = new System.Drawing.Size(166, 27);
             this.txtCustomer.TabIndex = 185;
+            this.txtCustomer.TextChanged += new System.EventHandler(this.txtCode_TextChanged);
             // 
             // btnPrint
             // 
@@ -283,6 +323,7 @@
             this.txtPriceTag.TabIndex = 24;
             this.txtPriceTag.Text = "0";
             this.txtPriceTag.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtPriceTag.TextChanged += new System.EventHandler(this.txtCode_TextChanged);
             this.txtPriceTag.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetPrice_KeyPress);
             this.txtPriceTag.Leave += new System.EventHandler(this.txtPriceTag_Leave);
             // 
@@ -301,6 +342,7 @@
             this.cmbShopRecive.Name = "cmbShopRecive";
             this.cmbShopRecive.Size = new System.Drawing.Size(167, 29);
             this.cmbShopRecive.TabIndex = 6;
+            this.cmbShopRecive.SelectedIndexChanged += new System.EventHandler(this.cmbSeller_SelectedValueChanged);
             // 
             // label6
             // 
@@ -337,6 +379,7 @@
             this.txtDiamond.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtDiamond.Size = new System.Drawing.Size(276, 110);
             this.txtDiamond.TabIndex = 44;
+            this.txtDiamond.TextChanged += new System.EventHandler(this.txtCode_TextChanged);
             // 
             // dtDueDate
             // 
@@ -346,6 +389,7 @@
             this.dtDueDate.Name = "dtDueDate";
             this.dtDueDate.Size = new System.Drawing.Size(137, 27);
             this.dtDueDate.TabIndex = 10;
+            this.dtDueDate.ValueChanged += new System.EventHandler(this.dtSellDate_ValueChanged);
             // 
             // label3
             // 
@@ -365,6 +409,7 @@
             this.dtPaymentDate.Name = "dtPaymentDate";
             this.dtPaymentDate.Size = new System.Drawing.Size(137, 27);
             this.dtPaymentDate.TabIndex = 14;
+            this.dtPaymentDate.ValueChanged += new System.EventHandler(this.dtSellDate_ValueChanged);
             // 
             // label1
             // 
@@ -382,6 +427,7 @@
             this.cmbSeller.Name = "cmbSeller";
             this.cmbSeller.Size = new System.Drawing.Size(167, 29);
             this.cmbSeller.TabIndex = 2;
+            this.cmbSeller.SelectedValueChanged += new System.EventHandler(this.cmbSeller_SelectedValueChanged);
             // 
             // txtJewelryTypeName
             // 
@@ -391,6 +437,7 @@
             this.txtJewelryTypeName.ReadOnly = true;
             this.txtJewelryTypeName.Size = new System.Drawing.Size(166, 27);
             this.txtJewelryTypeName.TabIndex = 16;
+            this.txtJewelryTypeName.TextChanged += new System.EventHandler(this.txtCode_TextChanged);
             // 
             // btnPending
             // 
@@ -430,6 +477,7 @@
             this.dtSellDate.Name = "dtSellDate";
             this.dtSellDate.Size = new System.Drawing.Size(137, 27);
             this.dtSellDate.TabIndex = 8;
+            this.dtSellDate.ValueChanged += new System.EventHandler(this.dtSellDate_ValueChanged);
             // 
             // label2
             // 
@@ -463,6 +511,7 @@
             this.cmbPayment.Size = new System.Drawing.Size(138, 29);
             this.cmbPayment.TabIndex = 12;
             this.cmbPayment.SelectedIndexChanged += new System.EventHandler(this.cmbPayment_SelectedIndexChanged);
+            this.cmbPayment.SelectedValueChanged += new System.EventHandler(this.cmbSeller_SelectedValueChanged);
             // 
             // label5
             // 
@@ -525,6 +574,8 @@
             this.txtCode.ReadOnly = true;
             this.txtCode.Size = new System.Drawing.Size(167, 27);
             this.txtCode.TabIndex = 0;
+            this.txtCode.TextAlignChanged += new System.EventHandler(this.txtCode_TextAlignChanged);
+            this.txtCode.TextChanged += new System.EventHandler(this.txtCode_TextChanged);
             // 
             // label14
             // 
@@ -545,40 +596,6 @@
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // label12
-            // 
-            this.label12.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(31, 262);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(73, 26);
-            this.label12.TabIndex = 197;
-            this.label12.Text = "Status";
-            // 
-            // txtStatus
-            // 
-            this.txtStatus.BackColor = System.Drawing.SystemColors.Window;
-            this.txtStatus.Enabled = false;
-            this.txtStatus.Location = new System.Drawing.Point(30, 291);
-            this.txtStatus.Name = "txtStatus";
-            this.txtStatus.ReadOnly = true;
-            this.txtStatus.Size = new System.Drawing.Size(150, 27);
-            this.txtStatus.TabIndex = 196;
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.BackColor = System.Drawing.Color.Transparent;
-            this.btnCancel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCancel.BackgroundImage")));
-            this.btnCancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCancel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(109)))), ((int)(((byte)(65)))));
-            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.Location = new System.Drawing.Point(595, 594);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(35, 33);
-            this.btnCancel.TabIndex = 198;
-            this.btnCancel.UseVisualStyleBackColor = false;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // Sell
             // 

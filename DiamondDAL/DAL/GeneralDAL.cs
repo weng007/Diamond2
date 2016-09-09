@@ -223,5 +223,21 @@ namespace DiamondDAL.DAL
 
             return ds;
         }
+        public int UpdateMessageStatus(int id, string Flag)
+        {
+            try
+            {
+                SQL.ClearParameter();
+                SQL.CreateParameter("@ID", id);
+                SQL.CreateParameter("@Flag", Flag);
+                flag = SQL.ExecuteSP("SP_Warning_Upd_MessageStatus");
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return flag;
+        }
     }
 }

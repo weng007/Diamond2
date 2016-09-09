@@ -38,6 +38,8 @@ namespace DiamondShop
 
             this.id = id;
             LoadData();
+
+            isEdit = false;
         }
 
         private void BinderData()
@@ -190,6 +192,11 @@ namespace DiamondShop
             txtRap.Text = GM.ConvertDoubleToString(txtRap, 0);
             txtUSDPrice.Text = GM.ConvertDoubleToString(txtUSDPrice, 0);
             txtBahtPrice.Text = GM.ConvertDoubleToString(txtBahtPrice, 0);
+        }
+
+        private void txtNote_TextChanged(object sender, EventArgs e)
+        {
+            isEdit = true;
         }
     }
 }

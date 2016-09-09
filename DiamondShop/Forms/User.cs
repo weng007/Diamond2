@@ -77,6 +77,7 @@ namespace DiamondShop
 
             this.id = id;
             LoadData();
+            isEdit = false;
         }
 
         protected override void LoadData()
@@ -96,6 +97,7 @@ namespace DiamondShop
             }
 
             base.LoadData();
+            cmbShop.SelectedValueChanged += cmbShop_SelectedValueChanged;
         }
 
         protected override bool SaveData()
@@ -196,6 +198,21 @@ namespace DiamondShop
                 lblBuyBook.Visible = false;
                 txtPassword3.Visible = false;
             }
+        }
+
+        private void txtTitleName_TextChanged(object sender, EventArgs e)
+        {
+            isEdit = true;
+        }
+
+        private void cmbShop_SelectedValueChanged(object sender, EventArgs e)
+        {
+            isEdit = true;
+        }
+
+        private void dtBirthDate_ValueChanged(object sender, EventArgs e)
+        {
+            isEdit = true;
         }
     }
 }

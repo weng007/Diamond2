@@ -78,9 +78,12 @@ namespace DiamondShop
                 id = (int)gridSell.SelectedRows[0].Cells["ID"].Value;
                 Sell frm = new Sell(id);
                 frm.ShowDialog();
-            }
 
-            DoLoadData();
+                if (frm.isEdit)
+                {
+                    DoLoadData();
+                }
+            }
         }
     }
 }

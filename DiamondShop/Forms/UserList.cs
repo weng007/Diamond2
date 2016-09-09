@@ -114,9 +114,13 @@ namespace DiamondShop
                 id = (int)grid.SelectedRows[0].Cells["ID"].Value;
                 User frm = new User(id);
                 frm.ShowDialog();
+
+                if (frm.isEdit)
+                {
+                    DoLoadData();
+                }
             }
 
-            DoLoadData();
         }
     }
 }
