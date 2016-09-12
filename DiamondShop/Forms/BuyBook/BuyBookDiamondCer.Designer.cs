@@ -31,6 +31,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BuyBookDiamondCer));
             this.dtBuyDate = new System.Windows.Forms.DateTimePicker();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnChooseDate = new System.Windows.Forms.Button();
+            this.txtPayDate = new System.Windows.Forms.TextBox();
+            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
+            this.label32 = new System.Windows.Forms.Label();
+            this.txtCode2 = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.cmbBuyer = new System.Windows.Forms.ComboBox();
             this.label17 = new System.Windows.Forms.Label();
@@ -41,7 +46,6 @@
             this.txtW = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
-            this.dtPayDate = new System.Windows.Forms.DateTimePicker();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.rdoYes = new System.Windows.Forms.RadioButton();
             this.rdoNo = new System.Windows.Forms.RadioButton();
@@ -104,8 +108,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.openFileDialog2 = new System.Windows.Forms.OpenFileDialog();
-            this.label32 = new System.Windows.Forms.Label();
-            this.txtCode2 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -120,11 +122,15 @@
             this.dtBuyDate.Name = "dtBuyDate";
             this.dtBuyDate.Size = new System.Drawing.Size(131, 27);
             this.dtBuyDate.TabIndex = 0;
+            this.dtBuyDate.ValueChanged += new System.EventHandler(this.dtBuyDate_ValueChanged);
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.btnChooseDate);
+            this.panel3.Controls.Add(this.txtPayDate);
+            this.panel3.Controls.Add(this.monthCalendar1);
             this.panel3.Controls.Add(this.label32);
             this.panel3.Controls.Add(this.txtCode2);
             this.panel3.Controls.Add(this.label13);
@@ -137,7 +143,6 @@
             this.panel3.Controls.Add(this.txtW);
             this.panel3.Controls.Add(this.label9);
             this.panel3.Controls.Add(this.label31);
-            this.panel3.Controls.Add(this.dtPayDate);
             this.panel3.Controls.Add(this.groupBox2);
             this.panel3.Controls.Add(this.groupBox1);
             this.panel3.Controls.Add(this.btnUpload);
@@ -199,6 +204,50 @@
             this.panel3.Size = new System.Drawing.Size(1001, 520);
             this.panel3.TabIndex = 74;
             // 
+            // btnChooseDate
+            // 
+            this.btnChooseDate.Location = new System.Drawing.Point(945, 218);
+            this.btnChooseDate.Name = "btnChooseDate";
+            this.btnChooseDate.Size = new System.Drawing.Size(34, 28);
+            this.btnChooseDate.TabIndex = 242;
+            this.btnChooseDate.UseVisualStyleBackColor = true;
+            this.btnChooseDate.Click += new System.EventHandler(this.btnChooseDate_Click);
+            // 
+            // txtPayDate
+            // 
+            this.txtPayDate.Location = new System.Drawing.Point(816, 219);
+            this.txtPayDate.Name = "txtPayDate";
+            this.txtPayDate.Size = new System.Drawing.Size(123, 27);
+            this.txtPayDate.TabIndex = 241;
+            this.txtPayDate.TextChanged += new System.EventHandler(this.txtNote_TextChanged);
+            // 
+            // monthCalendar1
+            // 
+            this.monthCalendar1.Location = new System.Drawing.Point(738, 251);
+            this.monthCalendar1.MaxSelectionCount = 1;
+            this.monthCalendar1.Name = "monthCalendar1";
+            this.monthCalendar1.TabIndex = 240;
+            this.monthCalendar1.Visible = false;
+            this.monthCalendar1.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar1_DateSelected);
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
+            this.label32.Location = new System.Drawing.Point(28, 162);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(63, 21);
+            this.label32.TabIndex = 239;
+            this.label32.Text = "Code2";
+            // 
+            // txtCode2
+            // 
+            this.txtCode2.Location = new System.Drawing.Point(150, 158);
+            this.txtCode2.Name = "txtCode2";
+            this.txtCode2.Size = new System.Drawing.Size(149, 27);
+            this.txtCode2.TabIndex = 238;
+            this.txtCode2.TextChanged += new System.EventHandler(this.txtNote_TextChanged);
+            // 
             // label13
             // 
             this.label13.AutoSize = true;
@@ -216,6 +265,7 @@
             this.cmbBuyer.Name = "cmbBuyer";
             this.cmbBuyer.Size = new System.Drawing.Size(166, 29);
             this.cmbBuyer.TabIndex = 220;
+            this.cmbBuyer.SelectedValueChanged += new System.EventHandler(this.cmbColorType_SelectedValueChanged);
             // 
             // label17
             // 
@@ -245,6 +295,7 @@
             this.txtD.TabIndex = 235;
             this.txtD.Text = "0";
             this.txtD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtD.TextChanged += new System.EventHandler(this.txtNote_TextChanged);
             // 
             // btnImportExcel
             // 
@@ -269,6 +320,7 @@
             this.txtL.TabIndex = 234;
             this.txtL.Text = "0";
             this.txtL.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtL.TextChanged += new System.EventHandler(this.txtNote_TextChanged);
             // 
             // txtW
             // 
@@ -278,6 +330,7 @@
             this.txtW.TabIndex = 233;
             this.txtW.Text = "0";
             this.txtW.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtW.TextChanged += new System.EventHandler(this.txtNote_TextChanged);
             // 
             // label9
             // 
@@ -299,15 +352,6 @@
             this.label31.Size = new System.Drawing.Size(110, 21);
             this.label31.TabIndex = 232;
             this.label31.Text = "Measuments";
-            // 
-            // dtPayDate
-            // 
-            this.dtPayDate.CustomFormat = "dd/MM/yyyy";
-            this.dtPayDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtPayDate.Location = new System.Drawing.Point(832, 218);
-            this.dtPayDate.Name = "dtPayDate";
-            this.dtPayDate.Size = new System.Drawing.Size(131, 27);
-            this.dtPayDate.TabIndex = 201;
             // 
             // groupBox2
             // 
@@ -331,6 +375,7 @@
             this.rdoYes.TabIndex = 100;
             this.rdoYes.Text = "Yes";
             this.rdoYes.UseVisualStyleBackColor = true;
+            this.rdoYes.CheckedChanged += new System.EventHandler(this.rdoIns1_CheckedChanged);
             // 
             // rdoNo
             // 
@@ -344,6 +389,7 @@
             this.rdoNo.TabStop = true;
             this.rdoNo.Text = "No";
             this.rdoNo.UseVisualStyleBackColor = true;
+            this.rdoNo.CheckedChanged += new System.EventHandler(this.rdoIns1_CheckedChanged);
             // 
             // groupBox1
             // 
@@ -369,6 +415,7 @@
             this.rdoIns2.TabStop = true;
             this.rdoIns2.Text = "No";
             this.rdoIns2.UseVisualStyleBackColor = true;
+            this.rdoIns2.CheckedChanged += new System.EventHandler(this.rdoIns1_CheckedChanged);
             // 
             // rdoIns1
             // 
@@ -380,6 +427,7 @@
             this.rdoIns1.TabIndex = 92;
             this.rdoIns1.Text = "Yes";
             this.rdoIns1.UseVisualStyleBackColor = true;
+            this.rdoIns1.CheckedChanged += new System.EventHandler(this.rdoIns1_CheckedChanged);
             // 
             // btnUpload
             // 
@@ -403,6 +451,7 @@
             this.txtNote.Name = "txtNote";
             this.txtNote.Size = new System.Drawing.Size(224, 54);
             this.txtNote.TabIndex = 42;
+            this.txtNote.TextChanged += new System.EventHandler(this.txtNote_TextChanged);
             // 
             // label30
             // 
@@ -422,6 +471,7 @@
             this.txtSoldToName.Name = "txtSoldToName";
             this.txtSoldToName.Size = new System.Drawing.Size(166, 27);
             this.txtSoldToName.TabIndex = 200;
+            this.txtSoldToName.TextChanged += new System.EventHandler(this.txtNote_TextChanged);
             // 
             // label29
             // 
@@ -441,6 +491,7 @@
             this.cmbStatus.Name = "cmbStatus";
             this.cmbStatus.Size = new System.Drawing.Size(165, 29);
             this.cmbStatus.TabIndex = 60;
+            this.cmbStatus.SelectedValueChanged += new System.EventHandler(this.cmbColorType_SelectedValueChanged);
             // 
             // label28
             // 
@@ -459,6 +510,7 @@
             this.cmbFluorescent.Name = "cmbFluorescent";
             this.cmbFluorescent.Size = new System.Drawing.Size(166, 29);
             this.cmbFluorescent.TabIndex = 14;
+            this.cmbFluorescent.SelectedValueChanged += new System.EventHandler(this.cmbColorType_SelectedValueChanged);
             // 
             // cmbCut
             // 
@@ -467,6 +519,7 @@
             this.cmbCut.Name = "cmbCut";
             this.cmbCut.Size = new System.Drawing.Size(165, 29);
             this.cmbCut.TabIndex = 9;
+            this.cmbCut.SelectedValueChanged += new System.EventHandler(this.cmbColorType_SelectedValueChanged);
             // 
             // label27
             // 
@@ -496,6 +549,7 @@
             this.txtTotalBaht.TabIndex = 158;
             this.txtTotalBaht.Text = "0";
             this.txtTotalBaht.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtTotalBaht.TextChanged += new System.EventHandler(this.txtNote_TextChanged);
             this.txtTotalBaht.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtWeight_KeyPress);
             // 
             // label24
@@ -516,6 +570,7 @@
             this.txtUSDRate.TabIndex = 38;
             this.txtUSDRate.Text = "0";
             this.txtUSDRate.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtUSDRate.TextChanged += new System.EventHandler(this.txtNote_TextChanged);
             this.txtUSDRate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtWeight_KeyPress);
             this.txtUSDRate.Leave += new System.EventHandler(this.txtUSDRate_Leave);
             // 
@@ -590,6 +645,7 @@
             this.txtRap.TabIndex = 36;
             this.txtRap.Text = "0";
             this.txtRap.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtRap.TextChanged += new System.EventHandler(this.txtNote_TextChanged);
             this.txtRap.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtWeight_KeyPress);
             this.txtRap.Leave += new System.EventHandler(this.txtRap_Leave);
             // 
@@ -621,6 +677,7 @@
             this.txtPrice.TabIndex = 34;
             this.txtPrice.Text = "0";
             this.txtPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtPrice.TextChanged += new System.EventHandler(this.txtNote_TextChanged);
             this.txtPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtWeight_KeyPress);
             this.txtPrice.Leave += new System.EventHandler(this.txtPrice_Leave);
             // 
@@ -651,6 +708,7 @@
             this.cmbColor.Name = "cmbColor";
             this.cmbColor.Size = new System.Drawing.Size(157, 29);
             this.cmbColor.TabIndex = 6;
+            this.cmbColor.SelectedValueChanged += new System.EventHandler(this.cmbColorType_SelectedValueChanged);
             // 
             // txtWeight
             // 
@@ -660,6 +718,7 @@
             this.txtWeight.TabIndex = 20;
             this.txtWeight.Text = "0";
             this.txtWeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtWeight.TextChanged += new System.EventHandler(this.txtNote_TextChanged);
             this.txtWeight.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtWeight_KeyPress);
             this.txtWeight.Leave += new System.EventHandler(this.txtWeight_Leave);
             // 
@@ -690,6 +749,7 @@
             this.txtSeller.Name = "txtSeller";
             this.txtSeller.Size = new System.Drawing.Size(150, 27);
             this.txtSeller.TabIndex = 2;
+            this.txtSeller.TextChanged += new System.EventHandler(this.txtNote_TextChanged);
             // 
             // label14
             // 
@@ -710,6 +770,7 @@
             this.cmbColorType.Size = new System.Drawing.Size(165, 29);
             this.cmbColorType.TabIndex = 4;
             this.cmbColorType.SelectedIndexChanged += new System.EventHandler(this.cmbColorType_SelectedIndexChanged);
+            this.cmbColorType.SelectedValueChanged += new System.EventHandler(this.cmbColorType_SelectedValueChanged);
             // 
             // label15
             // 
@@ -728,6 +789,7 @@
             this.cmbLab.Name = "cmbLab";
             this.cmbLab.Size = new System.Drawing.Size(132, 29);
             this.cmbLab.TabIndex = 16;
+            this.cmbLab.SelectedValueChanged += new System.EventHandler(this.cmbColorType_SelectedValueChanged);
             // 
             // label12
             // 
@@ -746,6 +808,7 @@
             this.cmbSymmetry.Name = "cmbSymmetry";
             this.cmbSymmetry.Size = new System.Drawing.Size(165, 29);
             this.cmbSymmetry.TabIndex = 12;
+            this.cmbSymmetry.SelectedValueChanged += new System.EventHandler(this.cmbColorType_SelectedValueChanged);
             // 
             // label11
             // 
@@ -764,6 +827,7 @@
             this.cmbShop.Name = "cmbShop";
             this.cmbShop.Size = new System.Drawing.Size(157, 29);
             this.cmbShop.TabIndex = 32;
+            this.cmbShop.SelectedValueChanged += new System.EventHandler(this.cmbColorType_SelectedValueChanged);
             // 
             // label10
             // 
@@ -783,6 +847,7 @@
             this.cmbSetting.Name = "cmbSetting";
             this.cmbSetting.Size = new System.Drawing.Size(180, 29);
             this.cmbSetting.TabIndex = 72;
+            this.cmbSetting.SelectedValueChanged += new System.EventHandler(this.cmbColorType_SelectedValueChanged);
             // 
             // cmbClearity
             // 
@@ -791,6 +856,7 @@
             this.cmbClearity.Name = "cmbClearity";
             this.cmbClearity.Size = new System.Drawing.Size(180, 29);
             this.cmbClearity.TabIndex = 30;
+            this.cmbClearity.SelectedValueChanged += new System.EventHandler(this.cmbColorType_SelectedValueChanged);
             // 
             // label8
             // 
@@ -820,6 +886,7 @@
             this.cmbShape.Size = new System.Drawing.Size(157, 29);
             this.cmbShape.TabIndex = 8;
             this.cmbShape.SelectedIndexChanged += new System.EventHandler(this.cmbShape_SelectedIndexChanged);
+            this.cmbShape.SelectedValueChanged += new System.EventHandler(this.cmbColorType_SelectedValueChanged);
             // 
             // label3
             // 
@@ -847,6 +914,7 @@
             this.txtReportNumber.Name = "txtReportNumber";
             this.txtReportNumber.Size = new System.Drawing.Size(157, 27);
             this.txtReportNumber.TabIndex = 18;
+            this.txtReportNumber.TextChanged += new System.EventHandler(this.txtNote_TextChanged);
             // 
             // label1
             // 
@@ -865,6 +933,7 @@
             this.cmbPolish.Name = "cmbPolish";
             this.cmbPolish.Size = new System.Drawing.Size(165, 29);
             this.cmbPolish.TabIndex = 10;
+            this.cmbPolish.SelectedValueChanged += new System.EventHandler(this.cmbColorType_SelectedValueChanged);
             // 
             // label6
             // 
@@ -884,6 +953,7 @@
             this.txtCode.Name = "txtCode";
             this.txtCode.Size = new System.Drawing.Size(150, 27);
             this.txtCode.TabIndex = 150;
+            this.txtCode.TextChanged += new System.EventHandler(this.txtNote_TextChanged);
             // 
             // panel1
             // 
@@ -912,23 +982,6 @@
             // openFileDialog2
             // 
             this.openFileDialog2.FileName = "openFileDialog2";
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label32.Location = new System.Drawing.Point(28, 162);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(63, 21);
-            this.label32.TabIndex = 239;
-            this.label32.Text = "Code2";
-            // 
-            // txtCode2
-            // 
-            this.txtCode2.Location = new System.Drawing.Point(150, 158);
-            this.txtCode2.Name = "txtCode2";
-            this.txtCode2.Size = new System.Drawing.Size(149, 27);
-            this.txtCode2.TabIndex = 238;
             // 
             // BuyBookDiamondCer
             // 
@@ -1017,7 +1070,6 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.DateTimePicker dtPayDate;
         private System.Windows.Forms.Button btnImportExcel;
         private System.Windows.Forms.OpenFileDialog openFileDialog2;
         private System.Windows.Forms.ComboBox cmbBuyer;
@@ -1030,5 +1082,8 @@
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.TextBox txtCode2;
+        private System.Windows.Forms.MonthCalendar monthCalendar1;
+        private System.Windows.Forms.TextBox txtPayDate;
+        private System.Windows.Forms.Button btnChooseDate;
     }
 }

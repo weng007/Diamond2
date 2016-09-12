@@ -116,6 +116,7 @@
             this.txtTotalBaht.TabIndex = 200;
             this.txtTotalBaht.Text = "0";
             this.txtTotalBaht.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtTotalBaht.TextChanged += new System.EventHandler(this.txtAmount_TextChanged);
             this.txtTotalBaht.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAmount_KeyPress);
             // 
             // TotalBaht
@@ -137,6 +138,7 @@
             this.txtUSDRate.TabIndex = 18;
             this.txtUSDRate.Text = "0";
             this.txtUSDRate.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtUSDRate.TextChanged += new System.EventHandler(this.txtAmount_TextChanged);
             this.txtUSDRate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAmount_KeyPress);
             this.txtUSDRate.Leave += new System.EventHandler(this.txtUSDRate_Leave);
             // 
@@ -159,6 +161,7 @@
             this.txtTotalUSD.TabIndex = 16;
             this.txtTotalUSD.Text = "0";
             this.txtTotalUSD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtTotalUSD.TextChanged += new System.EventHandler(this.txtAmount_TextChanged);
             this.txtTotalUSD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAmount_KeyPress);
             this.txtTotalUSD.Leave += new System.EventHandler(this.txtTotalUSD_Leave);
             // 
@@ -190,6 +193,7 @@
             this.txtDetail.Name = "txtDetail";
             this.txtDetail.Size = new System.Drawing.Size(195, 115);
             this.txtDetail.TabIndex = 20;
+            this.txtDetail.TextChanged += new System.EventHandler(this.txtAmount_TextChanged);
             // 
             // txtPricePerUnit
             // 
@@ -199,6 +203,7 @@
             this.txtPricePerUnit.TabIndex = 14;
             this.txtPricePerUnit.Text = "0";
             this.txtPricePerUnit.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtPricePerUnit.TextChanged += new System.EventHandler(this.txtAmount_TextChanged);
             this.txtPricePerUnit.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAmount_KeyPress);
             this.txtPricePerUnit.Leave += new System.EventHandler(this.txtPricePerUnit_Leave);
             // 
@@ -210,6 +215,7 @@
             this.txtPricePerGram.TabIndex = 12;
             this.txtPricePerGram.Text = "0";
             this.txtPricePerGram.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtPricePerGram.TextChanged += new System.EventHandler(this.txtAmount_TextChanged);
             this.txtPricePerGram.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAmount_KeyPress);
             this.txtPricePerGram.Leave += new System.EventHandler(this.txtPricePerGram_Leave);
             // 
@@ -240,6 +246,7 @@
             this.cmbMaterial.Name = "cmbMaterial";
             this.cmbMaterial.Size = new System.Drawing.Size(169, 29);
             this.cmbMaterial.TabIndex = 10;
+            this.cmbMaterial.SelectedValueChanged += new System.EventHandler(this.cmbSettingType_SelectedValueChanged);
             // 
             // label4
             // 
@@ -269,6 +276,7 @@
             this.txtLaborCost.TabIndex = 8;
             this.txtLaborCost.Text = "0";
             this.txtLaborCost.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtLaborCost.TextChanged += new System.EventHandler(this.txtAmount_TextChanged);
             this.txtLaborCost.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAmount_KeyPress);
             this.txtLaborCost.Leave += new System.EventHandler(this.txtLaborCost_Leave);
             // 
@@ -290,6 +298,7 @@
             this.txtWeight.TabIndex = 6;
             this.txtWeight.Text = "0";
             this.txtWeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtWeight.TextChanged += new System.EventHandler(this.txtAmount_TextChanged);
             this.txtWeight.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAmount_KeyPress);
             this.txtWeight.Leave += new System.EventHandler(this.txtWeight_Leave);
             // 
@@ -300,6 +309,7 @@
             this.cmbSettingType.Name = "cmbSettingType";
             this.cmbSettingType.Size = new System.Drawing.Size(182, 29);
             this.cmbSettingType.TabIndex = 2;
+            this.cmbSettingType.SelectedValueChanged += new System.EventHandler(this.cmbSettingType_SelectedValueChanged);
             // 
             // label1
             // 
@@ -329,6 +339,7 @@
             this.txtAmount.TabIndex = 4;
             this.txtAmount.Text = "0";
             this.txtAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtAmount.TextChanged += new System.EventHandler(this.txtAmount_TextChanged);
             this.txtAmount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAmount_KeyPress);
             this.txtAmount.Leave += new System.EventHandler(this.txtAmount_Leave);
             // 

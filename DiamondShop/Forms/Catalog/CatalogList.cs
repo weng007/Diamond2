@@ -123,6 +123,11 @@ namespace DiamondShop
                     id = (int)gridCatalog.SelectedRows[0].Cells["ID"].Value;
                     Catalog frm = new Catalog(id);
                     frm.ShowDialog();
+
+                    if (frm.isEdit)
+                    {
+                        DoLoadData();
+                    }
                 }
             }
             else //mode = 1 Search
@@ -137,10 +142,8 @@ namespace DiamondShop
                     image1 = (byte[])gridCatalog.SelectedRows[0].Cells["Image1"].Value;
                 }
 
-                this.Close();
+                this.Close();   
             }
-
-            DoLoadData();
         }
        
         private void btnClose_Click(object sender, EventArgs e)

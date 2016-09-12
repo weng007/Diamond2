@@ -720,7 +720,7 @@ namespace DiamondDS.DS {
                         System.DateTime CreateDate, 
                         int EditBy, 
                         System.DateTime EditDate, 
-                        string PayDate, 
+                        System.DateTime PayDate, 
                         string Buyer, 
                         string Code2) {
                 BuyBookGemstoneRow rowBuyBookGemstoneRow = ((BuyBookGemstoneRow)(this.NewRow()));
@@ -889,7 +889,7 @@ namespace DiamondDS.DS {
                 base.Columns.Add(this.columnEditBy);
                 this.columnEditDate = new global::System.Data.DataColumn("EditDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnEditDate);
-                this.columnPayDate = new global::System.Data.DataColumn("PayDate", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnPayDate = new global::System.Data.DataColumn("PayDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPayDate);
                 this.columnBuyer = new global::System.Data.DataColumn("Buyer", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnBuyer);
@@ -1551,10 +1551,10 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string PayDate {
+            public System.DateTime PayDate {
                 get {
                     try {
-                        return ((string)(this[this.tableBuyBookGemstone.PayDateColumn]));
+                        return ((global::System.DateTime)(this[this.tableBuyBookGemstone.PayDateColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'PayDate\' in table \'BuyBookGemstone\' is DBNull.", e);

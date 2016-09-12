@@ -13,8 +13,7 @@ using DiamondDS.DS;
 namespace DiamondShop
 {
     public partial class WarningList : FormList
-    {
-        
+    {     
         public WarningList()
         {
             InitializeComponent();
@@ -40,36 +39,41 @@ namespace DiamondShop
             cmbReceiver.SelectedIndex = ds.Tables[0].Rows.Count - 1;
             cmbReceiver.Refresh();
 
+            cmbSender.DataSource = ds.Tables[0];
+            cmbSender.ValueMember = "ID";
+            cmbSender.DisplayMember = "DisplayName";
+            cmbSender.SelectedIndex = ds.Tables[0].Rows.Count - 1;
+            cmbSender.Refresh();
+
             cmbFactoryStatus.DataSource = (GM.GetMasterTableDetail("C034",true)).Tables[0];
             cmbFactoryStatus.ValueMember = "ID";
             cmbFactoryStatus.DisplayMember = "Detail";
             cmbFactoryStatus.Refresh();
+
+            cmbMessageStatus.DataSource = (GM.GetMasterTableDetail("C033", true)).Tables[0];
+            cmbMessageStatus.ValueMember = "ID";
+            cmbMessageStatus.DisplayMember = "Detail";
+            cmbMessageStatus.Refresh();
 
             cmbShop.DataSource = (GM.GetMasterTableDetail("C007",true)).Tables[0];
             cmbShop.ValueMember = "ID";
             cmbShop.DisplayMember = "Detail";
             cmbShop.Refresh();
 
-            txtSender.Select();
-
             gridWarning.AutoGenerateColumns = false;
         }
         protected override void DoLoadData()
         {
-            ds = ser.DoSelectData("Warning", -1,0);
+            ser2 = GM.GetService2();
+
+            ds = ser2.DoSearchWarning(Convert.ToInt16(cmbSender.SelectedValue.ToString()), Convert.ToInt16(cmbReceiver.SelectedValue.ToString()), Convert.ToInt16(cmbMessageStatus.SelectedValue.ToString()), Convert.ToInt16(cmbFactoryStatus.SelectedValue.ToString()), Convert.ToInt16(cmbShop.SelectedValue.ToString()), ApplicationInfo.UserID);
 
             if (ds.Tables[0].Rows.Count > 0)
             {
                 gridWarning.DataSource = ds.Tables[0];
                 gridWarning.Refresh();
             }
-            else
-            {
-                gridWarning.DataSource = null;
-                gridWarning.Refresh();
-            }
-
-            //btnSearch_Click(null, null);
+            else { gridWarning.DataSource = null; gridWarning.Refresh(); }
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -83,7 +87,7 @@ namespace DiamondShop
         {
             ser2 = GM.GetService2();
 
-            ds = ser2.DoSearchWarning(txtSender.Text, Convert.ToInt32(cmbReceiver.SelectedValue.ToString()), Convert.ToInt32(cmbMessageStatus.SelectedValue.ToString()), Convert.ToInt32(cmbFactoryStatus.SelectedValue.ToString()), Convert.ToInt32(cmbShop.SelectedValue.ToString()));
+            ds = ser2.DoSearchWarning(Convert.ToInt16(cmbSender.SelectedValue.ToString()), Convert.ToInt32(cmbReceiver.SelectedValue.ToString()), Convert.ToInt32(cmbMessageStatus.SelectedValue.ToString()), Convert.ToInt32(cmbFactoryStatus.SelectedValue.ToString()), Convert.ToInt32(cmbShop.SelectedValue.ToString()), ApplicationInfo.UserID);
 
             if (ds.Tables[0].Rows.Count > 0)
             {
@@ -105,9 +109,7 @@ namespace DiamondShop
                 {
                     DoLoadData();
                 }
-            }
-
-            
+            }            
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -121,6 +123,12 @@ namespace DiamondShop
             timer.Interval = 30000; // 10 secs = 10000, 300000 = 5 m
             timer.Tick += new EventHandler(timer1_Tick);
             timer.Start();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            CalendarActivity frm = new CalendarActivity();
+            frm.ShowDialog();
         }
     }
 }

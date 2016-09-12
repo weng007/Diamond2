@@ -42,7 +42,6 @@ namespace DiamondShop
             binder.BindControl(txtNote, "NoteForRate");
             binder.BindControl(txtRemark, "Remark");
             binder.BindControl(txtMinPrice, "MinPrice");
-            binder.BindControl(dtPayDate, "PayDate");
             binder.BindControl(cmbBuyer, "Buyer");
             binder.BindControl(txtCode2, "Code2");
         }
@@ -66,7 +65,6 @@ namespace DiamondShop
             binder.BindControl(txtNote, "NoteForRate");
             binder.BindControl(txtRemark, "Remark");
             binder.BindControl(txtMinPrice, "MinPrice");
-            binder.BindControl(dtPayDate, "PayDate");
             binder.BindControl(cmbBuyer, "Buyer");
             binder.BindControl(txtCode2, "Code2");
 
@@ -79,6 +77,7 @@ namespace DiamondShop
             txtCost1_Leave(null, null);
 
             SetControlEnable(false);
+            isEdit = false;
         }
 
         protected override void Initial()
@@ -88,6 +87,7 @@ namespace DiamondShop
             cmbBuyer.DataSource = ds.Tables[0];
             cmbBuyer.ValueMember = "ID";
             cmbBuyer.DisplayMember = "DisplayName";
+            cmbBuyer.SelectedIndex = ds.Tables[0].Rows.Count - 1;
             cmbBuyer.Refresh();
 
             cmbShop.DataSource = (GM.GetMasterTableDetail("C007")).Tables[0];
@@ -123,8 +123,9 @@ namespace DiamondShop
 
             if (tds.BuyBookJewelry.Rows.Count > 0)
             {
-                binder.BindValueToControl(tds.BuyBookJewelry[0]);            
-                
+                binder.BindValueToControl(tds.BuyBookJewelry[0]);
+                txtPayDate.Text = string.Format("{0:d/M/yyyy}", tds.BuyBookJewelry[0]["PayDate"]);
+
                 if (tds.BuyBookJewelry[0].Image1 != null)
                 {
                     image1 = tds.BuyBookJewelry[0].Image1;
@@ -156,6 +157,8 @@ namespace DiamondShop
             }
             SetFormatNumber();
             base.LoadData();
+
+            cmbType.SelectedValueChanged += cmbType_SelectedValueChanged;
         }
         protected override void EditData()
         {
@@ -169,7 +172,7 @@ namespace DiamondShop
             }
             else
             {
-                RequirePassword frm = new RequirePassword("2");
+                RequirePassword frm = new RequirePassword("2",0);
                 frm.ShowDialog();
                 isAuthorize = frm.isAuthorize;
                 frm.Close();
@@ -202,7 +205,14 @@ namespace DiamondShop
             row.IsPaid = rdoYes.Checked ? "1" : "0";
             row.Image1 = image1;
             row.Image2 = image2;
-
+            if (txtPayDate.Text == "")
+            {
+                row.PayDate = DateTime.MinValue.AddYears(1900);
+            }
+            else
+            {
+                row.PayDate = Convert.ToDateTime(txtPayDate.Text.ToString());
+            }
             try
             {
                 if (id == 0)
@@ -256,15 +266,10 @@ namespace DiamondShop
             {
                 message += "Please input Min Price > 0.\n";
             }
-            //if(txtMeasure1.Text == "" || txtMeasure2.Text == "" || txtMeasure3.Text == ""
-            //&& GM.ConvertStringToDouble(txtMeasure1) == 0 || GM.ConvertStringToDouble(txtMeasure2) == 0 || GM.ConvertStringToDouble(txtMeasure3) == 0)
-            //{
-            //    message += "Please input Measurement > 0.\n";
-            //}
-            //if (txtCarat.Text == "" || GM.ConvertStringToDouble(txtCarat) == 0)
-            //{
-            //    message += "Please input Carat Weight > 0.\n";
-            //}
+            if (rdoYes.Checked == true && txtPayDate.Text == "")
+            {
+                message += "Please input Paydate";
+            }
 
             if (message == "") { return true; }
             else { return false; }
@@ -326,6 +331,11 @@ namespace DiamondShop
         }
         private void SetFormatNumber()
         {
+            //ดักเคส MinValue
+            if (txtPayDate.Text != "" && Convert.ToDateTime(txtPayDate.Text).Year == 1901)
+            {
+                txtPayDate.Text = "";
+            }
             txtWeight.Text = GM.ConvertDoubleToString(txtWeight);
             //txtSize.Text = GM.ConvertDoubleToString(txtSize);
         }
@@ -336,6 +346,38 @@ namespace DiamondShop
             {
                 e.Handled = true;
             }
+        }
+
+        private void txtRemark_TextChanged(object sender, EventArgs e)
+        {
+            isEdit = true;
+        }
+
+        private void cmbType_SelectedValueChanged(object sender, EventArgs e)
+        {
+            isEdit = true;
+        }
+
+        private void rdoYes_CheckedChanged(object sender, EventArgs e)
+        {
+            isEdit = true;
+        }
+
+        private void dtBuyDate_ValueChanged(object sender, EventArgs e)
+        {
+            isEdit = true;
+        }
+
+        private void btnChooseDate_Click(object sender, EventArgs e)
+        {
+            monthCalendar1.Visible = true;
+        }
+
+        private void monthCalendar1_DateSelected(object sender, DateRangeEventArgs e)
+        {
+            txtPayDate.Text = monthCalendar1.SelectionRange.Start.ToShortDateString();
+            monthCalendar1.Visible = false;
+            isEdit = true;
         }
 
         private void SetControlEnable(bool status)

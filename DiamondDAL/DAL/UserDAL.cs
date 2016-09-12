@@ -46,7 +46,7 @@ namespace DiamondDAL.DAL
             return ds;
         }
 
-        public dsUser DoAuthenticate(string userName, string password, string type)
+        public dsUser DoAuthenticate(string userName, string password, string type, int Shop)
         {
             try
             {
@@ -54,6 +54,7 @@ namespace DiamondDAL.DAL
                 SQL.CreateParameter("UserName", userName);
                 SQL.CreateParameter("Password", password);
                 SQL.CreateParameter("Type", type);
+                SQL.CreateParameter("Shop", Shop);
                 SQL.FillDataSetBySP("SP_User_Authenticate", ds.User);
             }
             catch (Exception ex)

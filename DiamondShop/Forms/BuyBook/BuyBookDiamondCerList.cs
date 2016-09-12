@@ -156,9 +156,12 @@ namespace DiamondShop
                 id = (int)gridDiamondCer.SelectedRows[0].Cells["ID"].Value;
                 BuyBookDiamondCer frm = new BuyBookDiamondCer(id);
                 frm.ShowDialog();
-            }
 
-            DoLoadData();
+                if (frm.isEdit)
+                {
+                    DoLoadData();
+                }
+            }
         }
     }
 }

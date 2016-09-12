@@ -43,13 +43,14 @@ namespace DiamondShop
             }
             if (chkFlag)
             {
-                dsUser ds = ser1.DoAuthenticate(txtUserName.Text.Trim(), GM.Encrypt(txtPassword.Text.Trim()), "0");
+                dsUser ds = ser1.DoAuthenticate(txtUserName.Text.Trim(), GM.Encrypt(txtPassword.Text.Trim()), "0",0);
 
                 if (ds.Tables[0].Rows.Count > 0)
                 {
                     dsUser.UserRow row = (dsUser.UserRow)ds.User.Rows[0];
                     ApplicationInfo.UserID = row.ID;
                     ApplicationInfo.UserName = row.UserName;
+                    ApplicationInfo.Shop = row.Shop;
                     ApplicationInfo.DisplayName = row.DisplayName;
 
                     if(row.Role == 65) { ApplicationInfo.Authorized = "Staff"; }

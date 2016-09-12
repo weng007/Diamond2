@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BuyBookGemstone));
             this.dtBuyDate = new System.Windows.Forms.DateTimePicker();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -38,7 +38,6 @@
             this.cmbBuyer = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.dtPayDate = new System.Windows.Forms.DateTimePicker();
             this.label19 = new System.Windows.Forms.Label();
             this.grid1 = new System.Windows.Forms.DataGridView();
             this.ActionDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -93,6 +92,9 @@
             this.txtCode = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
+            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
+            this.btnChooseDate = new System.Windows.Forms.Button();
+            this.txtPayDate = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid1)).BeginInit();
@@ -112,12 +114,14 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.btnChooseDate);
+            this.panel3.Controls.Add(this.txtPayDate);
+            this.panel3.Controls.Add(this.monthCalendar1);
             this.panel3.Controls.Add(this.label16);
             this.panel3.Controls.Add(this.txtCode2);
             this.panel3.Controls.Add(this.cmbBuyer);
             this.panel3.Controls.Add(this.label8);
             this.panel3.Controls.Add(this.label7);
-            this.panel3.Controls.Add(this.dtPayDate);
             this.panel3.Controls.Add(this.label19);
             this.panel3.Controls.Add(this.grid1);
             this.panel3.Controls.Add(this.label3);
@@ -185,6 +189,7 @@
             this.txtCode2.Name = "txtCode2";
             this.txtCode2.Size = new System.Drawing.Size(155, 27);
             this.txtCode2.TabIndex = 224;
+            this.txtCode2.TextChanged += new System.EventHandler(this.txtNote_TextChanged);
             // 
             // cmbBuyer
             // 
@@ -193,6 +198,7 @@
             this.cmbBuyer.Name = "cmbBuyer";
             this.cmbBuyer.Size = new System.Drawing.Size(155, 29);
             this.cmbBuyer.TabIndex = 222;
+            this.cmbBuyer.SelectedValueChanged += new System.EventHandler(this.cmbShape_SelectedValueChanged);
             // 
             // label8
             // 
@@ -214,15 +220,6 @@
             this.label7.Size = new System.Drawing.Size(78, 19);
             this.label7.TabIndex = 195;
             this.label7.Text = "Pay Date";
-            // 
-            // dtPayDate
-            // 
-            this.dtPayDate.CustomFormat = "dd/MM/yyyy";
-            this.dtPayDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtPayDate.Location = new System.Drawing.Point(756, 133);
-            this.dtPayDate.Name = "dtPayDate";
-            this.dtPayDate.Size = new System.Drawing.Size(136, 27);
-            this.dtPayDate.TabIndex = 194;
             // 
             // label19
             // 
@@ -260,17 +257,17 @@
             // ActionDate
             // 
             this.ActionDate.DataPropertyName = "ActionDate";
-            dataGridViewCellStyle1.Format = "dd/MM/YYYY";
-            this.ActionDate.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Format = "dd/MM/YYYY";
+            this.ActionDate.DefaultCellStyle = dataGridViewCellStyle5;
             this.ActionDate.HeaderText = "วันที่";
             this.ActionDate.Name = "ActionDate";
             // 
             // Amount
             // 
             this.Amount.DataPropertyName = "Amount";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle2.NullValue = "0";
-            this.Amount.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle6.NullValue = "0";
+            this.Amount.DefaultCellStyle = dataGridViewCellStyle6;
             this.Amount.HeaderText = "คงเหลือ (ct)";
             this.Amount.Name = "Amount";
             this.Amount.Width = 120;
@@ -334,6 +331,7 @@
             this.txtSize.TabIndex = 10;
             this.txtSize.Text = "0";
             this.txtSize.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtSize.TextChanged += new System.EventHandler(this.txtNote_TextChanged);
             this.txtSize.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSize_KeyPress);
             // 
             // txtMarketPrice
@@ -344,6 +342,7 @@
             this.txtMarketPrice.TabIndex = 28;
             this.txtMarketPrice.Text = "0";
             this.txtMarketPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtMarketPrice.TextChanged += new System.EventHandler(this.txtNote_TextChanged);
             this.txtMarketPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSize_KeyPress);
             this.txtMarketPrice.Leave += new System.EventHandler(this.txtMarketPrice_Leave);
             // 
@@ -354,6 +353,7 @@
             this.cmbShop.Name = "cmbShop";
             this.cmbShop.Size = new System.Drawing.Size(156, 29);
             this.cmbShop.TabIndex = 18;
+            this.cmbShop.SelectedValueChanged += new System.EventHandler(this.cmbShape_SelectedValueChanged);
             // 
             // label28
             // 
@@ -372,6 +372,7 @@
             this.cmbShape.Name = "cmbShape";
             this.cmbShape.Size = new System.Drawing.Size(155, 29);
             this.cmbShape.TabIndex = 6;
+            this.cmbShape.SelectedValueChanged += new System.EventHandler(this.cmbShape_SelectedValueChanged);
             // 
             // label25
             // 
@@ -400,6 +401,7 @@
             this.txtNote.Name = "txtNote";
             this.txtNote.Size = new System.Drawing.Size(250, 139);
             this.txtNote.TabIndex = 30;
+            this.txtNote.TextChanged += new System.EventHandler(this.txtNote_TextChanged);
             // 
             // label26
             // 
@@ -455,6 +457,7 @@
             this.txtPriceCarat.TabIndex = 26;
             this.txtPriceCarat.Text = "0";
             this.txtPriceCarat.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtPriceCarat.TextChanged += new System.EventHandler(this.txtNote_TextChanged);
             this.txtPriceCarat.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSize_KeyPress);
             this.txtPriceCarat.Leave += new System.EventHandler(this.txtPriceCarat_Leave);
             // 
@@ -487,6 +490,7 @@
             this.txtTotalUSD.TabIndex = 104;
             this.txtTotalUSD.Text = "0";
             this.txtTotalUSD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtTotalUSD.TextChanged += new System.EventHandler(this.txtNote_TextChanged);
             // 
             // label5
             // 
@@ -527,6 +531,7 @@
             this.txtUSDRate.TabIndex = 24;
             this.txtUSDRate.Text = "0";
             this.txtUSDRate.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtUSDRate.TextChanged += new System.EventHandler(this.txtNote_TextChanged);
             this.txtUSDRate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSize_KeyPress);
             this.txtUSDRate.Leave += new System.EventHandler(this.txtUSDRate_Leave);
             // 
@@ -582,6 +587,7 @@
             this.rdoYes.TabIndex = 36;
             this.rdoYes.Text = "Yes";
             this.rdoYes.UseVisualStyleBackColor = true;
+            this.rdoYes.CheckedChanged += new System.EventHandler(this.rdoYes_CheckedChanged);
             // 
             // label12
             // 
@@ -612,6 +618,7 @@
             this.txtPriceCaratUSD.TabIndex = 22;
             this.txtPriceCaratUSD.Text = "0";
             this.txtPriceCaratUSD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtPriceCaratUSD.TextChanged += new System.EventHandler(this.txtNote_TextChanged);
             this.txtPriceCaratUSD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSize_KeyPress);
             this.txtPriceCaratUSD.Leave += new System.EventHandler(this.txtPriceCaratUSD_Leave);
             // 
@@ -622,6 +629,7 @@
             this.cmbOrigin.Name = "cmbOrigin";
             this.cmbOrigin.Size = new System.Drawing.Size(157, 29);
             this.cmbOrigin.TabIndex = 16;
+            this.cmbOrigin.SelectedValueChanged += new System.EventHandler(this.cmbShape_SelectedValueChanged);
             // 
             // label11
             // 
@@ -640,6 +648,7 @@
             this.cmbIdentification.Name = "cmbIdentification";
             this.cmbIdentification.Size = new System.Drawing.Size(157, 29);
             this.cmbIdentification.TabIndex = 8;
+            this.cmbIdentification.SelectedValueChanged += new System.EventHandler(this.cmbShape_SelectedValueChanged);
             // 
             // label2
             // 
@@ -669,6 +678,7 @@
             this.txtWeight.TabIndex = 14;
             this.txtWeight.Text = "0";
             this.txtWeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtWeight.TextChanged += new System.EventHandler(this.txtNote_TextChanged);
             this.txtWeight.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSize_KeyPress);
             this.txtWeight.Leave += new System.EventHandler(this.txtWeight_Leave);
             // 
@@ -690,6 +700,7 @@
             this.txtAmount.TabIndex = 12;
             this.txtAmount.Text = "0";
             this.txtAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtAmount.TextChanged += new System.EventHandler(this.txtNote_TextChanged);
             this.txtAmount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSize_KeyPress);
             // 
             // label18
@@ -708,6 +719,7 @@
             this.txtSeller.Name = "txtSeller";
             this.txtSeller.Size = new System.Drawing.Size(155, 27);
             this.txtSeller.TabIndex = 4;
+            this.txtSeller.TextChanged += new System.EventHandler(this.txtNote_TextChanged);
             // 
             // label1
             // 
@@ -737,6 +749,7 @@
             this.txtCode.ReadOnly = true;
             this.txtCode.Size = new System.Drawing.Size(155, 27);
             this.txtCode.TabIndex = 100;
+            this.txtCode.TextChanged += new System.EventHandler(this.txtNote_TextChanged);
             // 
             // panel1
             // 
@@ -757,6 +770,31 @@
             this.button1.Size = new System.Drawing.Size(1089, 352);
             this.button1.TabIndex = 32;
             this.button1.UseVisualStyleBackColor = true;
+            // 
+            // monthCalendar1
+            // 
+            this.monthCalendar1.Location = new System.Drawing.Point(678, 166);
+            this.monthCalendar1.MaxSelectionCount = 1;
+            this.monthCalendar1.Name = "monthCalendar1";
+            this.monthCalendar1.TabIndex = 244;
+            this.monthCalendar1.Visible = false;
+            this.monthCalendar1.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar1_DateSelected);
+            // 
+            // btnChooseDate
+            // 
+            this.btnChooseDate.Location = new System.Drawing.Point(870, 137);
+            this.btnChooseDate.Name = "btnChooseDate";
+            this.btnChooseDate.Size = new System.Drawing.Size(34, 28);
+            this.btnChooseDate.TabIndex = 247;
+            this.btnChooseDate.UseVisualStyleBackColor = true;
+            this.btnChooseDate.Click += new System.EventHandler(this.btnChooseDate_Click);
+            // 
+            // txtPayDate
+            // 
+            this.txtPayDate.Location = new System.Drawing.Point(741, 138);
+            this.txtPayDate.Name = "txtPayDate";
+            this.txtPayDate.Size = new System.Drawing.Size(123, 27);
+            this.txtPayDate.TabIndex = 246;
             // 
             // BuyBookGemstone
             // 
@@ -836,10 +874,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn refIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn isDeletedDataGridViewTextBoxColumn;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.DateTimePicker dtPayDate;
         private System.Windows.Forms.ComboBox cmbBuyer;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox txtCode2;
+        private System.Windows.Forms.MonthCalendar monthCalendar1;
+        private System.Windows.Forms.Button btnChooseDate;
+        private System.Windows.Forms.TextBox txtPayDate;
     }
 }

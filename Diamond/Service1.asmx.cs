@@ -478,6 +478,18 @@ namespace Diamond
                     throw ex;
                 }
             }
+            else if (TableName == "Order")
+            {
+                OrderBiz biz = GM.GetOrderBiz();
+                try
+                {
+                    return biz.DoSelectData(id);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
             return null;
         }
         #endregion
@@ -941,6 +953,21 @@ namespace Diamond
             {
                 TransferDetailBiz biz = GM.GetTransferDetailBiz();
                 dsTransferDetail ds1 = new dsTransferDetail();
+                ds1.Merge(ds);
+
+                try
+                {
+                    flag = biz.DoInsertData(ds1);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            else if (TableName == "Order")
+            {
+                OrderBiz biz = GM.GetOrderBiz();
+                dsOrder ds1 = new dsOrder();
                 ds1.Merge(ds);
 
                 try
@@ -1464,6 +1491,22 @@ namespace Diamond
                     throw ex;
                 }
             }
+            else if (TableName == "Order")
+            {
+                OrderBiz biz = GM.GetOrderBiz();
+                dsOrder ds1 = new dsOrder();
+
+                ds1.Merge(ds);
+
+                try
+                {
+                    flag = biz.DoUpdateData(ds1);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
             return flag;
         }
         #endregion
@@ -1813,6 +1856,18 @@ namespace Diamond
             else if (TableName == "TransferDetail")
             {
                 TransferDetailBiz biz = GM.GetTransferDetailBiz();
+                try
+                {
+                    flag = biz.DoDeleteData(id);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            else if (TableName == "Order")
+            {
+                OrderBiz biz = GM.GetOrderBiz();
                 try
                 {
                     flag = biz.DoDeleteData(id);

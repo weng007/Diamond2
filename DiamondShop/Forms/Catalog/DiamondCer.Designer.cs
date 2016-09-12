@@ -145,6 +145,7 @@
             this.txtShape.Name = "txtShape";
             this.txtShape.Size = new System.Drawing.Size(141, 27);
             this.txtShape.TabIndex = 108;
+            this.txtShape.TextChanged += new System.EventHandler(this.txtNote_TextChanged);
             // 
             // txtFluorescent
             // 
@@ -153,6 +154,7 @@
             this.txtFluorescent.Name = "txtFluorescent";
             this.txtFluorescent.Size = new System.Drawing.Size(157, 27);
             this.txtFluorescent.TabIndex = 124;
+            this.txtFluorescent.TextChanged += new System.EventHandler(this.txtNote_TextChanged);
             // 
             // txtSetting
             // 
@@ -161,6 +163,7 @@
             this.txtSetting.Name = "txtSetting";
             this.txtSetting.Size = new System.Drawing.Size(187, 27);
             this.txtSetting.TabIndex = 160;
+            this.txtSetting.TextChanged += new System.EventHandler(this.txtNote_TextChanged);
             // 
             // txtShop
             // 
@@ -169,6 +172,7 @@
             this.txtShop.Name = "txtShop";
             this.txtShop.Size = new System.Drawing.Size(187, 27);
             this.txtShop.TabIndex = 156;
+            this.txtShop.TextChanged += new System.EventHandler(this.txtNote_TextChanged);
             // 
             // txtStatus
             // 
@@ -177,6 +181,7 @@
             this.txtStatus.Name = "txtStatus";
             this.txtStatus.Size = new System.Drawing.Size(187, 27);
             this.txtStatus.TabIndex = 152;
+            this.txtStatus.TextChanged += new System.EventHandler(this.txtNote_TextChanged);
             // 
             // txtSymmetry
             // 
@@ -185,6 +190,7 @@
             this.txtSymmetry.Name = "txtSymmetry";
             this.txtSymmetry.Size = new System.Drawing.Size(163, 27);
             this.txtSymmetry.TabIndex = 148;
+            this.txtSymmetry.TextChanged += new System.EventHandler(this.txtNote_TextChanged);
             // 
             // txtPolish
             // 
@@ -193,6 +199,7 @@
             this.txtPolish.Name = "txtPolish";
             this.txtPolish.Size = new System.Drawing.Size(163, 27);
             this.txtPolish.TabIndex = 144;
+            this.txtPolish.TextChanged += new System.EventHandler(this.txtNote_TextChanged);
             // 
             // txtCut
             // 
@@ -201,6 +208,7 @@
             this.txtCut.Name = "txtCut";
             this.txtCut.Size = new System.Drawing.Size(163, 27);
             this.txtCut.TabIndex = 140;
+            this.txtCut.TextChanged += new System.EventHandler(this.txtNote_TextChanged);
             // 
             // txtClearity
             // 
@@ -209,6 +217,7 @@
             this.txtClearity.Name = "txtClearity";
             this.txtClearity.Size = new System.Drawing.Size(163, 27);
             this.txtClearity.TabIndex = 136;
+            this.txtClearity.TextChanged += new System.EventHandler(this.txtNote_TextChanged);
             // 
             // txtColor
             // 
@@ -217,6 +226,7 @@
             this.txtColor.Name = "txtColor";
             this.txtColor.Size = new System.Drawing.Size(163, 27);
             this.txtColor.TabIndex = 132;
+            this.txtColor.TextChanged += new System.EventHandler(this.txtNote_TextChanged);
             // 
             // panel4
             // 
@@ -274,6 +284,7 @@
             this.txtNote1.Name = "txtNote1";
             this.txtNote1.Size = new System.Drawing.Size(231, 86);
             this.txtNote1.TabIndex = 4;
+            this.txtNote1.TextChanged += new System.EventHandler(this.txtNote_TextChanged);
             // 
             // label25
             // 
@@ -306,6 +317,7 @@
             this.txtBahtPrice.TabIndex = 108;
             this.txtBahtPrice.Text = "0";
             this.txtBahtPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtBahtPrice.TextChanged += new System.EventHandler(this.txtNote_TextChanged);
             // 
             // label23
             // 
@@ -327,6 +339,7 @@
             this.txtUSDPrice.TabIndex = 104;
             this.txtUSDPrice.Text = "0";
             this.txtUSDPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtUSDPrice.TextChanged += new System.EventHandler(this.txtNote_TextChanged);
             // 
             // label22
             // 
@@ -347,6 +360,7 @@
             this.txtUSDRate.TabIndex = 184;
             this.txtUSDRate.Text = "0";
             this.txtUSDRate.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtUSDRate.TextChanged += new System.EventHandler(this.txtNote_TextChanged);
             // 
             // label21
             // 
@@ -367,6 +381,7 @@
             this.txtRap.TabIndex = 180;
             this.txtRap.Text = "0";
             this.txtRap.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtRap.TextChanged += new System.EventHandler(this.txtNote_TextChanged);
             // 
             // label20
             // 
@@ -397,6 +412,7 @@
             this.txtPrice.TabIndex = 176;
             this.txtPrice.Text = "0";
             this.txtPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtPrice.TextChanged += new System.EventHandler(this.txtNote_TextChanged);
             // 
             // label18
             // 
@@ -415,6 +431,7 @@
             this.txtSeller.Name = "txtSeller";
             this.txtSeller.Size = new System.Drawing.Size(157, 27);
             this.txtSeller.TabIndex = 172;
+            this.txtSeller.TextChanged += new System.EventHandler(this.txtNote_TextChanged);
             // 
             // txtBuyDate
             // 
@@ -435,6 +452,7 @@
             this.txtNote.Name = "txtNote";
             this.txtNote.Size = new System.Drawing.Size(187, 103);
             this.txtNote.TabIndex = 1;
+            this.txtNote.TextChanged += new System.EventHandler(this.txtNote_TextChanged);
             // 
             // label16
             // 
@@ -546,6 +564,7 @@
             this.txtWeight.TabIndex = 128;
             this.txtWeight.Text = "0";
             this.txtWeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtWeight.TextChanged += new System.EventHandler(this.txtNote_TextChanged);
             // 
             // label5
             // 
@@ -585,6 +604,7 @@
             this.txtReportNumber.Name = "txtReportNumber";
             this.txtReportNumber.Size = new System.Drawing.Size(157, 27);
             this.txtReportNumber.TabIndex = 104;
+            this.txtReportNumber.TextChanged += new System.EventHandler(this.txtNote_TextChanged);
             // 
             // label1
             // 
@@ -614,6 +634,7 @@
             this.txtCode.Name = "txtCode";
             this.txtCode.Size = new System.Drawing.Size(131, 27);
             this.txtCode.TabIndex = 200;
+            this.txtCode.TextChanged += new System.EventHandler(this.txtNote_TextChanged);
             // 
             // panel1
             // 

@@ -29,16 +29,17 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BuyBookSetting));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dtBuyDate = new System.Windows.Forms.DateTimePicker();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.cmbBuyer = new System.Windows.Forms.ComboBox();
+            this.label22 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
-            this.dtPayDate = new System.Windows.Forms.DateTimePicker();
             this.rdoNo = new System.Windows.Forms.RadioButton();
             this.rdoYes = new System.Windows.Forms.RadioButton();
             this.label27 = new System.Windows.Forms.Label();
@@ -68,8 +69,9 @@
             this.btnEdit = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
-            this.cmbBuyer = new System.Windows.Forms.ComboBox();
-            this.label22 = new System.Windows.Forms.Label();
+            this.btnChooseDate = new System.Windows.Forms.Button();
+            this.txtPayDate = new System.Windows.Forms.TextBox();
+            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridSetting)).BeginInit();
@@ -89,10 +91,12 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.btnChooseDate);
+            this.panel3.Controls.Add(this.txtPayDate);
+            this.panel3.Controls.Add(this.monthCalendar1);
             this.panel3.Controls.Add(this.cmbBuyer);
             this.panel3.Controls.Add(this.label22);
             this.panel3.Controls.Add(this.label26);
-            this.panel3.Controls.Add(this.dtPayDate);
             this.panel3.Controls.Add(this.rdoNo);
             this.panel3.Controls.Add(this.rdoYes);
             this.panel3.Controls.Add(this.label27);
@@ -114,6 +118,25 @@
             this.panel3.Size = new System.Drawing.Size(976, 427);
             this.panel3.TabIndex = 74;
             // 
+            // cmbBuyer
+            // 
+            this.cmbBuyer.FormattingEnabled = true;
+            this.cmbBuyer.Location = new System.Drawing.Point(380, 14);
+            this.cmbBuyer.Name = "cmbBuyer";
+            this.cmbBuyer.Size = new System.Drawing.Size(156, 29);
+            this.cmbBuyer.TabIndex = 228;
+            this.cmbBuyer.SelectedValueChanged += new System.EventHandler(this.cmbBuyer_SelectedValueChanged);
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
+            this.label22.Location = new System.Drawing.Point(315, 19);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(52, 21);
+            this.label22.TabIndex = 229;
+            this.label22.Text = "Buyer";
+            // 
             // label26
             // 
             this.label26.AutoSize = true;
@@ -124,15 +147,6 @@
             this.label26.Size = new System.Drawing.Size(78, 19);
             this.label26.TabIndex = 210;
             this.label26.Text = "Pay Date";
-            // 
-            // dtPayDate
-            // 
-            this.dtPayDate.CustomFormat = "dd/MM/yyyy";
-            this.dtPayDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtPayDate.Location = new System.Drawing.Point(777, 53);
-            this.dtPayDate.Name = "dtPayDate";
-            this.dtPayDate.Size = new System.Drawing.Size(136, 27);
-            this.dtPayDate.TabIndex = 209;
             // 
             // rdoNo
             // 
@@ -145,6 +159,7 @@
             this.rdoNo.TabStop = true;
             this.rdoNo.Text = "No";
             this.rdoNo.UseVisualStyleBackColor = true;
+            this.rdoNo.CheckedChanged += new System.EventHandler(this.rdoYes_CheckedChanged);
             // 
             // rdoYes
             // 
@@ -155,6 +170,7 @@
             this.rdoYes.TabIndex = 206;
             this.rdoYes.Text = "Yes";
             this.rdoYes.UseVisualStyleBackColor = true;
+            this.rdoYes.CheckedChanged += new System.EventHandler(this.rdoYes_CheckedChanged);
             // 
             // label27
             // 
@@ -233,6 +249,7 @@
             this.txtBuyPrice.TabIndex = 6;
             this.txtBuyPrice.Text = "0";
             this.txtBuyPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtBuyPrice.TextChanged += new System.EventHandler(this.txtSeller_TextChanged);
             this.txtBuyPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBuyPrice_KeyPress);
             this.txtBuyPrice.Leave += new System.EventHandler(this.txtBuyPrice_Leave);
             // 
@@ -245,6 +262,7 @@
             this.txtSalePrice.TabIndex = 8;
             this.txtSalePrice.Text = "0";
             this.txtSalePrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtSalePrice.TextChanged += new System.EventHandler(this.txtSeller_TextChanged);
             this.txtSalePrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBuyPrice_KeyPress);
             this.txtSalePrice.Leave += new System.EventHandler(this.txtSalePrice_Leave);
             // 
@@ -294,8 +312,8 @@
             // RowNum
             // 
             this.RowNum.DataPropertyName = "RowNum";
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            this.RowNum.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            this.RowNum.DefaultCellStyle = dataGridViewCellStyle19;
             this.RowNum.HeaderText = "No.";
             this.RowNum.Name = "RowNum";
             this.RowNum.ReadOnly = true;
@@ -329,9 +347,9 @@
             // Amount
             // 
             this.Amount.DataPropertyName = "Amount";
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle8.Format = "N0";
-            this.Amount.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle20.Format = "N0";
+            this.Amount.DefaultCellStyle = dataGridViewCellStyle20;
             this.Amount.HeaderText = "Amount";
             this.Amount.Name = "Amount";
             this.Amount.ReadOnly = true;
@@ -340,9 +358,9 @@
             // Weight
             // 
             this.Weight.DataPropertyName = "Weight";
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle9.Format = "N2";
-            this.Weight.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle21.Format = "N2";
+            this.Weight.DefaultCellStyle = dataGridViewCellStyle21;
             this.Weight.HeaderText = "Weight";
             this.Weight.Name = "Weight";
             this.Weight.ReadOnly = true;
@@ -351,9 +369,9 @@
             // PricePerGram
             // 
             this.PricePerGram.DataPropertyName = "PricePerGram";
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle10.Format = "N0";
-            this.PricePerGram.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle22.Format = "N0";
+            this.PricePerGram.DefaultCellStyle = dataGridViewCellStyle22;
             this.PricePerGram.HeaderText = "Price/Gram";
             this.PricePerGram.Name = "PricePerGram";
             this.PricePerGram.ReadOnly = true;
@@ -362,9 +380,9 @@
             // PricePerUnit
             // 
             this.PricePerUnit.DataPropertyName = "PricePerUnit";
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle11.Format = "N0";
-            this.PricePerUnit.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle23.Format = "N0";
+            this.PricePerUnit.DefaultCellStyle = dataGridViewCellStyle23;
             this.PricePerUnit.HeaderText = "Price/Unit";
             this.PricePerUnit.Name = "PricePerUnit";
             this.PricePerUnit.ReadOnly = true;
@@ -372,9 +390,9 @@
             // TotalBaht
             // 
             this.TotalBaht.DataPropertyName = "TotalBaht";
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle12.Format = "N0";
-            this.TotalBaht.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle24.Format = "N0";
+            this.TotalBaht.DefaultCellStyle = dataGridViewCellStyle24;
             this.TotalBaht.HeaderText = "TotalBaht";
             this.TotalBaht.Name = "TotalBaht";
             this.TotalBaht.ReadOnly = true;
@@ -433,6 +451,7 @@
             this.txtSeller.Name = "txtSeller";
             this.txtSeller.Size = new System.Drawing.Size(157, 27);
             this.txtSeller.TabIndex = 4;
+            this.txtSeller.TextChanged += new System.EventHandler(this.txtSeller_TextChanged);
             // 
             // btnEdit
             // 
@@ -468,23 +487,30 @@
             this.button1.TabIndex = 32;
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // cmbBuyer
+            // btnChooseDate
             // 
-            this.cmbBuyer.FormattingEnabled = true;
-            this.cmbBuyer.Location = new System.Drawing.Point(380, 14);
-            this.cmbBuyer.Name = "cmbBuyer";
-            this.cmbBuyer.Size = new System.Drawing.Size(156, 29);
-            this.cmbBuyer.TabIndex = 228;
+            this.btnChooseDate.Location = new System.Drawing.Point(908, 53);
+            this.btnChooseDate.Name = "btnChooseDate";
+            this.btnChooseDate.Size = new System.Drawing.Size(34, 28);
+            this.btnChooseDate.TabIndex = 251;
+            this.btnChooseDate.UseVisualStyleBackColor = true;
+            this.btnChooseDate.Click += new System.EventHandler(this.btnChooseDate_Click);
             // 
-            // label22
+            // txtPayDate
             // 
-            this.label22.AutoSize = true;
-            this.label22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label22.Location = new System.Drawing.Point(315, 19);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(52, 21);
-            this.label22.TabIndex = 229;
-            this.label22.Text = "Buyer";
+            this.txtPayDate.Location = new System.Drawing.Point(779, 54);
+            this.txtPayDate.Name = "txtPayDate";
+            this.txtPayDate.Size = new System.Drawing.Size(123, 27);
+            this.txtPayDate.TabIndex = 250;
+            // 
+            // monthCalendar1
+            // 
+            this.monthCalendar1.Location = new System.Drawing.Point(701, 86);
+            this.monthCalendar1.MaxSelectionCount = 1;
+            this.monthCalendar1.Name = "monthCalendar1";
+            this.monthCalendar1.TabIndex = 249;
+            this.monthCalendar1.Visible = false;
+            this.monthCalendar1.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar1_DateSelected);
             // 
             // BuyBookSetting
             // 
@@ -535,11 +561,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn SettingType;
         private System.Windows.Forms.DataGridViewTextBoxColumn Material;
         private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.DateTimePicker dtPayDate;
         private System.Windows.Forms.RadioButton rdoNo;
         private System.Windows.Forms.RadioButton rdoYes;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.ComboBox cmbBuyer;
         private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Button btnChooseDate;
+        private System.Windows.Forms.TextBox txtPayDate;
+        private System.Windows.Forms.MonthCalendar monthCalendar1;
     }
 }

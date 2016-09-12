@@ -36,7 +36,6 @@ namespace DiamondShop
             binder.BindControl(txtPricePerGram, "PricePerGram");
             binder.BindControl(txtPriceGram1, "PriceGram1");
             binder.BindControl(txtPriceGram2, "PriceGram2");
-            binder.BindControl(dtPayDate, "PayDate");
             binder.BindControl(cmbBuyer, "Buyer");
 
         }
@@ -58,13 +57,14 @@ namespace DiamondShop
             binder.BindControl(txtPricePerGram, "PricePerGram");
             binder.BindControl(txtPriceGram1, "PriceGram1");
             binder.BindControl(txtPriceGram2, "PriceGram2");
-            binder.BindControl(dtPayDate, "PayDate");
             binder.BindControl(cmbBuyer, "Buyer");
 
             this.id = id;
             LoadData();
             SetFormatNumber();
             SetControlEnable(false);
+
+            isEdit = false;
         }
 
         protected override void Initial()
@@ -74,6 +74,7 @@ namespace DiamondShop
             cmbBuyer.DataSource = ds.Tables[0];
             cmbBuyer.ValueMember = "ID";
             cmbBuyer.DisplayMember = "DisplayName";
+            cmbBuyer.SelectedIndex = ds.Tables[0].Rows.Count - 1;
             cmbBuyer.Refresh();
 
             dtBuyDate.Select();
@@ -90,6 +91,7 @@ namespace DiamondShop
             if (tds.BuyBookGold.Rows.Count > 0)
             {
                 binder.BindValueToControl(tds.BuyBookGold[0]);
+                txtPayDate.Text = string.Format("{0:d/M/yyyy}", tds.BuyBookGold[0]["PayDate"]);
 
                 EnableSave = false;
                 EnableEdit = true;
@@ -107,6 +109,8 @@ namespace DiamondShop
             }
 
             base.LoadData();
+
+            cmbBuyer.SelectedValueChanged += cmbBuyer_SelectedValueChanged;
         }
 
         protected override bool SaveData()
@@ -124,6 +128,14 @@ namespace DiamondShop
             }
             binder.BindValueToDataRow(row);
             row.IsPaid = rdoYes.Checked ? "1" : "0";
+            if (txtPayDate.Text == "")
+            {
+                row.PayDate = DateTime.MinValue.AddYears(1900);
+            }
+            else
+            {
+                row.PayDate = Convert.ToDateTime(txtPayDate.Text.ToString());
+            }
             try
             {
                 if (id == 0)
@@ -170,7 +182,7 @@ namespace DiamondShop
             }
             else
             {
-                RequirePassword frm = new RequirePassword("2");
+                RequirePassword frm = new RequirePassword("2",0);
                 frm.ShowDialog();
                 isAuthorize = frm.isAuthorize;
                 frm.Close();
@@ -192,6 +204,10 @@ namespace DiamondShop
             if (txtSeller.Text == "")
             {
                 message = "Please input Seller.\n";
+            }
+            if (rdoYes.Checked == true && txtPayDate.Text == "")
+            {
+                message += "Please input Paydate";
             }
 
             if (message == "") { return true; }
@@ -236,6 +252,11 @@ namespace DiamondShop
         }
         private void SetFormatNumber()
         {
+            //ดักเคส MinValue
+            if (txtPayDate.Text != "" && Convert.ToDateTime(txtPayDate.Text).Year == 1901)
+            {
+                txtPayDate.Text = "";
+            }
             txtBuyPrice.Text = GM.ConvertDoubleToString(txtBuyPrice, 0);
             txtSellPrice.Text = GM.ConvertDoubleToString(txtSellPrice, 0);
             txtAmount1.Text = GM.ConvertDoubleToString(txtAmount1);
@@ -289,6 +310,38 @@ namespace DiamondShop
             txtPriceGram2.Enabled = status;
             txtSeller.Enabled = status;
             cmbBuyer.Enabled = status;
+        }
+
+        private void txtSeller_TextChanged(object sender, EventArgs e)
+        {
+            isEdit = true;
+        }
+
+        private void cmbBuyer_SelectedValueChanged(object sender, EventArgs e)
+        {
+            isEdit = true;
+        }
+
+        private void dtBuyDate_ValueChanged(object sender, EventArgs e)
+        {
+            isEdit = true;
+        }
+
+        private void rdoYes_CheckedChanged(object sender, EventArgs e)
+        {
+            isEdit = true;
+        }
+
+        private void btnChooseDate_Click(object sender, EventArgs e)
+        {
+            monthCalendar1.Visible = true;
+        }
+
+        private void monthCalendar1_DateSelected(object sender, DateRangeEventArgs e)
+        {
+            txtPayDate.Text = monthCalendar1.SelectionRange.Start.ToShortDateString();
+            monthCalendar1.Visible = false;
+            isEdit = true;
         }
     }
 }

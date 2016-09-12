@@ -22,6 +22,13 @@ namespace DiamondShop.FormMaster
             set { userName = value; }
         }
 
+        static int shop = 0;
+        public static int Shop
+        {
+            get { return shop; }
+            set { shop = value; }
+        }
+
         static string displayName = "";
         public static string DisplayName
         {

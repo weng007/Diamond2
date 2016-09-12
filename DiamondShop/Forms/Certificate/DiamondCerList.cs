@@ -143,8 +143,13 @@ namespace DiamondShop
                     id = (int)gridDiamondCer.SelectedRows[0].Cells["ID"].Value;
                     DiamondCer frm = new DiamondCer(id);
                     frm.ShowDialog();
+
+                    if (frm.isEdit)
+                    {
+                        DoLoadData();
+                    }
                 }
-                DoLoadData();
+                
             }
             else //mode = 1 Search
             {

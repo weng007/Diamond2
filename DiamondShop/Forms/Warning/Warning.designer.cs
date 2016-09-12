@@ -29,8 +29,9 @@
         private void InitializeComponent()
         {
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.txtMessageStatus = new System.Windows.Forms.TextBox();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnConfirm = new System.Windows.Forms.Button();
             this.txtCancelDate = new System.Windows.Forms.TextBox();
             this.txtConfirmDate = new System.Windows.Forms.TextBox();
             this.txtReadDate = new System.Windows.Forms.TextBox();
@@ -49,7 +50,6 @@
             this.label25 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.txtMessageStatus = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -58,8 +58,8 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Controls.Add(this.txtMessageStatus);
-            this.panel3.Controls.Add(this.button2);
-            this.panel3.Controls.Add(this.button1);
+            this.panel3.Controls.Add(this.btnCancel);
+            this.panel3.Controls.Add(this.btnConfirm);
             this.panel3.Controls.Add(this.txtCancelDate);
             this.panel3.Controls.Add(this.txtConfirmDate);
             this.panel3.Controls.Add(this.txtReadDate);
@@ -84,23 +84,42 @@
             this.panel3.Size = new System.Drawing.Size(707, 284);
             this.panel3.TabIndex = 1;
             // 
-            // button2
+            // txtMessageStatus
             // 
-            this.button2.Location = new System.Drawing.Point(232, 231);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(97, 34);
-            this.button2.TabIndex = 218;
-            this.button2.Text = "Cancel";
-            this.button2.UseVisualStyleBackColor = true;
+            this.txtMessageStatus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.txtMessageStatus.Enabled = false;
+            this.txtMessageStatus.Location = new System.Drawing.Point(162, 178);
+            this.txtMessageStatus.Name = "txtMessageStatus";
+            this.txtMessageStatus.Size = new System.Drawing.Size(167, 27);
+            this.txtMessageStatus.TabIndex = 219;
             // 
-            // button1
+            // btnCancel
             // 
-            this.button1.Location = new System.Drawing.Point(111, 231);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(97, 34);
-            this.button1.TabIndex = 217;
-            this.button1.Text = "Confirm";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnCancel.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnCancel.FlatAppearance.BorderSize = 0;
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel.ForeColor = System.Drawing.Color.White;
+            this.btnCancel.Location = new System.Drawing.Point(280, 225);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(97, 34);
+            this.btnCancel.TabIndex = 218;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // btnConfirm
+            // 
+            this.btnConfirm.BackColor = System.Drawing.Color.SandyBrown;
+            this.btnConfirm.FlatAppearance.BorderSize = 0;
+            this.btnConfirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConfirm.ForeColor = System.Drawing.Color.Black;
+            this.btnConfirm.Location = new System.Drawing.Point(162, 225);
+            this.btnConfirm.Name = "btnConfirm";
+            this.btnConfirm.Size = new System.Drawing.Size(97, 34);
+            this.btnConfirm.TabIndex = 217;
+            this.btnConfirm.Text = "Confirm";
+            this.btnConfirm.UseVisualStyleBackColor = false;
+            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
             // 
             // txtCancelDate
             // 
@@ -153,8 +172,8 @@
             this.txtNote.Location = new System.Drawing.Point(423, 152);
             this.txtNote.Multiline = true;
             this.txtNote.Name = "txtNote";
-            this.txtNote.Size = new System.Drawing.Size(251, 103);
-            this.txtNote.TabIndex = 208;
+            this.txtNote.Size = new System.Drawing.Size(251, 107);
+            this.txtNote.TabIndex = 4;
             this.txtNote.TextChanged += new System.EventHandler(this.txtNote_TextChanged);
             // 
             // label16
@@ -162,7 +181,7 @@
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label16.Location = new System.Drawing.Point(372, 160);
+            this.label16.Location = new System.Drawing.Point(372, 152);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(45, 19);
             this.label16.TabIndex = 209;
@@ -174,7 +193,7 @@
             this.cmbShop.Location = new System.Drawing.Point(162, 133);
             this.cmbShop.Name = "cmbShop";
             this.cmbShop.Size = new System.Drawing.Size(167, 29);
-            this.cmbShop.TabIndex = 206;
+            this.cmbShop.TabIndex = 3;
             this.cmbShop.SelectedValueChanged += new System.EventHandler(this.CmbFactoryStatus_SelectedValueChanged);
             // 
             // label4
@@ -191,7 +210,7 @@
             this.cmbFactoryStatus.Location = new System.Drawing.Point(162, 94);
             this.cmbFactoryStatus.Name = "cmbFactoryStatus";
             this.cmbFactoryStatus.Size = new System.Drawing.Size(167, 29);
-            this.cmbFactoryStatus.TabIndex = 204;
+            this.cmbFactoryStatus.TabIndex = 2;
             this.cmbFactoryStatus.SelectedValueChanged += new System.EventHandler(this.CmbFactoryStatus_SelectedValueChanged);
             // 
             // label7
@@ -208,7 +227,7 @@
             this.cmbReceiver.Location = new System.Drawing.Point(162, 56);
             this.cmbReceiver.Name = "cmbReceiver";
             this.cmbReceiver.Size = new System.Drawing.Size(167, 29);
-            this.cmbReceiver.TabIndex = 203;
+            this.cmbReceiver.TabIndex = 1;
             this.cmbReceiver.SelectedValueChanged += new System.EventHandler(this.CmbFactoryStatus_SelectedValueChanged);
             // 
             // label2
@@ -239,7 +258,7 @@
             // 
             // label25
             // 
-            this.label25.Location = new System.Drawing.Point(25, 183);
+            this.label25.Location = new System.Drawing.Point(25, 180);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(134, 28);
             this.label25.TabIndex = 163;
@@ -256,15 +275,6 @@
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // txtMessageStatus
-            // 
-            this.txtMessageStatus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.txtMessageStatus.Enabled = false;
-            this.txtMessageStatus.Location = new System.Drawing.Point(162, 181);
-            this.txtMessageStatus.Name = "txtMessageStatus";
-            this.txtMessageStatus.Size = new System.Drawing.Size(167, 27);
-            this.txtMessageStatus.TabIndex = 219;
             // 
             // Warning
             // 
@@ -304,8 +314,8 @@
         private System.Windows.Forms.TextBox txtCancelDate;
         private System.Windows.Forms.TextBox txtConfirmDate;
         private System.Windows.Forms.TextBox txtReadDate;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button btnConfirm;
         private System.Windows.Forms.TextBox txtMessageStatus;
     }
 }

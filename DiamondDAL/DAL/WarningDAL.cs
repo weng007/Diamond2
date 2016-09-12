@@ -14,7 +14,7 @@ namespace DiamondDAL.DAL
         dsWarning ds = new dsWarning();
         int flag = 0;
 
-        public dsWarning DoSearchData(string Sender, int Receiver, int MessageStatus, int FactoryStatus, int Shop)
+        public dsWarning DoSearchData(int Sender, int Receiver, int MessageStatus, int FactoryStatus, int Shop, int loginID)
         {
             try
             {
@@ -24,6 +24,7 @@ namespace DiamondDAL.DAL
                 SQL.CreateParameter("MessageStatus", MessageStatus);
                 SQL.CreateParameter("FactoryStatus", FactoryStatus);
                 SQL.CreateParameter("Shop", Shop);
+                SQL.CreateParameter("loginID", loginID);
                 SQL.FillDataSetBySP("SP_Warning_Search", ds.Warning);
             }
             catch (Exception ex)

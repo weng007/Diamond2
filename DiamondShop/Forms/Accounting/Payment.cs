@@ -26,7 +26,6 @@ namespace DiamondShop
             ds = ser.DoSelectData("ExchangeRate", id, 0);
             txtUSDRate.Text = ds.Tables[0].Rows[0]["USDRate"].ToString();
 
-            binder.BindControl(dtPayDate, "PayDate");
             binder.BindControl(txtUSDRate, "USDRete");
 
         }
@@ -35,18 +34,16 @@ namespace DiamondShop
             InitializeComponent();
             Initial();
             this.TotalPrice = TotalPrice;
-            binder.BindControl(dtPayDate, "PayDate");
             binder.BindControl(txtUSDRate, "USDRete");
 
             this.id = id;
             LoadData();
             SetControlEnable(false);
+            isEdit = false;
         }
 
         protected override void Initial()
         {
-
-            dtPayDate.Select();
 
             //SetFieldService.SetRequireField(txtSeller, txtPrice);
         }
@@ -88,6 +85,15 @@ namespace DiamondShop
             }
             binder.BindValueToDataRow(row);
             row.IsPaid = rdoYes.Checked ? "1" : "0";
+            if (txtPayDate.Text == "")
+            {
+                row.PayDate = DateTime.MinValue.AddYears(1900);
+            }
+            else
+            {
+                row.PayDate = Convert.ToDateTime(txtPayDate.Text.ToString());
+            }
+
             try
             {
                     SetEditBy(row);
@@ -126,7 +132,7 @@ namespace DiamondShop
             }
             else
             {
-                RequirePassword frm = new RequirePassword("2");
+                RequirePassword frm = new RequirePassword("2",0);
                 frm.ShowDialog();
                 isAuthorize = frm.isAuthorize;
                 frm.Close();
@@ -169,13 +175,49 @@ namespace DiamondShop
         }
         private void SetFormatNumber()
         {
+            //ดักเคส MinValue
+            if (txtPayDate.Text != "" && Convert.ToDateTime(txtPayDate.Text).Year == 1901)
+            {
+                txtPayDate.Text = "";
+            }
             txtPrice.Text = GM.ConvertDoubleToString(txtPrice,0);
         }
 
         private void SetControlEnable(bool status)
         {
-            dtPayDate.Enabled = status;
             txtPrice.Enabled = status;
+        }
+
+        private void dtPayDate_ValueChanged(object sender, EventArgs e)
+        {
+            isEdit = true;
+        }
+
+        private void rdoYes_CheckedChanged(object sender, EventArgs e)
+        {
+            isEdit = true;
+        }
+
+        private void txtUSDRate_TextChanged(object sender, EventArgs e)
+        {
+            isEdit = true;
+        }
+
+        private void btnChooseDate_Click(object sender, EventArgs e)
+        {
+            monthCalendar1.Visible = true;
+        }
+
+        private void monthCalendar1_DateSelected(object sender, DateRangeEventArgs e)
+        {
+            txtPayDate.Text = monthCalendar1.SelectionRange.Start.ToShortDateString();
+            monthCalendar1.Visible = false;
+            isEdit = true;
+        }
+
+        private void txtPayDate_TextChanged(object sender, EventArgs e)
+        {
+            isEdit = true;
         }
     }
 }

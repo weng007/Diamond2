@@ -80,9 +80,12 @@ namespace DiamondShop
                 id = (int)gridGold.SelectedRows[0].Cells["ID"].Value;
                 BuyBookGold frm = new BuyBookGold(id);
                 frm.ShowDialog();
-            }
 
-            DoLoadData();
+                if (frm.isEdit)
+                {
+                    DoLoadData();
+                }
+            }
         }
 
     }

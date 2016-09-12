@@ -32,8 +32,6 @@ namespace DiamondShop
             InitializeComponent();
             Initial();
             BinderData();
-            
-            txtUpdateBy.Text = ApplicationInfo.UserName;
         }
 
         public Inventory(int id)
@@ -42,11 +40,12 @@ namespace DiamondShop
             Initial();
             BinderData();
 
-            txtUpdateBy.Text = ApplicationInfo.UserName;
-
             this.id = id;
             LoadData();
             SetControlEnable(false);
+            txtUpdateBy.Text = ApplicationInfo.UserName;
+            
+            isEdit = false;
         }
 
         public Inventory(string prefix)
@@ -61,6 +60,7 @@ namespace DiamondShop
             SetJewelryType();
 
             txtUpdateBy.Text = ApplicationInfo.UserName;
+            cmbShop.SelectedValue = ApplicationInfo.Shop.ToString();
         }
 
         private void SetJewelryType()
@@ -223,6 +223,8 @@ namespace DiamondShop
             }
             SetFormatNumber();
             base.LoadData();
+
+            cmbShop.SelectedValueChanged += cmbShop_SelectedValueChanged;
         }
 
         protected override bool SaveData()
@@ -303,7 +305,7 @@ namespace DiamondShop
             }
             else
             {
-                RequirePassword frm = new RequirePassword("1");
+                RequirePassword frm = new RequirePassword("1",Convert.ToInt16(cmbShop.SelectedValue.ToString()));
                 frm.ShowDialog();
                 isAuthorize = frm.isAuthorize;
                 frm.Close();
@@ -409,6 +411,7 @@ namespace DiamondShop
 
             txtMaterialCost1.Text = GM.ConvertDoubleToString(txtMaterialCost1,0);
             txtMaterialCost11.Text = GM.ConvertDoubleToString(txtMaterialCost11,0);
+            isEdit = true;
         }
 
         private void txtMaterialWeight2_TextChanged(object sender, EventArgs e)
@@ -418,45 +421,61 @@ namespace DiamondShop
 
             txtMaterialCost2.Text = GM.ConvertDoubleToString(txtMaterialCost2,0);
             txtMaterialCost22.Text = GM.ConvertDoubleToString(txtMaterialCost22,0);
+
+            isEdit = true;
         }
 
         private void txtPricePerGram11_TextChanged(object sender, EventArgs e)
         {
             txtMaterialCost11.Text = (GM.ConvertStringToDouble(txtMaterialWeight1) * GM.ConvertStringToDouble(txtPricePerGram11)).ToString();
             txtMaterialCost11.Text = GM.ConvertDoubleToString(txtMaterialCost11,0);
+
+            isEdit = true;
         }
 
         private void txtPricePerGram22_TextChanged(object sender, EventArgs e)
         {
             txtMaterialCost22.Text = (GM.ConvertStringToDouble(txtMaterialWeight2) * GM.ConvertStringToDouble(txtPricePerGram22)).ToString();
             txtMaterialCost22.Text = GM.ConvertDoubleToString(txtMaterialCost22,0);
+
+            isEdit = true;
         }
 
         private void txtMaterialCost1_TextChanged(object sender, EventArgs e)
         {
             txtMaterialNetCost.Text = (GM.ConvertStringToDouble(txtMaterialCost1) + GM.ConvertStringToDouble(txtMaterialCost2)).ToString();
             txtMaterialNetCost.Text = GM.ConvertDoubleToString(txtMaterialNetCost,0);
+
+            isEdit = true;
         }
 
         private void txtMaterialCost11_TextChanged(object sender, EventArgs e)
         {
             txtMaterialNetCost1.Text = (GM.ConvertStringToDouble(txtMaterialCost11) + GM.ConvertStringToDouble(txtMaterialCost22)).ToString();
             txtMaterialNetCost1.Text = GM.ConvertDoubleToString(txtMaterialNetCost1,0);
+
+            isEdit = true;
         }
 
         private void txtLaborCost_TextChanged(object sender, EventArgs e)
         {
             txtLaborCost1.Text = (GM.ConvertStringToDouble(txtLaborCost) * 2).ToString();
+
+            isEdit = true;
         }
 
         private void txtCost1_TextChanged(object sender, EventArgs e)
         {
             txtCost11.Text = (GM.ConvertStringToDouble(txtCost1) * 2).ToString();
+
+            isEdit = true;
         }
 
         private void txtCost2_TextChanged(object sender, EventArgs e)
         {
             txtCost22.Text = (GM.ConvertStringToDouble(txtCost2) * 2).ToString();
+
+            isEdit = true;
         }
 
         private void txtCost3_TextChanged(object sender, EventArgs e)
@@ -466,6 +485,8 @@ namespace DiamondShop
                 GM.ConvertStringToDouble(txtCost2) + GM.ConvertStringToDouble(txtCost3)).ToString();
 
             txtCostBody.Text = GM.ConvertDoubleToString(txtCostBody,0);
+
+            isEdit = true;
         }
 
         private void txtMaterialNetCost_TextChanged(object sender, EventArgs e)
@@ -475,6 +496,8 @@ namespace DiamondShop
             txtPricePerGram1_Leave(sender, e);
 
             txtCostBody.Text = GM.ConvertDoubleToString(txtCostBody, 0);
+
+            isEdit = true;
         }
 
         private void txtMaterialNetCost1_TextChanged(object sender, EventArgs e)
@@ -484,6 +507,7 @@ namespace DiamondShop
             txtPricePerGram1_Leave(sender, e);
 
             txtCostBody1.Text = GM.ConvertDoubleToString(txtCostBody1, 0);
+            isEdit = true;
         }
 
         private void txtCostNonCer_TextChanged(object sender, EventArgs e)
@@ -492,6 +516,8 @@ namespace DiamondShop
             txtPricePerGram1_Leave(sender, e);
 
             txtRedCost.Text = GM.ConvertDoubleToString(txtRedCost,0);
+
+            isEdit = true;
         }
 
 
@@ -502,6 +528,8 @@ namespace DiamondShop
             txtPricePerGram1_Leave(sender, e);
 
             txtRedCost1.Text = GM.ConvertDoubleToString(txtRedCost1,0);
+
+            isEdit = true;
         }
 
         private void txtPricePerGram1_Leave(object sender, EventArgs e)
@@ -591,6 +619,22 @@ namespace DiamondShop
                 txtCostCer1.Text = Convert.ToString(Convert.ToDouble(ds.Tables[0].Rows[2]["Price"]) + Convert.ToDouble(ds.Tables[0].Rows[3]["Price"]));
             }
         }
+
+        private void cmbShop_SelectedValueChanged(object sender, EventArgs e)
+        {
+            isEdit = true;
+        }
+
+        private void dtUpdateDate_ValueChanged(object sender, EventArgs e)
+        {
+            isEdit = true;
+        }
+
+        private void txtRedCost_TextChanged(object sender, EventArgs e)
+        {
+            isEdit = true;
+        }
+
         private void SetControlEnable(bool status)
         {
             dtUpdateDate.Enabled = status;

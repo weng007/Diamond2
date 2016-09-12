@@ -19,13 +19,7 @@
             <xs:sequence>
               <xs:element name="RowNum" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnRowNum" msprop:Generator_ColumnPropNameInRow="RowNum" msprop:Generator_ColumnPropNameInTable="RowNumColumn" msprop:Generator_UserColumnName="RowNum" type="xs:long" minOccurs="0" />
               <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
-              <xs:element name="Sender" msprop:Generator_ColumnVarNameInTable="columnSender" msprop:Generator_ColumnPropNameInRow="Sender" msprop:Generator_ColumnPropNameInTable="SenderColumn" msprop:Generator_UserColumnName="Sender" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="30" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
+              <xs:element name="Sender" msprop:Generator_ColumnVarNameInTable="columnSender" msprop:Generator_ColumnPropNameInRow="Sender" msprop:Generator_ColumnPropNameInTable="SenderColumn" msprop:Generator_UserColumnName="Sender" type="xs:int" minOccurs="0" />
               <xs:element name="Receiver" msprop:Generator_ColumnVarNameInTable="columnReceiver" msprop:Generator_ColumnPropNameInRow="Receiver" msprop:Generator_ColumnPropNameInTable="ReceiverColumn" msprop:Generator_UserColumnName="Receiver" type="xs:int" minOccurs="0" />
               <xs:element name="MessageStatus" msprop:Generator_ColumnVarNameInTable="columnMessageStatus" msprop:Generator_ColumnPropNameInRow="MessageStatus" msprop:Generator_ColumnPropNameInTable="MessageStatusColumn" msprop:Generator_UserColumnName="MessageStatus" type="xs:int" minOccurs="0" />
               <xs:element name="FactoryStatus" msprop:Generator_ColumnVarNameInTable="columnFactoryStatus" msprop:Generator_ColumnPropNameInRow="FactoryStatus" msprop:Generator_ColumnPropNameInTable="FactoryStatusColumn" msprop:Generator_UserColumnName="FactoryStatus" type="xs:int" minOccurs="0" />
@@ -49,6 +43,7 @@
               <xs:element name="MessageStatusName" msprop:Generator_ColumnVarNameInTable="columnMessageStatusName" msprop:Generator_ColumnPropNameInRow="MessageStatusName" msprop:Generator_ColumnPropNameInTable="MessageStatusNameColumn" msprop:Generator_UserColumnName="MessageStatusName" type="xs:string" minOccurs="0" />
               <xs:element name="FactoryStatusName" msprop:Generator_ColumnVarNameInTable="columnFactoryStatusName" msprop:Generator_ColumnPropNameInRow="FactoryStatusName" msprop:Generator_ColumnPropNameInTable="FactoryStatusNameColumn" msprop:Generator_UserColumnName="FactoryStatusName" type="xs:string" minOccurs="0" />
               <xs:element name="ShopName" msprop:Generator_ColumnVarNameInTable="columnShopName" msprop:Generator_ColumnPropNameInRow="ShopName" msprop:Generator_ColumnPropNameInTable="ShopNameColumn" msprop:Generator_UserColumnName="ShopName" type="xs:string" minOccurs="0" />
+              <xs:element name="SenderName" msprop:Generator_ColumnVarNameInTable="columnSenderName" msprop:Generator_ColumnPropNameInRow="SenderName" msprop:Generator_ColumnPropNameInTable="SenderNameColumn" msprop:Generator_UserColumnName="SenderName" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

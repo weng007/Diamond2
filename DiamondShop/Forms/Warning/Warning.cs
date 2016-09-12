@@ -19,37 +19,61 @@ namespace DiamondShop
     {
         Service2 ser1;
         dsWarning tds = new dsWarning();
-        MemoryStream ms1;
-        byte[] image1;
-        int custID = 0;
-        int refID = 0;
-        string isPrintPrice = "1";
+        int flag = 0;
 
         public Warning()
         {
             InitializeComponent();
             Initial();
             BinderControl();
+            txtSender.Text = ApplicationInfo.DisplayName;
         }
         public Warning(int id)
         {
             InitializeComponent();
             Initial();
-
             BinderControl();
 
             this.id = id;
+            
+            //Receiver
+            if (Convert.ToInt16(cmbReceiver.SelectedValue.ToString()) == ApplicationInfo.UserID)
+            {   
+
+                if (txtConfirmDate.Text != "" || txtCancelDate.Text != "")
+                {
+                    cmbReceiver.Enabled = false;
+                    cmbFactoryStatus.Enabled = false;
+                    cmbShop.Enabled = false;
+                    txtNote.Text = "";
+                    EnableSave = false;
+                }
+                //ผู้รับจะไม่สามารถแก้ไขได้
+                cmbReceiver.Enabled = false;
+                cmbShop.Enabled = false;
+            }
+            //Sender
+            else if (Convert.ToInt16(cmbReceiver.SelectedValue.ToString()) != ApplicationInfo.UserID)
+            {
+                ser1 = GM.GetService1();
+                ser1.UpdateMessageStatus(id, "0");
+
+                    cmbReceiver.Enabled = false;
+                    //cmbFactoryStatus.Enabled = false;
+                    cmbShop.Enabled = false;
+                    txtNote.Text = "";
+                    EnableSave = false;
+            }
+            
             LoadData();
+            isEdit = false;
         }
         private void BinderControl()
         {
-            binder.BindControl(txtSender, "Sender");
+            binder.BindControl(txtSender, "SenderName");
             binder.BindControl(cmbReceiver, "Receiver");
-            binder.BindControl(txtMessageStatus, "MessageStatus");
+            binder.BindControl(txtMessageStatus, "MessageStatusName");
             binder.BindControl(cmbFactoryStatus, "FactoryStatus");
-            binder.BindControl(txtReadDate, "ReadDate");
-            binder.BindControl(txtConfirmDate, "ConfirmDate");
-            binder.BindControl(txtCancelDate, "CancelDate");
             binder.BindControl(cmbShop, "Shop");
             binder.BindControl(txtNote, "Note");
         }
@@ -61,7 +85,6 @@ namespace DiamondShop
             cmbReceiver.ValueMember = "ID";
             cmbReceiver.DisplayMember = "DisplayName";
             cmbReceiver.Refresh();
-
 
             cmbFactoryStatus.DataSource = (GM.GetMasterTableDetail("C034")).Tables[0];
             cmbFactoryStatus.ValueMember = "ID";
@@ -78,8 +101,6 @@ namespace DiamondShop
 
         protected override void LoadData()
         {
-            
-
             ds = ser.DoSelectData("Warning", id, 0);
             tds.Clear();
             tds.Merge(ds);
@@ -87,15 +108,15 @@ namespace DiamondShop
             if (tds.Warning.Rows.Count > 0)
             {
                 binder.BindValueToControl(tds.Warning[0]);
-
+                txtReadDate.Text = string.Format("{0:d/M/yyyy}", tds.Warning[0]["ReadDate"]);
+                txtConfirmDate.Text = string.Format("{0:d/M/yyyy}", tds.Warning[0]["ConfirmDate"]);
+                txtCancelDate.Text = string.Format("{0:d/M/yyyy}", tds.Warning[0]["CancelDate"]);
                 EnableDelete = true;
             }
-            SetFormatNumber();
+            SetFormat();
             base.LoadData();
 
-
             cmbFactoryStatus.SelectedValueChanged += CmbFactoryStatus_SelectedValueChanged;
-
         }
 
         private void CmbFactoryStatus_SelectedValueChanged(object sender, EventArgs e)
@@ -115,26 +136,33 @@ namespace DiamondShop
             {
                 row = tds.Warning.NewWarningRow();
                 tds.Warning.Rows.Add(row);
-            }
-            
-            binder.BindValueToDataRow(row);
-            row.ReadDate = DateTime.MinValue.AddYears(1900);
-            row.ConfirmDate = DateTime.MinValue.AddYears(1900);
-            row.CancelDate = DateTime.MinValue.AddYears(1900);
+            }          
+            binder.BindValueToDataRow(row);           
 
             try
             {
                 if (id == 0)
                 {
                     SetCreateBy(row);
+                    row.ReadDate = DateTime.MinValue.AddYears(1900);
+                    row.CancelDate = DateTime.MinValue.AddYears(1900);
+                    row.ConfirmDate = DateTime.MinValue.AddYears(1900);
+                    row.Sender = ApplicationInfo.UserID;
                     chkFlag = ser.DoInsertData("Warning", tds, 0);
                 }
                 else
                 {
                     SetEditBy(row);
+                    if(flag == 1)
+                    {
+                        row.CancelDate = DateTime.MinValue.AddYears(1900);
+                    }
+                    else if(flag == 2)
+                    {
+                        row.ConfirmDate = DateTime.MinValue.AddYears(1900);
+                    }
                     chkFlag = ser.DoUpdateData("Warning", tds);
                 }
-
                 tds.AcceptChanges();
             }
             catch (Exception ex)
@@ -148,20 +176,17 @@ namespace DiamondShop
         {
             try
             {
-                    chkFlag = ser.DoDeleteData("Warning", id);
-
+                chkFlag = ser.DoDeleteData("Warning", id);
             }
             catch (Exception ex)
             {
                 throw ex;
             }
-
             return chkFlag;
         }
 
         protected override bool ValidateData()
         {
-
             message = "";
 
             //if (txtCode.Text == "")
@@ -173,22 +198,52 @@ namespace DiamondShop
             else { return false; }
         }
   
-        private void SetFormatNumber()
+        private void SetFormat()
         {
-            //txtPriceTag.Text = GM.ConvertDoubleToString(txtPriceTag, 0);
-            //txtNetPrice.Text = GM.ConvertDoubleToString(txtNetPrice, 0);
-        }
-
-        private void txtNetPrice_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            //ดักเคส MinValue
+            if(txtReadDate.Text != "" && Convert.ToDateTime(txtReadDate.Text).Year == 1901)
             {
-                e.Handled = true;
+                txtReadDate.Text = "";
+            }
+            if (txtConfirmDate.Text != "" && Convert.ToDateTime(txtConfirmDate.Text).Year == 1901)
+            {
+                txtConfirmDate.Text = "";
+            }
+            if (txtCancelDate.Text != "" && Convert.ToDateTime(txtCancelDate.Text).Year == 1901)
+            {
+                txtCancelDate.Text = "";
             }
         }
+
         private void txtNote_TextChanged(object sender, EventArgs e)
         {
             isEdit = true;
+        }
+
+        private void btnConfirm_Click(object sender, EventArgs e)
+        {
+            if (Convert.ToInt16(cmbReceiver.SelectedValue.ToString()) == ApplicationInfo.UserID)
+            {
+                ser1 = GM.GetService1();
+                ser1.UpdateMessageStatus(id, "1");
+                LoadData();
+                txtCancelDate.Text = "";
+
+                flag = 1;
+            }           
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            if (Convert.ToInt16(cmbReceiver.SelectedValue.ToString()) == ApplicationInfo.UserID)
+            {
+                ser1 = GM.GetService1();
+                ser1.UpdateMessageStatus(id, "2");
+                LoadData();
+                txtConfirmDate.Text = "";
+
+                flag = 2;
+            }       
         }
     }
 }

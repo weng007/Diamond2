@@ -127,15 +127,25 @@ namespace DiamondShop
             PaymentList frm = new PaymentList();
             SetFormList(frm, 16, "Payment");
         }
-        private void btnActivity_Click(object sender, EventArgs e)
+        private void warningToolStripMenuItem_Click(object sender, EventArgs e)
         {
             WarningList frm = new WarningList();
             SetFormList(frm, 17, "Warning");
         }
+        private void calendarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CalendarActivity frm = new CalendarActivity();
+            SetFormList(frm, 18, "CalendarActivity");
+        }
         private void btnTransfer_Click(object sender, EventArgs e)
         {
             TransferList frm = new TransferList();
-            SetFormList(frm, 18, "Transfer");
+            SetFormList(frm, 19, "Transfer");
+        }
+        private void btnOrderFactory_Click(object sender, EventArgs e)
+        {
+            OrderList frm = new OrderList();
+            SetFormList(frm, 20, "Order");
         }
         private void btnReportBuying_Click(object sender, EventArgs e)
         {
@@ -274,11 +284,6 @@ namespace DiamondShop
 
             Login frm = new Login();
             frm.ShowDialog();            
-        }
-
-        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

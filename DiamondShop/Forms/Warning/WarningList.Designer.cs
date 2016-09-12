@@ -29,22 +29,22 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WarningList));
             this.panel2 = new System.Windows.Forms.Panel();
             this.gridWarning = new System.Windows.Forms.DataGridView();
             this.RowNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Sender = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SenderName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ReceiverName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MessageStatusName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FactoryStatusName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ShopName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Note = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.cmbSender = new System.Windows.Forms.ComboBox();
             this.cmbShop = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.cmbFactoryStatus = new System.Windows.Forms.ComboBox();
@@ -55,10 +55,10 @@
             this.cmbReceiver = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnSearch = new System.Windows.Forms.Button();
-            this.txtSender = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.tds = new DiamondDS.DS.dsSell();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.tds = new DiamondDS.DS.dsSell();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridWarning)).BeginInit();
@@ -83,19 +83,19 @@
             this.gridWarning.AllowUserToDeleteRows = false;
             this.gridWarning.AllowUserToOrderColumns = true;
             this.gridWarning.BackgroundColor = System.Drawing.SystemColors.ControlLight;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridWarning.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridWarning.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.gridWarning.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridWarning.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.RowNum,
             this.ID,
-            this.Sender,
+            this.SenderName,
             this.ReceiverName,
             this.MessageStatusName,
             this.FactoryStatusName,
@@ -115,8 +115,8 @@
             // RowNum
             // 
             this.RowNum.DataPropertyName = "RowNum";
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.RowNum.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.RowNum.DefaultCellStyle = dataGridViewCellStyle2;
             this.RowNum.HeaderText = "No.";
             this.RowNum.Name = "RowNum";
             this.RowNum.ReadOnly = true;
@@ -130,15 +130,13 @@
             this.ID.ReadOnly = true;
             this.ID.Visible = false;
             // 
-            // Sender
+            // SenderName
             // 
-            this.Sender.DataPropertyName = "Sender";
-            dataGridViewCellStyle11.Format = "dd/MM/yyyy";
-            this.Sender.DefaultCellStyle = dataGridViewCellStyle11;
-            this.Sender.HeaderText = "Sender";
-            this.Sender.Name = "Sender";
-            this.Sender.ReadOnly = true;
-            this.Sender.Width = 120;
+            this.SenderName.DataPropertyName = "SenderName";
+            this.SenderName.HeaderText = "Sender";
+            this.SenderName.Name = "SenderName";
+            this.SenderName.ReadOnly = true;
+            this.SenderName.Width = 120;
             // 
             // ReceiverName
             // 
@@ -167,9 +165,9 @@
             // ShopName
             // 
             this.ShopName.DataPropertyName = "ShopName";
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle12.Format = "N0";
-            this.ShopName.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle3.Format = "N0";
+            this.ShopName.DefaultCellStyle = dataGridViewCellStyle3;
             this.ShopName.HeaderText = "Location";
             this.ShopName.Name = "ShopName";
             this.ShopName.ReadOnly = true;
@@ -184,8 +182,9 @@
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(161)))), ((int)(((byte)(118)))));
-            this.panel4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel4.BackgroundImage")));
+            this.panel4.BackColor = System.Drawing.Color.IndianRed;
+            this.panel4.Controls.Add(this.button1);
+            this.panel4.Controls.Add(this.cmbSender);
             this.panel4.Controls.Add(this.cmbShop);
             this.panel4.Controls.Add(this.label5);
             this.panel4.Controls.Add(this.cmbFactoryStatus);
@@ -196,13 +195,20 @@
             this.panel4.Controls.Add(this.cmbReceiver);
             this.panel4.Controls.Add(this.label4);
             this.panel4.Controls.Add(this.btnSearch);
-            this.panel4.Controls.Add(this.txtSender);
             this.panel4.Controls.Add(this.label3);
             this.panel4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel4.Location = new System.Drawing.Point(-1, 0);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1322, 123);
             this.panel4.TabIndex = 44;
+            // 
+            // cmbSender
+            // 
+            this.cmbSender.FormattingEnabled = true;
+            this.cmbSender.Location = new System.Drawing.Point(239, 18);
+            this.cmbSender.Name = "cmbSender";
+            this.cmbSender.Size = new System.Drawing.Size(172, 29);
+            this.cmbSender.TabIndex = 1;
             // 
             // cmbShop
             // 
@@ -306,13 +312,6 @@
             this.btnSearch.UseVisualStyleBackColor = false;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // txtSender
-            // 
-            this.txtSender.Location = new System.Drawing.Point(239, 18);
-            this.txtSender.Name = "txtSender";
-            this.txtSender.Size = new System.Drawing.Size(172, 27);
-            this.txtSender.TabIndex = 1;
-            // 
             // label3
             // 
             this.label3.BackColor = System.Drawing.Color.Transparent;
@@ -323,21 +322,30 @@
             this.label3.TabIndex = 27;
             this.label3.Text = "Sender";
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // tds
             // 
             this.tds.DataSetName = "dsSell";
             this.tds.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // timer1
+            // button1
             // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.button1.Location = new System.Drawing.Point(1111, 77);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 34);
+            this.button1.TabIndex = 77;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // WarningList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackColor = System.Drawing.Color.IndianRed;
             this.ClientSize = new System.Drawing.Size(1335, 577);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel4);
@@ -348,7 +356,6 @@
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridWarning)).EndInit();
             this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tds)).EndInit();
             this.ResumeLayout(false);
 
@@ -359,7 +366,6 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.TextBox txtSender;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView gridWarning;
@@ -372,14 +378,16 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cmbMessageStatus;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.ComboBox cmbSender;
         private System.Windows.Forms.DataGridViewTextBoxColumn RowNum;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Sender;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SenderName;
         private System.Windows.Forms.DataGridViewTextBoxColumn ReceiverName;
         private System.Windows.Forms.DataGridViewTextBoxColumn MessageStatusName;
         private System.Windows.Forms.DataGridViewTextBoxColumn FactoryStatusName;
         private System.Windows.Forms.DataGridViewTextBoxColumn ShopName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Note;
-        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button button1;
     }
 }

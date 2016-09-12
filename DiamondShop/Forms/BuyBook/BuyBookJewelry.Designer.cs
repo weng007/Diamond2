@@ -31,10 +31,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BuyBookJewelry));
             this.dtBuyDate = new System.Windows.Forms.DateTimePicker();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label23 = new System.Windows.Forms.Label();
+            this.txtCode2 = new System.Windows.Forms.TextBox();
             this.cmbBuyer = new System.Windows.Forms.ComboBox();
             this.label22 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
-            this.dtPayDate = new System.Windows.Forms.DateTimePicker();
             this.rdoNo = new System.Windows.Forms.RadioButton();
             this.rdoYes = new System.Windows.Forms.RadioButton();
             this.label21 = new System.Windows.Forms.Label();
@@ -79,8 +80,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.txtCode2 = new System.Windows.Forms.TextBox();
-            this.label23 = new System.Windows.Forms.Label();
+            this.btnChooseDate = new System.Windows.Forms.Button();
+            this.txtPayDate = new System.Windows.Forms.TextBox();
+            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -93,17 +95,20 @@
             this.dtBuyDate.Name = "dtBuyDate";
             this.dtBuyDate.Size = new System.Drawing.Size(146, 27);
             this.dtBuyDate.TabIndex = 2;
+            this.dtBuyDate.ValueChanged += new System.EventHandler(this.dtBuyDate_ValueChanged);
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.btnChooseDate);
+            this.panel3.Controls.Add(this.txtPayDate);
+            this.panel3.Controls.Add(this.monthCalendar1);
             this.panel3.Controls.Add(this.label23);
             this.panel3.Controls.Add(this.txtCode2);
             this.panel3.Controls.Add(this.cmbBuyer);
             this.panel3.Controls.Add(this.label22);
             this.panel3.Controls.Add(this.label20);
-            this.panel3.Controls.Add(this.dtPayDate);
             this.panel3.Controls.Add(this.rdoNo);
             this.panel3.Controls.Add(this.rdoYes);
             this.panel3.Controls.Add(this.label21);
@@ -153,6 +158,25 @@
             this.panel3.Size = new System.Drawing.Size(1147, 406);
             this.panel3.TabIndex = 74;
             // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
+            this.label23.Location = new System.Drawing.Point(313, 20);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(63, 21);
+            this.label23.TabIndex = 229;
+            this.label23.Text = "Code2";
+            // 
+            // txtCode2
+            // 
+            this.txtCode2.Location = new System.Drawing.Point(378, 17);
+            this.txtCode2.Name = "txtCode2";
+            this.txtCode2.Size = new System.Drawing.Size(122, 27);
+            this.txtCode2.TabIndex = 228;
+            this.txtCode2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtCode2.TextChanged += new System.EventHandler(this.txtRemark_TextChanged);
+            // 
             // cmbBuyer
             // 
             this.cmbBuyer.FormattingEnabled = true;
@@ -182,15 +206,6 @@
             this.label20.TabIndex = 200;
             this.label20.Text = "Pay Date";
             // 
-            // dtPayDate
-            // 
-            this.dtPayDate.CustomFormat = "dd/MM/yyyy";
-            this.dtPayDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtPayDate.Location = new System.Drawing.Point(967, 196);
-            this.dtPayDate.Name = "dtPayDate";
-            this.dtPayDate.Size = new System.Drawing.Size(136, 27);
-            this.dtPayDate.TabIndex = 199;
-            // 
             // rdoNo
             // 
             this.rdoNo.AutoSize = true;
@@ -202,6 +217,7 @@
             this.rdoNo.TabStop = true;
             this.rdoNo.Text = "No";
             this.rdoNo.UseVisualStyleBackColor = true;
+            this.rdoNo.CheckedChanged += new System.EventHandler(this.rdoYes_CheckedChanged);
             // 
             // rdoYes
             // 
@@ -212,6 +228,7 @@
             this.rdoYes.TabIndex = 196;
             this.rdoYes.Text = "Yes";
             this.rdoYes.UseVisualStyleBackColor = true;
+            this.rdoYes.CheckedChanged += new System.EventHandler(this.rdoYes_CheckedChanged);
             // 
             // label21
             // 
@@ -242,6 +259,7 @@
             this.txtMinPrice.TabIndex = 14;
             this.txtMinPrice.Text = "0";
             this.txtMinPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtMinPrice.TextChanged += new System.EventHandler(this.txtRemark_TextChanged);
             this.txtMinPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCost1_KeyPress);
             this.txtMinPrice.Leave += new System.EventHandler(this.txtCost1_Leave);
             // 
@@ -321,6 +339,7 @@
             this.txtRemark.Name = "txtRemark";
             this.txtRemark.Size = new System.Drawing.Size(222, 117);
             this.txtRemark.TabIndex = 26;
+            this.txtRemark.TextChanged += new System.EventHandler(this.txtRemark_TextChanged);
             // 
             // label17
             // 
@@ -341,6 +360,7 @@
             this.txtNote.Name = "txtNote";
             this.txtNote.Size = new System.Drawing.Size(174, 62);
             this.txtNote.TabIndex = 24;
+            this.txtNote.TextChanged += new System.EventHandler(this.txtRemark_TextChanged);
             // 
             // label7
             // 
@@ -372,6 +392,7 @@
             this.txtCost3.TabIndex = 22;
             this.txtCost3.Text = "0";
             this.txtCost3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtCost3.TextChanged += new System.EventHandler(this.txtRemark_TextChanged);
             this.txtCost3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCost1_KeyPress);
             this.txtCost3.Leave += new System.EventHandler(this.txtCost1_Leave);
             // 
@@ -416,6 +437,7 @@
             this.txtCost2.TabIndex = 20;
             this.txtCost2.Text = "0";
             this.txtCost2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtCost2.TextChanged += new System.EventHandler(this.txtRemark_TextChanged);
             this.txtCost2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCost1_KeyPress);
             this.txtCost2.Leave += new System.EventHandler(this.txtCost1_Leave);
             // 
@@ -438,6 +460,7 @@
             this.txtCost1.TabIndex = 18;
             this.txtCost1.Text = "0";
             this.txtCost1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtCost1.TextChanged += new System.EventHandler(this.txtRemark_TextChanged);
             this.txtCost1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCost1_KeyPress);
             this.txtCost1.Leave += new System.EventHandler(this.txtCost1_Leave);
             // 
@@ -449,6 +472,7 @@
             this.txtSize.TabIndex = 12;
             this.txtSize.Text = "0";
             this.txtSize.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtSize.TextChanged += new System.EventHandler(this.txtRemark_TextChanged);
             this.txtSize.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCost1_KeyPress);
             // 
             // label15
@@ -469,6 +493,7 @@
             this.txtWeight.TabIndex = 10;
             this.txtWeight.Text = "0";
             this.txtWeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtWeight.TextChanged += new System.EventHandler(this.txtRemark_TextChanged);
             this.txtWeight.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCost1_KeyPress);
             this.txtWeight.Leave += new System.EventHandler(this.txtWeight_Leave);
             // 
@@ -536,6 +561,7 @@
             this.dtImportDate.Name = "dtImportDate";
             this.dtImportDate.Size = new System.Drawing.Size(146, 27);
             this.dtImportDate.TabIndex = 12;
+            this.dtImportDate.ValueChanged += new System.EventHandler(this.dtBuyDate_ValueChanged);
             // 
             // label10
             // 
@@ -573,6 +599,7 @@
             this.cmbType.Name = "cmbType";
             this.cmbType.Size = new System.Drawing.Size(173, 29);
             this.cmbType.TabIndex = 6;
+            this.cmbType.SelectedValueChanged += new System.EventHandler(this.cmbType_SelectedValueChanged);
             // 
             // label8
             // 
@@ -620,6 +647,7 @@
             this.txtCode.Name = "txtCode";
             this.txtCode.Size = new System.Drawing.Size(146, 27);
             this.txtCode.TabIndex = 100;
+            this.txtCode.TextChanged += new System.EventHandler(this.txtRemark_TextChanged);
             // 
             // panel1
             // 
@@ -645,23 +673,30 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // txtCode2
+            // btnChooseDate
             // 
-            this.txtCode2.Location = new System.Drawing.Point(378, 17);
-            this.txtCode2.Name = "txtCode2";
-            this.txtCode2.Size = new System.Drawing.Size(122, 27);
-            this.txtCode2.TabIndex = 228;
-            this.txtCode2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.btnChooseDate.Location = new System.Drawing.Point(1099, 192);
+            this.btnChooseDate.Name = "btnChooseDate";
+            this.btnChooseDate.Size = new System.Drawing.Size(34, 28);
+            this.btnChooseDate.TabIndex = 251;
+            this.btnChooseDate.UseVisualStyleBackColor = true;
+            this.btnChooseDate.Click += new System.EventHandler(this.btnChooseDate_Click);
             // 
-            // label23
+            // txtPayDate
             // 
-            this.label23.AutoSize = true;
-            this.label23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label23.Location = new System.Drawing.Point(313, 20);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(63, 21);
-            this.label23.TabIndex = 229;
-            this.label23.Text = "Code2";
+            this.txtPayDate.Location = new System.Drawing.Point(970, 193);
+            this.txtPayDate.Name = "txtPayDate";
+            this.txtPayDate.Size = new System.Drawing.Size(123, 27);
+            this.txtPayDate.TabIndex = 250;
+            // 
+            // monthCalendar1
+            // 
+            this.monthCalendar1.Location = new System.Drawing.Point(892, 225);
+            this.monthCalendar1.MaxSelectionCount = 1;
+            this.monthCalendar1.Name = "monthCalendar1";
+            this.monthCalendar1.TabIndex = 249;
+            this.monthCalendar1.Visible = false;
+            this.monthCalendar1.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar1_DateSelected);
             // 
             // BuyBookJewelry
             // 
@@ -726,7 +761,6 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.TextBox txtMinPrice;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.DateTimePicker dtPayDate;
         private System.Windows.Forms.RadioButton rdoNo;
         private System.Windows.Forms.RadioButton rdoYes;
         private System.Windows.Forms.Label label21;
@@ -734,5 +768,8 @@
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.TextBox txtCode2;
+        private System.Windows.Forms.Button btnChooseDate;
+        private System.Windows.Forms.TextBox txtPayDate;
+        private System.Windows.Forms.MonthCalendar monthCalendar1;
     }
 }

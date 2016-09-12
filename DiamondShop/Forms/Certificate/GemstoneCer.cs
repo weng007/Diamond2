@@ -37,6 +37,7 @@ namespace DiamondShop
             BinderData();
             this.id = id;
             LoadData();
+            isEdit = false;
         }
 
         private void BinderData()
@@ -202,6 +203,16 @@ namespace DiamondShop
             txtUSDPrice.Text = GM.ConvertDoubleToString(txtUSDPrice, 0);
             txtBahtPrice.Text = GM.ConvertDoubleToString(txtBahtPrice, 0);
             txtUSDRate.Text = GM.ConvertDoubleToString(txtUSDRate);
+        }
+
+        private void dtReportDate_ValueChanged(object sender, EventArgs e)
+        {
+            isEdit = true;
+        }
+
+        private void txtReportNumber_TextChanged(object sender, EventArgs e)
+        {
+            isEdit = true;
         }
     }
 }

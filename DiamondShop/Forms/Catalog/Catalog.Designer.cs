@@ -166,7 +166,7 @@
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Location = new System.Drawing.Point(364, 54);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(100, 27);
+            this.comboBox3.Size = new System.Drawing.Size(100, 21);
             this.comboBox3.TabIndex = 28;
             // 
             // textBox2
@@ -350,6 +350,7 @@
             this.dtImportDate.Name = "dtImportDate";
             this.dtImportDate.Size = new System.Drawing.Size(131, 27);
             this.dtImportDate.TabIndex = 249;
+            this.dtImportDate.ValueChanged += new System.EventHandler(this.dtImportDate_ValueChanged);
             // 
             // txtSize
             // 
@@ -360,6 +361,7 @@
             this.txtSize.TabIndex = 248;
             this.txtSize.Text = "0";
             this.txtSize.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtSize.TextChanged += new System.EventHandler(this.txtUpdateBy_TextChanged);
             // 
             // label10
             // 
@@ -379,6 +381,7 @@
             this.txtInvRemark.Name = "txtInvRemark";
             this.txtInvRemark.Size = new System.Drawing.Size(198, 70);
             this.txtInvRemark.TabIndex = 245;
+            this.txtInvRemark.TextChanged += new System.EventHandler(this.txtUpdateBy_TextChanged);
             // 
             // label12
             // 
@@ -396,6 +399,7 @@
             this.txtMaterial2.Name = "txtMaterial2";
             this.txtMaterial2.Size = new System.Drawing.Size(165, 27);
             this.txtMaterial2.TabIndex = 228;
+            this.txtMaterial2.TextChanged += new System.EventHandler(this.txtUpdateBy_TextChanged);
             // 
             // txtMaterial1
             // 
@@ -405,6 +409,7 @@
             this.txtMaterial1.Name = "txtMaterial1";
             this.txtMaterial1.Size = new System.Drawing.Size(165, 27);
             this.txtMaterial1.TabIndex = 170;
+            this.txtMaterial1.TextChanged += new System.EventHandler(this.txtUpdateBy_TextChanged);
             // 
             // txtStatus
             // 
@@ -413,6 +418,7 @@
             this.txtStatus.Name = "txtStatus";
             this.txtStatus.Size = new System.Drawing.Size(162, 27);
             this.txtStatus.TabIndex = 120;
+            this.txtStatus.TextChanged += new System.EventHandler(this.txtUpdateBy_TextChanged);
             // 
             // txtJewelryType
             // 
@@ -421,6 +427,7 @@
             this.txtJewelryType.Name = "txtJewelryType";
             this.txtJewelryType.Size = new System.Drawing.Size(162, 27);
             this.txtJewelryType.TabIndex = 112;
+            this.txtJewelryType.TextChanged += new System.EventHandler(this.txtUpdateBy_TextChanged);
             // 
             // txtShop
             // 
@@ -430,6 +437,7 @@
             this.txtShop.Name = "txtShop";
             this.txtShop.Size = new System.Drawing.Size(162, 27);
             this.txtShop.TabIndex = 108;
+            this.txtShop.TextChanged += new System.EventHandler(this.txtUpdateBy_TextChanged);
             // 
             // btnGemstone
             // 
@@ -477,6 +485,7 @@
             this.txtMaterialWeight2.TabIndex = 232;
             this.txtMaterialWeight2.Text = "0";
             this.txtMaterialWeight2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtMaterialWeight2.TextChanged += new System.EventHandler(this.txtUpdateBy_TextChanged);
             // 
             // txtPriceTag
             // 
@@ -487,6 +496,7 @@
             this.txtPriceTag.TabIndex = 244;
             this.txtPriceTag.Text = "0";
             this.txtPriceTag.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtPriceTag.TextChanged += new System.EventHandler(this.txtUpdateBy_TextChanged);
             // 
             // label36
             // 
@@ -516,6 +526,7 @@
             this.txtMinPrice.TabIndex = 240;
             this.txtMinPrice.Text = "0";
             this.txtMinPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtMinPrice.TextChanged += new System.EventHandler(this.txtUpdateBy_TextChanged);
             // 
             // label35
             // 
@@ -535,6 +546,7 @@
             this.txtMinBeforePremium.TabIndex = 236;
             this.txtMinBeforePremium.Text = "0";
             this.txtMinBeforePremium.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtMinBeforePremium.TextChanged += new System.EventHandler(this.txtUpdateBy_TextChanged);
             // 
             // label34
             // 
@@ -571,6 +583,7 @@
             this.txtSellDate.Name = "txtSellDate";
             this.txtSellDate.Size = new System.Drawing.Size(162, 27);
             this.txtSellDate.TabIndex = 124;
+            this.txtSellDate.TextChanged += new System.EventHandler(this.txtUpdateBy_TextChanged);
             // 
             // label8
             // 
@@ -588,6 +601,7 @@
             this.txtRemark.Name = "txtRemark";
             this.txtRemark.Size = new System.Drawing.Size(198, 70);
             this.txtRemark.TabIndex = 1;
+            this.txtRemark.TextChanged += new System.EventHandler(this.txtUpdateBy_TextChanged);
             // 
             // label27
             // 
@@ -615,6 +629,7 @@
             this.txtMaterialWeight1.TabIndex = 224;
             this.txtMaterialWeight1.Text = "0";
             this.txtMaterialWeight1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtMaterialWeight1.TextChanged += new System.EventHandler(this.txtUpdateBy_TextChanged);
             this.txtMaterialWeight1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
             this.txtMaterialWeight1.Leave += new System.EventHandler(this.txtCost_Leave);
             // 
@@ -635,6 +650,7 @@
             this.txtCode.Name = "txtCode";
             this.txtCode.Size = new System.Drawing.Size(162, 27);
             this.txtCode.TabIndex = 104;
+            this.txtCode.TextChanged += new System.EventHandler(this.txtUpdateBy_TextChanged);
             // 
             // txtUpdateBy
             // 
@@ -644,6 +660,7 @@
             this.txtUpdateBy.Name = "txtUpdateBy";
             this.txtUpdateBy.Size = new System.Drawing.Size(162, 27);
             this.txtUpdateBy.TabIndex = 100;
+            this.txtUpdateBy.TextChanged += new System.EventHandler(this.txtUpdateBy_TextChanged);
             // 
             // label19
             // 

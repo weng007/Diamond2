@@ -104,6 +104,8 @@ namespace DiamondShop
 
             SetFormatNumber();
             base.LoadData();
+
+            cmbSettingType.SelectedValueChanged += cmbSettingType_SelectedValueChanged;
         }
 
         protected override bool SaveData()
@@ -261,6 +263,14 @@ namespace DiamondShop
             }
         }
 
-        
+        private void cmbSettingType_SelectedValueChanged(object sender, EventArgs e)
+        {
+            isEdit = true;
+        }
+
+        private void txtAmount_TextChanged(object sender, EventArgs e)
+        {
+            isEdit = true;
+        }
     }
 }
