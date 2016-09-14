@@ -29,16 +29,20 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PaymentList));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panal = new System.Windows.Forms.Panel();
-            this.dtEPayDate = new System.Windows.Forms.DateTimePicker();
+            this.button1 = new System.Windows.Forms.Button();
+            this.txtEPayDate = new System.Windows.Forms.TextBox();
+            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
+            this.btnChooseDate = new System.Windows.Forms.Button();
+            this.txtSPayDate = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.dtEBuyDate = new System.Windows.Forms.DateTimePicker();
-            this.dtSPayDate = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.dtSBuyDate = new System.Windows.Forms.DateTimePicker();
@@ -83,10 +87,13 @@
             // panal
             // 
             this.panal.BackColor = System.Drawing.Color.DarkKhaki;
-            this.panal.Controls.Add(this.dtEPayDate);
+            this.panal.Controls.Add(this.monthCalendar1);
+            this.panal.Controls.Add(this.button1);
+            this.panal.Controls.Add(this.txtEPayDate);
+            this.panal.Controls.Add(this.btnChooseDate);
+            this.panal.Controls.Add(this.txtSPayDate);
             this.panal.Controls.Add(this.label9);
             this.panal.Controls.Add(this.dtEBuyDate);
-            this.panal.Controls.Add(this.dtSPayDate);
             this.panal.Controls.Add(this.label8);
             this.panal.Controls.Add(this.label10);
             this.panal.Controls.Add(this.dtSBuyDate);
@@ -108,20 +115,52 @@
             this.panal.Size = new System.Drawing.Size(1329, 183);
             this.panal.TabIndex = 40;
             // 
-            // dtEPayDate
+            // button1
             // 
-            this.dtEPayDate.CustomFormat = "dd/MM/yyyy";
-            this.dtEPayDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtEPayDate.Location = new System.Drawing.Point(690, 63);
-            this.dtEPayDate.Name = "dtEPayDate";
-            this.dtEPayDate.Size = new System.Drawing.Size(131, 27);
-            this.dtEPayDate.TabIndex = 92;
+            this.button1.Location = new System.Drawing.Point(854, 59);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(34, 28);
+            this.button1.TabIndex = 257;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // txtEPayDate
+            // 
+            this.txtEPayDate.Location = new System.Drawing.Point(725, 60);
+            this.txtEPayDate.Name = "txtEPayDate";
+            this.txtEPayDate.Size = new System.Drawing.Size(123, 27);
+            this.txtEPayDate.TabIndex = 256;
+            // 
+            // monthCalendar1
+            // 
+            this.monthCalendar1.Location = new System.Drawing.Point(469, 92);
+            this.monthCalendar1.MaxSelectionCount = 1;
+            this.monthCalendar1.Name = "monthCalendar1";
+            this.monthCalendar1.TabIndex = 255;
+            this.monthCalendar1.Visible = false;
+            this.monthCalendar1.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar1_DateSelected);
+            // 
+            // btnChooseDate
+            // 
+            this.btnChooseDate.Location = new System.Drawing.Point(663, 61);
+            this.btnChooseDate.Name = "btnChooseDate";
+            this.btnChooseDate.Size = new System.Drawing.Size(34, 28);
+            this.btnChooseDate.TabIndex = 254;
+            this.btnChooseDate.UseVisualStyleBackColor = true;
+            this.btnChooseDate.Click += new System.EventHandler(this.btnChooseDate_Click);
+            // 
+            // txtSPayDate
+            // 
+            this.txtSPayDate.Location = new System.Drawing.Point(534, 62);
+            this.txtSPayDate.Name = "txtSPayDate";
+            this.txtSPayDate.Size = new System.Drawing.Size(123, 27);
+            this.txtSPayDate.TabIndex = 253;
             // 
             // label9
             // 
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(671, 63);
+            this.label9.Location = new System.Drawing.Point(703, 63);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(16, 25);
             this.label9.TabIndex = 93;
@@ -135,15 +174,6 @@
             this.dtEBuyDate.Name = "dtEBuyDate";
             this.dtEBuyDate.Size = new System.Drawing.Size(131, 27);
             this.dtEBuyDate.TabIndex = 88;
-            // 
-            // dtSPayDate
-            // 
-            this.dtSPayDate.CustomFormat = "dd/MM/yyyy";
-            this.dtSPayDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtSPayDate.Location = new System.Drawing.Point(534, 63);
-            this.dtSPayDate.Name = "dtSPayDate";
-            this.dtSPayDate.Size = new System.Drawing.Size(131, 27);
-            this.dtSPayDate.TabIndex = 91;
             // 
             // label8
             // 
@@ -339,8 +369,8 @@
             this.gridBuyBookPayment.Name = "gridBuyBookPayment";
             this.gridBuyBookPayment.ReadOnly = true;
             this.gridBuyBookPayment.RowHeadersWidth = 10;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridBuyBookPayment.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridBuyBookPayment.RowsDefaultCellStyle = dataGridViewCellStyle12;
             this.gridBuyBookPayment.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridBuyBookPayment.RowTemplate.Height = 30;
             this.gridBuyBookPayment.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -375,8 +405,8 @@
             // Payment
             // 
             this.Payment.DataPropertyName = "Payment";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            this.Payment.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            this.Payment.DefaultCellStyle = dataGridViewCellStyle7;
             this.Payment.HeaderText = "Status";
             this.Payment.Name = "Payment";
             this.Payment.ReadOnly = true;
@@ -410,8 +440,8 @@
             // BuyDate
             // 
             this.BuyDate.DataPropertyName = "BuyDate";
-            dataGridViewCellStyle2.Format = "dd/MM/yyyy";
-            this.BuyDate.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Format = "dd/MM/yyyy";
+            this.BuyDate.DefaultCellStyle = dataGridViewCellStyle8;
             this.BuyDate.HeaderText = "Buy Date";
             this.BuyDate.Name = "BuyDate";
             this.BuyDate.ReadOnly = true;
@@ -420,6 +450,8 @@
             // PayDate
             // 
             this.PayDate.DataPropertyName = "PayDate";
+            dataGridViewCellStyle9.NullValue = "-";
+            this.PayDate.DefaultCellStyle = dataGridViewCellStyle9;
             this.PayDate.HeaderText = "PayDate";
             this.PayDate.Name = "PayDate";
             this.PayDate.ReadOnly = true;
@@ -428,9 +460,9 @@
             // Weight
             // 
             this.Weight.DataPropertyName = "Weight";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle3.Format = "N2";
-            this.Weight.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle10.Format = "N2";
+            this.Weight.DefaultCellStyle = dataGridViewCellStyle10;
             this.Weight.HeaderText = "Weight";
             this.Weight.Name = "Weight";
             this.Weight.ReadOnly = true;
@@ -439,9 +471,9 @@
             // TotalBaht
             // 
             this.TotalBaht.DataPropertyName = "TotalBaht";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle4.Format = "N0";
-            this.TotalBaht.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle11.Format = "N0";
+            this.TotalBaht.DefaultCellStyle = dataGridViewCellStyle11;
             this.TotalBaht.HeaderText = "TotalBaht";
             this.TotalBaht.Name = "TotalBaht";
             this.TotalBaht.ReadOnly = true;
@@ -543,10 +575,13 @@
         private System.Windows.Forms.DateTimePicker dtEBuyDate;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DateTimePicker dtSBuyDate;
-        private System.Windows.Forms.DateTimePicker dtEPayDate;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.DateTimePicker dtSPayDate;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.MonthCalendar monthCalendar1;
+        private System.Windows.Forms.Button btnChooseDate;
+        private System.Windows.Forms.TextBox txtSPayDate;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txtEPayDate;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Payment1;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn IsPaid;

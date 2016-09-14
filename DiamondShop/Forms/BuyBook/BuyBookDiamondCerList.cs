@@ -13,11 +13,23 @@ using DiamondDS;
 namespace DiamondShop
 {
     public partial class BuyBookDiamondCerList : FormList
-    {       
+    {
+        public int mode = 0;
+        public int refID1 = 0;
         public BuyBookDiamondCerList()
         {
             InitializeComponent();
             Initial();
+            DoLoadData();
+        }
+        public BuyBookDiamondCerList(int mode)
+        {
+            InitializeComponent();
+            Initial();
+            this.mode = mode;
+
+            btnClose.Visible = true;
+            btnAdd.Visible = false;
             DoLoadData();
         }
         protected override void Initial()
@@ -151,17 +163,26 @@ namespace DiamondShop
 
         private void gridDiamondCer_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            if (gridDiamondCer.RowCount > 0 && gridDiamondCer.SelectedRows.Count > 0)
+            if (mode == 0)
             {
-                id = (int)gridDiamondCer.SelectedRows[0].Cells["ID"].Value;
-                BuyBookDiamondCer frm = new BuyBookDiamondCer(id);
-                frm.ShowDialog();
+                if (gridDiamondCer.RowCount > 0 && gridDiamondCer.SelectedRows.Count > 0)
+                    {
+                        id = (int)gridDiamondCer.SelectedRows[0].Cells["ID"].Value;
+                        BuyBookDiamondCer frm = new BuyBookDiamondCer(id);
+                        frm.ShowDialog();
 
-                if (frm.isEdit)
-                {
-                    DoLoadData();
-                }
+                        if (frm.isEdit)
+                        {
+                            DoLoadData();
+                        }
+                    }
             }
+            else //mode = 1 Search
+            {
+                refID1 = (int)gridDiamondCer.SelectedRows[0].Cells["ID"].Value;
+                this.Close();
+            }
+
         }
     }
 }

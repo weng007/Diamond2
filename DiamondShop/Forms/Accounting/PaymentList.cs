@@ -16,13 +16,13 @@ namespace DiamondShop
     public partial class PaymentList : FormList
     {
         public decimal TotalPrice = 0;
+        int flag;
 
         public PaymentList()
         {
             InitializeComponent();
             Initial();
             dtSBuyDate.Value = dtSBuyDate.Value.AddDays(-90);
-            dtSPayDate.Value = dtSPayDate.Value.AddDays(-90);
             DoLoadData();
         }
         protected override void Initial()
@@ -69,6 +69,18 @@ namespace DiamondShop
 
             btnSearch_Click(null, null);
         }
+        //private void SetGridFormat()
+        //{
+        //    int i = 0;
+        //    foreach (DataGridViewRow row in gridBuyBookPayment.Rows)
+        //    {
+        //        if (row.Cells["PayDate"].Value.ToString() != "" && row.Cells["PayDate"] == 1901)
+        //        {
+        //            //gridBuyBookPayment.Rows[i]. = "-";
+        //        }
+        //        i++;
+        //    }
+        //}
 
         private void SetBackGroundColor()
         {
@@ -78,6 +90,11 @@ namespace DiamondShop
                 if (row.Cells["IsPaid"].Value.ToString() == "0")
                 {
                     gridBuyBookPayment.Rows[i].DefaultCellStyle.BackColor = Color.Aqua;
+                }
+
+                if (row.Cells["PayDate"].Value.ToString() == null)
+                {
+                    gridBuyBookPayment.Rows[i].DefaultCellStyle.Format = "-";
                 }
 
                 i++;
@@ -95,9 +112,29 @@ namespace DiamondShop
         private void btnSearch_Click(object sender, EventArgs e)
         {
             ser2 = GM.GetService2();
+            DateTime SPaydate,EPaydate;
+
+            if (txtSPayDate.Text == "")
+            {
+                SPaydate = DateTime.MinValue.AddYears(1900);
+            }
+            else
+            {
+                SPaydate = Convert.ToDateTime(txtSPayDate.Text.ToString());
+            }
+
+            if (txtEPayDate.Text == "")
+            {
+                EPaydate = DateTime.MaxValue;
+            }
+            else
+            {
+                EPaydate = Convert.ToDateTime(txtEPayDate.Text.ToString());
+            }
+
 
             ds = ser2.DoSearchBuyBookPayment(txtSeller.Text, cmbBuyBookType.SelectedValue.ToString(),dtSBuyDate.Value, dtEBuyDate.Value,cmbIsPaid.SelectedValue.ToString(),
-                dtSPayDate.Value, dtEPayDate.Value);
+                SPaydate, EPaydate);
 
             if (ds.Tables[0].Rows.Count > 0)
             {
@@ -144,6 +181,35 @@ namespace DiamondShop
                 }
             }
            
+        }
+
+        private void monthCalendar1_DateSelected(object sender, DateRangeEventArgs e)
+        {
+            if (flag == 0)
+            {
+                txtSPayDate.Text = monthCalendar1.SelectionRange.Start.ToShortDateString();
+            }
+            else if (flag == 1)
+            {
+                txtEPayDate.Text = monthCalendar1.SelectionRange.Start.ToShortDateString();
+            }
+            monthCalendar1.Visible = false; 
+            
+        }
+
+        private void btnChooseDate_Click(object sender, EventArgs e)
+        {
+            monthCalendar1.Visible = true;
+            monthCalendar1.BringToFront();
+            flag = 0;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            monthCalendar1.Visible = true;
+            monthCalendar1.BringToFront();
+            monthCalendar1.Location = new Point(659, 92); ;
+            flag = 1;
         }
     }
 }

@@ -29,10 +29,11 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OrderList));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel4 = new System.Windows.Forms.Panel();
             this.cmbSeller = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -49,7 +50,7 @@
             this.tds = new DiamondDS.DS.dsDiamondCer();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RowNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.OrderNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CustomerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.JewelryType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ReceiveDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -204,7 +205,7 @@
             this.gridOrder.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
             this.RowNum,
-            this.Code,
+            this.OrderNo,
             this.CustomerName,
             this.JewelryType,
             this.ReceiveDate,
@@ -215,8 +216,8 @@
             this.gridOrder.Name = "gridOrder";
             this.gridOrder.ReadOnly = true;
             this.gridOrder.RowHeadersWidth = 10;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridOrder.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridOrder.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.gridOrder.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridOrder.RowTemplate.Height = 30;
             this.gridOrder.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -248,13 +249,13 @@
             this.RowNum.ReadOnly = true;
             this.RowNum.Width = 50;
             // 
-            // Code
+            // OrderNo
             // 
-            this.Code.DataPropertyName = "Code";
-            this.Code.HeaderText = "Code";
-            this.Code.Name = "Code";
-            this.Code.ReadOnly = true;
-            this.Code.Width = 150;
+            this.OrderNo.DataPropertyName = "OrderNo";
+            this.OrderNo.HeaderText = "OrderNo";
+            this.OrderNo.Name = "OrderNo";
+            this.OrderNo.ReadOnly = true;
+            this.OrderNo.Width = 150;
             // 
             // CustomerName
             // 
@@ -293,6 +294,8 @@
             // BodyDate
             // 
             this.BodyDate.DataPropertyName = "BodyDate";
+            dataGridViewCellStyle3.NullValue = "-";
+            this.BodyDate.DefaultCellStyle = dataGridViewCellStyle3;
             this.BodyDate.HeaderText = "วันนัดดูตัวเรือน";
             this.BodyDate.Name = "BodyDate";
             this.BodyDate.ReadOnly = true;
@@ -301,9 +304,9 @@
             // BodyAtName
             // 
             this.BodyAtName.DataPropertyName = "BodyAtName";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle3.Format = "N2";
-            this.BodyAtName.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle4.Format = "N2";
+            this.BodyAtName.DefaultCellStyle = dataGridViewCellStyle4;
             this.BodyAtName.HeaderText = "Location";
             this.BodyAtName.Name = "BodyAtName";
             this.BodyAtName.ReadOnly = true;
@@ -347,7 +350,7 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn RowNum;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Code;
+        private System.Windows.Forms.DataGridViewTextBoxColumn OrderNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn CustomerName;
         private System.Windows.Forms.DataGridViewTextBoxColumn JewelryType;
         private System.Windows.Forms.DataGridViewTextBoxColumn ReceiveDate;

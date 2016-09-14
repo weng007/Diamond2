@@ -45,18 +45,6 @@ namespace Diamond
                     throw ex;
                 }
             }
-            //else if (TableName == "Seller")
-            //{
-            //    SellerBiz biz = GM.GetSellerBiz();
-            //    try
-            //    {
-            //        return biz.DoSelectData(id);
-            //    }
-            //    catch (Exception ex)
-            //    {
-            //        throw ex;
-            //    }
-            //}
             else if (TableName == "Catalog")
             {
                 CatalogBiz biz = GM.CatalogBiz();
@@ -490,6 +478,20 @@ namespace Diamond
                     throw ex;
                 }
             }
+            else if (TableName == "OrderDetail")
+            {
+                OrderDetailBiz biz = GM.GetOrderDetailBiz();
+
+                try
+                {               
+                        return biz.DoSelectData(id);
+                }
+
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
             return null;
         }
         #endregion
@@ -513,21 +515,6 @@ namespace Diamond
                     throw ex;
                 }
             }
-            //else if (TableName == "Seller")
-            //{
-            //    SellerBiz biz = GM.GetSellerBiz();
-            //    dsSeller ds1 = new dsSeller();
-            //    ds1.Merge(ds);
-
-            //    try
-            //    {
-            //        flag = biz.DoInsertData(ds1);
-            //    }
-            //    catch (Exception ex)
-            //    {
-            //        throw ex;
-            //    }
-            //}
             else if (TableName == "DiamondDetail")
             {
                 DiamondDetailBiz biz = GM.GetDiamondDetailBiz();
@@ -968,6 +955,21 @@ namespace Diamond
             {
                 OrderBiz biz = GM.GetOrderBiz();
                 dsOrder ds1 = new dsOrder();
+                ds1.Merge(ds);
+
+                try
+                {
+                    flag = biz.DoInsertData(ds1);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            else if (TableName == "OrderDetail")
+            {
+                OrderDetailBiz biz = GM.GetOrderDetailBiz();
+                dsOrderDetail ds1 = new dsOrderDetail();
                 ds1.Merge(ds);
 
                 try
@@ -1507,6 +1509,23 @@ namespace Diamond
                     throw ex;
                 }
             }
+            else if (TableName == "OrderDetail")
+            {
+                OrderDetailBiz biz = GM.GetOrderDetailBiz();
+                dsOrderDetail ds1 = new dsOrderDetail();
+
+                ds1.Merge(ds);
+
+                try
+                {
+                    flag = biz.DoUpdateData(ds1);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+
             return flag;
         }
         #endregion
@@ -1877,7 +1896,18 @@ namespace Diamond
                     throw ex;
                 }
             }
-
+            else if (TableName == "OrderDetail")
+            {
+                OrderDetailBiz biz = GM.GetOrderDetailBiz();
+                try
+                {
+                    flag = biz.DoDeleteData(id);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
             return flag;
         }
         #endregion

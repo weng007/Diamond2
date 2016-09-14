@@ -14,6 +14,9 @@ namespace DiamondShop
 {
     public partial class InventoryList : FormList
     {
+        public int mode = 0;
+        public int InvID = 0;
+        public string InvCode = "";
         public InventoryList()
         {
             InitializeComponent();
@@ -27,6 +30,17 @@ namespace DiamondShop
             Initial();
 
             txtPrefix.Text = prefix;
+            DoLoadData();
+        }
+
+        public InventoryList(int mode)
+        {
+            InitializeComponent();
+            Initial();
+            this.mode = mode;
+
+            btnClose.Visible = true;
+            btnAdd.Visible = false;
             DoLoadData();
         }
 
@@ -101,17 +115,31 @@ namespace DiamondShop
 
         private void gridInventory_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            if (gridInventory.RowCount > 0 && gridInventory.SelectedRows.Count > 0)
+            if (mode == 0)
             {
-                id = (int)gridInventory.SelectedRows[0].Cells["ID"].Value;
-                Inventory frm = new Inventory(id);
-                frm.ShowDialog();
-
-                if (frm.isEdit)
+                if (gridInventory.RowCount > 0 && gridInventory.SelectedRows.Count > 0)
                 {
-                    DoLoadData();
+                    id = (int)gridInventory.SelectedRows[0].Cells["ID"].Value;
+                    Inventory frm = new Inventory(id);
+                    frm.ShowDialog();
+
+                    if (frm.isEdit)
+                    {
+                        DoLoadData();
+                    }
                 }
             }
+            else //mode = 1 Search
+            {
+                InvID = (int)gridInventory.SelectedRows[0].Cells["ID"].Value;
+                InvCode = gridInventory.SelectedRows[0].Cells["Code"].Value.ToString();
+                this.Close();
+            }
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

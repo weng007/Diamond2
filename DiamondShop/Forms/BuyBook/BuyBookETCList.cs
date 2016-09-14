@@ -52,11 +52,6 @@ namespace DiamondShop
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            DoSearchData();
-        }
-
-        private void DoSearchData()
-        {
             ser2 = GM.GetService2();
             ds = ser2.DoSearchBuyBookETC(txtSeller.Text);
 

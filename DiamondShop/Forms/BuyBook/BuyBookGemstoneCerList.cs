@@ -13,11 +13,23 @@ using DiamondDS;
 namespace DiamondShop
 {
     public partial class BuyBookGemstoneCerList : FormList
-    {       
+    {
+        public int mode = 0;
+        public int refID2 = 0;
         public BuyBookGemstoneCerList()
         {
             InitializeComponent();
             Initial();
+            DoLoadData();
+        }
+        public BuyBookGemstoneCerList(int mode)
+        {
+            InitializeComponent();
+            Initial();
+            this.mode = mode;
+
+            btnClose.Visible = true;
+            btnAdd.Visible = false;
             DoLoadData();
         }
         protected override void Initial()
@@ -149,17 +161,26 @@ namespace DiamondShop
 
         private void gridGemstoneCer_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            if (gridGemstoneCer.RowCount > 0 && gridGemstoneCer.SelectedRows.Count > 0)
+            if (mode == 0)
             {
-                id = (int)gridGemstoneCer.SelectedRows[0].Cells["ID"].Value;
-                BuyBookGemstoneCer frm = new BuyBookGemstoneCer(id);
-                frm.ShowDialog();
+                if (gridGemstoneCer.RowCount > 0 && gridGemstoneCer.SelectedRows.Count > 0)
+                    {
+                        id = (int)gridGemstoneCer.SelectedRows[0].Cells["ID"].Value;
+                        BuyBookGemstoneCer frm = new BuyBookGemstoneCer(id);
+                        frm.ShowDialog();
 
-                if (frm.isEdit)
-                {
-                    DoLoadData();
-                }
+                        if (frm.isEdit)
+                        {
+                            DoLoadData();
+                        }
+                    }
             }
+            else //mode = 1 Search
+            {
+                refID2 = (int)gridGemstoneCer.SelectedRows[0].Cells["ID"].Value;
+                this.Close();
+            }
+
         }
 
         private void cmbIdentification_SelectedIndexChanged(object sender, EventArgs e)

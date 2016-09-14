@@ -23,12 +23,15 @@ namespace DiamondShop
         bool isAuthorize = false;
         string FilePath;
         int custID = 0;
+        int InvID = 0;
+        int InvID1 = 0;
         MemoryStream ms1;
         MemoryStream ms2;
         MemoryStream ms3;
         MemoryStream ms4;
         MemoryStream ms5;
         byte[] image1, image2, image3, image4, image5;
+        public string materail = "";
 
         public OrderInfo()
         {
@@ -54,7 +57,7 @@ namespace DiamondShop
             BinderControl();
 
             this.id = id;
-            //btnImportExcel.Enabled = false;
+            btnDiamond.Enabled = true;
             LoadData();
             SetControlEnable(false);
 
@@ -104,9 +107,9 @@ namespace DiamondShop
         {
             binder.BindControl(dtBuyDate, "BuyDate");
             binder.BindControl(txtCustomer, "CustomerName");
-            binder.BindControl(txtCode, "Code");
-            binder.BindControl(txtTel, "Tel");
-            binder.BindControl(cmbJewelryType, "ColorType");
+            binder.BindControl(txtCode, "OrderNo");
+            binder.BindControl(txtTel, "MobilePhone");
+            binder.BindControl(cmbJewelryType, "JewelryType");
             binder.BindControl(cmbMaterial, "Material");
             binder.BindControl(cmbQuality, "Quality");
             binder.BindControl(cmbSeller, "Seller");
@@ -118,7 +121,7 @@ namespace DiamondShop
 
             binder.BindControl(dtReceiveDate, "ReceiveDate");
             binder.BindControl(cmbShop1, "ReceiveAt");
-            binder.BindControl(txtBodyDate, "BodyDate");
+            //binder.BindControl(txtBodyDate, "BodyDate");
             binder.BindControl(cmbShop2, "BodyAt");
 
             binder.BindControl(txtCustNote, "CustomerNote");
@@ -135,7 +138,7 @@ namespace DiamondShop
               {
                 binder.BindValueToControl(tds.Order[0]);
                 custID = tds.Order[0].CustID;
-                txtBodyDate.Text = string.Format("{0:d/M/yyyy}", tds.Order[0]["BodyDate"]);
+                txtAppointDate.Text = string.Format("{0:d/M/yyyy}", tds.Order[0]["AppointDate"]);
 
                 if (tds.Order[0].Image1 != null)
                 {
@@ -173,11 +176,10 @@ namespace DiamondShop
                     btnImage5.BackgroundImage = backImage5;
                 }
 
-                //if (tds.BuyBookDiamondCer[0]["Certificate"].ToString() != "")
-                //{
-                //    file = (byte[])tds.BuyBookDiamondCer[0]["Certificate"];
-                //    linkFile.Text = tds.BuyBookDiamondCer[0].FileName;
-                //}
+                linkLabel1.Text = tds.Order[0].Code1;
+                linkLabel2.Text = tds.Order[0].Code2;
+                InvID = tds.Order[0].RefID;
+                InvID1 = tds.Order[0].RefID1;
 
                 if (tds.Order[0]["IsHave"].ToString() == "0")
                 {
@@ -200,8 +202,10 @@ namespace DiamondShop
                     rdoHave.Checked = true;
                     rdoNotHave.Checked = false;
                 }
-
-
+                if (materail != "")
+                {
+                    txtNote.Text = materail;
+                }
                 //EnableSave = false;
                 //EnableEdit = true;
                 //EnableDelete = false;
@@ -236,20 +240,21 @@ namespace DiamondShop
             row.Image5 = image5;
             row.IsHave = rdoHave.Checked ?"1":"0";
             row.IsReceive = rdoReceive.Checked ? "1" : "0";
-            if (txtBodyDate.Text == "")
+            if (txtAppointDate.Text == "")
             {
-                row.BodyDate = DateTime.MinValue.AddYears(1900);
+                row.AppointDate = DateTime.MinValue.AddYears(1900);
             }
             else
             {
-                row.BodyDate = Convert.ToDateTime(txtBodyDate.Text.ToString());
+                row.AppointDate = Convert.ToDateTime(txtAppointDate.Text.ToString());
             }
-
+            row.RefID = InvID;
+            row.RefID1 = InvID1;
             try
             {
                 if (id == 0)
                 {
-                    row.Code = GM.GetRunningNumber("ORD");
+                    row.OrderNo = GM.GetRunningNumber("ORD");
                     //พึ่งซื้อยังไม่ได้ขายให้ลูกค้า
                     //row.SoldTo = 0;
                     SetCreateBy(row);
@@ -340,54 +345,15 @@ namespace DiamondShop
         }
 
         private void cmbColorType_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            //string color = "";
-
-            //if (cmbColorType.SelectedIndex == 0)
-            //{
-            //    color = "C001";
-            //}
-            //else
-            //{
-            //    color = "C017";
-            //}
-
-            //cmbColor.DataSource = (GM.GetMasterTableDetail(color)).Tables[0];
-            //cmbColor.ValueMember = "ID";
-            //cmbColor.DisplayMember = "Detail";
-            //cmbColor.Refresh();
+        { 
         }
 
         private void cmbShape_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //if (cmbShape.SelectedIndex != 0)
-            //{
-            //    cmbCut.SelectedIndex = 0;
-            //    cmbCut.Enabled = false;
-            //}
-            //else
-            //{
-            //    cmbCut.Enabled = true;
-            //}
         }
 
         private void btnUpload_Click(object sender, EventArgs e)
         {
-            //if (openFileDialog1.ShowDialog() == DialogResult.OK && openFileDialog1.CheckFileExists)
-            //{      
-            //    using (var stream = new FileStream(openFileDialog1.FileName, FileMode.Open, FileAccess.Read))
-            //    {
-            //        using (var reader = new BinaryReader(stream))
-            //        {
-            //            file = reader.ReadBytes((int)stream.Length);
-            //        }
-            //    }
-
-            //    //if(file.Length > 0)
-            //    //{
-            //    //    linkFile.Text = openFileDialog1.SafeFileName;
-            //    //}
-            //}
         }
 
         private void txtAmount_KeyPress(object sender, KeyPressEventArgs e)
@@ -400,84 +366,40 @@ namespace DiamondShop
 
         private void txtWeight_Leave(object sender, EventArgs e)
         {
-            //txtTotal.Text = (GM.ConvertStringToDouble(txtRap) * 100 * (1 + GM.ConvertStringToDouble(txtPrice) / 100.0)
-            //    * GM.ConvertStringToDouble(txtWeight)).ToString();
-            //txtTotal.Text = GM.ConvertDoubleToString(txtTotal);
         } 
 
         private void txtPrice_Leave(object sender, EventArgs e)
         {
-            //txtTotal.Text = (GM.ConvertStringToDouble(txtRap) * 100 * (1 + GM.ConvertStringToDouble(txtPrice) / 100.0)
-            //    * GM.ConvertStringToDouble(txtWeight)).ToString();
-            //txtTotal.Text = GM.ConvertDoubleToString(txtTotal);
         }
 
         private void txtRap_Leave(object sender, EventArgs e)
         {
-            //txtTotal.Text = (GM.ConvertStringToDouble(txtRap) * 100 * (1 + GM.ConvertStringToDouble(txtPrice) / 100.0)
-            //    * GM.ConvertStringToDouble(txtWeight)).ToString();
-            //txtTotal.Text = GM.ConvertDoubleToString(txtTotal);
         }
 
         private void txtUSDRate_Leave(object sender, EventArgs e)
         {
-                //txtTotalBaht.Text = (GM.ConvertStringToDouble(txtTotal) * GM.ConvertStringToDouble(txtUSDRate)).ToString();
-                //txtTotalBaht.Text = GM.ConvertDoubleToString(txtTotalBaht, 0);
         }
 
         private void txtTotal_TextChanged(object sender, EventArgs e)
         {
-            //txtTotalBaht.Text = (GM.ConvertStringToDouble(txtTotal) * GM.ConvertStringToDouble(txtUSDRate)).ToString();
-            //txtTotalBaht.Text = GM.ConvertDoubleToString(txtTotalBaht, 0);
-
             isEdit = true;
         }
 
         private void SetFormatNumber()
         {
-            if (txtBodyDate.Text != "" && Convert.ToDateTime(txtBodyDate.Text).Year == 1901)
+            if (txtAppointDate.Text != "" && Convert.ToDateTime(txtAppointDate.Text).Year == 1901)
             {
-                txtBodyDate.Text = "";
-            }
-            //txtTotal.Text = GM.ConvertDoubleToString(txtTotal);
-            //txtTotalBaht.Text = GM.ConvertDoubleToString(txtTotalBaht, 0);          
+                txtAppointDate.Text = "";
+            }       
         }
         private void linkFile_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            
-            //if(file != null && file.Length > 0)
-            //{
-            //    System.IO.FileStream wFile;
-            //    if (!Directory.Exists(GM.Path))
-            //    {
-            //        Directory.CreateDirectory("C:\\Project");
-            //    }
-            //    wFile = new FileStream("C:\\Project\\"+linkFile.Text, FileMode.Create);
-            //    wFile.Write(file, 0, file.Length);
-            //    wFile.Flush();
-            //    wFile.Close();
-
-            //    System.Diagnostics.Process.Start(@"C:\\Project\\"+linkFile.Text);             
-            //}
         }
         private void SetControlEnable(bool status)
         {
             //dtBuyDate.Enabled = status;
             //txtCustomer.Enabled = status;
             //txtCode.Enabled = status;
-            //txtPrice.Enabled = status;
-            //cmbColorType.Enabled = status;
-            //cmbCut.Enabled = status;
-            //cmbPolish.Enabled = status;
-            //cmbSymmetry.Enabled = status;
-            //cmbFluorescent.Enabled = status;
-            //cmbLab.Enabled = status;
-            //txtReportNumber.Enabled = status;
-            //txtWeight.Enabled = status;
-            //cmbShape.Enabled = status;
-            //cmbColor.Enabled = status;
-            //cmbClearity.Enabled = status;
-            //cmbShop.Enabled = status;
         }
 
         private void dtDueDate_ValueChanged(object sender, EventArgs e)
@@ -488,23 +410,6 @@ namespace DiamondShop
 
         private void btnImportExcel_Click(object sender, EventArgs e)
         {
-            //if (openFileDialog2.ShowDialog() == DialogResult.OK && openFileDialog2.CheckFileExists)
-            //{
-            //    using (var stream = new FileStream(openFileDialog2.FileName, FileMode.Open, FileAccess.Read))
-            //    {
-            //        using (var reader = new BinaryReader(stream))
-            //        {
-            //            file = reader.ReadBytes((int)stream.Length);
-            //        }
-            //    }
-
-            //    if (file.Length > 0)
-            //    {
-            //        FilePath = openFileDialog2.FileName;
-            //    }
-            //}
-            //BuyBookDiamonCerExcel frm = new BuyBookDiamonCerExcel(id,FilePath);
-            //frm.ShowDialog();
 
         }
 
@@ -531,6 +436,42 @@ namespace DiamondShop
             txtCustomer.Text = frm.customerName;
             txtTel.Text = frm.Tel;
         }
+        private void btnBrownInv_Click(object sender, EventArgs e)
+        {
+            InventoryList frm = new InventoryList(1);
+            frm.ShowDialog();
+            InvID = frm.InvID;
+            linkLabel1.Text = frm.InvCode;
+        }
+        private void btnBrownInv1_Click(object sender, EventArgs e)
+        {
+            InventoryList frm = new InventoryList(1);
+            frm.ShowDialog();
+            InvID1 = frm.InvID;
+            linkLabel2.Text = frm.InvCode;
+        }
+        private void btnDiamond_Click(object sender, EventArgs e)
+        {
+            OrderDetail frm = new OrderDetail(id);
+            frm.ShowDialog();
+        }
+
+        private void linkLabel1_Click(object sender, EventArgs e)
+        {
+            Inventory frm = new Inventory(InvID);
+            frm.ShowDialog();
+        }
+
+        private void linkLabel2_Click(object sender, EventArgs e)
+        {
+            Inventory frm = new Inventory(InvID1);
+            frm.ShowDialog();
+        }
+
+        private void panel3_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
 
         private void dtBuyDate_ValueChanged(object sender, EventArgs e)
         {
@@ -544,7 +485,7 @@ namespace DiamondShop
 
         private void monthCalendar1_DateSelected(object sender, DateRangeEventArgs e)
         {
-            txtBodyDate.Text = monthCalendar1.SelectionRange.Start.ToShortDateString();
+            txtAppointDate.Text = monthCalendar1.SelectionRange.Start.ToShortDateString();
             monthCalendar1.Visible = false;
         }
 
