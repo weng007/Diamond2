@@ -139,51 +139,16 @@
             this.panel3.Controls.Add(this.txtCode);
             this.panel3.Controls.Add(this.label14);
             this.panel3.Controls.Add(this.label13);
-            this.panel3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.panel3.Location = new System.Drawing.Point(7, 72);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(943, 651);
             this.panel3.TabIndex = 1;
             // 
-            // btnCancel
-            // 
-            this.btnCancel.BackColor = System.Drawing.Color.Transparent;
-            this.btnCancel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCancel.BackgroundImage")));
-            this.btnCancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCancel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(109)))), ((int)(((byte)(65)))));
-            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.Location = new System.Drawing.Point(595, 594);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(35, 33);
-            this.btnCancel.TabIndex = 198;
-            this.btnCancel.UseVisualStyleBackColor = false;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            // 
-            // label12
-            // 
-            this.label12.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(31, 262);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(73, 26);
-            this.label12.TabIndex = 197;
-            this.label12.Text = "Status";
-            // 
-            // txtStatus
-            // 
-            this.txtStatus.BackColor = System.Drawing.SystemColors.Window;
-            this.txtStatus.Enabled = false;
-            this.txtStatus.Location = new System.Drawing.Point(30, 291);
-            this.txtStatus.Name = "txtStatus";
-            this.txtStatus.ReadOnly = true;
-            this.txtStatus.Size = new System.Drawing.Size(150, 27);
-            this.txtStatus.TabIndex = 196;
-            this.txtStatus.TextChanged += new System.EventHandler(this.txtCode_TextChanged);
-            // 
             // label11
             // 
-            this.label11.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(542, 279);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(122, 25);
@@ -192,7 +157,7 @@
             // 
             // txtCertified
             // 
-            this.txtCertified.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCertified.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCertified.Location = new System.Drawing.Point(546, 306);
             this.txtCertified.Multiline = true;
             this.txtCertified.Name = "txtCertified";
@@ -209,7 +174,7 @@
             this.chkIsPrintPrice.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkIsPrintPrice.Location = new System.Drawing.Point(56, 515);
             this.chkIsPrintPrice.Name = "chkIsPrintPrice";
-            this.chkIsPrintPrice.Size = new System.Drawing.Size(104, 25);
+            this.chkIsPrintPrice.Size = new System.Drawing.Size(99, 24);
             this.chkIsPrintPrice.TabIndex = 193;
             this.chkIsPrintPrice.Text = "Print Price";
             this.chkIsPrintPrice.UseVisualStyleBackColor = true;
@@ -237,7 +202,7 @@
             this.txtCerNo.Location = new System.Drawing.Point(513, 21);
             this.txtCerNo.Name = "txtCerNo";
             this.txtCerNo.ReadOnly = true;
-            this.txtCerNo.Size = new System.Drawing.Size(167, 27);
+            this.txtCerNo.Size = new System.Drawing.Size(167, 26);
             this.txtCerNo.TabIndex = 190;
             this.txtCerNo.TextChanged += new System.EventHandler(this.txtCode_TextChanged);
             // 
@@ -264,7 +229,7 @@
             // 
             this.txtNetPrice.Location = new System.Drawing.Point(145, 165);
             this.txtNetPrice.Name = "txtNetPrice";
-            this.txtNetPrice.Size = new System.Drawing.Size(138, 27);
+            this.txtNetPrice.Size = new System.Drawing.Size(138, 26);
             this.txtNetPrice.TabIndex = 4;
             this.txtNetPrice.Text = "0";
             this.txtNetPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -295,7 +260,7 @@
             this.txtCustomer.Location = new System.Drawing.Point(513, 205);
             this.txtCustomer.Name = "txtCustomer";
             this.txtCustomer.ReadOnly = true;
-            this.txtCustomer.Size = new System.Drawing.Size(166, 27);
+            this.txtCustomer.Size = new System.Drawing.Size(166, 26);
             this.txtCustomer.TabIndex = 185;
             this.txtCustomer.TextChanged += new System.EventHandler(this.txtCode_TextChanged);
             // 
@@ -319,7 +284,7 @@
             this.txtPriceTag.Enabled = false;
             this.txtPriceTag.Location = new System.Drawing.Point(145, 129);
             this.txtPriceTag.Name = "txtPriceTag";
-            this.txtPriceTag.Size = new System.Drawing.Size(138, 27);
+            this.txtPriceTag.Size = new System.Drawing.Size(138, 26);
             this.txtPriceTag.TabIndex = 24;
             this.txtPriceTag.Text = "0";
             this.txtPriceTag.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -340,7 +305,7 @@
             this.cmbShopRecive.FormattingEnabled = true;
             this.cmbShopRecive.Location = new System.Drawing.Point(145, 201);
             this.cmbShopRecive.Name = "cmbShopRecive";
-            this.cmbShopRecive.Size = new System.Drawing.Size(167, 29);
+            this.cmbShopRecive.Size = new System.Drawing.Size(167, 28);
             this.cmbShopRecive.TabIndex = 6;
             this.cmbShopRecive.SelectedIndexChanged += new System.EventHandler(this.cmbSeller_SelectedValueChanged);
             // 
@@ -387,13 +352,13 @@
             this.dtDueDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtDueDate.Location = new System.Drawing.Point(513, 94);
             this.dtDueDate.Name = "dtDueDate";
-            this.dtDueDate.Size = new System.Drawing.Size(137, 27);
+            this.dtDueDate.Size = new System.Drawing.Size(137, 26);
             this.dtDueDate.TabIndex = 10;
             this.dtDueDate.ValueChanged += new System.EventHandler(this.dtSellDate_ValueChanged);
             // 
             // label3
             // 
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(420, 96);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(91, 25);
@@ -407,13 +372,13 @@
             this.dtPaymentDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtPaymentDate.Location = new System.Drawing.Point(513, 168);
             this.dtPaymentDate.Name = "dtPaymentDate";
-            this.dtPaymentDate.Size = new System.Drawing.Size(137, 27);
+            this.dtPaymentDate.Size = new System.Drawing.Size(137, 26);
             this.dtPaymentDate.TabIndex = 14;
             this.dtPaymentDate.ValueChanged += new System.EventHandler(this.dtSellDate_ValueChanged);
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(384, 170);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(124, 25);
@@ -425,7 +390,7 @@
             this.cmbSeller.FormattingEnabled = true;
             this.cmbSeller.Location = new System.Drawing.Point(145, 18);
             this.cmbSeller.Name = "cmbSeller";
-            this.cmbSeller.Size = new System.Drawing.Size(167, 29);
+            this.cmbSeller.Size = new System.Drawing.Size(167, 28);
             this.cmbSeller.TabIndex = 2;
             this.cmbSeller.SelectedValueChanged += new System.EventHandler(this.cmbSeller_SelectedValueChanged);
             // 
@@ -435,7 +400,7 @@
             this.txtJewelryTypeName.Location = new System.Drawing.Point(145, 93);
             this.txtJewelryTypeName.Name = "txtJewelryTypeName";
             this.txtJewelryTypeName.ReadOnly = true;
-            this.txtJewelryTypeName.Size = new System.Drawing.Size(166, 27);
+            this.txtJewelryTypeName.Size = new System.Drawing.Size(166, 26);
             this.txtJewelryTypeName.TabIndex = 16;
             this.txtJewelryTypeName.TextChanged += new System.EventHandler(this.txtCode_TextChanged);
             // 
@@ -475,7 +440,7 @@
             this.dtSellDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtSellDate.Location = new System.Drawing.Point(513, 56);
             this.dtSellDate.Name = "dtSellDate";
-            this.dtSellDate.Size = new System.Drawing.Size(137, 27);
+            this.dtSellDate.Size = new System.Drawing.Size(137, 26);
             this.dtSellDate.TabIndex = 8;
             this.dtSellDate.ValueChanged += new System.EventHandler(this.dtSellDate_ValueChanged);
             // 
@@ -508,14 +473,14 @@
             this.cmbPayment.FormattingEnabled = true;
             this.cmbPayment.Location = new System.Drawing.Point(513, 129);
             this.cmbPayment.Name = "cmbPayment";
-            this.cmbPayment.Size = new System.Drawing.Size(138, 29);
+            this.cmbPayment.Size = new System.Drawing.Size(138, 28);
             this.cmbPayment.TabIndex = 12;
             this.cmbPayment.SelectedIndexChanged += new System.EventHandler(this.cmbPayment_SelectedIndexChanged);
             this.cmbPayment.SelectedValueChanged += new System.EventHandler(this.cmbSeller_SelectedValueChanged);
             // 
             // label5
             // 
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(423, 133);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(85, 26);
@@ -542,7 +507,7 @@
             // 
             // label18
             // 
-            this.label18.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.Location = new System.Drawing.Point(542, 435);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(80, 24);
@@ -572,7 +537,7 @@
             this.txtCode.Location = new System.Drawing.Point(145, 56);
             this.txtCode.Name = "txtCode";
             this.txtCode.ReadOnly = true;
-            this.txtCode.Size = new System.Drawing.Size(167, 27);
+            this.txtCode.Size = new System.Drawing.Size(167, 26);
             this.txtCode.TabIndex = 0;
             this.txtCode.TextAlignChanged += new System.EventHandler(this.txtCode_TextAlignChanged);
             this.txtCode.TextChanged += new System.EventHandler(this.txtCode_TextChanged);
