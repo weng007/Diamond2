@@ -20,6 +20,7 @@ namespace DiamondShop
         DataSet tmp = new DataSet();
         int rowIndex, rowIndex1;
         int chkGrid, DelID;
+        int flag;
         dsOrderDetail tds = new dsOrderDetail();
         dsBuyBookDiamondCer tds1 = new dsBuyBookDiamondCer();
         dsBuyBookGemstoneCer tds2 = new dsBuyBookGemstoneCer();
@@ -43,6 +44,7 @@ namespace DiamondShop
         protected override void Initial()
         {
             grid1.AutoGenerateColumns = false;
+            grid2.AutoGenerateColumns = false;
         }
         protected override void LoadData()
         {
@@ -53,12 +55,14 @@ namespace DiamondShop
                 grid1.DataSource = ds.Tables[1];
                 grid1.Refresh();
             }
+            CalSum(0);
 
             if (ds.Tables[0].Rows.Count > 0)
             {
                 grid2.DataSource = ds.Tables[0];
                 grid2.Refresh();
             }
+            CalSum(1);
             base.LoadData();
         }
 
@@ -66,45 +70,11 @@ namespace DiamondShop
         {
             try
             {
-                //Cer Diamond
-                foreach (DataRow row in tds.Tables[0].Rows)
-                {
-                    if (row["RowNum"].ToString() == "")
-                    {
-                        row["RefID"] = id;//OrdID
-                        row["Flag"] = 0;
-                        SetCreateBy(row);
-                    }
-                    else
-                    {
-                        SetEditBy(row);
-                    }
-                }
-
-                //tds
+                BindingDSOrderDetail();
                 chkFlag = ser.DoInsertData("OrderDetail", tds,0);
 
-                foreach (DataRow row in tds.Tables[0].Rows)
-                {
-                    if (row["RowNum"].ToString() == "")
-                    {
-                        row["RefID"] = id;//OrdID
-                        row["Flag"] = 1;
-                        SetCreateBy(row);
-                    }
-                    else
-                    {
-                        SetEditBy(row);
-                    }
-                }
-
-                tds2.AcceptChanges();
-                chkFlag = ser.DoInsertData("OrderDetail", tds,0);
-
-                GetMaterial();       
-
+                //GetMaterial();       
                 this.Close();
-
             }
             catch (Exception ex)
             {
@@ -115,28 +85,14 @@ namespace DiamondShop
         }
         protected override bool DeleteData()
         {
-            if (chkGrid == 0)
-            {
                 try
                 {
-                    chkFlag = ser.DoDeleteData("OrderDiamondCerDetail", DelID);
+                    chkFlag = ser.DoDeleteData("OrderDetail", DelID);
                 }
                 catch (Exception ex)
                 {
                     throw ex;
                 }
-            }
-            else
-            {
-                try
-                {
-                    chkFlag = ser.DoDeleteData("OrderGemstoneCerDetail", DelID);
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
-            }
 
             return chkFlag;
         }
@@ -172,17 +128,26 @@ namespace DiamondShop
             BuyBookDiamondCerList frm = new BuyBookDiamondCerList(1);
             frm.ShowDialog();
 
-            if (frm.refID1 != 0 && CheckDataExist(frm.refID1))
+            if (frm.refID1 != 0 && CheckDataExist(frm.refID1,0))
             {
                 tmp = ser.DoSelectData("BuyBookDiamondCer", frm.refID1, 0);
                 tds1.Clear();
                 tds1.Merge(tmp);
 
                 DataRow dr = ds.Tables[1].NewRow();
-                dr["Code2"] = tds1.Tables[0].Rows[0]["Code2"];
-
+                dr["Code"] = tds1.Tables[0].Rows[0]["Code"];
+                dr["ReportNumber"] = tds1.Tables[0].Rows[0]["ReportNumber"];
+                dr["Weight"] = tds1.Tables[0].Rows[0]["Weight"];
+                dr["LabName"] = tds1.Tables[0].Rows[0]["LabName"];
+                dr["ShapeName"] = tds1.Tables[0].Rows[0]["ShapeName"];
+                dr["ColorName"] = tds1.Tables[0].Rows[0]["ColorName"];
+                dr["ClearityName"] = tds1.Tables[0].Rows[0]["ClearityName"];
+                dr["TotalBaht"] = tds1.Tables[0].Rows[0]["TotalBaht"];
+                dr["ShopName"] = tds1.Tables[0].Rows[0]["ShopName"];
+                dr["RefID1"] = tds1.Tables[0].Rows[0]["ID"];
                 ds.Tables[1].Rows.Add(dr);
                 grid1.RefreshEdit();
+                CalSum(0);
             }
         }
 
@@ -190,19 +155,15 @@ namespace DiamondShop
         {
             try
             {
-                if (grid1.Rows.Count > 0)
-                {
-                    if (grid1.Rows[rowIndex].Cells["ID"].Value != null && Convert.ToInt16(grid1.Rows[rowIndex].Cells["ID"].Value.ToString()) > 0)
+                if (grid1.SelectedRows.Count > 0)
+                {                 
+                    if (grid1.Rows[rowIndex].Cells["ID"].Value != null)
                     {
                         DeleteDataGrid(0);
-                    }
-                        
+                    }                  
                 }
-                grid1.Rows.RemoveAt(rowIndex);
-                tds.Tables[0].Rows[rowIndex].Delete();
-                tds.AcceptChanges();
 
-                
+                grid1.Rows.RemoveAt(rowIndex);            
             }
             catch(Exception ex)
             {
@@ -215,32 +176,29 @@ namespace DiamondShop
             BuyBookGemstoneCerList frm = new BuyBookGemstoneCerList(1);
             frm.ShowDialog();
 
-            if (frm.refID2 != 0 && CheckDataExist(frm.refID2))
+            if (frm.refID2 != 0 && CheckDataExist(frm.refID2,1))
             {
                 tmp = ser.DoSelectData("BuyBookGemstoneCer", frm.refID2, 0);
                 tds2.Clear();
                 tds2.Merge(tmp);
 
-                grid2.Rows.Add();
-                rowIndex = grid2.Rows.GetLastRow(DataGridViewElementStates.Displayed);
+                DataRow dr = ds.Tables[0].NewRow();
+                dr["Code"] = tds2.Tables[0].Rows[0]["Code"];
+                dr["ReportNumber"] = tds2.Tables[0].Rows[0]["ReportNumber"];
+                dr["IdentificationName"] = tds2.Tables[0].Rows[0]["IdentificationName"];
+                dr["LabName"] = tds2.Tables[0].Rows[0]["LabName"];
+                dr["ShapeName"] = tds2.Tables[0].Rows[0]["ShapeName"];
+                dr["Weight"] = tds2.Tables[0].Rows[0]["Weight"];
+                dr["ColorName"] = tds2.Tables[0].Rows[0]["ColorName"];
+                dr["OriginName"] = tds2.Tables[0].Rows[0]["OriginName"];
+                dr["TotalBaht"] = tds2.Tables[0].Rows[0]["TotalBaht"];
+                dr["ShopName"] = tds2.Tables[0].Rows[0]["ShopName"];
+                dr["RefID1"] = tds2.Tables[0].Rows[0]["ID"];
+                ds.Tables[0].Rows.Add(dr);
 
-                grid2.Rows[rowIndex].Cells["Code11"].Value = tds2.Tables[0].Rows[0]["Code"].ToString();
-                grid2.Rows[rowIndex].Cells["Code22"].Value = tds2.Tables[0].Rows[0]["Code2"].ToString();
-                grid2.Rows[rowIndex].Cells["ReportNumber2"].Value = tds2.Tables[0].Rows[0]["ReportNumber"].ToString();
-                grid2.Rows[rowIndex].Cells["IdentificationName"].Value = tds2.Tables[0].Rows[0]["IdentificationName"].ToString();
-                grid2.Rows[rowIndex].Cells["LabName2"].Value = tds2.Tables[0].Rows[0]["LabName"].ToString();
-                grid2.Rows[rowIndex].Cells["ShapeName2"].Value = tds2.Tables[0].Rows[0]["ShapeName"].ToString();
-                grid2.Rows[rowIndex].Cells["Weight2"].Value = tds2.Tables[0].Rows[0]["Weight"].ToString();
-                grid2.Rows[rowIndex].Cells["ColorName2"].Value = tds2.Tables[0].Rows[0]["ColorName"].ToString();
-                grid2.Rows[rowIndex].Cells["OriginName"].Value = tds2.Tables[0].Rows[0]["OriginName"].ToString();
-                grid2.Rows[rowIndex].Cells["TotalBaht2"].Value = tds2.Tables[0].Rows[0]["TotalBaht"].ToString();
-                grid2.Rows[rowIndex].Cells["ShopName2"].Value = tds2.Tables[0].Rows[0]["ShopName"].ToString();
-                grid2.Rows[rowIndex].Cells["RefID2"].Value = frm.refID2;
-
-                tds.Tables[0].Rows.Add();
-                tds.Tables[0].Rows[rowIndex]["RefID1"] = frm.refID2; //ID ของ BuyBookGemstoneCer
-
-                tds.AcceptChanges();
+                grid2.DataSource = ds.Tables[0];
+                grid2.RefreshEdit();
+                CalSum(1);
             }
         }
 
@@ -248,18 +206,15 @@ namespace DiamondShop
         {
             try
             {
-                if (grid2.Rows.Count > 0)
+                if (grid2.SelectedRows.Count > 0)
                 {
-                    if (grid2.Rows[rowIndex1].Cells["ID1"].Value != null && Convert.ToInt16(grid2.Rows[rowIndex1].Cells["ID1"].Value.ToString()) > 0)
+                    if (grid2.Rows[rowIndex].Cells["ID2"].Value != null)
                     {
                         DeleteDataGrid(1);
                     }
-
                 }
 
-                grid2.Rows.RemoveAt(rowIndex1);
-                tds2.Tables[0].Rows[rowIndex1].Delete();
-                tds2.AcceptChanges();
+                grid2.Rows.RemoveAt(rowIndex);
             }
             catch (Exception ex)
             {
@@ -316,7 +271,7 @@ namespace DiamondShop
                     grid2.Rows[i].Cells["OriginName"].Value = row["OriginName"].ToString();
                     grid2.Rows[i].Cells["TotalBaht2"].Value = row["TotalBaht"].ToString();
                     grid2.Rows[i].Cells["ShopName2"].Value = row["ShopName"].ToString();
-                    grid2.Rows[i].Cells["refID2"].Value = row["refID"].ToString();
+                    grid2.Rows[i].Cells["refID1"].Value = row["refID"].ToString();
 
                     i++;
                     CalSum(1);
@@ -324,222 +279,71 @@ namespace DiamondShop
             }
         }
 
-        private void BindingDSDiamondDetail(int type)
+        private void BindingDSOrderDetail()
         {
-            int i = 0;
-
-            if (type == 0)
+           tds.Clear();
+           for(int i = 0;i < ds.Tables[1].Rows.Count;i++)
             {
-                tds.Clear();
-
-                foreach (DataGridViewRow row in grid1.Rows)
+                if (ds.Tables[1].Rows[i]["ID"].ToString() == "")
                 {
-                    tds.Tables[0].Rows.Add();
+                    DataRow dr = tds.Tables[0].NewRow();
 
-                    if (row.Cells["ID"].Value != null)
-                    { tds.Tables[0].Rows[i]["ID"] = row.Cells["ID"].Value; }
+                    dr["RefID"] = id;
+                    dr["RefID1"] = ds.Tables[1].Rows[i]["RefID1"];
+                    dr["flag"] = 0;
+                    SetCreateBy(dr);
+                    SetEditBy(dr);
 
-                    if (row.Cells["RowNum"].Value != null)
-                    { tds.Tables[0].Rows[i]["RowNum"] = row.Cells["RowNum"].Value; }
-
-                    if (row.Cells["RefID"].Value != null)
-                    { tds.Tables[0].Rows[i]["refID"] = row.Cells["refID"].Value; }
-
-                    i++;
-                }
-
-                i = 0;
-                tds.AcceptChanges();
+                    tds.Tables[0].Rows.Add(dr);
+                }                
             }
-            else
+
+           //GemstoneCer
+            for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
             {
-                tds2.Clear();
-                foreach (DataGridViewRow row in grid2.Rows)
+                if (ds.Tables[0].Rows[i]["ID"].ToString() == "")
                 {
-                    tds2.Tables[0].Rows.Add();
+                    DataRow dr = tds.Tables[0].NewRow();
 
-                    if(row.Cells["ID1"].Value != null)
-                    { tds2.Tables[0].Rows[i]["ID"] = row.Cells["ID1"].Value; }
+                    dr["RefID"] = id;
+                    dr["RefID1"] = ds.Tables[0].Rows[i]["RefID1"];
+                    dr["flag"] = 1;
+                    SetCreateBy(dr);
+                    SetEditBy(dr);
 
-                    if(row.Cells["RowNum1"].Value != null)
-                    { tds2.Tables[0].Rows[i]["RowNum"] = row.Cells["RowNum1"].Value; }
-                    
-                    if(row.Cells["WeightPerStone"].Value != null)
-                    { tds2.Tables[0].Rows[i]["WeightPerStone"] = row.Cells["WeightPerStone"].Value; }
-                    
-                    if(row.Cells["Amount"].Value != null)
-                    { tds2.Tables[0].Rows[i]["Amount"] = row.Cells["Amount"].Value; }
-                    
-                    if(row.Cells["Weight1"].Value != null)
-                    { tds2.Tables[0].Rows[i]["Weight"] = row.Cells["Weight1"].Value; }
-                    
-                    if(row.Cells["Shape"].Value != null)
-                    { tds2.Tables[0].Rows[i]["Shape"] = row.Cells["Shape"].Value; }
-
-                    if (row.Cells["Color"].Value != null)
-                    { tds2.Tables[0].Rows[i]["Color"] = row.Cells["Color"].Value; }
-
-                    if (row.Cells["Clearity1"].Value != null)
-                    { tds2.Tables[0].Rows[i]["Clearity"] = row.Cells["Clearity1"].Value; }
-
-                    if (row.Cells["CostPerCarat"].Value != null)
-                    { tds2.Tables[0].Rows[i]["CostPerCarat"] = row.Cells["CostPerCarat"].Value; }
-
-                    if (row.Cells["Cost1"].Value != null)
-                    { tds2.Tables[0].Rows[i]["Cost"] = row.Cells["Cost1"].Value; }
-                        
-                    if(row.Cells["MinPricePerCarat"].Value != null)
-                    { tds2.Tables[0].Rows[i]["MinPricePerCarat"] = row.Cells["MinPricePerCarat"].Value; }
-
-                    if (row.Cells["MinPrice1"].Value != null)
-                    { tds2.Tables[0].Rows[i]["MinPrice"] = row.Cells["MinPrice1"].Value; }
-
-                    if (row.Cells["refID2"].Value != null)
-                    { tds2.Tables[0].Rows[i]["refID"] = row.Cells["refID2"].Value; }
-                        
-                    i++;
-                }
-
-                tds2.AcceptChanges();
+                    tds.Tables[0].Rows.Add(dr);
+                }             
             }
+
+            tds.AcceptChanges();
         }
         #endregion
-
-        private void grid1_CellEndEdit(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.ColumnIndex == 10)
-            {
-                if (grid1.Rows[e.RowIndex].Cells[10].Value.ToString().Trim() == "")
-                {
-                    grid1.Rows[e.RowIndex].Cells[10].Value = 0;
-                }
-
-                grid1.RefreshEdit();
-                BindingDSDiamondDetail(0);          
-            }
-                   
-            CalSum(0);
-        }
-
-        private void grid2_CellEndEdit(object sender, DataGridViewCellEventArgs e)
-        {
-            if(e.ColumnIndex == 3 || e.ColumnIndex == 4 || e.ColumnIndex == 8 || e.ColumnIndex == 10)
-            {              
-                if(grid2.Rows[e.RowIndex].Cells[3].Value ==null || grid2.Rows[e.RowIndex].Cells[3].Value.ToString().Trim() == "")
-                {
-                    grid2.Rows[e.RowIndex].Cells[3].Value = 0;
-                }
-                if (grid2.Rows[e.RowIndex].Cells[4].Value == null || grid2.Rows[e.RowIndex].Cells[4].Value.ToString().Trim() == "")
-                {
-                    grid2.Rows[e.RowIndex].Cells[4].Value = 0;
-                }
-
-                if (grid2.Rows[e.RowIndex].Cells[8].Value == null || grid2.Rows[e.RowIndex].Cells[8].Value.ToString().Trim() == "")
-                {
-                    grid2.Rows[e.RowIndex].Cells[8].Value = 0;
-                }
-
-               
-
-                if (grid2.Rows[e.RowIndex].Cells[10].Value == null || grid2.Rows[e.RowIndex].Cells[10].Value.ToString().Trim() == "")
-                {
-                    grid2.Rows[e.RowIndex].Cells[10].Value = 0;
-                }              
-
-                grid2.Rows[e.RowIndex].Cells[5].Value = Convert.ToDecimal(grid2.Rows[e.RowIndex].Cells[3].Value) * Convert.ToInt16(grid2.Rows[e.RowIndex].Cells[4].Value);
-                grid2.Rows[e.RowIndex].Cells[9].Value = Convert.ToDecimal(grid2.Rows[e.RowIndex].Cells[5].Value) * Convert.ToDecimal(grid2.Rows[e.RowIndex].Cells[8].Value);
-                grid2.Rows[e.RowIndex].Cells[11].Value = Convert.ToDecimal(grid2.Rows[e.RowIndex].Cells[5].Value) * Convert.ToDecimal(grid2.Rows[e.RowIndex].Cells[10].Value);
-            }
-
-            grid2.RefreshEdit();
-            BindingDSDiamondDetail(1);
-
-            CalSum(1);
-        }
-
-        private void grid1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
-        {
-            //if ((e.ColumnIndex == 9 || e.ColumnIndex == 10) && e.RowIndex != this.grid1.NewRowIndex && e.Value != null)
-            //{
-            //    double d = double.Parse(e.Value.ToString());
-            //    e.Value = d.ToString("N0");
-            //}
-        }
-
-        private void grid2_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
-        {
-            if ((e.ColumnIndex == 8 || e.ColumnIndex == 9 || e.ColumnIndex == 10 || e.ColumnIndex == 11) && e.RowIndex != this.grid2.NewRowIndex && e.Value != null
-                && e.Value.ToString() != "")
-            {
-                double d = double.Parse(e.Value.ToString());
-                e.Value = d.ToString("N0");
-            }
-        }
 
         private void CalSum(int type)
         {
             if(type == 0)
             {
-                //txtSumWeight.Text = (grid1.Rows.Cast<DataGridViewRow>()
-                //.Sum(t => Convert.ToDecimal(t.Cells["Weight"].Value))).ToString();
+                txtSumWeight.Text = (grid1.Rows.Cast<DataGridViewRow>()
+                .Sum(t => Convert.ToDecimal(t.Cells["Weight1"].Value))).ToString();
 
-                //txtSumCost.Text = (grid1.Rows.Cast<DataGridViewRow>()
-                //.Sum(t => Convert.ToDecimal(t.Cells["TotalBaht"].Value))).ToString();
-
-                //txtSumMinPrice.Text = (grid1.Rows.Cast<DataGridViewRow>()
-                //.Sum(t => Convert.ToDecimal(t.Cells["MinPrice"].Value))).ToString();
+                txtSumCost.Text = (grid1.Rows.Cast<DataGridViewRow>()
+                .Sum(t => Convert.ToDecimal(t.Cells["TotalBaht"].Value))).ToString();
 
                 txtSumWeight.Text = GM.ConvertDoubleToString(txtSumWeight);
                 txtSumCost.Text = GM.ConvertDoubleToString(txtSumCost,0);
-                //txtSumMinPrice.Text = GM.ConvertDoubleToString(txtSumMinPrice,0);
             }
-
-        }
-
-        private void grid2_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
-        {
-            e.Control.KeyPress -= new KeyPressEventHandler(Column1_KeyPress);
-            if (grid2.CurrentCell.ColumnIndex != 0 || grid2.CurrentCell.ColumnIndex != 1 || grid2.CurrentCell.ColumnIndex != 5 ||
-                 grid2.CurrentCell.ColumnIndex != 6) 
+            if (type == 1)
             {
-                TextBox tb = e.Control as TextBox;
-                if (tb != null)
-                {
-                    tb.KeyPress += new KeyPressEventHandler(Column1_KeyPress);
-                }
+                txtSumWeight1.Text = (grid2.Rows.Cast<DataGridViewRow>()
+                .Sum(t => Convert.ToDecimal(t.Cells["Weight2"].Value))).ToString();
+
+                txtSumCost1.Text = (grid2.Rows.Cast<DataGridViewRow>()
+                .Sum(t => Convert.ToDecimal(t.Cells["TotalBaht2"].Value))).ToString();
+
+                txtSumWeight1.Text = GM.ConvertDoubleToString(txtSumWeight1);
+                txtSumCost1.Text = GM.ConvertDoubleToString(txtSumCost1, 0);
             }
-        }
 
-        private void Column1_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '.')
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void grid2_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            var grid = (DataGridView)sender;
-
-            if (e.RowIndex >= 0)
-            {
-                if (grid.Name == "grid1")
-                {
-                    rowIndex = e.RowIndex;
-                    if (grid1.Rows[e.RowIndex].Cells["ID"].Value != null)
-                    { DelID = Convert.ToInt16(grid1.Rows[e.RowIndex].Cells["ID"].Value.ToString()); }              
-                }
-                else
-                {
-                    rowIndex1 = e.RowIndex;
-                    
-                    if(grid2.Rows[e.RowIndex].Cells["ID1"].Value != null)
-                    { DelID = Convert.ToInt16(grid2.Rows[e.RowIndex].Cells["ID1"].Value.ToString()); }
-                    
-                }
-
-            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -568,30 +372,56 @@ namespace DiamondShop
 
         private void DeleteDataGrid(int type)
         {
-            if (type == 0)
+             DeleteData();
+        }
+
+        private void grid1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            rowIndex = e.RowIndex;
+            for (int i = 0; i < grid1.Rows.Count; i++)
             {
-                chkGrid = 0;
-                DeleteData();
-            }
-            else
-            {
-                chkGrid = 1;
-                DeleteData();
+                DelID = Convert.ToInt32(grid1.Rows[0].Cells["ID"].Value);
             }
         }
 
-        private bool CheckDataExist(int tmp)
+        private void grid2_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(grid1.Rows.Count > 0)
+            rowIndex1 = e.RowIndex;
+            for (int i = 0; i < grid2.Rows.Count; i++)
             {
-                for(int i = 0; i < grid1.Rows.Count; i++)
+                DelID = Convert.ToInt32(grid2.Rows[0].Cells["ID2"].Value);
+            }
+        }
+
+        private bool CheckDataExist(int tmp,int flag)
+        {
+            if(flag == 0)
+            {
+                if (grid1.Rows.Count > 0)
                 {
-                    if(tmp == Convert.ToInt32(grid1.Rows[i].Cells["RefID1"].Value))
+                    for(int i = 0; i < grid1.Rows.Count; i++)
                     {
-                        return false;
+                         if(tmp == Convert.ToInt32(grid1.Rows[i].Cells["RefID1"].Value))
+                         {
+                                return false;
+                         }
+                     }
+                 }
+            }
+            else
+            {
+                if (grid2.Rows.Count > 0)
+                {
+                    for (int i = 0; i < grid2.Rows.Count; i++)
+                    {
+                        if (tmp == Convert.ToInt32(grid2.Rows[i].Cells["RefID2"].Value))
+                        {
+                            return false;
+                        }
                     }
                 }
             }
+            
 
             return true;
         }

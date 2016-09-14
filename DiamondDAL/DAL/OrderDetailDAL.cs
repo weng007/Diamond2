@@ -38,14 +38,7 @@ namespace DiamondDAL.DAL
             {
                 foreach (dsOrderDetail.OrderDetailRow row in tds.Tables[0].Rows)
                 {
-                    if (row["RowNum"].ToString() == "")
-                    {
-                        SQL.ExecuteSP("SP_OrderDetail_Ins", row);
-                    }
-                    else
-                    {
-                        SQL.ExecuteSP("SP_OrderDetail_Upd", row);
-                    }
+                    SQL.ExecuteSP("SP_OrderDetail_Ins", row);
                 }
             }
             catch(Exception ex)
@@ -54,21 +47,6 @@ namespace DiamondDAL.DAL
             }
 
             return true;
-        }
-
-        public bool DoUpdateData(dsOrderDetail tds)
-        {
-            try
-            {
-                dsOrderDetail.OrderDetailRow row = tds.OrderDetail[0];
-                flag = SQL.ExecuteSP("SP_OrderDetail_Upd", row);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-
-            return Convert.ToBoolean(flag);
         }
 
         public bool DoDeleteData(int id)

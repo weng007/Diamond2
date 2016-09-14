@@ -52,11 +52,11 @@
             this.RowNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.OrderNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CustomerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.JewelryType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.JewelryTypeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ReceiveDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ReceiveAtName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ShopName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BodyDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BodyAtName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ShopName1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -152,11 +152,11 @@
             // 
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(153, 23);
+            this.label12.Location = new System.Drawing.Point(177, 23);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(104, 31);
+            this.label12.Size = new System.Drawing.Size(85, 31);
             this.label12.TabIndex = 74;
-            this.label12.Text = "Code Order";
+            this.label12.Text = "Order No.";
             // 
             // btnAdd
             // 
@@ -207,11 +207,11 @@
             this.RowNum,
             this.OrderNo,
             this.CustomerName,
-            this.JewelryType,
+            this.JewelryTypeName,
             this.ReceiveDate,
-            this.ReceiveAtName,
+            this.ShopName,
             this.BodyDate,
-            this.BodyAtName});
+            this.ShopName1});
             this.gridOrder.Location = new System.Drawing.Point(15, 3);
             this.gridOrder.Name = "gridOrder";
             this.gridOrder.ReadOnly = true;
@@ -265,13 +265,13 @@
             this.CustomerName.ReadOnly = true;
             this.CustomerName.Width = 120;
             // 
-            // JewelryType
+            // JewelryTypeName
             // 
-            this.JewelryType.DataPropertyName = "JewelryType";
-            this.JewelryType.HeaderText = "Type";
-            this.JewelryType.Name = "JewelryType";
-            this.JewelryType.ReadOnly = true;
-            this.JewelryType.Width = 150;
+            this.JewelryTypeName.DataPropertyName = "JewelryTypeName";
+            this.JewelryTypeName.HeaderText = "Type";
+            this.JewelryTypeName.Name = "JewelryTypeName";
+            this.JewelryTypeName.ReadOnly = true;
+            this.JewelryTypeName.Width = 150;
             // 
             // ReceiveDate
             // 
@@ -283,13 +283,13 @@
             this.ReceiveDate.ReadOnly = true;
             this.ReceiveDate.Width = 170;
             // 
-            // ReceiveAtName
+            // ShopName
             // 
-            this.ReceiveAtName.DataPropertyName = "ReceiveAtName";
-            this.ReceiveAtName.HeaderText = "Location";
-            this.ReceiveAtName.Name = "ReceiveAtName";
-            this.ReceiveAtName.ReadOnly = true;
-            this.ReceiveAtName.Width = 120;
+            this.ShopName.DataPropertyName = "ShopName";
+            this.ShopName.HeaderText = "Location (นัดรับสินค้า)";
+            this.ShopName.Name = "ShopName";
+            this.ShopName.ReadOnly = true;
+            this.ShopName.Width = 200;
             // 
             // BodyDate
             // 
@@ -301,16 +301,16 @@
             this.BodyDate.ReadOnly = true;
             this.BodyDate.Width = 160;
             // 
-            // BodyAtName
+            // ShopName1
             // 
-            this.BodyAtName.DataPropertyName = "BodyAtName";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            this.ShopName1.DataPropertyName = "ShopName1";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
             dataGridViewCellStyle4.Format = "N2";
-            this.BodyAtName.DefaultCellStyle = dataGridViewCellStyle4;
-            this.BodyAtName.HeaderText = "Location";
-            this.BodyAtName.Name = "BodyAtName";
-            this.BodyAtName.ReadOnly = true;
-            this.BodyAtName.Width = 120;
+            this.ShopName1.DefaultCellStyle = dataGridViewCellStyle4;
+            this.ShopName1.HeaderText = "Location (นัดดูสินค้า)";
+            this.ShopName1.Name = "ShopName1";
+            this.ShopName1.ReadOnly = true;
+            this.ShopName1.Width = 200;
             // 
             // OrderList
             // 
@@ -352,10 +352,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn RowNum;
         private System.Windows.Forms.DataGridViewTextBoxColumn OrderNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn CustomerName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn JewelryType;
+        private System.Windows.Forms.DataGridViewTextBoxColumn JewelryTypeName;
         private System.Windows.Forms.DataGridViewTextBoxColumn ReceiveDate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ReceiveAtName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ShopName;
         private System.Windows.Forms.DataGridViewTextBoxColumn BodyDate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BodyAtName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ShopName1;
     }
 }

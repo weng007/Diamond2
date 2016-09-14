@@ -36,18 +36,6 @@ namespace DiamondBiz.Biz
             }
         }
 
-        public bool DoUpdateData(dsOrderDetail tds)
-        {
-            try
-            {
-                return dal.DoUpdateData(tds);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-
         public bool DoDeleteData(int id)
         {
             try

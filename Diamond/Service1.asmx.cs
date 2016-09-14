@@ -1509,22 +1509,6 @@ namespace Diamond
                     throw ex;
                 }
             }
-            else if (TableName == "OrderDetail")
-            {
-                OrderDetailBiz biz = GM.GetOrderDetailBiz();
-                dsOrderDetail ds1 = new dsOrderDetail();
-
-                ds1.Merge(ds);
-
-                try
-                {
-                    flag = biz.DoUpdateData(ds1);
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
-            }
 
             return flag;
         }
