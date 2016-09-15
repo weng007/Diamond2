@@ -13,11 +13,11 @@ namespace DiamondBiz.Biz
         dsTransferDetail ds = new dsTransferDetail();
         TransferDetailDAL dal = new TransferDetailDAL();
 
-        public dsTransferDetail DoSelectData(int CatID)
+        public dsTransferDetail DoSelectData(int id)
         {
             try
             {
-                return dal.DoSelectData(CatID);
+                return dal.DoSelectData(id);
             }
             catch (Exception ex)
             {

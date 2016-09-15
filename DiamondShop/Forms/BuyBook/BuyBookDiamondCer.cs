@@ -244,7 +244,7 @@ namespace DiamondShop
             else
             {
                 row = tds.BuyBookDiamondCer.NewBuyBookDiamondCerRow();
-                tds.BuyBookDiamondCer.Rows.Add(row);
+                tds.BuyBookDiamondCer.Rows.Add(row); 
             }
             binder.BindValueToDataRow(row);
             row.IsInscription = rdoIns1.Checked ?"1":"0";

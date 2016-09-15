@@ -351,13 +351,13 @@ namespace Diamond
             }
         }
         [WebMethod]
-        public DataSet DoSearchTransfer(int Sender, int Receiver, int TransferStatus, int SShop, int EShop, DateTime SSendDate, DateTime ESendDate, DateTime SReceiveDate, DateTime EReceiveDate)
+        public DataSet DoSearchTransfer(int Sender, int TransferStatus, int SShop, int EShop, DateTime SSendDate, DateTime ESendDate, DateTime SReceiveDate, DateTime EReceiveDate)
         {
             TransferBiz biz = new TransferBiz();
 
             try
             {
-                return biz.DoSearchData(Sender, Receiver, TransferStatus, SShop, EShop, SSendDate, ESendDate, SReceiveDate, EReceiveDate);
+                return biz.DoSearchData(Sender, TransferStatus, SShop, EShop, SSendDate, ESendDate, SReceiveDate, EReceiveDate);
             }
             catch (Exception ex)
             {
@@ -372,6 +372,34 @@ namespace Diamond
             try
             {
                 return biz.DoSearchData(CustName, Code, Seller, JewelryType);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        [WebMethod]
+        public DataSet DoSearchTransferBuyBook(int shop, string code, string code2, int buybooktype)
+        {
+            TransferBuyBookBiz biz = new TransferBuyBookBiz();
+
+            try
+            {
+                return biz.DoSearchData(shop, code, code2, buybooktype);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        [WebMethod]
+        public DataSet DoSearchTransferInventory(int shop, string code, int jewelrytype)
+        {
+            TransferInventoryBiz biz = new TransferInventoryBiz();
+
+            try
+            {
+                return biz.DoSearchData(shop, code, jewelrytype);
             }
             catch (Exception ex)
             {

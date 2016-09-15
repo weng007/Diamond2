@@ -137,7 +137,7 @@ namespace DiamondShop
             CalendarActivity frm = new CalendarActivity();
             SetFormList(frm, 18, "CalendarActivity");
         }
-        private void btnTransfer_Click(object sender, EventArgs e)
+        private void buyBookToolStripMenuItem_Click(object sender, EventArgs e)
         {
             TransferList frm = new TransferList();
             SetFormList(frm, 19, "Transfer");
@@ -285,5 +285,7 @@ namespace DiamondShop
             Login frm = new Login();
             frm.ShowDialog();            
         }
+
+
     }
 }

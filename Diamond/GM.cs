@@ -45,6 +45,8 @@ namespace Diamond
         static WarningBiz bizWarning;
         static TransferBiz bizTransfer;
         static TransferDetailBiz bizTransferDetail;
+        static TransferBuyBookBiz bizTransferBuyBook;
+        static TransferInventoryBiz bizTransferInventory;
         static OrderBiz bizOrder;
         static OrderDetailBiz bizOrderDetail;
 
@@ -254,6 +256,18 @@ namespace Diamond
             if (bizTransferDetail == null)
             { return new TransferDetailBiz(); }
             else { return bizTransferDetail; }
+        }
+        public static TransferBuyBookBiz GetTransferBuyBookBiz()
+        {
+            if (bizTransferBuyBook == null)
+            { return new TransferBuyBookBiz(); }
+            else { return bizTransferBuyBook; }
+        }
+        public static TransferInventoryBiz GetTransferInventoryBiz()
+        {
+            if (bizTransferInventory == null)
+            { return new TransferInventoryBiz(); }
+            else { return bizTransferInventory; }
         }
         public static OrderBiz GetOrderBiz()
         {

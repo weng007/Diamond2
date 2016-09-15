@@ -12,12 +12,12 @@ namespace DiamondDAL.DAL
         SQLHelper SQL = new SQLHelper();
         dsTransferDetail ds = new dsTransferDetail();
         int flag = 0;
-        public dsTransferDetail DoSelectData(int CatID)
+        public dsTransferDetail DoSelectData(int id)
         {
             try
             {
                 SQL.ClearParameter();
-                SQL.CreateParameter("CatID", CatID);
+                SQL.CreateParameter("ID", id);
                 SQL.FillDataSetBySP("SP_TransferDetail_Sel", ds.TransferDetail);            
             }
             catch (Exception ex)
@@ -31,8 +31,17 @@ namespace DiamondDAL.DAL
         {
             try
             {
-                dsTransferDetail.TransferDetailRow row = tds.TransferDetail[0];
-                SQL.ExecuteSP("SP_TransferDetail_Ins", row);
+                foreach (dsTransferDetail.TransferDetailRow row in tds.Tables[0].Rows)
+                {
+                    if (row["RowNum"].ToString() == "")
+                    {
+                        SQL.ExecuteSP("SP_TransferDetail_Ins", row);
+                    }
+                    else
+                    {
+                        SQL.ExecuteSP("SP_TransferDetail_Upd", row);
+                    }
+                }
             }
             catch (Exception ex)
             {

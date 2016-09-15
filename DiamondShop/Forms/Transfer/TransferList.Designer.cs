@@ -29,11 +29,15 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TransferList));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.cmbSender = new System.Windows.Forms.ComboBox();
+            this.cmbEShop = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.cmbShop = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.dtEReceiveDate = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -51,19 +55,13 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.gridTransfer = new System.Windows.Forms.DataGridView();
-            this.cmbShop = new System.Windows.Forms.ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.RowNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Sender = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Receive = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SenderName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SendDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ReceiveDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TransferStatusName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EShop = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label9 = new System.Windows.Forms.Label();
-            this.cmbSender = new System.Windows.Forms.ComboBox();
-            this.cmbEShop = new System.Windows.Forms.ComboBox();
+            this.SShopName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -98,6 +96,50 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1334, 144);
             this.panel4.TabIndex = 42;
+            // 
+            // cmbSender
+            // 
+            this.cmbSender.FormattingEnabled = true;
+            this.cmbSender.Location = new System.Drawing.Point(228, 16);
+            this.cmbSender.Name = "cmbSender";
+            this.cmbSender.Size = new System.Drawing.Size(172, 29);
+            this.cmbSender.TabIndex = 91;
+            // 
+            // cmbEShop
+            // 
+            this.cmbEShop.FormattingEnabled = true;
+            this.cmbEShop.Location = new System.Drawing.Point(541, 60);
+            this.cmbEShop.Name = "cmbEShop";
+            this.cmbEShop.Size = new System.Drawing.Size(172, 29);
+            this.cmbEShop.TabIndex = 89;
+            // 
+            // label9
+            // 
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(421, 63);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(118, 26);
+            this.label9.TabIndex = 90;
+            this.label9.Text = "EndLocation";
+            // 
+            // cmbShop
+            // 
+            this.cmbShop.FormattingEnabled = true;
+            this.cmbShop.Location = new System.Drawing.Point(228, 60);
+            this.cmbShop.Name = "cmbShop";
+            this.cmbShop.Size = new System.Drawing.Size(172, 29);
+            this.cmbShop.TabIndex = 87;
+            // 
+            // label8
+            // 
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(108, 63);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(118, 26);
+            this.label8.TabIndex = 88;
+            this.label8.Text = "StartLocation";
             // 
             // dtEReceiveDate
             // 
@@ -272,12 +314,11 @@
             this.gridTransfer.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.RowNum,
             this.ID,
-            this.Sender,
-            this.Receive,
+            this.SenderName,
             this.SendDate,
             this.ReceiveDate,
             this.TransferStatusName,
-            this.EShop});
+            this.SShopName});
             this.gridTransfer.Location = new System.Drawing.Point(15, 8);
             this.gridTransfer.Name = "gridTransfer";
             this.gridTransfer.ReadOnly = true;
@@ -289,29 +330,11 @@
             this.gridTransfer.TabIndex = 2;
             this.gridTransfer.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.gridSetting_MouseDoubleClick);
             // 
-            // cmbShop
-            // 
-            this.cmbShop.FormattingEnabled = true;
-            this.cmbShop.Location = new System.Drawing.Point(228, 60);
-            this.cmbShop.Name = "cmbShop";
-            this.cmbShop.Size = new System.Drawing.Size(172, 29);
-            this.cmbShop.TabIndex = 87;
-            // 
-            // label8
-            // 
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(108, 63);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(118, 26);
-            this.label8.TabIndex = 88;
-            this.label8.Text = "StartLocation";
-            // 
             // RowNum
             // 
             this.RowNum.DataPropertyName = "RowNum";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            this.RowNum.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            this.RowNum.DefaultCellStyle = dataGridViewCellStyle1;
             this.RowNum.HeaderText = "No.";
             this.RowNum.Name = "RowNum";
             this.RowNum.ReadOnly = true;
@@ -325,30 +348,20 @@
             this.ID.ReadOnly = true;
             this.ID.Visible = false;
             // 
-            // Sender
+            // SenderName
             // 
-            this.Sender.DataPropertyName = "Sender";
-            this.Sender.HeaderText = "Sender";
-            this.Sender.Name = "Sender";
-            this.Sender.ReadOnly = true;
-            this.Sender.Width = 170;
-            // 
-            // Receive
-            // 
-            this.Receive.DataPropertyName = "Receive";
-            dataGridViewCellStyle6.Format = "dd/MM/yyyy";
-            this.Receive.DefaultCellStyle = dataGridViewCellStyle6;
-            this.Receive.HeaderText = "Receive";
-            this.Receive.Name = "Receive";
-            this.Receive.ReadOnly = true;
-            this.Receive.Width = 130;
+            this.SenderName.DataPropertyName = "SenderName";
+            this.SenderName.HeaderText = "Sender";
+            this.SenderName.Name = "SenderName";
+            this.SenderName.ReadOnly = true;
+            this.SenderName.Width = 170;
             // 
             // SendDate
             // 
             this.SendDate.DataPropertyName = "SendDate";
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle7.Format = "N0";
-            this.SendDate.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle2.Format = "dd/MM/yyyy";
+            this.SendDate.DefaultCellStyle = dataGridViewCellStyle2;
             this.SendDate.HeaderText = "SendDate";
             this.SendDate.Name = "SendDate";
             this.SendDate.ReadOnly = true;
@@ -357,9 +370,9 @@
             // ReceiveDate
             // 
             this.ReceiveDate.DataPropertyName = "ReceiveDate";
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle8.Format = "N0";
-            this.ReceiveDate.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle3.Format = "dd/MM/yyyy";
+            this.ReceiveDate.DefaultCellStyle = dataGridViewCellStyle3;
             this.ReceiveDate.HeaderText = "ReceiveDate";
             this.ReceiveDate.Name = "ReceiveDate";
             this.ReceiveDate.ReadOnly = true;
@@ -373,39 +386,13 @@
             this.TransferStatusName.ReadOnly = true;
             this.TransferStatusName.Width = 150;
             // 
-            // EShop
+            // SShopName
             // 
-            this.EShop.DataPropertyName = "EShop";
-            this.EShop.HeaderText = "Shop";
-            this.EShop.Name = "EShop";
-            this.EShop.ReadOnly = true;
-            this.EShop.Width = 120;
-            // 
-            // label9
-            // 
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(421, 63);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(118, 26);
-            this.label9.TabIndex = 90;
-            this.label9.Text = "EndLocation";
-            // 
-            // cmbSender
-            // 
-            this.cmbSender.FormattingEnabled = true;
-            this.cmbSender.Location = new System.Drawing.Point(228, 16);
-            this.cmbSender.Name = "cmbSender";
-            this.cmbSender.Size = new System.Drawing.Size(172, 29);
-            this.cmbSender.TabIndex = 91;
-            // 
-            // cmbEShop
-            // 
-            this.cmbEShop.FormattingEnabled = true;
-            this.cmbEShop.Location = new System.Drawing.Point(541, 60);
-            this.cmbEShop.Name = "cmbEShop";
-            this.cmbEShop.Size = new System.Drawing.Size(172, 29);
-            this.cmbEShop.TabIndex = 89;
+            this.SShopName.DataPropertyName = "SShopName";
+            this.SShopName.HeaderText = "Shop";
+            this.SShopName.Name = "SShopName";
+            this.SShopName.ReadOnly = true;
+            this.SShopName.Width = 120;
             // 
             // TransferList
             // 
@@ -446,16 +433,15 @@
         private System.Windows.Forms.DateTimePicker dtSSendDate;
         private System.Windows.Forms.ComboBox cmbShop;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn RowNum;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Sender;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Receive;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SendDate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ReceiveDate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TransferStatusName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn EShop;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ComboBox cmbSender;
         private System.Windows.Forms.ComboBox cmbEShop;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RowNum;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SenderName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SendDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ReceiveDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TransferStatusName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SShopName;
     }
 }

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema id="dsTransferDetail" targetNamespace="http://tempuri.org/dsTransferDetail.xsd" xmlns:mstns="http://tempuri.org/dsTransferDetail.xsd" xmlns="http://tempuri.org/dsTransferDetail.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+<xs:schema id="dsTransferBuyBook" targetNamespace="http://tempuri.org/dsTransferBuyBook.xsd" xmlns:mstns="http://tempuri.org/dsTransferBuyBook.xsd" xmlns="http://tempuri.org/dsTransferBuyBook.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
@@ -11,10 +11,10 @@
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="dsTransferDetail" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsTransferDetail" msprop:Generator_UserDSName="dsTransferDetail">
+  <xs:element name="dsTransferBuyBook" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsTransferBuyBook" msprop:Generator_UserDSName="dsTransferBuyBook">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="TransferDetail" msprop:Generator_TableClassName="TransferDetailDataTable" msprop:Generator_TableVarName="tableTransferDetail" msprop:Generator_TablePropName="TransferDetail" msprop:Generator_RowDeletingName="TransferDetailRowDeleting" msprop:Generator_RowChangingName="TransferDetailRowChanging" msprop:Generator_RowEvHandlerName="TransferDetailRowChangeEventHandler" msprop:Generator_RowDeletedName="TransferDetailRowDeleted" msprop:Generator_UserTableName="TransferDetail" msprop:Generator_RowChangedName="TransferDetailRowChanged" msprop:Generator_RowEvArgName="TransferDetailRowChangeEvent" msprop:Generator_RowClassName="TransferDetailRow">
+        <xs:element name="TransferBuyBook" msprop:Generator_TableClassName="TransferBuyBookDataTable" msprop:Generator_TableVarName="tableTransferBuyBook" msprop:Generator_TablePropName="TransferBuyBook" msprop:Generator_RowDeletingName="TransferBuyBookRowDeleting" msprop:Generator_RowChangingName="TransferBuyBookRowChanging" msprop:Generator_RowEvHandlerName="TransferBuyBookRowChangeEventHandler" msprop:Generator_RowDeletedName="TransferBuyBookRowDeleted" msprop:Generator_UserTableName="TransferBuyBook" msprop:Generator_RowChangedName="TransferBuyBookRowChanged" msprop:Generator_RowEvArgName="TransferBuyBookRowChangeEvent" msprop:Generator_RowClassName="TransferBuyBookRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="RowNum" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnRowNum" msprop:Generator_ColumnPropNameInRow="RowNum" msprop:Generator_ColumnPropNameInTable="RowNumColumn" msprop:Generator_UserColumnName="RowNum" type="xs:long" minOccurs="0" />

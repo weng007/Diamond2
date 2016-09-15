@@ -20,17 +20,17 @@ namespace DiamondDS.DS {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("dsTransfer")]
+    [global::System.Xml.Serialization.XmlRootAttribute("dsTransferInventory")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class dsTransfer : global::System.Data.DataSet {
+    public partial class dsTransferInventory : global::System.Data.DataSet {
         
-        private TransferDataTable tableTransfer;
+        private TransferInventoryDataTable tableTransferInventory;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public dsTransfer() {
+        public dsTransferInventory() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace DiamondDS.DS {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected dsTransfer(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected dsTransferInventory(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace DiamondDS.DS {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["Transfer"] != null)) {
-                    base.Tables.Add(new TransferDataTable(ds.Tables["Transfer"]));
+                if ((ds.Tables["TransferInventory"] != null)) {
+                    base.Tables.Add(new TransferInventoryDataTable(ds.Tables["TransferInventory"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace DiamondDS.DS {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public TransferDataTable Transfer {
+        public TransferInventoryDataTable TransferInventory {
             get {
-                return this.tableTransfer;
+                return this.tableTransferInventory;
             }
         }
         
@@ -127,7 +127,7 @@ namespace DiamondDS.DS {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            dsTransfer cln = ((dsTransfer)(base.Clone()));
+            dsTransferInventory cln = ((dsTransferInventory)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace DiamondDS.DS {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["Transfer"] != null)) {
-                    base.Tables.Add(new TransferDataTable(ds.Tables["Transfer"]));
+                if ((ds.Tables["TransferInventory"] != null)) {
+                    base.Tables.Add(new TransferInventoryDataTable(ds.Tables["TransferInventory"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace DiamondDS.DS {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableTransfer = ((TransferDataTable)(base.Tables["Transfer"]));
+            this.tableTransferInventory = ((TransferInventoryDataTable)(base.Tables["TransferInventory"]));
             if ((initTable == true)) {
-                if ((this.tableTransfer != null)) {
-                    this.tableTransfer.InitVars();
+                if ((this.tableTransferInventory != null)) {
+                    this.tableTransferInventory.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace DiamondDS.DS {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "dsTransfer";
+            this.DataSetName = "dsTransferInventory";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/dsTransfer.xsd";
+            this.Namespace = "http://tempuri.org/dsTransferInventory.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableTransfer = new TransferDataTable();
-            base.Tables.Add(this.tableTransfer);
+            this.tableTransferInventory = new TransferInventoryDataTable();
+            base.Tables.Add(this.tableTransferInventory);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializeTransfer() {
+        private bool ShouldSerializeTransferInventory() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace DiamondDS.DS {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            dsTransfer ds = new dsTransfer();
+            dsTransferInventory ds = new dsTransferInventory();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,38 +270,52 @@ namespace DiamondDS.DS {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void TransferRowChangeEventHandler(object sender, TransferRowChangeEvent e);
+        public delegate void TransferInventoryRowChangeEventHandler(object sender, TransferInventoryRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class TransferDataTable : global::System.Data.TypedTableBase<TransferRow> {
+        public partial class TransferInventoryDataTable : global::System.Data.TypedTableBase<TransferInventoryRow> {
             
             private global::System.Data.DataColumn columnRowNum;
             
             private global::System.Data.DataColumn columnID;
             
-            private global::System.Data.DataColumn columnSender;
+            private global::System.Data.DataColumn columnCode;
             
-            private global::System.Data.DataColumn columnSenderName;
+            private global::System.Data.DataColumn columnWeight;
             
-            private global::System.Data.DataColumn columnTransferStatus;
+            private global::System.Data.DataColumn columnJewelryType;
             
-            private global::System.Data.DataColumn columnTransferStatusName;
+            private global::System.Data.DataColumn columnJewelryTypeName;
             
-            private global::System.Data.DataColumn columnSendDate;
+            private global::System.Data.DataColumn columnShape;
             
-            private global::System.Data.DataColumn columnReceiveDate;
+            private global::System.Data.DataColumn columnShapeName;
             
-            private global::System.Data.DataColumn columnSShop;
+            private global::System.Data.DataColumn columnColorType;
             
-            private global::System.Data.DataColumn columnSShopName;
+            private global::System.Data.DataColumn columnColor;
             
-            private global::System.Data.DataColumn columnEShop;
+            private global::System.Data.DataColumn columnColorTypeName;
             
-            private global::System.Data.DataColumn columnEShopName;
+            private global::System.Data.DataColumn columnColorName;
+            
+            private global::System.Data.DataColumn columnMinPrice;
+            
+            private global::System.Data.DataColumn columnAmount1;
+            
+            private global::System.Data.DataColumn columnWeight1;
+            
+            private global::System.Data.DataColumn columnAmount3;
+            
+            private global::System.Data.DataColumn columnWeight3;
+            
+            private global::System.Data.DataColumn columnRefID;
+            
+            private global::System.Data.DataColumn columnRefID1;
             
             private global::System.Data.DataColumn columnIsDeleted;
             
@@ -315,8 +329,8 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TransferDataTable() {
-                this.TableName = "Transfer";
+            public TransferInventoryDataTable() {
+                this.TableName = "TransferInventory";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -324,7 +338,7 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal TransferDataTable(global::System.Data.DataTable table) {
+            internal TransferInventoryDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -341,7 +355,7 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected TransferDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected TransferInventoryDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -364,81 +378,137 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn SenderColumn {
+            public global::System.Data.DataColumn CodeColumn {
                 get {
-                    return this.columnSender;
+                    return this.columnCode;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn SenderNameColumn {
+            public global::System.Data.DataColumn WeightColumn {
                 get {
-                    return this.columnSenderName;
+                    return this.columnWeight;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn TransferStatusColumn {
+            public global::System.Data.DataColumn JewelryTypeColumn {
                 get {
-                    return this.columnTransferStatus;
+                    return this.columnJewelryType;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn TransferStatusNameColumn {
+            public global::System.Data.DataColumn JewelryTypeNameColumn {
                 get {
-                    return this.columnTransferStatusName;
+                    return this.columnJewelryTypeName;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn SendDateColumn {
+            public global::System.Data.DataColumn ShapeColumn {
                 get {
-                    return this.columnSendDate;
+                    return this.columnShape;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn ReceiveDateColumn {
+            public global::System.Data.DataColumn ShapeNameColumn {
                 get {
-                    return this.columnReceiveDate;
+                    return this.columnShapeName;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn SShopColumn {
+            public global::System.Data.DataColumn ColorTypeColumn {
                 get {
-                    return this.columnSShop;
+                    return this.columnColorType;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn SShopNameColumn {
+            public global::System.Data.DataColumn ColorColumn {
                 get {
-                    return this.columnSShopName;
+                    return this.columnColor;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn EShopColumn {
+            public global::System.Data.DataColumn ColorTypeNameColumn {
                 get {
-                    return this.columnEShop;
+                    return this.columnColorTypeName;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn EShopNameColumn {
+            public global::System.Data.DataColumn ColorNameColumn {
                 get {
-                    return this.columnEShopName;
+                    return this.columnColorName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn MinPriceColumn {
+                get {
+                    return this.columnMinPrice;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Amount1Column {
+                get {
+                    return this.columnAmount1;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Weight1Column {
+                get {
+                    return this.columnWeight1;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Amount3Column {
+                get {
+                    return this.columnAmount3;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Weight3Column {
+                get {
+                    return this.columnWeight3;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn RefIDColumn {
+                get {
+                    return this.columnRefID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn RefID1Column {
+                get {
+                    return this.columnRefID1;
                 }
             }
             
@@ -493,84 +563,98 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TransferRow this[int index] {
+            public TransferInventoryRow this[int index] {
                 get {
-                    return ((TransferRow)(this.Rows[index]));
+                    return ((TransferInventoryRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event TransferRowChangeEventHandler TransferRowChanging;
+            public event TransferInventoryRowChangeEventHandler TransferInventoryRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event TransferRowChangeEventHandler TransferRowChanged;
+            public event TransferInventoryRowChangeEventHandler TransferInventoryRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event TransferRowChangeEventHandler TransferRowDeleting;
+            public event TransferInventoryRowChangeEventHandler TransferInventoryRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event TransferRowChangeEventHandler TransferRowDeleted;
+            public event TransferInventoryRowChangeEventHandler TransferInventoryRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddTransferRow(TransferRow row) {
+            public void AddTransferInventoryRow(TransferInventoryRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TransferRow AddTransferRow(
+            public TransferInventoryRow AddTransferInventoryRow(
                         long RowNum, 
-                        int Sender, 
-                        string SenderName, 
-                        int TransferStatus, 
-                        string TransferStatusName, 
-                        System.DateTime SendDate, 
-                        System.DateTime ReceiveDate, 
-                        int SShop, 
-                        string SShopName, 
-                        int EShop, 
-                        string EShopName, 
+                        string Code, 
+                        int Weight, 
+                        int JewelryType, 
+                        string JewelryTypeName, 
+                        string Shape, 
+                        string ShapeName, 
+                        string ColorType, 
+                        string Color, 
+                        string ColorTypeName, 
+                        string ColorName, 
+                        decimal MinPrice, 
+                        int Amount1, 
+                        int Weight1, 
+                        int Amount3, 
+                        int Weight3, 
+                        int RefID, 
+                        int RefID1, 
                         string IsDeleted, 
                         int CreateBy, 
                         System.DateTime CreateDate, 
                         int EditBy, 
                         System.DateTime EditDate) {
-                TransferRow rowTransferRow = ((TransferRow)(this.NewRow()));
+                TransferInventoryRow rowTransferInventoryRow = ((TransferInventoryRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         RowNum,
                         null,
-                        Sender,
-                        SenderName,
-                        TransferStatus,
-                        TransferStatusName,
-                        SendDate,
-                        ReceiveDate,
-                        SShop,
-                        SShopName,
-                        EShop,
-                        EShopName,
+                        Code,
+                        Weight,
+                        JewelryType,
+                        JewelryTypeName,
+                        Shape,
+                        ShapeName,
+                        ColorType,
+                        Color,
+                        ColorTypeName,
+                        ColorName,
+                        MinPrice,
+                        Amount1,
+                        Weight1,
+                        Amount3,
+                        Weight3,
+                        RefID,
+                        RefID1,
                         IsDeleted,
                         CreateBy,
                         CreateDate,
                         EditBy,
                         EditDate};
-                rowTransferRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowTransferRow);
-                return rowTransferRow;
+                rowTransferInventoryRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowTransferInventoryRow);
+                return rowTransferInventoryRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TransferRow FindByID(int ID) {
-                return ((TransferRow)(this.Rows.Find(new object[] {
+            public TransferInventoryRow FindByID(int ID) {
+                return ((TransferInventoryRow)(this.Rows.Find(new object[] {
                             ID})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                TransferDataTable cln = ((TransferDataTable)(base.Clone()));
+                TransferInventoryDataTable cln = ((TransferInventoryDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -578,7 +662,7 @@ namespace DiamondDS.DS {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new TransferDataTable();
+                return new TransferInventoryDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -586,16 +670,23 @@ namespace DiamondDS.DS {
             internal void InitVars() {
                 this.columnRowNum = base.Columns["RowNum"];
                 this.columnID = base.Columns["ID"];
-                this.columnSender = base.Columns["Sender"];
-                this.columnSenderName = base.Columns["SenderName"];
-                this.columnTransferStatus = base.Columns["TransferStatus"];
-                this.columnTransferStatusName = base.Columns["TransferStatusName"];
-                this.columnSendDate = base.Columns["SendDate"];
-                this.columnReceiveDate = base.Columns["ReceiveDate"];
-                this.columnSShop = base.Columns["SShop"];
-                this.columnSShopName = base.Columns["SShopName"];
-                this.columnEShop = base.Columns["EShop"];
-                this.columnEShopName = base.Columns["EShopName"];
+                this.columnCode = base.Columns["Code"];
+                this.columnWeight = base.Columns["Weight"];
+                this.columnJewelryType = base.Columns["JewelryType"];
+                this.columnJewelryTypeName = base.Columns["JewelryTypeName"];
+                this.columnShape = base.Columns["Shape"];
+                this.columnShapeName = base.Columns["ShapeName"];
+                this.columnColorType = base.Columns["ColorType"];
+                this.columnColor = base.Columns["Color"];
+                this.columnColorTypeName = base.Columns["ColorTypeName"];
+                this.columnColorName = base.Columns["ColorName"];
+                this.columnMinPrice = base.Columns["MinPrice"];
+                this.columnAmount1 = base.Columns["Amount1"];
+                this.columnWeight1 = base.Columns["Weight1"];
+                this.columnAmount3 = base.Columns["Amount3"];
+                this.columnWeight3 = base.Columns["Weight3"];
+                this.columnRefID = base.Columns["RefID"];
+                this.columnRefID1 = base.Columns["RefID1"];
                 this.columnIsDeleted = base.Columns["IsDeleted"];
                 this.columnCreateBy = base.Columns["CreateBy"];
                 this.columnCreateDate = base.Columns["CreateDate"];
@@ -610,26 +701,40 @@ namespace DiamondDS.DS {
                 base.Columns.Add(this.columnRowNum);
                 this.columnID = new global::System.Data.DataColumn("ID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnID);
-                this.columnSender = new global::System.Data.DataColumn("Sender", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSender);
-                this.columnSenderName = new global::System.Data.DataColumn("SenderName", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSenderName);
-                this.columnTransferStatus = new global::System.Data.DataColumn("TransferStatus", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTransferStatus);
-                this.columnTransferStatusName = new global::System.Data.DataColumn("TransferStatusName", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTransferStatusName);
-                this.columnSendDate = new global::System.Data.DataColumn("SendDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSendDate);
-                this.columnReceiveDate = new global::System.Data.DataColumn("ReceiveDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnReceiveDate);
-                this.columnSShop = new global::System.Data.DataColumn("SShop", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSShop);
-                this.columnSShopName = new global::System.Data.DataColumn("SShopName", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSShopName);
-                this.columnEShop = new global::System.Data.DataColumn("EShop", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnEShop);
-                this.columnEShopName = new global::System.Data.DataColumn("EShopName", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnEShopName);
+                this.columnCode = new global::System.Data.DataColumn("Code", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCode);
+                this.columnWeight = new global::System.Data.DataColumn("Weight", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnWeight);
+                this.columnJewelryType = new global::System.Data.DataColumn("JewelryType", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnJewelryType);
+                this.columnJewelryTypeName = new global::System.Data.DataColumn("JewelryTypeName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnJewelryTypeName);
+                this.columnShape = new global::System.Data.DataColumn("Shape", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnShape);
+                this.columnShapeName = new global::System.Data.DataColumn("ShapeName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnShapeName);
+                this.columnColorType = new global::System.Data.DataColumn("ColorType", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnColorType);
+                this.columnColor = new global::System.Data.DataColumn("Color", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnColor);
+                this.columnColorTypeName = new global::System.Data.DataColumn("ColorTypeName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnColorTypeName);
+                this.columnColorName = new global::System.Data.DataColumn("ColorName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnColorName);
+                this.columnMinPrice = new global::System.Data.DataColumn("MinPrice", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMinPrice);
+                this.columnAmount1 = new global::System.Data.DataColumn("Amount1", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAmount1);
+                this.columnWeight1 = new global::System.Data.DataColumn("Weight1", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnWeight1);
+                this.columnAmount3 = new global::System.Data.DataColumn("Amount3", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAmount3);
+                this.columnWeight3 = new global::System.Data.DataColumn("Weight3", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnWeight3);
+                this.columnRefID = new global::System.Data.DataColumn("RefID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnRefID);
+                this.columnRefID1 = new global::System.Data.DataColumn("RefID1", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnRefID1);
                 this.columnIsDeleted = new global::System.Data.DataColumn("IsDeleted", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnIsDeleted);
                 this.columnCreateBy = new global::System.Data.DataColumn("CreateBy", typeof(int), null, global::System.Data.MappingType.Element);
@@ -649,38 +754,50 @@ namespace DiamondDS.DS {
                 this.columnID.AllowDBNull = false;
                 this.columnID.ReadOnly = true;
                 this.columnID.Unique = true;
-                this.columnTransferStatusName.MaxLength = 100;
-                this.columnSShopName.ReadOnly = true;
-                this.columnSShopName.MaxLength = 100;
-                this.columnEShopName.ReadOnly = true;
-                this.columnEShopName.MaxLength = 100;
+                this.columnCode.AllowDBNull = false;
+                this.columnCode.MaxLength = 30;
+                this.columnWeight.ReadOnly = true;
+                this.columnJewelryTypeName.ReadOnly = true;
+                this.columnJewelryTypeName.MaxLength = 100;
+                this.columnShape.ReadOnly = true;
+                this.columnShape.MaxLength = 1;
+                this.columnShapeName.ReadOnly = true;
+                this.columnShapeName.MaxLength = 1;
+                this.columnColorType.ReadOnly = true;
+                this.columnColorType.MaxLength = 1;
+                this.columnColor.ReadOnly = true;
+                this.columnColor.MaxLength = 1;
+                this.columnColorTypeName.ReadOnly = true;
+                this.columnColorTypeName.MaxLength = 1;
+                this.columnColorName.ReadOnly = true;
+                this.columnColorName.MaxLength = 1;
                 this.columnIsDeleted.MaxLength = 1;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TransferRow NewTransferRow() {
-                return ((TransferRow)(this.NewRow()));
+            public TransferInventoryRow NewTransferInventoryRow() {
+                return ((TransferInventoryRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new TransferRow(builder);
+                return new TransferInventoryRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(TransferRow);
+                return typeof(TransferInventoryRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.TransferRowChanged != null)) {
-                    this.TransferRowChanged(this, new TransferRowChangeEvent(((TransferRow)(e.Row)), e.Action));
+                if ((this.TransferInventoryRowChanged != null)) {
+                    this.TransferInventoryRowChanged(this, new TransferInventoryRowChangeEvent(((TransferInventoryRow)(e.Row)), e.Action));
                 }
             }
             
@@ -688,8 +805,8 @@ namespace DiamondDS.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.TransferRowChanging != null)) {
-                    this.TransferRowChanging(this, new TransferRowChangeEvent(((TransferRow)(e.Row)), e.Action));
+                if ((this.TransferInventoryRowChanging != null)) {
+                    this.TransferInventoryRowChanging(this, new TransferInventoryRowChangeEvent(((TransferInventoryRow)(e.Row)), e.Action));
                 }
             }
             
@@ -697,8 +814,8 @@ namespace DiamondDS.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.TransferRowDeleted != null)) {
-                    this.TransferRowDeleted(this, new TransferRowChangeEvent(((TransferRow)(e.Row)), e.Action));
+                if ((this.TransferInventoryRowDeleted != null)) {
+                    this.TransferInventoryRowDeleted(this, new TransferInventoryRowChangeEvent(((TransferInventoryRow)(e.Row)), e.Action));
                 }
             }
             
@@ -706,14 +823,14 @@ namespace DiamondDS.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.TransferRowDeleting != null)) {
-                    this.TransferRowDeleting(this, new TransferRowChangeEvent(((TransferRow)(e.Row)), e.Action));
+                if ((this.TransferInventoryRowDeleting != null)) {
+                    this.TransferInventoryRowDeleting(this, new TransferInventoryRowChangeEvent(((TransferInventoryRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemoveTransferRow(TransferRow row) {
+            public void RemoveTransferInventoryRow(TransferInventoryRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -722,7 +839,7 @@ namespace DiamondDS.DS {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                dsTransfer ds = new dsTransfer();
+                dsTransferInventory ds = new dsTransferInventory();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -740,7 +857,7 @@ namespace DiamondDS.DS {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "TransferDataTable";
+                attribute2.FixedValue = "TransferInventoryDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -784,15 +901,15 @@ namespace DiamondDS.DS {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class TransferRow : global::System.Data.DataRow {
+        public partial class TransferInventoryRow : global::System.Data.DataRow {
             
-            private TransferDataTable tableTransfer;
+            private TransferInventoryDataTable tableTransferInventory;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal TransferRow(global::System.Data.DataRowBuilder rb) : 
+            internal TransferInventoryRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableTransfer = ((TransferDataTable)(this.Table));
+                this.tableTransferInventory = ((TransferInventoryDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -800,14 +917,14 @@ namespace DiamondDS.DS {
             public long RowNum {
                 get {
                     try {
-                        return ((long)(this[this.tableTransfer.RowNumColumn]));
+                        return ((long)(this[this.tableTransferInventory.RowNumColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'RowNum\' in table \'Transfer\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'RowNum\' in table \'TransferInventory\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTransfer.RowNumColumn] = value;
+                    this[this.tableTransferInventory.RowNumColumn] = value;
                 }
             }
             
@@ -815,170 +932,277 @@ namespace DiamondDS.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public int ID {
                 get {
-                    return ((int)(this[this.tableTransfer.IDColumn]));
+                    return ((int)(this[this.tableTransferInventory.IDColumn]));
                 }
                 set {
-                    this[this.tableTransfer.IDColumn] = value;
+                    this[this.tableTransferInventory.IDColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int Sender {
+            public string Code {
                 get {
-                    try {
-                        return ((int)(this[this.tableTransfer.SenderColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Sender\' in table \'Transfer\' is DBNull.", e);
-                    }
+                    return ((string)(this[this.tableTransferInventory.CodeColumn]));
                 }
                 set {
-                    this[this.tableTransfer.SenderColumn] = value;
+                    this[this.tableTransferInventory.CodeColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string SenderName {
+            public int Weight {
                 get {
                     try {
-                        return ((string)(this[this.tableTransfer.SenderNameColumn]));
+                        return ((int)(this[this.tableTransferInventory.WeightColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'SenderName\' in table \'Transfer\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Weight\' in table \'TransferInventory\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTransfer.SenderNameColumn] = value;
+                    this[this.tableTransferInventory.WeightColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int TransferStatus {
+            public int JewelryType {
                 get {
                     try {
-                        return ((int)(this[this.tableTransfer.TransferStatusColumn]));
+                        return ((int)(this[this.tableTransferInventory.JewelryTypeColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'TransferStatus\' in table \'Transfer\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'JewelryType\' in table \'TransferInventory\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTransfer.TransferStatusColumn] = value;
+                    this[this.tableTransferInventory.JewelryTypeColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string TransferStatusName {
+            public string JewelryTypeName {
                 get {
                     try {
-                        return ((string)(this[this.tableTransfer.TransferStatusNameColumn]));
+                        return ((string)(this[this.tableTransferInventory.JewelryTypeNameColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'TransferStatusName\' in table \'Transfer\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'JewelryTypeName\' in table \'TransferInventory\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTransfer.TransferStatusNameColumn] = value;
+                    this[this.tableTransferInventory.JewelryTypeNameColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public System.DateTime SendDate {
+            public string Shape {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tableTransfer.SendDateColumn]));
+                        return ((string)(this[this.tableTransferInventory.ShapeColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'SendDate\' in table \'Transfer\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Shape\' in table \'TransferInventory\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTransfer.SendDateColumn] = value;
+                    this[this.tableTransferInventory.ShapeColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public System.DateTime ReceiveDate {
+            public string ShapeName {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tableTransfer.ReceiveDateColumn]));
+                        return ((string)(this[this.tableTransferInventory.ShapeNameColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'ReceiveDate\' in table \'Transfer\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'ShapeName\' in table \'TransferInventory\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTransfer.ReceiveDateColumn] = value;
+                    this[this.tableTransferInventory.ShapeNameColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int SShop {
+            public string ColorType {
                 get {
                     try {
-                        return ((int)(this[this.tableTransfer.SShopColumn]));
+                        return ((string)(this[this.tableTransferInventory.ColorTypeColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'SShop\' in table \'Transfer\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'ColorType\' in table \'TransferInventory\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTransfer.SShopColumn] = value;
+                    this[this.tableTransferInventory.ColorTypeColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string SShopName {
+            public string Color {
                 get {
                     try {
-                        return ((string)(this[this.tableTransfer.SShopNameColumn]));
+                        return ((string)(this[this.tableTransferInventory.ColorColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'SShopName\' in table \'Transfer\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Color\' in table \'TransferInventory\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTransfer.SShopNameColumn] = value;
+                    this[this.tableTransferInventory.ColorColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int EShop {
+            public string ColorTypeName {
                 get {
                     try {
-                        return ((int)(this[this.tableTransfer.EShopColumn]));
+                        return ((string)(this[this.tableTransferInventory.ColorTypeNameColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'EShop\' in table \'Transfer\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'ColorTypeName\' in table \'TransferInventory\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTransfer.EShopColumn] = value;
+                    this[this.tableTransferInventory.ColorTypeNameColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string EShopName {
+            public string ColorName {
                 get {
                     try {
-                        return ((string)(this[this.tableTransfer.EShopNameColumn]));
+                        return ((string)(this[this.tableTransferInventory.ColorNameColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'EShopName\' in table \'Transfer\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'ColorName\' in table \'TransferInventory\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTransfer.EShopNameColumn] = value;
+                    this[this.tableTransferInventory.ColorNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal MinPrice {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableTransferInventory.MinPriceColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'MinPrice\' in table \'TransferInventory\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTransferInventory.MinPriceColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int Amount1 {
+                get {
+                    try {
+                        return ((int)(this[this.tableTransferInventory.Amount1Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Amount1\' in table \'TransferInventory\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTransferInventory.Amount1Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int Weight1 {
+                get {
+                    try {
+                        return ((int)(this[this.tableTransferInventory.Weight1Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Weight1\' in table \'TransferInventory\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTransferInventory.Weight1Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int Amount3 {
+                get {
+                    try {
+                        return ((int)(this[this.tableTransferInventory.Amount3Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Amount3\' in table \'TransferInventory\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTransferInventory.Amount3Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int Weight3 {
+                get {
+                    try {
+                        return ((int)(this[this.tableTransferInventory.Weight3Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Weight3\' in table \'TransferInventory\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTransferInventory.Weight3Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int RefID {
+                get {
+                    try {
+                        return ((int)(this[this.tableTransferInventory.RefIDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'RefID\' in table \'TransferInventory\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTransferInventory.RefIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int RefID1 {
+                get {
+                    try {
+                        return ((int)(this[this.tableTransferInventory.RefID1Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'RefID1\' in table \'TransferInventory\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTransferInventory.RefID1Column] = value;
                 }
             }
             
@@ -987,14 +1211,14 @@ namespace DiamondDS.DS {
             public string IsDeleted {
                 get {
                     try {
-                        return ((string)(this[this.tableTransfer.IsDeletedColumn]));
+                        return ((string)(this[this.tableTransferInventory.IsDeletedColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'IsDeleted\' in table \'Transfer\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'IsDeleted\' in table \'TransferInventory\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTransfer.IsDeletedColumn] = value;
+                    this[this.tableTransferInventory.IsDeletedColumn] = value;
                 }
             }
             
@@ -1003,14 +1227,14 @@ namespace DiamondDS.DS {
             public int CreateBy {
                 get {
                     try {
-                        return ((int)(this[this.tableTransfer.CreateByColumn]));
+                        return ((int)(this[this.tableTransferInventory.CreateByColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'CreateBy\' in table \'Transfer\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'CreateBy\' in table \'TransferInventory\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTransfer.CreateByColumn] = value;
+                    this[this.tableTransferInventory.CreateByColumn] = value;
                 }
             }
             
@@ -1019,14 +1243,14 @@ namespace DiamondDS.DS {
             public System.DateTime CreateDate {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tableTransfer.CreateDateColumn]));
+                        return ((global::System.DateTime)(this[this.tableTransferInventory.CreateDateColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'CreateDate\' in table \'Transfer\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'CreateDate\' in table \'TransferInventory\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTransfer.CreateDateColumn] = value;
+                    this[this.tableTransferInventory.CreateDateColumn] = value;
                 }
             }
             
@@ -1035,14 +1259,14 @@ namespace DiamondDS.DS {
             public int EditBy {
                 get {
                     try {
-                        return ((int)(this[this.tableTransfer.EditByColumn]));
+                        return ((int)(this[this.tableTransferInventory.EditByColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'EditBy\' in table \'Transfer\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'EditBy\' in table \'TransferInventory\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTransfer.EditByColumn] = value;
+                    this[this.tableTransferInventory.EditByColumn] = value;
                 }
             }
             
@@ -1051,207 +1275,279 @@ namespace DiamondDS.DS {
             public System.DateTime EditDate {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tableTransfer.EditDateColumn]));
+                        return ((global::System.DateTime)(this[this.tableTransferInventory.EditDateColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'EditDate\' in table \'Transfer\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'EditDate\' in table \'TransferInventory\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTransfer.EditDateColumn] = value;
+                    this[this.tableTransferInventory.EditDateColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsRowNumNull() {
-                return this.IsNull(this.tableTransfer.RowNumColumn);
+                return this.IsNull(this.tableTransferInventory.RowNumColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetRowNumNull() {
-                this[this.tableTransfer.RowNumColumn] = global::System.Convert.DBNull;
+                this[this.tableTransferInventory.RowNumColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsSenderNull() {
-                return this.IsNull(this.tableTransfer.SenderColumn);
+            public bool IsWeightNull() {
+                return this.IsNull(this.tableTransferInventory.WeightColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetSenderNull() {
-                this[this.tableTransfer.SenderColumn] = global::System.Convert.DBNull;
+            public void SetWeightNull() {
+                this[this.tableTransferInventory.WeightColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsSenderNameNull() {
-                return this.IsNull(this.tableTransfer.SenderNameColumn);
+            public bool IsJewelryTypeNull() {
+                return this.IsNull(this.tableTransferInventory.JewelryTypeColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetSenderNameNull() {
-                this[this.tableTransfer.SenderNameColumn] = global::System.Convert.DBNull;
+            public void SetJewelryTypeNull() {
+                this[this.tableTransferInventory.JewelryTypeColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsTransferStatusNull() {
-                return this.IsNull(this.tableTransfer.TransferStatusColumn);
+            public bool IsJewelryTypeNameNull() {
+                return this.IsNull(this.tableTransferInventory.JewelryTypeNameColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetTransferStatusNull() {
-                this[this.tableTransfer.TransferStatusColumn] = global::System.Convert.DBNull;
+            public void SetJewelryTypeNameNull() {
+                this[this.tableTransferInventory.JewelryTypeNameColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsTransferStatusNameNull() {
-                return this.IsNull(this.tableTransfer.TransferStatusNameColumn);
+            public bool IsShapeNull() {
+                return this.IsNull(this.tableTransferInventory.ShapeColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetTransferStatusNameNull() {
-                this[this.tableTransfer.TransferStatusNameColumn] = global::System.Convert.DBNull;
+            public void SetShapeNull() {
+                this[this.tableTransferInventory.ShapeColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsSendDateNull() {
-                return this.IsNull(this.tableTransfer.SendDateColumn);
+            public bool IsShapeNameNull() {
+                return this.IsNull(this.tableTransferInventory.ShapeNameColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetSendDateNull() {
-                this[this.tableTransfer.SendDateColumn] = global::System.Convert.DBNull;
+            public void SetShapeNameNull() {
+                this[this.tableTransferInventory.ShapeNameColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsReceiveDateNull() {
-                return this.IsNull(this.tableTransfer.ReceiveDateColumn);
+            public bool IsColorTypeNull() {
+                return this.IsNull(this.tableTransferInventory.ColorTypeColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetReceiveDateNull() {
-                this[this.tableTransfer.ReceiveDateColumn] = global::System.Convert.DBNull;
+            public void SetColorTypeNull() {
+                this[this.tableTransferInventory.ColorTypeColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsSShopNull() {
-                return this.IsNull(this.tableTransfer.SShopColumn);
+            public bool IsColorNull() {
+                return this.IsNull(this.tableTransferInventory.ColorColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetSShopNull() {
-                this[this.tableTransfer.SShopColumn] = global::System.Convert.DBNull;
+            public void SetColorNull() {
+                this[this.tableTransferInventory.ColorColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsSShopNameNull() {
-                return this.IsNull(this.tableTransfer.SShopNameColumn);
+            public bool IsColorTypeNameNull() {
+                return this.IsNull(this.tableTransferInventory.ColorTypeNameColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetSShopNameNull() {
-                this[this.tableTransfer.SShopNameColumn] = global::System.Convert.DBNull;
+            public void SetColorTypeNameNull() {
+                this[this.tableTransferInventory.ColorTypeNameColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsEShopNull() {
-                return this.IsNull(this.tableTransfer.EShopColumn);
+            public bool IsColorNameNull() {
+                return this.IsNull(this.tableTransferInventory.ColorNameColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetEShopNull() {
-                this[this.tableTransfer.EShopColumn] = global::System.Convert.DBNull;
+            public void SetColorNameNull() {
+                this[this.tableTransferInventory.ColorNameColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsEShopNameNull() {
-                return this.IsNull(this.tableTransfer.EShopNameColumn);
+            public bool IsMinPriceNull() {
+                return this.IsNull(this.tableTransferInventory.MinPriceColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetEShopNameNull() {
-                this[this.tableTransfer.EShopNameColumn] = global::System.Convert.DBNull;
+            public void SetMinPriceNull() {
+                this[this.tableTransferInventory.MinPriceColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsAmount1Null() {
+                return this.IsNull(this.tableTransferInventory.Amount1Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetAmount1Null() {
+                this[this.tableTransferInventory.Amount1Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsWeight1Null() {
+                return this.IsNull(this.tableTransferInventory.Weight1Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetWeight1Null() {
+                this[this.tableTransferInventory.Weight1Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsAmount3Null() {
+                return this.IsNull(this.tableTransferInventory.Amount3Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetAmount3Null() {
+                this[this.tableTransferInventory.Amount3Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsWeight3Null() {
+                return this.IsNull(this.tableTransferInventory.Weight3Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetWeight3Null() {
+                this[this.tableTransferInventory.Weight3Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsRefIDNull() {
+                return this.IsNull(this.tableTransferInventory.RefIDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetRefIDNull() {
+                this[this.tableTransferInventory.RefIDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsRefID1Null() {
+                return this.IsNull(this.tableTransferInventory.RefID1Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetRefID1Null() {
+                this[this.tableTransferInventory.RefID1Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsIsDeletedNull() {
-                return this.IsNull(this.tableTransfer.IsDeletedColumn);
+                return this.IsNull(this.tableTransferInventory.IsDeletedColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetIsDeletedNull() {
-                this[this.tableTransfer.IsDeletedColumn] = global::System.Convert.DBNull;
+                this[this.tableTransferInventory.IsDeletedColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsCreateByNull() {
-                return this.IsNull(this.tableTransfer.CreateByColumn);
+                return this.IsNull(this.tableTransferInventory.CreateByColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetCreateByNull() {
-                this[this.tableTransfer.CreateByColumn] = global::System.Convert.DBNull;
+                this[this.tableTransferInventory.CreateByColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsCreateDateNull() {
-                return this.IsNull(this.tableTransfer.CreateDateColumn);
+                return this.IsNull(this.tableTransferInventory.CreateDateColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetCreateDateNull() {
-                this[this.tableTransfer.CreateDateColumn] = global::System.Convert.DBNull;
+                this[this.tableTransferInventory.CreateDateColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsEditByNull() {
-                return this.IsNull(this.tableTransfer.EditByColumn);
+                return this.IsNull(this.tableTransferInventory.EditByColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetEditByNull() {
-                this[this.tableTransfer.EditByColumn] = global::System.Convert.DBNull;
+                this[this.tableTransferInventory.EditByColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsEditDateNull() {
-                return this.IsNull(this.tableTransfer.EditDateColumn);
+                return this.IsNull(this.tableTransferInventory.EditDateColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetEditDateNull() {
-                this[this.tableTransfer.EditDateColumn] = global::System.Convert.DBNull;
+                this[this.tableTransferInventory.EditDateColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -1259,22 +1555,22 @@ namespace DiamondDS.DS {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class TransferRowChangeEvent : global::System.EventArgs {
+        public class TransferInventoryRowChangeEvent : global::System.EventArgs {
             
-            private TransferRow eventRow;
+            private TransferInventoryRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TransferRowChangeEvent(TransferRow row, global::System.Data.DataRowAction action) {
+            public TransferInventoryRowChangeEvent(TransferInventoryRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TransferRow Row {
+            public TransferInventoryRow Row {
                 get {
                     return this.eventRow;
                 }

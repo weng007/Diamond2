@@ -20,17 +20,17 @@ namespace DiamondDS.DS {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("dsTransfer")]
+    [global::System.Xml.Serialization.XmlRootAttribute("dsTransferBuyBook")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class dsTransfer : global::System.Data.DataSet {
+    public partial class dsTransferBuyBook : global::System.Data.DataSet {
         
-        private TransferDataTable tableTransfer;
+        private TransferBuyBookDataTable tableTransferBuyBook;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public dsTransfer() {
+        public dsTransferBuyBook() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace DiamondDS.DS {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected dsTransfer(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected dsTransferBuyBook(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace DiamondDS.DS {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["Transfer"] != null)) {
-                    base.Tables.Add(new TransferDataTable(ds.Tables["Transfer"]));
+                if ((ds.Tables["TransferBuyBook"] != null)) {
+                    base.Tables.Add(new TransferBuyBookDataTable(ds.Tables["TransferBuyBook"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace DiamondDS.DS {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public TransferDataTable Transfer {
+        public TransferBuyBookDataTable TransferBuyBook {
             get {
-                return this.tableTransfer;
+                return this.tableTransferBuyBook;
             }
         }
         
@@ -127,7 +127,7 @@ namespace DiamondDS.DS {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            dsTransfer cln = ((dsTransfer)(base.Clone()));
+            dsTransferBuyBook cln = ((dsTransferBuyBook)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace DiamondDS.DS {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["Transfer"] != null)) {
-                    base.Tables.Add(new TransferDataTable(ds.Tables["Transfer"]));
+                if ((ds.Tables["TransferBuyBook"] != null)) {
+                    base.Tables.Add(new TransferBuyBookDataTable(ds.Tables["TransferBuyBook"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace DiamondDS.DS {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableTransfer = ((TransferDataTable)(base.Tables["Transfer"]));
+            this.tableTransferBuyBook = ((TransferBuyBookDataTable)(base.Tables["TransferBuyBook"]));
             if ((initTable == true)) {
-                if ((this.tableTransfer != null)) {
-                    this.tableTransfer.InitVars();
+                if ((this.tableTransferBuyBook != null)) {
+                    this.tableTransferBuyBook.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace DiamondDS.DS {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "dsTransfer";
+            this.DataSetName = "dsTransferBuyBook";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/dsTransfer.xsd";
+            this.Namespace = "http://tempuri.org/dsTransferBuyBook.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableTransfer = new TransferDataTable();
-            base.Tables.Add(this.tableTransfer);
+            this.tableTransferBuyBook = new TransferBuyBookDataTable();
+            base.Tables.Add(this.tableTransferBuyBook);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializeTransfer() {
+        private bool ShouldSerializeTransferBuyBook() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace DiamondDS.DS {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            dsTransfer ds = new dsTransfer();
+            dsTransferBuyBook ds = new dsTransferBuyBook();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,38 +270,48 @@ namespace DiamondDS.DS {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void TransferRowChangeEventHandler(object sender, TransferRowChangeEvent e);
+        public delegate void TransferBuyBookRowChangeEventHandler(object sender, TransferBuyBookRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class TransferDataTable : global::System.Data.TypedTableBase<TransferRow> {
+        public partial class TransferBuyBookDataTable : global::System.Data.TypedTableBase<TransferBuyBookRow> {
             
             private global::System.Data.DataColumn columnRowNum;
             
             private global::System.Data.DataColumn columnID;
             
-            private global::System.Data.DataColumn columnSender;
+            private global::System.Data.DataColumn columnCode;
             
-            private global::System.Data.DataColumn columnSenderName;
+            private global::System.Data.DataColumn columnCode2;
             
-            private global::System.Data.DataColumn columnTransferStatus;
+            private global::System.Data.DataColumn columnWeight;
             
-            private global::System.Data.DataColumn columnTransferStatusName;
+            private global::System.Data.DataColumn columnJewelryType;
             
-            private global::System.Data.DataColumn columnSendDate;
+            private global::System.Data.DataColumn columnJewelryTypeName;
             
-            private global::System.Data.DataColumn columnReceiveDate;
+            private global::System.Data.DataColumn columnShape;
             
-            private global::System.Data.DataColumn columnSShop;
+            private global::System.Data.DataColumn columnShapeName;
             
-            private global::System.Data.DataColumn columnSShopName;
+            private global::System.Data.DataColumn columnColorType;
             
-            private global::System.Data.DataColumn columnEShop;
+            private global::System.Data.DataColumn columnColor;
             
-            private global::System.Data.DataColumn columnEShopName;
+            private global::System.Data.DataColumn columnColorTypeName;
+            
+            private global::System.Data.DataColumn columnColorName;
+            
+            private global::System.Data.DataColumn columnTotalBaht;
+            
+            private global::System.Data.DataColumn columnFlag;
+            
+            private global::System.Data.DataColumn columnRefID;
+            
+            private global::System.Data.DataColumn columnRefID1;
             
             private global::System.Data.DataColumn columnIsDeleted;
             
@@ -315,8 +325,8 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TransferDataTable() {
-                this.TableName = "Transfer";
+            public TransferBuyBookDataTable() {
+                this.TableName = "TransferBuyBook";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -324,7 +334,7 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal TransferDataTable(global::System.Data.DataTable table) {
+            internal TransferBuyBookDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -341,7 +351,7 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected TransferDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected TransferBuyBookDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -364,81 +374,121 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn SenderColumn {
+            public global::System.Data.DataColumn CodeColumn {
                 get {
-                    return this.columnSender;
+                    return this.columnCode;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn SenderNameColumn {
+            public global::System.Data.DataColumn Code2Column {
                 get {
-                    return this.columnSenderName;
+                    return this.columnCode2;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn TransferStatusColumn {
+            public global::System.Data.DataColumn WeightColumn {
                 get {
-                    return this.columnTransferStatus;
+                    return this.columnWeight;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn TransferStatusNameColumn {
+            public global::System.Data.DataColumn JewelryTypeColumn {
                 get {
-                    return this.columnTransferStatusName;
+                    return this.columnJewelryType;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn SendDateColumn {
+            public global::System.Data.DataColumn JewelryTypeNameColumn {
                 get {
-                    return this.columnSendDate;
+                    return this.columnJewelryTypeName;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn ReceiveDateColumn {
+            public global::System.Data.DataColumn ShapeColumn {
                 get {
-                    return this.columnReceiveDate;
+                    return this.columnShape;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn SShopColumn {
+            public global::System.Data.DataColumn ShapeNameColumn {
                 get {
-                    return this.columnSShop;
+                    return this.columnShapeName;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn SShopNameColumn {
+            public global::System.Data.DataColumn ColorTypeColumn {
                 get {
-                    return this.columnSShopName;
+                    return this.columnColorType;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn EShopColumn {
+            public global::System.Data.DataColumn ColorColumn {
                 get {
-                    return this.columnEShop;
+                    return this.columnColor;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn EShopNameColumn {
+            public global::System.Data.DataColumn ColorTypeNameColumn {
                 get {
-                    return this.columnEShopName;
+                    return this.columnColorTypeName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ColorNameColumn {
+                get {
+                    return this.columnColorName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn TotalBahtColumn {
+                get {
+                    return this.columnTotalBaht;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn FlagColumn {
+                get {
+                    return this.columnFlag;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn RefIDColumn {
+                get {
+                    return this.columnRefID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn RefID1Column {
+                get {
+                    return this.columnRefID1;
                 }
             }
             
@@ -493,84 +543,88 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TransferRow this[int index] {
+            public TransferBuyBookRow this[int index] {
                 get {
-                    return ((TransferRow)(this.Rows[index]));
+                    return ((TransferBuyBookRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event TransferRowChangeEventHandler TransferRowChanging;
+            public event TransferBuyBookRowChangeEventHandler TransferBuyBookRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event TransferRowChangeEventHandler TransferRowChanged;
+            public event TransferBuyBookRowChangeEventHandler TransferBuyBookRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event TransferRowChangeEventHandler TransferRowDeleting;
+            public event TransferBuyBookRowChangeEventHandler TransferBuyBookRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event TransferRowChangeEventHandler TransferRowDeleted;
+            public event TransferBuyBookRowChangeEventHandler TransferBuyBookRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddTransferRow(TransferRow row) {
+            public void AddTransferBuyBookRow(TransferBuyBookRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TransferRow AddTransferRow(
+            public TransferBuyBookRow AddTransferBuyBookRow(
                         long RowNum, 
-                        int Sender, 
-                        string SenderName, 
-                        int TransferStatus, 
-                        string TransferStatusName, 
-                        System.DateTime SendDate, 
-                        System.DateTime ReceiveDate, 
-                        int SShop, 
-                        string SShopName, 
-                        int EShop, 
-                        string EShopName, 
+                        int ID, 
+                        string Code, 
+                        string Code2, 
+                        double Weight, 
+                        int JewelryType, 
+                        string JewelryTypeName, 
+                        int Shape, 
+                        string ShapeName, 
+                        int ColorType, 
+                        int Color, 
+                        string ColorTypeName, 
+                        string ColorName, 
+                        decimal TotalBaht, 
+                        int Flag, 
+                        int RefID, 
+                        int RefID1, 
                         string IsDeleted, 
                         int CreateBy, 
                         System.DateTime CreateDate, 
                         int EditBy, 
                         System.DateTime EditDate) {
-                TransferRow rowTransferRow = ((TransferRow)(this.NewRow()));
+                TransferBuyBookRow rowTransferBuyBookRow = ((TransferBuyBookRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         RowNum,
-                        null,
-                        Sender,
-                        SenderName,
-                        TransferStatus,
-                        TransferStatusName,
-                        SendDate,
-                        ReceiveDate,
-                        SShop,
-                        SShopName,
-                        EShop,
-                        EShopName,
+                        ID,
+                        Code,
+                        Code2,
+                        Weight,
+                        JewelryType,
+                        JewelryTypeName,
+                        Shape,
+                        ShapeName,
+                        ColorType,
+                        Color,
+                        ColorTypeName,
+                        ColorName,
+                        TotalBaht,
+                        Flag,
+                        RefID,
+                        RefID1,
                         IsDeleted,
                         CreateBy,
                         CreateDate,
                         EditBy,
                         EditDate};
-                rowTransferRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowTransferRow);
-                return rowTransferRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TransferRow FindByID(int ID) {
-                return ((TransferRow)(this.Rows.Find(new object[] {
-                            ID})));
+                rowTransferBuyBookRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowTransferBuyBookRow);
+                return rowTransferBuyBookRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                TransferDataTable cln = ((TransferDataTable)(base.Clone()));
+                TransferBuyBookDataTable cln = ((TransferBuyBookDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -578,7 +632,7 @@ namespace DiamondDS.DS {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new TransferDataTable();
+                return new TransferBuyBookDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -586,16 +640,21 @@ namespace DiamondDS.DS {
             internal void InitVars() {
                 this.columnRowNum = base.Columns["RowNum"];
                 this.columnID = base.Columns["ID"];
-                this.columnSender = base.Columns["Sender"];
-                this.columnSenderName = base.Columns["SenderName"];
-                this.columnTransferStatus = base.Columns["TransferStatus"];
-                this.columnTransferStatusName = base.Columns["TransferStatusName"];
-                this.columnSendDate = base.Columns["SendDate"];
-                this.columnReceiveDate = base.Columns["ReceiveDate"];
-                this.columnSShop = base.Columns["SShop"];
-                this.columnSShopName = base.Columns["SShopName"];
-                this.columnEShop = base.Columns["EShop"];
-                this.columnEShopName = base.Columns["EShopName"];
+                this.columnCode = base.Columns["Code"];
+                this.columnCode2 = base.Columns["Code2"];
+                this.columnWeight = base.Columns["Weight"];
+                this.columnJewelryType = base.Columns["JewelryType"];
+                this.columnJewelryTypeName = base.Columns["JewelryTypeName"];
+                this.columnShape = base.Columns["Shape"];
+                this.columnShapeName = base.Columns["ShapeName"];
+                this.columnColorType = base.Columns["ColorType"];
+                this.columnColor = base.Columns["Color"];
+                this.columnColorTypeName = base.Columns["ColorTypeName"];
+                this.columnColorName = base.Columns["ColorName"];
+                this.columnTotalBaht = base.Columns["TotalBaht"];
+                this.columnFlag = base.Columns["Flag"];
+                this.columnRefID = base.Columns["RefID"];
+                this.columnRefID1 = base.Columns["RefID1"];
                 this.columnIsDeleted = base.Columns["IsDeleted"];
                 this.columnCreateBy = base.Columns["CreateBy"];
                 this.columnCreateDate = base.Columns["CreateDate"];
@@ -610,26 +669,36 @@ namespace DiamondDS.DS {
                 base.Columns.Add(this.columnRowNum);
                 this.columnID = new global::System.Data.DataColumn("ID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnID);
-                this.columnSender = new global::System.Data.DataColumn("Sender", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSender);
-                this.columnSenderName = new global::System.Data.DataColumn("SenderName", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSenderName);
-                this.columnTransferStatus = new global::System.Data.DataColumn("TransferStatus", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTransferStatus);
-                this.columnTransferStatusName = new global::System.Data.DataColumn("TransferStatusName", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTransferStatusName);
-                this.columnSendDate = new global::System.Data.DataColumn("SendDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSendDate);
-                this.columnReceiveDate = new global::System.Data.DataColumn("ReceiveDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnReceiveDate);
-                this.columnSShop = new global::System.Data.DataColumn("SShop", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSShop);
-                this.columnSShopName = new global::System.Data.DataColumn("SShopName", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSShopName);
-                this.columnEShop = new global::System.Data.DataColumn("EShop", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnEShop);
-                this.columnEShopName = new global::System.Data.DataColumn("EShopName", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnEShopName);
+                this.columnCode = new global::System.Data.DataColumn("Code", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCode);
+                this.columnCode2 = new global::System.Data.DataColumn("Code2", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCode2);
+                this.columnWeight = new global::System.Data.DataColumn("Weight", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnWeight);
+                this.columnJewelryType = new global::System.Data.DataColumn("JewelryType", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnJewelryType);
+                this.columnJewelryTypeName = new global::System.Data.DataColumn("JewelryTypeName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnJewelryTypeName);
+                this.columnShape = new global::System.Data.DataColumn("Shape", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnShape);
+                this.columnShapeName = new global::System.Data.DataColumn("ShapeName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnShapeName);
+                this.columnColorType = new global::System.Data.DataColumn("ColorType", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnColorType);
+                this.columnColor = new global::System.Data.DataColumn("Color", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnColor);
+                this.columnColorTypeName = new global::System.Data.DataColumn("ColorTypeName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnColorTypeName);
+                this.columnColorName = new global::System.Data.DataColumn("ColorName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnColorName);
+                this.columnTotalBaht = new global::System.Data.DataColumn("TotalBaht", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTotalBaht);
+                this.columnFlag = new global::System.Data.DataColumn("Flag", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFlag);
+                this.columnRefID = new global::System.Data.DataColumn("RefID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnRefID);
+                this.columnRefID1 = new global::System.Data.DataColumn("RefID1", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnRefID1);
                 this.columnIsDeleted = new global::System.Data.DataColumn("IsDeleted", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnIsDeleted);
                 this.columnCreateBy = new global::System.Data.DataColumn("CreateBy", typeof(int), null, global::System.Data.MappingType.Element);
@@ -640,47 +709,54 @@ namespace DiamondDS.DS {
                 base.Columns.Add(this.columnEditBy);
                 this.columnEditDate = new global::System.Data.DataColumn("EditDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnEditDate);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnID}, true));
                 this.columnRowNum.ReadOnly = true;
-                this.columnID.AutoIncrement = true;
-                this.columnID.AutoIncrementSeed = -1;
-                this.columnID.AutoIncrementStep = -1;
-                this.columnID.AllowDBNull = false;
                 this.columnID.ReadOnly = true;
-                this.columnID.Unique = true;
-                this.columnTransferStatusName.MaxLength = 100;
-                this.columnSShopName.ReadOnly = true;
-                this.columnSShopName.MaxLength = 100;
-                this.columnEShopName.ReadOnly = true;
-                this.columnEShopName.MaxLength = 100;
+                this.columnCode.ReadOnly = true;
+                this.columnCode.MaxLength = 30;
+                this.columnCode2.ReadOnly = true;
+                this.columnCode2.MaxLength = 30;
+                this.columnWeight.ReadOnly = true;
+                this.columnJewelryType.ReadOnly = true;
+                this.columnJewelryTypeName.ReadOnly = true;
+                this.columnJewelryTypeName.MaxLength = 100;
+                this.columnShape.ReadOnly = true;
+                this.columnShapeName.ReadOnly = true;
+                this.columnShapeName.MaxLength = 100;
+                this.columnColorType.ReadOnly = true;
+                this.columnColor.ReadOnly = true;
+                this.columnColorTypeName.ReadOnly = true;
+                this.columnColorTypeName.MaxLength = 100;
+                this.columnColorName.ReadOnly = true;
+                this.columnColorName.MaxLength = 100;
+                this.columnTotalBaht.ReadOnly = true;
+                this.columnFlag.ReadOnly = true;
                 this.columnIsDeleted.MaxLength = 1;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TransferRow NewTransferRow() {
-                return ((TransferRow)(this.NewRow()));
+            public TransferBuyBookRow NewTransferBuyBookRow() {
+                return ((TransferBuyBookRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new TransferRow(builder);
+                return new TransferBuyBookRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(TransferRow);
+                return typeof(TransferBuyBookRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.TransferRowChanged != null)) {
-                    this.TransferRowChanged(this, new TransferRowChangeEvent(((TransferRow)(e.Row)), e.Action));
+                if ((this.TransferBuyBookRowChanged != null)) {
+                    this.TransferBuyBookRowChanged(this, new TransferBuyBookRowChangeEvent(((TransferBuyBookRow)(e.Row)), e.Action));
                 }
             }
             
@@ -688,8 +764,8 @@ namespace DiamondDS.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.TransferRowChanging != null)) {
-                    this.TransferRowChanging(this, new TransferRowChangeEvent(((TransferRow)(e.Row)), e.Action));
+                if ((this.TransferBuyBookRowChanging != null)) {
+                    this.TransferBuyBookRowChanging(this, new TransferBuyBookRowChangeEvent(((TransferBuyBookRow)(e.Row)), e.Action));
                 }
             }
             
@@ -697,8 +773,8 @@ namespace DiamondDS.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.TransferRowDeleted != null)) {
-                    this.TransferRowDeleted(this, new TransferRowChangeEvent(((TransferRow)(e.Row)), e.Action));
+                if ((this.TransferBuyBookRowDeleted != null)) {
+                    this.TransferBuyBookRowDeleted(this, new TransferBuyBookRowChangeEvent(((TransferBuyBookRow)(e.Row)), e.Action));
                 }
             }
             
@@ -706,14 +782,14 @@ namespace DiamondDS.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.TransferRowDeleting != null)) {
-                    this.TransferRowDeleting(this, new TransferRowChangeEvent(((TransferRow)(e.Row)), e.Action));
+                if ((this.TransferBuyBookRowDeleting != null)) {
+                    this.TransferBuyBookRowDeleting(this, new TransferBuyBookRowChangeEvent(((TransferBuyBookRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemoveTransferRow(TransferRow row) {
+            public void RemoveTransferBuyBookRow(TransferBuyBookRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -722,7 +798,7 @@ namespace DiamondDS.DS {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                dsTransfer ds = new dsTransfer();
+                dsTransferBuyBook ds = new dsTransferBuyBook();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -740,7 +816,7 @@ namespace DiamondDS.DS {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "TransferDataTable";
+                attribute2.FixedValue = "TransferBuyBookDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -784,15 +860,15 @@ namespace DiamondDS.DS {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class TransferRow : global::System.Data.DataRow {
+        public partial class TransferBuyBookRow : global::System.Data.DataRow {
             
-            private TransferDataTable tableTransfer;
+            private TransferBuyBookDataTable tableTransferBuyBook;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal TransferRow(global::System.Data.DataRowBuilder rb) : 
+            internal TransferBuyBookRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableTransfer = ((TransferDataTable)(this.Table));
+                this.tableTransferBuyBook = ((TransferBuyBookDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -800,14 +876,14 @@ namespace DiamondDS.DS {
             public long RowNum {
                 get {
                     try {
-                        return ((long)(this[this.tableTransfer.RowNumColumn]));
+                        return ((long)(this[this.tableTransferBuyBook.RowNumColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'RowNum\' in table \'Transfer\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'RowNum\' in table \'TransferBuyBook\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTransfer.RowNumColumn] = value;
+                    this[this.tableTransferBuyBook.RowNumColumn] = value;
                 }
             }
             
@@ -815,170 +891,255 @@ namespace DiamondDS.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public int ID {
                 get {
-                    return ((int)(this[this.tableTransfer.IDColumn]));
+                    try {
+                        return ((int)(this[this.tableTransferBuyBook.IDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ID\' in table \'TransferBuyBook\' is DBNull.", e);
+                    }
                 }
                 set {
-                    this[this.tableTransfer.IDColumn] = value;
+                    this[this.tableTransferBuyBook.IDColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int Sender {
+            public string Code {
                 get {
                     try {
-                        return ((int)(this[this.tableTransfer.SenderColumn]));
+                        return ((string)(this[this.tableTransferBuyBook.CodeColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Sender\' in table \'Transfer\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Code\' in table \'TransferBuyBook\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTransfer.SenderColumn] = value;
+                    this[this.tableTransferBuyBook.CodeColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string SenderName {
+            public string Code2 {
                 get {
                     try {
-                        return ((string)(this[this.tableTransfer.SenderNameColumn]));
+                        return ((string)(this[this.tableTransferBuyBook.Code2Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'SenderName\' in table \'Transfer\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Code2\' in table \'TransferBuyBook\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTransfer.SenderNameColumn] = value;
+                    this[this.tableTransferBuyBook.Code2Column] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int TransferStatus {
+            public double Weight {
                 get {
                     try {
-                        return ((int)(this[this.tableTransfer.TransferStatusColumn]));
+                        return ((double)(this[this.tableTransferBuyBook.WeightColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'TransferStatus\' in table \'Transfer\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Weight\' in table \'TransferBuyBook\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTransfer.TransferStatusColumn] = value;
+                    this[this.tableTransferBuyBook.WeightColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string TransferStatusName {
+            public int JewelryType {
                 get {
                     try {
-                        return ((string)(this[this.tableTransfer.TransferStatusNameColumn]));
+                        return ((int)(this[this.tableTransferBuyBook.JewelryTypeColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'TransferStatusName\' in table \'Transfer\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'JewelryType\' in table \'TransferBuyBook\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTransfer.TransferStatusNameColumn] = value;
+                    this[this.tableTransferBuyBook.JewelryTypeColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public System.DateTime SendDate {
+            public string JewelryTypeName {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tableTransfer.SendDateColumn]));
+                        return ((string)(this[this.tableTransferBuyBook.JewelryTypeNameColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'SendDate\' in table \'Transfer\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'JewelryTypeName\' in table \'TransferBuyBook\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTransfer.SendDateColumn] = value;
+                    this[this.tableTransferBuyBook.JewelryTypeNameColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public System.DateTime ReceiveDate {
+            public int Shape {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tableTransfer.ReceiveDateColumn]));
+                        return ((int)(this[this.tableTransferBuyBook.ShapeColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'ReceiveDate\' in table \'Transfer\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Shape\' in table \'TransferBuyBook\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTransfer.ReceiveDateColumn] = value;
+                    this[this.tableTransferBuyBook.ShapeColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int SShop {
+            public string ShapeName {
                 get {
                     try {
-                        return ((int)(this[this.tableTransfer.SShopColumn]));
+                        return ((string)(this[this.tableTransferBuyBook.ShapeNameColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'SShop\' in table \'Transfer\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'ShapeName\' in table \'TransferBuyBook\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTransfer.SShopColumn] = value;
+                    this[this.tableTransferBuyBook.ShapeNameColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string SShopName {
+            public int ColorType {
                 get {
                     try {
-                        return ((string)(this[this.tableTransfer.SShopNameColumn]));
+                        return ((int)(this[this.tableTransferBuyBook.ColorTypeColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'SShopName\' in table \'Transfer\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'ColorType\' in table \'TransferBuyBook\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTransfer.SShopNameColumn] = value;
+                    this[this.tableTransferBuyBook.ColorTypeColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int EShop {
+            public int Color {
                 get {
                     try {
-                        return ((int)(this[this.tableTransfer.EShopColumn]));
+                        return ((int)(this[this.tableTransferBuyBook.ColorColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'EShop\' in table \'Transfer\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Color\' in table \'TransferBuyBook\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTransfer.EShopColumn] = value;
+                    this[this.tableTransferBuyBook.ColorColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string EShopName {
+            public string ColorTypeName {
                 get {
                     try {
-                        return ((string)(this[this.tableTransfer.EShopNameColumn]));
+                        return ((string)(this[this.tableTransferBuyBook.ColorTypeNameColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'EShopName\' in table \'Transfer\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'ColorTypeName\' in table \'TransferBuyBook\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTransfer.EShopNameColumn] = value;
+                    this[this.tableTransferBuyBook.ColorTypeNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string ColorName {
+                get {
+                    try {
+                        return ((string)(this[this.tableTransferBuyBook.ColorNameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ColorName\' in table \'TransferBuyBook\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTransferBuyBook.ColorNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal TotalBaht {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableTransferBuyBook.TotalBahtColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TotalBaht\' in table \'TransferBuyBook\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTransferBuyBook.TotalBahtColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int Flag {
+                get {
+                    try {
+                        return ((int)(this[this.tableTransferBuyBook.FlagColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Flag\' in table \'TransferBuyBook\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTransferBuyBook.FlagColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int RefID {
+                get {
+                    try {
+                        return ((int)(this[this.tableTransferBuyBook.RefIDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'RefID\' in table \'TransferBuyBook\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTransferBuyBook.RefIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int RefID1 {
+                get {
+                    try {
+                        return ((int)(this[this.tableTransferBuyBook.RefID1Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'RefID1\' in table \'TransferBuyBook\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTransferBuyBook.RefID1Column] = value;
                 }
             }
             
@@ -987,14 +1148,14 @@ namespace DiamondDS.DS {
             public string IsDeleted {
                 get {
                     try {
-                        return ((string)(this[this.tableTransfer.IsDeletedColumn]));
+                        return ((string)(this[this.tableTransferBuyBook.IsDeletedColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'IsDeleted\' in table \'Transfer\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'IsDeleted\' in table \'TransferBuyBook\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTransfer.IsDeletedColumn] = value;
+                    this[this.tableTransferBuyBook.IsDeletedColumn] = value;
                 }
             }
             
@@ -1003,14 +1164,14 @@ namespace DiamondDS.DS {
             public int CreateBy {
                 get {
                     try {
-                        return ((int)(this[this.tableTransfer.CreateByColumn]));
+                        return ((int)(this[this.tableTransferBuyBook.CreateByColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'CreateBy\' in table \'Transfer\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'CreateBy\' in table \'TransferBuyBook\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTransfer.CreateByColumn] = value;
+                    this[this.tableTransferBuyBook.CreateByColumn] = value;
                 }
             }
             
@@ -1019,14 +1180,14 @@ namespace DiamondDS.DS {
             public System.DateTime CreateDate {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tableTransfer.CreateDateColumn]));
+                        return ((global::System.DateTime)(this[this.tableTransferBuyBook.CreateDateColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'CreateDate\' in table \'Transfer\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'CreateDate\' in table \'TransferBuyBook\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTransfer.CreateDateColumn] = value;
+                    this[this.tableTransferBuyBook.CreateDateColumn] = value;
                 }
             }
             
@@ -1035,14 +1196,14 @@ namespace DiamondDS.DS {
             public int EditBy {
                 get {
                     try {
-                        return ((int)(this[this.tableTransfer.EditByColumn]));
+                        return ((int)(this[this.tableTransferBuyBook.EditByColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'EditBy\' in table \'Transfer\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'EditBy\' in table \'TransferBuyBook\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTransfer.EditByColumn] = value;
+                    this[this.tableTransferBuyBook.EditByColumn] = value;
                 }
             }
             
@@ -1051,207 +1212,279 @@ namespace DiamondDS.DS {
             public System.DateTime EditDate {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tableTransfer.EditDateColumn]));
+                        return ((global::System.DateTime)(this[this.tableTransferBuyBook.EditDateColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'EditDate\' in table \'Transfer\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'EditDate\' in table \'TransferBuyBook\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTransfer.EditDateColumn] = value;
+                    this[this.tableTransferBuyBook.EditDateColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsRowNumNull() {
-                return this.IsNull(this.tableTransfer.RowNumColumn);
+                return this.IsNull(this.tableTransferBuyBook.RowNumColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetRowNumNull() {
-                this[this.tableTransfer.RowNumColumn] = global::System.Convert.DBNull;
+                this[this.tableTransferBuyBook.RowNumColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsSenderNull() {
-                return this.IsNull(this.tableTransfer.SenderColumn);
+            public bool IsIDNull() {
+                return this.IsNull(this.tableTransferBuyBook.IDColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetSenderNull() {
-                this[this.tableTransfer.SenderColumn] = global::System.Convert.DBNull;
+            public void SetIDNull() {
+                this[this.tableTransferBuyBook.IDColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsSenderNameNull() {
-                return this.IsNull(this.tableTransfer.SenderNameColumn);
+            public bool IsCodeNull() {
+                return this.IsNull(this.tableTransferBuyBook.CodeColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetSenderNameNull() {
-                this[this.tableTransfer.SenderNameColumn] = global::System.Convert.DBNull;
+            public void SetCodeNull() {
+                this[this.tableTransferBuyBook.CodeColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsTransferStatusNull() {
-                return this.IsNull(this.tableTransfer.TransferStatusColumn);
+            public bool IsCode2Null() {
+                return this.IsNull(this.tableTransferBuyBook.Code2Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetTransferStatusNull() {
-                this[this.tableTransfer.TransferStatusColumn] = global::System.Convert.DBNull;
+            public void SetCode2Null() {
+                this[this.tableTransferBuyBook.Code2Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsTransferStatusNameNull() {
-                return this.IsNull(this.tableTransfer.TransferStatusNameColumn);
+            public bool IsWeightNull() {
+                return this.IsNull(this.tableTransferBuyBook.WeightColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetTransferStatusNameNull() {
-                this[this.tableTransfer.TransferStatusNameColumn] = global::System.Convert.DBNull;
+            public void SetWeightNull() {
+                this[this.tableTransferBuyBook.WeightColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsSendDateNull() {
-                return this.IsNull(this.tableTransfer.SendDateColumn);
+            public bool IsJewelryTypeNull() {
+                return this.IsNull(this.tableTransferBuyBook.JewelryTypeColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetSendDateNull() {
-                this[this.tableTransfer.SendDateColumn] = global::System.Convert.DBNull;
+            public void SetJewelryTypeNull() {
+                this[this.tableTransferBuyBook.JewelryTypeColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsReceiveDateNull() {
-                return this.IsNull(this.tableTransfer.ReceiveDateColumn);
+            public bool IsJewelryTypeNameNull() {
+                return this.IsNull(this.tableTransferBuyBook.JewelryTypeNameColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetReceiveDateNull() {
-                this[this.tableTransfer.ReceiveDateColumn] = global::System.Convert.DBNull;
+            public void SetJewelryTypeNameNull() {
+                this[this.tableTransferBuyBook.JewelryTypeNameColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsSShopNull() {
-                return this.IsNull(this.tableTransfer.SShopColumn);
+            public bool IsShapeNull() {
+                return this.IsNull(this.tableTransferBuyBook.ShapeColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetSShopNull() {
-                this[this.tableTransfer.SShopColumn] = global::System.Convert.DBNull;
+            public void SetShapeNull() {
+                this[this.tableTransferBuyBook.ShapeColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsSShopNameNull() {
-                return this.IsNull(this.tableTransfer.SShopNameColumn);
+            public bool IsShapeNameNull() {
+                return this.IsNull(this.tableTransferBuyBook.ShapeNameColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetSShopNameNull() {
-                this[this.tableTransfer.SShopNameColumn] = global::System.Convert.DBNull;
+            public void SetShapeNameNull() {
+                this[this.tableTransferBuyBook.ShapeNameColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsEShopNull() {
-                return this.IsNull(this.tableTransfer.EShopColumn);
+            public bool IsColorTypeNull() {
+                return this.IsNull(this.tableTransferBuyBook.ColorTypeColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetEShopNull() {
-                this[this.tableTransfer.EShopColumn] = global::System.Convert.DBNull;
+            public void SetColorTypeNull() {
+                this[this.tableTransferBuyBook.ColorTypeColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsEShopNameNull() {
-                return this.IsNull(this.tableTransfer.EShopNameColumn);
+            public bool IsColorNull() {
+                return this.IsNull(this.tableTransferBuyBook.ColorColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetEShopNameNull() {
-                this[this.tableTransfer.EShopNameColumn] = global::System.Convert.DBNull;
+            public void SetColorNull() {
+                this[this.tableTransferBuyBook.ColorColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsColorTypeNameNull() {
+                return this.IsNull(this.tableTransferBuyBook.ColorTypeNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetColorTypeNameNull() {
+                this[this.tableTransferBuyBook.ColorTypeNameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsColorNameNull() {
+                return this.IsNull(this.tableTransferBuyBook.ColorNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetColorNameNull() {
+                this[this.tableTransferBuyBook.ColorNameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsTotalBahtNull() {
+                return this.IsNull(this.tableTransferBuyBook.TotalBahtColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetTotalBahtNull() {
+                this[this.tableTransferBuyBook.TotalBahtColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsFlagNull() {
+                return this.IsNull(this.tableTransferBuyBook.FlagColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetFlagNull() {
+                this[this.tableTransferBuyBook.FlagColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsRefIDNull() {
+                return this.IsNull(this.tableTransferBuyBook.RefIDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetRefIDNull() {
+                this[this.tableTransferBuyBook.RefIDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsRefID1Null() {
+                return this.IsNull(this.tableTransferBuyBook.RefID1Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetRefID1Null() {
+                this[this.tableTransferBuyBook.RefID1Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsIsDeletedNull() {
-                return this.IsNull(this.tableTransfer.IsDeletedColumn);
+                return this.IsNull(this.tableTransferBuyBook.IsDeletedColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetIsDeletedNull() {
-                this[this.tableTransfer.IsDeletedColumn] = global::System.Convert.DBNull;
+                this[this.tableTransferBuyBook.IsDeletedColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsCreateByNull() {
-                return this.IsNull(this.tableTransfer.CreateByColumn);
+                return this.IsNull(this.tableTransferBuyBook.CreateByColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetCreateByNull() {
-                this[this.tableTransfer.CreateByColumn] = global::System.Convert.DBNull;
+                this[this.tableTransferBuyBook.CreateByColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsCreateDateNull() {
-                return this.IsNull(this.tableTransfer.CreateDateColumn);
+                return this.IsNull(this.tableTransferBuyBook.CreateDateColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetCreateDateNull() {
-                this[this.tableTransfer.CreateDateColumn] = global::System.Convert.DBNull;
+                this[this.tableTransferBuyBook.CreateDateColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsEditByNull() {
-                return this.IsNull(this.tableTransfer.EditByColumn);
+                return this.IsNull(this.tableTransferBuyBook.EditByColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetEditByNull() {
-                this[this.tableTransfer.EditByColumn] = global::System.Convert.DBNull;
+                this[this.tableTransferBuyBook.EditByColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsEditDateNull() {
-                return this.IsNull(this.tableTransfer.EditDateColumn);
+                return this.IsNull(this.tableTransferBuyBook.EditDateColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetEditDateNull() {
-                this[this.tableTransfer.EditDateColumn] = global::System.Convert.DBNull;
+                this[this.tableTransferBuyBook.EditDateColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -1259,22 +1492,22 @@ namespace DiamondDS.DS {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class TransferRowChangeEvent : global::System.EventArgs {
+        public class TransferBuyBookRowChangeEvent : global::System.EventArgs {
             
-            private TransferRow eventRow;
+            private TransferBuyBookRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TransferRowChangeEvent(TransferRow row, global::System.Data.DataRowAction action) {
+            public TransferBuyBookRowChangeEvent(TransferBuyBookRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TransferRow Row {
+            public TransferBuyBookRow Row {
                 get {
                     return this.eventRow;
                 }

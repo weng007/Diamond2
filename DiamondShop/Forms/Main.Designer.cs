@@ -89,6 +89,8 @@
             this.mnInvSJ = new System.Windows.Forms.ToolStripMenuItem();
             this.mnInvMTO = new System.Windows.Forms.ToolStripMenuItem();
             this.btnTransfer = new System.Windows.Forms.ToolStripMenuItem();
+            this.buyBookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.inventoryToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.btnOrderFactory = new System.Windows.Forms.ToolStripMenuItem();
             this.btnBuyBook = new System.Windows.Forms.ToolStripMenuItem();
             this.mnBBCD = new System.Windows.Forms.ToolStripMenuItem();
@@ -386,7 +388,7 @@
             this.warningToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("warningToolStripMenuItem.Image")));
             this.warningToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.warningToolStripMenuItem.Name = "warningToolStripMenuItem";
-            this.warningToolStripMenuItem.Size = new System.Drawing.Size(168, 38);
+            this.warningToolStripMenuItem.Size = new System.Drawing.Size(161, 38);
             this.warningToolStripMenuItem.Text = "Warning";
             this.warningToolStripMenuItem.Click += new System.EventHandler(this.warningToolStripMenuItem_Click);
             // 
@@ -396,7 +398,7 @@
             this.calendarToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("calendarToolStripMenuItem.Image")));
             this.calendarToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.calendarToolStripMenuItem.Name = "calendarToolStripMenuItem";
-            this.calendarToolStripMenuItem.Size = new System.Drawing.Size(168, 38);
+            this.calendarToolStripMenuItem.Size = new System.Drawing.Size(161, 38);
             this.calendarToolStripMenuItem.Text = "Calendar";
             this.calendarToolStripMenuItem.Click += new System.EventHandler(this.calendarToolStripMenuItem_Click);
             // 
@@ -787,12 +789,29 @@
             // 
             // btnTransfer
             // 
+            this.btnTransfer.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.buyBookToolStripMenuItem,
+            this.inventoryToolStripMenuItem1});
             this.btnTransfer.Image = ((System.Drawing.Image)(resources.GetObject("btnTransfer.Image")));
             this.btnTransfer.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnTransfer.Name = "btnTransfer";
             this.btnTransfer.Padding = new System.Windows.Forms.Padding(10, 4, 4, 4);
             this.btnTransfer.Size = new System.Drawing.Size(88, 95);
-            this.btnTransfer.Click += new System.EventHandler(this.btnTransfer_Click);
+            // 
+            // buyBookToolStripMenuItem
+            // 
+            this.buyBookToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.buyBookToolStripMenuItem.Name = "buyBookToolStripMenuItem";
+            this.buyBookToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
+            this.buyBookToolStripMenuItem.Text = "BuyBook";
+            this.buyBookToolStripMenuItem.Click += new System.EventHandler(this.buyBookToolStripMenuItem_Click);
+            // 
+            // inventoryToolStripMenuItem1
+            // 
+            this.inventoryToolStripMenuItem1.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.inventoryToolStripMenuItem1.Name = "inventoryToolStripMenuItem1";
+            this.inventoryToolStripMenuItem1.Size = new System.Drawing.Size(152, 26);
+            this.inventoryToolStripMenuItem1.Text = "Inventory";
             // 
             // btnOrderFactory
             // 
@@ -1093,6 +1112,8 @@
         private System.Windows.Forms.ToolStripMenuItem btnTransfer;
         private System.Windows.Forms.ToolStripMenuItem warningToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem calendarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem buyBookToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem inventoryToolStripMenuItem1;
     }
 }
 

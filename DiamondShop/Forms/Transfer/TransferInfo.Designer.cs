@@ -33,15 +33,16 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dtSendDate = new System.Windows.Forms.DateTimePicker();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.cmbTransferStatus = new System.Windows.Forms.ComboBox();
+            this.cmbEShop = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtNote = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.cmbSShop = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.dtReceiveDate = new System.Windows.Forms.DateTimePicker();
-            this.cmbReceiver = new System.Windows.Forms.ComboBox();
-            this.label22 = new System.Windows.Forms.Label();
             this.btnDel = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.gridTransfer = new System.Windows.Forms.DataGridView();
@@ -51,23 +52,19 @@
             this.btnEdit = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
-            this.cmbShop = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtNote = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
             this.RowNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CatID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Amount1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Weight1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Amount2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Weight2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AmountGC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.WeightGC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AmountNGC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.WeightNGC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Detail = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Weight = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.JewelryTypeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ShapeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColorTypeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColorName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TotalBaht = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Flag = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RefID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RefID2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtTransferStatus = new System.Windows.Forms.TextBox();
+            this.txtReceivedDate = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridTransfer)).BeginInit();
@@ -80,23 +77,23 @@
             this.dtSendDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtSendDate.Location = new System.Drawing.Point(127, 17);
             this.dtSendDate.Name = "dtSendDate";
-            this.dtSendDate.Size = new System.Drawing.Size(131, 27);
+            this.dtSendDate.Size = new System.Drawing.Size(145, 27);
             this.dtSendDate.TabIndex = 2;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.txtReceivedDate);
+            this.panel3.Controls.Add(this.txtTransferStatus);
+            this.panel3.Controls.Add(this.cmbEShop);
+            this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.txtNote);
             this.panel3.Controls.Add(this.label16);
-            this.panel3.Controls.Add(this.cmbShop);
+            this.panel3.Controls.Add(this.cmbSShop);
             this.panel3.Controls.Add(this.label4);
-            this.panel3.Controls.Add(this.cmbTransferStatus);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.label5);
-            this.panel3.Controls.Add(this.dtReceiveDate);
-            this.panel3.Controls.Add(this.cmbReceiver);
-            this.panel3.Controls.Add(this.label22);
             this.panel3.Controls.Add(this.btnDel);
             this.panel3.Controls.Add(this.btnAdd);
             this.panel3.Controls.Add(this.gridTransfer);
@@ -107,22 +104,67 @@
             this.panel3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel3.Location = new System.Drawing.Point(10, 72);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(976, 448);
+            this.panel3.Size = new System.Drawing.Size(1041, 448);
             this.panel3.TabIndex = 74;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
-            // cmbTransferStatus
+            // cmbEShop
             // 
-            this.cmbTransferStatus.FormattingEnabled = true;
-            this.cmbTransferStatus.Location = new System.Drawing.Point(730, 53);
-            this.cmbTransferStatus.Name = "cmbTransferStatus";
-            this.cmbTransferStatus.Size = new System.Drawing.Size(156, 29);
-            this.cmbTransferStatus.TabIndex = 232;
+            this.cmbEShop.FormattingEnabled = true;
+            this.cmbEShop.Location = new System.Drawing.Point(769, 56);
+            this.cmbEShop.Name = "cmbEShop";
+            this.cmbEShop.Size = new System.Drawing.Size(156, 29);
+            this.cmbEShop.TabIndex = 238;
+            // 
+            // label3
+            // 
+            this.label3.Location = new System.Drawing.Point(650, 56);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(119, 28);
+            this.label3.TabIndex = 239;
+            this.label3.Text = "End Location";
+            // 
+            // txtNote
+            // 
+            this.txtNote.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.txtNote.Location = new System.Drawing.Point(675, 364);
+            this.txtNote.Multiline = true;
+            this.txtNote.Name = "txtNote";
+            this.txtNote.Size = new System.Drawing.Size(320, 68);
+            this.txtNote.TabIndex = 236;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
+            this.label16.Location = new System.Drawing.Point(624, 364);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(45, 19);
+            this.label16.TabIndex = 237;
+            this.label16.Text = "Note";
+            // 
+            // cmbSShop
+            // 
+            this.cmbSShop.FormattingEnabled = true;
+            this.cmbSShop.Location = new System.Drawing.Point(436, 56);
+            this.cmbSShop.Name = "cmbSShop";
+            this.cmbSShop.Size = new System.Drawing.Size(156, 29);
+            this.cmbSShop.TabIndex = 234;
+            // 
+            // label4
+            // 
+            this.label4.Location = new System.Drawing.Point(309, 56);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(121, 28);
+            this.label4.TabIndex = 235;
+            this.label4.Text = "Start Location";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label2.Location = new System.Drawing.Point(601, 58);
+            this.label2.Location = new System.Drawing.Point(640, 21);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(123, 21);
             this.label2.TabIndex = 233;
@@ -133,39 +175,11 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label5.Location = new System.Drawing.Point(284, 18);
+            this.label5.Location = new System.Drawing.Point(300, 24);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(117, 21);
+            this.label5.Size = new System.Drawing.Size(128, 21);
             this.label5.TabIndex = 231;
-            this.label5.Text = "Receive Date";
-            // 
-            // dtReceiveDate
-            // 
-            this.dtReceiveDate.CustomFormat = "dd/MM/yyyy";
-            this.dtReceiveDate.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtReceiveDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtReceiveDate.Location = new System.Drawing.Point(406, 17);
-            this.dtReceiveDate.Name = "dtReceiveDate";
-            this.dtReceiveDate.Size = new System.Drawing.Size(131, 27);
-            this.dtReceiveDate.TabIndex = 230;
-            // 
-            // cmbReceiver
-            // 
-            this.cmbReceiver.FormattingEnabled = true;
-            this.cmbReceiver.Location = new System.Drawing.Point(406, 53);
-            this.cmbReceiver.Name = "cmbReceiver";
-            this.cmbReceiver.Size = new System.Drawing.Size(156, 29);
-            this.cmbReceiver.TabIndex = 228;
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label22.Location = new System.Drawing.Point(322, 58);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(78, 21);
-            this.label22.TabIndex = 229;
-            this.label22.Text = "Receiver";
+            this.label5.Text = "Received Date";
             // 
             // btnDel
             // 
@@ -177,7 +191,7 @@
             this.btnDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDel.Image = ((System.Drawing.Image)(resources.GetObject("btnDel.Image")));
-            this.btnDel.Location = new System.Drawing.Point(932, 134);
+            this.btnDel.Location = new System.Drawing.Point(1002, 134);
             this.btnDel.Name = "btnDel";
             this.btnDel.Size = new System.Drawing.Size(30, 30);
             this.btnDel.TabIndex = 95;
@@ -194,7 +208,7 @@
             this.btnAdd.FlatAppearance.BorderSize = 0;
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(932, 98);
+            this.btnAdd.Location = new System.Drawing.Point(1002, 98);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(30, 30);
             this.btnAdd.TabIndex = 93;
@@ -210,18 +224,16 @@
             this.gridTransfer.ColumnHeadersHeight = 33;
             this.gridTransfer.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.RowNum,
-            this.CatID,
-            this.ID,
             this.Code,
-            this.Amount1,
-            this.Weight1,
-            this.Amount2,
-            this.Weight2,
-            this.AmountGC,
-            this.WeightGC,
-            this.AmountNGC,
-            this.WeightNGC,
-            this.Detail});
+            this.Weight,
+            this.JewelryTypeName,
+            this.ShapeName,
+            this.ColorTypeName,
+            this.ColorName,
+            this.TotalBaht,
+            this.Flag,
+            this.RefID,
+            this.RefID2});
             this.gridTransfer.Location = new System.Drawing.Point(23, 98);
             this.gridTransfer.Name = "gridTransfer";
             this.gridTransfer.ReadOnly = true;
@@ -230,9 +242,8 @@
             this.gridTransfer.RowTemplate.Height = 25;
             this.gridTransfer.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.gridTransfer.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridTransfer.Size = new System.Drawing.Size(903, 248);
+            this.gridTransfer.Size = new System.Drawing.Size(972, 248);
             this.gridTransfer.TabIndex = 86;
-            this.gridTransfer.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.gridSetting_CellFormatting);
             this.gridTransfer.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.gridSetting_CellMouseDoubleClick);
             // 
             // label1
@@ -259,10 +270,11 @@
             // 
             // txtSender
             // 
+            this.txtSender.Enabled = false;
             this.txtSender.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSender.Location = new System.Drawing.Point(127, 53);
             this.txtSender.Name = "txtSender";
-            this.txtSender.Size = new System.Drawing.Size(157, 27);
+            this.txtSender.Size = new System.Drawing.Size(145, 27);
             this.txtSender.TabIndex = 4;
             // 
             // btnEdit
@@ -299,42 +311,6 @@
             this.button1.TabIndex = 32;
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // cmbShop
-            // 
-            this.cmbShop.FormattingEnabled = true;
-            this.cmbShop.Location = new System.Drawing.Point(730, 16);
-            this.cmbShop.Name = "cmbShop";
-            this.cmbShop.Size = new System.Drawing.Size(156, 29);
-            this.cmbShop.TabIndex = 234;
-            // 
-            // label4
-            // 
-            this.label4.Location = new System.Drawing.Point(601, 19);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(134, 28);
-            this.label4.TabIndex = 235;
-            this.label4.Text = "Location";
-            // 
-            // txtNote
-            // 
-            this.txtNote.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.txtNote.Location = new System.Drawing.Point(675, 364);
-            this.txtNote.Multiline = true;
-            this.txtNote.Name = "txtNote";
-            this.txtNote.Size = new System.Drawing.Size(251, 68);
-            this.txtNote.TabIndex = 236;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label16.Location = new System.Drawing.Point(624, 364);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(45, 19);
-            this.label16.TabIndex = 237;
-            this.label16.Text = "Note";
-            // 
             // RowNum
             // 
             this.RowNum.DataPropertyName = "RowNum";
@@ -345,21 +321,6 @@
             this.RowNum.ReadOnly = true;
             this.RowNum.Width = 40;
             // 
-            // CatID
-            // 
-            this.CatID.HeaderText = "CatID";
-            this.CatID.Name = "CatID";
-            this.CatID.ReadOnly = true;
-            this.CatID.Visible = false;
-            // 
-            // ID
-            // 
-            this.ID.DataPropertyName = "ID";
-            this.ID.HeaderText = "RefID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            this.ID.Visible = false;
-            // 
             // Code
             // 
             this.Code.DataPropertyName = "Code";
@@ -369,87 +330,108 @@
             this.Code.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Code.Width = 170;
             // 
-            // Amount1
+            // Weight
             // 
-            this.Amount1.DataPropertyName = "Amount1";
-            this.Amount1.HeaderText = "Amount DC";
-            this.Amount1.Name = "Amount1";
-            this.Amount1.ReadOnly = true;
-            this.Amount1.Width = 150;
+            this.Weight.DataPropertyName = "Weight";
+            this.Weight.HeaderText = "Weight";
+            this.Weight.Name = "Weight";
+            this.Weight.ReadOnly = true;
+            this.Weight.Width = 150;
             // 
-            // Weight1
+            // JewelryTypeName
             // 
-            this.Weight1.DataPropertyName = "Weight1";
+            this.JewelryTypeName.DataPropertyName = "JewelryTypeName";
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
             dataGridViewCellStyle2.Format = "N2";
-            this.Weight1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.Weight1.HeaderText = "Weight DC";
-            this.Weight1.Name = "Weight1";
-            this.Weight1.ReadOnly = true;
-            this.Weight1.Width = 140;
+            this.JewelryTypeName.DefaultCellStyle = dataGridViewCellStyle2;
+            this.JewelryTypeName.HeaderText = "JewelryType";
+            this.JewelryTypeName.Name = "JewelryTypeName";
+            this.JewelryTypeName.ReadOnly = true;
+            this.JewelryTypeName.Width = 140;
             // 
-            // Amount2
+            // ShapeName
             // 
-            this.Amount2.DataPropertyName = "Amount2";
+            this.ShapeName.DataPropertyName = "ShapeName";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
             dataGridViewCellStyle3.Format = "N0";
-            this.Amount2.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Amount2.HeaderText = "Amount NDC";
-            this.Amount2.Name = "Amount2";
-            this.Amount2.ReadOnly = true;
+            this.ShapeName.DefaultCellStyle = dataGridViewCellStyle3;
+            this.ShapeName.HeaderText = "ShapeName";
+            this.ShapeName.Name = "ShapeName";
+            this.ShapeName.ReadOnly = true;
             // 
-            // Weight2
+            // ColorTypeName
             // 
-            this.Weight2.DataPropertyName = "Weight2";
+            this.ColorTypeName.DataPropertyName = "ColorTypeName";
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
             dataGridViewCellStyle4.Format = "N0";
-            this.Weight2.DefaultCellStyle = dataGridViewCellStyle4;
-            this.Weight2.HeaderText = "Weight NDC";
-            this.Weight2.Name = "Weight2";
-            this.Weight2.ReadOnly = true;
-            this.Weight2.Width = 140;
+            this.ColorTypeName.DefaultCellStyle = dataGridViewCellStyle4;
+            this.ColorTypeName.HeaderText = "Color Type";
+            this.ColorTypeName.Name = "ColorTypeName";
+            this.ColorTypeName.ReadOnly = true;
+            this.ColorTypeName.Width = 140;
             // 
-            // AmountGC
+            // ColorName
             // 
-            this.AmountGC.HeaderText = "Amount GC";
-            this.AmountGC.Name = "AmountGC";
-            this.AmountGC.ReadOnly = true;
+            this.ColorName.DataPropertyName = "ColorName";
+            this.ColorName.HeaderText = "Color";
+            this.ColorName.Name = "ColorName";
+            this.ColorName.ReadOnly = true;
             // 
-            // WeightGC
+            // TotalBaht
             // 
-            this.WeightGC.HeaderText = "Weight GC";
-            this.WeightGC.Name = "WeightGC";
-            this.WeightGC.ReadOnly = true;
+            this.TotalBaht.DataPropertyName = "TotalBaht";
+            this.TotalBaht.HeaderText = "TotalBaht";
+            this.TotalBaht.Name = "TotalBaht";
+            this.TotalBaht.ReadOnly = true;
             // 
-            // AmountNGC
+            // Flag
             // 
-            this.AmountNGC.HeaderText = "Amount NGC";
-            this.AmountNGC.Name = "AmountNGC";
-            this.AmountNGC.ReadOnly = true;
+            this.Flag.DataPropertyName = "Flag";
+            this.Flag.HeaderText = "Flag";
+            this.Flag.Name = "Flag";
+            this.Flag.ReadOnly = true;
+            this.Flag.Visible = false;
             // 
-            // WeightNGC
+            // RefID
             // 
-            this.WeightNGC.HeaderText = "Weight NGC";
-            this.WeightNGC.Name = "WeightNGC";
-            this.WeightNGC.ReadOnly = true;
+            this.RefID.DataPropertyName = "RefID";
+            this.RefID.HeaderText = "RefID";
+            this.RefID.Name = "RefID";
+            this.RefID.ReadOnly = true;
+            this.RefID.Visible = false;
             // 
-            // Detail
+            // RefID2
             // 
-            this.Detail.DataPropertyName = "Detail";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle5.Format = "N0";
-            this.Detail.DefaultCellStyle = dataGridViewCellStyle5;
-            this.Detail.HeaderText = "Detail";
-            this.Detail.Name = "Detail";
-            this.Detail.ReadOnly = true;
-            this.Detail.Width = 150;
+            this.RefID2.DataPropertyName = "RefID1";
+            this.RefID2.HeaderText = "RefID1";
+            this.RefID2.Name = "RefID2";
+            this.RefID2.ReadOnly = true;
+            this.RefID2.Visible = false;
+            // 
+            // txtTransferStatus
+            // 
+            this.txtTransferStatus.Enabled = false;
+            this.txtTransferStatus.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTransferStatus.Location = new System.Drawing.Point(769, 21);
+            this.txtTransferStatus.Name = "txtTransferStatus";
+            this.txtTransferStatus.Size = new System.Drawing.Size(156, 27);
+            this.txtTransferStatus.TabIndex = 240;
+            // 
+            // txtReceivedDate
+            // 
+            this.txtReceivedDate.Enabled = false;
+            this.txtReceivedDate.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtReceivedDate.Location = new System.Drawing.Point(436, 21);
+            this.txtReceivedDate.Name = "txtReceivedDate";
+            this.txtReceivedDate.Size = new System.Drawing.Size(156, 27);
+            this.txtReceivedDate.TabIndex = 241;
             // 
             // TransferInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(195)))), ((int)(((byte)(157)))));
-            this.ClientSize = new System.Drawing.Size(998, 532);
+            this.ClientSize = new System.Drawing.Size(1063, 532);
             this.Controls.Add(this.panel3);
             this.Name = "TransferInfo";
             this.Text = "DiamondCer";
@@ -475,28 +457,26 @@
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnDel;
         private System.Windows.Forms.Button btnEdit;
-        private System.Windows.Forms.ComboBox cmbReceiver;
-        private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DateTimePicker dtReceiveDate;
-        private System.Windows.Forms.ComboBox cmbTransferStatus;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox cmbShop;
+        private System.Windows.Forms.ComboBox cmbSShop;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtNote;
         private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.ComboBox cmbEShop;
+        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridViewTextBoxColumn RowNum;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CatID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Code;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Amount1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Weight1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Amount2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Weight2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn AmountGC;
-        private System.Windows.Forms.DataGridViewTextBoxColumn WeightGC;
-        private System.Windows.Forms.DataGridViewTextBoxColumn AmountNGC;
-        private System.Windows.Forms.DataGridViewTextBoxColumn WeightNGC;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Detail;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Weight;
+        private System.Windows.Forms.DataGridViewTextBoxColumn JewelryTypeName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ShapeName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColorTypeName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColorName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TotalBaht;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Flag;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RefID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RefID2;
+        private System.Windows.Forms.TextBox txtReceivedDate;
+        private System.Windows.Forms.TextBox txtTransferStatus;
     }
 }

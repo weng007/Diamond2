@@ -13,13 +13,12 @@ namespace DiamondDAL.DAL
         dsTransfer ds = new dsTransfer();
         int flag = 0;
 
-        public dsTransfer DoSearchData(int Sender,int Receiver, int TransferStatus, int SShop, int EShop, DateTime SSendDate, DateTime ESendDate, DateTime SReceiveDate, DateTime EReceiveDate)
+        public dsTransfer DoSearchData(int Sender, int TransferStatus, int SShop, int EShop, DateTime SSendDate, DateTime ESendDate, DateTime SReceiveDate, DateTime EReceiveDate)
         {
             try
             {
                 SQL.ClearParameter();
                 SQL.CreateParameter("Sender", Sender);
-                SQL.CreateParameter("Receiver", Receiver);
                 SQL.CreateParameter("TransferStatus", TransferStatus);
                 SQL.CreateParameter("SShop", SShop);
                 SQL.CreateParameter("EShop", EShop);
