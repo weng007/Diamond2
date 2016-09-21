@@ -13,18 +13,22 @@ using DiamondDS.DS;
 using DiamondShop.DiamondService;
 using System.Data.OleDb;
 using System.Data.SqlClient;
+using DiamondShop.DiamondService1;
 
 
 namespace DiamondShop
 {
     public partial class OrderInfo : FormInfo
     {
+        Service2 ser1;
         dsOrder tds = new dsOrder();
+        dsWarning tds2 = new dsWarning();
         bool isAuthorize = false;
         string FilePath;
         int custID = 0;
         int InvID = 0;
         int InvID1 = 0;
+        int FactoryStatus;
         MemoryStream ms1;
         MemoryStream ms2;
         MemoryStream ms3;
@@ -32,7 +36,8 @@ namespace DiamondShop
         MemoryStream ms5;
         byte[] image1, image2, image3, image4, image5;
         public string materail = "";
-
+        int flag;
+        public int WarningID = 0;
         public OrderInfo()
         {
             InitializeComponent();
@@ -49,7 +54,7 @@ namespace DiamondShop
 
             //dtDueDate.Value = dtBuyDate.Value.AddDays(30);
         }
-        public OrderInfo(int id)
+        public OrderInfo(int id, int WarningID)
         {
             InitializeComponent();
             Initial();
@@ -57,10 +62,10 @@ namespace DiamondShop
             BinderControl();
 
             this.id = id;
+            this.WarningID = WarningID;
             btnDiamond.Enabled = true;
             LoadData();
             SetControlEnable(false);
-
             isEdit = false;
         }
 
@@ -99,13 +104,13 @@ namespace DiamondShop
             cmbShop2.DisplayMember = "Detail";
             cmbShop2.Refresh();
 
-            dtBuyDate.Select();
+            dtOrderDate.Select();
 
             //SetFieldService.SetRequireField(txtWeight, txtPrice, txtRap, txtUSDRate);
         }
         private void BinderControl()
         {
-            binder.BindControl(dtBuyDate, "BuyDate");
+            binder.BindControl(dtOrderDate, "BuyDate");
             binder.BindControl(txtCustomer, "CustomerName");
             binder.BindControl(txtCode, "OrderNo");
             binder.BindControl(txtTel, "MobilePhone");
@@ -121,7 +126,7 @@ namespace DiamondShop
 
             binder.BindControl(dtReceiveDate, "ReceiveDate");
             binder.BindControl(cmbShop1, "ReceiveAt");
-            //binder.BindControl(txtBodyDate, "BodyDate");
+            binder.BindControl(dtOrderDate, "OrderDate");
             binder.BindControl(cmbShop2, "BodyAt");
 
             binder.BindControl(txtCustNote, "CustomerNote");
@@ -175,9 +180,12 @@ namespace DiamondShop
                     Image backImage5 = Image.FromStream(ms5);
                     btnImage5.BackgroundImage = backImage5;
                 }
+                if (tds.Order[0].RefID > 0 )
+                {
+                    linkLabel1.Text = tds.Order[0].Code1;
+                    linkLabel2.Text = tds.Order[0].Code2;
+                }
 
-                linkLabel1.Text = tds.Order[0].Code1;
-                linkLabel2.Text = tds.Order[0].Code2;
                 InvID = tds.Order[0].RefID;
                 InvID1 = tds.Order[0].RefID1;
 
@@ -210,8 +218,22 @@ namespace DiamondShop
                 //EnableEdit = true;
                 //EnableDelete = false;
               }
+                if (ApplicationInfo.Shop == 239)//239 = Office
+                {
+                    FactoryStatus = tds.Order[0].FactoryStatus;
+                    if (FactoryStatus == 257)
+                    {
+                        btnPrint.Enabled = true;
+                    }
+                    btnConfirm.Visible = true;
+                }
+            if(tds.Order[0].FactoryStatus == 257)
+            {
+                btnNotYet.Enabled = false;
+                btnProcessing.Enabled = true;
+            }
 
-              SetFormatNumber();
+            SetFormatNumber();
               base.LoadData();
 
             cmbJewelryType.SelectedValueChanged += cmbColorType_SelectedValueChanged;
@@ -219,7 +241,9 @@ namespace DiamondShop
 
         protected override bool SaveData()
         {
+            ser1 = GM.GetService1();
             dsOrder.OrderRow row = null;
+            dsWarning.WarningRow row2 = null;
 
             if (tds.Order.Rows.Count > 0)
             {
@@ -230,7 +254,17 @@ namespace DiamondShop
                 row = tds.Order.NewOrderRow();
                 tds.Order.Rows.Add(row);
             }
-            
+
+            if (tds2.Warning.Rows.Count > 0)
+            {
+                row2 = tds2.Warning[0];
+            }
+            else
+            {
+                row2 = tds2.Warning.NewWarningRow();
+                tds2.Warning.Rows.Add(row2);
+            }
+
             binder.BindValueToDataRow(row);
             row.CustID = custID;
             row.Image1 = image1;
@@ -250,6 +284,8 @@ namespace DiamondShop
             }
             row.RefID = InvID;
             row.RefID1 = InvID1;
+            row.SShop = ApplicationInfo.Shop;
+
             try
             {
                 if (id == 0)
@@ -257,14 +293,22 @@ namespace DiamondShop
                     row.OrderNo = GM.GetRunningNumber("ORD");
                     //พึ่งซื้อยังไม่ได้ขายให้ลูกค้า
                     //row.SoldTo = 0;
+                    row.FactoryStatus = 256;
                     SetCreateBy(row);
                     chkFlag = ser.DoInsertData("Order", tds,0);
+
+                    
                 }
                 else
                 {
                     SetEditBy(row);
                     chkFlag = ser.DoUpdateData("Order", tds);
-                }
+                    if (flag == 1)//กดปุ่ม Confirm
+                    {
+                        id = WarningID;
+                        ser1.UpdateOrderStatus(id, 1);
+                    }
+                 }
 
                 tds.AcceptChanges();
             }
@@ -275,13 +319,27 @@ namespace DiamondShop
 
             return chkFlag;
         }
+        private void btnDel_Click(object sender, EventArgs e)
+        {
+            //if (gridTransfer.SelectedRows.Count > 0)
+            //{
+            //    chk = 1;
+            //    DeleteData();
+            //}
+            //if (Convert.ToInt16(cmbReceiver.SelectedValue.ToString()) != ApplicationInfo.UserID)
+            //{
+            //    chk = 2;
+            //    DeleteData();
+            //}
+        }
+
         protected override bool DeleteData()
         {
             try
             {
                 //if (cmbStatus.SelectedIndex == 0)
                 //{
-                //chkFlag = ser.DoDeleteData("BuyBookDiamondCer", id);
+                    chkFlag = ser.DoDeleteData("BuyBookDiamondCer", id);
                 //}
                 //else
                 //{
@@ -298,30 +356,30 @@ namespace DiamondShop
             return chkFlag;
         }
 
-        //protected override void EditData()
-        //{
-        //    if(isAuthorize)
-        //    {
-        //        EnableSave = true;
-        //        EnableDelete = true;
-        //        SetControlEnable(true);
-        //    }
-        //    else
-        //    {
-        //        RequirePassword frm = new RequirePassword("2");
-        //        frm.ShowDialog();
-        //        isAuthorize = frm.isAuthorize;
-        //        frm.Close();
+        protected override void EditData()
+        {
+            if (isAuthorize)
+            {
+                EnableSave = true;
+                EnableDelete = true;
+                SetControlEnable(true);
+            }
+            else
+            {
+                //RequirePassword frm = new RequirePassword("2");
+                //frm.ShowDialog();
+                //isAuthorize = frm.isAuthorize;
+                //frm.Close();
 
-        //        if (isAuthorize)
-        //        {
-        //            EnableSave = true;
-        //            EnableDelete = true;
-        //            SetControlEnable(true);
-        //            base.EditData();
-        //        }
-        //    }
-        //}
+                if (isAuthorize)
+                {
+                    EnableSave = true;
+                    EnableDelete = true;
+                    SetControlEnable(true);
+                    base.EditData();
+                }
+            }
+        }
 
         protected override bool ValidateData()
         {
@@ -408,11 +466,6 @@ namespace DiamondShop
             //isEdit = true;
         }
 
-        private void btnImportExcel_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void txtNote_TextChanged(object sender, EventArgs e)
         {
             isEdit = true;
@@ -471,6 +524,13 @@ namespace DiamondShop
         private void panel3_Paint_1(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btnConfirm_Click(object sender, EventArgs e)
+        {
+            btnNotYet.Enabled = false;
+            btnProcessing.Enabled = true;
+            flag = 1;
         }
 
         private void dtBuyDate_ValueChanged(object sender, EventArgs e)

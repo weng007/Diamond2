@@ -73,6 +73,22 @@ namespace DiamondDAL.DAL
 
             return flag;
         }
+        public int UpdateOrderStatus(int id, int Flag)
+        {
+            try
+            {
+                SQL.ClearParameter();
+                SQL.CreateParameter("@ID", id);
+                SQL.CreateParameter("@Flag", Flag);
+                flag = SQL.ExecuteSP("SP_OrderStatus_Upd");
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return flag;
+        }
 
         public DataSet GetPriceDaimondAndGemstone(int id)
         {
@@ -239,5 +255,39 @@ namespace DiamondDAL.DAL
 
             return flag;
         }
+
+        public int DoDeleteDataReference(int id)
+        {
+            try
+            {
+                SQL.ClearParameter();
+                SQL.CreateParameter("@ID", id);
+                flag = SQL.ExecuteSP("SP_OrderReference_Del");
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return flag;
+        }
+        public int DoUpdateProductionLine(int id,int FactoryStatus, int EditBy)
+        {
+            try
+            {
+                SQL.ClearParameter();
+                SQL.CreateParameter("@ID", id);
+                SQL.CreateParameter("@FactoryStatus", FactoryStatus);
+                SQL.CreateParameter("@EditBy", EditBy);
+                flag = SQL.ExecuteSP("SP_ProductionLine_Upd");
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return flag;
+        }
+             
     }
 }

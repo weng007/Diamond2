@@ -14,7 +14,7 @@
   <xs:element name="dsTransferDetail" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsTransferDetail" msprop:Generator_UserDSName="dsTransferDetail">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="TransferDetail" msprop:Generator_TableClassName="TransferDetailDataTable" msprop:Generator_TableVarName="tableTransferDetail" msprop:Generator_TablePropName="TransferDetail" msprop:Generator_RowDeletingName="TransferDetailRowDeleting" msprop:Generator_RowChangingName="TransferDetailRowChanging" msprop:Generator_RowEvHandlerName="TransferDetailRowChangeEventHandler" msprop:Generator_RowDeletedName="TransferDetailRowDeleted" msprop:Generator_UserTableName="TransferDetail" msprop:Generator_RowChangedName="TransferDetailRowChanged" msprop:Generator_RowEvArgName="TransferDetailRowChangeEvent" msprop:Generator_RowClassName="TransferDetailRow">
+        <xs:element name="TransferDetail" msprop:Generator_TableClassName="TransferDetailDataTable" msprop:Generator_TableVarName="tableTransferDetail" msprop:Generator_RowChangedName="TransferDetailRowChanged" msprop:Generator_TablePropName="TransferDetail" msprop:Generator_RowDeletingName="TransferDetailRowDeleting" msprop:Generator_RowChangingName="TransferDetailRowChanging" msprop:Generator_RowEvHandlerName="TransferDetailRowChangeEventHandler" msprop:Generator_RowDeletedName="TransferDetailRowDeleted" msprop:Generator_RowClassName="TransferDetailRow" msprop:Generator_UserTableName="TransferDetail" msprop:Generator_RowEvArgName="TransferDetailRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="RowNum" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnRowNum" msprop:Generator_ColumnPropNameInRow="RowNum" msprop:Generator_ColumnPropNameInTable="RowNumColumn" msprop:Generator_UserColumnName="RowNum" type="xs:long" minOccurs="0" />
@@ -43,7 +43,7 @@
                 </xs:simpleType>
               </xs:element>
               <xs:element name="Shape" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnShape" msprop:Generator_ColumnPropNameInRow="Shape" msprop:Generator_ColumnPropNameInTable="ShapeColumn" msprop:Generator_UserColumnName="Shape" type="xs:int" minOccurs="0" />
-              <xs:element name="ShapeName" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnShapeName" msprop:Generator_ColumnPropNameInRow="ShapeName" msprop:Generator_ColumnPropNameInTable="ShapeNameColumn" msprop:Generator_UserColumnName="ShapeName" minOccurs="0">
+              <xs:element name="ShapeName" msprop:Generator_ColumnVarNameInTable="columnShapeName" msprop:Generator_ColumnPropNameInRow="ShapeName" msprop:Generator_ColumnPropNameInTable="ShapeNameColumn" msprop:Generator_UserColumnName="ShapeName" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
@@ -70,6 +70,8 @@
               <xs:element name="Flag" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFlag" msprop:Generator_ColumnPropNameInRow="Flag" msprop:Generator_ColumnPropNameInTable="FlagColumn" msprop:Generator_UserColumnName="Flag" type="xs:int" minOccurs="0" />
               <xs:element name="RefID" msprop:Generator_ColumnVarNameInTable="columnRefID" msprop:Generator_ColumnPropNameInRow="RefID" msprop:Generator_ColumnPropNameInTable="RefIDColumn" msprop:Generator_UserColumnName="RefID" type="xs:int" minOccurs="0" />
               <xs:element name="RefID1" msprop:Generator_ColumnVarNameInTable="columnRefID1" msprop:Generator_ColumnPropNameInRow="RefID1" msprop:Generator_ColumnPropNameInTable="RefID1Column" msprop:Generator_UserColumnName="RefID1" type="xs:int" minOccurs="0" />
+              <xs:element name="EShop" msprop:Generator_ColumnVarNameInTable="columnEShop" msprop:Generator_ColumnPropNameInRow="EShop" msprop:Generator_ColumnPropNameInTable="EShopColumn" msprop:Generator_UserColumnName="EShop" type="xs:short" minOccurs="0" />
+              <xs:element name="Status" msprop:Generator_ColumnVarNameInTable="columnStatus" msprop:Generator_ColumnPropNameInRow="Status" msprop:Generator_ColumnPropNameInTable="StatusColumn" msprop:Generator_UserColumnName="Status" type="xs:short" minOccurs="0" />
               <xs:element name="IsDeleted" msprop:Generator_ColumnVarNameInTable="columnIsDeleted" msprop:Generator_ColumnPropNameInRow="IsDeleted" msprop:Generator_ColumnPropNameInTable="IsDeletedColumn" msprop:Generator_UserColumnName="IsDeleted" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">

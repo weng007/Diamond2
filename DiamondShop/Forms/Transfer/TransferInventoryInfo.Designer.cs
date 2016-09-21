@@ -33,6 +33,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dtSendDate = new System.Windows.Forms.DateTimePicker();
             this.panel3 = new System.Windows.Forms.Panel();
             this.txtReceivedDate = new System.Windows.Forms.TextBox();
@@ -47,7 +49,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.btnDel = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.gridTransfer = new System.Windows.Forms.DataGridView();
+            this.gridTransferINV = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txtSender = new System.Windows.Forms.TextBox();
@@ -55,23 +57,19 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.RowNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Amount1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Weight1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Amount3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Weight3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Weight = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.JewelryTypeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ShapeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColorTypeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColorName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TotalBaht = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Flag = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MinPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.JewelryType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RefID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RefID2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridTransfer)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridTransferINV)).BeginInit();
             this.SuspendLayout();
             // 
             // dtSendDate
@@ -100,7 +98,7 @@
             this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.btnDel);
             this.panel3.Controls.Add(this.btnAdd);
-            this.panel3.Controls.Add(this.gridTransfer);
+            this.panel3.Controls.Add(this.gridTransferINV);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.label6);
             this.panel3.Controls.Add(this.txtSender);
@@ -108,7 +106,7 @@
             this.panel3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel3.Location = new System.Drawing.Point(10, 72);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1041, 448);
+            this.panel3.Size = new System.Drawing.Size(1047, 448);
             this.panel3.TabIndex = 74;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
@@ -152,7 +150,7 @@
             this.txtNote.Location = new System.Drawing.Point(675, 364);
             this.txtNote.Multiline = true;
             this.txtNote.Name = "txtNote";
-            this.txtNote.Size = new System.Drawing.Size(320, 68);
+            this.txtNote.Size = new System.Drawing.Size(322, 68);
             this.txtNote.TabIndex = 236;
             // 
             // label16
@@ -213,7 +211,7 @@
             this.btnDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDel.Image = ((System.Drawing.Image)(resources.GetObject("btnDel.Image")));
-            this.btnDel.Location = new System.Drawing.Point(1002, 134);
+            this.btnDel.Location = new System.Drawing.Point(1005, 134);
             this.btnDel.Name = "btnDel";
             this.btnDel.Size = new System.Drawing.Size(30, 30);
             this.btnDel.TabIndex = 95;
@@ -230,7 +228,7 @@
             this.btnAdd.FlatAppearance.BorderSize = 0;
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(1002, 98);
+            this.btnAdd.Location = new System.Drawing.Point(1005, 98);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(30, 30);
             this.btnAdd.TabIndex = 93;
@@ -238,39 +236,35 @@
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // gridTransfer
+            // gridTransferINV
             // 
-            this.gridTransfer.AllowUserToAddRows = false;
-            this.gridTransfer.AllowUserToOrderColumns = true;
-            this.gridTransfer.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.gridTransfer.ColumnHeadersHeight = 33;
-            this.gridTransfer.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.gridTransferINV.AllowUserToAddRows = false;
+            this.gridTransferINV.AllowUserToOrderColumns = true;
+            this.gridTransferINV.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.gridTransferINV.ColumnHeadersHeight = 33;
+            this.gridTransferINV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.RowNum,
+            this.Code,
             this.Amount1,
             this.Weight1,
             this.Amount3,
             this.Weight3,
-            this.Code,
-            this.Weight,
             this.JewelryTypeName,
-            this.ShapeName,
-            this.ColorTypeName,
-            this.ColorName,
-            this.TotalBaht,
-            this.Flag,
+            this.MinPrice,
+            this.JewelryType,
             this.RefID,
             this.RefID2});
-            this.gridTransfer.Location = new System.Drawing.Point(23, 98);
-            this.gridTransfer.Name = "gridTransfer";
-            this.gridTransfer.ReadOnly = true;
-            this.gridTransfer.RowHeadersWidth = 10;
-            this.gridTransfer.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridTransfer.RowTemplate.Height = 25;
-            this.gridTransfer.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridTransfer.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridTransfer.Size = new System.Drawing.Size(972, 248);
-            this.gridTransfer.TabIndex = 86;
-            this.gridTransfer.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.gridSetting_CellMouseDoubleClick);
+            this.gridTransferINV.Location = new System.Drawing.Point(23, 98);
+            this.gridTransferINV.Name = "gridTransferINV";
+            this.gridTransferINV.ReadOnly = true;
+            this.gridTransferINV.RowHeadersWidth = 10;
+            this.gridTransferINV.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridTransferINV.RowTemplate.Height = 25;
+            this.gridTransferINV.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridTransferINV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.gridTransferINV.Size = new System.Drawing.Size(974, 248);
+            this.gridTransferINV.TabIndex = 86;
+            this.gridTransferINV.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.gridSetting_CellMouseDoubleClick);
             // 
             // label1
             // 
@@ -347,34 +341,6 @@
             this.RowNum.ReadOnly = true;
             this.RowNum.Width = 40;
             // 
-            // Amount1
-            // 
-            this.Amount1.DataPropertyName = "Amount1";
-            this.Amount1.HeaderText = "Amount1";
-            this.Amount1.Name = "Amount1";
-            this.Amount1.ReadOnly = true;
-            // 
-            // Weight1
-            // 
-            this.Weight1.DataPropertyName = "Weight1";
-            this.Weight1.HeaderText = "Weight1";
-            this.Weight1.Name = "Weight1";
-            this.Weight1.ReadOnly = true;
-            // 
-            // Amount3
-            // 
-            this.Amount3.DataPropertyName = "Amount3";
-            this.Amount3.HeaderText = "Amount3";
-            this.Amount3.Name = "Amount3";
-            this.Amount3.ReadOnly = true;
-            // 
-            // Weight3
-            // 
-            this.Weight3.DataPropertyName = "Weight3";
-            this.Weight3.HeaderText = "Weight3";
-            this.Weight3.Name = "Weight3";
-            this.Weight3.ReadOnly = true;
-            // 
             // Code
             // 
             this.Code.DataPropertyName = "Code";
@@ -382,69 +348,76 @@
             this.Code.Name = "Code";
             this.Code.ReadOnly = true;
             this.Code.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Code.Width = 170;
+            this.Code.Width = 150;
             // 
-            // Weight
+            // Amount1
             // 
-            this.Weight.DataPropertyName = "Weight";
-            this.Weight.HeaderText = "Weight";
-            this.Weight.Name = "Weight";
-            this.Weight.ReadOnly = true;
-            this.Weight.Width = 150;
+            this.Amount1.DataPropertyName = "Amount1";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            this.Amount1.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Amount1.HeaderText = "DC Amount";
+            this.Amount1.Name = "Amount1";
+            this.Amount1.ReadOnly = true;
+            this.Amount1.Width = 120;
+            // 
+            // Weight1
+            // 
+            this.Weight1.DataPropertyName = "Weight1";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle3.Format = "N2";
+            this.Weight1.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Weight1.HeaderText = "DC Weight";
+            this.Weight1.Name = "Weight1";
+            this.Weight1.ReadOnly = true;
+            this.Weight1.Width = 120;
+            // 
+            // Amount3
+            // 
+            this.Amount3.DataPropertyName = "Amount3";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            this.Amount3.DefaultCellStyle = dataGridViewCellStyle4;
+            this.Amount3.HeaderText = "GC Amount";
+            this.Amount3.Name = "Amount3";
+            this.Amount3.ReadOnly = true;
+            this.Amount3.Width = 130;
+            // 
+            // Weight3
+            // 
+            this.Weight3.DataPropertyName = "Weight3";
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle5.Format = "N2";
+            this.Weight3.DefaultCellStyle = dataGridViewCellStyle5;
+            this.Weight3.HeaderText = "GC Weight";
+            this.Weight3.Name = "Weight3";
+            this.Weight3.ReadOnly = true;
+            this.Weight3.Width = 130;
             // 
             // JewelryTypeName
             // 
             this.JewelryTypeName.DataPropertyName = "JewelryTypeName";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle2.Format = "N2";
-            this.JewelryTypeName.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle6.Format = "N2";
+            this.JewelryTypeName.DefaultCellStyle = dataGridViewCellStyle6;
             this.JewelryTypeName.HeaderText = "JewelryType";
             this.JewelryTypeName.Name = "JewelryTypeName";
             this.JewelryTypeName.ReadOnly = true;
             this.JewelryTypeName.Width = 140;
             // 
-            // ShapeName
+            // MinPrice
             // 
-            this.ShapeName.DataPropertyName = "ShapeName";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle3.Format = "N0";
-            this.ShapeName.DefaultCellStyle = dataGridViewCellStyle3;
-            this.ShapeName.HeaderText = "ShapeName";
-            this.ShapeName.Name = "ShapeName";
-            this.ShapeName.ReadOnly = true;
+            this.MinPrice.DataPropertyName = "MinPrice";
+            this.MinPrice.HeaderText = "MinPrice";
+            this.MinPrice.Name = "MinPrice";
+            this.MinPrice.ReadOnly = true;
+            this.MinPrice.Width = 130;
             // 
-            // ColorTypeName
+            // JewelryType
             // 
-            this.ColorTypeName.DataPropertyName = "ColorTypeName";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle4.Format = "N0";
-            this.ColorTypeName.DefaultCellStyle = dataGridViewCellStyle4;
-            this.ColorTypeName.HeaderText = "Color Type";
-            this.ColorTypeName.Name = "ColorTypeName";
-            this.ColorTypeName.ReadOnly = true;
-            this.ColorTypeName.Width = 140;
-            // 
-            // ColorName
-            // 
-            this.ColorName.DataPropertyName = "ColorName";
-            this.ColorName.HeaderText = "Color";
-            this.ColorName.Name = "ColorName";
-            this.ColorName.ReadOnly = true;
-            // 
-            // TotalBaht
-            // 
-            this.TotalBaht.DataPropertyName = "TotalBaht";
-            this.TotalBaht.HeaderText = "TotalBaht";
-            this.TotalBaht.Name = "TotalBaht";
-            this.TotalBaht.ReadOnly = true;
-            // 
-            // Flag
-            // 
-            this.Flag.DataPropertyName = "Flag";
-            this.Flag.HeaderText = "Flag";
-            this.Flag.Name = "Flag";
-            this.Flag.ReadOnly = true;
-            this.Flag.Visible = false;
+            this.JewelryType.DataPropertyName = "JewelryType";
+            this.JewelryType.HeaderText = "JewelryType";
+            this.JewelryType.Name = "JewelryType";
+            this.JewelryType.ReadOnly = true;
+            this.JewelryType.Visible = false;
             // 
             // RefID
             // 
@@ -467,7 +440,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(195)))), ((int)(((byte)(157)))));
-            this.ClientSize = new System.Drawing.Size(1063, 532);
+            this.ClientSize = new System.Drawing.Size(1069, 532);
             this.Controls.Add(this.panel3);
             this.Name = "TransferInventoryInfo";
             this.Text = "DiamondCer";
@@ -475,7 +448,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ds)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridTransfer)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridTransferINV)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -489,7 +462,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView gridTransfer;
+        private System.Windows.Forms.DataGridView gridTransferINV;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnDel;
         private System.Windows.Forms.Button btnEdit;
@@ -504,18 +477,14 @@
         private System.Windows.Forms.TextBox txtReceivedDate;
         private System.Windows.Forms.TextBox txtTransferStatus;
         private System.Windows.Forms.DataGridViewTextBoxColumn RowNum;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Code;
         private System.Windows.Forms.DataGridViewTextBoxColumn Amount1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Weight1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Amount3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Weight3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Code;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Weight;
         private System.Windows.Forms.DataGridViewTextBoxColumn JewelryTypeName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ShapeName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColorTypeName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColorName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TotalBaht;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Flag;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MinPrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn JewelryType;
         private System.Windows.Forms.DataGridViewTextBoxColumn RefID;
         private System.Windows.Forms.DataGridViewTextBoxColumn RefID2;
     }

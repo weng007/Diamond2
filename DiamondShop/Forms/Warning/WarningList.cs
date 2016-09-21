@@ -9,107 +9,111 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DiamondShop.FormMaster;
 using DiamondDS.DS;
+using DiamondShop.DiamondService1;
+using System.IO;
 
 namespace DiamondShop
 {
     public partial class WarningList : FormList
-    {     
+    {
+        public int WarningID = 0;
+        int flag;
+        int IsInbox;
+        Service2 ser1;
+        
         public WarningList()
         {
             InitializeComponent();
             Initial();
+            dtSEditDate.Value = dtSEditDate.Value.AddDays(-90);
             DoLoadData();
-            //Timer timer = new Timer();
-            //timer.Interval = (1 * 100000); // 10 secs = 10000, 300000 = 5 m
-            //timer.Tick += new EventHandler(timer1_Tick);
-            //timer.Start();
         }
 
         protected override void Initial()
         {
-            ds = GM.GetBuyer();
-            DataRow row = ds.Tables[0].NewRow();
-            row["ID"] = 0;
-            row["DisplayName"] = "All";
-            ds.Tables[0].Rows.Add(row);
+            cmbStatusType.DisplayMember = "Text";
+            cmbStatusType.ValueMember = "Value";
+            var items = new[] {
+                new { Text = "ALL", Value = "0" },
+                new { Text = "Order Jewelry", Value = "1" },
+                new { Text = "Transfer", Value = "2" }
+            };
+            cmbStatusType.DataSource = items;
+            cmbStatusType.SelectedIndex = 0;
 
-            cmbReceiver.DataSource = ds.Tables[0];
-            cmbReceiver.ValueMember = "ID";
-            cmbReceiver.DisplayMember = "DisplayName";
-            cmbReceiver.SelectedIndex = ds.Tables[0].Rows.Count - 1;
-            cmbReceiver.Refresh();
-
-            cmbSender.DataSource = ds.Tables[0];
-            cmbSender.ValueMember = "ID";
-            cmbSender.DisplayMember = "DisplayName";
-            cmbSender.SelectedIndex = ds.Tables[0].Rows.Count - 1;
-            cmbSender.Refresh();
-
-            cmbFactoryStatus.DataSource = (GM.GetMasterTableDetail("C034",true)).Tables[0];
-            cmbFactoryStatus.ValueMember = "ID";
-            cmbFactoryStatus.DisplayMember = "Detail";
-            cmbFactoryStatus.Refresh();
-
-            cmbMessageStatus.DataSource = (GM.GetMasterTableDetail("C033", true)).Tables[0];
-            cmbMessageStatus.ValueMember = "ID";
-            cmbMessageStatus.DisplayMember = "Detail";
-            cmbMessageStatus.Refresh();
-
-            cmbShop.DataSource = (GM.GetMasterTableDetail("C007",true)).Tables[0];
-            cmbShop.ValueMember = "ID";
-            cmbShop.DisplayMember = "Detail";
-            cmbShop.Refresh();
 
             gridWarning.AutoGenerateColumns = false;
         }
         protected override void DoLoadData()
         {
             ser2 = GM.GetService2();
+            // Inbox
+            ds = ser2.DoSearchWarning(txtRefID.Text, Convert.ToInt32(cmbStatusType.SelectedValue.ToString()), dtSEditDate.Value, dtEEditDate.Value,ApplicationInfo.UserID,1);
+            tds.Clear();
+            tds.Merge(ds);
 
-            ds = ser2.DoSearchWarning(Convert.ToInt16(cmbSender.SelectedValue.ToString()), Convert.ToInt16(cmbReceiver.SelectedValue.ToString()), Convert.ToInt16(cmbMessageStatus.SelectedValue.ToString()), Convert.ToInt16(cmbFactoryStatus.SelectedValue.ToString()), Convert.ToInt16(cmbShop.SelectedValue.ToString()), ApplicationInfo.UserID);
 
-            if (ds.Tables[0].Rows.Count > 0)
+            if (tds.Tables[0].Rows.Count > 0)
             {
-                gridWarning.DataSource = ds.Tables[0];
+                gridWarning.DataSource = tds.Tables[0];
+                gridWarning.Columns["ReceiverName"].Visible = false;
+                SetGridimage();
                 gridWarning.Refresh();
             }
+
             else { gridWarning.DataSource = null; gridWarning.Refresh(); }
         }
 
-        private void btnAdd_Click(object sender, EventArgs e)
+        private void btnSendBox_Click(object sender, EventArgs e)
         {
-            Warning frm = new Warning();
-            frm.ShowDialog();
-            DoLoadData();
+            SearchData(0);
+            flag = 0;//SendBox
+        }
+
+        private void btnInbox_Click(object sender, EventArgs e)
+        {
+            SearchData(1);
+            flag = 1;//InBox
+        }
+        private void SearchData(int IsInbox)
+        {
+            ser2 = GM.GetService2();
+            
+            ds = ser2.DoSearchWarning(txtRefID.Text, Convert.ToInt16(cmbStatusType.SelectedValue.ToString()), dtSEditDate.Value, dtEEditDate.Value, ApplicationInfo.UserID, IsInbox);
+            tds.Clear();
+            tds.Merge(ds);
+
+
+            if (tds.Tables[0].Rows.Count > 0)
+            {
+
+                gridWarning.DataSource = tds.Tables[0];
+                if (IsInbox == 1)
+                {
+                    gridWarning.Columns["ReceiverName"].Visible = false;
+                }
+                else
+                {
+                    gridWarning.Columns["SenderName"].Visible = false;
+                }
+                SetGridimage();
+                gridWarning.Refresh();
+            }
+            else { gridWarning.DataSource = null; gridWarning.Refresh(); }
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
             ser2 = GM.GetService2();
-
-            ds = ser2.DoSearchWarning(Convert.ToInt16(cmbSender.SelectedValue.ToString()), Convert.ToInt32(cmbReceiver.SelectedValue.ToString()), Convert.ToInt32(cmbMessageStatus.SelectedValue.ToString()), Convert.ToInt32(cmbFactoryStatus.SelectedValue.ToString()), Convert.ToInt32(cmbShop.SelectedValue.ToString()), ApplicationInfo.UserID);
-
-            if (ds.Tables[0].Rows.Count > 0)
+            if (flag == 1)
             {
-                gridWarning.DataSource = ds.Tables[0];
-                gridWarning.Refresh();
+                IsInbox = 1; //Inbox
             }
-            else { gridWarning.DataSource = null; gridWarning.Refresh(); }
-        }
-
-        private void gridSell_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-            if (gridWarning.RowCount > 0 && gridWarning.SelectedRows.Count > 0)
+            else
             {
-                id = (int)gridWarning.SelectedRows[0].Cells["ID"].Value;
-                Warning frm = new Warning(id);
-                frm.ShowDialog();
-
-                if (frm.isEdit)
-                {
-                    DoLoadData();
-                }
-            }            
+                IsInbox = 0; //Sendbox
+            }
+            SearchData(IsInbox);
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -129,6 +133,56 @@ namespace DiamondShop
         {
             CalendarActivity frm = new CalendarActivity();
             frm.ShowDialog();
+        }
+
+        private void gridWarning_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(e.ColumnIndex == gridWarning.Columns.Count-1)
+            {
+                if (gridWarning.Rows[e.RowIndex].Cells["StatusType"].Value.ToString() == "1")
+                {
+                    id = Convert.ToInt16(gridWarning.SelectedRows[0].Cells["RefID"].Value);
+                    WarningID = Convert.ToInt16(gridWarning.SelectedRows[0].Cells["ID"].Value);
+                    OrderInfo frm = new OrderInfo(id, WarningID);
+                    frm.ShowDialog();
+                }
+                else
+                {
+                    id = (int)gridWarning.SelectedRows[0].Cells["RefID"].Value;
+                    TransferInfo frm = new TransferInfo(id);
+                    frm.ShowDialog();
+                }
+
+                ser1 = GM.GetService1();
+                ser1.UpdateMessageStatus(WarningID, "0");
+
+                if (gridWarning.Rows[e.RowIndex].Cells["MessageStatus"].Value.ToString() == "245")
+                {
+                    gridWarning.Rows[e.RowIndex].Cells["IsRead"].Value = imageList1.Images[1];
+                }
+                else
+                {
+                    gridWarning.Rows[e.RowIndex].Cells["IsRead"].Value = imageList1.Images[0];
+                }
+
+            }
+            
+        }
+        private void SetGridimage()
+        {
+            foreach (dsWarning.WarningRow row in tds.Tables[0].Rows)
+            {
+                if (row["MessageStatus"].ToString() == "245")
+                {
+                    row["IsRead"] = (Image)imageList1.Images[1];
+                }
+                else
+                {
+                    row["IsRead"] = (Image)imageList1.Images[0];
+                }
+            }
+
+            tds.AcceptChanges();
         }
     }
 }

@@ -30,35 +30,44 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WarningList));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WarningList));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.gridWarning = new System.Windows.Forms.DataGridView();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.dtEEditDate = new System.Windows.Forms.DateTimePicker();
+            this.label8 = new System.Windows.Forms.Label();
+            this.dtSEditDate = new System.Windows.Forms.DateTimePicker();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.lblCount = new System.Windows.Forms.Label();
+            this.btnSendBox = new System.Windows.Forms.Button();
+            this.btnInbox = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtRefID = new System.Windows.Forms.TextBox();
+            this.cmbStatusType = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.tds = new DiamondDS.DS.dsWarning();
+            this.IsRead = new System.Windows.Forms.DataGridViewImageColumn();
             this.RowNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SenderName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ReceiverName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MessageStatusName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FactoryStatusName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Detail = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ShopName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Note = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.cmbSender = new System.Windows.Forms.ComboBox();
-            this.cmbShop = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.cmbFactoryStatus = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.cmbMessageStatus = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.cmbReceiver = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.btnSearch = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.tds = new DiamondDS.DS.dsSell();
-            this.button1 = new System.Windows.Forms.Button();
+            this.EditDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RefID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StatusType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MessageStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.OrderNo = new System.Windows.Forms.DataGridViewLinkColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridWarning)).BeginInit();
@@ -93,14 +102,20 @@
             this.gridWarning.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.gridWarning.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridWarning.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.IsRead,
             this.RowNum,
             this.ID,
             this.SenderName,
             this.ReceiverName,
-            this.MessageStatusName,
-            this.FactoryStatusName,
+            this.Detail,
+            this.Status,
             this.ShopName,
-            this.Note});
+            this.Note,
+            this.EditDate,
+            this.RefID,
+            this.StatusType,
+            this.MessageStatus,
+            this.OrderNo});
             this.gridWarning.Location = new System.Drawing.Point(14, 6);
             this.gridWarning.Name = "gridWarning";
             this.gridWarning.ReadOnly = true;
@@ -110,13 +125,210 @@
             this.gridWarning.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridWarning.Size = new System.Drawing.Size(1315, 446);
             this.gridWarning.TabIndex = 4;
-            this.gridWarning.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.gridSell_MouseDoubleClick);
+            this.gridWarning.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridWarning_CellClick);
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.IndianRed;
+            this.panel4.Controls.Add(this.label3);
+            this.panel4.Controls.Add(this.dtEEditDate);
+            this.panel4.Controls.Add(this.label8);
+            this.panel4.Controls.Add(this.dtSEditDate);
+            this.panel4.Controls.Add(this.label5);
+            this.panel4.Controls.Add(this.label4);
+            this.panel4.Controls.Add(this.lblCount);
+            this.panel4.Controls.Add(this.btnSendBox);
+            this.panel4.Controls.Add(this.btnInbox);
+            this.panel4.Controls.Add(this.label1);
+            this.panel4.Controls.Add(this.txtRefID);
+            this.panel4.Controls.Add(this.cmbStatusType);
+            this.panel4.Controls.Add(this.label2);
+            this.panel4.Controls.Add(this.btnSearch);
+            this.panel4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel4.Location = new System.Drawing.Point(-1, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1322, 123);
+            this.panel4.TabIndex = 44;
+            // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(557, 31);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(56, 26);
+            this.label3.TabIndex = 94;
+            this.label3.Text = "Date";
+            // 
+            // dtEEditDate
+            // 
+            this.dtEEditDate.CustomFormat = "dd/MM/yyyy";
+            this.dtEEditDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtEEditDate.Location = new System.Drawing.Point(775, 30);
+            this.dtEEditDate.Name = "dtEEditDate";
+            this.dtEEditDate.Size = new System.Drawing.Size(131, 27);
+            this.dtEEditDate.TabIndex = 92;
+            // 
+            // label8
+            // 
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(756, 30);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(16, 25);
+            this.label8.TabIndex = 93;
+            this.label8.Text = "-";
+            // 
+            // dtSEditDate
+            // 
+            this.dtSEditDate.CustomFormat = "dd/MM/yyyy";
+            this.dtSEditDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtSEditDate.Location = new System.Drawing.Point(619, 30);
+            this.dtSEditDate.Name = "dtSEditDate";
+            this.dtSEditDate.Size = new System.Drawing.Size(131, 27);
+            this.dtSEditDate.TabIndex = 91;
+            // 
+            // label5
+            // 
+            this.label5.BackColor = System.Drawing.Color.PeachPuff;
+            this.label5.Location = new System.Drawing.Point(134, 44);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(54, 43);
+            this.label5.TabIndex = 81;
+            this.label5.Text = "Send box";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.OldLace;
+            this.label4.Location = new System.Drawing.Point(26, 44);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(54, 21);
+            this.label4.TabIndex = 80;
+            this.label4.Text = "Inbox";
+            // 
+            // lblCount
+            // 
+            this.lblCount.AutoSize = true;
+            this.lblCount.BackColor = System.Drawing.Color.OldLace;
+            this.lblCount.Location = new System.Drawing.Point(26, 78);
+            this.lblCount.Name = "lblCount";
+            this.lblCount.Size = new System.Drawing.Size(57, 21);
+            this.lblCount.TabIndex = 79;
+            this.lblCount.Text = "label4";
+            // 
+            // btnSendBox
+            // 
+            this.btnSendBox.BackColor = System.Drawing.Color.PeachPuff;
+            this.btnSendBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnSendBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSendBox.FlatAppearance.BorderColor = System.Drawing.Color.Linen;
+            this.btnSendBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSendBox.Location = new System.Drawing.Point(126, 19);
+            this.btnSendBox.Name = "btnSendBox";
+            this.btnSendBox.Size = new System.Drawing.Size(70, 90);
+            this.btnSendBox.TabIndex = 78;
+            this.btnSendBox.UseVisualStyleBackColor = false;
+            this.btnSendBox.Click += new System.EventHandler(this.btnSendBox_Click);
+            // 
+            // btnInbox
+            // 
+            this.btnInbox.BackColor = System.Drawing.Color.OldLace;
+            this.btnInbox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnInbox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnInbox.FlatAppearance.BorderColor = System.Drawing.Color.Linen;
+            this.btnInbox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInbox.Location = new System.Drawing.Point(20, 19);
+            this.btnInbox.Name = "btnInbox";
+            this.btnInbox.Size = new System.Drawing.Size(70, 90);
+            this.btnInbox.TabIndex = 77;
+            this.btnInbox.UseVisualStyleBackColor = false;
+            this.btnInbox.Click += new System.EventHandler(this.btnInbox_Click);
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(283, 33);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(56, 26);
+            this.label1.TabIndex = 76;
+            this.label1.Text = "RefID";
+            // 
+            // txtRefID
+            // 
+            this.txtRefID.Location = new System.Drawing.Point(345, 30);
+            this.txtRefID.Name = "txtRefID";
+            this.txtRefID.Size = new System.Drawing.Size(172, 27);
+            this.txtRefID.TabIndex = 75;
+            // 
+            // cmbStatusType
+            // 
+            this.cmbStatusType.FormattingEnabled = true;
+            this.cmbStatusType.Location = new System.Drawing.Point(345, 70);
+            this.cmbStatusType.Name = "cmbStatusType";
+            this.cmbStatusType.Size = new System.Drawing.Size(172, 29);
+            this.cmbStatusType.TabIndex = 73;
+            // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(242, 73);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(101, 26);
+            this.label2.TabIndex = 74;
+            this.label2.Text = "Status Type";
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.BackColor = System.Drawing.Color.PaleGoldenrod;
+            this.btnSearch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSearch.BackgroundImage")));
+            this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSearch.FlatAppearance.BorderColor = System.Drawing.Color.Linen;
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearch.Location = new System.Drawing.Point(619, 70);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(105, 32);
+            this.btnSearch.TabIndex = 8;
+            this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "btnUnread.png");
+            this.imageList1.Images.SetKeyName(1, "btnRead.png");
+            // 
+            // tds
+            // 
+            this.tds.DataSetName = "dsWarning";
+            this.tds.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // IsRead
+            // 
+            this.IsRead.DataPropertyName = "IsRead";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.NullValue = "System.Drawing.Bitmap";
+            this.IsRead.DefaultCellStyle = dataGridViewCellStyle2;
+            this.IsRead.HeaderText = "";
+            this.IsRead.Name = "IsRead";
+            this.IsRead.ReadOnly = true;
+            this.IsRead.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.IsRead.Width = 70;
             // 
             // RowNum
             // 
             this.RowNum.DataPropertyName = "RowNum";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.RowNum.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.RowNum.DefaultCellStyle = dataGridViewCellStyle3;
             this.RowNum.HeaderText = "No.";
             this.RowNum.Name = "RowNum";
             this.RowNum.ReadOnly = true;
@@ -146,28 +358,28 @@
             this.ReceiverName.ReadOnly = true;
             this.ReceiverName.Width = 150;
             // 
-            // MessageStatusName
+            // Detail
             // 
-            this.MessageStatusName.DataPropertyName = "MessageStatusName";
-            this.MessageStatusName.HeaderText = "Message Status";
-            this.MessageStatusName.Name = "MessageStatusName";
-            this.MessageStatusName.ReadOnly = true;
-            this.MessageStatusName.Width = 160;
+            this.Detail.DataPropertyName = "Detail";
+            this.Detail.HeaderText = "Detail";
+            this.Detail.Name = "Detail";
+            this.Detail.ReadOnly = true;
+            this.Detail.Width = 180;
             // 
-            // FactoryStatusName
+            // Status
             // 
-            this.FactoryStatusName.DataPropertyName = "FactoryStatusName";
-            this.FactoryStatusName.HeaderText = "Factory Status";
-            this.FactoryStatusName.Name = "FactoryStatusName";
-            this.FactoryStatusName.ReadOnly = true;
-            this.FactoryStatusName.Width = 150;
+            this.Status.DataPropertyName = "Status";
+            this.Status.HeaderText = "Status";
+            this.Status.Name = "Status";
+            this.Status.ReadOnly = true;
+            this.Status.Width = 180;
             // 
             // ShopName
             // 
             this.ShopName.DataPropertyName = "ShopName";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle3.Format = "N0";
-            this.ShopName.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle4.Format = "N0";
+            this.ShopName.DefaultCellStyle = dataGridViewCellStyle4;
             this.ShopName.HeaderText = "Location";
             this.ShopName.Name = "ShopName";
             this.ShopName.ReadOnly = true;
@@ -180,166 +392,48 @@
             this.Note.Name = "Note";
             this.Note.ReadOnly = true;
             // 
-            // panel4
+            // EditDate
             // 
-            this.panel4.BackColor = System.Drawing.Color.IndianRed;
-            this.panel4.Controls.Add(this.button1);
-            this.panel4.Controls.Add(this.cmbSender);
-            this.panel4.Controls.Add(this.cmbShop);
-            this.panel4.Controls.Add(this.label5);
-            this.panel4.Controls.Add(this.cmbFactoryStatus);
-            this.panel4.Controls.Add(this.label2);
-            this.panel4.Controls.Add(this.cmbMessageStatus);
-            this.panel4.Controls.Add(this.label1);
-            this.panel4.Controls.Add(this.btnAdd);
-            this.panel4.Controls.Add(this.cmbReceiver);
-            this.panel4.Controls.Add(this.label4);
-            this.panel4.Controls.Add(this.btnSearch);
-            this.panel4.Controls.Add(this.label3);
-            this.panel4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel4.Location = new System.Drawing.Point(-1, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1322, 123);
-            this.panel4.TabIndex = 44;
+            this.EditDate.DataPropertyName = "EditDate";
+            this.EditDate.HeaderText = "Date";
+            this.EditDate.Name = "EditDate";
+            this.EditDate.ReadOnly = true;
+            this.EditDate.Width = 150;
             // 
-            // cmbSender
+            // RefID
             // 
-            this.cmbSender.FormattingEnabled = true;
-            this.cmbSender.Location = new System.Drawing.Point(239, 18);
-            this.cmbSender.Name = "cmbSender";
-            this.cmbSender.Size = new System.Drawing.Size(172, 29);
-            this.cmbSender.TabIndex = 1;
+            this.RefID.DataPropertyName = "RefID";
+            this.RefID.HeaderText = "RefID1";
+            this.RefID.Name = "RefID";
+            this.RefID.ReadOnly = true;
+            this.RefID.Visible = false;
             // 
-            // cmbShop
+            // StatusType
             // 
-            this.cmbShop.FormattingEnabled = true;
-            this.cmbShop.Location = new System.Drawing.Point(517, 62);
-            this.cmbShop.Name = "cmbShop";
-            this.cmbShop.Size = new System.Drawing.Size(172, 29);
-            this.cmbShop.TabIndex = 75;
+            this.StatusType.DataPropertyName = "StatusType";
+            this.StatusType.HeaderText = "StatusType";
+            this.StatusType.Name = "StatusType";
+            this.StatusType.ReadOnly = true;
+            this.StatusType.Visible = false;
             // 
-            // label5
+            // MessageStatus
             // 
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(429, 64);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(84, 26);
-            this.label5.TabIndex = 76;
-            this.label5.Text = "Location";
+            this.MessageStatus.DataPropertyName = "MessageStatus";
+            this.MessageStatus.HeaderText = "MessageStatus";
+            this.MessageStatus.Name = "MessageStatus";
+            this.MessageStatus.ReadOnly = true;
+            this.MessageStatus.Visible = false;
             // 
-            // cmbFactoryStatus
+            // OrderNo
             // 
-            this.cmbFactoryStatus.FormattingEnabled = true;
-            this.cmbFactoryStatus.Location = new System.Drawing.Point(239, 62);
-            this.cmbFactoryStatus.Name = "cmbFactoryStatus";
-            this.cmbFactoryStatus.Size = new System.Drawing.Size(172, 29);
-            this.cmbFactoryStatus.TabIndex = 73;
-            // 
-            // label2
-            // 
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(111, 65);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(135, 26);
-            this.label2.TabIndex = 74;
-            this.label2.Text = "Factory Status";
-            // 
-            // cmbMessageStatus
-            // 
-            this.cmbMessageStatus.FormattingEnabled = true;
-            this.cmbMessageStatus.Location = new System.Drawing.Point(854, 15);
-            this.cmbMessageStatus.Name = "cmbMessageStatus";
-            this.cmbMessageStatus.Size = new System.Drawing.Size(172, 29);
-            this.cmbMessageStatus.TabIndex = 71;
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(713, 18);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(136, 26);
-            this.label1.TabIndex = 72;
-            this.label1.Text = "Message Status";
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.BackColor = System.Drawing.Color.White;
-            this.btnAdd.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAdd.BackgroundImage")));
-            this.btnAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAdd.FlatAppearance.BorderColor = System.Drawing.Color.Linen;
-            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.Location = new System.Drawing.Point(20, 21);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(70, 90);
-            this.btnAdd.TabIndex = 70;
-            this.btnAdd.UseVisualStyleBackColor = false;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // cmbReceiver
-            // 
-            this.cmbReceiver.FormattingEnabled = true;
-            this.cmbReceiver.Location = new System.Drawing.Point(517, 16);
-            this.cmbReceiver.Name = "cmbReceiver";
-            this.cmbReceiver.Size = new System.Drawing.Size(172, 29);
-            this.cmbReceiver.TabIndex = 4;
-            // 
-            // label4
-            // 
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(430, 19);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(80, 26);
-            this.label4.TabIndex = 46;
-            this.label4.Text = "Receiver";
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.BackColor = System.Drawing.Color.PaleGoldenrod;
-            this.btnSearch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSearch.BackgroundImage")));
-            this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSearch.FlatAppearance.BorderColor = System.Drawing.Color.Linen;
-            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.Location = new System.Drawing.Point(854, 61);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(105, 32);
-            this.btnSearch.TabIndex = 8;
-            this.btnSearch.UseVisualStyleBackColor = false;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
-            // 
-            // label3
-            // 
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(169, 21);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(68, 26);
-            this.label3.TabIndex = 27;
-            this.label3.Text = "Sender";
-            // 
-            // timer1
-            // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // tds
-            // 
-            this.tds.DataSetName = "dsSell";
-            this.tds.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(1111, 77);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 34);
-            this.button1.TabIndex = 77;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.OrderNo.DataPropertyName = "OrderNo";
+            this.OrderNo.HeaderText = "RefID";
+            this.OrderNo.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.OrderNo.Name = "OrderNo";
+            this.OrderNo.ReadOnly = true;
+            this.OrderNo.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.OrderNo.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.OrderNo.Width = 150;
             // 
             // WarningList
             // 
@@ -356,6 +450,7 @@
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridWarning)).EndInit();
             this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tds)).EndInit();
             this.ResumeLayout(false);
 
@@ -364,30 +459,38 @@
         #endregion
 
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView gridWarning;
-        private System.Windows.Forms.ComboBox cmbReceiver;
-        private DiamondDS.DS.dsSell tds;
-        private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.ComboBox cmbShop;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox cmbFactoryStatus;
+        private DiamondDS.DS.dsWarning tds;
+        private System.Windows.Forms.ComboBox cmbStatusType;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox cmbMessageStatus;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.ComboBox cmbSender;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtRefID;
+        private System.Windows.Forms.Button btnSendBox;
+        private System.Windows.Forms.Button btnInbox;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblCount;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DateTimePicker dtEEditDate;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.DateTimePicker dtSEditDate;
+        private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.DataGridViewImageColumn IsRead;
         private System.Windows.Forms.DataGridViewTextBoxColumn RowNum;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn SenderName;
         private System.Windows.Forms.DataGridViewTextBoxColumn ReceiverName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MessageStatusName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FactoryStatusName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Detail;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Status;
         private System.Windows.Forms.DataGridViewTextBoxColumn ShopName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Note;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EditDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RefID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn StatusType;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MessageStatus;
+        private System.Windows.Forms.DataGridViewLinkColumn OrderNo;
     }
 }

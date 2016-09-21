@@ -337,13 +337,13 @@ namespace Diamond
             }
         }
         [WebMethod]
-        public DataSet DoSearchWarning(int Sender, int Receiver, int MessageStatus, int FactoryStatus, int Shop, int loginID)
+        public DataSet DoSearchWarning(string RefID, int StatusType, DateTime SDate, DateTime EDate, int LoginID,int IsInbox)
         {
             WarningBiz biz = new WarningBiz();
 
             try
             {
-                return biz.DoSearchData(Sender, Receiver, MessageStatus, FactoryStatus, Shop, loginID);
+                return biz.DoSearchData(RefID, StatusType, SDate, EDate, LoginID, IsInbox);
             }
             catch (Exception ex)
             {
@@ -351,13 +351,13 @@ namespace Diamond
             }
         }
         [WebMethod]
-        public DataSet DoSearchTransfer(int Sender, int TransferStatus, int SShop, int EShop, DateTime SSendDate, DateTime ESendDate, DateTime SReceiveDate, DateTime EReceiveDate)
+        public DataSet DoSearchTransfer(int Sender, int TransferStatus, int SShop, int EShop, DateTime SSendDate, DateTime ESendDate, DateTime SReceiveDate, DateTime EReceiveDate,string Flag)
         {
             TransferBiz biz = new TransferBiz();
 
             try
             {
-                return biz.DoSearchData(Sender, TransferStatus, SShop, EShop, SSendDate, ESendDate, SReceiveDate, EReceiveDate);
+                return biz.DoSearchData(Sender, TransferStatus, SShop, EShop, SSendDate, ESendDate, SReceiveDate, EReceiveDate,Flag);
             }
             catch (Exception ex)
             {
@@ -400,6 +400,34 @@ namespace Diamond
             try
             {
                 return biz.DoSearchData(shop, code, jewelrytype);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        [WebMethod]
+        public DataSet DoSearchWarningTransfer(int Sender, int Receiver, int MessageStatus, int FactoryStatus, int Shop, int loginID)
+        {
+            WarningTransferBiz biz = new WarningTransferBiz();
+
+            try
+            {
+                return biz.DoSearchData(Sender, Receiver, MessageStatus, FactoryStatus, Shop, loginID);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        [WebMethod]
+        public DataSet DoSearchProductionLine(string OrderNo, int JewelryType, int SShop, int FactoryStatus, DateTime SOrderDate, DateTime EOrderDate)
+        {
+            ProductionLineBiz biz = new ProductionLineBiz();
+
+            try
+            {
+                return biz.DoSearchData(OrderNo, JewelryType, SShop, FactoryStatus, SOrderDate, EOrderDate);
             }
             catch (Exception ex)
             {

@@ -52,6 +52,20 @@ namespace DiamondBiz.Biz
             }
         }
 
+        public int UpdateOrderStatus(int id, int Flag)
+        {
+            int tmp = 0;
+
+            try
+            {
+                return dal.UpdateOrderStatus(id, Flag);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
         public DataSet GetJewelryDetail(int id)
         {
             try
@@ -159,6 +173,28 @@ namespace DiamondBiz.Biz
             try
             {
                 return dal.UpdateMessageStatus(id, Flag);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public int DoDeleteDataReference(int id)
+        {
+            try
+            {
+                return dal.DoDeleteDataReference(id);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public int DoUpdateProductionLine(int id, int FactoryStatus, int EditBy)
+        {
+            try
+            {
+                return dal.DoUpdateProductionLine(id, FactoryStatus, EditBy);
             }
             catch (Exception ex)
             {

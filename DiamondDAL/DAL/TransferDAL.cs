@@ -13,7 +13,7 @@ namespace DiamondDAL.DAL
         dsTransfer ds = new dsTransfer();
         int flag = 0;
 
-        public dsTransfer DoSearchData(int Sender, int TransferStatus, int SShop, int EShop, DateTime SSendDate, DateTime ESendDate, DateTime SReceiveDate, DateTime EReceiveDate)
+        public dsTransfer DoSearchData(int Sender, int TransferStatus, int SShop, int EShop, DateTime SSendDate, DateTime ESendDate, DateTime SReceiveDate, DateTime EReceiveDate,string Flag)
         {
             try
             {
@@ -26,6 +26,7 @@ namespace DiamondDAL.DAL
                 SQL.CreateParameter("ESendDate", ESendDate);
                 SQL.CreateParameter("SReceiveDate", SReceiveDate);
                 SQL.CreateParameter("EReceiveDate", EReceiveDate);
+                SQL.CreateParameter("Flag", Flag);
                 SQL.FillDataSetBySP("SP_Transfer_Search", ds.Transfer);
             }
             catch (Exception ex)

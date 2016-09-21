@@ -14,17 +14,17 @@ namespace DiamondDAL.DAL
         dsWarning ds = new dsWarning();
         int flag = 0;
 
-        public dsWarning DoSearchData(int Sender, int Receiver, int MessageStatus, int FactoryStatus, int Shop, int loginID)
+        public dsWarning DoSearchData(string RefID, int StatusType, DateTime SDate, DateTime EDate, int LoginID,int IsInbox)
         {
             try
             {
                 SQL.ClearParameter();
-                SQL.CreateParameter("Sender", Sender);
-                SQL.CreateParameter("Receiver", Receiver);
-                SQL.CreateParameter("MessageStatus", MessageStatus);
-                SQL.CreateParameter("FactoryStatus", FactoryStatus);
-                SQL.CreateParameter("Shop", Shop);
-                SQL.CreateParameter("loginID", loginID);
+                SQL.CreateParameter("RefID", RefID);
+                SQL.CreateParameter("StatusType", StatusType);
+                SQL.CreateParameter("SDate", SDate);
+                SQL.CreateParameter("EDate", EDate);
+                SQL.CreateParameter("loginID", LoginID);
+                SQL.CreateParameter("IsInbox", IsInbox);
                 SQL.FillDataSetBySP("SP_Warning_Search", ds.Warning);
             }
             catch (Exception ex)

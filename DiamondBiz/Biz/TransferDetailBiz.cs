@@ -11,6 +11,7 @@ namespace DiamondBiz.Biz
     public class TransferDetailBiz
     {
         dsTransferDetail ds = new dsTransferDetail();
+        dsTransferInventory ds2 = new dsTransferInventory();
         TransferDetailDAL dal = new TransferDetailDAL();
 
         public dsTransferDetail DoSelectData(int id)
@@ -18,6 +19,17 @@ namespace DiamondBiz.Biz
             try
             {
                 return dal.DoSelectData(id);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public dsTransferInventory DoSelectData2(int id)
+        {
+            try
+            {
+                return dal.DoSelectData2(id);
             }
             catch (Exception ex)
             {

@@ -142,10 +142,25 @@ namespace DiamondShop
             TransferList frm = new TransferList();
             SetFormList(frm, 19, "Transfer");
         }
-        private void btnOrderFactory_Click(object sender, EventArgs e)
+        private void orderJewelryToolStripMenuItem_Click(object sender, EventArgs e)
         {
             OrderList frm = new OrderList();
             SetFormList(frm, 20, "Order");
+        }
+        private void inventoryToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            TransferInventoryList frm = new TransferInventoryList();
+            SetFormList(frm, 21, "TransferInventory");
+        }
+        private void warningTransferToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            WarningTransferList frm = new WarningTransferList();
+            SetFormList(frm, 22, "WarningTransferList");
+        }
+        private void productionLineToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ProductionLineList frm = new ProductionLineList();
+            SetFormList(frm, 23, "ProductionLine");
         }
         private void btnReportBuying_Click(object sender, EventArgs e)
         {
@@ -285,7 +300,5 @@ namespace DiamondShop
             Login frm = new Login();
             frm.ShowDialog();            
         }
-
-
     }
 }

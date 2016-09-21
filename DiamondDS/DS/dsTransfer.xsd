@@ -14,11 +14,12 @@
   <xs:element name="dsTransfer" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsTransfer" msprop:Generator_UserDSName="dsTransfer">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Transfer" msprop:Generator_TableClassName="TransferDataTable" msprop:Generator_TableVarName="tableTransfer" msprop:Generator_RowChangedName="TransferRowChanged" msprop:Generator_TablePropName="Transfer" msprop:Generator_RowDeletingName="TransferRowDeleting" msprop:Generator_RowChangingName="TransferRowChanging" msprop:Generator_RowEvHandlerName="TransferRowChangeEventHandler" msprop:Generator_RowDeletedName="TransferRowDeleted" msprop:Generator_RowClassName="TransferRow" msprop:Generator_UserTableName="Transfer" msprop:Generator_RowEvArgName="TransferRowChangeEvent">
+        <xs:element name="Transfer" msprop:Generator_TableClassName="TransferDataTable" msprop:Generator_TableVarName="tableTransfer" msprop:Generator_TablePropName="Transfer" msprop:Generator_RowDeletingName="TransferRowDeleting" msprop:Generator_RowChangingName="TransferRowChanging" msprop:Generator_RowEvHandlerName="TransferRowChangeEventHandler" msprop:Generator_RowDeletedName="TransferRowDeleted" msprop:Generator_UserTableName="Transfer" msprop:Generator_RowChangedName="TransferRowChanged" msprop:Generator_RowEvArgName="TransferRowChangeEvent" msprop:Generator_RowClassName="TransferRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="RowNum" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnRowNum" msprop:Generator_ColumnPropNameInRow="RowNum" msprop:Generator_ColumnPropNameInTable="RowNumColumn" msprop:Generator_UserColumnName="RowNum" type="xs:long" minOccurs="0" />
               <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="TransferNo" msprop:Generator_ColumnVarNameInTable="columnTransferNo" msprop:Generator_ColumnPropNameInRow="TransferNo" msprop:Generator_ColumnPropNameInTable="TransferNoColumn" msprop:Generator_UserColumnName="TransferNo" type="xs:string" minOccurs="0" />
               <xs:element name="Sender" msprop:Generator_ColumnVarNameInTable="columnSender" msprop:Generator_ColumnPropNameInRow="Sender" msprop:Generator_ColumnPropNameInTable="SenderColumn" msprop:Generator_UserColumnName="Sender" type="xs:int" minOccurs="0" />
               <xs:element name="SenderName" msprop:Generator_ColumnVarNameInTable="columnSenderName" msprop:Generator_ColumnPropNameInRow="SenderName" msprop:Generator_ColumnPropNameInTable="SenderNameColumn" msprop:Generator_UserColumnName="SenderName" type="xs:string" minOccurs="0" />
               <xs:element name="TransferStatus" msprop:Generator_ColumnVarNameInTable="columnTransferStatus" msprop:Generator_ColumnPropNameInRow="TransferStatus" msprop:Generator_ColumnPropNameInTable="TransferStatusColumn" msprop:Generator_UserColumnName="TransferStatus" type="xs:int" minOccurs="0" />
@@ -31,8 +32,10 @@
               </xs:element>
               <xs:element name="SendDate" msprop:Generator_ColumnVarNameInTable="columnSendDate" msprop:Generator_ColumnPropNameInRow="SendDate" msprop:Generator_ColumnPropNameInTable="SendDateColumn" msprop:Generator_UserColumnName="SendDate" type="xs:dateTime" minOccurs="0" />
               <xs:element name="ReceiveDate" msprop:Generator_ColumnVarNameInTable="columnReceiveDate" msprop:Generator_ColumnPropNameInRow="ReceiveDate" msprop:Generator_ColumnPropNameInTable="ReceiveDateColumn" msprop:Generator_UserColumnName="ReceiveDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Receiver" msprop:Generator_ColumnVarNameInTable="columnReceiver" msprop:Generator_ColumnPropNameInRow="Receiver" msprop:Generator_ColumnPropNameInTable="ReceiverColumn" msprop:Generator_UserColumnName="Receiver" type="xs:string" minOccurs="0" />
+              <xs:element name="ReceiverName" msprop:Generator_ColumnVarNameInTable="columnReceiverName" msprop:Generator_ColumnPropNameInRow="ReceiverName" msprop:Generator_ColumnPropNameInTable="ReceiverNameColumn" msprop:Generator_UserColumnName="ReceiverName" type="xs:string" minOccurs="0" />
               <xs:element name="SShop" msprop:Generator_ColumnVarNameInTable="columnSShop" msprop:Generator_ColumnPropNameInRow="SShop" msprop:Generator_ColumnPropNameInTable="SShopColumn" msprop:Generator_UserColumnName="SShop" type="xs:int" minOccurs="0" />
-              <xs:element name="SShopName" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSShopName" msprop:Generator_ColumnPropNameInRow="SShopName" msprop:Generator_ColumnPropNameInTable="SShopNameColumn" msprop:Generator_UserColumnName="SShopName" minOccurs="0">
+              <xs:element name="SShopName" msprop:Generator_ColumnVarNameInTable="columnSShopName" msprop:Generator_ColumnPropNameInRow="SShopName" msprop:Generator_ColumnPropNameInTable="SShopNameColumn" msprop:Generator_UserColumnName="SShopName" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
@@ -47,6 +50,7 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+              <xs:element name="IsBuyBook" msprop:Generator_ColumnVarNameInTable="columnIsBuyBook" msprop:Generator_ColumnPropNameInRow="IsBuyBook" msprop:Generator_ColumnPropNameInTable="IsBuyBookColumn" msprop:Generator_UserColumnName="IsBuyBook" type="xs:string" minOccurs="0" />
               <xs:element name="IsDeleted" msprop:Generator_ColumnVarNameInTable="columnIsDeleted" msprop:Generator_ColumnPropNameInRow="IsDeleted" msprop:Generator_ColumnPropNameInTable="IsDeletedColumn" msprop:Generator_UserColumnName="IsDeleted" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">

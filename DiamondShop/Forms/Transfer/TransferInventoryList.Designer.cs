@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TransferList));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TransferInventoryList));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel4 = new System.Windows.Forms.Panel();
             this.cmbSender = new System.Windows.Forms.ComboBox();
             this.cmbEShop = new System.Windows.Forms.ComboBox();
@@ -54,7 +54,7 @@
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.gridTransfer = new System.Windows.Forms.DataGridView();
+            this.gridTransferInventory = new System.Windows.Forms.DataGridView();
             this.RowNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SenderName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -65,7 +65,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridTransfer)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridTransferInventory)).BeginInit();
             this.SuspendLayout();
             // 
             // panel4
@@ -297,21 +297,21 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
-            this.panel2.Controls.Add(this.gridTransfer);
+            this.panel2.Controls.Add(this.gridTransferInventory);
             this.panel2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.Location = new System.Drawing.Point(5, 151);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1031, 414);
             this.panel2.TabIndex = 33;
             // 
-            // gridTransfer
+            // gridTransferInventory
             // 
-            this.gridTransfer.AllowUserToAddRows = false;
-            this.gridTransfer.AllowUserToDeleteRows = false;
-            this.gridTransfer.AllowUserToOrderColumns = true;
-            this.gridTransfer.BackgroundColor = System.Drawing.SystemColors.ControlLight;
-            this.gridTransfer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridTransfer.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.gridTransferInventory.AllowUserToAddRows = false;
+            this.gridTransferInventory.AllowUserToDeleteRows = false;
+            this.gridTransferInventory.AllowUserToOrderColumns = true;
+            this.gridTransferInventory.BackgroundColor = System.Drawing.SystemColors.ControlLight;
+            this.gridTransferInventory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridTransferInventory.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.RowNum,
             this.ID,
             this.SenderName,
@@ -319,22 +319,22 @@
             this.ReceiveDate,
             this.TransferStatusName,
             this.SShopName});
-            this.gridTransfer.Location = new System.Drawing.Point(15, 8);
-            this.gridTransfer.Name = "gridTransfer";
-            this.gridTransfer.ReadOnly = true;
-            this.gridTransfer.RowHeadersWidth = 10;
-            this.gridTransfer.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridTransfer.RowTemplate.Height = 30;
-            this.gridTransfer.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridTransfer.Size = new System.Drawing.Size(945, 395);
-            this.gridTransfer.TabIndex = 2;
-            this.gridTransfer.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.gridSetting_MouseDoubleClick);
+            this.gridTransferInventory.Location = new System.Drawing.Point(15, 8);
+            this.gridTransferInventory.Name = "gridTransferInventory";
+            this.gridTransferInventory.ReadOnly = true;
+            this.gridTransferInventory.RowHeadersWidth = 10;
+            this.gridTransferInventory.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridTransferInventory.RowTemplate.Height = 30;
+            this.gridTransferInventory.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.gridTransferInventory.Size = new System.Drawing.Size(945, 395);
+            this.gridTransferInventory.TabIndex = 2;
+            this.gridTransferInventory.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.gridSetting_MouseDoubleClick);
             // 
             // RowNum
             // 
             this.RowNum.DataPropertyName = "RowNum";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            this.RowNum.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            this.RowNum.DefaultCellStyle = dataGridViewCellStyle4;
             this.RowNum.HeaderText = "No.";
             this.RowNum.Name = "RowNum";
             this.RowNum.ReadOnly = true;
@@ -359,9 +359,9 @@
             // SendDate
             // 
             this.SendDate.DataPropertyName = "SendDate";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle2.Format = "dd/MM/yyyy";
-            this.SendDate.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle5.Format = "dd/MM/yyyy";
+            this.SendDate.DefaultCellStyle = dataGridViewCellStyle5;
             this.SendDate.HeaderText = "SendDate";
             this.SendDate.Name = "SendDate";
             this.SendDate.ReadOnly = true;
@@ -370,9 +370,9 @@
             // ReceiveDate
             // 
             this.ReceiveDate.DataPropertyName = "ReceiveDate";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle3.Format = "dd/MM/yyyy";
-            this.ReceiveDate.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle6.Format = "dd/MM/yyyy";
+            this.ReceiveDate.DefaultCellStyle = dataGridViewCellStyle6;
             this.ReceiveDate.HeaderText = "ReceiveDate";
             this.ReceiveDate.Name = "ReceiveDate";
             this.ReceiveDate.ReadOnly = true;
@@ -394,7 +394,7 @@
             this.SShopName.ReadOnly = true;
             this.SShopName.Width = 120;
             // 
-            // TransferList
+            // TransferInventoryList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -402,19 +402,19 @@
             this.ClientSize = new System.Drawing.Size(1335, 577);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
-            this.Name = "TransferList";
+            this.Name = "TransferInventoryList";
             this.Text = "ProductList";
             ((System.ComponentModel.ISupportInitialize)(this.ds)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridTransfer)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridTransferInventory)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.DataGridView gridTransfer;
+        private System.Windows.Forms.DataGridView gridTransferInventory;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Button btnAdd;

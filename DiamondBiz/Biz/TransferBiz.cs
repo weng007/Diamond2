@@ -13,11 +13,11 @@ namespace DiamondBiz.Biz
         dsTransfer ds = new dsTransfer();
         TransferDAL dal = new TransferDAL();
 
-        public dsTransfer DoSearchData(int Sender, int TransferStatus, int SShop, int EShop, DateTime SSendDate, DateTime ESendDate, DateTime SReceiveDate, DateTime EReceiveDate)
+        public dsTransfer DoSearchData(int Sender, int TransferStatus, int SShop, int EShop, DateTime SSendDate, DateTime ESendDate, DateTime SReceiveDate, DateTime EReceiveDate,string Flag)
         {
             try
             {
-                return dal.DoSearchData(Sender, TransferStatus,  SShop, EShop, SSendDate, ESendDate, SReceiveDate, EReceiveDate);
+                return dal.DoSearchData(Sender, TransferStatus,  SShop, EShop, SSendDate, ESendDate, SReceiveDate, EReceiveDate, Flag);
             }
             catch (Exception ex)
             {

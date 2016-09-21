@@ -124,7 +124,7 @@ namespace DiamondShop
             if (gridOrder.RowCount > 0 && gridOrder.SelectedRows.Count > 0)
             {
                 id = (int)gridOrder.SelectedRows[0].Cells["ID"].Value;
-                OrderInfo frm = new OrderInfo(id);
+                OrderInfo frm = new OrderInfo(id,0);
                 frm.ShowDialog();
 
                 if (frm.isEdit)

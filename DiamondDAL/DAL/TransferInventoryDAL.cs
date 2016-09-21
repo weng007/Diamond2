@@ -18,10 +18,10 @@ namespace DiamondDAL.DAL
             try
             {
                 SQL.ClearParameter();
-                SQL.CreateParameter("Shap", shop);
+                SQL.CreateParameter("Shop", shop);
                 SQL.CreateParameter("Code", code);
                 SQL.CreateParameter("JewelryType", jewelrytype);
-                SQL.FillDataSetBySP("SP_TransferBuyBook_Search", ds.TransferInventory);
+                SQL.FillDataSetBySP("SP_TransferInventory_Search", ds.TransferInventory);
             }
             catch (Exception ex)
             {

@@ -44,13 +44,13 @@ namespace DiamondShop
                 {
                     cmbReceiver.Enabled = false;
                     cmbFactoryStatus.Enabled = false;
-                    cmbShop.Enabled = false;
-                    txtNote.Text = "";
+                    //cmbShop.Enabled = false;
+                    //txtNote.Text = "";
                     EnableSave = false;
                 }
                 //ผู้รับจะไม่สามารถแก้ไขได้
                 cmbReceiver.Enabled = false;
-                cmbShop.Enabled = false;
+                //cmbShop.Enabled = false;
             }
             //Sender
             else if (Convert.ToInt16(cmbReceiver.SelectedValue.ToString()) != ApplicationInfo.UserID)
@@ -60,8 +60,8 @@ namespace DiamondShop
 
                     cmbReceiver.Enabled = false;
                     //cmbFactoryStatus.Enabled = false;
-                    cmbShop.Enabled = false;
-                    txtNote.Text = "";
+                    //cmbShop.Enabled = false;
+                    //txtNote.Text = "";
                     EnableSave = false;
             }
             
@@ -74,8 +74,8 @@ namespace DiamondShop
             binder.BindControl(cmbReceiver, "Receiver");
             binder.BindControl(txtMessageStatus, "MessageStatusName");
             binder.BindControl(cmbFactoryStatus, "FactoryStatus");
-            binder.BindControl(cmbShop, "Shop");
-            binder.BindControl(txtNote, "Note");
+            //binder.BindControl(cmbShop, "Shop");
+            //binder.BindControl(txtNote, "Note");
         }
         protected override void Initial()
         {
@@ -91,10 +91,10 @@ namespace DiamondShop
             cmbFactoryStatus.DisplayMember = "Detail";
             cmbFactoryStatus.Refresh();
 
-            cmbShop.DataSource = (GM.GetMasterTableDetail("C007")).Tables[0];
-            cmbShop.ValueMember = "ID";
-            cmbShop.DisplayMember = "Detail";
-            cmbShop.Refresh();
+            //cmbShop.DataSource = (GM.GetMasterTableDetail("C007")).Tables[0];
+            //cmbShop.ValueMember = "ID";
+            //cmbShop.DisplayMember = "Detail";
+            //cmbShop.Refresh();
 
             //SetFieldService.SetRequireField(txtNetPrice,txtCode,txtCustomer);
         }
@@ -244,6 +244,11 @@ namespace DiamondShop
 
                 flag = 2;
             }       
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

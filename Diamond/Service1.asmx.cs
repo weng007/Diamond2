@@ -459,7 +459,12 @@ namespace Diamond
                 TransferDetailBiz biz = GM.GetTransferDetailBiz();
                 try
                 {
-                    return biz.DoSelectData(id);
+                    
+                    if (mode == 0)
+                    { return biz.DoSelectData(id); }
+                    else
+                    { return biz.DoSelectData2(id); }
+
                 }
                 catch (Exception ex)
                 {
@@ -487,6 +492,30 @@ namespace Diamond
                         return biz.DoSelectData(id);
                 }
 
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            else if (TableName == "WarningTransfer")
+            {
+                WarningTransferBiz biz = GM.GetWarningTransferBiz();
+                try
+                {
+                    return biz.DoSelectData(id);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            else if (TableName == "ProductionLine")
+            {
+                ProductionLineBiz biz = GM.GetProductionLineBiz();
+                try
+                {
+                    return biz.DoSelectData(id);
+                }
                 catch (Exception ex)
                 {
                     throw ex;
@@ -970,6 +999,21 @@ namespace Diamond
             {
                 OrderDetailBiz biz = GM.GetOrderDetailBiz();
                 dsOrderDetail ds1 = new dsOrderDetail();
+                ds1.Merge(ds);
+
+                try
+                {
+                    flag = biz.DoInsertData(ds1);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            else if (TableName == "WarningTransfer")
+            {
+                WarningTransferBiz biz = GM.GetWarningTransferBiz();
+                dsWarningTransfer ds1 = new dsWarningTransfer();
                 ds1.Merge(ds);
 
                 try
@@ -1509,7 +1553,22 @@ namespace Diamond
                     throw ex;
                 }
             }
+            else if (TableName == "WarningTransfer")
+            {
+                WarningTransferBiz biz = GM.GetWarningTransferBiz();
+                dsWarningTransfer ds1 = new dsWarningTransfer();
 
+                ds1.Merge(ds);
+
+                try
+                {
+                    flag = biz.DoUpdateData(ds1);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
             return flag;
         }
         #endregion
@@ -1883,6 +1942,18 @@ namespace Diamond
             else if (TableName == "OrderDetail")
             {
                 OrderDetailBiz biz = GM.GetOrderDetailBiz();
+                try
+                {
+                    flag = biz.DoDeleteData(id);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            else if (TableName == "WarningTransfer")
+            {
+                WarningTransferBiz biz = GM.GetWarningTransferBiz();
                 try
                 {
                     flag = biz.DoDeleteData(id);

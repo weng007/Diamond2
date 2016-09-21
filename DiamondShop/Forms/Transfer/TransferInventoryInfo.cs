@@ -25,7 +25,7 @@ namespace DiamondShop
         int chk = 0;
         int rowIndex, rowIndex1;
         int refID1 = 0;
-        dsTransferBuyBook tds1 = new dsTransferBuyBook();
+        dsTransferInventory tds1 = new dsTransferInventory();
         public Service3 ser2;
         int shop;
 
@@ -73,7 +73,7 @@ namespace DiamondShop
 
             txtSender.Select();
             SetFieldService.SetRequireField(txtSender);
-            gridTransfer.AutoGenerateColumns = false;
+            gridTransferINV.AutoGenerateColumns = false;
         }
 
         private void BinderData()
@@ -93,7 +93,7 @@ namespace DiamondShop
             tds.Clear();
             tds.Merge(ds);
 
-            ds2 = ser.DoSelectData("TransferDetail", id, 0);
+            ds2 = ser.DoSelectData("TransferDetail", id, 1);
             tds1.Clear();
             tds1.Merge(ds2);
 
@@ -109,8 +109,8 @@ namespace DiamondShop
 
             if (ds2.Tables[0].Rows.Count > 0)
             {
-                gridTransfer.DataSource = ds2.Tables[0];
-                gridTransfer.Refresh();
+                gridTransferINV.DataSource = ds2.Tables[0];
+                gridTransferINV.Refresh();
             }
 
             SetFormatNumber();
@@ -134,6 +134,7 @@ namespace DiamondShop
             row.TransferStatus = 256;
             row.Sender = Convert.ToInt32(ApplicationInfo.UserID.ToString());
             row.ReceiveDate = DateTime.MinValue.AddYears(1900);
+            row.IsBuyBook = "0";
 
             try
             {
@@ -170,14 +171,14 @@ namespace DiamondShop
             tds2.Clear();
             for (int i = 0; i < ds2.Tables[0].Rows.Count; i++)
             {
-                if (ds2.Tables[0].Rows[i]["ID"].ToString() == "")
+                if (ds2.Tables[0].Rows[i]["RowNum"].ToString() == "")
                 {
                     DataRow dr = tds2.Tables[0].NewRow();
 
                     dr["RefID"] = id;
                     dr["RowNum"] = ds2.Tables[0].Rows[i]["RowNum"];
                     dr["RefID1"] = ds2.Tables[0].Rows[i]["RefID1"];
-                    dr["flag"] = ds2.Tables[0].Rows[i]["Flag"];
+                    dr["JewelryType"] = ds2.Tables[0].Rows[i]["JewelryType"];
                     SetCreateBy(dr);
                     SetEditBy(dr);
 
@@ -197,7 +198,7 @@ namespace DiamondShop
                 }
                 else if (chk == 1)
                 {
-                    chkFlag = ser.DoDeleteData("TransferDetail", Convert.ToInt32(gridTransfer.SelectedRows[0].Cells["ID"].Value));
+                    chkFlag = ser.DoDeleteData("TransferDetail", Convert.ToInt32(gridTransferINV.SelectedRows[0].Cells["ID"].Value));
 
                     chk = 0;
                 }
@@ -217,10 +218,10 @@ namespace DiamondShop
         {
             message = "";
 
-            if (txtSender.Text == "")
-            {
-                message = "Please input Seller.\n";
-            }
+            //if (txtSender.Text == "")
+            //{
+            //    message = "Please input Seller.\n";
+            //}
 
             if (message == "") { return true; }
             else { return false; }
@@ -229,19 +230,19 @@ namespace DiamondShop
         private void BindingGridBBSettingDetail()
         {
             int i = 0;
-            gridTransfer.Rows.Clear();
+            gridTransferINV.Rows.Clear();
 
             foreach (DataRow row in tds2.Tables[0].Rows)
             {
-                gridTransfer.Rows.Add();
-                gridTransfer.Rows[i].Cells["RowNum"].Value = row["RowNum"].ToString();
-                gridTransfer.Rows[i].Cells["ID"].Value = row["ID"].ToString();
-                gridTransfer.Rows[i].Cells["Code"].Value = row["Code"].ToString();
-                gridTransfer.Rows[i].Cells["Material1Name"].Value = row["Material1Name"].ToString();
-                gridTransfer.Rows[i].Cells["MaterialWeight"].Value = row["MaterialWeight"].ToString();
-                gridTransfer.Rows[i].Cells["Material2Name"].Value = row["Material2Name"].ToString();
-                gridTransfer.Rows[i].Cells["MaterialWeight2"].Value = row["MaterialWeight2"].ToString();
-                gridTransfer.Rows[i].Cells["Detail"].Value = row["Detail"].ToString();
+                gridTransferINV.Rows.Add();
+                gridTransferINV.Rows[i].Cells["RowNum"].Value = row["RowNum"].ToString();
+                gridTransferINV.Rows[i].Cells["ID"].Value = row["ID"].ToString();
+                gridTransferINV.Rows[i].Cells["Code"].Value = row["Code"].ToString();
+                gridTransferINV.Rows[i].Cells["Material1Name"].Value = row["Material1Name"].ToString();
+                gridTransferINV.Rows[i].Cells["MaterialWeight"].Value = row["MaterialWeight"].ToString();
+                gridTransferINV.Rows[i].Cells["Material2Name"].Value = row["Material2Name"].ToString();
+                gridTransferINV.Rows[i].Cells["MaterialWeight2"].Value = row["MaterialWeight2"].ToString();
+                gridTransferINV.Rows[i].Cells["Detail"].Value = row["Detail"].ToString();
 
                 i++;
             }
@@ -285,37 +286,37 @@ namespace DiamondShop
         {
             ser2 = GM.GetService2();
             shop = ApplicationInfo.Shop;
-            TransferBuyBookDetail frm = new TransferBuyBookDetail();
+            TransferInventoryDetail frm = new TransferInventoryDetail();
             frm.ShowDialog();
 
             if (frm.refID1 != 0 && CheckDataExist(frm.refID1))
             {
-                tmp = ser2.DoSearchTransferBuyBook(shop, "", "", 0);
+                tmp = ser2.DoSearchTransferInventory(shop, "", 0);
                 tds1.Clear();
                 tds1.Merge(tmp);
 
                 DataRow dr = ds2.Tables[0].NewRow();
                 dr["Code"] = tds1.Tables[0].Rows[0]["Code"];
-                dr["Weight"] = tds1.Tables[0].Rows[0]["Weight"];
+                dr["Amount1"] = tds1.Tables[0].Rows[0]["Amount1"];
+                dr["Weight1"] = tds1.Tables[0].Rows[0]["Weight1"];
+                dr["Amount3"] = tds1.Tables[0].Rows[0]["Amount3"];
+                dr["Weight3"] = tds1.Tables[0].Rows[0]["Weight3"];
+                dr["MinPrice"] = tds1.Tables[0].Rows[0]["MinPrice"];
                 dr["JewelryTypeName"] = tds1.Tables[0].Rows[0]["JewelryTypeName"];
-                dr["ShapeName"] = tds1.Tables[0].Rows[0]["ShapeName"];
-                dr["ColorTypeName"] = tds1.Tables[0].Rows[0]["ColorTypeName"];
-                dr["ColorName"] = tds1.Tables[0].Rows[0]["ColorName"];
-                dr["TotalBaht"] = tds1.Tables[0].Rows[0]["TotalBaht"];
-                dr["Flag"] = tds1.Tables[0].Rows[0]["Flag"];
+                dr["JewelryType"] = tds1.Tables[0].Rows[0]["JewelryType"];
                 dr["RefID1"] = tds1.Tables[0].Rows[0]["ID"];
                 ds2.Tables[0].Rows.Add(dr);
-                gridTransfer.DataSource = ds2.Tables[0];
-                gridTransfer.RefreshEdit();
+                gridTransferINV.DataSource = ds2.Tables[0];
+                gridTransferINV.RefreshEdit();
             }
         }
         private bool CheckDataExist(int tmp)
         {
-            if (gridTransfer.Rows.Count > 0)
+            if (gridTransferINV.Rows.Count > 0)
             {
-                for (int i = 0; i < gridTransfer.Rows.Count; i++)
+                for (int i = 0; i < gridTransferINV.Rows.Count; i++)
                 {
-                    if (tmp == Convert.ToInt32(gridTransfer.Rows[i].Cells["RefID1"].Value))
+                    if (tmp == Convert.ToInt32(gridTransferINV.Rows[i].Cells["ID"].Value))
                     {
                         return false;
                     }
@@ -339,7 +340,7 @@ namespace DiamondShop
         private void gridSetting_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             if ((e.ColumnIndex == 4 || e.ColumnIndex == 5 || e.ColumnIndex == 6 || e.ColumnIndex == 7 ||
-                e.ColumnIndex == 8) && e.RowIndex != this.gridTransfer.NewRowIndex && e.Value != null
+                e.ColumnIndex == 8) && e.RowIndex != this.gridTransferINV.NewRowIndex && e.Value != null
                 && e.Value.ToString() != "")
             {
                 double d = double.Parse(e.Value.ToString());
@@ -369,7 +370,7 @@ namespace DiamondShop
 
         private void btnDel_Click(object sender, EventArgs e)
         {
-            if (gridTransfer.SelectedRows.Count > 0)
+            if (gridTransferINV.SelectedRows.Count > 0)
             {
                 chk = 1;
                 DeleteData();
@@ -392,7 +393,7 @@ namespace DiamondShop
             txtSender.Enabled = status;
             btnAdd.Enabled = status;
             btnDel.Enabled = status;
-            gridTransfer.Enabled = status;
+            gridTransferINV.Enabled = status;
         }
     }
 }

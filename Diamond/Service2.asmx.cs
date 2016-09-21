@@ -106,6 +106,20 @@ namespace Diamond
         }
 
         [WebMethod]
+        public int UpdateOrderStatus(int id, int Flag)
+        {
+            GeneralCBiz biz = new GeneralCBiz();
+            try
+            {
+                return biz.UpdateOrderStatus(id, Flag);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        [WebMethod]
         public DataSet GetPriceDaimondAndGemstone(int id)
         {
             GeneralCBiz biz = new GeneralCBiz();
@@ -218,6 +232,32 @@ namespace Diamond
             try
             {
                 return biz.UpdateMessageStatus(id, Flag);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        [WebMethod]
+        public int DeleteDataReference(int id)
+        {
+            GeneralCBiz biz = new GeneralCBiz();
+            try
+            {
+                return biz.DoDeleteDataReference(id);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        [WebMethod]
+        public int UpdateProductionLine(int id, int FactoryStatus, int EditBy)
+        {
+            GeneralCBiz biz = new GeneralCBiz();
+            try
+            {
+                return biz.DoUpdateProductionLine(id, FactoryStatus, EditBy);
             }
             catch (Exception ex)
             {

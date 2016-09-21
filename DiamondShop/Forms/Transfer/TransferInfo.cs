@@ -18,7 +18,7 @@ namespace DiamondShop
     {
         dsTransfer tds = new dsTransfer();
         dsTransferDetail tds2 = new dsTransferDetail();
-        dsCatalog tdsCatalog = new dsCatalog();
+        dsWarningTransfer tds3 = new dsWarningTransfer();
         DataSet tmp = new DataSet();
         bool isAuthorize = false;
         DataSet ds2 = new DataSet();
@@ -28,6 +28,7 @@ namespace DiamondShop
         dsTransferBuyBook tds1 = new dsTransferBuyBook();
         public Service3 ser2;
         int shop;
+        int flag;
 
         public TransferInfo()
         {
@@ -49,21 +50,17 @@ namespace DiamondShop
             this.id = id;
             LoadData();
             SetControlEnable(false);
+            SetPermission();
         }
 
         protected override void Initial()
         {
             ds = GM.GetBuyer();
 
-            //cmbReceiver.DataSource = ds.Tables[0];
-            //cmbReceiver.ValueMember = "ID";
-            //cmbReceiver.DisplayMember = "DisplayName";
-            //cmbReceiver.Refresh();
-
-            cmbSShop.DataSource = (GM.GetMasterTableDetail("C007")).Tables[0];
-            cmbSShop.ValueMember = "ID";
-            cmbSShop.DisplayMember = "Detail";
-            cmbSShop.Refresh();
+            cmbReceiver.DataSource = ds.Tables[0];
+            cmbReceiver.ValueMember = "ID";
+            cmbReceiver.DisplayMember = "DisplayName";
+            cmbReceiver.Refresh();
 
             cmbEShop.DataSource = (GM.GetMasterTableDetail("C007")).Tables[0];
             cmbEShop.ValueMember = "ID";
@@ -80,8 +77,10 @@ namespace DiamondShop
         {
             binder.BindControl(dtSendDate, "SendDate");
             binder.BindControl(txtSender, "SenderName");
+            binder.BindControl(txtTransferNo, "TransferNo");
             binder.BindControl(txtTransferStatus, "TransferStatusName");
-            binder.BindControl(cmbSShop, "SShop");
+            binder.BindControl(cmbReceiver, "ReceiverName");
+            binder.BindControl(txtSShop, "SShopName");
             binder.BindControl(cmbEShop, "EShop");
             binder.BindControl(txtNote, "Note");
         }
@@ -120,6 +119,7 @@ namespace DiamondShop
         protected override bool SaveData()
         {
             dsTransfer.TransferRow row = null;
+            dsWarningTransfer.WarningTransferRow row2 = null;
 
             if (tds.Transfer.Rows.Count > 0)
             {
@@ -130,21 +130,61 @@ namespace DiamondShop
                 row = tds.Transfer.NewTransferRow();
                 tds.Transfer.Rows.Add(row);
             }
+
+            if (tds3.WarningTransfer.Rows.Count > 0)
+            {
+                row2 = tds3.WarningTransfer[0];
+            }
+            else
+            {
+                row2 = tds3.WarningTransfer.NewWarningTransferRow();
+                tds3.WarningTransfer.Rows.Add(row2);
+            }
+
             binder.BindValueToDataRow(row);
             row.TransferStatus = 256;
             row.Sender = Convert.ToInt32(ApplicationInfo.UserID.ToString());
             row.ReceiveDate = DateTime.MinValue.AddYears(1900);
+            row.IsBuyBook = "1";
+
+            if (flag ==1)//กดปุ่ม Receive
+            {
+                row2.ConfirmDate = Convert.ToDateTime(DateTime.Now.ToString()); //confirm date = วันที่ปัจจุบัน
+                row2.MessageStatus = 246; // Confirm
+                row2.TransferStatus = 254; //Received
+                row2.Shop = shop; //shop ปลายทาง
+            }
+            else //แจ้งเตือนครั้งแรก
+            {
+                row2.Sender = ApplicationInfo.UserID;
+                row2.Receiver = Convert.ToInt16(cmbReceiver.SelectedValue.ToString());
+                row2.MessageStatus = 244;//UnRead
+                row2.TransferStatus = 253; //Send
+                row2.Shop = Convert.ToInt16(cmbReceiver.SelectedValue.ToString()); //shop ที่เลือก
+            }
 
             try
             {
                 if (id == 0)
                 {
                     SetCreateBy(row);
+                    
                     chkFlag = ser.DoInsertData("Transfer", tds, 0);
+
+                    if (tds3.WarningTransfer.Rows.Count > 0)
+                    {
+                        chkFlag = ser.DoInsertData("WarningTransfer", tds3, 0);
+                    }
 
                 }
                 else
                 {
+                    //Receiver 
+                    if (Convert.ToInt16(cmbReceiver.SelectedValue.ToString()) == ApplicationInfo.UserID)
+                    {
+                        row.TransferStatus = 257; //สถานะ received
+                        row.ReceiveDate = Convert.ToDateTime(DateTime.Now.ToString());
+                    }
                     SetEditBy(row);
                     chkFlag = ser.DoUpdateData("Transfer", tds);
 
@@ -153,9 +193,19 @@ namespace DiamondShop
                     {
                         chkFlag = ser.DoInsertData("TransferDetail", tds2, 0);
                     }
-                }
 
+                    if (tds3.WarningTransfer.Rows.Count > 0)
+                    {
+                        chkFlag = ser.DoUpdateData("WarningTransfer", tds3);
+                    }
+
+                }
                 tds.AcceptChanges();
+
+                if (Convert.ToInt16(cmbReceiver.SelectedValue.ToString()) == ApplicationInfo.UserID)
+                {
+                    btnPrint.Visible = true;
+                }
             }
             catch (Exception ex)
             {
@@ -178,6 +228,19 @@ namespace DiamondShop
                     dr["RowNum"] = ds2.Tables[0].Rows[i]["RowNum"];
                     dr["RefID1"] = ds2.Tables[0].Rows[i]["RefID1"];
                     dr["flag"] = ds2.Tables[0].Rows[i]["Flag"];
+                    //Sender
+                    if (Convert.ToInt16(cmbReceiver.SelectedValue.ToString()) != ApplicationInfo.UserID)
+                    {
+                        dr["EShop"] = ds2.Tables[0].Rows[i]["Shop"];//Shop BuyBook
+                        dr["Status"] = 255;//Reserved
+                    }
+                    //Receiver 
+                    if (Convert.ToInt16(cmbReceiver.SelectedValue.ToString()) == ApplicationInfo.UserID)
+                    {
+                        dr["EShop"] = shop;//shop ฝั่งรับ
+                        dr["Status"] = 73; //Available
+                    }
+                    
                     SetCreateBy(dr);
                     SetEditBy(dr);
 
@@ -198,6 +261,12 @@ namespace DiamondShop
                 else if (chk == 1)
                 {
                     chkFlag = ser.DoDeleteData("TransferDetail", Convert.ToInt32(gridTransfer.SelectedRows[0].Cells["ID"].Value));
+
+                    chk = 0;
+                }
+                else if (chk == 2)
+                {
+                    chkFlag = ser.DoDeleteData("WarningTransfer", Convert.ToInt32(gridTransfer.SelectedRows[0].Cells["ID"].Value));
 
                     chk = 0;
                 }
@@ -304,6 +373,7 @@ namespace DiamondShop
                 dr["TotalBaht"] = tds1.Tables[0].Rows[0]["TotalBaht"];
                 dr["Flag"] = tds1.Tables[0].Rows[0]["Flag"];
                 dr["RefID1"] = tds1.Tables[0].Rows[0]["ID"];
+                dr["EShop"] = tds1.Tables[0].Rows[0]["Shop"];
                 ds2.Tables[0].Rows.Add(dr);
                 gridTransfer.DataSource = ds2.Tables[0];
                 gridTransfer.RefreshEdit();
@@ -374,6 +444,11 @@ namespace DiamondShop
                 chk = 1;
                 DeleteData();
             }
+            if (Convert.ToInt16(cmbReceiver.SelectedValue.ToString()) != ApplicationInfo.UserID)
+            {
+                chk = 2;
+                DeleteData();
+            }
         }
 
         private void panel3_Paint(object sender, PaintEventArgs e)
@@ -393,6 +468,23 @@ namespace DiamondShop
             btnAdd.Enabled = status;
             btnDel.Enabled = status;
             gridTransfer.Enabled = status;
+        }
+
+        private void btnRecieve_Click(object sender, EventArgs e)
+        {
+            txtReceivedDate.Text = DateTime.Now.ToString();
+            txtTransferStatus.Text = "Received";
+            flag = 1;
+        }
+
+        private void SetPermission()
+        {
+            //Receiver
+            if (Convert.ToInt16(cmbReceiver.SelectedValue.ToString()) == ApplicationInfo.UserID)
+            {
+                btnRecieve.Enabled = true;
+                btnPrint.Enabled = true;
+            }
         }
     }
 }

@@ -29,6 +29,16 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OrderDetail));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -40,47 +50,11 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.button1 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.grid1 = new System.Windows.Forms.DataGridView();
-            this.btnDel1 = new System.Windows.Forms.Button();
-            this.txtSumCost1 = new System.Windows.Forms.TextBox();
-            this.txtSumWeight1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.grid2 = new System.Windows.Forms.DataGridView();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btnDel = new System.Windows.Forms.Button();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.btnAdd1 = new System.Windows.Forms.Button();
-            this.txtSumCost = new System.Windows.Forms.TextBox();
-            this.txtSumWeight = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.RowNum2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RefID2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ID2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Code11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ReportNumber2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IdentificationName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LabName2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ShapeName2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Weight2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColorName2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.OriginName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TotalBaht2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ShopName2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RowNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Code1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -94,6 +68,32 @@
             this.ShopName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RefID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RefID1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnDel1 = new System.Windows.Forms.Button();
+            this.txtSumCost1 = new System.Windows.Forms.TextBox();
+            this.txtSumWeight1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.grid2 = new System.Windows.Forms.DataGridView();
+            this.RowNum2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RefID2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ID2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Code11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ReportNumber2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IdentificationName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LabName2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ShapeName2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Weight2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColorName2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.OriginName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TotalBaht2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ShopName2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnDel = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnAdd1 = new System.Windows.Forms.Button();
+            this.txtSumCost = new System.Windows.Forms.TextBox();
+            this.txtSumWeight = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid1)).BeginInit();
@@ -187,6 +187,134 @@
             this.grid1.TabIndex = 46;
             this.grid1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid1_CellClick);
             // 
+            // RowNum
+            // 
+            this.RowNum.DataPropertyName = "RowNum";
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.RowNum.DefaultCellStyle = dataGridViewCellStyle1;
+            this.RowNum.HeaderText = "No.";
+            this.RowNum.Name = "RowNum";
+            this.RowNum.ReadOnly = true;
+            this.RowNum.Width = 60;
+            // 
+            // ID
+            // 
+            this.ID.DataPropertyName = "ID";
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Visible = false;
+            // 
+            // Code1
+            // 
+            this.Code1.DataPropertyName = "Code";
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.Code1.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Code1.HeaderText = "Code";
+            this.Code1.Name = "Code1";
+            this.Code1.Width = 125;
+            // 
+            // ReportNumber
+            // 
+            this.ReportNumber.DataPropertyName = "ReportNumber";
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ReportNumber.DefaultCellStyle = dataGridViewCellStyle3;
+            this.ReportNumber.HeaderText = "Report Number";
+            this.ReportNumber.Name = "ReportNumber";
+            this.ReportNumber.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ReportNumber.Width = 180;
+            // 
+            // Weight1
+            // 
+            this.Weight1.DataPropertyName = "Weight";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.Weight1.DefaultCellStyle = dataGridViewCellStyle4;
+            this.Weight1.HeaderText = "Weight";
+            this.Weight1.Name = "Weight1";
+            this.Weight1.Width = 80;
+            // 
+            // LabName
+            // 
+            this.LabName.DataPropertyName = "LabName";
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.LabName.DefaultCellStyle = dataGridViewCellStyle5;
+            this.LabName.HeaderText = "Lab";
+            this.LabName.Name = "LabName";
+            this.LabName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.LabName.Width = 110;
+            // 
+            // ShapeName
+            // 
+            this.ShapeName.DataPropertyName = "ShapeName";
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ShapeName.DefaultCellStyle = dataGridViewCellStyle6;
+            this.ShapeName.HeaderText = "Shape";
+            this.ShapeName.Name = "ShapeName";
+            this.ShapeName.ReadOnly = true;
+            this.ShapeName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ShapeName.Width = 150;
+            // 
+            // ColorName
+            // 
+            this.ColorName.DataPropertyName = "ColorName";
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ColorName.DefaultCellStyle = dataGridViewCellStyle7;
+            this.ColorName.HeaderText = "Color";
+            this.ColorName.Name = "ColorName";
+            this.ColorName.ReadOnly = true;
+            this.ColorName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // ClearityName
+            // 
+            this.ClearityName.DataPropertyName = "ClearityName";
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ClearityName.DefaultCellStyle = dataGridViewCellStyle8;
+            this.ClearityName.HeaderText = "Clearity";
+            this.ClearityName.Name = "ClearityName";
+            this.ClearityName.ReadOnly = true;
+            this.ClearityName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ClearityName.Width = 150;
+            // 
+            // TotalBaht
+            // 
+            this.TotalBaht.DataPropertyName = "TotalBaht";
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle9.Format = "N0";
+            dataGridViewCellStyle9.NullValue = "0";
+            this.TotalBaht.DefaultCellStyle = dataGridViewCellStyle9;
+            this.TotalBaht.HeaderText = "Cost";
+            this.TotalBaht.Name = "TotalBaht";
+            this.TotalBaht.ReadOnly = true;
+            this.TotalBaht.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.TotalBaht.Width = 150;
+            // 
+            // ShopName
+            // 
+            this.ShopName.DataPropertyName = "ShopName";
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ShopName.DefaultCellStyle = dataGridViewCellStyle10;
+            this.ShopName.HeaderText = "Location";
+            this.ShopName.Name = "ShopName";
+            this.ShopName.ReadOnly = true;
+            this.ShopName.Width = 120;
+            // 
+            // RefID
+            // 
+            this.RefID.DataPropertyName = "RefID";
+            this.RefID.HeaderText = "RefID";
+            this.RefID.Name = "RefID";
+            this.RefID.Visible = false;
+            // 
+            // RefID1
+            // 
+            this.RefID1.DataPropertyName = "RefID1";
+            this.RefID1.HeaderText = "RefID1";
+            this.RefID1.Name = "RefID1";
+            this.RefID1.Visible = false;
+            // 
             // btnDel1
             // 
             this.btnDel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDel1.BackgroundImage")));
@@ -270,108 +398,6 @@
             this.grid2.Size = new System.Drawing.Size(1272, 188);
             this.grid2.TabIndex = 127;
             this.grid2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid2_CellClick);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(8, 249);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(128, 21);
-            this.label3.TabIndex = 126;
-            this.label3.Text = "Gemstone Cer.";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(8, 11);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(118, 21);
-            this.label2.TabIndex = 125;
-            this.label2.Text = "Diamond Cer.";
-            // 
-            // btnDel
-            // 
-            this.btnDel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDel.BackgroundImage")));
-            this.btnDel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnDel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDel.FlatAppearance.BorderSize = 0;
-            this.btnDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDel.Location = new System.Drawing.Point(1290, 71);
-            this.btnDel.Name = "btnDel";
-            this.btnDel.Size = new System.Drawing.Size(30, 30);
-            this.btnDel.TabIndex = 123;
-            this.btnDel.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnDel.UseVisualStyleBackColor = true;
-            this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAdd.BackgroundImage")));
-            this.btnAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAdd.FlatAppearance.BorderSize = 0;
-            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(1290, 35);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(30, 30);
-            this.btnAdd.TabIndex = 122;
-            this.btnAdd.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // btnAdd1
-            // 
-            this.btnAdd1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAdd1.BackgroundImage")));
-            this.btnAdd1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnAdd1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAdd1.FlatAppearance.BorderSize = 0;
-            this.btnAdd1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd1.Location = new System.Drawing.Point(1290, 273);
-            this.btnAdd1.Name = "btnAdd1";
-            this.btnAdd1.Size = new System.Drawing.Size(30, 30);
-            this.btnAdd1.TabIndex = 120;
-            this.btnAdd1.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnAdd1.UseVisualStyleBackColor = true;
-            this.btnAdd1.Click += new System.EventHandler(this.btnAdd1_Click);
-            // 
-            // txtSumCost
-            // 
-            this.txtSumCost.BackColor = System.Drawing.SystemColors.Window;
-            this.txtSumCost.Enabled = false;
-            this.txtSumCost.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSumCost.Location = new System.Drawing.Point(995, 227);
-            this.txtSumCost.Name = "txtSumCost";
-            this.txtSumCost.ReadOnly = true;
-            this.txtSumCost.Size = new System.Drawing.Size(133, 27);
-            this.txtSumCost.TabIndex = 114;
-            this.txtSumCost.Text = "0";
-            this.txtSumCost.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // txtSumWeight
-            // 
-            this.txtSumWeight.BackColor = System.Drawing.SystemColors.Window;
-            this.txtSumWeight.Enabled = false;
-            this.txtSumWeight.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSumWeight.Location = new System.Drawing.Point(392, 227);
-            this.txtSumWeight.Name = "txtSumWeight";
-            this.txtSumWeight.ReadOnly = true;
-            this.txtSumWeight.Size = new System.Drawing.Size(79, 27);
-            this.txtSumWeight.TabIndex = 113;
-            this.txtSumWeight.Text = "0";
-            this.txtSumWeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label14
-            // 
-            this.label14.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label14.Location = new System.Drawing.Point(327, 230);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(59, 24);
-            this.label14.TabIndex = 48;
-            this.label14.Text = "Total";
             // 
             // RowNum2
             // 
@@ -501,133 +527,107 @@
             this.ShopName2.ReadOnly = true;
             this.ShopName2.Width = 110;
             // 
-            // RowNum
+            // label3
             // 
-            this.RowNum.DataPropertyName = "RowNum";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.RowNum.DefaultCellStyle = dataGridViewCellStyle1;
-            this.RowNum.HeaderText = "No.";
-            this.RowNum.Name = "RowNum";
-            this.RowNum.ReadOnly = true;
-            this.RowNum.Width = 60;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(8, 249);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(128, 21);
+            this.label3.TabIndex = 126;
+            this.label3.Text = "Gemstone Cer.";
             // 
-            // ID
+            // label2
             // 
-            this.ID.DataPropertyName = "ID";
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            this.ID.Visible = false;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(8, 11);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(118, 21);
+            this.label2.TabIndex = 125;
+            this.label2.Text = "Diamond Cer.";
             // 
-            // Code1
+            // btnDel
             // 
-            this.Code1.DataPropertyName = "Code";
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.Code1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.Code1.HeaderText = "Code";
-            this.Code1.Name = "Code1";
-            this.Code1.Width = 125;
+            this.btnDel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDel.BackgroundImage")));
+            this.btnDel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnDel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDel.FlatAppearance.BorderSize = 0;
+            this.btnDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDel.Location = new System.Drawing.Point(1290, 71);
+            this.btnDel.Name = "btnDel";
+            this.btnDel.Size = new System.Drawing.Size(30, 30);
+            this.btnDel.TabIndex = 123;
+            this.btnDel.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnDel.UseVisualStyleBackColor = true;
+            this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
             // 
-            // ReportNumber
+            // btnAdd
             // 
-            this.ReportNumber.DataPropertyName = "ReportNumber";
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ReportNumber.DefaultCellStyle = dataGridViewCellStyle3;
-            this.ReportNumber.HeaderText = "Report Number";
-            this.ReportNumber.Name = "ReportNumber";
-            this.ReportNumber.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ReportNumber.Width = 180;
+            this.btnAdd.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAdd.BackgroundImage")));
+            this.btnAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAdd.FlatAppearance.BorderSize = 0;
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.Location = new System.Drawing.Point(1290, 35);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(30, 30);
+            this.btnAdd.TabIndex = 122;
+            this.btnAdd.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // Weight1
+            // btnAdd1
             // 
-            this.Weight1.DataPropertyName = "Weight";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.Weight1.DefaultCellStyle = dataGridViewCellStyle4;
-            this.Weight1.HeaderText = "Weight";
-            this.Weight1.Name = "Weight1";
-            this.Weight1.Width = 80;
+            this.btnAdd1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAdd1.BackgroundImage")));
+            this.btnAdd1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnAdd1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAdd1.FlatAppearance.BorderSize = 0;
+            this.btnAdd1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd1.Location = new System.Drawing.Point(1290, 273);
+            this.btnAdd1.Name = "btnAdd1";
+            this.btnAdd1.Size = new System.Drawing.Size(30, 30);
+            this.btnAdd1.TabIndex = 120;
+            this.btnAdd1.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnAdd1.UseVisualStyleBackColor = true;
+            this.btnAdd1.Click += new System.EventHandler(this.btnAdd1_Click);
             // 
-            // LabName
+            // txtSumCost
             // 
-            this.LabName.DataPropertyName = "LabName";
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.LabName.DefaultCellStyle = dataGridViewCellStyle5;
-            this.LabName.HeaderText = "Lab";
-            this.LabName.Name = "LabName";
-            this.LabName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.LabName.Width = 110;
+            this.txtSumCost.BackColor = System.Drawing.SystemColors.Window;
+            this.txtSumCost.Enabled = false;
+            this.txtSumCost.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSumCost.Location = new System.Drawing.Point(995, 227);
+            this.txtSumCost.Name = "txtSumCost";
+            this.txtSumCost.ReadOnly = true;
+            this.txtSumCost.Size = new System.Drawing.Size(133, 27);
+            this.txtSumCost.TabIndex = 114;
+            this.txtSumCost.Text = "0";
+            this.txtSumCost.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // ShapeName
+            // txtSumWeight
             // 
-            this.ShapeName.DataPropertyName = "ShapeName";
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ShapeName.DefaultCellStyle = dataGridViewCellStyle6;
-            this.ShapeName.HeaderText = "Shape";
-            this.ShapeName.Name = "ShapeName";
-            this.ShapeName.ReadOnly = true;
-            this.ShapeName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ShapeName.Width = 150;
+            this.txtSumWeight.BackColor = System.Drawing.SystemColors.Window;
+            this.txtSumWeight.Enabled = false;
+            this.txtSumWeight.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSumWeight.Location = new System.Drawing.Point(392, 227);
+            this.txtSumWeight.Name = "txtSumWeight";
+            this.txtSumWeight.ReadOnly = true;
+            this.txtSumWeight.Size = new System.Drawing.Size(79, 27);
+            this.txtSumWeight.TabIndex = 113;
+            this.txtSumWeight.Text = "0";
+            this.txtSumWeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // ColorName
+            // label14
             // 
-            this.ColorName.DataPropertyName = "ColorName";
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ColorName.DefaultCellStyle = dataGridViewCellStyle7;
-            this.ColorName.HeaderText = "Color";
-            this.ColorName.Name = "ColorName";
-            this.ColorName.ReadOnly = true;
-            this.ColorName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // ClearityName
-            // 
-            this.ClearityName.DataPropertyName = "ClearityName";
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ClearityName.DefaultCellStyle = dataGridViewCellStyle8;
-            this.ClearityName.HeaderText = "Clearity";
-            this.ClearityName.Name = "ClearityName";
-            this.ClearityName.ReadOnly = true;
-            this.ClearityName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ClearityName.Width = 150;
-            // 
-            // TotalBaht
-            // 
-            this.TotalBaht.DataPropertyName = "TotalBaht";
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle9.Format = "N0";
-            dataGridViewCellStyle9.NullValue = "0";
-            this.TotalBaht.DefaultCellStyle = dataGridViewCellStyle9;
-            this.TotalBaht.HeaderText = "Cost";
-            this.TotalBaht.Name = "TotalBaht";
-            this.TotalBaht.ReadOnly = true;
-            this.TotalBaht.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.TotalBaht.Width = 150;
-            // 
-            // ShopName
-            // 
-            this.ShopName.DataPropertyName = "ShopName";
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ShopName.DefaultCellStyle = dataGridViewCellStyle10;
-            this.ShopName.HeaderText = "Location";
-            this.ShopName.Name = "ShopName";
-            this.ShopName.ReadOnly = true;
-            this.ShopName.Width = 120;
-            // 
-            // RefID
-            // 
-            this.RefID.DataPropertyName = "RefID";
-            this.RefID.HeaderText = "RefID";
-            this.RefID.Name = "RefID";
-            this.RefID.Visible = false;
-            // 
-            // RefID1
-            // 
-            this.RefID1.DataPropertyName = "RefID1";
-            this.RefID1.HeaderText = "RefID1";
-            this.RefID1.Name = "RefID1";
-            this.RefID1.Visible = false;
+            this.label14.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
+            this.label14.Location = new System.Drawing.Point(327, 230);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(59, 24);
+            this.label14.TabIndex = 48;
+            this.label14.Text = "Total";
             // 
             // OrderDetail
             // 

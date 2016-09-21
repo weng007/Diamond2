@@ -11,6 +11,7 @@ namespace DiamondDAL.DAL
     {
         SQLHelper SQL = new SQLHelper();
         dsTransferDetail ds = new dsTransferDetail();
+        dsTransferInventory ds2 = new dsTransferInventory();
         int flag = 0;
         public dsTransferDetail DoSelectData(int id)
         {
@@ -26,6 +27,21 @@ namespace DiamondDAL.DAL
             }
 
             return ds;
+        }
+        public dsTransferInventory DoSelectData2(int id)
+        {
+            try
+            {
+                SQL.ClearParameter();
+                SQL.CreateParameter("ID", id);
+                SQL.FillDataSetBySP("SP_TransferInventoryDetail_Sel", ds2.TransferInventory);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return ds2;
         }
         public bool DoInsertData(dsTransferDetail tds)
         {

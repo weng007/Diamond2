@@ -13,11 +13,11 @@ namespace DiamondBiz.Biz
         dsWarning ds = new dsWarning();
         WarningDAL dal = new WarningDAL();
 
-        public dsWarning DoSearchData(int Sender, int Receiver, int MessageStatus, int FactoryStatus, int Shop, int loginID)
+        public dsWarning DoSearchData(string RefID, int StatusType, DateTime SDate, DateTime EDate, int LoginID, int IsInbox)
         {
             try
             {
-                return dal.DoSearchData(Sender, Receiver, MessageStatus, FactoryStatus, Shop, loginID);
+                return dal.DoSearchData(RefID, StatusType, SDate, EDate, LoginID, IsInbox);
             }
             catch (Exception ex)
             {
