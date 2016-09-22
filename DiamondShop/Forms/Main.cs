@@ -152,15 +152,10 @@ namespace DiamondShop
             TransferInventoryList frm = new TransferInventoryList();
             SetFormList(frm, 21, "TransferInventory");
         }
-        private void warningTransferToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            WarningTransferList frm = new WarningTransferList();
-            SetFormList(frm, 22, "WarningTransferList");
-        }
         private void productionLineToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ProductionLineList frm = new ProductionLineList();
-            SetFormList(frm, 23, "ProductionLine");
+            SetFormList(frm, 22, "ProductionLine");
         }
         private void btnReportBuying_Click(object sender, EventArgs e)
         {

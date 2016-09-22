@@ -52,7 +52,6 @@
             this.btnActivity = new System.Windows.Forms.ToolStripMenuItem();
             this.warningToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.calendarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.warningTransferToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnMaster = new System.Windows.Forms.ToolStripMenuItem();
             this.menuUser = new System.Windows.Forms.ToolStripMenuItem();
             this.menuExchangeRate = new System.Windows.Forms.ToolStripMenuItem();
@@ -378,8 +377,7 @@
             // 
             this.btnActivity.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.warningToolStripMenuItem,
-            this.calendarToolStripMenuItem,
-            this.warningTransferToolStripMenuItem});
+            this.calendarToolStripMenuItem});
             this.btnActivity.Image = ((System.Drawing.Image)(resources.GetObject("btnActivity.Image")));
             this.btnActivity.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnActivity.Name = "btnActivity";
@@ -392,7 +390,7 @@
             this.warningToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("warningToolStripMenuItem.Image")));
             this.warningToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.warningToolStripMenuItem.Name = "warningToolStripMenuItem";
-            this.warningToolStripMenuItem.Size = new System.Drawing.Size(208, 38);
+            this.warningToolStripMenuItem.Size = new System.Drawing.Size(168, 38);
             this.warningToolStripMenuItem.Text = "Warning";
             this.warningToolStripMenuItem.Click += new System.EventHandler(this.warningToolStripMenuItem_Click);
             // 
@@ -402,17 +400,9 @@
             this.calendarToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("calendarToolStripMenuItem.Image")));
             this.calendarToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.calendarToolStripMenuItem.Name = "calendarToolStripMenuItem";
-            this.calendarToolStripMenuItem.Size = new System.Drawing.Size(208, 38);
+            this.calendarToolStripMenuItem.Size = new System.Drawing.Size(168, 38);
             this.calendarToolStripMenuItem.Text = "Calendar";
             this.calendarToolStripMenuItem.Click += new System.EventHandler(this.calendarToolStripMenuItem_Click);
-            // 
-            // warningTransferToolStripMenuItem
-            // 
-            this.warningTransferToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 11.25F);
-            this.warningTransferToolStripMenuItem.Name = "warningTransferToolStripMenuItem";
-            this.warningTransferToolStripMenuItem.Size = new System.Drawing.Size(208, 38);
-            this.warningTransferToolStripMenuItem.Text = "WarningTransfer";
-            this.warningTransferToolStripMenuItem.Click += new System.EventHandler(this.warningTransferToolStripMenuItem_Click);
             // 
             // btnMaster
             // 
@@ -1147,7 +1137,6 @@
         private System.Windows.Forms.ToolStripMenuItem calendarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem buyBookToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem inventoryToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem warningTransferToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem orderJewelryToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem productionLineToolStripMenuItem;
     }
