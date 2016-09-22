@@ -178,6 +178,8 @@ namespace DiamondShop
             cmbLab.DisplayMember = "Detail";
             cmbLab.Refresh();
 
+            cmbShop.SelectedValue = ApplicationInfo.Shop;
+
             dtBuyDate.Select();
 
             SetFieldService.SetRequireField(txtWeight, txtPrice, txtRap, txtUSDRate);
@@ -462,8 +464,8 @@ namespace DiamondShop
 
         private void txtUSDRate_Leave(object sender, EventArgs e)
         {
-                txtTotalBaht.Text = (GM.ConvertStringToDouble(txtTotal) * GM.ConvertStringToDouble(txtUSDRate)).ToString();
-                txtTotalBaht.Text = GM.ConvertDoubleToString(txtTotalBaht, 0);
+            txtTotalBaht.Text = (GM.ConvertStringToDouble(txtTotal) * GM.ConvertStringToDouble(txtUSDRate)).ToString();
+            txtTotalBaht.Text = GM.ConvertDoubleToString(txtTotalBaht, 0);
         }
 
         private void txtTotal_TextChanged(object sender, EventArgs e)
@@ -519,7 +521,6 @@ namespace DiamondShop
             cmbShape.Enabled = status;
             cmbColor.Enabled = status;
             cmbClearity.Enabled = status;
-            cmbShop.Enabled = status;
             txtPrice.Enabled = status;
             txtRap.Enabled = status;
             rdoIns1.Enabled = status;

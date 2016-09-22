@@ -123,5 +123,13 @@ namespace DiamondShop
         {
             this.Close();
         }
+
+        private void btnShop1_Click(object sender, EventArgs e)
+        {
+            Main frm = new Main();
+            frm.ShowDialog();
+
+            this.Close();
+        }
     }
 }
