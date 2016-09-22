@@ -555,7 +555,6 @@
             this.txtCode.ReadOnly = true;
             this.txtCode.Size = new System.Drawing.Size(167, 26);
             this.txtCode.TabIndex = 0;
-            this.txtCode.TextAlignChanged += new System.EventHandler(this.txtCode_TextAlignChanged);
             this.txtCode.TextChanged += new System.EventHandler(this.txtCode_TextChanged);
             // 
             // label14

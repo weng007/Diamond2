@@ -31,17 +31,13 @@ namespace DiamondBiz.Biz
 
             try
             {
-                if(status =="Shop")
+                if(status == "Available")
                 {
-                    tmp = 71;
-                }
-                else if(status == "Pending")
-                {
-                    tmp = 72;
+                    tmp = 73;
                 }
                 else if(status == "Sold")
                 {
-                    tmp = 73;
+                    tmp = 72;
                 }
 
                 return dal.UpdateJewelryStatus(id, tmp);

@@ -406,7 +406,20 @@ namespace Diamond
                 throw ex;
             }
         }
-        
+        [WebMethod]
+        public DataSet DoSearchWarningTransfer(int Sender, int Receiver, int MessageStatus, int FactoryStatus, int Shop, int loginID)
+        {
+            WarningTransferBiz biz = new WarningTransferBiz();
+
+            try
+            {
+                return biz.DoSearchData(Sender, Receiver, MessageStatus, FactoryStatus, Shop, loginID);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
         [WebMethod]
         public DataSet DoSearchProductionLine(string OrderNo, int JewelryType, int SShop, int FactoryStatus, DateTime SOrderDate, DateTime EOrderDate)
         {

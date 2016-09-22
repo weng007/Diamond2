@@ -123,7 +123,6 @@ namespace DiamondShop
             base.LoadData();
 
             cmbSeller.SelectedValueChanged += cmbSeller_SelectedValueChanged;
-
         }
 
         protected override bool SaveData()
@@ -191,7 +190,6 @@ namespace DiamondShop
 
         protected override bool ValidateData()
         {
-
             message = "";
 
             if (txtCode.Text == "")
@@ -357,11 +355,6 @@ namespace DiamondShop
         {
             Report.ReportViewer report = new Report.ReportViewer(id);
             report.ShowDialog();
-        }
-
-        private void txtCode_TextAlignChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void txtCode_TextChanged(object sender, EventArgs e)
