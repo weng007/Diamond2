@@ -45,47 +45,68 @@ namespace DiamondShop
                         btnShop1.Visible = true;
                         Shop1.Visible = true;
                         Shop1.Text = ds.Tables[0].Rows[0][1].ToString();
+
+                        btnShop1.Enabled = CheckShopAuthorized(Shop1.Text);
                     }
                     if(i == 1)
                     {
                         btnShop2.Visible = true;
                         Shop2.Visible = true;
                         Shop2.Text = ds.Tables[0].Rows[1][1].ToString();
+
+                        btnShop2.Enabled = CheckShopAuthorized(Shop2.Text);
                     }
                     if (i == 2)
                     {
                         btnShop3.Visible = true;
                         Shop3.Visible = true;
                         Shop3.Text = ds.Tables[0].Rows[2][1].ToString();
+
+                        btnShop3.Enabled = CheckShopAuthorized(Shop3.Text);
                     }
                     if (i == 3)
                     {
                         btnShop4.Visible = true;
                         Shop4.Visible = true;
                         Shop4.Text = ds.Tables[0].Rows[3][1].ToString();
+
+                        btnShop4.Enabled = CheckShopAuthorized(Shop4.Text);
                     }
                     if (i == 4)
                     {
                         btnShop5.Visible = true;
                         Shop5.Visible = true;
                         Shop5.Text = ds.Tables[0].Rows[4][1].ToString();
+
+                        btnShop5.Enabled = CheckShopAuthorized(Shop5.Text);
                     }
                     if (i == 5)
                     {
                         btnShop6.Visible = true;
                         Shop6.Visible = true;
                         Shop6.Text = ds.Tables[0].Rows[5][1].ToString();
+
+                        btnShop6.Enabled = CheckShopAuthorized(Shop6.Text);
+                    }
+                    if (i == 6)
+                    {
+                        btnShop7.Visible = true;
+                        Shop7.Visible = true;
+                        Shop7.Text = ds.Tables[0].Rows[6][1].ToString();
+
+                        btnShop7.Enabled = CheckShopAuthorized(Shop7.Text);
                     }
                 }
             }
         }
 
-        private void btnShopAll_Click(object sender, EventArgs e)
+        private bool CheckShopAuthorized(string shopName)
         {
-            Main frm = new Main();
-            frm.ShowDialog();
-
-            this.Close();
+            if (shopName == ApplicationInfo.ShopName)
+            {
+                return true;
+            }
+            else { return false; }
         }
 
         private void btnMinimize_Click(object sender, EventArgs e)

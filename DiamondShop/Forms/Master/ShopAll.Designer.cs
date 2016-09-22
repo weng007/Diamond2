@@ -41,12 +41,13 @@
             this.btnShop2 = new System.Windows.Forms.Button();
             this.btnShop3 = new System.Windows.Forms.Button();
             this.btnShop1 = new System.Windows.Forms.Button();
-            this.btnShopAll = new System.Windows.Forms.Button();
             this.panel13 = new System.Windows.Forms.Panel();
             this.label16 = new System.Windows.Forms.Label();
             this.btnRestore = new System.Windows.Forms.Button();
             this.btnMinimize = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
+            this.Shop7 = new System.Windows.Forms.Label();
+            this.btnShop7 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel13.SuspendLayout();
             this.SuspendLayout();
@@ -58,10 +59,10 @@
             this.Shop6.BackColor = System.Drawing.Color.Transparent;
             this.Shop6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Shop6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Shop6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Shop6.Location = new System.Drawing.Point(602, 429);
+            this.Shop6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Shop6.Location = new System.Drawing.Point(296, 409);
             this.Shop6.Name = "Shop6";
-            this.Shop6.Size = new System.Drawing.Size(58, 21);
+            this.Shop6.Size = new System.Drawing.Size(56, 20);
             this.Shop6.TabIndex = 18;
             this.Shop6.Text = "Shop6";
             this.Shop6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -73,10 +74,10 @@
             this.Shop4.BackColor = System.Drawing.Color.Transparent;
             this.Shop4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Shop4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Shop4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Shop4.Location = new System.Drawing.Point(602, 254);
+            this.Shop4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Shop4.Location = new System.Drawing.Point(296, 234);
             this.Shop4.Name = "Shop4";
-            this.Shop4.Size = new System.Drawing.Size(58, 21);
+            this.Shop4.Size = new System.Drawing.Size(56, 20);
             this.Shop4.TabIndex = 17;
             this.Shop4.Text = "Shop4";
             this.Shop4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -88,10 +89,10 @@
             this.Shop5.BackColor = System.Drawing.Color.Transparent;
             this.Shop5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Shop5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Shop5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Shop5.Location = new System.Drawing.Point(345, 429);
+            this.Shop5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Shop5.Location = new System.Drawing.Point(39, 409);
             this.Shop5.Name = "Shop5";
-            this.Shop5.Size = new System.Drawing.Size(58, 21);
+            this.Shop5.Size = new System.Drawing.Size(56, 20);
             this.Shop5.TabIndex = 16;
             this.Shop5.Text = "Shop5";
             this.Shop5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -103,10 +104,10 @@
             this.Shop3.BackColor = System.Drawing.Color.Transparent;
             this.Shop3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Shop3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Shop3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Shop3.Location = new System.Drawing.Point(345, 254);
+            this.Shop3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Shop3.Location = new System.Drawing.Point(39, 234);
             this.Shop3.Name = "Shop3";
-            this.Shop3.Size = new System.Drawing.Size(58, 21);
+            this.Shop3.Size = new System.Drawing.Size(56, 20);
             this.Shop3.TabIndex = 15;
             this.Shop3.Text = "Shop3";
             this.Shop3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -118,10 +119,10 @@
             this.Shop2.BackColor = System.Drawing.Color.Transparent;
             this.Shop2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Shop2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Shop2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Shop2.Location = new System.Drawing.Point(602, 84);
+            this.Shop2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Shop2.Location = new System.Drawing.Point(296, 64);
             this.Shop2.Name = "Shop2";
-            this.Shop2.Size = new System.Drawing.Size(58, 21);
+            this.Shop2.Size = new System.Drawing.Size(56, 20);
             this.Shop2.TabIndex = 14;
             this.Shop2.Text = "Shop2";
             this.Shop2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -133,10 +134,10 @@
             this.Shop1.BackColor = System.Drawing.Color.Transparent;
             this.Shop1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Shop1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Shop1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Shop1.Location = new System.Drawing.Point(345, 84);
+            this.Shop1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Shop1.Location = new System.Drawing.Point(39, 64);
             this.Shop1.Name = "Shop1";
-            this.Shop1.Size = new System.Drawing.Size(58, 21);
+            this.Shop1.Size = new System.Drawing.Size(56, 20);
             this.Shop1.TabIndex = 13;
             this.Shop1.Text = "Shop1";
             this.Shop1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -149,7 +150,7 @@
             this.btnShop6.FlatAppearance.BorderSize = 0;
             this.btnShop6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnShop6.Image = ((System.Drawing.Image)(resources.GetObject("btnShop6.Image")));
-            this.btnShop6.Location = new System.Drawing.Point(588, 419);
+            this.btnShop6.Location = new System.Drawing.Point(282, 399);
             this.btnShop6.Name = "btnShop6";
             this.btnShop6.Size = new System.Drawing.Size(172, 145);
             this.btnShop6.TabIndex = 12;
@@ -163,7 +164,7 @@
             this.btnShop5.FlatAppearance.BorderSize = 0;
             this.btnShop5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnShop5.Image = ((System.Drawing.Image)(resources.GetObject("btnShop5.Image")));
-            this.btnShop5.Location = new System.Drawing.Point(331, 419);
+            this.btnShop5.Location = new System.Drawing.Point(25, 399);
             this.btnShop5.Name = "btnShop5";
             this.btnShop5.Size = new System.Drawing.Size(172, 145);
             this.btnShop5.TabIndex = 11;
@@ -177,7 +178,7 @@
             this.btnShop4.FlatAppearance.BorderSize = 0;
             this.btnShop4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnShop4.Image = ((System.Drawing.Image)(resources.GetObject("btnShop4.Image")));
-            this.btnShop4.Location = new System.Drawing.Point(588, 245);
+            this.btnShop4.Location = new System.Drawing.Point(282, 225);
             this.btnShop4.Name = "btnShop4";
             this.btnShop4.Size = new System.Drawing.Size(172, 145);
             this.btnShop4.TabIndex = 10;
@@ -191,7 +192,7 @@
             this.btnShop2.FlatAppearance.BorderSize = 0;
             this.btnShop2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnShop2.Image = ((System.Drawing.Image)(resources.GetObject("btnShop2.Image")));
-            this.btnShop2.Location = new System.Drawing.Point(588, 75);
+            this.btnShop2.Location = new System.Drawing.Point(282, 55);
             this.btnShop2.Name = "btnShop2";
             this.btnShop2.Size = new System.Drawing.Size(172, 145);
             this.btnShop2.TabIndex = 9;
@@ -205,7 +206,7 @@
             this.btnShop3.FlatAppearance.BorderSize = 0;
             this.btnShop3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnShop3.Image = ((System.Drawing.Image)(resources.GetObject("btnShop3.Image")));
-            this.btnShop3.Location = new System.Drawing.Point(331, 245);
+            this.btnShop3.Location = new System.Drawing.Point(25, 225);
             this.btnShop3.Name = "btnShop3";
             this.btnShop3.Size = new System.Drawing.Size(172, 145);
             this.btnShop3.TabIndex = 8;
@@ -219,26 +220,12 @@
             this.btnShop1.FlatAppearance.BorderSize = 0;
             this.btnShop1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnShop1.Image = ((System.Drawing.Image)(resources.GetObject("btnShop1.Image")));
-            this.btnShop1.Location = new System.Drawing.Point(331, 75);
+            this.btnShop1.Location = new System.Drawing.Point(25, 55);
             this.btnShop1.Name = "btnShop1";
             this.btnShop1.Size = new System.Drawing.Size(172, 145);
             this.btnShop1.TabIndex = 7;
             this.btnShop1.UseVisualStyleBackColor = false;
             this.btnShop1.Visible = false;
-            // 
-            // btnShopAll
-            // 
-            this.btnShopAll.BackColor = System.Drawing.Color.Transparent;
-            this.btnShopAll.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnShopAll.FlatAppearance.BorderSize = 0;
-            this.btnShopAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnShopAll.Image = ((System.Drawing.Image)(resources.GetObject("btnShopAll.Image")));
-            this.btnShopAll.Location = new System.Drawing.Point(33, 55);
-            this.btnShopAll.Name = "btnShopAll";
-            this.btnShopAll.Size = new System.Drawing.Size(232, 190);
-            this.btnShopAll.TabIndex = 6;
-            this.btnShopAll.UseVisualStyleBackColor = false;
-            this.btnShopAll.Click += new System.EventHandler(this.btnShopAll_Click);
             // 
             // panel13
             // 
@@ -251,7 +238,7 @@
             this.panel13.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel13.Location = new System.Drawing.Point(0, 0);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(816, 32);
+            this.panel13.Size = new System.Drawing.Size(789, 32);
             this.panel13.TabIndex = 5;
             // 
             // label16
@@ -259,7 +246,7 @@
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Angsana New", 24F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(364, -8);
+            this.label16.Location = new System.Drawing.Point(297, -8);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(145, 43);
             this.label16.TabIndex = 9;
@@ -274,7 +261,7 @@
             this.btnRestore.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRestore.FlatAppearance.BorderSize = 0;
             this.btnRestore.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRestore.Location = new System.Drawing.Point(744, 0);
+            this.btnRestore.Location = new System.Drawing.Point(717, 0);
             this.btnRestore.Margin = new System.Windows.Forms.Padding(0);
             this.btnRestore.Name = "btnRestore";
             this.btnRestore.Size = new System.Drawing.Size(38, 32);
@@ -291,7 +278,7 @@
             this.btnMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMinimize.FlatAppearance.BorderSize = 0;
             this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinimize.Location = new System.Drawing.Point(705, 0);
+            this.btnMinimize.Location = new System.Drawing.Point(678, 0);
             this.btnMinimize.Margin = new System.Windows.Forms.Padding(0);
             this.btnMinimize.Name = "btnMinimize";
             this.btnMinimize.Size = new System.Drawing.Size(38, 32);
@@ -308,7 +295,7 @@
             this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Location = new System.Drawing.Point(780, 0);
+            this.btnClose.Location = new System.Drawing.Point(753, 0);
             this.btnClose.Margin = new System.Windows.Forms.Padding(0);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(38, 32);
@@ -316,11 +303,43 @@
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // Shop7
+            // 
+            this.Shop7.AccessibleName = "Shop6";
+            this.Shop7.AutoSize = true;
+            this.Shop7.BackColor = System.Drawing.Color.Transparent;
+            this.Shop7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Shop7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Shop7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Shop7.Location = new System.Drawing.Point(558, 65);
+            this.Shop7.Name = "Shop7";
+            this.Shop7.Size = new System.Drawing.Size(56, 20);
+            this.Shop7.TabIndex = 20;
+            this.Shop7.Text = "Shop7";
+            this.Shop7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Shop7.Visible = false;
+            // 
+            // btnShop7
+            // 
+            this.btnShop7.BackColor = System.Drawing.Color.Transparent;
+            this.btnShop7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnShop7.FlatAppearance.BorderSize = 0;
+            this.btnShop7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnShop7.Image = ((System.Drawing.Image)(resources.GetObject("btnShop7.Image")));
+            this.btnShop7.Location = new System.Drawing.Point(544, 55);
+            this.btnShop7.Name = "btnShop7";
+            this.btnShop7.Size = new System.Drawing.Size(172, 145);
+            this.btnShop7.TabIndex = 19;
+            this.btnShop7.UseVisualStyleBackColor = false;
+            this.btnShop7.Visible = false;
+            // 
             // ShopAll
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(218)))), ((int)(((byte)(204)))));
-            this.ClientSize = new System.Drawing.Size(816, 607);
+            this.ClientSize = new System.Drawing.Size(789, 580);
+            this.Controls.Add(this.Shop7);
+            this.Controls.Add(this.btnShop7);
             this.Controls.Add(this.Shop6);
             this.Controls.Add(this.Shop4);
             this.Controls.Add(this.Shop5);
@@ -333,7 +352,6 @@
             this.Controls.Add(this.btnShop2);
             this.Controls.Add(this.btnShop3);
             this.Controls.Add(this.btnShop1);
-            this.Controls.Add(this.btnShopAll);
             this.Controls.Add(this.panel13);
             this.Name = "ShopAll";
             ((System.ComponentModel.ISupportInitialize)(this.ds)).EndInit();
@@ -383,7 +401,6 @@
         private System.Windows.Forms.Button btnRestore;
         private System.Windows.Forms.Button btnMinimize;
         private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.Button btnShopAll;
         private System.Windows.Forms.Button btnShop1;
         private System.Windows.Forms.Button btnShop3;
         private System.Windows.Forms.Label label16;
@@ -397,5 +414,7 @@
         private System.Windows.Forms.Label Shop5;
         private System.Windows.Forms.Label Shop4;
         private System.Windows.Forms.Label Shop6;
+        private System.Windows.Forms.Label Shop7;
+        private System.Windows.Forms.Button btnShop7;
     }
 }
