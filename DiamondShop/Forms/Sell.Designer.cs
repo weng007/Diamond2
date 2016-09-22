@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Sell));
             this.btnImage1 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtStatus = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.txtCertified = new System.Windows.Forms.TextBox();
             this.chkIsPrintPrice = new System.Windows.Forms.CheckBox();
@@ -72,8 +74,6 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.txtStatus = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -143,6 +143,24 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(943, 651);
             this.panel3.TabIndex = 1;
+            // 
+            // label12
+            // 
+            this.label12.Location = new System.Drawing.Point(26, 243);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(109, 28);
+            this.label12.TabIndex = 197;
+            this.label12.Text = "Status";
+            // 
+            // txtStatus
+            // 
+            this.txtStatus.BackColor = System.Drawing.SystemColors.Control;
+            this.txtStatus.Enabled = false;
+            this.txtStatus.Location = new System.Drawing.Point(145, 240);
+            this.txtStatus.Name = "txtStatus";
+            this.txtStatus.ReadOnly = true;
+            this.txtStatus.Size = new System.Drawing.Size(166, 26);
+            this.txtStatus.TabIndex = 196;
             // 
             // label11
             // 
@@ -559,24 +577,6 @@
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // txtStatus
-            // 
-            this.txtStatus.BackColor = System.Drawing.Color.White;
-            this.txtStatus.Enabled = false;
-            this.txtStatus.Location = new System.Drawing.Point(145, 240);
-            this.txtStatus.Name = "txtStatus";
-            this.txtStatus.ReadOnly = true;
-            this.txtStatus.Size = new System.Drawing.Size(166, 26);
-            this.txtStatus.TabIndex = 196;
-            // 
-            // label12
-            // 
-            this.label12.Location = new System.Drawing.Point(26, 240);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(109, 28);
-            this.label12.TabIndex = 197;
-            this.label12.Text = "Status";
             // 
             // Sell
             // 
