@@ -31,9 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Sell));
             this.btnImage1 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.btnCancel = new System.Windows.Forms.Button();
-            this.label12 = new System.Windows.Forms.Label();
-            this.txtStatus = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.txtCertified = new System.Windows.Forms.TextBox();
             this.chkIsPrintPrice = new System.Windows.Forms.CheckBox();
@@ -95,9 +92,6 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Controls.Add(this.btnCancel);
-            this.panel3.Controls.Add(this.label12);
-            this.panel3.Controls.Add(this.txtStatus);
             this.panel3.Controls.Add(this.label11);
             this.panel3.Controls.Add(this.txtCertified);
             this.panel3.Controls.Add(this.chkIsPrintPrice);
@@ -625,8 +619,5 @@
         private System.Windows.Forms.CheckBox chkIsPrintPrice;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtCertified;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox txtStatus;
-        private System.Windows.Forms.Button btnCancel;
     }
 }
