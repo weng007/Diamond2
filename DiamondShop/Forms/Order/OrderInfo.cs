@@ -55,31 +55,19 @@ namespace DiamondShop
             tds.Merge(ds);
             if (tds.Order[0].FactoryStatus == 256)
             {
-                btnNotYet.Enabled = true;
-                btnProcessing.Enabled = false;
-                btnMounting.Enabled = false;
-                btnJobDone.Enabled = false;
+                btnNotYet.Image = imageList1.Images[0];
             }
             if (tds.Order[0].FactoryStatus == 257)
             {
-                btnNotYet.Enabled = false;
-                btnProcessing.Enabled = true;
-                btnMounting.Enabled = false;
-                btnJobDone.Enabled = false;
+                btnProcessing.Image = imageList1.Images[1];
             }
             if (tds.Order[0].FactoryStatus == 258)
             {
-                btnNotYet.Enabled = false;
-                btnProcessing.Enabled = false;
-                btnMounting.Enabled = true;
-                btnJobDone.Enabled = false;
+                btnMounting.Image = imageList1.Images[2];
             }
             if (tds.Order[0].FactoryStatus == 259)
             {
-                btnNotYet.Enabled = false;
-                btnProcessing.Enabled = false;
-                btnMounting.Enabled = false;
-                btnJobDone.Enabled = true;
+                btnJobDone.Image = imageList1.Images[3];
             }
 
             BinderControl();
