@@ -93,5 +93,20 @@ namespace DiamondDAL.DAL
 
             return Convert.ToBoolean(flag);
         }
+        public dsOrder GetFactoryStatus(int id)
+        {
+            try
+            {
+                SQL.ClearParameter();
+                SQL.CreateParameter("@ID", id);
+                SQL.FillDataSetBySP("SP_FactoryStatus_Sel", ds.Order);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return ds;
+        }
     }
 }

@@ -51,6 +51,7 @@ namespace DiamondShop
                     ApplicationInfo.UserID = row.ID;
                     ApplicationInfo.UserName = row.UserName;
                     ApplicationInfo.Shop = row.Shop;
+                    ApplicationInfo.ShopName = row.ShopName;
                     ApplicationInfo.DisplayName = row.DisplayName;
 
                     if(row.Role == 65) { ApplicationInfo.Authorized = "Staff"; }

@@ -40,24 +40,25 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtCode = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.btnSearch = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.gridTransferInventory = new System.Windows.Forms.DataGridView();
             this.btnClose = new System.Windows.Forms.Button();
-            this.btnSearch = new System.Windows.Forms.Button();
             this.RowNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Amount1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Weight1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Amount3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Weight3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TotalBaht = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Code2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Weight = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.JewelryTypeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ShapeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColorTypeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColorName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EShop = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Flag = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel4.SuspendLayout();
@@ -135,6 +136,21 @@
             this.label5.TabIndex = 75;
             this.label5.Text = "Code";
             // 
+            // btnSearch
+            // 
+            this.btnSearch.BackColor = System.Drawing.Color.Gainsboro;
+            this.btnSearch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSearch.BackgroundImage")));
+            this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSearch.FlatAppearance.BorderColor = System.Drawing.Color.Linen;
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearch.Location = new System.Drawing.Point(585, 18);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(105, 32);
+            this.btnSearch.TabIndex = 12;
+            this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
@@ -154,19 +170,20 @@
             this.gridTransferInventory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridTransferInventory.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.RowNum,
+            this.ID,
+            this.Code,
             this.Amount1,
             this.Weight1,
             this.Amount3,
             this.Weight3,
             this.TotalBaht,
-            this.ID,
-            this.Code,
             this.Code2,
             this.Weight,
             this.JewelryTypeName,
             this.ShapeName,
             this.ColorTypeName,
             this.ColorName,
+            this.EShop,
             this.Flag});
             this.gridTransferInventory.Location = new System.Drawing.Point(9, 3);
             this.gridTransferInventory.Name = "gridTransferInventory";
@@ -195,21 +212,6 @@
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Visible = false;
             // 
-            // btnSearch
-            // 
-            this.btnSearch.BackColor = System.Drawing.Color.Gainsboro;
-            this.btnSearch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSearch.BackgroundImage")));
-            this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSearch.FlatAppearance.BorderColor = System.Drawing.Color.Linen;
-            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.Location = new System.Drawing.Point(585, 18);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(105, 32);
-            this.btnSearch.TabIndex = 12;
-            this.btnSearch.UseVisualStyleBackColor = false;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
-            // 
             // RowNum
             // 
             this.RowNum.DataPropertyName = "RowNum";
@@ -219,37 +221,6 @@
             this.RowNum.Name = "RowNum";
             this.RowNum.ReadOnly = true;
             this.RowNum.Width = 50;
-            // 
-            // Amount1
-            // 
-            this.Amount1.HeaderText = "DiamondCerAmount";
-            this.Amount1.Name = "Amount1";
-            this.Amount1.ReadOnly = true;
-            // 
-            // Weight1
-            // 
-            this.Weight1.HeaderText = "DiamondCerWeight";
-            this.Weight1.Name = "Weight1";
-            this.Weight1.ReadOnly = true;
-            // 
-            // Amount3
-            // 
-            this.Amount3.HeaderText = "GemstoneCerAmount";
-            this.Amount3.Name = "Amount3";
-            this.Amount3.ReadOnly = true;
-            // 
-            // Weight3
-            // 
-            this.Weight3.DataPropertyName = "Weight3";
-            this.Weight3.HeaderText = "GemstoneCerWeight";
-            this.Weight3.Name = "Weight3";
-            this.Weight3.ReadOnly = true;
-            // 
-            // TotalBaht
-            // 
-            this.TotalBaht.HeaderText = "TotalBaht";
-            this.TotalBaht.Name = "TotalBaht";
-            this.TotalBaht.ReadOnly = true;
             // 
             // ID
             // 
@@ -266,6 +237,44 @@
             this.Code.Name = "Code";
             this.Code.ReadOnly = true;
             this.Code.Width = 170;
+            // 
+            // Amount1
+            // 
+            this.Amount1.DataPropertyName = "Amount1";
+            this.Amount1.HeaderText = "DC Amount";
+            this.Amount1.Name = "Amount1";
+            this.Amount1.ReadOnly = true;
+            this.Amount1.Width = 130;
+            // 
+            // Weight1
+            // 
+            this.Weight1.DataPropertyName = "Weight1";
+            this.Weight1.HeaderText = "DC Weight";
+            this.Weight1.Name = "Weight1";
+            this.Weight1.ReadOnly = true;
+            this.Weight1.Width = 120;
+            // 
+            // Amount3
+            // 
+            this.Amount3.DataPropertyName = "Amount3";
+            this.Amount3.HeaderText = "GC Amount";
+            this.Amount3.Name = "Amount3";
+            this.Amount3.ReadOnly = true;
+            this.Amount3.Width = 130;
+            // 
+            // Weight3
+            // 
+            this.Weight3.DataPropertyName = "Weight3";
+            this.Weight3.HeaderText = "GC Weight";
+            this.Weight3.Name = "Weight3";
+            this.Weight3.ReadOnly = true;
+            this.Weight3.Width = 130;
+            // 
+            // TotalBaht
+            // 
+            this.TotalBaht.HeaderText = "TotalBaht";
+            this.TotalBaht.Name = "TotalBaht";
+            this.TotalBaht.ReadOnly = true;
             // 
             // Code2
             // 
@@ -322,6 +331,14 @@
             this.ColorName.Name = "ColorName";
             this.ColorName.ReadOnly = true;
             // 
+            // EShop
+            // 
+            this.EShop.DataPropertyName = "Shop";
+            this.EShop.HeaderText = "EShop";
+            this.EShop.Name = "EShop";
+            this.EShop.ReadOnly = true;
+            this.EShop.Visible = false;
+            // 
             // Flag
             // 
             this.Flag.DataPropertyName = "Flag";
@@ -363,19 +380,20 @@
         private System.Windows.Forms.ComboBox cmbBuybookType;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.DataGridViewTextBoxColumn RowNum;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Code;
         private System.Windows.Forms.DataGridViewTextBoxColumn Amount1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Weight1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Amount3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Weight3;
         private System.Windows.Forms.DataGridViewTextBoxColumn TotalBaht;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Code;
         private System.Windows.Forms.DataGridViewTextBoxColumn Code2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Weight;
         private System.Windows.Forms.DataGridViewTextBoxColumn JewelryTypeName;
         private System.Windows.Forms.DataGridViewTextBoxColumn ShapeName;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColorTypeName;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColorName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EShop;
         private System.Windows.Forms.DataGridViewTextBoxColumn Flag;
     }
 }

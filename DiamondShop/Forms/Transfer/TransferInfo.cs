@@ -18,7 +18,7 @@ namespace DiamondShop
     {
         dsTransfer tds = new dsTransfer();
         dsTransferDetail tds2 = new dsTransferDetail();
-        dsWarningTransfer tds3 = new dsWarningTransfer();
+        //dsWarningTransfer tds3 = new dsWarningTransfer();
         DataSet tmp = new DataSet();
         bool isAuthorize = false;
         DataSet ds2 = new DataSet();
@@ -37,6 +37,7 @@ namespace DiamondShop
             BinderData();
             txtTransferStatus.Text = "Send";
             txtSender.Text = ApplicationInfo.DisplayName;
+            txtSShop.Text = ApplicationInfo.ShopName;
         }
         public TransferInfo(int id)
         {
@@ -79,7 +80,7 @@ namespace DiamondShop
             binder.BindControl(txtSender, "SenderName");
             binder.BindControl(txtTransferNo, "TransferNo");
             binder.BindControl(txtTransferStatus, "TransferStatusName");
-            binder.BindControl(cmbReceiver, "ReceiverName");
+            binder.BindControl(cmbReceiver, "Receiver");
             binder.BindControl(txtSShop, "SShopName");
             binder.BindControl(cmbEShop, "EShop");
             binder.BindControl(txtNote, "Note");
@@ -119,7 +120,7 @@ namespace DiamondShop
         protected override bool SaveData()
         {
             dsTransfer.TransferRow row = null;
-            dsWarningTransfer.WarningTransferRow row2 = null;
+            //dsWarningTransfer.WarningTransferRow row2 = null;
 
             if (tds.Transfer.Rows.Count > 0)
             {
@@ -131,50 +132,20 @@ namespace DiamondShop
                 tds.Transfer.Rows.Add(row);
             }
 
-            if (tds3.WarningTransfer.Rows.Count > 0)
-            {
-                row2 = tds3.WarningTransfer[0];
-            }
-            else
-            {
-                row2 = tds3.WarningTransfer.NewWarningTransferRow();
-                tds3.WarningTransfer.Rows.Add(row2);
-            }
-
             binder.BindValueToDataRow(row);
-            row.TransferStatus = 256;
+            row.TransferStatus = 253;
             row.Sender = Convert.ToInt32(ApplicationInfo.UserID.ToString());
             row.ReceiveDate = DateTime.MinValue.AddYears(1900);
             row.IsBuyBook = "1";
-
-            if (flag ==1)//กดปุ่ม Receive
-            {
-                row2.ConfirmDate = Convert.ToDateTime(DateTime.Now.ToString()); //confirm date = วันที่ปัจจุบัน
-                row2.MessageStatus = 246; // Confirm
-                row2.TransferStatus = 254; //Received
-                row2.Shop = shop; //shop ปลายทาง
-            }
-            else //แจ้งเตือนครั้งแรก
-            {
-                row2.Sender = ApplicationInfo.UserID;
-                row2.Receiver = Convert.ToInt16(cmbReceiver.SelectedValue.ToString());
-                row2.MessageStatus = 244;//UnRead
-                row2.TransferStatus = 253; //Send
-                row2.Shop = Convert.ToInt16(cmbReceiver.SelectedValue.ToString()); //shop ที่เลือก
-            }
+            row.SShop = ApplicationInfo.Shop;
 
             try
             {
                 if (id == 0)
                 {
                     SetCreateBy(row);
-                    
+                    row.TransferNo = GM.GetRunningNumber("TRF");
                     chkFlag = ser.DoInsertData("Transfer", tds, 0);
-
-                    if (tds3.WarningTransfer.Rows.Count > 0)
-                    {
-                        chkFlag = ser.DoInsertData("WarningTransfer", tds3, 0);
-                    }
 
                 }
                 else
@@ -182,21 +153,19 @@ namespace DiamondShop
                     //Receiver 
                     if (Convert.ToInt16(cmbReceiver.SelectedValue.ToString()) == ApplicationInfo.UserID)
                     {
-                        row.TransferStatus = 257; //สถานะ received
+                        row.TransferStatus = 254; //สถานะ received
                         row.ReceiveDate = Convert.ToDateTime(DateTime.Now.ToString());
                     }
                     SetEditBy(row);
-                    chkFlag = ser.DoUpdateData("Transfer", tds);
-
+                    
                     BindingDSOrderDetail();
                     if (tds2.TransferDetail.Rows.Count > 0)
                     {
                         chkFlag = ser.DoInsertData("TransferDetail", tds2, 0);
                     }
-
-                    if (tds3.WarningTransfer.Rows.Count > 0)
+                    else
                     {
-                        chkFlag = ser.DoUpdateData("WarningTransfer", tds3);
+                        chkFlag = ser.DoUpdateData("Transfer", tds);
                     }
 
                 }
@@ -264,12 +233,12 @@ namespace DiamondShop
 
                     chk = 0;
                 }
-                else if (chk == 2)
-                {
-                    chkFlag = ser.DoDeleteData("WarningTransfer", Convert.ToInt32(gridTransfer.SelectedRows[0].Cells["ID"].Value));
+                //else if (chk == 2)
+                //{
+                //    chkFlag = ser.DoDeleteData("WarningTransfer", Convert.ToInt32(gridTransfer.SelectedRows[0].Cells["ID"].Value));
 
-                    chk = 0;
-                }
+                //    chk = 0;
+                //}
 
             }
             catch (Exception ex)
@@ -293,27 +262,6 @@ namespace DiamondShop
 
             if (message == "") { return true; }
             else { return false; }
-        }
-
-        private void BindingGridBBSettingDetail()
-        {
-            int i = 0;
-            gridTransfer.Rows.Clear();
-
-            foreach (DataRow row in tds2.Tables[0].Rows)
-            {
-                gridTransfer.Rows.Add();
-                gridTransfer.Rows[i].Cells["RowNum"].Value = row["RowNum"].ToString();
-                gridTransfer.Rows[i].Cells["ID"].Value = row["ID"].ToString();
-                gridTransfer.Rows[i].Cells["Code"].Value = row["Code"].ToString();
-                gridTransfer.Rows[i].Cells["Material1Name"].Value = row["Material1Name"].ToString();
-                gridTransfer.Rows[i].Cells["MaterialWeight"].Value = row["MaterialWeight"].ToString();
-                gridTransfer.Rows[i].Cells["Material2Name"].Value = row["Material2Name"].ToString();
-                gridTransfer.Rows[i].Cells["MaterialWeight2"].Value = row["MaterialWeight2"].ToString();
-                gridTransfer.Rows[i].Cells["Detail"].Value = row["Detail"].ToString();
-
-                i++;
-            }
         }
 
         protected override void EditData()
@@ -450,17 +398,6 @@ namespace DiamondShop
                 DeleteData();
             }
         }
-
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void cmbTransferStatus_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void SetControlEnable(bool status)
         {
             dtSendDate.Enabled = status;

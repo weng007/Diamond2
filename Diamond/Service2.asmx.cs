@@ -62,6 +62,20 @@ namespace Diamond
                 throw ex;
             }
         }
+        [WebMethod]
+        public dsOrder GetFactoryStatus(int id)
+        {
+            OrderBiz biz = new OrderBiz();
+
+            try
+            {
+                return biz.GetFactoryStatus(id);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
 
         [WebMethod]
         public string GetRunningNumber(string subject)

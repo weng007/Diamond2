@@ -36,6 +36,7 @@ namespace DiamondShop
             BinderData();
             txtTransferStatus.Text = "Send";
             txtSender.Text = ApplicationInfo.DisplayName;
+            txtSShop.Text = ApplicationInfo.ShopName;
         }
         public TransferInventoryInfo(int id)
         {
@@ -55,15 +56,10 @@ namespace DiamondShop
         {
             ds = GM.GetBuyer();
 
-            //cmbReceiver.DataSource = ds.Tables[0];
-            //cmbReceiver.ValueMember = "ID";
-            //cmbReceiver.DisplayMember = "DisplayName";
-            //cmbReceiver.Refresh();
-
-            cmbSShop.DataSource = (GM.GetMasterTableDetail("C007")).Tables[0];
-            cmbSShop.ValueMember = "ID";
-            cmbSShop.DisplayMember = "Detail";
-            cmbSShop.Refresh();
+            cmbReceiver.DataSource = ds.Tables[0];
+            cmbReceiver.ValueMember = "ID";
+            cmbReceiver.DisplayMember = "DisplayName";
+            cmbReceiver.Refresh();
 
             cmbEShop.DataSource = (GM.GetMasterTableDetail("C007")).Tables[0];
             cmbEShop.ValueMember = "ID";
@@ -80,8 +76,10 @@ namespace DiamondShop
         {
             binder.BindControl(dtSendDate, "SendDate");
             binder.BindControl(txtSender, "SenderName");
+            binder.BindControl(txtTransferNo, "TransferNo");
             binder.BindControl(txtTransferStatus, "TransferStatusName");
-            binder.BindControl(cmbSShop, "SShop");
+            binder.BindControl(cmbReceiver, "Receiver");
+            binder.BindControl(txtSShop, "SShopName");
             binder.BindControl(cmbEShop, "EShop");
             binder.BindControl(txtNote, "Note");
         }
@@ -135,17 +133,25 @@ namespace DiamondShop
             row.Sender = Convert.ToInt32(ApplicationInfo.UserID.ToString());
             row.ReceiveDate = DateTime.MinValue.AddYears(1900);
             row.IsBuyBook = "0";
+            row.SShop = ApplicationInfo.Shop;
 
             try
             {
                 if (id == 0)
                 {
                     SetCreateBy(row);
+                    row.TransferNo = GM.GetRunningNumber("TRF");
                     chkFlag = ser.DoInsertData("Transfer", tds, 0);
 
                 }
                 else
                 {
+                    //Receiver 
+                    if (Convert.ToInt16(cmbReceiver.SelectedValue.ToString()) == ApplicationInfo.UserID)
+                    {
+                        row.TransferStatus = 254; //สถานะ received
+                        row.ReceiveDate = Convert.ToDateTime(DateTime.Now.ToString());
+                    }
                     SetEditBy(row);
                     chkFlag = ser.DoUpdateData("Transfer", tds);
 
@@ -179,6 +185,18 @@ namespace DiamondShop
                     dr["RowNum"] = ds2.Tables[0].Rows[i]["RowNum"];
                     dr["RefID1"] = ds2.Tables[0].Rows[i]["RefID1"];
                     dr["JewelryType"] = ds2.Tables[0].Rows[i]["JewelryType"];
+                    //Sender
+                    if (Convert.ToInt16(cmbReceiver.SelectedValue.ToString()) != ApplicationInfo.UserID)
+                    {
+                        dr["EShop"] = ds2.Tables[0].Rows[i]["Shop"];//Shop Inventory
+                        dr["Status"] = 255;//Reserved
+                    }
+                    //Receiver 
+                    if (Convert.ToInt16(cmbReceiver.SelectedValue.ToString()) == ApplicationInfo.UserID)
+                    {
+                        dr["EShop"] = 239;//shop ฝั่งรับ
+                        dr["Status"] = 73; //Available
+                    }
                     SetCreateBy(dr);
                     SetEditBy(dr);
 
@@ -187,6 +205,10 @@ namespace DiamondShop
             }
 
             tds2.AcceptChanges();
+            if (Convert.ToInt16(cmbReceiver.SelectedValue.ToString()) == ApplicationInfo.UserID)
+            {
+                btnPrint.Visible = true;
+            }
         }
         protected override bool DeleteData()
         {
@@ -225,27 +247,6 @@ namespace DiamondShop
 
             if (message == "") { return true; }
             else { return false; }
-        }
-
-        private void BindingGridBBSettingDetail()
-        {
-            int i = 0;
-            gridTransferINV.Rows.Clear();
-
-            foreach (DataRow row in tds2.Tables[0].Rows)
-            {
-                gridTransferINV.Rows.Add();
-                gridTransferINV.Rows[i].Cells["RowNum"].Value = row["RowNum"].ToString();
-                gridTransferINV.Rows[i].Cells["ID"].Value = row["ID"].ToString();
-                gridTransferINV.Rows[i].Cells["Code"].Value = row["Code"].ToString();
-                gridTransferINV.Rows[i].Cells["Material1Name"].Value = row["Material1Name"].ToString();
-                gridTransferINV.Rows[i].Cells["MaterialWeight"].Value = row["MaterialWeight"].ToString();
-                gridTransferINV.Rows[i].Cells["Material2Name"].Value = row["Material2Name"].ToString();
-                gridTransferINV.Rows[i].Cells["MaterialWeight2"].Value = row["MaterialWeight2"].ToString();
-                gridTransferINV.Rows[i].Cells["Detail"].Value = row["Detail"].ToString();
-
-                i++;
-            }
         }
 
         protected override void EditData()
@@ -305,6 +306,7 @@ namespace DiamondShop
                 dr["JewelryTypeName"] = tds1.Tables[0].Rows[0]["JewelryTypeName"];
                 dr["JewelryType"] = tds1.Tables[0].Rows[0]["JewelryType"];
                 dr["RefID1"] = tds1.Tables[0].Rows[0]["ID"];
+                dr["EShop"] = tds1.Tables[0].Rows[0]["Shop"];
                 ds2.Tables[0].Rows.Add(dr);
                 gridTransferINV.DataSource = ds2.Tables[0];
                 gridTransferINV.RefreshEdit();

@@ -568,7 +568,7 @@ namespace DiamondDS.DS {
                         string TransferStatusName, 
                         System.DateTime SendDate, 
                         System.DateTime ReceiveDate, 
-                        string Receiver, 
+                        int Receiver, 
                         string ReceiverName, 
                         int SShop, 
                         string SShopName, 
@@ -676,7 +676,7 @@ namespace DiamondDS.DS {
                 base.Columns.Add(this.columnSendDate);
                 this.columnReceiveDate = new global::System.Data.DataColumn("ReceiveDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnReceiveDate);
-                this.columnReceiver = new global::System.Data.DataColumn("Receiver", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnReceiver = new global::System.Data.DataColumn("Receiver", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnReceiver);
                 this.columnReceiverName = new global::System.Data.DataColumn("ReceiverName", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnReceiverName);
@@ -995,10 +995,10 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Receiver {
+            public int Receiver {
                 get {
                     try {
-                        return ((string)(this[this.tableTransfer.ReceiverColumn]));
+                        return ((int)(this[this.tableTransfer.ReceiverColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'Receiver\' in table \'Transfer\' is DBNull.", e);

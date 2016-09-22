@@ -41,9 +41,6 @@
             this.dtEEditDate = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
             this.dtSEditDate = new System.Windows.Forms.DateTimePicker();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.lblCount = new System.Windows.Forms.Label();
             this.btnSendBox = new System.Windows.Forms.Button();
             this.btnInbox = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -53,7 +50,6 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.tds = new DiamondDS.DS.dsWarning();
             this.IsRead = new System.Windows.Forms.DataGridViewImageColumn();
             this.RowNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -68,6 +64,7 @@
             this.StatusType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MessageStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.OrderNo = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.tds = new DiamondDS.DS.dsWarning();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridWarning)).BeginInit();
@@ -134,9 +131,6 @@
             this.panel4.Controls.Add(this.dtEEditDate);
             this.panel4.Controls.Add(this.label8);
             this.panel4.Controls.Add(this.dtSEditDate);
-            this.panel4.Controls.Add(this.label5);
-            this.panel4.Controls.Add(this.label4);
-            this.panel4.Controls.Add(this.lblCount);
             this.panel4.Controls.Add(this.btnSendBox);
             this.panel4.Controls.Add(this.btnInbox);
             this.panel4.Controls.Add(this.label1);
@@ -188,36 +182,6 @@
             this.dtSEditDate.Size = new System.Drawing.Size(131, 27);
             this.dtSEditDate.TabIndex = 91;
             // 
-            // label5
-            // 
-            this.label5.BackColor = System.Drawing.Color.PeachPuff;
-            this.label5.Location = new System.Drawing.Point(134, 44);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(54, 43);
-            this.label5.TabIndex = 81;
-            this.label5.Text = "Send box";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.OldLace;
-            this.label4.Location = new System.Drawing.Point(26, 44);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(54, 21);
-            this.label4.TabIndex = 80;
-            this.label4.Text = "Inbox";
-            // 
-            // lblCount
-            // 
-            this.lblCount.AutoSize = true;
-            this.lblCount.BackColor = System.Drawing.Color.OldLace;
-            this.lblCount.Location = new System.Drawing.Point(26, 78);
-            this.lblCount.Name = "lblCount";
-            this.lblCount.Size = new System.Drawing.Size(57, 21);
-            this.lblCount.TabIndex = 79;
-            this.lblCount.Text = "label4";
-            // 
             // btnSendBox
             // 
             this.btnSendBox.BackColor = System.Drawing.Color.PeachPuff;
@@ -229,6 +193,7 @@
             this.btnSendBox.Name = "btnSendBox";
             this.btnSendBox.Size = new System.Drawing.Size(70, 90);
             this.btnSendBox.TabIndex = 78;
+            this.btnSendBox.Text = "Send box";
             this.btnSendBox.UseVisualStyleBackColor = false;
             this.btnSendBox.Click += new System.EventHandler(this.btnSendBox_Click);
             // 
@@ -243,6 +208,7 @@
             this.btnInbox.Name = "btnInbox";
             this.btnInbox.Size = new System.Drawing.Size(70, 90);
             this.btnInbox.TabIndex = 77;
+            this.btnInbox.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnInbox.UseVisualStyleBackColor = false;
             this.btnInbox.Click += new System.EventHandler(this.btnInbox_Click);
             // 
@@ -307,11 +273,6 @@
             this.imageList1.Images.SetKeyName(0, "btnUnread.png");
             this.imageList1.Images.SetKeyName(1, "btnRead.png");
             // 
-            // tds
-            // 
-            this.tds.DataSetName = "dsWarning";
-            this.tds.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // IsRead
             // 
             this.IsRead.DataPropertyName = "IsRead";
@@ -322,7 +283,7 @@
             this.IsRead.Name = "IsRead";
             this.IsRead.ReadOnly = true;
             this.IsRead.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.IsRead.Width = 70;
+            this.IsRead.Width = 50;
             // 
             // RowNum
             // 
@@ -426,14 +387,21 @@
             // 
             // OrderNo
             // 
+            this.OrderNo.ActiveLinkColor = System.Drawing.Color.Brown;
             this.OrderNo.DataPropertyName = "OrderNo";
             this.OrderNo.HeaderText = "RefID";
-            this.OrderNo.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.OrderNo.LinkColor = System.Drawing.Color.Red;
             this.OrderNo.Name = "OrderNo";
             this.OrderNo.ReadOnly = true;
             this.OrderNo.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.OrderNo.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.OrderNo.VisitedLinkColor = System.Drawing.Color.Gray;
             this.OrderNo.Width = 150;
+            // 
+            // tds
+            // 
+            this.tds.DataSetName = "dsWarning";
+            this.tds.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // WarningList
             // 
@@ -470,9 +438,6 @@
         private System.Windows.Forms.TextBox txtRefID;
         private System.Windows.Forms.Button btnSendBox;
         private System.Windows.Forms.Button btnInbox;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label lblCount;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DateTimePicker dtEEditDate;
         private System.Windows.Forms.Label label8;

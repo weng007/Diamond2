@@ -74,5 +74,16 @@ namespace DiamondBiz.Biz
                 throw ex;
             }
         }
+        public dsOrder GetFactoryStatus(int id)
+        {
+            try
+            {
+                return dal.GetFactoryStatus(id);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

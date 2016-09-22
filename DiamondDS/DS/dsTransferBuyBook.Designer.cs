@@ -307,6 +307,10 @@ namespace DiamondDS.DS {
             
             private global::System.Data.DataColumn columnTotalBaht;
             
+            private global::System.Data.DataColumn columnShop;
+            
+            private global::System.Data.DataColumn columnShopName;
+            
             private global::System.Data.DataColumn columnFlag;
             
             private global::System.Data.DataColumn columnRefID;
@@ -470,6 +474,22 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ShopColumn {
+                get {
+                    return this.columnShop;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ShopNameColumn {
+                get {
+                    return this.columnShopName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn FlagColumn {
                 get {
                     return this.columnFlag;
@@ -584,6 +604,8 @@ namespace DiamondDS.DS {
                         string ColorTypeName, 
                         string ColorName, 
                         decimal TotalBaht, 
+                        int Shop, 
+                        string ShopName, 
                         int Flag, 
                         int RefID, 
                         int RefID1, 
@@ -608,6 +630,8 @@ namespace DiamondDS.DS {
                         ColorTypeName,
                         ColorName,
                         TotalBaht,
+                        Shop,
+                        ShopName,
                         Flag,
                         RefID,
                         RefID1,
@@ -652,6 +676,8 @@ namespace DiamondDS.DS {
                 this.columnColorTypeName = base.Columns["ColorTypeName"];
                 this.columnColorName = base.Columns["ColorName"];
                 this.columnTotalBaht = base.Columns["TotalBaht"];
+                this.columnShop = base.Columns["Shop"];
+                this.columnShopName = base.Columns["ShopName"];
                 this.columnFlag = base.Columns["Flag"];
                 this.columnRefID = base.Columns["RefID"];
                 this.columnRefID1 = base.Columns["RefID1"];
@@ -693,6 +719,10 @@ namespace DiamondDS.DS {
                 base.Columns.Add(this.columnColorName);
                 this.columnTotalBaht = new global::System.Data.DataColumn("TotalBaht", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTotalBaht);
+                this.columnShop = new global::System.Data.DataColumn("Shop", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnShop);
+                this.columnShopName = new global::System.Data.DataColumn("ShopName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnShopName);
                 this.columnFlag = new global::System.Data.DataColumn("Flag", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnFlag);
                 this.columnRefID = new global::System.Data.DataColumn("RefID", typeof(int), null, global::System.Data.MappingType.Element);
@@ -1097,6 +1127,38 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int Shop {
+                get {
+                    try {
+                        return ((int)(this[this.tableTransferBuyBook.ShopColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Shop\' in table \'TransferBuyBook\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTransferBuyBook.ShopColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string ShopName {
+                get {
+                    try {
+                        return ((string)(this[this.tableTransferBuyBook.ShopNameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ShopName\' in table \'TransferBuyBook\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTransferBuyBook.ShopNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public int Flag {
                 get {
                     try {
@@ -1389,6 +1451,30 @@ namespace DiamondDS.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetTotalBahtNull() {
                 this[this.tableTransferBuyBook.TotalBahtColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsShopNull() {
+                return this.IsNull(this.tableTransferBuyBook.ShopColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetShopNull() {
+                this[this.tableTransferBuyBook.ShopColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsShopNameNull() {
+                return this.IsNull(this.tableTransferBuyBook.ShopNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetShopNameNull() {
+                this[this.tableTransferBuyBook.ShopNameColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

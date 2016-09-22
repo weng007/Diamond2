@@ -58,6 +58,7 @@
             this.RowNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SenderName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TransferNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SendDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ReceiveDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TransferStatusName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -315,6 +316,7 @@
             this.RowNum,
             this.ID,
             this.SenderName,
+            this.TransferNo,
             this.SendDate,
             this.ReceiveDate,
             this.TransferStatusName,
@@ -355,6 +357,13 @@
             this.SenderName.Name = "SenderName";
             this.SenderName.ReadOnly = true;
             this.SenderName.Width = 170;
+            // 
+            // TransferNo
+            // 
+            this.TransferNo.DataPropertyName = "TransferNo";
+            this.TransferNo.HeaderText = "TransferNo";
+            this.TransferNo.Name = "TransferNo";
+            this.TransferNo.ReadOnly = true;
             // 
             // SendDate
             // 
@@ -439,6 +448,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn RowNum;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn SenderName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TransferNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn SendDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn ReceiveDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn TransferStatusName;

@@ -271,7 +271,7 @@ namespace DiamondDAL.DAL
 
             return flag;
         }
-        public int DoUpdateProductionLine(int id,int FactoryStatus, int EditBy)
+        public int DoUpdateProductionLine(int id,int FactoryStatus,int EditBy)
         {
             try
             {

@@ -141,14 +141,15 @@ namespace DiamondShop
             {
                 if (gridWarning.Rows[e.RowIndex].Cells["StatusType"].Value.ToString() == "1")
                 {
-                    id = Convert.ToInt16(gridWarning.SelectedRows[0].Cells["RefID"].Value);
-                    WarningID = Convert.ToInt16(gridWarning.SelectedRows[0].Cells["ID"].Value);
+                    id = Convert.ToInt32(gridWarning.SelectedRows[0].Cells["RefID"].Value);
+                    WarningID = Convert.ToInt32(gridWarning.SelectedRows[0].Cells["ID"].Value);
                     OrderInfo frm = new OrderInfo(id, WarningID);
                     frm.ShowDialog();
                 }
                 else
                 {
                     id = (int)gridWarning.SelectedRows[0].Cells["RefID"].Value;
+                    WarningID = Convert.ToInt32(gridWarning.SelectedRows[0].Cells["ID"].Value);
                     TransferInfo frm = new TransferInfo(id);
                     frm.ShowDialog();
                 }

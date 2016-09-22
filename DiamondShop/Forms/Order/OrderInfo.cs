@@ -21,7 +21,7 @@ namespace DiamondShop
     public partial class OrderInfo : FormInfo
     {
         Service2 ser1;
-        dsOrder tds = new dsOrder();
+        DiamondDS.DS.dsOrder tds = new DiamondDS.DS.dsOrder();
         dsWarning tds2 = new dsWarning();
         bool isAuthorize = false;
         string FilePath;
@@ -42,22 +42,45 @@ namespace DiamondShop
         {
             InitializeComponent();
             Initial();
-            //ds = ser.DoSelectData("ExchangeRate", id, 0);
-            //txtPayDate.Text = ds.Tables[0].Rows[0]["USDRate"].ToString();
-
-            //cmbCut.SelectedIndex = 1;
-            //cmbPolish.SelectedIndex = 1;
-            //cmbSymmetry.SelectedIndex = 1;
-
+           
             BinderControl();
-
-
-            //dtDueDate.Value = dtBuyDate.Value.AddDays(30);
         }
         public OrderInfo(int id, int WarningID)
         {
             InitializeComponent();
             Initial();
+            ser1 = GM.GetService1();
+            ds = ser1.GetFactoryStatus(id);
+            tds.Clear();
+            tds.Merge(ds);
+            if (tds.Order[0].FactoryStatus == 256)
+            {
+                btnNotYet.Enabled = true;
+                btnProcessing.Enabled = false;
+                btnMounting.Enabled = false;
+                btnJobDone.Enabled = false;
+            }
+            if (tds.Order[0].FactoryStatus == 257)
+            {
+                btnNotYet.Enabled = false;
+                btnProcessing.Enabled = true;
+                btnMounting.Enabled = false;
+                btnJobDone.Enabled = false;
+            }
+            if (tds.Order[0].FactoryStatus == 258)
+            {
+                btnNotYet.Enabled = false;
+                btnProcessing.Enabled = false;
+                btnMounting.Enabled = true;
+                btnJobDone.Enabled = false;
+            }
+            if (tds.Order[0].FactoryStatus == 259)
+            {
+                btnNotYet.Enabled = false;
+                btnProcessing.Enabled = false;
+                btnMounting.Enabled = false;
+                btnJobDone.Enabled = true;
+            }
 
             BinderControl();
 
@@ -242,7 +265,7 @@ namespace DiamondShop
         protected override bool SaveData()
         {
             ser1 = GM.GetService1();
-            dsOrder.OrderRow row = null;
+            DiamondDS.DS.dsOrder.OrderRow row = null;
             dsWarning.WarningRow row2 = null;
 
             if (tds.Order.Rows.Count > 0)
@@ -422,21 +445,6 @@ namespace DiamondShop
             }
         }
 
-        private void txtWeight_Leave(object sender, EventArgs e)
-        {
-        } 
-
-        private void txtPrice_Leave(object sender, EventArgs e)
-        {
-        }
-
-        private void txtRap_Leave(object sender, EventArgs e)
-        {
-        }
-
-        private void txtUSDRate_Leave(object sender, EventArgs e)
-        {
-        }
 
         private void txtTotal_TextChanged(object sender, EventArgs e)
         {
@@ -458,12 +466,6 @@ namespace DiamondShop
             //dtBuyDate.Enabled = status;
             //txtCustomer.Enabled = status;
             //txtCode.Enabled = status;
-        }
-
-        private void dtDueDate_ValueChanged(object sender, EventArgs e)
-        {
-            //dtDueDate.Value = dtBuyDate.Value.AddDays(30);
-            //isEdit = true;
         }
 
         private void txtNote_TextChanged(object sender, EventArgs e)
@@ -519,11 +521,6 @@ namespace DiamondShop
         {
             Inventory frm = new Inventory(InvID1);
             frm.ShowDialog();
-        }
-
-        private void panel3_Paint_1(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void btnConfirm_Click(object sender, EventArgs e)
