@@ -72,6 +72,8 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.txtStatus = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -92,6 +94,8 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Controls.Add(this.label12);
+            this.panel3.Controls.Add(this.txtStatus);
             this.panel3.Controls.Add(this.label11);
             this.panel3.Controls.Add(this.txtCertified);
             this.panel3.Controls.Add(this.chkIsPrintPrice);
@@ -556,6 +560,24 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // txtStatus
+            // 
+            this.txtStatus.BackColor = System.Drawing.Color.White;
+            this.txtStatus.Enabled = false;
+            this.txtStatus.Location = new System.Drawing.Point(145, 240);
+            this.txtStatus.Name = "txtStatus";
+            this.txtStatus.ReadOnly = true;
+            this.txtStatus.Size = new System.Drawing.Size(166, 26);
+            this.txtStatus.TabIndex = 196;
+            // 
+            // label12
+            // 
+            this.label12.Location = new System.Drawing.Point(26, 240);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(109, 28);
+            this.label12.TabIndex = 197;
+            this.label12.Text = "Status";
+            // 
             // Sell
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -619,5 +641,7 @@
         private System.Windows.Forms.CheckBox chkIsPrintPrice;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtCertified;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox txtStatus;
     }
 }
