@@ -21,7 +21,6 @@ namespace DiamondShop
         public Main()
         {
             InitializeComponent();
-
             SetAuthorized();
         }
 
@@ -30,12 +29,6 @@ namespace DiamondShop
             UserList frm = new UserList();
             SetFormList(frm,0,"User");
         }
-        //private void menuSeller_Click(object sender, EventArgs e)
-        //{
-        //    SellerList frm = new SellerList();
-        //    SetFormList(frm, 1, "Seller");
-        //}
-        
 
         private void menuCerDiamond_Click(object sender, EventArgs e)
         {
@@ -276,15 +269,21 @@ namespace DiamondShop
         {
             if (ApplicationInfo.Authorized == "Staff")
             {
-                btnInventory.Visible = false;
-                btnBuyBook.Visible = false;
+                btnActivity.Visible = false;
                 btnMaster.Visible = false;
+                btnInventory.Visible = false;
+                btnTransfer.Visible = false;
+                btnOrderFactory.Visible = false;
+                btnBuyBook.Visible = false;             
             }
             else if (ApplicationInfo.Authorized == "Owner")
             {
-                btnInventory.Visible = true;
-                btnBuyBook.Visible = true;
+                btnActivity.Visible = true;
                 btnMaster.Visible = true;
+                btnInventory.Visible = true;
+                btnTransfer.Visible = true;
+                btnOrderFactory.Visible = true;
+                btnBuyBook.Visible = true;           
             }
         }
 

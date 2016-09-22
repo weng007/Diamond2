@@ -156,6 +156,7 @@
             this.btnShop6.TabIndex = 12;
             this.btnShop6.UseVisualStyleBackColor = false;
             this.btnShop6.Visible = false;
+            this.btnShop6.Click += new System.EventHandler(this.btnShop1_Click);
             // 
             // btnShop5
             // 
@@ -170,6 +171,7 @@
             this.btnShop5.TabIndex = 11;
             this.btnShop5.UseVisualStyleBackColor = false;
             this.btnShop5.Visible = false;
+            this.btnShop5.Click += new System.EventHandler(this.btnShop1_Click);
             // 
             // btnShop4
             // 
@@ -184,6 +186,7 @@
             this.btnShop4.TabIndex = 10;
             this.btnShop4.UseVisualStyleBackColor = false;
             this.btnShop4.Visible = false;
+            this.btnShop4.Click += new System.EventHandler(this.btnShop1_Click);
             // 
             // btnShop2
             // 
@@ -198,6 +201,7 @@
             this.btnShop2.TabIndex = 9;
             this.btnShop2.UseVisualStyleBackColor = false;
             this.btnShop2.Visible = false;
+            this.btnShop2.Click += new System.EventHandler(this.btnShop1_Click);
             // 
             // btnShop3
             // 
@@ -212,6 +216,7 @@
             this.btnShop3.TabIndex = 8;
             this.btnShop3.UseVisualStyleBackColor = false;
             this.btnShop3.Visible = false;
+            this.btnShop3.Click += new System.EventHandler(this.btnShop1_Click);
             // 
             // btnShop1
             // 
@@ -226,6 +231,7 @@
             this.btnShop1.TabIndex = 7;
             this.btnShop1.UseVisualStyleBackColor = false;
             this.btnShop1.Visible = false;
+            this.btnShop1.Click += new System.EventHandler(this.btnShop1_Click);
             // 
             // panel13
             // 
@@ -332,6 +338,7 @@
             this.btnShop7.TabIndex = 19;
             this.btnShop7.UseVisualStyleBackColor = false;
             this.btnShop7.Visible = false;
+            this.btnShop7.Click += new System.EventHandler(this.btnShop1_Click);
             // 
             // ShopAll
             // 

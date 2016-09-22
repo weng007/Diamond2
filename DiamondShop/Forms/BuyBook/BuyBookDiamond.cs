@@ -77,7 +77,6 @@ namespace DiamondShop
             binder.BindControl(txtTotalBaht, "TotalBaht");
             binder.BindControl(txtPriceCarat, "PriceCarat");
             binder.BindControl(chkPayByUSD, "PayByUSD");
-            //binder.BindControl(txtTotalThaiBaht, "TotalThaiBaht");
             binder.BindControl(txtMarketPrice, "MarketPrice");
             binder.BindControl(txtNote, "Note");
             binder.BindControl(cmbBuyer, "Buyer");
