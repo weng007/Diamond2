@@ -260,7 +260,7 @@
             // 
             // monthCalendar1
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(678, 249);
+            this.monthCalendar1.Location = new System.Drawing.Point(677, 248);
             this.monthCalendar1.MaxSelectionCount = 1;
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 266;
@@ -305,7 +305,6 @@
             // 
             // btnJobDone
             // 
-            this.btnJobDone.Enabled = false;
             this.btnJobDone.FlatAppearance.BorderSize = 0;
             this.btnJobDone.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnJobDone.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -321,7 +320,6 @@
             // btnMounting
             // 
             this.btnMounting.BackColor = System.Drawing.Color.Transparent;
-            this.btnMounting.Enabled = false;
             this.btnMounting.FlatAppearance.BorderSize = 0;
             this.btnMounting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMounting.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -336,7 +334,6 @@
             // 
             // btnProcessing
             // 
-            this.btnProcessing.Enabled = false;
             this.btnProcessing.FlatAppearance.BorderSize = 0;
             this.btnProcessing.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProcessing.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -495,11 +492,13 @@
             // 
             // btnDiamond
             // 
-            this.btnDiamond.BackColor = System.Drawing.Color.Gainsboro;
+            this.btnDiamond.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.btnDiamond.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDiamond.Enabled = false;
             this.btnDiamond.FlatAppearance.BorderSize = 0;
-            this.btnDiamond.Location = new System.Drawing.Point(450, 558);
+            this.btnDiamond.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDiamond.ForeColor = System.Drawing.Color.White;
+            this.btnDiamond.Location = new System.Drawing.Point(453, 517);
             this.btnDiamond.Name = "btnDiamond";
             this.btnDiamond.Size = new System.Drawing.Size(227, 40);
             this.btnDiamond.TabIndex = 286;
@@ -513,7 +512,7 @@
             this.groupBox2.Controls.Add(this.rdoReceive);
             this.groupBox2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.groupBox2.Location = new System.Drawing.Point(607, 349);
+            this.groupBox2.Location = new System.Drawing.Point(610, 308);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(153, 60);
             this.groupBox2.TabIndex = 157;
@@ -606,7 +605,7 @@
             // txtCustNote
             // 
             this.txtCustNote.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.txtCustNote.Location = new System.Drawing.Point(690, 455);
+            this.txtCustNote.Location = new System.Drawing.Point(693, 414);
             this.txtCustNote.Multiline = true;
             this.txtCustNote.Name = "txtCustNote";
             this.txtCustNote.Size = new System.Drawing.Size(212, 143);
@@ -626,7 +625,7 @@
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label20.Location = new System.Drawing.Point(686, 425);
+            this.label20.Location = new System.Drawing.Point(689, 384);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(76, 19);
             this.label20.TabIndex = 277;
@@ -737,7 +736,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label9.Location = new System.Drawing.Point(446, 424);
+            this.label9.Location = new System.Drawing.Point(449, 383);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(206, 19);
             this.label9.TabIndex = 263;
@@ -746,7 +745,7 @@
             // txtNote
             // 
             this.txtNote.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.txtNote.Location = new System.Drawing.Point(450, 455);
+            this.txtNote.Location = new System.Drawing.Point(453, 414);
             this.txtNote.Multiline = true;
             this.txtNote.Name = "txtNote";
             this.txtNote.Size = new System.Drawing.Size(225, 97);
@@ -950,7 +949,7 @@
             this.groupBox1.Controls.Add(this.rdoHave);
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.groupBox1.Location = new System.Drawing.Point(452, 349);
+            this.groupBox1.Location = new System.Drawing.Point(455, 308);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(134, 60);
             this.groupBox1.TabIndex = 156;
