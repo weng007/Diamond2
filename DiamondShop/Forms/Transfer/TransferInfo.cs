@@ -150,12 +150,6 @@ namespace DiamondShop
                 }
                 else
                 {
-                    //Receiver 
-                    if (Convert.ToInt16(cmbReceiver.SelectedValue.ToString()) == ApplicationInfo.UserID)
-                    {
-                        row.TransferStatus = 254; //สถานะ received
-                        row.ReceiveDate = Convert.ToDateTime(DateTime.Now.ToString());
-                    }
                     SetEditBy(row);
                     
                     BindingDSOrderDetail();
@@ -165,6 +159,16 @@ namespace DiamondShop
                     }
                     else
                     {
+                        if(flag == 1)
+                        {
+                            //Receiver 
+                            if (Convert.ToInt16(cmbReceiver.SelectedValue.ToString()) == ApplicationInfo.UserID)
+                            {
+                                row.TransferStatus = 254; //สถานะ received
+                                row.ReceiveDate = Convert.ToDateTime(DateTime.Now.ToString());
+                            }
+                        }
+
                         chkFlag = ser.DoUpdateData("Transfer", tds);
                     }
 
@@ -233,12 +237,12 @@ namespace DiamondShop
 
                     chk = 0;
                 }
-                //else if (chk == 2)
-                //{
-                //    chkFlag = ser.DoDeleteData("WarningTransfer", Convert.ToInt32(gridTransfer.SelectedRows[0].Cells["ID"].Value));
+                else if (chk == 2)
+                {
+                    chkFlag = ser.DoDeleteData("WarningTransfer", Convert.ToInt32(gridTransfer.SelectedRows[0].Cells["ID"].Value));
 
-                //    chk = 0;
-                //}
+                    chk = 0;
+                }
 
             }
             catch (Exception ex)
