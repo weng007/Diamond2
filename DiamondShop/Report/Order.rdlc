@@ -2,18 +2,18 @@
 <Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns:cl="http://schemas.microsoft.com/sqlserver/reporting/2010/01/componentdefinition" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition">
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
-    <DataSource Name="dsReportInventory">
+    <DataSource Name="dsReportSelling">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>3b88ddf9-09fa-467f-8bb7-93ee80fa52b3</rd:DataSourceID>
+      <rd:DataSourceID>3991113a-772b-426a-8792-6dc2b6733777</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="dsReportInventory">
+    <DataSet Name="dsReportSelling">
       <Query>
-        <DataSourceName>dsReportInventory</DataSourceName>
+        <DataSourceName>dsReportSelling</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
@@ -29,58 +29,50 @@
           <DataField>InventoryType</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="CreateDate">
-          <DataField>CreateDate</DataField>
+        <Field Name="SellDate">
+          <DataField>SellDate</DataField>
           <rd:TypeName>System.DateTime</rd:TypeName>
         </Field>
-        <Field Name="Material1">
-          <DataField>Material1</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+        <Field Name="Seller">
+          <DataField>Seller</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="MaterialWeight1">
-          <DataField>MaterialWeight1</DataField>
+        <Field Name="NetPrice">
+          <DataField>NetPrice</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="CustomerName">
+          <DataField>CustomerName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Detail">
+          <DataField>Detail</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CostNonCerDiaGem">
+          <DataField>CostNonCerDiaGem</DataField>
           <rd:TypeName>System.Double</rd:TypeName>
         </Field>
-        <Field Name="MaterialCost1">
-          <DataField>MaterialCost1</DataField>
+        <Field Name="PriceCerDiaGem">
+          <DataField>PriceCerDiaGem</DataField>
           <rd:TypeName>System.Decimal</rd:TypeName>
         </Field>
-        <Field Name="Material2">
-          <DataField>Material2</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="MaterialWeight2">
-          <DataField>MaterialWeight2</DataField>
+        <Field Name="CostNonCerDiaGem1">
+          <DataField>CostNonCerDiaGem1</DataField>
           <rd:TypeName>System.Double</rd:TypeName>
         </Field>
-        <Field Name="MaterialCost2">
-          <DataField>MaterialCost2</DataField>
-          <rd:TypeName>System.Decimal</rd:TypeName>
-        </Field>
-        <Field Name="MaterialNetCost">
-          <DataField>MaterialNetCost</DataField>
-          <rd:TypeName>System.Decimal</rd:TypeName>
-        </Field>
-        <Field Name="RedCost">
-          <DataField>RedCost</DataField>
-          <rd:TypeName>System.Decimal</rd:TypeName>
-        </Field>
-        <Field Name="MinPremium">
-          <DataField>MinPremium</DataField>
-          <rd:TypeName>System.Decimal</rd:TypeName>
-        </Field>
-        <Field Name="PriceTag">
-          <DataField>PriceTag</DataField>
+        <Field Name="PriceCerDiaGem1">
+          <DataField>PriceCerDiaGem1</DataField>
           <rd:TypeName>System.Decimal</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>dsReportInventory</rd:DataSetName>
-        <rd:SchemaPath>D:\leadssoft\Project\Diamond3\DiamondShop\dsReportInventory.xsd</rd:SchemaPath>
-        <rd:TableName>SP_Rpt_Inventory</rd:TableName>
-        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
-        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>SP_Rpt_InventoryTableAdapter</rd:TableAdapterName>
+        <rd:DataSetName>dsReportSelling</rd:DataSetName>
+        <rd:SchemaPath>D:\leadssoft\Project\Diamond3\DiamondShop\Report\DS\dsReportSelling.xsd</rd:SchemaPath>
+        <rd:TableName>ReportSelling</rd:TableName>
+        <rd:TableAdapterFillMethod />
+        <rd:TableAdapterGetDataMethod />
+        <rd:TableAdapterName />
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
@@ -147,18 +139,20 @@
                     <Value>Order Date</Value>
                     <Style>
                       <FontFamily>Century Gothic</FontFamily>
-                      <FontSize>12pt</FontSize>
+                      <FontSize>11pt</FontSize>
                     </Style>
                   </TextRun>
                 </TextRuns>
-                <Style />
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>0.58562in</Top>
-            <Left>10.36885in</Left>
+            <Top>0.67312in</Top>
+            <Left>7.95141in</Left>
             <Height>0.28125in</Height>
-            <Width>1.08542in</Width>
+            <Width>0.95286in</Width>
             <ZIndex>2</ZIndex>
             <Style>
               <Border>
@@ -188,15 +182,19 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>0.58562in</Top>
-            <Left>11.5112in</Left>
-            <Height>0.28125in</Height>
-            <Width>1.70978in</Width>
+            <Top>0.57882in</Top>
+            <Left>8.9612in</Left>
+            <Height>0.30958in</Height>
+            <Width>1.54724in</Width>
             <ZIndex>3</ZIndex>
             <Style>
               <Border>
-                <Style>None</Style>
+                <Color>White</Color>
+                <Style>Solid</Style>
               </Border>
+              <BottomBorder>
+                <Color>Black</Color>
+              </BottomBorder>
               <PaddingLeft>2pt</PaddingLeft>
               <PaddingRight>2pt</PaddingRight>
               <PaddingTop>2pt</PaddingTop>
@@ -213,7 +211,7 @@
                     <Value>="Report Date: " &amp; FORMAT(Cdate(today), "dd-MM-yyyy")</Value>
                     <Style>
                       <FontFamily>Century Gothic</FontFamily>
-                      <FontSize>12pt</FontSize>
+                      <FontSize>11pt</FontSize>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -221,13 +219,13 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>0.09896in</Top>
-            <Left>11.06885in</Left>
-            <Height>0.29167in</Height>
+            <Left>8.44385in</Left>
+            <Height>0.32292in</Height>
             <Width>2.1438in</Width>
             <ZIndex>4</ZIndex>
             <Style>
               <Border>
+                <Color>White</Color>
                 <Style>None</Style>
               </Border>
               <PaddingLeft>2pt</PaddingLeft>
@@ -254,15 +252,19 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>0.95021in</Top>
-            <Left>8.43636in</Left>
-            <Height>0.28125in</Height>
-            <Width>1.69728in</Width>
+            <Top>0.93284in</Top>
+            <Left>6.46136in</Left>
+            <Height>0.30903in</Height>
+            <Width>1.44936in</Width>
             <ZIndex>5</ZIndex>
             <Style>
               <Border>
-                <Style>None</Style>
+                <Color>White</Color>
+                <Style>Solid</Style>
               </Border>
+              <BottomBorder>
+                <Color>Black</Color>
+              </BottomBorder>
               <PaddingLeft>2pt</PaddingLeft>
               <PaddingRight>2pt</PaddingRight>
               <PaddingTop>2pt</PaddingTop>
@@ -279,16 +281,18 @@
                     <Value>Order No.</Value>
                     <Style>
                       <FontFamily>Century Gothic</FontFamily>
-                      <FontSize>12pt</FontSize>
+                      <FontSize>11pt</FontSize>
                     </Style>
                   </TextRun>
                 </TextRuns>
-                <Style />
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>0.58562in</Top>
-            <Left>7.47718in</Left>
+            <Top>0.67312in</Top>
+            <Left>5.50218in</Left>
             <Height>0.28125in</Height>
             <Width>0.88541in</Width>
             <ZIndex>6</ZIndex>
@@ -312,7 +316,7 @@
                     <Value />
                     <Style>
                       <FontFamily>Century Gothic</FontFamily>
-                      <FontSize>12pt</FontSize>
+                      <FontSize>11pt</FontSize>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -320,15 +324,19 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>0.58562in</Top>
-            <Left>8.4112in</Left>
-            <Height>0.28125in</Height>
-            <Width>1.70978in</Width>
+            <Top>0.53423in</Top>
+            <Left>6.4362in</Left>
+            <Height>0.35417in</Height>
+            <Width>1.44936in</Width>
             <ZIndex>7</ZIndex>
             <Style>
               <Border>
-                <Style>None</Style>
+                <Color>White</Color>
+                <Style>Solid</Style>
               </Border>
+              <BottomBorder>
+                <Color>Black</Color>
+              </BottomBorder>
               <PaddingLeft>2pt</PaddingLeft>
               <PaddingRight>2pt</PaddingRight>
               <PaddingTop>2pt</PaddingTop>
@@ -355,10 +363,10 @@
                   </Paragraph>
                 </Paragraphs>
                 <rd:DefaultName>Textbox2</rd:DefaultName>
-                <Top>0.74333in</Top>
-                <Left>0.19298in</Left>
+                <Top>0.4975in</Top>
+                <Left>0.14089in</Left>
                 <Height>0.28125in</Height>
-                <Width>2.08623in</Width>
+                <Width>2.59665in</Width>
                 <Style>
                   <Border>
                     <Style>None</Style>
@@ -370,10 +378,10 @@
                 </Style>
               </Textbox>
               <Line Name="Line1">
-                <Top>0.64444in</Top>
-                <Left>0.19298in</Left>
+                <Top>0.37361in</Top>
+                <Left>0.14089in</Left>
                 <Height>0in</Height>
-                <Width>2.08623in</Width>
+                <Width>2.59665in</Width>
                 <ZIndex>1</ZIndex>
                 <Style>
                   <Border>
@@ -381,47 +389,16 @@
                   </Border>
                 </Style>
               </Line>
-              <Textbox Name="Textbox23">
-                <CanGrow>true</CanGrow>
-                <KeepTogether>true</KeepTogether>
-                <Paragraphs>
-                  <Paragraph>
-                    <TextRuns>
-                      <TextRun>
-                        <Value>อนุมัติ</Value>
-                        <Style>
-                          <FontFamily>Century Gothic</FontFamily>
-                          <FontSize>16pt</FontSize>
-                        </Style>
-                      </TextRun>
-                    </TextRuns>
-                    <Style />
-                  </Paragraph>
-                </Paragraphs>
-                <rd:DefaultName>Textbox2</rd:DefaultName>
-                <Height>0.28125in</Height>
-                <Width>1.375in</Width>
-                <ZIndex>2</ZIndex>
-                <Style>
-                  <Border>
-                    <Style>None</Style>
-                  </Border>
-                  <PaddingLeft>2pt</PaddingLeft>
-                  <PaddingRight>2pt</PaddingRight>
-                  <PaddingTop>2pt</PaddingTop>
-                  <PaddingBottom>2pt</PaddingBottom>
-                </Style>
-              </Textbox>
             </ReportItems>
             <KeepTogether>true</KeepTogether>
-            <Top>6.97445in</Top>
-            <Left>10.81885in</Left>
-            <Height>1.09958in</Height>
-            <Width>2.3938in</Width>
+            <Top>6.45014in</Top>
+            <Left>7.76887in</Left>
+            <Height>0.92708in</Height>
+            <Width>2.85213in</Width>
             <ZIndex>8</ZIndex>
             <Style>
               <Border>
-                <Style>None</Style>
+                <Style>Solid</Style>
               </Border>
             </Style>
           </Rectangle>
@@ -443,14 +420,14 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>2.10472in</Top>
-            <Left>0.19298in</Left>
-            <Height>1.66667in</Height>
-            <Width>1.55422in</Width>
+            <Top>2.10264in</Top>
+            <Left>0.20551in</Left>
+            <Height>1.48959in</Height>
+            <Width>1.39913in</Width>
             <ZIndex>9</ZIndex>
             <Style>
               <Border>
-                <Style>None</Style>
+                <Style>Solid</Style>
               </Border>
               <PaddingLeft>2pt</PaddingLeft>
               <PaddingRight>2pt</PaddingRight>
@@ -468,18 +445,20 @@
                     <Value>วันนัดรับสินค้า</Value>
                     <Style>
                       <FontFamily>Century Gothic</FontFamily>
-                      <FontSize>16pt</FontSize>
+                      <FontSize>15pt</FontSize>
                     </Style>
                   </TextRun>
                 </TextRuns>
-                <Style />
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>0.96062in</Top>
-            <Left>10.36052in</Left>
+            <Top>1.02312in</Top>
+            <Left>7.95141in</Left>
             <Height>0.28125in</Height>
-            <Width>1.09375in</Width>
+            <Width>0.95286in</Width>
             <ZIndex>10</ZIndex>
             <Style>
               <Border>
@@ -509,15 +488,19 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>0.96062in</Top>
-            <Left>11.5112in</Left>
-            <Height>0.28125in</Height>
-            <Width>1.70978in</Width>
+            <Top>0.93284in</Top>
+            <Left>8.9612in</Left>
+            <Height>0.30903in</Height>
+            <Width>1.54724in</Width>
             <ZIndex>11</ZIndex>
             <Style>
               <Border>
-                <Style>None</Style>
+                <Color>White</Color>
+                <Style>Solid</Style>
               </Border>
+              <BottomBorder>
+                <Color>Black</Color>
+              </BottomBorder>
               <PaddingLeft>2pt</PaddingLeft>
               <PaddingRight>2pt</PaddingRight>
               <PaddingTop>2pt</PaddingTop>
@@ -538,13 +521,15 @@
                     </Style>
                   </TextRun>
                 </TextRuns>
-                <Style />
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>1.28354in</Top>
-            <Left>7.47718in</Left>
-            <Height>0.28125in</Height>
+            <Top>1.36132in</Top>
+            <Left>5.50218in</Left>
+            <Height>0.35in</Height>
             <Width>0.88973in</Width>
             <ZIndex>12</ZIndex>
             <Style>
@@ -575,15 +560,19 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>1.31132in</Top>
-            <Left>8.42386in</Left>
+            <Top>1.29882in</Top>
+            <Left>6.44886in</Left>
             <Height>0.28125in</Height>
-            <Width>1.70978in</Width>
+            <Width>1.46186in</Width>
             <ZIndex>13</ZIndex>
             <Style>
               <Border>
-                <Style>None</Style>
+                <Color>White</Color>
+                <Style>Solid</Style>
               </Border>
+              <BottomBorder>
+                <Color>Black</Color>
+              </BottomBorder>
               <PaddingLeft>2pt</PaddingLeft>
               <PaddingRight>2pt</PaddingRight>
               <PaddingTop>2pt</PaddingTop>
@@ -600,18 +589,20 @@
                     <Value>Seller</Value>
                     <Style>
                       <FontFamily>Century Gothic</FontFamily>
-                      <FontSize>12pt</FontSize>
+                      <FontSize>11pt</FontSize>
                     </Style>
                   </TextRun>
                 </TextRuns>
-                <Style />
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>1.31132in</Top>
-            <Left>10.36885in</Left>
+            <Top>1.36132in</Top>
+            <Left>7.95141in</Left>
             <Height>0.28125in</Height>
-            <Width>1.09375in</Width>
+            <Width>0.96119in</Width>
             <ZIndex>14</ZIndex>
             <Style>
               <Border>
@@ -641,15 +632,19 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>1.31132in</Top>
-            <Left>11.51954in</Left>
+            <Top>1.29882in</Top>
+            <Left>8.96954in</Left>
             <Height>0.28125in</Height>
-            <Width>1.69311in</Width>
+            <Width>1.53057in</Width>
             <ZIndex>15</ZIndex>
             <Style>
               <Border>
-                <Style>None</Style>
+                <Color>White</Color>
+                <Style>Solid</Style>
               </Border>
+              <BottomBorder>
+                <Color>Black</Color>
+              </BottomBorder>
               <PaddingLeft>2pt</PaddingLeft>
               <PaddingRight>2pt</PaddingRight>
               <PaddingTop>2pt</PaddingTop>
@@ -676,45 +671,18 @@
                   </Paragraph>
                 </Paragraphs>
                 <rd:DefaultName>Textbox2</rd:DefaultName>
-                <Top>0.74333in</Top>
-                <Left>0.19298in</Left>
+                <Top>0.09236in</Top>
+                <Left>2.30756in</Left>
                 <Height>0.28125in</Height>
-                <Width>2.08623in</Width>
+                <Width>1.88494in</Width>
                 <Style>
                   <Border>
-                    <Style>None</Style>
+                    <Color>White</Color>
+                    <Style>Solid</Style>
                   </Border>
-                  <PaddingLeft>2pt</PaddingLeft>
-                  <PaddingRight>2pt</PaddingRight>
-                  <PaddingTop>2pt</PaddingTop>
-                  <PaddingBottom>2pt</PaddingBottom>
-                </Style>
-              </Textbox>
-              <Textbox Name="Textbox31">
-                <CanGrow>true</CanGrow>
-                <KeepTogether>true</KeepTogether>
-                <Paragraphs>
-                  <Paragraph>
-                    <TextRuns>
-                      <TextRun>
-                        <Value>Reference</Value>
-                        <Style>
-                          <FontFamily>Century Gothic</FontFamily>
-                          <FontSize>12pt</FontSize>
-                        </Style>
-                      </TextRun>
-                    </TextRuns>
-                    <Style />
-                  </Paragraph>
-                </Paragraphs>
-                <rd:DefaultName>Textbox2</rd:DefaultName>
-                <Height>0.28125in</Height>
-                <Width>1.375in</Width>
-                <ZIndex>1</ZIndex>
-                <Style>
-                  <Border>
-                    <Style>None</Style>
-                  </Border>
+                  <BottomBorder>
+                    <Color>Black</Color>
+                  </BottomBorder>
                   <PaddingLeft>2pt</PaddingLeft>
                   <PaddingRight>2pt</PaddingRight>
                   <PaddingTop>2pt</PaddingTop>
@@ -739,15 +707,19 @@
                   </Paragraph>
                 </Paragraphs>
                 <rd:DefaultName>Textbox2</rd:DefaultName>
-                <Top>0.36764in</Top>
+                <Top>0.09236in</Top>
                 <Left>0.19298in</Left>
                 <Height>0.28125in</Height>
-                <Width>2.08623in</Width>
-                <ZIndex>2</ZIndex>
+                <Width>1.94744in</Width>
+                <ZIndex>1</ZIndex>
                 <Style>
                   <Border>
-                    <Style>None</Style>
+                    <Color>White</Color>
+                    <Style>Solid</Style>
                   </Border>
+                  <BottomBorder>
+                    <Color>Black</Color>
+                  </BottomBorder>
                   <PaddingLeft>2pt</PaddingLeft>
                   <PaddingRight>2pt</PaddingRight>
                   <PaddingTop>2pt</PaddingTop>
@@ -756,14 +728,14 @@
               </Textbox>
             </ReportItems>
             <KeepTogether>true</KeepTogether>
-            <Top>6.97445in</Top>
+            <Top>6.74528in</Top>
             <Left>0.22964in</Left>
-            <Height>1.09958in</Height>
-            <Width>2.47713in</Width>
+            <Height>0.63194in</Height>
+            <Width>4.41632in</Width>
             <ZIndex>16</ZIndex>
             <Style>
               <Border>
-                <Style>None</Style>
+                <Style>Solid</Style>
               </Border>
             </Style>
           </Rectangle>
@@ -777,16 +749,18 @@
                     <Value>ตัวเรือนเดิม</Value>
                     <Style>
                       <FontFamily>Century Gothic</FontFamily>
-                      <FontSize>16pt</FontSize>
+                      <FontSize>15pt</FontSize>
                     </Style>
                   </TextRun>
                 </TextRuns>
-                <Style />
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>0.96062in</Top>
-            <Left>7.47718in</Left>
+            <Top>1.02312in</Top>
+            <Left>5.50218in</Left>
             <Height>0.28125in</Height>
             <Width>0.88973in</Width>
             <ZIndex>17</ZIndex>
@@ -811,6 +785,7 @@
                     <Style>
                       <FontFamily>Century Gothic</FontFamily>
                       <FontSize>16pt</FontSize>
+                      <Color>White</Color>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -821,14 +796,15 @@
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
             <Top>1.77257in</Top>
-            <Left>7.47718in</Left>
+            <Left>5.43125in</Left>
             <Height>0.28125in</Height>
-            <Width>2.65645in</Width>
+            <Width>2.50864in</Width>
             <ZIndex>18</ZIndex>
             <Style>
               <Border>
-                <Style>None</Style>
+                <Style>Solid</Style>
               </Border>
+              <BackgroundColor>Teal</BackgroundColor>
               <PaddingLeft>2pt</PaddingLeft>
               <PaddingRight>2pt</PaddingRight>
               <PaddingTop>2pt</PaddingTop>
@@ -845,18 +821,20 @@
                     <Value>Size</Value>
                     <Style>
                       <FontFamily>Century Gothic</FontFamily>
-                      <FontSize>12pt</FontSize>
+                      <FontSize>11pt</FontSize>
                     </Style>
                   </TextRun>
                 </TextRuns>
-                <Style />
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>0.6134in</Top>
-            <Left>3.34717in</Left>
+            <Top>0.6634in</Top>
+            <Left>3.27183in</Left>
             <Height>0.28125in</Height>
-            <Width>1.08542in</Width>
+            <Width>0.43576in</Width>
             <ZIndex>19</ZIndex>
             <Style>
               <Border>
@@ -878,7 +856,7 @@
                     <Value />
                     <Style>
                       <FontFamily>Century Gothic</FontFamily>
-                      <FontSize>12pt</FontSize>
+                      <FontSize>11pt</FontSize>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -886,15 +864,19 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>0.6134in</Top>
-            <Left>4.48953in</Left>
-            <Height>0.28125in</Height>
-            <Width>1.70978in</Width>
+            <Top>0.59132in</Top>
+            <Left>3.76453in</Left>
+            <Height>0.27485in</Height>
+            <Width>0.73143in</Width>
             <ZIndex>20</ZIndex>
             <Style>
               <Border>
-                <Style>None</Style>
+                <Color>White</Color>
+                <Style>Solid</Style>
               </Border>
+              <BottomBorder>
+                <Color>Black</Color>
+              </BottomBorder>
               <PaddingLeft>2pt</PaddingLeft>
               <PaddingRight>2pt</PaddingRight>
               <PaddingTop>2pt</PaddingTop>
@@ -911,7 +893,7 @@
                     <Value />
                     <Style>
                       <FontFamily>Century Gothic</FontFamily>
-                      <FontSize>12pt</FontSize>
+                      <FontSize>11pt</FontSize>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -919,15 +901,19 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>0.9641in</Top>
-            <Left>1.41469in</Left>
-            <Height>0.28125in</Height>
-            <Width>1.69728in</Width>
+            <Top>0.94534in</Top>
+            <Left>1.45219in</Left>
+            <Height>0.26737in</Height>
+            <Width>1.50145in</Width>
             <ZIndex>21</ZIndex>
             <Style>
               <Border>
-                <Style>None</Style>
+                <Color>White</Color>
+                <Style>Solid</Style>
               </Border>
+              <BottomBorder>
+                <Color>Black</Color>
+              </BottomBorder>
               <PaddingLeft>2pt</PaddingLeft>
               <PaddingRight>2pt</PaddingRight>
               <PaddingTop>2pt</PaddingTop>
@@ -944,18 +930,20 @@
                     <Value>JewelryType</Value>
                     <Style>
                       <FontFamily>Century Gothic</FontFamily>
-                      <FontSize>12pt</FontSize>
+                      <FontSize>11pt</FontSize>
                     </Style>
                   </TextRun>
                 </TextRuns>
-                <Style />
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>0.6134in</Top>
-            <Left>0.20551in</Left>
+            <Top>0.6634in</Top>
+            <Left>0.29762in</Left>
             <Height>0.28125in</Height>
-            <Width>1.12846in</Width>
+            <Width>1.10318in</Width>
             <ZIndex>22</ZIndex>
             <Style>
               <Border>
@@ -977,7 +965,7 @@
                     <Value />
                     <Style>
                       <FontFamily>Century Gothic</FontFamily>
-                      <FontSize>12pt</FontSize>
+                      <FontSize>11pt</FontSize>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -985,15 +973,19 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>0.6134in</Top>
-            <Left>1.38953in</Left>
-            <Height>0.28125in</Height>
-            <Width>1.70978in</Width>
+            <Top>0.65035in</Top>
+            <Left>1.45219in</Left>
+            <Height>0.21583in</Height>
+            <Width>1.50145in</Width>
             <ZIndex>23</ZIndex>
             <Style>
               <Border>
-                <Style>None</Style>
+                <Color>White</Color>
+                <Style>Solid</Style>
               </Border>
+              <BottomBorder>
+                <Color>Black</Color>
+              </BottomBorder>
               <PaddingLeft>2pt</PaddingLeft>
               <PaddingRight>2pt</PaddingRight>
               <PaddingTop>2pt</PaddingTop>
@@ -1010,18 +1002,20 @@
                     <Value>Coating</Value>
                     <Style>
                       <FontFamily>Century Gothic</FontFamily>
-                      <FontSize>12pt</FontSize>
+                      <FontSize>11pt</FontSize>
                     </Style>
                   </TextRun>
                 </TextRuns>
-                <Style />
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>0.9641in</Top>
-            <Left>3.33884in</Left>
+            <Top>1.01201in</Top>
+            <Left>3.02308in</Left>
             <Height>0.28125in</Height>
-            <Width>1.09375in</Width>
+            <Width>0.68451in</Width>
             <ZIndex>24</ZIndex>
             <Style>
               <Border>
@@ -1043,7 +1037,7 @@
                     <Value />
                     <Style>
                       <FontFamily>Century Gothic</FontFamily>
-                      <FontSize>12pt</FontSize>
+                      <FontSize>11pt</FontSize>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -1051,15 +1045,19 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>0.97451in</Top>
-            <Left>4.48953in</Left>
-            <Height>0.28125in</Height>
-            <Width>1.70978in</Width>
+            <Top>0.94534in</Top>
+            <Left>3.77703in</Left>
+            <Height>0.26737in</Height>
+            <Width>1.47228in</Width>
             <ZIndex>25</ZIndex>
             <Style>
               <Border>
-                <Style>None</Style>
+                <Color>White</Color>
+                <Style>Solid</Style>
               </Border>
+              <BottomBorder>
+                <Color>Black</Color>
+              </BottomBorder>
               <PaddingLeft>2pt</PaddingLeft>
               <PaddingRight>2pt</PaddingRight>
               <PaddingTop>2pt</PaddingTop>
@@ -1076,18 +1074,20 @@
                     <Value>Laser</Value>
                     <Style>
                       <FontFamily>Century Gothic</FontFamily>
-                      <FontSize>12pt</FontSize>
+                      <FontSize>11pt</FontSize>
                     </Style>
                   </TextRun>
                 </TextRuns>
-                <Style />
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>1.29743in</Top>
-            <Left>0.45551in</Left>
+            <Top>1.33493in</Top>
+            <Left>0.29762in</Left>
             <Height>0.28125in</Height>
-            <Width>0.88973in</Width>
+            <Width>1.11445in</Width>
             <ZIndex>26</ZIndex>
             <Style>
               <Border>
@@ -1109,7 +1109,7 @@
                     <Value />
                     <Style>
                       <FontFamily>Century Gothic</FontFamily>
-                      <FontSize>12pt</FontSize>
+                      <FontSize>11pt</FontSize>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -1117,15 +1117,19 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>1.32521in</Top>
-            <Left>1.40218in</Left>
-            <Height>0.28125in</Height>
-            <Width>1.70978in</Width>
+            <Top>1.32243in</Top>
+            <Left>1.45219in</Left>
+            <Height>0.23264in</Height>
+            <Width>1.50145in</Width>
             <ZIndex>27</ZIndex>
             <Style>
               <Border>
-                <Style>None</Style>
+                <Color>White</Color>
+                <Style>Solid</Style>
               </Border>
+              <BottomBorder>
+                <Color>Black</Color>
+              </BottomBorder>
               <PaddingLeft>2pt</PaddingLeft>
               <PaddingRight>2pt</PaddingRight>
               <PaddingTop>2pt</PaddingTop>
@@ -1142,18 +1146,20 @@
                     <Value>Materail</Value>
                     <Style>
                       <FontFamily>Century Gothic</FontFamily>
-                      <FontSize>12pt</FontSize>
+                      <FontSize>11pt</FontSize>
                     </Style>
                   </TextRun>
                 </TextRuns>
-                <Style />
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>0.97451in</Top>
-            <Left>0.20551in</Left>
+            <Top>1.01201in</Top>
+            <Left>0.29762in</Left>
             <Height>0.28125in</Height>
-            <Width>1.13973in</Width>
+            <Width>1.11445in</Width>
             <ZIndex>28</ZIndex>
             <Style>
               <Border>
@@ -1176,6 +1182,7 @@
                     <Style>
                       <FontFamily>Century Gothic</FontFamily>
                       <FontSize>16pt</FontSize>
+                      <Color>White</Color>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -1186,14 +1193,15 @@
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
             <Top>1.77257in</Top>
-            <Left>10.36052in</Left>
+            <Left>8.07094in</Left>
             <Height>0.28125in</Height>
-            <Width>2.85213in</Width>
+            <Width>2.52915in</Width>
             <ZIndex>29</ZIndex>
             <Style>
               <Border>
-                <Style>None</Style>
+                <Style>Solid</Style>
               </Border>
+              <BackgroundColor>Teal</BackgroundColor>
               <PaddingLeft>2pt</PaddingLeft>
               <PaddingRight>2pt</PaddingRight>
               <PaddingTop>2pt</PaddingTop>
@@ -1218,14 +1226,14 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>2.10472in</Top>
-            <Left>7.47718in</Left>
-            <Height>1.25347in</Height>
-            <Width>2.65645in</Width>
+            <Top>2.05799in</Top>
+            <Left>5.43125in</Left>
+            <Height>1.53424in</Height>
+            <Width>2.50864in</Width>
             <ZIndex>30</ZIndex>
             <Style>
               <Border>
-                <Style>None</Style>
+                <Style>Solid</Style>
               </Border>
               <PaddingLeft>2pt</PaddingLeft>
               <PaddingRight>2pt</PaddingRight>
@@ -1251,14 +1259,14 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>2.09549in</Top>
-            <Left>10.36052in</Left>
-            <Height>1.2627in</Height>
-            <Width>2.86047in</Width>
+            <Top>2.05799in</Top>
+            <Left>8.07094in</Left>
+            <Height>1.53424in</Height>
+            <Width>2.52915in</Width>
             <ZIndex>31</ZIndex>
             <Style>
               <Border>
-                <Style>None</Style>
+                <Style>Solid</Style>
               </Border>
               <PaddingLeft>2pt</PaddingLeft>
               <PaddingRight>2pt</PaddingRight>
@@ -1277,6 +1285,7 @@
                     <Style>
                       <FontFamily>Century Gothic</FontFamily>
                       <FontSize>16pt</FontSize>
+                      <Color>White</Color>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -1286,147 +1295,16 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>1.82347in</Top>
+            <Top>1.77257in</Top>
             <Left>0.20551in</Left>
-            <Height>0.28125in</Height>
-            <Width>5.9938in</Width>
+            <Height>0.33215in</Height>
+            <Width>4.44045in</Width>
             <ZIndex>32</ZIndex>
             <Style>
               <Border>
-                <Style>None</Style>
+                <Style>Solid</Style>
               </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="Textbox29">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>img2</Value>
-                    <Style>
-                      <FontFamily>Century Gothic</FontFamily>
-                      <FontSize>12pt</FontSize>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>2.10472in</Top>
-            <Left>1.81664in</Left>
-            <Height>1.66667in</Height>
-            <Width>1.55422in</Width>
-            <ZIndex>33</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="Textbox46">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>img3</Value>
-                    <Style>
-                      <FontFamily>Century Gothic</FontFamily>
-                      <FontSize>12pt</FontSize>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>2.10472in</Top>
-            <Left>3.44422in</Left>
-            <Height>1.66667in</Height>
-            <Width>1.55422in</Width>
-            <ZIndex>34</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="Textbox47">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>img4</Value>
-                    <Style>
-                      <FontFamily>Century Gothic</FontFamily>
-                      <FontSize>12pt</FontSize>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>3.84083in</Top>
-            <Left>0.20551in</Left>
-            <Height>1.66667in</Height>
-            <Width>1.55422in</Width>
-            <ZIndex>35</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="Textbox48">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>img5</Value>
-                    <Style>
-                      <FontFamily>Century Gothic</FontFamily>
-                      <FontSize>12pt</FontSize>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>3.84083in</Top>
-            <Left>1.82917in</Left>
-            <Height>1.66667in</Height>
-            <Width>1.55422in</Width>
-            <ZIndex>36</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
+              <BackgroundColor>Teal</BackgroundColor>
               <PaddingLeft>2pt</PaddingLeft>
               <PaddingRight>2pt</PaddingRight>
               <PaddingTop>2pt</PaddingTop>
@@ -1444,6 +1322,7 @@
                     <Style>
                       <FontFamily>Century Gothic</FontFamily>
                       <FontSize>16pt</FontSize>
+                      <Color>White</Color>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -1453,15 +1332,16 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>3.48806in</Top>
-            <Left>7.47719in</Left>
-            <Height>0.28125in</Height>
-            <Width>5.7438in</Width>
-            <ZIndex>37</ZIndex>
+            <Top>3.67349in</Top>
+            <Left>5.43125in</Left>
+            <Height>0.31042in</Height>
+            <Width>5.17717in</Width>
+            <ZIndex>33</ZIndex>
             <Style>
               <Border>
-                <Style>None</Style>
+                <Style>Solid</Style>
               </Border>
+              <BackgroundColor>Teal</BackgroundColor>
               <PaddingLeft>2pt</PaddingLeft>
               <PaddingRight>2pt</PaddingRight>
               <PaddingTop>2pt</PaddingTop>
@@ -1486,14 +1366,14 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>3.79708in</Top>
-            <Left>7.47719in</Left>
-            <Height>2.96215in</Height>
-            <Width>5.73546in</Width>
-            <ZIndex>38</ZIndex>
+            <Top>3.9839in</Top>
+            <Left>5.43125in</Left>
+            <Height>1.17917in</Height>
+            <Width>5.16883in</Width>
+            <ZIndex>34</ZIndex>
             <Style>
               <Border>
-                <Style>None</Style>
+                <Style>Solid</Style>
               </Border>
               <PaddingLeft>2pt</PaddingLeft>
               <PaddingRight>2pt</PaddingRight>
@@ -1512,6 +1392,7 @@
                     <Style>
                       <FontFamily>Century Gothic</FontFamily>
                       <FontSize>16pt</FontSize>
+                      <Color>White</Color>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -1521,15 +1402,16 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>5.63771in</Top>
+            <Top>5.23771in</Top>
             <Left>0.20551in</Left>
-            <Height>0.28125in</Height>
-            <Width>5.9938in</Width>
-            <ZIndex>39</ZIndex>
+            <Height>0.34375in</Height>
+            <Width>4.44045in</Width>
+            <ZIndex>35</ZIndex>
             <Style>
               <Border>
-                <Style>None</Style>
+                <Style>Solid</Style>
               </Border>
+              <BackgroundColor>Teal</BackgroundColor>
               <PaddingLeft>2pt</PaddingLeft>
               <PaddingRight>2pt</PaddingRight>
               <PaddingTop>2pt</PaddingTop>
@@ -1554,14 +1436,14 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>5.97243in</Top>
+            <Top>5.58493in</Top>
             <Left>0.20551in</Left>
             <Height>0.78681in</Height>
-            <Width>5.9938in</Width>
-            <ZIndex>40</ZIndex>
+            <Width>4.44045in</Width>
+            <ZIndex>36</ZIndex>
             <Style>
               <Border>
-                <Style>None</Style>
+                <Style>Solid</Style>
               </Border>
               <PaddingLeft>2pt</PaddingLeft>
               <PaddingRight>2pt</PaddingRight>
@@ -1569,18 +1451,6 @@
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
-          <Line Name="Line2">
-            <Top>8.25577in</Top>
-            <Left>0.22964in</Left>
-            <Height>0in</Height>
-            <Width>12.98301in</Width>
-            <ZIndex>41</ZIndex>
-            <Style>
-              <Border>
-                <Style>Solid</Style>
-              </Border>
-            </Style>
-          </Line>
           <Textbox Name="Textbox54">
             <CanGrow>true</CanGrow>
             <KeepTogether>true</KeepTogether>
@@ -1591,23 +1461,26 @@
                     <Value>Code</Value>
                     <Style>
                       <FontFamily>Century Gothic</FontFamily>
-                      <FontSize>12pt</FontSize>
+                      <FontSize>11pt</FontSize>
                     </Style>
                   </TextRun>
                 </TextRuns>
-                <Style />
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>8.47868in</Top>
-            <Left>7.47717in</Left>
+            <Top>8.05368in</Top>
+            <Left>4.87717in</Left>
             <Height>0.28125in</Height>
             <Width>0.88541in</Width>
-            <ZIndex>42</ZIndex>
+            <ZIndex>37</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
               </Border>
+              <VerticalAlign>Bottom</VerticalAlign>
               <PaddingLeft>2pt</PaddingLeft>
               <PaddingRight>2pt</PaddingRight>
               <PaddingTop>2pt</PaddingTop>
@@ -1632,15 +1505,19 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>8.47868in</Top>
-            <Left>8.41119in</Left>
+            <Top>7.97868in</Top>
+            <Left>5.81119in</Left>
             <Height>0.28125in</Height>
             <Width>1.70978in</Width>
-            <ZIndex>43</ZIndex>
+            <ZIndex>38</ZIndex>
             <Style>
               <Border>
-                <Style>None</Style>
+                <Color>White</Color>
+                <Style>Solid</Style>
               </Border>
+              <BottomBorder>
+                <Color>Black</Color>
+              </BottomBorder>
               <PaddingLeft>2pt</PaddingLeft>
               <PaddingRight>2pt</PaddingRight>
               <PaddingTop>2pt</PaddingTop>
@@ -1665,14 +1542,14 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>9.65509in</Top>
-            <Left>0.24217in</Left>
+            <Top>8.90509in</Top>
+            <Left>0.22964in</Left>
             <Height>1.66667in</Height>
-            <Width>1.55422in</Width>
-            <ZIndex>44</ZIndex>
+            <Width>1.54169in</Width>
+            <ZIndex>39</ZIndex>
             <Style>
               <Border>
-                <Style>None</Style>
+                <Style>Solid</Style>
               </Border>
               <PaddingLeft>2pt</PaddingLeft>
               <PaddingRight>2pt</PaddingRight>
@@ -1690,7 +1567,8 @@
                     <Value>Remark </Value>
                     <Style>
                       <FontFamily>Century Gothic</FontFamily>
-                      <FontSize>12pt</FontSize>
+                      <FontSize>11pt</FontSize>
+                      <Color>White</Color>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -1700,15 +1578,16 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>11.45716in</Top>
-            <Left>0.24217in</Left>
+            <Top>10.83216in</Top>
+            <Left>0.22964in</Left>
             <Height>0.28125in</Height>
-            <Width>5.95714in</Width>
-            <ZIndex>45</ZIndex>
+            <Width>5.01967in</Width>
+            <ZIndex>40</ZIndex>
             <Style>
               <Border>
-                <Style>None</Style>
+                <Style>Solid</Style>
               </Border>
+              <BackgroundColor>Teal</BackgroundColor>
               <PaddingLeft>2pt</PaddingLeft>
               <PaddingRight>2pt</PaddingRight>
               <PaddingTop>2pt</PaddingTop>
@@ -1725,19 +1604,21 @@
                     <Value>Size</Value>
                     <Style>
                       <FontFamily>Century Gothic</FontFamily>
-                      <FontSize>12pt</FontSize>
+                      <FontSize>11pt</FontSize>
                     </Style>
                   </TextRun>
                 </TextRuns>
-                <Style />
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>8.86757in</Top>
-            <Left>10.31884in</Left>
+            <Top>8.43007in</Top>
+            <Left>7.71884in</Left>
             <Height>0.28125in</Height>
-            <Width>1.12846in</Width>
-            <ZIndex>46</ZIndex>
+            <Width>1.11458in</Width>
+            <ZIndex>41</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -1766,15 +1647,19 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>8.85716in</Top>
-            <Left>11.50286in</Left>
+            <Top>8.35716in</Top>
+            <Left>8.90286in</Left>
             <Height>0.28125in</Height>
-            <Width>1.71812in</Width>
-            <ZIndex>47</ZIndex>
+            <Width>0.69099in</Width>
+            <ZIndex>42</ZIndex>
             <Style>
               <Border>
-                <Style>None</Style>
+                <Color>White</Color>
+                <Style>Solid</Style>
               </Border>
+              <BottomBorder>
+                <Color>Black</Color>
+              </BottomBorder>
               <PaddingLeft>2pt</PaddingLeft>
               <PaddingRight>2pt</PaddingRight>
               <PaddingTop>2pt</PaddingTop>
@@ -1799,15 +1684,19 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>9.37384in</Top>
-            <Left>10.90289in</Left>
+            <Top>8.99884in</Top>
+            <Left>8.30289in</Left>
             <Height>0.28125in</Height>
             <Width>2.30976in</Width>
-            <ZIndex>48</ZIndex>
+            <ZIndex>43</ZIndex>
             <Style>
               <Border>
-                <Style>None</Style>
+                <Color>White</Color>
+                <Style>Solid</Style>
               </Border>
+              <BottomBorder>
+                <Color>Black</Color>
+              </BottomBorder>
               <PaddingLeft>2pt</PaddingLeft>
               <PaddingRight>2pt</PaddingRight>
               <PaddingTop>2pt</PaddingTop>
@@ -1824,19 +1713,21 @@
                     <Value>JewelryType</Value>
                     <Style>
                       <FontFamily>Century Gothic</FontFamily>
-                      <FontSize>12pt</FontSize>
+                      <FontSize>11pt</FontSize>
                     </Style>
                   </TextRun>
                 </TextRuns>
-                <Style />
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>8.47868in</Top>
-            <Left>10.31884in</Left>
+            <Top>8.05368in</Top>
+            <Left>7.71884in</Left>
             <Height>0.28125in</Height>
-            <Width>1.12846in</Width>
-            <ZIndex>49</ZIndex>
+            <Width>1.11458in</Width>
+            <ZIndex>44</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -1865,15 +1756,19 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>8.47868in</Top>
-            <Left>11.50286in</Left>
+            <Top>7.97868in</Top>
+            <Left>8.90286in</Left>
             <Height>0.28125in</Height>
             <Width>1.70978in</Width>
-            <ZIndex>50</ZIndex>
+            <ZIndex>45</ZIndex>
             <Style>
               <Border>
-                <Style>None</Style>
+                <Color>White</Color>
+                <Style>Solid</Style>
               </Border>
+              <BottomBorder>
+                <Color>Black</Color>
+              </BottomBorder>
               <PaddingLeft>2pt</PaddingLeft>
               <PaddingRight>2pt</PaddingRight>
               <PaddingTop>2pt</PaddingTop>
@@ -1890,19 +1785,21 @@
                     <Value>Location</Value>
                     <Style>
                       <FontFamily>Century Gothic</FontFamily>
-                      <FontSize>12pt</FontSize>
+                      <FontSize>11pt</FontSize>
                     </Style>
                   </TextRun>
                 </TextRuns>
-                <Style />
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>8.86757in</Top>
-            <Left>7.47717in</Left>
+            <Top>8.43007in</Top>
+            <Left>4.87717in</Left>
             <Height>0.28125in</Height>
             <Width>0.90225in</Width>
-            <ZIndex>51</ZIndex>
+            <ZIndex>46</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -1931,15 +1828,19 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>8.87798in</Top>
-            <Left>8.43636in</Left>
-            <Height>0.28125in</Height>
+            <Top>8.36757in</Top>
+            <Left>5.83636in</Left>
+            <Height>0.26458in</Height>
             <Width>1.70978in</Width>
-            <ZIndex>52</ZIndex>
+            <ZIndex>47</ZIndex>
             <Style>
               <Border>
-                <Style>None</Style>
+                <Color>White</Color>
+                <Style>Solid</Style>
               </Border>
+              <BottomBorder>
+                <Color>Black</Color>
+              </BottomBorder>
               <PaddingLeft>2pt</PaddingLeft>
               <PaddingRight>2pt</PaddingRight>
               <PaddingTop>2pt</PaddingTop>
@@ -1956,19 +1857,21 @@
                     <Value>Materail Weight1</Value>
                     <Style>
                       <FontFamily>Century Gothic</FontFamily>
-                      <FontSize>12pt</FontSize>
+                      <FontSize>11pt</FontSize>
                     </Style>
                   </TextRun>
                 </TextRuns>
-                <Style />
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>9.79327in</Top>
-            <Left>9.33536in</Left>
-            <Height>0.28125in</Height>
+            <Top>9.49328in</Top>
+            <Left>6.83536in</Left>
+            <Height>0.30624in</Height>
             <Width>1.48139in</Width>
-            <ZIndex>53</ZIndex>
+            <ZIndex>48</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -1997,15 +1900,19 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>9.79745in</Top>
-            <Left>10.90289in</Left>
+            <Top>9.39745in</Top>
+            <Left>8.30289in</Left>
             <Height>0.28125in</Height>
-            <Width>2.30975in</Width>
-            <ZIndex>54</ZIndex>
+            <Width>1.02643in</Width>
+            <ZIndex>49</ZIndex>
             <Style>
               <Border>
-                <Style>None</Style>
+                <Color>White</Color>
+                <Style>Solid</Style>
               </Border>
+              <BottomBorder>
+                <Color>Black</Color>
+              </BottomBorder>
               <PaddingLeft>2pt</PaddingLeft>
               <PaddingRight>2pt</PaddingRight>
               <PaddingTop>2pt</PaddingTop>
@@ -2022,19 +1929,21 @@
                     <Value>Materail1</Value>
                     <Style>
                       <FontFamily>Century Gothic</FontFamily>
-                      <FontSize>12pt</FontSize>
+                      <FontSize>11pt</FontSize>
                     </Style>
                   </TextRun>
                 </TextRuns>
-                <Style />
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>9.38425in</Top>
-            <Left>9.33535in</Left>
+            <Top>9.08425in</Top>
+            <Left>7.38118in</Left>
             <Height>0.28125in</Height>
-            <Width>1.48139in</Width>
-            <ZIndex>55</ZIndex>
+            <Width>0.92931in</Width>
+            <ZIndex>50</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -2063,14 +1972,14 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>11.78931in</Top>
-            <Left>0.24217in</Left>
+            <Top>11.12681in</Top>
+            <Left>0.22964in</Left>
             <Height>0.95139in</Height>
-            <Width>5.95714in</Width>
-            <ZIndex>56</ZIndex>
+            <Width>5.01967in</Width>
+            <ZIndex>51</ZIndex>
             <Style>
               <Border>
-                <Style>None</Style>
+                <Style>Solid</Style>
               </Border>
               <PaddingLeft>2pt</PaddingLeft>
               <PaddingRight>2pt</PaddingRight>
@@ -2089,6 +1998,7 @@
                     <Style>
                       <FontFamily>Century Gothic</FontFamily>
                       <FontSize>16pt</FontSize>
+                      <Color>White</Color>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -2098,15 +2008,16 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>9.37384in</Top>
-            <Left>0.2547in</Left>
-            <Height>0.28125in</Height>
+            <Top>8.57175in</Top>
+            <Left>0.22964in</Left>
+            <Height>0.33333in</Height>
             <Width>3.16535in</Width>
-            <ZIndex>57</ZIndex>
+            <ZIndex>52</ZIndex>
             <Style>
               <Border>
-                <Style>None</Style>
+                <Style>Solid</Style>
               </Border>
+              <BackgroundColor>Teal</BackgroundColor>
               <PaddingLeft>2pt</PaddingLeft>
               <PaddingRight>2pt</PaddingRight>
               <PaddingTop>2pt</PaddingTop>
@@ -2131,14 +2042,14 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>9.65509in</Top>
-            <Left>1.86583in</Left>
+            <Top>8.90509in</Top>
+            <Left>1.84077in</Left>
             <Height>1.66667in</Height>
             <Width>1.55422in</Width>
-            <ZIndex>58</ZIndex>
+            <ZIndex>53</ZIndex>
             <Style>
               <Border>
-                <Style>None</Style>
+                <Style>Solid</Style>
               </Border>
               <PaddingLeft>2pt</PaddingLeft>
               <PaddingRight>2pt</PaddingRight>
@@ -2164,15 +2075,19 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>10.54466in</Top>
-            <Left>10.90289in</Left>
+            <Top>10.16966in</Top>
+            <Left>8.30289in</Left>
             <Height>0.28125in</Height>
             <Width>2.31811in</Width>
-            <ZIndex>59</ZIndex>
+            <ZIndex>54</ZIndex>
             <Style>
               <Border>
-                <Style>None</Style>
+                <Color>White</Color>
+                <Style>Solid</Style>
               </Border>
+              <BottomBorder>
+                <Color>Black</Color>
+              </BottomBorder>
               <PaddingLeft>2pt</PaddingLeft>
               <PaddingRight>2pt</PaddingRight>
               <PaddingTop>2pt</PaddingTop>
@@ -2189,19 +2104,21 @@
                     <Value>Materail Weight2</Value>
                     <Style>
                       <FontFamily>Century Gothic</FontFamily>
-                      <FontSize>12pt</FontSize>
+                      <FontSize>11pt</FontSize>
                     </Style>
                   </TextRun>
                 </TextRuns>
-                <Style />
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>10.97659in</Top>
-            <Left>9.30169in</Left>
+            <Top>10.65159in</Top>
+            <Left>6.77669in</Left>
             <Height>0.28125in</Height>
             <Width>1.52896in</Width>
-            <ZIndex>60</ZIndex>
+            <ZIndex>55</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -2230,15 +2147,19 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>10.98077in</Top>
-            <Left>10.9001in</Left>
+            <Top>10.56827in</Top>
+            <Left>8.3001in</Left>
             <Height>0.28125in</Height>
-            <Width>2.32088in</Width>
-            <ZIndex>61</ZIndex>
+            <Width>1.02921in</Width>
+            <ZIndex>56</ZIndex>
             <Style>
               <Border>
-                <Style>None</Style>
+                <Color>White</Color>
+                <Style>Solid</Style>
               </Border>
+              <BottomBorder>
+                <Color>Black</Color>
+              </BottomBorder>
               <PaddingLeft>2pt</PaddingLeft>
               <PaddingRight>2pt</PaddingRight>
               <PaddingTop>2pt</PaddingTop>
@@ -2255,6 +2176,78 @@
                     <Value>Materail2</Value>
                     <Style>
                       <FontFamily>Century Gothic</FontFamily>
+                      <FontSize>11pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox2</rd:DefaultName>
+            <Top>10.24257in</Top>
+            <Left>6.91593in</Left>
+            <Height>0.28125in</Height>
+            <Width>1.37722in</Width>
+            <ZIndex>57</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox53">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>เพิ่มเติม</Value>
+                    <Style>
+                      <FontFamily>Century Gothic</FontFamily>
+                      <FontSize>16pt</FontSize>
+                      <Color>White</Color>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox2</rd:DefaultName>
+            <Top>5.23771in</Top>
+            <Left>5.43125in</Left>
+            <Height>0.34375in</Height>
+            <Width>5.16883in</Width>
+            <ZIndex>58</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+              <BackgroundColor>Teal</BackgroundColor>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox57">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value />
+                    <Style>
+                      <FontFamily>Century Gothic</FontFamily>
                       <FontSize>12pt</FontSize>
                     </Style>
                   </TextRun>
@@ -2263,11 +2256,312 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>10.55507in</Top>
-            <Left>9.45343in</Left>
+            <Top>5.58562in</Top>
+            <Left>5.43125in</Left>
+            <Height>0.78681in</Height>
+            <Width>5.16883in</Width>
+            <ZIndex>59</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox31">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Reference</Value>
+                    <Style>
+                      <FontFamily>Century Gothic</FontFamily>
+                      <FontSize>12pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox2</rd:DefaultName>
+            <Top>6.45014in</Top>
+            <Left>0.22964in</Left>
             <Height>0.28125in</Height>
-            <Width>1.37722in</Width>
+            <Width>1.375in</Width>
+            <ZIndex>60</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox16">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>img2</Value>
+                    <Style>
+                      <FontFamily>Century Gothic</FontFamily>
+                      <FontSize>12pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox2</rd:DefaultName>
+            <Top>2.10264in</Top>
+            <Left>1.72964in</Left>
+            <Height>1.48959in</Height>
+            <Width>1.39913in</Width>
+            <ZIndex>61</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox26">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>img1</Value>
+                    <Style>
+                      <FontFamily>Century Gothic</FontFamily>
+                      <FontSize>12pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox2</rd:DefaultName>
+            <Top>2.10264in</Top>
+            <Left>3.24683in</Left>
+            <Height>1.48959in</Height>
+            <Width>1.39913in</Width>
             <ZIndex>62</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox29">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>img1</Value>
+                    <Style>
+                      <FontFamily>Century Gothic</FontFamily>
+                      <FontSize>12pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox2</rd:DefaultName>
+            <Top>3.67348in</Top>
+            <Left>0.19298in</Left>
+            <Height>1.48959in</Height>
+            <Width>1.39913in</Width>
+            <ZIndex>63</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox46">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>img2</Value>
+                    <Style>
+                      <FontFamily>Century Gothic</FontFamily>
+                      <FontSize>12pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox2</rd:DefaultName>
+            <Top>3.67348in</Top>
+            <Left>1.72964in</Left>
+            <Height>1.48959in</Height>
+            <Width>1.3866in</Width>
+            <ZIndex>64</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox23">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>อนุมัติ</Value>
+                    <Style>
+                      <FontFamily>Century Gothic</FontFamily>
+                      <FontSize>16pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox2</rd:DefaultName>
+            <Top>6.45014in</Top>
+            <Left>6.3522in</Left>
+            <Height>0.32639in</Height>
+            <Width>1.375in</Width>
+            <ZIndex>65</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox47">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value />
+                    <Style>
+                      <FontFamily>Century Gothic</FontFamily>
+                      <FontSize>12pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox2</rd:DefaultName>
+            <Top>0.59132in</Top>
+            <Left>0.20551in</Left>
+            <Height>1.13889in</Height>
+            <Width>5.1563in</Width>
+            <ZIndex>66</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox48">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value />
+                    <Style>
+                      <FontFamily>Century Gothic</FontFamily>
+                      <FontSize>12pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox2</rd:DefaultName>
+            <Top>0.59132in</Top>
+            <Left>5.43125in</Left>
+            <Height>1.13889in</Height>
+            <Width>5.16883in</Width>
+            <ZIndex>67</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox7">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Reference</Value>
+                    <Style>
+                      <FontFamily>Century Gothic</FontFamily>
+                      <FontSize>16pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox2</rd:DefaultName>
+            <Top>8.05368in</Top>
+            <Left>0.22964in</Left>
+            <Height>0.39583in</Height>
+            <Width>2.47713in</Width>
+            <ZIndex>68</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -2279,15 +2573,17 @@
             </Style>
           </Textbox>
         </ReportItems>
-        <Height>12.7407in</Height>
+        <Height>12.3032in</Height>
         <Style />
       </Body>
-      <Width>13.43398in</Width>
+      <Width>10.84023in</Width>
       <Page>
-        <LeftMargin>1in</LeftMargin>
-        <RightMargin>1in</RightMargin>
-        <TopMargin>1in</TopMargin>
-        <BottomMargin>1in</BottomMargin>
+        <PageHeight>8.27in</PageHeight>
+        <PageWidth>11.69in</PageWidth>
+        <LeftMargin>0.25in</LeftMargin>
+        <RightMargin>0.25in</RightMargin>
+        <TopMargin>0.25in</TopMargin>
+        <BottomMargin>0.25in</BottomMargin>
         <Style />
       </Page>
     </ReportSection>
