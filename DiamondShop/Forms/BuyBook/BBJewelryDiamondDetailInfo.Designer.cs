@@ -93,7 +93,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label7.Location = new System.Drawing.Point(39, 167);
+            this.label7.Location = new System.Drawing.Point(31, 166);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(51, 21);
             this.label7.TabIndex = 125;

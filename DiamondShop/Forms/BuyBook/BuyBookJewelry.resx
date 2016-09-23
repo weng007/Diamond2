@@ -124,6 +124,29 @@
     <value>81, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnChooseDate.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAP1SURBVFhHxZZbT1NZFMf7KUZGMF6iM5PMgyYmeLbG
+        xExiYibU0sb4gt9BP8B8hPkAGjUaM/OgPgxeBkRgwCgSofeW0p72tGCBUkpbqJdESrvmv3ZPyzlSbq3F
+        h1/avdZea/3PXuvs1kJE35W6xv2krnE/2WQoCrulfLbb0itslqOKtfMnpSv7C8Bn+ohiPf4P7AT/Wh04
+        znPWZjmpWC3HlK5xjmPaFKtyS48rAmM904KBgANI1o7NP94TtiuHlS76GRwB94XtN9gPIkk776kH/O2j
+        wnb4V6UrfgIxR8Gf4vLVdeTjONBmrGcqzqwLhwcUSDhWJ4T9Q4eeBE+0NiXsabazfyvgL6wJR+aCYi0c
+        QhzHO4X9kyEubKxnKs5ggwYIATQp7KUzivXDOcX68bxizYeE/TPb2b8V7P8kHKWryuUsYj9yPPKUDXEp
+        Yz1TcQYb1GqyL8JRXhGOL8wqwJOVq76dKAjHWjUWeUoGX9JYz1ScWe+0qYCYEqDO7hq8rvp2Ypu47QUU
+        L/aEixevlUGpNfTMGuuZijM5zTsN1kGxBXDeGWM9U3Emm9VUQC1k+xZkl1QVUIUo5Zdjkpz+uRVf+3ld
+        tXGejZzq7gTkMlFanA9QZOo/E2poZE9rhvNwvj0KiNHcrIu8k08oOeOU32e0d+R3P6dkwgmbS9p5PRMb
+        l/4k8DmfUCz8Gmu3JOjtl3v5NBoSEPT0VY4S/VtKTVPI/xJJorBp0h7yD1J6YUr6c4D3c+F8Li7hE2lS
+        QL/s40o2TplFCAi8lMeZX0YBFhAYhLAp6c+DigAPreQSkqYEzONJfM6nlIi+lWiR1/LI4+pYzRZw/0up
+        6Bhl4pNggoKuZ+j7CCXQFiagn0hjAt675QxokTco+oai068g4JkUwrYEbC4I/GP0L7o+8oBujD6ggfHH
+        pGHwWCTDAhsWsNEC7asW8OsVpwJsLu8LOjVwm37ov0ltL27R32MPKTfn+zYtqA2hLFgdwgEkwRBmNFqF
+        zYUpPw0BByGgQxeQTXrlPDBNCnCTHz1lITwPs9xj7ikSsi8FXJiJnuF7dGnwDv0+dJd63z6iOczG/HuP
+        JOQbkHsbnAEPeSZ6KRwYonBwiKbxCnrRc7nW4SFV8SZw32PAh5kJoi3h4LCMYT+Lb0kL2M73whLugRXc
+        AXwX1O4BvQWRbzMDld+EpVRIF1Dxs50FpBeC0s9FNgnAK9mUAJ6B1Jxf3uecOOjto4WkD7aAtFeuWqf0
+        p4Df9Rz3wzgtQhTDAhsWwIU4IV8mNfBe77zesHE859mzgCrL6QgIG9jN2miL1HLp7Cggbg7gn9FmMeZT
+        t/9XjA2TINtCAsZ6puLfg7rG/YMs/wOCHHzP+ZVNcAAAAABJRU5ErkJggg==
+</value>
+  </data>
   <data name="btnGemstone.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         /9j/4AAQSkZJRgABAQEBLAEsAAD/7gAOQWRvYmUAZAAAAAAB/+EI7kV4aWYAAE1NACoAAAAIAAcBEgAD

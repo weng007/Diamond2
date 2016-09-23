@@ -175,11 +175,11 @@ namespace DiamondBiz.Biz
                 throw ex;
             }
         }
-        public int DoDeleteDataReference(int id)
+        public int DoDeleteDataReference(int id, int flag)
         {
             try
             {
-                return dal.DoDeleteDataReference(id);
+                return dal.DoDeleteDataReference(id, flag);
             }
             catch (Exception ex)
             {

@@ -14,7 +14,7 @@
   <xs:element name="dsBuyBookETC" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsBuyBookETC" msprop:Generator_UserDSName="dsBuyBookETC">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="BuyBookETC" msprop:Generator_TableClassName="BuyBookETCDataTable" msprop:Generator_TableVarName="tableBuyBookETC" msprop:Generator_RowChangedName="BuyBookETCRowChanged" msprop:Generator_TablePropName="BuyBookETC" msprop:Generator_RowDeletingName="BuyBookETCRowDeleting" msprop:Generator_RowChangingName="BuyBookETCRowChanging" msprop:Generator_RowEvHandlerName="BuyBookETCRowChangeEventHandler" msprop:Generator_RowDeletedName="BuyBookETCRowDeleted" msprop:Generator_RowClassName="BuyBookETCRow" msprop:Generator_UserTableName="BuyBookETC" msprop:Generator_RowEvArgName="BuyBookETCRowChangeEvent">
+        <xs:element name="BuyBookETC" msprop:Generator_TableClassName="BuyBookETCDataTable" msprop:Generator_TableVarName="tableBuyBookETC" msprop:Generator_TablePropName="BuyBookETC" msprop:Generator_RowDeletingName="BuyBookETCRowDeleting" msprop:Generator_RowChangingName="BuyBookETCRowChanging" msprop:Generator_RowEvHandlerName="BuyBookETCRowChangeEventHandler" msprop:Generator_RowDeletedName="BuyBookETCRowDeleted" msprop:Generator_UserTableName="BuyBookETC" msprop:Generator_RowChangedName="BuyBookETCRowChanged" msprop:Generator_RowEvArgName="BuyBookETCRowChangeEvent" msprop:Generator_RowClassName="BuyBookETCRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="RowNum" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnRowNum" msprop:Generator_ColumnPropNameInRow="RowNum" msprop:Generator_ColumnPropNameInTable="RowNumColumn" msprop:Generator_UserColumnName="RowNum" type="xs:long" minOccurs="0" />
@@ -35,6 +35,7 @@
                 </xs:simpleType>
               </xs:element>
               <xs:element name="Price" msprop:Generator_ColumnVarNameInTable="columnPrice" msprop:Generator_ColumnPropNameInRow="Price" msprop:Generator_ColumnPropNameInTable="PriceColumn" msprop:Generator_UserColumnName="Price" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Shop" msprop:Generator_ColumnVarNameInTable="columnShop" msprop:Generator_ColumnPropNameInRow="Shop" msprop:Generator_ColumnPropNameInTable="ShopColumn" msprop:Generator_UserColumnName="Shop" type="xs:int" minOccurs="0" />
               <xs:element name="IsDeleted" msprop:Generator_ColumnVarNameInTable="columnIsDeleted" msprop:Generator_ColumnPropNameInRow="IsDeleted" msprop:Generator_ColumnPropNameInTable="IsDeletedColumn" msprop:Generator_UserColumnName="IsDeleted" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">

@@ -31,6 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BuyBookGemstoneCer));
             this.dtBuyDate = new System.Windows.Forms.DateTimePicker();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnFileDel = new System.Windows.Forms.Button();
+            this.btnChooseDate = new System.Windows.Forms.Button();
+            this.txtPayDate = new System.Windows.Forms.TextBox();
+            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.label22 = new System.Windows.Forms.Label();
             this.txtCode2 = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
@@ -102,9 +106,6 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.openFileDialog2 = new System.Windows.Forms.OpenFileDialog();
             this.openFileDialog3 = new System.Windows.Forms.OpenFileDialog();
-            this.btnChooseDate = new System.Windows.Forms.Button();
-            this.txtPayDate = new System.Windows.Forms.TextBox();
-            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -123,6 +124,7 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.btnFileDel);
             this.panel3.Controls.Add(this.btnChooseDate);
             this.panel3.Controls.Add(this.txtPayDate);
             this.panel3.Controls.Add(this.monthCalendar1);
@@ -198,6 +200,50 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1024, 565);
             this.panel3.TabIndex = 74;
+            // 
+            // btnFileDel
+            // 
+            this.btnFileDel.BackColor = System.Drawing.Color.Transparent;
+            this.btnFileDel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnFileDel.BackgroundImage")));
+            this.btnFileDel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnFileDel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFileDel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(109)))), ((int)(((byte)(65)))));
+            this.btnFileDel.FlatAppearance.BorderSize = 0;
+            this.btnFileDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFileDel.Location = new System.Drawing.Point(198, 515);
+            this.btnFileDel.Name = "btnFileDel";
+            this.btnFileDel.Size = new System.Drawing.Size(30, 30);
+            this.btnFileDel.TabIndex = 308;
+            this.btnFileDel.UseVisualStyleBackColor = false;
+            this.btnFileDel.Click += new System.EventHandler(this.btnFileDel_Click);
+            // 
+            // btnChooseDate
+            // 
+            this.btnChooseDate.FlatAppearance.BorderSize = 0;
+            this.btnChooseDate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnChooseDate.Image = ((System.Drawing.Image)(resources.GetObject("btnChooseDate.Image")));
+            this.btnChooseDate.Location = new System.Drawing.Point(917, 220);
+            this.btnChooseDate.Name = "btnChooseDate";
+            this.btnChooseDate.Size = new System.Drawing.Size(34, 28);
+            this.btnChooseDate.TabIndex = 248;
+            this.btnChooseDate.UseVisualStyleBackColor = true;
+            this.btnChooseDate.Click += new System.EventHandler(this.btnChooseDate_Click);
+            // 
+            // txtPayDate
+            // 
+            this.txtPayDate.Location = new System.Drawing.Point(792, 221);
+            this.txtPayDate.Name = "txtPayDate";
+            this.txtPayDate.Size = new System.Drawing.Size(123, 27);
+            this.txtPayDate.TabIndex = 247;
+            // 
+            // monthCalendar1
+            // 
+            this.monthCalendar1.Location = new System.Drawing.Point(723, 252);
+            this.monthCalendar1.MaxSelectionCount = 1;
+            this.monthCalendar1.Name = "monthCalendar1";
+            this.monthCalendar1.TabIndex = 246;
+            this.monthCalendar1.Visible = false;
+            this.monthCalendar1.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar1_DateSelected);
             // 
             // label22
             // 
@@ -423,10 +469,11 @@
             this.btnUpload.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnUpload.BackgroundImage")));
             this.btnUpload.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnUpload.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnUpload.FlatAppearance.BorderSize = 0;
             this.btnUpload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpload.Location = new System.Drawing.Point(27, 515);
+            this.btnUpload.Location = new System.Drawing.Point(173, 515);
             this.btnUpload.Name = "btnUpload";
-            this.btnUpload.Size = new System.Drawing.Size(102, 33);
+            this.btnUpload.Size = new System.Drawing.Size(30, 33);
             this.btnUpload.TabIndex = 192;
             this.btnUpload.UseVisualStyleBackColor = false;
             this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
@@ -434,7 +481,7 @@
             // linkFile
             // 
             this.linkFile.AutoSize = true;
-            this.linkFile.Location = new System.Drawing.Point(146, 521);
+            this.linkFile.Location = new System.Drawing.Point(45, 521);
             this.linkFile.Name = "linkFile";
             this.linkFile.Size = new System.Drawing.Size(122, 21);
             this.linkFile.TabIndex = 191;
@@ -913,31 +960,6 @@
             // 
             this.openFileDialog3.FileName = "openFileDialog3";
             // 
-            // btnChooseDate
-            // 
-            this.btnChooseDate.Location = new System.Drawing.Point(921, 220);
-            this.btnChooseDate.Name = "btnChooseDate";
-            this.btnChooseDate.Size = new System.Drawing.Size(34, 28);
-            this.btnChooseDate.TabIndex = 248;
-            this.btnChooseDate.UseVisualStyleBackColor = true;
-            this.btnChooseDate.Click += new System.EventHandler(this.btnChooseDate_Click);
-            // 
-            // txtPayDate
-            // 
-            this.txtPayDate.Location = new System.Drawing.Point(792, 221);
-            this.txtPayDate.Name = "txtPayDate";
-            this.txtPayDate.Size = new System.Drawing.Size(123, 27);
-            this.txtPayDate.TabIndex = 247;
-            // 
-            // monthCalendar1
-            // 
-            this.monthCalendar1.Location = new System.Drawing.Point(727, 253);
-            this.monthCalendar1.MaxSelectionCount = 1;
-            this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 246;
-            this.monthCalendar1.Visible = false;
-            this.monthCalendar1.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar1_DateSelected);
-            // 
             // BuyBookGemstoneCer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1033,5 +1055,6 @@
         private System.Windows.Forms.Button btnChooseDate;
         private System.Windows.Forms.TextBox txtPayDate;
         private System.Windows.Forms.MonthCalendar monthCalendar1;
+        private System.Windows.Forms.Button btnFileDel;
     }
 }

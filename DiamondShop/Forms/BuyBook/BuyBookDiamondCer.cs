@@ -13,12 +13,14 @@ using DiamondDS.DS;
 using DiamondShop.DiamondService;
 using System.Data.OleDb;
 using System.Data.SqlClient;
+using DiamondShop.DiamondService1;
 
 
 namespace DiamondShop
 {
     public partial class BuyBookDiamondCer : FormInfo
     {
+        Service2 ser1;
         dsBuyBookDiamondCer tds = new dsBuyBookDiamondCer();
         bool isAuthorize = false;
         string FilePath;
@@ -587,7 +589,14 @@ namespace DiamondShop
 
         private void btnChooseDate_Click(object sender, EventArgs e)
         {
-            monthCalendar1.Visible = true;
+            if (monthCalendar1.Visible == false)
+            {
+                monthCalendar1.Visible = true;
+            }
+            else
+            {
+                monthCalendar1.Visible = false;
+            }
         }
 
         private void monthCalendar1_DateSelected(object sender, DateRangeEventArgs e)
@@ -595,6 +604,12 @@ namespace DiamondShop
             txtPayDate.Text = monthCalendar1.SelectionRange.Start.ToShortDateString();
             monthCalendar1.Visible = false;
             isEdit = true;
+        }
+
+        private void btnFileDel_Click(object sender, EventArgs e)
+        {
+            ser1 = GM.GetService1();
+            ser1.DeleteDataReference(id,2);
         }
     }
 }

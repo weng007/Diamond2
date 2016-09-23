@@ -191,12 +191,17 @@ namespace DiamondShop
                     Image backImage5 = Image.FromStream(ms5);
                     btnImage5.BackgroundImage = backImage5;
                 }
-                if (tds.Order[0].RefID > 0 )
+                if (tds.Order[0].RefID > 0)
                 {
                     linkLabel1.Text = tds.Order[0].Code1;
-                    linkLabel2.Text = tds.Order[0].Code2;
+                    
                 }
+                if (tds.Order[0].RefID1 > 0)
+                {
+                    linkLabel2.Text = tds.Order[0].Code2;
 
+                }
+                
                 InvID = tds.Order[0].RefID;
                 InvID1 = tds.Order[0].RefID1;
 
@@ -518,6 +523,17 @@ namespace DiamondShop
             flag = 1;
         }
 
+        private void btnRefDel_Click(object sender, EventArgs e)
+        {
+            ser1 = GM.GetService1();
+            ser1.DeleteDataReference(id, 0);
+        }
+        private void btnRefDel1_Click(object sender, EventArgs e)
+        {
+            ser1 = GM.GetService1();
+            ser1.DeleteDataReference(id, 1);
+        }
+
         private void dtBuyDate_ValueChanged(object sender, EventArgs e)
         {
             isEdit = true;
@@ -525,7 +541,14 @@ namespace DiamondShop
 
         private void btnChooseDate_Click(object sender, EventArgs e)
         {
-            monthCalendar1.Visible = true;
+            if (monthCalendar1.Visible == false)
+            {
+                monthCalendar1.Visible = true;
+            }
+            else
+            {
+                monthCalendar1.Visible = false;
+            }
         }
 
         private void monthCalendar1_DateSelected(object sender, DateRangeEventArgs e)

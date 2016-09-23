@@ -11,11 +11,14 @@ using System.Windows.Forms;
 using DiamondShop.FormMaster;
 using DiamondShop.DiamondService;
 using DiamondDS.DS;
+using DiamondShop.DiamondService1;
+
 
 namespace DiamondShop
 {
     public partial class BuyBookGemstoneCer : FormInfo
     {
+        Service2 ser1;
         dsBuyBookGemstoneCer tds = new dsBuyBookGemstoneCer();
         bool isAuthorize = false;
         MemoryStream ms1;
@@ -588,6 +591,12 @@ namespace DiamondShop
             txtPayDate.Text = monthCalendar1.SelectionRange.Start.ToShortDateString();
             monthCalendar1.Visible = false;
             isEdit = true;
+        }
+
+        private void btnFileDel_Click(object sender, EventArgs e)
+        {
+            ser1 = GM.GetService1();
+            ser1.DeleteDataReference(id, 3);
         }
     }
 }
