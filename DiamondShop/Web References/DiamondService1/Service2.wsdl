@@ -3,13 +3,16 @@
   <wsdl:types>
     <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
       <s:import namespace="http://tempuri.org/dsUser.xsd" />
-      <s:import schemaLocation="http://localhost:5555/DiamondService/Service2.asmx?schema=dsUser" namespace="http://tempuri.org/dsUser.xsd" />
+      <s:import namespace="http://tempuri.org/dsOrder.xsd" />
+      <s:import schemaLocation="http://localhost:8888/DiamondService/Service2.asmx?schema=dsUser" namespace="http://tempuri.org/dsUser.xsd" />
+      <s:import schemaLocation="http://localhost:8888/DiamondService/Service2.asmx?schema=dsOrder" namespace="http://tempuri.org/dsOrder.xsd" />
       <s:element name="DoAuthenticate">
         <s:complexType>
           <s:sequence>
             <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
             <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
             <s:element minOccurs="0" maxOccurs="1" name="type" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Shop" type="s:int" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -52,6 +55,26 @@
               <s:complexType>
                 <s:sequence>
                   <s:any namespace="http://tempuri.org/dsUser.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFactoryStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFactoryStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFactoryStatusResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/dsOrder.xsd" />
                 </s:sequence>
               </s:complexType>
             </s:element>
@@ -105,6 +128,21 @@
         <s:complexType>
           <s:sequence>
             <s:element minOccurs="1" maxOccurs="1" name="UpdateJewelryStatusResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateOrderStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Flag" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateOrderStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateOrderStatusResult" type="s:int" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -299,6 +337,51 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="UpdateMessageStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Flag" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateMessageStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateMessageStatusResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteDataReference">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteDataReferenceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteDataReferenceResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateProductionLine">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FactoryStatus" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="EditBy" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateProductionLineResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateProductionLineResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
     </s:schema>
   </wsdl:types>
   <wsdl:message name="DoAuthenticateSoapIn">
@@ -319,6 +402,12 @@
   <wsdl:message name="GetBuyerSoapOut">
     <wsdl:part name="parameters" element="tns:GetBuyerResponse" />
   </wsdl:message>
+  <wsdl:message name="GetFactoryStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFactoryStatus" />
+  </wsdl:message>
+  <wsdl:message name="GetFactoryStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFactoryStatusResponse" />
+  </wsdl:message>
   <wsdl:message name="GetRunningNumberSoapIn">
     <wsdl:part name="parameters" element="tns:GetRunningNumber" />
   </wsdl:message>
@@ -336,6 +425,12 @@
   </wsdl:message>
   <wsdl:message name="UpdateJewelryStatusSoapOut">
     <wsdl:part name="parameters" element="tns:UpdateJewelryStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateOrderStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateOrderStatus" />
+  </wsdl:message>
+  <wsdl:message name="UpdateOrderStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateOrderStatusResponse" />
   </wsdl:message>
   <wsdl:message name="GetPriceDaimondAndGemstoneSoapIn">
     <wsdl:part name="parameters" element="tns:GetPriceDaimondAndGemstone" />
@@ -385,6 +480,24 @@
   <wsdl:message name="GetReportCertificateSoapOut">
     <wsdl:part name="parameters" element="tns:GetReportCertificateResponse" />
   </wsdl:message>
+  <wsdl:message name="UpdateMessageStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateMessageStatus" />
+  </wsdl:message>
+  <wsdl:message name="UpdateMessageStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateMessageStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteDataReferenceSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteDataReference" />
+  </wsdl:message>
+  <wsdl:message name="DeleteDataReferenceSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteDataReferenceResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateProductionLineSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateProductionLine" />
+  </wsdl:message>
+  <wsdl:message name="UpdateProductionLineSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateProductionLineResponse" />
+  </wsdl:message>
   <wsdl:portType name="Service2Soap">
     <wsdl:operation name="DoAuthenticate">
       <wsdl:input message="tns:DoAuthenticateSoapIn" />
@@ -398,6 +511,10 @@
       <wsdl:input message="tns:GetBuyerSoapIn" />
       <wsdl:output message="tns:GetBuyerSoapOut" />
     </wsdl:operation>
+    <wsdl:operation name="GetFactoryStatus">
+      <wsdl:input message="tns:GetFactoryStatusSoapIn" />
+      <wsdl:output message="tns:GetFactoryStatusSoapOut" />
+    </wsdl:operation>
     <wsdl:operation name="GetRunningNumber">
       <wsdl:input message="tns:GetRunningNumberSoapIn" />
       <wsdl:output message="tns:GetRunningNumberSoapOut" />
@@ -409,6 +526,10 @@
     <wsdl:operation name="UpdateJewelryStatus">
       <wsdl:input message="tns:UpdateJewelryStatusSoapIn" />
       <wsdl:output message="tns:UpdateJewelryStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOrderStatus">
+      <wsdl:input message="tns:UpdateOrderStatusSoapIn" />
+      <wsdl:output message="tns:UpdateOrderStatusSoapOut" />
     </wsdl:operation>
     <wsdl:operation name="GetPriceDaimondAndGemstone">
       <wsdl:input message="tns:GetPriceDaimondAndGemstoneSoapIn" />
@@ -442,6 +563,18 @@
       <wsdl:input message="tns:GetReportCertificateSoapIn" />
       <wsdl:output message="tns:GetReportCertificateSoapOut" />
     </wsdl:operation>
+    <wsdl:operation name="UpdateMessageStatus">
+      <wsdl:input message="tns:UpdateMessageStatusSoapIn" />
+      <wsdl:output message="tns:UpdateMessageStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDataReference">
+      <wsdl:input message="tns:DeleteDataReferenceSoapIn" />
+      <wsdl:output message="tns:DeleteDataReferenceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProductionLine">
+      <wsdl:input message="tns:UpdateProductionLineSoapIn" />
+      <wsdl:output message="tns:UpdateProductionLineSoapOut" />
+    </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="Service2Soap" type="tns:Service2Soap">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
@@ -472,6 +605,15 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="GetFactoryStatus">
+      <soap:operation soapAction="http://tempuri.org/GetFactoryStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="GetRunningNumber">
       <soap:operation soapAction="http://tempuri.org/GetRunningNumber" style="document" />
       <wsdl:input>
@@ -492,6 +634,15 @@
     </wsdl:operation>
     <wsdl:operation name="UpdateJewelryStatus">
       <soap:operation soapAction="http://tempuri.org/UpdateJewelryStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOrderStatus">
+      <soap:operation soapAction="http://tempuri.org/UpdateOrderStatus" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -571,6 +722,33 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="UpdateMessageStatus">
+      <soap:operation soapAction="http://tempuri.org/UpdateMessageStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDataReference">
+      <soap:operation soapAction="http://tempuri.org/DeleteDataReference" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProductionLine">
+      <soap:operation soapAction="http://tempuri.org/UpdateProductionLine" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:binding name="Service2Soap12" type="tns:Service2Soap">
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
@@ -601,6 +779,15 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="GetFactoryStatus">
+      <soap12:operation soapAction="http://tempuri.org/GetFactoryStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="GetRunningNumber">
       <soap12:operation soapAction="http://tempuri.org/GetRunningNumber" style="document" />
       <wsdl:input>
@@ -621,6 +808,15 @@
     </wsdl:operation>
     <wsdl:operation name="UpdateJewelryStatus">
       <soap12:operation soapAction="http://tempuri.org/UpdateJewelryStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOrderStatus">
+      <soap12:operation soapAction="http://tempuri.org/UpdateOrderStatus" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -700,13 +896,40 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="UpdateMessageStatus">
+      <soap12:operation soapAction="http://tempuri.org/UpdateMessageStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDataReference">
+      <soap12:operation soapAction="http://tempuri.org/DeleteDataReference" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProductionLine">
+      <soap12:operation soapAction="http://tempuri.org/UpdateProductionLine" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:service name="Service2">
     <wsdl:port name="Service2Soap" binding="tns:Service2Soap">
-      <soap:address location="http://localhost:5555/DiamondService/Service2.asmx" />
+      <soap:address location="http://localhost:8888/DiamondService/Service2.asmx" />
     </wsdl:port>
     <wsdl:port name="Service2Soap12" binding="tns:Service2Soap12">
-      <soap12:address location="http://localhost:5555/DiamondService/Service2.asmx" />
+      <soap12:address location="http://localhost:8888/DiamondService/Service2.asmx" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>

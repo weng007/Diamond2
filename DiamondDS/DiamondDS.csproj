@@ -216,6 +216,21 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsMasterTableDetail.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DS\dsOrder.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsOrder.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS\dsOrderDetail.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsOrderDetail.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS\dsProductionLine.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsProductionLine.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DS\dsReportBuying.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -246,15 +261,28 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsSell.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DS\dsTransfer.cs">
+      <DependentUpon>dsTransfer.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DS\dsTransfer.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dsTransfer.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DS\dsTransferBuyBook.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsTransferBuyBook.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DS\dsTransferDetail.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dsTransferDetail.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS\dsTransferInventory.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsTransferInventory.xsd</DependentUpon>
     </Compile>
     <Compile Include="DS\dsUser.cs">
       <DependentUpon>dsUser.xsd</DependentUpon>
@@ -264,14 +292,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsUser.xsd</DependentUpon>
     </Compile>
-    <Compile Include="DS\dsWarning.cs">
-      <DependentUpon>dsWarning.xsd</DependentUpon>
-    </Compile>
     <Compile Include="DS\dsWarning.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dsWarning.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DS\dsWarningTransfer.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -633,6 +659,39 @@
     <None Include="DS\dsMasterTableDetail.xss">
       <DependentUpon>dsMasterTableDetail.xsd</DependentUpon>
     </None>
+    <None Include="DS\dsOrder.xsc">
+      <DependentUpon>dsOrder.xsd</DependentUpon>
+    </None>
+    <None Include="DS\dsOrder.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsOrder.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS\dsOrder.xss">
+      <DependentUpon>dsOrder.xsd</DependentUpon>
+    </None>
+    <None Include="DS\dsOrderDetail.xsc">
+      <DependentUpon>dsOrderDetail.xsd</DependentUpon>
+    </None>
+    <None Include="DS\dsOrderDetail.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsOrderDetail.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS\dsOrderDetail.xss">
+      <DependentUpon>dsOrderDetail.xsd</DependentUpon>
+    </None>
+    <None Include="DS\dsProductionLine.xsc">
+      <DependentUpon>dsProductionLine.xsd</DependentUpon>
+    </None>
+    <None Include="DS\dsProductionLine.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsProductionLine.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS\dsProductionLine.xss">
+      <DependentUpon>dsProductionLine.xsd</DependentUpon>
+    </None>
     <None Include="DS\dsReportBuying.xsc">
       <DependentUpon>dsReportBuying.xsd</DependentUpon>
     </None>
@@ -710,6 +769,17 @@
     <None Include="DS\dsTransfer.xss">
       <DependentUpon>dsTransfer.xsd</DependentUpon>
     </None>
+    <None Include="DS\dsTransferBuyBook.xsc">
+      <DependentUpon>dsTransferBuyBook.xsd</DependentUpon>
+    </None>
+    <None Include="DS\dsTransferBuyBook.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsTransferBuyBook.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS\dsTransferBuyBook.xss">
+      <DependentUpon>dsTransferBuyBook.xsd</DependentUpon>
+    </None>
     <None Include="DS\dsTransferDetail.xsc">
       <DependentUpon>dsTransferDetail.xsd</DependentUpon>
     </None>
@@ -720,6 +790,17 @@
     </None>
     <None Include="DS\dsTransferDetail.xss">
       <DependentUpon>dsTransferDetail.xsd</DependentUpon>
+    </None>
+    <None Include="DS\dsTransferInventory.xsc">
+      <DependentUpon>dsTransferInventory.xsd</DependentUpon>
+    </None>
+    <None Include="DS\dsTransferInventory.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsTransferInventory.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS\dsTransferInventory.xss">
+      <DependentUpon>dsTransferInventory.xsd</DependentUpon>
     </None>
     <None Include="DS\dsUser.xsc">
       <DependentUpon>dsUser.xsd</DependentUpon>
@@ -742,6 +823,17 @@
     </None>
     <None Include="DS\dsWarning.xss">
       <DependentUpon>dsWarning.xsd</DependentUpon>
+    </None>
+    <None Include="DS\dsWarningTransfer.xsc">
+      <DependentUpon>dsWarningTransfer.xsd</DependentUpon>
+    </None>
+    <None Include="DS\dsWarningTransfer.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsWarningTransfer1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DS\dsWarningTransfer.xss">
+      <DependentUpon>dsWarningTransfer.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
