@@ -225,7 +225,7 @@ namespace DiamondShop
                 }
 
                 EnableSave = false;
-                EnableEdit = true;
+                EnableEdit = GM.CheckIsEdit(ApplicationInfo.Shop, Convert.ToInt16(cmbShop.SelectedValue.ToString()));
                 EnableDelete = false;
               }
 

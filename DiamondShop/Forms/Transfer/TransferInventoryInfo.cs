@@ -101,7 +101,7 @@ namespace DiamondShop
                 txtReceivedDate.Text = string.Format("{0:d/M/yyyy}", tds.Transfer[0]["ReceiveDate"]);
 
                 EnableSave = false;
-                EnableEdit = true;
+                EnableEdit = GM.CheckIsEdit(ApplicationInfo.Shop, Convert.ToInt16(cmbShop.SelectedValue.ToString()));
                 EnableDelete = false;
             }
 
