@@ -33,9 +33,9 @@
             this.dtOrderDate = new System.Windows.Forms.DateTimePicker();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnPrint = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnRefDel1 = new System.Windows.Forms.Button();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnRefDel = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.btnConfirm = new System.Windows.Forms.Button();
             this.btnJobDone = new System.Windows.Forms.Button();
@@ -143,9 +143,9 @@
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.btnPrint);
-            this.panel3.Controls.Add(this.button4);
+            this.panel3.Controls.Add(this.btnRefDel1);
             this.panel3.Controls.Add(this.monthCalendar1);
-            this.panel3.Controls.Add(this.button3);
+            this.panel3.Controls.Add(this.btnRefDel);
             this.panel3.Controls.Add(this.button2);
             this.panel3.Controls.Add(this.btnConfirm);
             this.panel3.Controls.Add(this.btnJobDone);
@@ -232,73 +232,74 @@
             // 
             // btnPrint
             // 
-            this.btnPrint.BackColor = System.Drawing.Color.White;
+            this.btnPrint.BackColor = System.Drawing.Color.Transparent;
             this.btnPrint.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPrint.FlatAppearance.BorderSize = 0;
-            this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPrint.Image = ((System.Drawing.Image)(resources.GetObject("btnPrint.Image")));
-            this.btnPrint.Location = new System.Drawing.Point(1221, 583);
+            this.btnPrint.Location = new System.Drawing.Point(539, 578);
             this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(65, 96);
+            this.btnPrint.Size = new System.Drawing.Size(76, 90);
             this.btnPrint.TabIndex = 308;
             this.btnPrint.UseVisualStyleBackColor = false;
             // 
-            // button4
+            // btnRefDel1
             // 
-            this.button4.BackColor = System.Drawing.Color.Transparent;
-            this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(109)))), ((int)(((byte)(65)))));
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(1287, 409);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(30, 30);
-            this.button4.TabIndex = 307;
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnRefDel1.BackColor = System.Drawing.Color.Transparent;
+            this.btnRefDel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRefDel1.BackgroundImage")));
+            this.btnRefDel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnRefDel1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRefDel1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(109)))), ((int)(((byte)(65)))));
+            this.btnRefDel1.FlatAppearance.BorderSize = 0;
+            this.btnRefDel1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRefDel1.Location = new System.Drawing.Point(1287, 409);
+            this.btnRefDel1.Name = "btnRefDel1";
+            this.btnRefDel1.Size = new System.Drawing.Size(30, 30);
+            this.btnRefDel1.TabIndex = 307;
+            this.btnRefDel1.UseVisualStyleBackColor = false;
+            this.btnRefDel1.Click += new System.EventHandler(this.btnRefDel1_Click);
             // 
             // monthCalendar1
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(677, 248);
+            this.monthCalendar1.Location = new System.Drawing.Point(670, 248);
             this.monthCalendar1.MaxSelectionCount = 1;
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 266;
             this.monthCalendar1.Visible = false;
             this.monthCalendar1.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar1_DateSelected);
             // 
-            // button3
+            // btnRefDel
             // 
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(109)))), ((int)(((byte)(65)))));
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(1287, 377);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(30, 30);
-            this.button3.TabIndex = 306;
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnRefDel.BackColor = System.Drawing.Color.Transparent;
+            this.btnRefDel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRefDel.BackgroundImage")));
+            this.btnRefDel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnRefDel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRefDel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(109)))), ((int)(((byte)(65)))));
+            this.btnRefDel.FlatAppearance.BorderSize = 0;
+            this.btnRefDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRefDel.Location = new System.Drawing.Point(1287, 377);
+            this.btnRefDel.Name = "btnRefDel";
+            this.btnRefDel.Size = new System.Drawing.Size(30, 30);
+            this.btnRefDel.TabIndex = 306;
+            this.btnRefDel.UseVisualStyleBackColor = false;
+            this.btnRefDel.Click += new System.EventHandler(this.btnRefDel_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(997, 588);
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.Location = new System.Drawing.Point(829, 578);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(99, 33);
+            this.button2.Size = new System.Drawing.Size(76, 90);
             this.button2.TabIndex = 305;
-            this.button2.Text = "Inventory";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Visible = false;
             // 
             // btnConfirm
             // 
-            this.btnConfirm.Location = new System.Drawing.Point(1102, 588);
+            this.btnConfirm.Image = ((System.Drawing.Image)(resources.GetObject("btnConfirm.Image")));
+            this.btnConfirm.Location = new System.Drawing.Point(453, 578);
             this.btnConfirm.Name = "btnConfirm";
-            this.btnConfirm.Size = new System.Drawing.Size(105, 33);
+            this.btnConfirm.Size = new System.Drawing.Size(76, 90);
             this.btnConfirm.TabIndex = 304;
-            this.btnConfirm.Text = "Confirm Order";
             this.btnConfirm.UseVisualStyleBackColor = true;
             this.btnConfirm.Visible = false;
             this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
@@ -500,7 +501,7 @@
             this.btnDiamond.ForeColor = System.Drawing.Color.White;
             this.btnDiamond.Location = new System.Drawing.Point(453, 517);
             this.btnDiamond.Name = "btnDiamond";
-            this.btnDiamond.Size = new System.Drawing.Size(227, 40);
+            this.btnDiamond.Size = new System.Drawing.Size(225, 40);
             this.btnDiamond.TabIndex = 286;
             this.btnDiamond.Text = "รายการของใน Buy Book";
             this.btnDiamond.UseVisualStyleBackColor = false;
@@ -900,9 +901,12 @@
             // 
             // btnChooseDate
             // 
-            this.btnChooseDate.Location = new System.Drawing.Point(871, 218);
+            this.btnChooseDate.FlatAppearance.BorderSize = 0;
+            this.btnChooseDate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnChooseDate.Image = ((System.Drawing.Image)(resources.GetObject("btnChooseDate.Image")));
+            this.btnChooseDate.Location = new System.Drawing.Point(863, 212);
             this.btnChooseDate.Name = "btnChooseDate";
-            this.btnChooseDate.Size = new System.Drawing.Size(34, 28);
+            this.btnChooseDate.Size = new System.Drawing.Size(34, 32);
             this.btnChooseDate.TabIndex = 242;
             this.btnChooseDate.UseVisualStyleBackColor = true;
             this.btnChooseDate.Click += new System.EventHandler(this.btnChooseDate_Click);
@@ -1287,8 +1291,8 @@
         private System.Windows.Forms.Button btnNotYet;
         private System.Windows.Forms.Button btnConfirm;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnRefDel1;
+        private System.Windows.Forms.Button btnRefDel;
         private System.Windows.Forms.Button btnPrint;
         private System.Windows.Forms.ImageList imageList1;
     }

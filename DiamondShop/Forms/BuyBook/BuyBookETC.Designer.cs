@@ -31,9 +31,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BuyBookETC));
             this.dtBuyDate = new System.Windows.Forms.DateTimePicker();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
+            this.label29 = new System.Windows.Forms.Label();
+            this.cmbShop = new System.Windows.Forms.ComboBox();
             this.btnChooseDate = new System.Windows.Forms.Button();
             this.txtPayDate = new System.Windows.Forms.TextBox();
-            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.cmbBuyer = new System.Windows.Forms.ComboBox();
             this.label28 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
@@ -67,9 +69,11 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.monthCalendar1);
+            this.panel3.Controls.Add(this.label29);
+            this.panel3.Controls.Add(this.cmbShop);
             this.panel3.Controls.Add(this.btnChooseDate);
             this.panel3.Controls.Add(this.txtPayDate);
-            this.panel3.Controls.Add(this.monthCalendar1);
             this.panel3.Controls.Add(this.cmbBuyer);
             this.panel3.Controls.Add(this.label28);
             this.panel3.Controls.Add(this.label26);
@@ -92,9 +96,40 @@
             this.panel3.TabIndex = 74;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
-            // btnChooseDate
+            // monthCalendar1
             // 
-            this.btnChooseDate.Location = new System.Drawing.Point(591, 58);
+            this.monthCalendar1.Location = new System.Drawing.Point(393, 82);
+            this.monthCalendar1.MaxSelectionCount = 1;
+            this.monthCalendar1.Name = "monthCalendar1";
+            this.monthCalendar1.TabIndex = 253;
+            this.monthCalendar1.Visible = false;
+            this.monthCalendar1.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar1_DateSelected);
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
+            this.label29.Location = new System.Drawing.Point(381, 95);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(78, 21);
+            this.label29.TabIndex = 252;
+            this.label29.Text = "Location";
+            // 
+            // cmbShop
+            // 
+            this.cmbShop.Enabled = false;
+            this.cmbShop.FormattingEnabled = true;
+            this.cmbShop.Location = new System.Drawing.Point(462, 92);
+            this.cmbShop.Name = "cmbShop";
+            this.cmbShop.Size = new System.Drawing.Size(163, 29);
+            this.cmbShop.TabIndex = 251;
+            // 
+            this.btnChooseDate.FlatAppearance.BorderSize = 0;
+            // 
+            this.btnChooseDate.FlatAppearance.BorderSize = 0;
+            this.btnChooseDate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnChooseDate.Image = ((System.Drawing.Image)(resources.GetObject("btnChooseDate.Image")));
+            this.btnChooseDate.Location = new System.Drawing.Point(587, 51);
             this.btnChooseDate.Name = "btnChooseDate";
             this.btnChooseDate.Size = new System.Drawing.Size(34, 28);
             this.btnChooseDate.TabIndex = 245;
@@ -103,20 +138,11 @@
             // 
             // txtPayDate
             // 
-            this.txtPayDate.Location = new System.Drawing.Point(462, 59);
+            this.txtPayDate.Location = new System.Drawing.Point(462, 53);
             this.txtPayDate.Name = "txtPayDate";
             this.txtPayDate.Size = new System.Drawing.Size(123, 27);
             this.txtPayDate.TabIndex = 244;
             this.txtPayDate.TextChanged += new System.EventHandler(this.txtSeller_TextChanged);
-            // 
-            // monthCalendar1
-            // 
-            this.monthCalendar1.Location = new System.Drawing.Point(384, 91);
-            this.monthCalendar1.MaxSelectionCount = 1;
-            this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 243;
-            this.monthCalendar1.Visible = false;
-            this.monthCalendar1.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar1_DateSelected);
             // 
             // cmbBuyer
             // 
@@ -142,7 +168,7 @@
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.label26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label26.Location = new System.Drawing.Point(379, 58);
+            this.label26.Location = new System.Drawing.Point(379, 57);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(78, 19);
             this.label26.TabIndex = 215;
@@ -322,6 +348,8 @@
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Button btnChooseDate;
         private System.Windows.Forms.TextBox txtPayDate;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.ComboBox cmbShop;
         private System.Windows.Forms.MonthCalendar monthCalendar1;
     }
 }

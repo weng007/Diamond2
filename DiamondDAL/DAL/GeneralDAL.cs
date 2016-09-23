@@ -256,13 +256,14 @@ namespace DiamondDAL.DAL
             return flag;
         }
 
-        public int DoDeleteDataReference(int id)
+        public int DoDeleteDataReference(int id,int flag)
         {
             try
             {
                 SQL.ClearParameter();
                 SQL.CreateParameter("@ID", id);
-                flag = SQL.ExecuteSP("SP_OrderReference_Del");
+                SQL.CreateParameter("@Flag", flag);
+                flag = SQL.ExecuteSP("SP_Reference_Del");
             }
             catch (Exception ex)
             {

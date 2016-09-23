@@ -253,12 +253,12 @@ namespace Diamond
             }
         }
         [WebMethod]
-        public int DeleteDataReference(int id)
+        public int DeleteDataReference(int id, int flag)
         {
             GeneralCBiz biz = new GeneralCBiz();
             try
             {
-                return biz.DoDeleteDataReference(id);
+                return biz.DoDeleteDataReference(id, flag);
             }
             catch (Exception ex)
             {

@@ -77,6 +77,11 @@ namespace DiamondShop
             cmbBuyer.SelectedIndex = ds.Tables[0].Rows.Count - 1;
             cmbBuyer.Refresh();
 
+            cmbShop.DataSource = (GM.GetMasterTableDetail("C007")).Tables[0];
+            cmbShop.ValueMember = "ID";
+            cmbShop.DisplayMember = "Detail";
+            cmbShop.Refresh();
+
             dtBuyDate.Select();
 
             SetFieldService.SetRequireField(txtSeller);
@@ -334,7 +339,14 @@ namespace DiamondShop
 
         private void btnChooseDate_Click(object sender, EventArgs e)
         {
-            monthCalendar1.Visible = true;
+            if (monthCalendar1.Visible == false)
+            {
+                monthCalendar1.Visible = true;
+            }
+            else
+            {
+                monthCalendar1.Visible = false;
+            }
         }
 
         private void monthCalendar1_DateSelected(object sender, DateRangeEventArgs e)

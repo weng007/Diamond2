@@ -72,7 +72,7 @@ namespace DiamondShop
                 binder.BindValueToControl(tds.ProductionLine[0]);
                 
                 EnableSave = false;
-                EnableEdit = GM.CheckIsEdit(ApplicationInfo.Shop, Convert.ToInt16(cmbShop.SelectedValue.ToString()));
+                EnableEdit = true;
                 EnableDelete = false;
             }
             //ds = ser.DoSelectData("ExchangeRate", id, 0);
