@@ -94,7 +94,7 @@ namespace DiamondShop
                 txtPayDate.Text = string.Format("{0:d/M/yyyy}", tds.BuyBookGold[0]["PayDate"]);
 
                 EnableSave = false;
-                EnableEdit = true;
+                EnableEdit = GM.CheckIsEdit(ApplicationInfo.Shop, Convert.ToInt16(cmbShop.SelectedValue.ToString()));
                 EnableDelete = false;
             }
             if (tds.BuyBookGold[0]["IsPaid"].ToString() == "0")

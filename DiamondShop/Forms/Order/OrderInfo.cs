@@ -226,7 +226,7 @@ namespace DiamondShop
                     txtNote.Text = materail;
                 }
                 //EnableSave = false;
-                //EnableEdit = true;
+                //EnableEdit = GM.CheckIsEdit(ApplicationInfo.Shop, Convert.ToInt16(cmbShop.SelectedValue.ToString()));
                 //EnableDelete = false;
               }
                 if (ApplicationInfo.Shop == 239)//239 = Office
@@ -516,81 +516,6 @@ namespace DiamondShop
             btnNotYet.Enabled = false;
             btnProcessing.Enabled = true;
             flag = 1;
-        }
-
-        private void btnImage1_Click(object sender, EventArgs e)
-        {
-            openFileDialog1.Filter = "Image files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png) | *.jpg; *.jpeg; *.jpe; *.jfif; *.png";
-            if (openFileDialog1.ShowDialog() == DialogResult.OK)
-            {
-                btnImage1.BackgroundImage = Image.FromFile(openFileDialog1.FileName);
-
-                FileStream fs;
-                fs = new FileStream(openFileDialog1.FileName, FileMode.Open, FileAccess.Read);
-                image1 = new byte[fs.Length];
-                fs.Read(image1, 0, System.Convert.ToInt32(fs.Length));
-                fs.Close();
-            }
-        }
-
-        private void btnImage2_Click(object sender, EventArgs e)
-        {
-            openFileDialog1.Filter = "Image files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png) | *.jpg; *.jpeg; *.jpe; *.jfif; *.png";
-            if (openFileDialog1.ShowDialog() == DialogResult.OK)
-            {
-                btnImage2.BackgroundImage = Image.FromFile(openFileDialog1.FileName);
-
-                FileStream fs;
-                fs = new FileStream(openFileDialog1.FileName, FileMode.Open, FileAccess.Read);
-                image2 = new byte[fs.Length];
-                fs.Read(image2, 0, System.Convert.ToInt32(fs.Length));
-                fs.Close();
-            }
-        }
-
-        private void btnImage3_Click(object sender, EventArgs e)
-        {
-            openFileDialog1.Filter = "Image files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png) | *.jpg; *.jpeg; *.jpe; *.jfif; *.png";
-            if (openFileDialog1.ShowDialog() == DialogResult.OK)
-            {
-                btnImage3.BackgroundImage = Image.FromFile(openFileDialog1.FileName);
-
-                FileStream fs;
-                fs = new FileStream(openFileDialog1.FileName, FileMode.Open, FileAccess.Read);
-                image3 = new byte[fs.Length];
-                fs.Read(image3, 0, System.Convert.ToInt32(fs.Length));
-                fs.Close();
-            }
-        }
-
-        private void btnImage4_Click(object sender, EventArgs e)
-        {
-            openFileDialog1.Filter = "Image files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png) | *.jpg; *.jpeg; *.jpe; *.jfif; *.png";
-            if (openFileDialog1.ShowDialog() == DialogResult.OK)
-            {
-                btnImage4.BackgroundImage = Image.FromFile(openFileDialog1.FileName);
-
-                FileStream fs;
-                fs = new FileStream(openFileDialog1.FileName, FileMode.Open, FileAccess.Read);
-                image4 = new byte[fs.Length];
-                fs.Read(image4, 0, System.Convert.ToInt32(fs.Length));
-                fs.Close();
-            }
-        }
-
-        private void btnImage5_Click(object sender, EventArgs e)
-        {
-            openFileDialog1.Filter = "Image files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png) | *.jpg; *.jpeg; *.jpe; *.jfif; *.png";
-            if (openFileDialog1.ShowDialog() == DialogResult.OK)
-            {
-                btnImage5.BackgroundImage = Image.FromFile(openFileDialog1.FileName);
-
-                FileStream fs;
-                fs = new FileStream(openFileDialog1.FileName, FileMode.Open, FileAccess.Read);
-                image5 = new byte[fs.Length];
-                fs.Read(image5, 0, System.Convert.ToInt32(fs.Length));
-                fs.Close();
-            }
         }
 
         private void dtBuyDate_ValueChanged(object sender, EventArgs e)
