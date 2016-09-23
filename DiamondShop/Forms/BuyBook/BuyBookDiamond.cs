@@ -45,7 +45,6 @@ namespace DiamondShop
             binder.BindControl(txtTotalBaht, "TotalBaht");
             binder.BindControl(txtPriceCarat, "PriceCarat");
             binder.BindControl(chkPayByUSD, "PayByUSD");
-            //binder.BindControl(txtTotalThaiBaht, "TotalThaiBaht");
             binder.BindControl(txtMarketPrice, "MarketPrice");
             binder.BindControl(txtNote, "Note");
             binder.BindControl(cmbBuyer, "Buyer");
@@ -121,6 +120,8 @@ namespace DiamondShop
             cmbClearity.ValueMember = "ID";
             cmbClearity.DisplayMember = "Detail";
             cmbClearity.Refresh();
+
+            cmbShop.SelectedValue = ApplicationInfo.Shop;
 
             dtBuyDate.Select();
 
@@ -410,7 +411,6 @@ namespace DiamondShop
             dtBuyDate.Enabled = status;
             txtSeller.Enabled = status;
             txtCode.Enabled = status;
-            cmbShop.Enabled = status;
             cmbShape.Enabled = status;
             txtSSize.Enabled = status;
             txtESize.Enabled = status;
