@@ -15,7 +15,6 @@ namespace DiamondShop
 {
     public partial class User : FormInfo
     {
-        //Service1 ser = GM.GetService();
         dsUser tds = new dsUser();
 
         public User()
@@ -34,8 +33,6 @@ namespace DiamondShop
             binder.BindControl(dtStartDate, "StartDate");
             binder.BindControl(txtUserName, "UserName");
             binder.BindControl(txtPassword1, "Password1");
-            binder.BindControl(txtPassword2, "Password2");
-            binder.BindControl(txtPassword3, "Password3");
         }
         protected override void Initial()
         {
@@ -72,8 +69,6 @@ namespace DiamondShop
             binder.BindControl(dtStartDate, "StartDate");
             binder.BindControl(txtUserName, "UserName");
             binder.BindControl(txtPassword1, "Password1");
-            binder.BindControl(txtPassword2, "Password2");
-            binder.BindControl(txtPassword3, "Password3");
 
             this.id = id;
             LoadData();
@@ -89,8 +84,6 @@ namespace DiamondShop
             if (tds.User.Rows.Count > 0)
             {             
                 tds.User[0].Password1 = GM.Decrypt(tds.User[0].Password1);
-                tds.User[0].Password2 = GM.Decrypt(tds.User[0].Password2);
-                tds.User[0].Password3 = GM.Decrypt(tds.User[0].Password3);
 
                 binder.BindValueToControl(tds.User[0]);
                 EnableDelete = true;
@@ -119,8 +112,6 @@ namespace DiamondShop
             {
                 //Encrypt Password ก่อน Save
                 row.Password1 = GM.Encrypt(txtPassword1.Text.Trim());
-                row.Password2 = GM.Encrypt(txtPassword2.Text.Trim());
-                row.Password3 = GM.Encrypt(txtPassword3.Text.Trim());
 
                 if (id == 0)
                 {
@@ -180,24 +171,6 @@ namespace DiamondShop
             }
 
             return chkFlag;
-        }
-
-        private void cmbRole_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if(cmbRole.SelectedIndex == 1)
-            {   
-                lblInventory.Visible = true;
-                txtPassword2.Visible = true;
-                lblBuyBook.Visible = true;
-                txtPassword3.Visible = true;
-            }
-            else
-            {
-                lblInventory.Visible = false;
-                txtPassword2.Visible = false;
-                lblBuyBook.Visible = false;
-                txtPassword3.Visible = false;
-            }
         }
 
         private void txtTitleName_TextChanged(object sender, EventArgs e)

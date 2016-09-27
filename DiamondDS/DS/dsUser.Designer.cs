@@ -311,10 +311,6 @@ namespace DiamondDS.DS {
             
             private global::System.Data.DataColumn columnPassword1;
             
-            private global::System.Data.DataColumn columnPassword2;
-            
-            private global::System.Data.DataColumn columnPassword3;
-            
             private global::System.Data.DataColumn columnIsDeleted;
             
             private global::System.Data.DataColumn columnCreateBy;
@@ -488,22 +484,6 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn Password2Column {
-                get {
-                    return this.columnPassword2;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn Password3Column {
-                get {
-                    return this.columnPassword3;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn IsDeletedColumn {
                 get {
                     return this.columnIsDeleted;
@@ -595,8 +575,6 @@ namespace DiamondDS.DS {
                         System.DateTime StartDate, 
                         string UserName, 
                         string Password1, 
-                        string Password2, 
-                        string Password3, 
                         string IsDeleted, 
                         int CreateBy, 
                         System.DateTime CreateDate, 
@@ -620,8 +598,6 @@ namespace DiamondDS.DS {
                         StartDate,
                         UserName,
                         Password1,
-                        Password2,
-                        Password3,
                         IsDeleted,
                         CreateBy,
                         CreateDate,
@@ -672,8 +648,6 @@ namespace DiamondDS.DS {
                 this.columnStartDate = base.Columns["StartDate"];
                 this.columnUserName = base.Columns["UserName"];
                 this.columnPassword1 = base.Columns["Password1"];
-                this.columnPassword2 = base.Columns["Password2"];
-                this.columnPassword3 = base.Columns["Password3"];
                 this.columnIsDeleted = base.Columns["IsDeleted"];
                 this.columnCreateBy = base.Columns["CreateBy"];
                 this.columnCreateDate = base.Columns["CreateDate"];
@@ -716,10 +690,6 @@ namespace DiamondDS.DS {
                 base.Columns.Add(this.columnUserName);
                 this.columnPassword1 = new global::System.Data.DataColumn("Password1", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPassword1);
-                this.columnPassword2 = new global::System.Data.DataColumn("Password2", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPassword2);
-                this.columnPassword3 = new global::System.Data.DataColumn("Password3", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPassword3);
                 this.columnIsDeleted = new global::System.Data.DataColumn("IsDeleted", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnIsDeleted);
                 this.columnCreateBy = new global::System.Data.DataColumn("CreateBy", typeof(int), null, global::System.Data.MappingType.Element);
@@ -744,8 +714,6 @@ namespace DiamondDS.DS {
                 this.columnDisplayName.MaxLength = 100;
                 this.columnUserName.MaxLength = 30;
                 this.columnPassword1.MaxLength = 200;
-                this.columnPassword2.MaxLength = 200;
-                this.columnPassword3.MaxLength = 200;
                 this.columnIsDeleted.MaxLength = 1;
             }
             
@@ -1140,38 +1108,6 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Password2 {
-                get {
-                    try {
-                        return ((string)(this[this.tableUser.Password2Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Password2\' in table \'User\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableUser.Password2Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Password3 {
-                get {
-                    try {
-                        return ((string)(this[this.tableUser.Password3Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Password3\' in table \'User\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableUser.Password3Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string IsDeleted {
                 get {
                     try {
@@ -1428,30 +1364,6 @@ namespace DiamondDS.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetPassword1Null() {
                 this[this.tableUser.Password1Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsPassword2Null() {
-                return this.IsNull(this.tableUser.Password2Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetPassword2Null() {
-                this[this.tableUser.Password2Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsPassword3Null() {
-                return this.IsNull(this.tableUser.Password3Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetPassword3Null() {
-                this[this.tableUser.Password3Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

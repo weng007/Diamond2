@@ -14,11 +14,11 @@ namespace DiamondBiz.Biz
         UsereDAL dal = new UsereDAL();
 
         //type 0 = Login, 1 = BuyBook
-        public dsUser DoAuthenticate(string userName, string password, string type, int Shop)
+        public dsUser DoAuthenticate(string userName, string password, int Shop)
         {
             try
             {
-                return dal.DoAuthenticate(userName,password,type, Shop);
+                return dal.DoAuthenticate(userName,password, Shop);
             }
             catch (Exception ex)
             {

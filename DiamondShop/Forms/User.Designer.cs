@@ -47,17 +47,12 @@
             this.label22 = new System.Windows.Forms.Label();
             this.txtDisplayName = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
-            this.lblBuyBook = new System.Windows.Forms.Label();
-            this.lblInventory = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.txtTitleName = new System.Windows.Forms.TextBox();
             this.dtStartDate = new System.Windows.Forms.DateTimePicker();
             this.label18 = new System.Windows.Forms.Label();
-            this.txtPassword3 = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.txtUserName = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.txtPassword2 = new System.Windows.Forms.TextBox();
             this.txtPassword1 = new System.Windows.Forms.TextBox();
             this.cmbShop = new System.Windows.Forms.ComboBox();
             this.label17 = new System.Windows.Forms.Label();
@@ -180,7 +175,7 @@
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Location = new System.Drawing.Point(122, 123);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(100, 21);
+            this.comboBox3.Size = new System.Drawing.Size(100, 27);
             this.comboBox3.TabIndex = 28;
             // 
             // comboBox1
@@ -188,7 +183,7 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(122, 159);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(100, 21);
+            this.comboBox1.Size = new System.Drawing.Size(100, 27);
             this.comboBox1.TabIndex = 29;
             // 
             // panel2
@@ -220,17 +215,12 @@
             this.panel3.Controls.Add(this.label22);
             this.panel3.Controls.Add(this.txtDisplayName);
             this.panel3.Controls.Add(this.label21);
-            this.panel3.Controls.Add(this.lblBuyBook);
-            this.panel3.Controls.Add(this.lblInventory);
-            this.panel3.Controls.Add(this.label9);
             this.panel3.Controls.Add(this.txtTitleName);
             this.panel3.Controls.Add(this.dtStartDate);
             this.panel3.Controls.Add(this.label18);
-            this.panel3.Controls.Add(this.txtPassword3);
             this.panel3.Controls.Add(this.label15);
             this.panel3.Controls.Add(this.txtUserName);
             this.panel3.Controls.Add(this.label16);
-            this.panel3.Controls.Add(this.txtPassword2);
             this.panel3.Controls.Add(this.txtPassword1);
             this.panel3.Controls.Add(this.cmbShop);
             this.panel3.Controls.Add(this.label17);
@@ -245,10 +235,10 @@
             this.panel3.Controls.Add(this.label12);
             this.panel3.Controls.Add(this.label13);
             this.panel3.Controls.Add(this.label14);
-            this.panel3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel3.Location = new System.Drawing.Point(10, 72);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(671, 304);
+            this.panel3.Size = new System.Drawing.Size(671, 257);
             this.panel3.TabIndex = 6;
             // 
             // label22
@@ -265,13 +255,13 @@
             this.txtDisplayName.BackColor = System.Drawing.Color.LightBlue;
             this.txtDisplayName.Location = new System.Drawing.Point(488, 172);
             this.txtDisplayName.Name = "txtDisplayName";
-            this.txtDisplayName.Size = new System.Drawing.Size(165, 27);
+            this.txtDisplayName.Size = new System.Drawing.Size(165, 26);
             this.txtDisplayName.TabIndex = 10;
             this.txtDisplayName.TextChanged += new System.EventHandler(this.txtTitleName_TextChanged);
             // 
             // label21
             // 
-            this.label21.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label21.Location = new System.Drawing.Point(361, 176);
             this.label21.Name = "label21";
@@ -279,43 +269,11 @@
             this.label21.TabIndex = 61;
             this.label21.Text = "Display Name";
             // 
-            // lblBuyBook
-            // 
-            this.lblBuyBook.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBuyBook.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.lblBuyBook.Location = new System.Drawing.Point(343, 231);
-            this.lblBuyBook.Name = "lblBuyBook";
-            this.lblBuyBook.Size = new System.Drawing.Size(97, 24);
-            this.lblBuyBook.TabIndex = 59;
-            this.lblBuyBook.Text = "BuyBook";
-            this.lblBuyBook.Visible = false;
-            // 
-            // lblInventory
-            // 
-            this.lblInventory.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInventory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.lblInventory.Location = new System.Drawing.Point(234, 231);
-            this.lblInventory.Name = "lblInventory";
-            this.lblInventory.Size = new System.Drawing.Size(97, 24);
-            this.lblInventory.TabIndex = 58;
-            this.lblInventory.Text = "Inventory";
-            this.lblInventory.Visible = false;
-            // 
-            // label9
-            // 
-            this.label9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label9.Location = new System.Drawing.Point(126, 231);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(97, 24);
-            this.label9.TabIndex = 57;
-            this.label9.Text = "Login";
-            // 
             // txtTitleName
             // 
             this.txtTitleName.Location = new System.Drawing.Point(130, 16);
             this.txtTitleName.Name = "txtTitleName";
-            this.txtTitleName.Size = new System.Drawing.Size(165, 27);
+            this.txtTitleName.Size = new System.Drawing.Size(165, 26);
             this.txtTitleName.TabIndex = 0;
             this.txtTitleName.TextChanged += new System.EventHandler(this.txtTitleName_TextChanged);
             // 
@@ -325,7 +283,7 @@
             this.dtStartDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtStartDate.Location = new System.Drawing.Point(130, 126);
             this.dtStartDate.Name = "dtStartDate";
-            this.dtStartDate.Size = new System.Drawing.Size(139, 27);
+            this.dtStartDate.Size = new System.Drawing.Size(139, 26);
             this.dtStartDate.TabIndex = 22;
             this.dtStartDate.ValueChanged += new System.EventHandler(this.dtBirthDate_ValueChanged);
             // 
@@ -337,16 +295,6 @@
             this.label18.Size = new System.Drawing.Size(111, 24);
             this.label18.TabIndex = 55;
             this.label18.Text = "Start Job";
-            // 
-            // txtPassword3
-            // 
-            this.txtPassword3.Location = new System.Drawing.Point(347, 258);
-            this.txtPassword3.Name = "txtPassword3";
-            this.txtPassword3.Size = new System.Drawing.Size(93, 27);
-            this.txtPassword3.TabIndex = 18;
-            this.txtPassword3.UseSystemPasswordChar = true;
-            this.txtPassword3.Visible = false;
-            this.txtPassword3.TextChanged += new System.EventHandler(this.txtTitleName_TextChanged);
             // 
             // label15
             // 
@@ -362,7 +310,7 @@
             this.txtUserName.BackColor = System.Drawing.Color.LightBlue;
             this.txtUserName.Location = new System.Drawing.Point(130, 176);
             this.txtUserName.Name = "txtUserName";
-            this.txtUserName.Size = new System.Drawing.Size(139, 27);
+            this.txtUserName.Size = new System.Drawing.Size(139, 26);
             this.txtUserName.TabIndex = 12;
             this.txtUserName.TextChanged += new System.EventHandler(this.txtTitleName_TextChanged);
             // 
@@ -375,22 +323,12 @@
             this.label16.TabIndex = 48;
             this.label16.Text = "UserName";
             // 
-            // txtPassword2
-            // 
-            this.txtPassword2.Location = new System.Drawing.Point(238, 258);
-            this.txtPassword2.Name = "txtPassword2";
-            this.txtPassword2.Size = new System.Drawing.Size(93, 27);
-            this.txtPassword2.TabIndex = 16;
-            this.txtPassword2.UseSystemPasswordChar = true;
-            this.txtPassword2.Visible = false;
-            this.txtPassword2.TextChanged += new System.EventHandler(this.txtTitleName_TextChanged);
-            // 
             // txtPassword1
             // 
             this.txtPassword1.BackColor = System.Drawing.Color.LightBlue;
-            this.txtPassword1.Location = new System.Drawing.Point(130, 258);
+            this.txtPassword1.Location = new System.Drawing.Point(130, 211);
             this.txtPassword1.Name = "txtPassword1";
-            this.txtPassword1.Size = new System.Drawing.Size(93, 27);
+            this.txtPassword1.Size = new System.Drawing.Size(139, 26);
             this.txtPassword1.TabIndex = 14;
             this.txtPassword1.UseSystemPasswordChar = true;
             this.txtPassword1.TextChanged += new System.EventHandler(this.txtTitleName_TextChanged);
@@ -400,15 +338,15 @@
             this.cmbShop.FormattingEnabled = true;
             this.cmbShop.Location = new System.Drawing.Point(488, 14);
             this.cmbShop.Name = "cmbShop";
-            this.cmbShop.Size = new System.Drawing.Size(165, 29);
+            this.cmbShop.Size = new System.Drawing.Size(165, 28);
             this.cmbShop.TabIndex = 20;
             this.cmbShop.SelectedValueChanged += new System.EventHandler(this.cmbShop_SelectedValueChanged);
             // 
             // label17
             // 
-            this.label17.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label17.Location = new System.Drawing.Point(24, 261);
+            this.label17.Location = new System.Drawing.Point(24, 214);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(100, 24);
             this.label17.TabIndex = 50;
@@ -419,7 +357,7 @@
             this.cmbStatus.FormattingEnabled = true;
             this.cmbStatus.Location = new System.Drawing.Point(488, 124);
             this.cmbStatus.Name = "cmbStatus";
-            this.cmbStatus.Size = new System.Drawing.Size(165, 29);
+            this.cmbStatus.Size = new System.Drawing.Size(165, 28);
             this.cmbStatus.TabIndex = 8;
             this.cmbStatus.SelectedValueChanged += new System.EventHandler(this.cmbShop_SelectedValueChanged);
             // 
@@ -427,7 +365,7 @@
             // 
             this.txtLastName.Location = new System.Drawing.Point(488, 52);
             this.txtLastName.Name = "txtLastName";
-            this.txtLastName.Size = new System.Drawing.Size(165, 27);
+            this.txtLastName.Size = new System.Drawing.Size(165, 26);
             this.txtLastName.TabIndex = 4;
             this.txtLastName.TextChanged += new System.EventHandler(this.txtTitleName_TextChanged);
             // 
@@ -436,16 +374,15 @@
             this.cmbRole.FormattingEnabled = true;
             this.cmbRole.Location = new System.Drawing.Point(488, 87);
             this.cmbRole.Name = "cmbRole";
-            this.cmbRole.Size = new System.Drawing.Size(165, 29);
+            this.cmbRole.Size = new System.Drawing.Size(165, 28);
             this.cmbRole.TabIndex = 6;
-            this.cmbRole.SelectedIndexChanged += new System.EventHandler(this.cmbRole_SelectedIndexChanged);
             this.cmbRole.SelectedValueChanged += new System.EventHandler(this.cmbShop_SelectedValueChanged);
             // 
             // txtFirstName
             // 
             this.txtFirstName.Location = new System.Drawing.Point(130, 52);
             this.txtFirstName.Name = "txtFirstName";
-            this.txtFirstName.Size = new System.Drawing.Size(165, 27);
+            this.txtFirstName.Size = new System.Drawing.Size(165, 26);
             this.txtFirstName.TabIndex = 2;
             this.txtFirstName.TextChanged += new System.EventHandler(this.txtTitleName_TextChanged);
             // 
@@ -464,7 +401,7 @@
             this.dtBirthDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtBirthDate.Location = new System.Drawing.Point(130, 89);
             this.dtBirthDate.Name = "dtBirthDate";
-            this.dtBirthDate.Size = new System.Drawing.Size(139, 27);
+            this.dtBirthDate.Size = new System.Drawing.Size(139, 26);
             this.dtBirthDate.TabIndex = 20;
             this.dtBirthDate.ValueChanged += new System.EventHandler(this.dtBirthDate_ValueChanged);
             // 
@@ -518,7 +455,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(195)))), ((int)(((byte)(157)))));
-            this.ClientSize = new System.Drawing.Size(693, 393);
+            this.ClientSize = new System.Drawing.Size(693, 342);
             this.Controls.Add(this.panel3);
             this.EnableDelete = true;
             this.Name = "User";
@@ -564,18 +501,13 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.ComboBox cmbShop;
-        private System.Windows.Forms.TextBox txtPassword3;
         private System.Windows.Forms.TextBox txtUserName;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox txtPassword2;
         private System.Windows.Forms.TextBox txtPassword1;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.DateTimePicker dtStartDate;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TextBox txtTitleName;
-        private System.Windows.Forms.Label lblBuyBook;
-        private System.Windows.Forms.Label lblInventory;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtDisplayName;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label22;

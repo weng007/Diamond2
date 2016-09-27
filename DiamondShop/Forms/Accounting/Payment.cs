@@ -132,7 +132,7 @@ namespace DiamondShop
             }
             else
             {
-                RequirePassword frm = new RequirePassword("2",0);
+                RequirePassword frm = new RequirePassword(ApplicationInfo.Shop);
                 frm.ShowDialog();
                 isAuthorize = frm.isAuthorize;
                 frm.Close();

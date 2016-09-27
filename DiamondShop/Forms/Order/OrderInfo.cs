@@ -286,7 +286,7 @@ namespace DiamondShop
             row.Image3 = image3;
             row.Image4 = image4;
             row.Image5 = image5;
-            row.IsHave = rdoHave.Checked ?"1":"0";
+            row.IsHave = rdoHave.Checked ? "1" : "0";
             row.IsReceive = rdoReceive.Checked ? "1" : "0";
             if (txtAppointDate.Text == "")
             {
@@ -309,9 +309,9 @@ namespace DiamondShop
                     //row.SoldTo = 0;
                     row.FactoryStatus = 256;
                     SetCreateBy(row);
-                    chkFlag = ser.DoInsertData("Order", tds,0);
+                    chkFlag = ser.DoInsertData("Order", tds, 0);
 
-                    
+
                 }
                 else
                 {
@@ -322,7 +322,7 @@ namespace DiamondShop
                         id = WarningID;
                         ser1.UpdateOrderStatus(id, 1);
                     }
-                 }
+                }
 
                 tds.AcceptChanges();
             }
@@ -333,34 +333,17 @@ namespace DiamondShop
 
             return chkFlag;
         }
-        private void btnDel_Click(object sender, EventArgs e)
-        {
-            //if (gridTransfer.SelectedRows.Count > 0)
-            //{
-            //    chk = 1;
-            //    DeleteData();
-            //}
-            //if (Convert.ToInt16(cmbReceiver.SelectedValue.ToString()) != ApplicationInfo.UserID)
-            //{
-            //    chk = 2;
-            //    DeleteData();
-            //}
-        }
 
         protected override bool DeleteData()
         {
             try
             {
-                //if (cmbStatus.SelectedIndex == 0)
-                //{
-                    chkFlag = ser.DoDeleteData("BuyBookDiamondCer", id);
-                //}
-                //else
-                //{
-                //    Popup.Popup pop = new Popup.Popup("Diamond Cer ไม่อยู่ในสถานะลบได้");
-                //    pop.ShowDialog();
-                //}
-
+                chkFlag = ser.DoDeleteData("Order", id);
+                if(!chkFlag)
+                { 
+                    Popup.Popup pop = new Popup.Popup("Order นี้อยู่ในกระบวนการผลิตแล้วไม่สามารถลบได้");
+                    pop.ShowDialog();
+                }
             }
             catch (Exception ex)
             {
@@ -380,10 +363,10 @@ namespace DiamondShop
             }
             else
             {
-                //RequirePassword frm = new RequirePassword("2");
-                //frm.ShowDialog();
-                //isAuthorize = frm.isAuthorize;
-                //frm.Close();
+                RequirePassword frm = new RequirePassword("2",ApplicationInfo.Shop);
+                frm.ShowDialog();
+                isAuthorize = frm.isAuthorize;
+                frm.Close();
 
                 if (isAuthorize)
                 {
@@ -423,7 +406,6 @@ namespace DiamondShop
                 e.Handled = true;
             }
         }
-
 
         private void txtTotal_TextChanged(object sender, EventArgs e)
         {
@@ -540,11 +522,6 @@ namespace DiamondShop
         {
             txtAppointDate.Text = monthCalendar1.SelectionRange.Start.ToShortDateString();
             monthCalendar1.Visible = false;
-        }
-
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

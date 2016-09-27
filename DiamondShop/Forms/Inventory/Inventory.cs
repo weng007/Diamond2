@@ -305,7 +305,7 @@ namespace DiamondShop
             }
             else
             {
-                RequirePassword frm = new RequirePassword("1",Convert.ToInt16(cmbShop.SelectedValue.ToString()));
+                RequirePassword frm = new RequirePassword(Convert.ToInt16(cmbShop.SelectedValue.ToString()));
                 frm.ShowDialog();
                 isAuthorize = frm.isAuthorize;
                 frm.Close();

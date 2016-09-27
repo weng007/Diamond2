@@ -46,14 +46,13 @@ namespace DiamondDAL.DAL
             return ds;
         }
 
-        public dsUser DoAuthenticate(string userName, string password, string type, int Shop)
+        public dsUser DoAuthenticate(string userName, string password, int Shop)
         {
             try
             {
                 SQL.ClearParameter();
                 SQL.CreateParameter("UserName", userName);
                 SQL.CreateParameter("Password", password);
-                SQL.CreateParameter("Type", type);
                 SQL.CreateParameter("Shop", Shop);
                 SQL.FillDataSetBySP("SP_User_Authenticate", ds.User);
             }

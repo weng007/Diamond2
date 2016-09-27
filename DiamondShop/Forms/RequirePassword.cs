@@ -24,19 +24,17 @@ namespace DiamondShop
             InitializeComponent();
         }
 
-        public RequirePassword(string type, int Shop)
+        public RequirePassword(int Shop)
         {
             InitializeComponent();
-            typeLogin = type;
             AppShop = Shop;
-
         }
 
         private void btnOK_Click(object sender, EventArgs e)
         {
             Service2 ser1 = new Service2();
 
-            DataSet ds = ser1.DoAuthenticate(txtUserName.Text, GM.Encrypt(txtPassword.Text.Trim()), typeLogin, AppShop);
+            DataSet ds = ser1.DoAuthenticate(txtUserName.Text, GM.Encrypt(txtPassword.Text.Trim()), AppShop);
 
             if (ds.Tables[0].Rows.Count > 0)
             {
