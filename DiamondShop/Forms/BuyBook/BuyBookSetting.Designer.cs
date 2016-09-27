@@ -28,15 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BuyBookSetting));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BuyBookSetting));
             this.dtBuyDate = new System.Windows.Forms.DateTimePicker();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnChooseDate = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.cmbShop = new System.Windows.Forms.ComboBox();
             this.txtPayDate = new System.Windows.Forms.TextBox();
@@ -73,7 +74,6 @@
             this.btnEdit = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
-            this.btnChooseDate = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridSetting)).BeginInit();
@@ -82,11 +82,11 @@
             // dtBuyDate
             // 
             this.dtBuyDate.CustomFormat = "dd/MM/yyyy";
-            this.dtBuyDate.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtBuyDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtBuyDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtBuyDate.Location = new System.Drawing.Point(127, 17);
             this.dtBuyDate.Name = "dtBuyDate";
-            this.dtBuyDate.Size = new System.Drawing.Size(131, 27);
+            this.dtBuyDate.Size = new System.Drawing.Size(131, 26);
             this.dtBuyDate.TabIndex = 2;
             // 
             // panel3
@@ -116,11 +116,24 @@
             this.panel3.Controls.Add(this.label6);
             this.panel3.Controls.Add(this.txtSeller);
             this.panel3.Controls.Add(this.dtBuyDate);
-            this.panel3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel3.Location = new System.Drawing.Point(10, 72);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(976, 427);
             this.panel3.TabIndex = 74;
+            // 
+            // btnChooseDate
+            // 
+            this.btnChooseDate.BackColor = System.Drawing.Color.Transparent;
+            this.btnChooseDate.FlatAppearance.BorderSize = 0;
+            this.btnChooseDate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnChooseDate.Image = ((System.Drawing.Image)(resources.GetObject("btnChooseDate.Image")));
+            this.btnChooseDate.Location = new System.Drawing.Point(908, 53);
+            this.btnChooseDate.Name = "btnChooseDate";
+            this.btnChooseDate.Size = new System.Drawing.Size(34, 28);
+            this.btnChooseDate.TabIndex = 254;
+            this.btnChooseDate.UseVisualStyleBackColor = false;
+            this.btnChooseDate.Click += new System.EventHandler(this.btnChooseDate_Click);
             // 
             // label5
             // 
@@ -128,7 +141,7 @@
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label5.Location = new System.Drawing.Point(308, 56);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(78, 21);
+            this.label5.Size = new System.Drawing.Size(70, 20);
             this.label5.TabIndex = 253;
             this.label5.Text = "Location";
             // 
@@ -138,19 +151,19 @@
             this.cmbShop.FormattingEnabled = true;
             this.cmbShop.Location = new System.Drawing.Point(392, 53);
             this.cmbShop.Name = "cmbShop";
-            this.cmbShop.Size = new System.Drawing.Size(157, 29);
+            this.cmbShop.Size = new System.Drawing.Size(157, 28);
             this.cmbShop.TabIndex = 252;
             // 
             // txtPayDate
             // 
             this.txtPayDate.Location = new System.Drawing.Point(779, 54);
             this.txtPayDate.Name = "txtPayDate";
-            this.txtPayDate.Size = new System.Drawing.Size(123, 27);
+            this.txtPayDate.Size = new System.Drawing.Size(123, 26);
             this.txtPayDate.TabIndex = 250;
             // 
             // monthCalendar1
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(715, 86);
+            this.monthCalendar1.Location = new System.Drawing.Point(764, 87);
             this.monthCalendar1.MaxSelectionCount = 1;
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 249;
@@ -162,7 +175,7 @@
             this.cmbBuyer.FormattingEnabled = true;
             this.cmbBuyer.Location = new System.Drawing.Point(392, 14);
             this.cmbBuyer.Name = "cmbBuyer";
-            this.cmbBuyer.Size = new System.Drawing.Size(156, 29);
+            this.cmbBuyer.Size = new System.Drawing.Size(156, 28);
             this.cmbBuyer.TabIndex = 228;
             this.cmbBuyer.SelectedValueChanged += new System.EventHandler(this.cmbBuyer_SelectedValueChanged);
             // 
@@ -172,18 +185,18 @@
             this.label22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label22.Location = new System.Drawing.Point(327, 19);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(52, 21);
+            this.label22.Size = new System.Drawing.Size(50, 20);
             this.label22.TabIndex = 229;
             this.label22.Text = "Buyer";
             // 
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label26.Location = new System.Drawing.Point(680, 58);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(78, 19);
+            this.label26.Size = new System.Drawing.Size(82, 20);
             this.label26.TabIndex = 210;
             this.label26.Text = "Pay Date";
             // 
@@ -193,7 +206,7 @@
             this.rdoNo.Checked = true;
             this.rdoNo.Location = new System.Drawing.Point(845, 17);
             this.rdoNo.Name = "rdoNo";
-            this.rdoNo.Size = new System.Drawing.Size(50, 25);
+            this.rdoNo.Size = new System.Drawing.Size(47, 24);
             this.rdoNo.TabIndex = 207;
             this.rdoNo.TabStop = true;
             this.rdoNo.Text = "No";
@@ -205,7 +218,7 @@
             this.rdoYes.AutoSize = true;
             this.rdoYes.Location = new System.Drawing.Point(779, 17);
             this.rdoYes.Name = "rdoYes";
-            this.rdoYes.Size = new System.Drawing.Size(55, 25);
+            this.rdoYes.Size = new System.Drawing.Size(55, 24);
             this.rdoYes.TabIndex = 206;
             this.rdoYes.Text = "Yes";
             this.rdoYes.UseVisualStyleBackColor = true;
@@ -214,11 +227,11 @@
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label27.Location = new System.Drawing.Point(680, 19);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(78, 19);
+            this.label27.Size = new System.Drawing.Size(78, 20);
             this.label27.TabIndex = 208;
             this.label27.Text = "Payment";
             // 
@@ -230,7 +243,7 @@
             this.btnDel.Enabled = false;
             this.btnDel.FlatAppearance.BorderSize = 0;
             this.btnDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDel.Image = ((System.Drawing.Image)(resources.GetObject("btnDel.Image")));
             this.btnDel.Location = new System.Drawing.Point(923, 134);
             this.btnDel.Name = "btnDel";
@@ -248,7 +261,7 @@
             this.btnAdd.Enabled = false;
             this.btnAdd.FlatAppearance.BorderSize = 0;
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.Location = new System.Drawing.Point(923, 98);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(30, 30);
@@ -260,31 +273,31 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label4.Location = new System.Drawing.Point(670, 359);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(65, 21);
+            this.label4.Size = new System.Drawing.Size(58, 20);
             this.label4.TabIndex = 92;
             this.label4.Text = "ขายออก";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label3.Location = new System.Drawing.Point(555, 359);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 21);
+            this.label3.Size = new System.Drawing.Size(42, 20);
             this.label3.TabIndex = 91;
             this.label3.Text = "รับซื้อ";
             // 
             // txtBuyPrice
             // 
-            this.txtBuyPrice.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuyPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBuyPrice.Location = new System.Drawing.Point(537, 383);
             this.txtBuyPrice.Name = "txtBuyPrice";
-            this.txtBuyPrice.Size = new System.Drawing.Size(81, 27);
+            this.txtBuyPrice.Size = new System.Drawing.Size(81, 26);
             this.txtBuyPrice.TabIndex = 6;
             this.txtBuyPrice.Text = "0";
             this.txtBuyPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -294,10 +307,10 @@
             // 
             // txtSalePrice
             // 
-            this.txtSalePrice.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSalePrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSalePrice.Location = new System.Drawing.Point(663, 383);
             this.txtSalePrice.Name = "txtSalePrice";
-            this.txtSalePrice.Size = new System.Drawing.Size(81, 27);
+            this.txtSalePrice.Size = new System.Drawing.Size(81, 26);
             this.txtSalePrice.TabIndex = 8;
             this.txtSalePrice.Text = "0";
             this.txtSalePrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -308,11 +321,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label2.Location = new System.Drawing.Point(330, 386);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(201, 21);
+            this.label2.Size = new System.Drawing.Size(188, 20);
             this.label2.TabIndex = 88;
             this.label2.Text = "ทองคำแท่ง 96.5% ณ วันที่ซื้อ";
             // 
@@ -339,7 +352,7 @@
             this.gridSetting.Name = "gridSetting";
             this.gridSetting.ReadOnly = true;
             this.gridSetting.RowHeadersWidth = 10;
-            this.gridSetting.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridSetting.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridSetting.RowTemplate.Height = 25;
             this.gridSetting.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.gridSetting.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -464,31 +477,31 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label1.Location = new System.Drawing.Point(19, 56);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 21);
+            this.label1.Size = new System.Drawing.Size(49, 20);
             this.label1.TabIndex = 85;
             this.label1.Text = "Seller";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label6.Location = new System.Drawing.Point(19, 22);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(81, 21);
+            this.label6.Size = new System.Drawing.Size(75, 20);
             this.label6.TabIndex = 84;
             this.label6.Text = "Buy Date";
             // 
             // txtSeller
             // 
-            this.txtSeller.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSeller.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSeller.Location = new System.Drawing.Point(127, 53);
             this.txtSeller.Name = "txtSeller";
-            this.txtSeller.Size = new System.Drawing.Size(157, 27);
+            this.txtSeller.Size = new System.Drawing.Size(157, 26);
             this.txtSeller.TabIndex = 4;
             this.txtSeller.TextChanged += new System.EventHandler(this.txtSeller_TextChanged);
             // 
@@ -498,7 +511,7 @@
             this.btnEdit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnEdit.FlatAppearance.BorderSize = 0;
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEdit.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEdit.Location = new System.Drawing.Point(751, 134);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(30, 30);
@@ -525,19 +538,6 @@
             this.button1.Size = new System.Drawing.Size(1089, 352);
             this.button1.TabIndex = 32;
             this.button1.UseVisualStyleBackColor = true;
-            // 
-            // btnChooseDate
-            // 
-            this.btnChooseDate.BackColor = System.Drawing.Color.Transparent;
-            this.btnChooseDate.FlatAppearance.BorderSize = 0;
-            this.btnChooseDate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnChooseDate.Image = ((System.Drawing.Image)(resources.GetObject("btnChooseDate.Image")));
-            this.btnChooseDate.Location = new System.Drawing.Point(908, 53);
-            this.btnChooseDate.Name = "btnChooseDate";
-            this.btnChooseDate.Size = new System.Drawing.Size(34, 28);
-            this.btnChooseDate.TabIndex = 254;
-            this.btnChooseDate.UseVisualStyleBackColor = false;
-            this.btnChooseDate.Click += new System.EventHandler(this.btnChooseDate_Click);
             // 
             // BuyBookSetting
             // 
