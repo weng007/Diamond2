@@ -278,5 +278,19 @@ namespace Diamond
                 throw ex;
             }
         }
+        [WebMethod]
+        public dsExpenseGroup GetExpenseGroup()
+        {
+            ExpenseGroupBiz biz = new ExpenseGroupBiz();
+
+            try
+            {
+                return biz.GetExpenseGroup();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

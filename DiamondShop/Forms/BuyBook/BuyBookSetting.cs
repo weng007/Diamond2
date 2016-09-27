@@ -70,6 +70,7 @@ namespace DiamondShop
             binder.BindControl(txtBuyPrice, "BuyPrice");
             binder.BindControl(txtSalePrice, "SalePrice");
             binder.BindControl(cmbBuyer , "Buyer");
+            binder.BindControl(txtCode, "Code");
         }
         protected override void LoadData()
         {
@@ -138,6 +139,7 @@ namespace DiamondShop
             {
                 if (id == 0)
                 {
+                    row.Code = GM.GetRunningNumber("SET");
                     SetCreateBy(row);
                     chkFlag = ser.DoInsertData("BuyBookSetting", tds,0);
                 }

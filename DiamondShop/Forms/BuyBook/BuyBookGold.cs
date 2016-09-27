@@ -37,6 +37,7 @@ namespace DiamondShop
             binder.BindControl(txtPriceGram1, "PriceGram1");
             binder.BindControl(txtPriceGram2, "PriceGram2");
             binder.BindControl(cmbBuyer, "Buyer");
+            binder.BindControl(txtCode, "Code");
 
         }
         public BuyBookGold(int id)
@@ -58,6 +59,7 @@ namespace DiamondShop
             binder.BindControl(txtPriceGram1, "PriceGram1");
             binder.BindControl(txtPriceGram2, "PriceGram2");
             binder.BindControl(cmbBuyer, "Buyer");
+            binder.BindControl(txtCode, "Code");
 
             this.id = id;
             LoadData();
@@ -145,6 +147,7 @@ namespace DiamondShop
             {
                 if (id == 0)
                 {
+                    row.Code = GM.GetRunningNumber("GOL");
                     SetCreateBy(row);
                     chkFlag = ser.DoInsertData("BuyBookGold", tds,0);
                 }

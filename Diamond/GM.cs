@@ -51,6 +51,8 @@ namespace Diamond
         static OrderDetailBiz bizOrderDetail;
         static WarningTransferBiz bizWarningTransfer;
         static ProductionLineBiz bizProductionLine;
+        static SellBookBiz bizSellBook;
+        static ExpenseGroupBiz bizExpenseGroup;
 
         public static MasterTableDetailBiz GetMasterTableDetailBiz()
         {
@@ -294,6 +296,18 @@ namespace Diamond
             if (bizProductionLine == null)
             { return new ProductionLineBiz(); }
             else { return bizProductionLine; }
+        }
+        public static SellBookBiz GetSellBookBiz()
+        {
+            if (bizSellBook == null)
+            { return new SellBookBiz(); }
+            else { return bizSellBook; }
+        }
+        public static ExpenseGroupBiz GetExpenseGroupBiz()
+        {
+            if (bizExpenseGroup == null)
+            { return new ExpenseGroupBiz(); }
+            else { return bizExpenseGroup; }
         }
     }
 }

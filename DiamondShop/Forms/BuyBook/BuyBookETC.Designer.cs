@@ -52,6 +52,8 @@
             this.txtSeller = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
+            this.label30 = new System.Windows.Forms.Label();
+            this.txtCode = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -69,6 +71,8 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.label30);
+            this.panel3.Controls.Add(this.txtCode);
             this.panel3.Controls.Add(this.monthCalendar1);
             this.panel3.Controls.Add(this.label29);
             this.panel3.Controls.Add(this.cmbShop);
@@ -92,13 +96,13 @@
             this.panel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.panel3.Location = new System.Drawing.Point(12, 71);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(652, 294);
+            this.panel3.Size = new System.Drawing.Size(652, 325);
             this.panel3.TabIndex = 74;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // monthCalendar1
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(443, 83);
+            this.monthCalendar1.Location = new System.Drawing.Point(394, 84);
             this.monthCalendar1.MaxSelectionCount = 1;
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 253;
@@ -147,7 +151,7 @@
             // cmbBuyer
             // 
             this.cmbBuyer.FormattingEnabled = true;
-            this.cmbBuyer.Location = new System.Drawing.Point(127, 89);
+            this.cmbBuyer.Location = new System.Drawing.Point(127, 122);
             this.cmbBuyer.Name = "cmbBuyer";
             this.cmbBuyer.Size = new System.Drawing.Size(157, 28);
             this.cmbBuyer.TabIndex = 216;
@@ -157,7 +161,7 @@
             // 
             this.label28.AutoSize = true;
             this.label28.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label28.Location = new System.Drawing.Point(27, 92);
+            this.label28.Location = new System.Drawing.Point(27, 125);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(50, 20);
             this.label28.TabIndex = 217;
@@ -213,7 +217,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label8.Location = new System.Drawing.Point(275, 246);
+            this.label8.Location = new System.Drawing.Point(275, 279);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(47, 20);
             this.label8.TabIndex = 97;
@@ -224,7 +228,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label7.Location = new System.Drawing.Point(63, 246);
+            this.label7.Location = new System.Drawing.Point(63, 279);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(49, 20);
             this.label7.TabIndex = 96;
@@ -232,7 +236,7 @@
             // 
             // txtPrice
             // 
-            this.txtPrice.Location = new System.Drawing.Point(127, 243);
+            this.txtPrice.Location = new System.Drawing.Point(127, 276);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(131, 26);
             this.txtPrice.TabIndex = 12;
@@ -246,7 +250,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label5.Location = new System.Drawing.Point(29, 133);
+            this.label5.Location = new System.Drawing.Point(29, 166);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(50, 20);
             this.label5.TabIndex = 94;
@@ -254,7 +258,7 @@
             // 
             // txtDetail
             // 
-            this.txtDetail.Location = new System.Drawing.Point(127, 130);
+            this.txtDetail.Location = new System.Drawing.Point(127, 163);
             this.txtDetail.Multiline = true;
             this.txtDetail.Name = "txtDetail";
             this.txtDetail.Size = new System.Drawing.Size(279, 83);
@@ -309,12 +313,30 @@
             this.button1.TabIndex = 32;
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
+            this.label30.Location = new System.Drawing.Point(31, 90);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(47, 20);
+            this.label30.TabIndex = 258;
+            this.label30.Text = "Code";
+            // 
+            // txtCode
+            // 
+            this.txtCode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.txtCode.Location = new System.Drawing.Point(125, 87);
+            this.txtCode.Name = "txtCode";
+            this.txtCode.Size = new System.Drawing.Size(159, 26);
+            this.txtCode.TabIndex = 257;
+            // 
             // BuyBookETC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(195)))), ((int)(((byte)(157)))));
-            this.ClientSize = new System.Drawing.Size(676, 377);
+            this.ClientSize = new System.Drawing.Size(676, 408);
             this.Controls.Add(this.panel3);
             this.Name = "BuyBookETC";
             this.Text = "DiamondCer";
@@ -351,5 +373,7 @@
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.ComboBox cmbShop;
         private System.Windows.Forms.MonthCalendar monthCalendar1;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.TextBox txtCode;
     }
 }

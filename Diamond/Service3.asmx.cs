@@ -434,5 +434,33 @@ namespace Diamond
                 throw ex;
             }
         }
+        [WebMethod]
+        public DataSet DoSearchSellBook(string code)
+        {
+            SellBookBiz biz = new SellBookBiz();
+
+            try
+            {
+                return biz.DoSearchData(code);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        [WebMethod]
+        public DataSet DoSearchExpenseGroup(int ExpenseGroup)
+        {
+            ExpenseGroupBiz biz = new ExpenseGroupBiz();
+
+            try
+            {
+                return biz.DoSearchData(ExpenseGroup);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

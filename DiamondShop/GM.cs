@@ -83,7 +83,14 @@ namespace DiamondShop
 
             return ds;
         }
+        public static DataSet GetExpenseGroup()
+        {
+            DataSet ds = new DataSet();
+            ser2 = new Service2();
+            ds = ser2.GetExpenseGroup().Copy();
 
+            return ds;
+        }
         public static Service1 GetService()
         {
             if (ser1 != null) { return ser1; }

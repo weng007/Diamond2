@@ -28,7 +28,7 @@ namespace DiamondShop
             binder.BindControl(txtDetail, "Detail");
             binder.BindControl(txtPrice, "Price");
             binder.BindControl(cmbBuyer, "Buyer");
-
+            binder.BindControl(txtCode, "Code");
         }
         public BuyBookETC(int id)
         {
@@ -40,6 +40,7 @@ namespace DiamondShop
             binder.BindControl(txtDetail, "Detail");
             binder.BindControl(txtPrice, "Price");
             binder.BindControl(cmbBuyer, "Buyer");
+            binder.BindControl(txtCode, "Code");
 
             this.id = id;
             LoadData();
@@ -126,6 +127,7 @@ namespace DiamondShop
             {
                 if (id == 0)
                 {
+                    row.Code = GM.GetRunningNumber("ETC");
                     SetCreateBy(row);
                     chkFlag = ser.DoInsertData("BuyBookETC", tds,0);
                 }
