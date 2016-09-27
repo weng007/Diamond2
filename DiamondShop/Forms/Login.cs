@@ -55,8 +55,7 @@ namespace DiamondShop
                     ApplicationInfo.DisplayName = row.DisplayName;
 
                     if(row.Role == 65) { ApplicationInfo.Authorized = "Staff"; }
-                    else if (row.Role == 64) { ApplicationInfo.Authorized = "Owner"; }
-                    
+                    else if (row.Role == 64) { ApplicationInfo.Authorized = "Owner"; }               
                 }
                 else
                 {
