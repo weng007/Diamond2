@@ -150,6 +150,21 @@ namespace DiamondShop
             ProductionLineList frm = new ProductionLineList();
             SetFormList(frm, 22, "ProductionLine");
         }
+        private void sellBookToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SellBookList frm = new SellBookList();
+            SetFormList(frm, 23, "SellBook");
+        }
+        private void expenseGroupToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ExpenseGroupList frm = new ExpenseGroupList();
+            SetFormList(frm, 24, "ExpenseGroup");
+        }
+        private void expenseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ExpenseList frm = new ExpenseList();
+            SetFormList(frm, 25, "Expense");
+        }
         private void btnReportBuying_Click(object sender, EventArgs e)
         {
             ReportBuyingList frm = new ReportBuyingList();

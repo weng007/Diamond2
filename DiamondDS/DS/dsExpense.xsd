@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema id="dsExpenseGroup" targetNamespace="http://tempuri.org/dsExpenseGroup.xsd" xmlns:mstns="http://tempuri.org/dsExpenseGroup.xsd" xmlns="http://tempuri.org/dsExpenseGroup.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+<xs:schema id="dsExpense" targetNamespace="http://tempuri.org/dsExpense.xsd" xmlns:mstns="http://tempuri.org/dsExpense.xsd" xmlns="http://tempuri.org/dsExpense.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
@@ -11,15 +11,20 @@
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="dsExpenseGroup" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsExpenseGroup" msprop:Generator_UserDSName="dsExpenseGroup">
+  <xs:element name="dsExpense" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsExpense" msprop:Generator_UserDSName="dsExpense">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="ExpenseGroup" msprop:Generator_TableClassName="ExpenseGroupDataTable" msprop:Generator_TableVarName="tableExpenseGroup" msprop:Generator_TablePropName="ExpenseGroup" msprop:Generator_RowDeletingName="ExpenseGroupRowDeleting" msprop:Generator_RowChangingName="ExpenseGroupRowChanging" msprop:Generator_RowEvHandlerName="ExpenseGroupRowChangeEventHandler" msprop:Generator_RowDeletedName="ExpenseGroupRowDeleted" msprop:Generator_UserTableName="ExpenseGroup" msprop:Generator_RowChangedName="ExpenseGroupRowChanged" msprop:Generator_RowEvArgName="ExpenseGroupRowChangeEvent" msprop:Generator_RowClassName="ExpenseGroupRow">
+        <xs:element name="Expense" msprop:Generator_TableClassName="ExpenseDataTable" msprop:Generator_TableVarName="tableExpense" msprop:Generator_TablePropName="Expense" msprop:Generator_RowDeletingName="ExpenseRowDeleting" msprop:Generator_RowChangingName="ExpenseRowChanging" msprop:Generator_RowEvHandlerName="ExpenseRowChangeEventHandler" msprop:Generator_RowDeletedName="ExpenseRowDeleted" msprop:Generator_UserTableName="Expense" msprop:Generator_RowChangedName="ExpenseRowChanged" msprop:Generator_RowEvArgName="ExpenseRowChangeEvent" msprop:Generator_RowClassName="ExpenseRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="RowNum" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnRowNum" msprop:Generator_ColumnPropNameInRow="RowNum" msprop:Generator_ColumnPropNameInTable="RowNumColumn" msprop:Generator_UserColumnName="RowNum" type="xs:long" minOccurs="0" />
               <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
-              <xs:element name="ExpenseGroup" msprop:Generator_ColumnVarNameInTable="columnExpenseGroup" msprop:Generator_ColumnPropNameInRow="ExpenseGroup" msprop:Generator_ColumnPropNameInTable="ExpenseGroupColumn" msprop:Generator_UserColumnName="ExpenseGroup" minOccurs="0">
+              <xs:element name="ExpenseDate" msprop:Generator_ColumnVarNameInTable="columnExpenseDate" msprop:Generator_ColumnPropNameInRow="ExpenseDate" msprop:Generator_ColumnPropNameInTable="ExpenseDateColumn" msprop:Generator_UserColumnName="ExpenseDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ExpenseGroup" msprop:Generator_ColumnVarNameInTable="columnExpenseGroup" msprop:Generator_ColumnPropNameInRow="ExpenseGroup" msprop:Generator_ColumnPropNameInTable="ExpenseGroupColumn" msprop:Generator_UserColumnName="ExpenseGroup" type="xs:int" minOccurs="0" />
+              <xs:element name="ExpenseGroupName" msprop:Generator_ColumnVarNameInTable="columnExpenseGroupName" msprop:Generator_ColumnPropNameInRow="ExpenseGroupName" msprop:Generator_ColumnPropNameInTable="ExpenseGroupNameColumn" msprop:Generator_UserColumnName="ExpenseGroupName" type="xs:string" minOccurs="0" />
+              <xs:element name="Cost" msprop:Generator_ColumnVarNameInTable="columnCost" msprop:Generator_ColumnPropNameInRow="Cost" msprop:Generator_ColumnPropNameInTable="CostColumn" msprop:Generator_UserColumnName="Cost" type="xs:double" minOccurs="0" />
+              <xs:element name="Shop" msprop:Generator_ColumnVarNameInTable="columnShop" msprop:Generator_ColumnPropNameInRow="Shop" msprop:Generator_ColumnPropNameInTable="ShopColumn" msprop:Generator_UserColumnName="Shop" type="xs:int" minOccurs="0" />
+              <xs:element name="ShopName" msprop:Generator_ColumnVarNameInTable="columnShopName" msprop:Generator_ColumnPropNameInRow="ShopName" msprop:Generator_ColumnPropNameInTable="ShopNameColumn" msprop:Generator_UserColumnName="ShopName" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
@@ -43,7 +48,7 @@
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
-      <xs:selector xpath=".//mstns:ExpenseGroup" />
+      <xs:selector xpath=".//mstns:Expense" />
       <xs:field xpath="mstns:ID" />
     </xs:unique>
   </xs:element>

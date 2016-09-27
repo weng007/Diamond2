@@ -15,25 +15,42 @@ namespace DiamondShop
 {
     public partial class Expense : FormInfo
     {
-        dsExpenseGroup tds = new dsExpenseGroup();
+        dsExpense tds = new dsExpense();
 
         public Expense()
         {
             InitializeComponent();
             Initial();
 
-            //binder.BindControl(txtExpenseGroup, "ExpenseGroup");
+            binder.BindControl(cmbExpenseGroup, "ExpenseGroupName");
+            binder.BindControl(txtShop, "ShopName");
+            binder.BindControl(dtMemoDate, "CreateDate");
+            binder.BindControl(txtCost, "Cost");
+
+            txtShop.Text = ApplicationInfo.ShopName;
+
         }
         protected override void Initial()
         {
-           //SetFieldService.SetRequireField(txtExpenseGroup);
+            //SetFieldService.SetRequireField(txtExpenseGroup);
+            ds = GM.GetExpenseGroup();
+
+            cmbExpenseGroup.DataSource = ds.Tables[0];
+            cmbExpenseGroup.ValueMember = "ID";
+            cmbExpenseGroup.DisplayMember = "ExpenseGroup";
+            cmbExpenseGroup.SelectedIndex = ds.Tables[0].Rows.Count - 1;
+            cmbExpenseGroup.Refresh();
+
         }
         public Expense(int id)
         {
             InitializeComponent();
             Initial();
 
-            //binder.BindControl(txtExpenseGroup, "ExpenseGroup");
+            binder.BindControl(cmbExpenseGroup, "ExpenseGroupName");
+            binder.BindControl(txtShop, "ShopName");
+            binder.BindControl(dtMemoDate, "CreateDate");
+            binder.BindControl(txtCost, "Cost");
 
             this.id = id;
             LoadData();
@@ -42,14 +59,14 @@ namespace DiamondShop
 
         protected override void LoadData()
         {
-            ds = ser.DoSelectData("ExpenseGroup", id, 0);
+            ds = ser.DoSelectData("Expense", id, 0);
             tds.Clear();
             tds.Merge(ds);
 
-            if (tds.ExpenseGroup.Rows.Count > 0)
+            if (tds.Expense.Rows.Count > 0)
             {             
-
-                binder.BindValueToControl(tds.ExpenseGroup[0]);
+                binder.BindValueToControl(tds.Expense[0]);
+                txtExpenseDate.Text = string.Format("{0:d/M/yyyy}", tds.Expense[0]["ExpenseDate"]);
                 EnableDelete = true;
             }
 
@@ -59,31 +76,38 @@ namespace DiamondShop
 
         protected override bool SaveData()
         {
-            dsExpenseGroup.ExpenseGroupRow row = null;
+            dsExpense.ExpenseRow row = null;
 
-            if (tds.ExpenseGroup.Rows.Count > 0)
+            if (tds.Expense.Rows.Count > 0)
             {
-                row = tds.ExpenseGroup[0];
+                row = tds.Expense[0];
             }
             else
             {
-                row = tds.ExpenseGroup.NewExpenseGroupRow();           
-                tds.ExpenseGroup.Rows.Add(row);
+                row = tds.Expense.NewExpenseRow();           
+                tds.Expense.Rows.Add(row);
             }
             binder.BindValueToDataRow(row);
-
+            if (txtExpenseDate.Text == "")
+            {
+                row.ExpenseDate = DateTime.MinValue.AddYears(1900);
+            }
+            else
+            {
+                row.ExpenseDate = Convert.ToDateTime(txtExpenseDate.Text.ToString());
+            }
+            row.Shop = ApplicationInfo.Shop;
             try
             {
-
                 if (id == 0)
                 {
                     SetCreateBy(row);      
-                    chkFlag = ser.DoInsertData("ExpenseGroup", tds,0);
+                    chkFlag = ser.DoInsertData("Expense", tds,0);
                 }
                 else
                 {
                     SetEditBy(row);
-                    chkFlag = ser.DoUpdateData("ExpenseGroup", tds);
+                    chkFlag = ser.DoUpdateData("Expense", tds);
                 }
 
                 tds.AcceptChanges();
@@ -125,7 +149,7 @@ namespace DiamondShop
         {
             try
             {
-                chkFlag = ser.DoDeleteData("ExpenseGroup", id);
+                chkFlag = ser.DoDeleteData("Expense", id);
             }
             catch (Exception ex)
             {
@@ -137,20 +161,6 @@ namespace DiamondShop
 
         private void cmbRole_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //if(cmbRole.SelectedIndex == 1)
-            //{   
-            //    lblInventory.Visible = true;
-            //    txtPassword2.Visible = true;
-            //    lblBuyBook.Visible = true;
-            //    txtPassword3.Visible = true;
-            //}
-            //else
-            //{
-            //    lblInventory.Visible = false;
-            //    txtPassword2.Visible = false;
-            //    lblBuyBook.Visible = false;
-            //    txtPassword3.Visible = false;
-            //}
         }
 
         private void txtTitleName_TextChanged(object sender, EventArgs e)
@@ -166,6 +176,27 @@ namespace DiamondShop
         private void dtBirthDate_ValueChanged(object sender, EventArgs e)
         {
             isEdit = true;
+        }
+
+        private void btnChooseDate_Click(object sender, EventArgs e)
+        {
+            monthCalendar1.Visible = true;
+        }
+
+        private void monthCalendar1_DateSelected(object sender, DateRangeEventArgs e)
+        {
+            txtExpenseDate.Text = monthCalendar1.SelectionRange.Start.ToShortDateString();
+            monthCalendar1.Visible = false;
+            isEdit = true;
+        }
+        private void SetFormatNumber()
+        {
+            //ดักเคส MinValue
+            if (txtExpenseDate.Text != "" && Convert.ToDateTime(txtExpenseDate.Text).Year == 1901)
+            {
+                txtExpenseDate.Text = "";
+            }
+
         }
     }
 }

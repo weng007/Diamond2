@@ -30,19 +30,27 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExpenseList));
             this.panel4 = new System.Windows.Forms.Panel();
+            this.cmbShop = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.dtEMemoDate = new System.Windows.Forms.DateTimePicker();
+            this.label4 = new System.Windows.Forms.Label();
             this.cmbExpenseGroup = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.dtSMemoDate = new System.Windows.Forms.DateTimePicker();
+            this.label5 = new System.Windows.Forms.Label();
+            this.dtEExpense = new System.Windows.Forms.DateTimePicker();
+            this.label2 = new System.Windows.Forms.Label();
+            this.dtSExpense = new System.Windows.Forms.DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.grid = new System.Windows.Forms.DataGridView();
             this.RowNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ExpenseGroup = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label1 = new System.Windows.Forms.Label();
-            this.dtBuyDate = new System.Windows.Forms.DateTimePicker();
-            this.label2 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.ExpenseDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cost = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -53,27 +61,141 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(170)))), ((int)(((byte)(160)))));
             this.panel4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel4.BackgroundImage")));
-            this.panel4.Controls.Add(this.dateTimePicker1);
-            this.panel4.Controls.Add(this.label2);
-            this.panel4.Controls.Add(this.dtBuyDate);
-            this.panel4.Controls.Add(this.label1);
+            this.panel4.Controls.Add(this.cmbShop);
+            this.panel4.Controls.Add(this.label11);
+            this.panel4.Controls.Add(this.dtEMemoDate);
+            this.panel4.Controls.Add(this.label4);
             this.panel4.Controls.Add(this.cmbExpenseGroup);
+            this.panel4.Controls.Add(this.label3);
+            this.panel4.Controls.Add(this.dtSMemoDate);
+            this.panel4.Controls.Add(this.label5);
+            this.panel4.Controls.Add(this.dtEExpense);
+            this.panel4.Controls.Add(this.label2);
+            this.panel4.Controls.Add(this.dtSExpense);
+            this.panel4.Controls.Add(this.label1);
             this.panel4.Controls.Add(this.btnAdd);
             this.panel4.Controls.Add(this.btnSearch);
-            this.panel4.Controls.Add(this.label3);
             this.panel4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(917, 123);
+            this.panel4.Size = new System.Drawing.Size(983, 145);
             this.panel4.TabIndex = 43;
+            // 
+            // cmbShop
+            // 
+            this.cmbShop.FormattingEnabled = true;
+            this.cmbShop.Location = new System.Drawing.Point(743, 60);
+            this.cmbShop.Name = "cmbShop";
+            this.cmbShop.Size = new System.Drawing.Size(169, 29);
+            this.cmbShop.TabIndex = 275;
+            // 
+            // label11
+            // 
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(652, 60);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(85, 26);
+            this.label11.TabIndex = 274;
+            this.label11.Text = "Location";
+            // 
+            // dtEMemoDate
+            // 
+            this.dtEMemoDate.CustomFormat = "dd/MM/yyyy";
+            this.dtEMemoDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtEMemoDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtEMemoDate.Location = new System.Drawing.Point(425, 21);
+            this.dtEMemoDate.Name = "dtEMemoDate";
+            this.dtEMemoDate.Size = new System.Drawing.Size(156, 26);
+            this.dtEMemoDate.TabIndex = 273;
+            // 
+            // label4
+            // 
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(403, 25);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(16, 26);
+            this.label4.TabIndex = 272;
+            this.label4.Text = "-";
             // 
             // cmbExpenseGroup
             // 
             this.cmbExpenseGroup.FormattingEnabled = true;
-            this.cmbExpenseGroup.Location = new System.Drawing.Point(232, 24);
+            this.cmbExpenseGroup.Location = new System.Drawing.Point(743, 21);
             this.cmbExpenseGroup.Name = "cmbExpenseGroup";
             this.cmbExpenseGroup.Size = new System.Drawing.Size(217, 29);
             this.cmbExpenseGroup.TabIndex = 71;
+            // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(607, 21);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(130, 26);
+            this.label3.TabIndex = 27;
+            this.label3.Text = "Expense Group";
+            // 
+            // dtSMemoDate
+            // 
+            this.dtSMemoDate.CustomFormat = "dd/MM/yyyy";
+            this.dtSMemoDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtSMemoDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtSMemoDate.Location = new System.Drawing.Point(241, 21);
+            this.dtSMemoDate.Name = "dtSMemoDate";
+            this.dtSMemoDate.Size = new System.Drawing.Size(156, 26);
+            this.dtSMemoDate.TabIndex = 271;
+            // 
+            // label5
+            // 
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(115, 21);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(106, 26);
+            this.label5.TabIndex = 270;
+            this.label5.Text = "Memo Date";
+            // 
+            // dtEExpense
+            // 
+            this.dtEExpense.CustomFormat = "dd/MM/yyyy";
+            this.dtEExpense.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtEExpense.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtEExpense.Location = new System.Drawing.Point(425, 60);
+            this.dtEExpense.Name = "dtEExpense";
+            this.dtEExpense.Size = new System.Drawing.Size(156, 26);
+            this.dtEExpense.TabIndex = 269;
+            // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(403, 64);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(16, 26);
+            this.label2.TabIndex = 268;
+            this.label2.Text = "-";
+            // 
+            // dtSExpense
+            // 
+            this.dtSExpense.CustomFormat = "dd/MM/yyyy";
+            this.dtSExpense.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtSExpense.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtSExpense.Location = new System.Drawing.Point(241, 60);
+            this.dtSExpense.Name = "dtSExpense";
+            this.dtSExpense.Size = new System.Drawing.Size(156, 26);
+            this.dtSExpense.TabIndex = 267;
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(115, 60);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(130, 26);
+            this.label1.TabIndex = 266;
+            this.label1.Text = "Expense Date";
             // 
             // btnAdd
             // 
@@ -99,31 +221,21 @@
             this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSearch.FlatAppearance.BorderColor = System.Drawing.Color.Linen;
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.Location = new System.Drawing.Point(732, 90);
+            this.btnSearch.Location = new System.Drawing.Point(241, 100);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(106, 30);
             this.btnSearch.TabIndex = 8;
             this.btnSearch.UseVisualStyleBackColor = false;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // label3
-            // 
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(96, 24);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(130, 26);
-            this.label3.TabIndex = 27;
-            this.label3.Text = "Expense Group";
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.grid);
             this.panel2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel2.Location = new System.Drawing.Point(5, 113);
+            this.panel2.Location = new System.Drawing.Point(5, 135);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(912, 464);
+            this.panel2.Size = new System.Drawing.Size(978, 464);
             this.panel2.TabIndex = 2;
             // 
             // grid
@@ -135,7 +247,9 @@
             this.grid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.RowNum,
             this.ID,
-            this.ExpenseGroup});
+            this.ExpenseGroup,
+            this.ExpenseDate,
+            this.Cost});
             this.grid.Location = new System.Drawing.Point(14, 16);
             this.grid.MultiSelect = false;
             this.grid.Name = "grid";
@@ -144,7 +258,7 @@
             this.grid.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grid.RowTemplate.Height = 30;
             this.grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grid.Size = new System.Drawing.Size(895, 446);
+            this.grid.Size = new System.Drawing.Size(961, 446);
             this.grid.TabIndex = 2;
             this.grid.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.grid_CellMouseDoubleClick);
             this.grid.UserDeletedRow += new System.Windows.Forms.DataGridViewRowEventHandler(this.grid_UserDeletedRow);
@@ -173,45 +287,21 @@
             this.ExpenseGroup.ReadOnly = true;
             this.ExpenseGroup.Width = 300;
             // 
-            // label1
+            // ExpenseDate
             // 
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(113, 69);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(130, 26);
-            this.label1.TabIndex = 266;
-            this.label1.Text = "Expense Date";
+            this.ExpenseDate.DataPropertyName = "ExpenseDate";
+            this.ExpenseDate.HeaderText = "ExpenseDate";
+            this.ExpenseDate.Name = "ExpenseDate";
+            this.ExpenseDate.ReadOnly = true;
+            this.ExpenseDate.Width = 130;
             // 
-            // dtBuyDate
+            // Cost
             // 
-            this.dtBuyDate.CustomFormat = "dd/MM/yyyy";
-            this.dtBuyDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtBuyDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtBuyDate.Location = new System.Drawing.Point(232, 69);
-            this.dtBuyDate.Name = "dtBuyDate";
-            this.dtBuyDate.Size = new System.Drawing.Size(156, 26);
-            this.dtBuyDate.TabIndex = 267;
-            // 
-            // label2
-            // 
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(394, 73);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(16, 26);
-            this.label2.TabIndex = 268;
-            this.label2.Text = "-";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.CustomFormat = "dd/MM/yyyy";
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(416, 69);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(156, 26);
-            this.dateTimePicker1.TabIndex = 269;
+            this.Cost.DataPropertyName = "Cost";
+            this.Cost.HeaderText = "Cost";
+            this.Cost.Name = "Cost";
+            this.Cost.ReadOnly = true;
+            this.Cost.Width = 130;
             // 
             // ExpenseList
             // 
@@ -219,7 +309,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(927, 577);
+            this.ClientSize = new System.Drawing.Size(995, 608);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
             this.Name = "ExpenseList";
@@ -243,13 +333,21 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn updateDateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn fullNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.ComboBox cmbExpenseGroup;
+        private System.Windows.Forms.DateTimePicker dtEExpense;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DateTimePicker dtSExpense;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DateTimePicker dtEMemoDate;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.DateTimePicker dtSMemoDate;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox cmbShop;
+        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.DataGridViewTextBoxColumn RowNum;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn ExpenseGroup;
-        private System.Windows.Forms.ComboBox cmbExpenseGroup;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DateTimePicker dtBuyDate;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ExpenseDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cost;
     }
 }

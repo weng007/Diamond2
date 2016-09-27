@@ -462,5 +462,19 @@ namespace Diamond
                 throw ex;
             }
         }
+        [WebMethod]
+        public DataSet DoSearchExpense(int ExpenseGroup, int Shop, DateTime SMemoDate, DateTime EMemoDate, DateTime SExpenseDate, DateTime EExpenseDate)
+        {
+            ExpenseBiz biz = new ExpenseBiz();
+
+            try
+            {
+                return biz.DoSearchData(ExpenseGroup, Shop, SMemoDate, EMemoDate, SExpenseDate, EExpenseDate);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

@@ -20,17 +20,17 @@ namespace DiamondDS.DS {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("dsExpenseGroup")]
+    [global::System.Xml.Serialization.XmlRootAttribute("dsExpense")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class dsExpenseGroup : global::System.Data.DataSet {
+    public partial class dsExpense : global::System.Data.DataSet {
         
-        private ExpenseGroupDataTable tableExpenseGroup;
+        private ExpenseDataTable tableExpense;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public dsExpenseGroup() {
+        public dsExpense() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace DiamondDS.DS {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected dsExpenseGroup(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected dsExpense(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace DiamondDS.DS {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["ExpenseGroup"] != null)) {
-                    base.Tables.Add(new ExpenseGroupDataTable(ds.Tables["ExpenseGroup"]));
+                if ((ds.Tables["Expense"] != null)) {
+                    base.Tables.Add(new ExpenseDataTable(ds.Tables["Expense"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace DiamondDS.DS {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public ExpenseGroupDataTable ExpenseGroup {
+        public ExpenseDataTable Expense {
             get {
-                return this.tableExpenseGroup;
+                return this.tableExpense;
             }
         }
         
@@ -127,7 +127,7 @@ namespace DiamondDS.DS {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            dsExpenseGroup cln = ((dsExpenseGroup)(base.Clone()));
+            dsExpense cln = ((dsExpense)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace DiamondDS.DS {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["ExpenseGroup"] != null)) {
-                    base.Tables.Add(new ExpenseGroupDataTable(ds.Tables["ExpenseGroup"]));
+                if ((ds.Tables["Expense"] != null)) {
+                    base.Tables.Add(new ExpenseDataTable(ds.Tables["Expense"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace DiamondDS.DS {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableExpenseGroup = ((ExpenseGroupDataTable)(base.Tables["ExpenseGroup"]));
+            this.tableExpense = ((ExpenseDataTable)(base.Tables["Expense"]));
             if ((initTable == true)) {
-                if ((this.tableExpenseGroup != null)) {
-                    this.tableExpenseGroup.InitVars();
+                if ((this.tableExpense != null)) {
+                    this.tableExpense.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace DiamondDS.DS {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "dsExpenseGroup";
+            this.DataSetName = "dsExpense";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/dsExpenseGroup.xsd";
+            this.Namespace = "http://tempuri.org/dsExpense.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableExpenseGroup = new ExpenseGroupDataTable();
-            base.Tables.Add(this.tableExpenseGroup);
+            this.tableExpense = new ExpenseDataTable();
+            base.Tables.Add(this.tableExpense);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializeExpenseGroup() {
+        private bool ShouldSerializeExpense() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace DiamondDS.DS {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            dsExpenseGroup ds = new dsExpenseGroup();
+            dsExpense ds = new dsExpense();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,20 +270,30 @@ namespace DiamondDS.DS {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void ExpenseGroupRowChangeEventHandler(object sender, ExpenseGroupRowChangeEvent e);
+        public delegate void ExpenseRowChangeEventHandler(object sender, ExpenseRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class ExpenseGroupDataTable : global::System.Data.TypedTableBase<ExpenseGroupRow> {
+        public partial class ExpenseDataTable : global::System.Data.TypedTableBase<ExpenseRow> {
             
             private global::System.Data.DataColumn columnRowNum;
             
             private global::System.Data.DataColumn columnID;
             
+            private global::System.Data.DataColumn columnExpenseDate;
+            
             private global::System.Data.DataColumn columnExpenseGroup;
+            
+            private global::System.Data.DataColumn columnExpenseGroupName;
+            
+            private global::System.Data.DataColumn columnCost;
+            
+            private global::System.Data.DataColumn columnShop;
+            
+            private global::System.Data.DataColumn columnShopName;
             
             private global::System.Data.DataColumn columnIsDeleted;
             
@@ -297,8 +307,8 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ExpenseGroupDataTable() {
-                this.TableName = "ExpenseGroup";
+            public ExpenseDataTable() {
+                this.TableName = "Expense";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -306,7 +316,7 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal ExpenseGroupDataTable(global::System.Data.DataTable table) {
+            internal ExpenseDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -323,7 +333,7 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected ExpenseGroupDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected ExpenseDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -346,9 +356,49 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ExpenseDateColumn {
+                get {
+                    return this.columnExpenseDate;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn ExpenseGroupColumn {
                 get {
                     return this.columnExpenseGroup;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ExpenseGroupNameColumn {
+                get {
+                    return this.columnExpenseGroupName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn CostColumn {
+                get {
+                    return this.columnCost;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ShopColumn {
+                get {
+                    return this.columnShop;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ShopNameColumn {
+                get {
+                    return this.columnShopName;
                 }
             }
             
@@ -403,59 +453,64 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ExpenseGroupRow this[int index] {
+            public ExpenseRow this[int index] {
                 get {
-                    return ((ExpenseGroupRow)(this.Rows[index]));
+                    return ((ExpenseRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event ExpenseGroupRowChangeEventHandler ExpenseGroupRowChanging;
+            public event ExpenseRowChangeEventHandler ExpenseRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event ExpenseGroupRowChangeEventHandler ExpenseGroupRowChanged;
+            public event ExpenseRowChangeEventHandler ExpenseRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event ExpenseGroupRowChangeEventHandler ExpenseGroupRowDeleting;
+            public event ExpenseRowChangeEventHandler ExpenseRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event ExpenseGroupRowChangeEventHandler ExpenseGroupRowDeleted;
+            public event ExpenseRowChangeEventHandler ExpenseRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddExpenseGroupRow(ExpenseGroupRow row) {
+            public void AddExpenseRow(ExpenseRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ExpenseGroupRow AddExpenseGroupRow(long RowNum, string ExpenseGroup, string IsDeleted, int CreateBy, System.DateTime CreateDate, int EditBy, System.DateTime EditDate) {
-                ExpenseGroupRow rowExpenseGroupRow = ((ExpenseGroupRow)(this.NewRow()));
+            public ExpenseRow AddExpenseRow(long RowNum, System.DateTime ExpenseDate, int ExpenseGroup, string ExpenseGroupName, double Cost, int Shop, string ShopName, string IsDeleted, int CreateBy, System.DateTime CreateDate, int EditBy, System.DateTime EditDate) {
+                ExpenseRow rowExpenseRow = ((ExpenseRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         RowNum,
                         null,
+                        ExpenseDate,
                         ExpenseGroup,
+                        ExpenseGroupName,
+                        Cost,
+                        Shop,
+                        ShopName,
                         IsDeleted,
                         CreateBy,
                         CreateDate,
                         EditBy,
                         EditDate};
-                rowExpenseGroupRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowExpenseGroupRow);
-                return rowExpenseGroupRow;
+                rowExpenseRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowExpenseRow);
+                return rowExpenseRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ExpenseGroupRow FindByID(int ID) {
-                return ((ExpenseGroupRow)(this.Rows.Find(new object[] {
+            public ExpenseRow FindByID(int ID) {
+                return ((ExpenseRow)(this.Rows.Find(new object[] {
                             ID})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                ExpenseGroupDataTable cln = ((ExpenseGroupDataTable)(base.Clone()));
+                ExpenseDataTable cln = ((ExpenseDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -463,7 +518,7 @@ namespace DiamondDS.DS {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new ExpenseGroupDataTable();
+                return new ExpenseDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -471,7 +526,12 @@ namespace DiamondDS.DS {
             internal void InitVars() {
                 this.columnRowNum = base.Columns["RowNum"];
                 this.columnID = base.Columns["ID"];
+                this.columnExpenseDate = base.Columns["ExpenseDate"];
                 this.columnExpenseGroup = base.Columns["ExpenseGroup"];
+                this.columnExpenseGroupName = base.Columns["ExpenseGroupName"];
+                this.columnCost = base.Columns["Cost"];
+                this.columnShop = base.Columns["Shop"];
+                this.columnShopName = base.Columns["ShopName"];
                 this.columnIsDeleted = base.Columns["IsDeleted"];
                 this.columnCreateBy = base.Columns["CreateBy"];
                 this.columnCreateDate = base.Columns["CreateDate"];
@@ -486,8 +546,18 @@ namespace DiamondDS.DS {
                 base.Columns.Add(this.columnRowNum);
                 this.columnID = new global::System.Data.DataColumn("ID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnID);
-                this.columnExpenseGroup = new global::System.Data.DataColumn("ExpenseGroup", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnExpenseDate = new global::System.Data.DataColumn("ExpenseDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnExpenseDate);
+                this.columnExpenseGroup = new global::System.Data.DataColumn("ExpenseGroup", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnExpenseGroup);
+                this.columnExpenseGroupName = new global::System.Data.DataColumn("ExpenseGroupName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnExpenseGroupName);
+                this.columnCost = new global::System.Data.DataColumn("Cost", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCost);
+                this.columnShop = new global::System.Data.DataColumn("Shop", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnShop);
+                this.columnShopName = new global::System.Data.DataColumn("ShopName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnShopName);
                 this.columnIsDeleted = new global::System.Data.DataColumn("IsDeleted", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnIsDeleted);
                 this.columnCreateBy = new global::System.Data.DataColumn("CreateBy", typeof(int), null, global::System.Data.MappingType.Element);
@@ -507,34 +577,34 @@ namespace DiamondDS.DS {
                 this.columnID.AllowDBNull = false;
                 this.columnID.ReadOnly = true;
                 this.columnID.Unique = true;
-                this.columnExpenseGroup.MaxLength = 100;
+                this.columnShopName.MaxLength = 100;
                 this.columnIsDeleted.MaxLength = 1;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ExpenseGroupRow NewExpenseGroupRow() {
-                return ((ExpenseGroupRow)(this.NewRow()));
+            public ExpenseRow NewExpenseRow() {
+                return ((ExpenseRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new ExpenseGroupRow(builder);
+                return new ExpenseRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(ExpenseGroupRow);
+                return typeof(ExpenseRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.ExpenseGroupRowChanged != null)) {
-                    this.ExpenseGroupRowChanged(this, new ExpenseGroupRowChangeEvent(((ExpenseGroupRow)(e.Row)), e.Action));
+                if ((this.ExpenseRowChanged != null)) {
+                    this.ExpenseRowChanged(this, new ExpenseRowChangeEvent(((ExpenseRow)(e.Row)), e.Action));
                 }
             }
             
@@ -542,8 +612,8 @@ namespace DiamondDS.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.ExpenseGroupRowChanging != null)) {
-                    this.ExpenseGroupRowChanging(this, new ExpenseGroupRowChangeEvent(((ExpenseGroupRow)(e.Row)), e.Action));
+                if ((this.ExpenseRowChanging != null)) {
+                    this.ExpenseRowChanging(this, new ExpenseRowChangeEvent(((ExpenseRow)(e.Row)), e.Action));
                 }
             }
             
@@ -551,8 +621,8 @@ namespace DiamondDS.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.ExpenseGroupRowDeleted != null)) {
-                    this.ExpenseGroupRowDeleted(this, new ExpenseGroupRowChangeEvent(((ExpenseGroupRow)(e.Row)), e.Action));
+                if ((this.ExpenseRowDeleted != null)) {
+                    this.ExpenseRowDeleted(this, new ExpenseRowChangeEvent(((ExpenseRow)(e.Row)), e.Action));
                 }
             }
             
@@ -560,14 +630,14 @@ namespace DiamondDS.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.ExpenseGroupRowDeleting != null)) {
-                    this.ExpenseGroupRowDeleting(this, new ExpenseGroupRowChangeEvent(((ExpenseGroupRow)(e.Row)), e.Action));
+                if ((this.ExpenseRowDeleting != null)) {
+                    this.ExpenseRowDeleting(this, new ExpenseRowChangeEvent(((ExpenseRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemoveExpenseGroupRow(ExpenseGroupRow row) {
+            public void RemoveExpenseRow(ExpenseRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -576,7 +646,7 @@ namespace DiamondDS.DS {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                dsExpenseGroup ds = new dsExpenseGroup();
+                dsExpense ds = new dsExpense();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -594,7 +664,7 @@ namespace DiamondDS.DS {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "ExpenseGroupDataTable";
+                attribute2.FixedValue = "ExpenseDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -638,15 +708,15 @@ namespace DiamondDS.DS {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class ExpenseGroupRow : global::System.Data.DataRow {
+        public partial class ExpenseRow : global::System.Data.DataRow {
             
-            private ExpenseGroupDataTable tableExpenseGroup;
+            private ExpenseDataTable tableExpense;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal ExpenseGroupRow(global::System.Data.DataRowBuilder rb) : 
+            internal ExpenseRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableExpenseGroup = ((ExpenseGroupDataTable)(this.Table));
+                this.tableExpense = ((ExpenseDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -654,14 +724,14 @@ namespace DiamondDS.DS {
             public long RowNum {
                 get {
                     try {
-                        return ((long)(this[this.tableExpenseGroup.RowNumColumn]));
+                        return ((long)(this[this.tableExpense.RowNumColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'RowNum\' in table \'ExpenseGroup\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'RowNum\' in table \'Expense\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableExpenseGroup.RowNumColumn] = value;
+                    this[this.tableExpense.RowNumColumn] = value;
                 }
             }
             
@@ -669,26 +739,106 @@ namespace DiamondDS.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public int ID {
                 get {
-                    return ((int)(this[this.tableExpenseGroup.IDColumn]));
+                    return ((int)(this[this.tableExpense.IDColumn]));
                 }
                 set {
-                    this[this.tableExpenseGroup.IDColumn] = value;
+                    this[this.tableExpense.IDColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string ExpenseGroup {
+            public System.DateTime ExpenseDate {
                 get {
                     try {
-                        return ((string)(this[this.tableExpenseGroup.ExpenseGroupColumn]));
+                        return ((global::System.DateTime)(this[this.tableExpense.ExpenseDateColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'ExpenseGroup\' in table \'ExpenseGroup\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'ExpenseDate\' in table \'Expense\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableExpenseGroup.ExpenseGroupColumn] = value;
+                    this[this.tableExpense.ExpenseDateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int ExpenseGroup {
+                get {
+                    try {
+                        return ((int)(this[this.tableExpense.ExpenseGroupColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ExpenseGroup\' in table \'Expense\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableExpense.ExpenseGroupColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string ExpenseGroupName {
+                get {
+                    try {
+                        return ((string)(this[this.tableExpense.ExpenseGroupNameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ExpenseGroupName\' in table \'Expense\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableExpense.ExpenseGroupNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double Cost {
+                get {
+                    try {
+                        return ((double)(this[this.tableExpense.CostColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Cost\' in table \'Expense\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableExpense.CostColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int Shop {
+                get {
+                    try {
+                        return ((int)(this[this.tableExpense.ShopColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Shop\' in table \'Expense\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableExpense.ShopColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string ShopName {
+                get {
+                    try {
+                        return ((string)(this[this.tableExpense.ShopNameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ShopName\' in table \'Expense\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableExpense.ShopNameColumn] = value;
                 }
             }
             
@@ -697,14 +847,14 @@ namespace DiamondDS.DS {
             public string IsDeleted {
                 get {
                     try {
-                        return ((string)(this[this.tableExpenseGroup.IsDeletedColumn]));
+                        return ((string)(this[this.tableExpense.IsDeletedColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'IsDeleted\' in table \'ExpenseGroup\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'IsDeleted\' in table \'Expense\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableExpenseGroup.IsDeletedColumn] = value;
+                    this[this.tableExpense.IsDeletedColumn] = value;
                 }
             }
             
@@ -713,14 +863,14 @@ namespace DiamondDS.DS {
             public int CreateBy {
                 get {
                     try {
-                        return ((int)(this[this.tableExpenseGroup.CreateByColumn]));
+                        return ((int)(this[this.tableExpense.CreateByColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'CreateBy\' in table \'ExpenseGroup\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'CreateBy\' in table \'Expense\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableExpenseGroup.CreateByColumn] = value;
+                    this[this.tableExpense.CreateByColumn] = value;
                 }
             }
             
@@ -729,14 +879,14 @@ namespace DiamondDS.DS {
             public System.DateTime CreateDate {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tableExpenseGroup.CreateDateColumn]));
+                        return ((global::System.DateTime)(this[this.tableExpense.CreateDateColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'CreateDate\' in table \'ExpenseGroup\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'CreateDate\' in table \'Expense\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableExpenseGroup.CreateDateColumn] = value;
+                    this[this.tableExpense.CreateDateColumn] = value;
                 }
             }
             
@@ -745,14 +895,14 @@ namespace DiamondDS.DS {
             public int EditBy {
                 get {
                     try {
-                        return ((int)(this[this.tableExpenseGroup.EditByColumn]));
+                        return ((int)(this[this.tableExpense.EditByColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'EditBy\' in table \'ExpenseGroup\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'EditBy\' in table \'Expense\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableExpenseGroup.EditByColumn] = value;
+                    this[this.tableExpense.EditByColumn] = value;
                 }
             }
             
@@ -761,99 +911,159 @@ namespace DiamondDS.DS {
             public System.DateTime EditDate {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tableExpenseGroup.EditDateColumn]));
+                        return ((global::System.DateTime)(this[this.tableExpense.EditDateColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'EditDate\' in table \'ExpenseGroup\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'EditDate\' in table \'Expense\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableExpenseGroup.EditDateColumn] = value;
+                    this[this.tableExpense.EditDateColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsRowNumNull() {
-                return this.IsNull(this.tableExpenseGroup.RowNumColumn);
+                return this.IsNull(this.tableExpense.RowNumColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetRowNumNull() {
-                this[this.tableExpenseGroup.RowNumColumn] = global::System.Convert.DBNull;
+                this[this.tableExpense.RowNumColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsExpenseDateNull() {
+                return this.IsNull(this.tableExpense.ExpenseDateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetExpenseDateNull() {
+                this[this.tableExpense.ExpenseDateColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsExpenseGroupNull() {
-                return this.IsNull(this.tableExpenseGroup.ExpenseGroupColumn);
+                return this.IsNull(this.tableExpense.ExpenseGroupColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetExpenseGroupNull() {
-                this[this.tableExpenseGroup.ExpenseGroupColumn] = global::System.Convert.DBNull;
+                this[this.tableExpense.ExpenseGroupColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsExpenseGroupNameNull() {
+                return this.IsNull(this.tableExpense.ExpenseGroupNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetExpenseGroupNameNull() {
+                this[this.tableExpense.ExpenseGroupNameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsCostNull() {
+                return this.IsNull(this.tableExpense.CostColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetCostNull() {
+                this[this.tableExpense.CostColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsShopNull() {
+                return this.IsNull(this.tableExpense.ShopColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetShopNull() {
+                this[this.tableExpense.ShopColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsShopNameNull() {
+                return this.IsNull(this.tableExpense.ShopNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetShopNameNull() {
+                this[this.tableExpense.ShopNameColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsIsDeletedNull() {
-                return this.IsNull(this.tableExpenseGroup.IsDeletedColumn);
+                return this.IsNull(this.tableExpense.IsDeletedColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetIsDeletedNull() {
-                this[this.tableExpenseGroup.IsDeletedColumn] = global::System.Convert.DBNull;
+                this[this.tableExpense.IsDeletedColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsCreateByNull() {
-                return this.IsNull(this.tableExpenseGroup.CreateByColumn);
+                return this.IsNull(this.tableExpense.CreateByColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetCreateByNull() {
-                this[this.tableExpenseGroup.CreateByColumn] = global::System.Convert.DBNull;
+                this[this.tableExpense.CreateByColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsCreateDateNull() {
-                return this.IsNull(this.tableExpenseGroup.CreateDateColumn);
+                return this.IsNull(this.tableExpense.CreateDateColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetCreateDateNull() {
-                this[this.tableExpenseGroup.CreateDateColumn] = global::System.Convert.DBNull;
+                this[this.tableExpense.CreateDateColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsEditByNull() {
-                return this.IsNull(this.tableExpenseGroup.EditByColumn);
+                return this.IsNull(this.tableExpense.EditByColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetEditByNull() {
-                this[this.tableExpenseGroup.EditByColumn] = global::System.Convert.DBNull;
+                this[this.tableExpense.EditByColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsEditDateNull() {
-                return this.IsNull(this.tableExpenseGroup.EditDateColumn);
+                return this.IsNull(this.tableExpense.EditDateColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetEditDateNull() {
-                this[this.tableExpenseGroup.EditDateColumn] = global::System.Convert.DBNull;
+                this[this.tableExpense.EditDateColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -861,22 +1071,22 @@ namespace DiamondDS.DS {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class ExpenseGroupRowChangeEvent : global::System.EventArgs {
+        public class ExpenseRowChangeEvent : global::System.EventArgs {
             
-            private ExpenseGroupRow eventRow;
+            private ExpenseRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ExpenseGroupRowChangeEvent(ExpenseGroupRow row, global::System.Data.DataRowAction action) {
+            public ExpenseRowChangeEvent(ExpenseRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ExpenseGroupRow Row {
+            public ExpenseRow Row {
                 get {
                     return this.eventRow;
                 }

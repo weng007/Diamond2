@@ -25,11 +25,15 @@ namespace DiamondShop
         protected override void Initial()
         {
             grid.AutoGenerateColumns = false;
-            ds = GM.GetExpenseGroup();
 
+            ds = GM.GetExpenseGroup();
+            DataRow row = ds.Tables[0].NewRow();
+            row["ID"] = 0;
+            row["ExpenseGroup"] = "All";
+            ds.Tables[0].Rows.Add(row);
             cmbExpenseGroup.DataSource = ds.Tables[0];
             cmbExpenseGroup.ValueMember = "ID";
-            cmbExpenseGroup.DisplayMember = "DisplayName";
+            cmbExpenseGroup.DisplayMember = "ExpenseGroup";
             cmbExpenseGroup.SelectedIndex = ds.Tables[0].Rows.Count - 1;
             cmbExpenseGroup.Refresh();
             //txtName.Select();

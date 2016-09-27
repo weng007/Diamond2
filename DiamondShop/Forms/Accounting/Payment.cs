@@ -59,7 +59,8 @@ namespace DiamondShop
             if (tds.BuyBookPayment.Rows.Count > 0)
             {
                 binder.BindValueToControl(tds.BuyBookPayment[0]);
-                
+                txtPayDate.Text = string.Format("{0:d/M/yyyy}", tds.BuyBookPayment[0]["PayDate"]);
+
                 EnableSave = false;
                 EnableEdit = true;
                 EnableDelete = false;
