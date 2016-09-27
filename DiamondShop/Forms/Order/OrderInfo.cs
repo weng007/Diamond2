@@ -230,14 +230,12 @@ namespace DiamondShop
                 {
                     txtNote.Text = materail;
                 }
-                //EnableSave = false;
-                //EnableEdit = GM.CheckIsEdit(ApplicationInfo.Shop, Convert.ToInt16(cmbShop.SelectedValue.ToString()));
-                //EnableDelete = false;
               }
-                if (ApplicationInfo.Shop == 239)//239 = Office
+                if (ApplicationInfo.Shop == 239)// 239 = Office
                 {
                     FactoryStatus = tds.Order[0].FactoryStatus;
-                    if (FactoryStatus == 257)
+                    
+                    if (FactoryStatus == 257)// Processing
                     {
                         btnPrint.Enabled = true;
                     }
@@ -418,18 +416,6 @@ namespace DiamondShop
             }
         }
 
-        private void cmbColorType_SelectedIndexChanged(object sender, EventArgs e)
-        { 
-        }
-
-        private void cmbShape_SelectedIndexChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void btnUpload_Click(object sender, EventArgs e)
-        {
-        }
-
         private void txtAmount_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
@@ -456,9 +442,8 @@ namespace DiamondShop
         }
         private void SetControlEnable(bool status)
         {
-            //dtBuyDate.Enabled = status;
-            //txtCustomer.Enabled = status;
-            //txtCode.Enabled = status;
+            txtCustomer.Enabled = status;
+            txtCode.Enabled = status;
         }
 
         private void txtNote_TextChanged(object sender, EventArgs e)
