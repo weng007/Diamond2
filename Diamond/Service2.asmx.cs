@@ -227,6 +227,19 @@ namespace Diamond
             }
         }
         [WebMethod]
+        public DataSet GetReportOrder(int ID)
+        {
+            GeneralCBiz biz = new GeneralCBiz();
+            try
+            {
+                return biz.GetReportOrder(ID);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        [WebMethod]
         public DataSet GetReportCertificate(int id)
         {
             GeneralCBiz biz = new GeneralCBiz();

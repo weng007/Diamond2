@@ -32,7 +32,7 @@ namespace DiamondShop
             Initial();
         }
 
-        public OrderDetail(int id)
+        public OrderDetail(int id,string materail)
         {
             InitializeComponent();
             Initial();
@@ -73,7 +73,7 @@ namespace DiamondShop
                 BindingDSOrderDetail();
                 chkFlag = ser.DoInsertData("OrderDetail", tds,0);
 
-                //GetMaterial();       
+                GetMaterial();
                 this.Close();
             }
             catch (Exception ex)
@@ -108,19 +108,6 @@ namespace DiamondShop
 
             if (message == "") { return true; }
             else { return false; }
-        }
-
-        private void grid2_CellEnter(object sender, DataGridViewCellEventArgs e)
-        {
-            bool validClick = (e.RowIndex != -1 && e.ColumnIndex != -1); //Make sure the clicked row/column is valid.
-            var datagridview = sender as DataGridView;
-
-            // Check to make sure the cell clicked is the cell containing the combobox 
-            if (datagridview.Columns[e.ColumnIndex] is DataGridViewComboBoxColumn && validClick)
-            {
-                datagridview.BeginEdit(true);
-                ((ComboBox)datagridview.EditingControl).DroppedDown = true;
-            }
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -429,14 +416,14 @@ namespace DiamondShop
         private void GetMaterial()
         {
             int i = 1;
-            foreach (DataRow row in tds.Tables[0].Rows)
+            foreach (DataRow row in tds1.Tables[0].Rows)
             {
-                materail += i.ToString()+"."+ row["Code"].ToString()+" "+row["Weight"].ToString()+"\n";
+                materail += i.ToString()+"."+ row["Code"].ToString()+","+" "+row["Weight"].ToString()+"Ct."+"\n";
             }
           
             foreach (DataRow row in tds2.Tables[0].Rows)
             {
-                materail += i.ToString() + "." + row["Code"].ToString() + row["Type"].ToString() + " " + row["Weight"].ToString() + "\n";
+                materail += i.ToString() + "." + row["Code"].ToString() + "," + " "+row["Type"].ToString() + "," + " " + row["Weight"].ToString() + "Ct." + "\n";
             }
         }
     }

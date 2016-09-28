@@ -5,23 +5,27 @@ using System.Text;
 using System.Threading.Tasks;
 using DiamondDS.DS;
 
-namespace DiamondDAL.DAL
+
+namespace DiamondDAL.DAL    
 {
-    public class CatalogDAL
+    public class ExpenseDAL
     {
         SQLHelper SQL = new SQLHelper();
-        dsCatalog ds = new dsCatalog();
+        dsExpense ds = new dsExpense();
         int flag = 0;
 
-        public dsCatalog DoSearchData(string code, int mode,int Shop)
+        public dsExpense DoSearchData(int ExpenseGroup,int Shop , DateTime SMemoDate , DateTime EMemoDate , DateTime SExpenseDate, DateTime EExpenseDate)
         {
             try
             {
                 SQL.ClearParameter();
-                SQL.CreateParameter("Code", code);
-                SQL.CreateParameter("Mode", mode);
+                SQL.CreateParameter("ExpenseGroup", ExpenseGroup);
                 SQL.CreateParameter("Shop", Shop);
-                SQL.FillDataSetBySP("SP_Catalog_Search", ds.Catalog);
+                SQL.CreateParameter("SMemoDate", SMemoDate);
+                SQL.CreateParameter("EMemoDate", EMemoDate);
+                SQL.CreateParameter("SExpenseDate", SExpenseDate);
+                SQL.CreateParameter("EExpenseDate", EExpenseDate);
+                SQL.FillDataSetBySP("SP_Expense_Search", ds.Expense);
             }
             catch (Exception ex)
             {
@@ -30,30 +34,14 @@ namespace DiamondDAL.DAL
 
             return ds;
         }
-        public dsCatalog DoSelectData(int id, int mode)
+
+        public dsExpense DoSelectData(int id)
         {
             try
             {
                 SQL.ClearParameter();
                 SQL.CreateParameter("ID", id);
-                SQL.CreateParameter("Mode", mode);
-                SQL.FillDataSetBySP("SP_Catalog_Sel", ds.Catalog);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-
-            return ds;
-        }
-        public dsCatalog DoSearchByType(string prefix, int mode)
-        {
-            try
-            {
-                SQL.ClearParameter();
-                SQL.CreateParameter("CatalogType", prefix);
-                SQL.CreateParameter("Mode", mode);
-                SQL.FillDataSetBySP("SP_Catalog_By_Type", ds.Catalog);
+                SQL.FillDataSetBySP("SP_Expense_Sel", ds.Expense);
             }
             catch (Exception ex)
             {
@@ -63,27 +51,27 @@ namespace DiamondDAL.DAL
             return ds;
         }
 
-        //public bool DoInsertData(dsCatalog tds)
-        //{
-        //    try
-        //    {
-        //        dsCatalog.CatalogRow row = tds.Catalog[0];
-        //        SQL.ExecuteSP("SP_Catalog_Ins", row);
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        throw ex;
-        //    }
-
-        //    return true;
-        //}
-
-        public bool DoUpdateData(dsCatalog tds)
+        public bool DoInsertData(dsExpense tds)
         {
             try
             {
-                dsCatalog.CatalogRow row = tds.Catalog[0];
-                flag = SQL.ExecuteSP("SP_Catalog_UPD", row);
+                dsExpense.ExpenseRow row = tds.Expense[0];
+                SQL.ExecuteSP("SP_Expense_Ins", row);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return true;
+        }
+
+        public bool DoUpdateData(dsExpense tds)
+        {
+            try
+            {
+                dsExpense.ExpenseRow row = tds.Expense[0];
+                flag = SQL.ExecuteSP("SP_Expense_Upd", row);
             }
             catch (Exception ex)
             {
@@ -99,7 +87,7 @@ namespace DiamondDAL.DAL
             {
                 SQL.ClearParameter();
                 SQL.CreateParameter("@ID", id);
-                flag = SQL.ExecuteSP("SP_Catalog_Del");
+                flag = SQL.ExecuteSP("SP_Expense_Del");
             }
             catch (Exception ex)
             {

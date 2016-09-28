@@ -256,11 +256,11 @@
             // 
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(842, 98);
+            this.label11.Location = new System.Drawing.Point(826, 98);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(69, 26);
+            this.label11.Size = new System.Drawing.Size(85, 26);
             this.label11.TabIndex = 72;
-            this.label11.Text = "Shop";
+            this.label11.Text = "Location";
             // 
             // cmbStatus
             // 

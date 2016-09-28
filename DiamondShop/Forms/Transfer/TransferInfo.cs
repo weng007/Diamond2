@@ -53,7 +53,6 @@ namespace DiamondShop
             SetControlEnable(false);
             SetPermission();
         }
-
         protected override void Initial()
         {
             ds = GM.GetBuyer();
@@ -68,12 +67,10 @@ namespace DiamondShop
             cmbEShop.DisplayMember = "Detail";
             cmbEShop.Refresh();
 
-
             txtSender.Select();
             SetFieldService.SetRequireField(txtSender);
             gridTransfer.AutoGenerateColumns = false;
         }
-
         private void BinderData()
         {
             binder.BindControl(dtSendDate, "SendDate");
@@ -116,7 +113,6 @@ namespace DiamondShop
             SetFormatNumber();
             base.LoadData();
         }
-
         protected override bool SaveData()
         {
             dsTransfer.TransferRow row = null;
@@ -183,7 +179,6 @@ namespace DiamondShop
 
             return chkFlag;
         }
-
         private void BindingDSOrderDetail()
         {
             tds2.Clear();
@@ -233,13 +228,6 @@ namespace DiamondShop
 
                     chk = 0;
                 }
-                //else if (chk == 2)
-                //{
-                //    chkFlag = ser.DoDeleteData("WarningTransfer", Convert.ToInt32(gridTransfer.SelectedRows[0].Cells["ID"].Value));
-
-                //    chk = 0;
-                //}
-
             }
             catch (Exception ex)
             {
@@ -250,7 +238,6 @@ namespace DiamondShop
 
             return chkFlag;
         }
-
         protected override bool ValidateData()
         {
             message = "";
@@ -263,7 +250,6 @@ namespace DiamondShop
             if (message == "") { return true; }
             else { return false; }
         }
-
         protected override void EditData()
         {
             if (isAuthorize)
@@ -289,15 +275,6 @@ namespace DiamondShop
                 }
             }
         }
-
-        private void txtBuyPrice_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
-            {
-                e.Handled = true;
-            }
-        }
-
         private void btnAdd_Click(object sender, EventArgs e)
         {
             ser2 = GM.GetService2();
@@ -339,42 +316,7 @@ namespace DiamondShop
                     }
                 }
             }
-
             return true;
-        }
-
-        private void gridSetting_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-            //if (gridTransfer.SelectedRows.Count > 0)
-            //{
-            //    BuyBookSettingDetail frm = new BuyBookSettingDetail(id, 1);
-            //    frm.ShowDialog();
-
-            //    LoadData();
-            //}
-        }
-
-        private void gridSetting_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
-        {
-            if ((e.ColumnIndex == 4 || e.ColumnIndex == 5 || e.ColumnIndex == 6 || e.ColumnIndex == 7 ||
-                e.ColumnIndex == 8) && e.RowIndex != this.gridTransfer.NewRowIndex && e.Value != null
-                && e.Value.ToString() != "")
-            {
-                double d = double.Parse(e.Value.ToString());
-
-                if (e.ColumnIndex != 5) { e.Value = d.ToString("N0"); }
-                else { e.Value = d.ToString("N2"); }
-            }
-        }
-
-        private void txtBuyPrice_Leave(object sender, EventArgs e)
-        {
-            //txtBuyPrice.Text = GM.ConvertDoubleToString(txtBuyPrice, 0);
-        }
-
-        private void txtSalePrice_Leave(object sender, EventArgs e)
-        {
-            //txtSalePrice.Text = GM.ConvertDoubleToString(txtSalePrice, 0);
         }
         private void SetFormatNumber()
         {
@@ -384,7 +326,6 @@ namespace DiamondShop
                 txtReceivedDate.Text = "";
             }
         }
-
         private void btnDel_Click(object sender, EventArgs e)
         {
             if (gridTransfer.SelectedRows.Count > 0)
@@ -406,14 +347,12 @@ namespace DiamondShop
             btnDel.Enabled = status;
             gridTransfer.Enabled = status;
         }
-
         private void btnRecieve_Click(object sender, EventArgs e)
         {
             txtReceivedDate.Text = DateTime.Now.ToString();
             txtTransferStatus.Text = "Received";
             flag = 1;
         }
-
         private void SetPermission()
         {
             //Receiver

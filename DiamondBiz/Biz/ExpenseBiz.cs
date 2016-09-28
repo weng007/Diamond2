@@ -8,28 +8,38 @@ using DiamondDAL.DAL;
 
 namespace DiamondBiz.Biz
 {
-    public class CatalogBiz
+    public class ExpenseBiz
     {
-        dsCatalog ds = new dsCatalog();
-        CatalogDAL dal = new CatalogDAL();
+        dsExpense ds = new dsExpense();
+        ExpenseDAL dal = new ExpenseDAL();
 
-        //type 0 = Login, 1 = BuyBook
-        public dsCatalog DoSearchData(string code, int mode, int Shop)
+        public dsExpense DoSearchData(int ExpenseGroup, int Shop, DateTime SMemoDate, DateTime EMemoDate, DateTime SExpenseDate, DateTime EExpenseDate)
         {
             try
             {
-                return dal.DoSearchData(code, mode,Shop);
+                return dal.DoSearchData(ExpenseGroup, Shop, SMemoDate,  EMemoDate, SExpenseDate, EExpenseDate);
             }
             catch (Exception ex)
             {
                 throw ex;
             }
         }
-        public dsCatalog DoSearchByType(string prefix, int mode)
+        public dsExpense DoSelectData(int id)
         {
             try
             {
-                return dal.DoSearchByType(prefix, mode);
+                return dal.DoSelectData(id);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public bool DoInsertData(dsExpense tds)
+        {
+            try
+            {
+                return dal.DoInsertData(tds);
             }
             catch (Exception ex)
             {
@@ -37,30 +47,7 @@ namespace DiamondBiz.Biz
             }
         }
 
-        public dsCatalog DoSelectData(int id, int mode)
-        {
-            try
-            {
-                return dal.DoSelectData(id, mode);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-        //public bool DoInsertData(dsCatalog tds)
-        //{
-        //    try
-        //    {
-        //        return dal.DoInsertData(tds);
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        throw ex;
-        //    }
-        //}
-
-        public bool DoUpdateData(dsCatalog tds)
+        public bool DoUpdateData(dsExpense tds)
         {
             try
             {

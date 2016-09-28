@@ -45,18 +45,18 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label15 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.dtMemoDate = new System.Windows.Forms.DateTimePicker();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtCost = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.cmbExpenseGroup = new System.Windows.Forms.ComboBox();
             this.btnChooseDate = new System.Windows.Forms.Button();
-            this.txtPayDate = new System.Windows.Forms.TextBox();
+            this.txtExpenseDate = new System.Windows.Forms.TextBox();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.label26 = new System.Windows.Forms.Label();
-            this.cmbShop = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.txtSeller = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.dtBuyDate = new System.Windows.Forms.DateTimePicker();
+            this.label15 = new System.Windows.Forms.Label();
+            this.txtShop = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -202,15 +202,15 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Controls.Add(this.txtShop);
             this.panel3.Controls.Add(this.label10);
-            this.panel3.Controls.Add(this.dtBuyDate);
+            this.panel3.Controls.Add(this.dtMemoDate);
             this.panel3.Controls.Add(this.label9);
-            this.panel3.Controls.Add(this.txtSeller);
+            this.panel3.Controls.Add(this.txtCost);
             this.panel3.Controls.Add(this.label4);
-            this.panel3.Controls.Add(this.comboBox2);
-            this.panel3.Controls.Add(this.cmbShop);
+            this.panel3.Controls.Add(this.cmbExpenseGroup);
             this.panel3.Controls.Add(this.btnChooseDate);
-            this.panel3.Controls.Add(this.txtPayDate);
+            this.panel3.Controls.Add(this.txtExpenseDate);
             this.panel3.Controls.Add(this.monthCalendar1);
             this.panel3.Controls.Add(this.label26);
             this.panel3.Controls.Add(this.label15);
@@ -220,80 +220,26 @@
             this.panel3.Size = new System.Drawing.Size(701, 229);
             this.panel3.TabIndex = 6;
             // 
-            // label15
+            // label10
             // 
-            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label15.Location = new System.Drawing.Point(27, 56);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(130, 24);
-            this.label15.TabIndex = 46;
-            this.label15.Text = "Expense Group";
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
+            this.label10.Location = new System.Drawing.Point(60, 23);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(92, 20);
+            this.label10.TabIndex = 265;
+            this.label10.Text = "Memo Date";
             // 
-            // btnChooseDate
+            // dtMemoDate
             // 
-            this.btnChooseDate.BackColor = System.Drawing.Color.Transparent;
-            this.btnChooseDate.FlatAppearance.BorderSize = 0;
-            this.btnChooseDate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnChooseDate.Image = ((System.Drawing.Image)(resources.GetObject("btnChooseDate.Image")));
-            this.btnChooseDate.Location = new System.Drawing.Point(614, 16);
-            this.btnChooseDate.Name = "btnChooseDate";
-            this.btnChooseDate.Size = new System.Drawing.Size(34, 28);
-            this.btnChooseDate.TabIndex = 258;
-            this.btnChooseDate.UseVisualStyleBackColor = false;
-            // 
-            // txtPayDate
-            // 
-            this.txtPayDate.Location = new System.Drawing.Point(485, 17);
-            this.txtPayDate.Name = "txtPayDate";
-            this.txtPayDate.Size = new System.Drawing.Size(123, 27);
-            this.txtPayDate.TabIndex = 257;
-            // 
-            // monthCalendar1
-            // 
-            this.monthCalendar1.Location = new System.Drawing.Point(421, 50);
-            this.monthCalendar1.MaxSelectionCount = 1;
-            this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 256;
-            this.monthCalendar1.Visible = false;
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.label26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label26.Location = new System.Drawing.Point(357, 21);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(122, 20);
-            this.label26.TabIndex = 255;
-            this.label26.Text = "Expense Date";
-            // 
-            // cmbShop
-            // 
-            this.cmbShop.Enabled = false;
-            this.cmbShop.FormattingEnabled = true;
-            this.cmbShop.Location = new System.Drawing.Point(161, 53);
-            this.cmbShop.Name = "cmbShop";
-            this.cmbShop.Size = new System.Drawing.Size(157, 29);
-            this.cmbShop.TabIndex = 259;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label4.Location = new System.Drawing.Point(77, 93);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(78, 21);
-            this.label4.TabIndex = 261;
-            this.label4.Text = "Location";
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.Enabled = false;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(161, 90);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(157, 29);
-            this.comboBox2.TabIndex = 260;
+            this.dtMemoDate.CustomFormat = "dd/MM/yyyy";
+            this.dtMemoDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtMemoDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtMemoDate.Location = new System.Drawing.Point(161, 19);
+            this.dtMemoDate.Name = "dtMemoDate";
+            this.dtMemoDate.Size = new System.Drawing.Size(156, 26);
+            this.dtMemoDate.TabIndex = 264;
             // 
             // label9
             // 
@@ -306,34 +252,88 @@
             this.label9.TabIndex = 263;
             this.label9.Text = "Cost";
             // 
-            // txtSeller
+            // txtCost
             // 
-            this.txtSeller.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSeller.Location = new System.Drawing.Point(161, 128);
-            this.txtSeller.Name = "txtSeller";
-            this.txtSeller.Size = new System.Drawing.Size(156, 26);
-            this.txtSeller.TabIndex = 262;
+            this.txtCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCost.Location = new System.Drawing.Point(161, 128);
+            this.txtCost.Name = "txtCost";
+            this.txtCost.Size = new System.Drawing.Size(156, 26);
+            this.txtCost.TabIndex = 262;
             // 
-            // label10
+            // label4
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label10.Location = new System.Drawing.Point(109, 23);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(44, 20);
-            this.label10.TabIndex = 265;
-            this.label10.Text = "Date";
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
+            this.label4.Location = new System.Drawing.Point(77, 93);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(78, 21);
+            this.label4.TabIndex = 261;
+            this.label4.Text = "Location";
             // 
-            // dtBuyDate
+            // cmbExpenseGroup
             // 
-            this.dtBuyDate.CustomFormat = "dd/MM/yyyy";
-            this.dtBuyDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtBuyDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtBuyDate.Location = new System.Drawing.Point(161, 19);
-            this.dtBuyDate.Name = "dtBuyDate";
-            this.dtBuyDate.Size = new System.Drawing.Size(156, 26);
-            this.dtBuyDate.TabIndex = 264;
+            this.cmbExpenseGroup.FormattingEnabled = true;
+            this.cmbExpenseGroup.Location = new System.Drawing.Point(161, 53);
+            this.cmbExpenseGroup.Name = "cmbExpenseGroup";
+            this.cmbExpenseGroup.Size = new System.Drawing.Size(157, 29);
+            this.cmbExpenseGroup.TabIndex = 259;
+            // 
+            // btnChooseDate
+            // 
+            this.btnChooseDate.BackColor = System.Drawing.Color.Transparent;
+            this.btnChooseDate.FlatAppearance.BorderSize = 0;
+            this.btnChooseDate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnChooseDate.Image = ((System.Drawing.Image)(resources.GetObject("btnChooseDate.Image")));
+            this.btnChooseDate.Location = new System.Drawing.Point(614, 16);
+            this.btnChooseDate.Name = "btnChooseDate";
+            this.btnChooseDate.Size = new System.Drawing.Size(34, 28);
+            this.btnChooseDate.TabIndex = 258;
+            this.btnChooseDate.UseVisualStyleBackColor = false;
+            this.btnChooseDate.Click += new System.EventHandler(this.btnChooseDate_Click);
+            // 
+            // txtExpenseDate
+            // 
+            this.txtExpenseDate.Location = new System.Drawing.Point(485, 17);
+            this.txtExpenseDate.Name = "txtExpenseDate";
+            this.txtExpenseDate.Size = new System.Drawing.Size(123, 27);
+            this.txtExpenseDate.TabIndex = 257;
+            // 
+            // monthCalendar1
+            // 
+            this.monthCalendar1.Location = new System.Drawing.Point(421, 50);
+            this.monthCalendar1.MaxSelectionCount = 1;
+            this.monthCalendar1.Name = "monthCalendar1";
+            this.monthCalendar1.TabIndex = 256;
+            this.monthCalendar1.Visible = false;
+            this.monthCalendar1.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar1_DateSelected);
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.label26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
+            this.label26.Location = new System.Drawing.Point(357, 21);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(122, 20);
+            this.label26.TabIndex = 255;
+            this.label26.Text = "Expense Date";
+            // 
+            // label15
+            // 
+            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
+            this.label15.Location = new System.Drawing.Point(27, 56);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(130, 24);
+            this.label15.TabIndex = 46;
+            this.label15.Text = "Expense Group";
+            // 
+            // txtShop
+            // 
+            this.txtShop.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtShop.Location = new System.Drawing.Point(161, 91);
+            this.txtShop.Name = "txtShop";
+            this.txtShop.Size = new System.Drawing.Size(156, 26);
+            this.txtShop.TabIndex = 263;
             // 
             // Expense
             // 
@@ -375,15 +375,15 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Button btnChooseDate;
-        private System.Windows.Forms.TextBox txtPayDate;
+        private System.Windows.Forms.TextBox txtExpenseDate;
         private System.Windows.Forms.MonthCalendar monthCalendar1;
         private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.ComboBox cmbShop;
+        private System.Windows.Forms.ComboBox cmbExpenseGroup;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txtSeller;
+        private System.Windows.Forms.TextBox txtCost;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.DateTimePicker dtBuyDate;
+        private System.Windows.Forms.DateTimePicker dtMemoDate;
+        private System.Windows.Forms.TextBox txtShop;
     }
 }

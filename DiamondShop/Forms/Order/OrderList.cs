@@ -77,48 +77,6 @@ namespace DiamondShop
             else { gridOrder.DataSource = null; gridOrder.Refresh(); }
         }
 
-        private void txtWeightTo_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void cmbColorType_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            //string color = "";
-
-            //if (cmbColorType.SelectedIndex == 0)
-            //{
-            //    cmbSColor.Enabled = false;
-            //    cmbEColor.Enabled = false;
-            //    color = "C001";
-            //}
-            //else if(cmbColorType.SelectedIndex == 1)
-            //{
-            //    cmbSColor.Enabled = true;
-            //    cmbEColor.Enabled = true;
-            //    color = "C001";
-            //}
-            //else
-            //{
-            //    cmbSColor.Enabled = true;
-            //    cmbEColor.Enabled = false;
-            //    color = "C017";         
-            //}
-
-            //cmbSColor.DataSource = (GM.GetMasterTableDetail(color, true)).Tables[0];
-            //cmbSColor.ValueMember = "ID";
-            //cmbSColor.DisplayMember = "Detail";
-            //cmbSColor.Refresh();
-
-            //cmbEColor.DataSource = (GM.GetMasterTableDetail(color, true)).Tables[0];
-            //cmbEColor.ValueMember = "ID";
-            //cmbEColor.DisplayMember = "Detail";
-            //cmbEColor.Refresh();
-        }
-
         private void gridDiamondCer_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             if (gridOrder.RowCount > 0 && gridOrder.SelectedRows.Count > 0)

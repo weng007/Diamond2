@@ -241,6 +241,7 @@
             this.btnPrint.Size = new System.Drawing.Size(76, 90);
             this.btnPrint.TabIndex = 308;
             this.btnPrint.UseVisualStyleBackColor = false;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
             // btnRefDel1
             // 
@@ -260,7 +261,7 @@
             // 
             // monthCalendar1
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(719, 247);
+            this.monthCalendar1.Location = new System.Drawing.Point(668, 245);
             this.monthCalendar1.MaxSelectionCount = 1;
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 266;
@@ -643,6 +644,7 @@
             this.btnImage1.Size = new System.Drawing.Size(150, 150);
             this.btnImage1.TabIndex = 275;
             this.btnImage1.UseVisualStyleBackColor = false;
+            this.btnImage1.Click += new System.EventHandler(this.btnImage1_Click);
             // 
             // btnImage5
             // 
@@ -655,6 +657,7 @@
             this.btnImage5.Size = new System.Drawing.Size(150, 150);
             this.btnImage5.TabIndex = 274;
             this.btnImage5.UseVisualStyleBackColor = false;
+            this.btnImage5.Click += new System.EventHandler(this.btnImage5_Click);
             // 
             // btnImage4
             // 
@@ -667,6 +670,7 @@
             this.btnImage4.Size = new System.Drawing.Size(150, 150);
             this.btnImage4.TabIndex = 273;
             this.btnImage4.UseVisualStyleBackColor = false;
+            this.btnImage4.Click += new System.EventHandler(this.btnImage4_Click);
             // 
             // btnImage3
             // 
@@ -679,6 +683,7 @@
             this.btnImage3.Size = new System.Drawing.Size(150, 150);
             this.btnImage3.TabIndex = 272;
             this.btnImage3.UseVisualStyleBackColor = false;
+            this.btnImage3.Click += new System.EventHandler(this.btnImage3_Click);
             // 
             // btnImage2
             // 
@@ -691,6 +696,7 @@
             this.btnImage2.Size = new System.Drawing.Size(150, 150);
             this.btnImage2.TabIndex = 271;
             this.btnImage2.UseVisualStyleBackColor = false;
+            this.btnImage2.Click += new System.EventHandler(this.btnImage2_Click);
             // 
             // label19
             // 

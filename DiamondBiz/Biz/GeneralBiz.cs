@@ -153,6 +153,17 @@ namespace DiamondBiz.Biz
                 throw ex;
             }
         }
+        public DataSet GetReportOrder(int ID)
+        {
+            try
+            {
+                return dal.GetReportOrder(ID);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
         public DataSet GetReportCertificate(int ID)
         {
             try

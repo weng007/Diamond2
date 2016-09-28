@@ -202,13 +202,13 @@ namespace Diamond
         }
 
         [WebMethod]
-        public DataSet DoSearchCatalog(string code, int mode)
+        public DataSet DoSearchCatalog(string code, int mode,int Shop)
         {
             CatalogBiz biz = new CatalogBiz();
 
             try
             {
-                return biz.DoSearchData(code, mode);
+                return biz.DoSearchData(code, mode,Shop);
             }
             catch (Exception ex)
             {
@@ -456,6 +456,20 @@ namespace Diamond
             try
             {
                 return biz.DoSearchData(ExpenseGroup);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        [WebMethod]
+        public DataSet DoSearchExpense(int ExpenseGroup, int Shop, DateTime SMemoDate, DateTime EMemoDate, DateTime SExpenseDate, DateTime EExpenseDate)
+        {
+            ExpenseBiz biz = new ExpenseBiz();
+
+            try
+            {
+                return biz.DoSearchData(ExpenseGroup, Shop, SMemoDate, EMemoDate, SExpenseDate, EExpenseDate);
             }
             catch (Exception ex)
             {

@@ -25,18 +25,27 @@ namespace DiamondShop
         protected override void Initial()
         {
             grid.AutoGenerateColumns = false;
-            ds = GM.GetExpenseGroup();
 
+            ds = GM.GetExpenseGroup();
+            DataRow row = ds.Tables[0].NewRow();
+            row["ID"] = 0;
+            row["ExpenseGroup"] = "All";
+            ds.Tables[0].Rows.Add(row);
             cmbExpenseGroup.DataSource = ds.Tables[0];
             cmbExpenseGroup.ValueMember = "ID";
-            cmbExpenseGroup.DisplayMember = "DisplayName";
+            cmbExpenseGroup.DisplayMember = "ExpenseGroup";
             cmbExpenseGroup.SelectedIndex = ds.Tables[0].Rows.Count - 1;
             cmbExpenseGroup.Refresh();
+
+            cmbShop.DataSource = (GM.GetMasterTableDetail("C007", true)).Tables[0];
+            cmbShop.ValueMember = "ID";
+            cmbShop.DisplayMember = "Detail";
+            cmbShop.Refresh();
         }
 
         protected override void DoLoadData()
         {
-            ds = ser.DoSelectData("ExpenseGroup", -1, 0);
+            ds = ser.DoSelectData("Expense", -1, 0);
 
             if (ds.Tables[0].Rows.Count > 0)
             {
@@ -54,7 +63,7 @@ namespace DiamondShop
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            ExpenseGroup frm = new ExpenseGroup();
+            Expense frm = new Expense();
             frm.ShowDialog();
 
             DoLoadData();
@@ -71,7 +80,7 @@ namespace DiamondShop
                 if (grid.RowCount > 0 && grid.SelectedRows.Count > 0)
                 {
                     id = (int)grid.SelectedRows[0].Cells["ID"].Value;
-                    chkFlag = ser.DoDeleteData("ExpenseGroup", id);
+                    chkFlag = ser.DoDeleteData("Expense", id);
                 }
             }
 
@@ -87,7 +96,8 @@ namespace DiamondShop
         {
             ser2 = GM.GetService2();
 
-            ds = ser2.DoSearchExpenseGroup(Convert.ToInt32(cmbExpenseGroup.SelectedValue.ToString()));
+            ds = ser2.DoSearchExpense(Convert.ToInt32(cmbExpenseGroup.SelectedValue.ToString()), Convert.ToInt32(cmbShop.SelectedValue.ToString()), dtSMemoDate.Value, dtEMemoDate.Value,
+               dtSExpense.Value, dtEExpense.Value);
 
             if (ds.Tables[0].Rows.Count > 0)
             {
@@ -112,7 +122,7 @@ namespace DiamondShop
             if (grid.RowCount > 0 && grid.SelectedRows.Count > 0)
             {
                 id = (int)grid.SelectedRows[0].Cells["ID"].Value;
-                ExpenseGroup frm = new ExpenseGroup(id);
+                Expense frm = new Expense(id);
                 frm.ShowDialog();
 
                 if (frm.isEdit)
