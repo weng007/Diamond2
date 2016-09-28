@@ -34,7 +34,7 @@ namespace DiamondShop
             binder.BindControl(txtUSDRate, "USDRate");
             binder.BindControl(dtSellDate, "SellDate");
             binder.BindControl(dtDueDate, "DueDate");
-            binder.BindControl(txtTotal, "Total");
+            binder.BindControl(txtDiscount, "Total");
             binder.BindControl(cmbPayment, "Payment");
             binder.BindControl(txtCustomer, "CustomerName");
             binder.BindControl(txtNote, "Note");
@@ -53,11 +53,10 @@ namespace DiamondShop
             binder.BindControl(txtUSDRate, "USDRate");
             binder.BindControl(dtSellDate, "SellDate");
             binder.BindControl(dtDueDate, "DueDate");
-            binder.BindControl(txtTotal, "Total");
+            binder.BindControl(txtDiscount, "Total");
             binder.BindControl(cmbPayment, "Payment");
             binder.BindControl(txtCustomer, "CustomerName");
             binder.BindControl(txtNote, "Note");
-            //binder.BindControl(txtStatus, "StatusName");
 
             this.id = id;
             LoadData();
@@ -96,7 +95,6 @@ namespace DiamondShop
                 binder.BindValueToControl(tds.SellBook[0]);
                 txtPayDate.Text = string.Format("{0:d/M/yyyy}", tds.SellBook[0]["Paydate"]);
                 custID = tds.SellBook[0].CustID;
-                //chkIsPrintPrice.Checked = tds.Sell[0].IsPrintPrice=="1"?true:false;
 
                 EnableDelete = true;
             }
@@ -185,11 +183,6 @@ namespace DiamondShop
             else { return false; }
         }
 
-        //private void txtNetPrice_Leave(object sender, EventArgs e)
-        //{
-        //    txtNetPrice.Text = GM.ConvertDoubleToString(txtNetPrice, 0);
-        //}
-
         private void cmbPayment_SelectedIndexChanged(object sender, EventArgs e)
         {
             if(cmbPayment.SelectedIndex == 0)
@@ -227,12 +220,6 @@ namespace DiamondShop
             frm.ShowDialog();
             custID = frm.custID;
             txtCustomer.Text = frm.customerName;
-        }
-
-        private void txtPriceTag_Leave(object sender, EventArgs e)
-        {
-            TextBox txt = (TextBox)sender;
-            txt.Text = GM.ConvertDoubleToString(txt, 0);
         }
 
         private void btnPending_Click(object sender, EventArgs e)

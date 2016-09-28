@@ -13,13 +13,14 @@ namespace DiamondDAL.DAL
         dsCatalog ds = new dsCatalog();
         int flag = 0;
 
-        public dsCatalog DoSearchData(string code, int mode)
+        public dsCatalog DoSearchData(string code, int mode,int Shop)
         {
             try
             {
                 SQL.ClearParameter();
                 SQL.CreateParameter("Code", code);
                 SQL.CreateParameter("Mode", mode);
+                SQL.CreateParameter("Shop", Shop);
                 SQL.FillDataSetBySP("SP_Catalog_Search", ds.Catalog);
             }
             catch (Exception ex)

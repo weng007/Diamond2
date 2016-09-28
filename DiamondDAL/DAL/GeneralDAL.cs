@@ -220,6 +220,21 @@ namespace DiamondDAL.DAL
 
             return ds;
         }
+        public DataSet GetReportOrder(int id)
+        {
+            try
+            {
+                SQL.ClearParameter();
+                SQL.CreateParameter("@ID", id);
+                SQL.FillDataSetBySP2("SP_Rpt_Order", ds);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return ds;
+        }
         public DataSet GetReportCertificate(int id)
         {
             try

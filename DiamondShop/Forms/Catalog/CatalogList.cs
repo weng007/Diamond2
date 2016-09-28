@@ -83,7 +83,7 @@ namespace DiamondShop
         {
             ser2 = GM.GetService2();
 
-            ds = ser2.DoSearchCatalog(txtPrefix.Text + txtCode.Text,mode);
+            ds = ser2.DoSearchCatalog(txtPrefix.Text + txtCode.Text,mode,ApplicationInfo.Shop);
 
             if (ds.Tables[0].Rows.Count > 0)
             {

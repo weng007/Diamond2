@@ -337,7 +337,6 @@
             this.gridTransfer.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridTransfer.Size = new System.Drawing.Size(973, 187);
             this.gridTransfer.TabIndex = 86;
-            this.gridTransfer.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.gridSetting_CellMouseDoubleClick);
             // 
             // RowNum
             // 

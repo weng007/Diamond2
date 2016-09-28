@@ -22,7 +22,7 @@ namespace DiamondShop
             InitializeComponent();
             Initial();
 
-            binder.BindControl(cmbExpenseGroup, "ExpenseGroupName");
+            binder.BindControl(cmbExpenseGroup, "ExpenseGroup");
             binder.BindControl(txtShop, "ShopName");
             binder.BindControl(dtMemoDate, "CreateDate");
             binder.BindControl(txtCost, "Cost");
@@ -47,7 +47,7 @@ namespace DiamondShop
             InitializeComponent();
             Initial();
 
-            binder.BindControl(cmbExpenseGroup, "ExpenseGroupName");
+            binder.BindControl(cmbExpenseGroup, "ExpenseGroup");
             binder.BindControl(txtShop, "ShopName");
             binder.BindControl(dtMemoDate, "CreateDate");
             binder.BindControl(txtCost, "Cost");

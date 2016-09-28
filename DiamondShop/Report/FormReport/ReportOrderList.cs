@@ -63,19 +63,18 @@ namespace DiamondShop
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            //Application.UseWaitCursor = true;
-            //ser1 = GM.GetService1();
+            Application.UseWaitCursor = true;
+            ser1 = GM.GetService1();
 
-            //ds = ser1.GetReportOrder(OrderID);
+            ds = ser1.GetReportOrder(OrderID);
 
-            //ReportDataSource datasource = new ReportDataSource("dsReportOrder", ds.Tables[1]);
-            //this.reportViewer1.LocalReport.ReportPath = "..\\Report\\Order.rdlc";
+            ReportDataSource datasource = new ReportDataSource("dsReportOrder", ds.Tables[1]);
+            this.reportViewer1.LocalReport.ReportPath = "..\\Report\\Order.rdlc";
 
 
-
-            //this.reportViewer1.LocalReport.DataSources.Add(datasource);
-            //this.reportViewer1.RefreshReport();
-            //Application.UseWaitCursor = false;
+            this.reportViewer1.LocalReport.DataSources.Add(datasource);
+            this.reportViewer1.RefreshReport();
+            Application.UseWaitCursor = false;
         }
 
         private void btnClose_Click(object sender, EventArgs e)

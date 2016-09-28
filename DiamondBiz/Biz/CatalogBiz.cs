@@ -14,11 +14,11 @@ namespace DiamondBiz.Biz
         CatalogDAL dal = new CatalogDAL();
 
         //type 0 = Login, 1 = BuyBook
-        public dsCatalog DoSearchData(string code, int mode)
+        public dsCatalog DoSearchData(string code, int mode, int Shop)
         {
             try
             {
-                return dal.DoSearchData(code, mode);
+                return dal.DoSearchData(code, mode,Shop);
             }
             catch (Exception ex)
             {

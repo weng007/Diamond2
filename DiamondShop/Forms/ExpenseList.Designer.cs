@@ -48,7 +48,7 @@
             this.grid = new System.Windows.Forms.DataGridView();
             this.RowNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ExpenseGroup = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ExpenseGroupName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ExpenseDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cost = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
@@ -247,7 +247,7 @@
             this.grid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.RowNum,
             this.ID,
-            this.ExpenseGroup,
+            this.ExpenseGroupName,
             this.ExpenseDate,
             this.Cost});
             this.grid.Location = new System.Drawing.Point(14, 16);
@@ -279,13 +279,13 @@
             this.ID.ReadOnly = true;
             this.ID.Visible = false;
             // 
-            // ExpenseGroup
+            // ExpenseGroupName
             // 
-            this.ExpenseGroup.DataPropertyName = "ExpenseGroup";
-            this.ExpenseGroup.HeaderText = "ExpenseGroup";
-            this.ExpenseGroup.Name = "ExpenseGroup";
-            this.ExpenseGroup.ReadOnly = true;
-            this.ExpenseGroup.Width = 300;
+            this.ExpenseGroupName.DataPropertyName = "ExpenseGroupName";
+            this.ExpenseGroupName.HeaderText = "ExpenseGroup";
+            this.ExpenseGroupName.Name = "ExpenseGroupName";
+            this.ExpenseGroupName.ReadOnly = true;
+            this.ExpenseGroupName.Width = 300;
             // 
             // ExpenseDate
             // 
@@ -346,7 +346,7 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.DataGridViewTextBoxColumn RowNum;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ExpenseGroup;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ExpenseGroupName;
         private System.Windows.Forms.DataGridViewTextBoxColumn ExpenseDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cost;
     }

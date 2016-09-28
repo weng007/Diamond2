@@ -26,8 +26,6 @@ namespace DiamondShop
         {
             InitializeComponent();
             Initial();
-            //ds = ser.DoSelectData("ExchangeRate", id, 0);
-            //txtUSDRate.Text = ds.Tables[0].Rows[0]["USDRate"].ToString();
 
             binder.BindControl(cmbFactoryStatus, "FactoryStatus");
 
@@ -44,7 +42,6 @@ namespace DiamondShop
             this.SFactoryStatus = SFactoryStatus;
             LoadData();
             SetControlEnable(false);
-            SetDefaultFactoryStatus(SFactoryStatus);
             isEdit = false;
             
         }
@@ -63,9 +60,7 @@ namespace DiamondShop
         {
             ds = ser.DoSelectData("ProductionLine", id, 0);
             tds.Clear();
-            tds.Merge(ds);
-
-            //txtPrice.Text = Convert.ToString(TotalPrice);
+            tds.Merge(ds);;
 
             if (tds.ProductionLine.Rows.Count > 0)
             {
@@ -75,9 +70,6 @@ namespace DiamondShop
                 EnableEdit = true;
                 EnableDelete = false;
             }
-            //ds = ser.DoSelectData("ExchangeRate", id, 0);
-            //txtUSDRate.Text = ds.Tables[0].Rows[0]["USDRate"].ToString();
-            SetFormatNumber();
             base.LoadData();
         }
 
@@ -134,31 +126,6 @@ namespace DiamondShop
 
             if (message == "") { return true; }
             else { return false; }
-        }
-        private void SetDefaultFactoryStatus(int SFactoryStatus)
-        {
-            if(SFactoryStatus == 256)//เลือกมาจาก Not Yet
-            {
-                cmbFactoryStatus.SelectedIndex = 1; //แสดง Process ถัดไปเป็น Processing
-            }
-            else if (SFactoryStatus == 257)//เลือกมาจาก Processing
-            {
-                cmbFactoryStatus.SelectedIndex = 2; //แสดง Process ถัดไปเป็น Mounting
-            }
-            else if (SFactoryStatus == 258)//เลือกมาจาก Mounting
-            {
-                cmbFactoryStatus.SelectedIndex = 3; //แสดง Process ถัดไปเป็น Job Done
-            }
-        }
-
-        private void SetFormatNumber()
-        {
-            ////ดักเคส MinValue
-            //if (txtPayDate.Text != "" && Convert.ToDateTime(txtPayDate.Text).Year == 1901)
-            //{
-            //    txtPayDate.Text = "";
-            //}
-            //txtPrice.Text = GM.ConvertDoubleToString(txtPrice,0);
         }
 
         private void SetControlEnable(bool status)

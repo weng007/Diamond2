@@ -41,7 +41,7 @@
             this.label16 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtDiscount = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
@@ -90,7 +90,7 @@
             this.panel3.Controls.Add(this.label16);
             this.panel3.Controls.Add(this.textBox2);
             this.panel3.Controls.Add(this.label15);
-            this.panel3.Controls.Add(this.textBox1);
+            this.panel3.Controls.Add(this.txtDiscount);
             this.panel3.Controls.Add(this.label11);
             this.panel3.Controls.Add(this.txtTotal);
             this.panel3.Controls.Add(this.monthCalendar1);
@@ -262,7 +262,7 @@
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(94, 28);
             this.label16.TabIndex = 273;
-            this.label16.Text = "BBShop";
+            this.label16.Text = "Location";
             // 
             // textBox2
             // 
@@ -280,13 +280,13 @@
             this.label15.TabIndex = 271;
             this.label15.Text = "Discount";
             // 
-            // textBox1
+            // txtDiscount
             // 
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.Location = new System.Drawing.Point(451, 115);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(167, 26);
-            this.textBox1.TabIndex = 270;
+            this.txtDiscount.BackColor = System.Drawing.Color.White;
+            this.txtDiscount.Location = new System.Drawing.Point(451, 115);
+            this.txtDiscount.Name = "txtDiscount";
+            this.txtDiscount.Size = new System.Drawing.Size(167, 26);
+            this.txtDiscount.TabIndex = 270;
             // 
             // label11
             // 
@@ -629,7 +629,7 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtTotal;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtDiscount;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button btnSetting;

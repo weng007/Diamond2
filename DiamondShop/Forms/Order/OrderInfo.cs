@@ -38,6 +38,7 @@ namespace DiamondShop
         public string materail = "";
         int flag;
         public int WarningID = 0;
+        public int OrderID;
         public OrderInfo()
         {
             InitializeComponent();
@@ -134,14 +135,18 @@ namespace DiamondShop
             binder.BindControl(txtCoating, "Coating");
             binder.BindControl(txtLaser, "Laser");
             binder.BindControl(txtOldBody, "OldBody");
-
             binder.BindControl(dtReceiveDate, "ReceiveDate");
             binder.BindControl(cmbShop1, "ReceiveAt");
             binder.BindControl(dtOrderDate, "OrderDate");
             binder.BindControl(cmbShop2, "BodyAt");
-
             binder.BindControl(txtCustNote, "CustomerNote");
             binder.BindControl(txtImageNote, "ImageNote");
+            binder.BindControl(txtNote, "Things");
+            binder.BindControl(txtDetail, "Detail");
+            binder.BindControl(txtCustNote, "CustomerNote");
+            binder.BindControl(txtNote1, "Note1");
+            binder.BindControl(txtNote2, "Note2");
+            binder.BindControl(txtNote3, "Note3");
         }
 
         protected override void LoadData()
@@ -204,6 +209,7 @@ namespace DiamondShop
                 
                 InvID = tds.Order[0].RefID;
                 InvID1 = tds.Order[0].RefID1;
+                OrderID = tds.Order[0].ID;
 
                 if (tds.Order[0]["IsHave"].ToString() == "0")
                 {
@@ -467,8 +473,9 @@ namespace DiamondShop
         }
         private void btnDiamond_Click(object sender, EventArgs e)
         {
-            OrderDetail frm = new OrderDetail(id);
+            OrderDetail frm = new OrderDetail(id,materail);
             frm.ShowDialog();
+            txtNote.Text = frm.materail;
         }
 
         private void linkLabel1_Click(object sender, EventArgs e)
@@ -495,6 +502,88 @@ namespace DiamondShop
             ser1 = GM.GetService1();
             ser1.DeleteDataReference(id, 0);
         }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            ReportOrderList frm = new ReportOrderList(OrderID);
+            frm.ShowDialog();
+        }
+
+        private void btnImage1_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.Filter = "Image files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png) | *.jpg; *.jpeg; *.jpe; *.jfif; *.png";
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                btnImage1.BackgroundImage = Image.FromFile(openFileDialog1.FileName);
+
+                FileStream fs;
+                fs = new FileStream(openFileDialog1.FileName, FileMode.Open, FileAccess.Read);
+                image1 = new byte[fs.Length];
+                fs.Read(image1, 0, System.Convert.ToInt32(fs.Length));
+                fs.Close();
+            }
+        }
+
+        private void btnImage2_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.Filter = "Image files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png) | *.jpg; *.jpeg; *.jpe; *.jfif; *.png";
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                btnImage2.BackgroundImage = Image.FromFile(openFileDialog1.FileName);
+
+                FileStream fs;
+                fs = new FileStream(openFileDialog1.FileName, FileMode.Open, FileAccess.Read);
+                image2 = new byte[fs.Length];
+                fs.Read(image2, 0, System.Convert.ToInt32(fs.Length));
+                fs.Close();
+            }
+        }
+
+        private void btnImage3_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.Filter = "Image files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png) | *.jpg; *.jpeg; *.jpe; *.jfif; *.png";
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                btnImage3.BackgroundImage = Image.FromFile(openFileDialog1.FileName);
+
+                FileStream fs;
+                fs = new FileStream(openFileDialog1.FileName, FileMode.Open, FileAccess.Read);
+                image3 = new byte[fs.Length];
+                fs.Read(image3, 0, System.Convert.ToInt32(fs.Length));
+                fs.Close();
+            }
+        }
+
+        private void btnImage4_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.Filter = "Image files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png) | *.jpg; *.jpeg; *.jpe; *.jfif; *.png";
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                btnImage4.BackgroundImage = Image.FromFile(openFileDialog1.FileName);
+
+                FileStream fs;
+                fs = new FileStream(openFileDialog1.FileName, FileMode.Open, FileAccess.Read);
+                image4 = new byte[fs.Length];
+                fs.Read(image4, 0, System.Convert.ToInt32(fs.Length));
+                fs.Close();
+            }
+        }
+
+        private void btnImage5_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.Filter = "Image files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png) | *.jpg; *.jpeg; *.jpe; *.jfif; *.png";
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                btnImage5.BackgroundImage = Image.FromFile(openFileDialog1.FileName);
+
+                FileStream fs;
+                fs = new FileStream(openFileDialog1.FileName, FileMode.Open, FileAccess.Read);
+                image5 = new byte[fs.Length];
+                fs.Read(image5, 0, System.Convert.ToInt32(fs.Length));
+                fs.Close();
+            }
+        }
+
         private void btnRefDel1_Click(object sender, EventArgs e)
         {
             ser1 = GM.GetService1();
