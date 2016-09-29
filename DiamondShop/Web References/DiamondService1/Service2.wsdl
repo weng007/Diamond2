@@ -4,14 +4,15 @@
     <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
       <s:import namespace="http://tempuri.org/dsUser.xsd" />
       <s:import namespace="http://tempuri.org/dsOrder.xsd" />
+      <s:import namespace="http://tempuri.org/dsExpenseGroup.xsd" />
       <s:import schemaLocation="http://localhost:8888/DiamondService/Service2.asmx?schema=dsUser" namespace="http://tempuri.org/dsUser.xsd" />
+      <s:import schemaLocation="http://localhost:8888/DiamondService/Service2.asmx?schema=dsExpenseGroup" namespace="http://tempuri.org/dsExpenseGroup.xsd" />
       <s:import schemaLocation="http://localhost:8888/DiamondService/Service2.asmx?schema=dsOrder" namespace="http://tempuri.org/dsOrder.xsd" />
       <s:element name="DoAuthenticate">
         <s:complexType>
           <s:sequence>
             <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
             <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="type" type="s:string" />
             <s:element minOccurs="1" maxOccurs="1" name="Shop" type="s:int" />
           </s:sequence>
         </s:complexType>
@@ -316,6 +317,27 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="GetReportOrder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetReportOrderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetReportOrderResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
       <s:element name="GetReportCertificate">
         <s:complexType>
           <s:sequence>
@@ -356,6 +378,7 @@
         <s:complexType>
           <s:sequence>
             <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="flag" type="s:int" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -379,6 +402,22 @@
         <s:complexType>
           <s:sequence>
             <s:element minOccurs="1" maxOccurs="1" name="UpdateProductionLineResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetExpenseGroup">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetExpenseGroupResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetExpenseGroupResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/dsExpenseGroup.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -474,6 +513,12 @@
   <wsdl:message name="GetReportInventorySoapOut">
     <wsdl:part name="parameters" element="tns:GetReportInventoryResponse" />
   </wsdl:message>
+  <wsdl:message name="GetReportOrderSoapIn">
+    <wsdl:part name="parameters" element="tns:GetReportOrder" />
+  </wsdl:message>
+  <wsdl:message name="GetReportOrderSoapOut">
+    <wsdl:part name="parameters" element="tns:GetReportOrderResponse" />
+  </wsdl:message>
   <wsdl:message name="GetReportCertificateSoapIn">
     <wsdl:part name="parameters" element="tns:GetReportCertificate" />
   </wsdl:message>
@@ -497,6 +542,12 @@
   </wsdl:message>
   <wsdl:message name="UpdateProductionLineSoapOut">
     <wsdl:part name="parameters" element="tns:UpdateProductionLineResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetExpenseGroupSoapIn">
+    <wsdl:part name="parameters" element="tns:GetExpenseGroup" />
+  </wsdl:message>
+  <wsdl:message name="GetExpenseGroupSoapOut">
+    <wsdl:part name="parameters" element="tns:GetExpenseGroupResponse" />
   </wsdl:message>
   <wsdl:portType name="Service2Soap">
     <wsdl:operation name="DoAuthenticate">
@@ -559,6 +610,10 @@
       <wsdl:input message="tns:GetReportInventorySoapIn" />
       <wsdl:output message="tns:GetReportInventorySoapOut" />
     </wsdl:operation>
+    <wsdl:operation name="GetReportOrder">
+      <wsdl:input message="tns:GetReportOrderSoapIn" />
+      <wsdl:output message="tns:GetReportOrderSoapOut" />
+    </wsdl:operation>
     <wsdl:operation name="GetReportCertificate">
       <wsdl:input message="tns:GetReportCertificateSoapIn" />
       <wsdl:output message="tns:GetReportCertificateSoapOut" />
@@ -574,6 +629,10 @@
     <wsdl:operation name="UpdateProductionLine">
       <wsdl:input message="tns:UpdateProductionLineSoapIn" />
       <wsdl:output message="tns:UpdateProductionLineSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExpenseGroup">
+      <wsdl:input message="tns:GetExpenseGroupSoapIn" />
+      <wsdl:output message="tns:GetExpenseGroupSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="Service2Soap" type="tns:Service2Soap">
@@ -713,6 +772,15 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="GetReportOrder">
+      <soap:operation soapAction="http://tempuri.org/GetReportOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="GetReportCertificate">
       <soap:operation soapAction="http://tempuri.org/GetReportCertificate" style="document" />
       <wsdl:input>
@@ -742,6 +810,15 @@
     </wsdl:operation>
     <wsdl:operation name="UpdateProductionLine">
       <soap:operation soapAction="http://tempuri.org/UpdateProductionLine" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExpenseGroup">
+      <soap:operation soapAction="http://tempuri.org/GetExpenseGroup" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -887,6 +964,15 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="GetReportOrder">
+      <soap12:operation soapAction="http://tempuri.org/GetReportOrder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="GetReportCertificate">
       <soap12:operation soapAction="http://tempuri.org/GetReportCertificate" style="document" />
       <wsdl:input>
@@ -916,6 +1002,15 @@
     </wsdl:operation>
     <wsdl:operation name="UpdateProductionLine">
       <soap12:operation soapAction="http://tempuri.org/UpdateProductionLine" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExpenseGroup">
+      <soap12:operation soapAction="http://tempuri.org/GetExpenseGroup" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

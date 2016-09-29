@@ -8,6 +8,7 @@
             <xs:sequence>
               <xs:element msdata:ReadOnly="true" minOccurs="0" name="RowNum" type="xs:long" />
               <xs:element msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" name="ID" type="xs:int" />
+              <xs:element minOccurs="0" name="OrderDate" type="xs:dateTime" />
               <xs:element minOccurs="0" name="OrderNo">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -15,7 +16,6 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element minOccurs="0" name="OrderDate" type="xs:string" />
               <xs:element minOccurs="0" name="CustID" type="xs:int" />
               <xs:element minOccurs="0" name="CustomerName">
                 <xs:simpleType>
@@ -31,8 +31,6 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element minOccurs="0" name="SShop" type="xs:int" />
-              <xs:element minOccurs="0" name="SShopName" type="xs:string" />
               <xs:element minOccurs="0" name="JewelryType" type="xs:int" />
               <xs:element msdata:ReadOnly="true" minOccurs="0" name="JewelryTypeName">
                 <xs:simpleType>
@@ -42,7 +40,7 @@
                 </xs:simpleType>
               </xs:element>
               <xs:element minOccurs="0" name="Material" type="xs:int" />
-              <xs:element msdata:ReadOnly="true" minOccurs="0" name="MaterialName">
+              <xs:element minOccurs="0" name="MaterialName">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
@@ -50,7 +48,7 @@
                 </xs:simpleType>
               </xs:element>
               <xs:element minOccurs="0" name="Quality" type="xs:int" />
-              <xs:element msdata:ReadOnly="true" minOccurs="0" name="QualityName">
+              <xs:element minOccurs="0" name="QualityName">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
@@ -73,7 +71,7 @@
                 </xs:simpleType>
               </xs:element>
               <xs:element minOccurs="0" name="Seller" type="xs:int" />
-              <xs:element msdata:ReadOnly="true" minOccurs="0" name="SellerName">
+              <xs:element minOccurs="0" name="SellerName">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
@@ -89,7 +87,7 @@
               </xs:element>
               <xs:element minOccurs="0" name="ReceiveDate" type="xs:dateTime" />
               <xs:element minOccurs="0" name="Shop" type="xs:int" />
-              <xs:element msdata:ReadOnly="true" minOccurs="0" name="ShopName">
+              <xs:element minOccurs="0" name="ShopName">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
@@ -98,7 +96,7 @@
               </xs:element>
               <xs:element minOccurs="0" name="AppointDate" type="xs:dateTime" />
               <xs:element minOccurs="0" name="Shop1" type="xs:int" />
-              <xs:element msdata:ReadOnly="true" minOccurs="0" name="ShopName1">
+              <xs:element minOccurs="0" name="ShopName1">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
@@ -121,8 +119,14 @@
               </xs:element>
               <xs:element minOccurs="0" name="Paid" type="xs:decimal" />
               <xs:element minOccurs="0" name="Price" type="xs:decimal" />
-              <xs:element minOccurs="0" name="FactoryStatus" type="xs:short" />
-              <xs:element minOccurs="0" name="FactoryStatusName" type="xs:string" />
+              <xs:element minOccurs="0" name="FactoryStatus" type="xs:int" />
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="FactoryStatusName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
               <xs:element minOccurs="0" name="CustomerNote">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -142,10 +146,62 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+              <xs:element minOccurs="0" name="Things">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
               <xs:element minOccurs="0" name="Detail">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="Note1">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="300" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="Note1Status" type="xs:int" />
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="NoteStatusName1">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="Note2">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="300" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="Note2Status" type="xs:int" />
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="NoteStatusName2">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="Note3">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="300" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="Note3Status" type="xs:int" />
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="NoteStatusName3">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
@@ -176,7 +232,14 @@
               <xs:element minOccurs="0" name="CreateDate" type="xs:dateTime" />
               <xs:element minOccurs="0" name="EditBy" type="xs:int" />
               <xs:element minOccurs="0" name="EditDate" type="xs:dateTime" />
-              <xs:element minOccurs="0" name="Note" type="xs:string" />
+              <xs:element minOccurs="0" name="SShop" type="xs:int" />
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="SShopName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
             </xs:sequence>
           </xs:complexType>
         </xs:element>

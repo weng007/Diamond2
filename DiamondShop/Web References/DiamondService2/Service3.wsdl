@@ -276,6 +276,7 @@
           <s:sequence>
             <s:element minOccurs="0" maxOccurs="1" name="code" type="s:string" />
             <s:element minOccurs="1" maxOccurs="1" name="mode" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Shop" type="s:int" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -673,6 +674,74 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="DoSearchSellBook">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="code" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DoSearchSellBookResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DoSearchSellBookResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DoSearchExpenseGroup">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ExpenseGroup" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DoSearchExpenseGroupResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DoSearchExpenseGroupResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DoSearchExpense">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ExpenseGroup" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Shop" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="SMemoDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="EMemoDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="SExpenseDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="EExpenseDate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DoSearchExpenseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DoSearchExpenseResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
     </s:schema>
   </wsdl:types>
   <wsdl:message name="DoSearchCustomerSoapIn">
@@ -837,6 +906,24 @@
   <wsdl:message name="DoSearchProductionLineSoapOut">
     <wsdl:part name="parameters" element="tns:DoSearchProductionLineResponse" />
   </wsdl:message>
+  <wsdl:message name="DoSearchSellBookSoapIn">
+    <wsdl:part name="parameters" element="tns:DoSearchSellBook" />
+  </wsdl:message>
+  <wsdl:message name="DoSearchSellBookSoapOut">
+    <wsdl:part name="parameters" element="tns:DoSearchSellBookResponse" />
+  </wsdl:message>
+  <wsdl:message name="DoSearchExpenseGroupSoapIn">
+    <wsdl:part name="parameters" element="tns:DoSearchExpenseGroup" />
+  </wsdl:message>
+  <wsdl:message name="DoSearchExpenseGroupSoapOut">
+    <wsdl:part name="parameters" element="tns:DoSearchExpenseGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="DoSearchExpenseSoapIn">
+    <wsdl:part name="parameters" element="tns:DoSearchExpense" />
+  </wsdl:message>
+  <wsdl:message name="DoSearchExpenseSoapOut">
+    <wsdl:part name="parameters" element="tns:DoSearchExpenseResponse" />
+  </wsdl:message>
   <wsdl:portType name="Service3Soap">
     <wsdl:operation name="DoSearchCustomer">
       <wsdl:input message="tns:DoSearchCustomerSoapIn" />
@@ -945,6 +1032,18 @@
     <wsdl:operation name="DoSearchProductionLine">
       <wsdl:input message="tns:DoSearchProductionLineSoapIn" />
       <wsdl:output message="tns:DoSearchProductionLineSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DoSearchSellBook">
+      <wsdl:input message="tns:DoSearchSellBookSoapIn" />
+      <wsdl:output message="tns:DoSearchSellBookSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DoSearchExpenseGroup">
+      <wsdl:input message="tns:DoSearchExpenseGroupSoapIn" />
+      <wsdl:output message="tns:DoSearchExpenseGroupSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DoSearchExpense">
+      <wsdl:input message="tns:DoSearchExpenseSoapIn" />
+      <wsdl:output message="tns:DoSearchExpenseSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="Service3Soap" type="tns:Service3Soap">
@@ -1192,6 +1291,33 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="DoSearchSellBook">
+      <soap:operation soapAction="http://tempuri.org/DoSearchSellBook" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoSearchExpenseGroup">
+      <soap:operation soapAction="http://tempuri.org/DoSearchExpenseGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoSearchExpense">
+      <soap:operation soapAction="http://tempuri.org/DoSearchExpense" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:binding name="Service3Soap12" type="tns:Service3Soap">
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
@@ -1431,6 +1557,33 @@
     </wsdl:operation>
     <wsdl:operation name="DoSearchProductionLine">
       <soap12:operation soapAction="http://tempuri.org/DoSearchProductionLine" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoSearchSellBook">
+      <soap12:operation soapAction="http://tempuri.org/DoSearchSellBook" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoSearchExpenseGroup">
+      <soap12:operation soapAction="http://tempuri.org/DoSearchExpenseGroup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoSearchExpense">
+      <soap12:operation soapAction="http://tempuri.org/DoSearchExpense" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

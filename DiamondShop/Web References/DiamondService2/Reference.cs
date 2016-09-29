@@ -84,6 +84,12 @@ namespace DiamondShop.DiamondService2 {
         
         private System.Threading.SendOrPostCallback DoSearchProductionLineOperationCompleted;
         
+        private System.Threading.SendOrPostCallback DoSearchSellBookOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback DoSearchExpenseGroupOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback DoSearchExpenseOperationCompleted;
+        
         private bool useDefaultCredentialsSetExplicitly;
         
         /// <remarks/>
@@ -202,6 +208,15 @@ namespace DiamondShop.DiamondService2 {
         
         /// <remarks/>
         public event DoSearchProductionLineCompletedEventHandler DoSearchProductionLineCompleted;
+        
+        /// <remarks/>
+        public event DoSearchSellBookCompletedEventHandler DoSearchSellBookCompleted;
+        
+        /// <remarks/>
+        public event DoSearchExpenseGroupCompletedEventHandler DoSearchExpenseGroupCompleted;
+        
+        /// <remarks/>
+        public event DoSearchExpenseCompletedEventHandler DoSearchExpenseCompleted;
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/DoSearchCustomer", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
@@ -600,26 +615,28 @@ namespace DiamondShop.DiamondService2 {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/DoSearchCatalog", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public System.Data.DataSet DoSearchCatalog(string code, int mode) {
+        public System.Data.DataSet DoSearchCatalog(string code, int mode, int Shop) {
             object[] results = this.Invoke("DoSearchCatalog", new object[] {
                         code,
-                        mode});
+                        mode,
+                        Shop});
             return ((System.Data.DataSet)(results[0]));
         }
         
         /// <remarks/>
-        public void DoSearchCatalogAsync(string code, int mode) {
-            this.DoSearchCatalogAsync(code, mode, null);
+        public void DoSearchCatalogAsync(string code, int mode, int Shop) {
+            this.DoSearchCatalogAsync(code, mode, Shop, null);
         }
         
         /// <remarks/>
-        public void DoSearchCatalogAsync(string code, int mode, object userState) {
+        public void DoSearchCatalogAsync(string code, int mode, int Shop, object userState) {
             if ((this.DoSearchCatalogOperationCompleted == null)) {
                 this.DoSearchCatalogOperationCompleted = new System.Threading.SendOrPostCallback(this.OnDoSearchCatalogOperationCompleted);
             }
             this.InvokeAsync("DoSearchCatalog", new object[] {
                         code,
-                        mode}, this.DoSearchCatalogOperationCompleted, userState);
+                        mode,
+                        Shop}, this.DoSearchCatalogOperationCompleted, userState);
         }
         
         private void OnDoSearchCatalogOperationCompleted(object arg) {
@@ -1191,6 +1208,103 @@ namespace DiamondShop.DiamondService2 {
             if ((this.DoSearchProductionLineCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.DoSearchProductionLineCompleted(this, new DoSearchProductionLineCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/DoSearchSellBook", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataSet DoSearchSellBook(string code) {
+            object[] results = this.Invoke("DoSearchSellBook", new object[] {
+                        code});
+            return ((System.Data.DataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void DoSearchSellBookAsync(string code) {
+            this.DoSearchSellBookAsync(code, null);
+        }
+        
+        /// <remarks/>
+        public void DoSearchSellBookAsync(string code, object userState) {
+            if ((this.DoSearchSellBookOperationCompleted == null)) {
+                this.DoSearchSellBookOperationCompleted = new System.Threading.SendOrPostCallback(this.OnDoSearchSellBookOperationCompleted);
+            }
+            this.InvokeAsync("DoSearchSellBook", new object[] {
+                        code}, this.DoSearchSellBookOperationCompleted, userState);
+        }
+        
+        private void OnDoSearchSellBookOperationCompleted(object arg) {
+            if ((this.DoSearchSellBookCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.DoSearchSellBookCompleted(this, new DoSearchSellBookCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/DoSearchExpenseGroup", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataSet DoSearchExpenseGroup(int ExpenseGroup) {
+            object[] results = this.Invoke("DoSearchExpenseGroup", new object[] {
+                        ExpenseGroup});
+            return ((System.Data.DataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void DoSearchExpenseGroupAsync(int ExpenseGroup) {
+            this.DoSearchExpenseGroupAsync(ExpenseGroup, null);
+        }
+        
+        /// <remarks/>
+        public void DoSearchExpenseGroupAsync(int ExpenseGroup, object userState) {
+            if ((this.DoSearchExpenseGroupOperationCompleted == null)) {
+                this.DoSearchExpenseGroupOperationCompleted = new System.Threading.SendOrPostCallback(this.OnDoSearchExpenseGroupOperationCompleted);
+            }
+            this.InvokeAsync("DoSearchExpenseGroup", new object[] {
+                        ExpenseGroup}, this.DoSearchExpenseGroupOperationCompleted, userState);
+        }
+        
+        private void OnDoSearchExpenseGroupOperationCompleted(object arg) {
+            if ((this.DoSearchExpenseGroupCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.DoSearchExpenseGroupCompleted(this, new DoSearchExpenseGroupCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/DoSearchExpense", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataSet DoSearchExpense(int ExpenseGroup, int Shop, System.DateTime SMemoDate, System.DateTime EMemoDate, System.DateTime SExpenseDate, System.DateTime EExpenseDate) {
+            object[] results = this.Invoke("DoSearchExpense", new object[] {
+                        ExpenseGroup,
+                        Shop,
+                        SMemoDate,
+                        EMemoDate,
+                        SExpenseDate,
+                        EExpenseDate});
+            return ((System.Data.DataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void DoSearchExpenseAsync(int ExpenseGroup, int Shop, System.DateTime SMemoDate, System.DateTime EMemoDate, System.DateTime SExpenseDate, System.DateTime EExpenseDate) {
+            this.DoSearchExpenseAsync(ExpenseGroup, Shop, SMemoDate, EMemoDate, SExpenseDate, EExpenseDate, null);
+        }
+        
+        /// <remarks/>
+        public void DoSearchExpenseAsync(int ExpenseGroup, int Shop, System.DateTime SMemoDate, System.DateTime EMemoDate, System.DateTime SExpenseDate, System.DateTime EExpenseDate, object userState) {
+            if ((this.DoSearchExpenseOperationCompleted == null)) {
+                this.DoSearchExpenseOperationCompleted = new System.Threading.SendOrPostCallback(this.OnDoSearchExpenseOperationCompleted);
+            }
+            this.InvokeAsync("DoSearchExpense", new object[] {
+                        ExpenseGroup,
+                        Shop,
+                        SMemoDate,
+                        EMemoDate,
+                        SExpenseDate,
+                        EExpenseDate}, this.DoSearchExpenseOperationCompleted, userState);
+        }
+        
+        private void OnDoSearchExpenseOperationCompleted(object arg) {
+            if ((this.DoSearchExpenseCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.DoSearchExpenseCompleted(this, new DoSearchExpenseCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -1902,6 +2016,84 @@ namespace DiamondShop.DiamondService2 {
         private object[] results;
         
         internal DoSearchProductionLineCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Data.DataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Data.DataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    public delegate void DoSearchSellBookCompletedEventHandler(object sender, DoSearchSellBookCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class DoSearchSellBookCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal DoSearchSellBookCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Data.DataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Data.DataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    public delegate void DoSearchExpenseGroupCompletedEventHandler(object sender, DoSearchExpenseGroupCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class DoSearchExpenseGroupCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal DoSearchExpenseGroupCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Data.DataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Data.DataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    public delegate void DoSearchExpenseCompletedEventHandler(object sender, DoSearchExpenseCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class DoSearchExpenseCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal DoSearchExpenseCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }
