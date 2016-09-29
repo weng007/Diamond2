@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WarningList));
             this.panel2 = new System.Windows.Forms.Panel();
             this.gridWarning = new System.Windows.Forms.DataGridView();
@@ -89,14 +89,14 @@
             this.gridWarning.AllowUserToDeleteRows = false;
             this.gridWarning.AllowUserToOrderColumns = true;
             this.gridWarning.BackgroundColor = System.Drawing.SystemColors.ControlLight;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridWarning.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridWarning.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.gridWarning.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridWarning.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IsRead,
@@ -127,9 +127,9 @@
             // IsRead
             // 
             this.IsRead.DataPropertyName = "IsRead";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.NullValue = "System.Drawing.Bitmap";
-            this.IsRead.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.NullValue = "System.Drawing.Bitmap";
+            this.IsRead.DefaultCellStyle = dataGridViewCellStyle10;
             this.IsRead.HeaderText = "";
             this.IsRead.Name = "IsRead";
             this.IsRead.ReadOnly = true;
@@ -139,8 +139,8 @@
             // RowNum
             // 
             this.RowNum.DataPropertyName = "RowNum";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.RowNum.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.RowNum.DefaultCellStyle = dataGridViewCellStyle11;
             this.RowNum.HeaderText = "No.";
             this.RowNum.Name = "RowNum";
             this.RowNum.ReadOnly = true;
@@ -189,9 +189,9 @@
             // ShopName
             // 
             this.ShopName.DataPropertyName = "ShopName";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle4.Format = "N0";
-            this.ShopName.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle12.Format = "N0";
+            this.ShopName.DefaultCellStyle = dataGridViewCellStyle12;
             this.ShopName.HeaderText = "Location";
             this.ShopName.Name = "ShopName";
             this.ShopName.ReadOnly = true;
@@ -368,11 +368,11 @@
             // 
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(242, 73);
+            this.label2.Location = new System.Drawing.Point(225, 73);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(101, 26);
+            this.label2.Size = new System.Drawing.Size(118, 26);
             this.label2.TabIndex = 74;
-            this.label2.Text = "Status Type";
+            this.label2.Text = "Message Jobs";
             // 
             // btnSearch
             // 
