@@ -144,8 +144,13 @@
             this.imageList1.Images.SetKeyName(16, "TabPayment.png");
             this.imageList1.Images.SetKeyName(17, "TabWarning.png");
             this.imageList1.Images.SetKeyName(18, "TabCalendar.png");
-            this.imageList1.Images.SetKeyName(19, "TabTransfer.png");
+            this.imageList1.Images.SetKeyName(19, "TabTransferBuyBook.png");
             this.imageList1.Images.SetKeyName(20, "TabOrder.png");
+            this.imageList1.Images.SetKeyName(21, "TabTransferInventory.png");
+            this.imageList1.Images.SetKeyName(22, "TabProductionline.png");
+            this.imageList1.Images.SetKeyName(23, "TabSellBook.png");
+            this.imageList1.Images.SetKeyName(24, "TabExpenseGroup.png");
+            this.imageList1.Images.SetKeyName(25, "TabExpense.png");
             // 
             // btnUser
             // 
@@ -393,7 +398,7 @@
             this.warningToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("warningToolStripMenuItem.Image")));
             this.warningToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.warningToolStripMenuItem.Name = "warningToolStripMenuItem";
-            this.warningToolStripMenuItem.Size = new System.Drawing.Size(161, 38);
+            this.warningToolStripMenuItem.Size = new System.Drawing.Size(168, 38);
             this.warningToolStripMenuItem.Text = "Warning";
             this.warningToolStripMenuItem.Click += new System.EventHandler(this.warningToolStripMenuItem_Click);
             // 
@@ -403,7 +408,7 @@
             this.calendarToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("calendarToolStripMenuItem.Image")));
             this.calendarToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.calendarToolStripMenuItem.Name = "calendarToolStripMenuItem";
-            this.calendarToolStripMenuItem.Size = new System.Drawing.Size(161, 38);
+            this.calendarToolStripMenuItem.Size = new System.Drawing.Size(168, 38);
             this.calendarToolStripMenuItem.Text = "Calendar";
             this.calendarToolStripMenuItem.Click += new System.EventHandler(this.calendarToolStripMenuItem_Click);
             // 
@@ -442,7 +447,10 @@
             // 
             // expenseGroupToolStripMenuItem
             // 
+            this.expenseGroupToolStripMenuItem.AutoSize = false;
             this.expenseGroupToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 11.25F);
+            this.expenseGroupToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("expenseGroupToolStripMenuItem.Image")));
+            this.expenseGroupToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.expenseGroupToolStripMenuItem.Name = "expenseGroupToolStripMenuItem";
             this.expenseGroupToolStripMenuItem.Size = new System.Drawing.Size(203, 38);
             this.expenseGroupToolStripMenuItem.Text = "Expense Group";
@@ -815,16 +823,20 @@
             // buyBookToolStripMenuItem
             // 
             this.buyBookToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.buyBookToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("buyBookToolStripMenuItem.Image")));
+            this.buyBookToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.buyBookToolStripMenuItem.Name = "buyBookToolStripMenuItem";
-            this.buyBookToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
+            this.buyBookToolStripMenuItem.Size = new System.Drawing.Size(168, 38);
             this.buyBookToolStripMenuItem.Text = "BuyBook";
             this.buyBookToolStripMenuItem.Click += new System.EventHandler(this.buyBookToolStripMenuItem_Click);
             // 
             // inventoryToolStripMenuItem1
             // 
             this.inventoryToolStripMenuItem1.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.inventoryToolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("inventoryToolStripMenuItem1.Image")));
+            this.inventoryToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.inventoryToolStripMenuItem1.Name = "inventoryToolStripMenuItem1";
-            this.inventoryToolStripMenuItem1.Size = new System.Drawing.Size(152, 26);
+            this.inventoryToolStripMenuItem1.Size = new System.Drawing.Size(168, 38);
             this.inventoryToolStripMenuItem1.Text = "Inventory";
             this.inventoryToolStripMenuItem1.Click += new System.EventHandler(this.inventoryToolStripMenuItem1_Click);
             // 
@@ -841,19 +853,21 @@
             // 
             // orderJewelryToolStripMenuItem
             // 
-            this.orderJewelryToolStripMenuItem.AutoSize = false;
             this.orderJewelryToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.orderJewelryToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("orderJewelryToolStripMenuItem.Image")));
+            this.orderJewelryToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.orderJewelryToolStripMenuItem.Name = "orderJewelryToolStripMenuItem";
-            this.orderJewelryToolStripMenuItem.Size = new System.Drawing.Size(196, 26);
+            this.orderJewelryToolStripMenuItem.Size = new System.Drawing.Size(212, 38);
             this.orderJewelryToolStripMenuItem.Text = "Order Jewelry";
             this.orderJewelryToolStripMenuItem.Click += new System.EventHandler(this.orderJewelryToolStripMenuItem_Click);
             // 
             // productionLineToolStripMenuItem
             // 
-            this.productionLineToolStripMenuItem.AutoSize = false;
             this.productionLineToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.productionLineToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("productionLineToolStripMenuItem.Image")));
+            this.productionLineToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.productionLineToolStripMenuItem.Name = "productionLineToolStripMenuItem";
-            this.productionLineToolStripMenuItem.Size = new System.Drawing.Size(196, 26);
+            this.productionLineToolStripMenuItem.Size = new System.Drawing.Size(212, 38);
             this.productionLineToolStripMenuItem.Text = "Production Line";
             this.productionLineToolStripMenuItem.Click += new System.EventHandler(this.productionLineToolStripMenuItem_Click);
             // 
@@ -960,6 +974,8 @@
             // sellBookToolStripMenuItem
             // 
             this.sellBookToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 11.25F);
+            this.sellBookToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("sellBookToolStripMenuItem.Image")));
+            this.sellBookToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.sellBookToolStripMenuItem.Name = "sellBookToolStripMenuItem";
             this.sellBookToolStripMenuItem.Size = new System.Drawing.Size(237, 38);
             this.sellBookToolStripMenuItem.Text = "SellBook";
@@ -989,6 +1005,8 @@
             // expenseToolStripMenuItem
             // 
             this.expenseToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 11.25F);
+            this.expenseToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("expenseToolStripMenuItem.Image")));
+            this.expenseToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.expenseToolStripMenuItem.Name = "expenseToolStripMenuItem";
             this.expenseToolStripMenuItem.Size = new System.Drawing.Size(168, 38);
             this.expenseToolStripMenuItem.Text = "Expense";
