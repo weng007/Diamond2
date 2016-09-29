@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BuyBookGemstoneList));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SearchBuyBookGemstoneList));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -40,6 +40,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tds = new DiamondDS.DS.dsDiamondCer();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.btnClose = new System.Windows.Forms.Button();
             this.txtCode2 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -85,6 +86,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(105)))), ((int)(((byte)(79)))));
+            this.panel4.Controls.Add(this.btnClose);
             this.panel4.Controls.Add(this.txtCode2);
             this.panel4.Controls.Add(this.label3);
             this.panel4.Controls.Add(this.label2);
@@ -100,8 +102,24 @@
             this.panel4.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1334, 149);
+            this.panel4.Size = new System.Drawing.Size(1352, 149);
             this.panel4.TabIndex = 40;
+            // 
+            // btnClose
+            // 
+            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClose.BackColor = System.Drawing.Color.Transparent;
+            this.btnClose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClose.BackgroundImage")));
+            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Location = new System.Drawing.Point(1310, 9);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(0);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(38, 32);
+            this.btnClose.TabIndex = 86;
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // txtCode2
             // 
@@ -420,15 +438,15 @@
             this.Remain.Name = "Remain";
             this.Remain.ReadOnly = true;
             // 
-            // BuyBookGemstoneList
+            // SearchBuyBookGemstoneList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(105)))), ((int)(((byte)(79)))));
-            this.ClientSize = new System.Drawing.Size(1335, 577);
+            this.ClientSize = new System.Drawing.Size(1352, 594);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
-            this.Name = "BuyBookGemstoneList";
+            this.Name = "SearchBuyBookGemstoneList";
             this.Text = "DiamondCerList";
             ((System.ComponentModel.ISupportInitialize)(this.ds)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tds)).EndInit();
@@ -473,5 +491,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn PriceCarat;
         private System.Windows.Forms.DataGridViewTextBoxColumn MarketPrice;
         private System.Windows.Forms.DataGridViewTextBoxColumn Remain;
+        private System.Windows.Forms.Button btnClose;
     }
 }

@@ -28,11 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BuyBookETCList));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SearchBuyBookETCList));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.btnClose = new System.Windows.Forms.Button();
             this.txtSeller = new System.Windows.Forms.TextBox();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
@@ -54,6 +55,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(91)))), ((int)(((byte)(59)))));
+            this.panel4.Controls.Add(this.btnClose);
             this.panel4.Controls.Add(this.txtSeller);
             this.panel4.Controls.Add(this.btnAdd);
             this.panel4.Controls.Add(this.btnSearch);
@@ -61,8 +63,24 @@
             this.panel4.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.panel4.Location = new System.Drawing.Point(0, 1);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(710, 117);
+            this.panel4.Size = new System.Drawing.Size(731, 117);
             this.panel4.TabIndex = 42;
+            // 
+            // btnClose
+            // 
+            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClose.BackColor = System.Drawing.Color.Transparent;
+            this.btnClose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClose.BackgroundImage")));
+            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Location = new System.Drawing.Point(693, 8);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(0);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(38, 32);
+            this.btnClose.TabIndex = 79;
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // txtSeller
             // 
@@ -144,7 +162,7 @@
             this.gridETC.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridETC.RowTemplate.Height = 30;
             this.gridETC.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridETC.Size = new System.Drawing.Size(690, 447);
+            this.gridETC.Size = new System.Drawing.Size(690, 444);
             this.gridETC.TabIndex = 2;
             this.gridETC.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.gridETC_MouseDoubleClick);
             // 
@@ -204,15 +222,15 @@
             this.Price.ReadOnly = true;
             this.Price.Width = 125;
             // 
-            // BuyBookETCList
+            // SearchBuyBookETCList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(91)))), ((int)(((byte)(59)))));
-            this.ClientSize = new System.Drawing.Size(717, 577);
+            this.ClientSize = new System.Drawing.Size(732, 592);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
-            this.Name = "BuyBookETCList";
+            this.Name = "SearchBuyBookETCList";
             this.Text = "ProductList";
             ((System.ComponentModel.ISupportInitialize)(this.ds)).EndInit();
             this.panel4.ResumeLayout(false);
@@ -237,5 +255,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Seller;
         private System.Windows.Forms.DataGridViewTextBoxColumn Detail;
         private System.Windows.Forms.DataGridViewTextBoxColumn Price;
+        private System.Windows.Forms.Button btnClose;
     }
 }

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BuyBookDiamondCerList));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SearchBuyBookDiamondCerList));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -173,7 +173,6 @@
             this.btnClose.Size = new System.Drawing.Size(38, 32);
             this.btnClose.TabIndex = 78;
             this.btnClose.UseVisualStyleBackColor = false;
-            this.btnClose.Visible = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // txtCode2
@@ -798,15 +797,15 @@
             this.D.Name = "D";
             this.D.ReadOnly = true;
             // 
-            // BuyBookDiamondCerList
+            // SearchBuyBookDiamondCerList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(105)))), ((int)(((byte)(79)))));
-            this.ClientSize = new System.Drawing.Size(1335, 577);
+            this.ClientSize = new System.Drawing.Size(1347, 593);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
-            this.Name = "BuyBookDiamondCerList";
+            this.Name = "SearchBuyBookDiamondCerList";
             this.Text = "DiamondCerList";
             ((System.ComponentModel.ISupportInitialize)(this.ds)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tds)).EndInit();

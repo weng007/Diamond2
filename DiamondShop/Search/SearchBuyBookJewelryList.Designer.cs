@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BuyBookJewelryList));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SearchBuyBookJewelryList));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -41,6 +41,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtCode2 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
             this.txtPrefix = new System.Windows.Forms.TextBox();
@@ -49,8 +52,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.gridJewelry = new System.Windows.Forms.DataGridView();
-            this.txtCode2 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.RowNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -78,6 +79,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(91)))), ((int)(((byte)(59)))));
+            this.panel4.Controls.Add(this.btnClose);
             this.panel4.Controls.Add(this.label1);
             this.panel4.Controls.Add(this.txtCode2);
             this.panel4.Controls.Add(this.label6);
@@ -89,8 +91,41 @@
             this.panel4.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.panel4.Location = new System.Drawing.Point(0, 1);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1327, 119);
+            this.panel4.Size = new System.Drawing.Size(1349, 119);
             this.panel4.TabIndex = 42;
+            // 
+            // btnClose
+            // 
+            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClose.BackColor = System.Drawing.Color.Transparent;
+            this.btnClose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClose.BackgroundImage")));
+            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Location = new System.Drawing.Point(1311, 8);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(0);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(38, 32);
+            this.btnClose.TabIndex = 87;
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(429, 25);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(67, 25);
+            this.label1.TabIndex = 72;
+            this.label1.Text = "Code2";
+            // 
+            // txtCode2
+            // 
+            this.txtCode2.Location = new System.Drawing.Point(501, 22);
+            this.txtCode2.Name = "txtCode2";
+            this.txtCode2.Size = new System.Drawing.Size(132, 27);
+            this.txtCode2.TabIndex = 71;
             // 
             // label6
             // 
@@ -206,23 +241,6 @@
             this.gridJewelry.Size = new System.Drawing.Size(1314, 447);
             this.gridJewelry.TabIndex = 2;
             this.gridJewelry.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.gridJewelry_MouseDoubleClick);
-            // 
-            // txtCode2
-            // 
-            this.txtCode2.Location = new System.Drawing.Point(501, 22);
-            this.txtCode2.Name = "txtCode2";
-            this.txtCode2.Size = new System.Drawing.Size(132, 27);
-            this.txtCode2.TabIndex = 71;
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(429, 25);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 25);
-            this.label1.TabIndex = 72;
-            this.label1.Text = "Code2";
             // 
             // RowNum
             // 
@@ -399,15 +417,15 @@
             this.Seller.ReadOnly = true;
             this.Seller.Width = 120;
             // 
-            // BuyBookJewelryList
+            // SearchBuyBookJewelryList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(91)))), ((int)(((byte)(59)))));
-            this.ClientSize = new System.Drawing.Size(1335, 577);
+            this.ClientSize = new System.Drawing.Size(1351, 594);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
-            this.Name = "BuyBookJewelryList";
+            this.Name = "SearchBuyBookJewelryList";
             this.Text = "ProductList";
             ((System.ComponentModel.ISupportInitialize)(this.ds)).EndInit();
             this.panel4.ResumeLayout(false);
@@ -448,5 +466,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ShopName;
         private System.Windows.Forms.DataGridViewTextBoxColumn StatusName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Seller;
+        private System.Windows.Forms.Button btnClose;
     }
 }

@@ -28,12 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BuyBookSettingList));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SearchBuyBookSettingList));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.btnClose = new System.Windows.Forms.Button();
             this.txtSeller = new System.Windows.Forms.TextBox();
             this.dtEBuyDate = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
@@ -59,6 +60,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(91)))), ((int)(((byte)(59)))));
+            this.panel4.Controls.Add(this.btnClose);
             this.panel4.Controls.Add(this.txtSeller);
             this.panel4.Controls.Add(this.dtEBuyDate);
             this.panel4.Controls.Add(this.label2);
@@ -70,8 +72,24 @@
             this.panel4.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.panel4.Location = new System.Drawing.Point(0, 1);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1036, 117);
+            this.panel4.Size = new System.Drawing.Size(757, 117);
             this.panel4.TabIndex = 42;
+            // 
+            // btnClose
+            // 
+            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClose.BackColor = System.Drawing.Color.Transparent;
+            this.btnClose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClose.BackgroundImage")));
+            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Location = new System.Drawing.Point(719, 0);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(0);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(38, 32);
+            this.btnClose.TabIndex = 87;
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // txtSeller
             // 
@@ -166,7 +184,7 @@
             this.panel2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.Location = new System.Drawing.Point(5, 124);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1031, 456);
+            this.panel2.Size = new System.Drawing.Size(737, 456);
             this.panel2.TabIndex = 33;
             // 
             // gridSetting
@@ -190,7 +208,7 @@
             this.gridSetting.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridSetting.RowTemplate.Height = 30;
             this.gridSetting.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridSetting.Size = new System.Drawing.Size(646, 447);
+            this.gridSetting.Size = new System.Drawing.Size(719, 447);
             this.gridSetting.TabIndex = 2;
             this.gridSetting.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.gridSetting_MouseDoubleClick);
             // 
@@ -252,15 +270,15 @@
             this.SalePrice.ReadOnly = true;
             this.SalePrice.Width = 130;
             // 
-            // BuyBookSettingList
+            // SearchBuyBookSettingList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(91)))), ((int)(((byte)(59)))));
-            this.ClientSize = new System.Drawing.Size(1335, 577);
+            this.ClientSize = new System.Drawing.Size(759, 597);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
-            this.Name = "BuyBookSettingList";
+            this.Name = "SearchBuyBookSettingList";
             this.Text = "ProductList";
             ((System.ComponentModel.ISupportInitialize)(this.ds)).EndInit();
             this.panel4.ResumeLayout(false);
@@ -289,5 +307,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Seller;
         private System.Windows.Forms.DataGridViewTextBoxColumn BuyPrice;
         private System.Windows.Forms.DataGridViewTextBoxColumn SalePrice;
+        private System.Windows.Forms.Button btnClose;
     }
 }

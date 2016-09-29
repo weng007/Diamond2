@@ -208,5 +208,10 @@ namespace DiamondShop
             cmbComment.DisplayMember = "Detail";
             cmbComment.Refresh();
         }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

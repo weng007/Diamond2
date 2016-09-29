@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BuyBookDiamondList));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SearchBuyBookDiamondList));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -39,6 +39,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tds = new DiamondDS.DS.dsDiamondCer();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.txtCode2 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtESize = new System.Windows.Forms.TextBox();
             this.txtCode = new System.Windows.Forms.TextBox();
@@ -66,8 +69,6 @@
             this.PriceCaratUSD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PriceCaratB = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MarketPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtCode2 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tds)).BeginInit();
             this.panel4.SuspendLayout();
@@ -83,6 +84,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(105)))), ((int)(((byte)(79)))));
+            this.panel4.Controls.Add(this.btnClose);
             this.panel4.Controls.Add(this.txtCode2);
             this.panel4.Controls.Add(this.label2);
             this.panel4.Controls.Add(this.label1);
@@ -100,6 +102,39 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1329, 149);
             this.panel4.TabIndex = 40;
+            // 
+            // btnClose
+            // 
+            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClose.BackColor = System.Drawing.Color.Transparent;
+            this.btnClose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClose.BackgroundImage")));
+            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Location = new System.Drawing.Point(1291, 9);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(0);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(38, 32);
+            this.btnClose.TabIndex = 79;
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // txtCode2
+            // 
+            this.txtCode2.Location = new System.Drawing.Point(547, 20);
+            this.txtCode2.Name = "txtCode2";
+            this.txtCode2.Size = new System.Drawing.Size(161, 27);
+            this.txtCode2.TabIndex = 77;
+            // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(474, 23);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(67, 31);
+            this.label2.TabIndex = 78;
+            this.label2.Text = "Code2";
             // 
             // label1
             // 
@@ -394,32 +429,15 @@
             this.MarketPrice.ReadOnly = true;
             this.MarketPrice.Width = 180;
             // 
-            // txtCode2
-            // 
-            this.txtCode2.Location = new System.Drawing.Point(547, 20);
-            this.txtCode2.Name = "txtCode2";
-            this.txtCode2.Size = new System.Drawing.Size(161, 27);
-            this.txtCode2.TabIndex = 77;
-            // 
-            // label2
-            // 
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(474, 23);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 31);
-            this.label2.TabIndex = 78;
-            this.label2.Text = "Code2";
-            // 
-            // BuyBookDiamondList
+            // SearchBuyBookDiamondList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(105)))), ((int)(((byte)(79)))));
-            this.ClientSize = new System.Drawing.Size(1335, 577);
+            this.ClientSize = new System.Drawing.Size(1355, 593);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
-            this.Name = "BuyBookDiamondList";
+            this.Name = "SearchBuyBookDiamondList";
             this.Text = "DiamondCerList";
             ((System.ComponentModel.ISupportInitialize)(this.ds)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tds)).EndInit();
@@ -463,5 +481,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn MarketPrice;
         private System.Windows.Forms.TextBox txtCode2;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnClose;
     }
 }
