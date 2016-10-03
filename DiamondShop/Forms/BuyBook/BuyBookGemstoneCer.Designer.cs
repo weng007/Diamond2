@@ -501,6 +501,7 @@
             this.btnImage1.TabIndex = 190;
             this.btnImage1.UseVisualStyleBackColor = false;
             this.btnImage1.Click += new System.EventHandler(this.btnImage1_Click);
+            this.btnImage1.Resize += new System.EventHandler(this.btnImage1_Resize);
             // 
             // txtReportNumber
             // 

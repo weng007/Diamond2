@@ -69,6 +69,7 @@ namespace DiamondShop
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+
             if (ValidateLogin())
             {
                 if(ApplicationInfo.Authorized == "Owner")
