@@ -267,7 +267,7 @@
             this.txtCode2.Location = new System.Drawing.Point(150, 158);
             this.txtCode2.Name = "txtCode2";
             this.txtCode2.Size = new System.Drawing.Size(149, 26);
-            this.txtCode2.TabIndex = 238;
+            this.txtCode2.TabIndex = 3;
             this.txtCode2.TextChanged += new System.EventHandler(this.txtNote_TextChanged);
             // 
             // label13
@@ -286,7 +286,7 @@
             this.cmbBuyer.Location = new System.Drawing.Point(149, 449);
             this.cmbBuyer.Name = "cmbBuyer";
             this.cmbBuyer.Size = new System.Drawing.Size(166, 28);
-            this.cmbBuyer.TabIndex = 220;
+            this.cmbBuyer.TabIndex = 11;
             this.cmbBuyer.SelectedValueChanged += new System.EventHandler(this.cmbColorType_SelectedValueChanged);
             // 
             // label17
@@ -314,7 +314,7 @@
             this.txtD.Location = new System.Drawing.Point(895, 45);
             this.txtD.Name = "txtD";
             this.txtD.Size = new System.Drawing.Size(56, 26);
-            this.txtD.TabIndex = 235;
+            this.txtD.TabIndex = 20;
             this.txtD.Text = "0";
             this.txtD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtD.TextChanged += new System.EventHandler(this.txtNote_TextChanged);
@@ -339,7 +339,7 @@
             this.txtL.Location = new System.Drawing.Point(818, 44);
             this.txtL.Name = "txtL";
             this.txtL.Size = new System.Drawing.Size(56, 26);
-            this.txtL.TabIndex = 234;
+            this.txtL.TabIndex = 19;
             this.txtL.Text = "0";
             this.txtL.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtL.TextChanged += new System.EventHandler(this.txtNote_TextChanged);
@@ -349,7 +349,7 @@
             this.txtW.Location = new System.Drawing.Point(739, 44);
             this.txtW.Name = "txtW";
             this.txtW.Size = new System.Drawing.Size(56, 26);
-            this.txtW.TabIndex = 233;
+            this.txtW.TabIndex = 18;
             this.txtW.Text = "0";
             this.txtW.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtW.TextChanged += new System.EventHandler(this.txtNote_TextChanged);
@@ -473,7 +473,7 @@
             this.txtNote.Multiline = true;
             this.txtNote.Name = "txtNote";
             this.txtNote.Size = new System.Drawing.Size(224, 54);
-            this.txtNote.TabIndex = 42;
+            this.txtNote.TabIndex = 21;
             this.txtNote.TextChanged += new System.EventHandler(this.txtNote_TextChanged);
             // 
             // label30
@@ -532,7 +532,7 @@
             this.cmbFluorescent.Location = new System.Drawing.Point(149, 339);
             this.cmbFluorescent.Name = "cmbFluorescent";
             this.cmbFluorescent.Size = new System.Drawing.Size(166, 28);
-            this.cmbFluorescent.TabIndex = 14;
+            this.cmbFluorescent.TabIndex = 9;
             this.cmbFluorescent.SelectedValueChanged += new System.EventHandler(this.cmbColorType_SelectedValueChanged);
             // 
             // cmbCut
@@ -541,7 +541,7 @@
             this.cmbCut.Location = new System.Drawing.Point(150, 232);
             this.cmbCut.Name = "cmbCut";
             this.cmbCut.Size = new System.Drawing.Size(165, 28);
-            this.cmbCut.TabIndex = 9;
+            this.cmbCut.TabIndex = 6;
             this.cmbCut.SelectedValueChanged += new System.EventHandler(this.cmbColorType_SelectedValueChanged);
             // 
             // label27
@@ -647,7 +647,7 @@
             this.dtDueDate.Location = new System.Drawing.Point(150, 51);
             this.dtDueDate.Name = "dtDueDate";
             this.dtDueDate.Size = new System.Drawing.Size(131, 26);
-            this.dtDueDate.TabIndex = 40;
+            this.dtDueDate.TabIndex = 1;
             this.dtDueDate.ValueChanged += new System.EventHandler(this.dtDueDate_ValueChanged);
             // 
             // label20
@@ -665,7 +665,7 @@
             this.txtRap.Location = new System.Drawing.Point(502, 269);
             this.txtRap.Name = "txtRap";
             this.txtRap.Size = new System.Drawing.Size(61, 26);
-            this.txtRap.TabIndex = 36;
+            this.txtRap.TabIndex = 17;
             this.txtRap.Text = "0";
             this.txtRap.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtRap.TextChanged += new System.EventHandler(this.txtNote_TextChanged);
@@ -697,7 +697,7 @@
             this.txtPrice.Location = new System.Drawing.Point(502, 234);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(61, 26);
-            this.txtPrice.TabIndex = 34;
+            this.txtPrice.TabIndex = 16;
             this.txtPrice.Text = "0";
             this.txtPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtPrice.TextChanged += new System.EventHandler(this.txtNote_TextChanged);
@@ -730,7 +730,7 @@
             this.cmbColor.Location = new System.Drawing.Point(502, 125);
             this.cmbColor.Name = "cmbColor";
             this.cmbColor.Size = new System.Drawing.Size(157, 28);
-            this.cmbColor.TabIndex = 6;
+            this.cmbColor.TabIndex = 5;
             this.cmbColor.SelectedValueChanged += new System.EventHandler(this.cmbColorType_SelectedValueChanged);
             // 
             // txtWeight
@@ -738,7 +738,7 @@
             this.txtWeight.Location = new System.Drawing.Point(502, 54);
             this.txtWeight.Name = "txtWeight";
             this.txtWeight.Size = new System.Drawing.Size(61, 26);
-            this.txtWeight.TabIndex = 20;
+            this.txtWeight.TabIndex = 13;
             this.txtWeight.Text = "0";
             this.txtWeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtWeight.TextChanged += new System.EventHandler(this.txtNote_TextChanged);
@@ -813,7 +813,7 @@
             this.cmbLab.Location = new System.Drawing.Point(149, 377);
             this.cmbLab.Name = "cmbLab";
             this.cmbLab.Size = new System.Drawing.Size(132, 28);
-            this.cmbLab.TabIndex = 16;
+            this.cmbLab.TabIndex = 10;
             this.cmbLab.SelectedValueChanged += new System.EventHandler(this.cmbColorType_SelectedValueChanged);
             // 
             // label12
@@ -832,7 +832,7 @@
             this.cmbSymmetry.Location = new System.Drawing.Point(150, 304);
             this.cmbSymmetry.Name = "cmbSymmetry";
             this.cmbSymmetry.Size = new System.Drawing.Size(165, 28);
-            this.cmbSymmetry.TabIndex = 12;
+            this.cmbSymmetry.TabIndex = 8;
             this.cmbSymmetry.SelectedValueChanged += new System.EventHandler(this.cmbColorType_SelectedValueChanged);
             // 
             // label11
@@ -881,7 +881,7 @@
             this.cmbClearity.Location = new System.Drawing.Point(502, 162);
             this.cmbClearity.Name = "cmbClearity";
             this.cmbClearity.Size = new System.Drawing.Size(180, 28);
-            this.cmbClearity.TabIndex = 30;
+            this.cmbClearity.TabIndex = 15;
             this.cmbClearity.SelectedValueChanged += new System.EventHandler(this.cmbColorType_SelectedValueChanged);
             // 
             // label8
@@ -910,7 +910,7 @@
             this.cmbShape.Location = new System.Drawing.Point(502, 89);
             this.cmbShape.Name = "cmbShape";
             this.cmbShape.Size = new System.Drawing.Size(157, 28);
-            this.cmbShape.TabIndex = 8;
+            this.cmbShape.TabIndex = 14;
             this.cmbShape.SelectedIndexChanged += new System.EventHandler(this.cmbShape_SelectedIndexChanged);
             this.cmbShape.SelectedValueChanged += new System.EventHandler(this.cmbColorType_SelectedValueChanged);
             // 
@@ -939,7 +939,7 @@
             this.txtReportNumber.Location = new System.Drawing.Point(502, 18);
             this.txtReportNumber.Name = "txtReportNumber";
             this.txtReportNumber.Size = new System.Drawing.Size(157, 26);
-            this.txtReportNumber.TabIndex = 18;
+            this.txtReportNumber.TabIndex = 12;
             this.txtReportNumber.TextChanged += new System.EventHandler(this.txtNote_TextChanged);
             // 
             // label1
@@ -958,7 +958,7 @@
             this.cmbPolish.Location = new System.Drawing.Point(150, 269);
             this.cmbPolish.Name = "cmbPolish";
             this.cmbPolish.Size = new System.Drawing.Size(165, 28);
-            this.cmbPolish.TabIndex = 10;
+            this.cmbPolish.TabIndex = 7;
             this.cmbPolish.SelectedValueChanged += new System.EventHandler(this.cmbColorType_SelectedValueChanged);
             // 
             // label6
