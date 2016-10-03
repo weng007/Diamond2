@@ -104,7 +104,7 @@
             this.mnBBG = new System.Windows.Forms.ToolStripMenuItem();
             this.mnBBST = new System.Windows.Forms.ToolStripMenuItem();
             this.mnBBETC = new System.Windows.Forms.ToolStripMenuItem();
-            this.sellBookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnSellBook = new System.Windows.Forms.ToolStripMenuItem();
             this.btnAccounting = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuPayment = new System.Windows.Forms.ToolStripMenuItem();
             this.expenseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -882,7 +882,7 @@
             this.mnBBG,
             this.mnBBST,
             this.mnBBETC,
-            this.sellBookToolStripMenuItem});
+            this.mnSellBook});
             this.btnBuyBook.Image = ((System.Drawing.Image)(resources.GetObject("btnBuyBook.Image")));
             this.btnBuyBook.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnBuyBook.Name = "btnBuyBook";
@@ -971,15 +971,15 @@
             this.mnBBETC.Text = "ETC.";
             this.mnBBETC.Click += new System.EventHandler(this.menuETC_Click);
             // 
-            // sellBookToolStripMenuItem
+            // mnSellBook
             // 
-            this.sellBookToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.sellBookToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("sellBookToolStripMenuItem.Image")));
-            this.sellBookToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.sellBookToolStripMenuItem.Name = "sellBookToolStripMenuItem";
-            this.sellBookToolStripMenuItem.Size = new System.Drawing.Size(225, 38);
-            this.sellBookToolStripMenuItem.Text = "SellBook";
-            this.sellBookToolStripMenuItem.Click += new System.EventHandler(this.sellBookToolStripMenuItem_Click);
+            this.mnSellBook.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.mnSellBook.Image = ((System.Drawing.Image)(resources.GetObject("mnSellBook.Image")));
+            this.mnSellBook.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.mnSellBook.Name = "mnSellBook";
+            this.mnSellBook.Size = new System.Drawing.Size(225, 38);
+            this.mnSellBook.Text = "SellBook";
+            this.mnSellBook.Click += new System.EventHandler(this.mnSellBook_Click);
             // 
             // btnAccounting
             // 
@@ -1187,7 +1187,7 @@
         private System.Windows.Forms.ToolStripMenuItem inventoryToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem orderJewelryToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem productionLineToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem sellBookToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mnSellBook;
         private System.Windows.Forms.ToolStripMenuItem expenseGroupToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem expenseToolStripMenuItem;
     }
