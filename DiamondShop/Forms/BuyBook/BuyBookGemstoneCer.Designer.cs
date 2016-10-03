@@ -491,6 +491,7 @@
             // 
             // btnImage1
             // 
+            this.btnImage1.AutoSize = true;
             this.btnImage1.BackColor = System.Drawing.SystemColors.Control;
             this.btnImage1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnImage1.BackgroundImage")));
             this.btnImage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
@@ -501,7 +502,6 @@
             this.btnImage1.TabIndex = 190;
             this.btnImage1.UseVisualStyleBackColor = false;
             this.btnImage1.Click += new System.EventHandler(this.btnImage1_Click);
-            this.btnImage1.Resize += new System.EventHandler(this.btnImage1_Resize);
             // 
             // txtReportNumber
             // 

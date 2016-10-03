@@ -600,14 +600,5 @@ namespace DiamondShop
             ser1 = GM.GetService1();
             ser1.DeleteDataReference(id, 3);
         }
-
-        private void btnImage1_Resize(object sender, EventArgs e)
-        {
-            Button btn = (Button)sender;
-            if (btn.BackgroundImage == null)
-                return;
-            var pic = new Bitmap(btn.BackgroundImage, new Size(btn.Width, btn.Height));
-            btn.BackgroundImage = pic;
-        }
     }
 }
