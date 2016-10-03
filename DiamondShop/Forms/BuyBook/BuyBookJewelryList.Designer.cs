@@ -41,6 +41,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtCode2 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
             this.txtPrefix = new System.Windows.Forms.TextBox();
@@ -49,8 +51,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.gridJewelry = new System.Windows.Forms.DataGridView();
-            this.txtCode2 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.RowNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -91,6 +91,23 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1327, 119);
             this.panel4.TabIndex = 42;
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(429, 25);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(67, 25);
+            this.label1.TabIndex = 72;
+            this.label1.Text = "Code2";
+            // 
+            // txtCode2
+            // 
+            this.txtCode2.Location = new System.Drawing.Point(501, 22);
+            this.txtCode2.Name = "txtCode2";
+            this.txtCode2.Size = new System.Drawing.Size(132, 27);
+            this.txtCode2.TabIndex = 6;
             // 
             // label6
             // 
@@ -207,23 +224,6 @@
             this.gridJewelry.TabIndex = 2;
             this.gridJewelry.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.gridJewelry_MouseDoubleClick);
             // 
-            // txtCode2
-            // 
-            this.txtCode2.Location = new System.Drawing.Point(501, 22);
-            this.txtCode2.Name = "txtCode2";
-            this.txtCode2.Size = new System.Drawing.Size(132, 27);
-            this.txtCode2.TabIndex = 71;
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(429, 25);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 25);
-            this.label1.TabIndex = 72;
-            this.label1.Text = "Code2";
-            // 
             // RowNum
             // 
             this.RowNum.DataPropertyName = "RowNum";
@@ -256,6 +256,7 @@
             this.Code2.HeaderText = "Code2";
             this.Code2.Name = "Code2";
             this.Code2.ReadOnly = true;
+            this.Code2.Width = 150;
             // 
             // Image1
             // 

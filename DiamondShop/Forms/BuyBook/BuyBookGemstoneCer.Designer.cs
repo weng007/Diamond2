@@ -923,6 +923,7 @@
             // txtCode
             // 
             this.txtCode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.txtCode.Enabled = false;
             this.txtCode.Location = new System.Drawing.Point(127, 119);
             this.txtCode.Name = "txtCode";
             this.txtCode.Size = new System.Drawing.Size(176, 26);

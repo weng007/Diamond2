@@ -200,9 +200,8 @@
             // 
             this.txtCode2.Location = new System.Drawing.Point(378, 17);
             this.txtCode2.Name = "txtCode2";
-            this.txtCode2.Size = new System.Drawing.Size(122, 26);
+            this.txtCode2.Size = new System.Drawing.Size(146, 26);
             this.txtCode2.TabIndex = 228;
-            this.txtCode2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtCode2.TextChanged += new System.EventHandler(this.txtRemark_TextChanged);
             // 
             // cmbBuyer
@@ -641,10 +640,11 @@
             // 
             // cmbShop
             // 
+            this.cmbShop.Enabled = false;
             this.cmbShop.FormattingEnabled = true;
             this.cmbShop.Location = new System.Drawing.Point(665, 19);
             this.cmbShop.Name = "cmbShop";
-            this.cmbShop.Size = new System.Drawing.Size(150, 28);
+            this.cmbShop.Size = new System.Drawing.Size(146, 28);
             this.cmbShop.TabIndex = 4;
             // 
             // label1
