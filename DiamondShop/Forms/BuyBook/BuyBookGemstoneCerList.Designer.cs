@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BuyBookGemstoneCerList));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -41,9 +42,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BuyBookGemstoneCerList));
             this.tds = new DiamondDS.DS.dsDiamondCer();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.btnClose = new System.Windows.Forms.Button();
             this.txtCode2 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.cmbOrigin = new System.Windows.Forms.ComboBox();
@@ -100,7 +101,6 @@
             this.W = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.L = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.D = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnClose = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tds)).BeginInit();
             this.panel4.SuspendLayout();
@@ -149,6 +149,22 @@
             this.panel4.Size = new System.Drawing.Size(1329, 179);
             this.panel4.TabIndex = 40;
             // 
+            // btnClose
+            // 
+            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClose.BackColor = System.Drawing.Color.Transparent;
+            this.btnClose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClose.BackgroundImage")));
+            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Location = new System.Drawing.Point(1288, 0);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(0);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(38, 32);
+            this.btnClose.TabIndex = 85;
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Visible = false;
+            // 
             // txtCode2
             // 
             this.txtCode2.Location = new System.Drawing.Point(588, 20);
@@ -178,9 +194,9 @@
             // 
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(804, 99);
+            this.label2.Location = new System.Drawing.Point(833, 99);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(94, 26);
+            this.label2.Size = new System.Drawing.Size(65, 26);
             this.label2.TabIndex = 82;
             this.label2.Text = "Origin";
             // 
@@ -254,7 +270,7 @@
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(69, 26);
             this.label11.TabIndex = 72;
-            this.label11.Text = "Shop";
+            this.label11.Text = "Location";
             // 
             // cmbStatus
             // 
@@ -717,22 +733,6 @@
             this.D.HeaderText = "D";
             this.D.Name = "D";
             this.D.ReadOnly = true;
-            // 
-            // btnClose
-            // 
-            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClose.BackColor = System.Drawing.Color.Transparent;
-            this.btnClose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClose.BackgroundImage")));
-            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Location = new System.Drawing.Point(1288, 0);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(0);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(38, 32);
-            this.btnClose.TabIndex = 85;
-            this.btnClose.UseVisualStyleBackColor = false;
-            this.btnClose.Visible = false;
             // 
             // BuyBookGemstoneCerList
             // 
