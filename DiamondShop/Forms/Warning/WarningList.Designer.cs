@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WarningList));
             this.panel2 = new System.Windows.Forms.Panel();
             this.gridWarning = new System.Windows.Forms.DataGridView();
@@ -89,14 +89,14 @@
             this.gridWarning.AllowUserToDeleteRows = false;
             this.gridWarning.AllowUserToOrderColumns = true;
             this.gridWarning.BackgroundColor = System.Drawing.SystemColors.ControlLight;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridWarning.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridWarning.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.gridWarning.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridWarning.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IsRead,
@@ -127,9 +127,9 @@
             // IsRead
             // 
             this.IsRead.DataPropertyName = "IsRead";
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle10.NullValue = "System.Drawing.Bitmap";
-            this.IsRead.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.NullValue = "System.Drawing.Bitmap";
+            this.IsRead.DefaultCellStyle = dataGridViewCellStyle2;
             this.IsRead.HeaderText = "";
             this.IsRead.Name = "IsRead";
             this.IsRead.ReadOnly = true;
@@ -139,8 +139,8 @@
             // RowNum
             // 
             this.RowNum.DataPropertyName = "RowNum";
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.RowNum.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.RowNum.DefaultCellStyle = dataGridViewCellStyle3;
             this.RowNum.HeaderText = "No.";
             this.RowNum.Name = "RowNum";
             this.RowNum.ReadOnly = true;
@@ -189,9 +189,9 @@
             // ShopName
             // 
             this.ShopName.DataPropertyName = "ShopName";
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle12.Format = "N0";
-            this.ShopName.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle4.Format = "N0";
+            this.ShopName.DefaultCellStyle = dataGridViewCellStyle4;
             this.ShopName.HeaderText = "Location";
             this.ShopName.Name = "ShopName";
             this.ShopName.ReadOnly = true;
@@ -314,11 +314,11 @@
             this.btnSendBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSendBox.FlatAppearance.BorderColor = System.Drawing.Color.Linen;
             this.btnSendBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSendBox.Location = new System.Drawing.Point(126, 19);
+            this.btnSendBox.Image = ((System.Drawing.Image)(resources.GetObject("btnSendBox.Image")));
+            this.btnSendBox.Location = new System.Drawing.Point(111, 19);
             this.btnSendBox.Name = "btnSendBox";
             this.btnSendBox.Size = new System.Drawing.Size(70, 90);
             this.btnSendBox.TabIndex = 78;
-            this.btnSendBox.Text = "Send box";
             this.btnSendBox.UseVisualStyleBackColor = false;
             this.btnSendBox.Click += new System.EventHandler(this.btnSendBox_Click);
             // 
@@ -329,6 +329,7 @@
             this.btnInbox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnInbox.FlatAppearance.BorderColor = System.Drawing.Color.Linen;
             this.btnInbox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInbox.Font = new System.Drawing.Font("Angsana New", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInbox.Image = ((System.Drawing.Image)(resources.GetObject("btnInbox.Image")));
             this.btnInbox.Location = new System.Drawing.Point(20, 19);
             this.btnInbox.Name = "btnInbox";

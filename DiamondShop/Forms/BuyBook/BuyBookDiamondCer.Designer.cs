@@ -215,15 +215,16 @@
             this.btnFileDel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(109)))), ((int)(((byte)(65)))));
             this.btnFileDel.FlatAppearance.BorderSize = 0;
             this.btnFileDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFileDel.Location = new System.Drawing.Point(632, 423);
+            this.btnFileDel.Location = new System.Drawing.Point(634, 426);
             this.btnFileDel.Name = "btnFileDel";
-            this.btnFileDel.Size = new System.Drawing.Size(30, 30);
+            this.btnFileDel.Size = new System.Drawing.Size(25, 25);
             this.btnFileDel.TabIndex = 307;
             this.btnFileDel.UseVisualStyleBackColor = false;
             this.btnFileDel.Click += new System.EventHandler(this.btnFileDel_Click);
             // 
             // btnChooseDate
             // 
+            this.btnChooseDate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnChooseDate.FlatAppearance.BorderSize = 0;
             this.btnChooseDate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnChooseDate.Image = ((System.Drawing.Image)(resources.GetObject("btnChooseDate.Image")));
@@ -244,7 +245,7 @@
             // 
             // monthCalendar1
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(744, 250);
+            this.monthCalendar1.Location = new System.Drawing.Point(794, 248);
             this.monthCalendar1.MaxSelectionCount = 1;
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 240;
@@ -460,7 +461,7 @@
             this.btnUpload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpload.Location = new System.Drawing.Point(609, 424);
             this.btnUpload.Name = "btnUpload";
-            this.btnUpload.Size = new System.Drawing.Size(31, 33);
+            this.btnUpload.Size = new System.Drawing.Size(18, 27);
             this.btnUpload.TabIndex = 155;
             this.btnUpload.UseVisualStyleBackColor = false;
             this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
@@ -746,13 +747,15 @@
             // 
             // linkFile
             // 
+            this.linkFile.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.linkFile.AutoSize = true;
-            this.linkFile.Location = new System.Drawing.Point(498, 429);
+            this.linkFile.Location = new System.Drawing.Point(497, 429);
             this.linkFile.Name = "linkFile";
             this.linkFile.Size = new System.Drawing.Size(109, 20);
             this.linkFile.TabIndex = 122;
             this.linkFile.TabStop = true;
             this.linkFile.Text = "No File Attach";
+            this.linkFile.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.linkFile.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkFile_LinkClicked);
             // 
             // label26

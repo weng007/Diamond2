@@ -210,9 +210,9 @@
             this.btnFileDel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(109)))), ((int)(((byte)(65)))));
             this.btnFileDel.FlatAppearance.BorderSize = 0;
             this.btnFileDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFileDel.Location = new System.Drawing.Point(198, 515);
+            this.btnFileDel.Location = new System.Drawing.Point(196, 515);
             this.btnFileDel.Name = "btnFileDel";
-            this.btnFileDel.Size = new System.Drawing.Size(30, 30);
+            this.btnFileDel.Size = new System.Drawing.Size(25, 25);
             this.btnFileDel.TabIndex = 308;
             this.btnFileDel.UseVisualStyleBackColor = false;
             this.btnFileDel.Click += new System.EventHandler(this.btnFileDel_Click);
@@ -471,9 +471,9 @@
             this.btnUpload.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnUpload.FlatAppearance.BorderSize = 0;
             this.btnUpload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpload.Location = new System.Drawing.Point(173, 515);
+            this.btnUpload.Location = new System.Drawing.Point(173, 513);
             this.btnUpload.Name = "btnUpload";
-            this.btnUpload.Size = new System.Drawing.Size(30, 33);
+            this.btnUpload.Size = new System.Drawing.Size(18, 27);
             this.btnUpload.TabIndex = 192;
             this.btnUpload.UseVisualStyleBackColor = false;
             this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
@@ -481,7 +481,7 @@
             // linkFile
             // 
             this.linkFile.AutoSize = true;
-            this.linkFile.Location = new System.Drawing.Point(45, 521);
+            this.linkFile.Location = new System.Drawing.Point(61, 517);
             this.linkFile.Name = "linkFile";
             this.linkFile.Size = new System.Drawing.Size(109, 20);
             this.linkFile.TabIndex = 191;

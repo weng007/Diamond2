@@ -15,50 +15,54 @@ namespace DiamondShop
         public static DataTable GetExcel(string FileName,int mode)
         {
             DataSet ds = new DataSet();
-            Excel.Application xlApp;
-            Excel.Workbook xlWorkBook;
-            Excel.Worksheet xlWorkSheet;
-            Excel.Range range;
-
-            //Check จำนวน Column
-            int maxColumn = 0;
-            if (mode == 0) { maxColumn = 22; }
-            else if (mode == 1) { maxColumn = 20; }
-
-
             DataTable dt = GetDatatable(mode);
-            
 
-            xlApp = new Excel.Application();
-            //xlWorkBook = xlApp.Workbooks.Open("csharp.net-informations.xls", 0, true, 5, "", "", true, Microsoft.Office.Interop.Excel.XlPlatform.xlWindows, "\t", false, false, 0, true, 1, 0);
-            xlWorkBook = xlApp.Workbooks.Open(FileName, 0, true, 5, "", "", true, Microsoft.Office.Interop.Excel.XlPlatform.xlWindows, "\t", false, false, 0, true, 1, 0);
-            xlWorkSheet = (Excel.Worksheet)xlWorkBook.Worksheets.get_Item(1);
-
-            range = xlWorkSheet.UsedRange;
-
-            for (int i = 2; i <= range.Rows.Count; i++)
+            try
             {
-                DataRow dr = dt.NewRow();
-                dr[0] = (range.Cells[i, 1] as Excel.Range).Value2;
+                Excel.Application xlApp;
+                Excel.Workbook xlWorkBook;
+                Excel.Worksheet xlWorkSheet;
+                Excel.Range range;
 
-                if (dr[0].ToString() == "")
-                { break; }
+                //Check จำนวน Column
+                int maxColumn = 0;
+                if (mode == 0) { maxColumn = 22; }
+                else if (mode == 1) { maxColumn = 20; }
 
-                for (int j = 1; j <= maxColumn; j++)
+                xlApp = new Excel.Application();
+                xlWorkBook = xlApp.Workbooks.Open(FileName, 0, true, 5, "", "", true, Microsoft.Office.Interop.Excel.XlPlatform.xlWindows, "\t", false, false, 0, true, 1, 0);
+                xlWorkSheet = (Excel.Worksheet)xlWorkBook.Worksheets.get_Item(1);
+
+                range = xlWorkSheet.UsedRange;
+
+                for (int i = 2; i <= range.Rows.Count; i++)
                 {
-                    dr[j-1] = (range.Cells[i, j] as Excel.Range).Value2;
+                    DataRow dr = dt.NewRow();
+                    dr[0] = (range.Cells[i, 1] as Excel.Range).Value2;
+
+                    if (dr[0].ToString() == "")
+                    { break; }
+
+                    for (int j = 1; j <= maxColumn; j++)
+                    {
+                        dr[j - 1] = (range.Cells[i, j] as Excel.Range).Value2;
+                    }
+                    dt.Rows.Add(dr);
                 }
-                dt.Rows.Add(dr);
+                dt.AcceptChanges();
+
+
+                xlWorkBook.Close(true, null, null);
+                xlApp.Quit();
+
+                releaseObject(xlWorkSheet);
+                releaseObject(xlWorkBook);
+                releaseObject(xlApp);
             }
-            dt.AcceptChanges();
-
-
-            xlWorkBook.Close(true, null, null);
-            xlApp.Quit();
-
-            releaseObject(xlWorkSheet);
-            releaseObject(xlWorkBook);
-            releaseObject(xlApp);
+            catch(Exception ex)
+            {
+                
+            }
 
             return dt;
         }

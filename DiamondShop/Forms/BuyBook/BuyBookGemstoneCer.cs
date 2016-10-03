@@ -95,11 +95,11 @@ namespace DiamondShop
             binder.BindControl(txtCode2, "Code2");
 
             this.id = id;
-            btnImportExcel.Enabled = false;
-            LoadData();
+            btnImportExcel.Visible = false;      
             SetControlEnable(false);
-
             isEdit = false;
+
+            LoadData();
         }
 
         protected override void Initial()
@@ -529,6 +529,8 @@ namespace DiamondShop
             chkPayByUSD.Enabled = status;
             txtPriceCaratUSD.Enabled = status;
             btnUpload.Enabled = status;
+            btnFileDel.Enabled = status;
+            btnChooseDate.Enabled = status;
             btnImage1.Enabled = status;
             cmbBuyer.Enabled = status;
             txtCode2.Enabled = status;

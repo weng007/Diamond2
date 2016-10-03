@@ -108,11 +108,11 @@ namespace DiamondShop
             binder.BindControl(txtCode2, "Code2");
 
             this.id = id;
-            btnImportExcel.Enabled = false;
-            LoadData();
+            btnImportExcel.Visible = false;
             SetControlEnable(false);
-
             isEdit = false;
+
+            LoadData();
         }
 
         protected override void Initial()
@@ -370,8 +370,6 @@ namespace DiamondShop
                 message += "Please input Paydate";
             }
 
-
-
             if (message == "") { return true; }
             else { return false; }
         }
@@ -525,6 +523,8 @@ namespace DiamondShop
             cmbClearity.Enabled = status;
             txtPrice.Enabled = status;
             txtRap.Enabled = status;
+            btnUpload.Enabled = status;
+            btnFileDel.Enabled = status;
             rdoIns1.Enabled = status;
             rdoIns2.Enabled = status;
             rdoYes.Enabled = status;
@@ -533,8 +533,8 @@ namespace DiamondShop
             txtUSDRate.Enabled = status;
             txtTotalBaht.Enabled = status;
             txtNote.Enabled = status;
-            btnUpload.Enabled = status;
             txtPayDate.Enabled = status;
+            btnChooseDate.Enabled = status;
             cmbBuyer.Enabled = status;
             txtCode2.Enabled = status;
         }
