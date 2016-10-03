@@ -108,7 +108,7 @@
             this.txtCode2.Location = new System.Drawing.Point(510, 20);
             this.txtCode2.Name = "txtCode2";
             this.txtCode2.Size = new System.Drawing.Size(161, 27);
-            this.txtCode2.TabIndex = 79;
+            this.txtCode2.TabIndex = 6;
             // 
             // label3
             // 
@@ -135,7 +135,7 @@
             this.txtESize.Location = new System.Drawing.Point(592, 53);
             this.txtESize.Name = "txtESize";
             this.txtESize.Size = new System.Drawing.Size(58, 27);
-            this.txtESize.TabIndex = 77;
+            this.txtESize.TabIndex = 10;
             this.txtESize.Text = "50";
             this.txtESize.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 

@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BuyBookGold));
             this.dtBuyDate = new System.Windows.Forms.DateTimePicker();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label30 = new System.Windows.Forms.Label();
+            this.txtCode = new System.Windows.Forms.TextBox();
             this.btnChooseDate = new System.Windows.Forms.Button();
             this.label29 = new System.Windows.Forms.Label();
             this.cmbShop = new System.Windows.Forms.ComboBox();
@@ -81,8 +83,6 @@
             this.txtSeller = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
-            this.label30 = new System.Windows.Forms.Label();
-            this.txtCode = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -158,6 +158,25 @@
             this.panel3.Size = new System.Drawing.Size(628, 499);
             this.panel3.TabIndex = 74;
             // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
+            this.label30.Location = new System.Drawing.Point(387, 26);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(54, 21);
+            this.label30.TabIndex = 253;
+            this.label30.Text = "Code";
+            // 
+            // txtCode
+            // 
+            this.txtCode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.txtCode.Enabled = false;
+            this.txtCode.Location = new System.Drawing.Point(445, 23);
+            this.txtCode.Name = "txtCode";
+            this.txtCode.Size = new System.Drawing.Size(159, 27);
+            this.txtCode.TabIndex = 252;
+            // 
             // btnChooseDate
             // 
             this.btnChooseDate.FlatAppearance.BorderSize = 0;
@@ -187,7 +206,7 @@
             this.cmbShop.Location = new System.Drawing.Point(162, 127);
             this.cmbShop.Name = "cmbShop";
             this.cmbShop.Size = new System.Drawing.Size(157, 29);
-            this.cmbShop.TabIndex = 249;
+            this.cmbShop.TabIndex = 8;
             // 
             // txtPayDate
             // 
@@ -211,7 +230,7 @@
             this.cmbBuyer.Location = new System.Drawing.Point(162, 89);
             this.cmbBuyer.Name = "cmbBuyer";
             this.cmbBuyer.Size = new System.Drawing.Size(157, 29);
-            this.cmbBuyer.TabIndex = 206;
+            this.cmbBuyer.TabIndex = 6;
             this.cmbBuyer.SelectedValueChanged += new System.EventHandler(this.cmbBuyer_SelectedValueChanged);
             // 
             // label28
@@ -284,7 +303,7 @@
             this.txtPriceGram1.Location = new System.Drawing.Point(162, 449);
             this.txtPriceGram1.Name = "txtPriceGram1";
             this.txtPriceGram1.Size = new System.Drawing.Size(92, 27);
-            this.txtPriceGram1.TabIndex = 16;
+            this.txtPriceGram1.TabIndex = 20;
             this.txtPriceGram1.Text = "0";
             this.txtPriceGram1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtPriceGram1.TextChanged += new System.EventHandler(this.txtSeller_TextChanged);
@@ -327,7 +346,7 @@
             this.txtPriceGram2.Location = new System.Drawing.Point(459, 414);
             this.txtPriceGram2.Name = "txtPriceGram2";
             this.txtPriceGram2.Size = new System.Drawing.Size(92, 27);
-            this.txtPriceGram2.TabIndex = 22;
+            this.txtPriceGram2.TabIndex = 26;
             this.txtPriceGram2.Text = "0";
             this.txtPriceGram2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtPriceGram2.TextChanged += new System.EventHandler(this.txtSeller_TextChanged);
@@ -359,7 +378,7 @@
             this.txtPricePerGram.Location = new System.Drawing.Point(162, 414);
             this.txtPricePerGram.Name = "txtPricePerGram";
             this.txtPricePerGram.Size = new System.Drawing.Size(92, 27);
-            this.txtPricePerGram.TabIndex = 14;
+            this.txtPricePerGram.TabIndex = 18;
             this.txtPricePerGram.Text = "0";
             this.txtPricePerGram.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtPricePerGram.TextChanged += new System.EventHandler(this.txtSeller_TextChanged);
@@ -495,7 +514,7 @@
             this.txtPrice2.Location = new System.Drawing.Point(459, 344);
             this.txtPrice2.Name = "txtPrice2";
             this.txtPrice2.Size = new System.Drawing.Size(92, 27);
-            this.txtPrice2.TabIndex = 20;
+            this.txtPrice2.TabIndex = 24;
             this.txtPrice2.Text = "0";
             this.txtPrice2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtPrice2.TextChanged += new System.EventHandler(this.txtSeller_TextChanged);
@@ -517,7 +536,7 @@
             this.txtPrice1.Location = new System.Drawing.Point(162, 344);
             this.txtPrice1.Name = "txtPrice1";
             this.txtPrice1.Size = new System.Drawing.Size(92, 27);
-            this.txtPrice1.TabIndex = 12;
+            this.txtPrice1.TabIndex = 16;
             this.txtPrice1.Text = "0";
             this.txtPrice1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtPrice1.TextChanged += new System.EventHandler(this.txtSeller_TextChanged);
@@ -539,7 +558,7 @@
             this.txtAmount2.Location = new System.Drawing.Point(459, 309);
             this.txtAmount2.Name = "txtAmount2";
             this.txtAmount2.Size = new System.Drawing.Size(92, 27);
-            this.txtAmount2.TabIndex = 18;
+            this.txtAmount2.TabIndex = 22;
             this.txtAmount2.Text = "0";
             this.txtAmount2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtAmount2.TextChanged += new System.EventHandler(this.txtSeller_TextChanged);
@@ -551,7 +570,7 @@
             this.txtAmount1.Location = new System.Drawing.Point(162, 309);
             this.txtAmount1.Name = "txtAmount1";
             this.txtAmount1.Size = new System.Drawing.Size(92, 27);
-            this.txtAmount1.TabIndex = 10;
+            this.txtAmount1.TabIndex = 14;
             this.txtAmount1.Text = "0";
             this.txtAmount1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtAmount1.TextChanged += new System.EventHandler(this.txtSeller_TextChanged);
@@ -585,7 +604,7 @@
             this.txtSellPrice.Location = new System.Drawing.Point(306, 239);
             this.txtSellPrice.Name = "txtSellPrice";
             this.txtSellPrice.Size = new System.Drawing.Size(92, 27);
-            this.txtSellPrice.TabIndex = 8;
+            this.txtSellPrice.TabIndex = 12;
             this.txtSellPrice.Text = "0";
             this.txtSellPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtSellPrice.TextChanged += new System.EventHandler(this.txtSeller_TextChanged);
@@ -629,7 +648,7 @@
             this.txtBuyPrice.Location = new System.Drawing.Point(162, 239);
             this.txtBuyPrice.Name = "txtBuyPrice";
             this.txtBuyPrice.Size = new System.Drawing.Size(92, 27);
-            this.txtBuyPrice.TabIndex = 6;
+            this.txtBuyPrice.TabIndex = 10;
             this.txtBuyPrice.Text = "0";
             this.txtBuyPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtBuyPrice.TextChanged += new System.EventHandler(this.txtSeller_TextChanged);
@@ -683,24 +702,6 @@
             this.button1.Size = new System.Drawing.Size(1089, 352);
             this.button1.TabIndex = 32;
             this.button1.UseVisualStyleBackColor = true;
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label30.Location = new System.Drawing.Point(387, 26);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(54, 21);
-            this.label30.TabIndex = 253;
-            this.label30.Text = "Code";
-            // 
-            // txtCode
-            // 
-            this.txtCode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.txtCode.Location = new System.Drawing.Point(445, 23);
-            this.txtCode.Name = "txtCode";
-            this.txtCode.Size = new System.Drawing.Size(159, 27);
-            this.txtCode.TabIndex = 252;
             // 
             // BuyBookGold
             // 

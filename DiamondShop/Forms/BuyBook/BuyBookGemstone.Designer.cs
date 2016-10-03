@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BuyBookGemstone));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dtBuyDate = new System.Windows.Forms.DateTimePicker();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnChooseDate = new System.Windows.Forms.Button();
@@ -216,7 +216,7 @@
             this.txtCode2.Location = new System.Drawing.Point(127, 154);
             this.txtCode2.Name = "txtCode2";
             this.txtCode2.Size = new System.Drawing.Size(155, 27);
-            this.txtCode2.TabIndex = 224;
+            this.txtCode2.TabIndex = 8;
             this.txtCode2.TextChanged += new System.EventHandler(this.txtNote_TextChanged);
             // 
             // cmbBuyer
@@ -225,7 +225,7 @@
             this.cmbBuyer.Location = new System.Drawing.Point(447, 157);
             this.cmbBuyer.Name = "cmbBuyer";
             this.cmbBuyer.Size = new System.Drawing.Size(155, 29);
-            this.cmbBuyer.TabIndex = 222;
+            this.cmbBuyer.TabIndex = 20;
             this.cmbBuyer.SelectedValueChanged += new System.EventHandler(this.cmbShape_SelectedValueChanged);
             // 
             // label8
@@ -285,17 +285,17 @@
             // ActionDate
             // 
             this.ActionDate.DataPropertyName = "ActionDate";
-            dataGridViewCellStyle1.Format = "dd/MM/YYYY";
-            this.ActionDate.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Format = "dd/MM/YYYY";
+            this.ActionDate.DefaultCellStyle = dataGridViewCellStyle3;
             this.ActionDate.HeaderText = "วันที่";
             this.ActionDate.Name = "ActionDate";
             // 
             // Amount
             // 
             this.Amount.DataPropertyName = "Amount";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle2.NullValue = "0";
-            this.Amount.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle4.NullValue = "0";
+            this.Amount.DefaultCellStyle = dataGridViewCellStyle4;
             this.Amount.HeaderText = "คงเหลือ (ct)";
             this.Amount.Name = "Amount";
             this.Amount.Width = 120;
@@ -356,7 +356,7 @@
             this.txtSize.Location = new System.Drawing.Point(447, 52);
             this.txtSize.Name = "txtSize";
             this.txtSize.Size = new System.Drawing.Size(53, 27);
-            this.txtSize.TabIndex = 10;
+            this.txtSize.TabIndex = 14;
             this.txtSize.Text = "0";
             this.txtSize.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtSize.TextChanged += new System.EventHandler(this.txtNote_TextChanged);
@@ -376,11 +376,12 @@
             // 
             // cmbShop
             // 
+            this.cmbShop.Enabled = false;
             this.cmbShop.FormattingEnabled = true;
             this.cmbShop.Location = new System.Drawing.Point(735, 52);
             this.cmbShop.Name = "cmbShop";
             this.cmbShop.Size = new System.Drawing.Size(156, 29);
-            this.cmbShop.TabIndex = 18;
+            this.cmbShop.TabIndex = 24;
             this.cmbShop.SelectedValueChanged += new System.EventHandler(this.cmbShape_SelectedValueChanged);
             // 
             // label28
@@ -399,7 +400,7 @@
             this.cmbShape.Location = new System.Drawing.Point(127, 190);
             this.cmbShape.Name = "cmbShape";
             this.cmbShape.Size = new System.Drawing.Size(155, 29);
-            this.cmbShape.TabIndex = 6;
+            this.cmbShape.TabIndex = 10;
             this.cmbShape.SelectedValueChanged += new System.EventHandler(this.cmbShape_SelectedValueChanged);
             // 
             // label25
@@ -591,7 +592,7 @@
             this.dtDueDate.Location = new System.Drawing.Point(127, 50);
             this.dtDueDate.Name = "dtDueDate";
             this.dtDueDate.Size = new System.Drawing.Size(155, 27);
-            this.dtDueDate.TabIndex = 20;
+            this.dtDueDate.TabIndex = 4;
             this.dtDueDate.ValueChanged += new System.EventHandler(this.dtDueDate_ValueChanged);
             // 
             // rdoNo
@@ -643,7 +644,7 @@
             this.txtPriceCaratUSD.Location = new System.Drawing.Point(448, 260);
             this.txtPriceCaratUSD.Name = "txtPriceCaratUSD";
             this.txtPriceCaratUSD.Size = new System.Drawing.Size(101, 27);
-            this.txtPriceCaratUSD.TabIndex = 22;
+            this.txtPriceCaratUSD.TabIndex = 26;
             this.txtPriceCaratUSD.Text = "0";
             this.txtPriceCaratUSD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtPriceCaratUSD.TextChanged += new System.EventHandler(this.txtNote_TextChanged);
@@ -656,7 +657,7 @@
             this.cmbOrigin.Location = new System.Drawing.Point(735, 15);
             this.cmbOrigin.Name = "cmbOrigin";
             this.cmbOrigin.Size = new System.Drawing.Size(157, 29);
-            this.cmbOrigin.TabIndex = 16;
+            this.cmbOrigin.TabIndex = 22;
             this.cmbOrigin.SelectedValueChanged += new System.EventHandler(this.cmbShape_SelectedValueChanged);
             // 
             // label11
@@ -675,7 +676,7 @@
             this.cmbIdentification.Location = new System.Drawing.Point(447, 14);
             this.cmbIdentification.Name = "cmbIdentification";
             this.cmbIdentification.Size = new System.Drawing.Size(157, 29);
-            this.cmbIdentification.TabIndex = 8;
+            this.cmbIdentification.TabIndex = 12;
             this.cmbIdentification.SelectedValueChanged += new System.EventHandler(this.cmbShape_SelectedValueChanged);
             // 
             // label2
@@ -703,7 +704,7 @@
             this.txtWeight.Location = new System.Drawing.Point(447, 122);
             this.txtWeight.Name = "txtWeight";
             this.txtWeight.Size = new System.Drawing.Size(53, 27);
-            this.txtWeight.TabIndex = 14;
+            this.txtWeight.TabIndex = 18;
             this.txtWeight.Text = "0";
             this.txtWeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtWeight.TextChanged += new System.EventHandler(this.txtNote_TextChanged);
@@ -725,7 +726,7 @@
             this.txtAmount.Location = new System.Drawing.Point(447, 87);
             this.txtAmount.Name = "txtAmount";
             this.txtAmount.Size = new System.Drawing.Size(107, 27);
-            this.txtAmount.TabIndex = 12;
+            this.txtAmount.TabIndex = 16;
             this.txtAmount.Text = "0";
             this.txtAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtAmount.TextChanged += new System.EventHandler(this.txtNote_TextChanged);
@@ -746,7 +747,7 @@
             this.txtSeller.Location = new System.Drawing.Point(127, 84);
             this.txtSeller.Name = "txtSeller";
             this.txtSeller.Size = new System.Drawing.Size(155, 27);
-            this.txtSeller.TabIndex = 4;
+            this.txtSeller.TabIndex = 6;
             this.txtSeller.TextChanged += new System.EventHandler(this.txtNote_TextChanged);
             // 
             // label1
@@ -772,6 +773,7 @@
             // txtCode
             // 
             this.txtCode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.txtCode.Enabled = false;
             this.txtCode.Location = new System.Drawing.Point(127, 119);
             this.txtCode.Name = "txtCode";
             this.txtCode.ReadOnly = true;

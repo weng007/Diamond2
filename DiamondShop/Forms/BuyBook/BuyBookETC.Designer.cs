@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BuyBookETC));
             this.dtBuyDate = new System.Windows.Forms.DateTimePicker();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label30 = new System.Windows.Forms.Label();
+            this.txtCode = new System.Windows.Forms.TextBox();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.label29 = new System.Windows.Forms.Label();
             this.cmbShop = new System.Windows.Forms.ComboBox();
@@ -52,8 +54,6 @@
             this.txtSeller = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
-            this.label30 = new System.Windows.Forms.Label();
-            this.txtCode = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -99,6 +99,25 @@
             this.panel3.Size = new System.Drawing.Size(652, 325);
             this.panel3.TabIndex = 74;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
+            this.label30.Location = new System.Drawing.Point(31, 90);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(47, 20);
+            this.label30.TabIndex = 258;
+            this.label30.Text = "Code";
+            // 
+            // txtCode
+            // 
+            this.txtCode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.txtCode.Enabled = false;
+            this.txtCode.Location = new System.Drawing.Point(125, 87);
+            this.txtCode.Name = "txtCode";
+            this.txtCode.Size = new System.Drawing.Size(159, 26);
+            this.txtCode.TabIndex = 257;
             // 
             // monthCalendar1
             // 
@@ -312,24 +331,6 @@
             this.button1.Size = new System.Drawing.Size(1089, 352);
             this.button1.TabIndex = 32;
             this.button1.UseVisualStyleBackColor = true;
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label30.Location = new System.Drawing.Point(31, 90);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(47, 20);
-            this.label30.TabIndex = 258;
-            this.label30.Text = "Code";
-            // 
-            // txtCode
-            // 
-            this.txtCode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.txtCode.Location = new System.Drawing.Point(125, 87);
-            this.txtCode.Name = "txtCode";
-            this.txtCode.Size = new System.Drawing.Size(159, 26);
-            this.txtCode.TabIndex = 257;
             // 
             // BuyBookETC
             // 
