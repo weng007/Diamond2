@@ -48,6 +48,8 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.Shop7 = new System.Windows.Forms.Label();
             this.btnShop7 = new System.Windows.Forms.Button();
+            this.btnFactory = new System.Windows.Forms.Button();
+            this.lblFactory = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel13.SuspendLayout();
             this.SuspendLayout();
@@ -340,11 +342,44 @@
             this.btnShop7.Visible = false;
             this.btnShop7.Click += new System.EventHandler(this.btnShop1_Click);
             // 
+            // btnFactory
+            // 
+            this.btnFactory.BackColor = System.Drawing.Color.Transparent;
+            this.btnFactory.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFactory.FlatAppearance.BorderSize = 0;
+            this.btnFactory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFactory.Image = ((System.Drawing.Image)(resources.GetObject("btnFactory.Image")));
+            this.btnFactory.Location = new System.Drawing.Point(524, 266);
+            this.btnFactory.Name = "btnFactory";
+            this.btnFactory.Size = new System.Drawing.Size(227, 223);
+            this.btnFactory.TabIndex = 21;
+            this.btnFactory.UseVisualStyleBackColor = false;
+            this.btnFactory.Visible = false;
+            this.btnFactory.Click += new System.EventHandler(this.btnShop1_Click);
+            // 
+            // lblFactory
+            // 
+            this.lblFactory.AccessibleName = "Shop6";
+            this.lblFactory.AutoSize = true;
+            this.lblFactory.BackColor = System.Drawing.Color.Transparent;
+            this.lblFactory.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblFactory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblFactory.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFactory.Location = new System.Drawing.Point(531, 483);
+            this.lblFactory.Name = "lblFactory";
+            this.lblFactory.Size = new System.Drawing.Size(56, 20);
+            this.lblFactory.TabIndex = 22;
+            this.lblFactory.Text = "Shop8";
+            this.lblFactory.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblFactory.Visible = false;
+            // 
             // ShopAll
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(218)))), ((int)(((byte)(204)))));
             this.ClientSize = new System.Drawing.Size(789, 580);
+            this.Controls.Add(this.lblFactory);
+            this.Controls.Add(this.btnFactory);
             this.Controls.Add(this.Shop7);
             this.Controls.Add(this.btnShop7);
             this.Controls.Add(this.Shop6);
@@ -423,5 +458,7 @@
         private System.Windows.Forms.Label Shop6;
         private System.Windows.Forms.Label Shop7;
         private System.Windows.Forms.Button btnShop7;
+        private System.Windows.Forms.Button btnFactory;
+        private System.Windows.Forms.Label lblFactory;
     }
 }
