@@ -108,7 +108,7 @@
             this.btnAccounting = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuPayment = new System.Windows.Forms.ToolStripMenuItem();
             this.expenseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnReport = new System.Windows.Forms.ToolStripMenuItem();
             this.btnReportBuying = new System.Windows.Forms.ToolStripMenuItem();
             this.btnReportSelling = new System.Windows.Forms.ToolStripMenuItem();
             this.btnReportInventory = new System.Windows.Forms.ToolStripMenuItem();
@@ -319,7 +319,7 @@
             // 
             this.btnLogout.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLogout.BackgroundImage")));
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogout.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.Location = new System.Drawing.Point(176, 15);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(64, 27);
@@ -348,10 +348,10 @@
             // txtFullName
             // 
             this.txtFullName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtFullName.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFullName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFullName.Location = new System.Drawing.Point(12, 15);
             this.txtFullName.Name = "txtFullName";
-            this.txtFullName.Size = new System.Drawing.Size(158, 27);
+            this.txtFullName.Size = new System.Drawing.Size(158, 26);
             this.txtFullName.TabIndex = 11;
             // 
             // menuStrip1
@@ -373,7 +373,7 @@
             this.btnOrderFactory,
             this.btnBuyBook,
             this.btnAccounting,
-            this.toolStripMenuItem2});
+            this.btnReport});
             this.menuStrip1.Location = new System.Drawing.Point(2, 35);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(6, 0, 0, 0);
@@ -394,21 +394,21 @@
             // 
             // warningToolStripMenuItem
             // 
-            this.warningToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 11.25F);
+            this.warningToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.warningToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("warningToolStripMenuItem.Image")));
             this.warningToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.warningToolStripMenuItem.Name = "warningToolStripMenuItem";
-            this.warningToolStripMenuItem.Size = new System.Drawing.Size(168, 38);
+            this.warningToolStripMenuItem.Size = new System.Drawing.Size(150, 38);
             this.warningToolStripMenuItem.Text = "Warning";
             this.warningToolStripMenuItem.Click += new System.EventHandler(this.warningToolStripMenuItem_Click);
             // 
             // calendarToolStripMenuItem
             // 
-            this.calendarToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 11.25F);
+            this.calendarToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.calendarToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("calendarToolStripMenuItem.Image")));
             this.calendarToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.calendarToolStripMenuItem.Name = "calendarToolStripMenuItem";
-            this.calendarToolStripMenuItem.Size = new System.Drawing.Size(168, 38);
+            this.calendarToolStripMenuItem.Size = new System.Drawing.Size(150, 38);
             this.calendarToolStripMenuItem.Text = "Calendar";
             this.calendarToolStripMenuItem.Click += new System.EventHandler(this.calendarToolStripMenuItem_Click);
             // 
@@ -427,28 +427,28 @@
             // 
             // menuUser
             // 
-            this.menuUser.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuUser.Image = ((System.Drawing.Image)(resources.GetObject("menuUser.Image")));
             this.menuUser.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.menuUser.Name = "menuUser";
-            this.menuUser.Size = new System.Drawing.Size(203, 38);
+            this.menuUser.Size = new System.Drawing.Size(194, 38);
             this.menuUser.Text = "User";
             this.menuUser.Click += new System.EventHandler(this.btnUser_Click);
             // 
             // menuExchangeRate
             // 
-            this.menuExchangeRate.Font = new System.Drawing.Font("Century Gothic", 11.25F);
+            this.menuExchangeRate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.menuExchangeRate.Image = ((System.Drawing.Image)(resources.GetObject("menuExchangeRate.Image")));
             this.menuExchangeRate.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.menuExchangeRate.Name = "menuExchangeRate";
-            this.menuExchangeRate.Size = new System.Drawing.Size(203, 38);
+            this.menuExchangeRate.Size = new System.Drawing.Size(194, 38);
             this.menuExchangeRate.Text = "Exchange Rate";
             this.menuExchangeRate.Click += new System.EventHandler(this.menuExchangeRate_Click);
             // 
             // expenseGroupToolStripMenuItem
             // 
             this.expenseGroupToolStripMenuItem.AutoSize = false;
-            this.expenseGroupToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 11.25F);
+            this.expenseGroupToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.expenseGroupToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("expenseGroupToolStripMenuItem.Image")));
             this.expenseGroupToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.expenseGroupToolStripMenuItem.Name = "expenseGroupToolStripMenuItem";
@@ -472,7 +472,7 @@
             this.mnCatPD,
             this.mnCatSJ,
             this.mnCatMTO});
-            this.btnCatalog.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCatalog.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCatalog.Image = ((System.Drawing.Image)(resources.GetObject("btnCatalog.Image")));
             this.btnCatalog.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnCatalog.Name = "btnCatalog";
@@ -485,7 +485,7 @@
             this.mnCatDR.Image = ((System.Drawing.Image)(resources.GetObject("mnCatDR.Image")));
             this.mnCatDR.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mnCatDR.Name = "mnCatDR";
-            this.mnCatDR.Size = new System.Drawing.Size(242, 38);
+            this.mnCatDR.Size = new System.Drawing.Size(232, 38);
             this.mnCatDR.Text = "Diamond Ring";
             this.mnCatDR.Click += new System.EventHandler(this.mnCatDR_Click);
             // 
@@ -495,7 +495,7 @@
             this.mnCatDE.Image = ((System.Drawing.Image)(resources.GetObject("mnCatDE.Image")));
             this.mnCatDE.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mnCatDE.Name = "mnCatDE";
-            this.mnCatDE.Size = new System.Drawing.Size(242, 38);
+            this.mnCatDE.Size = new System.Drawing.Size(232, 38);
             this.mnCatDE.Text = "Diamond Earrings";
             this.mnCatDE.Click += new System.EventHandler(this.mnCatDR_Click);
             // 
@@ -505,7 +505,7 @@
             this.menuCatGR.Image = ((System.Drawing.Image)(resources.GetObject("menuCatGR.Image")));
             this.menuCatGR.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.menuCatGR.Name = "menuCatGR";
-            this.menuCatGR.Size = new System.Drawing.Size(242, 38);
+            this.menuCatGR.Size = new System.Drawing.Size(232, 38);
             this.menuCatGR.Text = "Gemstone Ring";
             this.menuCatGR.Click += new System.EventHandler(this.mnCatDR_Click);
             // 
@@ -515,7 +515,7 @@
             this.mnCatGE.Image = ((System.Drawing.Image)(resources.GetObject("mnCatGE.Image")));
             this.mnCatGE.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mnCatGE.Name = "mnCatGE";
-            this.mnCatGE.Size = new System.Drawing.Size(242, 38);
+            this.mnCatGE.Size = new System.Drawing.Size(232, 38);
             this.mnCatGE.Text = "Gemstone Earrings";
             this.mnCatGE.Click += new System.EventHandler(this.mnCatDR_Click);
             // 
@@ -525,7 +525,7 @@
             this.mnCatWR.Image = ((System.Drawing.Image)(resources.GetObject("mnCatWR.Image")));
             this.mnCatWR.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mnCatWR.Name = "mnCatWR";
-            this.mnCatWR.Size = new System.Drawing.Size(242, 38);
+            this.mnCatWR.Size = new System.Drawing.Size(232, 38);
             this.mnCatWR.Text = "Wedding Ring";
             this.mnCatWR.Click += new System.EventHandler(this.mnCatDR_Click);
             // 
@@ -535,7 +535,7 @@
             this.mnCatIC.Image = ((System.Drawing.Image)(resources.GetObject("mnCatIC.Image")));
             this.mnCatIC.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mnCatIC.Name = "mnCatIC";
-            this.mnCatIC.Size = new System.Drawing.Size(242, 38);
+            this.mnCatIC.Size = new System.Drawing.Size(232, 38);
             this.mnCatIC.Text = "Intalian Chain";
             this.mnCatIC.Click += new System.EventHandler(this.mnCatDR_Click);
             // 
@@ -545,7 +545,7 @@
             this.mnCatNL.Image = ((System.Drawing.Image)(resources.GetObject("mnCatNL.Image")));
             this.mnCatNL.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mnCatNL.Name = "mnCatNL";
-            this.mnCatNL.Size = new System.Drawing.Size(242, 38);
+            this.mnCatNL.Size = new System.Drawing.Size(232, 38);
             this.mnCatNL.Text = "Necklace";
             this.mnCatNL.Click += new System.EventHandler(this.mnCatDR_Click);
             // 
@@ -555,7 +555,7 @@
             this.mnCatBL.Image = ((System.Drawing.Image)(resources.GetObject("mnCatBL.Image")));
             this.mnCatBL.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mnCatBL.Name = "mnCatBL";
-            this.mnCatBL.Size = new System.Drawing.Size(242, 38);
+            this.mnCatBL.Size = new System.Drawing.Size(232, 38);
             this.mnCatBL.Text = "Bracelace";
             this.mnCatBL.Click += new System.EventHandler(this.mnCatDR_Click);
             // 
@@ -565,7 +565,7 @@
             this.mnCatCL.Image = ((System.Drawing.Image)(resources.GetObject("mnCatCL.Image")));
             this.mnCatCL.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mnCatCL.Name = "mnCatCL";
-            this.mnCatCL.Size = new System.Drawing.Size(242, 38);
+            this.mnCatCL.Size = new System.Drawing.Size(232, 38);
             this.mnCatCL.Text = "Cufflinks";
             this.mnCatCL.Click += new System.EventHandler(this.mnCatDR_Click);
             // 
@@ -575,7 +575,7 @@
             this.mnCatBR.Image = ((System.Drawing.Image)(resources.GetObject("mnCatBR.Image")));
             this.mnCatBR.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mnCatBR.Name = "mnCatBR";
-            this.mnCatBR.Size = new System.Drawing.Size(242, 38);
+            this.mnCatBR.Size = new System.Drawing.Size(232, 38);
             this.mnCatBR.Text = "Brooch";
             this.mnCatBR.Click += new System.EventHandler(this.mnCatDR_Click);
             // 
@@ -585,7 +585,7 @@
             this.mnCatPD.Image = ((System.Drawing.Image)(resources.GetObject("mnCatPD.Image")));
             this.mnCatPD.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mnCatPD.Name = "mnCatPD";
-            this.mnCatPD.Size = new System.Drawing.Size(242, 38);
+            this.mnCatPD.Size = new System.Drawing.Size(232, 38);
             this.mnCatPD.Text = "Pendant";
             this.mnCatPD.Click += new System.EventHandler(this.mnCatDR_Click);
             // 
@@ -595,7 +595,7 @@
             this.mnCatSJ.Image = ((System.Drawing.Image)(resources.GetObject("mnCatSJ.Image")));
             this.mnCatSJ.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mnCatSJ.Name = "mnCatSJ";
-            this.mnCatSJ.Size = new System.Drawing.Size(242, 38);
+            this.mnCatSJ.Size = new System.Drawing.Size(232, 38);
             this.mnCatSJ.Text = "Special Jewelry";
             this.mnCatSJ.Click += new System.EventHandler(this.mnCatDR_Click);
             // 
@@ -605,7 +605,7 @@
             this.mnCatMTO.Image = ((System.Drawing.Image)(resources.GetObject("mnCatMTO.Image")));
             this.mnCatMTO.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mnCatMTO.Name = "mnCatMTO";
-            this.mnCatMTO.Size = new System.Drawing.Size(242, 38);
+            this.mnCatMTO.Size = new System.Drawing.Size(232, 38);
             this.mnCatMTO.Text = "Made To Order";
             this.mnCatMTO.Click += new System.EventHandler(this.mnCatDR_Click);
             // 
@@ -670,7 +670,7 @@
             this.mnInvPD,
             this.mnInvSJ,
             this.mnInvMTO});
-            this.btnInventory.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInventory.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInventory.Image = ((System.Drawing.Image)(resources.GetObject("btnInventory.Image")));
             this.btnInventory.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnInventory.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
@@ -685,7 +685,7 @@
             this.mnInvDR.Image = ((System.Drawing.Image)(resources.GetObject("mnInvDR.Image")));
             this.mnInvDR.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mnInvDR.Name = "mnInvDR";
-            this.mnInvDR.Size = new System.Drawing.Size(242, 38);
+            this.mnInvDR.Size = new System.Drawing.Size(232, 38);
             this.mnInvDR.Text = "Diamond Ring";
             this.mnInvDR.Click += new System.EventHandler(this.mnInvDR_Click);
             // 
@@ -695,7 +695,7 @@
             this.mnInvDE.Image = ((System.Drawing.Image)(resources.GetObject("mnInvDE.Image")));
             this.mnInvDE.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mnInvDE.Name = "mnInvDE";
-            this.mnInvDE.Size = new System.Drawing.Size(242, 38);
+            this.mnInvDE.Size = new System.Drawing.Size(232, 38);
             this.mnInvDE.Text = "Diamond Earrings";
             this.mnInvDE.Click += new System.EventHandler(this.mnInvDR_Click);
             // 
@@ -705,7 +705,7 @@
             this.mnInvGR.Image = ((System.Drawing.Image)(resources.GetObject("mnInvGR.Image")));
             this.mnInvGR.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mnInvGR.Name = "mnInvGR";
-            this.mnInvGR.Size = new System.Drawing.Size(242, 38);
+            this.mnInvGR.Size = new System.Drawing.Size(232, 38);
             this.mnInvGR.Text = "Gemstone Ring";
             this.mnInvGR.Click += new System.EventHandler(this.mnInvDR_Click);
             // 
@@ -715,7 +715,7 @@
             this.mnInvGE.Image = ((System.Drawing.Image)(resources.GetObject("mnInvGE.Image")));
             this.mnInvGE.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mnInvGE.Name = "mnInvGE";
-            this.mnInvGE.Size = new System.Drawing.Size(242, 38);
+            this.mnInvGE.Size = new System.Drawing.Size(232, 38);
             this.mnInvGE.Text = "Gemstone Earrings";
             this.mnInvGE.Click += new System.EventHandler(this.mnInvDR_Click);
             // 
@@ -725,7 +725,7 @@
             this.mnInvWR.Image = ((System.Drawing.Image)(resources.GetObject("mnInvWR.Image")));
             this.mnInvWR.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mnInvWR.Name = "mnInvWR";
-            this.mnInvWR.Size = new System.Drawing.Size(242, 38);
+            this.mnInvWR.Size = new System.Drawing.Size(232, 38);
             this.mnInvWR.Text = "Wedding Ring";
             this.mnInvWR.Click += new System.EventHandler(this.mnInvDR_Click);
             // 
@@ -735,7 +735,7 @@
             this.mnInvIC.Image = ((System.Drawing.Image)(resources.GetObject("mnInvIC.Image")));
             this.mnInvIC.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mnInvIC.Name = "mnInvIC";
-            this.mnInvIC.Size = new System.Drawing.Size(242, 38);
+            this.mnInvIC.Size = new System.Drawing.Size(232, 38);
             this.mnInvIC.Text = "Intalian Chain";
             this.mnInvIC.Click += new System.EventHandler(this.mnInvDR_Click);
             // 
@@ -745,7 +745,7 @@
             this.mnInvNL.Image = ((System.Drawing.Image)(resources.GetObject("mnInvNL.Image")));
             this.mnInvNL.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mnInvNL.Name = "mnInvNL";
-            this.mnInvNL.Size = new System.Drawing.Size(242, 38);
+            this.mnInvNL.Size = new System.Drawing.Size(232, 38);
             this.mnInvNL.Text = "Necklace";
             this.mnInvNL.Click += new System.EventHandler(this.mnInvDR_Click);
             // 
@@ -755,7 +755,7 @@
             this.mnInvBL.Image = ((System.Drawing.Image)(resources.GetObject("mnInvBL.Image")));
             this.mnInvBL.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mnInvBL.Name = "mnInvBL";
-            this.mnInvBL.Size = new System.Drawing.Size(242, 38);
+            this.mnInvBL.Size = new System.Drawing.Size(232, 38);
             this.mnInvBL.Text = "Bracelace";
             this.mnInvBL.Click += new System.EventHandler(this.mnInvDR_Click);
             // 
@@ -765,7 +765,7 @@
             this.mnInvCL.Image = ((System.Drawing.Image)(resources.GetObject("mnInvCL.Image")));
             this.mnInvCL.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mnInvCL.Name = "mnInvCL";
-            this.mnInvCL.Size = new System.Drawing.Size(242, 38);
+            this.mnInvCL.Size = new System.Drawing.Size(232, 38);
             this.mnInvCL.Text = "Cufflinks";
             this.mnInvCL.Click += new System.EventHandler(this.mnInvDR_Click);
             // 
@@ -775,7 +775,7 @@
             this.mnInvBR.Image = ((System.Drawing.Image)(resources.GetObject("mnInvBR.Image")));
             this.mnInvBR.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mnInvBR.Name = "mnInvBR";
-            this.mnInvBR.Size = new System.Drawing.Size(242, 38);
+            this.mnInvBR.Size = new System.Drawing.Size(232, 38);
             this.mnInvBR.Text = "Brooch";
             this.mnInvBR.Click += new System.EventHandler(this.mnInvDR_Click);
             // 
@@ -785,7 +785,7 @@
             this.mnInvPD.Image = ((System.Drawing.Image)(resources.GetObject("mnInvPD.Image")));
             this.mnInvPD.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mnInvPD.Name = "mnInvPD";
-            this.mnInvPD.Size = new System.Drawing.Size(242, 38);
+            this.mnInvPD.Size = new System.Drawing.Size(232, 38);
             this.mnInvPD.Text = "Pendant";
             this.mnInvPD.Click += new System.EventHandler(this.mnInvDR_Click);
             // 
@@ -795,7 +795,7 @@
             this.mnInvSJ.Image = ((System.Drawing.Image)(resources.GetObject("mnInvSJ.Image")));
             this.mnInvSJ.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mnInvSJ.Name = "mnInvSJ";
-            this.mnInvSJ.Size = new System.Drawing.Size(242, 38);
+            this.mnInvSJ.Size = new System.Drawing.Size(232, 38);
             this.mnInvSJ.Text = "Special Jewelry";
             this.mnInvSJ.Click += new System.EventHandler(this.mnInvDR_Click);
             // 
@@ -805,7 +805,7 @@
             this.mnInvMTO.Image = ((System.Drawing.Image)(resources.GetObject("mnInvMTO.Image")));
             this.mnInvMTO.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mnInvMTO.Name = "mnInvMTO";
-            this.mnInvMTO.Size = new System.Drawing.Size(242, 38);
+            this.mnInvMTO.Size = new System.Drawing.Size(232, 38);
             this.mnInvMTO.Text = "Made To Order";
             this.mnInvMTO.Click += new System.EventHandler(this.mnInvDR_Click);
             // 
@@ -822,21 +822,21 @@
             // 
             // buyBookToolStripMenuItem
             // 
-            this.buyBookToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.buyBookToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.buyBookToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("buyBookToolStripMenuItem.Image")));
             this.buyBookToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.buyBookToolStripMenuItem.Name = "buyBookToolStripMenuItem";
-            this.buyBookToolStripMenuItem.Size = new System.Drawing.Size(168, 38);
+            this.buyBookToolStripMenuItem.Size = new System.Drawing.Size(157, 38);
             this.buyBookToolStripMenuItem.Text = "BuyBook";
             this.buyBookToolStripMenuItem.Click += new System.EventHandler(this.buyBookToolStripMenuItem_Click);
             // 
             // inventoryToolStripMenuItem1
             // 
-            this.inventoryToolStripMenuItem1.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.inventoryToolStripMenuItem1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.inventoryToolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("inventoryToolStripMenuItem1.Image")));
             this.inventoryToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.inventoryToolStripMenuItem1.Name = "inventoryToolStripMenuItem1";
-            this.inventoryToolStripMenuItem1.Size = new System.Drawing.Size(168, 38);
+            this.inventoryToolStripMenuItem1.Size = new System.Drawing.Size(157, 38);
             this.inventoryToolStripMenuItem1.Text = "Inventory";
             this.inventoryToolStripMenuItem1.Click += new System.EventHandler(this.inventoryToolStripMenuItem1_Click);
             // 
@@ -853,21 +853,21 @@
             // 
             // orderJewelryToolStripMenuItem
             // 
-            this.orderJewelryToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.orderJewelryToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.orderJewelryToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("orderJewelryToolStripMenuItem.Image")));
             this.orderJewelryToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.orderJewelryToolStripMenuItem.Name = "orderJewelryToolStripMenuItem";
-            this.orderJewelryToolStripMenuItem.Size = new System.Drawing.Size(212, 38);
+            this.orderJewelryToolStripMenuItem.Size = new System.Drawing.Size(202, 38);
             this.orderJewelryToolStripMenuItem.Text = "Order Jewelry";
             this.orderJewelryToolStripMenuItem.Click += new System.EventHandler(this.orderJewelryToolStripMenuItem_Click);
             // 
             // productionLineToolStripMenuItem
             // 
-            this.productionLineToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.productionLineToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.productionLineToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("productionLineToolStripMenuItem.Image")));
             this.productionLineToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.productionLineToolStripMenuItem.Name = "productionLineToolStripMenuItem";
-            this.productionLineToolStripMenuItem.Size = new System.Drawing.Size(212, 38);
+            this.productionLineToolStripMenuItem.Size = new System.Drawing.Size(202, 38);
             this.productionLineToolStripMenuItem.Text = "Production Line";
             this.productionLineToolStripMenuItem.Click += new System.EventHandler(this.productionLineToolStripMenuItem_Click);
             // 
@@ -893,91 +893,91 @@
             // mnBBCD
             // 
             this.mnBBCD.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.mnBBCD.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mnBBCD.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mnBBCD.Image = ((System.Drawing.Image)(resources.GetObject("mnBBCD.Image")));
             this.mnBBCD.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mnBBCD.Name = "mnBBCD";
-            this.mnBBCD.Size = new System.Drawing.Size(237, 38);
+            this.mnBBCD.Size = new System.Drawing.Size(225, 38);
             this.mnBBCD.Text = "Cer. Diamond";
             this.mnBBCD.Click += new System.EventHandler(this.menuCerDiamond_Click);
             // 
             // mnBBCG
             // 
-            this.mnBBCG.Font = new System.Drawing.Font("Century Gothic", 11.25F);
+            this.mnBBCG.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.mnBBCG.Image = ((System.Drawing.Image)(resources.GetObject("mnBBCG.Image")));
             this.mnBBCG.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mnBBCG.Name = "mnBBCG";
-            this.mnBBCG.Size = new System.Drawing.Size(237, 38);
+            this.mnBBCG.Size = new System.Drawing.Size(225, 38);
             this.mnBBCG.Text = "Cer. Gemstone";
             this.mnBBCG.Click += new System.EventHandler(this.menuCerGemstone_Click);
             // 
             // mnBBJW
             // 
-            this.mnBBJW.Font = new System.Drawing.Font("Century Gothic", 11.25F);
+            this.mnBBJW.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.mnBBJW.Image = ((System.Drawing.Image)(resources.GetObject("mnBBJW.Image")));
             this.mnBBJW.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mnBBJW.Name = "mnBBJW";
-            this.mnBBJW.Size = new System.Drawing.Size(237, 38);
+            this.mnBBJW.Size = new System.Drawing.Size(225, 38);
             this.mnBBJW.Text = "Jewelry";
             this.mnBBJW.Click += new System.EventHandler(this.menuJewelry_Click);
             // 
             // mnBBNCD
             // 
-            this.mnBBNCD.Font = new System.Drawing.Font("Century Gothic", 11.25F);
+            this.mnBBNCD.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.mnBBNCD.Image = ((System.Drawing.Image)(resources.GetObject("mnBBNCD.Image")));
             this.mnBBNCD.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mnBBNCD.Name = "mnBBNCD";
-            this.mnBBNCD.Size = new System.Drawing.Size(237, 38);
+            this.mnBBNCD.Size = new System.Drawing.Size(225, 38);
             this.mnBBNCD.Text = "Non Cer. Diamond";
             this.mnBBNCD.Click += new System.EventHandler(this.menuNonCerDiamond_Click);
             // 
             // mnBBNCG
             // 
-            this.mnBBNCG.Font = new System.Drawing.Font("Century Gothic", 11.25F);
+            this.mnBBNCG.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.mnBBNCG.Image = ((System.Drawing.Image)(resources.GetObject("mnBBNCG.Image")));
             this.mnBBNCG.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mnBBNCG.Name = "mnBBNCG";
-            this.mnBBNCG.Size = new System.Drawing.Size(237, 38);
+            this.mnBBNCG.Size = new System.Drawing.Size(225, 38);
             this.mnBBNCG.Text = "Non Cer. Gemstone";
             this.mnBBNCG.Click += new System.EventHandler(this.menuNonCerGemstone_Click);
             // 
             // mnBBG
             // 
-            this.mnBBG.Font = new System.Drawing.Font("Century Gothic", 11.25F);
+            this.mnBBG.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.mnBBG.Image = ((System.Drawing.Image)(resources.GetObject("mnBBG.Image")));
             this.mnBBG.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mnBBG.Name = "mnBBG";
-            this.mnBBG.Size = new System.Drawing.Size(237, 38);
+            this.mnBBG.Size = new System.Drawing.Size(225, 38);
             this.mnBBG.Text = "Gold";
             this.mnBBG.Click += new System.EventHandler(this.menuGold_Click);
             // 
             // mnBBST
             // 
-            this.mnBBST.Font = new System.Drawing.Font("Century Gothic", 11.25F);
+            this.mnBBST.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.mnBBST.Image = ((System.Drawing.Image)(resources.GetObject("mnBBST.Image")));
             this.mnBBST.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mnBBST.Name = "mnBBST";
-            this.mnBBST.Size = new System.Drawing.Size(237, 38);
+            this.mnBBST.Size = new System.Drawing.Size(225, 38);
             this.mnBBST.Text = "Setting";
             this.mnBBST.Click += new System.EventHandler(this.menuSetting_Click);
             // 
             // mnBBETC
             // 
-            this.mnBBETC.Font = new System.Drawing.Font("Century Gothic", 11.25F);
+            this.mnBBETC.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.mnBBETC.Image = ((System.Drawing.Image)(resources.GetObject("mnBBETC.Image")));
             this.mnBBETC.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mnBBETC.Name = "mnBBETC";
-            this.mnBBETC.Size = new System.Drawing.Size(237, 38);
+            this.mnBBETC.Size = new System.Drawing.Size(225, 38);
             this.mnBBETC.Text = "ETC.";
             this.mnBBETC.Click += new System.EventHandler(this.menuETC_Click);
             // 
             // sellBookToolStripMenuItem
             // 
-            this.sellBookToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 11.25F);
+            this.sellBookToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.sellBookToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("sellBookToolStripMenuItem.Image")));
             this.sellBookToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.sellBookToolStripMenuItem.Name = "sellBookToolStripMenuItem";
-            this.sellBookToolStripMenuItem.Size = new System.Drawing.Size(237, 38);
+            this.sellBookToolStripMenuItem.Size = new System.Drawing.Size(225, 38);
             this.sellBookToolStripMenuItem.Text = "SellBook";
             this.sellBookToolStripMenuItem.Click += new System.EventHandler(this.sellBookToolStripMenuItem_Click);
             // 
@@ -994,85 +994,85 @@
             // 
             // MenuPayment
             // 
-            this.MenuPayment.Font = new System.Drawing.Font("Century Gothic", 11.25F);
+            this.MenuPayment.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.MenuPayment.Image = ((System.Drawing.Image)(resources.GetObject("MenuPayment.Image")));
             this.MenuPayment.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.MenuPayment.Name = "MenuPayment";
-            this.MenuPayment.Size = new System.Drawing.Size(168, 38);
+            this.MenuPayment.Size = new System.Drawing.Size(149, 38);
             this.MenuPayment.Text = "Payment";
             this.MenuPayment.Click += new System.EventHandler(this.MenuPayment_Click);
             // 
             // expenseToolStripMenuItem
             // 
-            this.expenseToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 11.25F);
+            this.expenseToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.expenseToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("expenseToolStripMenuItem.Image")));
             this.expenseToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.expenseToolStripMenuItem.Name = "expenseToolStripMenuItem";
-            this.expenseToolStripMenuItem.Size = new System.Drawing.Size(168, 38);
+            this.expenseToolStripMenuItem.Size = new System.Drawing.Size(149, 38);
             this.expenseToolStripMenuItem.Text = "Expense";
             this.expenseToolStripMenuItem.Click += new System.EventHandler(this.expenseToolStripMenuItem_Click);
             // 
-            // toolStripMenuItem2
+            // btnReport
             // 
-            this.toolStripMenuItem2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnReport.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnReportBuying,
             this.btnReportSelling,
             this.btnReportInventory,
             this.btnReportDebt,
             this.btnReportCustomer});
-            this.toolStripMenuItem2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem2.Image")));
-            this.toolStripMenuItem2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Padding = new System.Windows.Forms.Padding(10, 4, 4, 4);
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(88, 95);
+            this.btnReport.Image = ((System.Drawing.Image)(resources.GetObject("btnReport.Image")));
+            this.btnReport.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.btnReport.Name = "btnReport";
+            this.btnReport.Padding = new System.Windows.Forms.Padding(10, 4, 4, 4);
+            this.btnReport.Size = new System.Drawing.Size(88, 95);
             // 
             // btnReportBuying
             // 
-            this.btnReportBuying.Font = new System.Drawing.Font("Century Gothic", 11.25F);
+            this.btnReportBuying.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.btnReportBuying.Image = ((System.Drawing.Image)(resources.GetObject("btnReportBuying.Image")));
             this.btnReportBuying.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnReportBuying.Name = "btnReportBuying";
-            this.btnReportBuying.Size = new System.Drawing.Size(216, 38);
+            this.btnReportBuying.Size = new System.Drawing.Size(206, 38);
             this.btnReportBuying.Text = "Report Buying";
             this.btnReportBuying.Click += new System.EventHandler(this.btnReportBuying_Click);
             // 
             // btnReportSelling
             // 
-            this.btnReportSelling.Font = new System.Drawing.Font("Century Gothic", 11.25F);
+            this.btnReportSelling.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.btnReportSelling.Image = ((System.Drawing.Image)(resources.GetObject("btnReportSelling.Image")));
             this.btnReportSelling.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnReportSelling.Name = "btnReportSelling";
-            this.btnReportSelling.Size = new System.Drawing.Size(216, 38);
+            this.btnReportSelling.Size = new System.Drawing.Size(206, 38);
             this.btnReportSelling.Text = "Report Selling";
             this.btnReportSelling.Click += new System.EventHandler(this.btnReportSelling_Click);
             // 
             // btnReportInventory
             // 
-            this.btnReportInventory.Font = new System.Drawing.Font("Century Gothic", 11.25F);
+            this.btnReportInventory.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.btnReportInventory.Image = ((System.Drawing.Image)(resources.GetObject("btnReportInventory.Image")));
             this.btnReportInventory.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnReportInventory.Name = "btnReportInventory";
-            this.btnReportInventory.Size = new System.Drawing.Size(216, 38);
+            this.btnReportInventory.Size = new System.Drawing.Size(206, 38);
             this.btnReportInventory.Text = "Report Inventory";
             this.btnReportInventory.Click += new System.EventHandler(this.btnReportInventory_Click);
             // 
             // btnReportDebt
             // 
-            this.btnReportDebt.Font = new System.Drawing.Font("Century Gothic", 11.25F);
+            this.btnReportDebt.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.btnReportDebt.Image = ((System.Drawing.Image)(resources.GetObject("btnReportDebt.Image")));
             this.btnReportDebt.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnReportDebt.Name = "btnReportDebt";
-            this.btnReportDebt.Size = new System.Drawing.Size(216, 38);
+            this.btnReportDebt.Size = new System.Drawing.Size(206, 38);
             this.btnReportDebt.Text = "Report Debt";
             this.btnReportDebt.Click += new System.EventHandler(this.btnReportDebt_Click);
             // 
             // btnReportCustomer
             // 
-            this.btnReportCustomer.Font = new System.Drawing.Font("Century Gothic", 11.25F);
+            this.btnReportCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.btnReportCustomer.Image = ((System.Drawing.Image)(resources.GetObject("btnReportCustomer.Image")));
             this.btnReportCustomer.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnReportCustomer.Name = "btnReportCustomer";
-            this.btnReportCustomer.Size = new System.Drawing.Size(216, 38);
+            this.btnReportCustomer.Size = new System.Drawing.Size(206, 38);
             this.btnReportCustomer.Text = "Report Customer";
             this.btnReportCustomer.Click += new System.EventHandler(this.btnReportCustomer_Click);
             // 
@@ -1173,7 +1173,7 @@
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.ToolStripMenuItem MenuPayment;
         private System.Windows.Forms.ToolStripMenuItem menuExchangeRate;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem btnReport;
         private System.Windows.Forms.ToolStripMenuItem btnReportBuying;
         private System.Windows.Forms.ToolStripMenuItem btnReportSelling;
         private System.Windows.Forms.ToolStripMenuItem btnReportInventory;

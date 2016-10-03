@@ -289,7 +289,10 @@ namespace DiamondShop
                 btnInventory.Visible = false;
                 btnTransfer.Visible = false;
                 btnOrderFactory.Visible = false;
-                btnBuyBook.Visible = false;             
+                btnBuyBook.Visible = false;
+                btnAccounting.Visible = false;
+                btnReport.Visible = false;
+                        
             }
             else if (ApplicationInfo.Authorized == "Owner")
             {
@@ -298,7 +301,9 @@ namespace DiamondShop
                 btnInventory.Visible = true;
                 btnTransfer.Visible = true;
                 btnOrderFactory.Visible = true;
-                btnBuyBook.Visible = true;           
+                btnBuyBook.Visible = true;
+                btnAccounting.Visible = true;
+                btnReport.Visible = true;
             }
         }
 
