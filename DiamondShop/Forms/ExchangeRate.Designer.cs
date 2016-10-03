@@ -46,39 +46,39 @@
             this.panel3.Controls.Add(this.label8);
             this.panel3.Controls.Add(this.label7);
             this.panel3.Controls.Add(this.txtRate);
-            this.panel3.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.panel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.panel3.Location = new System.Drawing.Point(12, 74);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(438, 107);
+            this.panel3.Size = new System.Drawing.Size(331, 83);
             this.panel3.TabIndex = 74;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label8.Location = new System.Drawing.Point(279, 43);
+            this.label8.Location = new System.Drawing.Point(211, 32);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(43, 19);
+            this.label8.Size = new System.Drawing.Size(47, 20);
             this.label8.TabIndex = 97;
             this.label8.Text = "Baht";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label7.Location = new System.Drawing.Point(66, 43);
+            this.label7.Location = new System.Drawing.Point(36, 33);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(65, 19);
+            this.label7.Size = new System.Drawing.Size(77, 20);
             this.label7.TabIndex = 96;
             this.label7.Text = "1 USD =";
             // 
             // txtRate
             // 
-            this.txtRate.Location = new System.Drawing.Point(142, 39);
+            this.txtRate.Location = new System.Drawing.Point(122, 29);
             this.txtRate.Name = "txtRate";
-            this.txtRate.Size = new System.Drawing.Size(131, 27);
+            this.txtRate.Size = new System.Drawing.Size(80, 26);
             this.txtRate.TabIndex = 12;
             this.txtRate.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -107,7 +107,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(195)))), ((int)(((byte)(157)))));
-            this.ClientSize = new System.Drawing.Size(464, 192);
+            this.ClientSize = new System.Drawing.Size(356, 171);
             this.Controls.Add(this.panel3);
             this.Name = "ExchangeRate";
             this.Text = "DiamondCer";
