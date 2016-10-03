@@ -24,9 +24,7 @@ namespace DiamondShop
             Initial();
 
             binder.BindControl(txtRate, "USDRate");
-            LoadData();
-            
-            
+            LoadData();          
         }
         public ExchangeRate(int id)
         {
@@ -42,7 +40,6 @@ namespace DiamondShop
 
         protected override void Initial()
         {
-
             txtRate.Select();
 
             //SetFieldService.SetRequireField(txtSeller, txtPrice);

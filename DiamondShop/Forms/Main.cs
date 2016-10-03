@@ -150,7 +150,7 @@ namespace DiamondShop
             ProductionLineList frm = new ProductionLineList();
             SetFormList(frm, 22, "ProductionLine");
         }
-        private void sellBookToolStripMenuItem_Click(object sender, EventArgs e)
+        private void mnSellBook_Click(object sender, EventArgs e)
         {
             SellBookList frm = new SellBookList();
             SetFormList(frm, 23, "SellBook");
@@ -289,17 +289,38 @@ namespace DiamondShop
                 btnInventory.Visible = false;
                 btnTransfer.Visible = false;
                 btnOrderFactory.Visible = false;
-                btnBuyBook.Visible = false;             
+                btnBuyBook.Visible = false;
+                btnAccounting.Visible = false;
+                btnReport.Visible = false;                  
             }
             else if (ApplicationInfo.Authorized == "Owner")
-            {
+            {           
                 btnActivity.Visible = true;
                 btnMaster.Visible = true;
                 btnInventory.Visible = true;
                 btnTransfer.Visible = true;
                 btnOrderFactory.Visible = true;
-                btnBuyBook.Visible = true;           
-            }
+                btnBuyBook.Visible = true;
+                btnAccounting.Visible = true;
+                btnReport.Visible = true;
+
+                //สิทธิ์ Sub Menu ภายใน
+                if (ApplicationInfo.Shop != 209)// Office ใช้เท่านั้น
+                {
+                    mnBBCD.Enabled = false;
+                    mnBBCG.Enabled = false;
+                    mnBBJW.Enabled = false;
+                    mnBBNCD.Enabled = false;
+                    mnBBNCG.Enabled = false;
+                    mnBBG.Enabled = false;
+                    mnBBST.Enabled = false;
+                    mnBBETC.Enabled = false;
+                }
+                if(ApplicationInfo.Shop == 232)// Factory ซื้อทองได้
+                {
+                    mnBBG.Enabled = true;
+                }
+            }         
         }
 
         private void btnLogout_Click(object sender, EventArgs e)

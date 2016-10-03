@@ -481,12 +481,12 @@
             // linkFile
             // 
             this.linkFile.AutoSize = true;
-            this.linkFile.Location = new System.Drawing.Point(61, 517);
+            this.linkFile.Location = new System.Drawing.Point(48, 517);
             this.linkFile.Name = "linkFile";
-            this.linkFile.Size = new System.Drawing.Size(109, 20);
+            this.linkFile.Size = new System.Drawing.Size(127, 20);
             this.linkFile.TabIndex = 191;
             this.linkFile.TabStop = true;
-            this.linkFile.Text = "No File Attach";
+            this.linkFile.Text = "No File Attached";
             this.linkFile.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkFile_LinkClicked);
             // 
             // btnImage1
