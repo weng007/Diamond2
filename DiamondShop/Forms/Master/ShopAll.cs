@@ -96,6 +96,14 @@ namespace DiamondShop
 
                         btnShop7.Enabled = CheckShopAuthorized(Shop7.Text);
                     }
+                    if (i == 7)
+                    {
+                        btnFactory.Visible = true;
+                        lblFactory.Visible = false;
+                        lblFactory.Text = ds.Tables[0].Rows[7][1].ToString();
+
+                        btnFactory.Enabled = CheckShopAuthorized(lblFactory.Text);
+                    }
                 }
             }
         }

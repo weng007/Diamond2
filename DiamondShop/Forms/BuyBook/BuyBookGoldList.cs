@@ -13,15 +13,13 @@ using DiamondDS;
 namespace DiamondShop
 {
     public partial class BuyBookGoldList : FormList
-    {
-        
+    {        
         public BuyBookGoldList()
         {
             InitializeComponent();
             Initial();
             dtSBuyDate.Value = dtSBuyDate.Value.AddDays(-90);
-            DoLoadData();
-            
+            DoLoadData();          
         }
 
         protected override void Initial()

@@ -110,9 +110,9 @@ namespace DiamondShop
             this.id = id;
             btnImportExcel.Visible = false;
             SetControlEnable(false);
-            isEdit = false;
-
             LoadData();
+
+            isEdit = false;
         }
 
         protected override void Initial()
