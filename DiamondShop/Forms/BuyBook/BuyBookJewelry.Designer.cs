@@ -201,7 +201,7 @@
             this.txtCode2.Location = new System.Drawing.Point(378, 17);
             this.txtCode2.Name = "txtCode2";
             this.txtCode2.Size = new System.Drawing.Size(146, 26);
-            this.txtCode2.TabIndex = 228;
+            this.txtCode2.TabIndex = 4;
             this.txtCode2.TextChanged += new System.EventHandler(this.txtRemark_TextChanged);
             // 
             // cmbBuyer
@@ -210,7 +210,7 @@
             this.cmbBuyer.Location = new System.Drawing.Point(970, 89);
             this.cmbBuyer.Name = "cmbBuyer";
             this.cmbBuyer.Size = new System.Drawing.Size(156, 28);
-            this.cmbBuyer.TabIndex = 226;
+            this.cmbBuyer.TabIndex = 20;
             // 
             // label22
             // 
@@ -283,7 +283,7 @@
             this.txtMinPrice.Location = new System.Drawing.Point(665, 168);
             this.txtMinPrice.Name = "txtMinPrice";
             this.txtMinPrice.Size = new System.Drawing.Size(146, 26);
-            this.txtMinPrice.TabIndex = 14;
+            this.txtMinPrice.TabIndex = 16;
             this.txtMinPrice.Text = "0";
             this.txtMinPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtMinPrice.TextChanged += new System.EventHandler(this.txtRemark_TextChanged);
@@ -365,7 +365,7 @@
             this.txtRemark.Multiline = true;
             this.txtRemark.Name = "txtRemark";
             this.txtRemark.Size = new System.Drawing.Size(222, 117);
-            this.txtRemark.TabIndex = 26;
+            this.txtRemark.TabIndex = 32;
             this.txtRemark.TextChanged += new System.EventHandler(this.txtRemark_TextChanged);
             // 
             // label17
@@ -386,7 +386,7 @@
             this.txtNote.Multiline = true;
             this.txtNote.Name = "txtNote";
             this.txtNote.Size = new System.Drawing.Size(174, 62);
-            this.txtNote.TabIndex = 24;
+            this.txtNote.TabIndex = 30;
             this.txtNote.TextChanged += new System.EventHandler(this.txtRemark_TextChanged);
             // 
             // label7
@@ -416,7 +416,7 @@
             this.txtCost3.Location = new System.Drawing.Point(108, 173);
             this.txtCost3.Name = "txtCost3";
             this.txtCost3.Size = new System.Drawing.Size(122, 26);
-            this.txtCost3.TabIndex = 22;
+            this.txtCost3.TabIndex = 28;
             this.txtCost3.Text = "0";
             this.txtCost3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtCost3.TextChanged += new System.EventHandler(this.txtRemark_TextChanged);
@@ -461,7 +461,7 @@
             this.txtCost2.Location = new System.Drawing.Point(108, 138);
             this.txtCost2.Name = "txtCost2";
             this.txtCost2.Size = new System.Drawing.Size(122, 26);
-            this.txtCost2.TabIndex = 20;
+            this.txtCost2.TabIndex = 26;
             this.txtCost2.Text = "0";
             this.txtCost2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtCost2.TextChanged += new System.EventHandler(this.txtRemark_TextChanged);
@@ -484,7 +484,7 @@
             this.txtCost1.Location = new System.Drawing.Point(108, 103);
             this.txtCost1.Name = "txtCost1";
             this.txtCost1.Size = new System.Drawing.Size(122, 26);
-            this.txtCost1.TabIndex = 18;
+            this.txtCost1.TabIndex = 24;
             this.txtCost1.Text = "0";
             this.txtCost1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtCost1.TextChanged += new System.EventHandler(this.txtRemark_TextChanged);
@@ -496,7 +496,7 @@
             this.txtSize.Location = new System.Drawing.Point(763, 131);
             this.txtSize.Name = "txtSize";
             this.txtSize.Size = new System.Drawing.Size(48, 26);
-            this.txtSize.TabIndex = 12;
+            this.txtSize.TabIndex = 14;
             this.txtSize.Text = "0";
             this.txtSize.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtSize.TextChanged += new System.EventHandler(this.txtRemark_TextChanged);
@@ -517,7 +517,7 @@
             this.txtWeight.Location = new System.Drawing.Point(763, 94);
             this.txtWeight.Name = "txtWeight";
             this.txtWeight.Size = new System.Drawing.Size(48, 26);
-            this.txtWeight.TabIndex = 10;
+            this.txtWeight.TabIndex = 12;
             this.txtWeight.Text = "0";
             this.txtWeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtWeight.TextChanged += new System.EventHandler(this.txtRemark_TextChanged);
@@ -528,7 +528,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label14.Location = new System.Drawing.Point(608, 97);
+            this.label14.Location = new System.Drawing.Point(626, 97);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(119, 20);
             this.label14.TabIndex = 108;
@@ -549,7 +549,7 @@
             this.txtSeller.Location = new System.Drawing.Point(970, 54);
             this.txtSeller.Name = "txtSeller";
             this.txtSeller.Size = new System.Drawing.Size(146, 26);
-            this.txtSeller.TabIndex = 16;
+            this.txtSeller.TabIndex = 18;
             // 
             // label12
             // 
@@ -567,7 +567,7 @@
             this.cmbMaterial.Location = new System.Drawing.Point(665, 56);
             this.cmbMaterial.Name = "cmbMaterial";
             this.cmbMaterial.Size = new System.Drawing.Size(146, 28);
-            this.cmbMaterial.TabIndex = 8;
+            this.cmbMaterial.TabIndex = 10;
             // 
             // label11
             // 
@@ -607,7 +607,7 @@
             this.CmbStatus.Location = new System.Drawing.Point(970, 126);
             this.CmbStatus.Name = "CmbStatus";
             this.CmbStatus.Size = new System.Drawing.Size(156, 28);
-            this.CmbStatus.TabIndex = 8;
+            this.CmbStatus.TabIndex = 22;
             // 
             // label9
             // 
@@ -645,7 +645,7 @@
             this.cmbShop.Location = new System.Drawing.Point(665, 19);
             this.cmbShop.Name = "cmbShop";
             this.cmbShop.Size = new System.Drawing.Size(146, 28);
-            this.cmbShop.TabIndex = 4;
+            this.cmbShop.TabIndex = 8;
             // 
             // label1
             // 

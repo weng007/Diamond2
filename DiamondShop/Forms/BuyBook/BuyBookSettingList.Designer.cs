@@ -78,7 +78,7 @@
             this.txtSeller.Location = new System.Drawing.Point(238, 21);
             this.txtSeller.Name = "txtSeller";
             this.txtSeller.Size = new System.Drawing.Size(132, 27);
-            this.txtSeller.TabIndex = 73;
+            this.txtSeller.TabIndex = 1;
             // 
             // dtEBuyDate
             // 
@@ -87,7 +87,7 @@
             this.dtEBuyDate.Location = new System.Drawing.Point(394, 62);
             this.dtEBuyDate.Name = "dtEBuyDate";
             this.dtEBuyDate.Size = new System.Drawing.Size(131, 27);
-            this.dtEBuyDate.TabIndex = 8;
+            this.dtEBuyDate.TabIndex = 6;
             // 
             // label2
             // 
