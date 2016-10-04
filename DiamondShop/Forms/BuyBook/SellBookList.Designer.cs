@@ -48,7 +48,7 @@
             this.SellNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.JewelryTypeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PaymentName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SellerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SellByName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ShopName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel2.SuspendLayout();
@@ -91,7 +91,7 @@
             this.SellNo,
             this.JewelryTypeName,
             this.PaymentName,
-            this.SellerName,
+            this.SellByName,
             this.ShopName});
             this.gridSellBook.Location = new System.Drawing.Point(14, 6);
             this.gridSellBook.Name = "gridSellBook";
@@ -232,13 +232,13 @@
             this.PaymentName.Name = "PaymentName";
             this.PaymentName.ReadOnly = true;
             // 
-            // SellerName
+            // SellByName
             // 
-            this.SellerName.DataPropertyName = "SellerName";
-            this.SellerName.HeaderText = "Seller";
-            this.SellerName.Name = "SellerName";
-            this.SellerName.ReadOnly = true;
-            this.SellerName.Width = 120;
+            this.SellByName.DataPropertyName = "SellByName";
+            this.SellByName.HeaderText = "Seller";
+            this.SellByName.Name = "SellByName";
+            this.SellByName.ReadOnly = true;
+            this.SellByName.Width = 120;
             // 
             // ShopName
             // 
@@ -286,7 +286,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn SellNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn JewelryTypeName;
         private System.Windows.Forms.DataGridViewTextBoxColumn PaymentName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SellerName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SellByName;
         private System.Windows.Forms.DataGridViewTextBoxColumn ShopName;
     }
 }

@@ -29,7 +29,7 @@ namespace DiamondShop
             Initial();
 
             binder.BindControl(txtSellNo, "SellNo");
-            binder.BindControl(cmbSeller, "Seller");
+            binder.BindControl(cmbSeller, "SellBy");
             binder.BindControl(cmbShopReceive, "ShopReceive");
             binder.BindControl(cmbShop, "Shop");
             binder.BindControl(txtUSDRate, "USDRate");
@@ -51,7 +51,7 @@ namespace DiamondShop
             Initial();
 
             binder.BindControl(txtSellNo, "SellNo");
-            binder.BindControl(cmbSeller, "Seller");
+            binder.BindControl(cmbSeller, "SellBy");
             binder.BindControl(cmbShopReceive, "ShopReceive");
             binder.BindControl(cmbShop, "Shop");
             binder.BindControl(txtUSDRate, "USDRate");

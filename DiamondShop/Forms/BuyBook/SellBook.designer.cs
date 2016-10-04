@@ -312,8 +312,9 @@
             this.txtDiscount.BackColor = System.Drawing.Color.White;
             this.txtDiscount.Location = new System.Drawing.Point(454, 78);
             this.txtDiscount.Name = "txtDiscount";
-            this.txtDiscount.Size = new System.Drawing.Size(167, 26);
+            this.txtDiscount.Size = new System.Drawing.Size(163, 26);
             this.txtDiscount.TabIndex = 270;
+            this.txtDiscount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label11
             // 
