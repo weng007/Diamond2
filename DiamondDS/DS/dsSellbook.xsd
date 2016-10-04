@@ -35,6 +35,8 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+              <xs:element name="ShopReceive" msprop:Generator_ColumnVarNameInTable="columnShopReceive" msprop:Generator_ColumnPropNameInRow="ShopReceive" msprop:Generator_ColumnPropNameInTable="ShopReceiveColumn" msprop:Generator_UserColumnName="ShopReceive" type="xs:string" minOccurs="0" />
+              <xs:element name="ShopReceiveName" msprop:Generator_ColumnVarNameInTable="columnShopReceiveName" msprop:Generator_ColumnPropNameInRow="ShopReceiveName" msprop:Generator_ColumnPropNameInTable="ShopReceiveNameColumn" msprop:Generator_UserColumnName="ShopReceiveName" type="xs:string" minOccurs="0" />
               <xs:element name="SellDate" msprop:Generator_ColumnVarNameInTable="columnSellDate" msprop:Generator_ColumnPropNameInRow="SellDate" msprop:Generator_ColumnPropNameInTable="SellDateColumn" msprop:Generator_UserColumnName="SellDate" type="xs:dateTime" minOccurs="0" />
               <xs:element name="DueDate" msprop:Generator_ColumnVarNameInTable="columnDueDate" msprop:Generator_ColumnPropNameInRow="DueDate" msprop:Generator_ColumnPropNameInTable="DueDateColumn" msprop:Generator_UserColumnName="DueDate" type="xs:dateTime" minOccurs="0" />
               <xs:element name="USDRate" msprop:Generator_ColumnVarNameInTable="columnUSDRate" msprop:Generator_ColumnPropNameInRow="USDRate" msprop:Generator_ColumnPropNameInTable="USDRateColumn" msprop:Generator_UserColumnName="USDRate" type="xs:decimal" minOccurs="0" />

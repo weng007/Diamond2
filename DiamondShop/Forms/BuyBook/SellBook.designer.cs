@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SellBook));
             this.panel3 = new System.Windows.Forms.Panel();
+            this.cmbShop = new System.Windows.Forms.ComboBox();
             this.cmbStatus = new System.Windows.Forms.ComboBox();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.btnSetting = new System.Windows.Forms.Button();
@@ -56,7 +57,7 @@
             this.txtSellNo = new System.Windows.Forms.TextBox();
             this.btnBrowseCustomer = new System.Windows.Forms.Button();
             this.txtCustomer = new System.Windows.Forms.TextBox();
-            this.cmbShop = new System.Windows.Forms.ComboBox();
+            this.cmbShopReceive = new System.Windows.Forms.ComboBox();
             this.dtDueDate = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.cmbSeller = new System.Windows.Forms.ComboBox();
@@ -71,7 +72,6 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -79,7 +79,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Controls.Add(this.comboBox1);
+            this.panel3.Controls.Add(this.cmbShop);
             this.panel3.Controls.Add(this.cmbStatus);
             this.panel3.Controls.Add(this.monthCalendar1);
             this.panel3.Controls.Add(this.btnSetting);
@@ -106,7 +106,7 @@
             this.panel3.Controls.Add(this.txtSellNo);
             this.panel3.Controls.Add(this.btnBrowseCustomer);
             this.panel3.Controls.Add(this.txtCustomer);
-            this.panel3.Controls.Add(this.cmbShop);
+            this.panel3.Controls.Add(this.cmbShopReceive);
             this.panel3.Controls.Add(this.dtDueDate);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.cmbSeller);
@@ -128,13 +128,22 @@
             this.panel3.TabIndex = 1;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
+            // cmbShop
+            // 
+            this.cmbShop.Enabled = false;
+            this.cmbShop.FormattingEnabled = true;
+            this.cmbShop.Location = new System.Drawing.Point(454, 112);
+            this.cmbShop.Name = "cmbShop";
+            this.cmbShop.Size = new System.Drawing.Size(164, 28);
+            this.cmbShop.TabIndex = 284;
+            // 
             // cmbStatus
             // 
             this.cmbStatus.Enabled = false;
             this.cmbStatus.FormattingEnabled = true;
             this.cmbStatus.Location = new System.Drawing.Point(126, 146);
             this.cmbStatus.Name = "cmbStatus";
-            this.cmbStatus.Size = new System.Drawing.Size(164, 28);
+            this.cmbStatus.Size = new System.Drawing.Size(167, 28);
             this.cmbStatus.TabIndex = 283;
             // 
             // monthCalendar1
@@ -374,7 +383,7 @@
             // 
             // label12
             // 
-            this.label12.Location = new System.Drawing.Point(21, 146);
+            this.label12.Location = new System.Drawing.Point(26, 144);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(73, 28);
             this.label12.TabIndex = 197;
@@ -402,7 +411,6 @@
             this.txtSellNo.Enabled = false;
             this.txtSellNo.Location = new System.Drawing.Point(126, 46);
             this.txtSellNo.Name = "txtSellNo";
-            this.txtSellNo.ReadOnly = true;
             this.txtSellNo.Size = new System.Drawing.Size(167, 26);
             this.txtSellNo.TabIndex = 190;
             this.txtSellNo.TextChanged += new System.EventHandler(this.txtCode_TextChanged);
@@ -434,14 +442,14 @@
             this.txtCustomer.TabIndex = 185;
             this.txtCustomer.TextChanged += new System.EventHandler(this.txtCode_TextChanged);
             // 
-            // cmbShop
+            // cmbShopReceive
             // 
-            this.cmbShop.FormattingEnabled = true;
-            this.cmbShop.Location = new System.Drawing.Point(126, 78);
-            this.cmbShop.Name = "cmbShop";
-            this.cmbShop.Size = new System.Drawing.Size(167, 28);
-            this.cmbShop.TabIndex = 6;
-            this.cmbShop.SelectedIndexChanged += new System.EventHandler(this.cmbSeller_SelectedValueChanged);
+            this.cmbShopReceive.FormattingEnabled = true;
+            this.cmbShopReceive.Location = new System.Drawing.Point(126, 78);
+            this.cmbShopReceive.Name = "cmbShopReceive";
+            this.cmbShopReceive.Size = new System.Drawing.Size(167, 28);
+            this.cmbShopReceive.TabIndex = 6;
+            this.cmbShopReceive.SelectedIndexChanged += new System.EventHandler(this.cmbSeller_SelectedValueChanged);
             // 
             // dtDueDate
             // 
@@ -577,15 +585,6 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // comboBox1
-            // 
-            this.comboBox1.Enabled = false;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(454, 112);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(164, 28);
-            this.comboBox1.TabIndex = 284;
-            // 
             // SellBook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -620,7 +619,7 @@
         private System.Windows.Forms.ComboBox cmbSeller;
         private System.Windows.Forms.DateTimePicker dtDueDate;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox cmbShop;
+        private System.Windows.Forms.ComboBox cmbShopReceive;
         private System.Windows.Forms.TextBox txtCustomer;
         private System.Windows.Forms.Button btnBrowseCustomer;
         private System.Windows.Forms.Label label10;
@@ -647,6 +646,6 @@
         private System.Windows.Forms.Button btnDC;
         private System.Windows.Forms.MonthCalendar monthCalendar1;
         private System.Windows.Forms.ComboBox cmbStatus;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbShop;
     }
 }

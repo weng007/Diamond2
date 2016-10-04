@@ -291,6 +291,10 @@ namespace DiamondDS.DS {
             
             private global::System.Data.DataColumn columnShopName;
             
+            private global::System.Data.DataColumn columnShopReceive;
+            
+            private global::System.Data.DataColumn columnShopReceiveName;
+            
             private global::System.Data.DataColumn columnSellDate;
             
             private global::System.Data.DataColumn columnDueDate;
@@ -405,6 +409,22 @@ namespace DiamondDS.DS {
             public global::System.Data.DataColumn ShopNameColumn {
                 get {
                     return this.columnShopName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ShopReceiveColumn {
+                get {
+                    return this.columnShopReceive;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ShopReceiveNameColumn {
+                get {
+                    return this.columnShopReceiveName;
                 }
             }
             
@@ -595,6 +615,8 @@ namespace DiamondDS.DS {
                         int SellBy, 
                         int Shop, 
                         string ShopName, 
+                        string ShopReceive, 
+                        string ShopReceiveName, 
                         System.DateTime SellDate, 
                         System.DateTime DueDate, 
                         decimal USDRate, 
@@ -621,6 +643,8 @@ namespace DiamondDS.DS {
                         SellBy,
                         Shop,
                         ShopName,
+                        ShopReceive,
+                        ShopReceiveName,
                         SellDate,
                         DueDate,
                         USDRate,
@@ -674,6 +698,8 @@ namespace DiamondDS.DS {
                 this.columnSellBy = base.Columns["SellBy"];
                 this.columnShop = base.Columns["Shop"];
                 this.columnShopName = base.Columns["ShopName"];
+                this.columnShopReceive = base.Columns["ShopReceive"];
+                this.columnShopReceiveName = base.Columns["ShopReceiveName"];
                 this.columnSellDate = base.Columns["SellDate"];
                 this.columnDueDate = base.Columns["DueDate"];
                 this.columnUSDRate = base.Columns["USDRate"];
@@ -709,6 +735,10 @@ namespace DiamondDS.DS {
                 base.Columns.Add(this.columnShop);
                 this.columnShopName = new global::System.Data.DataColumn("ShopName", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnShopName);
+                this.columnShopReceive = new global::System.Data.DataColumn("ShopReceive", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnShopReceive);
+                this.columnShopReceiveName = new global::System.Data.DataColumn("ShopReceiveName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnShopReceiveName);
                 this.columnSellDate = new global::System.Data.DataColumn("SellDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSellDate);
                 this.columnDueDate = new global::System.Data.DataColumn("DueDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
@@ -991,6 +1021,38 @@ namespace DiamondDS.DS {
                 }
                 set {
                     this[this.tableSellBook.ShopNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string ShopReceive {
+                get {
+                    try {
+                        return ((string)(this[this.tableSellBook.ShopReceiveColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ShopReceive\' in table \'SellBook\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSellBook.ShopReceiveColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string ShopReceiveName {
+                get {
+                    try {
+                        return ((string)(this[this.tableSellBook.ShopReceiveNameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ShopReceiveName\' in table \'SellBook\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSellBook.ShopReceiveNameColumn] = value;
                 }
             }
             
@@ -1340,6 +1402,30 @@ namespace DiamondDS.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetShopNameNull() {
                 this[this.tableSellBook.ShopNameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsShopReceiveNull() {
+                return this.IsNull(this.tableSellBook.ShopReceiveColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetShopReceiveNull() {
+                this[this.tableSellBook.ShopReceiveColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsShopReceiveNameNull() {
+                return this.IsNull(this.tableSellBook.ShopReceiveNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetShopReceiveNameNull() {
+                this[this.tableSellBook.ShopReceiveNameColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

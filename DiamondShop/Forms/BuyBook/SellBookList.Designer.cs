@@ -29,27 +29,27 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SellBookList));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SellBookList));
             this.panel2 = new System.Windows.Forms.Panel();
             this.gridSellBook = new System.Windows.Forms.DataGridView();
-            this.RowNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SellDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CustomerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.JewelryTypeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PaymentName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SellerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ShopName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtCode = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.tds = new DiamondDS.DS.dsSell();
+            this.RowNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SellDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CustomerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SellNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.JewelryTypeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PaymentName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SellerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ShopName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridSellBook)).BeginInit();
@@ -88,7 +88,7 @@
             this.ID,
             this.SellDate,
             this.CustomerName,
-            this.Code,
+            this.SellNo,
             this.JewelryTypeName,
             this.PaymentName,
             this.SellerName,
@@ -103,83 +103,6 @@
             this.gridSellBook.Size = new System.Drawing.Size(1315, 446);
             this.gridSellBook.TabIndex = 4;
             this.gridSellBook.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.gridSell_MouseDoubleClick);
-            // 
-            // RowNum
-            // 
-            this.RowNum.DataPropertyName = "RowNum";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.RowNum.DefaultCellStyle = dataGridViewCellStyle2;
-            this.RowNum.HeaderText = "No.";
-            this.RowNum.Name = "RowNum";
-            this.RowNum.ReadOnly = true;
-            this.RowNum.Width = 60;
-            // 
-            // ID
-            // 
-            this.ID.DataPropertyName = "ID";
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            this.ID.Visible = false;
-            // 
-            // SellDate
-            // 
-            this.SellDate.DataPropertyName = "SellDate";
-            dataGridViewCellStyle3.Format = "dd/MM/yyyy";
-            this.SellDate.DefaultCellStyle = dataGridViewCellStyle3;
-            this.SellDate.HeaderText = "Sold Date";
-            this.SellDate.Name = "SellDate";
-            this.SellDate.ReadOnly = true;
-            this.SellDate.Width = 120;
-            // 
-            // CustomerName
-            // 
-            this.CustomerName.DataPropertyName = "CustomerName";
-            this.CustomerName.HeaderText = "Customer";
-            this.CustomerName.Name = "CustomerName";
-            this.CustomerName.ReadOnly = true;
-            this.CustomerName.Width = 150;
-            // 
-            // Code
-            // 
-            this.Code.DataPropertyName = "Code";
-            this.Code.HeaderText = "Code";
-            this.Code.Name = "Code";
-            this.Code.ReadOnly = true;
-            this.Code.Width = 160;
-            // 
-            // JewelryTypeName
-            // 
-            this.JewelryTypeName.DataPropertyName = "JewelryTypeName";
-            this.JewelryTypeName.HeaderText = "Type";
-            this.JewelryTypeName.Name = "JewelryTypeName";
-            this.JewelryTypeName.ReadOnly = true;
-            this.JewelryTypeName.Width = 150;
-            // 
-            // PaymentName
-            // 
-            this.PaymentName.DataPropertyName = "PaymentName";
-            dataGridViewCellStyle4.Format = "N2";
-            this.PaymentName.DefaultCellStyle = dataGridViewCellStyle4;
-            this.PaymentName.HeaderText = "Payment";
-            this.PaymentName.Name = "PaymentName";
-            this.PaymentName.ReadOnly = true;
-            // 
-            // SellerName
-            // 
-            this.SellerName.DataPropertyName = "SellerName";
-            this.SellerName.HeaderText = "Seller";
-            this.SellerName.Name = "SellerName";
-            this.SellerName.ReadOnly = true;
-            this.SellerName.Width = 120;
-            // 
-            // ShopName
-            // 
-            this.ShopName.DataPropertyName = "ShopName";
-            this.ShopName.HeaderText = "Received Shop";
-            this.ShopName.Name = "ShopName";
-            this.ShopName.ReadOnly = true;
-            this.ShopName.Width = 150;
             // 
             // panel4
             // 
@@ -247,6 +170,84 @@
             this.tds.DataSetName = "dsSell";
             this.tds.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // RowNum
+            // 
+            this.RowNum.DataPropertyName = "RowNum";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.RowNum.DefaultCellStyle = dataGridViewCellStyle2;
+            this.RowNum.HeaderText = "No.";
+            this.RowNum.Name = "RowNum";
+            this.RowNum.ReadOnly = true;
+            this.RowNum.Width = 60;
+            // 
+            // ID
+            // 
+            this.ID.DataPropertyName = "ID";
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Visible = false;
+            // 
+            // SellDate
+            // 
+            this.SellDate.DataPropertyName = "SellDate";
+            dataGridViewCellStyle3.Format = "dd/MM/yyyy";
+            this.SellDate.DefaultCellStyle = dataGridViewCellStyle3;
+            this.SellDate.HeaderText = "Sold Date";
+            this.SellDate.Name = "SellDate";
+            this.SellDate.ReadOnly = true;
+            this.SellDate.Width = 120;
+            // 
+            // CustomerName
+            // 
+            this.CustomerName.DataPropertyName = "CustomerName";
+            this.CustomerName.HeaderText = "Customer";
+            this.CustomerName.Name = "CustomerName";
+            this.CustomerName.ReadOnly = true;
+            this.CustomerName.Width = 150;
+            // 
+            // SellNo
+            // 
+            this.SellNo.DataPropertyName = "SellNo";
+            this.SellNo.HeaderText = "Code";
+            this.SellNo.Name = "SellNo";
+            this.SellNo.ReadOnly = true;
+            this.SellNo.Width = 160;
+            // 
+            // JewelryTypeName
+            // 
+            this.JewelryTypeName.DataPropertyName = "JewelryTypeName";
+            this.JewelryTypeName.HeaderText = "Type";
+            this.JewelryTypeName.Name = "JewelryTypeName";
+            this.JewelryTypeName.ReadOnly = true;
+            this.JewelryTypeName.Visible = false;
+            this.JewelryTypeName.Width = 150;
+            // 
+            // PaymentName
+            // 
+            this.PaymentName.DataPropertyName = "PaymentName";
+            dataGridViewCellStyle4.Format = "N2";
+            this.PaymentName.DefaultCellStyle = dataGridViewCellStyle4;
+            this.PaymentName.HeaderText = "Payment";
+            this.PaymentName.Name = "PaymentName";
+            this.PaymentName.ReadOnly = true;
+            // 
+            // SellerName
+            // 
+            this.SellerName.DataPropertyName = "SellerName";
+            this.SellerName.HeaderText = "Seller";
+            this.SellerName.Name = "SellerName";
+            this.SellerName.ReadOnly = true;
+            this.SellerName.Width = 120;
+            // 
+            // ShopName
+            // 
+            this.ShopName.DataPropertyName = "ShopName";
+            this.ShopName.HeaderText = "Received Shop";
+            this.ShopName.Name = "ShopName";
+            this.ShopName.ReadOnly = true;
+            this.ShopName.Width = 150;
+            // 
             // SellBookList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -282,7 +283,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn SellDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn CustomerName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Code;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SellNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn JewelryTypeName;
         private System.Windows.Forms.DataGridViewTextBoxColumn PaymentName;
         private System.Windows.Forms.DataGridViewTextBoxColumn SellerName;

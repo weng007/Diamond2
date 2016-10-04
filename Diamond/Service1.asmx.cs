@@ -131,7 +131,7 @@ namespace Diamond
             }
             else if (TableName == "SellBook")
             {
-                SellBiz biz = GM.SellBiz();
+                SellBookBiz biz = GM.GetSellBookBiz();
                 try
                 {
                     return biz.DoSelectData(id);

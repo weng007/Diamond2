@@ -30,6 +30,7 @@ namespace DiamondShop
 
             binder.BindControl(txtSellNo, "SellNo");
             binder.BindControl(cmbSeller, "Seller");
+            binder.BindControl(cmbShopReceive, "ShopReceive");
             binder.BindControl(cmbShop, "Shop");
             binder.BindControl(txtUSDRate, "USDRate");
             binder.BindControl(dtSellDate, "SellDate");
@@ -42,7 +43,7 @@ namespace DiamondShop
 
             ds = ser.DoSelectData("ExchangeRate", id, 0);
             txtUSDRate.Text = ds.Tables[0].Rows[0]["USDRate"].ToString();
-            cmbShop.SelectedValue = ApplicationInfo.Shop.ToString();
+            cmbShop.SelectedValue = ApplicationInfo.Shop;
         }
         public SellBook(int id)
         {
@@ -51,6 +52,7 @@ namespace DiamondShop
 
             binder.BindControl(txtSellNo, "SellNo");
             binder.BindControl(cmbSeller, "Seller");
+            binder.BindControl(cmbShopReceive, "ShopReceive");
             binder.BindControl(cmbShop, "Shop");
             binder.BindControl(txtUSDRate, "USDRate");
             binder.BindControl(dtSellDate, "SellDate");
@@ -80,6 +82,11 @@ namespace DiamondShop
             cmbPayment.DisplayMember = "Detail";
             cmbPayment.Refresh();
 
+            cmbShopReceive.DataSource = (GM.GetMasterTableDetail("C007")).Tables[0];
+            cmbShopReceive.ValueMember = "ID";
+            cmbShopReceive.DisplayMember = "Detail";
+            cmbShopReceive.Refresh();
+
             cmbShop.DataSource = (GM.GetMasterTableDetail("C007")).Tables[0];
             cmbShop.ValueMember = "ID";
             cmbShop.DisplayMember = "Detail";
@@ -95,14 +102,14 @@ namespace DiamondShop
 
         protected override void LoadData()
         {
-            ds = ser.DoSelectData("Sell", id, 0);
+            ds = ser.DoSelectData("SellBook", id, 0);
             tds.Clear();
             tds.Merge(ds);
 
             if (tds.SellBook.Rows.Count > 0)
             {
                 binder.BindValueToControl(tds.SellBook[0]);
-                txtPayDate.Text = string.Format("{0:d/M/yyyy}", tds.SellBook[0]["Paydate"]);
+                txtPayDate.Text = string.Format("{0:d/M/yyyy}", tds.SellBook[0]["PaymentDate"]);
                 custID = tds.SellBook[0].CustID;
 
                 EnableSave = false;
@@ -147,6 +154,7 @@ namespace DiamondShop
             cmbPayment.Enabled = status;
             txtCustomer.Enabled = status;
             cmbStatus.Enabled = status;
+            cmbShopReceive.Enabled = status;
             cmbShop.Enabled = status;
             dtDueDate.Enabled = status;
             txtUSDRate.Enabled = status;
