@@ -39,6 +39,7 @@ namespace DiamondShop
             binder.BindControl(cmbBuyer, "Buyer");
             binder.BindControl(txtCode, "Code");
 
+            cmbShop.SelectedValue = ApplicationInfo.Shop;
         }
         public BuyBookGold(int id)
         {
