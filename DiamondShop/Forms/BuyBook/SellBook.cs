@@ -21,7 +21,7 @@ namespace DiamondShop
         dsSellbook tds = new dsSellbook();
         int custID = 0;
         int refID = 0;
-        string isPrintPrice = "1";
+        bool isAuthorize = false;
 
         public SellBook()
         {
@@ -34,13 +34,15 @@ namespace DiamondShop
             binder.BindControl(txtUSDRate, "USDRate");
             binder.BindControl(dtSellDate, "SellDate");
             binder.BindControl(dtDueDate, "DueDate");
-            binder.BindControl(txtDiscount, "Total");
+            binder.BindControl(txtDiscount, "Discount");
             binder.BindControl(cmbPayment, "Payment");
             binder.BindControl(txtCustomer, "CustomerName");
             binder.BindControl(txtNote, "Note");
+            binder.BindControl(cmbStatus, "Status");
 
             ds = ser.DoSelectData("ExchangeRate", id, 0);
             txtUSDRate.Text = ds.Tables[0].Rows[0]["USDRate"].ToString();
+            cmbShop.SelectedValue = ApplicationInfo.Shop.ToString();
         }
         public SellBook(int id)
         {
@@ -53,12 +55,14 @@ namespace DiamondShop
             binder.BindControl(txtUSDRate, "USDRate");
             binder.BindControl(dtSellDate, "SellDate");
             binder.BindControl(dtDueDate, "DueDate");
-            binder.BindControl(txtDiscount, "Total");
+            binder.BindControl(txtDiscount, "Discount");
             binder.BindControl(cmbPayment, "Payment");
             binder.BindControl(txtCustomer, "CustomerName");
             binder.BindControl(txtNote, "Note");
+            binder.BindControl(cmbStatus, "Status");
 
             this.id = id;
+            SetControlEnable(false);
             LoadData();
             isEdit = false;
         }
@@ -79,7 +83,12 @@ namespace DiamondShop
             cmbShop.DataSource = (GM.GetMasterTableDetail("C007")).Tables[0];
             cmbShop.ValueMember = "ID";
             cmbShop.DisplayMember = "Detail";
-            cmbShop.Refresh();          
+            cmbShop.Refresh();
+
+            cmbStatus.DataSource = (GM.GetMasterTableDetail("C023")).Tables[0];
+            cmbStatus.ValueMember = "ID";
+            cmbStatus.DisplayMember = "Detail";
+            cmbStatus.Refresh();
 
             SetFieldService.SetRequireField(txtCustomer);
         }
@@ -96,6 +105,8 @@ namespace DiamondShop
                 txtPayDate.Text = string.Format("{0:d/M/yyyy}", tds.SellBook[0]["Paydate"]);
                 custID = tds.SellBook[0].CustID;
 
+                EnableSave = false;
+                EnableEdit = GM.CheckIsEdit(ApplicationInfo.Shop, Convert.ToInt16(cmbShop.SelectedValue.ToString()));
                 EnableDelete = true;
             }
             SetFormatNumber();
@@ -103,7 +114,45 @@ namespace DiamondShop
 
             cmbSeller.SelectedValueChanged += cmbSeller_SelectedValueChanged;
         }
+        protected override void EditData()
+        {
+            if (isAuthorize)
+            {
+                EnableSave = true;
+                EnableDelete = true;
+                SetControlEnable(true);
+            }
+            else
+            {
+                RequirePassword frm = new RequirePassword(ApplicationInfo.Shop);
+                frm.ShowDialog();
+                isAuthorize = frm.isAuthorize;
+                frm.Close();
 
+                if (isAuthorize)
+                {
+                    EnableSave = true;
+                    EnableDelete = true;
+                    SetControlEnable(true);
+                    base.EditData();
+                }
+            }
+        }
+        private void SetControlEnable(bool status)
+        {
+            txtSellNo.Enabled = status;
+            cmbSeller.Enabled = status;
+            dtSellDate.Enabled = status;
+            txtDiscount.Enabled = status;
+            cmbPayment.Enabled = status;
+            txtCustomer.Enabled = status;
+            cmbStatus.Enabled = status;
+            cmbShop.Enabled = status;
+            dtDueDate.Enabled = status;
+            txtUSDRate.Enabled = status;
+            txtNote.Enabled = status;
+            btnChooseDate.Enabled = status;
+        }
         protected override bool SaveData()
         {
             dsSellbook.SellBookRow row = null;

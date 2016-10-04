@@ -309,7 +309,11 @@ namespace DiamondDS.DS {
             
             private global::System.Data.DataColumn columnCustomerName;
             
-            private global::System.Data.DataColumn columnTotal;
+            private global::System.Data.DataColumn columnDiscount;
+            
+            private global::System.Data.DataColumn columnStatus;
+            
+            private global::System.Data.DataColumn columnStatusName;
             
             private global::System.Data.DataColumn columnNote;
             
@@ -478,9 +482,25 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn TotalColumn {
+            public global::System.Data.DataColumn DiscountColumn {
                 get {
-                    return this.columnTotal;
+                    return this.columnDiscount;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn StatusColumn {
+                get {
+                    return this.columnStatus;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn StatusNameColumn {
+                get {
+                    return this.columnStatusName;
                 }
             }
             
@@ -584,7 +604,9 @@ namespace DiamondDS.DS {
                         System.DateTime PaymentDate1, 
                         int CustID, 
                         string CustomerName, 
-                        decimal Total, 
+                        decimal Discount, 
+                        int Status, 
+                        string StatusName, 
                         string Note, 
                         string IsDeleted, 
                         int CreateBy, 
@@ -608,7 +630,9 @@ namespace DiamondDS.DS {
                         PaymentDate1,
                         CustID,
                         CustomerName,
-                        Total,
+                        Discount,
+                        Status,
+                        StatusName,
                         Note,
                         IsDeleted,
                         CreateBy,
@@ -659,7 +683,9 @@ namespace DiamondDS.DS {
                 this.columnPaymentDate1 = base.Columns["PaymentDate1"];
                 this.columnCustID = base.Columns["CustID"];
                 this.columnCustomerName = base.Columns["CustomerName"];
-                this.columnTotal = base.Columns["Total"];
+                this.columnDiscount = base.Columns["Discount"];
+                this.columnStatus = base.Columns["Status"];
+                this.columnStatusName = base.Columns["StatusName"];
                 this.columnNote = base.Columns["Note"];
                 this.columnIsDeleted = base.Columns["IsDeleted"];
                 this.columnCreateBy = base.Columns["CreateBy"];
@@ -701,8 +727,12 @@ namespace DiamondDS.DS {
                 base.Columns.Add(this.columnCustID);
                 this.columnCustomerName = new global::System.Data.DataColumn("CustomerName", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCustomerName);
-                this.columnTotal = new global::System.Data.DataColumn("Total", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTotal);
+                this.columnDiscount = new global::System.Data.DataColumn("Discount", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDiscount);
+                this.columnStatus = new global::System.Data.DataColumn("Status", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnStatus);
+                this.columnStatusName = new global::System.Data.DataColumn("StatusName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnStatusName);
                 this.columnNote = new global::System.Data.DataColumn("Note", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnNote);
                 this.columnIsDeleted = new global::System.Data.DataColumn("IsDeleted", typeof(string), null, global::System.Data.MappingType.Element);
@@ -1110,17 +1140,49 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public decimal Total {
+            public decimal Discount {
                 get {
                     try {
-                        return ((decimal)(this[this.tableSellBook.TotalColumn]));
+                        return ((decimal)(this[this.tableSellBook.DiscountColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Total\' in table \'SellBook\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Discount\' in table \'SellBook\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableSellBook.TotalColumn] = value;
+                    this[this.tableSellBook.DiscountColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int Status {
+                get {
+                    try {
+                        return ((int)(this[this.tableSellBook.StatusColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Status\' in table \'SellBook\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSellBook.StatusColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string StatusName {
+                get {
+                    try {
+                        return ((string)(this[this.tableSellBook.StatusNameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'StatusName\' in table \'SellBook\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSellBook.StatusNameColumn] = value;
                 }
             }
             
@@ -1390,14 +1452,38 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsTotalNull() {
-                return this.IsNull(this.tableSellBook.TotalColumn);
+            public bool IsDiscountNull() {
+                return this.IsNull(this.tableSellBook.DiscountColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetTotalNull() {
-                this[this.tableSellBook.TotalColumn] = global::System.Convert.DBNull;
+            public void SetDiscountNull() {
+                this[this.tableSellBook.DiscountColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsStatusNull() {
+                return this.IsNull(this.tableSellBook.StatusColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetStatusNull() {
+                this[this.tableSellBook.StatusColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsStatusNameNull() {
+                return this.IsNull(this.tableSellBook.StatusNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetStatusNameNull() {
+                this[this.tableSellBook.StatusNameColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

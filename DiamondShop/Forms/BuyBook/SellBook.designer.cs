@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SellBook));
             this.panel3 = new System.Windows.Forms.Panel();
+            this.cmbStatus = new System.Windows.Forms.ComboBox();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.btnSetting = new System.Windows.Forms.Button();
             this.btnGold = new System.Windows.Forms.Button();
@@ -40,7 +41,6 @@
             this.btnGc = new System.Windows.Forms.Button();
             this.btnDC = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.txtDiscount = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -51,7 +51,6 @@
             this.txtPayDate = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.txtStatus = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.txtSellNo = new System.Windows.Forms.TextBox();
@@ -72,6 +71,7 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -79,6 +79,8 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Controls.Add(this.comboBox1);
+            this.panel3.Controls.Add(this.cmbStatus);
             this.panel3.Controls.Add(this.monthCalendar1);
             this.panel3.Controls.Add(this.btnSetting);
             this.panel3.Controls.Add(this.btnGold);
@@ -89,7 +91,6 @@
             this.panel3.Controls.Add(this.btnGc);
             this.panel3.Controls.Add(this.btnDC);
             this.panel3.Controls.Add(this.label16);
-            this.panel3.Controls.Add(this.textBox2);
             this.panel3.Controls.Add(this.label15);
             this.panel3.Controls.Add(this.txtDiscount);
             this.panel3.Controls.Add(this.label11);
@@ -100,7 +101,6 @@
             this.panel3.Controls.Add(this.txtPayDate);
             this.panel3.Controls.Add(this.label9);
             this.panel3.Controls.Add(this.label12);
-            this.panel3.Controls.Add(this.txtStatus);
             this.panel3.Controls.Add(this.label8);
             this.panel3.Controls.Add(this.label10);
             this.panel3.Controls.Add(this.txtSellNo);
@@ -127,6 +127,15 @@
             this.panel3.Size = new System.Drawing.Size(1215, 507);
             this.panel3.TabIndex = 1;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            // 
+            // cmbStatus
+            // 
+            this.cmbStatus.Enabled = false;
+            this.cmbStatus.FormattingEnabled = true;
+            this.cmbStatus.Location = new System.Drawing.Point(126, 146);
+            this.cmbStatus.Name = "cmbStatus";
+            this.cmbStatus.Size = new System.Drawing.Size(164, 28);
+            this.cmbStatus.TabIndex = 283;
             // 
             // monthCalendar1
             // 
@@ -281,14 +290,6 @@
             this.label16.TabIndex = 273;
             this.label16.Text = "Location";
             // 
-            // textBox2
-            // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox2.Location = new System.Drawing.Point(454, 110);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(167, 26);
-            this.textBox2.TabIndex = 272;
-            // 
             // label15
             // 
             this.label15.Location = new System.Drawing.Point(354, 78);
@@ -378,16 +379,6 @@
             this.label12.Size = new System.Drawing.Size(73, 28);
             this.label12.TabIndex = 197;
             this.label12.Text = "Status";
-            // 
-            // txtStatus
-            // 
-            this.txtStatus.BackColor = System.Drawing.SystemColors.Control;
-            this.txtStatus.Enabled = false;
-            this.txtStatus.Location = new System.Drawing.Point(126, 144);
-            this.txtStatus.Name = "txtStatus";
-            this.txtStatus.ReadOnly = true;
-            this.txtStatus.Size = new System.Drawing.Size(167, 26);
-            this.txtStatus.TabIndex = 196;
             // 
             // label8
             // 
@@ -586,6 +577,15 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // comboBox1
+            // 
+            this.comboBox1.Enabled = false;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(454, 112);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(164, 28);
+            this.comboBox1.TabIndex = 284;
+            // 
             // SellBook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -627,7 +627,6 @@
         private System.Windows.Forms.TextBox txtSellNo;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox txtStatus;
         private System.Windows.Forms.Button btnChooseDate;
         private System.Windows.Forms.TextBox txtPayDate;
         private System.Windows.Forms.Label label9;
@@ -638,7 +637,6 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox txtDiscount;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button btnSetting;
         private System.Windows.Forms.Button btnGold;
         private System.Windows.Forms.Button btnJewelry;
@@ -648,5 +646,7 @@
         private System.Windows.Forms.Button btnGc;
         private System.Windows.Forms.Button btnDC;
         private System.Windows.Forms.MonthCalendar monthCalendar1;
+        private System.Windows.Forms.ComboBox cmbStatus;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

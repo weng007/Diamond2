@@ -247,7 +247,7 @@
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
             dataGridViewCellStyle4.Format = "N0";
             this.SalePrice.DefaultCellStyle = dataGridViewCellStyle4;
-            this.SalePrice.HeaderText = "ขายอก";
+            this.SalePrice.HeaderText = "ขายออก";
             this.SalePrice.Name = "SalePrice";
             this.SalePrice.ReadOnly = true;
             this.SalePrice.Width = 130;
