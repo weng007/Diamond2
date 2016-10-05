@@ -149,10 +149,10 @@ namespace DiamondShop
                     if (grid1.Rows[rowIndex].Cells["ID"].Value != null)
                     {
                         DeleteDataGrid(0);
-                    }                  
-                }
+                    }
 
-                grid1.Rows.RemoveAt(rowIndex);            
+                    grid1.Rows.RemoveAt(rowIndex);
+                }                       
             }
             catch(Exception ex)
             {
@@ -201,9 +201,9 @@ namespace DiamondShop
                     {
                         DeleteDataGrid(1);
                     }
-                }
 
-                grid2.Rows.RemoveAt(rowIndex);
+                    grid2.Rows.RemoveAt(rowIndex);
+                }
             }
             catch (Exception ex)
             {
