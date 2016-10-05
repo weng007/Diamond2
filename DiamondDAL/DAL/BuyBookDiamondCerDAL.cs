@@ -15,7 +15,7 @@ namespace DiamondDAL.DAL
         int flag = 0;
 
         public dsBuyBookDiamondCer DoSearchData(string code, string reportNumber, int shape, int lab, double sWeight, double eWeight, int colorType, int sColor,
-            int eColor, int sClearity, int eClearity, int status, int shop,string Code2)
+            int eColor, int sClearity, int eClearity, int status, int shop,string code2, int mode)
         {
             try
             {
@@ -33,7 +33,8 @@ namespace DiamondDAL.DAL
                 SQL.CreateParameter("eClearity", eClearity);
                 SQL.CreateParameter("Status", status);
                 SQL.CreateParameter("Shop", shop);
-                SQL.CreateParameter("Code2", Code2);
+                SQL.CreateParameter("Code2", code2);
+                SQL.CreateParameter("Mode", mode);
                 SQL.FillDataSetBySP("SP_BuyBookDiamondCer_Search", ds.BuyBookDiamondCer);
             }
             catch (Exception ex)
@@ -44,12 +45,13 @@ namespace DiamondDAL.DAL
             return ds;
         }
 
-        public dsBuyBookDiamondCer DoSelectData(int id)
+        public dsBuyBookDiamondCer DoSelectData(int id, int mode)
         {
             try
             {
                 SQL.ClearParameter();
                 SQL.CreateParameter("ID", id);
+                SQL.CreateParameter("MODE", mode);
                 SQL.FillDataSetBySP("SP_BuyBookDiamondCer_Sel", ds.BuyBookDiamondCer);            
             }
             catch (Exception ex)

@@ -76,7 +76,7 @@ namespace DiamondShop
 
         protected override void DoLoadData()
         {
-            ds = ser.DoSelectData("BuyBookDiamondCer", -1, 0);
+            ds = ser.DoSelectData("BuyBookDiamondCer", -1, mode);
 
             if (ds.Tables[0].Rows.Count > 0)
             {
@@ -109,7 +109,7 @@ namespace DiamondShop
                 Convert.ToInt16(cmbColorType.SelectedValue.ToString()), Convert.ToInt16(cmbSColor.SelectedValue.ToString()),
                 Convert.ToInt16(cmbEColor.SelectedValue.ToString()), Convert.ToInt16(cmbSClearity.SelectedValue.ToString()),
                 Convert.ToInt16(cmbEClearity.SelectedValue.ToString()), Convert.ToInt16(cmbStatus.SelectedValue.ToString()),
-                Convert.ToInt16(cmbShop.SelectedValue.ToString()),txtCode2.Text);
+                Convert.ToInt16(cmbShop.SelectedValue.ToString()),txtCode2.Text, mode);
 
             if (ds.Tables[0].Rows.Count > 0)
             {

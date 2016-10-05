@@ -211,7 +211,7 @@ namespace Diamond
                 BuyBookDiamondCerBiz biz = GM.GetBuyBookDiamondCerBiz();
                 try
                 {
-                    return biz.DoSelectData(id);
+                    return biz.DoSelectData(id,mode);
                 }
                 catch (Exception ex)
                 {
