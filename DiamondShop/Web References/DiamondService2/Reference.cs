@@ -90,6 +90,8 @@ namespace DiamondShop.DiamondService2 {
         
         private System.Threading.SendOrPostCallback DoSearchExpenseOperationCompleted;
         
+        private System.Threading.SendOrPostCallback DoSearchReceiveDocumentOperationCompleted;
+        
         private bool useDefaultCredentialsSetExplicitly;
         
         /// <remarks/>
@@ -217,6 +219,9 @@ namespace DiamondShop.DiamondService2 {
         
         /// <remarks/>
         public event DoSearchExpenseCompletedEventHandler DoSearchExpenseCompleted;
+        
+        /// <remarks/>
+        public event DoSearchReceiveDocumentCompletedEventHandler DoSearchReceiveDocumentCompleted;
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/DoSearchCustomer", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
@@ -1309,6 +1314,43 @@ namespace DiamondShop.DiamondService2 {
         }
         
         /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/DoSearchReceiveDocument", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataSet DoSearchReceiveDocument(string ReceiveNo, System.DateTime SReceiveDate, System.DateTime EReceiveDate, int Receiver, string Seller) {
+            object[] results = this.Invoke("DoSearchReceiveDocument", new object[] {
+                        ReceiveNo,
+                        SReceiveDate,
+                        EReceiveDate,
+                        Receiver,
+                        Seller});
+            return ((System.Data.DataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void DoSearchReceiveDocumentAsync(string ReceiveNo, System.DateTime SReceiveDate, System.DateTime EReceiveDate, int Receiver, string Seller) {
+            this.DoSearchReceiveDocumentAsync(ReceiveNo, SReceiveDate, EReceiveDate, Receiver, Seller, null);
+        }
+        
+        /// <remarks/>
+        public void DoSearchReceiveDocumentAsync(string ReceiveNo, System.DateTime SReceiveDate, System.DateTime EReceiveDate, int Receiver, string Seller, object userState) {
+            if ((this.DoSearchReceiveDocumentOperationCompleted == null)) {
+                this.DoSearchReceiveDocumentOperationCompleted = new System.Threading.SendOrPostCallback(this.OnDoSearchReceiveDocumentOperationCompleted);
+            }
+            this.InvokeAsync("DoSearchReceiveDocument", new object[] {
+                        ReceiveNo,
+                        SReceiveDate,
+                        EReceiveDate,
+                        Receiver,
+                        Seller}, this.DoSearchReceiveDocumentOperationCompleted, userState);
+        }
+        
+        private void OnDoSearchReceiveDocumentOperationCompleted(object arg) {
+            if ((this.DoSearchReceiveDocumentCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.DoSearchReceiveDocumentCompleted(this, new DoSearchReceiveDocumentCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
         public new void CancelAsync(object userState) {
             base.CancelAsync(userState);
         }
@@ -2094,6 +2136,32 @@ namespace DiamondShop.DiamondService2 {
         private object[] results;
         
         internal DoSearchExpenseCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Data.DataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Data.DataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void DoSearchReceiveDocumentCompletedEventHandler(object sender, DoSearchReceiveDocumentCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class DoSearchReceiveDocumentCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal DoSearchReceiveDocumentCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }

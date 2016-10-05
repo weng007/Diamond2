@@ -5,9 +5,9 @@
       <s:import namespace="http://tempuri.org/dsUser.xsd" />
       <s:import namespace="http://tempuri.org/dsOrder.xsd" />
       <s:import namespace="http://tempuri.org/dsExpenseGroup.xsd" />
-      <s:import schemaLocation="http://localhost:5555/DiamondService/Service2.asmx?schema=dsExpenseGroup" namespace="http://tempuri.org/dsExpenseGroup.xsd" />
-      <s:import schemaLocation="http://localhost:5555/DiamondService/Service2.asmx?schema=dsUser" namespace="http://tempuri.org/dsUser.xsd" />
       <s:import schemaLocation="http://localhost:5555/DiamondService/Service2.asmx?schema=dsOrder" namespace="http://tempuri.org/dsOrder.xsd" />
+      <s:import schemaLocation="http://localhost:5555/DiamondService/Service2.asmx?schema=dsUser" namespace="http://tempuri.org/dsUser.xsd" />
+      <s:import schemaLocation="http://localhost:5555/DiamondService/Service2.asmx?schema=dsExpenseGroup" namespace="http://tempuri.org/dsExpenseGroup.xsd" />
       <s:element name="DoAuthenticate">
         <s:complexType>
           <s:sequence>
@@ -136,7 +136,7 @@
         <s:complexType>
           <s:sequence>
             <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
-            <s:element minOccurs="1" maxOccurs="1" name="Flag" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="WarningID" type="s:int" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -338,6 +338,27 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="GetReportReceiveDocument">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetReportReceiveDocumentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetReportReceiveDocumentResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
       <s:element name="GetReportCertificate">
         <s:complexType>
           <s:sequence>
@@ -519,6 +540,12 @@
   <wsdl:message name="GetReportOrderSoapOut">
     <wsdl:part name="parameters" element="tns:GetReportOrderResponse" />
   </wsdl:message>
+  <wsdl:message name="GetReportReceiveDocumentSoapIn">
+    <wsdl:part name="parameters" element="tns:GetReportReceiveDocument" />
+  </wsdl:message>
+  <wsdl:message name="GetReportReceiveDocumentSoapOut">
+    <wsdl:part name="parameters" element="tns:GetReportReceiveDocumentResponse" />
+  </wsdl:message>
   <wsdl:message name="GetReportCertificateSoapIn">
     <wsdl:part name="parameters" element="tns:GetReportCertificate" />
   </wsdl:message>
@@ -613,6 +640,10 @@
     <wsdl:operation name="GetReportOrder">
       <wsdl:input message="tns:GetReportOrderSoapIn" />
       <wsdl:output message="tns:GetReportOrderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReportReceiveDocument">
+      <wsdl:input message="tns:GetReportReceiveDocumentSoapIn" />
+      <wsdl:output message="tns:GetReportReceiveDocumentSoapOut" />
     </wsdl:operation>
     <wsdl:operation name="GetReportCertificate">
       <wsdl:input message="tns:GetReportCertificateSoapIn" />
@@ -774,6 +805,15 @@
     </wsdl:operation>
     <wsdl:operation name="GetReportOrder">
       <soap:operation soapAction="http://tempuri.org/GetReportOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReportReceiveDocument">
+      <soap:operation soapAction="http://tempuri.org/GetReportReceiveDocument" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -966,6 +1006,15 @@
     </wsdl:operation>
     <wsdl:operation name="GetReportOrder">
       <soap12:operation soapAction="http://tempuri.org/GetReportOrder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReportReceiveDocument">
+      <soap12:operation soapAction="http://tempuri.org/GetReportReceiveDocument" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
