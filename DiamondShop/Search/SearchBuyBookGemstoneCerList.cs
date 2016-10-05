@@ -141,7 +141,7 @@ namespace DiamondShop
                 Convert.ToInt16(cmbComment.SelectedValue.ToString()),
                 Convert.ToInt16(cmbOrigin.SelectedValue.ToString()),
                 Convert.ToInt16(cmbStatus.SelectedValue.ToString()),
-                Convert.ToInt16(cmbShop.SelectedValue.ToString()),txtCode2.Text);
+                Convert.ToInt16(cmbShop.SelectedValue.ToString()),txtCode2.Text, mode);
 
             if (ds.Tables[0].Rows.Count > 0)
             {

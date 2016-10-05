@@ -13,11 +13,11 @@ namespace DiamondBiz.Biz
         dsBuyBookGemstoneCer ds = new dsBuyBookGemstoneCer();
         BuyBookGemstoneCerDAL dal = new BuyBookGemstoneCerDAL();
 
-        public dsBuyBookGemstoneCer DoSearchData(string code, string reportNumber, int shape, int lab, double sWeight, double eWeight, int identification, int comment, int origin, int status, int shop, string code2)
+        public dsBuyBookGemstoneCer DoSearchData(string code, string reportNumber, int shape, int lab, double sWeight, double eWeight, int identification, int comment, int origin, int status, int shop, string code2, int mode)
         {
             try
             {
-                return dal.DoSearchData(code, reportNumber, shape, lab, sWeight, eWeight, identification, comment, origin, status, shop, code2);
+                return dal.DoSearchData(code, reportNumber, shape, lab, sWeight, eWeight, identification, comment, origin, status, shop, code2, mode);
             }
             catch (Exception ex)
             {
@@ -25,11 +25,11 @@ namespace DiamondBiz.Biz
             }
         }
 
-        public dsBuyBookGemstoneCer DoSelectData(int id)
+        public dsBuyBookGemstoneCer DoSelectData(int id, int mode)
         {
             try
             {
-                return dal.DoSelectData(id);
+                return dal.DoSelectData(id, mode);
             }
             catch (Exception ex)
             {

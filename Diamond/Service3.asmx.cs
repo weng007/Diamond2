@@ -142,13 +142,14 @@ namespace Diamond
         }
 
         [WebMethod]
-        public DataSet DoSearchBuyBookGemstoneCer(string code, string reportNumber, int shape, int lab, double sWeight, double eWeight, int identification, int comment, int origin, int status, int shop, string code2)
+        public DataSet DoSearchBuyBookGemstoneCer(string code, string reportNumber, int shape, int lab, double sWeight, double eWeight, int identification, int comment, 
+            int origin, int status, int shop, string code2, int mode)
         {
             BuyBookGemstoneCerBiz biz = new BuyBookGemstoneCerBiz();
 
             try
             {
-                return biz.DoSearchData(code, reportNumber, shape, lab, sWeight, eWeight, identification, comment, origin, status, shop, code2);
+                return biz.DoSearchData(code, reportNumber, shape, lab, sWeight, eWeight, identification, comment, origin, status, shop, code2, mode);
             }
             catch (Exception ex)
             {
