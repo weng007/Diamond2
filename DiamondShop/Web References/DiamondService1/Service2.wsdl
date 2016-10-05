@@ -5,9 +5,9 @@
       <s:import namespace="http://tempuri.org/dsUser.xsd" />
       <s:import namespace="http://tempuri.org/dsOrder.xsd" />
       <s:import namespace="http://tempuri.org/dsExpenseGroup.xsd" />
-      <s:import schemaLocation="http://localhost:5555/DiamondService/Service2.asmx?schema=dsOrder" namespace="http://tempuri.org/dsOrder.xsd" />
-      <s:import schemaLocation="http://localhost:5555/DiamondService/Service2.asmx?schema=dsUser" namespace="http://tempuri.org/dsUser.xsd" />
-      <s:import schemaLocation="http://localhost:5555/DiamondService/Service2.asmx?schema=dsExpenseGroup" namespace="http://tempuri.org/dsExpenseGroup.xsd" />
+      <s:import schemaLocation="http://localhost:8888/DiamondService/Service2.asmx?schema=dsUser" namespace="http://tempuri.org/dsUser.xsd" />
+      <s:import schemaLocation="http://localhost:8888/DiamondService/Service2.asmx?schema=dsOrder" namespace="http://tempuri.org/dsOrder.xsd" />
+      <s:import schemaLocation="http://localhost:8888/DiamondService/Service2.asmx?schema=dsExpenseGroup" namespace="http://tempuri.org/dsExpenseGroup.xsd" />
       <s:element name="DoAuthenticate">
         <s:complexType>
           <s:sequence>
@@ -1070,10 +1070,10 @@
   </wsdl:binding>
   <wsdl:service name="Service2">
     <wsdl:port name="Service2Soap" binding="tns:Service2Soap">
-      <soap:address location="http://localhost:5555/DiamondService/Service2.asmx" />
+      <soap:address location="http://localhost:8888/DiamondService/Service2.asmx" />
     </wsdl:port>
     <wsdl:port name="Service2Soap12" binding="tns:Service2Soap12">
-      <soap12:address location="http://localhost:5555/DiamondService/Service2.asmx" />
+      <soap12:address location="http://localhost:8888/DiamondService/Service2.asmx" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>

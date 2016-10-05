@@ -423,14 +423,17 @@ namespace DiamondShop
         private void GetMaterial()
         {
             int i = 1;
-            foreach (DataRow row in tds1.Tables[0].Rows)
+            foreach (DataRow row in ds.Tables[1].Rows)
             {
                 materail += i.ToString()+"."+ row["Code"].ToString()+","+" "+row["Weight"].ToString()+"Ct."+"\n";
+                i++;
             }
+            
           
-            foreach (DataRow row in tds2.Tables[0].Rows)
+            foreach (DataRow row in ds.Tables[0].Rows)
             {
                 materail += i.ToString() + "." + row["Code"].ToString() + "," + " "+row["IdentificationName"].ToString() + "," + " " + row["Weight"].ToString() + "Ct." + "\n";
+                i++;
             }
         }
     }
