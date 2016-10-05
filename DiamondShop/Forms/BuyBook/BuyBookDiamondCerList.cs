@@ -175,6 +175,8 @@ namespace DiamondShop
                         {
                             DoLoadData();
                         }
+
+                    frm.Close();
                     }
             }
             else //mode = 1 Search
