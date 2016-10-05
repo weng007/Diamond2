@@ -55,6 +55,19 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.grid1 = new System.Windows.Forms.DataGridView();
+            this.btnDel1 = new System.Windows.Forms.Button();
+            this.txtSumCost1 = new System.Windows.Forms.TextBox();
+            this.txtSumWeight1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.grid2 = new System.Windows.Forms.DataGridView();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnDel = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnAdd1 = new System.Windows.Forms.Button();
+            this.txtSumCost = new System.Windows.Forms.TextBox();
+            this.txtSumWeight = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
             this.RowNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Code1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -68,14 +81,9 @@
             this.ShopName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RefID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RefID1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnDel1 = new System.Windows.Forms.Button();
-            this.txtSumCost1 = new System.Windows.Forms.TextBox();
-            this.txtSumWeight1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.grid2 = new System.Windows.Forms.DataGridView();
             this.RowNum2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RefID2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ID2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ID1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Code11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ReportNumber2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IdentificationName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -86,14 +94,6 @@
             this.OriginName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TotalBaht2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ShopName2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btnDel = new System.Windows.Forms.Button();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.btnAdd1 = new System.Windows.Forms.Button();
-            this.txtSumCost = new System.Windows.Forms.TextBox();
-            this.txtSumWeight = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid1)).BeginInit();
@@ -186,6 +186,192 @@
             this.grid1.Size = new System.Drawing.Size(1272, 181);
             this.grid1.TabIndex = 46;
             this.grid1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid2_CellClick);
+            // 
+            // btnDel1
+            // 
+            this.btnDel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDel1.BackgroundImage")));
+            this.btnDel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnDel1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDel1.FlatAppearance.BorderSize = 0;
+            this.btnDel1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDel1.Location = new System.Drawing.Point(1290, 309);
+            this.btnDel1.Name = "btnDel1";
+            this.btnDel1.Size = new System.Drawing.Size(30, 30);
+            this.btnDel1.TabIndex = 131;
+            this.btnDel1.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnDel1.UseVisualStyleBackColor = true;
+            this.btnDel1.Click += new System.EventHandler(this.btnDel1_Click);
+            // 
+            // txtSumCost1
+            // 
+            this.txtSumCost1.BackColor = System.Drawing.SystemColors.Window;
+            this.txtSumCost1.Enabled = false;
+            this.txtSumCost1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSumCost1.Location = new System.Drawing.Point(1015, 482);
+            this.txtSumCost1.Name = "txtSumCost1";
+            this.txtSumCost1.ReadOnly = true;
+            this.txtSumCost1.Size = new System.Drawing.Size(133, 26);
+            this.txtSumCost1.TabIndex = 130;
+            this.txtSumCost1.Text = "0";
+            this.txtSumCost1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // txtSumWeight1
+            // 
+            this.txtSumWeight1.BackColor = System.Drawing.SystemColors.Window;
+            this.txtSumWeight1.Enabled = false;
+            this.txtSumWeight1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSumWeight1.Location = new System.Drawing.Point(715, 482);
+            this.txtSumWeight1.Name = "txtSumWeight1";
+            this.txtSumWeight1.ReadOnly = true;
+            this.txtSumWeight1.Size = new System.Drawing.Size(73, 26);
+            this.txtSumWeight1.TabIndex = 129;
+            this.txtSumWeight1.Text = "0";
+            this.txtSumWeight1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
+            this.label1.Location = new System.Drawing.Point(655, 485);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(59, 24);
+            this.label1.TabIndex = 128;
+            this.label1.Text = "Total";
+            // 
+            // grid2
+            // 
+            this.grid2.AllowUserToAddRows = false;
+            this.grid2.AllowUserToOrderColumns = true;
+            this.grid2.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.grid2.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.grid2.ColumnHeadersHeight = 33;
+            this.grid2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.RowNum2,
+            this.RefID2,
+            this.ID1,
+            this.Code11,
+            this.ReportNumber2,
+            this.IdentificationName,
+            this.LabName2,
+            this.ShapeName2,
+            this.Weight2,
+            this.ColorName2,
+            this.OriginName,
+            this.TotalBaht2,
+            this.ShopName2});
+            this.grid2.Location = new System.Drawing.Point(12, 282);
+            this.grid2.Name = "grid2";
+            this.grid2.RowHeadersWidth = 10;
+            this.grid2.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grid2.RowTemplate.Height = 25;
+            this.grid2.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.grid2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.grid2.Size = new System.Drawing.Size(1272, 188);
+            this.grid2.TabIndex = 127;
+            this.grid2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid2_CellClick);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(8, 249);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(117, 20);
+            this.label3.TabIndex = 126;
+            this.label3.Text = "Gemstone Cer.";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(8, 11);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(106, 20);
+            this.label2.TabIndex = 125;
+            this.label2.Text = "Diamond Cer.";
+            // 
+            // btnDel
+            // 
+            this.btnDel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDel.BackgroundImage")));
+            this.btnDel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnDel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDel.FlatAppearance.BorderSize = 0;
+            this.btnDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDel.Location = new System.Drawing.Point(1290, 71);
+            this.btnDel.Name = "btnDel";
+            this.btnDel.Size = new System.Drawing.Size(30, 30);
+            this.btnDel.TabIndex = 123;
+            this.btnDel.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnDel.UseVisualStyleBackColor = true;
+            this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAdd.BackgroundImage")));
+            this.btnAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAdd.FlatAppearance.BorderSize = 0;
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.Location = new System.Drawing.Point(1290, 35);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(30, 30);
+            this.btnAdd.TabIndex = 122;
+            this.btnAdd.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // btnAdd1
+            // 
+            this.btnAdd1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAdd1.BackgroundImage")));
+            this.btnAdd1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnAdd1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAdd1.FlatAppearance.BorderSize = 0;
+            this.btnAdd1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd1.Location = new System.Drawing.Point(1290, 273);
+            this.btnAdd1.Name = "btnAdd1";
+            this.btnAdd1.Size = new System.Drawing.Size(30, 30);
+            this.btnAdd1.TabIndex = 120;
+            this.btnAdd1.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnAdd1.UseVisualStyleBackColor = true;
+            this.btnAdd1.Click += new System.EventHandler(this.btnAdd1_Click);
+            // 
+            // txtSumCost
+            // 
+            this.txtSumCost.BackColor = System.Drawing.SystemColors.Window;
+            this.txtSumCost.Enabled = false;
+            this.txtSumCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSumCost.Location = new System.Drawing.Point(995, 227);
+            this.txtSumCost.Name = "txtSumCost";
+            this.txtSumCost.ReadOnly = true;
+            this.txtSumCost.Size = new System.Drawing.Size(133, 26);
+            this.txtSumCost.TabIndex = 114;
+            this.txtSumCost.Text = "0";
+            this.txtSumCost.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // txtSumWeight
+            // 
+            this.txtSumWeight.BackColor = System.Drawing.SystemColors.Window;
+            this.txtSumWeight.Enabled = false;
+            this.txtSumWeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSumWeight.Location = new System.Drawing.Point(392, 227);
+            this.txtSumWeight.Name = "txtSumWeight";
+            this.txtSumWeight.ReadOnly = true;
+            this.txtSumWeight.Size = new System.Drawing.Size(79, 26);
+            this.txtSumWeight.TabIndex = 113;
+            this.txtSumWeight.Text = "0";
+            this.txtSumWeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label14
+            // 
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
+            this.label14.Location = new System.Drawing.Point(327, 230);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(59, 24);
+            this.label14.TabIndex = 48;
+            this.label14.Text = "Total";
             // 
             // RowNum
             // 
@@ -315,90 +501,6 @@
             this.RefID1.Name = "RefID1";
             this.RefID1.Visible = false;
             // 
-            // btnDel1
-            // 
-            this.btnDel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDel1.BackgroundImage")));
-            this.btnDel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnDel1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDel1.FlatAppearance.BorderSize = 0;
-            this.btnDel1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDel1.Location = new System.Drawing.Point(1290, 309);
-            this.btnDel1.Name = "btnDel1";
-            this.btnDel1.Size = new System.Drawing.Size(30, 30);
-            this.btnDel1.TabIndex = 131;
-            this.btnDel1.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnDel1.UseVisualStyleBackColor = true;
-            this.btnDel1.Click += new System.EventHandler(this.btnDel1_Click);
-            // 
-            // txtSumCost1
-            // 
-            this.txtSumCost1.BackColor = System.Drawing.SystemColors.Window;
-            this.txtSumCost1.Enabled = false;
-            this.txtSumCost1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSumCost1.Location = new System.Drawing.Point(1015, 482);
-            this.txtSumCost1.Name = "txtSumCost1";
-            this.txtSumCost1.ReadOnly = true;
-            this.txtSumCost1.Size = new System.Drawing.Size(133, 26);
-            this.txtSumCost1.TabIndex = 130;
-            this.txtSumCost1.Text = "0";
-            this.txtSumCost1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // txtSumWeight1
-            // 
-            this.txtSumWeight1.BackColor = System.Drawing.SystemColors.Window;
-            this.txtSumWeight1.Enabled = false;
-            this.txtSumWeight1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSumWeight1.Location = new System.Drawing.Point(715, 482);
-            this.txtSumWeight1.Name = "txtSumWeight1";
-            this.txtSumWeight1.ReadOnly = true;
-            this.txtSumWeight1.Size = new System.Drawing.Size(73, 26);
-            this.txtSumWeight1.TabIndex = 129;
-            this.txtSumWeight1.Text = "0";
-            this.txtSumWeight1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label1.Location = new System.Drawing.Point(655, 485);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(59, 24);
-            this.label1.TabIndex = 128;
-            this.label1.Text = "Total";
-            // 
-            // grid2
-            // 
-            this.grid2.AllowUserToAddRows = false;
-            this.grid2.AllowUserToOrderColumns = true;
-            this.grid2.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.grid2.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.grid2.ColumnHeadersHeight = 33;
-            this.grid2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.RowNum2,
-            this.RefID2,
-            this.ID2,
-            this.Code11,
-            this.ReportNumber2,
-            this.IdentificationName,
-            this.LabName2,
-            this.ShapeName2,
-            this.Weight2,
-            this.ColorName2,
-            this.OriginName,
-            this.TotalBaht2,
-            this.ShopName2});
-            this.grid2.Location = new System.Drawing.Point(12, 282);
-            this.grid2.Name = "grid2";
-            this.grid2.RowHeadersWidth = 10;
-            this.grid2.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grid2.RowTemplate.Height = 25;
-            this.grid2.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.grid2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grid2.Size = new System.Drawing.Size(1272, 188);
-            this.grid2.TabIndex = 127;
-            this.grid2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid2_CellClick);
-            // 
             // RowNum2
             // 
             this.RowNum2.DataPropertyName = "RowNum";
@@ -415,12 +517,12 @@
             this.RefID2.Name = "RefID2";
             this.RefID2.Visible = false;
             // 
-            // ID2
+            // ID1
             // 
-            this.ID2.DataPropertyName = "ID";
-            this.ID2.HeaderText = "ID";
-            this.ID2.Name = "ID2";
-            this.ID2.Visible = false;
+            this.ID1.DataPropertyName = "ID";
+            this.ID1.HeaderText = "ID";
+            this.ID1.Name = "ID1";
+            this.ID1.Visible = false;
             // 
             // Code11
             // 
@@ -527,108 +629,6 @@
             this.ShopName2.ReadOnly = true;
             this.ShopName2.Width = 110;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(8, 249);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(117, 20);
-            this.label3.TabIndex = 126;
-            this.label3.Text = "Gemstone Cer.";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(8, 11);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(106, 20);
-            this.label2.TabIndex = 125;
-            this.label2.Text = "Diamond Cer.";
-            // 
-            // btnDel
-            // 
-            this.btnDel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDel.BackgroundImage")));
-            this.btnDel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnDel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDel.FlatAppearance.BorderSize = 0;
-            this.btnDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDel.Location = new System.Drawing.Point(1290, 71);
-            this.btnDel.Name = "btnDel";
-            this.btnDel.Size = new System.Drawing.Size(30, 30);
-            this.btnDel.TabIndex = 123;
-            this.btnDel.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnDel.UseVisualStyleBackColor = true;
-            this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAdd.BackgroundImage")));
-            this.btnAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAdd.FlatAppearance.BorderSize = 0;
-            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(1290, 35);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(30, 30);
-            this.btnAdd.TabIndex = 122;
-            this.btnAdd.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // btnAdd1
-            // 
-            this.btnAdd1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAdd1.BackgroundImage")));
-            this.btnAdd1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnAdd1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAdd1.FlatAppearance.BorderSize = 0;
-            this.btnAdd1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd1.Location = new System.Drawing.Point(1290, 273);
-            this.btnAdd1.Name = "btnAdd1";
-            this.btnAdd1.Size = new System.Drawing.Size(30, 30);
-            this.btnAdd1.TabIndex = 120;
-            this.btnAdd1.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnAdd1.UseVisualStyleBackColor = true;
-            this.btnAdd1.Click += new System.EventHandler(this.btnAdd1_Click);
-            // 
-            // txtSumCost
-            // 
-            this.txtSumCost.BackColor = System.Drawing.SystemColors.Window;
-            this.txtSumCost.Enabled = false;
-            this.txtSumCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSumCost.Location = new System.Drawing.Point(995, 227);
-            this.txtSumCost.Name = "txtSumCost";
-            this.txtSumCost.ReadOnly = true;
-            this.txtSumCost.Size = new System.Drawing.Size(133, 26);
-            this.txtSumCost.TabIndex = 114;
-            this.txtSumCost.Text = "0";
-            this.txtSumCost.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // txtSumWeight
-            // 
-            this.txtSumWeight.BackColor = System.Drawing.SystemColors.Window;
-            this.txtSumWeight.Enabled = false;
-            this.txtSumWeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSumWeight.Location = new System.Drawing.Point(392, 227);
-            this.txtSumWeight.Name = "txtSumWeight";
-            this.txtSumWeight.ReadOnly = true;
-            this.txtSumWeight.Size = new System.Drawing.Size(79, 26);
-            this.txtSumWeight.TabIndex = 113;
-            this.txtSumWeight.Text = "0";
-            this.txtSumWeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label14
-            // 
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label14.Location = new System.Drawing.Point(327, 230);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(59, 24);
-            this.label14.TabIndex = 48;
-            this.label14.Text = "Total";
-            // 
             // OrderDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -683,7 +683,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn RefID1;
         private System.Windows.Forms.DataGridViewTextBoxColumn RowNum2;
         private System.Windows.Forms.DataGridViewTextBoxColumn RefID2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Code11;
         private System.Windows.Forms.DataGridViewTextBoxColumn ReportNumber2;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdentificationName;
