@@ -165,6 +165,11 @@ namespace DiamondShop
             ExpenseList frm = new ExpenseList();
             SetFormList(frm, 25, "Expense");
         }
+        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            ReceiveDocumentList frm = new ReceiveDocumentList();
+            SetFormList(frm, 26, "ReceiveDocument");
+        }
         private void btnReportBuying_Click(object sender, EventArgs e)
         {
             ReportBuyingList frm = new ReportBuyingList();
@@ -190,6 +195,7 @@ namespace DiamondShop
             ReportCustomerList frm = new ReportCustomerList();
             frm.ShowDialog();
         }
+
         private void menuExchangeRate_Click(object sender, EventArgs e)
         {
             ExchangeRate frm = new ExchangeRate();

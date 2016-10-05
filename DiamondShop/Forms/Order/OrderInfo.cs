@@ -54,19 +54,19 @@ namespace DiamondShop
             ds = ser1.GetFactoryStatus(id);
             tds.Clear();
             tds.Merge(ds);
-            if (tds.Order[0].FactoryStatus == 256)
+            if (tds.Order[0].FactoryStatus == 218)
             {
                 btnNotYet.Image = imageList1.Images[0];
             }
-            if (tds.Order[0].FactoryStatus == 257)
+            if (tds.Order[0].FactoryStatus == 219)
             {
                 btnProcessing.Image = imageList1.Images[1];
             }
-            if (tds.Order[0].FactoryStatus == 258)
+            if (tds.Order[0].FactoryStatus == 220)
             {
                 btnMounting.Image = imageList1.Images[2];
             }
-            if (tds.Order[0].FactoryStatus == 259)
+            if (tds.Order[0].FactoryStatus == 221)
             {
                 btnJobDone.Image = imageList1.Images[3];
             }
@@ -237,17 +237,17 @@ namespace DiamondShop
                     txtNote.Text = materail;
                 }
               }
-                if (ApplicationInfo.Shop == 239)// 239 = Office
+                if (ApplicationInfo.Shop == 232)// 232 = Factory
                 {
                     FactoryStatus = tds.Order[0].FactoryStatus;
                     
-                    if (FactoryStatus == 257)// Processing
+                    if (FactoryStatus == 219)// Processing
                     {
-                        btnPrint.Enabled = true;
+                        btnPrint.Visible = true;
                     }
                     btnConfirm.Visible = true;
                 }
-            if(tds.Order[0].FactoryStatus == 257)
+            if(tds.Order[0].FactoryStatus == 219)
             {
                 btnNotYet.Enabled = false;
                 btnProcessing.Enabled = true;
@@ -313,7 +313,7 @@ namespace DiamondShop
                     row.OrderNo = GM.GetRunningNumber("ORD");
                     //พึ่งซื้อยังไม่ได้ขายให้ลูกค้า
                     //row.SoldTo = 0;
-                    row.FactoryStatus = 256;
+                    row.FactoryStatus = 218;
                     SetCreateBy(row);
                     chkFlag = ser.DoInsertData("Order", tds, 0);
 
@@ -325,8 +325,8 @@ namespace DiamondShop
                     chkFlag = ser.DoUpdateData("Order", tds);
                     if (flag == 1)//กดปุ่ม Confirm
                     {
-                        id = WarningID;
-                        ser1.UpdateOrderStatus(id, 1);
+                        //id = WarningID;
+                        ser1.UpdateOrderStatus(id, WarningID);
                     }
                 }
 
@@ -492,8 +492,8 @@ namespace DiamondShop
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-            btnNotYet.Enabled = false;
-            btnProcessing.Enabled = true;
+            btnNotYet.Image = imageList1.Images[4];
+            btnProcessing.Image = imageList1.Images[1];
             flag = 1;
         }
 

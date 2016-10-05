@@ -241,6 +241,7 @@
             this.btnPrint.Size = new System.Drawing.Size(76, 90);
             this.btnPrint.TabIndex = 308;
             this.btnPrint.UseVisualStyleBackColor = false;
+            this.btnPrint.Visible = false;
             this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
             // btnRefDel1
@@ -1183,6 +1184,7 @@
             this.imageList1.Images.SetKeyName(1, "btnProcessing.png");
             this.imageList1.Images.SetKeyName(2, "btnMounting.png");
             this.imageList1.Images.SetKeyName(3, "btnJobDone.png");
+            this.imageList1.Images.SetKeyName(4, "btnEnableNotYet.png");
             // 
             // OrderInfo
             // 

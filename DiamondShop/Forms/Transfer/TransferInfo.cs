@@ -129,7 +129,7 @@ namespace DiamondShop
             }
 
             binder.BindValueToDataRow(row);
-            row.TransferStatus = 253;
+            row.TransferStatus = 222;
             row.Sender = Convert.ToInt32(ApplicationInfo.UserID.ToString());
             row.ReceiveDate = DateTime.MinValue.AddYears(1900);
             row.IsBuyBook = "1";
@@ -149,7 +149,7 @@ namespace DiamondShop
                     //Receiver 
                     if (Convert.ToInt16(cmbReceiver.SelectedValue.ToString()) == ApplicationInfo.UserID)
                     {
-                        row.TransferStatus = 254; //สถานะ received
+                        row.TransferStatus = 223; //สถานะ received
                         row.ReceiveDate = Convert.ToDateTime(DateTime.Now.ToString());
                     }
                     SetEditBy(row);

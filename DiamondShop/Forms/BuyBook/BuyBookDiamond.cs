@@ -19,6 +19,8 @@ namespace DiamondShop
         
         DataSet ds2 = new DataSet();
         bool isAuthorize = false;
+        public int ReceiveDocID = 0;
+        public string ReceiveDocNo = "";
 
         public BuyBookDiamond()
         {
@@ -49,6 +51,7 @@ namespace DiamondShop
             binder.BindControl(txtNote, "Note");
             binder.BindControl(cmbBuyer, "Buyer");
             binder.BindControl(txtCode2, "Code2");
+            binder.BindControl(txtReceiveNo, "ReceiveDocNo");
 
             dtDueDate.Value = dtBuyDate.Value.AddDays(30);
 
@@ -80,6 +83,7 @@ namespace DiamondShop
             binder.BindControl(txtNote, "Note");
             binder.BindControl(cmbBuyer, "Buyer");
             binder.BindControl(txtCode2, "Code2");
+            binder.BindControl(txtReceiveNo, "ReceiveDocNo");
 
             this.id = id;
             LoadData();
@@ -189,6 +193,7 @@ namespace DiamondShop
 
             binder.BindValueToDataRow(row);
             row.IsPaid = rdoPayment1.Checked ? "1" : "0";
+
             if (txtPayDate.Text == "")
             {
                 row.PayDate = DateTime.MinValue.AddYears(1900);
@@ -479,6 +484,14 @@ namespace DiamondShop
             txtPayDate.Text = monthCalendar1.SelectionRange.Start.ToShortDateString();
             monthCalendar1.Visible = false;
             isEdit = true;
+        }
+
+        private void btnBrowseReceiveNo_Click(object sender, EventArgs e)
+        {
+            ReceiveDocumentList frm = new ReceiveDocumentList(1);
+            frm.ShowDialog();
+            ReceiveDocID = frm.ReceiveDocID;
+            txtReceiveNo.Text = frm.ReceiveDocNo;
         }
     }
 }

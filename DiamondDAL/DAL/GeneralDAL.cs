@@ -73,13 +73,13 @@ namespace DiamondDAL.DAL
 
             return flag;
         }
-        public int UpdateOrderStatus(int id, int Flag)
+        public int UpdateOrderStatus(int id, int WarningID)
         {
             try
             {
                 SQL.ClearParameter();
                 SQL.CreateParameter("@ID", id);
-                SQL.CreateParameter("@Flag", Flag);
+                SQL.CreateParameter("@WarningID", WarningID);
                 flag = SQL.ExecuteSP("SP_OrderStatus_Upd");
             }
             catch (Exception ex)
@@ -304,6 +304,21 @@ namespace DiamondDAL.DAL
 
             return flag;
         }
-             
+        public DataSet GetReportReceiveDocument(int ID)
+        {
+            try
+            {
+                SQL.ClearParameter();
+                SQL.CreateParameter("@ID", ID);
+                SQL.FillDataSetBySP2("SP_Rpt_ReceiveDocument", ds);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return ds;
+        }
+
     }
 }

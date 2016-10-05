@@ -476,5 +476,19 @@ namespace Diamond
                 throw ex;
             }
         }
+        [WebMethod]
+        public DataSet DoSearchReceiveDocument(string ReceiveNo, DateTime SReceiveDate, DateTime EReceiveDate, int Receiver, string Seller)
+        {
+            ReceiveDocumentBiz biz = new ReceiveDocumentBiz();
+
+            try
+            {
+                return biz.DoSearchData(ReceiveNo, SReceiveDate, EReceiveDate, Receiver, Seller);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

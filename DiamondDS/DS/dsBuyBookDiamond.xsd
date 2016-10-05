@@ -14,7 +14,7 @@
   <xs:element name="dsBuyBookDiamond" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsBuyBookDiamond" msprop:Generator_UserDSName="dsBuyBookDiamond">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="BuyBookDiamond" msprop:Generator_TableClassName="BuyBookDiamondDataTable" msprop:Generator_TableVarName="tableBuyBookDiamond" msprop:Generator_RowChangedName="BuyBookDiamondRowChanged" msprop:Generator_TablePropName="BuyBookDiamond" msprop:Generator_RowDeletingName="BuyBookDiamondRowDeleting" msprop:Generator_RowChangingName="BuyBookDiamondRowChanging" msprop:Generator_RowEvHandlerName="BuyBookDiamondRowChangeEventHandler" msprop:Generator_RowDeletedName="BuyBookDiamondRowDeleted" msprop:Generator_RowClassName="BuyBookDiamondRow" msprop:Generator_UserTableName="BuyBookDiamond" msprop:Generator_RowEvArgName="BuyBookDiamondRowChangeEvent">
+        <xs:element name="BuyBookDiamond" msprop:Generator_TableClassName="BuyBookDiamondDataTable" msprop:Generator_TableVarName="tableBuyBookDiamond" msprop:Generator_TablePropName="BuyBookDiamond" msprop:Generator_RowDeletingName="BuyBookDiamondRowDeleting" msprop:Generator_RowChangingName="BuyBookDiamondRowChanging" msprop:Generator_RowEvHandlerName="BuyBookDiamondRowChangeEventHandler" msprop:Generator_RowDeletedName="BuyBookDiamondRowDeleted" msprop:Generator_UserTableName="BuyBookDiamond" msprop:Generator_RowChangedName="BuyBookDiamondRowChanged" msprop:Generator_RowEvArgName="BuyBookDiamondRowChangeEvent" msprop:Generator_RowClassName="BuyBookDiamondRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="RowNum" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnRowNum" msprop:Generator_ColumnPropNameInRow="RowNum" msprop:Generator_ColumnPropNameInTable="RowNumColumn" msprop:Generator_UserColumnName="RowNum" type="xs:long" minOccurs="0" />
@@ -98,6 +98,8 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+              <xs:element name="ReceiveDocID" msprop:Generator_ColumnVarNameInTable="columnReceiveDocID" msprop:Generator_ColumnPropNameInRow="ReceiveDocID" msprop:Generator_ColumnPropNameInTable="ReceiveDocIDColumn" msprop:Generator_UserColumnName="ReceiveDocID" type="xs:int" minOccurs="0" />
+              <xs:element name="ReceiveDocNo" msprop:Generator_ColumnVarNameInTable="columnReceiveDocNo" msprop:Generator_ColumnPropNameInRow="ReceiveDocNo" msprop:Generator_ColumnPropNameInTable="ReceiveDocNoColumn" msprop:Generator_UserColumnName="ReceiveDocNo" type="xs:string" minOccurs="0" />
               <xs:element name="IsDeleted" msprop:Generator_ColumnVarNameInTable="columnIsDeleted" msprop:Generator_ColumnPropNameInRow="IsDeleted" msprop:Generator_ColumnPropNameInTable="IsDeletedColumn" msprop:Generator_UserColumnName="IsDeleted" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">

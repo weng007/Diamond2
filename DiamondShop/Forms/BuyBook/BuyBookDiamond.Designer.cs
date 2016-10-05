@@ -32,6 +32,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dtBuyDate = new System.Windows.Forms.DateTimePicker();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnBrowseReceiveNo = new System.Windows.Forms.Button();
+            this.txtReceiveNo = new System.Windows.Forms.TextBox();
+            this.label27 = new System.Windows.Forms.Label();
             this.txtPayDate = new System.Windows.Forms.TextBox();
             this.btnChooseDate = new System.Windows.Forms.Button();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
@@ -116,6 +119,9 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.btnBrowseReceiveNo);
+            this.panel3.Controls.Add(this.txtReceiveNo);
+            this.panel3.Controls.Add(this.label27);
             this.panel3.Controls.Add(this.txtPayDate);
             this.panel3.Controls.Add(this.btnChooseDate);
             this.panel3.Controls.Add(this.monthCalendar1);
@@ -177,9 +183,45 @@
             this.panel3.Size = new System.Drawing.Size(945, 515);
             this.panel3.TabIndex = 74;
             // 
+            // btnBrowseReceiveNo
+            // 
+            this.btnBrowseReceiveNo.BackColor = System.Drawing.Color.Transparent;
+            this.btnBrowseReceiveNo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBrowseReceiveNo.BackgroundImage")));
+            this.btnBrowseReceiveNo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnBrowseReceiveNo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBrowseReceiveNo.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(109)))), ((int)(((byte)(65)))));
+            this.btnBrowseReceiveNo.FlatAppearance.BorderSize = 0;
+            this.btnBrowseReceiveNo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBrowseReceiveNo.Location = new System.Drawing.Point(907, 84);
+            this.btnBrowseReceiveNo.Name = "btnBrowseReceiveNo";
+            this.btnBrowseReceiveNo.Size = new System.Drawing.Size(30, 30);
+            this.btnBrowseReceiveNo.TabIndex = 227;
+            this.btnBrowseReceiveNo.UseVisualStyleBackColor = false;
+            this.btnBrowseReceiveNo.Click += new System.EventHandler(this.btnBrowseReceiveNo_Click);
+            // 
+            // txtReceiveNo
+            // 
+            this.txtReceiveNo.BackColor = System.Drawing.Color.White;
+            this.txtReceiveNo.Enabled = false;
+            this.txtReceiveNo.Location = new System.Drawing.Point(737, 87);
+            this.txtReceiveNo.Name = "txtReceiveNo";
+            this.txtReceiveNo.ReadOnly = true;
+            this.txtReceiveNo.Size = new System.Drawing.Size(166, 26);
+            this.txtReceiveNo.TabIndex = 228;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
+            this.label27.Location = new System.Drawing.Point(642, 92);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(86, 20);
+            this.label27.TabIndex = 226;
+            this.label27.Text = "ReceiveNo";
+            // 
             // txtPayDate
             // 
-            this.txtPayDate.Location = new System.Drawing.Point(737, 137);
+            this.txtPayDate.Location = new System.Drawing.Point(737, 190);
             this.txtPayDate.Name = "txtPayDate";
             this.txtPayDate.Size = new System.Drawing.Size(157, 26);
             this.txtPayDate.TabIndex = 224;
@@ -190,7 +232,7 @@
             this.btnChooseDate.FlatAppearance.BorderSize = 0;
             this.btnChooseDate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnChooseDate.Image = ((System.Drawing.Image)(resources.GetObject("btnChooseDate.Image")));
-            this.btnChooseDate.Location = new System.Drawing.Point(893, 136);
+            this.btnChooseDate.Location = new System.Drawing.Point(893, 189);
             this.btnChooseDate.Name = "btnChooseDate";
             this.btnChooseDate.Size = new System.Drawing.Size(34, 28);
             this.btnChooseDate.TabIndex = 223;
@@ -199,7 +241,7 @@
             // 
             // monthCalendar1
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(700, 170);
+            this.monthCalendar1.Location = new System.Drawing.Point(700, 223);
             this.monthCalendar1.MaxSelectionCount = 1;
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 222;
@@ -248,7 +290,7 @@
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label22.Location = new System.Drawing.Point(650, 141);
+            this.label22.Location = new System.Drawing.Point(650, 194);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(82, 20);
             this.label22.TabIndex = 179;
@@ -565,7 +607,7 @@
             this.rdoPayment2.AutoSize = true;
             this.rdoPayment2.Checked = true;
             this.rdoPayment2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.rdoPayment2.Location = new System.Drawing.Point(803, 100);
+            this.rdoPayment2.Location = new System.Drawing.Point(803, 153);
             this.rdoPayment2.Name = "rdoPayment2";
             this.rdoPayment2.Size = new System.Drawing.Size(47, 24);
             this.rdoPayment2.TabIndex = 44;
@@ -578,7 +620,7 @@
             // 
             this.rdoPayment1.AutoSize = true;
             this.rdoPayment1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.rdoPayment1.Location = new System.Drawing.Point(737, 100);
+            this.rdoPayment1.Location = new System.Drawing.Point(737, 153);
             this.rdoPayment1.Name = "rdoPayment1";
             this.rdoPayment1.Size = new System.Drawing.Size(55, 24);
             this.rdoPayment1.TabIndex = 40;
@@ -591,7 +633,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label12.Location = new System.Drawing.Point(650, 102);
+            this.label12.Location = new System.Drawing.Point(650, 155);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(78, 20);
             this.label12.TabIndex = 145;
@@ -622,7 +664,7 @@
             // cmbClearity
             // 
             this.cmbClearity.FormattingEnabled = true;
-            this.cmbClearity.Location = new System.Drawing.Point(737, 52);
+            this.cmbClearity.Location = new System.Drawing.Point(737, 50);
             this.cmbClearity.Name = "cmbClearity";
             this.cmbClearity.Size = new System.Drawing.Size(179, 28);
             this.cmbClearity.TabIndex = 26;
@@ -632,7 +674,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label11.Location = new System.Drawing.Point(652, 55);
+            this.label11.Location = new System.Drawing.Point(652, 53);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(61, 20);
             this.label11.TabIndex = 123;
@@ -917,5 +959,8 @@
         private System.Windows.Forms.MonthCalendar monthCalendar1;
         private System.Windows.Forms.Button btnChooseDate;
         private System.Windows.Forms.TextBox txtPayDate;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Button btnBrowseReceiveNo;
+        private System.Windows.Forms.TextBox txtReceiveNo;
     }
 }

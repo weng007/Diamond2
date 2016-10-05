@@ -120,12 +120,12 @@ namespace Diamond
         }
 
         [WebMethod]
-        public int UpdateOrderStatus(int id, int Flag)
+        public int UpdateOrderStatus(int id, int WarningID)
         {
             GeneralCBiz biz = new GeneralCBiz();
             try
             {
-                return biz.UpdateOrderStatus(id, Flag);
+                return biz.UpdateOrderStatus(id, WarningID);
             }
             catch (Exception ex)
             {
@@ -233,6 +233,19 @@ namespace Diamond
             try
             {
                 return biz.GetReportOrder(ID);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        [WebMethod]
+        public DataSet GetReportReceiveDocument(int ID)
+        {
+            GeneralCBiz biz = new GeneralCBiz();
+            try
+            {
+                return biz.GetReportReceiveDocument(ID);
             }
             catch (Exception ex)
             {

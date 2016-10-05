@@ -48,13 +48,13 @@ namespace DiamondBiz.Biz
             }
         }
 
-        public int UpdateOrderStatus(int id, int Flag)
+        public int UpdateOrderStatus(int id, int WarningID)
         {
             int tmp = 0;
 
             try
             {
-                return dal.UpdateOrderStatus(id, Flag);
+                return dal.UpdateOrderStatus(id, WarningID);
             }
             catch (Exception ex)
             {
@@ -158,6 +158,17 @@ namespace DiamondBiz.Biz
             try
             {
                 return dal.GetReportOrder(ID);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public DataSet GetReportReceiveDocument(int ID)
+        {
+            try
+            {
+                return dal.GetReportReceiveDocument(ID);
             }
             catch (Exception ex)
             {

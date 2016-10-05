@@ -114,6 +114,7 @@
             this.btnReportInventory = new System.Windows.Forms.ToolStripMenuItem();
             this.btnReportDebt = new System.Windows.Forms.ToolStripMenuItem();
             this.btnReportCustomer = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnReceiveDocument = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -874,6 +875,7 @@
             // btnBuyBook
             // 
             this.btnBuyBook.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnReceiveDocument,
             this.mnBBCD,
             this.mnBBCG,
             this.mnBBJW,
@@ -998,7 +1000,7 @@
             this.MenuPayment.Image = ((System.Drawing.Image)(resources.GetObject("MenuPayment.Image")));
             this.MenuPayment.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.MenuPayment.Name = "MenuPayment";
-            this.MenuPayment.Size = new System.Drawing.Size(149, 38);
+            this.MenuPayment.Size = new System.Drawing.Size(168, 38);
             this.MenuPayment.Text = "Payment";
             this.MenuPayment.Click += new System.EventHandler(this.MenuPayment_Click);
             // 
@@ -1008,7 +1010,7 @@
             this.expenseToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("expenseToolStripMenuItem.Image")));
             this.expenseToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.expenseToolStripMenuItem.Name = "expenseToolStripMenuItem";
-            this.expenseToolStripMenuItem.Size = new System.Drawing.Size(149, 38);
+            this.expenseToolStripMenuItem.Size = new System.Drawing.Size(168, 38);
             this.expenseToolStripMenuItem.Text = "Expense";
             this.expenseToolStripMenuItem.Click += new System.EventHandler(this.expenseToolStripMenuItem_Click);
             // 
@@ -1075,6 +1077,13 @@
             this.btnReportCustomer.Size = new System.Drawing.Size(206, 38);
             this.btnReportCustomer.Text = "Report Customer";
             this.btnReportCustomer.Click += new System.EventHandler(this.btnReportCustomer_Click);
+            // 
+            // mnReceiveDocument
+            // 
+            this.mnReceiveDocument.Name = "mnReceiveDocument";
+            this.mnReceiveDocument.Size = new System.Drawing.Size(225, 38);
+            this.mnReceiveDocument.Text = "ReceiveDocument";
+            this.mnReceiveDocument.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
             // 
             // Main
             // 
@@ -1190,6 +1199,7 @@
         private System.Windows.Forms.ToolStripMenuItem mnSellBook;
         private System.Windows.Forms.ToolStripMenuItem expenseGroupToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem expenseToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mnReceiveDocument;
     }
 }
 

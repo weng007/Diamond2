@@ -1598,8 +1598,9 @@
           <Rectangle Name="Rectangle4">
             <ReportItems>
               <Image Name="Image3">
-                <Source>Embedded</Source>
+                <Source>Database</Source>
                 <Value>=First(Fields!Image1.Value, "dsReportOrder")</Value>
+                <MIMEType>image/png</MIMEType>
                 <Sizing>FitProportional</Sizing>
                 <Top>0.0125in</Top>
                 <Height>1.48959in</Height>
@@ -1611,8 +1612,9 @@
                 </Style>
               </Image>
               <Image Name="Image4">
-                <Source>Embedded</Source>
+                <Source>Database</Source>
                 <Value>=First(Fields!Image2.Value, "dsReportOrder")</Value>
+                <MIMEType>image/png</MIMEType>
                 <Sizing>FitProportional</Sizing>
                 <Left>1.51166in</Left>
                 <Height>1.48959in</Height>
@@ -1625,8 +1627,9 @@
                 </Style>
               </Image>
               <Image Name="Image5">
-                <Source>Embedded</Source>
+                <Source>Database</Source>
                 <Value>=First(Fields!Image3.Value, "dsReportOrder")</Value>
+                <MIMEType>image/png</MIMEType>
                 <Sizing>FitProportional</Sizing>
                 <Top>0.00208in</Top>
                 <Left>3.02888in</Left>
@@ -1640,8 +1643,9 @@
                 </Style>
               </Image>
               <Image Name="Image6">
-                <Source>Embedded</Source>
+                <Source>Database</Source>
                 <Value>=First(Fields!Image4.Value, "dsReportOrder")</Value>
+                <MIMEType>image/png</MIMEType>
                 <Sizing>FitProportional</Sizing>
                 <Top>1.58574in</Top>
                 <Height>1.48959in</Height>
@@ -1654,8 +1658,9 @@
                 </Style>
               </Image>
               <Image Name="Image7">
-                <Source>Embedded</Source>
-                <Value>=First(Fields!Image4.Value, "dsReportOrder")</Value>
+                <Source>Database</Source>
+                <Value>=First(Fields!Image5.Value, "dsReportOrder")</Value>
+                <MIMEType>image/png</MIMEType>
                 <Sizing>FitProportional</Sizing>
                 <Top>1.58574in</Top>
                 <Left>1.51166in</Left>
@@ -2067,8 +2072,9 @@
             </Style>
           </Rectangle>
           <Image Name="Image8">
-            <Source>Embedded</Source>
+            <Source>Database</Source>
             <Value>=First(Fields!InventoryImg1.Value, "dsReportOrder")</Value>
+            <MIMEType>image/png</MIMEType>
             <Sizing>FitProportional</Sizing>
             <Top>8.90508in</Top>
             <Left>0.23284in</Left>
@@ -2082,8 +2088,9 @@
             </Style>
           </Image>
           <Image Name="Image9">
-            <Source>Embedded</Source>
+            <Source>Database</Source>
             <Value>=First(Fields!InventoryImg2.Value, "dsReportOrder")</Value>
+            <MIMEType>image/png</MIMEType>
             <Sizing>FitProportional</Sizing>
             <Top>8.90508in</Top>
             <Left>1.89172in</Left>

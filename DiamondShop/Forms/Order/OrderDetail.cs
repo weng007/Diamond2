@@ -133,6 +133,8 @@ namespace DiamondShop
                 dr["ShopName"] = tds1.Tables[0].Rows[0]["ShopName"];
                 dr["RefID1"] = tds1.Tables[0].Rows[0]["ID"];
                 ds.Tables[1].Rows.Add(dr);
+
+                grid1.DataSource = ds.Tables[1];
                 grid1.RefreshEdit();
                 CalSum(0);
             }
@@ -423,7 +425,7 @@ namespace DiamondShop
           
             foreach (DataRow row in tds2.Tables[0].Rows)
             {
-                materail += i.ToString() + "." + row["Code"].ToString() + "," + " "+row["Type"].ToString() + "," + " " + row["Weight"].ToString() + "Ct." + "\n";
+                materail += i.ToString() + "." + row["Code"].ToString() + "," + " "+row["IdentificationName"].ToString() + "," + " " + row["Weight"].ToString() + "Ct." + "\n";
             }
         }
     }

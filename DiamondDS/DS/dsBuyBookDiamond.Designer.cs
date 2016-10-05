@@ -333,6 +333,10 @@ namespace DiamondDS.DS {
             
             private global::System.Data.DataColumn columnNote;
             
+            private global::System.Data.DataColumn columnReceiveDocID;
+            
+            private global::System.Data.DataColumn columnReceiveDocNo;
+            
             private global::System.Data.DataColumn columnIsDeleted;
             
             private global::System.Data.DataColumn columnCreateBy;
@@ -602,6 +606,22 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ReceiveDocIDColumn {
+                get {
+                    return this.columnReceiveDocID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ReceiveDocNoColumn {
+                get {
+                    return this.columnReceiveDocNo;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn IsDeletedColumn {
                 get {
                     return this.columnIsDeleted;
@@ -736,6 +756,8 @@ namespace DiamondDS.DS {
                         decimal PriceCarat, 
                         decimal MarketPrice, 
                         string Note, 
+                        int ReceiveDocID, 
+                        string ReceiveDocNo, 
                         string IsDeleted, 
                         int CreateBy, 
                         System.DateTime CreateDate, 
@@ -774,6 +796,8 @@ namespace DiamondDS.DS {
                         PriceCarat,
                         MarketPrice,
                         Note,
+                        ReceiveDocID,
+                        ReceiveDocNo,
                         IsDeleted,
                         CreateBy,
                         CreateDate,
@@ -839,6 +863,8 @@ namespace DiamondDS.DS {
                 this.columnPriceCarat = base.Columns["PriceCarat"];
                 this.columnMarketPrice = base.Columns["MarketPrice"];
                 this.columnNote = base.Columns["Note"];
+                this.columnReceiveDocID = base.Columns["ReceiveDocID"];
+                this.columnReceiveDocNo = base.Columns["ReceiveDocNo"];
                 this.columnIsDeleted = base.Columns["IsDeleted"];
                 this.columnCreateBy = base.Columns["CreateBy"];
                 this.columnCreateDate = base.Columns["CreateDate"];
@@ -907,6 +933,10 @@ namespace DiamondDS.DS {
                 base.Columns.Add(this.columnMarketPrice);
                 this.columnNote = new global::System.Data.DataColumn("Note", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnNote);
+                this.columnReceiveDocID = new global::System.Data.DataColumn("ReceiveDocID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnReceiveDocID);
+                this.columnReceiveDocNo = new global::System.Data.DataColumn("ReceiveDocNo", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnReceiveDocNo);
                 this.columnIsDeleted = new global::System.Data.DataColumn("IsDeleted", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnIsDeleted);
                 this.columnCreateBy = new global::System.Data.DataColumn("CreateBy", typeof(int), null, global::System.Data.MappingType.Element);
@@ -1517,6 +1547,38 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int ReceiveDocID {
+                get {
+                    try {
+                        return ((int)(this[this.tableBuyBookDiamond.ReceiveDocIDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ReceiveDocID\' in table \'BuyBookDiamond\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableBuyBookDiamond.ReceiveDocIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string ReceiveDocNo {
+                get {
+                    try {
+                        return ((string)(this[this.tableBuyBookDiamond.ReceiveDocNoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ReceiveDocNo\' in table \'BuyBookDiamond\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableBuyBookDiamond.ReceiveDocNoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string IsDeleted {
                 get {
                     try {
@@ -1969,6 +2031,30 @@ namespace DiamondDS.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetNoteNull() {
                 this[this.tableBuyBookDiamond.NoteColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsReceiveDocIDNull() {
+                return this.IsNull(this.tableBuyBookDiamond.ReceiveDocIDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetReceiveDocIDNull() {
+                this[this.tableBuyBookDiamond.ReceiveDocIDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsReceiveDocNoNull() {
+                return this.IsNull(this.tableBuyBookDiamond.ReceiveDocNoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetReceiveDocNoNull() {
+                this[this.tableBuyBookDiamond.ReceiveDocNoColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

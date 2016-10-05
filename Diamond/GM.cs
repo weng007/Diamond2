@@ -54,6 +54,7 @@ namespace Diamond
         static SellBookBiz bizSellBook;
         static ExpenseGroupBiz bizExpenseGroup;
         static ExpenseBiz bizExpense;
+        static ReceiveDocumentBiz bizReceiveDocument;
 
         public static MasterTableDetailBiz GetMasterTableDetailBiz()
         {
@@ -315,6 +316,12 @@ namespace Diamond
             if (bizExpense == null)
             { return new ExpenseBiz(); }
             else { return bizExpense; }
+        }
+        public static ReceiveDocumentBiz GetReceiveDocumentBiz()
+        {
+            if (bizReceiveDocument == null)
+            { return new ReceiveDocumentBiz(); }
+            else { return bizReceiveDocument; }
         }
     }
 }

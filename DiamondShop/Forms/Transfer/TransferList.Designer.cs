@@ -48,8 +48,6 @@
             this.dtSSendDate = new System.Windows.Forms.DateTimePicker();
             this.cmbTransferStatus = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.cmbReceiver = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
@@ -87,8 +85,6 @@
             this.panel4.Controls.Add(this.dtSSendDate);
             this.panel4.Controls.Add(this.cmbTransferStatus);
             this.panel4.Controls.Add(this.label3);
-            this.panel4.Controls.Add(this.cmbReceiver);
-            this.panel4.Controls.Add(this.label4);
             this.panel4.Controls.Add(this.label5);
             this.panel4.Controls.Add(this.btnAdd);
             this.panel4.Controls.Add(this.btnSearch);
@@ -221,7 +217,7 @@
             // cmbTransferStatus
             // 
             this.cmbTransferStatus.FormattingEnabled = true;
-            this.cmbTransferStatus.Location = new System.Drawing.Point(875, 15);
+            this.cmbTransferStatus.Location = new System.Drawing.Point(542, 16);
             this.cmbTransferStatus.Name = "cmbTransferStatus";
             this.cmbTransferStatus.Size = new System.Drawing.Size(172, 29);
             this.cmbTransferStatus.TabIndex = 77;
@@ -230,29 +226,11 @@
             // 
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(734, 18);
+            this.label3.Location = new System.Drawing.Point(412, 19);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(136, 26);
             this.label3.TabIndex = 78;
             this.label3.Text = "Transfer Status";
-            // 
-            // cmbReceiver
-            // 
-            this.cmbReceiver.FormattingEnabled = true;
-            this.cmbReceiver.Location = new System.Drawing.Point(541, 16);
-            this.cmbReceiver.Name = "cmbReceiver";
-            this.cmbReceiver.Size = new System.Drawing.Size(172, 29);
-            this.cmbReceiver.TabIndex = 74;
-            // 
-            // label4
-            // 
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(421, 19);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(80, 26);
-            this.label4.TabIndex = 76;
-            this.label4.Text = "Receiver";
             // 
             // label5
             // 
@@ -356,7 +334,7 @@
             this.SenderName.HeaderText = "Sender";
             this.SenderName.Name = "SenderName";
             this.SenderName.ReadOnly = true;
-            this.SenderName.Width = 170;
+            this.SenderName.Width = 150;
             // 
             // TransferNo
             // 
@@ -364,6 +342,7 @@
             this.TransferNo.HeaderText = "TransferNo";
             this.TransferNo.Name = "TransferNo";
             this.TransferNo.ReadOnly = true;
+            this.TransferNo.Width = 150;
             // 
             // SendDate
             // 
@@ -429,8 +408,6 @@
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.ComboBox cmbTransferStatus;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox cmbReceiver;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker dtEReceiveDate;
         private System.Windows.Forms.Label label2;
