@@ -173,8 +173,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsExchangeRate.xsd</DependentUpon>
     </Compile>
-    <Compile Include="DS\dsExpense.Designer.cs" />
-    <Compile Include="DS\dsExpenseGroup.Designer.cs" />
+    <Compile Include="DS\dsExpense.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsExpense.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS\dsExpenseGroup.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsExpenseGroup.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DS\dsGemstoneCer.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -233,7 +241,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsProductionLine.xsd</DependentUpon>
     </Compile>
-    <Compile Include="DS\dsReceiveDocument.Designer.cs" />
+    <Compile Include="DS\dsReceiveDocument.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsReceiveDocument.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DS\dsReportBuying.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -262,7 +274,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsReportOrder.xsd</DependentUpon>
     </Compile>
-    <Compile Include="DS\dsReportReceiveDocument.Designer.cs" />
+    <Compile Include="DS\dsReportReceiveDocument.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsReportReceiveDocument.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DS\dsReportSelling.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -273,7 +289,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsSell.xsd</DependentUpon>
     </Compile>
-    <Compile Include="DS\dsSellbook.Designer.cs" />
+    <Compile Include="DS\dsSellbook.cs">
+      <DependentUpon>dsSellbook.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS\dsSellbook.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsSellbook.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DS\dsTransfer.cs">
       <DependentUpon>dsTransfer.xsd</DependentUpon>
     </Compile>
@@ -589,7 +612,7 @@
     </None>
     <None Include="DS\dsExpense.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>dsExpense1.Designer.cs</LastGenOutput>
+      <LastGenOutput>dsExpense.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
     <None Include="DS\dsExpense.xss">
@@ -600,7 +623,7 @@
     </None>
     <None Include="DS\dsExpenseGroup.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>dsExpenseGroup1.Designer.cs</LastGenOutput>
+      <LastGenOutput>dsExpenseGroup.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
     <None Include="DS\dsExpenseGroup.xss">
@@ -731,9 +754,9 @@
       <DependentUpon>dsReceiveDocument.xsd</DependentUpon>
     </None>
     <None Include="DS\dsReceiveDocument.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>dsReceiveDocument1.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsReceiveDocument.Designer.cs</LastGenOutput>
     </None>
     <None Include="DS\dsReceiveDocument.xss">
       <DependentUpon>dsReceiveDocument.xsd</DependentUpon>
@@ -797,9 +820,9 @@
       <DependentUpon>dsReportReceiveDocument.xsd</DependentUpon>
     </None>
     <None Include="DS\dsReportReceiveDocument.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>dsReportReceiveDocument1.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsReportReceiveDocument.Designer.cs</LastGenOutput>
     </None>
     <None Include="DS\dsReportReceiveDocument.xss">
       <DependentUpon>dsReportReceiveDocument.xsd</DependentUpon>
@@ -831,7 +854,7 @@
     </None>
     <None Include="DS\dsSellbook.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>dsSellbook1.Designer.cs</LastGenOutput>
+      <LastGenOutput>dsSellbook.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
     <None Include="DS\dsSellbook.xss">
