@@ -364,21 +364,26 @@ namespace DiamondShop
              DeleteData();
         }
 
-        private void grid1_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            rowIndex = e.RowIndex;
-            for (int i = 0; i < grid1.Rows.Count; i++)
-            {
-                DelID = Convert.ToInt32(grid1.Rows[0].Cells["ID"].Value);
-            }
-        }
-
         private void grid2_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            rowIndex1 = e.RowIndex;
-            for (int i = 0; i < grid2.Rows.Count; i++)
+            var grid = (DataGridView)sender;
+
+            if (e.RowIndex >= 0)
             {
-                DelID = Convert.ToInt32(grid2.Rows[0].Cells["ID2"].Value);
+                if (grid.Name == "grid1")
+                {
+                    rowIndex = e.RowIndex;
+                    if (grid1.Rows[e.RowIndex].Cells["ID"].Value != null)
+                    { DelID = Convert.ToInt16(grid1.Rows[e.RowIndex].Cells["ID"].Value.ToString()); }
+                }
+                else
+                {
+                    rowIndex1 = e.RowIndex;
+
+                    if (grid2.Rows[e.RowIndex].Cells["ID1"].Value != null)
+                    { DelID = Convert.ToInt16(grid2.Rows[e.RowIndex].Cells["ID1"].Value.ToString()); }
+
+                }
             }
         }
 
