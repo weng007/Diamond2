@@ -164,6 +164,7 @@
             this.btnClose.TabIndex = 85;
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Visible = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // txtCode2
             // 

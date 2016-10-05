@@ -132,7 +132,6 @@ namespace DiamondShop
                 dr["TotalBaht"] = tds1.Tables[0].Rows[0]["TotalBaht"];
                 dr["ShopName"] = tds1.Tables[0].Rows[0]["ShopName"];
                 dr["RefID1"] = tds1.Tables[0].Rows[0]["ID"];
-                dr["ID"] = tds1.Tables[0].Rows[0]["ID"];
                 ds.Tables[1].Rows.Add(dr);
 
                 grid1.DataSource = ds.Tables[1];
@@ -184,7 +183,6 @@ namespace DiamondShop
                 dr["TotalBaht"] = tds2.Tables[0].Rows[0]["TotalBaht"];
                 dr["ShopName"] = tds2.Tables[0].Rows[0]["ShopName"];
                 dr["RefID1"] = tds2.Tables[0].Rows[0]["ID"];
-                dr["ID"] = tds2.Tables[0].Rows[0]["ID"];
                 ds.Tables[0].Rows.Add(dr);
 
                 grid2.DataSource = ds.Tables[0];
@@ -375,15 +373,15 @@ namespace DiamondShop
                 if (grid.Name == "grid1")
                 {
                     rowIndex = e.RowIndex;
-                    if (grid1.Rows[e.RowIndex].Cells["ID"].Value != null)
-                    { DelID = Convert.ToInt16(grid1.Rows[e.RowIndex].Cells["ID"].Value.ToString()); }
+                    if (grid1.Rows[e.RowIndex].Cells["RefID1"].Value != null)
+                    { DelID = Convert.ToInt16(grid1.Rows[e.RowIndex].Cells["RefID1"].Value.ToString()); }
                 }
                 else
                 {
                     rowIndex1 = e.RowIndex;
 
-                    if (grid2.Rows[e.RowIndex].Cells["ID1"].Value != null)
-                    { DelID = Convert.ToInt16(grid2.Rows[e.RowIndex].Cells["ID1"].Value.ToString()); }
+                    if (grid2.Rows[e.RowIndex].Cells["RefID2"].Value != null)
+                    { DelID = Convert.ToInt16(grid2.Rows[e.RowIndex].Cells["RefID2"].Value.ToString()); }
 
                 }
             }
