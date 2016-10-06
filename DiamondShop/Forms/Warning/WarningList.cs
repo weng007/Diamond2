@@ -126,12 +126,21 @@ namespace DiamondShop
         {
             if(e.ColumnIndex == gridWarning.Columns.Count-1)
             {
-                if (gridWarning.Rows[e.RowIndex].Cells["StatusType"].Value.ToString() == "1")
+                ser1 = GM.GetService1();
+
+                //statusType 1 = Order, 2 = Transfer
+                string statusType = "1";
+
+                statusType = gridWarning.Rows[e.RowIndex].Cells["StatusType"].Value.ToString();
+                
+                if (statusType == "1")
                 {
                     id = Convert.ToInt32(gridWarning.SelectedRows[0].Cells["RefID"].Value);
                     WarningID = Convert.ToInt32(gridWarning.SelectedRows[0].Cells["ID"].Value);
                     OrderInfo frm = new OrderInfo(id, WarningID);
                     frm.ShowDialog();
+
+                    ser1.UpdateMessageStatus(WarningID, statusType,"0");
                 }
                 else
                 {
@@ -139,10 +148,12 @@ namespace DiamondShop
                     WarningID = Convert.ToInt32(gridWarning.SelectedRows[0].Cells["ID"].Value);
                     TransferInfo frm = new TransferInfo(id);
                     frm.ShowDialog();
+
+                    ser1.UpdateMessageStatus(WarningID, statusType,"0");
                 }
 
-                ser1 = GM.GetService1();
-                ser1.UpdateMessageStatus(WarningID, "0");
+                
+                
 
                 if (gridWarning.Rows[e.RowIndex].Cells["MessageStatus"].Value.ToString() == "245")
                 {
