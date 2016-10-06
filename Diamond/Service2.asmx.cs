@@ -80,7 +80,7 @@ namespace Diamond
         [WebMethod]
         public string GetRunningNumber(string subject)
         {
-            GeneralCBiz biz = new GeneralCBiz();
+            GeneralBiz biz = new GeneralBiz();
             try
             {
                 return biz.GetRunningNumber(subject);
@@ -94,7 +94,7 @@ namespace Diamond
         [WebMethod]
         public DataSet GetJewelryDetail(int id)
         {
-            GeneralCBiz biz = new GeneralCBiz();
+            GeneralBiz biz = new GeneralBiz();
             try
             {
                 return biz.GetJewelryDetail(id);
@@ -108,7 +108,7 @@ namespace Diamond
         [WebMethod]
         public int UpdateJewelryStatus(int id, string status)
         {
-            GeneralCBiz biz = new GeneralCBiz();
+            GeneralBiz biz = new GeneralBiz();
             try
             {
                 return biz.UpdateJewelryStatus(id,status);
@@ -122,7 +122,7 @@ namespace Diamond
         [WebMethod]
         public int UpdateOrderStatus(int id, int WarningID)
         {
-            GeneralCBiz biz = new GeneralCBiz();
+            GeneralBiz biz = new GeneralBiz();
             try
             {
                 return biz.UpdateOrderStatus(id, WarningID);
@@ -136,7 +136,7 @@ namespace Diamond
         [WebMethod]
         public DataSet GetPriceDaimondAndGemstone(int id)
         {
-            GeneralCBiz biz = new GeneralCBiz();
+            GeneralBiz biz = new GeneralBiz();
             try
             {
                 return biz.GetPriceDaimondAndGemstone(id);
@@ -150,7 +150,7 @@ namespace Diamond
         [WebMethod]
         public DataSet GetReportJewelry(int id)
         {
-            GeneralCBiz biz = new GeneralCBiz();
+            GeneralBiz biz = new GeneralBiz();
             try
             {
                 return biz.GetReportJewelry(id);
@@ -164,7 +164,7 @@ namespace Diamond
         [WebMethod]
         public DataSet GetReportBuying(int TableName, DateTime SBuyDate, DateTime EBuyDate, float SWeight, float EWeight, int Shape, int Status, DateTime SDueDate, DateTime EDueDate, int IsPaid)
         {
-            GeneralCBiz biz = new GeneralCBiz();
+            GeneralBiz biz = new GeneralBiz();
             try
             {
                 return biz.GetReportBuying(TableName, SBuyDate, EBuyDate, SWeight, EWeight, Shape, Status, SDueDate, EDueDate, IsPaid);
@@ -177,7 +177,7 @@ namespace Diamond
         [WebMethod]
         public DataSet GetReportSelling(int JewelryType, int Seller , DateTime SSellDate, DateTime ESellDate )
         {
-            GeneralCBiz biz = new GeneralCBiz();
+            GeneralBiz biz = new GeneralBiz();
             try
             {
                 return biz.GetReportSelling(JewelryType, Seller, SSellDate, ESellDate);
@@ -190,7 +190,7 @@ namespace Diamond
         [WebMethod]
         public DataSet GetReportDebt(int TableName , string Seller, DateTime SDueDate, DateTime EDueDate)
         {
-            GeneralCBiz biz = new GeneralCBiz();
+            GeneralBiz biz = new GeneralBiz();
             try
             {
                 return biz.GetReportDebt(TableName, Seller, SDueDate, EDueDate);
@@ -203,7 +203,7 @@ namespace Diamond
         [WebMethod]
         public DataSet GetReportCustomer(DateTime SBirthDate, DateTime EBirthDate, DateTime SAnniDate, DateTime EAnniDate, string DisplayName)
         {
-            GeneralCBiz biz = new GeneralCBiz();
+            GeneralBiz biz = new GeneralBiz();
             try
             {
                 return biz.GetReportCustomer(SBirthDate, EBirthDate, SAnniDate, EAnniDate, DisplayName);
@@ -216,7 +216,7 @@ namespace Diamond
         [WebMethod]
         public DataSet GetReportInventory(int Status, DateTime SImpDate, DateTime EImpDate, float SPriceTag, float EPricetag)
         {
-            GeneralCBiz biz = new GeneralCBiz();
+            GeneralBiz biz = new GeneralBiz();
             try
             {
                 return biz.GetReportInventory(Status, SImpDate, EImpDate, SPriceTag, EPricetag);
@@ -229,7 +229,7 @@ namespace Diamond
         [WebMethod]
         public DataSet GetReportOrder(int ID)
         {
-            GeneralCBiz biz = new GeneralCBiz();
+            GeneralBiz biz = new GeneralBiz();
             try
             {
                 return biz.GetReportOrder(ID);
@@ -242,7 +242,7 @@ namespace Diamond
         [WebMethod]
         public DataSet GetReportReceiveDocument(int ID)
         {
-            GeneralCBiz biz = new GeneralCBiz();
+            GeneralBiz biz = new GeneralBiz();
             try
             {
                 return biz.GetReportReceiveDocument(ID);
@@ -255,7 +255,7 @@ namespace Diamond
         [WebMethod]
         public DataSet GetReportCertificate(int id)
         {
-            GeneralCBiz biz = new GeneralCBiz();
+            GeneralBiz biz = new GeneralBiz();
             try
             {
                 return biz.GetReportCertificate(id);
@@ -268,7 +268,7 @@ namespace Diamond
         [WebMethod]
         public int UpdateMessageStatus(int id, string StatusType,string Flag )
         {
-            GeneralCBiz biz = new GeneralCBiz();
+            GeneralBiz biz = new GeneralBiz();
             try
             {
                 return biz.UpdateMessageStatus(id, StatusType,Flag );
@@ -281,7 +281,7 @@ namespace Diamond
         [WebMethod]
         public int DeleteDataReference(int id, int flag)
         {
-            GeneralCBiz biz = new GeneralCBiz();
+            GeneralBiz biz = new GeneralBiz();
             try
             {
                 return biz.DoDeleteDataReference(id, flag);
@@ -294,7 +294,7 @@ namespace Diamond
         [WebMethod]
         public int UpdateProductionLine(int id, int FactoryStatus, int EditBy)
         {
-            GeneralCBiz biz = new GeneralCBiz();
+            GeneralBiz biz = new GeneralBiz();
             try
             {
                 return biz.DoUpdateProductionLine(id, FactoryStatus, EditBy);
@@ -312,6 +312,23 @@ namespace Diamond
             try
             {
                 return biz.GetExpenseGroup();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        [WebMethod]
+        public int CountUnReadMessage(int userID)
+        {
+            GeneralBiz biz = new GeneralBiz();
+
+            try
+            {
+                DataSet ds = new DataSet();
+                ds = biz.CountUnReadMessage(userID);
+                return (int)ds.Tables[0].Rows[0][0];
             }
             catch (Exception ex)
             {

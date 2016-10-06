@@ -30,6 +30,8 @@ namespace DiamondShop
 
         protected override void Initial()
         {
+            ser1 = GM.GetService1();
+
             cmbStatusType.DisplayMember = "Text";
             cmbStatusType.ValueMember = "Value";
             var items = new[] {
@@ -62,6 +64,8 @@ namespace DiamondShop
             }
 
             else { gridWarning.DataSource = null; gridWarning.Refresh(); }
+
+            CheckUnReadMessage();
         }
 
         private void btnSendBox_Click(object sender, EventArgs e)
@@ -126,8 +130,6 @@ namespace DiamondShop
         {
             if(e.ColumnIndex == gridWarning.Columns.Count-1)
             {
-                ser1 = GM.GetService1();
-
                 //statusType 1 = Order, 2 = Transfer
                 string statusType = "1";
 
@@ -135,8 +137,8 @@ namespace DiamondShop
                 
                 if (statusType == "1")
                 {
-                    id = Convert.ToInt32(gridWarning.SelectedRows[0].Cells["RefID"].Value);
-                    WarningID = Convert.ToInt32(gridWarning.SelectedRows[0].Cells["ID"].Value);
+                    id = Convert.ToInt32(gridWarning.Rows[e.RowIndex].Cells["RefID"].Value);
+                    WarningID = Convert.ToInt32(gridWarning.Rows[e.RowIndex].Cells["ID"].Value);
                     OrderInfo frm = new OrderInfo(id, WarningID);
                     frm.ShowDialog();
 
@@ -144,8 +146,8 @@ namespace DiamondShop
                 }
                 else
                 {
-                    id = (int)gridWarning.SelectedRows[0].Cells["RefID"].Value;
-                    WarningID = Convert.ToInt32(gridWarning.SelectedRows[0].Cells["ID"].Value);
+                    id = (int)gridWarning.Rows[e.RowIndex].Cells["RefID"].Value;
+                    WarningID = Convert.ToInt32(gridWarning.Rows[e.RowIndex].Cells["ID"].Value);
                     TransferInfo frm = new TransferInfo(id);
                     frm.ShowDialog();
 
@@ -160,15 +162,13 @@ namespace DiamondShop
                 {
                     gridWarning.Rows[e.RowIndex].Cells["IsRead"].Value = imageList1.Images[0];
                 }
-
-            }
-            
+            }           
         }
         private void SetGridimage()
         {
             foreach (dsWarning.WarningRow row in tds.Tables[0].Rows)
             {
-                if (row["MessageStatus"].ToString() == "245")
+                if (row["MessageStatus"].ToString() == "215")
                 {
                     row["IsRead"] = (Image)imageList1.Images[1];
                 }
@@ -197,6 +197,11 @@ namespace DiamondShop
 
                 gridWarning.Columns["SenderName"].Visible = false;
             }
+        }
+
+        private void CheckUnReadMessage()
+        {
+            btnInbox.Text = "UnRead(" + ser1.CountUnReadMessage(ApplicationInfo.UserID)+")";
         }
     }
 }

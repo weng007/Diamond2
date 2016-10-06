@@ -8,7 +8,7 @@ using System.Data;
 
 namespace DiamondBiz.Biz
 {
-    public class GeneralCBiz
+    public class GeneralBiz
     {
         GeneralDAL dal = new GeneralDAL();
         int flag = 0;

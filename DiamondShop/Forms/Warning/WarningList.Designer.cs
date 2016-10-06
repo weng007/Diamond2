@@ -30,26 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WarningList));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WarningList));
             this.panel2 = new System.Windows.Forms.Panel();
             this.gridWarning = new System.Windows.Forms.DataGridView();
-            this.IsRead = new System.Windows.Forms.DataGridViewImageColumn();
-            this.RowNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SenderName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ReceiverName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Detail = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ShopName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Note = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EditDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RefID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StatusType = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MessageStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.OrderNo = new System.Windows.Forms.DataGridViewLinkColumn();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.dtEEditDate = new System.Windows.Forms.DateTimePicker();
@@ -65,6 +51,21 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.tds = new DiamondDS.DS.dsWarning();
+            this.IsRead = new System.Windows.Forms.DataGridViewImageColumn();
+            this.RowNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SenderName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ReceiverName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Detail = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SShopName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EShopName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Note = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EditDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RefID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StatusType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MessageStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.OrderNo = new System.Windows.Forms.DataGridViewLinkColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridWarning)).BeginInit();
@@ -106,7 +107,8 @@
             this.ReceiverName,
             this.Detail,
             this.Status,
-            this.ShopName,
+            this.SShopName,
+            this.EShopName,
             this.Note,
             this.EditDate,
             this.RefID,
@@ -123,131 +125,6 @@
             this.gridWarning.Size = new System.Drawing.Size(1315, 446);
             this.gridWarning.TabIndex = 4;
             this.gridWarning.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridWarning_CellClick);
-            // 
-            // IsRead
-            // 
-            this.IsRead.DataPropertyName = "IsRead";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.NullValue = "System.Drawing.Bitmap";
-            this.IsRead.DefaultCellStyle = dataGridViewCellStyle2;
-            this.IsRead.HeaderText = "";
-            this.IsRead.Name = "IsRead";
-            this.IsRead.ReadOnly = true;
-            this.IsRead.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.IsRead.Width = 50;
-            // 
-            // RowNum
-            // 
-            this.RowNum.DataPropertyName = "RowNum";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.RowNum.DefaultCellStyle = dataGridViewCellStyle3;
-            this.RowNum.HeaderText = "No.";
-            this.RowNum.Name = "RowNum";
-            this.RowNum.ReadOnly = true;
-            this.RowNum.Width = 60;
-            // 
-            // ID
-            // 
-            this.ID.DataPropertyName = "ID";
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            this.ID.Visible = false;
-            // 
-            // SenderName
-            // 
-            this.SenderName.DataPropertyName = "SenderName";
-            this.SenderName.HeaderText = "Sender";
-            this.SenderName.Name = "SenderName";
-            this.SenderName.ReadOnly = true;
-            this.SenderName.Width = 120;
-            // 
-            // ReceiverName
-            // 
-            this.ReceiverName.DataPropertyName = "ReceiverName";
-            this.ReceiverName.HeaderText = "Receiver";
-            this.ReceiverName.Name = "ReceiverName";
-            this.ReceiverName.ReadOnly = true;
-            this.ReceiverName.Width = 150;
-            // 
-            // Detail
-            // 
-            this.Detail.DataPropertyName = "Detail";
-            this.Detail.HeaderText = "Detail";
-            this.Detail.Name = "Detail";
-            this.Detail.ReadOnly = true;
-            this.Detail.Width = 180;
-            // 
-            // Status
-            // 
-            this.Status.DataPropertyName = "Status";
-            this.Status.HeaderText = "Status";
-            this.Status.Name = "Status";
-            this.Status.ReadOnly = true;
-            this.Status.Width = 180;
-            // 
-            // ShopName
-            // 
-            this.ShopName.DataPropertyName = "ShopName";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle4.Format = "N0";
-            this.ShopName.DefaultCellStyle = dataGridViewCellStyle4;
-            this.ShopName.HeaderText = "Location";
-            this.ShopName.Name = "ShopName";
-            this.ShopName.ReadOnly = true;
-            this.ShopName.Width = 110;
-            // 
-            // Note
-            // 
-            this.Note.DataPropertyName = "Note";
-            this.Note.HeaderText = "Note";
-            this.Note.Name = "Note";
-            this.Note.ReadOnly = true;
-            // 
-            // EditDate
-            // 
-            this.EditDate.DataPropertyName = "EditDate";
-            this.EditDate.HeaderText = "Date";
-            this.EditDate.Name = "EditDate";
-            this.EditDate.ReadOnly = true;
-            this.EditDate.Width = 150;
-            // 
-            // RefID
-            // 
-            this.RefID.DataPropertyName = "RefID";
-            this.RefID.HeaderText = "RefID1";
-            this.RefID.Name = "RefID";
-            this.RefID.ReadOnly = true;
-            this.RefID.Visible = false;
-            // 
-            // StatusType
-            // 
-            this.StatusType.DataPropertyName = "StatusType";
-            this.StatusType.HeaderText = "StatusType";
-            this.StatusType.Name = "StatusType";
-            this.StatusType.ReadOnly = true;
-            this.StatusType.Visible = false;
-            // 
-            // MessageStatus
-            // 
-            this.MessageStatus.DataPropertyName = "MessageStatus";
-            this.MessageStatus.HeaderText = "MessageStatus";
-            this.MessageStatus.Name = "MessageStatus";
-            this.MessageStatus.ReadOnly = true;
-            this.MessageStatus.Visible = false;
-            // 
-            // OrderNo
-            // 
-            this.OrderNo.ActiveLinkColor = System.Drawing.Color.Brown;
-            this.OrderNo.DataPropertyName = "OrderNo";
-            this.OrderNo.HeaderText = "RefID";
-            this.OrderNo.LinkColor = System.Drawing.Color.Red;
-            this.OrderNo.Name = "OrderNo";
-            this.OrderNo.ReadOnly = true;
-            this.OrderNo.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.OrderNo.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.OrderNo.VisitedLinkColor = System.Drawing.Color.Gray;
-            this.OrderNo.Width = 150;
             // 
             // panel4
             // 
@@ -329,9 +206,10 @@
             this.btnInbox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnInbox.FlatAppearance.BorderColor = System.Drawing.Color.Linen;
             this.btnInbox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInbox.Font = new System.Drawing.Font("Angsana New", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInbox.Font = new System.Drawing.Font("Angsana New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInbox.Image = ((System.Drawing.Image)(resources.GetObject("btnInbox.Image")));
             this.btnInbox.Location = new System.Drawing.Point(20, 19);
+            this.btnInbox.Margin = new System.Windows.Forms.Padding(0);
             this.btnInbox.Name = "btnInbox";
             this.btnInbox.Size = new System.Drawing.Size(70, 90);
             this.btnInbox.TabIndex = 77;
@@ -406,6 +284,139 @@
             this.tds.DataSetName = "dsWarning";
             this.tds.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // IsRead
+            // 
+            this.IsRead.DataPropertyName = "IsRead";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.NullValue = "System.Drawing.Bitmap";
+            this.IsRead.DefaultCellStyle = dataGridViewCellStyle2;
+            this.IsRead.HeaderText = "";
+            this.IsRead.Name = "IsRead";
+            this.IsRead.ReadOnly = true;
+            this.IsRead.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.IsRead.Width = 50;
+            // 
+            // RowNum
+            // 
+            this.RowNum.DataPropertyName = "RowNum";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.RowNum.DefaultCellStyle = dataGridViewCellStyle3;
+            this.RowNum.HeaderText = "No.";
+            this.RowNum.Name = "RowNum";
+            this.RowNum.ReadOnly = true;
+            this.RowNum.Width = 60;
+            // 
+            // ID
+            // 
+            this.ID.DataPropertyName = "ID";
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Visible = false;
+            // 
+            // SenderName
+            // 
+            this.SenderName.DataPropertyName = "SenderName";
+            this.SenderName.HeaderText = "Sender";
+            this.SenderName.Name = "SenderName";
+            this.SenderName.ReadOnly = true;
+            this.SenderName.Width = 120;
+            // 
+            // ReceiverName
+            // 
+            this.ReceiverName.DataPropertyName = "ReceiverName";
+            this.ReceiverName.HeaderText = "Receiver";
+            this.ReceiverName.Name = "ReceiverName";
+            this.ReceiverName.ReadOnly = true;
+            this.ReceiverName.Width = 150;
+            // 
+            // Detail
+            // 
+            this.Detail.DataPropertyName = "Detail";
+            this.Detail.HeaderText = "Detail";
+            this.Detail.Name = "Detail";
+            this.Detail.ReadOnly = true;
+            this.Detail.Width = 180;
+            // 
+            // Status
+            // 
+            this.Status.DataPropertyName = "Status";
+            this.Status.HeaderText = "Status";
+            this.Status.Name = "Status";
+            this.Status.ReadOnly = true;
+            this.Status.Width = 130;
+            // 
+            // SShopName
+            // 
+            this.SShopName.DataPropertyName = "SShopName";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle4.Format = "N0";
+            this.SShopName.DefaultCellStyle = dataGridViewCellStyle4;
+            this.SShopName.HeaderText = "Location (From)";
+            this.SShopName.Name = "SShopName";
+            this.SShopName.ReadOnly = true;
+            this.SShopName.Width = 140;
+            // 
+            // EShopName
+            // 
+            this.EShopName.DataPropertyName = "EShopName";
+            this.EShopName.HeaderText = "Location (Dest.)";
+            this.EShopName.Name = "EShopName";
+            this.EShopName.ReadOnly = true;
+            this.EShopName.Width = 140;
+            // 
+            // Note
+            // 
+            this.Note.DataPropertyName = "Note";
+            this.Note.HeaderText = "Note";
+            this.Note.Name = "Note";
+            this.Note.ReadOnly = true;
+            // 
+            // EditDate
+            // 
+            this.EditDate.DataPropertyName = "EditDate";
+            this.EditDate.HeaderText = "Date";
+            this.EditDate.Name = "EditDate";
+            this.EditDate.ReadOnly = true;
+            this.EditDate.Width = 150;
+            // 
+            // RefID
+            // 
+            this.RefID.DataPropertyName = "RefID";
+            this.RefID.HeaderText = "RefID1";
+            this.RefID.Name = "RefID";
+            this.RefID.ReadOnly = true;
+            this.RefID.Visible = false;
+            // 
+            // StatusType
+            // 
+            this.StatusType.DataPropertyName = "StatusType";
+            this.StatusType.HeaderText = "StatusType";
+            this.StatusType.Name = "StatusType";
+            this.StatusType.ReadOnly = true;
+            this.StatusType.Visible = false;
+            // 
+            // MessageStatus
+            // 
+            this.MessageStatus.DataPropertyName = "MessageStatus";
+            this.MessageStatus.HeaderText = "MessageStatus";
+            this.MessageStatus.Name = "MessageStatus";
+            this.MessageStatus.ReadOnly = true;
+            this.MessageStatus.Visible = false;
+            // 
+            // OrderNo
+            // 
+            this.OrderNo.ActiveLinkColor = System.Drawing.Color.Brown;
+            this.OrderNo.DataPropertyName = "OrderNo";
+            this.OrderNo.HeaderText = "RefID";
+            this.OrderNo.LinkColor = System.Drawing.Color.Red;
+            this.OrderNo.Name = "OrderNo";
+            this.OrderNo.ReadOnly = true;
+            this.OrderNo.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.OrderNo.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.OrderNo.VisitedLinkColor = System.Drawing.Color.Gray;
+            this.OrderNo.Width = 150;
+            // 
             // WarningList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -453,7 +464,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ReceiverName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Detail;
         private System.Windows.Forms.DataGridViewTextBoxColumn Status;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ShopName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SShopName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EShopName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Note;
         private System.Windows.Forms.DataGridViewTextBoxColumn EditDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn RefID;
