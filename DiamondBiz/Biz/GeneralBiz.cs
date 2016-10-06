@@ -219,5 +219,16 @@ namespace DiamondBiz.Biz
                 throw ex;
             }
         }
+        public DataSet CountUnReadMessage(int userID)
+        {
+            try
+            {
+                return dal.CountUnReadMessage(userID);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

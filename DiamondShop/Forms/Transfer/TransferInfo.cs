@@ -10,12 +10,14 @@ using System.Windows.Forms;
 using DiamondShop.FormMaster;
 using DiamondDS.DS;
 using DiamondShop.DiamondService;
+using DiamondShop.DiamondService1;
 using DiamondShop.DiamondService2;
 
 namespace DiamondShop
 {
     public partial class TransferInfo : FormInfo
     {
+        Service2 ser1;
         dsTransfer tds = new dsTransfer();
         dsTransferDetail tds2 = new dsTransferDetail();
         //dsWarningTransfer tds3 = new dsWarningTransfer();
@@ -349,9 +351,11 @@ namespace DiamondShop
         }
         private void btnRecieve_Click(object sender, EventArgs e)
         {
+            ser1 = GM.GetService1();
             txtReceivedDate.Text = DateTime.Now.ToString();
             txtTransferStatus.Text = "Received";
             flag = 1;
+            ser1.UpdateMessageStatus(id, "2", "1");
         }
         private void SetPermission()
         {

@@ -496,7 +496,7 @@ namespace DiamondShop
             btnNotYet.Image = imageList1.Images[4];
             btnProcessing.Image = imageList1.Images[1];
             flag = 1;
-            ser1.UpdateMessageStatus(id, "2", "1");
+            ser1.UpdateMessageStatus(id, "1", "1");
         }
 
         private void btnRefDel_Click(object sender, EventArgs e)

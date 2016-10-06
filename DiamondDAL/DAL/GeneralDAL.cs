@@ -320,6 +320,20 @@ namespace DiamondDAL.DAL
 
             return ds;
         }
+        public DataSet CountUnReadMessage(int userID)
+        {
+            try
+            {
+                SQL.ClearParameter();
+                SQL.CreateParameter("@UserID", userID);
+                SQL.FillDataSet(string.Format("Select dbo.fns_CountUnRead('{0}')", userID), ds);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
 
+            return ds;
+        }
     }
 }
