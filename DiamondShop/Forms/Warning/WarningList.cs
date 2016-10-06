@@ -187,15 +187,19 @@ namespace DiamondShop
             {
                 gridWarning.Columns["ReceiverName"].Visible = false;
                 gridWarning.Columns["Status"].Visible = false;
+                gridWarning.Columns["EShopName"].Visible = false;
 
                 gridWarning.Columns["SenderName"].Visible = true;
+                gridWarning.Columns["SShopName"].Visible = true;
             }
             else
             {
                 gridWarning.Columns["ReceiverName"].Visible = true;
                 gridWarning.Columns["Status"].Visible = true;
+                gridWarning.Columns["EShopName"].Visible = true;
 
                 gridWarning.Columns["SenderName"].Visible = false;
+                gridWarning.Columns["SShopName"].Visible = false;
             }
         }
 
