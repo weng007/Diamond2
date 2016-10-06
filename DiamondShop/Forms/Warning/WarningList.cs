@@ -168,7 +168,7 @@ namespace DiamondShop
         {
             foreach (dsWarning.WarningRow row in tds.Tables[0].Rows)
             {
-                if (row["MessageStatus"].ToString() == "245")
+                if (row["MessageStatus"].ToString() == "215")
                 {
                     row["IsRead"] = (Image)imageList1.Images[1];
                 }
