@@ -144,7 +144,7 @@ namespace DiamondShop
                 ser1 = GM.GetService1();
                 ser1.UpdateMessageStatus(WarningID, "0");
 
-                if (gridWarning.Rows[e.RowIndex].Cells["MessageStatus"].Value.ToString() == "245")
+                if (gridWarning.Rows[e.RowIndex].Cells["MessageStatus"].Value.ToString() == "215")
                 {
                     gridWarning.Rows[e.RowIndex].Cells["IsRead"].Value = imageList1.Images[1];
                 }
