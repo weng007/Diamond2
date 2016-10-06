@@ -186,11 +186,11 @@ namespace DiamondBiz.Biz
                 throw ex;
             }
         }
-        public int UpdateMessageStatus(int id, string Flag)
+        public int UpdateMessageStatus(int id, string StatusType, string Flag)
         {
             try
             {
-                return dal.UpdateMessageStatus(id, Flag);
+                return dal.UpdateMessageStatus(id, StatusType, Flag);
             }
             catch (Exception ex)
             {

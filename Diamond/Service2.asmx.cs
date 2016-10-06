@@ -266,12 +266,12 @@ namespace Diamond
             }
         }
         [WebMethod]
-        public int UpdateMessageStatus(int id, string Flag)
+        public int UpdateMessageStatus(int id, string StatusType,string Flag )
         {
             GeneralCBiz biz = new GeneralCBiz();
             try
             {
-                return biz.UpdateMessageStatus(id, Flag);
+                return biz.UpdateMessageStatus(id, StatusType,Flag );
             }
             catch (Exception ex)
             {

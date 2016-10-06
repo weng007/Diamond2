@@ -55,8 +55,8 @@ namespace DiamondShop
             //Sender
             else if (Convert.ToInt16(cmbReceiver.SelectedValue.ToString()) != ApplicationInfo.UserID)
             {
-                ser1 = GM.GetService1();
-                ser1.UpdateMessageStatus(id, "0");
+                //ser1 = GM.GetService1();
+                //ser1.UpdateMessageStatus(id, "0");
 
                     cmbReceiver.Enabled = false;
                     //cmbFactoryStatus.Enabled = false;
@@ -224,8 +224,8 @@ namespace DiamondShop
         {
             if (Convert.ToInt16(cmbReceiver.SelectedValue.ToString()) == ApplicationInfo.UserID)
             {
-                ser1 = GM.GetService1();
-                ser1.UpdateMessageStatus(id, "1");
+                //ser1 = GM.GetService1();
+                //ser1.UpdateMessageStatus(id, "1");
                 LoadData();
                 txtCancelDate.Text = "";
 
@@ -237,8 +237,8 @@ namespace DiamondShop
         {
             if (Convert.ToInt16(cmbReceiver.SelectedValue.ToString()) == ApplicationInfo.UserID)
             {
-                ser1 = GM.GetService1();
-                ser1.UpdateMessageStatus(id, "2");
+                //ser1 = GM.GetService1();
+                //ser1.UpdateMessageStatus(id, "2");
                 LoadData();
                 txtConfirmDate.Text = "";
 

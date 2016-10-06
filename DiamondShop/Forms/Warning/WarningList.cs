@@ -152,9 +152,6 @@ namespace DiamondShop
                     ser1.UpdateMessageStatus(WarningID, statusType,"0");
                 }
 
-                
-                
-
                 if (gridWarning.Rows[e.RowIndex].Cells["MessageStatus"].Value.ToString() == "215")
                 {
                     gridWarning.Rows[e.RowIndex].Cells["IsRead"].Value = imageList1.Images[1];
