@@ -30,7 +30,7 @@ namespace DiamondShop
         dsTransferBuyBook tds1 = new dsTransferBuyBook();
         public Service3 ser2;
         int shop;
-        int flag;
+        int flag = 0;
 
         public TransferInfo()
         {
@@ -136,6 +136,14 @@ namespace DiamondShop
             row.ReceiveDate = DateTime.MinValue.AddYears(1900);
             row.IsBuyBook = "1";
             row.SShop = ApplicationInfo.Shop;
+            if (flag == 1)
+            {
+                row.Flag = flag;
+            }
+            else
+            {
+                row.Flag = flag;
+            }
 
             try
             {
@@ -163,6 +171,7 @@ namespace DiamondShop
                     }
                     else
                     {
+                        
                         chkFlag = ser.DoUpdateData("Transfer", tds);
                     }
 
@@ -355,7 +364,7 @@ namespace DiamondShop
             txtReceivedDate.Text = DateTime.Now.ToString();
             txtTransferStatus.Text = "Received";
             flag = 1;
-            ser1.UpdateMessageStatus(id, "2", "1");
+            //ser1.UpdateMessageStatus(id, "2", "1");
         }
         private void SetPermission()
         {

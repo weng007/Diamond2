@@ -51,6 +51,7 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.tds = new DiamondDS.DS.dsWarning();
+            this.imageList2 = new System.Windows.Forms.ImageList(this.components);
             this.IsRead = new System.Windows.Forms.DataGridViewImageColumn();
             this.RowNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -186,13 +187,14 @@
             // 
             // btnSendBox
             // 
-            this.btnSendBox.BackColor = System.Drawing.Color.PeachPuff;
+            this.btnSendBox.BackColor = System.Drawing.Color.Transparent;
             this.btnSendBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnSendBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSendBox.FlatAppearance.BorderColor = System.Drawing.Color.Linen;
+            this.btnSendBox.FlatAppearance.BorderSize = 0;
             this.btnSendBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSendBox.Image = ((System.Drawing.Image)(resources.GetObject("btnSendBox.Image")));
-            this.btnSendBox.Location = new System.Drawing.Point(111, 19);
+            this.btnSendBox.Location = new System.Drawing.Point(108, 19);
             this.btnSendBox.Name = "btnSendBox";
             this.btnSendBox.Size = new System.Drawing.Size(70, 90);
             this.btnSendBox.TabIndex = 78;
@@ -284,6 +286,15 @@
             this.tds.DataSetName = "dsWarning";
             this.tds.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // imageList2
+            // 
+            this.imageList2.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList2.ImageStream")));
+            this.imageList2.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList2.Images.SetKeyName(0, "btnInbox2.png");
+            this.imageList2.Images.SetKeyName(1, "btnSendbox2.png");
+            this.imageList2.Images.SetKeyName(2, "btnSendbox.png");
+            this.imageList2.Images.SetKeyName(3, "btnInbox.png");
+            // 
             // IsRead
             // 
             this.IsRead.DataPropertyName = "IsRead";
@@ -336,7 +347,7 @@
             this.Detail.HeaderText = "Detail";
             this.Detail.Name = "Detail";
             this.Detail.ReadOnly = true;
-            this.Detail.Width = 180;
+            this.Detail.Width = 250;
             // 
             // Status
             // 
@@ -371,7 +382,7 @@
             this.Note.HeaderText = "Note";
             this.Note.Name = "Note";
             this.Note.ReadOnly = true;
-            this.Note.Width = 150;
+            this.Note.Width = 200;
             // 
             // EditDate
             // 
@@ -458,6 +469,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DateTimePicker dtSEditDate;
         private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.ImageList imageList2;
         private System.Windows.Forms.DataGridViewImageColumn IsRead;
         private System.Windows.Forms.DataGridViewTextBoxColumn RowNum;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;

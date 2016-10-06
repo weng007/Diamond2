@@ -727,6 +727,8 @@
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(148, 26);
             this.txtPrice.TabIndex = 268;
+            this.txtPrice.Text = "0";
+            this.txtPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label10
             // 
@@ -821,6 +823,8 @@
             this.txtPaid.Name = "txtPaid";
             this.txtPaid.Size = new System.Drawing.Size(148, 26);
             this.txtPaid.TabIndex = 253;
+            this.txtPaid.Text = "0";
+            this.txtPaid.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtOldBody
             // 

@@ -34,6 +34,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.tds = new DiamondDS.DS.dsDiamondCer();
             this.panel4 = new System.Windows.Forms.Panel();
             this.cmbSeller = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -47,22 +48,27 @@
             this.label7 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.gridOrder = new System.Windows.Forms.DataGridView();
-            this.tds = new DiamondDS.DS.dsDiamondCer();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RowNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.OrderNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CustomerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.JewelryTypeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SShopName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ReceiveDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ShopName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BodyDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AppointDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ShopName1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tds)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridOrder)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tds)).BeginInit();
             this.SuspendLayout();
+            // 
+            // tds
+            // 
+            this.tds.DataSetName = "dsDiamondCer";
+            this.tds.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // panel4
             // 
@@ -208,9 +214,10 @@
             this.OrderNo,
             this.CustomerName,
             this.JewelryTypeName,
+            this.SShopName,
             this.ReceiveDate,
             this.ShopName,
-            this.BodyDate,
+            this.AppointDate,
             this.ShopName1});
             this.gridOrder.Location = new System.Drawing.Point(15, 3);
             this.gridOrder.Name = "gridOrder";
@@ -224,11 +231,6 @@
             this.gridOrder.Size = new System.Drawing.Size(1313, 388);
             this.gridOrder.TabIndex = 2;
             this.gridOrder.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.gridDiamondCer_MouseDoubleClick);
-            // 
-            // tds
-            // 
-            this.tds.DataSetName = "dsDiamondCer";
-            this.tds.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // ID
             // 
@@ -273,6 +275,14 @@
             this.JewelryTypeName.ReadOnly = true;
             this.JewelryTypeName.Width = 150;
             // 
+            // SShopName
+            // 
+            this.SShopName.DataPropertyName = "SShopName";
+            this.SShopName.HeaderText = "Location (Order)";
+            this.SShopName.Name = "SShopName";
+            this.SShopName.ReadOnly = true;
+            this.SShopName.Width = 170;
+            // 
             // ReceiveDate
             // 
             this.ReceiveDate.DataPropertyName = "ReceiveDate";
@@ -286,20 +296,20 @@
             // ShopName
             // 
             this.ShopName.DataPropertyName = "ShopName";
-            this.ShopName.HeaderText = "Location (นัดรับสินค้า)";
+            this.ShopName.HeaderText = "Location (นัดรับ)";
             this.ShopName.Name = "ShopName";
             this.ShopName.ReadOnly = true;
-            this.ShopName.Width = 200;
+            this.ShopName.Width = 160;
             // 
-            // BodyDate
+            // AppointDate
             // 
-            this.BodyDate.DataPropertyName = "BodyDate";
+            this.AppointDate.DataPropertyName = "AppointDate";
             dataGridViewCellStyle3.NullValue = "-";
-            this.BodyDate.DefaultCellStyle = dataGridViewCellStyle3;
-            this.BodyDate.HeaderText = "วันนัดดูตัวเรือน";
-            this.BodyDate.Name = "BodyDate";
-            this.BodyDate.ReadOnly = true;
-            this.BodyDate.Width = 160;
+            this.AppointDate.DefaultCellStyle = dataGridViewCellStyle3;
+            this.AppointDate.HeaderText = "วันนัดดูตัวเรือน";
+            this.AppointDate.Name = "AppointDate";
+            this.AppointDate.ReadOnly = true;
+            this.AppointDate.Width = 160;
             // 
             // ShopName1
             // 
@@ -307,10 +317,10 @@
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
             dataGridViewCellStyle4.Format = "N2";
             this.ShopName1.DefaultCellStyle = dataGridViewCellStyle4;
-            this.ShopName1.HeaderText = "Location (นัดดูสินค้า)";
+            this.ShopName1.HeaderText = "Location (นัดดู)";
             this.ShopName1.Name = "ShopName1";
             this.ShopName1.ReadOnly = true;
-            this.ShopName1.Width = 200;
+            this.ShopName1.Width = 160;
             // 
             // OrderList
             // 
@@ -323,11 +333,11 @@
             this.Name = "OrderList";
             this.Text = "DiamondCerList";
             ((System.ComponentModel.ISupportInitialize)(this.ds)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tds)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridOrder)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tds)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -353,9 +363,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn OrderNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn CustomerName;
         private System.Windows.Forms.DataGridViewTextBoxColumn JewelryTypeName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SShopName;
         private System.Windows.Forms.DataGridViewTextBoxColumn ReceiveDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn ShopName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BodyDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AppointDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn ShopName1;
     }
 }

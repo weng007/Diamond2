@@ -372,7 +372,7 @@
             // 
             // SShopName
             // 
-            this.SShopName.DataPropertyName = "SShopName";
+            this.SShopName.DataPropertyName = "ShopName";
             this.SShopName.HeaderText = "Location";
             this.SShopName.Name = "SShopName";
             this.SShopName.ReadOnly = true;

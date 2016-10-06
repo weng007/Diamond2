@@ -72,6 +72,8 @@ namespace DiamondShop
         {
             IsInbox = 0;//SendBox
             SearchData();
+            btnInbox.Image = imageList2.Images[0];
+            btnSendBox.Image = imageList2.Images[2];
 
             SetGrid();     
         }
@@ -80,7 +82,9 @@ namespace DiamondShop
         {
             IsInbox = 1;//InBox
             SearchData();
-
+            btnSendBox.Image = imageList2.Images[1];
+            btnInbox.Image = imageList2.Images[3];
+            
             SetGrid();
         }
         private void SearchData()

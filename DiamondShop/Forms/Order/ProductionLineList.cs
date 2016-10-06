@@ -112,22 +112,39 @@ namespace DiamondShop
         }
         private void btnNotYet_Click(object sender, EventArgs e)
         {
-            SearchProductionLine(256);
+            btnNotYet.BackColor = Color.CadetBlue;
+            btnProcessing.BackColor = Color.Gray;
+            btnMounting.BackColor = Color.Gray;
+            btnJobDone.BackColor = Color.Gray;
+
+            SearchProductionLine(218);
         }
 
         private void btnProcessing_Click(object sender, EventArgs e)
         {
-            SearchProductionLine(257);
+            btnNotYet.BackColor = Color.Gray;
+            btnProcessing.BackColor = Color.CadetBlue;
+            btnMounting.BackColor = Color.Gray;
+            btnJobDone.BackColor = Color.Gray;
+            SearchProductionLine(219);
         }
 
         private void btnMounting_Click(object sender, EventArgs e)
         {
-            SearchProductionLine(258);
+            btnNotYet.BackColor = Color.Gray;
+            btnProcessing.BackColor = Color.Gray;
+            btnMounting.BackColor = Color.CadetBlue;
+            btnJobDone.BackColor = Color.Gray;
+            SearchProductionLine(220);
         }
 
         private void btnJobDone_Click(object sender, EventArgs e)
         {
-            SearchProductionLine(259);
+            btnNotYet.BackColor = Color.Gray;
+            btnProcessing.BackColor = Color.Gray;
+            btnMounting.BackColor = Color.Gray;
+            btnJobDone.BackColor = Color.CadetBlue;
+            SearchProductionLine(221);
         }
         private void SearchProductionLine(int FactoryStatus)
         {

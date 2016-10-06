@@ -48,7 +48,7 @@ namespace DiamondShop
 
         protected override void Initial()
         {
-            cmbFactoryStatus.DataSource = (GM.GetMasterTableDetail("C036")).Tables[0];
+            cmbFactoryStatus.DataSource = (GM.GetMasterTableDetail("C034")).Tables[0];
             cmbFactoryStatus.ValueMember = "ID";
             cmbFactoryStatus.DisplayMember = "Detail";
             cmbFactoryStatus.Refresh();

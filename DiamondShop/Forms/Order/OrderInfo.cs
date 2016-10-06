@@ -36,7 +36,7 @@ namespace DiamondShop
         MemoryStream ms5;
         byte[] image1, image2, image3, image4, image5;
         public string materail = "";
-        int flag;
+        int flag = 0;
         public int WarningID = 0;
         public int OrderID;
         public OrderInfo()
@@ -130,15 +130,14 @@ namespace DiamondShop
             binder.BindControl(cmbMaterial, "Material");
             binder.BindControl(cmbQuality, "Quality");
             binder.BindControl(cmbSeller, "Seller");
-
             binder.BindControl(txtSize, "Size");
             binder.BindControl(txtCoating, "Coating");
             binder.BindControl(txtLaser, "Laser");
             binder.BindControl(txtOldBody, "OldBody");
             binder.BindControl(dtReceiveDate, "ReceiveDate");
-            binder.BindControl(cmbShop1, "ReceiveAt");
+            binder.BindControl(cmbShop1, "Shop");
             binder.BindControl(dtOrderDate, "OrderDate");
-            binder.BindControl(cmbShop2, "BodyAt");
+            binder.BindControl(cmbShop2, "Shop1");
             binder.BindControl(txtCustNote, "CustomerNote");
             binder.BindControl(txtImageNote, "ImageNote");
             binder.BindControl(txtNote, "Things");
@@ -147,6 +146,7 @@ namespace DiamondShop
             binder.BindControl(txtNote1, "Note1");
             binder.BindControl(txtNote2, "Note2");
             binder.BindControl(txtNote3, "Note3");
+            binder.BindControl(txtPrice, "Price");
         }
 
         protected override void LoadData()
@@ -304,6 +304,14 @@ namespace DiamondShop
             row.RefID = InvID;
             row.RefID1 = InvID1;
             row.SShop = ApplicationInfo.Shop;
+            if (flag == 1)
+            {
+                row.Flag = flag;
+            }
+            else
+            {
+                row.Flag = flag;
+            }
 
             try
             {
@@ -321,12 +329,8 @@ namespace DiamondShop
                 else
                 {
                     SetEditBy(row);
+                    row.FactoryStatus = 219;
                     chkFlag = ser.DoUpdateData("Order", tds);
-                    if (flag == 1)//กดปุ่ม Confirm
-                    {
-                        //id = WarningID;
-                        ser1.UpdateOrderStatus(id, WarningID);
-                    }
                 }
 
                 tds.AcceptChanges();
@@ -495,7 +499,7 @@ namespace DiamondShop
             btnNotYet.Image = imageList1.Images[4];
             btnProcessing.Image = imageList1.Images[1];
             flag = 1;
-            ser1.UpdateMessageStatus(id, "1", "1");
+            //ser1.UpdateMessageStatus(id, "1", "1");
         }
 
         private void btnRefDel_Click(object sender, EventArgs e)
