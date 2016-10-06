@@ -344,18 +344,18 @@
             this.Status.HeaderText = "Status";
             this.Status.Name = "Status";
             this.Status.ReadOnly = true;
-            this.Status.Width = 130;
+            this.Status.Width = 110;
             // 
             // SShopName
             // 
             this.SShopName.DataPropertyName = "SShopName";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
             dataGridViewCellStyle4.Format = "N0";
             this.SShopName.DefaultCellStyle = dataGridViewCellStyle4;
             this.SShopName.HeaderText = "Location (From)";
             this.SShopName.Name = "SShopName";
             this.SShopName.ReadOnly = true;
-            this.SShopName.Width = 140;
+            this.SShopName.Width = 150;
             // 
             // EShopName
             // 
@@ -363,7 +363,7 @@
             this.EShopName.HeaderText = "Location (Dest.)";
             this.EShopName.Name = "EShopName";
             this.EShopName.ReadOnly = true;
-            this.EShopName.Width = 140;
+            this.EShopName.Width = 150;
             // 
             // Note
             // 
@@ -371,6 +371,7 @@
             this.Note.HeaderText = "Note";
             this.Note.Name = "Note";
             this.Note.ReadOnly = true;
+            this.Note.Width = 150;
             // 
             // EditDate
             // 

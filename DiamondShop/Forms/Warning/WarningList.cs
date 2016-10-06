@@ -154,7 +154,7 @@ namespace DiamondShop
                     ser1.UpdateMessageStatus(WarningID, statusType,"0");
                 }
 
-                if (gridWarning.Rows[e.RowIndex].Cells["MessageStatus"].Value.ToString() == "215")
+                if (gridWarning.Rows[e.RowIndex].Cells["MessageStatus"].Value.ToString() == "215" || gridWarning.Rows[e.RowIndex].Cells["MessageStatus"].Value.ToString() == "217")
                 {
                     gridWarning.Rows[e.RowIndex].Cells["IsRead"].Value = imageList1.Images[1];
                 }
@@ -168,7 +168,7 @@ namespace DiamondShop
         {
             foreach (dsWarning.WarningRow row in tds.Tables[0].Rows)
             {
-                if (row["MessageStatus"].ToString() == "215")
+                if (row["MessageStatus"].ToString() == "215" || row["MessageStatus"].ToString() == "217")
                 {
                     row["IsRead"] = (Image)imageList1.Images[1];
                 }
