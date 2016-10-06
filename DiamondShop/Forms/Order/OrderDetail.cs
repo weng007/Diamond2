@@ -19,8 +19,8 @@ namespace DiamondShop
         DataSet ds2 = new DataSet();
         DataSet tmp = new DataSet();
         int rowIndex, rowIndex1;
-        int chkGrid, DelID;
-        int flag;
+        int DelID;
+        int i = 1;
         dsOrderDetail tds = new dsOrderDetail();
         dsBuyBookDiamondCer tds1 = new dsBuyBookDiamondCer();
         dsBuyBookGemstoneCer tds2 = new dsBuyBookGemstoneCer();
@@ -414,25 +414,22 @@ namespace DiamondShop
                         }
                     }
                 }
-            }
-            
+            }        
 
             return true;
         }
 
         private void GetMaterial()
-        {
-            int i = 1;
+        {         
             foreach (DataRow row in ds.Tables[1].Rows)
             {
-                materail += i.ToString()+"."+ row["Code"].ToString()+","+" "+row["Weight"].ToString()+"Ct."+"\n";
+                materail += i.ToString()+". "+ row["Code"].ToString()+","+" "+row["Weight"].ToString()+"Ct."+"\n ";
                 i++;
             }
-            
-          
+                    
             foreach (DataRow row in ds.Tables[0].Rows)
             {
-                materail += i.ToString() + "." + row["Code"].ToString() + "," + " "+row["IdentificationName"].ToString() + "," + " " + row["Weight"].ToString() + "Ct." + "\n";
+                materail += i.ToString() + ". " + row["Code"].ToString() + "," + " "+row["IdentificationName"].ToString() + "," + " " + row["Weight"].ToString() + "Ct." + "\n ";
                 i++;
             }
         }
