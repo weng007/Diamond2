@@ -17,7 +17,7 @@ namespace DiamondShop
     public partial class WarningList : FormList
     {
         public int WarningID = 0;
-        int IsInbox = 0;
+        int IsInbox = 1;
         Service2 ser1;
         
         public WarningList()
@@ -47,7 +47,7 @@ namespace DiamondShop
         {
             ser2 = GM.GetService2();
             // Inbox
-            ds = ser2.DoSearchWarning(txtRefID.Text, Convert.ToInt32(cmbStatusType.SelectedValue.ToString()), dtSEditDate.Value, dtEEditDate.Value,ApplicationInfo.UserID,1);
+            ds = ser2.DoSearchWarning(txtRefID.Text, Convert.ToInt32(cmbStatusType.SelectedValue.ToString()), dtSEditDate.Value, dtEEditDate.Value,ApplicationInfo.UserID, IsInbox);
             tds.Clear();
             tds.Merge(ds);
 
@@ -55,7 +55,8 @@ namespace DiamondShop
             if (tds.Tables[0].Rows.Count > 0)
             {
                 gridWarning.DataSource = tds.Tables[0];
-                gridWarning.Columns["ReceiverName"].Visible = false;
+
+                SetGrid();
                 SetGridimage();
                 gridWarning.Refresh();
             }
@@ -66,15 +67,19 @@ namespace DiamondShop
         private void btnSendBox_Click(object sender, EventArgs e)
         {
             IsInbox = 0;//SendBox
-            SearchData(IsInbox);       
+            SearchData();
+
+            SetGrid();     
         }
 
         private void btnInbox_Click(object sender, EventArgs e)
         {
             IsInbox = 1;//InBox
-            SearchData(IsInbox);       
+            SearchData();
+
+            SetGrid();
         }
-        private void SearchData(int IsInbox)
+        private void SearchData()
         {
             ser2 = GM.GetService2();
             
@@ -85,14 +90,8 @@ namespace DiamondShop
             if (tds.Tables[0].Rows.Count > 0)
             {
                 gridWarning.DataSource = tds.Tables[0];
-                if (IsInbox == 1)
-                {
-                    gridWarning.Columns["ReceiverName"].Visible = false;
-                }
-                else
-                {
-                    gridWarning.Columns["SenderName"].Visible = false;
-                }
+
+                SetGrid();
                 SetGridimage();
                 gridWarning.Refresh();
             }
@@ -101,18 +100,18 @@ namespace DiamondShop
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            SearchData(IsInbox);
+            SearchData();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            SearchData(IsInbox);
+            SearchData();
         }
 
         private void WarningList_Load(object sender, EventArgs e)
         {
             Timer timer = new Timer();
-            timer.Interval = 3000; // 10 secs = 10000, 300000 = 5 m
+            timer.Interval = 6000; // 10 secs = 10000, 300000 = 5 m
             timer.Tick += new EventHandler(timer1_Tick);
             timer.Start();
         }
@@ -172,6 +171,24 @@ namespace DiamondShop
             }
 
             tds.AcceptChanges();
+        }
+
+        private void SetGrid()
+        {
+            if (IsInbox == 1)
+            {
+                gridWarning.Columns["ReceiverName"].Visible = false;
+                gridWarning.Columns["Status"].Visible = false;
+
+                gridWarning.Columns["SenderName"].Visible = true;
+            }
+            else
+            {
+                gridWarning.Columns["ReceiverName"].Visible = true;
+                gridWarning.Columns["Status"].Visible = true;
+
+                gridWarning.Columns["SenderName"].Visible = false;
+            }
         }
     }
 }
