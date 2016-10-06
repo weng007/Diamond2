@@ -237,8 +237,6 @@ namespace DiamondShop
         {
             if (Convert.ToInt16(cmbReceiver.SelectedValue.ToString()) == ApplicationInfo.UserID)
             {
-                //ser1 = GM.GetService1();
-                //ser1.UpdateMessageStatus(id, "2");
                 LoadData();
                 txtConfirmDate.Text = "";
 
