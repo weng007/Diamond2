@@ -50,7 +50,6 @@ namespace DiamondShop
         {
             InitializeComponent();
             Initial();
-            ser1 = GM.GetService1();
             ds = ser1.GetFactoryStatus(id);
             tds.Clear();
             tds.Merge(ds);
@@ -83,6 +82,7 @@ namespace DiamondShop
 
         protected override void Initial()
         {
+            ser1 = GM.GetService1();
             ds = GM.GetBuyer();
 
             cmbSeller.DataSource = ds.Tables[0];
@@ -261,7 +261,6 @@ namespace DiamondShop
 
         protected override bool SaveData()
         {
-            ser1 = GM.GetService1();
             DiamondDS.DS.dsOrder.OrderRow row = null;
             dsWarning.WarningRow row2 = null;
 
@@ -587,7 +586,6 @@ namespace DiamondShop
 
         private void btnRefDel1_Click(object sender, EventArgs e)
         {
-            ser1 = GM.GetService1();
             ser1.DeleteDataReference(id, 1);
         }
 
