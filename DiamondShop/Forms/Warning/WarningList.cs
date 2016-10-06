@@ -195,6 +195,7 @@ namespace DiamondShop
 
                 gridWarning.Columns["SenderName"].Visible = true;
                 gridWarning.Columns["SShopName"].Visible = true;
+                gridWarning.Columns["IsRead"].Visible = true;
             }
             else
             {
@@ -204,6 +205,7 @@ namespace DiamondShop
 
                 gridWarning.Columns["SenderName"].Visible = false;
                 gridWarning.Columns["SShopName"].Visible = false;
+                gridWarning.Columns["IsRead"].Visible = false;
             }
         }
 
