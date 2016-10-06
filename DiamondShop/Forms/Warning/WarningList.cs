@@ -213,5 +213,10 @@ namespace DiamondShop
         {
             btnInbox.Text = "UnRead(" + ser1.CountUnReadMessage(ApplicationInfo.UserID)+")";
         }
+
+        private void gridWarning_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+
+        }
     }
 }
