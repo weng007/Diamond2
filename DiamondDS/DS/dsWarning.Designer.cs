@@ -301,9 +301,13 @@ namespace DiamondDS.DS {
             
             private global::System.Data.DataColumn columnStatus;
             
-            private global::System.Data.DataColumn columnShop;
+            private global::System.Data.DataColumn columnSShop;
             
-            private global::System.Data.DataColumn columnShopName;
+            private global::System.Data.DataColumn columnSShopName;
+            
+            private global::System.Data.DataColumn columnEShop;
+            
+            private global::System.Data.DataColumn columnEShopName;
             
             private global::System.Data.DataColumn columnRefID;
             
@@ -454,17 +458,33 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn ShopColumn {
+            public global::System.Data.DataColumn SShopColumn {
                 get {
-                    return this.columnShop;
+                    return this.columnSShop;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn ShopNameColumn {
+            public global::System.Data.DataColumn SShopNameColumn {
                 get {
-                    return this.columnShopName;
+                    return this.columnSShopName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn EShopColumn {
+                get {
+                    return this.columnEShop;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn EShopNameColumn {
+                get {
+                    return this.columnEShopName;
                 }
             }
             
@@ -621,8 +641,10 @@ namespace DiamondDS.DS {
                         int MessageStatus, 
                         int FactoryStatus, 
                         string Status, 
-                        int Shop, 
-                        string ShopName, 
+                        int SShop, 
+                        string SShopName, 
+                        int EShop, 
+                        string EShopName, 
                         int RefID, 
                         string OrderNo, 
                         System.DateTime ReadDate, 
@@ -649,8 +671,10 @@ namespace DiamondDS.DS {
                         MessageStatus,
                         FactoryStatus,
                         Status,
-                        Shop,
-                        ShopName,
+                        SShop,
+                        SShopName,
+                        EShop,
+                        EShopName,
                         RefID,
                         OrderNo,
                         ReadDate,
@@ -697,8 +721,10 @@ namespace DiamondDS.DS {
                 this.columnMessageStatus = base.Columns["MessageStatus"];
                 this.columnFactoryStatus = base.Columns["FactoryStatus"];
                 this.columnStatus = base.Columns["Status"];
-                this.columnShop = base.Columns["Shop"];
-                this.columnShopName = base.Columns["ShopName"];
+                this.columnSShop = base.Columns["SShop"];
+                this.columnSShopName = base.Columns["SShopName"];
+                this.columnEShop = base.Columns["EShop"];
+                this.columnEShopName = base.Columns["EShopName"];
                 this.columnRefID = base.Columns["RefID"];
                 this.columnOrderNo = base.Columns["OrderNo"];
                 this.columnReadDate = base.Columns["ReadDate"];
@@ -739,10 +765,14 @@ namespace DiamondDS.DS {
                 base.Columns.Add(this.columnFactoryStatus);
                 this.columnStatus = new global::System.Data.DataColumn("Status", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnStatus);
-                this.columnShop = new global::System.Data.DataColumn("Shop", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnShop);
-                this.columnShopName = new global::System.Data.DataColumn("ShopName", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnShopName);
+                this.columnSShop = new global::System.Data.DataColumn("SShop", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSShop);
+                this.columnSShopName = new global::System.Data.DataColumn("SShopName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSShopName);
+                this.columnEShop = new global::System.Data.DataColumn("EShop", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEShop);
+                this.columnEShopName = new global::System.Data.DataColumn("EShopName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEShopName);
                 this.columnRefID = new global::System.Data.DataColumn("RefID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnRefID);
                 this.columnOrderNo = new global::System.Data.DataColumn("OrderNo", typeof(string), null, global::System.Data.MappingType.Element);
@@ -783,9 +813,9 @@ namespace DiamondDS.DS {
                 this.columnFactoryStatus.ReadOnly = true;
                 this.columnStatus.ReadOnly = true;
                 this.columnStatus.MaxLength = 100;
-                this.columnShop.ReadOnly = true;
-                this.columnShopName.ReadOnly = true;
-                this.columnShopName.MaxLength = 100;
+                this.columnSShop.ReadOnly = true;
+                this.columnSShopName.ReadOnly = true;
+                this.columnSShopName.MaxLength = 100;
                 this.columnRefID.ReadOnly = true;
                 this.columnOrderNo.ReadOnly = true;
                 this.columnOrderNo.MaxLength = 30;
@@ -1118,33 +1148,65 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int Shop {
+            public int SShop {
                 get {
                     try {
-                        return ((int)(this[this.tableWarning.ShopColumn]));
+                        return ((int)(this[this.tableWarning.SShopColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Shop\' in table \'Warning\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'SShop\' in table \'Warning\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableWarning.ShopColumn] = value;
+                    this[this.tableWarning.SShopColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string ShopName {
+            public string SShopName {
                 get {
                     try {
-                        return ((string)(this[this.tableWarning.ShopNameColumn]));
+                        return ((string)(this[this.tableWarning.SShopNameColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'ShopName\' in table \'Warning\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'SShopName\' in table \'Warning\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableWarning.ShopNameColumn] = value;
+                    this[this.tableWarning.SShopNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int EShop {
+                get {
+                    try {
+                        return ((int)(this[this.tableWarning.EShopColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'EShop\' in table \'Warning\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableWarning.EShopColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string EShopName {
+                get {
+                    try {
+                        return ((string)(this[this.tableWarning.EShopNameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'EShopName\' in table \'Warning\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableWarning.EShopNameColumn] = value;
                 }
             }
             
@@ -1490,26 +1552,50 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsShopNull() {
-                return this.IsNull(this.tableWarning.ShopColumn);
+            public bool IsSShopNull() {
+                return this.IsNull(this.tableWarning.SShopColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetShopNull() {
-                this[this.tableWarning.ShopColumn] = global::System.Convert.DBNull;
+            public void SetSShopNull() {
+                this[this.tableWarning.SShopColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsShopNameNull() {
-                return this.IsNull(this.tableWarning.ShopNameColumn);
+            public bool IsSShopNameNull() {
+                return this.IsNull(this.tableWarning.SShopNameColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetShopNameNull() {
-                this[this.tableWarning.ShopNameColumn] = global::System.Convert.DBNull;
+            public void SetSShopNameNull() {
+                this[this.tableWarning.SShopNameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsEShopNull() {
+                return this.IsNull(this.tableWarning.EShopColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetEShopNull() {
+                this[this.tableWarning.EShopColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsEShopNameNull() {
+                return this.IsNull(this.tableWarning.EShopNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetEShopNameNull() {
+                this[this.tableWarning.EShopNameColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
