@@ -17,8 +17,7 @@ namespace DiamondShop
     public partial class WarningList : FormList
     {
         public int WarningID = 0;
-        int flag;
-        int IsInbox;
+        int IsInbox = 0;
         Service2 ser1;
         
         public WarningList()
@@ -66,14 +65,14 @@ namespace DiamondShop
 
         private void btnSendBox_Click(object sender, EventArgs e)
         {
-            SearchData(0);
-            flag = 0;//SendBox
+            IsInbox = 0;//SendBox
+            SearchData(IsInbox);       
         }
 
         private void btnInbox_Click(object sender, EventArgs e)
         {
-            SearchData(1);
-            flag = 1;//InBox
+            IsInbox = 1;//InBox
+            SearchData(IsInbox);       
         }
         private void SearchData(int IsInbox)
         {
@@ -83,10 +82,8 @@ namespace DiamondShop
             tds.Clear();
             tds.Merge(ds);
 
-
             if (tds.Tables[0].Rows.Count > 0)
             {
-
                 gridWarning.DataSource = tds.Tables[0];
                 if (IsInbox == 1)
                 {
@@ -104,21 +101,12 @@ namespace DiamondShop
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            ser2 = GM.GetService2();
-            if (flag == 1)
-            {
-                IsInbox = 1; //Inbox
-            }
-            else
-            {
-                IsInbox = 0; //Sendbox
-            }
             SearchData(IsInbox);
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            DoLoadData();
+            SearchData(IsInbox);
         }
 
         private void WarningList_Load(object sender, EventArgs e)
