@@ -729,6 +729,8 @@
             this.txtPrice.TabIndex = 268;
             this.txtPrice.Text = "0";
             this.txtPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrice_KeyPress);
+            this.txtPrice.Leave += new System.EventHandler(this.txtPrice_Leave);
             // 
             // label10
             // 
@@ -825,6 +827,8 @@
             this.txtPaid.TabIndex = 253;
             this.txtPaid.Text = "0";
             this.txtPaid.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtPaid.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrice_KeyPress);
+            this.txtPaid.Leave += new System.EventHandler(this.txtPaid_Leave);
             // 
             // txtOldBody
             // 
@@ -871,10 +875,11 @@
             // 
             this.txtSize.Location = new System.Drawing.Point(428, 139);
             this.txtSize.Name = "txtSize";
-            this.txtSize.Size = new System.Drawing.Size(149, 26);
+            this.txtSize.Size = new System.Drawing.Size(69, 26);
             this.txtSize.TabIndex = 246;
             this.txtSize.Text = "0";
             this.txtSize.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtSize.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrice_KeyPress);
             // 
             // label8
             // 

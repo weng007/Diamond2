@@ -335,5 +335,18 @@ namespace Diamond
                 throw ex;
             }
         }
+        [WebMethod]
+        public int UpdateBuyBookShop(int refID1, string Flag, int eShop)
+        {
+            GeneralBiz biz = new GeneralBiz();
+            try
+            {
+                return biz.UpdateBuyBookShop(refID1, Flag, eShop);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

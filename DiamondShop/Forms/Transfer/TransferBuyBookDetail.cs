@@ -25,12 +25,16 @@ namespace DiamondShop
 
         protected override void Initial()
         {
-            ds = GM.GetBuyer();
-
-            cmbBuybookType.DataSource = ds.Tables[0];
-            cmbBuybookType.ValueMember = "ID";
-            cmbBuybookType.DisplayMember = "DisplayName";
-            cmbBuybookType.Refresh();
+            cmbBuybookType.DisplayMember = "Text";
+            cmbBuybookType.ValueMember = "Value";
+            var items = new[] {
+                new { Text = "ALL", Value = "0" },
+                new { Text = "BuyBookDiamondCer", Value = "1" },
+                new { Text = "BuyBookGemstoneCer", Value = "2" },
+                new { Text = "BuyBookJewelry", Value = "3" }
+            };
+            cmbBuybookType.DataSource = items;
+            cmbBuybookType.SelectedIndex = 0;
 
             gridTransferBuyBook.AutoGenerateColumns = false;    
         }
@@ -85,6 +89,11 @@ namespace DiamondShop
         {
 
             refID1 = (int)gridTransferBuyBook.SelectedRows[0].Cells["ID"].Value;
+            this.Close();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
             this.Close();
         }
     }

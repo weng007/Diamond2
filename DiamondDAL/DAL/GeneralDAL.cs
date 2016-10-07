@@ -335,5 +335,22 @@ namespace DiamondDAL.DAL
 
             return ds;
         }
+        public int UpdateBuyBookShop(int refID1, string Flag, int eShop)
+        {
+            try
+            {
+                SQL.ClearParameter();
+                SQL.CreateParameter("@RefID1", refID1);
+                SQL.CreateParameter("@Flag", Flag);
+                SQL.CreateParameter("@EShop", eShop);
+                flag = SQL.ExecuteSP("SP_Transfer_Upd_BuyBook");
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return flag;
+        }
     }
 }

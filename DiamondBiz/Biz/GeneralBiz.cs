@@ -230,5 +230,16 @@ namespace DiamondBiz.Biz
                 throw ex;
             }
         }
+        public int UpdateBuyBookShop(int refID1, string Flag, int eShop)
+        {
+            try
+            {
+                return dal.UpdateBuyBookShop(refID1, Flag, eShop);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

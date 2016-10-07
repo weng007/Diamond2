@@ -147,6 +147,7 @@ namespace DiamondShop
             binder.BindControl(txtNote2, "Note2");
             binder.BindControl(txtNote3, "Note3");
             binder.BindControl(txtPrice, "Price");
+            binder.BindControl(txtPaid, "Paid");
         }
 
         protected override void LoadData()
@@ -303,10 +304,10 @@ namespace DiamondShop
             }
             row.RefID = InvID;
             row.RefID1 = InvID1;
-            row.SShop = ApplicationInfo.Shop;
             if (flag == 1)
             {
                 row.Flag = flag;
+                row.FactoryStatus = 219; //Processing
             }
             else
             {
@@ -318,9 +319,8 @@ namespace DiamondShop
                 if (id == 0)
                 {
                     row.OrderNo = GM.GetRunningNumber("ORD");
-                    //พึ่งซื้อยังไม่ได้ขายให้ลูกค้า
-                    //row.SoldTo = 0;
-                    row.FactoryStatus = 218;
+                    row.FactoryStatus = 218; //Not Yet
+                    row.SShop = ApplicationInfo.Shop; // Shop ต้นทาง
                     SetCreateBy(row);
                     chkFlag = ser.DoInsertData("Order", tds, 0);
 
@@ -329,7 +329,6 @@ namespace DiamondShop
                 else
                 {
                     SetEditBy(row);
-                    row.FactoryStatus = 219;
                     chkFlag = ser.DoUpdateData("Order", tds);
                 }
 
@@ -426,7 +425,10 @@ namespace DiamondShop
             if (txtAppointDate.Text != "" && Convert.ToDateTime(txtAppointDate.Text).Year == 1901)
             {
                 txtAppointDate.Text = "";
-            }       
+            }
+
+            txtPrice.Text = GM.ConvertDoubleToString(txtPrice, 0);
+            txtPaid.Text = GM.ConvertDoubleToString(txtPaid, 0);
         }
         private void linkFile_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -586,6 +588,24 @@ namespace DiamondShop
                 fs.Read(image5, 0, System.Convert.ToInt32(fs.Length));
                 fs.Close();
             }
+        }
+
+        private void txtPrice_Leave(object sender, EventArgs e)
+        {
+            txtPrice.Text = GM.ConvertDoubleToString(txtPrice, 0);
+        }
+
+        private void txtPrice_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtPaid_Leave(object sender, EventArgs e)
+        {
+            txtPaid.Text = GM.ConvertDoubleToString(txtPaid, 0);
         }
 
         private void btnRefDel1_Click(object sender, EventArgs e)

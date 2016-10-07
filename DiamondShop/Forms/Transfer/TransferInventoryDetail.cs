@@ -87,5 +87,10 @@ namespace DiamondShop
             refID1 = (int)gridTransferInventory.SelectedRows[0].Cells["ID"].Value;
             this.Close();
         }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
