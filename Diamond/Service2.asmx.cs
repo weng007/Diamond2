@@ -336,12 +336,12 @@ namespace Diamond
             }
         }
         [WebMethod]
-        public int UpdateBuyBookShop(int refID1, string Flag, int eShop)
+        public int UpdateTransferReceived(int ID, int TransferStatus, DateTime ReceiveDate, int EShop)
         {
             GeneralBiz biz = new GeneralBiz();
             try
             {
-                return biz.UpdateBuyBookShop(refID1, Flag, eShop);
+                return biz.UpdateTransferReceived(ID, TransferStatus, ReceiveDate, EShop);
             }
             catch (Exception ex)
             {

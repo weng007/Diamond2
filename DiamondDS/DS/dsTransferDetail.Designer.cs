@@ -591,7 +591,6 @@ namespace DiamondDS.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public TransferDetailRow AddTransferDetailRow(
                         long RowNum, 
-                        int ID, 
                         string Code, 
                         string Code2, 
                         double Weight, 
@@ -617,7 +616,7 @@ namespace DiamondDS.DS {
                 TransferDetailRow rowTransferDetailRow = ((TransferDetailRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         RowNum,
-                        ID,
+                        null,
                         Code,
                         Code2,
                         Weight,
@@ -740,6 +739,9 @@ namespace DiamondDS.DS {
                 this.columnEditDate = new global::System.Data.DataColumn("EditDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnEditDate);
                 this.columnRowNum.ReadOnly = true;
+                this.columnID.AutoIncrement = true;
+                this.columnID.AutoIncrementSeed = -1;
+                this.columnID.AutoIncrementStep = -1;
                 this.columnID.ReadOnly = true;
                 this.columnCode.ReadOnly = true;
                 this.columnCode.MaxLength = 30;

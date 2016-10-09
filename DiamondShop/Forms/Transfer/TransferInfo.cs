@@ -24,14 +24,14 @@ namespace DiamondShop
         DataSet tmp = new DataSet();
         bool isAuthorize = false;
         DataSet ds2 = new DataSet();
-        int chk = 0;
+        int chkGrid = 0;
         int rowIndex, rowIndex1;
         int refID1 = 0;
         dsTransferBuyBook tds1 = new dsTransferBuyBook();
         public Service3 ser2;
         int shop;
         int flag = 0;
-        int BBflag;
+        int DelID;
 
         public TransferInfo()
         {
@@ -145,16 +145,7 @@ namespace DiamondShop
             row.SShop = ApplicationInfo.Shop;
             row.EShop = Convert.ToInt32(cmbEShop.SelectedValue.ToString());
             row.Receiver = Convert.ToInt32(cmbReceiver.SelectedValue.ToString());
-            if (flag == 1)
-            {
-                row.Flag = flag;
-                row.BuyBookType = tds2.TransferDetail[0].Flag;
-                row.TransferID = id;
-            }
-            else
-            {
-                row.Flag = flag;
-            }
+            
 
             try
             {
@@ -166,12 +157,15 @@ namespace DiamondShop
                 }
                 else
                 {
-                    //Receiver กดปุ่ม Receive
-                    if (Convert.ToInt16(cmbReceiver.SelectedValue.ToString()) == ApplicationInfo.UserID)
+                    if (flag == 1)
                     {
-                        row.TransferStatus = 223; //สถานะ received
-                        row.ReceiveDate = Convert.ToDateTime(DateTime.Now.ToString());
+                        //Receiver กดปุ่ม Receive
+                        if (Convert.ToInt16(cmbReceiver.SelectedValue.ToString()) == ApplicationInfo.UserID)
+                        {
+                            ser1.UpdateTransferReceived(id,223, Convert.ToDateTime(DateTime.Now.ToString()), Convert.ToInt32(cmbEShop.SelectedValue.ToString()));
+                        }
                     }
+
                     SetEditBy(row);
 
                     BindingDSOrderDetail();
@@ -211,7 +205,7 @@ namespace DiamondShop
             tds2.Clear();
             for (int i = 0; i < ds2.Tables[0].Rows.Count; i++)
             {
-                if (ds2.Tables[0].Rows[i]["ID"].ToString() == "")
+                if (ds2.Tables[0].Rows[i]["RefID"].ToString() == "")
                 {
                     DataRow dr = tds2.Tables[0].NewRow();
 
@@ -219,6 +213,7 @@ namespace DiamondShop
                     dr["RowNum"] = ds2.Tables[0].Rows[i]["RowNum"];
                     dr["RefID1"] = ds2.Tables[0].Rows[i]["RefID1"];
                     dr["flag"] = ds2.Tables[0].Rows[i]["Flag"];
+                    dr["ID"] = 0;
                     ////Sender
                     //if (Convert.ToInt16(cmbReceiver.SelectedValue.ToString()) != ApplicationInfo.UserID)
                     //{
@@ -243,25 +238,28 @@ namespace DiamondShop
         }
         protected override bool DeleteData()
         {
-            try
+            if (chkGrid == 0)
             {
-                if (chk == 0)
+                try
                 {
-                    chkFlag = ser.DoDeleteData("Transfer", id);
+                    chkFlag = ser.DoDeleteData("Transfer", DelID);
                 }
-                else if (chk == 1)
+                catch (Exception ex)
                 {
-                    chkFlag = ser.DoDeleteData("TransferDetail", Convert.ToInt32(gridTransfer.SelectedRows[0].Cells["ID"].Value));
-
-                    chk = 0;
+                    throw ex;
                 }
             }
-            catch (Exception ex)
+            else
             {
-                throw ex;
+                try
+                {
+                    chkFlag = ser.DoDeleteData("TransferDetail", DelID);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
             }
-
-            LoadData();
 
             return chkFlag;
         }
@@ -311,7 +309,7 @@ namespace DiamondShop
 
             if (frm.refID1 != 0 && CheckDataExist(frm.refID1))
             {
-                tmp = ser2.DoSearchTransferBuyBook(shop, "", "", 0);
+                tmp = ser2.DoSearchTransferBuyBook(shop, "", "", 0, frm.refID1);
                 tds1.Clear();
                 tds1.Merge(tmp);
 
@@ -357,12 +355,26 @@ namespace DiamondShop
         {
             if (gridTransfer.SelectedRows.Count > 0)
             {
-                chk = 1;
+                if (gridTransfer.Rows[rowIndex].Cells["RefID2"].Value != null)
+                {
+                    DeleteDataGrid(1);
+                }
+
+                gridTransfer.Rows.RemoveAt(rowIndex);
+                //tds2.Tables[0].Rows[rowIndex].Delete();
+                //tds2.AcceptChanges();
+            }
+        }
+        private void DeleteDataGrid(int type)
+        {
+            if (type == 0)
+            {
+                chkGrid = 0;
                 DeleteData();
             }
-            if (Convert.ToInt16(cmbReceiver.SelectedValue.ToString()) != ApplicationInfo.UserID)
+            else
             {
-                chk = 2;
+                chkGrid = 1;
                 DeleteData();
             }
         }
@@ -381,6 +393,26 @@ namespace DiamondShop
             txtTransferStatus.Text = "Received";
             flag = 1;
         }
+
+        private void gridTransfer_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                    rowIndex = e.RowIndex;
+                    if (gridTransfer.Rows[e.RowIndex].Cells["RefID2"].Value != null)
+                    { DelID = Convert.ToInt16(gridTransfer.Rows[e.RowIndex].Cells["RefID2"].Value.ToString()); }
+            }
+        }
+
+        private void gridTransfer_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if ((e.ColumnIndex == 7) && e.RowIndex != this.gridTransfer.NewRowIndex && e.Value != null)
+            {
+                double d = double.Parse(e.Value.ToString());
+                e.Value = d.ToString("N0");
+            }
+        }
+
         private void SetPermission()
         {
             //Receiver

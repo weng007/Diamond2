@@ -16,11 +16,11 @@ namespace DiamondBiz.Biz
         //type 0 = Login, 1 = BuyBook
 
 
-        public dsTransferBuyBook DoSearchData(int shop, string code, string code2, int buybooktype)
+        public dsTransferBuyBook DoSearchData(int shop, string code, string code2, int buybooktype, int ID)
         {
             try
             {
-                return dal.DoSearchData(shop, code, code2, buybooktype);
+                return dal.DoSearchData(shop, code, code2, buybooktype,ID);
             }
             catch (Exception ex)
             {

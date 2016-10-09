@@ -230,16 +230,17 @@ namespace DiamondBiz.Biz
                 throw ex;
             }
         }
-        public int UpdateBuyBookShop(int refID1, string Flag, int eShop)
+        public int UpdateTransferReceived(int ID, int TransferStatus, DateTime ReceiveDate, int EShop)
         {
             try
             {
-                return dal.UpdateBuyBookShop(refID1, Flag, eShop);
+                return dal.UpdateTransferReceived(ID, TransferStatus, ReceiveDate, EShop);
             }
             catch (Exception ex)
             {
                 throw ex;
             }
         }
+
     }
 }

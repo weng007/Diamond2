@@ -380,13 +380,13 @@ namespace Diamond
             }
         }
         [WebMethod]
-        public DataSet DoSearchTransferBuyBook(int shop, string code, string code2, int buybooktype)
+        public DataSet DoSearchTransferBuyBook(int shop, string code, string code2, int Flag, int ID)
         {
             TransferBuyBookBiz biz = new TransferBuyBookBiz();
 
             try
             {
-                return biz.DoSearchData(shop, code, code2, buybooktype);
+                return biz.DoSearchData(shop, code, code2, Flag,ID);
             }
             catch (Exception ex)
             {

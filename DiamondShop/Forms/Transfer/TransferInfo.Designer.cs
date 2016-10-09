@@ -33,6 +33,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dtSendDate = new System.Windows.Forms.DateTimePicker();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
@@ -339,6 +340,8 @@
             this.gridTransfer.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridTransfer.Size = new System.Drawing.Size(973, 187);
             this.gridTransfer.TabIndex = 86;
+            this.gridTransfer.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridTransfer_CellClick);
+            this.gridTransfer.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.gridTransfer_CellFormatting);
             // 
             // label1
             // 
@@ -474,6 +477,8 @@
             // TotalBaht
             // 
             this.TotalBaht.DataPropertyName = "TotalBaht";
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            this.TotalBaht.DefaultCellStyle = dataGridViewCellStyle5;
             this.TotalBaht.HeaderText = "TotalBaht";
             this.TotalBaht.Name = "TotalBaht";
             this.TotalBaht.ReadOnly = true;
@@ -516,6 +521,7 @@
             this.BuyBookType.HeaderText = "BuyBookType";
             this.BuyBookType.Name = "BuyBookType";
             this.BuyBookType.ReadOnly = true;
+            this.BuyBookType.Visible = false;
             // 
             // TransferInfo
             // 

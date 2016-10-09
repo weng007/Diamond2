@@ -335,15 +335,16 @@ namespace DiamondDAL.DAL
 
             return ds;
         }
-        public int UpdateBuyBookShop(int refID1, string Flag, int eShop)
+        public int UpdateTransferReceived(int ID, int TransferStatus, DateTime ReceiveDate, int EShop)
         {
             try
             {
                 SQL.ClearParameter();
-                SQL.CreateParameter("@RefID1", refID1);
-                SQL.CreateParameter("@Flag", Flag);
-                SQL.CreateParameter("@EShop", eShop);
-                flag = SQL.ExecuteSP("SP_Transfer_Upd_BuyBook");
+                SQL.CreateParameter("@ID", ID);
+                SQL.CreateParameter("@TransferStatus", TransferStatus);
+                SQL.CreateParameter("@ReceiveDate", ReceiveDate);
+                SQL.CreateParameter("@EShop", EShop);
+                flag = SQL.ExecuteSP("SP_Transfer_Upd_Received");
             }
             catch (Exception ex)
             {

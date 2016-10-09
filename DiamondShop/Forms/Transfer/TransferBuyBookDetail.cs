@@ -44,7 +44,7 @@ namespace DiamondShop
             ser2 = GM.GetService2();
             
             shop = ApplicationInfo.Shop;
-            ds = ser2.DoSearchTransferBuyBook(shop, "", "", 0);
+            ds = ser2.DoSearchTransferBuyBook(shop, "", "", 0, 0);
 
             if (ds.Tables[0].Rows.Count > 0)
             {
@@ -66,7 +66,7 @@ namespace DiamondShop
         {
             ser2 = GM.GetService2();
 
-            ds = ser2.DoSearchTransferBuyBook(shop, txtCode.Text, txtCode2.Text, Convert.ToInt16(cmbBuybookType.SelectedValue.ToString()));
+            ds = ser2.DoSearchTransferBuyBook(shop, txtCode.Text, txtCode2.Text, Convert.ToInt16(cmbBuybookType.SelectedValue.ToString()),0);
 
             if (ds.Tables[0].Rows.Count > 0)
             {

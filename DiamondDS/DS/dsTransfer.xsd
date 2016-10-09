@@ -51,7 +51,6 @@
                 </xs:simpleType>
               </xs:element>
               <xs:element name="Flag" msprop:Generator_ColumnVarNameInTable="columnFlag" msprop:Generator_ColumnPropNameInRow="Flag" msprop:Generator_ColumnPropNameInTable="FlagColumn" msprop:Generator_UserColumnName="Flag" type="xs:int" minOccurs="0" />
-              <xs:element name="BuyBookType" msprop:Generator_ColumnVarNameInTable="columnBuyBookType" msprop:Generator_ColumnPropNameInRow="BuyBookType" msprop:Generator_ColumnPropNameInTable="BuyBookTypeColumn" msprop:Generator_UserColumnName="BuyBookType" type="xs:int" minOccurs="0" />
               <xs:element name="TransferID" msprop:Generator_ColumnVarNameInTable="columnTransferID" msprop:Generator_ColumnPropNameInRow="TransferID" msprop:Generator_ColumnPropNameInTable="TransferIDColumn" msprop:Generator_UserColumnName="TransferID" type="xs:int" minOccurs="0" />
               <xs:element name="IsBuyBook" msprop:Generator_ColumnVarNameInTable="columnIsBuyBook" msprop:Generator_ColumnPropNameInRow="IsBuyBook" msprop:Generator_ColumnPropNameInTable="IsBuyBookColumn" msprop:Generator_UserColumnName="IsBuyBook" type="xs:string" minOccurs="0" />
               <xs:element name="IsDeleted" msprop:Generator_ColumnVarNameInTable="columnIsDeleted" msprop:Generator_ColumnPropNameInRow="IsDeleted" msprop:Generator_ColumnPropNameInTable="IsDeletedColumn" msprop:Generator_UserColumnName="IsDeleted" minOccurs="0">

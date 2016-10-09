@@ -13,7 +13,7 @@ namespace DiamondDAL.DAL
         dsTransferBuyBook ds = new dsTransferBuyBook();
         int flag = 0;
 
-        public dsTransferBuyBook DoSearchData(int shop,string code,string code2, int buybooktype)
+        public dsTransferBuyBook DoSearchData(int shop,string code,string code2, int buybooktype,int ID)
         {
             try
             {
@@ -22,6 +22,7 @@ namespace DiamondDAL.DAL
                 SQL.CreateParameter("Code", code);
                 SQL.CreateParameter("Code2", code2);
                 SQL.CreateParameter("BuyBookType", buybooktype);
+                SQL.CreateParameter("ID", ID);
                 SQL.FillDataSetBySP("SP_TransferBuyBook_Search", ds.TransferBuyBook);
             }
             catch (Exception ex)
