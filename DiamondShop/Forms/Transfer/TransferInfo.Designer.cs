@@ -119,7 +119,7 @@
             this.panel3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel3.Location = new System.Drawing.Point(10, 72);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1049, 461);
+            this.panel3.Size = new System.Drawing.Size(1022, 461);
             this.panel3.TabIndex = 74;
             // 
             // label8
@@ -229,7 +229,7 @@
             // txtNote
             // 
             this.txtNote.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.txtNote.Location = new System.Drawing.Point(676, 341);
+            this.txtNote.Location = new System.Drawing.Point(655, 343);
             this.txtNote.Multiline = true;
             this.txtNote.Name = "txtNote";
             this.txtNote.Size = new System.Drawing.Size(320, 68);
@@ -240,7 +240,7 @@
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label16.Location = new System.Drawing.Point(625, 341);
+            this.label16.Location = new System.Drawing.Point(604, 343);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(45, 19);
             this.label16.TabIndex = 237;
@@ -285,7 +285,7 @@
             this.btnDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDel.Image = ((System.Drawing.Image)(resources.GetObject("btnDel.Image")));
-            this.btnDel.Location = new System.Drawing.Point(1006, 179);
+            this.btnDel.Location = new System.Drawing.Point(981, 179);
             this.btnDel.Name = "btnDel";
             this.btnDel.Size = new System.Drawing.Size(30, 30);
             this.btnDel.TabIndex = 95;
@@ -302,7 +302,7 @@
             this.btnAdd.FlatAppearance.BorderSize = 0;
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(1006, 143);
+            this.btnAdd.Location = new System.Drawing.Point(981, 143);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(30, 30);
             this.btnAdd.TabIndex = 93;
@@ -338,7 +338,7 @@
             this.gridTransfer.RowTemplate.Height = 25;
             this.gridTransfer.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.gridTransfer.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridTransfer.Size = new System.Drawing.Size(973, 187);
+            this.gridTransfer.Size = new System.Drawing.Size(952, 187);
             this.gridTransfer.TabIndex = 86;
             this.gridTransfer.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridTransfer_CellClick);
             this.gridTransfer.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.gridTransfer_CellFormatting);
@@ -528,7 +528,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(195)))), ((int)(((byte)(157)))));
-            this.ClientSize = new System.Drawing.Size(1072, 545);
+            this.ClientSize = new System.Drawing.Size(1043, 545);
             this.Controls.Add(this.panel3);
             this.Name = "TransferInfo";
             this.Text = "DiamondCer";
