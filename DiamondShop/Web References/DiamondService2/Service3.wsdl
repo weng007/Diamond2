@@ -583,7 +583,8 @@
             <s:element minOccurs="1" maxOccurs="1" name="shop" type="s:int" />
             <s:element minOccurs="0" maxOccurs="1" name="code" type="s:string" />
             <s:element minOccurs="0" maxOccurs="1" name="code2" type="s:string" />
-            <s:element minOccurs="1" maxOccurs="1" name="buybooktype" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Flag" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
           </s:sequence>
         </s:complexType>
       </s:element>

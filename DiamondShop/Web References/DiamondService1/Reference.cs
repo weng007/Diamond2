@@ -24,7 +24,7 @@ namespace DiamondShop.DiamondService1 {
     
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Web.Services.WebServiceBindingAttribute(Name="Service2Soap", Namespace="http://tempuri.org/")]
@@ -73,6 +73,10 @@ namespace DiamondShop.DiamondService1 {
         private System.Threading.SendOrPostCallback UpdateProductionLineOperationCompleted;
         
         private System.Threading.SendOrPostCallback GetExpenseGroupOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback CountUnReadMessageOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback UpdateTransferReceivedOperationCompleted;
         
         private bool useDefaultCredentialsSetExplicitly;
         
@@ -177,6 +181,12 @@ namespace DiamondShop.DiamondService1 {
         
         /// <remarks/>
         public event GetExpenseGroupCompletedEventHandler GetExpenseGroupCompleted;
+        
+        /// <remarks/>
+        public event CountUnReadMessageCompletedEventHandler CountUnReadMessageCompleted;
+        
+        /// <remarks/>
+        public event UpdateTransferReceivedCompletedEventHandler UpdateTransferReceivedCompleted;
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/DoAuthenticate", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
@@ -752,25 +762,27 @@ namespace DiamondShop.DiamondService1 {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/UpdateMessageStatus", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public int UpdateMessageStatus(int id, string Flag) {
+        public int UpdateMessageStatus(int id, string StatusType, string Flag) {
             object[] results = this.Invoke("UpdateMessageStatus", new object[] {
                         id,
+                        StatusType,
                         Flag});
             return ((int)(results[0]));
         }
         
         /// <remarks/>
-        public void UpdateMessageStatusAsync(int id, string Flag) {
-            this.UpdateMessageStatusAsync(id, Flag, null);
+        public void UpdateMessageStatusAsync(int id, string StatusType, string Flag) {
+            this.UpdateMessageStatusAsync(id, StatusType, Flag, null);
         }
         
         /// <remarks/>
-        public void UpdateMessageStatusAsync(int id, string Flag, object userState) {
+        public void UpdateMessageStatusAsync(int id, string StatusType, string Flag, object userState) {
             if ((this.UpdateMessageStatusOperationCompleted == null)) {
                 this.UpdateMessageStatusOperationCompleted = new System.Threading.SendOrPostCallback(this.OnUpdateMessageStatusOperationCompleted);
             }
             this.InvokeAsync("UpdateMessageStatus", new object[] {
                         id,
+                        StatusType,
                         Flag}, this.UpdateMessageStatusOperationCompleted, userState);
         }
         
@@ -873,6 +885,70 @@ namespace DiamondShop.DiamondService1 {
         }
         
         /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/CountUnReadMessage", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public int CountUnReadMessage(int userID) {
+            object[] results = this.Invoke("CountUnReadMessage", new object[] {
+                        userID});
+            return ((int)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void CountUnReadMessageAsync(int userID) {
+            this.CountUnReadMessageAsync(userID, null);
+        }
+        
+        /// <remarks/>
+        public void CountUnReadMessageAsync(int userID, object userState) {
+            if ((this.CountUnReadMessageOperationCompleted == null)) {
+                this.CountUnReadMessageOperationCompleted = new System.Threading.SendOrPostCallback(this.OnCountUnReadMessageOperationCompleted);
+            }
+            this.InvokeAsync("CountUnReadMessage", new object[] {
+                        userID}, this.CountUnReadMessageOperationCompleted, userState);
+        }
+        
+        private void OnCountUnReadMessageOperationCompleted(object arg) {
+            if ((this.CountUnReadMessageCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.CountUnReadMessageCompleted(this, new CountUnReadMessageCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/UpdateTransferReceived", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public int UpdateTransferReceived(int ID, int TransferStatus, System.DateTime ReceiveDate, int EShop) {
+            object[] results = this.Invoke("UpdateTransferReceived", new object[] {
+                        ID,
+                        TransferStatus,
+                        ReceiveDate,
+                        EShop});
+            return ((int)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void UpdateTransferReceivedAsync(int ID, int TransferStatus, System.DateTime ReceiveDate, int EShop) {
+            this.UpdateTransferReceivedAsync(ID, TransferStatus, ReceiveDate, EShop, null);
+        }
+        
+        /// <remarks/>
+        public void UpdateTransferReceivedAsync(int ID, int TransferStatus, System.DateTime ReceiveDate, int EShop, object userState) {
+            if ((this.UpdateTransferReceivedOperationCompleted == null)) {
+                this.UpdateTransferReceivedOperationCompleted = new System.Threading.SendOrPostCallback(this.OnUpdateTransferReceivedOperationCompleted);
+            }
+            this.InvokeAsync("UpdateTransferReceived", new object[] {
+                        ID,
+                        TransferStatus,
+                        ReceiveDate,
+                        EShop}, this.UpdateTransferReceivedOperationCompleted, userState);
+        }
+        
+        private void OnUpdateTransferReceivedOperationCompleted(object arg) {
+            if ((this.UpdateTransferReceivedCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.UpdateTransferReceivedCompleted(this, new UpdateTransferReceivedCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
         public new void CancelAsync(object userState) {
             base.CancelAsync(userState);
         }
@@ -901,7 +977,7 @@ namespace DiamondShop.DiamondService1 {
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
     [global::System.Xml.Serialization.XmlRootAttribute("dsUser")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1064.2")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     public partial class dsUser : global::System.Data.DataSet {
         
         private UserDataTable tableUser;
@@ -2358,7 +2434,7 @@ namespace DiamondShop.DiamondService1 {
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
     [global::System.Xml.Serialization.XmlRootAttribute("dsOrder")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1064.2")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     public partial class dsOrder : global::System.Data.DataSet {
         
         private OrderDataTable tableOrder;
@@ -2695,6 +2771,8 @@ namespace DiamondShop.DiamondService1 {
             private global::System.Data.DataColumn columnThings;
             
             private global::System.Data.DataColumn columnDetail;
+            
+            private global::System.Data.DataColumn columnFlag;
             
             private global::System.Data.DataColumn columnNote1;
             
@@ -3091,6 +3169,14 @@ namespace DiamondShop.DiamondService1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn FlagColumn {
+                get {
+                    return this.columnFlag;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn Note1Column {
                 get {
                     return this.columnNote1;
@@ -3326,6 +3412,7 @@ namespace DiamondShop.DiamondService1 {
                         string ImageNote, 
                         string Things, 
                         string Detail, 
+                        int Flag, 
                         string Note1, 
                         int Note1Status, 
                         string NoteStatusName1, 
@@ -3388,6 +3475,7 @@ namespace DiamondShop.DiamondService1 {
                         ImageNote,
                         Things,
                         Detail,
+                        Flag,
                         Note1,
                         Note1Status,
                         NoteStatusName1,
@@ -3483,6 +3571,7 @@ namespace DiamondShop.DiamondService1 {
                 this.columnImageNote = base.Columns["ImageNote"];
                 this.columnThings = base.Columns["Things"];
                 this.columnDetail = base.Columns["Detail"];
+                this.columnFlag = base.Columns["Flag"];
                 this.columnNote1 = base.Columns["Note1"];
                 this.columnNote1Status = base.Columns["Note1Status"];
                 this.columnNoteStatusName1 = base.Columns["NoteStatusName1"];
@@ -3588,6 +3677,8 @@ namespace DiamondShop.DiamondService1 {
                 base.Columns.Add(this.columnThings);
                 this.columnDetail = new global::System.Data.DataColumn("Detail", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDetail);
+                this.columnFlag = new global::System.Data.DataColumn("Flag", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFlag);
                 this.columnNote1 = new global::System.Data.DataColumn("Note1", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnNote1);
                 this.columnNote1Status = new global::System.Data.DataColumn("Note1Status", typeof(int), null, global::System.Data.MappingType.Element);
@@ -4449,6 +4540,22 @@ namespace DiamondShop.DiamondService1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int Flag {
+                get {
+                    try {
+                        return ((int)(this[this.tableOrder.FlagColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Flag\' in table \'Order\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableOrder.FlagColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string Note1 {
                 get {
                     try {
@@ -5237,6 +5344,18 @@ namespace DiamondShop.DiamondService1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsFlagNull() {
+                return this.IsNull(this.tableOrder.FlagColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetFlagNull() {
+                this[this.tableOrder.FlagColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsNote1Null() {
                 return this.IsNull(this.tableOrder.Note1Column);
             }
@@ -5521,7 +5640,7 @@ namespace DiamondShop.DiamondService1 {
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
     [global::System.Xml.Serialization.XmlRootAttribute("dsExpenseGroup")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1064.2")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1055.0")]
     public partial class dsExpenseGroup : global::System.Data.DataSet {
         
         private ExpenseGroupDataTable tableExpenseGroup;
@@ -6399,11 +6518,11 @@ namespace DiamondShop.DiamondService1 {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
     public delegate void DoAuthenticateCompletedEventHandler(object sender, DoAuthenticateCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class DoAuthenticateCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -6425,11 +6544,11 @@ namespace DiamondShop.DiamondService1 {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
     public delegate void GetSellerCompletedEventHandler(object sender, GetSellerCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class GetSellerCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -6451,11 +6570,11 @@ namespace DiamondShop.DiamondService1 {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
     public delegate void GetBuyerCompletedEventHandler(object sender, GetBuyerCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class GetBuyerCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -6477,11 +6596,11 @@ namespace DiamondShop.DiamondService1 {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
     public delegate void GetFactoryStatusCompletedEventHandler(object sender, GetFactoryStatusCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class GetFactoryStatusCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -6503,11 +6622,11 @@ namespace DiamondShop.DiamondService1 {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
     public delegate void GetRunningNumberCompletedEventHandler(object sender, GetRunningNumberCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class GetRunningNumberCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -6529,11 +6648,11 @@ namespace DiamondShop.DiamondService1 {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
     public delegate void GetJewelryDetailCompletedEventHandler(object sender, GetJewelryDetailCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class GetJewelryDetailCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -6555,11 +6674,11 @@ namespace DiamondShop.DiamondService1 {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
     public delegate void UpdateJewelryStatusCompletedEventHandler(object sender, UpdateJewelryStatusCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class UpdateJewelryStatusCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -6581,11 +6700,11 @@ namespace DiamondShop.DiamondService1 {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
     public delegate void UpdateOrderStatusCompletedEventHandler(object sender, UpdateOrderStatusCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class UpdateOrderStatusCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -6607,11 +6726,11 @@ namespace DiamondShop.DiamondService1 {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
     public delegate void GetPriceDaimondAndGemstoneCompletedEventHandler(object sender, GetPriceDaimondAndGemstoneCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class GetPriceDaimondAndGemstoneCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -6633,11 +6752,11 @@ namespace DiamondShop.DiamondService1 {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
     public delegate void GetReportJewelryCompletedEventHandler(object sender, GetReportJewelryCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class GetReportJewelryCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -6659,11 +6778,11 @@ namespace DiamondShop.DiamondService1 {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
     public delegate void GetReportBuyingCompletedEventHandler(object sender, GetReportBuyingCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class GetReportBuyingCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -6685,11 +6804,11 @@ namespace DiamondShop.DiamondService1 {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
     public delegate void GetReportSellingCompletedEventHandler(object sender, GetReportSellingCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class GetReportSellingCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -6711,11 +6830,11 @@ namespace DiamondShop.DiamondService1 {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
     public delegate void GetReportDebtCompletedEventHandler(object sender, GetReportDebtCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class GetReportDebtCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -6737,11 +6856,11 @@ namespace DiamondShop.DiamondService1 {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
     public delegate void GetReportCustomerCompletedEventHandler(object sender, GetReportCustomerCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class GetReportCustomerCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -6763,11 +6882,11 @@ namespace DiamondShop.DiamondService1 {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
     public delegate void GetReportInventoryCompletedEventHandler(object sender, GetReportInventoryCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class GetReportInventoryCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -6789,11 +6908,11 @@ namespace DiamondShop.DiamondService1 {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
     public delegate void GetReportOrderCompletedEventHandler(object sender, GetReportOrderCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class GetReportOrderCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -6815,11 +6934,11 @@ namespace DiamondShop.DiamondService1 {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
     public delegate void GetReportReceiveDocumentCompletedEventHandler(object sender, GetReportReceiveDocumentCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class GetReportReceiveDocumentCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -6841,11 +6960,11 @@ namespace DiamondShop.DiamondService1 {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
     public delegate void GetReportCertificateCompletedEventHandler(object sender, GetReportCertificateCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class GetReportCertificateCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -6867,11 +6986,11 @@ namespace DiamondShop.DiamondService1 {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
     public delegate void UpdateMessageStatusCompletedEventHandler(object sender, UpdateMessageStatusCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class UpdateMessageStatusCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -6893,11 +7012,11 @@ namespace DiamondShop.DiamondService1 {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
     public delegate void DeleteDataReferenceCompletedEventHandler(object sender, DeleteDataReferenceCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class DeleteDataReferenceCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -6919,11 +7038,11 @@ namespace DiamondShop.DiamondService1 {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
     public delegate void UpdateProductionLineCompletedEventHandler(object sender, UpdateProductionLineCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class UpdateProductionLineCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -6945,11 +7064,11 @@ namespace DiamondShop.DiamondService1 {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
     public delegate void GetExpenseGroupCompletedEventHandler(object sender, GetExpenseGroupCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class GetExpenseGroupCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -6966,6 +7085,58 @@ namespace DiamondShop.DiamondService1 {
             get {
                 this.RaiseExceptionIfNecessary();
                 return ((dsExpenseGroup)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void CountUnReadMessageCompletedEventHandler(object sender, CountUnReadMessageCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class CountUnReadMessageCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal CountUnReadMessageCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public int Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((int)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void UpdateTransferReceivedCompletedEventHandler(object sender, UpdateTransferReceivedCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class UpdateTransferReceivedCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal UpdateTransferReceivedCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public int Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((int)(this.results[0]));
             }
         }
     }

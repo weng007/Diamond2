@@ -328,6 +328,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsUser.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DS\dsWarning.cs">
+      <DependentUpon>dsWarning.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DS\dsWarning.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
