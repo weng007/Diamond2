@@ -48,6 +48,7 @@ namespace DiamondShop
             txtSeller.Select();
 
             gridBuyBookPayment.AutoGenerateColumns = false;
+            
         }
 
         protected override void DoLoadData()

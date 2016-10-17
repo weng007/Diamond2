@@ -60,7 +60,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.gridBuyBookPayment = new System.Windows.Forms.DataGridView();
-            this.Payment1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Select = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IsPaid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Payment = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -109,7 +109,7 @@
             this.panal.Controls.Add(this.cmbBuyBookType);
             this.panal.Controls.Add(this.label6);
             this.panal.Controls.Add(this.label5);
-            this.panal.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.panal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.panal.Location = new System.Drawing.Point(0, 0);
             this.panal.Name = "panal";
             this.panal.Size = new System.Drawing.Size(1329, 183);
@@ -126,9 +126,12 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(854, 59);
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Location = new System.Drawing.Point(848, 57);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(34, 28);
+            this.button1.Size = new System.Drawing.Size(28, 28);
             this.button1.TabIndex = 257;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -137,14 +140,17 @@
             // 
             this.txtEPayDate.Location = new System.Drawing.Point(725, 60);
             this.txtEPayDate.Name = "txtEPayDate";
-            this.txtEPayDate.Size = new System.Drawing.Size(123, 27);
+            this.txtEPayDate.Size = new System.Drawing.Size(123, 26);
             this.txtEPayDate.TabIndex = 256;
             // 
             // btnChooseDate
             // 
-            this.btnChooseDate.Location = new System.Drawing.Point(663, 61);
+            this.btnChooseDate.FlatAppearance.BorderSize = 0;
+            this.btnChooseDate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnChooseDate.Image = ((System.Drawing.Image)(resources.GetObject("btnChooseDate.Image")));
+            this.btnChooseDate.Location = new System.Drawing.Point(658, 59);
             this.btnChooseDate.Name = "btnChooseDate";
-            this.btnChooseDate.Size = new System.Drawing.Size(34, 28);
+            this.btnChooseDate.Size = new System.Drawing.Size(28, 28);
             this.btnChooseDate.TabIndex = 254;
             this.btnChooseDate.UseVisualStyleBackColor = true;
             this.btnChooseDate.Click += new System.EventHandler(this.btnChooseDate_Click);
@@ -153,7 +159,7 @@
             // 
             this.txtSPayDate.Location = new System.Drawing.Point(534, 62);
             this.txtSPayDate.Name = "txtSPayDate";
-            this.txtSPayDate.Size = new System.Drawing.Size(123, 27);
+            this.txtSPayDate.Size = new System.Drawing.Size(123, 26);
             this.txtSPayDate.TabIndex = 253;
             // 
             // label9
@@ -172,7 +178,7 @@
             this.dtEBuyDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtEBuyDate.Location = new System.Drawing.Point(690, 25);
             this.dtEBuyDate.Name = "dtEBuyDate";
-            this.dtEBuyDate.Size = new System.Drawing.Size(131, 27);
+            this.dtEBuyDate.Size = new System.Drawing.Size(131, 26);
             this.dtEBuyDate.TabIndex = 88;
             // 
             // label8
@@ -201,14 +207,14 @@
             this.dtSBuyDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtSBuyDate.Location = new System.Drawing.Point(534, 25);
             this.dtSBuyDate.Name = "dtSBuyDate";
-            this.dtSBuyDate.Size = new System.Drawing.Size(131, 27);
+            this.dtSBuyDate.Size = new System.Drawing.Size(131, 26);
             this.dtSBuyDate.TabIndex = 87;
             // 
             // txtSeller
             // 
             this.txtSeller.Location = new System.Drawing.Point(253, 24);
             this.txtSeller.Name = "txtSeller";
-            this.txtSeller.Size = new System.Drawing.Size(168, 27);
+            this.txtSeller.Size = new System.Drawing.Size(168, 26);
             this.txtSeller.TabIndex = 86;
             // 
             // label4
@@ -246,7 +252,7 @@
             this.cmbIsPaid.FormattingEnabled = true;
             this.cmbIsPaid.Location = new System.Drawing.Point(253, 99);
             this.cmbIsPaid.Name = "cmbIsPaid";
-            this.cmbIsPaid.Size = new System.Drawing.Size(168, 29);
+            this.cmbIsPaid.Size = new System.Drawing.Size(168, 28);
             this.cmbIsPaid.TabIndex = 80;
             // 
             // label1
@@ -305,7 +311,7 @@
             this.cmbBuyBookType.FormattingEnabled = true;
             this.cmbBuyBookType.Location = new System.Drawing.Point(253, 61);
             this.cmbBuyBookType.Name = "cmbBuyBookType";
-            this.cmbBuyBookType.Size = new System.Drawing.Size(168, 29);
+            this.cmbBuyBookType.Size = new System.Drawing.Size(168, 28);
             this.cmbBuyBookType.TabIndex = 28;
             // 
             // label6
@@ -332,7 +338,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.gridBuyBookPayment);
-            this.panel2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.Location = new System.Drawing.Point(1, 187);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1335, 388);
@@ -347,7 +353,7 @@
             this.gridBuyBookPayment.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.gridBuyBookPayment.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridBuyBookPayment.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Payment1,
+            this.Select,
             this.ID,
             this.IsPaid,
             this.Payment,
@@ -369,9 +375,9 @@
             this.gridBuyBookPayment.Name = "gridBuyBookPayment";
             this.gridBuyBookPayment.ReadOnly = true;
             this.gridBuyBookPayment.RowHeadersWidth = 10;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridBuyBookPayment.RowsDefaultCellStyle = dataGridViewCellStyle6;
-            this.gridBuyBookPayment.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridBuyBookPayment.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridBuyBookPayment.RowTemplate.Height = 30;
             this.gridBuyBookPayment.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridBuyBookPayment.Size = new System.Drawing.Size(1313, 388);
@@ -379,12 +385,12 @@
             this.gridBuyBookPayment.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridBuyBookPayment_CellClick);
             this.gridBuyBookPayment.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.gridDiamondCer_MouseDoubleClick);
             // 
-            // Payment1
+            // Select
             // 
-            this.Payment1.HeaderText = "Select";
-            this.Payment1.Name = "Payment1";
-            this.Payment1.ReadOnly = true;
-            this.Payment1.Width = 80;
+            this.Select.HeaderText = "Select";
+            this.Select.Name = "Select";
+            this.Select.ReadOnly = true;
+            this.Select.Width = 60;
             // 
             // ID
             // 
@@ -582,7 +588,7 @@
         private System.Windows.Forms.TextBox txtSPayDate;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox txtEPayDate;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Payment1;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Select;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn IsPaid;
         private System.Windows.Forms.DataGridViewTextBoxColumn Payment;

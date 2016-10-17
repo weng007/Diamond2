@@ -45,6 +45,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.gridSetting = new System.Windows.Forms.DataGridView();
+            this.Select = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.RowNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BuyDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -69,7 +70,7 @@
             this.panel4.Controls.Add(this.btnAdd);
             this.panel4.Controls.Add(this.btnSearch);
             this.panel4.Controls.Add(this.label3);
-            this.panel4.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.panel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.panel4.Location = new System.Drawing.Point(0, 1);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(757, 117);
@@ -95,7 +96,7 @@
             // 
             this.txtSeller.Location = new System.Drawing.Point(238, 21);
             this.txtSeller.Name = "txtSeller";
-            this.txtSeller.Size = new System.Drawing.Size(132, 27);
+            this.txtSeller.Size = new System.Drawing.Size(132, 26);
             this.txtSeller.TabIndex = 73;
             // 
             // dtEBuyDate
@@ -104,7 +105,7 @@
             this.dtEBuyDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtEBuyDate.Location = new System.Drawing.Point(394, 62);
             this.dtEBuyDate.Name = "dtEBuyDate";
-            this.dtEBuyDate.Size = new System.Drawing.Size(131, 27);
+            this.dtEBuyDate.Size = new System.Drawing.Size(131, 26);
             this.dtEBuyDate.TabIndex = 8;
             // 
             // label2
@@ -133,7 +134,7 @@
             this.dtSBuyDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtSBuyDate.Location = new System.Drawing.Point(238, 62);
             this.dtSBuyDate.Name = "dtSBuyDate";
-            this.dtSBuyDate.Size = new System.Drawing.Size(131, 27);
+            this.dtSBuyDate.Size = new System.Drawing.Size(131, 26);
             this.dtSBuyDate.TabIndex = 4;
             // 
             // btnAdd
@@ -181,7 +182,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.gridSetting);
-            this.panel2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.Location = new System.Drawing.Point(5, 124);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(737, 456);
@@ -195,6 +196,7 @@
             this.gridSetting.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.gridSetting.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridSetting.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Select,
             this.RowNum,
             this.ID,
             this.BuyDate,
@@ -205,12 +207,19 @@
             this.gridSetting.Name = "gridSetting";
             this.gridSetting.ReadOnly = true;
             this.gridSetting.RowHeadersWidth = 10;
-            this.gridSetting.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridSetting.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridSetting.RowTemplate.Height = 30;
             this.gridSetting.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridSetting.Size = new System.Drawing.Size(719, 447);
             this.gridSetting.TabIndex = 2;
             this.gridSetting.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.gridSetting_MouseDoubleClick);
+            // 
+            // Select
+            // 
+            this.Select.HeaderText = "Select";
+            this.Select.Name = "Select";
+            this.Select.ReadOnly = true;
+            this.Select.Width = 60;
             // 
             // RowNum
             // 
@@ -265,7 +274,7 @@
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
             dataGridViewCellStyle4.Format = "N0";
             this.SalePrice.DefaultCellStyle = dataGridViewCellStyle4;
-            this.SalePrice.HeaderText = "ขายอก";
+            this.SalePrice.HeaderText = "ขายออก";
             this.SalePrice.Name = "SalePrice";
             this.SalePrice.ReadOnly = true;
             this.SalePrice.Width = 130;
@@ -301,12 +310,13 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker dtSBuyDate;
         private System.Windows.Forms.TextBox txtSeller;
+        private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Select;
         private System.Windows.Forms.DataGridViewTextBoxColumn RowNum;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn BuyDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn Seller;
         private System.Windows.Forms.DataGridViewTextBoxColumn BuyPrice;
         private System.Windows.Forms.DataGridViewTextBoxColumn SalePrice;
-        private System.Windows.Forms.Button btnClose;
     }
 }
