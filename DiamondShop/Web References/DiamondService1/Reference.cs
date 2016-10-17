@@ -74,6 +74,10 @@ namespace DiamondShop.DiamondService1 {
         
         private System.Threading.SendOrPostCallback GetExpenseGroupOperationCompleted;
         
+        private System.Threading.SendOrPostCallback CountUnReadMessageOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback UpdateTransferReceivedOperationCompleted;
+        
         private bool useDefaultCredentialsSetExplicitly;
         
         /// <remarks/>
@@ -177,6 +181,12 @@ namespace DiamondShop.DiamondService1 {
         
         /// <remarks/>
         public event GetExpenseGroupCompletedEventHandler GetExpenseGroupCompleted;
+        
+        /// <remarks/>
+        public event CountUnReadMessageCompletedEventHandler CountUnReadMessageCompleted;
+        
+        /// <remarks/>
+        public event UpdateTransferReceivedCompletedEventHandler UpdateTransferReceivedCompleted;
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/DoAuthenticate", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
@@ -752,25 +762,27 @@ namespace DiamondShop.DiamondService1 {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/UpdateMessageStatus", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public int UpdateMessageStatus(int id, string Flag) {
+        public int UpdateMessageStatus(int id, string StatusType, string Flag) {
             object[] results = this.Invoke("UpdateMessageStatus", new object[] {
                         id,
+                        StatusType,
                         Flag});
             return ((int)(results[0]));
         }
         
         /// <remarks/>
-        public void UpdateMessageStatusAsync(int id, string Flag) {
-            this.UpdateMessageStatusAsync(id, Flag, null);
+        public void UpdateMessageStatusAsync(int id, string StatusType, string Flag) {
+            this.UpdateMessageStatusAsync(id, StatusType, Flag, null);
         }
         
         /// <remarks/>
-        public void UpdateMessageStatusAsync(int id, string Flag, object userState) {
+        public void UpdateMessageStatusAsync(int id, string StatusType, string Flag, object userState) {
             if ((this.UpdateMessageStatusOperationCompleted == null)) {
                 this.UpdateMessageStatusOperationCompleted = new System.Threading.SendOrPostCallback(this.OnUpdateMessageStatusOperationCompleted);
             }
             this.InvokeAsync("UpdateMessageStatus", new object[] {
                         id,
+                        StatusType,
                         Flag}, this.UpdateMessageStatusOperationCompleted, userState);
         }
         
@@ -869,6 +881,70 @@ namespace DiamondShop.DiamondService1 {
             if ((this.GetExpenseGroupCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.GetExpenseGroupCompleted(this, new GetExpenseGroupCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/CountUnReadMessage", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public int CountUnReadMessage(int userID) {
+            object[] results = this.Invoke("CountUnReadMessage", new object[] {
+                        userID});
+            return ((int)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void CountUnReadMessageAsync(int userID) {
+            this.CountUnReadMessageAsync(userID, null);
+        }
+        
+        /// <remarks/>
+        public void CountUnReadMessageAsync(int userID, object userState) {
+            if ((this.CountUnReadMessageOperationCompleted == null)) {
+                this.CountUnReadMessageOperationCompleted = new System.Threading.SendOrPostCallback(this.OnCountUnReadMessageOperationCompleted);
+            }
+            this.InvokeAsync("CountUnReadMessage", new object[] {
+                        userID}, this.CountUnReadMessageOperationCompleted, userState);
+        }
+        
+        private void OnCountUnReadMessageOperationCompleted(object arg) {
+            if ((this.CountUnReadMessageCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.CountUnReadMessageCompleted(this, new CountUnReadMessageCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/UpdateTransferReceived", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public int UpdateTransferReceived(int ID, int TransferStatus, System.DateTime ReceiveDate, int EShop) {
+            object[] results = this.Invoke("UpdateTransferReceived", new object[] {
+                        ID,
+                        TransferStatus,
+                        ReceiveDate,
+                        EShop});
+            return ((int)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void UpdateTransferReceivedAsync(int ID, int TransferStatus, System.DateTime ReceiveDate, int EShop) {
+            this.UpdateTransferReceivedAsync(ID, TransferStatus, ReceiveDate, EShop, null);
+        }
+        
+        /// <remarks/>
+        public void UpdateTransferReceivedAsync(int ID, int TransferStatus, System.DateTime ReceiveDate, int EShop, object userState) {
+            if ((this.UpdateTransferReceivedOperationCompleted == null)) {
+                this.UpdateTransferReceivedOperationCompleted = new System.Threading.SendOrPostCallback(this.OnUpdateTransferReceivedOperationCompleted);
+            }
+            this.InvokeAsync("UpdateTransferReceived", new object[] {
+                        ID,
+                        TransferStatus,
+                        ReceiveDate,
+                        EShop}, this.UpdateTransferReceivedOperationCompleted, userState);
+        }
+        
+        private void OnUpdateTransferReceivedOperationCompleted(object arg) {
+            if ((this.UpdateTransferReceivedCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.UpdateTransferReceivedCompleted(this, new UpdateTransferReceivedCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -2696,6 +2772,8 @@ namespace DiamondShop.DiamondService1 {
             
             private global::System.Data.DataColumn columnDetail;
             
+            private global::System.Data.DataColumn columnFlag;
+            
             private global::System.Data.DataColumn columnNote1;
             
             private global::System.Data.DataColumn columnNote1Status;
@@ -3091,6 +3169,14 @@ namespace DiamondShop.DiamondService1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn FlagColumn {
+                get {
+                    return this.columnFlag;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn Note1Column {
                 get {
                     return this.columnNote1;
@@ -3326,6 +3412,7 @@ namespace DiamondShop.DiamondService1 {
                         string ImageNote, 
                         string Things, 
                         string Detail, 
+                        int Flag, 
                         string Note1, 
                         int Note1Status, 
                         string NoteStatusName1, 
@@ -3388,6 +3475,7 @@ namespace DiamondShop.DiamondService1 {
                         ImageNote,
                         Things,
                         Detail,
+                        Flag,
                         Note1,
                         Note1Status,
                         NoteStatusName1,
@@ -3483,6 +3571,7 @@ namespace DiamondShop.DiamondService1 {
                 this.columnImageNote = base.Columns["ImageNote"];
                 this.columnThings = base.Columns["Things"];
                 this.columnDetail = base.Columns["Detail"];
+                this.columnFlag = base.Columns["Flag"];
                 this.columnNote1 = base.Columns["Note1"];
                 this.columnNote1Status = base.Columns["Note1Status"];
                 this.columnNoteStatusName1 = base.Columns["NoteStatusName1"];
@@ -3588,6 +3677,8 @@ namespace DiamondShop.DiamondService1 {
                 base.Columns.Add(this.columnThings);
                 this.columnDetail = new global::System.Data.DataColumn("Detail", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDetail);
+                this.columnFlag = new global::System.Data.DataColumn("Flag", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFlag);
                 this.columnNote1 = new global::System.Data.DataColumn("Note1", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnNote1);
                 this.columnNote1Status = new global::System.Data.DataColumn("Note1Status", typeof(int), null, global::System.Data.MappingType.Element);
@@ -4449,6 +4540,22 @@ namespace DiamondShop.DiamondService1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int Flag {
+                get {
+                    try {
+                        return ((int)(this[this.tableOrder.FlagColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Flag\' in table \'Order\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableOrder.FlagColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string Note1 {
                 get {
                     try {
@@ -5233,6 +5340,18 @@ namespace DiamondShop.DiamondService1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetDetailNull() {
                 this[this.tableOrder.DetailColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsFlagNull() {
+                return this.IsNull(this.tableOrder.FlagColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetFlagNull() {
+                this[this.tableOrder.FlagColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6966,6 +7085,58 @@ namespace DiamondShop.DiamondService1 {
             get {
                 this.RaiseExceptionIfNecessary();
                 return ((dsExpenseGroup)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    public delegate void CountUnReadMessageCompletedEventHandler(object sender, CountUnReadMessageCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class CountUnReadMessageCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal CountUnReadMessageCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public int Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((int)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    public delegate void UpdateTransferReceivedCompletedEventHandler(object sender, UpdateTransferReceivedCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class UpdateTransferReceivedCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal UpdateTransferReceivedCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public int Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((int)(this.results[0]));
             }
         }
     }

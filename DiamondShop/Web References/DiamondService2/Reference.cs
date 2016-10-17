@@ -1092,22 +1092,23 @@ namespace DiamondShop.DiamondService2 {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/DoSearchTransferBuyBook", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public System.Data.DataSet DoSearchTransferBuyBook(int shop, string code, string code2, int buybooktype) {
+        public System.Data.DataSet DoSearchTransferBuyBook(int shop, string code, string code2, int Flag, int ID) {
             object[] results = this.Invoke("DoSearchTransferBuyBook", new object[] {
                         shop,
                         code,
                         code2,
-                        buybooktype});
+                        Flag,
+                        ID});
             return ((System.Data.DataSet)(results[0]));
         }
         
         /// <remarks/>
-        public void DoSearchTransferBuyBookAsync(int shop, string code, string code2, int buybooktype) {
-            this.DoSearchTransferBuyBookAsync(shop, code, code2, buybooktype, null);
+        public void DoSearchTransferBuyBookAsync(int shop, string code, string code2, int Flag, int ID) {
+            this.DoSearchTransferBuyBookAsync(shop, code, code2, Flag, ID, null);
         }
         
         /// <remarks/>
-        public void DoSearchTransferBuyBookAsync(int shop, string code, string code2, int buybooktype, object userState) {
+        public void DoSearchTransferBuyBookAsync(int shop, string code, string code2, int Flag, int ID, object userState) {
             if ((this.DoSearchTransferBuyBookOperationCompleted == null)) {
                 this.DoSearchTransferBuyBookOperationCompleted = new System.Threading.SendOrPostCallback(this.OnDoSearchTransferBuyBookOperationCompleted);
             }
@@ -1115,7 +1116,8 @@ namespace DiamondShop.DiamondService2 {
                         shop,
                         code,
                         code2,
-                        buybooktype}, this.DoSearchTransferBuyBookOperationCompleted, userState);
+                        Flag,
+                        ID}, this.DoSearchTransferBuyBookOperationCompleted, userState);
         }
         
         private void OnDoSearchTransferBuyBookOperationCompleted(object arg) {

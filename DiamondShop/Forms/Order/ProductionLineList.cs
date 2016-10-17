@@ -16,6 +16,7 @@ namespace DiamondShop
     public partial class ProductionLineList : FormList
     {
         public int SFactoryStatus;
+        string idSelected = "";
         int flag;
 
         public ProductionLineList()
@@ -52,10 +53,27 @@ namespace DiamondShop
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            ProductionLineInfo frm = new ProductionLineInfo(id,SFactoryStatus);
+            CheckSelected();
+
+            ProductionLineInfo frm = new ProductionLineInfo(idSelected, SFactoryStatus);
             frm.ShowDialog();
 
             DoLoadData();
+        }
+
+        private void CheckSelected()
+        {
+            string comma = ",";
+
+            for (int i = 0; i < gridProductionLine.Rows.Count; i++)
+            {       
+                idSelected += gridProductionLine.Rows[i].Cells["ID"].ToString() + comma;
+
+                if (i == gridProductionLine.Rows.Count - 2)
+                {
+                    comma = "";
+                }
+            }
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -80,30 +98,14 @@ namespace DiamondShop
                 if (gridProductionLine.SelectedCells[0].Value == null)
                 {
                     gridProductionLine.SelectedCells[0].Value = true;
-                    id = (int)gridProductionLine.SelectedRows[0].Cells["ID"].Value;
-                    SFactoryStatus += Convert.ToInt32(gridProductionLine.SelectedRows[0].Cells["FactoryStatus"].Value.ToString());
                 }
                 else
                 {
                     gridProductionLine.SelectedCells[0].Value = false;
-                    SFactoryStatus -= Convert.ToInt32(gridProductionLine.SelectedRows[0].Cells["FactoryStatus"].Value.ToString());
                 }
             }
         }
 
-        private void monthCalendar1_DateSelected(object sender, DateRangeEventArgs e)
-        {
-            //if (flag == 0)
-            //{
-            //    txtSPayDate.Text = monthCalendar1.SelectionRange.Start.ToShortDateString();
-            //}
-            //else if (flag == 1)
-            //{
-            //    txtEPayDate.Text = monthCalendar1.SelectionRange.Start.ToShortDateString();
-            //}
-            //monthCalendar1.Visible = false; 
-            
-        }
         private void btnChooseDate_Click(object sender, EventArgs e)
         {
             //monthCalendar1.Visible = true;
@@ -116,6 +118,7 @@ namespace DiamondShop
             btnProcessing.BackColor = Color.Gray;
             btnMounting.BackColor = Color.Gray;
             btnJobDone.BackColor = Color.Gray;
+            SFactoryStatus = 
 
             SearchProductionLine(218);
         }

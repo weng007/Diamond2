@@ -5,9 +5,9 @@
       <s:import namespace="http://tempuri.org/dsUser.xsd" />
       <s:import namespace="http://tempuri.org/dsOrder.xsd" />
       <s:import namespace="http://tempuri.org/dsExpenseGroup.xsd" />
+      <s:import schemaLocation="http://localhost:8888/DiamondService/Service2.asmx?schema=dsExpenseGroup" namespace="http://tempuri.org/dsExpenseGroup.xsd" />
       <s:import schemaLocation="http://localhost:8888/DiamondService/Service2.asmx?schema=dsUser" namespace="http://tempuri.org/dsUser.xsd" />
       <s:import schemaLocation="http://localhost:8888/DiamondService/Service2.asmx?schema=dsOrder" namespace="http://tempuri.org/dsOrder.xsd" />
-      <s:import schemaLocation="http://localhost:8888/DiamondService/Service2.asmx?schema=dsExpenseGroup" namespace="http://tempuri.org/dsExpenseGroup.xsd" />
       <s:element name="DoAuthenticate">
         <s:complexType>
           <s:sequence>
@@ -384,6 +384,7 @@
         <s:complexType>
           <s:sequence>
             <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="StatusType" type="s:string" />
             <s:element minOccurs="0" maxOccurs="1" name="Flag" type="s:string" />
           </s:sequence>
         </s:complexType>
@@ -439,6 +440,37 @@
                 </s:sequence>
               </s:complexType>
             </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CountUnReadMessage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="userID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CountUnReadMessageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CountUnReadMessageResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateTransferReceived">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="TransferStatus" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ReceiveDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="EShop" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateTransferReceivedResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateTransferReceivedResult" type="s:int" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -576,6 +608,18 @@
   <wsdl:message name="GetExpenseGroupSoapOut">
     <wsdl:part name="parameters" element="tns:GetExpenseGroupResponse" />
   </wsdl:message>
+  <wsdl:message name="CountUnReadMessageSoapIn">
+    <wsdl:part name="parameters" element="tns:CountUnReadMessage" />
+  </wsdl:message>
+  <wsdl:message name="CountUnReadMessageSoapOut">
+    <wsdl:part name="parameters" element="tns:CountUnReadMessageResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateTransferReceivedSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateTransferReceived" />
+  </wsdl:message>
+  <wsdl:message name="UpdateTransferReceivedSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateTransferReceivedResponse" />
+  </wsdl:message>
   <wsdl:portType name="Service2Soap">
     <wsdl:operation name="DoAuthenticate">
       <wsdl:input message="tns:DoAuthenticateSoapIn" />
@@ -664,6 +708,14 @@
     <wsdl:operation name="GetExpenseGroup">
       <wsdl:input message="tns:GetExpenseGroupSoapIn" />
       <wsdl:output message="tns:GetExpenseGroupSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CountUnReadMessage">
+      <wsdl:input message="tns:CountUnReadMessageSoapIn" />
+      <wsdl:output message="tns:CountUnReadMessageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTransferReceived">
+      <wsdl:input message="tns:UpdateTransferReceivedSoapIn" />
+      <wsdl:output message="tns:UpdateTransferReceivedSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="Service2Soap" type="tns:Service2Soap">
@@ -866,6 +918,24 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="CountUnReadMessage">
+      <soap:operation soapAction="http://tempuri.org/CountUnReadMessage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTransferReceived">
+      <soap:operation soapAction="http://tempuri.org/UpdateTransferReceived" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:binding name="Service2Soap12" type="tns:Service2Soap">
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
@@ -1060,6 +1130,24 @@
     </wsdl:operation>
     <wsdl:operation name="GetExpenseGroup">
       <soap12:operation soapAction="http://tempuri.org/GetExpenseGroup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CountUnReadMessage">
+      <soap12:operation soapAction="http://tempuri.org/CountUnReadMessage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTransferReceived">
+      <soap12:operation soapAction="http://tempuri.org/UpdateTransferReceived" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

@@ -21,6 +21,7 @@ namespace DiamondShop
         bool isAuthorize = false;
         Decimal TotalPrice;
         int SFactoryStatus;
+        string[] idSelected;
 
         public ProductionLineInfo()
         {
@@ -30,15 +31,15 @@ namespace DiamondShop
             binder.BindControl(cmbFactoryStatus, "FactoryStatus");
 
         }
-        public ProductionLineInfo(int id,int SFactoryStatus)
+        public ProductionLineInfo(string idSelected,int SFactoryStatus)
         {
             InitializeComponent();
             Initial();
-            //this.TotalPrice = TotalPrice;
+
+            this.idSelected = idSelected.Split(',');
 
             binder.BindControl(cmbFactoryStatus, "FactoryStatus");
 
-            this.id = id;
             this.SFactoryStatus = SFactoryStatus;
             LoadData();
             SetControlEnable(false);
@@ -75,10 +76,14 @@ namespace DiamondShop
 
         protected override bool SaveData()
         {
+
             ser1 = GM.GetService1();
             try
             {
-                ser1.UpdateProductionLine(id, Convert.ToInt32(cmbFactoryStatus.SelectedValue.ToString()), ApplicationInfo.UserID);
+                for (int i = 0; i < idSelected.Length; i++)
+                {
+                    ser1.UpdateProductionLine(Convert.ToInt32(idSelected[i]), Convert.ToInt32(cmbFactoryStatus.SelectedValue.ToString()), ApplicationInfo.UserID);
+                }             
             }
             
             catch (Exception ex)

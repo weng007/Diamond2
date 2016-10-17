@@ -583,7 +583,8 @@
             <s:element minOccurs="1" maxOccurs="1" name="shop" type="s:int" />
             <s:element minOccurs="0" maxOccurs="1" name="code" type="s:string" />
             <s:element minOccurs="0" maxOccurs="1" name="code2" type="s:string" />
-            <s:element minOccurs="1" maxOccurs="1" name="buybooktype" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Flag" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -1649,10 +1650,10 @@
   </wsdl:binding>
   <wsdl:service name="Service3">
     <wsdl:port name="Service3Soap" binding="tns:Service3Soap">
-      <soap:address location="http://localhost:5555/DiamondService/Service3.asmx" />
+      <soap:address location="http://localhost:8888/DiamondService/Service3.asmx" />
     </wsdl:port>
     <wsdl:port name="Service3Soap12" binding="tns:Service3Soap12">
-      <soap12:address location="http://localhost:5555/DiamondService/Service3.asmx" />
+      <soap12:address location="http://localhost:8888/DiamondService/Service3.asmx" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>
