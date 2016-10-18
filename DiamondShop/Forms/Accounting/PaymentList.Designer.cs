@@ -67,6 +67,7 @@
             this.Payment = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Seller = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BuyBookType1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BuyDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PayDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Weight = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -360,6 +361,7 @@
             this.Payment,
             this.Code,
             this.Seller,
+            this.BuyBookType1,
             this.BuyDate,
             this.PayDate,
             this.Weight,
@@ -443,6 +445,14 @@
             this.Seller.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Seller.Width = 150;
             // 
+            // BuyBookType1
+            // 
+            this.BuyBookType1.DataPropertyName = "BuyBookType";
+            this.BuyBookType1.HeaderText = "BuyBookType";
+            this.BuyBookType1.Name = "BuyBookType1";
+            this.BuyBookType1.ReadOnly = true;
+            this.BuyBookType1.Width = 120;
+            // 
             // BuyDate
             // 
             this.BuyDate.DataPropertyName = "BuyDate";
@@ -499,7 +509,7 @@
             this.ColorTypeName.HeaderText = "ColorType";
             this.ColorTypeName.Name = "ColorTypeName";
             this.ColorTypeName.ReadOnly = true;
-            this.ColorTypeName.Width = 150;
+            this.ColorTypeName.Width = 140;
             // 
             // ColorName
             // 
@@ -522,7 +532,7 @@
             this.OriginName.Name = "OriginName";
             this.OriginName.ReadOnly = true;
             this.OriginName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.OriginName.Width = 160;
+            this.OriginName.Width = 140;
             // 
             // Detail
             // 
@@ -595,6 +605,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Payment;
         private System.Windows.Forms.DataGridViewTextBoxColumn Code;
         private System.Windows.Forms.DataGridViewTextBoxColumn Seller;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BuyBookType1;
         private System.Windows.Forms.DataGridViewTextBoxColumn BuyDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn PayDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn Weight;
