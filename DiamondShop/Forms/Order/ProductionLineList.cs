@@ -16,6 +16,7 @@ namespace DiamondShop
     public partial class ProductionLineList : FormList
     {
         public int SFactoryStatus;
+        string idSelected = "";
         int flag;
 
         public ProductionLineList()
@@ -52,10 +53,33 @@ namespace DiamondShop
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            ProductionLineInfo frm = new ProductionLineInfo(id,SFactoryStatus);
+            CheckSelected();
+
+            ProductionLineInfo frm = new ProductionLineInfo(idSelected, SFactoryStatus);
             frm.ShowDialog();
 
-            DoLoadData();
+            if (frm.isEdit)
+            {
+                DoLoadData();
+            }
+        }
+
+        private void CheckSelected()
+        {
+            string comma = ",";
+
+            for (int i = 0; i < gridProductionLine.Rows.Count; i++)
+            {
+                if (gridProductionLine.Rows[i].Cells["Select"].Value != null)
+                {
+                    idSelected += gridProductionLine.Rows[i].Cells["ID"].Value.ToString() + comma;
+                }
+                if (i == gridProductionLine.Rows.Count - 2)
+                {
+                    comma = "";
+                }
+            }
+            idSelected = idSelected.Remove(idSelected.Length - 1, 1);
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -80,30 +104,14 @@ namespace DiamondShop
                 if (gridProductionLine.SelectedCells[0].Value == null)
                 {
                     gridProductionLine.SelectedCells[0].Value = true;
-                    id = (int)gridProductionLine.SelectedRows[0].Cells["ID"].Value;
-                    SFactoryStatus += Convert.ToInt32(gridProductionLine.SelectedRows[0].Cells["FactoryStatus"].Value.ToString());
                 }
                 else
                 {
                     gridProductionLine.SelectedCells[0].Value = false;
-                    SFactoryStatus -= Convert.ToInt32(gridProductionLine.SelectedRows[0].Cells["FactoryStatus"].Value.ToString());
                 }
             }
         }
 
-        private void monthCalendar1_DateSelected(object sender, DateRangeEventArgs e)
-        {
-            //if (flag == 0)
-            //{
-            //    txtSPayDate.Text = monthCalendar1.SelectionRange.Start.ToShortDateString();
-            //}
-            //else if (flag == 1)
-            //{
-            //    txtEPayDate.Text = monthCalendar1.SelectionRange.Start.ToShortDateString();
-            //}
-            //monthCalendar1.Visible = false; 
-            
-        }
         private void btnChooseDate_Click(object sender, EventArgs e)
         {
             //monthCalendar1.Visible = true;
@@ -116,6 +124,7 @@ namespace DiamondShop
             btnProcessing.BackColor = Color.Gray;
             btnMounting.BackColor = Color.Gray;
             btnJobDone.BackColor = Color.Gray;
+            SFactoryStatus = 218;
 
             SearchProductionLine(218);
         }
@@ -126,6 +135,8 @@ namespace DiamondShop
             btnProcessing.BackColor = Color.CadetBlue;
             btnMounting.BackColor = Color.Gray;
             btnJobDone.BackColor = Color.Gray;
+            SFactoryStatus = 219;
+
             SearchProductionLine(219);
         }
 
@@ -135,6 +146,8 @@ namespace DiamondShop
             btnProcessing.BackColor = Color.Gray;
             btnMounting.BackColor = Color.CadetBlue;
             btnJobDone.BackColor = Color.Gray;
+            SFactoryStatus = 220;
+
             SearchProductionLine(220);
         }
 
@@ -144,6 +157,8 @@ namespace DiamondShop
             btnProcessing.BackColor = Color.Gray;
             btnMounting.BackColor = Color.Gray;
             btnJobDone.BackColor = Color.CadetBlue;
+            SFactoryStatus = 221;
+
             SearchProductionLine(221);
         }
         private void SearchProductionLine(int FactoryStatus)

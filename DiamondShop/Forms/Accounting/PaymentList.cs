@@ -16,6 +16,8 @@ namespace DiamondShop
     public partial class PaymentList : FormList
     {
         public decimal TotalPrice = 0;
+        string idSelected = "";
+        string buyBookType = "";
         int flag;
 
         public PaymentList()
@@ -104,10 +106,30 @@ namespace DiamondShop
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            Payment frm = new Payment(id, TotalPrice);
+            CheckSelected();
+            Payment frm = new Payment(idSelected, TotalPrice, buyBookType);
             frm.ShowDialog();
 
-            DoLoadData();
+            if (frm.isEdit)
+            {
+                DoLoadData();
+            }
+        }
+
+        private void CheckSelected()
+        {
+            string comma = ",";
+
+            for (int i = 0; i < gridBuyBookPayment.Rows.Count; i++)
+            {
+                if(gridBuyBookPayment.Rows[i].Cells["Select"].Value != null)
+                {
+                    idSelected += gridBuyBookPayment.Rows[i].Cells["ID"].Value.ToString() + comma;
+                    buyBookType += gridBuyBookPayment.Rows[i].Cells["BuyBookTypeID"].Value.ToString() +comma;
+                }
+            }
+            idSelected = idSelected.Remove(idSelected.Length - 1, 1);
+            buyBookType = buyBookType.Remove(buyBookType.Length - 1, 1);
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -174,11 +196,13 @@ namespace DiamondShop
                     gridBuyBookPayment.SelectedCells[0].Value = true;
                     id = (int)gridBuyBookPayment.SelectedRows[0].Cells["ID"].Value;
                     TotalPrice += Convert.ToDecimal(gridBuyBookPayment.SelectedRows[0].Cells["TotalBaht"].Value.ToString());
+                    //BuyBookType += Convert.Toint32(gridBuyBookPayment.SelectedRows[0].Cells["BuybookTypeID"].Value.ToString());
                 }
                 else
                 {
                     gridBuyBookPayment.SelectedCells[0].Value = false;
                     TotalPrice -= Convert.ToDecimal(gridBuyBookPayment.SelectedRows[0].Cells["TotalBaht"].Value.ToString());
+                    
                 }
             }
            

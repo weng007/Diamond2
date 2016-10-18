@@ -289,6 +289,8 @@ namespace DiamondDS.DS {
             
             private global::System.Data.DataColumn columnBuybookType;
             
+            private global::System.Data.DataColumn columnBuybookTypeID;
+            
             private global::System.Data.DataColumn columnSeller;
             
             private global::System.Data.DataColumn columnBuyDate;
@@ -389,6 +391,14 @@ namespace DiamondDS.DS {
             public global::System.Data.DataColumn BuybookTypeColumn {
                 get {
                     return this.columnBuybookType;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn BuybookTypeIDColumn {
+                get {
+                    return this.columnBuybookTypeID;
                 }
             }
             
@@ -555,6 +565,7 @@ namespace DiamondDS.DS {
                         string Payment, 
                         string Code, 
                         string BuybookType, 
+                        int BuybookTypeID, 
                         string Seller, 
                         System.DateTime BuyDate, 
                         System.DateTime PayDate, 
@@ -577,6 +588,7 @@ namespace DiamondDS.DS {
                         Payment,
                         Code,
                         BuybookType,
+                        BuybookTypeID,
                         Seller,
                         BuyDate,
                         PayDate,
@@ -619,6 +631,7 @@ namespace DiamondDS.DS {
                 this.columnPayment = base.Columns["Payment"];
                 this.columnCode = base.Columns["Code"];
                 this.columnBuybookType = base.Columns["BuybookType"];
+                this.columnBuybookTypeID = base.Columns["BuybookTypeID"];
                 this.columnSeller = base.Columns["Seller"];
                 this.columnBuyDate = base.Columns["BuyDate"];
                 this.columnPayDate = base.Columns["PayDate"];
@@ -649,6 +662,8 @@ namespace DiamondDS.DS {
                 base.Columns.Add(this.columnCode);
                 this.columnBuybookType = new global::System.Data.DataColumn("BuybookType", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnBuybookType);
+                this.columnBuybookTypeID = new global::System.Data.DataColumn("BuybookTypeID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBuybookTypeID);
                 this.columnSeller = new global::System.Data.DataColumn("Seller", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSeller);
                 this.columnBuyDate = new global::System.Data.DataColumn("BuyDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
@@ -679,13 +694,11 @@ namespace DiamondDS.DS {
                 base.Columns.Add(this.columnUSDRate);
                 this.columnRowNum = new global::System.Data.DataColumn("RowNum", typeof(short), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnRowNum);
-                this.columnID.ReadOnly = true;
                 this.columnIsPaid.MaxLength = 1;
                 this.columnPayment.ReadOnly = true;
                 this.columnPayment.MaxLength = 10;
                 this.columnCode.ReadOnly = true;
                 this.columnCode.MaxLength = 30;
-                this.columnBuybookType.ReadOnly = true;
                 this.columnBuybookType.MaxLength = 100;
                 this.columnSeller.ReadOnly = true;
                 this.columnSeller.MaxLength = 100;
@@ -922,6 +935,22 @@ namespace DiamondDS.DS {
                 }
                 set {
                     this[this.tableBuyBookPayment.BuybookTypeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int BuybookTypeID {
+                get {
+                    try {
+                        return ((int)(this[this.tableBuyBookPayment.BuybookTypeIDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'BuybookTypeID\' in table \'BuyBookPayment\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableBuyBookPayment.BuybookTypeIDColumn] = value;
                 }
             }
             
@@ -1223,6 +1252,18 @@ namespace DiamondDS.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetBuybookTypeNull() {
                 this[this.tableBuyBookPayment.BuybookTypeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsBuybookTypeIDNull() {
+                return this.IsNull(this.tableBuyBookPayment.BuybookTypeIDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetBuybookTypeIDNull() {
+                this[this.tableBuyBookPayment.BuybookTypeIDColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

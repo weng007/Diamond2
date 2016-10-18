@@ -17,6 +17,8 @@ namespace DiamondShop
     {
         dsBuyBookPayment tds = new dsBuyBookPayment();
         bool isAuthorize = false;
+        string[] idSelected;
+        string[] buyBookType;
         Decimal TotalPrice;
 
         public Payment()
@@ -29,14 +31,23 @@ namespace DiamondShop
             binder.BindControl(txtUSDRate, "USDRete");
 
         }
-        public Payment(int id,Decimal TotalPrice)
+        public Payment(string idSelected, Decimal TotalPrice, string buyBookType)
         {
             InitializeComponent();
             Initial();
             this.TotalPrice = TotalPrice;
-            binder.BindControl(txtUSDRate, "USDRete");
+            this.idSelected = idSelected.Split(',');
+            this.buyBookType = buyBookType.Split(',');
+            //int CountLength;
 
-            this.id = id;
+            //for (int i = 0; i < idSelected.Length; i++)
+            //{
+
+            //    idSelected = idSelected.Substring(0, 2);
+            //}
+
+            binder.BindControl(txtUSDRate, "USDRete");
+            
             LoadData();
             SetControlEnable(false);
             isEdit = false;
@@ -97,9 +108,14 @@ namespace DiamondShop
 
             try
             {
-                    SetEditBy(row);
+                SetEditBy(row);
+                for (int i = 0; i < idSelected.Length; i++)
+                {
+                    row.ID = Convert.ToInt32(idSelected[i]);
+                    row.BuybookTypeID = Convert.ToInt32(buyBookType[i]);
+                    row.USDRate = Convert.ToDecimal(txtUSDRate.Text);
                     chkFlag = ser.DoUpdateData("BuyBookPayment", tds);
-
+                }
                 tds.AcceptChanges();
             }
             catch (Exception ex)

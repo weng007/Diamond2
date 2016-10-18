@@ -61,11 +61,11 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.gridBuyBookPayment = new System.Windows.Forms.DataGridView();
             this.Select = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.BuybookTypeID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IsPaid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Payment = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BuybookType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Seller = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BuyDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PayDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -354,11 +354,11 @@
             this.gridBuyBookPayment.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridBuyBookPayment.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Select,
+            this.BuybookTypeID,
             this.ID,
             this.IsPaid,
             this.Payment,
             this.Code,
-            this.BuybookType,
             this.Seller,
             this.BuyDate,
             this.PayDate,
@@ -391,6 +391,14 @@
             this.Select.Name = "Select";
             this.Select.ReadOnly = true;
             this.Select.Width = 60;
+            // 
+            // BuybookTypeID
+            // 
+            this.BuybookTypeID.DataPropertyName = "BuybookTypeID";
+            this.BuybookTypeID.HeaderText = "BuybookTypeID";
+            this.BuybookTypeID.Name = "BuybookTypeID";
+            this.BuybookTypeID.ReadOnly = true;
+            this.BuybookTypeID.Visible = false;
             // 
             // ID
             // 
@@ -425,14 +433,6 @@
             this.Code.Name = "Code";
             this.Code.ReadOnly = true;
             this.Code.Width = 150;
-            // 
-            // BuybookType
-            // 
-            this.BuybookType.DataPropertyName = "BuybookType";
-            this.BuybookType.HeaderText = "BuybookType";
-            this.BuybookType.Name = "BuybookType";
-            this.BuybookType.ReadOnly = true;
-            this.BuybookType.Width = 200;
             // 
             // Seller
             // 
@@ -589,11 +589,11 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox txtEPayDate;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Select;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BuybookTypeID;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn IsPaid;
         private System.Windows.Forms.DataGridViewTextBoxColumn Payment;
         private System.Windows.Forms.DataGridViewTextBoxColumn Code;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BuybookType;
         private System.Windows.Forms.DataGridViewTextBoxColumn Seller;
         private System.Windows.Forms.DataGridViewTextBoxColumn BuyDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn PayDate;

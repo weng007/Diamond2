@@ -17,7 +17,7 @@
         <xs:element name="BuyBookPayment" msprop:Generator_TableClassName="BuyBookPaymentDataTable" msprop:Generator_TableVarName="tableBuyBookPayment" msprop:Generator_TablePropName="BuyBookPayment" msprop:Generator_RowDeletingName="BuyBookPaymentRowDeleting" msprop:Generator_RowChangingName="BuyBookPaymentRowChanging" msprop:Generator_RowEvHandlerName="BuyBookPaymentRowChangeEventHandler" msprop:Generator_RowDeletedName="BuyBookPaymentRowDeleted" msprop:Generator_UserTableName="BuyBookPayment" msprop:Generator_RowChangedName="BuyBookPaymentRowChanged" msprop:Generator_RowEvArgName="BuyBookPaymentRowChangeEvent" msprop:Generator_RowClassName="BuyBookPaymentRow">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="ID" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" minOccurs="0" />
+              <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" minOccurs="0" />
               <xs:element name="IsPaid" msprop:Generator_ColumnVarNameInTable="columnIsPaid" msprop:Generator_ColumnPropNameInRow="IsPaid" msprop:Generator_ColumnPropNameInTable="IsPaidColumn" msprop:Generator_UserColumnName="IsPaid" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -39,13 +39,14 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="BuybookType" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnBuybookType" msprop:Generator_ColumnPropNameInRow="BuybookType" msprop:Generator_ColumnPropNameInTable="BuybookTypeColumn" msprop:Generator_UserColumnName="BuybookType" minOccurs="0">
+              <xs:element name="BuybookType" msprop:Generator_ColumnVarNameInTable="columnBuybookType" msprop:Generator_ColumnPropNameInRow="BuybookType" msprop:Generator_ColumnPropNameInTable="BuybookTypeColumn" msprop:Generator_UserColumnName="BuybookType" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+              <xs:element name="BuybookTypeID" msprop:Generator_ColumnVarNameInTable="columnBuybookTypeID" msprop:Generator_ColumnPropNameInRow="BuybookTypeID" msprop:Generator_ColumnPropNameInTable="BuybookTypeIDColumn" msprop:Generator_UserColumnName="BuybookTypeID" type="xs:int" minOccurs="0" />
               <xs:element name="Seller" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSeller" msprop:Generator_ColumnPropNameInRow="Seller" msprop:Generator_ColumnPropNameInTable="SellerColumn" msprop:Generator_UserColumnName="Seller" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
