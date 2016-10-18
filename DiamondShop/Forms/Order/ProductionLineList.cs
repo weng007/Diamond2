@@ -114,8 +114,6 @@ namespace DiamondShop
 
         private void btnChooseDate_Click(object sender, EventArgs e)
         {
-            //monthCalendar1.Visible = true;
-            //monthCalendar1.BringToFront();
             flag = 0;
         }
         private void btnNotYet_Click(object sender, EventArgs e)
