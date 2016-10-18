@@ -95,7 +95,7 @@
             this.Payment = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DueDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ShopName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SettingName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Setting = new System.Windows.Forms.DataGridViewLinkColumn();
             this.ReportNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BuyDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.W = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -143,10 +143,10 @@
             this.panel4.Controls.Add(this.btnSearch);
             this.panel4.Controls.Add(this.txtReportNumber);
             this.panel4.Controls.Add(this.label3);
-            this.panel4.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.panel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1329, 179);
+            this.panel4.Size = new System.Drawing.Size(1337, 179);
             this.panel4.TabIndex = 40;
             // 
             // btnClose
@@ -157,7 +157,7 @@
             this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Location = new System.Drawing.Point(1288, 0);
+            this.btnClose.Location = new System.Drawing.Point(1296, 1);
             this.btnClose.Margin = new System.Windows.Forms.Padding(0);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(38, 32);
@@ -169,7 +169,7 @@
             // 
             this.txtCode2.Location = new System.Drawing.Point(588, 20);
             this.txtCode2.Name = "txtCode2";
-            this.txtCode2.Size = new System.Drawing.Size(161, 27);
+            this.txtCode2.Size = new System.Drawing.Size(161, 26);
             this.txtCode2.TabIndex = 83;
             // 
             // label8
@@ -187,7 +187,7 @@
             this.cmbOrigin.FormattingEnabled = true;
             this.cmbOrigin.Location = new System.Drawing.Point(910, 96);
             this.cmbOrigin.Name = "cmbOrigin";
-            this.cmbOrigin.Size = new System.Drawing.Size(148, 29);
+            this.cmbOrigin.Size = new System.Drawing.Size(148, 28);
             this.cmbOrigin.TabIndex = 32;
             // 
             // label2
@@ -205,7 +205,7 @@
             this.cmbComment.FormattingEnabled = true;
             this.cmbComment.Location = new System.Drawing.Point(588, 133);
             this.cmbComment.Name = "cmbComment";
-            this.cmbComment.Size = new System.Drawing.Size(148, 29);
+            this.cmbComment.Size = new System.Drawing.Size(148, 28);
             this.cmbComment.TabIndex = 28;
             // 
             // label6
@@ -223,7 +223,7 @@
             this.cmbIdentification.FormattingEnabled = true;
             this.cmbIdentification.Location = new System.Drawing.Point(588, 57);
             this.cmbIdentification.Name = "cmbIdentification";
-            this.cmbIdentification.Size = new System.Drawing.Size(184, 29);
+            this.cmbIdentification.Size = new System.Drawing.Size(184, 28);
             this.cmbIdentification.TabIndex = 16;
             this.cmbIdentification.SelectedIndexChanged += new System.EventHandler(this.cmbIdentification_SelectedIndexChanged);
             // 
@@ -241,7 +241,7 @@
             // 
             this.txtCode.Location = new System.Drawing.Point(257, 20);
             this.txtCode.Name = "txtCode";
-            this.txtCode.Size = new System.Drawing.Size(161, 27);
+            this.txtCode.Size = new System.Drawing.Size(161, 26);
             this.txtCode.TabIndex = 1;
             // 
             // label12
@@ -259,7 +259,7 @@
             this.cmbShop.FormattingEnabled = true;
             this.cmbShop.Location = new System.Drawing.Point(910, 57);
             this.cmbShop.Name = "cmbShop";
-            this.cmbShop.Size = new System.Drawing.Size(148, 29);
+            this.cmbShop.Size = new System.Drawing.Size(148, 28);
             this.cmbShop.TabIndex = 40;
             // 
             // label11
@@ -277,7 +277,7 @@
             this.cmbStatus.FormattingEnabled = true;
             this.cmbStatus.Location = new System.Drawing.Point(910, 20);
             this.cmbStatus.Name = "cmbStatus";
-            this.cmbStatus.Size = new System.Drawing.Size(148, 29);
+            this.cmbStatus.Size = new System.Drawing.Size(148, 28);
             this.cmbStatus.TabIndex = 36;
             // 
             // label10
@@ -322,7 +322,7 @@
             this.cmbLab.FormattingEnabled = true;
             this.cmbLab.Location = new System.Drawing.Point(257, 135);
             this.cmbLab.Name = "cmbLab";
-            this.cmbLab.Size = new System.Drawing.Size(161, 29);
+            this.cmbLab.Size = new System.Drawing.Size(161, 28);
             this.cmbLab.TabIndex = 12;
             // 
             // label1
@@ -339,7 +339,7 @@
             // 
             this.txtEWeight.Location = new System.Drawing.Point(669, 96);
             this.txtEWeight.Name = "txtEWeight";
-            this.txtEWeight.Size = new System.Drawing.Size(52, 27);
+            this.txtEWeight.Size = new System.Drawing.Size(52, 26);
             this.txtEWeight.TabIndex = 24;
             this.txtEWeight.Text = "50";
             this.txtEWeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -349,7 +349,7 @@
             // 
             this.txtSWeight.Location = new System.Drawing.Point(588, 96);
             this.txtSWeight.Name = "txtSWeight";
-            this.txtSWeight.Size = new System.Drawing.Size(54, 27);
+            this.txtSWeight.Size = new System.Drawing.Size(54, 26);
             this.txtSWeight.TabIndex = 20;
             this.txtSWeight.Text = "0";
             this.txtSWeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -370,7 +370,7 @@
             this.cmbShape.FormattingEnabled = true;
             this.cmbShape.Location = new System.Drawing.Point(257, 96);
             this.cmbShape.Name = "cmbShape";
-            this.cmbShape.Size = new System.Drawing.Size(161, 29);
+            this.cmbShape.Size = new System.Drawing.Size(161, 28);
             this.cmbShape.TabIndex = 8;
             // 
             // label4
@@ -402,7 +402,7 @@
             // 
             this.txtReportNumber.Location = new System.Drawing.Point(257, 59);
             this.txtReportNumber.Name = "txtReportNumber";
-            this.txtReportNumber.Size = new System.Drawing.Size(161, 27);
+            this.txtReportNumber.Size = new System.Drawing.Size(161, 26);
             this.txtReportNumber.TabIndex = 4;
             // 
             // label3
@@ -419,10 +419,10 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.gridGemstoneCer);
-            this.panel2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.Location = new System.Drawing.Point(0, 184);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1337, 393);
+            this.panel2.Size = new System.Drawing.Size(1325, 393);
             this.panel2.TabIndex = 34;
             // 
             // gridGemstoneCer
@@ -455,7 +455,7 @@
             this.Payment,
             this.DueDate,
             this.ShopName,
-            this.SettingName,
+            this.Setting,
             this.ReportNumber,
             this.BuyDate,
             this.W,
@@ -465,10 +465,10 @@
             this.gridGemstoneCer.Name = "gridGemstoneCer";
             this.gridGemstoneCer.ReadOnly = true;
             this.gridGemstoneCer.RowHeadersWidth = 10;
-            this.gridGemstoneCer.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridGemstoneCer.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridGemstoneCer.RowTemplate.Height = 30;
             this.gridGemstoneCer.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridGemstoneCer.Size = new System.Drawing.Size(1314, 393);
+            this.gridGemstoneCer.Size = new System.Drawing.Size(1302, 393);
             this.gridGemstoneCer.TabIndex = 2;
             this.gridGemstoneCer.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.gridGemstoneCer_MouseDoubleClick);
             // 
@@ -675,13 +675,15 @@
             this.ShopName.ReadOnly = true;
             this.ShopName.Width = 60;
             // 
-            // SettingName
+            // Setting
             // 
-            this.SettingName.DataPropertyName = "SettingName";
-            this.SettingName.HeaderText = "Setting";
-            this.SettingName.Name = "SettingName";
-            this.SettingName.ReadOnly = true;
-            this.SettingName.Width = 175;
+            this.Setting.DataPropertyName = "Setting";
+            this.Setting.HeaderText = "Setting";
+            this.Setting.Name = "Setting";
+            this.Setting.ReadOnly = true;
+            this.Setting.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Setting.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Setting.Width = 175;
             // 
             // ReportNumber
             // 
@@ -739,7 +741,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(105)))), ((int)(((byte)(79)))));
-            this.ClientSize = new System.Drawing.Size(1353, 596);
+            this.ClientSize = new System.Drawing.Size(1337, 596);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
             this.Name = "SearchBuyBookGemstoneCerList";
@@ -785,6 +787,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtCode2;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn RowNum;
         private System.Windows.Forms.DataGridViewTextBoxColumn StatusName;
@@ -807,12 +810,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Payment;
         private System.Windows.Forms.DataGridViewTextBoxColumn DueDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn ShopName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SettingName;
+        private System.Windows.Forms.DataGridViewLinkColumn Setting;
         private System.Windows.Forms.DataGridViewTextBoxColumn ReportNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn BuyDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn W;
         private System.Windows.Forms.DataGridViewTextBoxColumn L;
         private System.Windows.Forms.DataGridViewTextBoxColumn D;
-        private System.Windows.Forms.Button btnClose;
     }
 }

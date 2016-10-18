@@ -291,8 +291,6 @@ namespace DiamondDS.DS {
             
             private global::System.Data.DataColumn columnSetting;
             
-            private global::System.Data.DataColumn columnSettingName;
-            
             private global::System.Data.DataColumn columnShop;
             
             private global::System.Data.DataColumn columnShopName;
@@ -457,14 +455,6 @@ namespace DiamondDS.DS {
             public global::System.Data.DataColumn SettingColumn {
                 get {
                     return this.columnSetting;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn SettingNameColumn {
-                get {
-                    return this.columnSettingName;
                 }
             }
             
@@ -854,8 +844,7 @@ namespace DiamondDS.DS {
                         System.DateTime BuyDate, 
                         string Seller, 
                         string Code, 
-                        int Setting, 
-                        string SettingName, 
+                        string Setting, 
                         int Shop, 
                         string ShopName, 
                         int Status, 
@@ -907,7 +896,6 @@ namespace DiamondDS.DS {
                         Seller,
                         Code,
                         Setting,
-                        SettingName,
                         Shop,
                         ShopName,
                         Status,
@@ -986,7 +974,6 @@ namespace DiamondDS.DS {
                 this.columnSeller = base.Columns["Seller"];
                 this.columnCode = base.Columns["Code"];
                 this.columnSetting = base.Columns["Setting"];
-                this.columnSettingName = base.Columns["SettingName"];
                 this.columnShop = base.Columns["Shop"];
                 this.columnShopName = base.Columns["ShopName"];
                 this.columnStatus = base.Columns["Status"];
@@ -1045,10 +1032,8 @@ namespace DiamondDS.DS {
                 base.Columns.Add(this.columnSeller);
                 this.columnCode = new global::System.Data.DataColumn("Code", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCode);
-                this.columnSetting = new global::System.Data.DataColumn("Setting", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnSetting = new global::System.Data.DataColumn("Setting", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSetting);
-                this.columnSettingName = new global::System.Data.DataColumn("SettingName", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSettingName);
                 this.columnShop = new global::System.Data.DataColumn("Shop", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnShop);
                 this.columnShopName = new global::System.Data.DataColumn("ShopName", typeof(string), null, global::System.Data.MappingType.Element);
@@ -1146,8 +1131,6 @@ namespace DiamondDS.DS {
                 this.columnID.Unique = true;
                 this.columnSeller.MaxLength = 100;
                 this.columnCode.MaxLength = 30;
-                this.columnSettingName.ReadOnly = true;
-                this.columnSettingName.MaxLength = 100;
                 this.columnShopName.ReadOnly = true;
                 this.columnShopName.MaxLength = 100;
                 this.columnStatusName.ReadOnly = true;
@@ -1382,10 +1365,10 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int Setting {
+            public string Setting {
                 get {
                     try {
-                        return ((int)(this[this.tableBuyBookGemstoneCer.SettingColumn]));
+                        return ((string)(this[this.tableBuyBookGemstoneCer.SettingColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'Setting\' in table \'BuyBookGemstoneCer\' is DBNull.", e);
@@ -1393,22 +1376,6 @@ namespace DiamondDS.DS {
                 }
                 set {
                     this[this.tableBuyBookGemstoneCer.SettingColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string SettingName {
-                get {
-                    try {
-                        return ((string)(this[this.tableBuyBookGemstoneCer.SettingNameColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'SettingName\' in table \'BuyBookGemstoneCer\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableBuyBookGemstoneCer.SettingNameColumn] = value;
                 }
             }
             
@@ -2159,18 +2126,6 @@ namespace DiamondDS.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetSettingNull() {
                 this[this.tableBuyBookGemstoneCer.SettingColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsSettingNameNull() {
-                return this.IsNull(this.tableBuyBookGemstoneCer.SettingNameColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetSettingNameNull() {
-                this[this.tableBuyBookGemstoneCer.SettingNameColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

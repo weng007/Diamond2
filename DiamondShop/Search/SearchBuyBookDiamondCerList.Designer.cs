@@ -77,6 +77,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.gridDiamondCer = new System.Windows.Forms.DataGridView();
+            this.Select = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RowNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StatusName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -101,7 +102,7 @@
             this.Payment = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DueDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ShopName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SettingName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Setting = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ReportNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SoldToName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.W = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -153,10 +154,10 @@
             this.panel4.Controls.Add(this.label4);
             this.panel4.Controls.Add(this.txtReportNumber);
             this.panel4.Controls.Add(this.label3);
-            this.panel4.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.panel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1329, 183);
+            this.panel4.Size = new System.Drawing.Size(1313, 171);
             this.panel4.TabIndex = 40;
             // 
             // btnClose
@@ -167,7 +168,7 @@
             this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Location = new System.Drawing.Point(1291, 9);
+            this.btnClose.Location = new System.Drawing.Point(1275, 1);
             this.btnClose.Margin = new System.Windows.Forms.Padding(0);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(38, 32);
@@ -179,7 +180,7 @@
             // 
             this.txtCode2.Location = new System.Drawing.Point(534, 18);
             this.txtCode2.Name = "txtCode2";
-            this.txtCode2.Size = new System.Drawing.Size(161, 27);
+            this.txtCode2.Size = new System.Drawing.Size(161, 26);
             this.txtCode2.TabIndex = 76;
             // 
             // label14
@@ -212,7 +213,7 @@
             this.cmbColorType.FormattingEnabled = true;
             this.cmbColorType.Location = new System.Drawing.Point(534, 95);
             this.cmbColorType.Name = "cmbColorType";
-            this.cmbColorType.Size = new System.Drawing.Size(154, 29);
+            this.cmbColorType.Size = new System.Drawing.Size(154, 28);
             this.cmbColorType.TabIndex = 24;
             this.cmbColorType.SelectedIndexChanged += new System.EventHandler(this.cmbColorType_SelectedIndexChanged);
             // 
@@ -230,7 +231,7 @@
             // 
             this.txtCode.Location = new System.Drawing.Point(257, 20);
             this.txtCode.Name = "txtCode";
-            this.txtCode.Size = new System.Drawing.Size(161, 27);
+            this.txtCode.Size = new System.Drawing.Size(161, 26);
             this.txtCode.TabIndex = 1;
             // 
             // label12
@@ -248,7 +249,7 @@
             this.cmbShop.FormattingEnabled = true;
             this.cmbShop.Location = new System.Drawing.Point(917, 95);
             this.cmbShop.Name = "cmbShop";
-            this.cmbShop.Size = new System.Drawing.Size(148, 29);
+            this.cmbShop.Size = new System.Drawing.Size(148, 28);
             this.cmbShop.TabIndex = 48;
             // 
             // label11
@@ -266,7 +267,7 @@
             this.cmbStatus.FormattingEnabled = true;
             this.cmbStatus.Location = new System.Drawing.Point(917, 56);
             this.cmbStatus.Name = "cmbStatus";
-            this.cmbStatus.Size = new System.Drawing.Size(148, 29);
+            this.cmbStatus.Size = new System.Drawing.Size(148, 28);
             this.cmbStatus.TabIndex = 44;
             // 
             // label10
@@ -310,7 +311,7 @@
             this.cmbLab.FormattingEnabled = true;
             this.cmbLab.Location = new System.Drawing.Point(257, 133);
             this.cmbLab.Name = "cmbLab";
-            this.cmbLab.Size = new System.Drawing.Size(161, 29);
+            this.cmbLab.Size = new System.Drawing.Size(161, 28);
             this.cmbLab.TabIndex = 12;
             // 
             // label1
@@ -338,7 +339,7 @@
             this.cmbEColor.FormattingEnabled = true;
             this.cmbEColor.Location = new System.Drawing.Point(655, 132);
             this.cmbEColor.Name = "cmbEColor";
-            this.cmbEColor.Size = new System.Drawing.Size(105, 29);
+            this.cmbEColor.Size = new System.Drawing.Size(105, 28);
             this.cmbEColor.TabIndex = 32;
             // 
             // cmbEClearity
@@ -346,7 +347,7 @@
             this.cmbEClearity.FormattingEnabled = true;
             this.cmbEClearity.Location = new System.Drawing.Point(1096, 18);
             this.cmbEClearity.Name = "cmbEClearity";
-            this.cmbEClearity.Size = new System.Drawing.Size(143, 29);
+            this.cmbEClearity.Size = new System.Drawing.Size(143, 28);
             this.cmbEClearity.TabIndex = 40;
             // 
             // label8
@@ -363,7 +364,7 @@
             // 
             this.txtEWeight.Location = new System.Drawing.Point(616, 56);
             this.txtEWeight.Name = "txtEWeight";
-            this.txtEWeight.Size = new System.Drawing.Size(52, 27);
+            this.txtEWeight.Size = new System.Drawing.Size(52, 26);
             this.txtEWeight.TabIndex = 20;
             this.txtEWeight.Text = "50";
             this.txtEWeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -373,7 +374,7 @@
             // 
             this.txtSWeight.Location = new System.Drawing.Point(534, 56);
             this.txtSWeight.Name = "txtSWeight";
-            this.txtSWeight.Size = new System.Drawing.Size(54, 27);
+            this.txtSWeight.Size = new System.Drawing.Size(54, 26);
             this.txtSWeight.TabIndex = 16;
             this.txtSWeight.Text = "0";
             this.txtSWeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -384,7 +385,7 @@
             this.cmbSColor.FormattingEnabled = true;
             this.cmbSColor.Location = new System.Drawing.Point(535, 132);
             this.cmbSColor.Name = "cmbSColor";
-            this.cmbSColor.Size = new System.Drawing.Size(91, 29);
+            this.cmbSColor.Size = new System.Drawing.Size(91, 28);
             this.cmbSColor.TabIndex = 28;
             // 
             // label6
@@ -412,7 +413,7 @@
             this.cmbShape.FormattingEnabled = true;
             this.cmbShape.Location = new System.Drawing.Point(257, 96);
             this.cmbShape.Name = "cmbShape";
-            this.cmbShape.Size = new System.Drawing.Size(161, 29);
+            this.cmbShape.Size = new System.Drawing.Size(161, 28);
             this.cmbShape.TabIndex = 8;
             // 
             // label2
@@ -430,7 +431,7 @@
             this.cmbSClearity.FormattingEnabled = true;
             this.cmbSClearity.Location = new System.Drawing.Point(917, 18);
             this.cmbSClearity.Name = "cmbSClearity";
-            this.cmbSClearity.Size = new System.Drawing.Size(148, 29);
+            this.cmbSClearity.Size = new System.Drawing.Size(148, 28);
             this.cmbSClearity.TabIndex = 36;
             // 
             // label4
@@ -447,7 +448,7 @@
             // 
             this.txtReportNumber.Location = new System.Drawing.Point(257, 59);
             this.txtReportNumber.Name = "txtReportNumber";
-            this.txtReportNumber.Size = new System.Drawing.Size(161, 27);
+            this.txtReportNumber.Size = new System.Drawing.Size(161, 26);
             this.txtReportNumber.TabIndex = 4;
             // 
             // label3
@@ -464,10 +465,10 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.gridDiamondCer);
-            this.panel2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel2.Location = new System.Drawing.Point(1, 187);
+            this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel2.Location = new System.Drawing.Point(1, 177);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1335, 388);
+            this.panel2.Size = new System.Drawing.Size(1312, 404);
             this.panel2.TabIndex = 34;
             // 
             // gridDiamondCer
@@ -479,6 +480,7 @@
             this.gridDiamondCer.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.gridDiamondCer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridDiamondCer.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Select,
             this.ID,
             this.RowNum,
             this.StatusName,
@@ -503,7 +505,7 @@
             this.Payment,
             this.DueDate,
             this.ShopName,
-            this.SettingName,
+            this.Setting,
             this.ReportNumber,
             this.SoldToName,
             this.W,
@@ -513,14 +515,23 @@
             this.gridDiamondCer.Name = "gridDiamondCer";
             this.gridDiamondCer.ReadOnly = true;
             this.gridDiamondCer.RowHeadersWidth = 10;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridDiamondCer.RowsDefaultCellStyle = dataGridViewCellStyle13;
-            this.gridDiamondCer.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridDiamondCer.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridDiamondCer.RowTemplate.Height = 30;
             this.gridDiamondCer.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridDiamondCer.Size = new System.Drawing.Size(1313, 388);
+            this.gridDiamondCer.Size = new System.Drawing.Size(1294, 398);
             this.gridDiamondCer.TabIndex = 2;
             this.gridDiamondCer.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.gridDiamondCer_MouseDoubleClick);
+            // 
+            // Select
+            // 
+            this.Select.HeaderText = "Select";
+            this.Select.Name = "Select";
+            this.Select.ReadOnly = true;
+            this.Select.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Select.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Select.Width = 60;
             // 
             // ID
             // 
@@ -741,13 +752,13 @@
             this.ShopName.ReadOnly = true;
             this.ShopName.Width = 90;
             // 
-            // SettingName
+            // Setting
             // 
-            this.SettingName.DataPropertyName = "SettingName";
-            this.SettingName.HeaderText = "Setting";
-            this.SettingName.Name = "SettingName";
-            this.SettingName.ReadOnly = true;
-            this.SettingName.Width = 170;
+            this.Setting.DataPropertyName = "Setting";
+            this.Setting.HeaderText = "Setting";
+            this.Setting.Name = "Setting";
+            this.Setting.ReadOnly = true;
+            this.Setting.Width = 170;
             // 
             // ReportNumber
             // 
@@ -802,7 +813,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(105)))), ((int)(((byte)(79)))));
-            this.ClientSize = new System.Drawing.Size(1347, 593);
+            this.ClientSize = new System.Drawing.Size(1320, 593);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
             this.Name = "SearchBuyBookDiamondCerList";
@@ -853,6 +864,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Total;
         private System.Windows.Forms.TextBox txtCode2;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Select;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn RowNum;
         private System.Windows.Forms.DataGridViewTextBoxColumn StatusName;
@@ -877,12 +890,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Payment;
         private System.Windows.Forms.DataGridViewTextBoxColumn DueDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn ShopName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SettingName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Setting;
         private System.Windows.Forms.DataGridViewTextBoxColumn ReportNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn SoldToName;
         private System.Windows.Forms.DataGridViewTextBoxColumn W;
         private System.Windows.Forms.DataGridViewTextBoxColumn L;
         private System.Windows.Forms.DataGridViewTextBoxColumn D;
-        private System.Windows.Forms.Button btnClose;
     }
 }

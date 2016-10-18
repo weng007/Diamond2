@@ -92,7 +92,6 @@ namespace DiamondShop
             else { gridProductionLine.DataSource = null; gridProductionLine.Refresh(); }
         }
 
-
         private void gridProductionLine_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex == 0)

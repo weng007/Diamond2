@@ -191,5 +191,10 @@ namespace DiamondShop
         {
             this.Close();
         }
+
+        private void gridDiamondCer_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
