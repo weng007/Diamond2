@@ -74,10 +74,6 @@ namespace DiamondShop
                 {
                     idSelected += gridProductionLine.Rows[i].Cells["ID"].Value.ToString() + comma;
                 }
-                if (i == gridProductionLine.Rows.Count - 2)
-                {
-                    comma = "";
-                }
             }
             idSelected = idSelected.Remove(idSelected.Length - 1, 1);
         }
