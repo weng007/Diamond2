@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BuyBookDiamondCer));
             this.dtBuyDate = new System.Windows.Forms.DateTimePicker();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.lnkSetting = new System.Windows.Forms.LinkLabel();
             this.btnFileDel = new System.Windows.Forms.Button();
             this.btnChooseDate = new System.Windows.Forms.Button();
             this.txtPayDate = new System.Windows.Forms.TextBox();
@@ -108,7 +109,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.openFileDialog2 = new System.Windows.Forms.OpenFileDialog();
-            this.lnkSetting = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -205,6 +205,17 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1001, 520);
             this.panel3.TabIndex = 74;
+            // 
+            // lnkSetting
+            // 
+            this.lnkSetting.AutoSize = true;
+            this.lnkSetting.Location = new System.Drawing.Point(498, 342);
+            this.lnkSetting.Name = "lnkSetting";
+            this.lnkSetting.Size = new System.Drawing.Size(63, 20);
+            this.lnkSetting.TabIndex = 308;
+            this.lnkSetting.TabStop = true;
+            this.lnkSetting.Text = "Not Yet";
+            this.lnkSetting.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkSetting_LinkClicked);
             // 
             // btnFileDel
             // 
@@ -998,15 +1009,6 @@
             // openFileDialog2
             // 
             this.openFileDialog2.FileName = "openFileDialog2";
-            // 
-            // lnkSetting
-            // 
-            this.lnkSetting.AutoSize = true;
-            this.lnkSetting.Location = new System.Drawing.Point(498, 342);
-            this.lnkSetting.Name = "lnkSetting";
-            this.lnkSetting.Size = new System.Drawing.Size(0, 20);
-            this.lnkSetting.TabIndex = 308;
-            this.lnkSetting.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkSetting_LinkClicked);
             // 
             // BuyBookDiamondCer
             // 
