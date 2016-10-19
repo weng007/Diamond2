@@ -18,7 +18,6 @@ namespace DiamondShop
 {
     public partial class Inventory : FormInfo
     {
-
         dsInventory tds = new dsInventory();
         Service2 ser1;
         bool isAuthorize = false;
@@ -61,6 +60,13 @@ namespace DiamondShop
 
             txtUpdateBy.Text = ApplicationInfo.UserName;
             cmbShop.SelectedValue = ApplicationInfo.Shop.ToString();
+        }
+
+        public Inventory(string code, int mode)
+        {
+            InitializeComponent();
+            Initial();
+            BinderData();
         }
 
         private void SetJewelryType()

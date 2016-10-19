@@ -57,7 +57,7 @@ namespace DiamondShop
             binder.BindControl(txtRap, "Rap");
             binder.BindControl(txtTotal, "Total$");
             binder.BindControl(cmbShop, "Shop");
-            binder.BindControl(cmbSetting, "Setting");
+            binder.BindControl(lnkSetting, "Setting");
             binder.BindControl(cmbLab, "Lab");
             binder.BindControl(dtDueDate, "DueDate");
             binder.BindControl(txtUSDRate, "USDRate");
@@ -95,7 +95,7 @@ namespace DiamondShop
             binder.BindControl(txtRap, "Rap");
             binder.BindControl(txtTotal, "Total$");
             binder.BindControl(cmbShop, "Shop");
-            binder.BindControl(cmbSetting, "Setting");
+            binder.BindControl(lnkSetting, "Setting");
             binder.BindControl(cmbLab, "Lab");
             binder.BindControl(dtDueDate, "DueDate");
             binder.BindControl(txtUSDRate, "USDRate");
@@ -169,11 +169,6 @@ namespace DiamondShop
             cmbShop.ValueMember = "ID";
             cmbShop.DisplayMember = "Detail";
             cmbShop.Refresh();
-
-            cmbSetting.DataSource = (GM.GetMasterTableDetail("C015",false)).Tables[0];
-            cmbSetting.ValueMember = "ID";
-            cmbSetting.DisplayMember = "Detail";
-            cmbSetting.Refresh();
 
             cmbLab.DataSource = (GM.GetMasterTableDetail("C020")).Tables[0];
             cmbLab.ValueMember = "ID";
@@ -610,6 +605,12 @@ namespace DiamondShop
         {
             ser1 = GM.GetService1();
             ser1.DeleteDataReference(id,2);
+        }
+
+        private void lnkSetting_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Inventory frm = new Inventory(lnkSetting.Text,0);
+            frm.ShowDialog();
         }
     }
 }

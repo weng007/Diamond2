@@ -93,7 +93,6 @@
             this.label11 = new System.Windows.Forms.Label();
             this.cmbShop = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.cmbSetting = new System.Windows.Forms.ComboBox();
             this.cmbClearity = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -109,6 +108,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.openFileDialog2 = new System.Windows.Forms.OpenFileDialog();
+            this.lnkSetting = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -129,6 +129,7 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.lnkSetting);
             this.panel3.Controls.Add(this.btnFileDel);
             this.panel3.Controls.Add(this.btnChooseDate);
             this.panel3.Controls.Add(this.txtPayDate);
@@ -187,7 +188,6 @@
             this.panel3.Controls.Add(this.label11);
             this.panel3.Controls.Add(this.cmbShop);
             this.panel3.Controls.Add(this.label10);
-            this.panel3.Controls.Add(this.cmbSetting);
             this.panel3.Controls.Add(this.cmbClearity);
             this.panel3.Controls.Add(this.label8);
             this.panel3.Controls.Add(this.label5);
@@ -865,16 +865,6 @@
             this.label10.TabIndex = 98;
             this.label10.Text = "Total $";
             // 
-            // cmbSetting
-            // 
-            this.cmbSetting.Enabled = false;
-            this.cmbSetting.FormattingEnabled = true;
-            this.cmbSetting.Location = new System.Drawing.Point(502, 339);
-            this.cmbSetting.Name = "cmbSetting";
-            this.cmbSetting.Size = new System.Drawing.Size(180, 28);
-            this.cmbSetting.TabIndex = 72;
-            this.cmbSetting.SelectedValueChanged += new System.EventHandler(this.cmbColorType_SelectedValueChanged);
-            // 
             // cmbClearity
             // 
             this.cmbClearity.FormattingEnabled = true;
@@ -1009,6 +999,15 @@
             // 
             this.openFileDialog2.FileName = "openFileDialog2";
             // 
+            // lnkSetting
+            // 
+            this.lnkSetting.AutoSize = true;
+            this.lnkSetting.Location = new System.Drawing.Point(498, 342);
+            this.lnkSetting.Name = "lnkSetting";
+            this.lnkSetting.Size = new System.Drawing.Size(0, 20);
+            this.lnkSetting.TabIndex = 308;
+            this.lnkSetting.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkSetting_LinkClicked);
+            // 
             // BuyBookDiamondCer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1049,7 +1048,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ComboBox cmbShop;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ComboBox cmbSetting;
         private System.Windows.Forms.ComboBox cmbClearity;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label5;
@@ -1112,5 +1110,6 @@
         private System.Windows.Forms.TextBox txtPayDate;
         private System.Windows.Forms.Button btnChooseDate;
         private System.Windows.Forms.Button btnFileDel;
+        private System.Windows.Forms.LinkLabel lnkSetting;
     }
 }

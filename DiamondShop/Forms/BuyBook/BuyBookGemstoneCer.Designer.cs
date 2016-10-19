@@ -63,7 +63,6 @@
             this.txtReportNumber = new System.Windows.Forms.TextBox();
             this.cmbShop = new System.Windows.Forms.ComboBox();
             this.label28 = new System.Windows.Forms.Label();
-            this.cmbSetting = new System.Windows.Forms.ComboBox();
             this.label25 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.dtReportDate = new System.Windows.Forms.DateTimePicker();
@@ -106,6 +105,7 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.openFileDialog2 = new System.Windows.Forms.OpenFileDialog();
             this.openFileDialog3 = new System.Windows.Forms.OpenFileDialog();
+            this.lnkSetting = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -124,6 +124,7 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.lnkSetting);
             this.panel3.Controls.Add(this.btnFileDel);
             this.panel3.Controls.Add(this.btnChooseDate);
             this.panel3.Controls.Add(this.txtPayDate);
@@ -156,7 +157,6 @@
             this.panel3.Controls.Add(this.txtReportNumber);
             this.panel3.Controls.Add(this.cmbShop);
             this.panel3.Controls.Add(this.label28);
-            this.panel3.Controls.Add(this.cmbSetting);
             this.panel3.Controls.Add(this.label25);
             this.panel3.Controls.Add(this.label7);
             this.panel3.Controls.Add(this.dtReportDate);
@@ -530,16 +530,6 @@
             this.label28.Size = new System.Drawing.Size(70, 20);
             this.label28.TabIndex = 187;
             this.label28.Text = "Location";
-            // 
-            // cmbSetting
-            // 
-            this.cmbSetting.Enabled = false;
-            this.cmbSetting.FormattingEnabled = true;
-            this.cmbSetting.Location = new System.Drawing.Point(790, 84);
-            this.cmbSetting.Name = "cmbSetting";
-            this.cmbSetting.Size = new System.Drawing.Size(188, 28);
-            this.cmbSetting.TabIndex = 18;
-            this.cmbSetting.SelectedValueChanged += new System.EventHandler(this.cmbShape_SelectedValueChanged);
             // 
             // label25
             // 
@@ -963,6 +953,15 @@
             // 
             this.openFileDialog3.FileName = "openFileDialog3";
             // 
+            // lnkSetting
+            // 
+            this.lnkSetting.AutoSize = true;
+            this.lnkSetting.Location = new System.Drawing.Point(787, 88);
+            this.lnkSetting.Name = "lnkSetting";
+            this.lnkSetting.Size = new System.Drawing.Size(0, 20);
+            this.lnkSetting.TabIndex = 309;
+            this.lnkSetting.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkSetting_LinkClicked);
+            // 
             // BuyBookGemstoneCer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1025,7 +1024,6 @@
         private System.Windows.Forms.TextBox txtReportNumber;
         private System.Windows.Forms.ComboBox cmbShop;
         private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.ComboBox cmbSetting;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Button btnImage1;
         private System.Windows.Forms.Button btnUpload;
@@ -1059,5 +1057,6 @@
         private System.Windows.Forms.TextBox txtPayDate;
         private System.Windows.Forms.MonthCalendar monthCalendar1;
         private System.Windows.Forms.Button btnFileDel;
+        private System.Windows.Forms.LinkLabel lnkSetting;
     }
 }

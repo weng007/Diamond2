@@ -215,5 +215,14 @@ namespace DiamondShop
         {
             this.Close();
         }
+
+        private void gridGemstoneCer_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 22)
+            {
+                Inventory frm = new Inventory(sender.ToString(), 0);
+                frm.ShowDialog();
+            }
+        }
     }
 }

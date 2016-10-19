@@ -38,7 +38,7 @@ namespace DiamondShop
             binder.BindControl(dtBuyDate, "BuyDate");
             binder.BindControl(txtSeller, "Seller");
             binder.BindControl(txtCode, "Code");
-            binder.BindControl(cmbSetting, "Setting");
+            binder.BindControl(lnkSetting, "Setting");
             binder.BindControl(cmbShop, "Shop");
             binder.BindControl(cmbStatus, "Status");
             binder.BindControl(txtReportNumber, "ReportNumber");
@@ -71,7 +71,7 @@ namespace DiamondShop
             binder.BindControl(dtBuyDate, "BuyDate");
             binder.BindControl(txtSeller, "Seller");
             binder.BindControl(txtCode, "Code");
-            binder.BindControl(cmbSetting, "Setting");
+            binder.BindControl(lnkSetting, "Setting");
             binder.BindControl(cmbShop, "Shop");
             binder.BindControl(cmbStatus, "Status");
             binder.BindControl(txtReportNumber, "ReportNumber");
@@ -111,11 +111,6 @@ namespace DiamondShop
             cmbBuyer.DisplayMember = "DisplayName";
             cmbBuyer.SelectedIndex = ds.Tables[0].Rows.Count - 1;
             cmbBuyer.Refresh();
-
-            cmbSetting.DataSource = (GM.GetMasterTableDetail("C015",false)).Tables[0];
-            cmbSetting.ValueMember = "ID";
-            cmbSetting.DisplayMember = "Detail";
-            cmbSetting.Refresh();
 
             cmbShop.DataSource = (GM.GetMasterTableDetail("C007")).Tables[0];
             cmbShop.ValueMember = "ID";
@@ -600,5 +595,12 @@ namespace DiamondShop
             ser1 = GM.GetService1();
             ser1.DeleteDataReference(id, 3);
         }
+
+        private void lnkSetting_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Inventory frm = new Inventory(sender.ToString(), 0);
+            frm.ShowDialog();
+        }
     }
 }
+    

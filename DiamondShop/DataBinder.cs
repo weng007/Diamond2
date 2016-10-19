@@ -61,7 +61,10 @@ namespace DiamondShop
                             case "System.Windows.Forms.DateTimePicker":
                                 if (!row.IsNull(columnName)) ((DateTimePicker)ctrl).Value = Convert.ToDateTime(row[columnName]);
                                 break;
-                        
+                            case "System.Windows.Forms.LinkLabel":
+                                if (!row.IsNull(columnName)) ((LinkLabel)ctrl).Text = (row[columnName].ToString());
+                                break;
+
                             default: break;
                         }
                     }
@@ -93,6 +96,9 @@ namespace DiamondShop
                             case "System.Windows.Forms.ComboBox":
                                 ComboBox cmb = (ComboBox)ctrl;
                                 row[columnName] = cmb.SelectedValue;
+                                break;
+                            case "System.Windows.Forms.LinkLabel":
+                                row[columnName] = ((LinkLabel)ctrl).Text.Trim();
                                 break;
                             case "System.Windows.Forms.DateTimePicker":
                                 DateTimePicker rdp = (DateTimePicker)ctrl;

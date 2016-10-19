@@ -29,11 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WarningList));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WarningList));
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.imageList2 = new System.Windows.Forms.ImageList(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
             this.gridWarning = new System.Windows.Forms.DataGridView();
             this.IsRead = new System.Windows.Forms.DataGridViewImageColumn();
@@ -63,10 +66,7 @@
             this.cmbStatusType = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnSearch = new System.Windows.Forms.Button();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.tds = new DiamondDS.DS.dsWarning();
-            this.imageList2 = new System.Windows.Forms.ImageList(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridWarning)).BeginInit();
@@ -74,13 +74,33 @@
             ((System.ComponentModel.ISupportInitialize)(this.tds)).BeginInit();
             this.SuspendLayout();
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "btnUnread.png");
+            this.imageList1.Images.SetKeyName(1, "btnRead.png");
+            // 
+            // imageList2
+            // 
+            this.imageList2.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList2.ImageStream")));
+            this.imageList2.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList2.Images.SetKeyName(0, "btnInbox2.png");
+            this.imageList2.Images.SetKeyName(1, "btnSendbox2.png");
+            this.imageList2.Images.SetKeyName(2, "btnSendbox.png");
+            this.imageList2.Images.SetKeyName(3, "btnInbox.png");
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.gridWarning);
             this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel2.Location = new System.Drawing.Point(5, 123);
+            this.panel2.Location = new System.Drawing.Point(5, 119);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1329, 452);
             this.panel2.TabIndex = 45;
@@ -116,7 +136,7 @@
             this.StatusType,
             this.MessageStatus,
             this.OrderNo});
-            this.gridWarning.Location = new System.Drawing.Point(14, 6);
+            this.gridWarning.Location = new System.Drawing.Point(7, 3);
             this.gridWarning.Name = "gridWarning";
             this.gridWarning.ReadOnly = true;
             this.gridWarning.RowHeadersWidth = 10;
@@ -279,7 +299,7 @@
             this.panel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel4.Location = new System.Drawing.Point(-1, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1322, 123);
+            this.panel4.Size = new System.Drawing.Size(1322, 117);
             this.panel4.TabIndex = 44;
             // 
             // label3
@@ -405,30 +425,10 @@
             this.btnSearch.UseVisualStyleBackColor = false;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // timer1
-            // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // imageList1
-            // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "btnUnread.png");
-            this.imageList1.Images.SetKeyName(1, "btnRead.png");
-            // 
             // tds
             // 
             this.tds.DataSetName = "dsWarning";
             this.tds.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // imageList2
-            // 
-            this.imageList2.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList2.ImageStream")));
-            this.imageList2.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList2.Images.SetKeyName(0, "btnInbox2.png");
-            this.imageList2.Images.SetKeyName(1, "btnSendbox2.png");
-            this.imageList2.Images.SetKeyName(2, "btnSendbox.png");
-            this.imageList2.Images.SetKeyName(3, "btnInbox.png");
             // 
             // WarningList
             // 
