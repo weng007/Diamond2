@@ -65,7 +65,6 @@ namespace DiamondShop
             cmbLab.DisplayMember = "Detail";
             cmbLab.Refresh();
 
-
             txtReportNumber.Select();
 
             gridGemstoneCer.AutoGenerateColumns = false;
