@@ -348,5 +348,19 @@ namespace Diamond
                 throw ex;
             }
         }
+
+        [WebMethod]
+        public int DoSearchInventoryByCode(string code)
+        {
+            InventoryBiz biz = GM.InventoryBiz();
+            try
+            {
+                return biz.DoSearchByCode(code);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

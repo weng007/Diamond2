@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DiamondShop.FormMaster;
+using DiamondShop.DiamondService1;
 using DiamondDS;
 
 namespace DiamondShop
@@ -164,8 +165,7 @@ namespace DiamondShop
                     {
                         DoLoadData();
                     }
-                }
-                
+                }            
             }
             else //mode = 1 Search
             {
@@ -177,6 +177,17 @@ namespace DiamondShop
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void gridGemstone_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Service2 ser1 = GM.GetService1();
+
+            if (e.ColumnIndex == 13)
+            {
+                Inventory frm = new Inventory(ser1.DoSearchInventoryByCode(sender.ToString()));
+                frm.ShowDialog();
+            }
         }
     }
 }

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DiamondShop.FormMaster;
+using DiamondShop.DiamondService1;
 using DiamondDS;
 
 namespace DiamondShop
@@ -194,9 +195,11 @@ namespace DiamondShop
 
         private void gridDiamondCer_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            Service2 ser1 = GM.GetService1();
+
             if (e.ColumnIndex == 24)
             {
-                Inventory frm = new Inventory(sender.ToString(),0);
+                Inventory frm = new Inventory(ser1.DoSearchInventoryByCode(sender.ToString()));
                 frm.ShowDialog();
             }
         }

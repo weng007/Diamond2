@@ -17,6 +17,7 @@ namespace DiamondShop.FormMaster
         public int id = 0;
         public bool chkFlag = false;
         public string message = "";
+        public bool isClosed = true;
         public DataBinder binder = new DataBinder();
         public DataSet ds = new DataSet();
         public Service1 ser = GM.GetService();
@@ -120,7 +121,11 @@ namespace DiamondShop.FormMaster
                 if (chkFlag)
                 {
                     SaveData();
-                    this.Close();
+
+                    if (isClosed)
+                    {
+                        this.Close();
+                    }
                 }
             }   
             else

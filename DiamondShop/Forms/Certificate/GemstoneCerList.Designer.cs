@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GemstoneCerList));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnSearch = new System.Windows.Forms.Button();
             this.cmbLab = new System.Windows.Forms.ComboBox();
@@ -75,7 +75,7 @@
             this.D = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ReportNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ShopName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SettingName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Setting = new System.Windows.Forms.DataGridViewLinkColumn();
             this.StatusName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BuyDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
@@ -111,7 +111,7 @@
             this.panel4.Controls.Add(this.cmbOrigin);
             this.panel4.Controls.Add(this.label5);
             this.panel4.Controls.Add(this.label4);
-            this.panel4.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.panel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.panel4.Location = new System.Drawing.Point(-3, 0);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1207, 178);
@@ -137,7 +137,7 @@
             this.cmbLab.FormattingEnabled = true;
             this.cmbLab.Location = new System.Drawing.Point(744, 57);
             this.cmbLab.Name = "cmbLab";
-            this.cmbLab.Size = new System.Drawing.Size(130, 29);
+            this.cmbLab.Size = new System.Drawing.Size(130, 28);
             this.cmbLab.TabIndex = 28;
             // 
             // label9
@@ -155,7 +155,7 @@
             this.cmbShape.FormattingEnabled = true;
             this.cmbShape.Location = new System.Drawing.Point(454, 60);
             this.cmbShape.Name = "cmbShape";
-            this.cmbShape.Size = new System.Drawing.Size(139, 29);
+            this.cmbShape.Size = new System.Drawing.Size(139, 28);
             this.cmbShape.TabIndex = 20;
             // 
             // label8
@@ -173,7 +173,7 @@
             this.cmbShop.FormattingEnabled = true;
             this.cmbShop.Location = new System.Drawing.Point(1018, 57);
             this.cmbShop.Name = "cmbShop";
-            this.cmbShop.Size = new System.Drawing.Size(130, 29);
+            this.cmbShop.Size = new System.Drawing.Size(130, 28);
             this.cmbShop.TabIndex = 40;
             // 
             // label3
@@ -191,7 +191,7 @@
             this.cmbStatus.FormattingEnabled = true;
             this.cmbStatus.Location = new System.Drawing.Point(1018, 20);
             this.cmbStatus.Name = "cmbStatus";
-            this.cmbStatus.Size = new System.Drawing.Size(130, 29);
+            this.cmbStatus.Size = new System.Drawing.Size(130, 28);
             this.cmbStatus.TabIndex = 36;
             // 
             // label2
@@ -208,7 +208,7 @@
             // 
             this.txtReportNumber.Location = new System.Drawing.Point(182, 97);
             this.txtReportNumber.Name = "txtReportNumber";
-            this.txtReportNumber.Size = new System.Drawing.Size(161, 27);
+            this.txtReportNumber.Size = new System.Drawing.Size(161, 26);
             this.txtReportNumber.TabIndex = 8;
             this.txtReportNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -246,7 +246,7 @@
             // 
             this.txtCode.Location = new System.Drawing.Point(182, 60);
             this.txtCode.Name = "txtCode";
-            this.txtCode.Size = new System.Drawing.Size(161, 27);
+            this.txtCode.Size = new System.Drawing.Size(161, 26);
             this.txtCode.TabIndex = 4;
             this.txtCode.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -255,7 +255,7 @@
             this.cmbIdentification.FormattingEnabled = true;
             this.cmbIdentification.Location = new System.Drawing.Point(182, 22);
             this.cmbIdentification.Name = "cmbIdentification";
-            this.cmbIdentification.Size = new System.Drawing.Size(161, 29);
+            this.cmbIdentification.Size = new System.Drawing.Size(161, 28);
             this.cmbIdentification.TabIndex = 1;
             this.cmbIdentification.SelectedIndexChanged += new System.EventHandler(this.cmbIdentification_SelectedIndexChanged);
             // 
@@ -263,7 +263,7 @@
             // 
             this.txtEWeight.Location = new System.Drawing.Point(529, 20);
             this.txtEWeight.Name = "txtEWeight";
-            this.txtEWeight.Size = new System.Drawing.Size(49, 27);
+            this.txtEWeight.Size = new System.Drawing.Size(49, 26);
             this.txtEWeight.TabIndex = 16;
             this.txtEWeight.Text = "50";
             this.txtEWeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -273,7 +273,7 @@
             // 
             this.txtSWeight.Location = new System.Drawing.Point(454, 20);
             this.txtSWeight.Name = "txtSWeight";
-            this.txtSWeight.Size = new System.Drawing.Size(51, 27);
+            this.txtSWeight.Size = new System.Drawing.Size(51, 26);
             this.txtSWeight.TabIndex = 12;
             this.txtSWeight.Text = "0";
             this.txtSWeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -294,7 +294,7 @@
             this.cmbComment.FormattingEnabled = true;
             this.cmbComment.Location = new System.Drawing.Point(744, 20);
             this.cmbComment.Name = "cmbComment";
-            this.cmbComment.Size = new System.Drawing.Size(169, 29);
+            this.cmbComment.Size = new System.Drawing.Size(169, 28);
             this.cmbComment.TabIndex = 24;
             // 
             // label6
@@ -312,7 +312,7 @@
             this.cmbOrigin.FormattingEnabled = true;
             this.cmbOrigin.Location = new System.Drawing.Point(744, 95);
             this.cmbOrigin.Name = "cmbOrigin";
-            this.cmbOrigin.Size = new System.Drawing.Size(130, 29);
+            this.cmbOrigin.Size = new System.Drawing.Size(130, 28);
             this.cmbOrigin.TabIndex = 32;
             // 
             // label5
@@ -339,7 +339,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.gridGemstone);
-            this.panel2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.Location = new System.Drawing.Point(0, 184);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1336, 397);
@@ -366,18 +366,19 @@
             this.D,
             this.ReportNumber,
             this.ShopName,
-            this.SettingName,
+            this.Setting,
             this.StatusName,
             this.BuyDate});
             this.gridGemstone.Location = new System.Drawing.Point(18, 0);
             this.gridGemstone.Name = "gridGemstone";
             this.gridGemstone.ReadOnly = true;
             this.gridGemstone.RowHeadersWidth = 10;
-            this.gridGemstone.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridGemstone.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridGemstone.RowTemplate.Height = 30;
             this.gridGemstone.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridGemstone.Size = new System.Drawing.Size(1315, 392);
             this.gridGemstone.TabIndex = 2;
+            this.gridGemstone.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridGemstone_CellClick);
             this.gridGemstone.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.gridGemstone_MouseDoubleClick);
             // 
             // btnClose
@@ -408,8 +409,8 @@
             // RowNum
             // 
             this.RowNum.DataPropertyName = "RowNum";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            this.RowNum.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            this.RowNum.DefaultCellStyle = dataGridViewCellStyle7;
             this.RowNum.HeaderText = "No.";
             this.RowNum.Name = "RowNum";
             this.RowNum.ReadOnly = true;
@@ -459,9 +460,9 @@
             // Weight
             // 
             this.Weight.DataPropertyName = "Weight";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle2.Format = "N2";
-            this.Weight.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle8.Format = "N2";
+            this.Weight.DefaultCellStyle = dataGridViewCellStyle8;
             this.Weight.HeaderText = "Weight";
             this.Weight.Name = "Weight";
             this.Weight.ReadOnly = true;
@@ -469,9 +470,9 @@
             // W
             // 
             this.W.DataPropertyName = "W";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle3.Format = "N2";
-            this.W.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle9.Format = "N2";
+            this.W.DefaultCellStyle = dataGridViewCellStyle9;
             this.W.HeaderText = "W";
             this.W.Name = "W";
             this.W.ReadOnly = true;
@@ -481,9 +482,9 @@
             // L
             // 
             this.L.DataPropertyName = "L";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle4.Format = "N2";
-            this.L.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle10.Format = "N2";
+            this.L.DefaultCellStyle = dataGridViewCellStyle10;
             this.L.HeaderText = "L";
             this.L.Name = "L";
             this.L.ReadOnly = true;
@@ -493,9 +494,9 @@
             // D
             // 
             this.D.DataPropertyName = "D";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle5.Format = "N2";
-            this.D.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle11.Format = "N2";
+            this.D.DefaultCellStyle = dataGridViewCellStyle11;
             this.D.HeaderText = "D";
             this.D.Name = "D";
             this.D.ReadOnly = true;
@@ -517,13 +518,15 @@
             this.ShopName.Name = "ShopName";
             this.ShopName.ReadOnly = true;
             // 
-            // SettingName
+            // Setting
             // 
-            this.SettingName.DataPropertyName = "SettingName";
-            this.SettingName.HeaderText = "Setting";
-            this.SettingName.Name = "SettingName";
-            this.SettingName.ReadOnly = true;
-            this.SettingName.Width = 170;
+            this.Setting.DataPropertyName = "Setting";
+            this.Setting.HeaderText = "Setting";
+            this.Setting.Name = "Setting";
+            this.Setting.ReadOnly = true;
+            this.Setting.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Setting.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Setting.Width = 170;
             // 
             // StatusName
             // 
@@ -536,8 +539,8 @@
             // BuyDate
             // 
             this.BuyDate.DataPropertyName = "BuyDate";
-            dataGridViewCellStyle6.Format = "dd/MM/yyyy";
-            this.BuyDate.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle12.Format = "dd/MM/yyyy";
+            this.BuyDate.DefaultCellStyle = dataGridViewCellStyle12;
             this.BuyDate.HeaderText = "Buy Date";
             this.BuyDate.Name = "BuyDate";
             this.BuyDate.ReadOnly = true;
@@ -607,7 +610,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn D;
         private System.Windows.Forms.DataGridViewTextBoxColumn ReportNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn ShopName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SettingName;
+        private System.Windows.Forms.DataGridViewLinkColumn Setting;
         private System.Windows.Forms.DataGridViewTextBoxColumn StatusName;
         private System.Windows.Forms.DataGridViewTextBoxColumn BuyDate;
     }

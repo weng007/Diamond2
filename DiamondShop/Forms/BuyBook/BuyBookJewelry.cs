@@ -227,12 +227,15 @@ namespace DiamondShop
                     chkFlag = ser.DoUpdateData("BuyBookJewelry", tds);
                 }
 
-                tds.AcceptChanges();
+                tds.AcceptChanges();          
             }
             catch (Exception ex)
             {
                 throw ex;
             }
+
+            //ไม่ให้ปิดหน้าจอหลัง Save
+            isClosed = false;
 
             return chkFlag;
         }

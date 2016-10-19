@@ -65,8 +65,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.gridDiamondCer = new System.Windows.Forms.DataGridView();
-            this.tds = new DiamondDS.DS.dsDiamondCer();
-            this.btnClose = new System.Windows.Forms.Button();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RowNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -84,9 +82,11 @@
             this.D = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ReportNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ShopName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SettingName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Setting = new System.Windows.Forms.DataGridViewLinkColumn();
             this.StatusName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BuyDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tds = new DiamondDS.DS.dsDiamondCer();
+            this.btnClose = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -124,7 +124,7 @@
             this.panel4.Controls.Add(this.label4);
             this.panel4.Controls.Add(this.txtReportNumber);
             this.panel4.Controls.Add(this.label3);
-            this.panel4.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.panel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1293, 174);
@@ -135,7 +135,7 @@
             this.cmbColorType.FormattingEnabled = true;
             this.cmbColorType.Location = new System.Drawing.Point(495, 20);
             this.cmbColorType.Name = "cmbColorType";
-            this.cmbColorType.Size = new System.Drawing.Size(158, 29);
+            this.cmbColorType.Size = new System.Drawing.Size(158, 28);
             this.cmbColorType.TabIndex = 75;
             this.cmbColorType.SelectedIndexChanged += new System.EventHandler(this.cmbColorType_SelectedIndexChanged);
             // 
@@ -153,7 +153,7 @@
             // 
             this.txtCode.Location = new System.Drawing.Point(205, 55);
             this.txtCode.Name = "txtCode";
-            this.txtCode.Size = new System.Drawing.Size(161, 27);
+            this.txtCode.Size = new System.Drawing.Size(161, 26);
             this.txtCode.TabIndex = 73;
             // 
             // label12
@@ -186,7 +186,7 @@
             this.cmbShop.FormattingEnabled = true;
             this.cmbShop.Location = new System.Drawing.Point(929, 59);
             this.cmbShop.Name = "cmbShop";
-            this.cmbShop.Size = new System.Drawing.Size(148, 29);
+            this.cmbShop.Size = new System.Drawing.Size(148, 28);
             this.cmbShop.TabIndex = 40;
             // 
             // label11
@@ -204,7 +204,7 @@
             this.cmbStatus.FormattingEnabled = true;
             this.cmbStatus.Location = new System.Drawing.Point(929, 20);
             this.cmbStatus.Name = "cmbStatus";
-            this.cmbStatus.Size = new System.Drawing.Size(148, 29);
+            this.cmbStatus.Size = new System.Drawing.Size(148, 28);
             this.cmbStatus.TabIndex = 36;
             // 
             // label10
@@ -232,7 +232,7 @@
             this.cmbLab.FormattingEnabled = true;
             this.cmbLab.Location = new System.Drawing.Point(205, 129);
             this.cmbLab.Name = "cmbLab";
-            this.cmbLab.Size = new System.Drawing.Size(161, 29);
+            this.cmbLab.Size = new System.Drawing.Size(161, 28);
             this.cmbLab.TabIndex = 8;
             // 
             // label1
@@ -260,7 +260,7 @@
             this.cmbEColor.FormattingEnabled = true;
             this.cmbEColor.Location = new System.Drawing.Point(615, 58);
             this.cmbEColor.Name = "cmbEColor";
-            this.cmbEColor.Size = new System.Drawing.Size(95, 29);
+            this.cmbEColor.Size = new System.Drawing.Size(95, 28);
             this.cmbEColor.TabIndex = 24;
             // 
             // cmbEClearity
@@ -268,7 +268,7 @@
             this.cmbEClearity.FormattingEnabled = true;
             this.cmbEClearity.Location = new System.Drawing.Point(678, 95);
             this.cmbEClearity.Name = "cmbEClearity";
-            this.cmbEClearity.Size = new System.Drawing.Size(151, 29);
+            this.cmbEClearity.Size = new System.Drawing.Size(151, 28);
             this.cmbEClearity.TabIndex = 32;
             // 
             // label8
@@ -285,7 +285,7 @@
             // 
             this.txtEWeight.Location = new System.Drawing.Point(577, 131);
             this.txtEWeight.Name = "txtEWeight";
-            this.txtEWeight.Size = new System.Drawing.Size(51, 27);
+            this.txtEWeight.Size = new System.Drawing.Size(51, 26);
             this.txtEWeight.TabIndex = 16;
             this.txtEWeight.Text = "50";
             this.txtEWeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -295,7 +295,7 @@
             // 
             this.txtSWeight.Location = new System.Drawing.Point(495, 131);
             this.txtSWeight.Name = "txtSWeight";
-            this.txtSWeight.Size = new System.Drawing.Size(54, 27);
+            this.txtSWeight.Size = new System.Drawing.Size(54, 26);
             this.txtSWeight.TabIndex = 12;
             this.txtSWeight.Text = "0";
             this.txtSWeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -306,7 +306,7 @@
             this.cmbSColor.FormattingEnabled = true;
             this.cmbSColor.Location = new System.Drawing.Point(495, 58);
             this.cmbSColor.Name = "cmbSColor";
-            this.cmbSColor.Size = new System.Drawing.Size(91, 29);
+            this.cmbSColor.Size = new System.Drawing.Size(91, 28);
             this.cmbSColor.TabIndex = 20;
             // 
             // label6
@@ -334,7 +334,7 @@
             this.cmbShape.FormattingEnabled = true;
             this.cmbShape.Location = new System.Drawing.Point(205, 91);
             this.cmbShape.Name = "cmbShape";
-            this.cmbShape.Size = new System.Drawing.Size(161, 29);
+            this.cmbShape.Size = new System.Drawing.Size(161, 28);
             this.cmbShape.TabIndex = 4;
             // 
             // label2
@@ -352,7 +352,7 @@
             this.cmbSClearity.FormattingEnabled = true;
             this.cmbSClearity.Location = new System.Drawing.Point(495, 95);
             this.cmbSClearity.Name = "cmbSClearity";
-            this.cmbSClearity.Size = new System.Drawing.Size(158, 29);
+            this.cmbSClearity.Size = new System.Drawing.Size(158, 28);
             this.cmbSClearity.TabIndex = 28;
             // 
             // label4
@@ -369,7 +369,7 @@
             // 
             this.txtReportNumber.Location = new System.Drawing.Point(205, 20);
             this.txtReportNumber.Name = "txtReportNumber";
-            this.txtReportNumber.Size = new System.Drawing.Size(161, 27);
+            this.txtReportNumber.Size = new System.Drawing.Size(161, 26);
             this.txtReportNumber.TabIndex = 1;
             // 
             // label3
@@ -386,7 +386,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.gridDiamondCer);
-            this.panel2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.Location = new System.Drawing.Point(0, 165);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1339, 412);
@@ -417,41 +417,20 @@
             this.D,
             this.ReportNumber,
             this.ShopName,
-            this.SettingName,
+            this.Setting,
             this.StatusName,
             this.BuyDate});
             this.gridDiamondCer.Location = new System.Drawing.Point(18, 9);
             this.gridDiamondCer.Name = "gridDiamondCer";
             this.gridDiamondCer.ReadOnly = true;
             this.gridDiamondCer.RowHeadersWidth = 10;
-            this.gridDiamondCer.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridDiamondCer.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridDiamondCer.RowTemplate.Height = 30;
             this.gridDiamondCer.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridDiamondCer.Size = new System.Drawing.Size(1316, 402);
             this.gridDiamondCer.TabIndex = 2;
+            this.gridDiamondCer.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridDiamondCer_CellClick);
             this.gridDiamondCer.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.gridDiamondCer_MouseDoubleClick);
-            // 
-            // tds
-            // 
-            this.tds.DataSetName = "dsDiamondCer";
-            this.tds.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // btnClose
-            // 
-            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClose.BackColor = System.Drawing.Color.Transparent;
-            this.btnClose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClose.BackgroundImage")));
-            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Location = new System.Drawing.Point(1295, 3);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(0);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(38, 32);
-            this.btnClose.TabIndex = 41;
-            this.btnClose.UseVisualStyleBackColor = false;
-            this.btnClose.Visible = false;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // ID
             // 
@@ -608,13 +587,15 @@
             this.ShopName.ReadOnly = true;
             this.ShopName.Width = 90;
             // 
-            // SettingName
+            // Setting
             // 
-            this.SettingName.DataPropertyName = "SettingName";
-            this.SettingName.HeaderText = "Setting";
-            this.SettingName.Name = "SettingName";
-            this.SettingName.ReadOnly = true;
-            this.SettingName.Width = 170;
+            this.Setting.DataPropertyName = "Setting";
+            this.Setting.HeaderText = "Setting";
+            this.Setting.Name = "Setting";
+            this.Setting.ReadOnly = true;
+            this.Setting.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Setting.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Setting.Width = 170;
             // 
             // StatusName
             // 
@@ -633,6 +614,28 @@
             this.BuyDate.Name = "BuyDate";
             this.BuyDate.ReadOnly = true;
             this.BuyDate.Width = 120;
+            // 
+            // tds
+            // 
+            this.tds.DataSetName = "dsDiamondCer";
+            this.tds.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // btnClose
+            // 
+            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClose.BackColor = System.Drawing.Color.Transparent;
+            this.btnClose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClose.BackgroundImage")));
+            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Location = new System.Drawing.Point(1295, 3);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(0);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(38, 32);
+            this.btnClose.TabIndex = 41;
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Visible = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // DiamondCerList
             // 
@@ -705,7 +708,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn D;
         private System.Windows.Forms.DataGridViewTextBoxColumn ReportNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn ShopName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SettingName;
+        private System.Windows.Forms.DataGridViewLinkColumn Setting;
         private System.Windows.Forms.DataGridViewTextBoxColumn StatusName;
         private System.Windows.Forms.DataGridViewTextBoxColumn BuyDate;
     }

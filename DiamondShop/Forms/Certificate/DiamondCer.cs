@@ -60,7 +60,7 @@ namespace DiamondShop
             binder.BindControl(txtPrice, "Price");
             binder.BindControl(txtRap, "Rap");
             binder.BindControl(txtUSDRate, "USDRate");
-            binder.BindControl(txtSetting, "SettingName");
+            binder.BindControl(lnkSetting, "Setting");
             binder.BindControl(txtShop, "ShopName");
             binder.BindControl(txtUSDPrice, "TotalUSD");
             binder.BindControl(txtBahtPrice, "TotalBaht");

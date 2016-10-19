@@ -609,7 +609,7 @@ namespace DiamondShop
 
         private void lnkSetting_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Inventory frm = new Inventory(lnkSetting.Text,0);
+            Inventory frm = new Inventory(ser1.DoSearchInventoryByCode(lnkSetting.Text));
             frm.ShowDialog();
         }
     }

@@ -62,13 +62,6 @@ namespace DiamondShop
             cmbShop.SelectedValue = ApplicationInfo.Shop.ToString();
         }
 
-        public Inventory(string code, int mode)
-        {
-            InitializeComponent();
-            Initial();
-            BinderData();
-        }
-
         private void SetJewelryType()
         {
             if (prefixCode == "DR")
@@ -273,6 +266,9 @@ namespace DiamondShop
             {
                 throw ex;
             }
+
+            //ไม่ให้ปิดหน้าจอหลัง Save
+            isClosed = false;
 
             return chkFlag;
         }

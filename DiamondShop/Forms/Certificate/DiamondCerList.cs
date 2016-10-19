@@ -196,5 +196,16 @@ namespace DiamondShop
         {
             this.Close();
         }
+
+        private void gridDiamondCer_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Service2 ser1 = GM.GetService1();
+
+            if (e.ColumnIndex == 17)
+            {
+                Inventory frm = new Inventory(ser1.DoSearchInventoryByCode(sender.ToString()));
+                frm.ShowDialog();
+            }
+        }
     }
 }

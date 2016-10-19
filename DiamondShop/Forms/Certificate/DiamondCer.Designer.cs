@@ -33,7 +33,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.txtShape = new System.Windows.Forms.TextBox();
             this.txtFluorescent = new System.Windows.Forms.TextBox();
-            this.txtSetting = new System.Windows.Forms.TextBox();
             this.txtShop = new System.Windows.Forms.TextBox();
             this.txtStatus = new System.Windows.Forms.TextBox();
             this.txtSymmetry = new System.Windows.Forms.TextBox();
@@ -81,6 +80,7 @@
             this.txtCode = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
+            this.lnkSetting = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -100,9 +100,9 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.lnkSetting);
             this.panel3.Controls.Add(this.txtShape);
             this.panel3.Controls.Add(this.txtFluorescent);
-            this.panel3.Controls.Add(this.txtSetting);
             this.panel3.Controls.Add(this.txtShop);
             this.panel3.Controls.Add(this.txtStatus);
             this.panel3.Controls.Add(this.txtSymmetry);
@@ -155,15 +155,6 @@
             this.txtFluorescent.Size = new System.Drawing.Size(157, 26);
             this.txtFluorescent.TabIndex = 124;
             this.txtFluorescent.TextChanged += new System.EventHandler(this.txtNote_TextChanged);
-            // 
-            // txtSetting
-            // 
-            this.txtSetting.Enabled = false;
-            this.txtSetting.Location = new System.Drawing.Point(800, 90);
-            this.txtSetting.Name = "txtSetting";
-            this.txtSetting.Size = new System.Drawing.Size(187, 26);
-            this.txtSetting.TabIndex = 160;
-            this.txtSetting.TextChanged += new System.EventHandler(this.txtNote_TextChanged);
             // 
             // txtShop
             // 
@@ -656,6 +647,14 @@
             this.button1.TabIndex = 32;
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // lnkSetting
+            // 
+            this.lnkSetting.AutoSize = true;
+            this.lnkSetting.Location = new System.Drawing.Point(796, 93);
+            this.lnkSetting.Name = "lnkSetting";
+            this.lnkSetting.Size = new System.Drawing.Size(0, 20);
+            this.lnkSetting.TabIndex = 201;
+            // 
             // DiamondCer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -718,7 +717,6 @@
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.TextBox txtUSDPrice;
         private System.Windows.Forms.LinkLabel linkFile;
-        private System.Windows.Forms.TextBox txtSetting;
         private System.Windows.Forms.TextBox txtShop;
         private System.Windows.Forms.TextBox txtStatus;
         private System.Windows.Forms.TextBox txtSymmetry;
@@ -729,5 +727,6 @@
         private System.Windows.Forms.TextBox txtFluorescent;
         private System.Windows.Forms.TextBox txtShape;
         private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.LinkLabel lnkSetting;
     }
 }

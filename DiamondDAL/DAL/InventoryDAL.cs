@@ -45,6 +45,22 @@ namespace DiamondDAL.DAL
             return ds;
         }
 
+        public int DoSearchByCode(string code)
+        {
+            try
+            {
+                SQL.ClearParameter();
+                SQL.CreateParameter("Code", code);
+                SQL.FillDataSetBySP("SP_Inventory_By_Code", ds.Inventory);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return (int)ds.Inventory[0][0];
+        }
+
         public dsInventory DoSelectData(int id)
         {
             try
