@@ -253,6 +253,12 @@ namespace DiamondShop
                     row.Code = GM.GetRunningNumber(prefixCode);
                     SetCreateBy(row);               
                     chkFlag = ser.DoInsertData("Inventory", tds,0);
+
+                    if(chkFlag)
+                    {
+                        btnDiamond.Enabled = true;
+                        btnGemstone.Enabled = true;
+                    }
                 }
                 else
                 {
@@ -269,6 +275,8 @@ namespace DiamondShop
 
             //ไม่ให้ปิดหน้าจอหลัง Save
             isClosed = false;
+
+            LoadData();
 
             return chkFlag;
         }
@@ -300,8 +308,6 @@ namespace DiamondShop
             {
                 EnableSave = true;
                 EnableDelete = true;
-                btnDiamond.Enabled = true;
-                btnGemstone.Enabled = true;
                 SetControlEnable(true);
                 base.EditData();
             }
@@ -316,8 +322,6 @@ namespace DiamondShop
                 {
                     EnableSave = true;
                     EnableDelete = true;
-                    btnDiamond.Enabled = true;
-                    btnGemstone.Enabled = true;
                     SetControlEnable(true);
                     base.EditData();
                 }

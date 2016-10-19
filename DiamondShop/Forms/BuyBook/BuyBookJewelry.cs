@@ -220,6 +220,12 @@ namespace DiamondShop
                     row.Code = GM.GetRunningNumber("JWR");
                     SetCreateBy(row);
                     chkFlag = ser.DoInsertData("BuyBookJewelry", tds,0);
+
+                    if(chkFlag)
+                    {
+                        btnDiamond.Enabled = true;
+                        btnGemstone.Enabled = true;
+                    }
                 }
                 else
                 {
@@ -236,6 +242,8 @@ namespace DiamondShop
 
             //ไม่ให้ปิดหน้าจอหลัง Save
             isClosed = false;
+
+            LoadData();
 
             return chkFlag;
         }
