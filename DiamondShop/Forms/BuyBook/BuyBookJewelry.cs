@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DiamondShop.FormMaster;
 using DiamondShop.DiamondService;
+using DiamondShop.DiamondService1;
 using DiamondDS.DS;
 
 namespace DiamondShop
@@ -17,6 +18,7 @@ namespace DiamondShop
     public partial class BuyBookJewelry : FormInfo
     {
         dsBuyBookJewelry tds = new dsBuyBookJewelry();
+        Service2 ser1;
         MemoryStream ms1;
         MemoryStream ms2;
         byte[] image1, image2;
@@ -223,6 +225,8 @@ namespace DiamondShop
 
                     if(chkFlag)
                     {
+                        ser1 = GM.GetService1();
+                        id = ser1.DoSearchJewelryByCode(row.Code);
                         btnDiamond.Enabled = true;
                         btnGemstone.Enabled = true;
                     }

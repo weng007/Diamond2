@@ -256,6 +256,8 @@ namespace DiamondShop
 
                     if(chkFlag)
                     {
+                        ser1 = GM.GetService1();
+                        id = ser1.DoSearchInventoryByCode(row.Code);
                         btnDiamond.Enabled = true;
                         btnGemstone.Enabled = true;
                     }

@@ -174,6 +174,7 @@ namespace Diamond
                 throw ex;
             }
         }
+
         [WebMethod]
         public DataSet GetReportSelling(int JewelryType, int Seller , DateTime SSellDate, DateTime ESellDate )
         {
@@ -187,6 +188,7 @@ namespace Diamond
                 throw ex;
             }
         }
+
         [WebMethod]
         public DataSet GetReportDebt(int TableName , string Seller, DateTime SDueDate, DateTime EDueDate)
         {
@@ -200,6 +202,7 @@ namespace Diamond
                 throw ex;
             }
         }
+
         [WebMethod]
         public DataSet GetReportCustomer(DateTime SBirthDate, DateTime EBirthDate, DateTime SAnniDate, DateTime EAnniDate, string DisplayName)
         {
@@ -213,6 +216,7 @@ namespace Diamond
                 throw ex;
             }
         }
+
         [WebMethod]
         public DataSet GetReportInventory(int Status, DateTime SImpDate, DateTime EImpDate, float SPriceTag, float EPricetag)
         {
@@ -226,6 +230,7 @@ namespace Diamond
                 throw ex;
             }
         }
+
         [WebMethod]
         public DataSet GetReportOrder(int ID)
         {
@@ -239,6 +244,7 @@ namespace Diamond
                 throw ex;
             }
         }
+
         [WebMethod]
         public DataSet GetReportReceiveDocument(int ID)
         {
@@ -252,6 +258,7 @@ namespace Diamond
                 throw ex;
             }
         }
+
         [WebMethod]
         public DataSet GetReportCertificate(int id)
         {
@@ -265,6 +272,7 @@ namespace Diamond
                 throw ex;
             }
         }
+
         [WebMethod]
         public int UpdateMessageStatus(int id, string StatusType,string Flag )
         {
@@ -278,6 +286,7 @@ namespace Diamond
                 throw ex;
             }
         }
+
         [WebMethod]
         public int DeleteDataReference(int id, int flag)
         {
@@ -291,6 +300,7 @@ namespace Diamond
                 throw ex;
             }
         }
+
         [WebMethod]
         public int UpdateProductionLine(int id, int FactoryStatus, int EditBy)
         {
@@ -304,6 +314,7 @@ namespace Diamond
                 throw ex;
             }
         }
+
         [WebMethod]
         public dsExpenseGroup GetExpenseGroup()
         {
@@ -335,6 +346,7 @@ namespace Diamond
                 throw ex;
             }
         }
+
         [WebMethod]
         public int UpdateTransferReceived(int ID, int TransferStatus, DateTime ReceiveDate, int EShop)
         {
@@ -353,6 +365,20 @@ namespace Diamond
         public int DoSearchInventoryByCode(string code)
         {
             InventoryBiz biz = GM.InventoryBiz();
+            try
+            {
+                return biz.DoSearchByCode(code);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        [WebMethod]
+        public int DoSearchJewelryByCode(string code)
+        {
+            BuyBookJewelryBiz biz = GM.GetBuyBookJewelryBiz();
             try
             {
                 return biz.DoSearchByCode(code);

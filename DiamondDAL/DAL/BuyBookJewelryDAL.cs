@@ -30,6 +30,22 @@ namespace DiamondDAL.DAL
             return ds;
         }
 
+        public int DoSearchByCode(string code)
+        {
+            try
+            {
+                SQL.ClearParameter();
+                SQL.CreateParameter("Code", code);
+                SQL.FillDataSetBySP("SP_Jewelry_By_Code", ds.BuyBookJewelry);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return (int)ds.BuyBookJewelry[0][0];
+        }
+
         public dsBuyBookJewelry DoSelectData(int id)
         {
             try
