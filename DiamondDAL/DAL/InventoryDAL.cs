@@ -58,7 +58,7 @@ namespace DiamondDAL.DAL
                 throw ex;
             }
 
-            return (int)ds.Inventory[0][0];
+            return (int)ds.Inventory[0]["ID"];
         }
 
         public dsInventory DoSelectData(int id)

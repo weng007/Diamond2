@@ -43,7 +43,7 @@ namespace DiamondDAL.DAL
                 throw ex;
             }
 
-            return (int)ds.BuyBookJewelry[0][0];
+            return (int)ds.BuyBookJewelry[0]["ID"];
         }
 
         public dsBuyBookJewelry DoSelectData(int id)
