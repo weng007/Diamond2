@@ -14,7 +14,8 @@ namespace DiamondShop
 {
     public partial class SearchBuyBookSettingList : FormList
     {
-        
+        public string idSelected = "";
+
         public SearchBuyBookSettingList()
         {
             InitializeComponent();
@@ -46,11 +47,20 @@ namespace DiamondShop
 
             btnSearch_Click(null, null);
         }
-        private void btnAdd_Click(object sender, EventArgs e)
+
+        private void CheckSelected()
         {
-            BuyBookSetting frm = new BuyBookSetting();
-            frm.ShowDialog();
-            DoLoadData();
+            string comma = ",";
+
+            for (int i = 0; i < gridSetting.Rows.Count; i++)
+            {
+                if (gridSetting.Rows[i].Cells["Select"].Value != null)
+                {
+                    idSelected += gridSetting.Rows[i].Cells["ID"].Value.ToString() + comma;
+                }
+            }
+
+            idSelected = idSelected.Remove(idSelected.Length - 1, 1);
         }
 
         private void DoSearchData()
@@ -71,28 +81,15 @@ namespace DiamondShop
             DoSearchData();
         }
 
-        protected override bool DoDeleteData()
-        {
-            return chkFlag;
-        }
-
-        private void gridSetting_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-            if (gridSetting.RowCount > 0 && gridSetting.SelectedRows.Count > 0)
-            {
-                id = (int)gridSetting.SelectedRows[0].Cells["ID"].Value;
-                BuyBookSetting frm = new BuyBookSetting(id);
-                frm.ShowDialog();
-
-                if (frm.isEdit)
-                {
-                    DoLoadData();
-                }
-            }
-        }
-
         private void btnClose_Click(object sender, EventArgs e)
         {
+            this.Close();
+        }
+
+        private void btnSelect_Click(object sender, EventArgs e)
+        {
+            CheckSelected();
+
             this.Close();
         }
     }

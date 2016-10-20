@@ -14,7 +14,8 @@ namespace DiamondShop
 {
     public partial class SearchBuyBookJewelryList : FormList
     {
-        
+        public string idSelected = "";
+
         public SearchBuyBookJewelryList()
         {
             InitializeComponent();
@@ -24,7 +25,6 @@ namespace DiamondShop
 
         protected override void Initial()
         {
-
             txtCode.Select();
 
             gridJewelry.AutoGenerateColumns = false;
@@ -44,12 +44,19 @@ namespace DiamondShop
             btnSearch_Click(null, null);
         }
 
-        private void btnAdd_Click(object sender, EventArgs e)
+        private void CheckSelected()
         {
-            BuyBookJewelry frm = new BuyBookJewelry();
-            frm.ShowDialog();
+            string comma = ",";
 
-            DoLoadData();
+            for (int i = 0; i < gridJewelry.Rows.Count; i++)
+            {
+                if (gridJewelry.Rows[i].Cells["Select"].Value != null)
+                {
+                    idSelected += gridJewelry.Rows[i].Cells["ID"].Value.ToString() + comma;
+                }
+            }
+
+            idSelected = idSelected.Remove(idSelected.Length - 1, 1);
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -71,23 +78,15 @@ namespace DiamondShop
             else { gridJewelry.DataSource = null; gridJewelry.Refresh(); }
         }
 
-        private void gridJewelry_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-            if (gridJewelry.RowCount > 0 && gridJewelry.SelectedRows.Count > 0)
-            {
-                id = (int)gridJewelry.SelectedRows[0].Cells["ID"].Value;
-                BuyBookJewelry frm = new BuyBookJewelry(id);
-                frm.ShowDialog();
-
-                if (frm.isEdit)
-                {
-                    DoLoadData();
-                }
-            }
-        }
-
         private void btnClose_Click(object sender, EventArgs e)
         {
+            this.Close();
+        }
+
+        private void btnSelect_Click(object sender, EventArgs e)
+        {
+            CheckSelected();
+
             this.Close();
         }
     }

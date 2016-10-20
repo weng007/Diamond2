@@ -44,6 +44,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tds = new DiamondDS.DS.dsDiamondCer();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.btnSelect = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.txtCode2 = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
@@ -56,7 +57,6 @@
             this.label11 = new System.Windows.Forms.Label();
             this.cmbStatus = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.btnAdd = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.cmbLab = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -123,6 +123,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(105)))), ((int)(((byte)(79)))));
+            this.panel4.Controls.Add(this.btnSelect);
             this.panel4.Controls.Add(this.btnClose);
             this.panel4.Controls.Add(this.txtCode2);
             this.panel4.Controls.Add(this.label14);
@@ -135,7 +136,6 @@
             this.panel4.Controls.Add(this.label11);
             this.panel4.Controls.Add(this.cmbStatus);
             this.panel4.Controls.Add(this.label10);
-            this.panel4.Controls.Add(this.btnAdd);
             this.panel4.Controls.Add(this.label7);
             this.panel4.Controls.Add(this.cmbLab);
             this.panel4.Controls.Add(this.label1);
@@ -160,6 +160,22 @@
             this.panel4.Size = new System.Drawing.Size(1313, 171);
             this.panel4.TabIndex = 40;
             // 
+            // btnSelect
+            // 
+            this.btnSelect.BackColor = System.Drawing.Color.Transparent;
+            this.btnSelect.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSelect.BackgroundImage")));
+            this.btnSelect.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnSelect.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSelect.FlatAppearance.BorderColor = System.Drawing.Color.Linen;
+            this.btnSelect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSelect.Image = ((System.Drawing.Image)(resources.GetObject("btnSelect.Image")));
+            this.btnSelect.Location = new System.Drawing.Point(16, 27);
+            this.btnSelect.Name = "btnSelect";
+            this.btnSelect.Size = new System.Drawing.Size(70, 90);
+            this.btnSelect.TabIndex = 79;
+            this.btnSelect.UseVisualStyleBackColor = false;
+            this.btnSelect.Click += new System.EventHandler(this.btnSelect_Click);
+            // 
             // btnClose
             // 
             this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -168,7 +184,7 @@
             this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Location = new System.Drawing.Point(1275, 1);
+            this.btnClose.Location = new System.Drawing.Point(1275, 2);
             this.btnClose.Margin = new System.Windows.Forms.Padding(0);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(38, 32);
@@ -279,22 +295,6 @@
             this.label10.Size = new System.Drawing.Size(69, 26);
             this.label10.TabIndex = 70;
             this.label10.Text = "Status";
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.BackColor = System.Drawing.Color.Transparent;
-            this.btnAdd.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAdd.BackgroundImage")));
-            this.btnAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAdd.FlatAppearance.BorderColor = System.Drawing.Color.Linen;
-            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
-            this.btnAdd.Location = new System.Drawing.Point(20, 21);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(70, 90);
-            this.btnAdd.TabIndex = 68;
-            this.btnAdd.UseVisualStyleBackColor = false;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // label7
             // 
@@ -466,9 +466,9 @@
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.gridDiamondCer);
             this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel2.Location = new System.Drawing.Point(1, 177);
+            this.panel2.Location = new System.Drawing.Point(1, 173);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1312, 404);
+            this.panel2.Size = new System.Drawing.Size(1302, 404);
             this.panel2.TabIndex = 34;
             // 
             // gridDiamondCer
@@ -520,9 +520,8 @@
             this.gridDiamondCer.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridDiamondCer.RowTemplate.Height = 30;
             this.gridDiamondCer.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridDiamondCer.Size = new System.Drawing.Size(1294, 398);
+            this.gridDiamondCer.Size = new System.Drawing.Size(1284, 398);
             this.gridDiamondCer.TabIndex = 2;
-            this.gridDiamondCer.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.gridDiamondCer_MouseDoubleClick);
             // 
             // Select
             // 
@@ -813,7 +812,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(105)))), ((int)(((byte)(79)))));
-            this.ClientSize = new System.Drawing.Size(1320, 593);
+            this.ClientSize = new System.Drawing.Size(1315, 593);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
             this.Name = "SearchBuyBookDiamondCerList";
@@ -851,7 +850,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox cmbLab;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.ComboBox cmbShop;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ComboBox cmbStatus;
@@ -896,5 +894,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn W;
         private System.Windows.Forms.DataGridViewTextBoxColumn L;
         private System.Windows.Forms.DataGridViewTextBoxColumn D;
+        private System.Windows.Forms.Button btnSelect;
     }
 }

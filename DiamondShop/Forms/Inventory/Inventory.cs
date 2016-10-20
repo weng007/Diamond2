@@ -13,7 +13,6 @@ using DiamondShop.DiamondService;
 using DiamondShop.DiamondService1;
 using DiamondDS.DS;
 
-
 namespace DiamondShop
 {
     public partial class Inventory : FormInfo
@@ -287,11 +286,9 @@ namespace DiamondShop
         {
             try
             {
-                if (cmbStatus.SelectedIndex == 0)
-                {
-                    chkFlag = ser.DoDeleteData("Inventory", id);
-                }
-                else
+                chkFlag = ser.DoDeleteData("Inventory", id);
+
+                if (!chkFlag)
                 {
                     Popup.Popup pop = new Popup.Popup("Jewelry ไม่อยู่ในสถานะลบได้");
                     pop.ShowDialog();

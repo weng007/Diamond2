@@ -148,7 +148,7 @@
             // 
             // monthCalendar1
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(685, 144);
+            this.monthCalendar1.Location = new System.Drawing.Point(734, 144);
             this.monthCalendar1.MaxSelectionCount = 1;
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 282;
@@ -165,9 +165,9 @@
             this.btnSetting.FlatAppearance.BorderSize = 0;
             this.btnSetting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSetting.ForeColor = System.Drawing.Color.White;
-            this.btnSetting.Location = new System.Drawing.Point(808, 420);
+            this.btnSetting.Location = new System.Drawing.Point(808, 422);
             this.btnSetting.Name = "btnSetting";
-            this.btnSetting.Size = new System.Drawing.Size(186, 63);
+            this.btnSetting.Size = new System.Drawing.Size(185, 60);
             this.btnSetting.TabIndex = 281;
             this.btnSetting.UseVisualStyleBackColor = false;
             this.btnSetting.Click += new System.EventHandler(this.btnSetting_Click);
@@ -184,7 +184,7 @@
             this.btnGold.ForeColor = System.Drawing.Color.White;
             this.btnGold.Location = new System.Drawing.Point(1008, 346);
             this.btnGold.Name = "btnGold";
-            this.btnGold.Size = new System.Drawing.Size(186, 62);
+            this.btnGold.Size = new System.Drawing.Size(185, 60);
             this.btnGold.TabIndex = 280;
             this.btnGold.UseVisualStyleBackColor = false;
             this.btnGold.Click += new System.EventHandler(this.btnGold_Click);
@@ -199,9 +199,9 @@
             this.btnJewelry.FlatAppearance.BorderSize = 0;
             this.btnJewelry.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnJewelry.ForeColor = System.Drawing.Color.White;
-            this.btnJewelry.Location = new System.Drawing.Point(809, 268);
+            this.btnJewelry.Location = new System.Drawing.Point(809, 269);
             this.btnJewelry.Name = "btnJewelry";
-            this.btnJewelry.Size = new System.Drawing.Size(186, 64);
+            this.btnJewelry.Size = new System.Drawing.Size(185, 60);
             this.btnJewelry.TabIndex = 279;
             this.btnJewelry.UseVisualStyleBackColor = false;
             this.btnJewelry.Click += new System.EventHandler(this.btnJewelry_Click);
@@ -216,9 +216,9 @@
             this.btnETC.FlatAppearance.BorderSize = 0;
             this.btnETC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnETC.ForeColor = System.Drawing.Color.White;
-            this.btnETC.Location = new System.Drawing.Point(1008, 420);
+            this.btnETC.Location = new System.Drawing.Point(1008, 422);
             this.btnETC.Name = "btnETC";
-            this.btnETC.Size = new System.Drawing.Size(186, 63);
+            this.btnETC.Size = new System.Drawing.Size(185, 60);
             this.btnETC.TabIndex = 278;
             this.btnETC.UseVisualStyleBackColor = false;
             this.btnETC.Click += new System.EventHandler(this.btnETC_Click);
@@ -235,7 +235,7 @@
             this.btnNonGC.ForeColor = System.Drawing.Color.White;
             this.btnNonGC.Location = new System.Drawing.Point(808, 346);
             this.btnNonGC.Name = "btnNonGC";
-            this.btnNonGC.Size = new System.Drawing.Size(187, 59);
+            this.btnNonGC.Size = new System.Drawing.Size(185, 60);
             this.btnNonGC.TabIndex = 277;
             this.btnNonGC.UseVisualStyleBackColor = false;
             this.btnNonGC.Click += new System.EventHandler(this.btnNonGC_Click);
@@ -250,9 +250,9 @@
             this.btnNonDC.FlatAppearance.BorderSize = 0;
             this.btnNonDC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNonDC.ForeColor = System.Drawing.Color.White;
-            this.btnNonDC.Location = new System.Drawing.Point(1007, 268);
+            this.btnNonDC.Location = new System.Drawing.Point(1007, 269);
             this.btnNonDC.Name = "btnNonDC";
-            this.btnNonDC.Size = new System.Drawing.Size(187, 62);
+            this.btnNonDC.Size = new System.Drawing.Size(185, 60);
             this.btnNonDC.TabIndex = 276;
             this.btnNonDC.UseVisualStyleBackColor = false;
             this.btnNonDC.Click += new System.EventHandler(this.btnNonDC_Click);
@@ -267,9 +267,9 @@
             this.btnGc.FlatAppearance.BorderSize = 0;
             this.btnGc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGc.ForeColor = System.Drawing.Color.White;
-            this.btnGc.Location = new System.Drawing.Point(1007, 194);
+            this.btnGc.Location = new System.Drawing.Point(1007, 191);
             this.btnGc.Name = "btnGc";
-            this.btnGc.Size = new System.Drawing.Size(187, 63);
+            this.btnGc.Size = new System.Drawing.Size(185, 60);
             this.btnGc.TabIndex = 275;
             this.btnGc.UseVisualStyleBackColor = false;
             this.btnGc.Click += new System.EventHandler(this.btnGc_Click);
@@ -286,7 +286,7 @@
             this.btnDC.ForeColor = System.Drawing.Color.White;
             this.btnDC.Location = new System.Drawing.Point(809, 191);
             this.btnDC.Name = "btnDC";
-            this.btnDC.Size = new System.Drawing.Size(186, 66);
+            this.btnDC.Size = new System.Drawing.Size(185, 60);
             this.btnDC.TabIndex = 274;
             this.btnDC.UseVisualStyleBackColor = false;
             this.btnDC.Click += new System.EventHandler(this.btnDC_Click);
@@ -335,11 +335,11 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label7.Location = new System.Drawing.Point(318, 13);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(131, 21);
+            this.label7.Size = new System.Drawing.Size(119, 20);
             this.label7.TabIndex = 248;
             this.label7.Text = "Exchange Rate";
             // 

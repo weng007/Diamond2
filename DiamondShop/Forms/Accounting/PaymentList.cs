@@ -49,8 +49,7 @@ namespace DiamondShop
 
             txtSeller.Select();
 
-            gridBuyBookPayment.AutoGenerateColumns = false;
-            
+            gridBuyBookPayment.AutoGenerateColumns = false;            
         }
 
         protected override void DoLoadData()
@@ -72,18 +71,6 @@ namespace DiamondShop
 
             btnSearch_Click(null, null);
         }
-        //private void SetGridFormat()
-        //{
-        //    int i = 0;
-        //    foreach (DataGridViewRow row in gridBuyBookPayment.Rows)
-        //    {
-        //        if (row.Cells["PayDate"].Value.ToString() != "" && row.Cells["PayDate"] == 1901)
-        //        {
-        //            //gridBuyBookPayment.Rows[i]. = "-";
-        //        }
-        //        i++;
-        //    }
-        //}
 
         private void SetBackGroundColor()
         {

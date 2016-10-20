@@ -13,7 +13,9 @@ using DiamondDS;
 namespace DiamondShop
 {
     public partial class SearchBuyBookDiamondList : FormList
-    {       
+    {
+        public string idSelected = "";
+
         public SearchBuyBookDiamondList()
         {
             InitializeComponent();
@@ -46,16 +48,21 @@ namespace DiamondShop
                 gridDiamond.DataSource = null;
                 gridDiamond.Refresh();
             }
-
-            btnSearch_Click(null, null);
         }
 
-        private void btnAdd_Click(object sender, EventArgs e)
+        private void CheckSelected()
         {
-            BuyBookDiamond frm = new BuyBookDiamond();
-            frm.ShowDialog();
+            string comma = ",";
 
-            DoLoadData();
+            for (int i = 0; i < gridDiamond.Rows.Count; i++)
+            {
+                if (gridDiamond.Rows[i].Cells["Select"].Value != null)
+                {
+                    idSelected += gridDiamond.Rows[i].Cells["ID"].Value.ToString() + comma;
+                }
+            }
+
+            idSelected = idSelected.Remove(idSelected.Length - 1, 1);
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -70,7 +77,6 @@ namespace DiamondShop
                 gridDiamond.Refresh();
             }
             else { gridDiamond.DataSource = null; gridDiamond.Refresh(); }
-
         }
 
         private void txtSSize_KeyPress(object sender, KeyPressEventArgs e)
@@ -81,23 +87,15 @@ namespace DiamondShop
             }
         }
 
-        private void gridDiamond_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-            if (gridDiamond.RowCount > 0 && gridDiamond.SelectedRows.Count > 0)
-            {
-                id = (int)gridDiamond.SelectedRows[0].Cells["ID"].Value;
-                BuyBookDiamond frm = new BuyBookDiamond(id);
-                frm.ShowDialog();
-
-                if (frm.isEdit)
-                {
-                    DoLoadData();
-                }
-            }
-        }
-
         private void btnClose_Click(object sender, EventArgs e)
         {
+            this.Close();
+        }
+
+        private void btnSelect_Click(object sender, EventArgs e)
+        {
+            CheckSelected();
+
             this.Close();
         }
     }

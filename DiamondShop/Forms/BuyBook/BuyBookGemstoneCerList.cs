@@ -219,11 +219,15 @@ namespace DiamondShop
         private void gridGemstoneCer_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             Service2 ser1 = GM.GetService1();
+            string setting = ((DataGridView)sender).Rows[e.RowIndex].Cells["Setting"].Value.ToString();
 
             if (e.ColumnIndex == 22)
             {
-                Inventory frm = new Inventory(ser1.DoSearchInventoryByCode(sender.ToString()));
-                frm.ShowDialog();
+                if (setting != "" && setting != "Not Yet")
+                {
+                    Inventory frm = new Inventory(ser1.DoSearchInventoryByCode(setting));
+                    frm.ShowDialog();
+                }
             }
         }
     }

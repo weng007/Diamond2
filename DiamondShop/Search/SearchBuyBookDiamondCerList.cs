@@ -15,7 +15,8 @@ namespace DiamondShop
     public partial class SearchBuyBookDiamondCerList : FormList
     {
         public int mode = 0;
-        public int refID1 = 0;
+        public string idSelected = "";
+
         public SearchBuyBookDiamondCerList()
         {
             InitializeComponent();
@@ -28,8 +29,6 @@ namespace DiamondShop
             Initial();
             this.mode = mode;
 
-            btnClose.Visible = true;
-            btnAdd.Visible = false;
             DoLoadData();
         }
         protected override void Initial()
@@ -88,16 +87,21 @@ namespace DiamondShop
                 gridDiamondCer.DataSource = null;
                 gridDiamondCer.Refresh();
             }
-
-            btnSearch_Click(null, null);
         }
 
-        private void btnAdd_Click(object sender, EventArgs e)
+        private void CheckSelected()
         {
-            BuyBookDiamondCer frm = new BuyBookDiamondCer();
-            frm.ShowDialog();
+            string comma = ",";
 
-            DoLoadData();
+            for (int i = 0; i < gridDiamondCer.Rows.Count; i++)
+            {
+                if (gridDiamondCer.Rows[i].Cells["Select"].Value != null)
+                {
+                    idSelected += gridDiamondCer.Rows[i].Cells["ID"].Value.ToString() + comma;
+                }
+            }
+
+            idSelected = idSelected.Remove(idSelected.Length - 1, 1);
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -161,32 +165,15 @@ namespace DiamondShop
             cmbEColor.Refresh();
         }
 
-        private void gridDiamondCer_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-            if (mode == 0)
-            {
-                if (gridDiamondCer.RowCount > 0 && gridDiamondCer.SelectedRows.Count > 0)
-                    {
-                        id = (int)gridDiamondCer.SelectedRows[0].Cells["ID"].Value;
-                        BuyBookDiamondCer frm = new BuyBookDiamondCer(id);
-                        frm.ShowDialog();
-
-                        if (frm.isEdit)
-                        {
-                            DoLoadData();
-                        }
-                    }
-            }
-            else //mode = 1 Search
-            {
-                refID1 = (int)gridDiamondCer.SelectedRows[0].Cells["ID"].Value;
-                this.Close();
-            }
-
-        }
-
         private void btnClose_Click(object sender, EventArgs e)
         {
+            this.Close();
+        }
+
+        private void btnSelect_Click(object sender, EventArgs e)
+        {
+            CheckSelected();
+
             this.Close();
         }
     }
