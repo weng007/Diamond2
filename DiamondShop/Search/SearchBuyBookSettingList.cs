@@ -21,8 +21,8 @@ namespace DiamondShop
             InitializeComponent();
             Initial();
             dtSBuyDate.Value = dtSBuyDate.Value.AddDays(-90);
-            DoLoadData();
-            
+
+            DoLoadData();        
         }
 
         protected override void Initial()
@@ -44,8 +44,6 @@ namespace DiamondShop
                 gridSetting.DataSource = null;
                 gridSetting.Refresh();
             }
-
-            btnSearch_Click(null, null);
         }
 
         private void CheckSelected()

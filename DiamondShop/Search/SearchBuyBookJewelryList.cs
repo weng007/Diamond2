@@ -40,8 +40,6 @@ namespace DiamondShop
                 gridJewelry.Refresh();
             }
             else { gridJewelry.DataSource = null; gridJewelry.Refresh(); }
-
-            btnSearch_Click(null, null);
         }
 
         private void CheckSelected()

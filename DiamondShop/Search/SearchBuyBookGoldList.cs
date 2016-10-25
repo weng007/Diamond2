@@ -44,8 +44,6 @@ namespace DiamondShop
                 gridGold.DataSource = null;
                 gridGold.Refresh();
             }
-
-            btnSearch_Click(null, null);
         }
 
         private void CheckSelected()
