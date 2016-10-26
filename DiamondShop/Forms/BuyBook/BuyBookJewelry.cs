@@ -28,6 +28,8 @@ namespace DiamondShop
         {
             InitializeComponent();
             Initial();
+            ds = ser.DoSelectData("ExchangeRate", id, 0);
+            txtUSDRate.Text = ds.Tables[0].Rows[0]["USDRate"].ToString();
 
             binder.BindControl(dtBuyDate, "BuyDate");
             binder.BindControl(txtCode, "Code");
@@ -46,6 +48,7 @@ namespace DiamondShop
             binder.BindControl(txtMinPrice, "MinPrice");
             binder.BindControl(cmbBuyer, "Buyer");
             binder.BindControl(txtCode2, "Code2");
+            binder.BindControl(txtUSDRate, "USDRate");
         }
         public BuyBookJewelry(int id)
         {
@@ -69,14 +72,13 @@ namespace DiamondShop
             binder.BindControl(txtMinPrice, "MinPrice");
             binder.BindControl(cmbBuyer, "Buyer");
             binder.BindControl(txtCode2, "Code2");
+            binder.BindControl(txtUSDRate, "USDRate");
 
             btnDiamond.Enabled = true;
             btnGemstone.Enabled = true;
 
             this.id = id;
             LoadData();
-
-            txtCost1_Leave(null, null);
 
             SetControlEnable(false);
             isEdit = false;
@@ -157,7 +159,9 @@ namespace DiamondShop
                 EnableEdit = GM.CheckIsEdit(ApplicationInfo.Shop, Convert.ToInt16(cmbShop.SelectedValue.ToString()));
                 EnableDelete = false;
             }
+
             SetFormatNumber();
+            txtCost1_Leave(null, null);
             base.LoadData();
 
             cmbType.SelectedValueChanged += cmbType_SelectedValueChanged;

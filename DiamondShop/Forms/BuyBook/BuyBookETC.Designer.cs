@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BuyBookETC));
             this.dtBuyDate = new System.Windows.Forms.DateTimePicker();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.txtUSDRate = new System.Windows.Forms.TextBox();
+            this.label31 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
             this.txtCode = new System.Windows.Forms.TextBox();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
@@ -71,6 +73,8 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.txtUSDRate);
+            this.panel3.Controls.Add(this.label31);
             this.panel3.Controls.Add(this.label30);
             this.panel3.Controls.Add(this.txtCode);
             this.panel3.Controls.Add(this.monthCalendar1);
@@ -99,6 +103,27 @@
             this.panel3.Size = new System.Drawing.Size(652, 325);
             this.panel3.TabIndex = 74;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            // 
+            // txtUSDRate
+            // 
+            this.txtUSDRate.Location = new System.Drawing.Point(462, 128);
+            this.txtUSDRate.Name = "txtUSDRate";
+            this.txtUSDRate.Size = new System.Drawing.Size(61, 26);
+            this.txtUSDRate.TabIndex = 259;
+            this.txtUSDRate.Text = "0";
+            this.txtUSDRate.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtUSDRate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrice_KeyPress);
+            this.txtUSDRate.Leave += new System.EventHandler(this.txtUSDRate_Leave);
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
+            this.label31.Location = new System.Drawing.Point(376, 131);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(83, 20);
+            this.label31.TabIndex = 260;
+            this.label31.Text = "USD Rate";
             // 
             // label30
             // 
@@ -132,7 +157,7 @@
             // 
             this.label29.AutoSize = true;
             this.label29.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label29.Location = new System.Drawing.Point(381, 95);
+            this.label29.Location = new System.Drawing.Point(376, 93);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(70, 20);
             this.label29.TabIndex = 252;
@@ -142,7 +167,7 @@
             // 
             this.cmbShop.Enabled = false;
             this.cmbShop.FormattingEnabled = true;
-            this.cmbShop.Location = new System.Drawing.Point(462, 92);
+            this.cmbShop.Location = new System.Drawing.Point(462, 90);
             this.cmbShop.Name = "cmbShop";
             this.cmbShop.Size = new System.Drawing.Size(163, 28);
             this.cmbShop.TabIndex = 251;
@@ -191,7 +216,7 @@
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label26.Location = new System.Drawing.Point(379, 57);
+            this.label26.Location = new System.Drawing.Point(374, 57);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(82, 20);
             this.label26.TabIndex = 215;
@@ -225,7 +250,7 @@
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label27.Location = new System.Drawing.Point(379, 19);
+            this.label27.Location = new System.Drawing.Point(374, 19);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(78, 20);
             this.label27.TabIndex = 213;
@@ -376,5 +401,7 @@
         private System.Windows.Forms.MonthCalendar monthCalendar1;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.TextBox txtCode;
+        private System.Windows.Forms.TextBox txtUSDRate;
+        private System.Windows.Forms.Label label31;
     }
 }

@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BuyBookGold));
             this.dtBuyDate = new System.Windows.Forms.DateTimePicker();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.txtUSDRate = new System.Windows.Forms.TextBox();
+            this.label31 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
             this.txtCode = new System.Windows.Forms.TextBox();
             this.btnChooseDate = new System.Windows.Forms.Button();
@@ -101,6 +103,8 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.txtUSDRate);
+            this.panel3.Controls.Add(this.label31);
             this.panel3.Controls.Add(this.label30);
             this.panel3.Controls.Add(this.txtCode);
             this.panel3.Controls.Add(this.btnChooseDate);
@@ -157,6 +161,27 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(628, 499);
             this.panel3.TabIndex = 74;
+            // 
+            // txtUSDRate
+            // 
+            this.txtUSDRate.Location = new System.Drawing.Point(162, 165);
+            this.txtUSDRate.Name = "txtUSDRate";
+            this.txtUSDRate.Size = new System.Drawing.Size(61, 27);
+            this.txtUSDRate.TabIndex = 254;
+            this.txtUSDRate.Text = "0";
+            this.txtUSDRate.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtUSDRate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBuyPrice_KeyPress);
+            this.txtUSDRate.Leave += new System.EventHandler(this.txtUSDRate_Leave);
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
+            this.label31.Location = new System.Drawing.Point(76, 168);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(83, 21);
+            this.label31.TabIndex = 255;
+            this.label31.Text = "USD Rate";
             // 
             // label30
             // 
@@ -217,7 +242,7 @@
             // 
             // monthCalendar1
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(377, 120);
+            this.monthCalendar1.Location = new System.Drawing.Point(375, 119);
             this.monthCalendar1.MaxSelectionCount = 1;
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 246;
@@ -776,5 +801,7 @@
         private System.Windows.Forms.Button btnChooseDate;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.TextBox txtCode;
+        private System.Windows.Forms.TextBox txtUSDRate;
+        private System.Windows.Forms.Label label31;
     }
 }

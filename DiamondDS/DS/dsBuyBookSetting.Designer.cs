@@ -295,6 +295,8 @@ namespace DiamondDS.DS {
             
             private global::System.Data.DataColumn columnShop;
             
+            private global::System.Data.DataColumn columnUSDRate;
+            
             private global::System.Data.DataColumn columnIsDeleted;
             
             private global::System.Data.DataColumn columnCreateBy;
@@ -410,6 +412,14 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn USDRateColumn {
+                get {
+                    return this.columnUSDRate;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn IsDeletedColumn {
                 get {
                     return this.columnIsDeleted;
@@ -509,7 +519,23 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public BBSettingRow AddBBSettingRow(long RowNum, string Code, System.DateTime BuyDate, string Seller, decimal BuyPrice, decimal SalePrice, int Shop, string IsDeleted, int CreateBy, System.DateTime CreateDate, int EditBy, string IsPaid, System.DateTime PayDate, System.DateTime EditDate, string Buyer) {
+            public BBSettingRow AddBBSettingRow(
+                        long RowNum, 
+                        string Code, 
+                        System.DateTime BuyDate, 
+                        string Seller, 
+                        decimal BuyPrice, 
+                        decimal SalePrice, 
+                        int Shop, 
+                        double USDRate, 
+                        string IsDeleted, 
+                        int CreateBy, 
+                        System.DateTime CreateDate, 
+                        int EditBy, 
+                        string IsPaid, 
+                        System.DateTime PayDate, 
+                        System.DateTime EditDate, 
+                        string Buyer) {
                 BBSettingRow rowBBSettingRow = ((BBSettingRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         RowNum,
@@ -520,6 +546,7 @@ namespace DiamondDS.DS {
                         BuyPrice,
                         SalePrice,
                         Shop,
+                        USDRate,
                         IsDeleted,
                         CreateBy,
                         CreateDate,
@@ -565,6 +592,7 @@ namespace DiamondDS.DS {
                 this.columnBuyPrice = base.Columns["BuyPrice"];
                 this.columnSalePrice = base.Columns["SalePrice"];
                 this.columnShop = base.Columns["Shop"];
+                this.columnUSDRate = base.Columns["USDRate"];
                 this.columnIsDeleted = base.Columns["IsDeleted"];
                 this.columnCreateBy = base.Columns["CreateBy"];
                 this.columnCreateDate = base.Columns["CreateDate"];
@@ -594,6 +622,8 @@ namespace DiamondDS.DS {
                 base.Columns.Add(this.columnSalePrice);
                 this.columnShop = new global::System.Data.DataColumn("Shop", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnShop);
+                this.columnUSDRate = new global::System.Data.DataColumn("USDRate", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnUSDRate);
                 this.columnIsDeleted = new global::System.Data.DataColumn("IsDeleted", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnIsDeleted);
                 this.columnCreateBy = new global::System.Data.DataColumn("CreateBy", typeof(int), null, global::System.Data.MappingType.Element);
@@ -886,6 +916,22 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double USDRate {
+                get {
+                    try {
+                        return ((double)(this[this.tableBBSetting.USDRateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'USDRate\' in table \'BBSetting\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableBBSetting.USDRateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string IsDeleted {
                 get {
                     try {
@@ -1094,6 +1140,18 @@ namespace DiamondDS.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetShopNull() {
                 this[this.tableBBSetting.ShopColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsUSDRateNull() {
+                return this.IsNull(this.tableBBSetting.USDRateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetUSDRateNull() {
+                this[this.tableBBSetting.USDRateColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

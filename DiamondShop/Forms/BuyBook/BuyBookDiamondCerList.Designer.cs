@@ -609,7 +609,7 @@
             this.ColorTypeName.HeaderText = "ColorType";
             this.ColorTypeName.Name = "ColorTypeName";
             this.ColorTypeName.ReadOnly = true;
-            this.ColorTypeName.Width = 150;
+            this.ColorTypeName.Width = 140;
             // 
             // ColorName
             // 
@@ -625,7 +625,7 @@
             this.ClearityName.Name = "ClearityName";
             this.ClearityName.ReadOnly = true;
             this.ClearityName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ClearityName.Width = 160;
+            this.ClearityName.Width = 80;
             // 
             // CutName
             // 
@@ -634,7 +634,7 @@
             this.CutName.Name = "CutName";
             this.CutName.ReadOnly = true;
             this.CutName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.CutName.Width = 110;
+            this.CutName.Width = 70;
             // 
             // PolishName
             // 
@@ -643,7 +643,7 @@
             this.PolishName.Name = "PolishName";
             this.PolishName.ReadOnly = true;
             this.PolishName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.PolishName.Width = 120;
+            this.PolishName.Width = 70;
             // 
             // SymmetryName
             // 
@@ -651,7 +651,7 @@
             this.SymmetryName.HeaderText = "Symmetry";
             this.SymmetryName.Name = "SymmetryName";
             this.SymmetryName.ReadOnly = true;
-            this.SymmetryName.Width = 120;
+            this.SymmetryName.Width = 70;
             // 
             // Seller
             // 
@@ -741,7 +741,7 @@
             this.ShopName.HeaderText = "Location";
             this.ShopName.Name = "ShopName";
             this.ShopName.ReadOnly = true;
-            this.ShopName.Width = 90;
+            this.ShopName.Width = 120;
             // 
             // Setting
             // 

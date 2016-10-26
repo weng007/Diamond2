@@ -25,9 +25,9 @@ namespace DiamondShop
         {
             InitializeComponent();
             Initial();
+            ds = ser.DoSelectData("ExchangeRate", id, 0);
+            txtUSDRate.Text = ds.Tables[0].Rows[0]["USDRate"].ToString();
             BinderData();
-
-
         }
         public BuyBookSetting(int id)
         {
@@ -71,6 +71,7 @@ namespace DiamondShop
             binder.BindControl(txtSalePrice, "SalePrice");
             binder.BindControl(cmbBuyer , "Buyer");
             binder.BindControl(txtCode, "Code");
+            binder.BindControl(txtUSDRate, "USDRate");
         }
         protected override void LoadData()
         {
@@ -369,6 +370,19 @@ namespace DiamondShop
             txtPayDate.Text = monthCalendar1.SelectionRange.Start.ToShortDateString();
             monthCalendar1.Visible = false;
             isEdit = true;
+        }
+
+        private void txtUSDRate_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtUSDRate_Leave(object sender, EventArgs e)
+        {
+            txtUSDRate.Text = GM.ConvertDoubleToString(txtUSDRate);
         }
     }
 }
