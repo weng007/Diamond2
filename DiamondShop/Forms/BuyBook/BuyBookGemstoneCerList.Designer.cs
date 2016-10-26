@@ -42,7 +42,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.tds = new DiamondDS.DS.dsDiamondCer();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.Button();
             this.txtCode2 = new System.Windows.Forms.TextBox();
@@ -102,16 +101,10 @@
             this.L = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.D = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tds)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridGemstoneCer)).BeginInit();
             this.SuspendLayout();
-            // 
-            // tds
-            // 
-            this.tds.DataSetName = "dsDiamondCer";
-            this.tds.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // panel4
             // 
@@ -514,6 +507,7 @@
             this.Code2.HeaderText = "Code2";
             this.Code2.Name = "Code2";
             this.Code2.ReadOnly = true;
+            this.Code2.Width = 150;
             // 
             // LabName
             // 
@@ -675,7 +669,7 @@
             this.ShopName.HeaderText = "Location";
             this.ShopName.Name = "ShopName";
             this.ShopName.ReadOnly = true;
-            this.ShopName.Width = 60;
+            this.ShopName.Width = 120;
             // 
             // Setting
             // 
@@ -749,7 +743,6 @@
             this.Name = "BuyBookGemstoneCerList";
             this.Text = "DiamondCerList";
             ((System.ComponentModel.ISupportInitialize)(this.ds)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tds)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -770,7 +763,6 @@
         private System.Windows.Forms.ComboBox cmbShape;
         private System.Windows.Forms.TextBox txtEWeight;
         private System.Windows.Forms.TextBox txtSWeight;
-        private DiamondDS.DS.dsDiamondCer tds;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox cmbLab;
         private System.Windows.Forms.Label label1;

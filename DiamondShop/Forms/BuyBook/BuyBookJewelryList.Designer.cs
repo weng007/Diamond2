@@ -383,6 +383,7 @@
             this.ShopName.HeaderText = "Location";
             this.ShopName.Name = "ShopName";
             this.ShopName.ReadOnly = true;
+            this.ShopName.Width = 120;
             // 
             // StatusName
             // 

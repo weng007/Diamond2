@@ -409,9 +409,9 @@ namespace DiamondShop
         {
             DataSet ds1 = new DataSet();
 
-            ds1 = ser.GetSellBookDetail(idSelected, 0);
-            tds1.Clear();
-            tds1.Merge(ds1);
+            //ds1 = ser.GetSellBookDetail(idSelected, 0);
+            //tds1.Clear();
+            //tds1.Merge(ds1);
 
             if (tds1.SellBookDetail.Rows.Count > 0)
             {

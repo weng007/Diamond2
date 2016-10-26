@@ -39,6 +39,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tds = new DiamondDS.DS.dsDiamondCer();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.txtCode2 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtESize = new System.Windows.Forms.TextBox();
             this.txtCode = new System.Windows.Forms.TextBox();
@@ -66,8 +68,6 @@
             this.PriceCaratUSD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PriceCaratB = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MarketPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtCode2 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tds)).BeginInit();
             this.panel4.SuspendLayout();
@@ -100,6 +100,23 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1329, 149);
             this.panel4.TabIndex = 40;
+            // 
+            // txtCode2
+            // 
+            this.txtCode2.Location = new System.Drawing.Point(547, 20);
+            this.txtCode2.Name = "txtCode2";
+            this.txtCode2.Size = new System.Drawing.Size(161, 27);
+            this.txtCode2.TabIndex = 77;
+            // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(474, 23);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(67, 31);
+            this.label2.TabIndex = 78;
+            this.label2.Text = "Code2";
             // 
             // label1
             // 
@@ -283,6 +300,7 @@
             this.Code2.HeaderText = "Code2";
             this.Code2.Name = "Code2";
             this.Code2.ReadOnly = true;
+            this.Code2.Width = 160;
             // 
             // BuyDate
             // 
@@ -357,7 +375,7 @@
             this.ClearityName.Name = "ClearityName";
             this.ClearityName.ReadOnly = true;
             this.ClearityName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ClearityName.Width = 150;
+            this.ClearityName.Width = 80;
             // 
             // PriceCaratUSD
             // 
@@ -394,23 +412,6 @@
             this.MarketPrice.ReadOnly = true;
             this.MarketPrice.Width = 180;
             // 
-            // txtCode2
-            // 
-            this.txtCode2.Location = new System.Drawing.Point(547, 20);
-            this.txtCode2.Name = "txtCode2";
-            this.txtCode2.Size = new System.Drawing.Size(161, 27);
-            this.txtCode2.TabIndex = 77;
-            // 
-            // label2
-            // 
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(474, 23);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 31);
-            this.label2.TabIndex = 78;
-            this.label2.Text = "Code2";
-            // 
             // BuyBookDiamondList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -446,6 +447,8 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtESize;
+        private System.Windows.Forms.TextBox txtCode2;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn RowNum;
         private System.Windows.Forms.DataGridViewTextBoxColumn Code;
@@ -461,7 +464,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn PriceCaratUSD;
         private System.Windows.Forms.DataGridViewTextBoxColumn PriceCaratB;
         private System.Windows.Forms.DataGridViewTextBoxColumn MarketPrice;
-        private System.Windows.Forms.TextBox txtCode2;
-        private System.Windows.Forms.Label label2;
     }
 }

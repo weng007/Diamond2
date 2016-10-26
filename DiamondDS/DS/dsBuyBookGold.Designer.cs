@@ -313,6 +313,8 @@ namespace DiamondDS.DS {
             
             private global::System.Data.DataColumn columnShop;
             
+            private global::System.Data.DataColumn columnUSDRate;
+            
             private global::System.Data.DataColumn columnIsDeleted;
             
             private global::System.Data.DataColumn columnCreateBy;
@@ -500,6 +502,14 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn USDRateColumn {
+                get {
+                    return this.columnUSDRate;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn IsDeletedColumn {
                 get {
                     return this.columnIsDeleted;
@@ -616,6 +626,7 @@ namespace DiamondDS.DS {
                         decimal PriceGram1, 
                         decimal PriceGram2, 
                         int Shop, 
+                        double USDRate, 
                         string IsDeleted, 
                         int CreateBy, 
                         System.DateTime CreateDate, 
@@ -643,6 +654,7 @@ namespace DiamondDS.DS {
                         PriceGram1,
                         PriceGram2,
                         Shop,
+                        USDRate,
                         IsDeleted,
                         CreateBy,
                         CreateDate,
@@ -697,6 +709,7 @@ namespace DiamondDS.DS {
                 this.columnPriceGram1 = base.Columns["PriceGram1"];
                 this.columnPriceGram2 = base.Columns["PriceGram2"];
                 this.columnShop = base.Columns["Shop"];
+                this.columnUSDRate = base.Columns["USDRate"];
                 this.columnIsDeleted = base.Columns["IsDeleted"];
                 this.columnCreateBy = base.Columns["CreateBy"];
                 this.columnCreateDate = base.Columns["CreateDate"];
@@ -744,6 +757,8 @@ namespace DiamondDS.DS {
                 base.Columns.Add(this.columnPriceGram2);
                 this.columnShop = new global::System.Data.DataColumn("Shop", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnShop);
+                this.columnUSDRate = new global::System.Data.DataColumn("USDRate", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnUSDRate);
                 this.columnIsDeleted = new global::System.Data.DataColumn("IsDeleted", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnIsDeleted);
                 this.columnCreateBy = new global::System.Data.DataColumn("CreateBy", typeof(int), null, global::System.Data.MappingType.Element);
@@ -1180,6 +1195,22 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double USDRate {
+                get {
+                    try {
+                        return ((double)(this[this.tableBuyBookGold.USDRateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'USDRate\' in table \'BuyBookGold\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableBuyBookGold.USDRateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string IsDeleted {
                 get {
                     try {
@@ -1496,6 +1527,18 @@ namespace DiamondDS.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetShopNull() {
                 this[this.tableBuyBookGold.ShopColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsUSDRateNull() {
+                return this.IsNull(this.tableBuyBookGold.USDRateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetUSDRateNull() {
+                this[this.tableBuyBookGold.USDRateColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

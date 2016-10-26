@@ -320,7 +320,7 @@
             this.Code2.HeaderText = "Code2";
             this.Code2.Name = "Code2";
             this.Code2.ReadOnly = true;
-            this.Code2.Width = 120;
+            this.Code2.Width = 150;
             // 
             // ShapeName
             // 
