@@ -78,6 +78,10 @@ namespace DiamondShop.DiamondService1 {
         
         private System.Threading.SendOrPostCallback UpdateTransferReceivedOperationCompleted;
         
+        private System.Threading.SendOrPostCallback DoSearchInventoryByCodeOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback DoSearchJewelryByCodeOperationCompleted;
+        
         private bool useDefaultCredentialsSetExplicitly;
         
         /// <remarks/>
@@ -187,6 +191,12 @@ namespace DiamondShop.DiamondService1 {
         
         /// <remarks/>
         public event UpdateTransferReceivedCompletedEventHandler UpdateTransferReceivedCompleted;
+        
+        /// <remarks/>
+        public event DoSearchInventoryByCodeCompletedEventHandler DoSearchInventoryByCodeCompleted;
+        
+        /// <remarks/>
+        public event DoSearchJewelryByCodeCompletedEventHandler DoSearchJewelryByCodeCompleted;
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/DoAuthenticate", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
@@ -945,6 +955,64 @@ namespace DiamondShop.DiamondService1 {
             if ((this.UpdateTransferReceivedCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.UpdateTransferReceivedCompleted(this, new UpdateTransferReceivedCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/DoSearchInventoryByCode", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public int DoSearchInventoryByCode(string code) {
+            object[] results = this.Invoke("DoSearchInventoryByCode", new object[] {
+                        code});
+            return ((int)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void DoSearchInventoryByCodeAsync(string code) {
+            this.DoSearchInventoryByCodeAsync(code, null);
+        }
+        
+        /// <remarks/>
+        public void DoSearchInventoryByCodeAsync(string code, object userState) {
+            if ((this.DoSearchInventoryByCodeOperationCompleted == null)) {
+                this.DoSearchInventoryByCodeOperationCompleted = new System.Threading.SendOrPostCallback(this.OnDoSearchInventoryByCodeOperationCompleted);
+            }
+            this.InvokeAsync("DoSearchInventoryByCode", new object[] {
+                        code}, this.DoSearchInventoryByCodeOperationCompleted, userState);
+        }
+        
+        private void OnDoSearchInventoryByCodeOperationCompleted(object arg) {
+            if ((this.DoSearchInventoryByCodeCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.DoSearchInventoryByCodeCompleted(this, new DoSearchInventoryByCodeCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/DoSearchJewelryByCode", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public int DoSearchJewelryByCode(string code) {
+            object[] results = this.Invoke("DoSearchJewelryByCode", new object[] {
+                        code});
+            return ((int)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void DoSearchJewelryByCodeAsync(string code) {
+            this.DoSearchJewelryByCodeAsync(code, null);
+        }
+        
+        /// <remarks/>
+        public void DoSearchJewelryByCodeAsync(string code, object userState) {
+            if ((this.DoSearchJewelryByCodeOperationCompleted == null)) {
+                this.DoSearchJewelryByCodeOperationCompleted = new System.Threading.SendOrPostCallback(this.OnDoSearchJewelryByCodeOperationCompleted);
+            }
+            this.InvokeAsync("DoSearchJewelryByCode", new object[] {
+                        code}, this.DoSearchJewelryByCodeOperationCompleted, userState);
+        }
+        
+        private void OnDoSearchJewelryByCodeOperationCompleted(object arg) {
+            if ((this.DoSearchJewelryByCodeCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.DoSearchJewelryByCodeCompleted(this, new DoSearchJewelryByCodeCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -7128,6 +7196,58 @@ namespace DiamondShop.DiamondService1 {
         private object[] results;
         
         internal UpdateTransferReceivedCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public int Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((int)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void DoSearchInventoryByCodeCompletedEventHandler(object sender, DoSearchInventoryByCodeCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class DoSearchInventoryByCodeCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal DoSearchInventoryByCodeCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public int Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((int)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void DoSearchJewelryByCodeCompletedEventHandler(object sender, DoSearchJewelryByCodeCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class DoSearchJewelryByCodeCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal DoSearchJewelryByCodeCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }
