@@ -5,9 +5,9 @@
       <s:import namespace="http://tempuri.org/dsUser.xsd" />
       <s:import namespace="http://tempuri.org/dsOrder.xsd" />
       <s:import namespace="http://tempuri.org/dsExpenseGroup.xsd" />
-      <s:import schemaLocation="http://localhost:5555/DiamondService/Service2.asmx?schema=dsOrder" namespace="http://tempuri.org/dsOrder.xsd" />
-      <s:import schemaLocation="http://localhost:5555/DiamondService/Service2.asmx?schema=dsExpenseGroup" namespace="http://tempuri.org/dsExpenseGroup.xsd" />
-      <s:import schemaLocation="http://localhost:5555/DiamondService/Service2.asmx?schema=dsUser" namespace="http://tempuri.org/dsUser.xsd" />
+      <s:import schemaLocation="http://localhost:8888/DiamondService/Service2.asmx?schema=dsExpenseGroup" namespace="http://tempuri.org/dsExpenseGroup.xsd" />
+      <s:import schemaLocation="http://localhost:8888/DiamondService/Service2.asmx?schema=dsUser" namespace="http://tempuri.org/dsUser.xsd" />
+      <s:import schemaLocation="http://localhost:8888/DiamondService/Service2.asmx?schema=dsOrder" namespace="http://tempuri.org/dsOrder.xsd" />
       <s:element name="DoAuthenticate">
         <s:complexType>
           <s:sequence>
@@ -474,6 +474,34 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="DoSearchInventoryByCode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="code" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DoSearchInventoryByCodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DoSearchInventoryByCodeResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DoSearchJewelryByCode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="code" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DoSearchJewelryByCodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DoSearchJewelryByCodeResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
     </s:schema>
   </wsdl:types>
   <wsdl:message name="DoAuthenticateSoapIn">
@@ -620,6 +648,18 @@
   <wsdl:message name="UpdateTransferReceivedSoapOut">
     <wsdl:part name="parameters" element="tns:UpdateTransferReceivedResponse" />
   </wsdl:message>
+  <wsdl:message name="DoSearchInventoryByCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:DoSearchInventoryByCode" />
+  </wsdl:message>
+  <wsdl:message name="DoSearchInventoryByCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:DoSearchInventoryByCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="DoSearchJewelryByCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:DoSearchJewelryByCode" />
+  </wsdl:message>
+  <wsdl:message name="DoSearchJewelryByCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:DoSearchJewelryByCodeResponse" />
+  </wsdl:message>
   <wsdl:portType name="Service2Soap">
     <wsdl:operation name="DoAuthenticate">
       <wsdl:input message="tns:DoAuthenticateSoapIn" />
@@ -716,6 +756,14 @@
     <wsdl:operation name="UpdateTransferReceived">
       <wsdl:input message="tns:UpdateTransferReceivedSoapIn" />
       <wsdl:output message="tns:UpdateTransferReceivedSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DoSearchInventoryByCode">
+      <wsdl:input message="tns:DoSearchInventoryByCodeSoapIn" />
+      <wsdl:output message="tns:DoSearchInventoryByCodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DoSearchJewelryByCode">
+      <wsdl:input message="tns:DoSearchJewelryByCodeSoapIn" />
+      <wsdl:output message="tns:DoSearchJewelryByCodeSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="Service2Soap" type="tns:Service2Soap">
@@ -929,6 +977,24 @@
     </wsdl:operation>
     <wsdl:operation name="UpdateTransferReceived">
       <soap:operation soapAction="http://tempuri.org/UpdateTransferReceived" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoSearchInventoryByCode">
+      <soap:operation soapAction="http://tempuri.org/DoSearchInventoryByCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoSearchJewelryByCode">
+      <soap:operation soapAction="http://tempuri.org/DoSearchJewelryByCode" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1155,13 +1221,31 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="DoSearchInventoryByCode">
+      <soap12:operation soapAction="http://tempuri.org/DoSearchInventoryByCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoSearchJewelryByCode">
+      <soap12:operation soapAction="http://tempuri.org/DoSearchJewelryByCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:service name="Service2">
     <wsdl:port name="Service2Soap" binding="tns:Service2Soap">
-      <soap:address location="http://localhost:5555/DiamondService/Service2.asmx" />
+      <soap:address location="http://localhost:8888/DiamondService/Service2.asmx" />
     </wsdl:port>
     <wsdl:port name="Service2Soap12" binding="tns:Service2Soap12">
-      <soap12:address location="http://localhost:5555/DiamondService/Service2.asmx" />
+      <soap12:address location="http://localhost:8888/DiamondService/Service2.asmx" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>
