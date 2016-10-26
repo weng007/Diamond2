@@ -124,6 +124,29 @@
     <value>81, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnChooseDate.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAAD9UlEQVRYR8WWW09TWRTH+ylG
+        RjBeojOTzIMmJni2xsRMYmIm1NLG+ILfQT/AfIT5ABo1GjPzoD4MXgZEYMAoEqH3ltKe9rRggVJKW6iX
+        REq75r92T8s5Um6txYdf2r3WXmv9z17r7NZCRN+Vusb9pK5xP9lkKAq7pXy229IrbJajirXzJ6Ur+wvA
+        Z/qIYj3+D+wE/1odOM5z1mY5qVgtx5SucY5j2hSrckuPKwJjPdOCgYADSNaOzT/eE7Yrh5Uu+hkcAfeF
+        7TfYDyJJO++pB/zto8J2+FelK34CMUfBn+Ly1XXk4zjQZqxnKs6sC4cHFEg4VieE/UOHngRPtDYl7Gm2
+        s38r4C+sCUfmgmItHEIcxzuF/ZMhLmysZyrOYIMGCAE0KeylM4r1wznF+vG8Ys2HhP0z29m/Fez/JByl
+        q8rlLGI/cjzylA1xKWM9U3EGG9Rqsi/CUV4Rji/MKsCTlau+nSgIx1o1FnlKBl/SWM9UnFnvtKmAmBKg
+        zu4avK76dmKbuO0FFC/2hIsXr5VBqTX0zBrrmYozOc07DdZBsQVw3hljPVNxJpvVVEAtZPsWZJdUFVCF
+        KOWXY5Kc/rkVX/t5XbVxno2c6u4E5DJRWpwPUGTqPxNqaGRPa4bzcL49CojR3KyLvJNPKDnjlN9ntHfk
+        dz+nZMIJm0vaeT0TG5f+JPA5n1As/BprtyTo7Zd7+TQaEhD09FWOEv1bSk1TyP8SSaKwadIe8g9SemFK
+        +nOA93PhfC4u4RNpUkC/7ONKNk6ZRQgIvJTHmV9GARYQGISwKenPg4oAD63kEpKmBMzjSXzOp5SIvpVo
+        kdfyyOPqWM0WcP9LqegYZeKTYIKCrmfo+wgl0BYmoJ9IYwLeu+UMaJE3KPqGotOvIOCZFMK2BGwuCPxj
+        9C+6PvKAbow+oIHxx6Rh8FgkwwIbFrDRAu2rFvDrFacCbC7vCzo1cJt+6L9JbS9u0d9jDyk35/s2LagN
+        oSxYHcIBJMEQZjRahc2FKT8NAQchoEMXkE165TwwTQpwkx89ZSE8D7PcY+4pErIvBVyYiZ7he3Rp8A79
+        PnSXet8+ojnMxvx7jyTkG5B7G5wBD3kmeikcGKJwcIim8Qp60XO51uEhVfEmcN9jwIeZCaIt4eCwjGE/
+        i29JC9jO98IS7oEV3AF8F9TuAb0FkW8zA5XfhKVUSBdQ8bOdBaQXgtLPRTYJwCvZlACegdScX97nnDjo
+        7aOFpA+2gLRXrlqn9KeA3/Uc98M4LUIUwwIbFsCFOCFfJjXwXu+83rBxPOfZs4Aqy+kICBvYzdpoi9Ry
+        6ewoIG4O4J/RZjHmU7f/V4wNkyDbQgLGeqbi34O6xv2DLP8Dghx8z/mVTXAAAAAASUVORK5CYII=
+</value>
+  </data>
   <data name="panel1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAQ4AAAAfCAYAAAAWTCMvAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
