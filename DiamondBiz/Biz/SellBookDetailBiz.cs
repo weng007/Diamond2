@@ -8,33 +8,12 @@ using DiamondDAL.DAL;
 
 namespace DiamondBiz.Biz
 {
-    public class SellBookBiz
+    public class SellBookDetailBiz
     {
-        dsSellbook ds = new dsSellbook();
-        SellBookDAL dal = new SellBookDAL();
+        dsSellBookDetail ds = new dsSellBookDetail();
+        SellBookDetailDAL dal = new SellBookDetailDAL();
 
-        public dsSellbook DoSearchData(string code)
-        {
-            try
-            {
-                return dal.DoSearchData(code);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-        public dsSellbook DoSelectData(int id, int mode)
-        {
-            try
-            {
-                return dal.DoSelectData(id,mode);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
+      
         public bool DoInsertData(dsSellbook tds)
         {
             try

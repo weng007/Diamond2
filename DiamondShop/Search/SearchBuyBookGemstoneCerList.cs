@@ -15,7 +15,8 @@ namespace DiamondShop
     public partial class SearchBuyBookGemstoneCerList : FormList
     {
         public int mode = 0;
-        public int refID2 = 0;
+        public string idSelected = "";
+
         public SearchBuyBookGemstoneCerList()
         {
             InitializeComponent();
@@ -28,8 +29,6 @@ namespace DiamondShop
             Initial();
             this.mode = mode;
 
-            btnClose.Visible = true;
-            btnAdd.Visible = false;
             DoLoadData();
         }
         protected override void Initial()
@@ -72,7 +71,7 @@ namespace DiamondShop
 
         protected override void DoLoadData()
         {
-            ds = ser.DoSelectData("BuyBookGemstoneCer", -1, 0);
+            ds = ser.DoSelectData("BuyBookGemstoneCer", -1, mode);
 
             if (ds.Tables[0].Rows.Count > 0)
             {
@@ -84,49 +83,21 @@ namespace DiamondShop
                 gridGemstoneCer.DataSource = null;
                 gridGemstoneCer.Refresh();
             }
-
-            btnSearch_Click(null, null);
         }
 
-        private void btnAdd_Click(object sender, EventArgs e)
+        private void CheckSelected()
         {
-            BuyBookGemstoneCer frm = new BuyBookGemstoneCer();
-            frm.ShowDialog();
+            string comma = ",";
 
-            DoLoadData();
-        }
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
-            DoDeleteData();
-            DoLoadData();
-        }
-        protected override bool DoDeleteData()
-        {
-            Popup.Popup winMessage = new Popup.Popup("Do you want to Delete data?");
-            winMessage.ShowDialog();
-            chkFlag = winMessage.result;
-
-            if (chkFlag)
+            for (int i = 0; i < gridGemstoneCer.Rows.Count; i++)
             {
-                if (gridGemstoneCer.RowCount > 0 && gridGemstoneCer.SelectedRows.Count > 0)
+                if (gridGemstoneCer.Rows[i].Cells["Select"].Value != null)
                 {
-                    id = (int)gridGemstoneCer.SelectedRows[0].Cells["ID"].Value;
-                    chkFlag = ser.DoDeleteData("DiamondCer", id);
+                    idSelected += gridGemstoneCer.Rows[i].Cells["ID"].Value.ToString() + comma;
                 }
             }
-            return chkFlag;
-        }
 
-        private void btnEdit_Click(object sender, EventArgs e)
-        {
-            if (gridGemstoneCer.RowCount > 0 && gridGemstoneCer.SelectedRows.Count > 0)
-            {
-                id = (int)gridGemstoneCer.SelectedRows[0].Cells["ID"].Value;
-                BuyBookGemstoneCer frm = new BuyBookGemstoneCer(id);
-                frm.ShowDialog();
-            }
-
-            DoLoadData();
+            idSelected = idSelected.Remove(idSelected.Length - 1, 1);
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -159,30 +130,6 @@ namespace DiamondShop
             }
         }
 
-        private void gridGemstoneCer_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-            if (mode == 0)
-            {
-                if (gridGemstoneCer.RowCount > 0 && gridGemstoneCer.SelectedRows.Count > 0)
-                    {
-                        id = (int)gridGemstoneCer.SelectedRows[0].Cells["ID"].Value;
-                        BuyBookGemstoneCer frm = new BuyBookGemstoneCer(id);
-                        frm.ShowDialog();
-
-                        if (frm.isEdit)
-                        {
-                            DoLoadData();
-                        }
-                    }
-            }
-            else //mode = 1 Search
-            {
-                refID2 = (int)gridGemstoneCer.SelectedRows[0].Cells["ID"].Value;
-                this.Close();
-            }
-
-        }
-
         private void cmbIdentification_SelectedIndexChanged(object sender, EventArgs e)
         {
             string GemstoneType = "";
@@ -211,6 +158,13 @@ namespace DiamondShop
 
         private void btnClose_Click(object sender, EventArgs e)
         {
+            this.Close();
+        }
+
+        private void btnSelect_Click(object sender, EventArgs e)
+        {
+            CheckSelected();
+
             this.Close();
         }
     }

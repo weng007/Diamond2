@@ -59,7 +59,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.cmbStatus = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnSelect = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.cmbLab = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -73,6 +73,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.gridGemstoneCer = new System.Windows.Forms.DataGridView();
+            this.Select = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RowNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StatusName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -131,7 +132,7 @@
             this.panel4.Controls.Add(this.label11);
             this.panel4.Controls.Add(this.cmbStatus);
             this.panel4.Controls.Add(this.label10);
-            this.panel4.Controls.Add(this.btnAdd);
+            this.panel4.Controls.Add(this.btnSelect);
             this.panel4.Controls.Add(this.label7);
             this.panel4.Controls.Add(this.cmbLab);
             this.panel4.Controls.Add(this.label1);
@@ -290,21 +291,21 @@
             this.label10.TabIndex = 70;
             this.label10.Text = "Status";
             // 
-            // btnAdd
+            // btnSelect
             // 
-            this.btnAdd.BackColor = System.Drawing.Color.Transparent;
-            this.btnAdd.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAdd.BackgroundImage")));
-            this.btnAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAdd.FlatAppearance.BorderColor = System.Drawing.Color.Linen;
-            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
-            this.btnAdd.Location = new System.Drawing.Point(20, 21);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(70, 90);
-            this.btnAdd.TabIndex = 68;
-            this.btnAdd.UseVisualStyleBackColor = false;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            this.btnSelect.BackColor = System.Drawing.Color.Transparent;
+            this.btnSelect.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSelect.BackgroundImage")));
+            this.btnSelect.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnSelect.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSelect.FlatAppearance.BorderColor = System.Drawing.Color.Linen;
+            this.btnSelect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSelect.Image = ((System.Drawing.Image)(resources.GetObject("btnSelect.Image")));
+            this.btnSelect.Location = new System.Drawing.Point(20, 21);
+            this.btnSelect.Name = "btnSelect";
+            this.btnSelect.Size = new System.Drawing.Size(70, 90);
+            this.btnSelect.TabIndex = 68;
+            this.btnSelect.UseVisualStyleBackColor = false;
+            this.btnSelect.Click += new System.EventHandler(this.btnSelect_Click);
             // 
             // label7
             // 
@@ -433,6 +434,7 @@
             this.gridGemstoneCer.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.gridGemstoneCer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridGemstoneCer.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Select,
             this.ID,
             this.RowNum,
             this.StatusName,
@@ -470,7 +472,13 @@
             this.gridGemstoneCer.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridGemstoneCer.Size = new System.Drawing.Size(1302, 393);
             this.gridGemstoneCer.TabIndex = 2;
-            this.gridGemstoneCer.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.gridGemstoneCer_MouseDoubleClick);
+            // 
+            // Select
+            // 
+            this.Select.HeaderText = "Select";
+            this.Select.Name = "Select";
+            this.Select.ReadOnly = true;
+            this.Select.Width = 60;
             // 
             // ID
             // 
@@ -772,7 +780,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox cmbLab;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnSelect;
         private System.Windows.Forms.ComboBox cmbShop;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ComboBox cmbStatus;
@@ -788,6 +796,7 @@
         private System.Windows.Forms.TextBox txtCode2;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Select;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn RowNum;
         private System.Windows.Forms.DataGridViewTextBoxColumn StatusName;

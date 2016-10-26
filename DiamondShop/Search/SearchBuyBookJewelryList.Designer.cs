@@ -45,13 +45,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtCode2 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.btnAdd = new System.Windows.Forms.Button();
             this.txtPrefix = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtCode = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.gridJewelry = new System.Windows.Forms.DataGridView();
+            this.btnSelect = new System.Windows.Forms.Button();
+            this.Select = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.RowNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -79,16 +80,16 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(91)))), ((int)(((byte)(59)))));
+            this.panel4.Controls.Add(this.btnSelect);
             this.panel4.Controls.Add(this.btnClose);
             this.panel4.Controls.Add(this.label1);
             this.panel4.Controls.Add(this.txtCode2);
             this.panel4.Controls.Add(this.label6);
-            this.panel4.Controls.Add(this.btnAdd);
             this.panel4.Controls.Add(this.txtPrefix);
             this.panel4.Controls.Add(this.btnSearch);
             this.panel4.Controls.Add(this.txtCode);
             this.panel4.Controls.Add(this.label3);
-            this.panel4.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.panel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.panel4.Location = new System.Drawing.Point(0, 1);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1349, 119);
@@ -124,7 +125,7 @@
             // 
             this.txtCode2.Location = new System.Drawing.Point(501, 22);
             this.txtCode2.Name = "txtCode2";
-            this.txtCode2.Size = new System.Drawing.Size(132, 27);
+            this.txtCode2.Size = new System.Drawing.Size(132, 26);
             this.txtCode2.TabIndex = 71;
             // 
             // label6
@@ -138,28 +139,12 @@
             this.label6.TabIndex = 70;
             this.label6.Text = "-";
             // 
-            // btnAdd
-            // 
-            this.btnAdd.BackColor = System.Drawing.Color.Transparent;
-            this.btnAdd.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAdd.BackgroundImage")));
-            this.btnAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAdd.FlatAppearance.BorderColor = System.Drawing.Color.Linen;
-            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
-            this.btnAdd.Location = new System.Drawing.Point(20, 21);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(70, 90);
-            this.btnAdd.TabIndex = 69;
-            this.btnAdd.UseVisualStyleBackColor = false;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
             // txtPrefix
             // 
             this.txtPrefix.Enabled = false;
             this.txtPrefix.Location = new System.Drawing.Point(197, 21);
             this.txtPrefix.Name = "txtPrefix";
-            this.txtPrefix.Size = new System.Drawing.Size(52, 27);
+            this.txtPrefix.Size = new System.Drawing.Size(52, 26);
             this.txtPrefix.TabIndex = 1;
             this.txtPrefix.Text = "JWR";
             // 
@@ -182,7 +167,7 @@
             // 
             this.txtCode.Location = new System.Drawing.Point(270, 21);
             this.txtCode.Name = "txtCode";
-            this.txtCode.Size = new System.Drawing.Size(132, 27);
+            this.txtCode.Size = new System.Drawing.Size(132, 26);
             this.txtCode.TabIndex = 4;
             // 
             // label3
@@ -199,7 +184,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.gridJewelry);
-            this.panel2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.Location = new System.Drawing.Point(5, 124);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1332, 451);
@@ -213,6 +198,7 @@
             this.gridJewelry.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.gridJewelry.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridJewelry.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Select,
             this.RowNum,
             this.ID,
             this.Code,
@@ -235,12 +221,34 @@
             this.gridJewelry.Name = "gridJewelry";
             this.gridJewelry.ReadOnly = true;
             this.gridJewelry.RowHeadersWidth = 10;
-            this.gridJewelry.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridJewelry.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridJewelry.RowTemplate.Height = 60;
             this.gridJewelry.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridJewelry.Size = new System.Drawing.Size(1314, 447);
             this.gridJewelry.TabIndex = 2;
-            this.gridJewelry.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.gridJewelry_MouseDoubleClick);
+            // 
+            // btnSelect
+            // 
+            this.btnSelect.BackColor = System.Drawing.Color.Transparent;
+            this.btnSelect.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSelect.BackgroundImage")));
+            this.btnSelect.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnSelect.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSelect.FlatAppearance.BorderColor = System.Drawing.Color.Linen;
+            this.btnSelect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSelect.Image = ((System.Drawing.Image)(resources.GetObject("btnSelect.Image")));
+            this.btnSelect.Location = new System.Drawing.Point(20, 21);
+            this.btnSelect.Name = "btnSelect";
+            this.btnSelect.Size = new System.Drawing.Size(70, 90);
+            this.btnSelect.TabIndex = 88;
+            this.btnSelect.UseVisualStyleBackColor = false;
+            this.btnSelect.Click += new System.EventHandler(this.btnSelect_Click);
+            // 
+            // Select
+            // 
+            this.Select.HeaderText = "Select";
+            this.Select.Name = "Select";
+            this.Select.ReadOnly = true;
+            this.Select.Width = 60;
             // 
             // RowNum
             // 
@@ -444,10 +452,12 @@
         private System.Windows.Forms.TextBox txtCode;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtPrefix;
-        private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtCode2;
+        private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Button btnSelect;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Select;
         private System.Windows.Forms.DataGridViewTextBoxColumn RowNum;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Code;
@@ -466,6 +476,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ShopName;
         private System.Windows.Forms.DataGridViewTextBoxColumn StatusName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Seller;
-        private System.Windows.Forms.Button btnClose;
     }
 }

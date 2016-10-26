@@ -14,7 +14,8 @@ namespace DiamondShop
 {
     public partial class SearchBuyBookETCList : FormList
     {
-        
+        public string idSelected = "";
+
         public SearchBuyBookETCList()
         {
             InitializeComponent();
@@ -24,7 +25,6 @@ namespace DiamondShop
 
         protected override void Initial()
         {
-
             txtSeller.Select();
 
             gridETC.AutoGenerateColumns = false;
@@ -39,15 +39,21 @@ namespace DiamondShop
                 gridETC.Refresh();
             }
             else { gridETC.DataSource = null; gridETC.Refresh(); }
-
-            btnSearch_Click(null, null);
         }
 
-        private void btnAdd_Click(object sender, EventArgs e)
+        private void CheckSelected()
         {
-            BuyBookETC frm = new BuyBookETC();
-            frm.ShowDialog();
-            DoLoadData();
+            string comma = ",";
+
+            for (int i = 0; i < gridETC.Rows.Count; i++)
+            {
+                if (gridETC.Rows[i].Cells["Select"].Value != null)
+                {
+                    idSelected += gridETC.Rows[i].Cells["ID"].Value.ToString() + comma;
+                }
+            }
+
+            idSelected = idSelected.Remove(idSelected.Length - 1, 1);
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -63,23 +69,15 @@ namespace DiamondShop
             else { gridETC.DataSource = null; gridETC.Refresh(); }
         }
 
-        private void gridETC_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-            if (gridETC.RowCount > 0 && gridETC.SelectedRows.Count > 0)
-            {
-                id = (int)gridETC.SelectedRows[0].Cells["ID"].Value;
-                BuyBookETC frm = new BuyBookETC(id);
-                frm.ShowDialog();
-
-                if (frm.isEdit)
-                {
-                    DoLoadData();
-                }
-            }
-        }
-
         private void btnClose_Click(object sender, EventArgs e)
         {
+            this.Close();
+        }
+
+        private void btnSelect_Click(object sender, EventArgs e)
+        {
+            CheckSelected();
+
             this.Close();
         }
     }

@@ -19,6 +19,7 @@ namespace DiamondShop
     {
         Service2 ser1;
         dsSellbook tds = new dsSellbook();
+        dsSellBookDetail tds1 = new dsSellBookDetail();
         int custID = 0;
         int refID = 0;
         bool isAuthorize = false;
@@ -318,11 +319,6 @@ namespace DiamondShop
             isEdit = true;
         }
 
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void btnAdd_Click(object sender, EventArgs e)
         {
             DiamondCerList frm = new DiamondCerList(1);
@@ -351,48 +347,77 @@ namespace DiamondShop
         {
             SearchBuyBookGemstoneCerList frm = new SearchBuyBookGemstoneCerList(0);
             frm.ShowDialog();
+
+            SetGrid(frm.idSelected);
         }
 
         private void btnDC_Click(object sender, EventArgs e)
         {
             SearchBuyBookDiamondCerList frm = new SearchBuyBookDiamondCerList(0);
             frm.ShowDialog();
+
+            SetGrid(frm.idSelected);
         }
 
         private void btnNonDC_Click(object sender, EventArgs e)
         {
             SearchBuyBookDiamondList frm = new SearchBuyBookDiamondList();
             frm.ShowDialog();
+
+            SetGrid(frm.idSelected);
         }
 
         private void btnNonGC_Click(object sender, EventArgs e)
         {
             SearchBuyBookGemstoneList frm = new SearchBuyBookGemstoneList();
             frm.ShowDialog();
+
+            SetGrid(frm.idSelected);
         }
 
         private void btnETC_Click(object sender, EventArgs e)
         {
             SearchBuyBookETCList frm = new SearchBuyBookETCList();
             frm.ShowDialog();
+
+            SetGrid(frm.idSelected);
         }
 
         private void btnJewelry_Click(object sender, EventArgs e)
         {
             SearchBuyBookJewelryList frm = new SearchBuyBookJewelryList();
             frm.ShowDialog();
+
+            SetGrid(frm.idSelected);
         }
 
         private void btnGold_Click(object sender, EventArgs e)
         {
             SearchBuyBookGoldList frm = new SearchBuyBookGoldList();
             frm.ShowDialog();
+
+            SetGrid(frm.idSelected);
         }
 
         private void btnSetting_Click(object sender, EventArgs e)
         {
             SearchBuyBookSettingList frm = new SearchBuyBookSettingList();
             frm.ShowDialog();
+        }
+
+        private void SetGrid(string idSelected)
+        {
+            DataSet ds1 = new DataSet();
+
+            ds1 = ser.GetSellBookDetail(idSelected, 0);
+            tds1.Clear();
+            tds1.Merge(ds1);
+
+            if (tds1.SellBookDetail.Rows.Count > 0)
+            {
+                grid1.DataSource = tds1.SellBookDetail;
+                grid1.Refresh();
+            }
         }
     }
 }

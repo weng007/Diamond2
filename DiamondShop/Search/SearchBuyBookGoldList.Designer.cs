@@ -45,12 +45,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dtSBuyDate = new System.Windows.Forms.DateTimePicker();
-            this.btnAdd = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.gridGold = new System.Windows.Forms.DataGridView();
+            this.btnSelect = new System.Windows.Forms.Button();
+            this.Select = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.RowNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BuyDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -73,17 +74,17 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(91)))), ((int)(((byte)(59)))));
+            this.panel4.Controls.Add(this.btnSelect);
             this.panel4.Controls.Add(this.btnClose);
             this.panel4.Controls.Add(this.dtEBuyDate);
             this.panel4.Controls.Add(this.label2);
             this.panel4.Controls.Add(this.label1);
             this.panel4.Controls.Add(this.dtSBuyDate);
-            this.panel4.Controls.Add(this.btnAdd);
             this.panel4.Controls.Add(this.btnSearch);
-            this.panel4.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.panel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.panel4.Location = new System.Drawing.Point(0, 1);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1355, 117);
+            this.panel4.Size = new System.Drawing.Size(1301, 117);
             this.panel4.TabIndex = 42;
             // 
             // btnClose
@@ -94,7 +95,7 @@
             this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Location = new System.Drawing.Point(1317, 8);
+            this.btnClose.Location = new System.Drawing.Point(1263, 0);
             this.btnClose.Margin = new System.Windows.Forms.Padding(0);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(38, 32);
@@ -108,7 +109,7 @@
             this.dtEBuyDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtEBuyDate.Location = new System.Drawing.Point(394, 21);
             this.dtEBuyDate.Name = "dtEBuyDate";
-            this.dtEBuyDate.Size = new System.Drawing.Size(131, 27);
+            this.dtEBuyDate.Size = new System.Drawing.Size(131, 26);
             this.dtEBuyDate.TabIndex = 8;
             // 
             // label2
@@ -137,24 +138,8 @@
             this.dtSBuyDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtSBuyDate.Location = new System.Drawing.Point(238, 21);
             this.dtSBuyDate.Name = "dtSBuyDate";
-            this.dtSBuyDate.Size = new System.Drawing.Size(131, 27);
+            this.dtSBuyDate.Size = new System.Drawing.Size(131, 26);
             this.dtSBuyDate.TabIndex = 4;
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.BackColor = System.Drawing.Color.Transparent;
-            this.btnAdd.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAdd.BackgroundImage")));
-            this.btnAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAdd.FlatAppearance.BorderColor = System.Drawing.Color.Linen;
-            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
-            this.btnAdd.Location = new System.Drawing.Point(20, 21);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(70, 90);
-            this.btnAdd.TabIndex = 69;
-            this.btnAdd.UseVisualStyleBackColor = false;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnSearch
             // 
@@ -180,7 +165,7 @@
             this.panel2.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.Location = new System.Drawing.Point(5, 124);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1331, 451);
+            this.panel2.Size = new System.Drawing.Size(1296, 459);
             this.panel2.TabIndex = 33;
             // 
             // label4
@@ -188,9 +173,9 @@
             this.label4.BackColor = System.Drawing.SystemColors.Control;
             this.label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label4.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(874, 1);
+            this.label4.Location = new System.Drawing.Point(877, 1);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(454, 33);
+            this.label4.Size = new System.Drawing.Size(409, 33);
             this.label4.TabIndex = 6;
             this.label4.Text = "ทองคำ 99.99%";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -200,9 +185,9 @@
             this.label5.BackColor = System.Drawing.SystemColors.Control;
             this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label5.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(323, 1);
+            this.label5.Location = new System.Drawing.Point(387, 1);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(553, 33);
+            this.label5.Size = new System.Drawing.Size(486, 33);
             this.label5.TabIndex = 5;
             this.label5.Text = "ทองคำ 96.5%";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -215,6 +200,7 @@
             this.gridGold.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.gridGold.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridGold.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Select,
             this.RowNum,
             this.ID,
             this.BuyDate,
@@ -232,12 +218,34 @@
             this.gridGold.Name = "gridGold";
             this.gridGold.ReadOnly = true;
             this.gridGold.RowHeadersWidth = 10;
-            this.gridGold.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridGold.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridGold.RowTemplate.Height = 30;
             this.gridGold.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridGold.Size = new System.Drawing.Size(1315, 419);
+            this.gridGold.Size = new System.Drawing.Size(1278, 419);
             this.gridGold.TabIndex = 3;
-            this.gridGold.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.gridGold_MouseDoubleClick);
+            // 
+            // btnSelect
+            // 
+            this.btnSelect.BackColor = System.Drawing.Color.Transparent;
+            this.btnSelect.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSelect.BackgroundImage")));
+            this.btnSelect.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnSelect.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSelect.FlatAppearance.BorderColor = System.Drawing.Color.Linen;
+            this.btnSelect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSelect.Image = ((System.Drawing.Image)(resources.GetObject("btnSelect.Image")));
+            this.btnSelect.Location = new System.Drawing.Point(20, 19);
+            this.btnSelect.Name = "btnSelect";
+            this.btnSelect.Size = new System.Drawing.Size(70, 90);
+            this.btnSelect.TabIndex = 88;
+            this.btnSelect.UseVisualStyleBackColor = false;
+            this.btnSelect.Click += new System.EventHandler(this.btnSelect_Click);
+            // 
+            // Select
+            // 
+            this.Select.HeaderText = "Select";
+            this.Select.Name = "Select";
+            this.Select.ReadOnly = true;
+            this.Select.Width = 60;
             // 
             // RowNum
             // 
@@ -282,7 +290,7 @@
             this.Amount1.HeaderText = "บาท";
             this.Amount1.Name = "Amount1";
             this.Amount1.ReadOnly = true;
-            this.Amount1.Width = 80;
+            this.Amount1.Width = 60;
             // 
             // Price1
             // 
@@ -293,7 +301,6 @@
             this.Price1.HeaderText = "ราคาบาทละ";
             this.Price1.Name = "Price1";
             this.Price1.ReadOnly = true;
-            this.Price1.Width = 110;
             // 
             // Total1
             // 
@@ -315,7 +322,6 @@
             this.PricePerGram.HeaderText = "ราคากรัมละ";
             this.PricePerGram.Name = "PricePerGram";
             this.PricePerGram.ReadOnly = true;
-            this.PricePerGram.Width = 110;
             // 
             // PriceGram1
             // 
@@ -326,7 +332,7 @@
             this.PriceGram1.HeaderText = "ทอง 75% กรัมละ";
             this.PriceGram1.Name = "PriceGram1";
             this.PriceGram1.ReadOnly = true;
-            this.PriceGram1.Width = 140;
+            this.PriceGram1.Width = 120;
             // 
             // Amount2
             // 
@@ -348,7 +354,6 @@
             this.Price2.HeaderText = "ราคากรัมละ";
             this.Price2.Name = "Price2";
             this.Price2.ReadOnly = true;
-            this.Price2.Width = 120;
             // 
             // Total2
             // 
@@ -370,14 +375,14 @@
             this.PriceGram2.HeaderText = "ทอง 75% กรัมละ";
             this.PriceGram2.Name = "PriceGram2";
             this.PriceGram2.ReadOnly = true;
-            this.PriceGram2.Width = 140;
+            this.PriceGram2.Width = 120;
             // 
             // SearchBuyBookGoldList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(91)))), ((int)(((byte)(59)))));
-            this.ClientSize = new System.Drawing.Size(1357, 595);
+            this.ClientSize = new System.Drawing.Size(1305, 595);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
             this.Name = "SearchBuyBookGoldList";
@@ -394,7 +399,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.DateTimePicker dtEBuyDate;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
@@ -402,6 +406,9 @@
         private System.Windows.Forms.DataGridView gridGold;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Button btnSelect;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Select;
         private System.Windows.Forms.DataGridViewTextBoxColumn RowNum;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn BuyDate;
@@ -415,6 +422,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Price2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Total2;
         private System.Windows.Forms.DataGridViewTextBoxColumn PriceGram2;
-        private System.Windows.Forms.Button btnClose;
     }
 }

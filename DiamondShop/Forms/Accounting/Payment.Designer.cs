@@ -63,7 +63,7 @@
             this.panel3.Controls.Add(this.label7);
             this.panel3.Controls.Add(this.txtPrice);
             this.panel3.Controls.Add(this.label6);
-            this.panel3.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.panel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.panel3.Location = new System.Drawing.Point(12, 74);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(438, 212);
@@ -71,9 +71,12 @@
             // 
             // btnChooseDate
             // 
-            this.btnChooseDate.Location = new System.Drawing.Point(311, 13);
+            this.btnChooseDate.FlatAppearance.BorderSize = 0;
+            this.btnChooseDate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnChooseDate.Image = ((System.Drawing.Image)(resources.GetObject("btnChooseDate.Image")));
+            this.btnChooseDate.Location = new System.Drawing.Point(309, 12);
             this.btnChooseDate.Name = "btnChooseDate";
-            this.btnChooseDate.Size = new System.Drawing.Size(34, 28);
+            this.btnChooseDate.Size = new System.Drawing.Size(28, 28);
             this.btnChooseDate.TabIndex = 251;
             this.btnChooseDate.UseVisualStyleBackColor = true;
             this.btnChooseDate.Click += new System.EventHandler(this.btnChooseDate_Click);
@@ -82,13 +85,13 @@
             // 
             this.txtPayDate.Location = new System.Drawing.Point(182, 14);
             this.txtPayDate.Name = "txtPayDate";
-            this.txtPayDate.Size = new System.Drawing.Size(123, 27);
+            this.txtPayDate.Size = new System.Drawing.Size(123, 26);
             this.txtPayDate.TabIndex = 250;
             this.txtPayDate.TextChanged += new System.EventHandler(this.txtPayDate_TextChanged);
             // 
             // monthCalendar1
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(118, 43);
+            this.monthCalendar1.Location = new System.Drawing.Point(127, 43);
             this.monthCalendar1.MaxSelectionCount = 1;
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 249;
@@ -99,7 +102,7 @@
             // 
             this.txtUSDRate.Location = new System.Drawing.Point(195, 48);
             this.txtUSDRate.Name = "txtUSDRate";
-            this.txtUSDRate.Size = new System.Drawing.Size(61, 27);
+            this.txtUSDRate.Size = new System.Drawing.Size(61, 26);
             this.txtUSDRate.TabIndex = 159;
             this.txtUSDRate.Text = "0";
             this.txtUSDRate.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -111,7 +114,7 @@
             this.label23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label23.Location = new System.Drawing.Point(95, 51);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(83, 21);
+            this.label23.Size = new System.Drawing.Size(83, 20);
             this.label23.TabIndex = 160;
             this.label23.Text = "USD Rate";
             // 
@@ -133,7 +136,7 @@
             this.rdoYes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.rdoYes.Location = new System.Drawing.Point(12, 23);
             this.rdoYes.Name = "rdoYes";
-            this.rdoYes.Size = new System.Drawing.Size(55, 25);
+            this.rdoYes.Size = new System.Drawing.Size(55, 24);
             this.rdoYes.TabIndex = 100;
             this.rdoYes.Text = "Yes";
             this.rdoYes.UseVisualStyleBackColor = true;
@@ -146,7 +149,7 @@
             this.rdoNo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.rdoNo.Location = new System.Drawing.Point(107, 23);
             this.rdoNo.Name = "rdoNo";
-            this.rdoNo.Size = new System.Drawing.Size(50, 25);
+            this.rdoNo.Size = new System.Drawing.Size(47, 24);
             this.rdoNo.TabIndex = 104;
             this.rdoNo.TabStop = true;
             this.rdoNo.Text = "No";
@@ -156,22 +159,22 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label8.Location = new System.Drawing.Point(343, 88);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(43, 19);
+            this.label8.Size = new System.Drawing.Size(47, 20);
             this.label8.TabIndex = 97;
             this.label8.Text = "Baht";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label7.Location = new System.Drawing.Point(97, 88);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(87, 19);
+            this.label7.Size = new System.Drawing.Size(94, 20);
             this.label7.TabIndex = 96;
             this.label7.Text = "Total Price";
             // 
@@ -179,7 +182,7 @@
             // 
             this.txtPrice.Location = new System.Drawing.Point(195, 85);
             this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(131, 27);
+            this.txtPrice.Size = new System.Drawing.Size(131, 26);
             this.txtPrice.TabIndex = 12;
             this.txtPrice.Text = "0";
             this.txtPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -193,7 +196,7 @@
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label6.Location = new System.Drawing.Point(55, 18);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(124, 21);
+            this.label6.Size = new System.Drawing.Size(110, 20);
             this.label6.TabIndex = 84;
             this.label6.Text = "Payment Date";
             // 

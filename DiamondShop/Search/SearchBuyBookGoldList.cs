@@ -14,14 +14,15 @@ namespace DiamondShop
 {
     public partial class SearchBuyBookGoldList : FormList
     {
-        
+        public string idSelected = "";
+
         public SearchBuyBookGoldList()
         {
             InitializeComponent();
             Initial();
             dtSBuyDate.Value = dtSBuyDate.Value.AddDays(-90);
-            DoLoadData();
-            
+
+            DoLoadData();           
         }
 
         protected override void Initial()
@@ -43,8 +44,21 @@ namespace DiamondShop
                 gridGold.DataSource = null;
                 gridGold.Refresh();
             }
+        }
 
-            btnSearch_Click(null, null);
+        private void CheckSelected()
+        {
+            string comma = ",";
+
+            for (int i = 0; i < gridGold.Rows.Count; i++)
+            {
+                if (gridGold.Rows[i].Cells["Select"].Value != null)
+                {
+                    idSelected += gridGold.Rows[i].Cells["ID"].Value.ToString() + comma;
+                }
+            }
+
+            idSelected = idSelected.Remove(idSelected.Length - 1, 1);
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -61,36 +75,15 @@ namespace DiamondShop
             else { gridGold.DataSource = null; gridGold.Refresh(); }
         }
 
-        private void btnAdd_Click(object sender, EventArgs e)
-        {
-            BuyBookGold frm = new BuyBookGold();
-            frm.ShowDialog();
-            DoLoadData();
-        }
-
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
-            DoDeleteData();
-            DoLoadData();
-        }
-
-        private void gridGold_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-            if (gridGold.RowCount > 0 && gridGold.SelectedRows.Count > 0)
-            {
-                id = (int)gridGold.SelectedRows[0].Cells["ID"].Value;
-                BuyBookGold frm = new BuyBookGold(id);
-                frm.ShowDialog();
-
-                if (frm.isEdit)
-                {
-                    DoLoadData();
-                }
-            }
-        }
-
         private void btnClose_Click(object sender, EventArgs e)
         {
+            this.Close();
+        }
+
+        private void btnSelect_Click(object sender, EventArgs e)
+        {
+            CheckSelected();
+
             this.Close();
         }
     }

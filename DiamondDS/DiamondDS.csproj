@@ -297,6 +297,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsSellbook.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DS\dsSellBookDetail.cs">
+      <DependentUpon>dsSellBookDetail.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS\dsSellBookDetail.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsSellBookDetail.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DS\dsTransfer.cs">
       <DependentUpon>dsTransfer.xsd</DependentUpon>
     </Compile>
@@ -862,6 +870,17 @@
     </None>
     <None Include="DS\dsSellbook.xss">
       <DependentUpon>dsSellbook.xsd</DependentUpon>
+    </None>
+    <None Include="DS\dsSellBookDetail.xsc">
+      <DependentUpon>dsSellBookDetail.xsd</DependentUpon>
+    </None>
+    <None Include="DS\dsSellBookDetail.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsSellBookDetail.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS\dsSellBookDetail.xss">
+      <DependentUpon>dsSellBookDetail.xsd</DependentUpon>
     </None>
     <None Include="DS\dsTransfer.xsc">
       <DependentUpon>dsTransfer.xsd</DependentUpon>

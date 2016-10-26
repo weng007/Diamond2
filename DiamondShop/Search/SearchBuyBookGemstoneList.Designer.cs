@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SearchBuyBookGemstoneList));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -38,6 +37,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SearchBuyBookGemstoneList));
             this.tds = new DiamondDS.DS.dsDiamondCer();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.Button();
@@ -49,7 +49,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtCode = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.btnAdd = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.cmbShape = new System.Windows.Forms.ComboBox();
             this.btnSearch = new System.Windows.Forms.Button();
@@ -71,6 +70,7 @@
             this.PriceCarat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MarketPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Remain = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnSelect = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tds)).BeginInit();
             this.panel4.SuspendLayout();
@@ -86,6 +86,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(105)))), ((int)(((byte)(79)))));
+            this.panel4.Controls.Add(this.btnSelect);
             this.panel4.Controls.Add(this.btnClose);
             this.panel4.Controls.Add(this.txtCode2);
             this.panel4.Controls.Add(this.label3);
@@ -95,11 +96,10 @@
             this.panel4.Controls.Add(this.label1);
             this.panel4.Controls.Add(this.txtCode);
             this.panel4.Controls.Add(this.label12);
-            this.panel4.Controls.Add(this.btnAdd);
             this.panel4.Controls.Add(this.label5);
             this.panel4.Controls.Add(this.cmbShape);
             this.panel4.Controls.Add(this.btnSearch);
-            this.panel4.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.panel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1352, 149);
@@ -125,7 +125,7 @@
             // 
             this.txtCode2.Location = new System.Drawing.Point(510, 20);
             this.txtCode2.Name = "txtCode2";
-            this.txtCode2.Size = new System.Drawing.Size(161, 27);
+            this.txtCode2.Size = new System.Drawing.Size(161, 26);
             this.txtCode2.TabIndex = 79;
             // 
             // label3
@@ -152,7 +152,7 @@
             // 
             this.txtESize.Location = new System.Drawing.Point(592, 53);
             this.txtESize.Name = "txtESize";
-            this.txtESize.Size = new System.Drawing.Size(58, 27);
+            this.txtESize.Size = new System.Drawing.Size(58, 26);
             this.txtESize.TabIndex = 77;
             this.txtESize.Text = "50";
             this.txtESize.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -161,7 +161,7 @@
             // 
             this.txtSize.Location = new System.Drawing.Point(510, 53);
             this.txtSize.Name = "txtSize";
-            this.txtSize.Size = new System.Drawing.Size(58, 27);
+            this.txtSize.Size = new System.Drawing.Size(58, 26);
             this.txtSize.TabIndex = 8;
             this.txtSize.Text = "0";
             this.txtSize.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -181,7 +181,7 @@
             // 
             this.txtCode.Location = new System.Drawing.Point(251, 20);
             this.txtCode.Name = "txtCode";
-            this.txtCode.Size = new System.Drawing.Size(161, 27);
+            this.txtCode.Size = new System.Drawing.Size(161, 26);
             this.txtCode.TabIndex = 1;
             // 
             // label12
@@ -193,22 +193,6 @@
             this.label12.Size = new System.Drawing.Size(67, 31);
             this.label12.TabIndex = 74;
             this.label12.Text = "Code";
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.BackColor = System.Drawing.Color.Transparent;
-            this.btnAdd.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAdd.BackgroundImage")));
-            this.btnAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAdd.FlatAppearance.BorderColor = System.Drawing.Color.Linen;
-            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
-            this.btnAdd.Location = new System.Drawing.Point(20, 21);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(70, 90);
-            this.btnAdd.TabIndex = 68;
-            this.btnAdd.UseVisualStyleBackColor = false;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // label5
             // 
@@ -225,7 +209,7 @@
             this.cmbShape.FormattingEnabled = true;
             this.cmbShape.Location = new System.Drawing.Point(251, 55);
             this.cmbShape.Name = "cmbShape";
-            this.cmbShape.Size = new System.Drawing.Size(161, 29);
+            this.cmbShape.Size = new System.Drawing.Size(161, 28);
             this.cmbShape.TabIndex = 4;
             // 
             // btnSearch
@@ -247,7 +231,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.gridGemstone);
-            this.panel2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.Location = new System.Drawing.Point(0, 151);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1334, 428);
@@ -281,12 +265,11 @@
             this.gridGemstone.Name = "gridGemstone";
             this.gridGemstone.ReadOnly = true;
             this.gridGemstone.RowHeadersWidth = 10;
-            this.gridGemstone.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridGemstone.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridGemstone.RowTemplate.Height = 30;
             this.gridGemstone.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridGemstone.Size = new System.Drawing.Size(1314, 425);
             this.gridGemstone.TabIndex = 2;
-            this.gridGemstone.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.gridGemstone_MouseDoubleClick);
             // 
             // ID
             // 
@@ -438,6 +421,22 @@
             this.Remain.Name = "Remain";
             this.Remain.ReadOnly = true;
             // 
+            // btnSelect
+            // 
+            this.btnSelect.BackColor = System.Drawing.Color.Transparent;
+            this.btnSelect.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSelect.BackgroundImage")));
+            this.btnSelect.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnSelect.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSelect.FlatAppearance.BorderColor = System.Drawing.Color.Linen;
+            this.btnSelect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSelect.Image = ((System.Drawing.Image)(resources.GetObject("btnSelect.Image")));
+            this.btnSelect.Location = new System.Drawing.Point(20, 23);
+            this.btnSelect.Name = "btnSelect";
+            this.btnSelect.Size = new System.Drawing.Size(70, 90);
+            this.btnSelect.TabIndex = 87;
+            this.btnSelect.UseVisualStyleBackColor = false;
+            this.btnSelect.Click += new System.EventHandler(this.btnSelect_Click);
+            // 
             // SearchBuyBookGemstoneList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -466,7 +465,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cmbShape;
         private DiamondDS.DS.dsDiamondCer tds;
-        private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.TextBox txtCode;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txtSize;
@@ -492,5 +490,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn MarketPrice;
         private System.Windows.Forms.DataGridViewTextBoxColumn Remain;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Button btnSelect;
     }
 }

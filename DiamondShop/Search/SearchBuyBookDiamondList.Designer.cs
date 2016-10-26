@@ -46,7 +46,6 @@
             this.txtESize = new System.Windows.Forms.TextBox();
             this.txtCode = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.btnAdd = new System.Windows.Forms.Button();
             this.txtSSize = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.cmbShape = new System.Windows.Forms.ComboBox();
@@ -54,6 +53,8 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.gridDiamond = new System.Windows.Forms.DataGridView();
+            this.btnSelect = new System.Windows.Forms.Button();
+            this.Select = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RowNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -84,6 +85,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(105)))), ((int)(((byte)(79)))));
+            this.panel4.Controls.Add(this.btnSelect);
             this.panel4.Controls.Add(this.btnClose);
             this.panel4.Controls.Add(this.txtCode2);
             this.panel4.Controls.Add(this.label2);
@@ -91,16 +93,15 @@
             this.panel4.Controls.Add(this.txtESize);
             this.panel4.Controls.Add(this.txtCode);
             this.panel4.Controls.Add(this.label12);
-            this.panel4.Controls.Add(this.btnAdd);
             this.panel4.Controls.Add(this.txtSSize);
             this.panel4.Controls.Add(this.label5);
             this.panel4.Controls.Add(this.cmbShape);
             this.panel4.Controls.Add(this.label4);
             this.panel4.Controls.Add(this.btnSearch);
-            this.panel4.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.panel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1329, 149);
+            this.panel4.Size = new System.Drawing.Size(1318, 139);
             this.panel4.TabIndex = 40;
             // 
             // btnClose
@@ -111,7 +112,7 @@
             this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Location = new System.Drawing.Point(1291, 9);
+            this.btnClose.Location = new System.Drawing.Point(1280, 2);
             this.btnClose.Margin = new System.Windows.Forms.Padding(0);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(38, 32);
@@ -123,7 +124,7 @@
             // 
             this.txtCode2.Location = new System.Drawing.Point(547, 20);
             this.txtCode2.Name = "txtCode2";
-            this.txtCode2.Size = new System.Drawing.Size(161, 27);
+            this.txtCode2.Size = new System.Drawing.Size(161, 26);
             this.txtCode2.TabIndex = 77;
             // 
             // label2
@@ -150,7 +151,7 @@
             // 
             this.txtESize.Location = new System.Drawing.Point(626, 54);
             this.txtESize.Name = "txtESize";
-            this.txtESize.Size = new System.Drawing.Size(54, 27);
+            this.txtESize.Size = new System.Drawing.Size(54, 26);
             this.txtESize.TabIndex = 6;
             this.txtESize.Text = "50";
             this.txtESize.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -160,7 +161,7 @@
             // 
             this.txtCode.Location = new System.Drawing.Point(245, 21);
             this.txtCode.Name = "txtCode";
-            this.txtCode.Size = new System.Drawing.Size(161, 27);
+            this.txtCode.Size = new System.Drawing.Size(161, 26);
             this.txtCode.TabIndex = 2;
             // 
             // label12
@@ -173,27 +174,11 @@
             this.label12.TabIndex = 74;
             this.label12.Text = "Code";
             // 
-            // btnAdd
-            // 
-            this.btnAdd.BackColor = System.Drawing.Color.Transparent;
-            this.btnAdd.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAdd.BackgroundImage")));
-            this.btnAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAdd.FlatAppearance.BorderColor = System.Drawing.Color.Linen;
-            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
-            this.btnAdd.Location = new System.Drawing.Point(20, 21);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(70, 90);
-            this.btnAdd.TabIndex = 68;
-            this.btnAdd.UseVisualStyleBackColor = false;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
             // txtSSize
             // 
             this.txtSSize.Location = new System.Drawing.Point(547, 54);
             this.txtSSize.Name = "txtSSize";
-            this.txtSSize.Size = new System.Drawing.Size(54, 27);
+            this.txtSSize.Size = new System.Drawing.Size(54, 26);
             this.txtSSize.TabIndex = 4;
             this.txtSSize.Text = "0";
             this.txtSSize.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -214,7 +199,7 @@
             this.cmbShape.FormattingEnabled = true;
             this.cmbShape.Location = new System.Drawing.Point(245, 56);
             this.cmbShape.Name = "cmbShape";
-            this.cmbShape.Size = new System.Drawing.Size(161, 29);
+            this.cmbShape.Size = new System.Drawing.Size(161, 28);
             this.cmbShape.TabIndex = 8;
             // 
             // label4
@@ -246,10 +231,10 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.gridDiamond);
-            this.panel2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel2.Location = new System.Drawing.Point(0, 155);
+            this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel2.Location = new System.Drawing.Point(0, 145);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1337, 422);
+            this.panel2.Size = new System.Drawing.Size(1318, 436);
             this.panel2.TabIndex = 34;
             // 
             // gridDiamond
@@ -260,6 +245,7 @@
             this.gridDiamond.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.gridDiamond.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridDiamond.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Select,
             this.ID,
             this.RowNum,
             this.Code,
@@ -279,12 +265,34 @@
             this.gridDiamond.Name = "gridDiamond";
             this.gridDiamond.ReadOnly = true;
             this.gridDiamond.RowHeadersWidth = 10;
-            this.gridDiamond.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridDiamond.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridDiamond.RowTemplate.Height = 30;
             this.gridDiamond.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridDiamond.Size = new System.Drawing.Size(1314, 422);
+            this.gridDiamond.Size = new System.Drawing.Size(1291, 433);
             this.gridDiamond.TabIndex = 2;
-            this.gridDiamond.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.gridDiamond_MouseDoubleClick);
+            // 
+            // btnSelect
+            // 
+            this.btnSelect.BackColor = System.Drawing.Color.Transparent;
+            this.btnSelect.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSelect.BackgroundImage")));
+            this.btnSelect.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnSelect.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSelect.FlatAppearance.BorderColor = System.Drawing.Color.Linen;
+            this.btnSelect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSelect.Image = ((System.Drawing.Image)(resources.GetObject("btnSelect.Image")));
+            this.btnSelect.Location = new System.Drawing.Point(20, 20);
+            this.btnSelect.Name = "btnSelect";
+            this.btnSelect.Size = new System.Drawing.Size(70, 90);
+            this.btnSelect.TabIndex = 81;
+            this.btnSelect.UseVisualStyleBackColor = false;
+            this.btnSelect.Click += new System.EventHandler(this.btnSelect_Click);
+            // 
+            // Select
+            // 
+            this.Select.HeaderText = "Select";
+            this.Select.Name = "Select";
+            this.Select.ReadOnly = true;
+            this.Select.Width = 60;
             // 
             // ID
             // 
@@ -434,7 +442,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(105)))), ((int)(((byte)(79)))));
-            this.ClientSize = new System.Drawing.Size(1355, 593);
+            this.ClientSize = new System.Drawing.Size(1321, 593);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
             this.Name = "SearchBuyBookDiamondList";
@@ -459,11 +467,15 @@
         private System.Windows.Forms.ComboBox cmbShape;
         private System.Windows.Forms.TextBox txtSSize;
         private DiamondDS.DS.dsDiamondCer tds;
-        private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.TextBox txtCode;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtESize;
+        private System.Windows.Forms.TextBox txtCode2;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Button btnSelect;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Select;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn RowNum;
         private System.Windows.Forms.DataGridViewTextBoxColumn Code;
@@ -479,8 +491,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn PriceCaratUSD;
         private System.Windows.Forms.DataGridViewTextBoxColumn PriceCaratB;
         private System.Windows.Forms.DataGridViewTextBoxColumn MarketPrice;
-        private System.Windows.Forms.TextBox txtCode2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnClose;
     }
 }
