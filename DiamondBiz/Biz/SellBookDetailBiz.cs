@@ -13,8 +13,19 @@ namespace DiamondBiz.Biz
         dsSellBookDetail ds = new dsSellBookDetail();
         SellBookDetailDAL dal = new SellBookDetailDAL();
 
-      
-        public bool DoInsertData(dsSellbook tds)
+        public dsSellBookDetail DoSelectData(int id)
+        {
+            try
+            {
+                return dal.DoSelectData(id);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public bool DoInsertData(dsSellBookDetail tds)
         {
             try
             {
@@ -26,7 +37,7 @@ namespace DiamondBiz.Biz
             }
         }
 
-        public bool DoUpdateData(dsSellbook tds)
+        public bool DoUpdateData(dsSellBookDetail tds)
         {
             try
             {
@@ -49,5 +60,18 @@ namespace DiamondBiz.Biz
                 throw ex;
             }
         }
+
+        public dsSellBookDetail GetSellBookDetail(string idSelected)
+        {
+            try
+            {
+                return dal.GetSellBookDetail(idSelected);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
     }
 }

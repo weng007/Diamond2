@@ -20,6 +20,7 @@ namespace DiamondShop
         Service2 ser1;
         dsSellbook tds = new dsSellbook();
         dsSellBookDetail tds1 = new dsSellBookDetail();
+        DataSet ds1 = new DataSet();
         int custID = 0;
         int refID = 0;
         bool isAuthorize = false;
@@ -117,6 +118,9 @@ namespace DiamondShop
                 EnableEdit = GM.CheckIsEdit(ApplicationInfo.Shop, Convert.ToInt16(cmbShop.SelectedValue.ToString()));
                 EnableDelete = true;
             }
+
+            ds1 = ser.DoSelectData("SellBookDetail", id, 0);
+
             SetFormatNumber();
             base.LoadData();
 
@@ -176,7 +180,6 @@ namespace DiamondShop
                 tds.SellBook.Rows.Add(row);
             }
             binder.BindValueToDataRow(row);
-            //row.RefID = refID;
             row.CustID = custID;
             if (txtPayDate.Text == "")
             {
@@ -282,19 +285,19 @@ namespace DiamondShop
 
         private void btnPending_Click(object sender, EventArgs e)
         {
-            ser1.UpdateJewelryStatus(refID, "Pending");
+            ser1.UpdateSellBookStatus(id, "Pending");
             LoadData();
         }
 
         private void btnSold_Click(object sender, EventArgs e)
         {
-            ser1.UpdateJewelryStatus(refID, "Sold");
+            ser1.UpdateSellBookStatus(id, "Sold");
             LoadData();
         }
 
-        private void btnCancel_Click(object sender, EventArgs e)
+        private void btnAvailable_Click(object sender, EventArgs e)
         {
-            ser1.UpdateJewelryStatus(refID, "Shop");
+            ser1.UpdateSellBookStatus(id, "Available");
             LoadData();
         }
 
@@ -407,7 +410,7 @@ namespace DiamondShop
 
         private void SetGrid(string idSelected)
         {
-            DataSet ds1 = new DataSet();
+            
 
             //ds1 = ser.GetSellBookDetail(idSelected, 0);
             //tds1.Clear();
@@ -418,6 +421,11 @@ namespace DiamondShop
                 grid1.DataSource = tds1.SellBookDetail;
                 grid1.Refresh();
             }
+        }
+
+        private void btnDel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

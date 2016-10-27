@@ -28,13 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SellBook));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SellBook));
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.grid1 = new System.Windows.Forms.DataGridView();
             this.cmbShop = new System.Windows.Forms.ComboBox();
             this.cmbStatus = new System.Windows.Forms.ComboBox();
@@ -78,15 +79,18 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.label1 = new System.Windows.Forms.Label();
+            this.btnAvailable = new System.Windows.Forms.Button();
             this.RowNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RefID1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RefID2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.USDRate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Weight1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Weight = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PriceBaht = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Comment = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnDel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid1)).BeginInit();
@@ -95,6 +99,8 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Controls.Add(this.btnDel);
+            this.panel3.Controls.Add(this.btnAvailable);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.grid1);
             this.panel3.Controls.Add(this.cmbShop);
@@ -145,6 +151,14 @@
             this.panel3.Size = new System.Drawing.Size(1215, 526);
             this.panel3.TabIndex = 1;
             // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(26, 198);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(94, 28);
+            this.label1.TabIndex = 286;
+            this.label1.Text = "Sell Lists";
+            // 
             // grid1
             // 
             this.grid1.AllowUserToAddRows = false;
@@ -154,11 +168,13 @@
             this.grid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grid1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.RowNum,
+            this.RefID1,
+            this.RefID2,
             this.ID,
             this.Code,
             this.USDRate,
             this.Amount,
-            this.Weight1,
+            this.Weight,
             this.PriceBaht,
             this.Comment});
             this.grid1.Location = new System.Drawing.Point(30, 229);
@@ -168,7 +184,7 @@
             this.grid1.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grid1.RowTemplate.Height = 60;
             this.grid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grid1.Size = new System.Drawing.Size(762, 285);
+            this.grid1.Size = new System.Drawing.Size(717, 285);
             this.grid1.TabIndex = 285;
             // 
             // cmbShop
@@ -531,7 +547,7 @@
             this.btnPending.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPending.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(109)))), ((int)(((byte)(65)))));
             this.btnPending.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPending.Location = new System.Drawing.Point(948, 109);
+            this.btnPending.Location = new System.Drawing.Point(455, 170);
             this.btnPending.Name = "btnPending";
             this.btnPending.Size = new System.Drawing.Size(120, 33);
             this.btnPending.TabIndex = 56;
@@ -546,7 +562,7 @@
             this.btnSold.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSold.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(109)))), ((int)(((byte)(65)))));
             this.btnSold.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSold.Location = new System.Drawing.Point(1074, 109);
+            this.btnSold.Location = new System.Drawing.Point(592, 170);
             this.btnSold.Name = "btnSold";
             this.btnSold.Size = new System.Drawing.Size(120, 33);
             this.btnSold.TabIndex = 61;
@@ -597,7 +613,7 @@
             this.txtNote.Multiline = true;
             this.txtNote.Name = "txtNote";
             this.txtNote.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtNote.Size = new System.Drawing.Size(246, 59);
+            this.txtNote.Size = new System.Drawing.Size(246, 95);
             this.txtNote.TabIndex = 16;
             // 
             // label18
@@ -629,13 +645,19 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // label1
+            // btnAvailable
             // 
-            this.label1.Location = new System.Drawing.Point(26, 198);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 28);
-            this.label1.TabIndex = 286;
-            this.label1.Text = "Sell Lists";
+            this.btnAvailable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(170)))), ((int)(((byte)(160)))));
+            this.btnAvailable.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAvailable.BackgroundImage")));
+            this.btnAvailable.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnAvailable.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAvailable.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(109)))), ((int)(((byte)(65)))));
+            this.btnAvailable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAvailable.Location = new System.Drawing.Point(317, 170);
+            this.btnAvailable.Name = "btnAvailable";
+            this.btnAvailable.Size = new System.Drawing.Size(120, 33);
+            this.btnAvailable.TabIndex = 287;
+            this.btnAvailable.UseVisualStyleBackColor = false;
             // 
             // RowNum
             // 
@@ -646,6 +668,22 @@
             this.RowNum.Name = "RowNum";
             this.RowNum.ReadOnly = true;
             this.RowNum.Width = 50;
+            // 
+            // RefID1
+            // 
+            this.RefID1.DataPropertyName = "RefID1";
+            this.RefID1.HeaderText = "RefID1";
+            this.RefID1.Name = "RefID1";
+            this.RefID1.ReadOnly = true;
+            this.RefID1.Visible = false;
+            // 
+            // RefID2
+            // 
+            this.RefID2.DataPropertyName = "RefID2";
+            this.RefID2.HeaderText = "RefID2";
+            this.RefID2.Name = "RefID2";
+            this.RefID2.ReadOnly = true;
+            this.RefID2.Visible = false;
             // 
             // ID
             // 
@@ -682,17 +720,18 @@
             this.Amount.HeaderText = "Amount";
             this.Amount.Name = "Amount";
             this.Amount.ReadOnly = true;
+            this.Amount.Width = 70;
             // 
-            // Weight1
+            // Weight
             // 
-            this.Weight1.DataPropertyName = "Weight1";
+            this.Weight.DataPropertyName = "Weight";
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
             dataGridViewCellStyle4.Format = "N2";
-            this.Weight1.DefaultCellStyle = dataGridViewCellStyle4;
-            this.Weight1.HeaderText = "Weight";
-            this.Weight1.Name = "Weight1";
-            this.Weight1.ReadOnly = true;
-            this.Weight1.Width = 90;
+            this.Weight.DefaultCellStyle = dataGridViewCellStyle4;
+            this.Weight.HeaderText = "Weight";
+            this.Weight.Name = "Weight";
+            this.Weight.ReadOnly = true;
+            this.Weight.Width = 70;
             // 
             // PriceBaht
             // 
@@ -712,6 +751,22 @@
             this.Comment.Name = "Comment";
             this.Comment.ReadOnly = true;
             this.Comment.Width = 125;
+            // 
+            // btnDel
+            // 
+            this.btnDel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDel.BackgroundImage")));
+            this.btnDel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnDel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDel.FlatAppearance.BorderSize = 0;
+            this.btnDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDel.Location = new System.Drawing.Point(753, 229);
+            this.btnDel.Name = "btnDel";
+            this.btnDel.Size = new System.Drawing.Size(30, 30);
+            this.btnDel.TabIndex = 289;
+            this.btnDel.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnDel.UseVisualStyleBackColor = true;
+            this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
             // 
             // SellBook
             // 
@@ -778,13 +833,17 @@
         private System.Windows.Forms.ComboBox cmbShop;
         private System.Windows.Forms.DataGridView grid1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnAvailable;
         private System.Windows.Forms.DataGridViewTextBoxColumn RowNum;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RefID1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RefID2;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Code;
         private System.Windows.Forms.DataGridViewTextBoxColumn USDRate;
         private System.Windows.Forms.DataGridViewTextBoxColumn Amount;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Weight1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Weight;
         private System.Windows.Forms.DataGridViewTextBoxColumn PriceBaht;
         private System.Windows.Forms.DataGridViewTextBoxColumn Comment;
+        private System.Windows.Forms.Button btnDel;
     }
 }

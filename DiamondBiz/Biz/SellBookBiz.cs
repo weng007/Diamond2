@@ -10,10 +10,10 @@ namespace DiamondBiz.Biz
 {
     public class SellBookBiz
     {
-        dsSellbook ds = new dsSellbook();
+        dsSellBook ds = new dsSellBook();
         SellBookDAL dal = new SellBookDAL();
 
-        public dsSellbook DoSearchData(string code)
+        public dsSellBook DoSearchData(string code)
         {
             try
             {
@@ -24,7 +24,7 @@ namespace DiamondBiz.Biz
                 throw ex;
             }
         }
-        public dsSellbook DoSelectData(int id)
+        public dsSellBook DoSelectData(int id)
         {
             try
             {
@@ -35,7 +35,7 @@ namespace DiamondBiz.Biz
                 throw ex;
             }
         }
-        public bool DoInsertData(dsSellbook tds)
+        public bool DoInsertData(dsSellBook tds)
         {
             try
             {
@@ -47,7 +47,7 @@ namespace DiamondBiz.Biz
             }
         }
 
-        public bool DoUpdateData(dsSellbook tds)
+        public bool DoUpdateData(dsSellBook tds)
         {
             try
             {

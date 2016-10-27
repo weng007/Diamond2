@@ -388,5 +388,18 @@ namespace Diamond
                 throw ex;
             }
         }
+
+        public DataSet GetSellBookDetail(string idSelected)
+        {
+            SellBookDetailBiz biz = GM.GetSellBookDetailBiz();
+            try
+            {
+                return biz.GetSellBookDetail(idSelected);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }
