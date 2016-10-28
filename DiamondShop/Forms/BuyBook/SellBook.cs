@@ -18,7 +18,7 @@ namespace DiamondShop
     public partial class SellBook : FormInfo
     {
         Service2 ser1;
-        dsSellbook tds = new dsSellbook();
+        dsSellBook tds = new dsSellBook();
         dsSellBookDetail tds1 = new dsSellBookDetail();
         DataSet ds1 = new DataSet();
         int custID = 0;
@@ -104,6 +104,8 @@ namespace DiamondShop
 
         protected override void LoadData()
         {
+            ser1 = GM.GetService1();
+
             ds = ser.DoSelectData("SellBook", id, 0);
             tds.Clear();
             tds.Merge(ds);
@@ -120,6 +122,14 @@ namespace DiamondShop
             }
 
             ds1 = ser.DoSelectData("SellBookDetail", id, 0);
+            tds1.Clear();
+            tds1.Merge(ds1);
+
+            if(tds1.SellBookDetail.Rows.Count > 0)
+            {
+                grid1.DataSource = tds1.SellBookDetail;
+                grid1.Refresh();
+            }
 
             SetFormatNumber();
             base.LoadData();
@@ -168,7 +178,7 @@ namespace DiamondShop
         }
         protected override bool SaveData()
         {
-            dsSellbook.SellBookRow row = null;
+            dsSellBook.SellBookRow row = null;
 
             if (tds.SellBook.Rows.Count > 0)
             {
@@ -179,8 +189,10 @@ namespace DiamondShop
                 row = tds.SellBook.NewSellBookRow();
                 tds.SellBook.Rows.Add(row);
             }
+
             binder.BindValueToDataRow(row);
             row.CustID = custID;
+
             if (txtPayDate.Text == "")
             {
                 row.PaymentDate = DateTime.MinValue.AddYears(1900);
@@ -205,6 +217,26 @@ namespace DiamondShop
                 }
 
                 tds.AcceptChanges();
+
+                //Save SellBookDetail
+                if (tds1.SellBookDetail.Rows.Count > 0)
+                {
+                    foreach (dsSellBookDetail.SellBookDetailRow row1 in tds1.SellBookDetail.Rows)
+                    {
+                        if (row1.ID.ToString() == "")
+                        {
+                            SetCreateBy(row1);
+                            chkFlag = ser.DoInsertData("SellBookDetail", tds1, 0);
+                        }
+                        else
+                        {
+                            SetEditBy(row1);
+                            chkFlag = ser.DoUpdateData("SellBookDetail", tds1);
+                        }
+                    }
+
+                    tds1.AcceptChanges();
+                }
             }
             catch (Exception ex)
             {
@@ -283,6 +315,12 @@ namespace DiamondShop
             txtCustomer.Text = frm.customerName;
         }
 
+        private void btnAvailable_Click(object sender, EventArgs e)
+        {
+            ser1.UpdateSellBookStatus(id, "Available");
+            LoadData();
+        }
+
         private void btnPending_Click(object sender, EventArgs e)
         {
             ser1.UpdateSellBookStatus(id, "Pending");
@@ -292,12 +330,6 @@ namespace DiamondShop
         private void btnSold_Click(object sender, EventArgs e)
         {
             ser1.UpdateSellBookStatus(id, "Sold");
-            LoadData();
-        }
-
-        private void btnAvailable_Click(object sender, EventArgs e)
-        {
-            ser1.UpdateSellBookStatus(id, "Available");
             LoadData();
         }
 
@@ -356,7 +388,7 @@ namespace DiamondShop
 
         private void btnDC_Click(object sender, EventArgs e)
         {
-            SearchBuyBookDiamondCerList frm = new SearchBuyBookDiamondCerList(0);
+            SearchBuyBookDiamondCerList frm = new SearchBuyBookDiamondCerList(1);
             frm.ShowDialog();
 
             SetGrid(frm.idSelected);
@@ -410,22 +442,33 @@ namespace DiamondShop
 
         private void SetGrid(string idSelected)
         {
-            
+            ser1 = GM.GetService1();
 
-            //ds1 = ser.GetSellBookDetail(idSelected, 0);
-            //tds1.Clear();
-            //tds1.Merge(ds1);
+            ds1 = ser1.GetSellBookDetail(idSelected);
+            tds1.Clear();
+            tds1.Merge(ds1);
 
             if (tds1.SellBookDetail.Rows.Count > 0)
             {
-                grid1.DataSource = tds1.SellBookDetail;
+                tds1.AcceptChanges();
                 grid1.Refresh();
             }
         }
 
         private void btnDel_Click(object sender, EventArgs e)
         {
+            int delID = 0;
 
+            if(grid1.SelectedRows.Count > 0)
+            {
+                delID = (int)grid1.SelectedRows[0].Cells["ID"].Value;
+                tds1.SellBookDetail.Rows.RemoveAt(grid1.SelectedRows[0].Index);
+            }
+
+            tds1.AcceptChanges();
+            grid1.Refresh();
+
+            ser.DoDeleteData("SellBookDetail", delID);
         }
     }
 }

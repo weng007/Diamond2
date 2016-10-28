@@ -255,7 +255,7 @@ namespace DiamondShop
             }
 
             SetFormatNumber();
-              base.LoadData();
+            base.LoadData();
 
             cmbJewelryType.SelectedValueChanged += cmbColorType_SelectedValueChanged;
         }

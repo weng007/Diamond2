@@ -162,18 +162,6 @@ namespace DiamondShop
             }
         }
 
-        private void gridDiamondCer_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-            //if (gridBuyBookPayment.RowCount > 0 && gridBuyBookPayment.SelectedRows.Count > 0)
-            //{
-            //    id = (int)gridBuyBookPayment.SelectedRows[0].Cells["ID"].Value;
-            //    Payment frm = new Payment(id);
-            //    frm.ShowDialog();
-            //}
-
-            //DoLoadData();
-        }
-
         private void gridBuyBookPayment_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex == 0)
@@ -191,8 +179,7 @@ namespace DiamondShop
                     TotalPrice -= Convert.ToDecimal(gridBuyBookPayment.SelectedRows[0].Cells["TotalBaht"].Value.ToString());
                     
                 }
-            }
-           
+            }           
         }
 
         private void monthCalendar1_DateSelected(object sender, DateRangeEventArgs e)

@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Sell));
             this.btnImage1 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnAvailable = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.txtStatus = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -74,7 +75,6 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.btnAvailable = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -145,6 +145,21 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(943, 651);
             this.panel3.TabIndex = 1;
+            // 
+            // btnAvailable
+            // 
+            this.btnAvailable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(170)))), ((int)(((byte)(160)))));
+            this.btnAvailable.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAvailable.BackgroundImage")));
+            this.btnAvailable.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnAvailable.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAvailable.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(109)))), ((int)(((byte)(65)))));
+            this.btnAvailable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAvailable.Location = new System.Drawing.Point(513, 594);
+            this.btnAvailable.Name = "btnAvailable";
+            this.btnAvailable.Size = new System.Drawing.Size(120, 33);
+            this.btnAvailable.TabIndex = 198;
+            this.btnAvailable.UseVisualStyleBackColor = false;
+            this.btnAvailable.Click += new System.EventHandler(this.btnAvailable_Click);
             // 
             // label12
             // 
@@ -578,20 +593,6 @@
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // btnAvailable
-            // 
-            this.btnAvailable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(170)))), ((int)(((byte)(160)))));
-            this.btnAvailable.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAvailable.BackgroundImage")));
-            this.btnAvailable.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnAvailable.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAvailable.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(109)))), ((int)(((byte)(65)))));
-            this.btnAvailable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAvailable.Location = new System.Drawing.Point(513, 594);
-            this.btnAvailable.Name = "btnAvailable";
-            this.btnAvailable.Size = new System.Drawing.Size(120, 33);
-            this.btnAvailable.TabIndex = 198;
-            this.btnAvailable.UseVisualStyleBackColor = false;
             // 
             // Sell
             // 

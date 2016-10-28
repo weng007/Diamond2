@@ -40,6 +40,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.btnSelect = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.dtEBuyDate = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
@@ -50,7 +51,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.gridGold = new System.Windows.Forms.DataGridView();
-            this.btnSelect = new System.Windows.Forms.Button();
             this.Select = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.RowNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -86,6 +86,22 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1301, 117);
             this.panel4.TabIndex = 42;
+            // 
+            // btnSelect
+            // 
+            this.btnSelect.BackColor = System.Drawing.Color.Transparent;
+            this.btnSelect.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSelect.BackgroundImage")));
+            this.btnSelect.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnSelect.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSelect.FlatAppearance.BorderColor = System.Drawing.Color.Linen;
+            this.btnSelect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSelect.Image = ((System.Drawing.Image)(resources.GetObject("btnSelect.Image")));
+            this.btnSelect.Location = new System.Drawing.Point(20, 19);
+            this.btnSelect.Name = "btnSelect";
+            this.btnSelect.Size = new System.Drawing.Size(70, 90);
+            this.btnSelect.TabIndex = 88;
+            this.btnSelect.UseVisualStyleBackColor = false;
+            this.btnSelect.Click += new System.EventHandler(this.btnSelect_Click);
             // 
             // btnClose
             // 
@@ -223,22 +239,7 @@
             this.gridGold.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridGold.Size = new System.Drawing.Size(1278, 419);
             this.gridGold.TabIndex = 3;
-            // 
-            // btnSelect
-            // 
-            this.btnSelect.BackColor = System.Drawing.Color.Transparent;
-            this.btnSelect.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSelect.BackgroundImage")));
-            this.btnSelect.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnSelect.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSelect.FlatAppearance.BorderColor = System.Drawing.Color.Linen;
-            this.btnSelect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSelect.Image = ((System.Drawing.Image)(resources.GetObject("btnSelect.Image")));
-            this.btnSelect.Location = new System.Drawing.Point(20, 19);
-            this.btnSelect.Name = "btnSelect";
-            this.btnSelect.Size = new System.Drawing.Size(70, 90);
-            this.btnSelect.TabIndex = 88;
-            this.btnSelect.UseVisualStyleBackColor = false;
-            this.btnSelect.Click += new System.EventHandler(this.btnSelect_Click);
+            this.gridGold.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridGold_CellClick);
             // 
             // Select
             // 

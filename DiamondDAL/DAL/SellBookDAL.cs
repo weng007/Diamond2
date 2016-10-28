@@ -89,5 +89,22 @@ namespace DiamondDAL.DAL
 
             return Convert.ToBoolean(flag);
         }
+
+        public bool UpdateSellBookStatus(int id, int status)
+        {
+            try
+            {
+                SQL.ClearParameter();
+                SQL.CreateParameter("ID", id);
+                SQL.CreateParameter("Status", status);
+                flag = SQL.ExecuteSP("SP_SellBook_Upd_SellStatus");
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return Convert.ToBoolean(flag);
+        }      
     }
 }

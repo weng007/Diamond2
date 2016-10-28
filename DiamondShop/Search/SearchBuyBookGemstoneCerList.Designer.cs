@@ -472,6 +472,7 @@
             this.gridGemstoneCer.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridGemstoneCer.Size = new System.Drawing.Size(1302, 393);
             this.gridGemstoneCer.TabIndex = 2;
+            this.gridGemstoneCer.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridGemstoneCer_CellClick);
             // 
             // Select
             // 

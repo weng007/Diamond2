@@ -70,5 +70,32 @@ namespace DiamondBiz.Biz
                 throw ex;
             }
         }
+
+        public bool UpdateSellBookStatus(int id, string status)
+        {
+            int tmp = 0;
+
+            try
+            {
+                if (status == "Available")
+                {
+                    tmp = 73;
+                }
+                else if (status == "Pending")
+                {
+                    tmp = 1;
+                }
+                else if (status == "Sold")
+                {
+                    tmp = 72;
+                }
+
+                return dal.UpdateSellBookStatus(id, tmp);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

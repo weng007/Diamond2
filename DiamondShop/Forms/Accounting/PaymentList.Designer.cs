@@ -385,7 +385,6 @@
             this.gridBuyBookPayment.Size = new System.Drawing.Size(1313, 388);
             this.gridBuyBookPayment.TabIndex = 2;
             this.gridBuyBookPayment.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridBuyBookPayment_CellClick);
-            this.gridBuyBookPayment.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.gridDiamondCer_MouseDoubleClick);
             // 
             // Select
             // 
