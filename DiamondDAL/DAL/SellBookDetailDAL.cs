@@ -34,8 +34,17 @@ namespace DiamondDAL.DAL
         {
             try
             {
-                dsSellBookDetail.SellBookDetailRow row = tds.SellBookDetail[0];
-                SQL.ExecuteSP("SP_SellBookDetail_Ins", row);
+                foreach (dsSellBookDetail.SellBookDetailRow row in tds.SellBookDetail.Rows)
+                {
+                    if (row.ID < 0)
+                    {
+                        SQL.ExecuteSP("SP_SellBookDetail_Ins", row);
+                    }
+                    else
+                    {
+                        SQL.ExecuteSP("SP_SellBookDetail_Upd", row);
+                    }
+                }              
             }
             catch(Exception ex)
             {
@@ -49,15 +58,17 @@ namespace DiamondDAL.DAL
         {
             try
             {
-                dsSellBookDetail.SellBookDetailRow row = tds.SellBookDetail[0];
-                flag = SQL.ExecuteSP("SP_SellBookDetail_Upd", row);
+                foreach (dsSellBookDetail.SellBookDetailRow row in tds.SellBookDetail.Rows)
+                {
+                    SQL.ExecuteSP("SP_SellBookDetail_Upd", row);
+                }
             }
             catch (Exception ex)
             {
                 throw ex;
             }
 
-            return Convert.ToBoolean(flag);
+            return true;
         }
 
         public bool DoDeleteData(int id)

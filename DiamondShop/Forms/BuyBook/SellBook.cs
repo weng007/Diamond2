@@ -99,6 +99,8 @@ namespace DiamondShop
             cmbStatus.DisplayMember = "Detail";
             cmbStatus.Refresh();
 
+            grid1.AutoGenerateColumns = false;
+
             SetFieldService.SetRequireField(txtCustomer);
         }
 
@@ -175,6 +177,14 @@ namespace DiamondShop
             txtUSDRate.Enabled = status;
             txtNote.Enabled = status;
             btnChooseDate.Enabled = status;
+            btnDC.Enabled = status;
+            btnGC.Enabled = status;
+            btnJewelry.Enabled = status;
+            btnNonDC.Enabled = status;
+            btnNonGC.Enabled = status;
+            btnGold.Enabled = status;
+            btnSetting.Enabled = status;
+            btnETC.Enabled = status;
         }
         protected override bool SaveData()
         {
@@ -223,18 +233,18 @@ namespace DiamondShop
                 {
                     foreach (dsSellBookDetail.SellBookDetailRow row1 in tds1.SellBookDetail.Rows)
                     {
-                        if (row1.ID.ToString() == "")
+                        if (row1.ID < 0)
                         {
                             SetCreateBy(row1);
-                            chkFlag = ser.DoInsertData("SellBookDetail", tds1, 0);
+                            row1.RefID = id;
                         }
                         else
                         {
                             SetEditBy(row1);
-                            chkFlag = ser.DoUpdateData("SellBookDetail", tds1);
-                        }
+                        }                    
                     }
 
+                    chkFlag = ser.DoInsertData("SellBookDetail", tds1, 0);
                     tds1.AcceptChanges();
                 }
             }
@@ -354,12 +364,6 @@ namespace DiamondShop
             isEdit = true;
         }
 
-        private void btnAdd_Click(object sender, EventArgs e)
-        {
-            DiamondCerList frm = new DiamondCerList(1);
-            frm.ShowDialog();
-        }
-
         private void btnChooseDate_Click(object sender, EventArgs e)
         {
             if (monthCalendar1.Visible == false)
@@ -378,7 +382,7 @@ namespace DiamondShop
             monthCalendar1.Visible = false;
         }
 
-        private void btnGc_Click(object sender, EventArgs e)
+        private void btnGC_Click(object sender, EventArgs e)
         {
             SearchBuyBookGemstoneCerList frm = new SearchBuyBookGemstoneCerList(0);
             frm.ShowDialog();
@@ -450,7 +454,7 @@ namespace DiamondShop
 
             if (tds1.SellBookDetail.Rows.Count > 0)
             {
-                tds1.AcceptChanges();
+                grid1.DataSource = tds1.SellBookDetail;
                 grid1.Refresh();
             }
         }
