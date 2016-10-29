@@ -102,7 +102,6 @@
             this.Payment = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DueDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ShopName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Setting = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ReportNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SoldToName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.W = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -505,7 +504,6 @@
             this.Payment,
             this.DueDate,
             this.ShopName,
-            this.Setting,
             this.ReportNumber,
             this.SoldToName,
             this.W,
@@ -522,6 +520,7 @@
             this.gridDiamondCer.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridDiamondCer.Size = new System.Drawing.Size(1284, 398);
             this.gridDiamondCer.TabIndex = 2;
+            this.gridDiamondCer.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridDiamondCer_CellClick);
             // 
             // Select
             // 
@@ -617,7 +616,7 @@
             this.ColorTypeName.HeaderText = "ColorType";
             this.ColorTypeName.Name = "ColorTypeName";
             this.ColorTypeName.ReadOnly = true;
-            this.ColorTypeName.Width = 150;
+            this.ColorTypeName.Width = 130;
             // 
             // ColorName
             // 
@@ -633,7 +632,7 @@
             this.ClearityName.Name = "ClearityName";
             this.ClearityName.ReadOnly = true;
             this.ClearityName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ClearityName.Width = 160;
+            this.ClearityName.Width = 70;
             // 
             // CutName
             // 
@@ -642,7 +641,7 @@
             this.CutName.Name = "CutName";
             this.CutName.ReadOnly = true;
             this.CutName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.CutName.Width = 110;
+            this.CutName.Width = 70;
             // 
             // PolishName
             // 
@@ -651,7 +650,7 @@
             this.PolishName.Name = "PolishName";
             this.PolishName.ReadOnly = true;
             this.PolishName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.PolishName.Width = 120;
+            this.PolishName.Width = 70;
             // 
             // SymmetryName
             // 
@@ -659,7 +658,7 @@
             this.SymmetryName.HeaderText = "Symmetry";
             this.SymmetryName.Name = "SymmetryName";
             this.SymmetryName.ReadOnly = true;
-            this.SymmetryName.Width = 120;
+            this.SymmetryName.Width = 80;
             // 
             // Seller
             // 
@@ -668,7 +667,7 @@
             this.Seller.Name = "Seller";
             this.Seller.ReadOnly = true;
             this.Seller.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Seller.Width = 150;
+            this.Seller.Width = 120;
             // 
             // Price
             // 
@@ -701,7 +700,6 @@
             this.Cost.HeaderText = "Cost";
             this.Cost.Name = "Cost";
             this.Cost.ReadOnly = true;
-            this.Cost.Width = 120;
             // 
             // USDRate
             // 
@@ -712,7 +710,7 @@
             this.USDRate.HeaderText = "USD Rate";
             this.USDRate.Name = "USDRate";
             this.USDRate.ReadOnly = true;
-            this.USDRate.Width = 120;
+            this.USDRate.Width = 110;
             // 
             // CostBaht
             // 
@@ -751,21 +749,13 @@
             this.ShopName.ReadOnly = true;
             this.ShopName.Width = 90;
             // 
-            // Setting
-            // 
-            this.Setting.DataPropertyName = "Setting";
-            this.Setting.HeaderText = "Setting";
-            this.Setting.Name = "Setting";
-            this.Setting.ReadOnly = true;
-            this.Setting.Width = 170;
-            // 
             // ReportNumber
             // 
             this.ReportNumber.DataPropertyName = "ReportNumber";
-            this.ReportNumber.HeaderText = "Report Number";
+            this.ReportNumber.HeaderText = "Report No.";
             this.ReportNumber.Name = "ReportNumber";
             this.ReportNumber.ReadOnly = true;
-            this.ReportNumber.Width = 160;
+            this.ReportNumber.Width = 140;
             // 
             // SoldToName
             // 
@@ -773,6 +763,7 @@
             this.SoldToName.HeaderText = "Sold To";
             this.SoldToName.Name = "SoldToName";
             this.SoldToName.ReadOnly = true;
+            this.SoldToName.Width = 120;
             // 
             // W
             // 
@@ -784,6 +775,7 @@
             this.W.HeaderText = "W";
             this.W.Name = "W";
             this.W.ReadOnly = true;
+            this.W.Width = 60;
             // 
             // L
             // 
@@ -795,6 +787,7 @@
             this.L.HeaderText = "L";
             this.L.Name = "L";
             this.L.ReadOnly = true;
+            this.L.Width = 60;
             // 
             // D
             // 
@@ -806,6 +799,7 @@
             this.D.HeaderText = "D";
             this.D.Name = "D";
             this.D.ReadOnly = true;
+            this.D.Width = 60;
             // 
             // SearchBuyBookDiamondCerList
             // 
@@ -863,6 +857,7 @@
         private System.Windows.Forms.TextBox txtCode2;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Button btnSelect;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Select;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn RowNum;
@@ -888,12 +883,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Payment;
         private System.Windows.Forms.DataGridViewTextBoxColumn DueDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn ShopName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Setting;
         private System.Windows.Forms.DataGridViewTextBoxColumn ReportNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn SoldToName;
         private System.Windows.Forms.DataGridViewTextBoxColumn W;
         private System.Windows.Forms.DataGridViewTextBoxColumn L;
         private System.Windows.Forms.DataGridViewTextBoxColumn D;
-        private System.Windows.Forms.Button btnSelect;
     }
 }

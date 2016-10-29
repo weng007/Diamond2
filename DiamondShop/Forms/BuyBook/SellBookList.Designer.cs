@@ -196,7 +196,7 @@
             this.SellDate.HeaderText = "Sold Date";
             this.SellDate.Name = "SellDate";
             this.SellDate.ReadOnly = true;
-            this.SellDate.Width = 120;
+            this.SellDate.Width = 110;
             // 
             // CustomerName
             // 

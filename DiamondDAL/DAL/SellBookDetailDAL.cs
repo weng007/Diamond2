@@ -4,37 +4,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DiamondDS.DS;
+using System.Data;
 
 namespace DiamondDAL.DAL
 {
-    public class SellBookDAL
+    public class SellBookDetailDAL
     {
         SQLHelper SQL = new SQLHelper();
-        dsSellbook ds = new dsSellbook();
+        dsSellBookDetail ds = new dsSellBookDetail();
         int flag = 0;
 
-        public dsSellbook DoSearchData(string code)
-        {
-            try
-            {
-                SQL.ClearParameter();
-                SQL.CreateParameter("Code", code);
-                SQL.FillDataSetBySP("SP_SellBook_Search", ds.SellBook);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-
-            return ds;
-        }
-        public dsSellbook DoSelectData(int id)
+        public dsSellBookDetail DoSelectData(int id)
         {
             try
             {
                 SQL.ClearParameter();
                 SQL.CreateParameter("ID", id);
-                SQL.FillDataSetBySP("SP_SellBook_Sel", ds.SellBook);            
+                SQL.FillDataSetBySP("SP_SellBookDetail_Sel", ds.SellBookDetail);
             }
             catch (Exception ex)
             {
@@ -44,12 +30,21 @@ namespace DiamondDAL.DAL
             return ds;
         }
 
-        public bool DoInsertData(dsSellbook tds)
+        public bool DoInsertData(dsSellBookDetail tds)
         {
             try
             {
-                dsSellbook.SellBookRow row = tds.SellBook[0];
-                SQL.ExecuteSP("SP_SellBook_Ins", row);
+                foreach (dsSellBookDetail.SellBookDetailRow row in tds.SellBookDetail.Rows)
+                {
+                    if (row.ID < 0)
+                    {
+                        SQL.ExecuteSP("SP_SellBookDetail_Ins", row);
+                    }
+                    else
+                    {
+                        SQL.ExecuteSP("SP_SellBookDetail_Upd", row);
+                    }
+                }              
             }
             catch(Exception ex)
             {
@@ -59,19 +54,21 @@ namespace DiamondDAL.DAL
             return true;
         }
 
-        public bool DoUpdateData(dsSellbook tds)
+        public bool DoUpdateData(dsSellBookDetail tds)
         {
             try
             {
-                dsSellbook.SellBookRow row = tds.SellBook[0];
-                flag = SQL.ExecuteSP("SP_SellBook_Upd", row);
+                foreach (dsSellBookDetail.SellBookDetailRow row in tds.SellBookDetail.Rows)
+                {
+                    SQL.ExecuteSP("SP_SellBookDetail_Upd", row);
+                }
             }
             catch (Exception ex)
             {
                 throw ex;
             }
 
-            return Convert.ToBoolean(flag);
+            return true;
         }
 
         public bool DoDeleteData(int id)
@@ -80,7 +77,7 @@ namespace DiamondDAL.DAL
             {
                 SQL.ClearParameter();
                 SQL.CreateParameter("@ID", id);
-                flag = SQL.ExecuteSP("SP_SellBook_Del");
+                flag = SQL.ExecuteSP("SP_SellBookDetail_Del");
             }
             catch(Exception ex)
             {
@@ -88,6 +85,22 @@ namespace DiamondDAL.DAL
             }
 
             return Convert.ToBoolean(flag);
+        }
+
+        public dsSellBookDetail GetSellBookDetail(string idSelected)
+        {
+            try
+            {
+                SQL.ClearParameter();
+                SQL.CreateParameter("@IDSelected", idSelected);
+                SQL.FillDataSetBySP("SP_GetSellBookDetail", ds.SellBookDetail);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return ds;
         }
     }
 }

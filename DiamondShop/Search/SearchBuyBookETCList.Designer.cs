@@ -166,6 +166,7 @@
             this.gridETC.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridETC.Size = new System.Drawing.Size(755, 444);
             this.gridETC.TabIndex = 2;
+            this.gridETC.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridETC_CellClick);
             // 
             // Select
             // 

@@ -120,6 +120,20 @@ namespace Diamond
         }
 
         [WebMethod]
+        public bool UpdateSellBookStatus(int id, string status)
+        {
+            SellBookBiz biz = GM.GetSellBookBiz();
+            try
+            {
+                return biz.UpdateSellBookStatus(id, status);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        [WebMethod]
         public int UpdateOrderStatus(int id, int WarningID)
         {
             GeneralBiz biz = new GeneralBiz();
@@ -382,6 +396,20 @@ namespace Diamond
             try
             {
                 return biz.DoSearchByCode(code);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        [WebMethod]
+        public DataSet GetSellBookDetail(string idSelected)
+        {
+            SellBookDetailBiz biz = GM.GetSellBookDetailBiz();
+            try
+            {
+                return biz.GetSellBookDetail(idSelected);
             }
             catch (Exception ex)
             {

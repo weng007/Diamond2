@@ -167,5 +167,21 @@ namespace DiamondShop
 
             this.Close();
         }
+
+        private void gridGemstoneCer_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 0)
+            {
+                if (gridGemstoneCer.SelectedCells[0].Value == null)
+                {
+                    gridGemstoneCer.SelectedCells[0].Value = true;
+                    id = (int)gridGemstoneCer.SelectedRows[0].Cells["ID"].Value;
+                }
+                else
+                {
+                    gridGemstoneCer.SelectedCells[0].Value = false;
+                }
+            }
+        }
     }
 }

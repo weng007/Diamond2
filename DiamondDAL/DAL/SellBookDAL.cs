@@ -10,10 +10,10 @@ namespace DiamondDAL.DAL
     public class SellBookDAL
     {
         SQLHelper SQL = new SQLHelper();
-        dsSellbook ds = new dsSellbook();
+        dsSellBook ds = new dsSellBook();
         int flag = 0;
 
-        public dsSellbook DoSearchData(string code)
+        public dsSellBook DoSearchData(string code)
         {
             try
             {
@@ -28,7 +28,7 @@ namespace DiamondDAL.DAL
 
             return ds;
         }
-        public dsSellbook DoSelectData(int id)
+        public dsSellBook DoSelectData(int id)
         {
             try
             {
@@ -44,11 +44,11 @@ namespace DiamondDAL.DAL
             return ds;
         }
 
-        public bool DoInsertData(dsSellbook tds)
+        public bool DoInsertData(dsSellBook tds)
         {
             try
             {
-                dsSellbook.SellBookRow row = tds.SellBook[0];
+                dsSellBook.SellBookRow row = tds.SellBook[0];
                 SQL.ExecuteSP("SP_SellBook_Ins", row);
             }
             catch(Exception ex)
@@ -59,11 +59,11 @@ namespace DiamondDAL.DAL
             return true;
         }
 
-        public bool DoUpdateData(dsSellbook tds)
+        public bool DoUpdateData(dsSellBook tds)
         {
             try
             {
-                dsSellbook.SellBookRow row = tds.SellBook[0];
+                dsSellBook.SellBookRow row = tds.SellBook[0];
                 flag = SQL.ExecuteSP("SP_SellBook_Upd", row);
             }
             catch (Exception ex)
@@ -89,5 +89,22 @@ namespace DiamondDAL.DAL
 
             return Convert.ToBoolean(flag);
         }
+
+        public bool UpdateSellBookStatus(int id, int status)
+        {
+            try
+            {
+                SQL.ClearParameter();
+                SQL.CreateParameter("ID", id);
+                SQL.CreateParameter("Status", status);
+                flag = SQL.ExecuteSP("SP_SellBook_Upd_SellStatus");
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return Convert.ToBoolean(flag);
+        }      
     }
 }

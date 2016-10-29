@@ -333,6 +333,12 @@ namespace DiamondShop
             txt.Text = GM.ConvertDoubleToString(txt, 0);
         }
 
+        private void btnAvailable_Click(object sender, EventArgs e)
+        {
+            ser1.UpdateJewelryStatus(refID, "Available");
+            LoadData();
+        }
+
         private void btnPending_Click(object sender, EventArgs e)
         {
             ser1.UpdateJewelryStatus(refID, "Pending");
@@ -342,12 +348,6 @@ namespace DiamondShop
         private void btnSold_Click(object sender, EventArgs e)
         {
             ser1.UpdateJewelryStatus(refID, "Sold");
-            LoadData();
-        }
-
-        private void btnCancel_Click(object sender, EventArgs e)
-        {
-            ser1.UpdateJewelryStatus(refID, "Shop");
             LoadData();
         }
 
