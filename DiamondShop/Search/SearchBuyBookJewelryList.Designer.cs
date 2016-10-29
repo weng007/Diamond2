@@ -299,10 +299,9 @@
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.Format = "N0";
             this.Amount1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.Amount1.HeaderText = "Amount DC.";
+            this.Amount1.HeaderText = "Amt. DC.";
             this.Amount1.Name = "Amount1";
             this.Amount1.ReadOnly = true;
-            this.Amount1.Width = 140;
             // 
             // Weight1
             // 
@@ -310,10 +309,10 @@
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
             dataGridViewCellStyle3.Format = "N2";
             this.Weight1.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Weight1.HeaderText = "Weight DC.";
+            this.Weight1.HeaderText = "นน. DC.";
             this.Weight1.Name = "Weight1";
             this.Weight1.ReadOnly = true;
-            this.Weight1.Width = 140;
+            this.Weight1.Width = 90;
             // 
             // Amount2
             // 
