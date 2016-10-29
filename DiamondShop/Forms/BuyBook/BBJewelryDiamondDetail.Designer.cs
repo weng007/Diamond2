@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BBJewelryDiamondDetail));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.button1 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnDel1 = new System.Windows.Forms.Button();
@@ -43,18 +43,11 @@
             this.txtSumWeight1 = new System.Windows.Forms.TextBox();
             this.txtSumAmount1 = new System.Windows.Forms.TextBox();
             this.grid2 = new System.Windows.Forms.DataGridView();
-            this.RowNum1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ID1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RefID2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Shape1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Amount1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Weight1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Color1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Clearity1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.txtSumWeight = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.grid1 = new System.Windows.Forms.DataGridView();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.RowNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RefID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -66,7 +59,14 @@
             this.ColorTypeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColorName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ClearityName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.RowNum1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ID1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RefID2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Shape1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Amount1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Weight1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Color1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Clearity1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid2)).BeginInit();
@@ -101,7 +101,7 @@
             this.panel3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel3.Location = new System.Drawing.Point(12, 72);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1254, 524);
+            this.panel3.Size = new System.Drawing.Size(1071, 524);
             this.panel3.TabIndex = 73;
             // 
             // btnDel1
@@ -112,7 +112,7 @@
             this.btnDel1.FlatAppearance.BorderSize = 0;
             this.btnDel1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDel1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDel1.Location = new System.Drawing.Point(768, 311);
+            this.btnDel1.Location = new System.Drawing.Point(640, 311);
             this.btnDel1.Name = "btnDel1";
             this.btnDel1.Size = new System.Drawing.Size(30, 30);
             this.btnDel1.TabIndex = 127;
@@ -128,7 +128,7 @@
             this.btnAdd1.FlatAppearance.BorderSize = 0;
             this.btnAdd1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd1.Location = new System.Drawing.Point(768, 275);
+            this.btnAdd1.Location = new System.Drawing.Point(640, 275);
             this.btnAdd1.Name = "btnAdd1";
             this.btnAdd1.Size = new System.Drawing.Size(30, 30);
             this.btnAdd1.TabIndex = 126;
@@ -144,7 +144,7 @@
             this.btnDel.FlatAppearance.BorderSize = 0;
             this.btnDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDel.Location = new System.Drawing.Point(1211, 71);
+            this.btnDel.Location = new System.Drawing.Point(1030, 71);
             this.btnDel.Name = "btnDel";
             this.btnDel.Size = new System.Drawing.Size(30, 30);
             this.btnDel.TabIndex = 125;
@@ -160,7 +160,7 @@
             this.btnAdd.FlatAppearance.BorderSize = 0;
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(1211, 35);
+            this.btnAdd.Location = new System.Drawing.Point(1030, 35);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(30, 30);
             this.btnAdd.TabIndex = 124;
@@ -217,84 +217,13 @@
             this.grid2.RowTemplate.Height = 25;
             this.grid2.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.grid2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.grid2.Size = new System.Drawing.Size(750, 189);
+            this.grid2.Size = new System.Drawing.Size(622, 189);
             this.grid2.TabIndex = 120;
             this.grid2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid2_CellClick);
             this.grid2.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid2_CellEndEdit);
             this.grid2.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid2_CellEnter);
             this.grid2.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.grid2_CellFormatting);
             this.grid2.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.grid2_EditingControlShowing);
-            // 
-            // RowNum1
-            // 
-            this.RowNum1.DataPropertyName = "RowNum";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            this.RowNum1.DefaultCellStyle = dataGridViewCellStyle1;
-            this.RowNum1.HeaderText = "No.";
-            this.RowNum1.Name = "RowNum1";
-            this.RowNum1.Width = 60;
-            // 
-            // ID1
-            // 
-            this.ID1.DataPropertyName = "ID";
-            this.ID1.HeaderText = "ID";
-            this.ID1.Name = "ID1";
-            this.ID1.Visible = false;
-            // 
-            // RefID2
-            // 
-            this.RefID2.DataPropertyName = "RefID";
-            this.RefID2.HeaderText = "RefID";
-            this.RefID2.Name = "RefID2";
-            this.RefID2.Visible = false;
-            // 
-            // Shape1
-            // 
-            this.Shape1.DataPropertyName = "Shape";
-            this.Shape1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Shape1.HeaderText = "Shape";
-            this.Shape1.Name = "Shape1";
-            this.Shape1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Shape1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Shape1.Width = 150;
-            // 
-            // Amount1
-            // 
-            this.Amount1.DataPropertyName = "Amount";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle2.Format = "N0";
-            dataGridViewCellStyle2.NullValue = "0";
-            this.Amount1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.Amount1.HeaderText = "Amount";
-            this.Amount1.Name = "Amount1";
-            // 
-            // Weight1
-            // 
-            this.Weight1.DataPropertyName = "Weight";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle3.Format = "N2";
-            dataGridViewCellStyle3.NullValue = "0";
-            this.Weight1.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Weight1.HeaderText = "Weight";
-            this.Weight1.Name = "Weight1";
-            // 
-            // Color1
-            // 
-            this.Color1.DataPropertyName = "Color";
-            this.Color1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Color1.HeaderText = "Color";
-            this.Color1.Name = "Color1";
-            this.Color1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Color1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Color1.Width = 150;
-            // 
-            // Clearity1
-            // 
-            this.Clearity1.DataPropertyName = "Clearity";
-            this.Clearity1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Clearity1.HeaderText = "Clearity";
-            this.Clearity1.Name = "Clearity1";
-            this.Clearity1.Width = 170;
             // 
             // txtSumWeight
             // 
@@ -354,17 +283,27 @@
             this.grid1.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grid1.RowTemplate.Height = 30;
             this.grid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grid1.Size = new System.Drawing.Size(1193, 181);
+            this.grid1.Size = new System.Drawing.Size(1012, 181);
             this.grid1.TabIndex = 46;
             this.grid1.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.grid1_CellFormatting);
             this.grid1.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.grid1_EditingControlShowing);
             this.grid1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.grid1_MouseDoubleClick);
             // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(35)))), ((int)(((byte)(69)))));
+            this.panel4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel4.BackgroundImage")));
+            this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.panel4.Location = new System.Drawing.Point(12, 3);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(207, 32);
+            this.panel4.TabIndex = 45;
+            // 
             // RowNum
             // 
             this.RowNum.DataPropertyName = "RowNum";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            this.RowNum.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            this.RowNum.DefaultCellStyle = dataGridViewCellStyle9;
             this.RowNum.HeaderText = "No.";
             this.RowNum.Name = "RowNum";
             this.RowNum.Width = 60;
@@ -412,18 +351,17 @@
             this.ShapeName.HeaderText = "Shape";
             this.ShapeName.Name = "ShapeName";
             this.ShapeName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ShapeName.Width = 130;
             // 
             // Weight
             // 
             this.Weight.DataPropertyName = "Weight";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle5.Format = "N2";
-            dataGridViewCellStyle5.NullValue = "0";
-            this.Weight.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle10.Format = "N2";
+            dataGridViewCellStyle10.NullValue = "0";
+            this.Weight.DefaultCellStyle = dataGridViewCellStyle10;
             this.Weight.HeaderText = "Weight";
             this.Weight.Name = "Weight";
-            this.Weight.Width = 90;
+            this.Weight.Width = 70;
             // 
             // ColorTypeName
             // 
@@ -431,7 +369,7 @@
             this.ColorTypeName.HeaderText = "ColorType";
             this.ColorTypeName.Name = "ColorTypeName";
             this.ColorTypeName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ColorTypeName.Width = 140;
+            this.ColorTypeName.Width = 130;
             // 
             // ColorName
             // 
@@ -439,7 +377,6 @@
             this.ColorName.HeaderText = "Color";
             this.ColorName.Name = "ColorName";
             this.ColorName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ColorName.Width = 150;
             // 
             // ClearityName
             // 
@@ -447,24 +384,82 @@
             this.ClearityName.HeaderText = "Clearity";
             this.ClearityName.Name = "ClearityName";
             this.ClearityName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ClearityName.Width = 170;
             // 
-            // panel4
+            // RowNum1
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(35)))), ((int)(((byte)(69)))));
-            this.panel4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel4.BackgroundImage")));
-            this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.panel4.Location = new System.Drawing.Point(12, 3);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(207, 32);
-            this.panel4.TabIndex = 45;
+            this.RowNum1.DataPropertyName = "RowNum";
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            this.RowNum1.DefaultCellStyle = dataGridViewCellStyle6;
+            this.RowNum1.HeaderText = "No.";
+            this.RowNum1.Name = "RowNum1";
+            this.RowNum1.Width = 60;
+            // 
+            // ID1
+            // 
+            this.ID1.DataPropertyName = "ID";
+            this.ID1.HeaderText = "ID";
+            this.ID1.Name = "ID1";
+            this.ID1.Visible = false;
+            // 
+            // RefID2
+            // 
+            this.RefID2.DataPropertyName = "RefID";
+            this.RefID2.HeaderText = "RefID";
+            this.RefID2.Name = "RefID2";
+            this.RefID2.Visible = false;
+            // 
+            // Shape1
+            // 
+            this.Shape1.DataPropertyName = "Shape";
+            this.Shape1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Shape1.HeaderText = "Shape";
+            this.Shape1.Name = "Shape1";
+            this.Shape1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Shape1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Shape1.Width = 150;
+            // 
+            // Amount1
+            // 
+            this.Amount1.DataPropertyName = "Amount";
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle7.Format = "N0";
+            dataGridViewCellStyle7.NullValue = "0";
+            this.Amount1.DefaultCellStyle = dataGridViewCellStyle7;
+            this.Amount1.HeaderText = "Amount";
+            this.Amount1.Name = "Amount1";
+            // 
+            // Weight1
+            // 
+            this.Weight1.DataPropertyName = "Weight";
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle8.Format = "N2";
+            dataGridViewCellStyle8.NullValue = "0";
+            this.Weight1.DefaultCellStyle = dataGridViewCellStyle8;
+            this.Weight1.HeaderText = "Weight";
+            this.Weight1.Name = "Weight1";
+            // 
+            // Color1
+            // 
+            this.Color1.DataPropertyName = "Color";
+            this.Color1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Color1.HeaderText = "Color";
+            this.Color1.Name = "Color1";
+            this.Color1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Color1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // Clearity1
+            // 
+            this.Clearity1.DataPropertyName = "Clearity";
+            this.Clearity1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Clearity1.HeaderText = "Clearity";
+            this.Clearity1.Name = "Clearity1";
             // 
             // BBJewelryDiamondDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(195)))), ((int)(((byte)(157)))));
-            this.ClientSize = new System.Drawing.Size(1278, 613);
+            this.ClientSize = new System.Drawing.Size(1093, 613);
             this.Controls.Add(this.panel3);
             this.Name = "BBJewelryDiamondDetail";
             this.Text = "GemstoneCer";

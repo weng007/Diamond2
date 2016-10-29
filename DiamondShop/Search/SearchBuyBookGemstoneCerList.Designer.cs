@@ -521,6 +521,7 @@
             this.Code2.HeaderText = "Code2";
             this.Code2.Name = "Code2";
             this.Code2.ReadOnly = true;
+            this.Code2.Width = 150;
             // 
             // LabName
             // 
@@ -528,7 +529,7 @@
             this.LabName.HeaderText = "Lab";
             this.LabName.Name = "LabName";
             this.LabName.ReadOnly = true;
-            this.LabName.Width = 80;
+            this.LabName.Width = 60;
             // 
             // IdentificationName
             // 
@@ -564,7 +565,7 @@
             this.Weight.HeaderText = "Weight";
             this.Weight.Name = "Weight";
             this.Weight.ReadOnly = true;
-            this.Weight.Width = 80;
+            this.Weight.Width = 70;
             // 
             // ColorName
             // 
@@ -572,7 +573,6 @@
             this.ColorName.HeaderText = "Color";
             this.ColorName.Name = "ColorName";
             this.ColorName.ReadOnly = true;
-            this.ColorName.Width = 70;
             // 
             // CommentName
             // 
@@ -621,7 +621,7 @@
             this.USDRate.HeaderText = "USD Rate";
             this.USDRate.Name = "USDRate";
             this.USDRate.ReadOnly = true;
-            this.USDRate.Width = 120;
+            this.USDRate.Width = 110;
             // 
             // TotalUSD
             // 
@@ -682,7 +682,7 @@
             this.ShopName.HeaderText = "Location";
             this.ShopName.Name = "ShopName";
             this.ShopName.ReadOnly = true;
-            this.ShopName.Width = 60;
+            this.ShopName.Width = 120;
             // 
             // Setting
             // 
@@ -722,6 +722,7 @@
             this.W.HeaderText = "W";
             this.W.Name = "W";
             this.W.ReadOnly = true;
+            this.W.Width = 60;
             // 
             // L
             // 
@@ -733,6 +734,7 @@
             this.L.HeaderText = "L";
             this.L.Name = "L";
             this.L.ReadOnly = true;
+            this.L.Width = 60;
             // 
             // D
             // 
@@ -744,6 +746,7 @@
             this.D.HeaderText = "D";
             this.D.Name = "D";
             this.D.ReadOnly = true;
+            this.D.Width = 60;
             // 
             // SearchBuyBookGemstoneCerList
             // 

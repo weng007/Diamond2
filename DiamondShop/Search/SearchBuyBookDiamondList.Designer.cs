@@ -319,7 +319,7 @@
             this.Code.HeaderText = "Code";
             this.Code.Name = "Code";
             this.Code.ReadOnly = true;
-            this.Code.Width = 160;
+            this.Code.Width = 150;
             // 
             // Code2
             // 
@@ -327,6 +327,7 @@
             this.Code2.HeaderText = "Code2";
             this.Code2.Name = "Code2";
             this.Code2.ReadOnly = true;
+            this.Code2.Width = 150;
             // 
             // BuyDate
             // 
@@ -392,7 +393,6 @@
             this.ColorName.HeaderText = "Color";
             this.ColorName.Name = "ColorName";
             this.ColorName.ReadOnly = true;
-            this.ColorName.Width = 90;
             // 
             // ClearityName
             // 
@@ -401,7 +401,7 @@
             this.ClearityName.Name = "ClearityName";
             this.ClearityName.ReadOnly = true;
             this.ClearityName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ClearityName.Width = 150;
+            this.ClearityName.Width = 70;
             // 
             // PriceCaratUSD
             // 

@@ -366,7 +366,6 @@
             this.ColorName.HeaderText = "Color";
             this.ColorName.Name = "ColorName";
             this.ColorName.ReadOnly = true;
-            this.ColorName.Width = 90;
             // 
             // ClearityName
             // 

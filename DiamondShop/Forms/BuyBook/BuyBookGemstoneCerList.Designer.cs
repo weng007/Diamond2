@@ -515,7 +515,7 @@
             this.LabName.HeaderText = "Lab";
             this.LabName.Name = "LabName";
             this.LabName.ReadOnly = true;
-            this.LabName.Width = 80;
+            this.LabName.Width = 60;
             // 
             // IdentificationName
             // 
@@ -531,7 +531,6 @@
             this.ShapeName.HeaderText = "Shape";
             this.ShapeName.Name = "ShapeName";
             this.ShapeName.ReadOnly = true;
-            this.ShapeName.Width = 120;
             // 
             // CutName
             // 
@@ -559,7 +558,6 @@
             this.ColorName.HeaderText = "Color";
             this.ColorName.Name = "ColorName";
             this.ColorName.ReadOnly = true;
-            this.ColorName.Width = 70;
             // 
             // CommentName
             // 
@@ -608,7 +606,7 @@
             this.USDRate.HeaderText = "USD Rate";
             this.USDRate.Name = "USDRate";
             this.USDRate.ReadOnly = true;
-            this.USDRate.Width = 120;
+            this.USDRate.Width = 110;
             // 
             // TotalUSD
             // 
@@ -709,6 +707,7 @@
             this.W.HeaderText = "W";
             this.W.Name = "W";
             this.W.ReadOnly = true;
+            this.W.Width = 60;
             // 
             // L
             // 
@@ -720,6 +719,7 @@
             this.L.HeaderText = "L";
             this.L.Name = "L";
             this.L.ReadOnly = true;
+            this.L.Width = 60;
             // 
             // D
             // 
@@ -731,6 +731,7 @@
             this.D.HeaderText = "D";
             this.D.Name = "D";
             this.D.ReadOnly = true;
+            this.D.Width = 60;
             // 
             // BuyBookGemstoneCerList
             // 

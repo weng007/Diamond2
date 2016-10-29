@@ -338,7 +338,7 @@
             this.Code2.HeaderText = "Code2";
             this.Code2.Name = "Code2";
             this.Code2.ReadOnly = true;
-            this.Code2.Width = 120;
+            this.Code2.Width = 150;
             // 
             // ShapeName
             // 
@@ -474,6 +474,8 @@
         private System.Windows.Forms.TextBox txtESize;
         private System.Windows.Forms.TextBox txtCode2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Button btnSelect;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn RowNum;
         private System.Windows.Forms.DataGridViewTextBoxColumn BuyDate;
@@ -490,7 +492,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn PriceCarat;
         private System.Windows.Forms.DataGridViewTextBoxColumn MarketPrice;
         private System.Windows.Forms.DataGridViewTextBoxColumn Remain;
-        private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.Button btnSelect;
     }
 }

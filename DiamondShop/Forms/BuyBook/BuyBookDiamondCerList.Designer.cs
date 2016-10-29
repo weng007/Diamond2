@@ -609,7 +609,7 @@
             this.ColorTypeName.HeaderText = "ColorType";
             this.ColorTypeName.Name = "ColorTypeName";
             this.ColorTypeName.ReadOnly = true;
-            this.ColorTypeName.Width = 140;
+            this.ColorTypeName.Width = 130;
             // 
             // ColorName
             // 
@@ -651,7 +651,7 @@
             this.SymmetryName.HeaderText = "Symmetry";
             this.SymmetryName.Name = "SymmetryName";
             this.SymmetryName.ReadOnly = true;
-            this.SymmetryName.Width = 70;
+            this.SymmetryName.Width = 80;
             // 
             // Seller
             // 
@@ -741,7 +741,7 @@
             this.ShopName.HeaderText = "Location";
             this.ShopName.Name = "ShopName";
             this.ShopName.ReadOnly = true;
-            this.ShopName.Width = 120;
+            this.ShopName.Width = 90;
             // 
             // Setting
             // 
@@ -778,6 +778,7 @@
             this.W.HeaderText = "W";
             this.W.Name = "W";
             this.W.ReadOnly = true;
+            this.W.Width = 60;
             // 
             // L
             // 
@@ -789,6 +790,7 @@
             this.L.HeaderText = "L";
             this.L.Name = "L";
             this.L.ReadOnly = true;
+            this.L.Width = 60;
             // 
             // D
             // 
@@ -800,6 +802,7 @@
             this.D.HeaderText = "D";
             this.D.Name = "D";
             this.D.ReadOnly = true;
+            this.D.Width = 60;
             // 
             // BuyBookDiamondCerList
             // 

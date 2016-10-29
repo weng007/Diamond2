@@ -56,6 +56,7 @@
             this.txtSumWeight = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.grid1 = new System.Windows.Forms.DataGridView();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.RowNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RefID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -67,7 +68,6 @@
             this.Weight = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Color = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.Origin = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.panel6 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid2)).BeginInit();
@@ -102,7 +102,7 @@
             this.panel3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel3.Location = new System.Drawing.Point(12, 72);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1299, 534);
+            this.panel3.Size = new System.Drawing.Size(1144, 534);
             this.panel3.TabIndex = 73;
             // 
             // btnDel1
@@ -145,7 +145,7 @@
             this.btnDel.FlatAppearance.BorderSize = 0;
             this.btnDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDel.Location = new System.Drawing.Point(1263, 71);
+            this.btnDel.Location = new System.Drawing.Point(1101, 71);
             this.btnDel.Name = "btnDel";
             this.btnDel.Size = new System.Drawing.Size(30, 30);
             this.btnDel.TabIndex = 128;
@@ -161,7 +161,7 @@
             this.btnAdd.FlatAppearance.BorderSize = 0;
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(1263, 35);
+            this.btnAdd.Location = new System.Drawing.Point(1101, 35);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(30, 30);
             this.btnAdd.TabIndex = 127;
@@ -354,13 +354,23 @@
             this.grid1.RowTemplate.Height = 25;
             this.grid1.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.grid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.grid1.Size = new System.Drawing.Size(1245, 188);
+            this.grid1.Size = new System.Drawing.Size(1083, 188);
             this.grid1.TabIndex = 16;
             this.grid1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid2_CellClick);
             this.grid1.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid1_CellEndEdit);
             this.grid1.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid2_CellEnter);
             this.grid1.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.grid1_CellFormatting);
             this.grid1.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.grid1_EditingControlShowing);
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(35)))), ((int)(((byte)(69)))));
+            this.panel6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel6.BackgroundImage")));
+            this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.panel6.Location = new System.Drawing.Point(12, 3);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(207, 32);
+            this.panel6.TabIndex = 15;
             // 
             // RowNum
             // 
@@ -393,7 +403,7 @@
             this.Code.HeaderText = "Code";
             this.Code.Name = "Code";
             this.Code.ReadOnly = true;
-            this.Code.Width = 160;
+            this.Code.Width = 150;
             // 
             // ReportNumber
             // 
@@ -429,7 +439,6 @@
             this.Shape.Name = "Shape";
             this.Shape.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Shape.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Shape.Width = 130;
             // 
             // Weight
             // 
@@ -440,7 +449,7 @@
             this.Weight.DefaultCellStyle = dataGridViewCellStyle6;
             this.Weight.HeaderText = "Weight";
             this.Weight.Name = "Weight";
-            this.Weight.Width = 90;
+            this.Weight.Width = 70;
             // 
             // Color
             // 
@@ -448,7 +457,6 @@
             this.Color.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Color.HeaderText = "Color";
             this.Color.Name = "Color";
-            this.Color.Width = 130;
             // 
             // Origin
             // 
@@ -460,22 +468,12 @@
             this.Origin.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Origin.Width = 170;
             // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(35)))), ((int)(((byte)(69)))));
-            this.panel6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel6.BackgroundImage")));
-            this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.panel6.Location = new System.Drawing.Point(12, 3);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(207, 32);
-            this.panel6.TabIndex = 15;
-            // 
             // BBJewelryGemstoneDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(195)))), ((int)(((byte)(157)))));
-            this.ClientSize = new System.Drawing.Size(1323, 614);
+            this.ClientSize = new System.Drawing.Size(1165, 614);
             this.Controls.Add(this.panel3);
             this.Name = "BBJewelryGemstoneDetail";
             this.Text = "GemstoneCer";
