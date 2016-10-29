@@ -117,6 +117,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsBuyBookGold.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DS\dsBuyBookJewelry.cs">
+      <DependentUpon>dsBuyBookJewelry.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DS\dsBuyBookJewelry.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
