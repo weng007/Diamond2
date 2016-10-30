@@ -45,6 +45,7 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.txtShop = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.dtMemoDate = new System.Windows.Forms.DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
@@ -56,7 +57,6 @@
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.label26 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.txtShop = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -220,6 +220,14 @@
             this.panel3.Size = new System.Drawing.Size(701, 229);
             this.panel3.TabIndex = 6;
             // 
+            // txtShop
+            // 
+            this.txtShop.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtShop.Location = new System.Drawing.Point(161, 91);
+            this.txtShop.Name = "txtShop";
+            this.txtShop.Size = new System.Drawing.Size(156, 26);
+            this.txtShop.TabIndex = 4;
+            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -239,7 +247,7 @@
             this.dtMemoDate.Location = new System.Drawing.Point(161, 19);
             this.dtMemoDate.Name = "dtMemoDate";
             this.dtMemoDate.Size = new System.Drawing.Size(156, 26);
-            this.dtMemoDate.TabIndex = 264;
+            this.dtMemoDate.TabIndex = 2;
             // 
             // label9
             // 
@@ -258,7 +266,7 @@
             this.txtCost.Location = new System.Drawing.Point(161, 128);
             this.txtCost.Name = "txtCost";
             this.txtCost.Size = new System.Drawing.Size(156, 26);
-            this.txtCost.TabIndex = 262;
+            this.txtCost.TabIndex = 6;
             // 
             // label4
             // 
@@ -326,14 +334,6 @@
             this.label15.Size = new System.Drawing.Size(130, 24);
             this.label15.TabIndex = 46;
             this.label15.Text = "Expense Group";
-            // 
-            // txtShop
-            // 
-            this.txtShop.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtShop.Location = new System.Drawing.Point(161, 91);
-            this.txtShop.Name = "txtShop";
-            this.txtShop.Size = new System.Drawing.Size(156, 26);
-            this.txtShop.TabIndex = 263;
             // 
             // Expense
             // 

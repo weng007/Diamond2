@@ -167,7 +167,7 @@
             this.txtUSDRate.Location = new System.Drawing.Point(127, 84);
             this.txtUSDRate.Name = "txtUSDRate";
             this.txtUSDRate.Size = new System.Drawing.Size(61, 26);
-            this.txtUSDRate.TabIndex = 256;
+            this.txtUSDRate.TabIndex = 4;
             this.txtUSDRate.Text = "0";
             this.txtUSDRate.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtUSDRate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCost1_KeyPress);
@@ -226,7 +226,7 @@
             this.txtCode2.Location = new System.Drawing.Point(378, 17);
             this.txtCode2.Name = "txtCode2";
             this.txtCode2.Size = new System.Drawing.Size(146, 26);
-            this.txtCode2.TabIndex = 4;
+            this.txtCode2.TabIndex = 6;
             this.txtCode2.TextChanged += new System.EventHandler(this.txtRemark_TextChanged);
             // 
             // cmbBuyer
@@ -277,7 +277,7 @@
             this.rdoYes.Location = new System.Drawing.Point(970, 165);
             this.rdoYes.Name = "rdoYes";
             this.rdoYes.Size = new System.Drawing.Size(55, 24);
-            this.rdoYes.TabIndex = 196;
+            this.rdoYes.TabIndex = 20;
             this.rdoYes.Text = "Yes";
             this.rdoYes.UseVisualStyleBackColor = true;
             this.rdoYes.CheckedChanged += new System.EventHandler(this.rdoYes_CheckedChanged);

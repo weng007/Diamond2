@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BuyBookGemstoneCer));
             this.dtBuyDate = new System.Windows.Forms.DateTimePicker();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.lnkSetting = new System.Windows.Forms.LinkLabel();
             this.btnFileDel = new System.Windows.Forms.Button();
             this.btnChooseDate = new System.Windows.Forms.Button();
             this.txtPayDate = new System.Windows.Forms.TextBox();
@@ -105,7 +106,6 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.openFileDialog2 = new System.Windows.Forms.OpenFileDialog();
             this.openFileDialog3 = new System.Windows.Forms.OpenFileDialog();
-            this.lnkSetting = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -200,6 +200,16 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1024, 565);
             this.panel3.TabIndex = 74;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            // 
+            // lnkSetting
+            // 
+            this.lnkSetting.AutoSize = true;
+            this.lnkSetting.Location = new System.Drawing.Point(787, 88);
+            this.lnkSetting.Name = "lnkSetting";
+            this.lnkSetting.Size = new System.Drawing.Size(0, 20);
+            this.lnkSetting.TabIndex = 309;
+            this.lnkSetting.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkSetting_LinkClicked);
             // 
             // btnFileDel
             // 
@@ -952,15 +962,6 @@
             // openFileDialog3
             // 
             this.openFileDialog3.FileName = "openFileDialog3";
-            // 
-            // lnkSetting
-            // 
-            this.lnkSetting.AutoSize = true;
-            this.lnkSetting.Location = new System.Drawing.Point(787, 88);
-            this.lnkSetting.Name = "lnkSetting";
-            this.lnkSetting.Size = new System.Drawing.Size(0, 20);
-            this.lnkSetting.TabIndex = 309;
-            this.lnkSetting.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkSetting_LinkClicked);
             // 
             // BuyBookGemstoneCer
             // 

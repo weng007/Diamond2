@@ -109,7 +109,7 @@
             this.txtUSDRate.Location = new System.Drawing.Point(462, 128);
             this.txtUSDRate.Name = "txtUSDRate";
             this.txtUSDRate.Size = new System.Drawing.Size(61, 26);
-            this.txtUSDRate.TabIndex = 259;
+            this.txtUSDRate.TabIndex = 14;
             this.txtUSDRate.Text = "0";
             this.txtUSDRate.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtUSDRate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrice_KeyPress);

@@ -135,7 +135,7 @@
             this.dtOrderDate.Location = new System.Drawing.Point(126, 33);
             this.dtOrderDate.Name = "dtOrderDate";
             this.dtOrderDate.Size = new System.Drawing.Size(150, 26);
-            this.dtOrderDate.TabIndex = 0;
+            this.dtOrderDate.TabIndex = 1;
             this.dtOrderDate.ValueChanged += new System.EventHandler(this.dtBuyDate_ValueChanged);
             // 
             // panel3
@@ -612,7 +612,7 @@
             this.txtCustNote.Multiline = true;
             this.txtCustNote.Name = "txtCustNote";
             this.txtCustNote.Size = new System.Drawing.Size(212, 143);
-            this.txtCustNote.TabIndex = 279;
+            this.txtCustNote.TabIndex = 20;
             // 
             // txtImageNote
             // 
@@ -761,7 +761,7 @@
             this.txtNote.Multiline = true;
             this.txtNote.Name = "txtNote";
             this.txtNote.Size = new System.Drawing.Size(225, 97);
-            this.txtNote.TabIndex = 262;
+            this.txtNote.TabIndex = 18;
             // 
             // label17
             // 
@@ -824,7 +824,7 @@
             this.txtPaid.Location = new System.Drawing.Point(713, 108);
             this.txtPaid.Name = "txtPaid";
             this.txtPaid.Size = new System.Drawing.Size(148, 26);
-            this.txtPaid.TabIndex = 253;
+            this.txtPaid.TabIndex = 14;
             this.txtPaid.Text = "0";
             this.txtPaid.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtPaid.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrice_KeyPress);
@@ -835,7 +835,7 @@
             this.txtOldBody.Location = new System.Drawing.Point(428, 246);
             this.txtOldBody.Name = "txtOldBody";
             this.txtOldBody.Size = new System.Drawing.Size(149, 26);
-            this.txtOldBody.TabIndex = 252;
+            this.txtOldBody.TabIndex = 12;
             // 
             // label5
             // 
@@ -862,21 +862,21 @@
             this.txtLaser.Location = new System.Drawing.Point(428, 211);
             this.txtLaser.Name = "txtLaser";
             this.txtLaser.Size = new System.Drawing.Size(149, 26);
-            this.txtLaser.TabIndex = 248;
+            this.txtLaser.TabIndex = 10;
             // 
             // txtCoating
             // 
             this.txtCoating.Location = new System.Drawing.Point(428, 175);
             this.txtCoating.Name = "txtCoating";
             this.txtCoating.Size = new System.Drawing.Size(149, 26);
-            this.txtCoating.TabIndex = 247;
+            this.txtCoating.TabIndex = 8;
             // 
             // txtSize
             // 
             this.txtSize.Location = new System.Drawing.Point(428, 139);
             this.txtSize.Name = "txtSize";
             this.txtSize.Size = new System.Drawing.Size(69, 26);
-            this.txtSize.TabIndex = 246;
+            this.txtSize.TabIndex = 6;
             this.txtSize.Text = "0";
             this.txtSize.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtSize.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrice_KeyPress);
@@ -1009,7 +1009,7 @@
             this.txtDetail.Multiline = true;
             this.txtDetail.Name = "txtDetail";
             this.txtDetail.Size = new System.Drawing.Size(386, 101);
-            this.txtDetail.TabIndex = 42;
+            this.txtDetail.TabIndex = 16;
             this.txtDetail.TextChanged += new System.EventHandler(this.txtNote_TextChanged);
             // 
             // label30

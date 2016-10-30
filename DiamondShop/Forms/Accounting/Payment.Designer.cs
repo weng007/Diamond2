@@ -91,7 +91,7 @@
             // 
             // monthCalendar1
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(127, 43);
+            this.monthCalendar1.Location = new System.Drawing.Point(110, 47);
             this.monthCalendar1.MaxSelectionCount = 1;
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 249;
@@ -103,7 +103,7 @@
             this.txtUSDRate.Location = new System.Drawing.Point(195, 48);
             this.txtUSDRate.Name = "txtUSDRate";
             this.txtUSDRate.Size = new System.Drawing.Size(61, 26);
-            this.txtUSDRate.TabIndex = 159;
+            this.txtUSDRate.TabIndex = 2;
             this.txtUSDRate.Text = "0";
             this.txtUSDRate.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtUSDRate.TextChanged += new System.EventHandler(this.txtUSDRate_TextChanged);
@@ -183,7 +183,7 @@
             this.txtPrice.Location = new System.Drawing.Point(195, 85);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(131, 26);
-            this.txtPrice.TabIndex = 12;
+            this.txtPrice.TabIndex = 4;
             this.txtPrice.Text = "0";
             this.txtPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtPrice.TextChanged += new System.EventHandler(this.txtUSDRate_TextChanged);
