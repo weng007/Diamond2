@@ -13,8 +13,7 @@ using DiamondDS.DS;
 namespace DiamondShop
 {
     public partial class SellBookList : FormList
-    {
-        
+    { 
         public SellBookList()
         {
             InitializeComponent();

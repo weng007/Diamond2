@@ -22,7 +22,6 @@ namespace DiamondShop
         dsSellBookDetail tds1 = new dsSellBookDetail();
         DataSet ds1 = new DataSet();
         int custID = 0;
-        int refID = 0;
         bool isAuthorize = false;
 
         public SellBook()
@@ -185,6 +184,7 @@ namespace DiamondShop
             btnGold.Enabled = status;
             btnSetting.Enabled = status;
             btnETC.Enabled = status;
+            btnDel.Enabled = status;
         }
         protected override bool SaveData()
         {
@@ -306,6 +306,8 @@ namespace DiamondShop
             {
                 txtPayDate.Text = "";
             }
+
+            txtDiscount.Text = GM.ConvertDoubleToString(txtDiscount, 0);
             txtTotal.Text = GM.ConvertDoubleToString(txtTotal, 0);
         }
 
@@ -446,14 +448,31 @@ namespace DiamondShop
 
         private void SetGrid(string idSelected)
         {
-            ser1 = GM.GetService1();
-
-            ds1 = ser1.GetSellBookDetail(idSelected);
-            tds1.Clear();
-            tds1.Merge(ds1);
-
-            if (tds1.SellBookDetail.Rows.Count > 0)
+            if (idSelected != "")
             {
+                ser1 = GM.GetService1();
+
+                dsSellBookDetail tmp = new dsSellBookDetail();
+
+                ds1 = ser1.GetSellBookDetail(idSelected);
+                tmp.Clear();
+                tmp.Merge(ds1);
+
+                for (int i = 0; i < tmp.SellBookDetail.Rows.Count; i++)
+                {
+                    dsSellBookDetail.SellBookDetailRow row = tds1.SellBookDetail.NewSellBookDetailRow();
+                    row.RefID = id;
+                    row.RefID1 = tmp.SellBookDetail[i].RefID1;
+                    row.BuyBookType = tmp.SellBookDetail[i].BuyBookType;
+                    row.Code = tmp.SellBookDetail[i].Code;
+                    row.USDRate = tmp.SellBookDetail[i].USDRate;
+                    row.Amount = tmp.SellBookDetail[i].Amount;
+                    row.Weight = tmp.SellBookDetail[i].Weight;
+                    row.Price = tmp.SellBookDetail[i].Price;
+                    tds1.SellBookDetail.Rows.Add(row);           
+                }
+
+                tds1.AcceptChanges();
                 grid1.DataSource = tds1.SellBookDetail;
                 grid1.Refresh();
             }
