@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BuyBookDiamond));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dtBuyDate = new System.Windows.Forms.DateTimePicker();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnBrowseReceiveNo = new System.Windows.Forms.Button();
@@ -380,9 +380,9 @@
             // Amount
             // 
             this.Amount.DataPropertyName = "Amount";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle2.NullValue = "0";
-            this.Amount.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle1.NullValue = "0";
+            this.Amount.DefaultCellStyle = dataGridViewCellStyle1;
             this.Amount.HeaderText = "คงเหลือ (ct)";
             this.Amount.Name = "Amount";
             this.Amount.Width = 120;
@@ -666,7 +666,7 @@
             this.cmbClearity.FormattingEnabled = true;
             this.cmbClearity.Location = new System.Drawing.Point(737, 50);
             this.cmbClearity.Name = "cmbClearity";
-            this.cmbClearity.Size = new System.Drawing.Size(179, 28);
+            this.cmbClearity.Size = new System.Drawing.Size(87, 28);
             this.cmbClearity.TabIndex = 26;
             this.cmbClearity.SelectedValueChanged += new System.EventHandler(this.cmbShop_SelectedValueChanged);
             // 
@@ -685,7 +685,7 @@
             this.cmbColor.FormattingEnabled = true;
             this.cmbColor.Location = new System.Drawing.Point(737, 14);
             this.cmbColor.Name = "cmbColor";
-            this.cmbColor.Size = new System.Drawing.Size(146, 28);
+            this.cmbColor.Size = new System.Drawing.Size(87, 28);
             this.cmbColor.TabIndex = 24;
             this.cmbColor.SelectedValueChanged += new System.EventHandler(this.cmbShop_SelectedValueChanged);
             // 

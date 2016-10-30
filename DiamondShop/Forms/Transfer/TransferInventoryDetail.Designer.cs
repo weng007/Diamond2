@@ -43,6 +43,7 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.gridTransferInventory = new System.Windows.Forms.DataGridView();
+            this.btnClose = new System.Windows.Forms.Button();
             this.RowNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -59,7 +60,6 @@
             this.ColorName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EShop = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Flag = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnClose = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -196,6 +196,22 @@
             this.gridTransferInventory.TabIndex = 2;
             this.gridTransferInventory.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.gridSetting_MouseDoubleClick);
             // 
+            // btnClose
+            // 
+            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClose.BackColor = System.Drawing.Color.Transparent;
+            this.btnClose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClose.BackgroundImage")));
+            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Location = new System.Drawing.Point(1209, 9);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(0);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(38, 32);
+            this.btnClose.TabIndex = 79;
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
             // RowNum
             // 
             this.RowNum.DataPropertyName = "RowNum";
@@ -225,34 +241,32 @@
             // Amount1
             // 
             this.Amount1.DataPropertyName = "Amount1";
-            this.Amount1.HeaderText = "DC Amount";
+            this.Amount1.HeaderText = "Amt. DC.";
             this.Amount1.Name = "Amount1";
             this.Amount1.ReadOnly = true;
-            this.Amount1.Width = 130;
+            this.Amount1.Width = 110;
             // 
             // Weight1
             // 
             this.Weight1.DataPropertyName = "Weight1";
-            this.Weight1.HeaderText = "DC Weight";
+            this.Weight1.HeaderText = "นน. DC.";
             this.Weight1.Name = "Weight1";
             this.Weight1.ReadOnly = true;
-            this.Weight1.Width = 120;
             // 
             // Amount3
             // 
             this.Amount3.DataPropertyName = "Amount3";
-            this.Amount3.HeaderText = "GC Amount";
+            this.Amount3.HeaderText = "Amt. GC.";
             this.Amount3.Name = "Amount3";
             this.Amount3.ReadOnly = true;
-            this.Amount3.Width = 130;
+            this.Amount3.Width = 110;
             // 
             // Weight3
             // 
             this.Weight3.DataPropertyName = "Weight3";
-            this.Weight3.HeaderText = "GC Weight";
+            this.Weight3.HeaderText = "นน. GC.";
             this.Weight3.Name = "Weight3";
             this.Weight3.ReadOnly = true;
-            this.Weight3.Width = 130;
             // 
             // TotalBaht
             // 
@@ -330,22 +344,6 @@
             this.Flag.Name = "Flag";
             this.Flag.ReadOnly = true;
             this.Flag.Visible = false;
-            // 
-            // btnClose
-            // 
-            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClose.BackColor = System.Drawing.Color.Transparent;
-            this.btnClose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClose.BackgroundImage")));
-            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Location = new System.Drawing.Point(1209, 9);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(0);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(38, 32);
-            this.btnClose.TabIndex = 79;
-            this.btnClose.UseVisualStyleBackColor = false;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // TransferInventoryDetail
             // 

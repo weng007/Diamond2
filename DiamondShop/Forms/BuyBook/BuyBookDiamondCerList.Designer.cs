@@ -617,6 +617,7 @@
             this.ColorName.HeaderText = "Color";
             this.ColorName.Name = "ColorName";
             this.ColorName.ReadOnly = true;
+            this.ColorName.Width = 80;
             // 
             // ClearityName
             // 
@@ -634,7 +635,7 @@
             this.CutName.Name = "CutName";
             this.CutName.ReadOnly = true;
             this.CutName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.CutName.Width = 70;
+            this.CutName.Width = 80;
             // 
             // PolishName
             // 
@@ -643,7 +644,7 @@
             this.PolishName.Name = "PolishName";
             this.PolishName.ReadOnly = true;
             this.PolishName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.PolishName.Width = 70;
+            this.PolishName.Width = 80;
             // 
             // SymmetryName
             // 

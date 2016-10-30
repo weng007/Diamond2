@@ -39,7 +39,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
@@ -52,7 +51,6 @@
             this.RowNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Image1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.Amount1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Weight1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Amount2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -62,7 +60,6 @@
             this.Amount4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Weight4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MinPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PriceTag = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ShopName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StatusName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.JewelryTypeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -175,7 +172,6 @@
             this.RowNum,
             this.ID,
             this.Code,
-            this.Image1,
             this.Amount1,
             this.Weight1,
             this.Amount2,
@@ -185,7 +181,6 @@
             this.Amount4,
             this.Weight4,
             this.MinPrice,
-            this.PriceTag,
             this.ShopName,
             this.StatusName,
             this.JewelryTypeName});
@@ -226,14 +221,6 @@
             this.Code.ReadOnly = true;
             this.Code.Width = 140;
             // 
-            // Image1
-            // 
-            this.Image1.DataPropertyName = "Image1";
-            this.Image1.HeaderText = "Photo";
-            this.Image1.Name = "Image1";
-            this.Image1.ReadOnly = true;
-            this.Image1.Width = 130;
-            // 
             // Amount1
             // 
             this.Amount1.DataPropertyName = "Amount1";
@@ -241,10 +228,10 @@
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.Format = "N0";
             this.Amount1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.Amount1.HeaderText = "Amount DC.";
+            this.Amount1.HeaderText = "Amt. DC.";
             this.Amount1.Name = "Amount1";
             this.Amount1.ReadOnly = true;
-            this.Amount1.Width = 140;
+            this.Amount1.Width = 110;
             // 
             // Weight1
             // 
@@ -252,10 +239,10 @@
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
             dataGridViewCellStyle3.Format = "N2";
             this.Weight1.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Weight1.HeaderText = "Weight DC.";
+            this.Weight1.HeaderText = "นน. DC.";
             this.Weight1.Name = "Weight1";
             this.Weight1.ReadOnly = true;
-            this.Weight1.Width = 140;
+            this.Weight1.Width = 110;
             // 
             // Amount2
             // 
@@ -263,10 +250,10 @@
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
             dataGridViewCellStyle4.Format = "N0";
             this.Amount2.DefaultCellStyle = dataGridViewCellStyle4;
-            this.Amount2.HeaderText = "Amount NDC.";
+            this.Amount2.HeaderText = "Amt. NDC.";
             this.Amount2.Name = "Amount2";
             this.Amount2.ReadOnly = true;
-            this.Amount2.Width = 145;
+            this.Amount2.Width = 120;
             // 
             // Weight2
             // 
@@ -274,10 +261,10 @@
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
             dataGridViewCellStyle5.Format = "N2";
             this.Weight2.DefaultCellStyle = dataGridViewCellStyle5;
-            this.Weight2.HeaderText = "Weight NDC.";
+            this.Weight2.HeaderText = "นน. NDC.";
             this.Weight2.Name = "Weight2";
             this.Weight2.ReadOnly = true;
-            this.Weight2.Width = 145;
+            this.Weight2.Width = 110;
             // 
             // Amount3
             // 
@@ -285,10 +272,10 @@
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
             dataGridViewCellStyle6.Format = "N0";
             this.Amount3.DefaultCellStyle = dataGridViewCellStyle6;
-            this.Amount3.HeaderText = "Amount GC.";
+            this.Amount3.HeaderText = "Amt. GC.";
             this.Amount3.Name = "Amount3";
             this.Amount3.ReadOnly = true;
-            this.Amount3.Width = 140;
+            this.Amount3.Width = 110;
             // 
             // Weight3
             // 
@@ -296,10 +283,10 @@
             dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
             dataGridViewCellStyle7.Format = "N2";
             this.Weight3.DefaultCellStyle = dataGridViewCellStyle7;
-            this.Weight3.HeaderText = "Weight GC.";
+            this.Weight3.HeaderText = "นน. GC.";
             this.Weight3.Name = "Weight3";
             this.Weight3.ReadOnly = true;
-            this.Weight3.Width = 140;
+            this.Weight3.Width = 110;
             // 
             // Amount4
             // 
@@ -307,10 +294,10 @@
             dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
             dataGridViewCellStyle8.Format = "N0";
             this.Amount4.DefaultCellStyle = dataGridViewCellStyle8;
-            this.Amount4.HeaderText = "Amount NGC.";
+            this.Amount4.HeaderText = "Amt. NGC.";
             this.Amount4.Name = "Amount4";
             this.Amount4.ReadOnly = true;
-            this.Amount4.Width = 145;
+            this.Amount4.Width = 120;
             // 
             // Weight4
             // 
@@ -318,10 +305,10 @@
             dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
             dataGridViewCellStyle9.Format = "N2";
             this.Weight4.DefaultCellStyle = dataGridViewCellStyle9;
-            this.Weight4.HeaderText = "Weight NGC.";
+            this.Weight4.HeaderText = "นน. NGC.";
             this.Weight4.Name = "Weight4";
             this.Weight4.ReadOnly = true;
-            this.Weight4.Width = 145;
+            this.Weight4.Width = 120;
             // 
             // MinPrice
             // 
@@ -333,17 +320,6 @@
             this.MinPrice.Name = "MinPrice";
             this.MinPrice.ReadOnly = true;
             this.MinPrice.Width = 110;
-            // 
-            // PriceTag
-            // 
-            this.PriceTag.DataPropertyName = "PriceTag";
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle11.Format = "N0";
-            this.PriceTag.DefaultCellStyle = dataGridViewCellStyle11;
-            this.PriceTag.HeaderText = "Price Tag";
-            this.PriceTag.Name = "PriceTag";
-            this.PriceTag.ReadOnly = true;
-            this.PriceTag.Width = 110;
             // 
             // ShopName
             // 
@@ -399,7 +375,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn RowNum;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Code;
-        private System.Windows.Forms.DataGridViewImageColumn Image1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Amount1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Weight1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Amount2;
@@ -409,7 +384,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Amount4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Weight4;
         private System.Windows.Forms.DataGridViewTextBoxColumn MinPrice;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PriceTag;
         private System.Windows.Forms.DataGridViewTextBoxColumn ShopName;
         private System.Windows.Forms.DataGridViewTextBoxColumn StatusName;
         private System.Windows.Forms.DataGridViewTextBoxColumn JewelryTypeName;

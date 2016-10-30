@@ -399,7 +399,7 @@
             this.Code1.DefaultCellStyle = dataGridViewCellStyle2;
             this.Code1.HeaderText = "Code";
             this.Code1.Name = "Code1";
-            this.Code1.Width = 125;
+            this.Code1.Width = 150;
             // 
             // ReportNumber
             // 
@@ -440,7 +440,6 @@
             this.ShapeName.Name = "ShapeName";
             this.ShapeName.ReadOnly = true;
             this.ShapeName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ShapeName.Width = 150;
             // 
             // ColorName
             // 
@@ -461,7 +460,6 @@
             this.ClearityName.Name = "ClearityName";
             this.ClearityName.ReadOnly = true;
             this.ClearityName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ClearityName.Width = 150;
             // 
             // TotalBaht
             // 
@@ -532,7 +530,7 @@
             this.Code11.HeaderText = "Code";
             this.Code11.Name = "Code11";
             this.Code11.ReadOnly = true;
-            this.Code11.Width = 125;
+            this.Code11.Width = 150;
             // 
             // ReportNumber2
             // 
@@ -574,7 +572,6 @@
             this.ShapeName2.HeaderText = "Shape";
             this.ShapeName2.Name = "ShapeName2";
             this.ShapeName2.ReadOnly = true;
-            this.ShapeName2.Width = 130;
             // 
             // Weight2
             // 
@@ -627,7 +624,7 @@
             this.ShopName2.HeaderText = "Location";
             this.ShopName2.Name = "ShopName2";
             this.ShopName2.ReadOnly = true;
-            this.ShopName2.Width = 110;
+            this.ShopName2.Width = 120;
             // 
             // OrderDetail
             // 

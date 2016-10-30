@@ -455,7 +455,6 @@
             this.ShapeName.Name = "ShapeName";
             this.ShapeName.ReadOnly = true;
             this.ShapeName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ShapeName.Width = 130;
             // 
             // Weight
             // 
@@ -477,6 +476,7 @@
             this.ColorName.Name = "ColorName";
             this.ColorName.ReadOnly = true;
             this.ColorName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ColorName.Width = 80;
             // 
             // ClearityName
             // 
@@ -487,7 +487,7 @@
             this.ClearityName.Name = "ClearityName";
             this.ClearityName.ReadOnly = true;
             this.ClearityName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ClearityName.Width = 70;
+            this.ClearityName.Width = 80;
             // 
             // TotalBaht
             // 
@@ -601,6 +601,7 @@
             this.Color.Name = "Color";
             this.Color.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Color.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Color.Width = 80;
             // 
             // Clearity1
             // 
@@ -610,7 +611,7 @@
             this.Clearity1.Name = "Clearity1";
             this.Clearity1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Clearity1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Clearity1.Width = 70;
+            this.Clearity1.Width = 80;
             // 
             // CostPerCarat
             // 

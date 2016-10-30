@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DiamondCer));
             this.dtReportDate = new System.Windows.Forms.DateTimePicker();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.lnkSetting = new System.Windows.Forms.LinkLabel();
             this.txtShape = new System.Windows.Forms.TextBox();
             this.txtFluorescent = new System.Windows.Forms.TextBox();
             this.txtShop = new System.Windows.Forms.TextBox();
@@ -80,7 +81,6 @@
             this.txtCode = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
-            this.lnkSetting = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -137,6 +137,14 @@
             this.panel3.Size = new System.Drawing.Size(1014, 464);
             this.panel3.TabIndex = 74;
             // 
+            // lnkSetting
+            // 
+            this.lnkSetting.AutoSize = true;
+            this.lnkSetting.Location = new System.Drawing.Point(702, 91);
+            this.lnkSetting.Name = "lnkSetting";
+            this.lnkSetting.Size = new System.Drawing.Size(0, 20);
+            this.lnkSetting.TabIndex = 201;
+            // 
             // txtShape
             // 
             this.txtShape.AcceptsReturn = true;
@@ -159,7 +167,7 @@
             // txtShop
             // 
             this.txtShop.Enabled = false;
-            this.txtShop.Location = new System.Drawing.Point(800, 53);
+            this.txtShop.Location = new System.Drawing.Point(706, 51);
             this.txtShop.Name = "txtShop";
             this.txtShop.Size = new System.Drawing.Size(187, 26);
             this.txtShop.TabIndex = 156;
@@ -168,54 +176,54 @@
             // txtStatus
             // 
             this.txtStatus.Enabled = false;
-            this.txtStatus.Location = new System.Drawing.Point(800, 15);
+            this.txtStatus.Location = new System.Drawing.Point(706, 13);
             this.txtStatus.Name = "txtStatus";
-            this.txtStatus.Size = new System.Drawing.Size(187, 26);
+            this.txtStatus.Size = new System.Drawing.Size(107, 26);
             this.txtStatus.TabIndex = 152;
             this.txtStatus.TextChanged += new System.EventHandler(this.txtNote_TextChanged);
             // 
             // txtSymmetry
             // 
             this.txtSymmetry.Enabled = false;
-            this.txtSymmetry.Location = new System.Drawing.Point(520, 202);
+            this.txtSymmetry.Location = new System.Drawing.Point(476, 203);
             this.txtSymmetry.Name = "txtSymmetry";
-            this.txtSymmetry.Size = new System.Drawing.Size(163, 26);
+            this.txtSymmetry.Size = new System.Drawing.Size(75, 26);
             this.txtSymmetry.TabIndex = 148;
             this.txtSymmetry.TextChanged += new System.EventHandler(this.txtNote_TextChanged);
             // 
             // txtPolish
             // 
             this.txtPolish.Enabled = false;
-            this.txtPolish.Location = new System.Drawing.Point(520, 166);
+            this.txtPolish.Location = new System.Drawing.Point(476, 167);
             this.txtPolish.Name = "txtPolish";
-            this.txtPolish.Size = new System.Drawing.Size(163, 26);
+            this.txtPolish.Size = new System.Drawing.Size(75, 26);
             this.txtPolish.TabIndex = 144;
             this.txtPolish.TextChanged += new System.EventHandler(this.txtNote_TextChanged);
             // 
             // txtCut
             // 
             this.txtCut.Enabled = false;
-            this.txtCut.Location = new System.Drawing.Point(520, 128);
+            this.txtCut.Location = new System.Drawing.Point(476, 129);
             this.txtCut.Name = "txtCut";
-            this.txtCut.Size = new System.Drawing.Size(163, 26);
+            this.txtCut.Size = new System.Drawing.Size(75, 26);
             this.txtCut.TabIndex = 140;
             this.txtCut.TextChanged += new System.EventHandler(this.txtNote_TextChanged);
             // 
             // txtClearity
             // 
             this.txtClearity.Enabled = false;
-            this.txtClearity.Location = new System.Drawing.Point(520, 90);
+            this.txtClearity.Location = new System.Drawing.Point(476, 91);
             this.txtClearity.Name = "txtClearity";
-            this.txtClearity.Size = new System.Drawing.Size(163, 26);
+            this.txtClearity.Size = new System.Drawing.Size(75, 26);
             this.txtClearity.TabIndex = 136;
             this.txtClearity.TextChanged += new System.EventHandler(this.txtNote_TextChanged);
             // 
             // txtColor
             // 
             this.txtColor.Enabled = false;
-            this.txtColor.Location = new System.Drawing.Point(520, 53);
+            this.txtColor.Location = new System.Drawing.Point(476, 54);
             this.txtColor.Name = "txtColor";
-            this.txtColor.Size = new System.Drawing.Size(163, 26);
+            this.txtColor.Size = new System.Drawing.Size(75, 26);
             this.txtColor.TabIndex = 132;
             this.txtColor.TextChanged += new System.EventHandler(this.txtNote_TextChanged);
             // 
@@ -438,7 +446,7 @@
             // txtNote
             // 
             this.txtNote.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.txtNote.Location = new System.Drawing.Point(800, 128);
+            this.txtNote.Location = new System.Drawing.Point(706, 126);
             this.txtNote.Multiline = true;
             this.txtNote.Name = "txtNote";
             this.txtNote.Size = new System.Drawing.Size(187, 103);
@@ -450,7 +458,7 @@
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label16.Location = new System.Drawing.Point(720, 136);
+            this.label16.Location = new System.Drawing.Point(626, 134);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(47, 20);
             this.label16.TabIndex = 109;
@@ -460,7 +468,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label13.Location = new System.Drawing.Point(720, 93);
+            this.label13.Location = new System.Drawing.Point(626, 91);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(60, 20);
             this.label13.TabIndex = 108;
@@ -470,7 +478,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label14.Location = new System.Drawing.Point(720, 56);
+            this.label14.Location = new System.Drawing.Point(626, 54);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(47, 20);
             this.label14.TabIndex = 106;
@@ -480,7 +488,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label15.Location = new System.Drawing.Point(720, 18);
+            this.label15.Location = new System.Drawing.Point(626, 16);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(56, 20);
             this.label15.TabIndex = 104;
@@ -490,7 +498,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label12.Location = new System.Drawing.Point(423, 205);
+            this.label12.Location = new System.Drawing.Point(379, 206);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(79, 20);
             this.label12.TabIndex = 102;
@@ -500,7 +508,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label11.Location = new System.Drawing.Point(423, 169);
+            this.label11.Location = new System.Drawing.Point(379, 170);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(51, 20);
             this.label11.TabIndex = 100;
@@ -510,7 +518,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label10.Location = new System.Drawing.Point(423, 131);
+            this.label10.Location = new System.Drawing.Point(379, 132);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(34, 20);
             this.label10.TabIndex = 98;
@@ -520,7 +528,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label9.Location = new System.Drawing.Point(423, 94);
+            this.label9.Location = new System.Drawing.Point(379, 95);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(61, 20);
             this.label9.TabIndex = 96;
@@ -530,7 +538,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label8.Location = new System.Drawing.Point(423, 56);
+            this.label8.Location = new System.Drawing.Point(379, 57);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(46, 20);
             this.label8.TabIndex = 94;
@@ -540,7 +548,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label7.Location = new System.Drawing.Point(423, 18);
+            this.label7.Location = new System.Drawing.Point(379, 19);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(59, 20);
             this.label7.TabIndex = 93;
@@ -549,7 +557,7 @@
             // txtWeight
             // 
             this.txtWeight.Enabled = false;
-            this.txtWeight.Location = new System.Drawing.Point(520, 15);
+            this.txtWeight.Location = new System.Drawing.Point(476, 16);
             this.txtWeight.Name = "txtWeight";
             this.txtWeight.Size = new System.Drawing.Size(75, 26);
             this.txtWeight.TabIndex = 128;
@@ -646,14 +654,6 @@
             this.button1.Size = new System.Drawing.Size(1089, 352);
             this.button1.TabIndex = 32;
             this.button1.UseVisualStyleBackColor = true;
-            // 
-            // lnkSetting
-            // 
-            this.lnkSetting.AutoSize = true;
-            this.lnkSetting.Location = new System.Drawing.Point(796, 93);
-            this.lnkSetting.Name = "lnkSetting";
-            this.lnkSetting.Size = new System.Drawing.Size(0, 20);
-            this.lnkSetting.TabIndex = 201;
             // 
             // DiamondCer
             // 

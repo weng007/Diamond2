@@ -273,10 +273,10 @@
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.Format = "N0";
             this.Amount1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.Amount1.HeaderText = "Amount DC.";
+            this.Amount1.HeaderText = "Amt. DC.";
             this.Amount1.Name = "Amount1";
             this.Amount1.ReadOnly = true;
-            this.Amount1.Width = 140;
+            this.Amount1.Width = 110;
             // 
             // Weight1
             // 
@@ -284,10 +284,9 @@
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
             dataGridViewCellStyle3.Format = "N2";
             this.Weight1.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Weight1.HeaderText = "Weight DC.";
+            this.Weight1.HeaderText = "นน. DC.";
             this.Weight1.Name = "Weight1";
             this.Weight1.ReadOnly = true;
-            this.Weight1.Width = 140;
             // 
             // Amount2
             // 
@@ -295,10 +294,10 @@
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
             dataGridViewCellStyle4.Format = "N0";
             this.Amount2.DefaultCellStyle = dataGridViewCellStyle4;
-            this.Amount2.HeaderText = "Amount NDC.";
+            this.Amount2.HeaderText = "Amt. NDC.";
             this.Amount2.Name = "Amount2";
             this.Amount2.ReadOnly = true;
-            this.Amount2.Width = 145;
+            this.Amount2.Width = 120;
             // 
             // Weight2
             // 
@@ -306,10 +305,10 @@
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
             dataGridViewCellStyle5.Format = "N2";
             this.Weight2.DefaultCellStyle = dataGridViewCellStyle5;
-            this.Weight2.HeaderText = "Weight NDC.";
+            this.Weight2.HeaderText = "นน. NDC.";
             this.Weight2.Name = "Weight2";
             this.Weight2.ReadOnly = true;
-            this.Weight2.Width = 145;
+            this.Weight2.Width = 120;
             // 
             // Amount3
             // 
@@ -317,10 +316,9 @@
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
             dataGridViewCellStyle6.Format = "N0";
             this.Amount3.DefaultCellStyle = dataGridViewCellStyle6;
-            this.Amount3.HeaderText = "Amount GC.";
+            this.Amount3.HeaderText = "Amt.GC.";
             this.Amount3.Name = "Amount3";
             this.Amount3.ReadOnly = true;
-            this.Amount3.Width = 140;
             // 
             // Weight3
             // 
@@ -328,10 +326,9 @@
             dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
             dataGridViewCellStyle7.Format = "N2";
             this.Weight3.DefaultCellStyle = dataGridViewCellStyle7;
-            this.Weight3.HeaderText = "Weight GC.";
+            this.Weight3.HeaderText = "นน. GC.";
             this.Weight3.Name = "Weight3";
             this.Weight3.ReadOnly = true;
-            this.Weight3.Width = 140;
             // 
             // Amount4
             // 
@@ -339,10 +336,10 @@
             dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
             dataGridViewCellStyle8.Format = "N0";
             this.Amount4.DefaultCellStyle = dataGridViewCellStyle8;
-            this.Amount4.HeaderText = "Amount NGC.";
+            this.Amount4.HeaderText = "Amt. NGC.";
             this.Amount4.Name = "Amount4";
             this.Amount4.ReadOnly = true;
-            this.Amount4.Width = 145;
+            this.Amount4.Width = 120;
             // 
             // Weight4
             // 
@@ -350,10 +347,10 @@
             dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
             dataGridViewCellStyle9.Format = "N2";
             this.Weight4.DefaultCellStyle = dataGridViewCellStyle9;
-            this.Weight4.HeaderText = "Weight NGC.";
+            this.Weight4.HeaderText = "นน. NGC.";
             this.Weight4.Name = "Weight4";
             this.Weight4.ReadOnly = true;
-            this.Weight4.Width = 145;
+            this.Weight4.Width = 120;
             // 
             // CostBaht
             // 

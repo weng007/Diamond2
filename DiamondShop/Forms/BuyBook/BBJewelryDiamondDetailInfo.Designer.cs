@@ -104,7 +104,7 @@
             this.cmbColor.FormattingEnabled = true;
             this.cmbColor.Location = new System.Drawing.Point(150, 163);
             this.cmbColor.Name = "cmbColor";
-            this.cmbColor.Size = new System.Drawing.Size(165, 29);
+            this.cmbColor.Size = new System.Drawing.Size(108, 29);
             this.cmbColor.TabIndex = 8;
             // 
             // txtWeight

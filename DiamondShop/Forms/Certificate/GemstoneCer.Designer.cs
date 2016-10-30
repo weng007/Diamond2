@@ -157,7 +157,7 @@
             this.txtStatus.Enabled = false;
             this.txtStatus.Location = new System.Drawing.Point(828, 15);
             this.txtStatus.Name = "txtStatus";
-            this.txtStatus.Size = new System.Drawing.Size(172, 27);
+            this.txtStatus.Size = new System.Drawing.Size(109, 27);
             this.txtStatus.TabIndex = 44;
             this.txtStatus.TextChanged += new System.EventHandler(this.txtReportNumber_TextChanged);
             // 
@@ -175,7 +175,7 @@
             this.txtCut.Enabled = false;
             this.txtCut.Location = new System.Drawing.Point(537, 165);
             this.txtCut.Name = "txtCut";
-            this.txtCut.Size = new System.Drawing.Size(175, 27);
+            this.txtCut.Size = new System.Drawing.Size(148, 27);
             this.txtCut.TabIndex = 40;
             this.txtCut.TextChanged += new System.EventHandler(this.txtReportNumber_TextChanged);
             // 
@@ -184,7 +184,7 @@
             this.txtShape.Enabled = false;
             this.txtShape.Location = new System.Drawing.Point(537, 128);
             this.txtShape.Name = "txtShape";
-            this.txtShape.Size = new System.Drawing.Size(175, 27);
+            this.txtShape.Size = new System.Drawing.Size(148, 27);
             this.txtShape.TabIndex = 36;
             this.txtShape.TextChanged += new System.EventHandler(this.txtReportNumber_TextChanged);
             // 
@@ -193,7 +193,7 @@
             this.txtColor.Enabled = false;
             this.txtColor.Location = new System.Drawing.Point(537, 91);
             this.txtColor.Name = "txtColor";
-            this.txtColor.Size = new System.Drawing.Size(175, 27);
+            this.txtColor.Size = new System.Drawing.Size(148, 27);
             this.txtColor.TabIndex = 32;
             this.txtColor.TextChanged += new System.EventHandler(this.txtReportNumber_TextChanged);
             // 
@@ -214,7 +214,7 @@
             this.txtOrigin.Enabled = false;
             this.txtOrigin.Location = new System.Drawing.Point(537, 53);
             this.txtOrigin.Name = "txtOrigin";
-            this.txtOrigin.Size = new System.Drawing.Size(175, 27);
+            this.txtOrigin.Size = new System.Drawing.Size(148, 27);
             this.txtOrigin.TabIndex = 28;
             this.txtOrigin.TextChanged += new System.EventHandler(this.txtReportNumber_TextChanged);
             // 
@@ -503,9 +503,9 @@
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label14.Location = new System.Drawing.Point(753, 56);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(49, 21);
+            this.label14.Size = new System.Drawing.Size(78, 21);
             this.label14.TabIndex = 106;
-            this.label14.Text = "Shop";
+            this.label14.Text = "Location";
             // 
             // label15
             // 

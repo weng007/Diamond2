@@ -94,7 +94,7 @@
             this.panal.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.panal.Location = new System.Drawing.Point(0, 0);
             this.panal.Name = "panal";
-            this.panal.Size = new System.Drawing.Size(1329, 183);
+            this.panal.Size = new System.Drawing.Size(1175, 183);
             this.panal.TabIndex = 40;
             // 
             // txtLable
@@ -196,7 +196,7 @@
             // 
             this.dtEOrderDate.CustomFormat = "dd/MM/yyyy";
             this.dtEOrderDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtEOrderDate.Location = new System.Drawing.Point(1045, 89);
+            this.dtEOrderDate.Location = new System.Drawing.Point(1030, 89);
             this.dtEOrderDate.Name = "dtEOrderDate";
             this.dtEOrderDate.Size = new System.Drawing.Size(131, 27);
             this.dtEOrderDate.TabIndex = 88;
@@ -205,7 +205,7 @@
             // 
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(1026, 91);
+            this.label8.Location = new System.Drawing.Point(1011, 91);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(16, 25);
             this.label8.TabIndex = 89;
@@ -215,7 +215,7 @@
             // 
             this.dtSOrderDate.CustomFormat = "dd/MM/yyyy";
             this.dtSOrderDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtSOrderDate.Location = new System.Drawing.Point(889, 89);
+            this.dtSOrderDate.Location = new System.Drawing.Point(874, 89);
             this.dtSOrderDate.Name = "dtSOrderDate";
             this.dtSOrderDate.Size = new System.Drawing.Size(131, 27);
             this.dtSOrderDate.TabIndex = 87;
@@ -224,7 +224,7 @@
             // 
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(771, 90);
+            this.label7.Location = new System.Drawing.Point(756, 90);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(105, 26);
             this.label7.TabIndex = 83;
@@ -256,7 +256,7 @@
             this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSearch.FlatAppearance.BorderSize = 0;
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.Location = new System.Drawing.Point(889, 128);
+            this.btnSearch.Location = new System.Drawing.Point(874, 128);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(131, 32);
             this.btnSearch.TabIndex = 52;
@@ -304,7 +304,7 @@
             this.panel2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.Location = new System.Drawing.Point(1, 187);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1335, 388);
+            this.panel2.Size = new System.Drawing.Size(1160, 388);
             this.panel2.TabIndex = 34;
             // 
             // gridProductionLine
@@ -335,7 +335,7 @@
             this.gridProductionLine.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridProductionLine.RowTemplate.Height = 30;
             this.gridProductionLine.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridProductionLine.Size = new System.Drawing.Size(1313, 388);
+            this.gridProductionLine.Size = new System.Drawing.Size(1124, 388);
             this.gridProductionLine.TabIndex = 2;
             this.gridProductionLine.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridProductionLine_CellClick);
             // 
@@ -386,10 +386,9 @@
             dataGridViewCellStyle1.Format = "N2";
             dataGridViewCellStyle1.NullValue = "0";
             this.WeightDC.DefaultCellStyle = dataGridViewCellStyle1;
-            this.WeightDC.HeaderText = "Weight DC";
+            this.WeightDC.HeaderText = "นน. DC";
             this.WeightDC.Name = "WeightDC";
             this.WeightDC.ReadOnly = true;
-            this.WeightDC.Width = 180;
             // 
             // WeightGC
             // 
@@ -398,10 +397,9 @@
             dataGridViewCellStyle2.Format = "N2";
             dataGridViewCellStyle2.NullValue = "0";
             this.WeightGC.DefaultCellStyle = dataGridViewCellStyle2;
-            this.WeightGC.HeaderText = "Weight GC";
+            this.WeightGC.HeaderText = "นน.  GC";
             this.WeightGC.Name = "WeightGC";
             this.WeightGC.ReadOnly = true;
-            this.WeightGC.Width = 180;
             // 
             // Price
             // 
@@ -436,7 +434,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PaleGoldenrod;
-            this.ClientSize = new System.Drawing.Size(1335, 577);
+            this.ClientSize = new System.Drawing.Size(1177, 577);
             this.Controls.Add(this.panal);
             this.Controls.Add(this.panel2);
             this.Name = "ProductionLineList";

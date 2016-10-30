@@ -551,7 +551,7 @@
             this.cmbCut.FormattingEnabled = true;
             this.cmbCut.Location = new System.Drawing.Point(150, 232);
             this.cmbCut.Name = "cmbCut";
-            this.cmbCut.Size = new System.Drawing.Size(165, 28);
+            this.cmbCut.Size = new System.Drawing.Size(84, 28);
             this.cmbCut.TabIndex = 6;
             this.cmbCut.SelectedValueChanged += new System.EventHandler(this.cmbColorType_SelectedValueChanged);
             // 
@@ -740,7 +740,7 @@
             this.cmbColor.FormattingEnabled = true;
             this.cmbColor.Location = new System.Drawing.Point(502, 125);
             this.cmbColor.Name = "cmbColor";
-            this.cmbColor.Size = new System.Drawing.Size(157, 28);
+            this.cmbColor.Size = new System.Drawing.Size(108, 28);
             this.cmbColor.TabIndex = 5;
             this.cmbColor.SelectedValueChanged += new System.EventHandler(this.cmbColorType_SelectedValueChanged);
             // 
@@ -842,7 +842,7 @@
             this.cmbSymmetry.FormattingEnabled = true;
             this.cmbSymmetry.Location = new System.Drawing.Point(150, 304);
             this.cmbSymmetry.Name = "cmbSymmetry";
-            this.cmbSymmetry.Size = new System.Drawing.Size(165, 28);
+            this.cmbSymmetry.Size = new System.Drawing.Size(84, 28);
             this.cmbSymmetry.TabIndex = 8;
             this.cmbSymmetry.SelectedValueChanged += new System.EventHandler(this.cmbColorType_SelectedValueChanged);
             // 
@@ -881,7 +881,7 @@
             this.cmbClearity.FormattingEnabled = true;
             this.cmbClearity.Location = new System.Drawing.Point(502, 162);
             this.cmbClearity.Name = "cmbClearity";
-            this.cmbClearity.Size = new System.Drawing.Size(180, 28);
+            this.cmbClearity.Size = new System.Drawing.Size(90, 28);
             this.cmbClearity.TabIndex = 15;
             this.cmbClearity.SelectedValueChanged += new System.EventHandler(this.cmbColorType_SelectedValueChanged);
             // 
@@ -958,7 +958,7 @@
             this.cmbPolish.FormattingEnabled = true;
             this.cmbPolish.Location = new System.Drawing.Point(150, 269);
             this.cmbPolish.Name = "cmbPolish";
-            this.cmbPolish.Size = new System.Drawing.Size(165, 28);
+            this.cmbPolish.Size = new System.Drawing.Size(84, 28);
             this.cmbPolish.TabIndex = 7;
             this.cmbPolish.SelectedValueChanged += new System.EventHandler(this.cmbColorType_SelectedValueChanged);
             // 
