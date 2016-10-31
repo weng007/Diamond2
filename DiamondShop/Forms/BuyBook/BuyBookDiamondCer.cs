@@ -605,6 +605,7 @@ namespace DiamondShop
         private void lnkSetting_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             int tmpId = 0;
+            ser1 = GM.GetService1();
             tmpId = ser1.DoSearchInventoryByCode(lnkSetting.Text);
 
             Inventory frm = new Inventory(tmpId);
