@@ -47,7 +47,6 @@ namespace DiamondShop
             binder.BindControl(dtBuyDate, "BuyDate");
             binder.BindControl(txtSeller, "Seller");
             binder.BindControl(txtCode, "Code");
-            binder.BindControl(txtSetting, "SettingName");
             binder.BindControl(txtShop, "ShopName");
             binder.BindControl(txtStatus, "StatusName");
             binder.BindControl(txtReportNumber, "ReportNumber");
@@ -60,6 +59,7 @@ namespace DiamondShop
             binder.BindControl(txtPriceCaratBaht, "PriceCarat");
             binder.BindControl(txtNote, "Note");
             binder.BindControl(txtNote1, "Note1");
+            binder.BindControl(lnkSetting, "Setting");
             binder.BindControl(txtShape, "ShapeName");
             binder.BindControl(txtColor, "ColorName");
             binder.BindControl(txtCut, "CutName");
