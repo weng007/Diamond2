@@ -87,12 +87,13 @@ namespace DiamondDAL.DAL
             return Convert.ToBoolean(flag);
         }
 
-        public dsSellBookDetail GetSellBookDetail(string idSelected)
+        public dsSellBookDetail GetSellBookDetail(string idSelected, int buyBookType)
         {
             try
             {
                 SQL.ClearParameter();
                 SQL.CreateParameter("@IDSelected", idSelected);
+                SQL.CreateParameter("@BuyBookType", buyBookType);
                 SQL.FillDataSetBySP("SP_GetSellBookDetail", ds.SellBookDetail);
             }
             catch (Exception ex)

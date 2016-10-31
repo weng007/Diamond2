@@ -418,12 +418,12 @@ namespace Diamond
         }
 
         [WebMethod]
-        public DataSet GetSellBookDetail(string idSelected)
+        public DataSet GetSellBookDetail(string idSelected, int buyBookType)
         {
             SellBookDetailBiz biz = GM.GetSellBookDetailBiz();
             try
             {
-                return biz.GetSellBookDetail(idSelected);
+                return biz.GetSellBookDetail(idSelected,buyBookType);
             }
             catch (Exception ex)
             {
