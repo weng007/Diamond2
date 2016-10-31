@@ -353,5 +353,22 @@ namespace DiamondDAL.DAL
 
             return flag;
         }
+
+        public string GetCertificate(int ID, int Mode)
+        {
+            try
+            {
+                SQL.ClearParameter();
+                SQL.CreateParameter("@ID", ID);
+                SQL.CreateParameter("@Mode", Mode);
+                SQL.FillDataSetBySP("SP_GetCertificate", ds);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return ds.Tables[0].Rows[0][0].ToString();
+        }
     }
 }

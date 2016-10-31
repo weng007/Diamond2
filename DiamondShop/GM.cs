@@ -269,12 +269,14 @@ namespace DiamondShop
             else { return false; }
         }
 
-        public static byte[] GetCertificate()
+        public static byte[] GetCertificate(int id, int mode)
         {
-            //if (tds.BuyBookDiamondCer[0]["Certificate"].ToString() != "")
+            DataSet ds = new DataSet();
+
+            //ds = ser2.GetCertificate(id, mode);
+            //if (ds.Tables[0].Rows[0]["Certificate"].ToString() != "")
             //{
-            //    file = (byte[])tds.BuyBookDiamondCer[0]["Certificate"];
-            //    linkFile.Text = tds.BuyBookDiamondCer[0].FileName;
+            //    return (byte[])ds.Tables[0].Rows[0]["Certificate"];
             //}
 
             return null;

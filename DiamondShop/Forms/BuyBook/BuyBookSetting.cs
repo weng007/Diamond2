@@ -111,10 +111,6 @@ namespace DiamondShop
             }
 
             SetFormatNumber();
-
-            //ไม่ให้ปิดหน้าจอหลัง Save
-            isClosed = false;
-
             base.LoadData();
             cmbBuyer.SelectedValueChanged += cmbBuyer_SelectedValueChanged;
         }
@@ -167,6 +163,11 @@ namespace DiamondShop
             {
                 throw ex;
             }
+
+            //ไม่ให้ปิดหน้าจอหลัง Save
+            isClosed = false;
+
+            LoadData();
 
             return chkFlag;
         }

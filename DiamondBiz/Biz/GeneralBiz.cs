@@ -242,5 +242,16 @@ namespace DiamondBiz.Biz
             }
         }
 
+        public string GetCertificate(int id, int mode)
+        {
+            try
+            {
+                return dal.GetCertificate(id, mode);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

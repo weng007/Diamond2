@@ -430,5 +430,20 @@ namespace Diamond
                 throw ex;
             }
         }
+
+        [WebMethod]
+        public string GetCertificate(int id, int mode)
+        {
+            GeneralBiz biz = new GeneralBiz();
+
+            try
+            {
+                return biz.GetCertificate(id, mode);       
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

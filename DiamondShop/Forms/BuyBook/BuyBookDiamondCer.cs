@@ -62,6 +62,7 @@ namespace DiamondShop
             binder.BindControl(dtDueDate, "DueDate");
             binder.BindControl(txtUSDRate, "USDRate");
             binder.BindControl(txtTotalBaht, "TotalBaht");
+            binder.BindControl(linkFile, "FileName");
             binder.BindControl(txtNote, "Note");
             binder.BindControl(cmbBuyer, "Buyer");
             binder.BindControl(txtW, "W");
@@ -100,6 +101,7 @@ namespace DiamondShop
             binder.BindControl(dtDueDate, "DueDate");
             binder.BindControl(txtUSDRate, "USDRate");
             binder.BindControl(txtTotalBaht, "TotalBaht");
+            binder.BindControl(linkFile, "FileName");
             binder.BindControl(txtNote, "Note");
             binder.BindControl(cmbBuyer, "Buyer");
             binder.BindControl(txtW, "W");
