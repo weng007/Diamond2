@@ -83,7 +83,7 @@
             this.panel4.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.panel4.Location = new System.Drawing.Point(0, 1);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1327, 117);
+            this.panel4.Size = new System.Drawing.Size(1289, 117);
             this.panel4.TabIndex = 42;
             // 
             // dtEBuyDate
@@ -164,7 +164,7 @@
             this.panel2.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.Location = new System.Drawing.Point(5, 124);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1308, 451);
+            this.panel2.Size = new System.Drawing.Size(1329, 451);
             this.panel2.TabIndex = 33;
             // 
             // label4
@@ -172,9 +172,9 @@
             this.label4.BackColor = System.Drawing.SystemColors.Control;
             this.label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label4.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(914, 1);
+            this.label4.Location = new System.Drawing.Point(903, 1);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(381, 33);
+            this.label4.Size = new System.Drawing.Size(396, 33);
             this.label4.TabIndex = 6;
             this.label4.Text = "ทองคำ 99.99%";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -186,7 +186,7 @@
             this.label5.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(442, 1);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(474, 33);
+            this.label5.Size = new System.Drawing.Size(463, 33);
             this.label5.TabIndex = 5;
             this.label5.Text = "ทองคำ 96.5%";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -220,7 +220,7 @@
             this.gridGold.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridGold.RowTemplate.Height = 30;
             this.gridGold.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridGold.Size = new System.Drawing.Size(1292, 419);
+            this.gridGold.Size = new System.Drawing.Size(1296, 419);
             this.gridGold.TabIndex = 3;
             this.gridGold.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.gridGold_MouseDoubleClick);
             // 
@@ -370,7 +370,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(91)))), ((int)(((byte)(59)))));
-            this.ClientSize = new System.Drawing.Size(1329, 577);
+            this.ClientSize = new System.Drawing.Size(1346, 577);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
             this.Name = "BuyBookGoldList";
