@@ -601,11 +601,6 @@ namespace DiamondShop
             Inventory frm = new Inventory(ser1.DoSearchInventoryByCode(lnkSetting.Text));
             frm.ShowDialog();
         }
-
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }
     
