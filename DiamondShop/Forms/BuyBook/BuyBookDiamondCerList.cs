@@ -197,12 +197,14 @@ namespace DiamondShop
         {
             Service2 ser1 = GM.GetService1();
             string setting = ((DataGridView)sender).Rows[e.RowIndex].Cells["Setting"].Value.ToString();
+            int tmpId = 0;
 
             if (e.ColumnIndex == 24)
             {
                 if (setting != "" && setting != "Not Yet")
-                {                   
-                    Inventory frm = new Inventory(ser1.DoSearchInventoryByCode(setting));
+                {
+                    tmpId = ser1.DoSearchInventoryByCode(setting);
+                    Inventory frm = new Inventory(tmpId);
                     frm.ShowDialog();
                 }
             }

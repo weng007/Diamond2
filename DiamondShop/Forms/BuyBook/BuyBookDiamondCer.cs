@@ -555,7 +555,6 @@ namespace DiamondShop
             }
             BuyBookDiamonCerExcel frm = new BuyBookDiamonCerExcel(id,FilePath);
             frm.ShowDialog();
-
         }
 
         private void txtNote_TextChanged(object sender, EventArgs e)
@@ -605,7 +604,10 @@ namespace DiamondShop
 
         private void lnkSetting_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Inventory frm = new Inventory(ser1.DoSearchInventoryByCode(lnkSetting.Text));
+            int tmpId = 0;
+            tmpId = ser1.DoSearchInventoryByCode(lnkSetting.Text);
+
+            Inventory frm = new Inventory(tmpId);
             frm.ShowDialog();
         }
     }
