@@ -200,11 +200,17 @@ namespace DiamondShop
         private void gridDiamondCer_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             Service2 ser1 = GM.GetService1();
+            string setting = ((DataGridView)sender).Rows[e.RowIndex].Cells["Setting"].Value.ToString();
+            int tmpId = 0;
 
-            if (e.ColumnIndex == 17)
+            if (e.ColumnIndex == 18)
             {
-                Inventory frm = new Inventory(ser1.DoSearchInventoryByCode(sender.ToString()));
-                frm.ShowDialog();
+                if (setting != "" && setting != "Not Yet")
+                {
+                    tmpId = ser1.DoSearchInventoryByCode(setting);
+                    Inventory frm = new Inventory(tmpId);
+                    frm.ShowDialog();
+                }
             }
         }
     }
