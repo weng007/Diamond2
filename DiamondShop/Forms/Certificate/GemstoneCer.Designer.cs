@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GemstoneCer));
             this.dtReportDate = new System.Windows.Forms.DateTimePicker();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.txtSetting = new System.Windows.Forms.TextBox();
             this.txtShop = new System.Windows.Forms.TextBox();
             this.txtStatus = new System.Windows.Forms.TextBox();
             this.txtLab = new System.Windows.Forms.TextBox();
@@ -79,6 +78,7 @@
             this.txtCode = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
+            this.lnkSetting = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -91,7 +91,7 @@
             this.dtReportDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtReportDate.Location = new System.Drawing.Point(169, 17);
             this.dtReportDate.Name = "dtReportDate";
-            this.dtReportDate.Size = new System.Drawing.Size(131, 27);
+            this.dtReportDate.Size = new System.Drawing.Size(131, 26);
             this.dtReportDate.TabIndex = 1;
             this.dtReportDate.ValueChanged += new System.EventHandler(this.dtReportDate_ValueChanged);
             // 
@@ -99,7 +99,7 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.txtSetting);
+            this.panel3.Controls.Add(this.lnkSetting);
             this.panel3.Controls.Add(this.txtShop);
             this.panel3.Controls.Add(this.txtStatus);
             this.panel3.Controls.Add(this.txtLab);
@@ -128,27 +128,18 @@
             this.panel3.Controls.Add(this.label6);
             this.panel3.Controls.Add(this.txtCode);
             this.panel3.Controls.Add(this.dtReportDate);
-            this.panel3.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.panel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.panel3.Location = new System.Drawing.Point(12, 72);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1035, 443);
             this.panel3.TabIndex = 74;
-            // 
-            // txtSetting
-            // 
-            this.txtSetting.Enabled = false;
-            this.txtSetting.Location = new System.Drawing.Point(828, 91);
-            this.txtSetting.Name = "txtSetting";
-            this.txtSetting.Size = new System.Drawing.Size(172, 27);
-            this.txtSetting.TabIndex = 52;
-            this.txtSetting.TextChanged += new System.EventHandler(this.txtReportNumber_TextChanged);
             // 
             // txtShop
             // 
             this.txtShop.Enabled = false;
             this.txtShop.Location = new System.Drawing.Point(828, 53);
             this.txtShop.Name = "txtShop";
-            this.txtShop.Size = new System.Drawing.Size(172, 27);
+            this.txtShop.Size = new System.Drawing.Size(172, 26);
             this.txtShop.TabIndex = 48;
             this.txtShop.TextChanged += new System.EventHandler(this.txtReportNumber_TextChanged);
             // 
@@ -157,7 +148,7 @@
             this.txtStatus.Enabled = false;
             this.txtStatus.Location = new System.Drawing.Point(828, 15);
             this.txtStatus.Name = "txtStatus";
-            this.txtStatus.Size = new System.Drawing.Size(109, 27);
+            this.txtStatus.Size = new System.Drawing.Size(109, 26);
             this.txtStatus.TabIndex = 44;
             this.txtStatus.TextChanged += new System.EventHandler(this.txtReportNumber_TextChanged);
             // 
@@ -166,7 +157,7 @@
             this.txtLab.Enabled = false;
             this.txtLab.Location = new System.Drawing.Point(169, 128);
             this.txtLab.Name = "txtLab";
-            this.txtLab.Size = new System.Drawing.Size(157, 27);
+            this.txtLab.Size = new System.Drawing.Size(157, 26);
             this.txtLab.TabIndex = 12;
             this.txtLab.TextChanged += new System.EventHandler(this.txtReportNumber_TextChanged);
             // 
@@ -175,7 +166,7 @@
             this.txtCut.Enabled = false;
             this.txtCut.Location = new System.Drawing.Point(537, 165);
             this.txtCut.Name = "txtCut";
-            this.txtCut.Size = new System.Drawing.Size(148, 27);
+            this.txtCut.Size = new System.Drawing.Size(148, 26);
             this.txtCut.TabIndex = 40;
             this.txtCut.TextChanged += new System.EventHandler(this.txtReportNumber_TextChanged);
             // 
@@ -184,7 +175,7 @@
             this.txtShape.Enabled = false;
             this.txtShape.Location = new System.Drawing.Point(537, 128);
             this.txtShape.Name = "txtShape";
-            this.txtShape.Size = new System.Drawing.Size(148, 27);
+            this.txtShape.Size = new System.Drawing.Size(148, 26);
             this.txtShape.TabIndex = 36;
             this.txtShape.TextChanged += new System.EventHandler(this.txtReportNumber_TextChanged);
             // 
@@ -193,7 +184,7 @@
             this.txtColor.Enabled = false;
             this.txtColor.Location = new System.Drawing.Point(537, 91);
             this.txtColor.Name = "txtColor";
-            this.txtColor.Size = new System.Drawing.Size(148, 27);
+            this.txtColor.Size = new System.Drawing.Size(148, 26);
             this.txtColor.TabIndex = 32;
             this.txtColor.TextChanged += new System.EventHandler(this.txtReportNumber_TextChanged);
             // 
@@ -203,7 +194,7 @@
             this.linkFile.Cursor = System.Windows.Forms.Cursors.Hand;
             this.linkFile.Location = new System.Drawing.Point(79, 400);
             this.linkFile.Name = "linkFile";
-            this.linkFile.Size = new System.Drawing.Size(122, 21);
+            this.linkFile.Size = new System.Drawing.Size(109, 20);
             this.linkFile.TabIndex = 122;
             this.linkFile.TabStop = true;
             this.linkFile.Text = "No File Attach";
@@ -214,7 +205,7 @@
             this.txtOrigin.Enabled = false;
             this.txtOrigin.Location = new System.Drawing.Point(537, 53);
             this.txtOrigin.Name = "txtOrigin";
-            this.txtOrigin.Size = new System.Drawing.Size(148, 27);
+            this.txtOrigin.Size = new System.Drawing.Size(148, 26);
             this.txtOrigin.TabIndex = 28;
             this.txtOrigin.TextChanged += new System.EventHandler(this.txtReportNumber_TextChanged);
             // 
@@ -223,7 +214,7 @@
             this.txtIdentification.Enabled = false;
             this.txtIdentification.Location = new System.Drawing.Point(537, 15);
             this.txtIdentification.Name = "txtIdentification";
-            this.txtIdentification.Size = new System.Drawing.Size(175, 27);
+            this.txtIdentification.Size = new System.Drawing.Size(175, 26);
             this.txtIdentification.TabIndex = 8;
             this.txtIdentification.TextChanged += new System.EventHandler(this.txtReportNumber_TextChanged);
             // 
@@ -246,7 +237,7 @@
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label5.Location = new System.Drawing.Point(430, 56);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(56, 21);
+            this.label5.Size = new System.Drawing.Size(50, 20);
             this.label5.TabIndex = 113;
             this.label5.Text = "Origin";
             // 
@@ -282,7 +273,7 @@
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label12.Location = new System.Drawing.Point(28, 126);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(109, 21);
+            this.label12.Size = new System.Drawing.Size(95, 20);
             this.label12.TabIndex = 124;
             this.label12.Text = "Price / Carat";
             // 
@@ -292,7 +283,7 @@
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label11.Location = new System.Drawing.Point(252, 126);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(83, 21);
+            this.label11.Size = new System.Drawing.Size(77, 20);
             this.label11.TabIndex = 123;
             this.label11.Text = "Thai Baht";
             // 
@@ -310,22 +301,22 @@
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label25.Location = new System.Drawing.Point(462, 104);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(45, 19);
+            this.label25.Size = new System.Drawing.Size(47, 20);
             this.label25.TabIndex = 112;
             this.label25.Text = "Note";
             // 
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label24.Location = new System.Drawing.Point(487, 60);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(85, 19);
+            this.label24.Size = new System.Drawing.Size(92, 20);
             this.label24.TabIndex = 121;
             this.label24.Text = "Baht Price";
             // 
@@ -334,7 +325,7 @@
             this.txtBahtPrice.Enabled = false;
             this.txtBahtPrice.Location = new System.Drawing.Point(576, 57);
             this.txtBahtPrice.Name = "txtBahtPrice";
-            this.txtBahtPrice.Size = new System.Drawing.Size(108, 27);
+            this.txtBahtPrice.Size = new System.Drawing.Size(108, 26);
             this.txtBahtPrice.TabIndex = 120;
             this.txtBahtPrice.Text = "0";
             this.txtBahtPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -343,11 +334,11 @@
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label23.Location = new System.Drawing.Point(487, 21);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(80, 19);
+            this.label23.Size = new System.Drawing.Size(92, 20);
             this.label23.TabIndex = 119;
             this.label23.Text = "USD Price";
             // 
@@ -356,7 +347,7 @@
             this.txtUSDPrice.Enabled = false;
             this.txtUSDPrice.Location = new System.Drawing.Point(576, 18);
             this.txtUSDPrice.Name = "txtUSDPrice";
-            this.txtUSDPrice.Size = new System.Drawing.Size(108, 27);
+            this.txtUSDPrice.Size = new System.Drawing.Size(108, 26);
             this.txtUSDPrice.TabIndex = 118;
             this.txtUSDPrice.Text = "0";
             this.txtUSDPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -368,7 +359,7 @@
             this.label22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label22.Location = new System.Drawing.Point(350, 17);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(83, 21);
+            this.label22.Size = new System.Drawing.Size(83, 20);
             this.label22.TabIndex = 117;
             this.label22.Text = "USD Rate";
             // 
@@ -377,7 +368,7 @@
             this.txtUSDRate.Enabled = false;
             this.txtUSDRate.Location = new System.Drawing.Point(354, 41);
             this.txtUSDRate.Name = "txtUSDRate";
-            this.txtUSDRate.Size = new System.Drawing.Size(70, 27);
+            this.txtUSDRate.Size = new System.Drawing.Size(70, 26);
             this.txtUSDRate.TabIndex = 76;
             this.txtUSDRate.Text = "0";
             this.txtUSDRate.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -389,7 +380,7 @@
             this.label21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label21.Location = new System.Drawing.Point(251, 90);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(41, 21);
+            this.label21.Size = new System.Drawing.Size(44, 20);
             this.label21.TabIndex = 115;
             this.label21.Text = "USD";
             // 
@@ -398,7 +389,7 @@
             this.txtPriceCaratBaht.Enabled = false;
             this.txtPriceCaratBaht.Location = new System.Drawing.Point(148, 123);
             this.txtPriceCaratBaht.Name = "txtPriceCaratBaht";
-            this.txtPriceCaratBaht.Size = new System.Drawing.Size(97, 27);
+            this.txtPriceCaratBaht.Size = new System.Drawing.Size(97, 26);
             this.txtPriceCaratBaht.TabIndex = 72;
             this.txtPriceCaratBaht.Text = "0";
             this.txtPriceCaratBaht.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -410,7 +401,7 @@
             this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label20.Location = new System.Drawing.Point(28, 90);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(109, 21);
+            this.label20.Size = new System.Drawing.Size(95, 20);
             this.label20.TabIndex = 113;
             this.label20.Text = "Price / Carat";
             // 
@@ -420,7 +411,7 @@
             this.label19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label19.Location = new System.Drawing.Point(57, 55);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(49, 21);
+            this.label19.Size = new System.Drawing.Size(49, 20);
             this.label19.TabIndex = 113;
             this.label19.Text = "Seller";
             // 
@@ -429,7 +420,7 @@
             this.txtPriceCaratUSD.Enabled = false;
             this.txtPriceCaratUSD.Location = new System.Drawing.Point(148, 87);
             this.txtPriceCaratUSD.Name = "txtPriceCaratUSD";
-            this.txtPriceCaratUSD.Size = new System.Drawing.Size(97, 27);
+            this.txtPriceCaratUSD.Size = new System.Drawing.Size(97, 26);
             this.txtPriceCaratUSD.TabIndex = 68;
             this.txtPriceCaratUSD.Text = "0";
             this.txtPriceCaratUSD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -441,7 +432,7 @@
             this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label18.Location = new System.Drawing.Point(28, 21);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(81, 21);
+            this.label18.Size = new System.Drawing.Size(75, 20);
             this.label18.TabIndex = 113;
             this.label18.Text = "Buy Date";
             // 
@@ -450,19 +441,19 @@
             this.txtSeller.Enabled = false;
             this.txtSeller.Location = new System.Drawing.Point(148, 52);
             this.txtSeller.Name = "txtSeller";
-            this.txtSeller.Size = new System.Drawing.Size(157, 27);
+            this.txtSeller.Size = new System.Drawing.Size(157, 26);
             this.txtSeller.TabIndex = 64;
             this.txtSeller.TextChanged += new System.EventHandler(this.txtReportNumber_TextChanged);
             // 
             // dtBuyDate
             // 
-            this.dtBuyDate.CalendarFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtBuyDate.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtBuyDate.CustomFormat = "dd/MM/yyyy";
             this.dtBuyDate.Enabled = false;
             this.dtBuyDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtBuyDate.Location = new System.Drawing.Point(148, 17);
             this.dtBuyDate.Name = "dtBuyDate";
-            this.dtBuyDate.Size = new System.Drawing.Size(131, 27);
+            this.dtBuyDate.Size = new System.Drawing.Size(131, 26);
             this.dtBuyDate.TabIndex = 60;
             this.dtBuyDate.ValueChanged += new System.EventHandler(this.dtReportDate_ValueChanged);
             // 
@@ -479,11 +470,11 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label16.Location = new System.Drawing.Point(753, 136);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(45, 19);
+            this.label16.Size = new System.Drawing.Size(47, 20);
             this.label16.TabIndex = 109;
             this.label16.Text = "Note";
             // 
@@ -493,7 +484,7 @@
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label13.Location = new System.Drawing.Point(753, 93);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(66, 21);
+            this.label13.Size = new System.Drawing.Size(60, 20);
             this.label13.TabIndex = 108;
             this.label13.Text = "Setting";
             // 
@@ -503,7 +494,7 @@
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label14.Location = new System.Drawing.Point(753, 56);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(78, 21);
+            this.label14.Size = new System.Drawing.Size(70, 20);
             this.label14.TabIndex = 106;
             this.label14.Text = "Location";
             // 
@@ -513,7 +504,7 @@
             this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label15.Location = new System.Drawing.Point(753, 18);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(59, 21);
+            this.label15.Size = new System.Drawing.Size(56, 20);
             this.label15.TabIndex = 104;
             this.label15.Text = "Status";
             // 
@@ -523,7 +514,7 @@
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label10.Location = new System.Drawing.Point(430, 171);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(40, 21);
+            this.label10.Size = new System.Drawing.Size(34, 20);
             this.label10.TabIndex = 98;
             this.label10.Text = "Cut";
             // 
@@ -533,7 +524,7 @@
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label9.Location = new System.Drawing.Point(430, 132);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(60, 21);
+            this.label9.Size = new System.Drawing.Size(56, 20);
             this.label9.TabIndex = 96;
             this.label9.Text = "Shape";
             // 
@@ -543,7 +534,7 @@
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label8.Location = new System.Drawing.Point(430, 94);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(51, 21);
+            this.label8.Size = new System.Drawing.Size(46, 20);
             this.label8.TabIndex = 94;
             this.label8.Text = "Color";
             // 
@@ -553,7 +544,7 @@
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label7.Location = new System.Drawing.Point(401, 18);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(115, 21);
+            this.label7.Size = new System.Drawing.Size(100, 20);
             this.label7.TabIndex = 93;
             this.label7.Text = "Identification";
             // 
@@ -563,7 +554,7 @@
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label3.Location = new System.Drawing.Point(29, 131);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(39, 21);
+            this.label3.Size = new System.Drawing.Size(36, 20);
             this.label3.TabIndex = 88;
             this.label3.Text = "Lab";
             // 
@@ -573,7 +564,7 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label2.Location = new System.Drawing.Point(29, 94);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(130, 21);
+            this.label2.Size = new System.Drawing.Size(118, 20);
             this.label2.TabIndex = 87;
             this.label2.Text = "Report Number";
             // 
@@ -582,7 +573,7 @@
             this.txtReportNumber.Enabled = false;
             this.txtReportNumber.Location = new System.Drawing.Point(169, 91);
             this.txtReportNumber.Name = "txtReportNumber";
-            this.txtReportNumber.Size = new System.Drawing.Size(157, 27);
+            this.txtReportNumber.Size = new System.Drawing.Size(157, 26);
             this.txtReportNumber.TabIndex = 4;
             this.txtReportNumber.TextChanged += new System.EventHandler(this.txtReportNumber_TextChanged);
             // 
@@ -592,7 +583,7 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label1.Location = new System.Drawing.Point(29, 56);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(54, 21);
+            this.label1.Size = new System.Drawing.Size(47, 20);
             this.label1.TabIndex = 85;
             this.label1.Text = "Code";
             // 
@@ -602,7 +593,7 @@
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label6.Location = new System.Drawing.Point(29, 22);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(107, 21);
+            this.label6.Size = new System.Drawing.Size(97, 20);
             this.label6.TabIndex = 84;
             this.label6.Text = "Report Date";
             // 
@@ -612,7 +603,7 @@
             this.txtCode.Enabled = false;
             this.txtCode.Location = new System.Drawing.Point(169, 53);
             this.txtCode.Name = "txtCode";
-            this.txtCode.Size = new System.Drawing.Size(157, 27);
+            this.txtCode.Size = new System.Drawing.Size(157, 26);
             this.txtCode.TabIndex = 100;
             this.txtCode.TextChanged += new System.EventHandler(this.txtReportNumber_TextChanged);
             // 
@@ -635,6 +626,17 @@
             this.button1.Size = new System.Drawing.Size(1089, 352);
             this.button1.TabIndex = 32;
             this.button1.UseVisualStyleBackColor = true;
+            // 
+            // lnkSetting
+            // 
+            this.lnkSetting.AutoSize = true;
+            this.lnkSetting.Location = new System.Drawing.Point(824, 93);
+            this.lnkSetting.Name = "lnkSetting";
+            this.lnkSetting.Size = new System.Drawing.Size(63, 20);
+            this.lnkSetting.TabIndex = 202;
+            this.lnkSetting.TabStop = true;
+            this.lnkSetting.Text = "Not Yet";
+            this.lnkSetting.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkSetting_LinkClicked);
             // 
             // GemstoneCer
             // 
@@ -704,8 +706,8 @@
         private System.Windows.Forms.TextBox txtIdentification;
         private System.Windows.Forms.TextBox txtCut;
         private System.Windows.Forms.TextBox txtLab;
-        private System.Windows.Forms.TextBox txtSetting;
         private System.Windows.Forms.TextBox txtShop;
         private System.Windows.Forms.TextBox txtStatus;
+        private System.Windows.Forms.LinkLabel lnkSetting;
     }
 }

@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DiamondShop.FormMaster;
 using DiamondShop.DiamondService;
+using DiamondShop.DiamondService1;
 using DiamondDS.DS;
 
 namespace DiamondShop
@@ -18,6 +19,7 @@ namespace DiamondShop
     {
         dsGemstoneCer tds = new dsGemstoneCer();
         MemoryStream ms1;
+        Service2 ser1;
         byte[] image1;
         MemoryStream ms;
         byte[] file;
@@ -213,6 +215,16 @@ namespace DiamondShop
         private void txtReportNumber_TextChanged(object sender, EventArgs e)
         {
             isEdit = true;
+        }
+
+        private void lnkSetting_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            int tmpId = 0;
+            ser1 = GM.GetService1();
+            tmpId = ser1.DoSearchInventoryByCode(lnkSetting.Text);
+
+            Inventory frm = new Inventory(tmpId);
+            frm.ShowDialog();
         }
     }
 }
