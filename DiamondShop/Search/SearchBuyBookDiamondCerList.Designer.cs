@@ -564,7 +564,7 @@
             this.Code.HeaderText = "Code";
             this.Code.Name = "Code";
             this.Code.ReadOnly = true;
-            this.Code.Width = 150;
+            this.Code.Width = 140;
             // 
             // Code2
             // 
@@ -572,7 +572,7 @@
             this.Code2.HeaderText = "Code2";
             this.Code2.Name = "Code2";
             this.Code2.ReadOnly = true;
-            this.Code2.Width = 150;
+            this.Code2.Width = 140;
             // 
             // BuyDate
             // 
