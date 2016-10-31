@@ -432,7 +432,7 @@ namespace Diamond
         }
 
         [WebMethod]
-        public string GetCertificate(int id, int mode)
+        public byte[] GetCertificate(int id, int mode)
         {
             GeneralBiz biz = new GeneralBiz();
 

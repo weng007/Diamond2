@@ -478,8 +478,9 @@ namespace DiamondShop
             txtTotalBaht.Text = GM.ConvertDoubleToString(txtTotalBaht, 0);          
         }
         private void linkFile_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {       
-            if(file != null && file.Length > 0)
+        {
+            file = ser1.GetCertificate(id, 0);
+            if(file != null || id > 0)
             {
                 System.IO.FileStream wFile;
                 if (!Directory.Exists(GM.Path))
