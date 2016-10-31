@@ -268,5 +268,16 @@ namespace DiamondShop
             { return true; }
             else { return false; }
         }
+
+        public static byte[] GetCertificate()
+        {
+            //if (tds.BuyBookDiamondCer[0]["Certificate"].ToString() != "")
+            //{
+            //    file = (byte[])tds.BuyBookDiamondCer[0]["Certificate"];
+            //    linkFile.Text = tds.BuyBookDiamondCer[0].FileName;
+            //}
+
+            return null;
+        }
     }
 }

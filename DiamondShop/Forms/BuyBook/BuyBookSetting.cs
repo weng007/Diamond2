@@ -111,6 +111,10 @@ namespace DiamondShop
             }
 
             SetFormatNumber();
+
+            //ไม่ให้ปิดหน้าจอหลัง Save
+            isClosed = false;
+
             base.LoadData();
             cmbBuyer.SelectedValueChanged += cmbBuyer_SelectedValueChanged;
         }

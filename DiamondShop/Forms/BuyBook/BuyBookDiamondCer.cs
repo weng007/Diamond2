@@ -193,12 +193,6 @@ namespace DiamondShop
                 binder.BindValueToControl(tds.BuyBookDiamondCer[0]);
                 txtPayDate.Text = string.Format("{0:d/M/yyyy}", tds.BuyBookDiamondCer[0]["PayDate"]);
 
-                if (tds.BuyBookDiamondCer[0]["Certificate"].ToString() != "")
-                {
-                    file = (byte[])tds.BuyBookDiamondCer[0]["Certificate"];
-                    linkFile.Text = tds.BuyBookDiamondCer[0].FileName;
-                }
-
                 if (tds.BuyBookDiamondCer[0]["IsInscription"].ToString() == "0")
                 {
                     rdoIns1.Checked = false;
