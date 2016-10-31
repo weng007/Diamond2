@@ -13,10 +13,8 @@ namespace DiamondBiz.Biz
         dsInventory ds = new dsInventory();
         InventoryDAL dal = new InventoryDAL();
 
-
         public dsInventory DoSearchData(string code)
         {
-
             try
             {
                 return dal.DoSearchData(code);
@@ -29,7 +27,6 @@ namespace DiamondBiz.Biz
 
         public dsInventory DoSearchByType(string prefix)
         {
-
             try
             {
                 return dal.DoSearchByType(prefix);
@@ -42,7 +39,6 @@ namespace DiamondBiz.Biz
 
         public int DoSearchByCode(string code)
         {
-
             try
             {
                 return dal.DoSearchByCode(code);
