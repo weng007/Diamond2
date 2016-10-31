@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DiamondShop.FormMaster;
 using DiamondDS.DS;
 using DiamondShop.DiamondService;
+using DiamondShop.DiamondService1;
 
 namespace DiamondShop
 {
@@ -18,6 +19,7 @@ namespace DiamondShop
         dsBuyBookSetting tds = new dsBuyBookSetting();
         dsBuyBookSettingDetail tds2 = new dsBuyBookSettingDetail();
         bool isAuthorize = false;
+        Service2 ser1;
         DataSet ds2 = new DataSet();
         int chk = 0;
 
@@ -143,6 +145,11 @@ namespace DiamondShop
                     row.Code = GM.GetRunningNumber("SET");
                     SetCreateBy(row);
                     chkFlag = ser.DoInsertData("BuyBookSetting", tds,0);
+
+                    ser1 = GM.GetService1();
+                    id = ser1.DoSearchBBSettingByCode(row.Code);
+                    btnAdd.Enabled = true;
+                    btnDel.Enabled = true;
                 }
                 else
                 {
