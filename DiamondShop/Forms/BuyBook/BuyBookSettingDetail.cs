@@ -25,7 +25,7 @@ namespace DiamondShop
         {
             InitializeComponent();
             Initial();
-
+            
             binder.BindControl(cmbSettingType, "SettingType");
             binder.BindControl(txtAmount, "Amount");
             binder.BindControl(txtWeight, "Weight");
@@ -62,6 +62,11 @@ namespace DiamondShop
             if (mode == 1)
             {
                 LoadData();
+            }
+            else
+            {
+                ds = ser.DoSelectData("ExchangeRate", id, 0);
+                txtUSDRate.Text = ds.Tables[0].Rows[0]["USDRate"].ToString();
             }
             
         }

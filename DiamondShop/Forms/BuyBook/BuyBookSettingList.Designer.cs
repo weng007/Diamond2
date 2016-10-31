@@ -46,6 +46,7 @@
             this.gridSetting = new System.Windows.Forms.DataGridView();
             this.RowNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BuyDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Seller = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BuyPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -179,6 +180,7 @@
             this.gridSetting.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.RowNum,
             this.ID,
+            this.Code,
             this.BuyDate,
             this.Seller,
             this.BuyPrice,
@@ -190,7 +192,7 @@
             this.gridSetting.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridSetting.RowTemplate.Height = 30;
             this.gridSetting.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridSetting.Size = new System.Drawing.Size(646, 447);
+            this.gridSetting.Size = new System.Drawing.Size(774, 447);
             this.gridSetting.TabIndex = 2;
             this.gridSetting.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.gridSetting_MouseDoubleClick);
             // 
@@ -211,6 +213,14 @@
             this.ID.Name = "ID";
             this.ID.ReadOnly = true;
             this.ID.Visible = false;
+            // 
+            // Code
+            // 
+            this.Code.DataPropertyName = "Code";
+            this.Code.HeaderText = "Code";
+            this.Code.Name = "Code";
+            this.Code.ReadOnly = true;
+            this.Code.Width = 150;
             // 
             // BuyDate
             // 
@@ -285,6 +295,7 @@
         private System.Windows.Forms.TextBox txtSeller;
         private System.Windows.Forms.DataGridViewTextBoxColumn RowNum;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Code;
         private System.Windows.Forms.DataGridViewTextBoxColumn BuyDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn Seller;
         private System.Windows.Forms.DataGridViewTextBoxColumn BuyPrice;
