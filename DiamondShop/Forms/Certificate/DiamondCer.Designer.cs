@@ -142,8 +142,11 @@
             this.lnkSetting.AutoSize = true;
             this.lnkSetting.Location = new System.Drawing.Point(702, 91);
             this.lnkSetting.Name = "lnkSetting";
-            this.lnkSetting.Size = new System.Drawing.Size(0, 20);
+            this.lnkSetting.Size = new System.Drawing.Size(63, 20);
             this.lnkSetting.TabIndex = 201;
+            this.lnkSetting.TabStop = true;
+            this.lnkSetting.Text = "Not Yet";
+            this.lnkSetting.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkSetting_LinkClicked);
             // 
             // txtShape
             // 

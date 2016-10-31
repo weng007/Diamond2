@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using DiamondShop.FormMaster;
 using DiamondDS.DS;
 using DiamondShop.DiamondService;
+using DiamondShop.DiamondService1;
 
 namespace DiamondShop
 {
@@ -18,6 +19,7 @@ namespace DiamondShop
     {
         dsDiamondCer tds = new dsDiamondCer();
         MemoryStream ms;
+        Service2 ser1;
         byte[] file;
 
         public DiamondCer()
@@ -26,8 +28,6 @@ namespace DiamondShop
             Initial();
 
             BinderData();
-
-
         }
         public DiamondCer(int id)
         {
@@ -197,6 +197,15 @@ namespace DiamondShop
         private void txtNote_TextChanged(object sender, EventArgs e)
         {
             isEdit = true;
+        }
+
+        private void lnkSetting_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            int tmpId = 0;
+            tmpId = ser1.DoSearchInventoryByCode(lnkSetting.Text);
+
+            Inventory frm = new Inventory(tmpId);
+            frm.ShowDialog();
         }
     }
 }
