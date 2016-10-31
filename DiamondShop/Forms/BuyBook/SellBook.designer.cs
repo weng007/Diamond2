@@ -38,7 +38,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnDel = new System.Windows.Forms.Button();
-            this.btnAvailable = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.grid1 = new System.Windows.Forms.DataGridView();
             this.RowNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -102,7 +101,6 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Controls.Add(this.btnDel);
-            this.panel3.Controls.Add(this.btnAvailable);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.grid1);
             this.panel3.Controls.Add(this.cmbShop);
@@ -169,21 +167,6 @@
             this.btnDel.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btnDel.UseVisualStyleBackColor = true;
             this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
-            // 
-            // btnAvailable
-            // 
-            this.btnAvailable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(170)))), ((int)(((byte)(160)))));
-            this.btnAvailable.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAvailable.BackgroundImage")));
-            this.btnAvailable.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnAvailable.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAvailable.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(109)))), ((int)(((byte)(65)))));
-            this.btnAvailable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAvailable.Location = new System.Drawing.Point(317, 170);
-            this.btnAvailable.Name = "btnAvailable";
-            this.btnAvailable.Size = new System.Drawing.Size(120, 33);
-            this.btnAvailable.TabIndex = 287;
-            this.btnAvailable.UseVisualStyleBackColor = false;
-            this.btnAvailable.Click += new System.EventHandler(this.btnAvailable_Click);
             // 
             // label1
             // 
@@ -835,7 +818,6 @@
         private System.Windows.Forms.ComboBox cmbShop;
         private System.Windows.Forms.DataGridView grid1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnAvailable;
         private System.Windows.Forms.Button btnDel;
         private System.Windows.Forms.DataGridViewTextBoxColumn RowNum;
         private System.Windows.Forms.DataGridViewTextBoxColumn RefID;

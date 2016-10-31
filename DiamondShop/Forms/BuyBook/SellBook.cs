@@ -327,12 +327,6 @@ namespace DiamondShop
             txtCustomer.Text = frm.customerName;
         }
 
-        private void btnAvailable_Click(object sender, EventArgs e)
-        {
-            ser1.UpdateSellBookStatus(id, "Available");
-            LoadData();
-        }
-
         private void btnPending_Click(object sender, EventArgs e)
         {
             ser1.UpdateSellBookStatus(id, "Pending");
@@ -386,7 +380,7 @@ namespace DiamondShop
 
         private void btnGC_Click(object sender, EventArgs e)
         {
-            SearchBuyBookGemstoneCerList frm = new SearchBuyBookGemstoneCerList(0);
+            SearchBuyBookGemstoneCerList frm = new SearchBuyBookGemstoneCerList(1);
             frm.ShowDialog();
 
             SetGrid(frm.idSelected);
