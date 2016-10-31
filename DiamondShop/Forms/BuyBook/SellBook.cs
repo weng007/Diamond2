@@ -378,44 +378,20 @@ namespace DiamondShop
             monthCalendar1.Visible = false;
         }
 
-        private void btnGC_Click(object sender, EventArgs e)
-        {
-            SearchBuyBookGemstoneCerList frm = new SearchBuyBookGemstoneCerList(1);
-            frm.ShowDialog();
-
-            SetGrid(frm.idSelected);
-        }
-
         private void btnDC_Click(object sender, EventArgs e)
         {
             SearchBuyBookDiamondCerList frm = new SearchBuyBookDiamondCerList(1);
             frm.ShowDialog();
 
-            SetGrid(frm.idSelected);
+            SetGrid(frm.idSelected, 224);
         }
 
-        private void btnNonDC_Click(object sender, EventArgs e)
+        private void btnGC_Click(object sender, EventArgs e)
         {
-            SearchBuyBookDiamondList frm = new SearchBuyBookDiamondList();
+            SearchBuyBookGemstoneCerList frm = new SearchBuyBookGemstoneCerList(1);
             frm.ShowDialog();
 
-            SetGrid(frm.idSelected);
-        }
-
-        private void btnNonGC_Click(object sender, EventArgs e)
-        {
-            SearchBuyBookGemstoneList frm = new SearchBuyBookGemstoneList();
-            frm.ShowDialog();
-
-            SetGrid(frm.idSelected);
-        }
-
-        private void btnETC_Click(object sender, EventArgs e)
-        {
-            SearchBuyBookETCList frm = new SearchBuyBookETCList();
-            frm.ShowDialog();
-
-            SetGrid(frm.idSelected);
+            SetGrid(frm.idSelected,225);
         }
 
         private void btnJewelry_Click(object sender, EventArgs e)
@@ -423,7 +399,23 @@ namespace DiamondShop
             SearchBuyBookJewelryList frm = new SearchBuyBookJewelryList();
             frm.ShowDialog();
 
-            SetGrid(frm.idSelected);
+            SetGrid(frm.idSelected, 226);
+        }
+
+        private void btnNonDC_Click(object sender, EventArgs e)
+        {
+            SearchBuyBookDiamondList frm = new SearchBuyBookDiamondList();
+            frm.ShowDialog();
+
+            SetGrid(frm.idSelected,227);
+        }
+
+        private void btnNonGC_Click(object sender, EventArgs e)
+        {
+            SearchBuyBookGemstoneList frm = new SearchBuyBookGemstoneList();
+            frm.ShowDialog();
+
+            SetGrid(frm.idSelected, 228);
         }
 
         private void btnGold_Click(object sender, EventArgs e)
@@ -431,16 +423,26 @@ namespace DiamondShop
             SearchBuyBookGoldList frm = new SearchBuyBookGoldList();
             frm.ShowDialog();
 
-            SetGrid(frm.idSelected);
+            SetGrid(frm.idSelected, 229);
         }
 
-        private void btnSetting_Click(object sender, EventArgs e)
+         private void btnSetting_Click(object sender, EventArgs e)
         {
             SearchBuyBookSettingList frm = new SearchBuyBookSettingList();
             frm.ShowDialog();
+
+            SetGrid(frm.idSelected, 230);
         }
 
-        private void SetGrid(string idSelected)
+        private void btnETC_Click(object sender, EventArgs e)
+        {
+            SearchBuyBookETCList frm = new SearchBuyBookETCList();
+            frm.ShowDialog();
+
+            SetGrid(frm.idSelected, 231);
+        }
+
+        private void SetGrid(string idSelected, int buyBookType)
         {
             if (idSelected != "")
             {
@@ -448,7 +450,7 @@ namespace DiamondShop
 
                 dsSellBookDetail tmp = new dsSellBookDetail();
 
-                ds1 = ser1.GetSellBookDetail(idSelected);
+                ds1 = ser1.GetSellBookDetail(idSelected, buyBookType);
                 tmp.Clear();
                 tmp.Merge(ds1);
 

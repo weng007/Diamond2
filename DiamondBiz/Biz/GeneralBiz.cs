@@ -242,7 +242,7 @@ namespace DiamondBiz.Biz
             }
         }
 
-        public string GetCertificate(int id, int mode)
+        public byte[] GetCertificate(int id, int mode)
         {
             try
             {

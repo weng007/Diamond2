@@ -61,11 +61,11 @@ namespace DiamondBiz.Biz
             }
         }
 
-        public dsSellBookDetail GetSellBookDetail(string idSelected)
+        public dsSellBookDetail GetSellBookDetail(string idSelected, int buyBookType)
         {
             try
             {
-                return dal.GetSellBookDetail(idSelected);
+                return dal.GetSellBookDetail(idSelected, buyBookType);
             }
             catch (Exception ex)
             {

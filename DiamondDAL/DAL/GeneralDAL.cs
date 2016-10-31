@@ -354,13 +354,13 @@ namespace DiamondDAL.DAL
             return flag;
         }
 
-        public string GetCertificate(int ID, int Mode)
+        public byte[] GetCertificate(int id, int mode)
         {
             try
             {
                 SQL.ClearParameter();
-                SQL.CreateParameter("@ID", ID);
-                SQL.CreateParameter("@Mode", Mode);
+                SQL.CreateParameter("@ID", id);
+                SQL.CreateParameter("@Mode", mode);
                 SQL.FillDataSetBySP("SP_GetCertificate", ds);
             }
             catch (Exception ex)
@@ -368,7 +368,7 @@ namespace DiamondDAL.DAL
                 throw ex;
             }
 
-            return ds.Tables[0].Rows[0][0].ToString();
+            return (byte[])ds.Tables[0].Rows[0][0];
         }
     }
 }
