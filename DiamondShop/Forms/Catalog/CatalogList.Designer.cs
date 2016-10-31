@@ -50,6 +50,7 @@
             this.gridCatalog = new System.Windows.Forms.DataGridView();
             this.RowNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StatusName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Amount1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Weight1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -61,7 +62,6 @@
             this.Weight4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MinPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ShopName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StatusName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.JewelryTypeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel4.SuspendLayout();
@@ -171,6 +171,7 @@
             this.gridCatalog.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.RowNum,
             this.ID,
+            this.StatusName,
             this.Code,
             this.Amount1,
             this.Weight1,
@@ -182,14 +183,13 @@
             this.Weight4,
             this.MinPrice,
             this.ShopName,
-            this.StatusName,
             this.JewelryTypeName});
             this.gridCatalog.Location = new System.Drawing.Point(15, 0);
             this.gridCatalog.Name = "gridCatalog";
             this.gridCatalog.ReadOnly = true;
             this.gridCatalog.RowHeadersWidth = 10;
             this.gridCatalog.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridCatalog.RowTemplate.Height = 60;
+            this.gridCatalog.RowTemplate.Height = 30;
             this.gridCatalog.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridCatalog.Size = new System.Drawing.Size(1295, 489);
             this.gridCatalog.TabIndex = 2;
@@ -212,6 +212,13 @@
             this.ID.Name = "ID";
             this.ID.ReadOnly = true;
             this.ID.Visible = false;
+            // 
+            // StatusName
+            // 
+            this.StatusName.DataPropertyName = "StatusName";
+            this.StatusName.HeaderText = "Status";
+            this.StatusName.Name = "StatusName";
+            this.StatusName.ReadOnly = true;
             // 
             // Code
             // 
@@ -328,13 +335,6 @@
             this.ShopName.Name = "ShopName";
             this.ShopName.ReadOnly = true;
             // 
-            // StatusName
-            // 
-            this.StatusName.DataPropertyName = "StatusName";
-            this.StatusName.HeaderText = "Status";
-            this.StatusName.Name = "StatusName";
-            this.StatusName.ReadOnly = true;
-            // 
             // JewelryTypeName
             // 
             this.JewelryTypeName.DataPropertyName = "JewelryTypeName";
@@ -374,6 +374,7 @@
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.DataGridViewTextBoxColumn RowNum;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn StatusName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Code;
         private System.Windows.Forms.DataGridViewTextBoxColumn Amount1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Weight1;
@@ -385,7 +386,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Weight4;
         private System.Windows.Forms.DataGridViewTextBoxColumn MinPrice;
         private System.Windows.Forms.DataGridViewTextBoxColumn ShopName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn StatusName;
         private System.Windows.Forms.DataGridViewTextBoxColumn JewelryTypeName;
     }
 }
