@@ -479,6 +479,7 @@ namespace DiamondShop
         }
         private void linkFile_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            ser1 = GM.GetService1();
             file = ser1.GetCertificate(id, 0);
             if(file != null || id > 0)
             {

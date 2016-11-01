@@ -515,7 +515,7 @@
             this.LabName.HeaderText = "Lab";
             this.LabName.Name = "LabName";
             this.LabName.ReadOnly = true;
-            this.LabName.Width = 60;
+            this.LabName.Width = 90;
             // 
             // IdentificationName
             // 
@@ -566,7 +566,7 @@
             this.CommentName.Name = "CommentName";
             this.CommentName.ReadOnly = true;
             this.CommentName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.CommentName.Width = 160;
+            this.CommentName.Width = 130;
             // 
             // OriginName
             // 

@@ -422,7 +422,6 @@
             this.StatusName.HeaderText = "Status";
             this.StatusName.Name = "StatusName";
             this.StatusName.ReadOnly = true;
-            this.StatusName.Width = 110;
             // 
             // Code
             // 
@@ -517,7 +516,7 @@
             this.ReportNumber.HeaderText = "Report Number";
             this.ReportNumber.Name = "ReportNumber";
             this.ReportNumber.ReadOnly = true;
-            this.ReportNumber.Width = 180;
+            this.ReportNumber.Width = 160;
             // 
             // ShopName
             // 
@@ -534,6 +533,7 @@
             this.Setting.ReadOnly = true;
             this.Setting.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Setting.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Setting.Visible = false;
             this.Setting.Width = 170;
             // 
             // BuyDate
@@ -544,7 +544,7 @@
             this.BuyDate.HeaderText = "Buy Date";
             this.BuyDate.Name = "BuyDate";
             this.BuyDate.ReadOnly = true;
-            this.BuyDate.Width = 120;
+            this.BuyDate.Width = 110;
             // 
             // GemstoneCerList
             // 
