@@ -194,7 +194,7 @@
             this.gridCatalog.ReadOnly = true;
             this.gridCatalog.RowHeadersWidth = 10;
             this.gridCatalog.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridCatalog.RowTemplate.Height = 30;
+            this.gridCatalog.RowTemplate.Height = 50;
             this.gridCatalog.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridCatalog.Size = new System.Drawing.Size(1295, 489);
             this.gridCatalog.TabIndex = 2;
@@ -228,7 +228,8 @@
             // image1
             // 
             this.image1.DataPropertyName = "image1";
-            this.image1.HeaderText = "image1";
+            this.image1.HeaderText = "Photo";
+            this.image1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
             this.image1.Name = "image1";
             this.image1.ReadOnly = true;
             this.image1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -252,7 +253,6 @@
             this.Amount1.HeaderText = "Amt. DC.";
             this.Amount1.Name = "Amount1";
             this.Amount1.ReadOnly = true;
-            this.Amount1.Width = 110;
             // 
             // Weight1
             // 
@@ -263,7 +263,6 @@
             this.Weight1.HeaderText = "นน. DC.";
             this.Weight1.Name = "Weight1";
             this.Weight1.ReadOnly = true;
-            this.Weight1.Width = 110;
             // 
             // Amount2
             // 
@@ -274,7 +273,7 @@
             this.Amount2.HeaderText = "Amt. NDC.";
             this.Amount2.Name = "Amount2";
             this.Amount2.ReadOnly = true;
-            this.Amount2.Width = 120;
+            this.Amount2.Width = 110;
             // 
             // Weight2
             // 
@@ -285,7 +284,6 @@
             this.Weight2.HeaderText = "นน. NDC.";
             this.Weight2.Name = "Weight2";
             this.Weight2.ReadOnly = true;
-            this.Weight2.Width = 110;
             // 
             // Amount3
             // 
@@ -296,7 +294,6 @@
             this.Amount3.HeaderText = "Amt. GC.";
             this.Amount3.Name = "Amount3";
             this.Amount3.ReadOnly = true;
-            this.Amount3.Width = 110;
             // 
             // Weight3
             // 
@@ -307,7 +304,6 @@
             this.Weight3.HeaderText = "นน. GC.";
             this.Weight3.Name = "Weight3";
             this.Weight3.ReadOnly = true;
-            this.Weight3.Width = 110;
             // 
             // Amount4
             // 
@@ -318,7 +314,7 @@
             this.Amount4.HeaderText = "Amt. NGC.";
             this.Amount4.Name = "Amount4";
             this.Amount4.ReadOnly = true;
-            this.Amount4.Width = 120;
+            this.Amount4.Width = 110;
             // 
             // Weight4
             // 
@@ -329,7 +325,7 @@
             this.Weight4.HeaderText = "นน. NGC.";
             this.Weight4.Name = "Weight4";
             this.Weight4.ReadOnly = true;
-            this.Weight4.Width = 120;
+            this.Weight4.Width = 110;
             // 
             // MinPrice
             // 
@@ -340,7 +336,6 @@
             this.MinPrice.HeaderText = "Min Price";
             this.MinPrice.Name = "MinPrice";
             this.MinPrice.ReadOnly = true;
-            this.MinPrice.Width = 110;
             // 
             // Pricetag
             // 

@@ -361,6 +361,7 @@
             this.Size.HeaderText = "Size";
             this.Size.Name = "Size";
             this.Size.ReadOnly = true;
+            this.Size.Width = 90;
             // 
             // ColorName
             // 
@@ -389,7 +390,7 @@
             this.PriceCaratUSD.Name = "PriceCaratUSD";
             this.PriceCaratUSD.ReadOnly = true;
             this.PriceCaratUSD.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.PriceCaratUSD.Width = 135;
+            this.PriceCaratUSD.Width = 130;
             // 
             // PriceCaratB
             // 
@@ -401,7 +402,7 @@
             this.PriceCaratB.Name = "PriceCaratB";
             this.PriceCaratB.ReadOnly = true;
             this.PriceCaratB.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.PriceCaratB.Width = 140;
+            this.PriceCaratB.Width = 130;
             // 
             // MarketPrice
             // 
@@ -412,7 +413,7 @@
             this.MarketPrice.HeaderText = "Market Price Baht";
             this.MarketPrice.Name = "MarketPrice";
             this.MarketPrice.ReadOnly = true;
-            this.MarketPrice.Width = 180;
+            this.MarketPrice.Width = 170;
             // 
             // BuyBookDiamondList
             // 

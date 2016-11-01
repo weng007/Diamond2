@@ -192,7 +192,6 @@
             this.gridJewelry.AllowUserToAddRows = false;
             this.gridJewelry.AllowUserToDeleteRows = false;
             this.gridJewelry.AllowUserToOrderColumns = true;
-            this.gridJewelry.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.gridJewelry.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.gridJewelry.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridJewelry.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -219,7 +218,7 @@
             this.gridJewelry.ReadOnly = true;
             this.gridJewelry.RowHeadersWidth = 10;
             this.gridJewelry.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridJewelry.RowTemplate.Height = 60;
+            this.gridJewelry.RowTemplate.Height = 50;
             this.gridJewelry.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridJewelry.Size = new System.Drawing.Size(1314, 447);
             this.gridJewelry.TabIndex = 2;
@@ -263,6 +262,7 @@
             // 
             this.Image1.DataPropertyName = "Image1";
             this.Image1.HeaderText = "Photo";
+            this.Image1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
             this.Image1.Name = "Image1";
             this.Image1.ReadOnly = true;
             this.Image1.Width = 130;

@@ -53,6 +53,7 @@
             this.gridInventory = new System.Windows.Forms.DataGridView();
             this.RowNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StatusName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Image1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.Amount1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -67,7 +68,6 @@
             this.MinPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PriceTag = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ShopName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StatusName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -194,6 +194,7 @@
             this.gridInventory.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.RowNum,
             this.ID,
+            this.StatusName,
             this.Code,
             this.Image1,
             this.Amount1,
@@ -207,14 +208,13 @@
             this.RedCost,
             this.MinPrice,
             this.PriceTag,
-            this.ShopName,
-            this.StatusName});
+            this.ShopName});
             this.gridInventory.Location = new System.Drawing.Point(20, 11);
             this.gridInventory.Name = "gridInventory";
             this.gridInventory.ReadOnly = true;
             this.gridInventory.RowHeadersWidth = 10;
             this.gridInventory.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridInventory.RowTemplate.Height = 60;
+            this.gridInventory.RowTemplate.Height = 50;
             this.gridInventory.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridInventory.Size = new System.Drawing.Size(1315, 448);
             this.gridInventory.TabIndex = 2;
@@ -238,6 +238,13 @@
             this.ID.ReadOnly = true;
             this.ID.Visible = false;
             // 
+            // StatusName
+            // 
+            this.StatusName.DataPropertyName = "StatusName";
+            this.StatusName.HeaderText = "Status";
+            this.StatusName.Name = "StatusName";
+            this.StatusName.ReadOnly = true;
+            // 
             // Code
             // 
             this.Code.DataPropertyName = "Code";
@@ -250,6 +257,7 @@
             // 
             this.Image1.DataPropertyName = "Image1";
             this.Image1.HeaderText = "Photo";
+            this.Image1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
             this.Image1.Name = "Image1";
             this.Image1.ReadOnly = true;
             this.Image1.Width = 130;
@@ -382,13 +390,6 @@
             this.ShopName.Name = "ShopName";
             this.ShopName.ReadOnly = true;
             // 
-            // StatusName
-            // 
-            this.StatusName.DataPropertyName = "StatusName";
-            this.StatusName.HeaderText = "Status";
-            this.StatusName.Name = "StatusName";
-            this.StatusName.ReadOnly = true;
-            // 
             // InventoryList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -421,6 +422,7 @@
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.DataGridViewTextBoxColumn RowNum;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn StatusName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Code;
         private System.Windows.Forms.DataGridViewImageColumn Image1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Amount1;
@@ -435,6 +437,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn MinPrice;
         private System.Windows.Forms.DataGridViewTextBoxColumn PriceTag;
         private System.Windows.Forms.DataGridViewTextBoxColumn ShopName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn StatusName;
     }
 }

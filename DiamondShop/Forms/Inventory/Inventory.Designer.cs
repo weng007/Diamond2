@@ -312,7 +312,7 @@
             // 
             this.btnImage1.BackColor = System.Drawing.SystemColors.Control;
             this.btnImage1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnImage1.BackgroundImage")));
-            this.btnImage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnImage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnImage1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnImage1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnImage1.Location = new System.Drawing.Point(699, 286);
@@ -326,7 +326,7 @@
             // 
             this.btnImage2.BackColor = System.Drawing.SystemColors.Control;
             this.btnImage2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnImage2.BackgroundImage")));
-            this.btnImage2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnImage2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnImage2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnImage2.Location = new System.Drawing.Point(920, 286);
             this.btnImage2.Name = "btnImage2";
@@ -408,7 +408,7 @@
             this.panel7.Controls.Add(this.label15);
             this.panel7.Controls.Add(this.label14);
             this.panel7.Controls.Add(this.label13);
-            this.panel7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.panel7.Location = new System.Drawing.Point(13, 72);
             this.panel7.Name = "panel7";
@@ -417,7 +417,7 @@
             // 
             // label32
             // 
-            this.label32.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label32.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label32.Location = new System.Drawing.Point(57, 502);
             this.label32.Name = "label32";
@@ -427,7 +427,7 @@
             // 
             // label30
             // 
-            this.label30.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label30.Location = new System.Drawing.Point(77, 538);
             this.label30.Name = "label30";
@@ -449,7 +449,7 @@
             // 
             this.txtSize.Location = new System.Drawing.Point(436, 90);
             this.txtSize.Name = "txtSize";
-            this.txtSize.Size = new System.Drawing.Size(119, 27);
+            this.txtSize.Size = new System.Drawing.Size(119, 26);
             this.txtSize.TabIndex = 10;
             this.txtSize.Text = "0";
             this.txtSize.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -457,7 +457,7 @@
             // 
             // label38
             // 
-            this.label38.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label38.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label38.Location = new System.Drawing.Point(386, 90);
             this.label38.Name = "label38";
@@ -472,7 +472,7 @@
             this.dtImportDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtImportDate.Location = new System.Drawing.Point(783, 50);
             this.dtImportDate.Name = "dtImportDate";
-            this.dtImportDate.Size = new System.Drawing.Size(131, 27);
+            this.dtImportDate.Size = new System.Drawing.Size(131, 26);
             this.dtImportDate.TabIndex = 14;
             this.dtImportDate.ValueChanged += new System.EventHandler(this.dtUpdateDate_ValueChanged);
             // 
@@ -483,7 +483,7 @@
             this.dtUpdateDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtUpdateDate.Location = new System.Drawing.Point(150, 53);
             this.dtUpdateDate.Name = "dtUpdateDate";
-            this.dtUpdateDate.Size = new System.Drawing.Size(131, 27);
+            this.dtUpdateDate.Size = new System.Drawing.Size(131, 26);
             this.dtUpdateDate.TabIndex = 4;
             this.dtUpdateDate.ValueChanged += new System.EventHandler(this.dtUpdateDate_ValueChanged);
             // 
@@ -535,7 +535,7 @@
             // 
             this.txtTechnician.Location = new System.Drawing.Point(174, 629);
             this.txtTechnician.Name = "txtTechnician";
-            this.txtTechnician.Size = new System.Drawing.Size(187, 27);
+            this.txtTechnician.Size = new System.Drawing.Size(187, 26);
             this.txtTechnician.TabIndex = 32;
             this.txtTechnician.TextChanged += new System.EventHandler(this.txtRedCost_TextChanged);
             // 
@@ -554,7 +554,7 @@
             this.txtPriceTag.BackColor = System.Drawing.Color.White;
             this.txtPriceTag.Location = new System.Drawing.Point(653, 647);
             this.txtPriceTag.Name = "txtPriceTag";
-            this.txtPriceTag.Size = new System.Drawing.Size(135, 27);
+            this.txtPriceTag.Size = new System.Drawing.Size(135, 26);
             this.txtPriceTag.TabIndex = 38;
             this.txtPriceTag.Text = "0";
             this.txtPriceTag.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -564,7 +564,7 @@
             // 
             // label36
             // 
-            this.label36.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label36.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label36.Location = new System.Drawing.Point(512, 650);
             this.label36.Name = "label36";
@@ -577,7 +577,7 @@
             this.txtMinPrice.BackColor = System.Drawing.Color.White;
             this.txtMinPrice.Location = new System.Drawing.Point(653, 613);
             this.txtMinPrice.Name = "txtMinPrice";
-            this.txtMinPrice.Size = new System.Drawing.Size(135, 27);
+            this.txtMinPrice.Size = new System.Drawing.Size(135, 26);
             this.txtMinPrice.TabIndex = 36;
             this.txtMinPrice.Text = "0";
             this.txtMinPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -587,7 +587,7 @@
             // 
             // label35
             // 
-            this.label35.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label35.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label35.Location = new System.Drawing.Point(473, 616);
             this.label35.Name = "label35";
@@ -601,7 +601,7 @@
             this.txtRedCost1.Enabled = false;
             this.txtRedCost1.Location = new System.Drawing.Point(653, 579);
             this.txtRedCost1.Name = "txtRedCost1";
-            this.txtRedCost1.Size = new System.Drawing.Size(135, 27);
+            this.txtRedCost1.Size = new System.Drawing.Size(135, 26);
             this.txtRedCost1.TabIndex = 154;
             this.txtRedCost1.Text = "0";
             this.txtRedCost1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -610,7 +610,7 @@
             // 
             // label34
             // 
-            this.label34.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label34.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label34.Location = new System.Drawing.Point(434, 584);
             this.label34.Name = "label34";
@@ -624,7 +624,7 @@
             this.txtRedCost.Enabled = false;
             this.txtRedCost.Location = new System.Drawing.Point(221, 579);
             this.txtRedCost.Name = "txtRedCost";
-            this.txtRedCost.Size = new System.Drawing.Size(140, 27);
+            this.txtRedCost.Size = new System.Drawing.Size(140, 26);
             this.txtRedCost.TabIndex = 68;
             this.txtRedCost.Text = "0";
             this.txtRedCost.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -633,7 +633,7 @@
             // 
             // label33
             // 
-            this.label33.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label33.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label33.Location = new System.Drawing.Point(126, 582);
             this.label33.Name = "label33";
@@ -646,7 +646,7 @@
             this.txtCostCer.Enabled = false;
             this.txtCostCer.Location = new System.Drawing.Point(242, 502);
             this.txtCostCer.Name = "txtCostCer";
-            this.txtCostCer.Size = new System.Drawing.Size(119, 27);
+            this.txtCostCer.Size = new System.Drawing.Size(119, 26);
             this.txtCostCer.TabIndex = 64;
             this.txtCostCer.Text = "0";
             this.txtCostCer.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -658,7 +658,7 @@
             this.txtCostCer1.Enabled = false;
             this.txtCostCer1.Location = new System.Drawing.Point(434, 502);
             this.txtCostCer1.Name = "txtCostCer1";
-            this.txtCostCer1.Size = new System.Drawing.Size(119, 27);
+            this.txtCostCer1.Size = new System.Drawing.Size(119, 26);
             this.txtCostCer1.TabIndex = 148;
             this.txtCostCer1.Text = "0";
             this.txtCostCer1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -670,7 +670,7 @@
             this.txtCostNonCer.Enabled = false;
             this.txtCostNonCer.Location = new System.Drawing.Point(242, 540);
             this.txtCostNonCer.Name = "txtCostNonCer";
-            this.txtCostNonCer.Size = new System.Drawing.Size(119, 27);
+            this.txtCostNonCer.Size = new System.Drawing.Size(119, 26);
             this.txtCostNonCer.TabIndex = 60;
             this.txtCostNonCer.Text = "0";
             this.txtCostNonCer.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -682,7 +682,7 @@
             this.txtCostNonCer1.Enabled = false;
             this.txtCostNonCer1.Location = new System.Drawing.Point(434, 540);
             this.txtCostNonCer1.Name = "txtCostNonCer1";
-            this.txtCostNonCer1.Size = new System.Drawing.Size(119, 27);
+            this.txtCostNonCer1.Size = new System.Drawing.Size(119, 26);
             this.txtCostNonCer1.TabIndex = 145;
             this.txtCostNonCer1.Text = "0";
             this.txtCostNonCer1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -694,7 +694,7 @@
             this.txtCostBody.Enabled = false;
             this.txtCostBody.Location = new System.Drawing.Point(242, 463);
             this.txtCostBody.Name = "txtCostBody";
-            this.txtCostBody.Size = new System.Drawing.Size(119, 27);
+            this.txtCostBody.Size = new System.Drawing.Size(119, 26);
             this.txtCostBody.TabIndex = 56;
             this.txtCostBody.Text = "0";
             this.txtCostBody.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -706,7 +706,7 @@
             this.txtCostBody1.Enabled = false;
             this.txtCostBody1.Location = new System.Drawing.Point(434, 463);
             this.txtCostBody1.Name = "txtCostBody1";
-            this.txtCostBody1.Size = new System.Drawing.Size(119, 27);
+            this.txtCostBody1.Size = new System.Drawing.Size(119, 26);
             this.txtCostBody1.TabIndex = 142;
             this.txtCostBody1.Text = "0";
             this.txtCostBody1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -717,7 +717,7 @@
             // 
             this.txtCost3.Location = new System.Drawing.Point(242, 427);
             this.txtCost3.Name = "txtCost3";
-            this.txtCost3.Size = new System.Drawing.Size(119, 27);
+            this.txtCost3.Size = new System.Drawing.Size(119, 26);
             this.txtCost3.TabIndex = 30;
             this.txtCost3.Text = "0";
             this.txtCost3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -730,7 +730,7 @@
             this.txtCost33.Enabled = false;
             this.txtCost33.Location = new System.Drawing.Point(434, 427);
             this.txtCost33.Name = "txtCost33";
-            this.txtCost33.Size = new System.Drawing.Size(119, 27);
+            this.txtCost33.Size = new System.Drawing.Size(119, 26);
             this.txtCost33.TabIndex = 139;
             this.txtCost33.Text = "0";
             this.txtCost33.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -753,7 +753,7 @@
             this.txtCost11.Enabled = false;
             this.txtCost11.Location = new System.Drawing.Point(434, 359);
             this.txtCost11.Name = "txtCost11";
-            this.txtCost11.Size = new System.Drawing.Size(119, 27);
+            this.txtCost11.Size = new System.Drawing.Size(119, 26);
             this.txtCost11.TabIndex = 137;
             this.txtCost11.Text = "0";
             this.txtCost11.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -765,7 +765,7 @@
             // 
             this.txtCost1.Location = new System.Drawing.Point(242, 359);
             this.txtCost1.Name = "txtCost1";
-            this.txtCost1.Size = new System.Drawing.Size(119, 27);
+            this.txtCost1.Size = new System.Drawing.Size(119, 26);
             this.txtCost1.TabIndex = 26;
             this.txtCost1.Text = "0";
             this.txtCost1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -787,7 +787,7 @@
             // 
             this.txtCost2.Location = new System.Drawing.Point(242, 393);
             this.txtCost2.Name = "txtCost2";
-            this.txtCost2.Size = new System.Drawing.Size(119, 27);
+            this.txtCost2.Size = new System.Drawing.Size(119, 26);
             this.txtCost2.TabIndex = 28;
             this.txtCost2.Text = "0";
             this.txtCost2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -810,7 +810,7 @@
             this.txtCost22.Enabled = false;
             this.txtCost22.Location = new System.Drawing.Point(434, 393);
             this.txtCost22.Name = "txtCost22";
-            this.txtCost22.Size = new System.Drawing.Size(119, 27);
+            this.txtCost22.Size = new System.Drawing.Size(119, 26);
             this.txtCost22.TabIndex = 132;
             this.txtCost22.Text = "0";
             this.txtCost22.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -823,7 +823,7 @@
             this.chkMoreMaterial.AutoSize = true;
             this.chkMoreMaterial.Location = new System.Drawing.Point(1001, 75);
             this.chkMoreMaterial.Name = "chkMoreMaterial";
-            this.chkMoreMaterial.Size = new System.Drawing.Size(107, 25);
+            this.chkMoreMaterial.Size = new System.Drawing.Size(97, 24);
             this.chkMoreMaterial.TabIndex = 88;
             this.chkMoreMaterial.Text = "Material 2";
             this.chkMoreMaterial.UseVisualStyleBackColor = true;
@@ -834,7 +834,7 @@
             this.txtMaterialNetCost1.Enabled = false;
             this.txtMaterialNetCost1.Location = new System.Drawing.Point(434, 291);
             this.txtMaterialNetCost1.Name = "txtMaterialNetCost1";
-            this.txtMaterialNetCost1.Size = new System.Drawing.Size(119, 27);
+            this.txtMaterialNetCost1.Size = new System.Drawing.Size(119, 26);
             this.txtMaterialNetCost1.TabIndex = 130;
             this.txtMaterialNetCost1.Text = "0";
             this.txtMaterialNetCost1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -846,7 +846,7 @@
             this.txtMaterialNetCost.Enabled = false;
             this.txtMaterialNetCost.Location = new System.Drawing.Point(242, 291);
             this.txtMaterialNetCost.Name = "txtMaterialNetCost";
-            this.txtMaterialNetCost.Size = new System.Drawing.Size(119, 27);
+            this.txtMaterialNetCost.Size = new System.Drawing.Size(119, 26);
             this.txtMaterialNetCost.TabIndex = 140;
             this.txtMaterialNetCost.Text = "0";
             this.txtMaterialNetCost.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -883,7 +883,7 @@
             // 
             // label17
             // 
-            this.label17.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.Location = new System.Drawing.Point(15, 12);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(117, 24);
@@ -894,7 +894,7 @@
             // 
             this.txtMaterialWeight2.Location = new System.Drawing.Point(169, 48);
             this.txtMaterialWeight2.Name = "txtMaterialWeight2";
-            this.txtMaterialWeight2.Size = new System.Drawing.Size(119, 27);
+            this.txtMaterialWeight2.Size = new System.Drawing.Size(119, 26);
             this.txtMaterialWeight2.TabIndex = 190;
             this.txtMaterialWeight2.Text = "0";
             this.txtMaterialWeight2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -906,7 +906,7 @@
             // 
             this.txtPricePerGram22.Location = new System.Drawing.Point(323, 84);
             this.txtPricePerGram22.Name = "txtPricePerGram22";
-            this.txtPricePerGram22.Size = new System.Drawing.Size(119, 27);
+            this.txtPricePerGram22.Size = new System.Drawing.Size(119, 26);
             this.txtPricePerGram22.TabIndex = 192;
             this.txtPricePerGram22.Text = "0";
             this.txtPricePerGram22.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -916,7 +916,7 @@
             // 
             // label21
             // 
-            this.label21.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.Location = new System.Drawing.Point(15, 117);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(134, 24);
@@ -928,7 +928,7 @@
             this.txtMaterialCost22.Enabled = false;
             this.txtMaterialCost22.Location = new System.Drawing.Point(323, 117);
             this.txtMaterialCost22.Name = "txtMaterialCost22";
-            this.txtMaterialCost22.Size = new System.Drawing.Size(119, 27);
+            this.txtMaterialCost22.Size = new System.Drawing.Size(119, 26);
             this.txtMaterialCost22.TabIndex = 172;
             this.txtMaterialCost22.Text = "0";
             this.txtMaterialCost22.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -940,7 +940,7 @@
             this.cmbMaterial2.FormattingEnabled = true;
             this.cmbMaterial2.Location = new System.Drawing.Point(169, 10);
             this.cmbMaterial2.Name = "cmbMaterial2";
-            this.cmbMaterial2.Size = new System.Drawing.Size(165, 29);
+            this.cmbMaterial2.Size = new System.Drawing.Size(165, 28);
             this.cmbMaterial2.TabIndex = 92;
             // 
             // txtMaterialCost2
@@ -948,7 +948,7 @@
             this.txtMaterialCost2.Enabled = false;
             this.txtMaterialCost2.Location = new System.Drawing.Point(169, 119);
             this.txtMaterialCost2.Name = "txtMaterialCost2";
-            this.txtMaterialCost2.Size = new System.Drawing.Size(119, 27);
+            this.txtMaterialCost2.Size = new System.Drawing.Size(119, 26);
             this.txtMaterialCost2.TabIndex = 104;
             this.txtMaterialCost2.Text = "0";
             this.txtMaterialCost2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -957,7 +957,7 @@
             // 
             // label20
             // 
-            this.label20.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label20.Location = new System.Drawing.Point(15, 48);
             this.label20.Name = "label20";
@@ -969,7 +969,7 @@
             // 
             this.txtPricePerGram2.Location = new System.Drawing.Point(169, 84);
             this.txtPricePerGram2.Name = "txtPricePerGram2";
-            this.txtPricePerGram2.Size = new System.Drawing.Size(119, 27);
+            this.txtPricePerGram2.Size = new System.Drawing.Size(119, 26);
             this.txtPricePerGram2.TabIndex = 191;
             this.txtPricePerGram2.Text = "0";
             this.txtPricePerGram2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -979,7 +979,7 @@
             // 
             // label18
             // 
-            this.label18.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label18.Location = new System.Drawing.Point(15, 84);
             this.label18.Name = "label18";
@@ -989,7 +989,7 @@
             // 
             // label16
             // 
-            this.label16.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label16.Location = new System.Drawing.Point(82, 136);
             this.label16.Name = "label16";
@@ -1001,7 +1001,7 @@
             // 
             this.txtPricePerGram11.Location = new System.Drawing.Point(434, 202);
             this.txtPricePerGram11.Name = "txtPricePerGram11";
-            this.txtPricePerGram11.Size = new System.Drawing.Size(119, 27);
+            this.txtPricePerGram11.Size = new System.Drawing.Size(119, 26);
             this.txtPricePerGram11.TabIndex = 22;
             this.txtPricePerGram11.Text = "0";
             this.txtPricePerGram11.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -1014,7 +1014,7 @@
             this.txtMaterialCost11.Enabled = false;
             this.txtMaterialCost11.Location = new System.Drawing.Point(434, 235);
             this.txtMaterialCost11.Name = "txtMaterialCost11";
-            this.txtMaterialCost11.Size = new System.Drawing.Size(119, 27);
+            this.txtMaterialCost11.Size = new System.Drawing.Size(119, 26);
             this.txtMaterialCost11.TabIndex = 144;
             this.txtMaterialCost11.Text = "0";
             this.txtMaterialCost11.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -1025,7 +1025,7 @@
             // 
             this.txtLaborCost.Location = new System.Drawing.Point(242, 325);
             this.txtLaborCost.Name = "txtLaborCost";
-            this.txtLaborCost.Size = new System.Drawing.Size(119, 27);
+            this.txtLaborCost.Size = new System.Drawing.Size(119, 26);
             this.txtLaborCost.TabIndex = 24;
             this.txtLaborCost.Text = "0";
             this.txtLaborCost.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -1047,7 +1047,7 @@
             this.txtMaterialCost1.Enabled = false;
             this.txtMaterialCost1.Location = new System.Drawing.Point(241, 238);
             this.txtMaterialCost1.Name = "txtMaterialCost1";
-            this.txtMaterialCost1.Size = new System.Drawing.Size(119, 27);
+            this.txtMaterialCost1.Size = new System.Drawing.Size(119, 26);
             this.txtMaterialCost1.TabIndex = 36;
             this.txtMaterialCost1.Text = "0";
             this.txtMaterialCost1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -1059,7 +1059,7 @@
             this.txtLaborCost1.Enabled = false;
             this.txtLaborCost1.Location = new System.Drawing.Point(434, 325);
             this.txtLaborCost1.Name = "txtLaborCost1";
-            this.txtLaborCost1.Size = new System.Drawing.Size(119, 27);
+            this.txtLaborCost1.Size = new System.Drawing.Size(119, 26);
             this.txtLaborCost1.TabIndex = 120;
             this.txtLaborCost1.Text = "0";
             this.txtLaborCost1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -1071,7 +1071,7 @@
             // 
             this.txtPricePerGram1.Location = new System.Drawing.Point(241, 203);
             this.txtPricePerGram1.Name = "txtPricePerGram1";
-            this.txtPricePerGram1.Size = new System.Drawing.Size(119, 27);
+            this.txtPricePerGram1.Size = new System.Drawing.Size(119, 26);
             this.txtPricePerGram1.TabIndex = 20;
             this.txtPricePerGram1.Text = "0";
             this.txtPricePerGram1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -1081,7 +1081,7 @@
             // 
             // label10
             // 
-            this.label10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label10.Location = new System.Drawing.Point(82, 206);
@@ -1092,7 +1092,7 @@
             // 
             // label11
             // 
-            this.label11.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(660, 52);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(117, 24);
@@ -1129,7 +1129,7 @@
             // 
             // label26
             // 
-            this.label26.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label26.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label26.Location = new System.Drawing.Point(660, 16);
             this.label26.Name = "label26";
@@ -1143,7 +1143,7 @@
             this.cmbShop.FormattingEnabled = true;
             this.cmbShop.Location = new System.Drawing.Point(436, 19);
             this.cmbShop.Name = "cmbShop";
-            this.cmbShop.Size = new System.Drawing.Size(165, 29);
+            this.cmbShop.Size = new System.Drawing.Size(165, 28);
             this.cmbShop.TabIndex = 6;
             this.cmbShop.SelectedValueChanged += new System.EventHandler(this.cmbShop_SelectedValueChanged);
             // 
@@ -1153,7 +1153,7 @@
             this.cmbStatus.FormattingEnabled = true;
             this.cmbStatus.Location = new System.Drawing.Point(783, 13);
             this.cmbStatus.Name = "cmbStatus";
-            this.cmbStatus.Size = new System.Drawing.Size(165, 29);
+            this.cmbStatus.Size = new System.Drawing.Size(165, 28);
             this.cmbStatus.TabIndex = 12;
             this.cmbStatus.SelectedValueChanged += new System.EventHandler(this.cmbShop_SelectedValueChanged);
             // 
@@ -1163,7 +1163,7 @@
             this.cmbJewelryType.FormattingEnabled = true;
             this.cmbJewelryType.Location = new System.Drawing.Point(436, 55);
             this.cmbJewelryType.Name = "cmbJewelryType";
-            this.cmbJewelryType.Size = new System.Drawing.Size(165, 29);
+            this.cmbJewelryType.Size = new System.Drawing.Size(165, 28);
             this.cmbJewelryType.TabIndex = 8;
             this.cmbJewelryType.SelectedValueChanged += new System.EventHandler(this.cmbShop_SelectedValueChanged);
             // 
@@ -1171,7 +1171,7 @@
             // 
             this.txtMaterialWeight1.Location = new System.Drawing.Point(241, 167);
             this.txtMaterialWeight1.Name = "txtMaterialWeight1";
-            this.txtMaterialWeight1.Size = new System.Drawing.Size(119, 27);
+            this.txtMaterialWeight1.Size = new System.Drawing.Size(119, 26);
             this.txtMaterialWeight1.TabIndex = 18;
             this.txtMaterialWeight1.Text = "0";
             this.txtMaterialWeight1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -1181,7 +1181,7 @@
             // 
             // label22
             // 
-            this.label22.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label22.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label22.Location = new System.Drawing.Point(82, 171);
@@ -1196,7 +1196,7 @@
             this.txtCode.Enabled = false;
             this.txtCode.Location = new System.Drawing.Point(149, 91);
             this.txtCode.Name = "txtCode";
-            this.txtCode.Size = new System.Drawing.Size(162, 27);
+            this.txtCode.Size = new System.Drawing.Size(162, 26);
             this.txtCode.TabIndex = 200;
             // 
             // txtUpdateBy
@@ -1206,7 +1206,7 @@
             this.txtUpdateBy.Location = new System.Drawing.Point(150, 19);
             this.txtUpdateBy.Name = "txtUpdateBy";
             this.txtUpdateBy.ReadOnly = true;
-            this.txtUpdateBy.Size = new System.Drawing.Size(162, 27);
+            this.txtUpdateBy.Size = new System.Drawing.Size(162, 26);
             this.txtUpdateBy.TabIndex = 2;
             this.txtUpdateBy.TextChanged += new System.EventHandler(this.txtRedCost_TextChanged);
             // 
@@ -1223,7 +1223,7 @@
             this.cmbMaterial1.FormattingEnabled = true;
             this.cmbMaterial1.Location = new System.Drawing.Point(241, 131);
             this.cmbMaterial1.Name = "cmbMaterial1";
-            this.cmbMaterial1.Size = new System.Drawing.Size(165, 29);
+            this.cmbMaterial1.Size = new System.Drawing.Size(165, 28);
             this.cmbMaterial1.TabIndex = 16;
             this.cmbMaterial1.SelectedValueChanged += new System.EventHandler(this.cmbShop_SelectedValueChanged);
             // 
@@ -1248,7 +1248,7 @@
             // 
             // label14
             // 
-            this.label14.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label14.Location = new System.Drawing.Point(82, 236);
             this.label14.Name = "label14";
