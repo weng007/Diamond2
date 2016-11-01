@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DiamondShop.FormMaster;
+using DiamondDS.DS;
 using DiamondShop.DiamondService1;
 using Microsoft.Reporting.WinForms;
 
@@ -16,15 +17,23 @@ namespace DiamondShop.Report
     public partial class ReportViewer : FormList
     {
         Service2 ser1;
+        public int ID;
         DataSet ds = new DataSet();
 
         public ReportViewer()
         {
             InitializeComponent();
+            Initial();
+            DoLoadData();
         }
 
-        public ReportViewer(int id)
+        public ReportViewer(int ID)
         {
+            InitializeComponent();
+            Initial();
+
+            this.ID = ID;
+
             Application.UseWaitCursor = true;
             ser1 = GM.GetService1();
 
@@ -33,20 +42,14 @@ namespace DiamondShop.Report
             ReportDataSource datasource = new ReportDataSource("dsCertificate", ds.Tables[1]);
             this.reportViewer1.LocalReport.ReportPath = "..\\Report\\Certificate.rdlc";
 
-            //ReportDataSource datasource2 = new ReportDataSource("dsCertificateDetail", ds.Tables[2]);
-            //this.reportViewer1.LocalReport.ReportPath = "..\\Report\\CertificateDetsil.rdlc";
-
 
             this.reportViewer1.LocalReport.DataSources.Add(datasource);
-            //this.reportViewer1.LocalReport.DataSources.Add(datasource2);
             this.reportViewer1.RefreshReport();
             Application.UseWaitCursor = false;
         }
 
         private void ReportViewer_Load(object sender, EventArgs e)
         {
-
-
             this.reportViewer1.RefreshReport();
         }
 
