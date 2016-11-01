@@ -23,6 +23,7 @@ namespace DiamondShop
         byte[] image1;
         int custID = 0;
         int refID = 0;
+        decimal price = 0;
         string isPrintPrice = "1";
 
         public Sell()
@@ -231,14 +232,14 @@ namespace DiamondShop
             refID = frm.refID1;
             txtCode.Text = frm.code1;
             txtJewelryTypeName.Text = frm.typeName;
-            txtPriceTag.Text = frm.priceTag.ToString();
+            txtPriceTag.Text = frm.price.ToString();
             txtPriceTag.Text = GM.ConvertDoubleToString(txtPriceTag, 0);
             SetJewelryDetail();
 
             //Bind Image
-            if (frm.image1 != null)
+            if (frm.image != null)
             {
-                image1 = frm.image1;
+                image1 = frm.image;
                 ms1 = new MemoryStream(image1);
                 Image backImage1 = Image.FromStream(ms1);
                 btnImage1.BackgroundImage = backImage1;
