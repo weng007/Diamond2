@@ -80,7 +80,7 @@
             this.panel4.Controls.Add(this.txtPrefix);
             this.panel4.Controls.Add(this.txtCode);
             this.panel4.Controls.Add(this.label3);
-            this.panel4.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.panel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.panel4.Location = new System.Drawing.Point(0, 1);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1335, 64);
@@ -133,14 +133,14 @@
             this.txtPrefix.Enabled = false;
             this.txtPrefix.Location = new System.Drawing.Point(147, 20);
             this.txtPrefix.Name = "txtPrefix";
-            this.txtPrefix.Size = new System.Drawing.Size(48, 27);
+            this.txtPrefix.Size = new System.Drawing.Size(48, 26);
             this.txtPrefix.TabIndex = 1;
             // 
             // txtCode
             // 
             this.txtCode.Location = new System.Drawing.Point(214, 21);
             this.txtCode.Name = "txtCode";
-            this.txtCode.Size = new System.Drawing.Size(132, 27);
+            this.txtCode.Size = new System.Drawing.Size(132, 26);
             this.txtCode.TabIndex = 4;
             // 
             // label3
@@ -157,7 +157,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.gridCatalog);
-            this.panel2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.Location = new System.Drawing.Point(5, 71);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1330, 505);
@@ -168,6 +168,7 @@
             this.gridCatalog.AllowUserToAddRows = false;
             this.gridCatalog.AllowUserToDeleteRows = false;
             this.gridCatalog.AllowUserToOrderColumns = true;
+            this.gridCatalog.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.gridCatalog.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.gridCatalog.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridCatalog.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -192,7 +193,7 @@
             this.gridCatalog.Name = "gridCatalog";
             this.gridCatalog.ReadOnly = true;
             this.gridCatalog.RowHeadersWidth = 10;
-            this.gridCatalog.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridCatalog.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridCatalog.RowTemplate.Height = 30;
             this.gridCatalog.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridCatalog.Size = new System.Drawing.Size(1295, 489);

@@ -88,7 +88,7 @@
             this.panel4.Controls.Add(this.label5);
             this.panel4.Controls.Add(this.btnAdd);
             this.panel4.Controls.Add(this.btnSearch);
-            this.panel4.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.panel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.panel4.Location = new System.Drawing.Point(0, 1);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1334, 144);
@@ -99,7 +99,7 @@
             this.cmbSender.FormattingEnabled = true;
             this.cmbSender.Location = new System.Drawing.Point(228, 16);
             this.cmbSender.Name = "cmbSender";
-            this.cmbSender.Size = new System.Drawing.Size(172, 29);
+            this.cmbSender.Size = new System.Drawing.Size(172, 28);
             this.cmbSender.TabIndex = 91;
             // 
             // cmbEShop
@@ -107,7 +107,7 @@
             this.cmbEShop.FormattingEnabled = true;
             this.cmbEShop.Location = new System.Drawing.Point(541, 60);
             this.cmbEShop.Name = "cmbEShop";
-            this.cmbEShop.Size = new System.Drawing.Size(172, 29);
+            this.cmbEShop.Size = new System.Drawing.Size(172, 28);
             this.cmbEShop.TabIndex = 89;
             // 
             // label9
@@ -125,7 +125,7 @@
             this.cmbShop.FormattingEnabled = true;
             this.cmbShop.Location = new System.Drawing.Point(228, 60);
             this.cmbShop.Name = "cmbShop";
-            this.cmbShop.Size = new System.Drawing.Size(172, 29);
+            this.cmbShop.Size = new System.Drawing.Size(172, 28);
             this.cmbShop.TabIndex = 87;
             // 
             // label8
@@ -144,7 +144,7 @@
             this.dtEReceiveDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtEReceiveDate.Location = new System.Drawing.Point(825, 106);
             this.dtEReceiveDate.Name = "dtEReceiveDate";
-            this.dtEReceiveDate.Size = new System.Drawing.Size(131, 27);
+            this.dtEReceiveDate.Size = new System.Drawing.Size(131, 26);
             this.dtEReceiveDate.TabIndex = 84;
             // 
             // label2
@@ -173,7 +173,7 @@
             this.dtSReceiveDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtSReceiveDate.Location = new System.Drawing.Point(669, 106);
             this.dtSReceiveDate.Name = "dtSReceiveDate";
-            this.dtSReceiveDate.Size = new System.Drawing.Size(131, 27);
+            this.dtSReceiveDate.Size = new System.Drawing.Size(131, 26);
             this.dtSReceiveDate.TabIndex = 83;
             // 
             // dtESendDate
@@ -182,7 +182,7 @@
             this.dtESendDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtESendDate.Location = new System.Drawing.Point(383, 106);
             this.dtESendDate.Name = "dtESendDate";
-            this.dtESendDate.Size = new System.Drawing.Size(131, 27);
+            this.dtESendDate.Size = new System.Drawing.Size(131, 26);
             this.dtESendDate.TabIndex = 80;
             // 
             // label6
@@ -211,7 +211,7 @@
             this.dtSSendDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtSSendDate.Location = new System.Drawing.Point(227, 106);
             this.dtSSendDate.Name = "dtSSendDate";
-            this.dtSSendDate.Size = new System.Drawing.Size(131, 27);
+            this.dtSSendDate.Size = new System.Drawing.Size(131, 26);
             this.dtSSendDate.TabIndex = 79;
             // 
             // cmbTransferStatus
@@ -219,7 +219,7 @@
             this.cmbTransferStatus.FormattingEnabled = true;
             this.cmbTransferStatus.Location = new System.Drawing.Point(542, 16);
             this.cmbTransferStatus.Name = "cmbTransferStatus";
-            this.cmbTransferStatus.Size = new System.Drawing.Size(172, 29);
+            this.cmbTransferStatus.Size = new System.Drawing.Size(172, 28);
             this.cmbTransferStatus.TabIndex = 77;
             // 
             // label3
@@ -277,7 +277,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.gridTransfer);
-            this.panel2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.Location = new System.Drawing.Point(5, 151);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1031, 414);
@@ -288,6 +288,7 @@
             this.gridTransfer.AllowUserToAddRows = false;
             this.gridTransfer.AllowUserToDeleteRows = false;
             this.gridTransfer.AllowUserToOrderColumns = true;
+            this.gridTransfer.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.gridTransfer.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.gridTransfer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridTransfer.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -303,7 +304,7 @@
             this.gridTransfer.Name = "gridTransfer";
             this.gridTransfer.ReadOnly = true;
             this.gridTransfer.RowHeadersWidth = 10;
-            this.gridTransfer.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridTransfer.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridTransfer.RowTemplate.Height = 30;
             this.gridTransfer.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridTransfer.Size = new System.Drawing.Size(945, 395);

@@ -258,6 +258,7 @@
             this.gridDiamond.AllowUserToAddRows = false;
             this.gridDiamond.AllowUserToDeleteRows = false;
             this.gridDiamond.AllowUserToOrderColumns = true;
+            this.gridDiamond.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.gridDiamond.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.gridDiamond.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridDiamond.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {

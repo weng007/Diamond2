@@ -211,6 +211,7 @@
             this.gridJewelry.AllowUserToAddRows = false;
             this.gridJewelry.AllowUserToDeleteRows = false;
             this.gridJewelry.AllowUserToOrderColumns = true;
+            this.gridJewelry.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.gridJewelry.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.gridJewelry.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridJewelry.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {

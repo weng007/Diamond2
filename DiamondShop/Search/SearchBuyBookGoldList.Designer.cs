@@ -213,6 +213,7 @@
             this.gridGold.AllowUserToAddRows = false;
             this.gridGold.AllowUserToDeleteRows = false;
             this.gridGold.AllowUserToOrderColumns = true;
+            this.gridGold.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.gridGold.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.gridGold.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridGold.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {

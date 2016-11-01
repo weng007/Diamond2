@@ -59,7 +59,7 @@
             this.panel4.Controls.Add(this.btnAdd);
             this.panel4.Controls.Add(this.btnSearch);
             this.panel4.Controls.Add(this.label3);
-            this.panel4.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.panel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.panel4.Location = new System.Drawing.Point(0, 1);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(710, 117);
@@ -70,7 +70,7 @@
             this.txtSeller.BackColor = System.Drawing.Color.White;
             this.txtSeller.Location = new System.Drawing.Point(199, 21);
             this.txtSeller.Name = "txtSeller";
-            this.txtSeller.Size = new System.Drawing.Size(165, 27);
+            this.txtSeller.Size = new System.Drawing.Size(165, 26);
             this.txtSeller.TabIndex = 1;
             // 
             // btnAdd
@@ -118,7 +118,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.gridETC);
-            this.panel2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.Location = new System.Drawing.Point(5, 122);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(867, 455);
@@ -129,6 +129,7 @@
             this.gridETC.AllowUserToAddRows = false;
             this.gridETC.AllowUserToDeleteRows = false;
             this.gridETC.AllowUserToOrderColumns = true;
+            this.gridETC.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.gridETC.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.gridETC.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridETC.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -143,7 +144,7 @@
             this.gridETC.Name = "gridETC";
             this.gridETC.ReadOnly = true;
             this.gridETC.RowHeadersWidth = 10;
-            this.gridETC.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridETC.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridETC.RowTemplate.Height = 30;
             this.gridETC.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridETC.Size = new System.Drawing.Size(839, 447);

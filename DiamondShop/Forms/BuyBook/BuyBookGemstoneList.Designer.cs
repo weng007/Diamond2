@@ -97,7 +97,7 @@
             this.panel4.Controls.Add(this.label5);
             this.panel4.Controls.Add(this.cmbShape);
             this.panel4.Controls.Add(this.btnSearch);
-            this.panel4.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.panel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1334, 149);
@@ -107,7 +107,7 @@
             // 
             this.txtCode2.Location = new System.Drawing.Point(510, 20);
             this.txtCode2.Name = "txtCode2";
-            this.txtCode2.Size = new System.Drawing.Size(161, 27);
+            this.txtCode2.Size = new System.Drawing.Size(161, 26);
             this.txtCode2.TabIndex = 6;
             // 
             // label3
@@ -134,7 +134,7 @@
             // 
             this.txtESize.Location = new System.Drawing.Point(592, 53);
             this.txtESize.Name = "txtESize";
-            this.txtESize.Size = new System.Drawing.Size(58, 27);
+            this.txtESize.Size = new System.Drawing.Size(58, 26);
             this.txtESize.TabIndex = 10;
             this.txtESize.Text = "50";
             this.txtESize.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -143,7 +143,7 @@
             // 
             this.txtSize.Location = new System.Drawing.Point(510, 53);
             this.txtSize.Name = "txtSize";
-            this.txtSize.Size = new System.Drawing.Size(58, 27);
+            this.txtSize.Size = new System.Drawing.Size(58, 26);
             this.txtSize.TabIndex = 8;
             this.txtSize.Text = "0";
             this.txtSize.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -163,7 +163,7 @@
             // 
             this.txtCode.Location = new System.Drawing.Point(251, 20);
             this.txtCode.Name = "txtCode";
-            this.txtCode.Size = new System.Drawing.Size(161, 27);
+            this.txtCode.Size = new System.Drawing.Size(161, 26);
             this.txtCode.TabIndex = 1;
             // 
             // label12
@@ -207,7 +207,7 @@
             this.cmbShape.FormattingEnabled = true;
             this.cmbShape.Location = new System.Drawing.Point(251, 55);
             this.cmbShape.Name = "cmbShape";
-            this.cmbShape.Size = new System.Drawing.Size(161, 29);
+            this.cmbShape.Size = new System.Drawing.Size(161, 28);
             this.cmbShape.TabIndex = 4;
             // 
             // btnSearch
@@ -229,7 +229,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.gridGemstone);
-            this.panel2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.Location = new System.Drawing.Point(0, 151);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1334, 428);
@@ -240,6 +240,7 @@
             this.gridGemstone.AllowUserToAddRows = false;
             this.gridGemstone.AllowUserToDeleteRows = false;
             this.gridGemstone.AllowUserToOrderColumns = true;
+            this.gridGemstone.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.gridGemstone.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.gridGemstone.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridGemstone.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -263,7 +264,7 @@
             this.gridGemstone.Name = "gridGemstone";
             this.gridGemstone.ReadOnly = true;
             this.gridGemstone.RowHeadersWidth = 10;
-            this.gridGemstone.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridGemstone.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridGemstone.RowTemplate.Height = 30;
             this.gridGemstone.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridGemstone.Size = new System.Drawing.Size(1314, 425);

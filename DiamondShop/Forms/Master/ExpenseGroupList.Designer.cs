@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExpenseGroupList));
             this.panel4 = new System.Windows.Forms.Panel();
+            this.cmbExpenseGroup = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -37,8 +39,6 @@
             this.RowNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ExpenseGroup = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cmbExpenseGroup = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -53,11 +53,29 @@
             this.panel4.Controls.Add(this.label3);
             this.panel4.Controls.Add(this.btnAdd);
             this.panel4.Controls.Add(this.btnSearch);
-            this.panel4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(917, 123);
             this.panel4.TabIndex = 43;
+            // 
+            // cmbExpenseGroup
+            // 
+            this.cmbExpenseGroup.FormattingEnabled = true;
+            this.cmbExpenseGroup.Location = new System.Drawing.Point(240, 26);
+            this.cmbExpenseGroup.Name = "cmbExpenseGroup";
+            this.cmbExpenseGroup.Size = new System.Drawing.Size(217, 28);
+            this.cmbExpenseGroup.TabIndex = 73;
+            // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(104, 26);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(130, 26);
+            this.label3.TabIndex = 72;
+            this.label3.Text = "Expense Group";
             // 
             // btnAdd
             // 
@@ -94,7 +112,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.grid);
-            this.panel2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.Location = new System.Drawing.Point(5, 113);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(912, 464);
@@ -104,6 +122,7 @@
             // 
             this.grid.AllowUserToAddRows = false;
             this.grid.AllowUserToOrderColumns = true;
+            this.grid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.grid.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -115,7 +134,7 @@
             this.grid.Name = "grid";
             this.grid.ReadOnly = true;
             this.grid.RowHeadersWidth = 10;
-            this.grid.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grid.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grid.RowTemplate.Height = 30;
             this.grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grid.Size = new System.Drawing.Size(895, 446);
@@ -146,24 +165,6 @@
             this.ExpenseGroup.Name = "ExpenseGroup";
             this.ExpenseGroup.ReadOnly = true;
             this.ExpenseGroup.Width = 300;
-            // 
-            // cmbExpenseGroup
-            // 
-            this.cmbExpenseGroup.FormattingEnabled = true;
-            this.cmbExpenseGroup.Location = new System.Drawing.Point(240, 26);
-            this.cmbExpenseGroup.Name = "cmbExpenseGroup";
-            this.cmbExpenseGroup.Size = new System.Drawing.Size(217, 29);
-            this.cmbExpenseGroup.TabIndex = 73;
-            // 
-            // label3
-            // 
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(104, 26);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(130, 26);
-            this.label3.TabIndex = 72;
-            this.label3.Text = "Expense Group";
             // 
             // ExpenseGroupList
             // 

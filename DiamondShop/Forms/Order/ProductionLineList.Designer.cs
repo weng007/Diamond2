@@ -91,7 +91,7 @@
             this.panal.Controls.Add(this.btnAdd);
             this.panal.Controls.Add(this.cmbJewelryType);
             this.panal.Controls.Add(this.label6);
-            this.panal.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.panal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.panal.Location = new System.Drawing.Point(0, 0);
             this.panal.Name = "panal";
             this.panal.Size = new System.Drawing.Size(1175, 183);
@@ -112,7 +112,7 @@
             this.cmbFactoryStatus.FormattingEnabled = true;
             this.cmbFactoryStatus.Location = new System.Drawing.Point(569, 87);
             this.cmbFactoryStatus.Name = "cmbFactoryStatus";
-            this.cmbFactoryStatus.Size = new System.Drawing.Size(168, 29);
+            this.cmbFactoryStatus.Size = new System.Drawing.Size(168, 28);
             this.cmbFactoryStatus.TabIndex = 309;
             // 
             // label1
@@ -129,7 +129,7 @@
             // 
             this.txtOrderNo.Location = new System.Drawing.Point(249, 86);
             this.txtOrderNo.Name = "txtOrderNo";
-            this.txtOrderNo.Size = new System.Drawing.Size(168, 27);
+            this.txtOrderNo.Size = new System.Drawing.Size(168, 26);
             this.txtOrderNo.TabIndex = 307;
             // 
             // btnJobDone
@@ -137,7 +137,7 @@
             this.btnJobDone.BackColor = System.Drawing.Color.CadetBlue;
             this.btnJobDone.FlatAppearance.BorderSize = 0;
             this.btnJobDone.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnJobDone.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnJobDone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnJobDone.ForeColor = System.Drawing.Color.White;
             this.btnJobDone.Location = new System.Drawing.Point(648, 24);
             this.btnJobDone.Name = "btnJobDone";
@@ -152,7 +152,7 @@
             this.btnMounting.BackColor = System.Drawing.Color.CadetBlue;
             this.btnMounting.FlatAppearance.BorderSize = 0;
             this.btnMounting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMounting.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMounting.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMounting.ForeColor = System.Drawing.Color.White;
             this.btnMounting.Location = new System.Drawing.Point(425, 24);
             this.btnMounting.Name = "btnMounting";
@@ -167,7 +167,7 @@
             this.btnProcessing.BackColor = System.Drawing.Color.CadetBlue;
             this.btnProcessing.FlatAppearance.BorderSize = 0;
             this.btnProcessing.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProcessing.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProcessing.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProcessing.ForeColor = System.Drawing.Color.White;
             this.btnProcessing.Location = new System.Drawing.Point(277, 24);
             this.btnProcessing.Name = "btnProcessing";
@@ -182,7 +182,7 @@
             this.btnNotYet.BackColor = System.Drawing.Color.CadetBlue;
             this.btnNotYet.FlatAppearance.BorderSize = 0;
             this.btnNotYet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNotYet.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNotYet.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNotYet.ForeColor = System.Drawing.Color.White;
             this.btnNotYet.Location = new System.Drawing.Point(144, 24);
             this.btnNotYet.Name = "btnNotYet";
@@ -198,7 +198,7 @@
             this.dtEOrderDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtEOrderDate.Location = new System.Drawing.Point(1030, 89);
             this.dtEOrderDate.Name = "dtEOrderDate";
-            this.dtEOrderDate.Size = new System.Drawing.Size(131, 27);
+            this.dtEOrderDate.Size = new System.Drawing.Size(131, 26);
             this.dtEOrderDate.TabIndex = 88;
             // 
             // label8
@@ -217,7 +217,7 @@
             this.dtSOrderDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtSOrderDate.Location = new System.Drawing.Point(874, 89);
             this.dtSOrderDate.Name = "dtSOrderDate";
-            this.dtSOrderDate.Size = new System.Drawing.Size(131, 27);
+            this.dtSOrderDate.Size = new System.Drawing.Size(131, 26);
             this.dtSOrderDate.TabIndex = 87;
             // 
             // label7
@@ -245,7 +245,7 @@
             this.cmbShop.FormattingEnabled = true;
             this.cmbShop.Location = new System.Drawing.Point(569, 128);
             this.cmbShop.Name = "cmbShop";
-            this.cmbShop.Size = new System.Drawing.Size(168, 29);
+            this.cmbShop.Size = new System.Drawing.Size(168, 28);
             this.cmbShop.TabIndex = 80;
             // 
             // btnSearch
@@ -284,7 +284,7 @@
             this.cmbJewelryType.FormattingEnabled = true;
             this.cmbJewelryType.Location = new System.Drawing.Point(249, 128);
             this.cmbJewelryType.Name = "cmbJewelryType";
-            this.cmbJewelryType.Size = new System.Drawing.Size(168, 29);
+            this.cmbJewelryType.Size = new System.Drawing.Size(168, 28);
             this.cmbJewelryType.TabIndex = 28;
             // 
             // label6
@@ -301,7 +301,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.gridProductionLine);
-            this.panel2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.Location = new System.Drawing.Point(1, 187);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1160, 388);
@@ -312,7 +312,7 @@
             this.gridProductionLine.AllowUserToAddRows = false;
             this.gridProductionLine.AllowUserToDeleteRows = false;
             this.gridProductionLine.AllowUserToOrderColumns = true;
-            this.gridProductionLine.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.gridProductionLine.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.gridProductionLine.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.gridProductionLine.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridProductionLine.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -330,9 +330,9 @@
             this.gridProductionLine.Name = "gridProductionLine";
             this.gridProductionLine.ReadOnly = true;
             this.gridProductionLine.RowHeadersWidth = 10;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridProductionLine.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.gridProductionLine.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridProductionLine.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridProductionLine.RowTemplate.Height = 30;
             this.gridProductionLine.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridProductionLine.Size = new System.Drawing.Size(1124, 388);

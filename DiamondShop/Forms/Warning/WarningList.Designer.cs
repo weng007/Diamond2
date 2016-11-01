@@ -110,6 +110,7 @@
             this.gridWarning.AllowUserToAddRows = false;
             this.gridWarning.AllowUserToDeleteRows = false;
             this.gridWarning.AllowUserToOrderColumns = true;
+            this.gridWarning.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.gridWarning.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;

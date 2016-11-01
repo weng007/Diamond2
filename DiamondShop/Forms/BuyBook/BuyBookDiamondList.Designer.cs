@@ -95,7 +95,7 @@
             this.panel4.Controls.Add(this.cmbShape);
             this.panel4.Controls.Add(this.label4);
             this.panel4.Controls.Add(this.btnSearch);
-            this.panel4.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.panel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1329, 149);
@@ -105,7 +105,7 @@
             // 
             this.txtCode2.Location = new System.Drawing.Point(547, 20);
             this.txtCode2.Name = "txtCode2";
-            this.txtCode2.Size = new System.Drawing.Size(161, 27);
+            this.txtCode2.Size = new System.Drawing.Size(161, 26);
             this.txtCode2.TabIndex = 77;
             // 
             // label2
@@ -132,7 +132,7 @@
             // 
             this.txtESize.Location = new System.Drawing.Point(626, 54);
             this.txtESize.Name = "txtESize";
-            this.txtESize.Size = new System.Drawing.Size(54, 27);
+            this.txtESize.Size = new System.Drawing.Size(54, 26);
             this.txtESize.TabIndex = 6;
             this.txtESize.Text = "50";
             this.txtESize.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -142,7 +142,7 @@
             // 
             this.txtCode.Location = new System.Drawing.Point(245, 21);
             this.txtCode.Name = "txtCode";
-            this.txtCode.Size = new System.Drawing.Size(161, 27);
+            this.txtCode.Size = new System.Drawing.Size(161, 26);
             this.txtCode.TabIndex = 2;
             // 
             // label12
@@ -175,7 +175,7 @@
             // 
             this.txtSSize.Location = new System.Drawing.Point(547, 54);
             this.txtSSize.Name = "txtSSize";
-            this.txtSSize.Size = new System.Drawing.Size(54, 27);
+            this.txtSSize.Size = new System.Drawing.Size(54, 26);
             this.txtSSize.TabIndex = 4;
             this.txtSSize.Text = "0";
             this.txtSSize.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -196,7 +196,7 @@
             this.cmbShape.FormattingEnabled = true;
             this.cmbShape.Location = new System.Drawing.Point(245, 56);
             this.cmbShape.Name = "cmbShape";
-            this.cmbShape.Size = new System.Drawing.Size(161, 29);
+            this.cmbShape.Size = new System.Drawing.Size(161, 28);
             this.cmbShape.TabIndex = 8;
             // 
             // label4
@@ -228,7 +228,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.gridDiamond);
-            this.panel2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.Location = new System.Drawing.Point(0, 155);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1337, 422);
@@ -239,6 +239,7 @@
             this.gridDiamond.AllowUserToAddRows = false;
             this.gridDiamond.AllowUserToDeleteRows = false;
             this.gridDiamond.AllowUserToOrderColumns = true;
+            this.gridDiamond.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.gridDiamond.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.gridDiamond.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridDiamond.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -261,7 +262,7 @@
             this.gridDiamond.Name = "gridDiamond";
             this.gridDiamond.ReadOnly = true;
             this.gridDiamond.RowHeadersWidth = 10;
-            this.gridDiamond.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridDiamond.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridDiamond.RowTemplate.Height = 30;
             this.gridDiamond.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridDiamond.Size = new System.Drawing.Size(1314, 422);
@@ -275,6 +276,7 @@
             this.ID.Name = "ID";
             this.ID.ReadOnly = true;
             this.ID.Visible = false;
+            this.ID.Width = 51;
             // 
             // RowNum
             // 
