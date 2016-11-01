@@ -51,6 +51,7 @@
             this.RowNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StatusName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.image1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Amount1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Weight1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -61,6 +62,7 @@
             this.Amount4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Weight4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MinPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Pricetag = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ShopName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.JewelryTypeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
@@ -172,6 +174,7 @@
             this.RowNum,
             this.ID,
             this.StatusName,
+            this.image1,
             this.Code,
             this.Amount1,
             this.Weight1,
@@ -182,6 +185,7 @@
             this.Amount4,
             this.Weight4,
             this.MinPrice,
+            this.Pricetag,
             this.ShopName,
             this.JewelryTypeName});
             this.gridCatalog.Location = new System.Drawing.Point(15, 0);
@@ -219,6 +223,15 @@
             this.StatusName.HeaderText = "Status";
             this.StatusName.Name = "StatusName";
             this.StatusName.ReadOnly = true;
+            // 
+            // image1
+            // 
+            this.image1.DataPropertyName = "image1";
+            this.image1.HeaderText = "image1";
+            this.image1.Name = "image1";
+            this.image1.ReadOnly = true;
+            this.image1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.image1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // Code
             // 
@@ -328,6 +341,13 @@
             this.MinPrice.ReadOnly = true;
             this.MinPrice.Width = 110;
             // 
+            // Pricetag
+            // 
+            this.Pricetag.DataPropertyName = "PriceTag";
+            this.Pricetag.HeaderText = "PriceTag";
+            this.Pricetag.Name = "Pricetag";
+            this.Pricetag.ReadOnly = true;
+            // 
             // ShopName
             // 
             this.ShopName.DataPropertyName = "ShopName";
@@ -375,6 +395,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn RowNum;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn StatusName;
+        private System.Windows.Forms.DataGridViewImageColumn image1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Code;
         private System.Windows.Forms.DataGridViewTextBoxColumn Amount1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Weight1;
@@ -385,6 +406,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Amount4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Weight4;
         private System.Windows.Forms.DataGridViewTextBoxColumn MinPrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Pricetag;
         private System.Windows.Forms.DataGridViewTextBoxColumn ShopName;
         private System.Windows.Forms.DataGridViewTextBoxColumn JewelryTypeName;
     }

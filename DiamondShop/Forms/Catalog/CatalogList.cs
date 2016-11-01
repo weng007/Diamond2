@@ -18,8 +18,8 @@ namespace DiamondShop
         public int refID1 = 0;
         public string code1="";
         public string typeName="";
-        public decimal priceTag = 0;
-        public byte[] image1;
+        public decimal price = 0;
+        public byte[] image;
 
         public CatalogList()
         {
@@ -135,11 +135,11 @@ namespace DiamondShop
                 refID1 = (int)gridCatalog.SelectedRows[0].Cells["ID"].Value;
                 code1 = gridCatalog.SelectedRows[0].Cells["Code"].Value.ToString();
                 typeName = gridCatalog.SelectedRows[0].Cells["JewelryTypeName"].Value.ToString();
-                priceTag = Convert.ToDecimal(gridCatalog.SelectedRows[0].Cells["PriceTag"].Value);
+                price = Convert.ToDecimal(gridCatalog.SelectedRows[0].Cells["PriceTag"].Value);
 
                 if (gridCatalog.SelectedRows[0].Cells["Image1"].Value != null && gridCatalog.SelectedRows[0].Cells["Image1"].Value.ToString() !="")
                 {
-                    image1 = (byte[])gridCatalog.SelectedRows[0].Cells["Image1"].Value;
+                    image = (byte[])gridCatalog.SelectedRows[0].Cells["Image1"].Value;
                 }
 
                 this.Close();   
