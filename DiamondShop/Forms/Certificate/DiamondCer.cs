@@ -39,6 +39,8 @@ namespace DiamondShop
             this.id = id;
             LoadData();
 
+            lnkSetting.Enabled = GM.IsOwner(ApplicationInfo.Authorized);
+
             isEdit = false;
         }
 
@@ -106,8 +108,8 @@ namespace DiamondShop
 
             try
             {
-                    SetEditBy(row);
-                    chkFlag = ser.DoUpdateData("DiamondCer", tds);
+                SetEditBy(row);
+                chkFlag = ser.DoUpdateData("DiamondCer", tds);
 
                 tds.AcceptChanges();
             }
@@ -174,8 +176,8 @@ namespace DiamondShop
         private void linkFile_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             ser1 = GM.GetService1();
-            file = ser1.GetCertificate(id, 0);
-            if (file != null || id > 0)
+            file = ser1.GetCertificate(id, 2);
+            if (file != null && id > 0)
             {
                 System.IO.FileStream wFile;
                 if (!Directory.Exists(GM.Path))

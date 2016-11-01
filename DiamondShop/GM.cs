@@ -281,5 +281,12 @@ namespace DiamondShop
 
             return null;
         }
+
+        public static bool IsOwner(string str)
+        {
+            if (str == "Owner")
+            { return true; }
+            else { return false; }
+        }
     }
 }

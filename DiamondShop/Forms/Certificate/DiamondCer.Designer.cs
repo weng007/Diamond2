@@ -101,6 +101,7 @@
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.lnkSetting);
+            this.panel3.Controls.Add(this.linkFile);
             this.panel3.Controls.Add(this.txtShape);
             this.panel3.Controls.Add(this.txtFluorescent);
             this.panel3.Controls.Add(this.txtShop);
@@ -233,7 +234,6 @@
             // panel4
             // 
             this.panel4.Controls.Add(this.label26);
-            this.panel4.Controls.Add(this.linkFile);
             this.panel4.Controls.Add(this.txtNote1);
             this.panel4.Controls.Add(this.label25);
             this.panel4.Controls.Add(this.label24);
@@ -269,7 +269,7 @@
             // linkFile
             // 
             this.linkFile.AutoSize = true;
-            this.linkFile.Location = new System.Drawing.Point(34, 156);
+            this.linkFile.Location = new System.Drawing.Point(29, 232);
             this.linkFile.Name = "linkFile";
             this.linkFile.Size = new System.Drawing.Size(109, 20);
             this.linkFile.TabIndex = 122;
