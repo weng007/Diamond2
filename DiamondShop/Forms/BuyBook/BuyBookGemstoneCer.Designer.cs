@@ -221,7 +221,7 @@
             this.btnFileDel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(109)))), ((int)(((byte)(65)))));
             this.btnFileDel.FlatAppearance.BorderSize = 0;
             this.btnFileDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFileDel.Location = new System.Drawing.Point(196, 515);
+            this.btnFileDel.Location = new System.Drawing.Point(198, 515);
             this.btnFileDel.Name = "btnFileDel";
             this.btnFileDel.Size = new System.Drawing.Size(25, 25);
             this.btnFileDel.TabIndex = 308;
@@ -492,7 +492,7 @@
             // linkFile
             // 
             this.linkFile.AutoSize = true;
-            this.linkFile.Location = new System.Drawing.Point(48, 517);
+            this.linkFile.Location = new System.Drawing.Point(41, 517);
             this.linkFile.Name = "linkFile";
             this.linkFile.Size = new System.Drawing.Size(127, 20);
             this.linkFile.TabIndex = 191;

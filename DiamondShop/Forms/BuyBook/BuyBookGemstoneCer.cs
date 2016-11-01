@@ -59,6 +59,7 @@ namespace DiamondShop
             binder.BindControl(cmbCut, "Cut");
             binder.BindControl(cmbColor, "Color");
             binder.BindControl(cmbBuyer, "Buyer");
+            binder.BindControl(linkFile, "FileName");
             binder.BindControl(txtCode2, "Code2");
 
             dtDueDate.Value = dtBuyDate.Value.AddDays(30);
@@ -92,6 +93,7 @@ namespace DiamondShop
             binder.BindControl(cmbCut, "Cut");
             binder.BindControl(cmbColor, "Color");
             binder.BindControl(cmbBuyer, "Buyer");
+            binder.BindControl(linkFile, "FileName");
             binder.BindControl(txtCode2, "Code2");
 
             this.id = id;
@@ -331,7 +333,6 @@ namespace DiamondShop
                 message += "Please input Paydate";
             }
 
-
             if (message == "") { return true; }
             else { return false; }
         }
@@ -378,7 +379,6 @@ namespace DiamondShop
                 e.Handled = true;
             }
         }
-
 
         #region Calculate Money
         private void chkPayByUSD_CheckedChanged(object sender, EventArgs e)
@@ -448,7 +448,6 @@ namespace DiamondShop
         }
         #endregion Calculate Money
 
-
         private void SetFormatNumber()
         {
             //ดักเคส MinValue
@@ -464,8 +463,9 @@ namespace DiamondShop
 
         private void linkFile_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
-            if (file != null && file.Length > 0)
+            ser1 = GM.GetService1();
+            file = ser1.GetCertificate(id, 1);
+            if (file != null || id > 0)
             {
                 System.IO.FileStream wFile;
                 if (!Directory.Exists(GM.Path))

@@ -368,7 +368,14 @@ namespace DiamondDAL.DAL
                 throw ex;
             }
 
-            return (byte[])ds.Tables[0].Rows[0][0];
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                return (byte[])ds.Tables[0].Rows[0][0];
+            }
+            else
+            {
+                return null;
+            }
         }
     }
 }

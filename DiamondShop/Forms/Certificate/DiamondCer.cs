@@ -61,6 +61,7 @@ namespace DiamondShop
             binder.BindControl(txtRap, "Rap");
             binder.BindControl(txtUSDRate, "USDRate");
             binder.BindControl(lnkSetting, "Setting");
+            binder.BindControl(linkFile, "FileName");
             binder.BindControl(txtShop, "ShopName");
             binder.BindControl(txtUSDPrice, "TotalUSD");
             binder.BindControl(txtBahtPrice, "TotalBaht");
@@ -172,7 +173,9 @@ namespace DiamondShop
 
         private void linkFile_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            if (file != null && file.Length > 0)
+            ser1 = GM.GetService1();
+            file = ser1.GetCertificate(id, 0);
+            if (file != null || id > 0)
             {
                 System.IO.FileStream wFile;
                 if (!Directory.Exists(GM.Path))
