@@ -22,6 +22,7 @@ namespace DiamondShop
         dsSellBookDetail tds1 = new dsSellBookDetail();
         DataSet ds1 = new DataSet();
         int custID = 0;
+        int rowIndex = -1;
         bool isAuthorize = false;
 
         public SellBook()
@@ -185,6 +186,8 @@ namespace DiamondShop
             btnSetting.Enabled = status;
             btnETC.Enabled = status;
             btnDel.Enabled = status;
+            btnPending.Enabled = status;
+            btnSold.Enabled = status;
         }
         protected override bool SaveData()
         {
@@ -252,6 +255,8 @@ namespace DiamondShop
             {
                 throw ex;
             }
+
+            isClosed = false;
 
             return chkFlag;
         }
@@ -478,16 +483,24 @@ namespace DiamondShop
         {
             int delID = 0;
 
-            if(grid1.SelectedRows.Count > 0)
+            if(rowIndex > -1)
             {
-                delID = (int)grid1.SelectedRows[0].Cells["ID"].Value;
-                tds1.SellBookDetail.Rows.RemoveAt(grid1.SelectedRows[0].Index);
+                delID = (int)grid1.Rows[rowIndex].Cells["ID"].Value;
+                tds1.SellBookDetail.Rows.RemoveAt(rowIndex);
             }
 
             tds1.AcceptChanges();
             grid1.Refresh();
 
-            ser.DoDeleteData("SellBookDetail", delID);
+            if (delID != 0)
+            {
+                ser.DoDeleteData("SellBookDetail", delID);
+            }
+        }
+
+        private void grid1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            rowIndex = e.RowIndex;
         }
     }
 }

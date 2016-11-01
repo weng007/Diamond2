@@ -68,7 +68,7 @@
             this.panel4.Controls.Add(this.btnAdd);
             this.panel4.Controls.Add(this.btnSearch);
             this.panel4.Controls.Add(this.label3);
-            this.panel4.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.panel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.panel4.Location = new System.Drawing.Point(0, 1);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1036, 117);
@@ -78,7 +78,7 @@
             // 
             this.txtSeller.Location = new System.Drawing.Point(238, 21);
             this.txtSeller.Name = "txtSeller";
-            this.txtSeller.Size = new System.Drawing.Size(132, 27);
+            this.txtSeller.Size = new System.Drawing.Size(132, 26);
             this.txtSeller.TabIndex = 1;
             // 
             // dtEBuyDate
@@ -87,7 +87,7 @@
             this.dtEBuyDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtEBuyDate.Location = new System.Drawing.Point(394, 62);
             this.dtEBuyDate.Name = "dtEBuyDate";
-            this.dtEBuyDate.Size = new System.Drawing.Size(131, 27);
+            this.dtEBuyDate.Size = new System.Drawing.Size(131, 26);
             this.dtEBuyDate.TabIndex = 6;
             // 
             // label2
@@ -116,7 +116,7 @@
             this.dtSBuyDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtSBuyDate.Location = new System.Drawing.Point(238, 62);
             this.dtSBuyDate.Name = "dtSBuyDate";
-            this.dtSBuyDate.Size = new System.Drawing.Size(131, 27);
+            this.dtSBuyDate.Size = new System.Drawing.Size(131, 26);
             this.dtSBuyDate.TabIndex = 4;
             // 
             // btnAdd
@@ -164,7 +164,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.gridSetting);
-            this.panel2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.Location = new System.Drawing.Point(5, 124);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1031, 456);
@@ -175,6 +175,7 @@
             this.gridSetting.AllowUserToAddRows = false;
             this.gridSetting.AllowUserToDeleteRows = false;
             this.gridSetting.AllowUserToOrderColumns = true;
+            this.gridSetting.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.gridSetting.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.gridSetting.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridSetting.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -189,7 +190,7 @@
             this.gridSetting.Name = "gridSetting";
             this.gridSetting.ReadOnly = true;
             this.gridSetting.RowHeadersWidth = 10;
-            this.gridSetting.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridSetting.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridSetting.RowTemplate.Height = 30;
             this.gridSetting.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridSetting.Size = new System.Drawing.Size(774, 447);

@@ -86,7 +86,7 @@
             this.panel4.Controls.Add(this.btnSearch);
             this.panel4.Controls.Add(this.txtCode);
             this.panel4.Controls.Add(this.label3);
-            this.panel4.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.panel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.panel4.Location = new System.Drawing.Point(0, 1);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1327, 119);
@@ -106,7 +106,7 @@
             // 
             this.txtCode2.Location = new System.Drawing.Point(501, 22);
             this.txtCode2.Name = "txtCode2";
-            this.txtCode2.Size = new System.Drawing.Size(132, 27);
+            this.txtCode2.Size = new System.Drawing.Size(132, 26);
             this.txtCode2.TabIndex = 6;
             // 
             // label6
@@ -141,7 +141,7 @@
             this.txtPrefix.Enabled = false;
             this.txtPrefix.Location = new System.Drawing.Point(197, 21);
             this.txtPrefix.Name = "txtPrefix";
-            this.txtPrefix.Size = new System.Drawing.Size(52, 27);
+            this.txtPrefix.Size = new System.Drawing.Size(52, 26);
             this.txtPrefix.TabIndex = 1;
             this.txtPrefix.Text = "JWR";
             // 
@@ -164,7 +164,7 @@
             // 
             this.txtCode.Location = new System.Drawing.Point(270, 21);
             this.txtCode.Name = "txtCode";
-            this.txtCode.Size = new System.Drawing.Size(132, 27);
+            this.txtCode.Size = new System.Drawing.Size(132, 26);
             this.txtCode.TabIndex = 4;
             // 
             // label3
@@ -181,7 +181,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.gridJewelry);
-            this.panel2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.Location = new System.Drawing.Point(5, 124);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1332, 451);
@@ -217,8 +217,8 @@
             this.gridJewelry.Name = "gridJewelry";
             this.gridJewelry.ReadOnly = true;
             this.gridJewelry.RowHeadersWidth = 10;
-            this.gridJewelry.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridJewelry.RowTemplate.Height = 60;
+            this.gridJewelry.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridJewelry.RowTemplate.Height = 50;
             this.gridJewelry.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridJewelry.Size = new System.Drawing.Size(1314, 447);
             this.gridJewelry.TabIndex = 2;
@@ -262,6 +262,7 @@
             // 
             this.Image1.DataPropertyName = "Image1";
             this.Image1.HeaderText = "Photo";
+            this.Image1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
             this.Image1.Name = "Image1";
             this.Image1.ReadOnly = true;
             this.Image1.Width = 130;

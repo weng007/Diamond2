@@ -83,7 +83,7 @@
             this.panel4.Controls.Add(this.label12);
             this.panel4.Controls.Add(this.btnAdd);
             this.panel4.Controls.Add(this.label7);
-            this.panel4.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.panel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1329, 160);
@@ -94,7 +94,7 @@
             this.cmbSeller.FormattingEnabled = true;
             this.cmbSeller.Location = new System.Drawing.Point(519, 60);
             this.cmbSeller.Name = "cmbSeller";
-            this.cmbSeller.Size = new System.Drawing.Size(161, 29);
+            this.cmbSeller.Size = new System.Drawing.Size(161, 28);
             this.cmbSeller.TabIndex = 80;
             // 
             // label1
@@ -112,14 +112,14 @@
             this.cmbJewelryType.FormattingEnabled = true;
             this.cmbJewelryType.Location = new System.Drawing.Point(519, 18);
             this.cmbJewelryType.Name = "cmbJewelryType";
-            this.cmbJewelryType.Size = new System.Drawing.Size(161, 29);
+            this.cmbJewelryType.Size = new System.Drawing.Size(161, 28);
             this.cmbJewelryType.TabIndex = 78;
             // 
             // txtCustomerName
             // 
             this.txtCustomerName.Location = new System.Drawing.Point(263, 62);
             this.txtCustomerName.Name = "txtCustomerName";
-            this.txtCustomerName.Size = new System.Drawing.Size(161, 27);
+            this.txtCustomerName.Size = new System.Drawing.Size(161, 26);
             this.txtCustomerName.TabIndex = 76;
             // 
             // label14
@@ -151,7 +151,7 @@
             // 
             this.txtCode.Location = new System.Drawing.Point(263, 20);
             this.txtCode.Name = "txtCode";
-            this.txtCode.Size = new System.Drawing.Size(161, 27);
+            this.txtCode.Size = new System.Drawing.Size(161, 26);
             this.txtCode.TabIndex = 1;
             // 
             // label12
@@ -194,7 +194,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.gridOrder);
-            this.panel2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.Location = new System.Drawing.Point(1, 166);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1335, 409);
@@ -205,7 +205,7 @@
             this.gridOrder.AllowUserToAddRows = false;
             this.gridOrder.AllowUserToDeleteRows = false;
             this.gridOrder.AllowUserToOrderColumns = true;
-            this.gridOrder.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.gridOrder.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.gridOrder.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.gridOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridOrder.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -223,9 +223,9 @@
             this.gridOrder.Name = "gridOrder";
             this.gridOrder.ReadOnly = true;
             this.gridOrder.RowHeadersWidth = 10;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridOrder.RowsDefaultCellStyle = dataGridViewCellStyle5;
-            this.gridOrder.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridOrder.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridOrder.RowTemplate.Height = 30;
             this.gridOrder.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridOrder.Size = new System.Drawing.Size(1313, 388);

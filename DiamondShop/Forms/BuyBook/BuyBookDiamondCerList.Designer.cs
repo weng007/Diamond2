@@ -476,7 +476,8 @@
             this.gridDiamondCer.AllowUserToAddRows = false;
             this.gridDiamondCer.AllowUserToDeleteRows = false;
             this.gridDiamondCer.AllowUserToOrderColumns = true;
-            this.gridDiamondCer.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.gridDiamondCer.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.gridDiamondCer.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.gridDiamondCer.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.gridDiamondCer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridDiamondCer.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -531,6 +532,7 @@
             this.ID.Name = "ID";
             this.ID.ReadOnly = true;
             this.ID.Visible = false;
+            this.ID.Width = 51;
             // 
             // RowNum
             // 
@@ -538,59 +540,66 @@
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
             dataGridViewCellStyle1.Format = "N0";
             this.RowNum.DefaultCellStyle = dataGridViewCellStyle1;
+            this.RowNum.FillWeight = 129.2852F;
             this.RowNum.HeaderText = "No.";
             this.RowNum.Name = "RowNum";
             this.RowNum.ReadOnly = true;
-            this.RowNum.Width = 50;
+            this.RowNum.Width = 58;
             // 
             // StatusName
             // 
             this.StatusName.DataPropertyName = "StatusName";
+            this.StatusName.FillWeight = 174.3174F;
             this.StatusName.HeaderText = "Status";
             this.StatusName.Name = "StatusName";
             this.StatusName.ReadOnly = true;
-            this.StatusName.Width = 90;
+            this.StatusName.Width = 81;
             // 
             // Code
             // 
             this.Code.DataPropertyName = "Code";
+            this.Code.FillWeight = 146.9135F;
             this.Code.HeaderText = "Code";
             this.Code.Name = "Code";
             this.Code.ReadOnly = true;
-            this.Code.Width = 150;
+            this.Code.Width = 72;
             // 
             // Code2
             // 
             this.Code2.DataPropertyName = "Code2";
+            this.Code2.FillWeight = 157.9441F;
             this.Code2.HeaderText = "Code2";
             this.Code2.Name = "Code2";
             this.Code2.ReadOnly = true;
-            this.Code2.Width = 150;
+            this.Code2.Width = 81;
             // 
             // BuyDate
             // 
             this.BuyDate.DataPropertyName = "BuyDate";
             dataGridViewCellStyle2.Format = "dd/MM/yyyy";
             this.BuyDate.DefaultCellStyle = dataGridViewCellStyle2;
+            this.BuyDate.FillWeight = 185.0912F;
             this.BuyDate.HeaderText = "Buy Date";
             this.BuyDate.Name = "BuyDate";
             this.BuyDate.ReadOnly = true;
-            this.BuyDate.Width = 110;
             // 
             // LabName
             // 
             this.LabName.DataPropertyName = "LabName";
+            this.LabName.FillWeight = 105.5928F;
             this.LabName.HeaderText = "Lab";
             this.LabName.Name = "LabName";
             this.LabName.ReadOnly = true;
-            this.LabName.Width = 60;
+            this.LabName.Width = 61;
             // 
             // ShapeName
             // 
             this.ShapeName.DataPropertyName = "ShapeName";
+            this.ShapeName.FillWeight = 135.4524F;
             this.ShapeName.HeaderText = "Shape";
             this.ShapeName.Name = "ShapeName";
             this.ShapeName.ReadOnly = true;
+            this.ShapeName.Width = 81;
             // 
             // Weight
             // 
@@ -598,70 +607,78 @@
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
             dataGridViewCellStyle3.Format = "N2";
             this.Weight.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Weight.FillWeight = 133.604F;
             this.Weight.HeaderText = "Weight";
             this.Weight.Name = "Weight";
             this.Weight.ReadOnly = true;
-            this.Weight.Width = 70;
+            this.Weight.Width = 84;
             // 
             // ColorTypeName
             // 
             this.ColorTypeName.DataPropertyName = "ColorTypeName";
+            this.ColorTypeName.FillWeight = 158.5727F;
             this.ColorTypeName.HeaderText = "ColorType";
             this.ColorTypeName.Name = "ColorTypeName";
             this.ColorTypeName.ReadOnly = true;
-            this.ColorTypeName.Width = 130;
+            this.ColorTypeName.Width = 105;
             // 
             // ColorName
             // 
             this.ColorName.DataPropertyName = "ColorName";
+            this.ColorName.FillWeight = 100.1609F;
             this.ColorName.HeaderText = "Color";
             this.ColorName.Name = "ColorName";
             this.ColorName.ReadOnly = true;
-            this.ColorName.Width = 80;
+            this.ColorName.Width = 71;
             // 
             // ClearityName
             // 
             this.ClearityName.DataPropertyName = "ClearityName";
+            this.ClearityName.FillWeight = 116.6259F;
             this.ClearityName.HeaderText = "Clearity";
             this.ClearityName.Name = "ClearityName";
             this.ClearityName.ReadOnly = true;
             this.ClearityName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ClearityName.Width = 80;
+            this.ClearityName.Width = 86;
             // 
             // CutName
             // 
             this.CutName.DataPropertyName = "CutName";
+            this.CutName.FillWeight = 76.0426F;
             this.CutName.HeaderText = "Cut";
             this.CutName.Name = "CutName";
             this.CutName.ReadOnly = true;
             this.CutName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.CutName.Width = 80;
+            this.CutName.Width = 59;
             // 
             // PolishName
             // 
             this.PolishName.DataPropertyName = "PolishName";
+            this.PolishName.FillWeight = 95.21234F;
             this.PolishName.HeaderText = "Polish";
             this.PolishName.Name = "PolishName";
             this.PolishName.ReadOnly = true;
             this.PolishName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.PolishName.Width = 80;
+            this.PolishName.Width = 76;
             // 
             // SymmetryName
             // 
             this.SymmetryName.DataPropertyName = "SymmetryName";
+            this.SymmetryName.FillWeight = 125.0076F;
             this.SymmetryName.HeaderText = "Symmetry";
             this.SymmetryName.Name = "SymmetryName";
             this.SymmetryName.ReadOnly = true;
-            this.SymmetryName.Width = 80;
+            this.SymmetryName.Width = 104;
             // 
             // Seller
             // 
             this.Seller.DataPropertyName = "Seller";
+            this.Seller.FillWeight = 83.4939F;
             this.Seller.HeaderText = "Seller";
             this.Seller.Name = "Seller";
             this.Seller.ReadOnly = true;
             this.Seller.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Seller.Width = 150;
+            this.Seller.Width = 74;
             // 
             // Price
             // 
@@ -669,10 +686,11 @@
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
             dataGridViewCellStyle4.Format = "N2";
             this.Price.DefaultCellStyle = dataGridViewCellStyle4;
+            this.Price.FillWeight = 74.96884F;
             this.Price.HeaderText = "Price";
             this.Price.Name = "Price";
             this.Price.ReadOnly = true;
-            this.Price.Width = 80;
+            this.Price.Width = 69;
             // 
             // Rap
             // 
@@ -680,10 +698,11 @@
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
             dataGridViewCellStyle5.Format = "N0";
             this.Rap.DefaultCellStyle = dataGridViewCellStyle5;
+            this.Rap.FillWeight = 67.28107F;
             this.Rap.HeaderText = "Rap";
             this.Rap.Name = "Rap";
             this.Rap.ReadOnly = true;
-            this.Rap.Width = 60;
+            this.Rap.Width = 64;
             // 
             // Cost
             // 
@@ -691,10 +710,11 @@
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
             dataGridViewCellStyle6.Format = "N0";
             this.Cost.DefaultCellStyle = dataGridViewCellStyle6;
+            this.Cost.FillWeight = 68.46982F;
             this.Cost.HeaderText = "Cost";
             this.Cost.Name = "Cost";
             this.Cost.ReadOnly = true;
-            this.Cost.Width = 120;
+            this.Cost.Width = 67;
             // 
             // USDRate
             // 
@@ -702,10 +722,11 @@
             dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
             dataGridViewCellStyle7.Format = "N2";
             this.USDRate.DefaultCellStyle = dataGridViewCellStyle7;
+            this.USDRate.FillWeight = 107.1031F;
             this.USDRate.HeaderText = "USD Rate";
             this.USDRate.Name = "USDRate";
             this.USDRate.ReadOnly = true;
-            this.USDRate.Width = 120;
+            this.USDRate.Width = 108;
             // 
             // CostBaht
             // 
@@ -713,61 +734,69 @@
             dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
             dataGridViewCellStyle8.Format = "N0";
             this.CostBaht.DefaultCellStyle = dataGridViewCellStyle8;
+            this.CostBaht.FillWeight = 97.83449F;
             this.CostBaht.HeaderText = "Cost Baht";
             this.CostBaht.Name = "CostBaht";
             this.CostBaht.ReadOnly = true;
-            this.CostBaht.Width = 120;
+            this.CostBaht.Width = 105;
             // 
             // Payment
             // 
             this.Payment.DataPropertyName = "Payment";
             dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
             this.Payment.DefaultCellStyle = dataGridViewCellStyle9;
+            this.Payment.FillWeight = 84.37859F;
             this.Payment.HeaderText = "Payment";
             this.Payment.Name = "Payment";
             this.Payment.ReadOnly = true;
-            this.Payment.Width = 80;
+            this.Payment.Width = 96;
             // 
             // DueDate
             // 
             this.DueDate.DataPropertyName = "DueDate";
+            this.DueDate.FillWeight = 82.81081F;
             this.DueDate.HeaderText = "DueDate";
             this.DueDate.Name = "DueDate";
             this.DueDate.ReadOnly = true;
-            this.DueDate.Width = 90;
+            this.DueDate.Width = 99;
             // 
             // ShopName
             // 
             this.ShopName.DataPropertyName = "ShopName";
+            this.ShopName.FillWeight = 75.54464F;
             this.ShopName.HeaderText = "Location";
             this.ShopName.Name = "ShopName";
             this.ShopName.ReadOnly = true;
-            this.ShopName.Width = 90;
+            this.ShopName.Width = 95;
             // 
             // Setting
             // 
             this.Setting.DataPropertyName = "Setting";
+            this.Setting.FillWeight = 64.55972F;
             this.Setting.HeaderText = "Setting";
             this.Setting.Name = "Setting";
             this.Setting.ReadOnly = true;
             this.Setting.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Setting.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Setting.Width = 170;
+            this.Setting.Width = 85;
             // 
             // ReportNumber
             // 
             this.ReportNumber.DataPropertyName = "ReportNumber";
+            this.ReportNumber.FillWeight = 104.7173F;
             this.ReportNumber.HeaderText = "Report Number";
             this.ReportNumber.Name = "ReportNumber";
             this.ReportNumber.ReadOnly = true;
-            this.ReportNumber.Width = 160;
+            this.ReportNumber.Width = 143;
             // 
             // SoldToName
             // 
             this.SoldToName.DataPropertyName = "SoldToName";
+            this.SoldToName.FillWeight = 59.32823F;
             this.SoldToName.HeaderText = "Sold To";
             this.SoldToName.Name = "SoldToName";
             this.SoldToName.ReadOnly = true;
+            this.SoldToName.Width = 88;
             // 
             // W
             // 
@@ -776,10 +805,11 @@
             dataGridViewCellStyle10.Format = "N2";
             dataGridViewCellStyle10.NullValue = "0";
             this.W.DefaultCellStyle = dataGridViewCellStyle10;
+            this.W.FillWeight = 31.89746F;
             this.W.HeaderText = "W";
             this.W.Name = "W";
             this.W.ReadOnly = true;
-            this.W.Width = 60;
+            this.W.Width = 49;
             // 
             // L
             // 
@@ -788,10 +818,11 @@
             dataGridViewCellStyle11.Format = "N2";
             dataGridViewCellStyle11.NullValue = "0";
             this.L.DefaultCellStyle = dataGridViewCellStyle11;
+            this.L.FillWeight = 27.89998F;
             this.L.HeaderText = "L";
             this.L.Name = "L";
             this.L.ReadOnly = true;
-            this.L.Width = 60;
+            this.L.Width = 43;
             // 
             // D
             // 
@@ -800,10 +831,11 @@
             dataGridViewCellStyle12.Format = "N2";
             dataGridViewCellStyle12.NullValue = "D";
             this.D.DefaultCellStyle = dataGridViewCellStyle12;
+            this.D.FillWeight = 29.88976F;
             this.D.HeaderText = "D";
             this.D.Name = "D";
             this.D.ReadOnly = true;
-            this.D.Width = 60;
+            this.D.Width = 46;
             // 
             // BuyBookDiamondCerList
             // 

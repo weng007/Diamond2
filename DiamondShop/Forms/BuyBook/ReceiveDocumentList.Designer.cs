@@ -79,6 +79,7 @@
             this.gridReceiveDocument.AllowUserToAddRows = false;
             this.gridReceiveDocument.AllowUserToDeleteRows = false;
             this.gridReceiveDocument.AllowUserToOrderColumns = true;
+            this.gridReceiveDocument.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.gridReceiveDocument.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;

@@ -147,6 +147,7 @@
             this.gridETC.AllowUserToAddRows = false;
             this.gridETC.AllowUserToDeleteRows = false;
             this.gridETC.AllowUserToOrderColumns = true;
+            this.gridETC.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.gridETC.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.gridETC.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridETC.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {

@@ -424,6 +424,7 @@
             this.gridGemstoneCer.AllowUserToAddRows = false;
             this.gridGemstoneCer.AllowUserToDeleteRows = false;
             this.gridGemstoneCer.AllowUserToOrderColumns = true;
+            this.gridGemstoneCer.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.gridGemstoneCer.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.gridGemstoneCer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridGemstoneCer.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
