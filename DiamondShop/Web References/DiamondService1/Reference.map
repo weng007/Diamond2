@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Results>
-    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://localhost:8888/DiamondService/Service2.asmx?wsdl" filename="Service2.wsdl" />
-    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://localhost:8888/DiamondService/Service2.asmx?schema=dsUser" filename="dsUser.xsd" />
-    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.DiscoveryDocumentReference" url="http://localhost:8888/DiamondService/Service2.asmx?disco" filename="Service2.disco" />
-    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://localhost:8888/DiamondService/Service2.asmx?schema=dsExpenseGroup" filename="dsExpenseGroup.xsd" />
-    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://localhost:8888/DiamondService/Service2.asmx?schema=dsOrder" filename="dsOrder.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://localhost:5555/DiamondService/Service2.asmx?schema=dsUser" filename="dsUser.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://localhost:5555/DiamondService/Service2.asmx?wsdl" filename="Service2.wsdl" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.DiscoveryDocumentReference" url="http://localhost:5555/DiamondService/Service2.asmx?disco" filename="Service2.disco" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://localhost:5555/DiamondService/Service2.asmx?schema=dsOrder" filename="dsOrder.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://localhost:5555/DiamondService/Service2.asmx?schema=dsExpenseGroup" filename="dsExpenseGroup.xsd" />
   </Results>
 </DiscoveryClientResultsFile>
