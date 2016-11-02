@@ -29,21 +29,21 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GemstoneDetailCatalog));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle39 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle40 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle41 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle42 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle43 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle44 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle45 = new System.Windows.Forms.DataGridViewCellStyle();
             this.button1 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.txtSumWeight1 = new System.Windows.Forms.TextBox();
@@ -60,7 +60,6 @@
             this.Weight1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.OriginName1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grid1 = new System.Windows.Forms.DataGridView();
-            this.panel6 = new System.Windows.Forms.Panel();
             this.RowNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -71,6 +70,7 @@
             this.Weight = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColorName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.OriginName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel6 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid2)).BeginInit();
@@ -98,7 +98,7 @@
             this.panel3.Controls.Add(this.grid2);
             this.panel3.Controls.Add(this.grid1);
             this.panel3.Controls.Add(this.panel6);
-            this.panel3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel3.Location = new System.Drawing.Point(12, 73);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1111, 534);
@@ -108,11 +108,11 @@
             // 
             this.txtSumWeight1.BackColor = System.Drawing.SystemColors.Window;
             this.txtSumWeight1.Enabled = false;
-            this.txtSumWeight1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSumWeight1.Location = new System.Drawing.Point(394, 486);
+            this.txtSumWeight1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSumWeight1.Location = new System.Drawing.Point(416, 486);
             this.txtSumWeight1.Name = "txtSumWeight1";
             this.txtSumWeight1.ReadOnly = true;
-            this.txtSumWeight1.Size = new System.Drawing.Size(63, 27);
+            this.txtSumWeight1.Size = new System.Drawing.Size(57, 26);
             this.txtSumWeight1.TabIndex = 123;
             this.txtSumWeight1.Text = "0";
             this.txtSumWeight1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -121,18 +121,18 @@
             // 
             this.txtSumAmount1.BackColor = System.Drawing.SystemColors.Window;
             this.txtSumAmount1.Enabled = false;
-            this.txtSumAmount1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSumAmount1.Location = new System.Drawing.Point(326, 486);
+            this.txtSumAmount1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSumAmount1.Location = new System.Drawing.Point(330, 486);
             this.txtSumAmount1.Name = "txtSumAmount1";
             this.txtSumAmount1.ReadOnly = true;
-            this.txtSumAmount1.Size = new System.Drawing.Size(62, 27);
+            this.txtSumAmount1.Size = new System.Drawing.Size(62, 26);
             this.txtSumAmount1.TabIndex = 122;
             this.txtSumAmount1.Text = "0";
             this.txtSumAmount1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(245, 489);
+            this.label1.Location = new System.Drawing.Point(265, 489);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(59, 24);
             this.label1.TabIndex = 121;
@@ -142,18 +142,18 @@
             // 
             this.txtSumWeight.BackColor = System.Drawing.SystemColors.Window;
             this.txtSumWeight.Enabled = false;
-            this.txtSumWeight.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSumWeight.Location = new System.Drawing.Point(698, 236);
+            this.txtSumWeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSumWeight.Location = new System.Drawing.Point(700, 236);
             this.txtSumWeight.Name = "txtSumWeight";
             this.txtSumWeight.ReadOnly = true;
-            this.txtSumWeight.Size = new System.Drawing.Size(63, 27);
+            this.txtSumWeight.Size = new System.Drawing.Size(64, 26);
             this.txtSumWeight.TabIndex = 118;
             this.txtSumWeight.Text = "0";
             this.txtSumWeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label14
             // 
-            this.label14.Location = new System.Drawing.Point(624, 239);
+            this.label14.Location = new System.Drawing.Point(639, 239);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(59, 24);
             this.label14.TabIndex = 116;
@@ -179,7 +179,7 @@
             this.grid2.Name = "grid2";
             this.grid2.ReadOnly = true;
             this.grid2.RowHeadersWidth = 10;
-            this.grid2.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grid2.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grid2.RowTemplate.Height = 25;
             this.grid2.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.grid2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -189,9 +189,9 @@
             // RowNum1
             // 
             this.RowNum1.DataPropertyName = "RowNum";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.RowNum1.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.RowNum1.DefaultCellStyle = dataGridViewCellStyle31;
             this.RowNum1.HeaderText = "No.";
             this.RowNum1.Name = "RowNum1";
             this.RowNum1.ReadOnly = true;
@@ -208,8 +208,8 @@
             // GemstoneTypeName
             // 
             this.GemstoneTypeName.DataPropertyName = "GemstoneTypeName";
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.GemstoneTypeName.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle32.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.GemstoneTypeName.DefaultCellStyle = dataGridViewCellStyle32;
             this.GemstoneTypeName.HeaderText = "Type";
             this.GemstoneTypeName.Name = "GemstoneTypeName";
             this.GemstoneTypeName.ReadOnly = true;
@@ -219,8 +219,8 @@
             // ShapeName1
             // 
             this.ShapeName1.DataPropertyName = "ShapeName";
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ShapeName1.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle33.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ShapeName1.DefaultCellStyle = dataGridViewCellStyle33;
             this.ShapeName1.HeaderText = "Shape";
             this.ShapeName1.Name = "ShapeName1";
             this.ShapeName1.ReadOnly = true;
@@ -230,8 +230,8 @@
             // Amount1
             // 
             this.Amount1.DataPropertyName = "Amount";
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.Amount1.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle34.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.Amount1.DefaultCellStyle = dataGridViewCellStyle34;
             this.Amount1.HeaderText = "Amount";
             this.Amount1.Name = "Amount1";
             this.Amount1.ReadOnly = true;
@@ -240,10 +240,10 @@
             // Weight1
             // 
             this.Weight1.DataPropertyName = "Weight";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle5.Format = "N2";
-            this.Weight1.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle35.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle35.Format = "N2";
+            this.Weight1.DefaultCellStyle = dataGridViewCellStyle35;
             this.Weight1.HeaderText = "Weight";
             this.Weight1.Name = "Weight1";
             this.Weight1.ReadOnly = true;
@@ -252,8 +252,8 @@
             // OriginName1
             // 
             this.OriginName1.DataPropertyName = "OriginName";
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.OriginName1.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle36.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.OriginName1.DefaultCellStyle = dataGridViewCellStyle36;
             this.OriginName1.HeaderText = "Origin";
             this.OriginName1.Name = "OriginName1";
             this.OriginName1.ReadOnly = true;
@@ -283,29 +283,19 @@
             this.grid1.Name = "grid1";
             this.grid1.ReadOnly = true;
             this.grid1.RowHeadersWidth = 10;
-            this.grid1.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grid1.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grid1.RowTemplate.Height = 25;
             this.grid1.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.grid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grid1.Size = new System.Drawing.Size(1074, 188);
             this.grid1.TabIndex = 16;
             // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(35)))), ((int)(((byte)(69)))));
-            this.panel6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel6.BackgroundImage")));
-            this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.panel6.Location = new System.Drawing.Point(12, 3);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(207, 32);
-            this.panel6.TabIndex = 15;
-            // 
             // RowNum
             // 
             this.RowNum.DataPropertyName = "RowNum";
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.RowNum.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle37.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle37.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.RowNum.DefaultCellStyle = dataGridViewCellStyle37;
             this.RowNum.HeaderText = "No.";
             this.RowNum.Name = "RowNum";
             this.RowNum.ReadOnly = true;
@@ -322,8 +312,8 @@
             // Code
             // 
             this.Code.DataPropertyName = "Code";
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.Code.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle38.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.Code.DefaultCellStyle = dataGridViewCellStyle38;
             this.Code.HeaderText = "Code";
             this.Code.Name = "Code";
             this.Code.ReadOnly = true;
@@ -332,8 +322,8 @@
             // ReportNumber
             // 
             this.ReportNumber.DataPropertyName = "ReportNumber";
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ReportNumber.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle39.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ReportNumber.DefaultCellStyle = dataGridViewCellStyle39;
             this.ReportNumber.HeaderText = "Report Number";
             this.ReportNumber.Name = "ReportNumber";
             this.ReportNumber.ReadOnly = true;
@@ -343,8 +333,8 @@
             // IdentificationName
             // 
             this.IdentificationName.DataPropertyName = "IdentificationName";
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.IdentificationName.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle40.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.IdentificationName.DefaultCellStyle = dataGridViewCellStyle40;
             this.IdentificationName.HeaderText = "Type";
             this.IdentificationName.Name = "IdentificationName";
             this.IdentificationName.ReadOnly = true;
@@ -355,8 +345,8 @@
             // LabName
             // 
             this.LabName.DataPropertyName = "LabName";
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.LabName.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle41.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.LabName.DefaultCellStyle = dataGridViewCellStyle41;
             this.LabName.HeaderText = "Lab";
             this.LabName.Name = "LabName";
             this.LabName.ReadOnly = true;
@@ -365,8 +355,8 @@
             // ShapeName
             // 
             this.ShapeName.DataPropertyName = "ShapeName";
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ShapeName.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle42.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ShapeName.DefaultCellStyle = dataGridViewCellStyle42;
             this.ShapeName.HeaderText = "Shape";
             this.ShapeName.Name = "ShapeName";
             this.ShapeName.ReadOnly = true;
@@ -376,10 +366,10 @@
             // Weight
             // 
             this.Weight.DataPropertyName = "Weight";
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle13.Format = "N2";
-            this.Weight.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle43.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle43.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle43.Format = "N2";
+            this.Weight.DefaultCellStyle = dataGridViewCellStyle43;
             this.Weight.HeaderText = "Weight";
             this.Weight.Name = "Weight";
             this.Weight.ReadOnly = true;
@@ -388,8 +378,8 @@
             // ColorName
             // 
             this.ColorName.DataPropertyName = "ColorName";
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ColorName.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle44.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ColorName.DefaultCellStyle = dataGridViewCellStyle44;
             this.ColorName.HeaderText = "Color";
             this.ColorName.Name = "ColorName";
             this.ColorName.ReadOnly = true;
@@ -400,13 +390,23 @@
             // OriginName
             // 
             this.OriginName.DataPropertyName = "OriginName";
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.OriginName.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle45.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.OriginName.DefaultCellStyle = dataGridViewCellStyle45;
             this.OriginName.HeaderText = "Origin";
             this.OriginName.Name = "OriginName";
             this.OriginName.ReadOnly = true;
             this.OriginName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.OriginName.Width = 140;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(35)))), ((int)(((byte)(69)))));
+            this.panel6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel6.BackgroundImage")));
+            this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.panel6.Location = new System.Drawing.Point(12, 3);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(207, 32);
+            this.panel6.TabIndex = 15;
             // 
             // GemstoneDetailCatalog
             // 
