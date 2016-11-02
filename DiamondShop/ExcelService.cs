@@ -26,8 +26,8 @@ namespace DiamondShop
 
                 //Check จำนวน Column
                 int maxColumn = 0;
-                if (mode == 0) { maxColumn = 22; }
-                else if (mode == 1) { maxColumn = 20; }
+                if (mode == 0) { maxColumn = 26; }
+                else if (mode == 1) { maxColumn = 24; }
 
                 xlApp = new Excel.Application();
                 xlWorkBook = xlApp.Workbooks.Open(FileName, 0, true, 5, "", "", true, Microsoft.Office.Interop.Excel.XlPlatform.xlWindows, "\t", false, false, 0, true, 1, 0);
