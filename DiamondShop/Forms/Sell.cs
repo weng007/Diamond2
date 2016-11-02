@@ -26,6 +26,7 @@ namespace DiamondShop
         int Shop;
         decimal price = 0;
         string isPrintPrice = "1";
+        bool isAuthorize = false;
 
         public Sell()
         {
@@ -70,8 +71,9 @@ namespace DiamondShop
             binder.BindControl(txtNote, "Note");
             binder.BindControl(txtStatus, "StatusName");
             binder.BindControl(cmbShop, "Shop");
-
+            
             this.id = id;
+            SetControlEnable(false);
             LoadData();
             isEdit = false;
         }
@@ -197,6 +199,45 @@ namespace DiamondShop
             return chkFlag;
         }
 
+        protected override void EditData()
+        {
+            if (isAuthorize)
+            {
+                EnableSave = true;
+                EnableDelete = true;
+                SetControlEnable(true);
+            }
+            else
+            {
+                RequirePassword frm = new RequirePassword(ApplicationInfo.Shop);
+                frm.ShowDialog();
+                isAuthorize = frm.isAuthorize;
+                frm.Close();
+
+                if (isAuthorize)
+                {
+                    EnableSave = true;
+                    EnableDelete = true;
+                    SetControlEnable(true);
+                    base.EditData();
+                }
+            }
+        }
+        private void SetControlEnable(bool status)
+        {
+            txtCode.Enabled = status;
+            dtDueDate.Enabled = status;
+            txtNote.Enabled = status;
+            txtCerNo.Enabled = status;
+            txtNetPrice.Enabled = status;
+            cmbShopRecive.Enabled = status;
+            dtSellDate.Enabled = status;
+            cmbPayment.Enabled = status;
+            dtPaymentDate.Enabled = status;
+            btnAvailable.Enabled = status;
+            btnPending.Enabled = status;
+            btnSold.Enabled = status;
+        }
         protected override bool ValidateData()
         {
             message = "";
