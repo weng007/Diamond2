@@ -242,12 +242,16 @@ namespace DiamondShop
                 {
                     FactoryStatus = tds.Order[0].FactoryStatus;
                     
-                    if (FactoryStatus == 219)// Processing
+                    if (FactoryStatus != 218)// Processing
                     {
                         btnPrint.Visible = true;
                     }
-                    btnConfirm.Visible = true;
-                }
+                    if (FactoryStatus == 218)// Not yet
+                    {
+                        btnConfirm.Visible = true;
+                    }
+                
+            }
             if(tds.Order[0].FactoryStatus == 219)
             {
                 btnNotYet.Enabled = false;
