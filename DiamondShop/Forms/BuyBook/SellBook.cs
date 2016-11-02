@@ -257,6 +257,7 @@ namespace DiamondShop
             }
 
             isClosed = false;
+            LoadData();
 
             return chkFlag;
         }
