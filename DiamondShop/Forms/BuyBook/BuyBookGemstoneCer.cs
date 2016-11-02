@@ -170,13 +170,6 @@ namespace DiamondShop
                 binder.BindValueToControl(tds.BuyBookGemstoneCer[0]);
                 txtPayDate.Text = string.Format("{0:d/M/yyyy}", tds.BuyBookGemstoneCer[0]["PayDate"]);
 
-                if (tds.BuyBookGemstoneCer[0]["Certificate"].ToString() != "")
-                {
-                    file = (byte[])tds.BuyBookGemstoneCer[0]["Certificate"];
-                    linkFile.Text = tds.BuyBookGemstoneCer[0].FileName;
-                }
-
-
                 if (tds.BuyBookGemstoneCer[0]["PayByUSD"].ToString() =="0")
                 {
                     chkPayByUSD.Checked = false;
@@ -594,6 +587,8 @@ namespace DiamondShop
         {
             ser1 = GM.GetService1();
             ser1.DeleteDataReference(id, 3);
+
+            linkFile.Text = "No File Attached";
         }
 
         private void lnkSetting_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

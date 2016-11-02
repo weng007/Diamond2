@@ -601,6 +601,8 @@ namespace DiamondShop
         {
             ser1 = GM.GetService1();
             ser1.DeleteDataReference(id,2);
+
+            linkFile.Text = "No File Attached";
         }
 
         private void lnkSetting_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

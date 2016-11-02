@@ -760,7 +760,7 @@
             // 
             this.linkFile.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.linkFile.AutoSize = true;
-            this.linkFile.Location = new System.Drawing.Point(410, 419);
+            this.linkFile.Location = new System.Drawing.Point(428, 419);
             this.linkFile.Name = "linkFile";
             this.linkFile.Size = new System.Drawing.Size(127, 20);
             this.linkFile.TabIndex = 122;
