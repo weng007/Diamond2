@@ -64,7 +64,7 @@ namespace DiamondDAL.DAL
                 SQL.ClearParameter();
                 SQL.CreateParameter("@ID", id);
                 SQL.CreateParameter("@Status", status);
-                SQL.CreateParameter("@SShop", shop);
+                SQL.CreateParameter("@Shop", shop);
                 flag = SQL.ExecuteSP("SP_Sell_Upd_JewelryStatus");
             }
             catch (Exception ex)

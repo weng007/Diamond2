@@ -101,6 +101,7 @@ namespace DiamondShop
             cmbShop.DisplayMember = "Detail";
             cmbShop.Refresh();
 
+            txtNetPrice.Select();
             SetFieldService.SetRequireField(txtNetPrice,txtCode,txtCustomer);
         }
 
@@ -116,7 +117,7 @@ namespace DiamondShop
 
                 refID = tds.Sell[0].RefID;
                 custID = tds.Sell[0].CustID;
-                chkIsPrintPrice.Checked = tds.Sell[0].IsPrintPrice=="1"?true:false;
+                chkIsPrintPrice.Checked = tds.Sell[0].IsPrintPrice=="1"? true:false;
 
                 SetJewelryDetail();
 
@@ -128,7 +129,9 @@ namespace DiamondShop
                     btnImage1.BackgroundImage = backImage1;
                 }
 
-                EnableDelete = true;
+                EnableSave = false;
+                EnableEdit = GM.CheckIsEdit(ApplicationInfo.Shop, Convert.ToInt16(cmbShop.SelectedValue.ToString()));
+                EnableDelete = false;
             }
             SetFormatNumber();
             base.LoadData();
@@ -237,6 +240,10 @@ namespace DiamondShop
             btnAvailable.Enabled = status;
             btnPending.Enabled = status;
             btnSold.Enabled = status;
+            btnBrowseCatalog.Enabled = status;
+            btnBrowseCustomer.Enabled = status;
+            cmbSeller.Enabled = status;
+            btnPrint.Enabled = status;
         }
         protected override bool ValidateData()
         {
