@@ -492,7 +492,7 @@
             // linkFile
             // 
             this.linkFile.AutoSize = true;
-            this.linkFile.Location = new System.Drawing.Point(41, 517);
+            this.linkFile.Location = new System.Drawing.Point(37, 517);
             this.linkFile.Name = "linkFile";
             this.linkFile.Size = new System.Drawing.Size(127, 20);
             this.linkFile.TabIndex = 191;

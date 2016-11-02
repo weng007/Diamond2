@@ -265,8 +265,13 @@ namespace DiamondShop
         public static bool CheckIsEdit(int shop, int shop1)
         {
             if(shop == shop1)
-            { return true; }
-            else { return false; }
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         public static byte[] GetCertificate(int id, int mode)

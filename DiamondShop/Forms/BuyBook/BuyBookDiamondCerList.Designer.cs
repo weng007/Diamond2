@@ -477,7 +477,6 @@
             this.gridDiamondCer.AllowUserToAddRows = false;
             this.gridDiamondCer.AllowUserToDeleteRows = false;
             this.gridDiamondCer.AllowUserToOrderColumns = true;
-            this.gridDiamondCer.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.gridDiamondCer.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.gridDiamondCer.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.gridDiamondCer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -563,7 +562,7 @@
             this.Code.HeaderText = "Code";
             this.Code.Name = "Code";
             this.Code.ReadOnly = true;
-            this.Code.Width = 72;
+            this.Code.Width = 150;
             // 
             // Code2
             // 
@@ -572,7 +571,7 @@
             this.Code2.HeaderText = "Code2";
             this.Code2.Name = "Code2";
             this.Code2.ReadOnly = true;
-            this.Code2.Width = 81;
+            this.Code2.Width = 150;
             // 
             // BuyDate
             // 

@@ -29,18 +29,11 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReceiveDocumentList));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReceiveDocumentList));
             this.panel2 = new System.Windows.Forms.Panel();
             this.gridReceiveDocument = new System.Windows.Forms.DataGridView();
-            this.RowNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ReceiveNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ReceiveDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Seller = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ReceiverName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ShopName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.Button();
             this.dtEReceiveDate = new System.Windows.Forms.DateTimePicker();
@@ -56,6 +49,13 @@
             this.txtSeller = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.tds = new DiamondDS.DS.dsSell();
+            this.RowNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ReceiveNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ReceiveDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Seller = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ReceiverName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ShopName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridReceiveDocument)).BeginInit();
@@ -108,67 +108,6 @@
             this.gridReceiveDocument.Size = new System.Drawing.Size(1315, 412);
             this.gridReceiveDocument.TabIndex = 4;
             this.gridReceiveDocument.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.gridSell_MouseDoubleClick);
-            // 
-            // RowNum
-            // 
-            this.RowNum.DataPropertyName = "RowNum";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.RowNum.DefaultCellStyle = dataGridViewCellStyle2;
-            this.RowNum.HeaderText = "No.";
-            this.RowNum.Name = "RowNum";
-            this.RowNum.ReadOnly = true;
-            this.RowNum.Width = 60;
-            // 
-            // ID
-            // 
-            this.ID.DataPropertyName = "ID";
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            this.ID.Visible = false;
-            // 
-            // ReceiveNo
-            // 
-            this.ReceiveNo.DataPropertyName = "ReceiveNo";
-            this.ReceiveNo.HeaderText = "ReceiveNo";
-            this.ReceiveNo.Name = "ReceiveNo";
-            this.ReceiveNo.ReadOnly = true;
-            this.ReceiveNo.Width = 130;
-            // 
-            // ReceiveDate
-            // 
-            this.ReceiveDate.DataPropertyName = "ReceiveDate";
-            dataGridViewCellStyle3.Format = "dd/MM/yyyy";
-            this.ReceiveDate.DefaultCellStyle = dataGridViewCellStyle3;
-            this.ReceiveDate.HeaderText = "Receive Date";
-            this.ReceiveDate.Name = "ReceiveDate";
-            this.ReceiveDate.ReadOnly = true;
-            this.ReceiveDate.Width = 140;
-            // 
-            // Seller
-            // 
-            this.Seller.DataPropertyName = "Seller";
-            this.Seller.HeaderText = "Seller";
-            this.Seller.Name = "Seller";
-            this.Seller.ReadOnly = true;
-            this.Seller.Width = 150;
-            // 
-            // ReceiverName
-            // 
-            this.ReceiverName.DataPropertyName = "ReceiverName";
-            this.ReceiverName.HeaderText = "Receiver";
-            this.ReceiverName.Name = "ReceiverName";
-            this.ReceiverName.ReadOnly = true;
-            this.ReceiverName.Width = 160;
-            // 
-            // ShopName
-            // 
-            this.ShopName.DataPropertyName = "ShopName";
-            this.ShopName.HeaderText = "Location";
-            this.ShopName.Name = "ShopName";
-            this.ShopName.ReadOnly = true;
-            this.ShopName.Visible = false;
-            this.ShopName.Width = 150;
             // 
             // panel4
             // 
@@ -335,6 +274,67 @@
             this.tds.DataSetName = "dsSell";
             this.tds.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // RowNum
+            // 
+            this.RowNum.DataPropertyName = "RowNum";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.RowNum.DefaultCellStyle = dataGridViewCellStyle2;
+            this.RowNum.HeaderText = "No.";
+            this.RowNum.Name = "RowNum";
+            this.RowNum.ReadOnly = true;
+            this.RowNum.Width = 60;
+            // 
+            // ID
+            // 
+            this.ID.DataPropertyName = "ID";
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Visible = false;
+            // 
+            // ReceiveNo
+            // 
+            this.ReceiveNo.DataPropertyName = "ReceiveNo";
+            this.ReceiveNo.HeaderText = "ReceiveNo";
+            this.ReceiveNo.Name = "ReceiveNo";
+            this.ReceiveNo.ReadOnly = true;
+            this.ReceiveNo.Width = 150;
+            // 
+            // ReceiveDate
+            // 
+            this.ReceiveDate.DataPropertyName = "ReceiveDate";
+            dataGridViewCellStyle3.Format = "dd/MM/yyyy";
+            this.ReceiveDate.DefaultCellStyle = dataGridViewCellStyle3;
+            this.ReceiveDate.HeaderText = "Receive Date";
+            this.ReceiveDate.Name = "ReceiveDate";
+            this.ReceiveDate.ReadOnly = true;
+            this.ReceiveDate.Width = 130;
+            // 
+            // Seller
+            // 
+            this.Seller.DataPropertyName = "Seller";
+            this.Seller.HeaderText = "Seller";
+            this.Seller.Name = "Seller";
+            this.Seller.ReadOnly = true;
+            this.Seller.Width = 150;
+            // 
+            // ReceiverName
+            // 
+            this.ReceiverName.DataPropertyName = "ReceiverName";
+            this.ReceiverName.HeaderText = "Receiver";
+            this.ReceiverName.Name = "ReceiverName";
+            this.ReceiverName.ReadOnly = true;
+            this.ReceiverName.Width = 160;
+            // 
+            // ShopName
+            // 
+            this.ShopName.DataPropertyName = "ShopName";
+            this.ShopName.HeaderText = "Location";
+            this.ShopName.Name = "ShopName";
+            this.ShopName.ReadOnly = true;
+            this.ShopName.Visible = false;
+            this.ShopName.Width = 150;
+            // 
             // ReceiveDocumentList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -374,6 +374,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DateTimePicker dtSReceiveDate;
+        private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.DataGridViewTextBoxColumn RowNum;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn ReceiveNo;
@@ -381,6 +382,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Seller;
         private System.Windows.Forms.DataGridViewTextBoxColumn ReceiverName;
         private System.Windows.Forms.DataGridViewTextBoxColumn ShopName;
-        private System.Windows.Forms.Button btnClose;
     }
 }
