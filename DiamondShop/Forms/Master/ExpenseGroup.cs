@@ -26,7 +26,8 @@ namespace DiamondShop
         }
         protected override void Initial()
         {
-           SetFieldService.SetRequireField(txtExpenseGroup);
+            txtExpenseGroup.Select();
+            SetFieldService.SetRequireField(txtExpenseGroup);
         }
         public ExpenseGroup(int id)
         {
@@ -54,7 +55,6 @@ namespace DiamondShop
             }
 
             base.LoadData();
-            //cmbShop.SelectedValueChanged += cmbShop_SelectedValueChanged;
         }
 
         protected override bool SaveData()
@@ -100,22 +100,10 @@ namespace DiamondShop
         {
             message = "";
 
-            //if (txtFirstName.Text == "")
-            //{
-            //    message += "Please input FirstName.\n";
-            //}
-            //if (txtLastName.Text == "")
-            //{
-            //    message += "Please input LastName.\n";
-            //}
-            //if (txtUserName.Text == "")
-            //{
-            //    message += "Please input UserName.\n";
-            //}
-            //if (txtPassword1.Text == "")
-            //{
-            //    message += "Please input Password.\n";
-            //}
+            if (txtExpenseGroup.Text == "")
+            {
+                message = "Please input Expense Group.\n";
+            }
 
             if (message == "") { return true; }
             else { return false; }

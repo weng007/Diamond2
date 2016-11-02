@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExpenseGroupList));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel4 = new System.Windows.Forms.Panel();
             this.cmbExpenseGroup = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -137,7 +138,7 @@
             this.grid.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grid.RowTemplate.Height = 30;
             this.grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grid.Size = new System.Drawing.Size(895, 446);
+            this.grid.Size = new System.Drawing.Size(438, 446);
             this.grid.TabIndex = 2;
             this.grid.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.grid_CellMouseDoubleClick);
             this.grid.UserDeletedRow += new System.Windows.Forms.DataGridViewRowEventHandler(this.grid_UserDeletedRow);
@@ -145,10 +146,12 @@
             // RowNum
             // 
             this.RowNum.DataPropertyName = "RowNum";
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.RowNum.DefaultCellStyle = dataGridViewCellStyle1;
             this.RowNum.HeaderText = "No.";
             this.RowNum.Name = "RowNum";
             this.RowNum.ReadOnly = true;
-            this.RowNum.Width = 80;
+            this.RowNum.Width = 60;
             // 
             // ID
             // 
@@ -164,7 +167,7 @@
             this.ExpenseGroup.HeaderText = "ExpenseGroup";
             this.ExpenseGroup.Name = "ExpenseGroup";
             this.ExpenseGroup.ReadOnly = true;
-            this.ExpenseGroup.Width = 300;
+            this.ExpenseGroup.Width = 350;
             // 
             // ExpenseGroupList
             // 
@@ -195,10 +198,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn updateDateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn fullNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.ComboBox cmbExpenseGroup;
+        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridViewTextBoxColumn RowNum;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn ExpenseGroup;
-        private System.Windows.Forms.ComboBox cmbExpenseGroup;
-        private System.Windows.Forms.Label label3;
     }
 }
