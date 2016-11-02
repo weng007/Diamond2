@@ -36,14 +36,21 @@ namespace DiamondShop.Report
 
             Application.UseWaitCursor = true;
             ser1 = GM.GetService1();
+            ds = ser1.GetReportCertificate(ID);
 
-            ds = ser1.GetReportCertificate(id);
-
-            ReportDataSource datasource = new ReportDataSource("dsCertificate", ds.Tables[1]);
+            ReportDataSource datasource = new ReportDataSource("SP_Rpt_Certificate", ds.Tables[1]);
+            ReportDataSource datasource1 = new ReportDataSource("Detail", ds.Tables[0]);
+            ReportDataSource datasource2 = new ReportDataSource("Detail1", ds.Tables[2]);
+            ReportDataSource datasource3 = new ReportDataSource("Detail2", ds.Tables[3]);
+            ReportDataSource datasource4 = new ReportDataSource("Total", ds.Tables[4]);
             this.reportViewer1.LocalReport.ReportPath = "..\\Report\\Certificate.rdlc";
 
 
             this.reportViewer1.LocalReport.DataSources.Add(datasource);
+            this.reportViewer1.LocalReport.DataSources.Add(datasource1);
+            this.reportViewer1.LocalReport.DataSources.Add(datasource2);
+            this.reportViewer1.LocalReport.DataSources.Add(datasource3);
+            this.reportViewer1.LocalReport.DataSources.Add(datasource4);
             this.reportViewer1.RefreshReport();
             Application.UseWaitCursor = false;
         }

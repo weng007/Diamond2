@@ -243,9 +243,9 @@ namespace DiamondDAL.DAL
                 SQL.CreateParameter("@ID", id);
                 SQL.FillDataSetBySP2("SP_Rpt_Certificate", ds);
 
-                ds.Tables[1].TableName = "dsCertificate";
-                ds.Tables[0].TableName = "dsCertificateDetail";
-                ds.AcceptChanges();
+                //ds.Tables[1].TableName = "dsCertificate";
+                //ds.Tables[0].TableName = "dsCertificateDetail";
+                //ds.AcceptChanges();
             }
             catch (Exception ex)
             {

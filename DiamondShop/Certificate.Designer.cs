@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace DiamondShop.Report.DS {
+namespace DiamondShop {
     
     
     /// <summary>
@@ -20,17 +20,17 @@ namespace DiamondShop.Report.DS {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("dsCerDetail")]
+    [global::System.Xml.Serialization.XmlRootAttribute("Certificate")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class dsCerDetail : global::System.Data.DataSet {
+    public partial class Certificate : global::System.Data.DataSet {
         
-        private SP_Rpt_CerDetailDataTable tableSP_Rpt_CerDetail;
+        private SP_Rpt_CertificateDataTable tableSP_Rpt_Certificate;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public dsCerDetail() {
+        public Certificate() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace DiamondShop.Report.DS {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected dsCerDetail(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected Certificate(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace DiamondShop.Report.DS {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["SP_Rpt_CerDetail"] != null)) {
-                    base.Tables.Add(new SP_Rpt_CerDetailDataTable(ds.Tables["SP_Rpt_CerDetail"]));
+                if ((ds.Tables["SP_Rpt_Certificate"] != null)) {
+                    base.Tables.Add(new SP_Rpt_CertificateDataTable(ds.Tables["SP_Rpt_Certificate"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace DiamondShop.Report.DS {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public SP_Rpt_CerDetailDataTable SP_Rpt_CerDetail {
+        public SP_Rpt_CertificateDataTable SP_Rpt_Certificate {
             get {
-                return this.tableSP_Rpt_CerDetail;
+                return this.tableSP_Rpt_Certificate;
             }
         }
         
@@ -127,7 +127,7 @@ namespace DiamondShop.Report.DS {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            dsCerDetail cln = ((dsCerDetail)(base.Clone()));
+            Certificate cln = ((Certificate)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace DiamondShop.Report.DS {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["SP_Rpt_CerDetail"] != null)) {
-                    base.Tables.Add(new SP_Rpt_CerDetailDataTable(ds.Tables["SP_Rpt_CerDetail"]));
+                if ((ds.Tables["SP_Rpt_Certificate"] != null)) {
+                    base.Tables.Add(new SP_Rpt_CertificateDataTable(ds.Tables["SP_Rpt_Certificate"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace DiamondShop.Report.DS {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableSP_Rpt_CerDetail = ((SP_Rpt_CerDetailDataTable)(base.Tables["SP_Rpt_CerDetail"]));
+            this.tableSP_Rpt_Certificate = ((SP_Rpt_CertificateDataTable)(base.Tables["SP_Rpt_Certificate"]));
             if ((initTable == true)) {
-                if ((this.tableSP_Rpt_CerDetail != null)) {
-                    this.tableSP_Rpt_CerDetail.InitVars();
+                if ((this.tableSP_Rpt_Certificate != null)) {
+                    this.tableSP_Rpt_Certificate.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace DiamondShop.Report.DS {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "dsCerDetail";
+            this.DataSetName = "Certificate";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/dsCerDetail.xsd";
+            this.Namespace = "http://tempuri.org/Certificate.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableSP_Rpt_CerDetail = new SP_Rpt_CerDetailDataTable();
-            base.Tables.Add(this.tableSP_Rpt_CerDetail);
+            this.tableSP_Rpt_Certificate = new SP_Rpt_CertificateDataTable();
+            base.Tables.Add(this.tableSP_Rpt_Certificate);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializeSP_Rpt_CerDetail() {
+        private bool ShouldSerializeSP_Rpt_Certificate() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace DiamondShop.Report.DS {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            dsCerDetail ds = new dsCerDetail();
+            Certificate ds = new Certificate();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,21 +270,21 @@ namespace DiamondShop.Report.DS {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void SP_Rpt_CerDetailRowChangeEventHandler(object sender, SP_Rpt_CerDetailRowChangeEvent e);
+        public delegate void SP_Rpt_CertificateRowChangeEventHandler(object sender, SP_Rpt_CertificateRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class SP_Rpt_CerDetailDataTable : global::System.Data.TypedTableBase<SP_Rpt_CerDetailRow> {
+        public partial class SP_Rpt_CertificateDataTable : global::System.Data.TypedTableBase<SP_Rpt_CertificateRow> {
             
             private global::System.Data.DataColumn columnDetail;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public SP_Rpt_CerDetailDataTable() {
-                this.TableName = "SP_Rpt_CerDetail";
+            public SP_Rpt_CertificateDataTable() {
+                this.TableName = "SP_Rpt_Certificate";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -292,7 +292,7 @@ namespace DiamondShop.Report.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal SP_Rpt_CerDetailDataTable(global::System.Data.DataTable table) {
+            internal SP_Rpt_CertificateDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -309,7 +309,7 @@ namespace DiamondShop.Report.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected SP_Rpt_CerDetailDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected SP_Rpt_CertificateDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -333,45 +333,45 @@ namespace DiamondShop.Report.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public SP_Rpt_CerDetailRow this[int index] {
+            public SP_Rpt_CertificateRow this[int index] {
                 get {
-                    return ((SP_Rpt_CerDetailRow)(this.Rows[index]));
+                    return ((SP_Rpt_CertificateRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event SP_Rpt_CerDetailRowChangeEventHandler SP_Rpt_CerDetailRowChanging;
+            public event SP_Rpt_CertificateRowChangeEventHandler SP_Rpt_CertificateRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event SP_Rpt_CerDetailRowChangeEventHandler SP_Rpt_CerDetailRowChanged;
+            public event SP_Rpt_CertificateRowChangeEventHandler SP_Rpt_CertificateRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event SP_Rpt_CerDetailRowChangeEventHandler SP_Rpt_CerDetailRowDeleting;
+            public event SP_Rpt_CertificateRowChangeEventHandler SP_Rpt_CertificateRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event SP_Rpt_CerDetailRowChangeEventHandler SP_Rpt_CerDetailRowDeleted;
+            public event SP_Rpt_CertificateRowChangeEventHandler SP_Rpt_CertificateRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddSP_Rpt_CerDetailRow(SP_Rpt_CerDetailRow row) {
+            public void AddSP_Rpt_CertificateRow(SP_Rpt_CertificateRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public SP_Rpt_CerDetailRow AddSP_Rpt_CerDetailRow(string Detail) {
-                SP_Rpt_CerDetailRow rowSP_Rpt_CerDetailRow = ((SP_Rpt_CerDetailRow)(this.NewRow()));
+            public SP_Rpt_CertificateRow AddSP_Rpt_CertificateRow(string Detail) {
+                SP_Rpt_CertificateRow rowSP_Rpt_CertificateRow = ((SP_Rpt_CertificateRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Detail};
-                rowSP_Rpt_CerDetailRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowSP_Rpt_CerDetailRow);
-                return rowSP_Rpt_CerDetailRow;
+                rowSP_Rpt_CertificateRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowSP_Rpt_CertificateRow);
+                return rowSP_Rpt_CertificateRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                SP_Rpt_CerDetailDataTable cln = ((SP_Rpt_CerDetailDataTable)(base.Clone()));
+                SP_Rpt_CertificateDataTable cln = ((SP_Rpt_CertificateDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -379,7 +379,7 @@ namespace DiamondShop.Report.DS {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new SP_Rpt_CerDetailDataTable();
+                return new SP_Rpt_CertificateDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -399,28 +399,28 @@ namespace DiamondShop.Report.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public SP_Rpt_CerDetailRow NewSP_Rpt_CerDetailRow() {
-                return ((SP_Rpt_CerDetailRow)(this.NewRow()));
+            public SP_Rpt_CertificateRow NewSP_Rpt_CertificateRow() {
+                return ((SP_Rpt_CertificateRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new SP_Rpt_CerDetailRow(builder);
+                return new SP_Rpt_CertificateRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(SP_Rpt_CerDetailRow);
+                return typeof(SP_Rpt_CertificateRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.SP_Rpt_CerDetailRowChanged != null)) {
-                    this.SP_Rpt_CerDetailRowChanged(this, new SP_Rpt_CerDetailRowChangeEvent(((SP_Rpt_CerDetailRow)(e.Row)), e.Action));
+                if ((this.SP_Rpt_CertificateRowChanged != null)) {
+                    this.SP_Rpt_CertificateRowChanged(this, new SP_Rpt_CertificateRowChangeEvent(((SP_Rpt_CertificateRow)(e.Row)), e.Action));
                 }
             }
             
@@ -428,8 +428,8 @@ namespace DiamondShop.Report.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.SP_Rpt_CerDetailRowChanging != null)) {
-                    this.SP_Rpt_CerDetailRowChanging(this, new SP_Rpt_CerDetailRowChangeEvent(((SP_Rpt_CerDetailRow)(e.Row)), e.Action));
+                if ((this.SP_Rpt_CertificateRowChanging != null)) {
+                    this.SP_Rpt_CertificateRowChanging(this, new SP_Rpt_CertificateRowChangeEvent(((SP_Rpt_CertificateRow)(e.Row)), e.Action));
                 }
             }
             
@@ -437,8 +437,8 @@ namespace DiamondShop.Report.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.SP_Rpt_CerDetailRowDeleted != null)) {
-                    this.SP_Rpt_CerDetailRowDeleted(this, new SP_Rpt_CerDetailRowChangeEvent(((SP_Rpt_CerDetailRow)(e.Row)), e.Action));
+                if ((this.SP_Rpt_CertificateRowDeleted != null)) {
+                    this.SP_Rpt_CertificateRowDeleted(this, new SP_Rpt_CertificateRowChangeEvent(((SP_Rpt_CertificateRow)(e.Row)), e.Action));
                 }
             }
             
@@ -446,14 +446,14 @@ namespace DiamondShop.Report.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.SP_Rpt_CerDetailRowDeleting != null)) {
-                    this.SP_Rpt_CerDetailRowDeleting(this, new SP_Rpt_CerDetailRowChangeEvent(((SP_Rpt_CerDetailRow)(e.Row)), e.Action));
+                if ((this.SP_Rpt_CertificateRowDeleting != null)) {
+                    this.SP_Rpt_CertificateRowDeleting(this, new SP_Rpt_CertificateRowChangeEvent(((SP_Rpt_CertificateRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemoveSP_Rpt_CerDetailRow(SP_Rpt_CerDetailRow row) {
+            public void RemoveSP_Rpt_CertificateRow(SP_Rpt_CertificateRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -462,7 +462,7 @@ namespace DiamondShop.Report.DS {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                dsCerDetail ds = new dsCerDetail();
+                Certificate ds = new Certificate();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -480,7 +480,7 @@ namespace DiamondShop.Report.DS {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "SP_Rpt_CerDetailDataTable";
+                attribute2.FixedValue = "SP_Rpt_CertificateDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -524,15 +524,15 @@ namespace DiamondShop.Report.DS {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class SP_Rpt_CerDetailRow : global::System.Data.DataRow {
+        public partial class SP_Rpt_CertificateRow : global::System.Data.DataRow {
             
-            private SP_Rpt_CerDetailDataTable tableSP_Rpt_CerDetail;
+            private SP_Rpt_CertificateDataTable tableSP_Rpt_Certificate;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal SP_Rpt_CerDetailRow(global::System.Data.DataRowBuilder rb) : 
+            internal SP_Rpt_CertificateRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableSP_Rpt_CerDetail = ((SP_Rpt_CerDetailDataTable)(this.Table));
+                this.tableSP_Rpt_Certificate = ((SP_Rpt_CertificateDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -540,27 +540,27 @@ namespace DiamondShop.Report.DS {
             public string Detail {
                 get {
                     try {
-                        return ((string)(this[this.tableSP_Rpt_CerDetail.DetailColumn]));
+                        return ((string)(this[this.tableSP_Rpt_Certificate.DetailColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Detail\' in table \'SP_Rpt_CerDetail\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Detail\' in table \'SP_Rpt_Certificate\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableSP_Rpt_CerDetail.DetailColumn] = value;
+                    this[this.tableSP_Rpt_Certificate.DetailColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsDetailNull() {
-                return this.IsNull(this.tableSP_Rpt_CerDetail.DetailColumn);
+                return this.IsNull(this.tableSP_Rpt_Certificate.DetailColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetDetailNull() {
-                this[this.tableSP_Rpt_CerDetail.DetailColumn] = global::System.Convert.DBNull;
+                this[this.tableSP_Rpt_Certificate.DetailColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -568,22 +568,22 @@ namespace DiamondShop.Report.DS {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class SP_Rpt_CerDetailRowChangeEvent : global::System.EventArgs {
+        public class SP_Rpt_CertificateRowChangeEvent : global::System.EventArgs {
             
-            private SP_Rpt_CerDetailRow eventRow;
+            private SP_Rpt_CertificateRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public SP_Rpt_CerDetailRowChangeEvent(SP_Rpt_CerDetailRow row, global::System.Data.DataRowAction action) {
+            public SP_Rpt_CertificateRowChangeEvent(SP_Rpt_CertificateRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public SP_Rpt_CerDetailRow Row {
+            public SP_Rpt_CertificateRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -599,7 +599,7 @@ namespace DiamondShop.Report.DS {
         }
     }
 }
-namespace DiamondShop.Report.DS.dsCerDetailTableAdapters {
+namespace DiamondShop.CertificateTableAdapters {
     
     
     /// <summary>
@@ -611,7 +611,7 @@ namespace DiamondShop.Report.DS.dsCerDetailTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class SP_Rpt_CerDetailTableAdapter : global::System.ComponentModel.Component {
+    public partial class SP_Rpt_CertificateTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -625,7 +625,7 @@ namespace DiamondShop.Report.DS.dsCerDetailTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public SP_Rpt_CerDetailTableAdapter() {
+        public SP_Rpt_CertificateTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -722,7 +722,7 @@ namespace DiamondShop.Report.DS.dsCerDetailTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "SP_Rpt_CerDetail";
+            tableMapping.DataSetTable = "SP_Rpt_Certificate";
             tableMapping.ColumnMappings.Add("Detail", "Detail");
             this._adapter.TableMappings.Add(tableMapping);
         }
@@ -731,7 +731,7 @@ namespace DiamondShop.Report.DS.dsCerDetailTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::DiamondShop.Properties.Settings.Default.DiamondShopConnectionString;
+            this._connection.ConnectionString = global::DiamondShop.Properties.Settings.Default.JusminConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -740,7 +740,7 @@ namespace DiamondShop.Report.DS.dsCerDetailTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "dbo.SP_Rpt_CerDetail";
+            this._commandCollection[0].CommandText = "dbo.SP_Rpt_Certificate";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -750,7 +750,7 @@ namespace DiamondShop.Report.DS.dsCerDetailTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(dsCerDetail.SP_Rpt_CerDetailDataTable dataTable, global::System.Nullable<int> ID) {
+        public virtual int Fill(Certificate.SP_Rpt_CertificateDataTable dataTable, global::System.Nullable<int> ID) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((ID.HasValue == true)) {
                 this.Adapter.SelectCommand.Parameters[1].Value = ((int)(ID.Value));
@@ -769,7 +769,7 @@ namespace DiamondShop.Report.DS.dsCerDetailTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual dsCerDetail.SP_Rpt_CerDetailDataTable GetData(global::System.Nullable<int> ID) {
+        public virtual Certificate.SP_Rpt_CertificateDataTable GetData(global::System.Nullable<int> ID) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((ID.HasValue == true)) {
                 this.Adapter.SelectCommand.Parameters[1].Value = ((int)(ID.Value));
@@ -777,7 +777,7 @@ namespace DiamondShop.Report.DS.dsCerDetailTableAdapters {
             else {
                 this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            dsCerDetail.SP_Rpt_CerDetailDataTable dataTable = new dsCerDetail.SP_Rpt_CerDetailDataTable();
+            Certificate.SP_Rpt_CertificateDataTable dataTable = new Certificate.SP_Rpt_CertificateDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -851,7 +851,7 @@ namespace DiamondShop.Report.DS.dsCerDetailTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateUpdatedRows(dsCerDetail dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(Certificate dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -861,7 +861,7 @@ namespace DiamondShop.Report.DS.dsCerDetailTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateInsertedRows(dsCerDetail dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(Certificate dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -871,7 +871,7 @@ namespace DiamondShop.Report.DS.dsCerDetailTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateDeletedRows(dsCerDetail dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(Certificate dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             return result;
         }
@@ -905,7 +905,7 @@ namespace DiamondShop.Report.DS.dsCerDetailTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public virtual int UpdateAll(dsCerDetail dataSet) {
+        public virtual int UpdateAll(Certificate dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
