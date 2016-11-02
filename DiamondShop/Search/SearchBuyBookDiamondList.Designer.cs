@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SearchBuyBookDiamondList));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tds = new DiamondDS.DS.dsDiamondCer();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnSelect = new System.Windows.Forms.Button();
@@ -127,8 +127,9 @@
             this.btnClose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClose.BackgroundImage")));
             this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Location = new System.Drawing.Point(1280, 2);
+            this.btnClose.Location = new System.Drawing.Point(1284, 1);
             this.btnClose.Margin = new System.Windows.Forms.Padding(0);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(38, 32);
@@ -307,8 +308,8 @@
             // RowNum
             // 
             this.RowNum.DataPropertyName = "RowNum";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            this.RowNum.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            this.RowNum.DefaultCellStyle = dataGridViewCellStyle9;
             this.RowNum.HeaderText = "No.";
             this.RowNum.Name = "RowNum";
             this.RowNum.ReadOnly = true;
@@ -333,8 +334,8 @@
             // BuyDate
             // 
             this.BuyDate.DataPropertyName = "BuyDate";
-            dataGridViewCellStyle2.Format = "dd/MM/yyyy";
-            this.BuyDate.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle10.Format = "dd/MM/yyyy";
+            this.BuyDate.DefaultCellStyle = dataGridViewCellStyle10;
             this.BuyDate.HeaderText = "Buy Date";
             this.BuyDate.Name = "BuyDate";
             this.BuyDate.ReadOnly = true;
@@ -360,9 +361,9 @@
             // Amount
             // 
             this.Amount.DataPropertyName = "Amount";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle3.Format = "N0";
-            this.Amount.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle11.Format = "N0";
+            this.Amount.DefaultCellStyle = dataGridViewCellStyle11;
             this.Amount.HeaderText = "Amount";
             this.Amount.Name = "Amount";
             this.Amount.ReadOnly = true;
@@ -371,9 +372,9 @@
             // Weight
             // 
             this.Weight.DataPropertyName = "Weight";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle4.Format = "N2";
-            this.Weight.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle12.Format = "N2";
+            this.Weight.DefaultCellStyle = dataGridViewCellStyle12;
             this.Weight.HeaderText = "Weight";
             this.Weight.Name = "Weight";
             this.Weight.ReadOnly = true;
@@ -382,8 +383,8 @@
             // Size
             // 
             this.Size.DataPropertyName = "Size";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            this.Size.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            this.Size.DefaultCellStyle = dataGridViewCellStyle13;
             this.Size.HeaderText = "Size";
             this.Size.Name = "Size";
             this.Size.ReadOnly = true;
@@ -407,9 +408,9 @@
             // PriceCaratUSD
             // 
             this.PriceCaratUSD.DataPropertyName = "PriceCaratUSD";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle6.Format = "N0";
-            this.PriceCaratUSD.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle14.Format = "N0";
+            this.PriceCaratUSD.DefaultCellStyle = dataGridViewCellStyle14;
             this.PriceCaratUSD.HeaderText = "Price/Ct USD";
             this.PriceCaratUSD.Name = "PriceCaratUSD";
             this.PriceCaratUSD.ReadOnly = true;
@@ -419,9 +420,9 @@
             // PriceCaratB
             // 
             this.PriceCaratB.DataPropertyName = "PriceCarat";
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle7.Format = "N0";
-            this.PriceCaratB.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle15.Format = "N0";
+            this.PriceCaratB.DefaultCellStyle = dataGridViewCellStyle15;
             this.PriceCaratB.HeaderText = "Price/Ct Baht";
             this.PriceCaratB.Name = "PriceCaratB";
             this.PriceCaratB.ReadOnly = true;
@@ -431,9 +432,9 @@
             // MarketPrice
             // 
             this.MarketPrice.DataPropertyName = "MarketPrice";
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle8.Format = "N0";
-            this.MarketPrice.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle16.Format = "N0";
+            this.MarketPrice.DefaultCellStyle = dataGridViewCellStyle16;
             this.MarketPrice.HeaderText = "Market Price Baht";
             this.MarketPrice.Name = "MarketPrice";
             this.MarketPrice.ReadOnly = true;

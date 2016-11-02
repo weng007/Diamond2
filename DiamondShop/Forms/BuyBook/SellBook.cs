@@ -503,5 +503,26 @@ namespace DiamondShop
         {
             rowIndex = e.RowIndex;
         }
+
+        private void grid1_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
+        {
+            e.Control.KeyPress -= new KeyPressEventHandler(Column1_KeyPress);
+            if (grid1.CurrentCell.ColumnIndex == 6 || grid1.CurrentCell.ColumnIndex == 7 || grid1.CurrentCell.ColumnIndex == 8)
+            {
+                TextBox tb = e.Control as TextBox;
+                if (tb != null)
+                {
+                    tb.KeyPress += new KeyPressEventHandler(Column1_KeyPress);
+                }
+            }
+        }
+
+        private void Column1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '.')
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

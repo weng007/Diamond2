@@ -157,8 +157,9 @@
             this.btnClose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClose.BackgroundImage")));
             this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Location = new System.Drawing.Point(1296, 1);
+            this.btnClose.Location = new System.Drawing.Point(1299, 2);
             this.btnClose.Margin = new System.Windows.Forms.Padding(0);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(38, 32);

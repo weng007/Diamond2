@@ -156,7 +156,7 @@
             this.panel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1329, 183);
+            this.panel4.Size = new System.Drawing.Size(1336, 183);
             this.panel4.TabIndex = 40;
             // 
             // btnClose
@@ -166,8 +166,9 @@
             this.btnClose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClose.BackgroundImage")));
             this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Location = new System.Drawing.Point(1291, 9);
+            this.btnClose.Location = new System.Drawing.Point(1298, 1);
             this.btnClose.Margin = new System.Windows.Forms.Padding(0);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(38, 32);
