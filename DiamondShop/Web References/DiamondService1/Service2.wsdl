@@ -5,9 +5,9 @@
       <s:import namespace="http://tempuri.org/dsUser.xsd" />
       <s:import namespace="http://tempuri.org/dsOrder.xsd" />
       <s:import namespace="http://tempuri.org/dsExpenseGroup.xsd" />
-      <s:import schemaLocation="http://localhost:5555/DiamondService/Service2.asmx?schema=dsOrder" namespace="http://tempuri.org/dsOrder.xsd" />
-      <s:import schemaLocation="http://localhost:5555/DiamondService/Service2.asmx?schema=dsUser" namespace="http://tempuri.org/dsUser.xsd" />
-      <s:import schemaLocation="http://localhost:5555/DiamondService/Service2.asmx?schema=dsExpenseGroup" namespace="http://tempuri.org/dsExpenseGroup.xsd" />
+      <s:import schemaLocation="http://localhost:8888/DiamondService/Service2.asmx?schema=dsOrder" namespace="http://tempuri.org/dsOrder.xsd" />
+      <s:import schemaLocation="http://localhost:8888/DiamondService/Service2.asmx?schema=dsUser" namespace="http://tempuri.org/dsUser.xsd" />
+      <s:import schemaLocation="http://localhost:8888/DiamondService/Service2.asmx?schema=dsExpenseGroup" namespace="http://tempuri.org/dsExpenseGroup.xsd" />
       <s:element name="DoAuthenticate">
         <s:complexType>
           <s:sequence>
@@ -129,6 +129,21 @@
         <s:complexType>
           <s:sequence>
             <s:element minOccurs="1" maxOccurs="1" name="UpdateJewelryStatusResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateSellBookStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="status" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateSellBookStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateSellBookStatusResult" type="s:boolean" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -488,6 +503,20 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="DoSearchBBSettingByCode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="code" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DoSearchBBSettingByCodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DoSearchBBSettingByCodeResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
       <s:element name="DoSearchJewelryByCode">
         <s:complexType>
           <s:sequence>
@@ -499,6 +528,43 @@
         <s:complexType>
           <s:sequence>
             <s:element minOccurs="1" maxOccurs="1" name="DoSearchJewelryByCodeResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSellBookDetail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idSelected" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="buyBookType" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSellBookDetailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSellBookDetailResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCertificate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="mode" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCertificateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCertificateResult" type="s:base64Binary" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -545,6 +611,12 @@
   </wsdl:message>
   <wsdl:message name="UpdateJewelryStatusSoapOut">
     <wsdl:part name="parameters" element="tns:UpdateJewelryStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateSellBookStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateSellBookStatus" />
+  </wsdl:message>
+  <wsdl:message name="UpdateSellBookStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateSellBookStatusResponse" />
   </wsdl:message>
   <wsdl:message name="UpdateOrderStatusSoapIn">
     <wsdl:part name="parameters" element="tns:UpdateOrderStatus" />
@@ -654,11 +726,29 @@
   <wsdl:message name="DoSearchInventoryByCodeSoapOut">
     <wsdl:part name="parameters" element="tns:DoSearchInventoryByCodeResponse" />
   </wsdl:message>
+  <wsdl:message name="DoSearchBBSettingByCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:DoSearchBBSettingByCode" />
+  </wsdl:message>
+  <wsdl:message name="DoSearchBBSettingByCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:DoSearchBBSettingByCodeResponse" />
+  </wsdl:message>
   <wsdl:message name="DoSearchJewelryByCodeSoapIn">
     <wsdl:part name="parameters" element="tns:DoSearchJewelryByCode" />
   </wsdl:message>
   <wsdl:message name="DoSearchJewelryByCodeSoapOut">
     <wsdl:part name="parameters" element="tns:DoSearchJewelryByCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSellBookDetailSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSellBookDetail" />
+  </wsdl:message>
+  <wsdl:message name="GetSellBookDetailSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSellBookDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCertificateSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCertificate" />
+  </wsdl:message>
+  <wsdl:message name="GetCertificateSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCertificateResponse" />
   </wsdl:message>
   <wsdl:portType name="Service2Soap">
     <wsdl:operation name="DoAuthenticate">
@@ -688,6 +778,10 @@
     <wsdl:operation name="UpdateJewelryStatus">
       <wsdl:input message="tns:UpdateJewelryStatusSoapIn" />
       <wsdl:output message="tns:UpdateJewelryStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSellBookStatus">
+      <wsdl:input message="tns:UpdateSellBookStatusSoapIn" />
+      <wsdl:output message="tns:UpdateSellBookStatusSoapOut" />
     </wsdl:operation>
     <wsdl:operation name="UpdateOrderStatus">
       <wsdl:input message="tns:UpdateOrderStatusSoapIn" />
@@ -761,9 +855,21 @@
       <wsdl:input message="tns:DoSearchInventoryByCodeSoapIn" />
       <wsdl:output message="tns:DoSearchInventoryByCodeSoapOut" />
     </wsdl:operation>
+    <wsdl:operation name="DoSearchBBSettingByCode">
+      <wsdl:input message="tns:DoSearchBBSettingByCodeSoapIn" />
+      <wsdl:output message="tns:DoSearchBBSettingByCodeSoapOut" />
+    </wsdl:operation>
     <wsdl:operation name="DoSearchJewelryByCode">
       <wsdl:input message="tns:DoSearchJewelryByCodeSoapIn" />
       <wsdl:output message="tns:DoSearchJewelryByCodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSellBookDetail">
+      <wsdl:input message="tns:GetSellBookDetailSoapIn" />
+      <wsdl:output message="tns:GetSellBookDetailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCertificate">
+      <wsdl:input message="tns:GetCertificateSoapIn" />
+      <wsdl:output message="tns:GetCertificateSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="Service2Soap" type="tns:Service2Soap">
@@ -824,6 +930,15 @@
     </wsdl:operation>
     <wsdl:operation name="UpdateJewelryStatus">
       <soap:operation soapAction="http://tempuri.org/UpdateJewelryStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSellBookStatus">
+      <soap:operation soapAction="http://tempuri.org/UpdateSellBookStatus" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -993,8 +1108,35 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="DoSearchBBSettingByCode">
+      <soap:operation soapAction="http://tempuri.org/DoSearchBBSettingByCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="DoSearchJewelryByCode">
       <soap:operation soapAction="http://tempuri.org/DoSearchJewelryByCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSellBookDetail">
+      <soap:operation soapAction="http://tempuri.org/GetSellBookDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCertificate">
+      <soap:operation soapAction="http://tempuri.org/GetCertificate" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1061,6 +1203,15 @@
     </wsdl:operation>
     <wsdl:operation name="UpdateJewelryStatus">
       <soap12:operation soapAction="http://tempuri.org/UpdateJewelryStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSellBookStatus">
+      <soap12:operation soapAction="http://tempuri.org/UpdateSellBookStatus" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -1230,8 +1381,35 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="DoSearchBBSettingByCode">
+      <soap12:operation soapAction="http://tempuri.org/DoSearchBBSettingByCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="DoSearchJewelryByCode">
       <soap12:operation soapAction="http://tempuri.org/DoSearchJewelryByCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSellBookDetail">
+      <soap12:operation soapAction="http://tempuri.org/GetSellBookDetail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCertificate">
+      <soap12:operation soapAction="http://tempuri.org/GetCertificate" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
