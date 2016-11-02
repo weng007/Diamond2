@@ -71,8 +71,8 @@
             this.mnCatSJ = new System.Windows.Forms.ToolStripMenuItem();
             this.mnCatMTO = new System.Windows.Forms.ToolStripMenuItem();
             this.btnCerDiamond = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnCustomer = new System.Windows.Forms.ToolStripMenuItem();
             this.btnCerGemstone = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnCustomer = new System.Windows.Forms.ToolStripMenuItem();
             this.btnConsign = new System.Windows.Forms.ToolStripMenuItem();
             this.btnSell = new System.Windows.Forms.ToolStripMenuItem();
             this.btnInventory = new System.Windows.Forms.ToolStripMenuItem();
@@ -152,6 +152,7 @@
             this.imageList1.Images.SetKeyName(23, "TabSellBook.png");
             this.imageList1.Images.SetKeyName(24, "TabExpenseGroup.png");
             this.imageList1.Images.SetKeyName(25, "TabExpense.png");
+            this.imageList1.Images.SetKeyName(26, "TabReceiveDocument.png");
             // 
             // btnUser
             // 
@@ -619,15 +620,6 @@
             this.btnCerDiamond.Size = new System.Drawing.Size(78, 95);
             this.btnCerDiamond.Click += new System.EventHandler(this.btnCerDiamond_Click);
             // 
-            // btnCustomer
-            // 
-            this.btnCustomer.Image = ((System.Drawing.Image)(resources.GetObject("btnCustomer.Image")));
-            this.btnCustomer.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.btnCustomer.Name = "btnCustomer";
-            this.btnCustomer.Padding = new System.Windows.Forms.Padding(2);
-            this.btnCustomer.Size = new System.Drawing.Size(78, 95);
-            this.btnCustomer.Click += new System.EventHandler(this.btnCustomer_Click);
-            // 
             // btnCerGemstone
             // 
             this.btnCerGemstone.Image = ((System.Drawing.Image)(resources.GetObject("btnCerGemstone.Image")));
@@ -636,6 +628,15 @@
             this.btnCerGemstone.Padding = new System.Windows.Forms.Padding(2);
             this.btnCerGemstone.Size = new System.Drawing.Size(78, 95);
             this.btnCerGemstone.Click += new System.EventHandler(this.btnCerGemstone_Click);
+            // 
+            // btnCustomer
+            // 
+            this.btnCustomer.Image = ((System.Drawing.Image)(resources.GetObject("btnCustomer.Image")));
+            this.btnCustomer.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.btnCustomer.Name = "btnCustomer";
+            this.btnCustomer.Padding = new System.Windows.Forms.Padding(2);
+            this.btnCustomer.Size = new System.Drawing.Size(78, 95);
+            this.btnCustomer.Click += new System.EventHandler(this.btnCustomer_Click);
             // 
             // btnConsign
             // 
@@ -895,6 +896,8 @@
             // mnReceiveDocument
             // 
             this.mnReceiveDocument.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.mnReceiveDocument.Image = ((System.Drawing.Image)(resources.GetObject("mnReceiveDocument.Image")));
+            this.mnReceiveDocument.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mnReceiveDocument.Name = "mnReceiveDocument";
             this.mnReceiveDocument.Size = new System.Drawing.Size(225, 38);
             this.mnReceiveDocument.Text = "ReceiveDocument";
@@ -1008,7 +1011,7 @@
             this.MenuPayment.Image = ((System.Drawing.Image)(resources.GetObject("MenuPayment.Image")));
             this.MenuPayment.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.MenuPayment.Name = "MenuPayment";
-            this.MenuPayment.Size = new System.Drawing.Size(149, 38);
+            this.MenuPayment.Size = new System.Drawing.Size(168, 38);
             this.MenuPayment.Text = "Payment";
             this.MenuPayment.Click += new System.EventHandler(this.MenuPayment_Click);
             // 
@@ -1018,7 +1021,7 @@
             this.expenseToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("expenseToolStripMenuItem.Image")));
             this.expenseToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.expenseToolStripMenuItem.Name = "expenseToolStripMenuItem";
-            this.expenseToolStripMenuItem.Size = new System.Drawing.Size(149, 38);
+            this.expenseToolStripMenuItem.Size = new System.Drawing.Size(168, 38);
             this.expenseToolStripMenuItem.Text = "Expense";
             this.expenseToolStripMenuItem.Click += new System.EventHandler(this.expenseToolStripMenuItem_Click);
             // 

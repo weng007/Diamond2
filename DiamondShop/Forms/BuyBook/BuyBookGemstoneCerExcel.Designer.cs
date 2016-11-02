@@ -185,6 +185,7 @@
             this.Identification.HeaderText = "Identification";
             this.Identification.Name = "Identification";
             this.Identification.ReadOnly = true;
+            this.Identification.Width = 130;
             // 
             // Color
             // 
