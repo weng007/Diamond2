@@ -237,9 +237,9 @@ namespace DiamondShop
             dtSellDate.Enabled = status;
             cmbPayment.Enabled = status;
             dtPaymentDate.Enabled = status;
-            btnAvailable.Enabled = status;
-            btnPending.Enabled = status;
-            btnSold.Enabled = status;
+            //btnAvailable.Enabled = status;
+            //btnPending.Enabled = status;
+            //btnSold.Enabled = status;
             btnBrowseCatalog.Enabled = status;
             btnBrowseCustomer.Enabled = status;
             cmbSeller.Enabled = status;
