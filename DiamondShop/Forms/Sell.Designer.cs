@@ -75,6 +75,8 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.cmbShop = new System.Windows.Forms.ComboBox();
+            this.label16 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -95,6 +97,8 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Controls.Add(this.cmbShop);
+            this.panel3.Controls.Add(this.label16);
             this.panel3.Controls.Add(this.btnAvailable);
             this.panel3.Controls.Add(this.label12);
             this.panel3.Controls.Add(this.txtStatus);
@@ -594,6 +598,23 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // cmbShop
+            // 
+            this.cmbShop.Enabled = false;
+            this.cmbShop.FormattingEnabled = true;
+            this.cmbShop.Location = new System.Drawing.Point(513, 240);
+            this.cmbShop.Name = "cmbShop";
+            this.cmbShop.Size = new System.Drawing.Size(167, 28);
+            this.cmbShop.TabIndex = 199;
+            // 
+            // label16
+            // 
+            this.label16.Location = new System.Drawing.Point(420, 243);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(71, 28);
+            this.label16.TabIndex = 200;
+            this.label16.Text = "Location";
+            // 
             // Sell
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -660,5 +681,7 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txtStatus;
         private System.Windows.Forms.Button btnAvailable;
+        private System.Windows.Forms.ComboBox cmbShop;
+        private System.Windows.Forms.Label label16;
     }
 }

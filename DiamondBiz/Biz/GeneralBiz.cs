@@ -25,7 +25,7 @@ namespace DiamondBiz.Biz
             }
         }
 
-        public int UpdateJewelryStatus(int id, string status)
+        public int UpdateJewelryStatus(int id, string status, int shop)
         {
             int tmp = 0;
 
@@ -39,8 +39,12 @@ namespace DiamondBiz.Biz
                 {
                     tmp = 72;
                 }
+                else if (status == "Pending")
+                {
+                    tmp = 211;
+                }
 
-                return dal.UpdateJewelryStatus(id, tmp);
+                return dal.UpdateJewelryStatus(id, tmp,shop);
             }
             catch (Exception ex)
             {

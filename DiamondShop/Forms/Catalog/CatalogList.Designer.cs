@@ -64,6 +64,7 @@
             this.MinPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Pricetag = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ShopName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ShopID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.JewelryTypeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel4.SuspendLayout();
@@ -188,6 +189,7 @@
             this.MinPrice,
             this.Pricetag,
             this.ShopName,
+            this.ShopID,
             this.JewelryTypeName});
             this.gridCatalog.Location = new System.Drawing.Point(15, 0);
             this.gridCatalog.Name = "gridCatalog";
@@ -351,6 +353,14 @@
             this.ShopName.Name = "ShopName";
             this.ShopName.ReadOnly = true;
             // 
+            // ShopID
+            // 
+            this.ShopID.DataPropertyName = "Shop";
+            this.ShopID.HeaderText = "ShopID";
+            this.ShopID.Name = "ShopID";
+            this.ShopID.ReadOnly = true;
+            this.ShopID.Visible = false;
+            // 
             // JewelryTypeName
             // 
             this.JewelryTypeName.DataPropertyName = "JewelryTypeName";
@@ -404,6 +414,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn MinPrice;
         private System.Windows.Forms.DataGridViewTextBoxColumn Pricetag;
         private System.Windows.Forms.DataGridViewTextBoxColumn ShopName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ShopID;
         private System.Windows.Forms.DataGridViewTextBoxColumn JewelryTypeName;
     }
 }

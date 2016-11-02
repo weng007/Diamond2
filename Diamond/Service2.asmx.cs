@@ -106,12 +106,12 @@ namespace Diamond
         }
 
         [WebMethod]
-        public int UpdateJewelryStatus(int id, string status)
+        public int UpdateJewelryStatus(int id, string status,int shop)
         {
             GeneralBiz biz = new GeneralBiz();
             try
             {
-                return biz.UpdateJewelryStatus(id,status);
+                return biz.UpdateJewelryStatus(id,status,shop);
             }
             catch (Exception ex)
             {

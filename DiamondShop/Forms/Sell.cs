@@ -23,6 +23,7 @@ namespace DiamondShop
         byte[] image1;
         int custID = 0;
         int refID = 0;
+        int Shop;
         decimal price = 0;
         string isPrintPrice = "1";
 
@@ -46,6 +47,7 @@ namespace DiamondShop
             binder.BindControl(txtCustomer, "CustomerName");
             binder.BindControl(txtNote, "Note");
             binder.BindControl(txtStatus, "StatusName");
+            binder.BindControl(cmbShop, "Shop");
         }
         public Sell(int id)
         {
@@ -67,6 +69,7 @@ namespace DiamondShop
             binder.BindControl(txtCustomer, "CustomerName");
             binder.BindControl(txtNote, "Note");
             binder.BindControl(txtStatus, "StatusName");
+            binder.BindControl(cmbShop, "Shop");
 
             this.id = id;
             LoadData();
@@ -89,7 +92,12 @@ namespace DiamondShop
             cmbShopRecive.DataSource = (GM.GetMasterTableDetail("C007")).Tables[0];
             cmbShopRecive.ValueMember = "ID";
             cmbShopRecive.DisplayMember = "Detail";
-            cmbShopRecive.Refresh();          
+            cmbShopRecive.Refresh();
+
+            cmbShop.DataSource = (GM.GetMasterTableDetail("C007")).Tables[0];
+            cmbShop.ValueMember = "ID";
+            cmbShop.DisplayMember = "Detail";
+            cmbShop.Refresh();
 
             SetFieldService.SetRequireField(txtNetPrice,txtCode,txtCustomer);
         }
@@ -233,6 +241,7 @@ namespace DiamondShop
             txtCode.Text = frm.code1;
             txtJewelryTypeName.Text = frm.typeName;
             txtPriceTag.Text = frm.price.ToString();
+            cmbShop.SelectedValue = frm.shop;
             txtPriceTag.Text = GM.ConvertDoubleToString(txtPriceTag, 0);
             SetJewelryDetail();
 
@@ -336,19 +345,19 @@ namespace DiamondShop
 
         private void btnAvailable_Click(object sender, EventArgs e)
         {
-            ser1.UpdateJewelryStatus(refID, "Available");
+            ser1.UpdateJewelryStatus(refID, "Available",ApplicationInfo.Shop);
             LoadData();
         }
 
         private void btnPending_Click(object sender, EventArgs e)
         {
-            ser1.UpdateJewelryStatus(refID, "Pending");
+            ser1.UpdateJewelryStatus(refID, "Pending",211);
             LoadData();
         }
 
         private void btnSold_Click(object sender, EventArgs e)
         {
-            ser1.UpdateJewelryStatus(refID, "Sold");
+            ser1.UpdateJewelryStatus(refID, "Sold", ApplicationInfo.Shop);
             LoadData();
         }
 
