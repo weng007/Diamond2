@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReportOrderList));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReportReceiveDocumentList));
             this.reportSellingBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dsReportSellingBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dsReportSelling = new DiamondShop.Report.DS.dsReportSelling();
             this.dsReportSellingBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.dsReportSellingBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tds = new DiamondDS.DS.dsSell();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
@@ -41,9 +41,9 @@
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.reportSellingBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsReportSellingBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsReportSelling)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsReportSellingBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dsReportSellingBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tds)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -54,6 +54,11 @@
             this.reportSellingBindingSource.DataMember = "ReportSelling";
             this.reportSellingBindingSource.DataSource = this.dsReportSellingBindingSource;
             // 
+            // dsReportSellingBindingSource
+            // 
+            this.dsReportSellingBindingSource.DataSource = typeof(DiamondDS.DS.dsReportSelling);
+            this.dsReportSellingBindingSource.Position = 0;
+            // 
             // dsReportSelling
             // 
             this.dsReportSelling.DataSetName = "dsReportSelling";
@@ -63,11 +68,6 @@
             // 
             this.dsReportSellingBindingSource1.DataSource = this.dsReportSelling;
             this.dsReportSellingBindingSource1.Position = 0;
-            // 
-            // dsReportSellingBindingSource
-            // 
-            this.dsReportSellingBindingSource.DataSource = typeof(DiamondDS.DS.dsReportSelling);
-            this.dsReportSellingBindingSource.Position = 0;
             // 
             // tds
             // 
@@ -94,6 +94,7 @@
             this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Location = new System.Drawing.Point(1315, 0);
             this.button1.Margin = new System.Windows.Forms.Padding(0);
@@ -107,22 +108,22 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.reportViewer1);
-            this.panel2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel2.Location = new System.Drawing.Point(5, 35);
+            this.panel2.Location = new System.Drawing.Point(5, 52);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1329, 711);
+            this.panel2.Size = new System.Drawing.Size(1329, 694);
             this.panel2.TabIndex = 45;
             // 
             // reportViewer1
             // 
             this.reportViewer1.Location = new System.Drawing.Point(7, 3);
             this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(1327, 705);
+            this.reportViewer1.Size = new System.Drawing.Size(1327, 688);
             this.reportViewer1.TabIndex = 0;
             this.reportViewer1.Load += new System.EventHandler(this.reportViewer1_Load);
             // 
-            // ReportOrderList
+            // ReportReceiveDocumentList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -130,13 +131,13 @@
             this.ClientSize = new System.Drawing.Size(1351, 758);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
-            this.Name = "ReportOrderList";
+            this.Name = "ReportReceiveDocumentList";
             this.Text = "SaleList";
             ((System.ComponentModel.ISupportInitialize)(this.ds)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.reportSellingBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsReportSellingBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsReportSelling)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsReportSellingBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dsReportSellingBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tds)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
