@@ -135,6 +135,7 @@
             // btnJobDone
             // 
             this.btnJobDone.BackColor = System.Drawing.Color.CadetBlue;
+            this.btnJobDone.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnJobDone.FlatAppearance.BorderSize = 0;
             this.btnJobDone.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnJobDone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -150,6 +151,7 @@
             // btnMounting
             // 
             this.btnMounting.BackColor = System.Drawing.Color.CadetBlue;
+            this.btnMounting.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMounting.FlatAppearance.BorderSize = 0;
             this.btnMounting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMounting.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -165,6 +167,7 @@
             // btnProcessing
             // 
             this.btnProcessing.BackColor = System.Drawing.Color.CadetBlue;
+            this.btnProcessing.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnProcessing.FlatAppearance.BorderSize = 0;
             this.btnProcessing.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProcessing.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -180,6 +183,7 @@
             // btnNotYet
             // 
             this.btnNotYet.BackColor = System.Drawing.Color.CadetBlue;
+            this.btnNotYet.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNotYet.FlatAppearance.BorderSize = 0;
             this.btnNotYet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNotYet.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

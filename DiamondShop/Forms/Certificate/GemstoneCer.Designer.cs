@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GemstoneCer));
             this.dtReportDate = new System.Windows.Forms.DateTimePicker();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.lnkSetting = new System.Windows.Forms.LinkLabel();
             this.txtShop = new System.Windows.Forms.TextBox();
             this.txtStatus = new System.Windows.Forms.TextBox();
             this.txtLab = new System.Windows.Forms.TextBox();
@@ -78,7 +79,6 @@
             this.txtCode = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
-            this.lnkSetting = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -133,6 +133,17 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1035, 443);
             this.panel3.TabIndex = 74;
+            // 
+            // lnkSetting
+            // 
+            this.lnkSetting.AutoSize = true;
+            this.lnkSetting.Location = new System.Drawing.Point(824, 93);
+            this.lnkSetting.Name = "lnkSetting";
+            this.lnkSetting.Size = new System.Drawing.Size(63, 20);
+            this.lnkSetting.TabIndex = 202;
+            this.lnkSetting.TabStop = true;
+            this.lnkSetting.Text = "Not Yet";
+            this.lnkSetting.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkSetting_LinkClicked);
             // 
             // txtShop
             // 
@@ -222,8 +233,9 @@
             // 
             this.btnImage1.BackColor = System.Drawing.SystemColors.Control;
             this.btnImage1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnImage1.BackgroundImage")));
-            this.btnImage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnImage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnImage1.Enabled = false;
+            this.btnImage1.FlatAppearance.BorderSize = 0;
             this.btnImage1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnImage1.Location = new System.Drawing.Point(61, 223);
             this.btnImage1.Name = "btnImage1";
@@ -314,7 +326,7 @@
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label24.Location = new System.Drawing.Point(487, 60);
+            this.label24.Location = new System.Drawing.Point(478, 60);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(92, 20);
             this.label24.TabIndex = 121;
@@ -336,7 +348,7 @@
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label23.Location = new System.Drawing.Point(487, 21);
+            this.label23.Location = new System.Drawing.Point(478, 21);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(92, 20);
             this.label23.TabIndex = 119;
@@ -626,17 +638,6 @@
             this.button1.Size = new System.Drawing.Size(1089, 352);
             this.button1.TabIndex = 32;
             this.button1.UseVisualStyleBackColor = true;
-            // 
-            // lnkSetting
-            // 
-            this.lnkSetting.AutoSize = true;
-            this.lnkSetting.Location = new System.Drawing.Point(824, 93);
-            this.lnkSetting.Name = "lnkSetting";
-            this.lnkSetting.Size = new System.Drawing.Size(63, 20);
-            this.lnkSetting.TabIndex = 202;
-            this.lnkSetting.TabStop = true;
-            this.lnkSetting.Text = "Not Yet";
-            this.lnkSetting.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkSetting_LinkClicked);
             // 
             // GemstoneCer
             // 

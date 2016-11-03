@@ -166,7 +166,7 @@
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Location = new System.Drawing.Point(364, 54);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(100, 27);
+            this.comboBox3.Size = new System.Drawing.Size(100, 21);
             this.comboBox3.TabIndex = 28;
             // 
             // textBox2
@@ -270,7 +270,7 @@
             // 
             this.btnImage1.BackColor = System.Drawing.SystemColors.Control;
             this.btnImage1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnImage1.BackgroundImage")));
-            this.btnImage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnImage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnImage1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnImage1.Enabled = false;
             this.btnImage1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -284,7 +284,7 @@
             // 
             this.btnImage2.BackColor = System.Drawing.SystemColors.Control;
             this.btnImage2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnImage2.BackgroundImage")));
-            this.btnImage2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnImage2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnImage2.Enabled = false;
             this.btnImage2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnImage2.Location = new System.Drawing.Point(216, 130);
@@ -335,7 +335,7 @@
             this.panel7.Controls.Add(this.label24);
             this.panel7.Controls.Add(this.label15);
             this.panel7.Controls.Add(this.label13);
-            this.panel7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel7.Location = new System.Drawing.Point(13, 72);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(956, 458);
@@ -348,7 +348,7 @@
             this.dtImportDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtImportDate.Location = new System.Drawing.Point(761, 20);
             this.dtImportDate.Name = "dtImportDate";
-            this.dtImportDate.Size = new System.Drawing.Size(131, 27);
+            this.dtImportDate.Size = new System.Drawing.Size(131, 26);
             this.dtImportDate.TabIndex = 249;
             this.dtImportDate.ValueChanged += new System.EventHandler(this.dtImportDate_ValueChanged);
             // 
@@ -357,7 +357,7 @@
             this.txtSize.Enabled = false;
             this.txtSize.Location = new System.Drawing.Point(761, 57);
             this.txtSize.Name = "txtSize";
-            this.txtSize.Size = new System.Drawing.Size(67, 27);
+            this.txtSize.Size = new System.Drawing.Size(67, 26);
             this.txtSize.TabIndex = 248;
             this.txtSize.Text = "0";
             this.txtSize.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -397,7 +397,7 @@
             this.txtMaterial2.Enabled = false;
             this.txtMaterial2.Location = new System.Drawing.Point(752, 205);
             this.txtMaterial2.Name = "txtMaterial2";
-            this.txtMaterial2.Size = new System.Drawing.Size(165, 27);
+            this.txtMaterial2.Size = new System.Drawing.Size(165, 26);
             this.txtMaterial2.TabIndex = 228;
             this.txtMaterial2.TextChanged += new System.EventHandler(this.txtUpdateBy_TextChanged);
             // 
@@ -407,7 +407,7 @@
             this.txtMaterial1.Enabled = false;
             this.txtMaterial1.Location = new System.Drawing.Point(752, 131);
             this.txtMaterial1.Name = "txtMaterial1";
-            this.txtMaterial1.Size = new System.Drawing.Size(165, 27);
+            this.txtMaterial1.Size = new System.Drawing.Size(165, 26);
             this.txtMaterial1.TabIndex = 170;
             this.txtMaterial1.TextChanged += new System.EventHandler(this.txtUpdateBy_TextChanged);
             // 
@@ -416,7 +416,7 @@
             this.txtStatus.Enabled = false;
             this.txtStatus.Location = new System.Drawing.Point(420, 131);
             this.txtStatus.Name = "txtStatus";
-            this.txtStatus.Size = new System.Drawing.Size(133, 27);
+            this.txtStatus.Size = new System.Drawing.Size(133, 26);
             this.txtStatus.TabIndex = 120;
             this.txtStatus.TextChanged += new System.EventHandler(this.txtUpdateBy_TextChanged);
             // 
@@ -425,7 +425,7 @@
             this.txtJewelryType.Enabled = false;
             this.txtJewelryType.Location = new System.Drawing.Point(417, 57);
             this.txtJewelryType.Name = "txtJewelryType";
-            this.txtJewelryType.Size = new System.Drawing.Size(162, 27);
+            this.txtJewelryType.Size = new System.Drawing.Size(162, 26);
             this.txtJewelryType.TabIndex = 112;
             this.txtJewelryType.TextChanged += new System.EventHandler(this.txtUpdateBy_TextChanged);
             // 
@@ -435,7 +435,7 @@
             this.txtShop.Enabled = false;
             this.txtShop.Location = new System.Drawing.Point(417, 20);
             this.txtShop.Name = "txtShop";
-            this.txtShop.Size = new System.Drawing.Size(162, 27);
+            this.txtShop.Size = new System.Drawing.Size(162, 26);
             this.txtShop.TabIndex = 108;
             this.txtShop.TextChanged += new System.EventHandler(this.txtUpdateBy_TextChanged);
             // 
@@ -469,7 +469,7 @@
             // 
             // label17
             // 
-            this.label17.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.Location = new System.Drawing.Point(657, 208);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(93, 24);
@@ -481,7 +481,7 @@
             this.txtMaterialWeight2.Enabled = false;
             this.txtMaterialWeight2.Location = new System.Drawing.Point(752, 242);
             this.txtMaterialWeight2.Name = "txtMaterialWeight2";
-            this.txtMaterialWeight2.Size = new System.Drawing.Size(67, 27);
+            this.txtMaterialWeight2.Size = new System.Drawing.Size(67, 26);
             this.txtMaterialWeight2.TabIndex = 232;
             this.txtMaterialWeight2.Text = "0";
             this.txtMaterialWeight2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -492,7 +492,7 @@
             this.txtPriceTag.Enabled = false;
             this.txtPriceTag.Location = new System.Drawing.Point(239, 406);
             this.txtPriceTag.Name = "txtPriceTag";
-            this.txtPriceTag.Size = new System.Drawing.Size(127, 27);
+            this.txtPriceTag.Size = new System.Drawing.Size(127, 26);
             this.txtPriceTag.TabIndex = 244;
             this.txtPriceTag.Text = "0";
             this.txtPriceTag.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -500,7 +500,7 @@
             // 
             // label36
             // 
-            this.label36.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label36.Location = new System.Drawing.Point(137, 409);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(83, 29);
@@ -509,7 +509,7 @@
             // 
             // label20
             // 
-            this.label20.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label20.Location = new System.Drawing.Point(657, 242);
             this.label20.Name = "label20";
@@ -522,7 +522,7 @@
             this.txtMinPrice.Enabled = false;
             this.txtMinPrice.Location = new System.Drawing.Point(239, 371);
             this.txtMinPrice.Name = "txtMinPrice";
-            this.txtMinPrice.Size = new System.Drawing.Size(127, 27);
+            this.txtMinPrice.Size = new System.Drawing.Size(127, 26);
             this.txtMinPrice.TabIndex = 240;
             this.txtMinPrice.Text = "0";
             this.txtMinPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -530,7 +530,7 @@
             // 
             // label35
             // 
-            this.label35.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label35.Location = new System.Drawing.Point(98, 374);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(122, 29);
@@ -542,7 +542,7 @@
             this.txtMinBeforePremium.Enabled = false;
             this.txtMinBeforePremium.Location = new System.Drawing.Point(239, 336);
             this.txtMinBeforePremium.Name = "txtMinBeforePremium";
-            this.txtMinBeforePremium.Size = new System.Drawing.Size(127, 27);
+            this.txtMinBeforePremium.Size = new System.Drawing.Size(127, 26);
             this.txtMinBeforePremium.TabIndex = 236;
             this.txtMinBeforePremium.Text = "0";
             this.txtMinBeforePremium.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -550,7 +550,7 @@
             // 
             // label34
             // 
-            this.label34.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label34.Location = new System.Drawing.Point(20, 339);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(213, 29);
@@ -559,7 +559,7 @@
             // 
             // label16
             // 
-            this.label16.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.Location = new System.Drawing.Point(657, 135);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(89, 24);
@@ -568,7 +568,7 @@
             // 
             // label11
             // 
-            this.label11.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(638, 23);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(117, 24);
@@ -581,7 +581,7 @@
             this.txtSellDate.Enabled = false;
             this.txtSellDate.Location = new System.Drawing.Point(420, 192);
             this.txtSellDate.Name = "txtSellDate";
-            this.txtSellDate.Size = new System.Drawing.Size(162, 27);
+            this.txtSellDate.Size = new System.Drawing.Size(162, 26);
             this.txtSellDate.TabIndex = 124;
             this.txtSellDate.TextChanged += new System.EventHandler(this.txtUpdateBy_TextChanged);
             // 
@@ -625,7 +625,7 @@
             this.txtMaterialWeight1.Enabled = false;
             this.txtMaterialWeight1.Location = new System.Drawing.Point(752, 168);
             this.txtMaterialWeight1.Name = "txtMaterialWeight1";
-            this.txtMaterialWeight1.Size = new System.Drawing.Size(67, 27);
+            this.txtMaterialWeight1.Size = new System.Drawing.Size(67, 26);
             this.txtMaterialWeight1.TabIndex = 224;
             this.txtMaterialWeight1.Text = "0";
             this.txtMaterialWeight1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -635,7 +635,7 @@
             // 
             // label22
             // 
-            this.label22.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label22.Location = new System.Drawing.Point(657, 171);
             this.label22.Name = "label22";
@@ -648,7 +648,7 @@
             this.txtCode.Enabled = false;
             this.txtCode.Location = new System.Drawing.Point(150, 57);
             this.txtCode.Name = "txtCode";
-            this.txtCode.Size = new System.Drawing.Size(162, 27);
+            this.txtCode.Size = new System.Drawing.Size(162, 26);
             this.txtCode.TabIndex = 104;
             this.txtCode.TextChanged += new System.EventHandler(this.txtUpdateBy_TextChanged);
             // 
@@ -658,7 +658,7 @@
             this.txtUpdateBy.Enabled = false;
             this.txtUpdateBy.Location = new System.Drawing.Point(150, 20);
             this.txtUpdateBy.Name = "txtUpdateBy";
-            this.txtUpdateBy.Size = new System.Drawing.Size(162, 27);
+            this.txtUpdateBy.Size = new System.Drawing.Size(162, 26);
             this.txtUpdateBy.TabIndex = 100;
             this.txtUpdateBy.TextChanged += new System.EventHandler(this.txtUpdateBy_TextChanged);
             // 

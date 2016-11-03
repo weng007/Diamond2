@@ -87,7 +87,7 @@
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.label6);
             this.panel3.Controls.Add(this.txtAmount);
-            this.panel3.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.panel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.panel3.Location = new System.Drawing.Point(12, 72);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(693, 366);
@@ -97,7 +97,7 @@
             // 
             this.btnImage1.BackColor = System.Drawing.SystemColors.Control;
             this.btnImage1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnImage1.BackgroundImage")));
-            this.btnImage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnImage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnImage1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnImage1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnImage1.Location = new System.Drawing.Point(18, 192);
@@ -112,7 +112,7 @@
             this.txtTotalBaht.Enabled = false;
             this.txtTotalBaht.Location = new System.Drawing.Point(285, 320);
             this.txtTotalBaht.Name = "txtTotalBaht";
-            this.txtTotalBaht.Size = new System.Drawing.Size(118, 27);
+            this.txtTotalBaht.Size = new System.Drawing.Size(118, 26);
             this.txtTotalBaht.TabIndex = 200;
             this.txtTotalBaht.Text = "0";
             this.txtTotalBaht.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -122,11 +122,11 @@
             // TotalBaht
             // 
             this.TotalBaht.AutoSize = true;
-            this.TotalBaht.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.TotalBaht.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.TotalBaht.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.TotalBaht.Location = new System.Drawing.Point(188, 323);
             this.TotalBaht.Name = "TotalBaht";
-            this.TotalBaht.Size = new System.Drawing.Size(83, 19);
+            this.TotalBaht.Size = new System.Drawing.Size(92, 20);
             this.TotalBaht.TabIndex = 107;
             this.TotalBaht.Text = "Total Baht";
             // 
@@ -134,7 +134,7 @@
             // 
             this.txtUSDRate.Location = new System.Drawing.Point(285, 285);
             this.txtUSDRate.Name = "txtUSDRate";
-            this.txtUSDRate.Size = new System.Drawing.Size(64, 27);
+            this.txtUSDRate.Size = new System.Drawing.Size(64, 26);
             this.txtUSDRate.TabIndex = 18;
             this.txtUSDRate.Text = "0";
             this.txtUSDRate.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -145,11 +145,11 @@
             // lblll
             // 
             this.lblll.AutoSize = true;
-            this.lblll.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.lblll.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.lblll.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.lblll.Location = new System.Drawing.Point(188, 288);
             this.lblll.Name = "lblll";
-            this.lblll.Size = new System.Drawing.Size(76, 19);
+            this.lblll.Size = new System.Drawing.Size(91, 20);
             this.lblll.TabIndex = 105;
             this.lblll.Text = "USD Rate";
             // 
@@ -157,7 +157,7 @@
             // 
             this.txtTotalUSD.Location = new System.Drawing.Point(285, 250);
             this.txtTotalUSD.Name = "txtTotalUSD";
-            this.txtTotalUSD.Size = new System.Drawing.Size(118, 27);
+            this.txtTotalUSD.Size = new System.Drawing.Size(118, 26);
             this.txtTotalUSD.TabIndex = 16;
             this.txtTotalUSD.Text = "0";
             this.txtTotalUSD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -168,11 +168,11 @@
             // TotalUSD
             // 
             this.TotalUSD.AutoSize = true;
-            this.TotalUSD.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.TotalUSD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.TotalUSD.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.TotalUSD.Location = new System.Drawing.Point(188, 253);
             this.TotalUSD.Name = "TotalUSD";
-            this.TotalUSD.Size = new System.Drawing.Size(78, 19);
+            this.TotalUSD.Size = new System.Drawing.Size(92, 20);
             this.TotalUSD.TabIndex = 103;
             this.TotalUSD.Text = "Total USD";
             // 
@@ -182,7 +182,7 @@
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label8.Location = new System.Drawing.Point(463, 205);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(56, 21);
+            this.label8.Size = new System.Drawing.Size(50, 20);
             this.label8.TabIndex = 102;
             this.label8.Text = "Detail";
             // 
@@ -199,7 +199,7 @@
             // 
             this.txtPricePerUnit.Location = new System.Drawing.Point(467, 94);
             this.txtPricePerUnit.Name = "txtPricePerUnit";
-            this.txtPricePerUnit.Size = new System.Drawing.Size(118, 27);
+            this.txtPricePerUnit.Size = new System.Drawing.Size(118, 26);
             this.txtPricePerUnit.TabIndex = 14;
             this.txtPricePerUnit.Text = "0";
             this.txtPricePerUnit.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -211,7 +211,7 @@
             // 
             this.txtPricePerGram.Location = new System.Drawing.Point(467, 57);
             this.txtPricePerGram.Name = "txtPricePerGram";
-            this.txtPricePerGram.Size = new System.Drawing.Size(118, 27);
+            this.txtPricePerGram.Size = new System.Drawing.Size(118, 26);
             this.txtPricePerGram.TabIndex = 12;
             this.txtPricePerGram.Text = "0";
             this.txtPricePerGram.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -225,7 +225,7 @@
             this.lblPricePerUnit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.lblPricePerUnit.Location = new System.Drawing.Point(336, 97);
             this.lblPricePerUnit.Name = "lblPricePerUnit";
-            this.lblPricePerUnit.Size = new System.Drawing.Size(110, 21);
+            this.lblPricePerUnit.Size = new System.Drawing.Size(105, 20);
             this.lblPricePerUnit.TabIndex = 96;
             this.lblPricePerUnit.Text = "Price Per Unit";
             // 
@@ -235,7 +235,7 @@
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label5.Location = new System.Drawing.Point(336, 25);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(75, 21);
+            this.label5.Size = new System.Drawing.Size(65, 20);
             this.label5.TabIndex = 94;
             this.label5.Text = "Material";
             // 
@@ -244,7 +244,7 @@
             this.cmbMaterial.FormattingEnabled = true;
             this.cmbMaterial.Location = new System.Drawing.Point(467, 17);
             this.cmbMaterial.Name = "cmbMaterial";
-            this.cmbMaterial.Size = new System.Drawing.Size(169, 29);
+            this.cmbMaterial.Size = new System.Drawing.Size(169, 28);
             this.cmbMaterial.TabIndex = 10;
             this.cmbMaterial.SelectedValueChanged += new System.EventHandler(this.cmbSettingType_SelectedValueChanged);
             // 
@@ -254,7 +254,7 @@
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label4.Location = new System.Drawing.Point(336, 60);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(124, 21);
+            this.label4.Size = new System.Drawing.Size(116, 20);
             this.label4.TabIndex = 92;
             this.label4.Text = "Price Per Gram";
             // 
@@ -264,7 +264,7 @@
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label3.Location = new System.Drawing.Point(14, 136);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(94, 21);
+            this.label3.Size = new System.Drawing.Size(87, 20);
             this.label3.TabIndex = 91;
             this.label3.Text = "Labor Cost";
             // 
@@ -272,7 +272,7 @@
             // 
             this.txtLaborCost.Location = new System.Drawing.Point(122, 133);
             this.txtLaborCost.Name = "txtLaborCost";
-            this.txtLaborCost.Size = new System.Drawing.Size(118, 27);
+            this.txtLaborCost.Size = new System.Drawing.Size(118, 26);
             this.txtLaborCost.TabIndex = 8;
             this.txtLaborCost.Text = "0";
             this.txtLaborCost.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -286,7 +286,7 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label2.Location = new System.Drawing.Point(14, 100);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(66, 21);
+            this.label2.Size = new System.Drawing.Size(59, 20);
             this.label2.TabIndex = 89;
             this.label2.Text = "Weight";
             // 
@@ -294,7 +294,7 @@
             // 
             this.txtWeight.Location = new System.Drawing.Point(122, 97);
             this.txtWeight.Name = "txtWeight";
-            this.txtWeight.Size = new System.Drawing.Size(87, 27);
+            this.txtWeight.Size = new System.Drawing.Size(87, 26);
             this.txtWeight.TabIndex = 6;
             this.txtWeight.Text = "0";
             this.txtWeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -307,7 +307,7 @@
             this.cmbSettingType.FormattingEnabled = true;
             this.cmbSettingType.Location = new System.Drawing.Point(122, 20);
             this.cmbSettingType.Name = "cmbSettingType";
-            this.cmbSettingType.Size = new System.Drawing.Size(182, 29);
+            this.cmbSettingType.Size = new System.Drawing.Size(182, 28);
             this.cmbSettingType.TabIndex = 2;
             this.cmbSettingType.SelectedValueChanged += new System.EventHandler(this.cmbSettingType_SelectedValueChanged);
             // 
@@ -317,7 +317,7 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label1.Location = new System.Drawing.Point(14, 63);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 21);
+            this.label1.Size = new System.Drawing.Size(65, 20);
             this.label1.TabIndex = 85;
             this.label1.Text = "Amount";
             // 
@@ -327,7 +327,7 @@
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label6.Location = new System.Drawing.Point(14, 23);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(47, 21);
+            this.label6.Size = new System.Drawing.Size(43, 20);
             this.label6.TabIndex = 84;
             this.label6.Text = "Type";
             // 
@@ -335,7 +335,7 @@
             // 
             this.txtAmount.Location = new System.Drawing.Point(122, 60);
             this.txtAmount.Name = "txtAmount";
-            this.txtAmount.Size = new System.Drawing.Size(87, 27);
+            this.txtAmount.Size = new System.Drawing.Size(87, 26);
             this.txtAmount.TabIndex = 4;
             this.txtAmount.Text = "0";
             this.txtAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;

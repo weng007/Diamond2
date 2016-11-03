@@ -36,7 +36,7 @@
             this.btnRefDel1 = new System.Windows.Forms.Button();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.btnRefDel = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnInventory = new System.Windows.Forms.Button();
             this.btnConfirm = new System.Windows.Forms.Button();
             this.btnJobDone = new System.Windows.Forms.Button();
             this.btnMounting = new System.Windows.Forms.Button();
@@ -146,7 +146,7 @@
             this.panel3.Controls.Add(this.btnRefDel1);
             this.panel3.Controls.Add(this.monthCalendar1);
             this.panel3.Controls.Add(this.btnRefDel);
-            this.panel3.Controls.Add(this.button2);
+            this.panel3.Controls.Add(this.btnInventory);
             this.panel3.Controls.Add(this.btnConfirm);
             this.panel3.Controls.Add(this.btnJobDone);
             this.panel3.Controls.Add(this.btnMounting);
@@ -285,18 +285,21 @@
             this.btnRefDel.UseVisualStyleBackColor = false;
             this.btnRefDel.Click += new System.EventHandler(this.btnRefDel_Click);
             // 
-            // button2
+            // btnInventory
             // 
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(829, 578);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(76, 90);
-            this.button2.TabIndex = 305;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Visible = false;
+            this.btnInventory.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnInventory.Image = ((System.Drawing.Image)(resources.GetObject("btnInventory.Image")));
+            this.btnInventory.Location = new System.Drawing.Point(829, 578);
+            this.btnInventory.Name = "btnInventory";
+            this.btnInventory.Size = new System.Drawing.Size(76, 90);
+            this.btnInventory.TabIndex = 305;
+            this.btnInventory.UseVisualStyleBackColor = true;
+            this.btnInventory.Visible = false;
+            this.btnInventory.Click += new System.EventHandler(this.btnInventory_Click);
             // 
             // btnConfirm
             // 
+            this.btnConfirm.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnConfirm.Image = ((System.Drawing.Image)(resources.GetObject("btnConfirm.Image")));
             this.btnConfirm.Location = new System.Drawing.Point(453, 578);
             this.btnConfirm.Name = "btnConfirm";
@@ -463,6 +466,7 @@
             // 
             // linkLabel2
             // 
+            this.linkLabel2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.linkLabel2.Location = new System.Drawing.Point(1104, 414);
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.Size = new System.Drawing.Size(155, 21);
@@ -484,6 +488,7 @@
             // 
             // linkLabel1
             // 
+            this.linkLabel1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.linkLabel1.Location = new System.Drawing.Point(1104, 382);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(155, 21);
@@ -638,7 +643,7 @@
             // 
             this.btnImage1.BackColor = System.Drawing.SystemColors.Control;
             this.btnImage1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnImage1.BackgroundImage")));
-            this.btnImage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnImage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnImage1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnImage1.Location = new System.Drawing.Point(950, 13);
             this.btnImage1.Name = "btnImage1";
@@ -651,7 +656,7 @@
             // 
             this.btnImage5.BackColor = System.Drawing.SystemColors.Control;
             this.btnImage5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnImage5.BackgroundImage")));
-            this.btnImage5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnImage5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnImage5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnImage5.Location = new System.Drawing.Point(950, 325);
             this.btnImage5.Name = "btnImage5";
@@ -664,7 +669,7 @@
             // 
             this.btnImage4.BackColor = System.Drawing.SystemColors.Control;
             this.btnImage4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnImage4.BackgroundImage")));
-            this.btnImage4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnImage4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnImage4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnImage4.Location = new System.Drawing.Point(1159, 169);
             this.btnImage4.Name = "btnImage4";
@@ -677,7 +682,7 @@
             // 
             this.btnImage3.BackColor = System.Drawing.SystemColors.Control;
             this.btnImage3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnImage3.BackgroundImage")));
-            this.btnImage3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnImage3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnImage3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnImage3.Location = new System.Drawing.Point(950, 169);
             this.btnImage3.Name = "btnImage3";
@@ -690,7 +695,7 @@
             // 
             this.btnImage2.BackColor = System.Drawing.SystemColors.Control;
             this.btnImage2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnImage2.BackgroundImage")));
-            this.btnImage2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnImage2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnImage2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnImage2.Location = new System.Drawing.Point(1159, 13);
             this.btnImage2.Name = "btnImage2";
@@ -1305,7 +1310,7 @@
         private System.Windows.Forms.Button btnProcessing;
         private System.Windows.Forms.Button btnNotYet;
         private System.Windows.Forms.Button btnConfirm;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnInventory;
         private System.Windows.Forms.Button btnRefDel1;
         private System.Windows.Forms.Button btnRefDel;
         private System.Windows.Forms.Button btnPrint;

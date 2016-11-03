@@ -245,6 +245,7 @@ namespace DiamondShop
                     if (FactoryStatus != 218)// Processing
                     {
                         btnPrint.Visible = true;
+                        btnInventory.Visible = true;
                     }
                     if (FactoryStatus == 218)// Not yet
                     {
@@ -327,8 +328,6 @@ namespace DiamondShop
                     row.SShop = ApplicationInfo.Shop; // Shop ต้นทาง
                     SetCreateBy(row);
                     chkFlag = ser.DoInsertData("Order", tds, 0);
-
-
                 }
                 else
                 {
@@ -342,6 +341,9 @@ namespace DiamondShop
             {
                 throw ex;
             }
+
+            //ไม่ให้ปิดหน้าจอหลัง Save
+            isClosed = false;
 
             return chkFlag;
         }
@@ -500,12 +502,15 @@ namespace DiamondShop
         }
 
         private void btnConfirm_Click(object sender, EventArgs e)
-        {
-            
+        {          
             btnNotYet.Image = imageList1.Images[4];
             btnProcessing.Image = imageList1.Images[1];
             flag = 1;
             //ser1.UpdateMessageStatus(id, "1", "1");
+
+            SaveData();
+            btnPrint.Visible = true;
+            btnInventory.Visible = true;
         }
 
         private void btnRefDel_Click(object sender, EventArgs e)
@@ -610,6 +615,12 @@ namespace DiamondShop
         private void txtPaid_Leave(object sender, EventArgs e)
         {
             txtPaid.Text = GM.ConvertDoubleToString(txtPaid, 0);
+        }
+
+        private void btnInventory_Click(object sender, EventArgs e)
+        {
+            Inventory frm = new Inventory(txtCode.Text, 0);
+            frm.ShowDialog();
         }
 
         private void btnRefDel1_Click(object sender, EventArgs e)

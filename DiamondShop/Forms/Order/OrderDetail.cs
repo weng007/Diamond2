@@ -423,13 +423,13 @@ namespace DiamondShop
         {         
             foreach (DataRow row in ds.Tables[1].Rows)
             {
-                materail += i.ToString()+". "+ row["Code"].ToString()+","+" "+row["Weight"].ToString()+"Ct."+"\n ";
+                materail += i.ToString()+". "+ row["Code"].ToString()+","+" "+row["Weight"].ToString()+"Ct."+"\n";
                 i++;
             }
                     
             foreach (DataRow row in ds.Tables[0].Rows)
             {
-                materail += i.ToString() + ". " + row["Code"].ToString() + "," + " "+row["IdentificationName"].ToString() + "," + " " + row["Weight"].ToString() + "Ct." + "\n ";
+                materail += i.ToString() + ". " + row["Code"].ToString() + "," + " "+row["IdentificationName"].ToString() + "," + " " + row["Weight"].ToString() + "Ct." + "\n";
                 i++;
             }
         }

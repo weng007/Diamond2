@@ -94,6 +94,7 @@
             this.btnClose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClose.BackgroundImage")));
             this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Location = new System.Drawing.Point(1297, 0);
             this.btnClose.Margin = new System.Windows.Forms.Padding(0);
@@ -236,6 +237,7 @@
             this.image1.ReadOnly = true;
             this.image1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.image1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.image1.Width = 110;
             // 
             // Code
             // 

@@ -46,6 +46,16 @@ namespace DiamondShop
             isEdit = false;
         }
 
+        public Inventory(string str, int mode)
+        {
+            if(mode == 0)
+            {
+                InitializeComponent();
+                Initial();
+                BinderData();
+            }
+        }
+
         public Inventory(string prefix)
         {
             InitializeComponent();
