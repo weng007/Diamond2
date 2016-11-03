@@ -105,6 +105,7 @@
             this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Location = new System.Drawing.Point(1315, 0);
             this.button1.Margin = new System.Windows.Forms.Padding(0);
@@ -118,7 +119,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.reportViewer1);
-            this.panel2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel2.Location = new System.Drawing.Point(5, 147);
             this.panel2.Name = "panel2";
@@ -145,7 +146,7 @@
             this.panel4.Controls.Add(this.dtEDueDate);
             this.panel4.Controls.Add(this.dtSDueDate);
             this.panel4.Controls.Add(this.label5);
-            this.panel4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel4.Location = new System.Drawing.Point(16, 34);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1318, 107);
@@ -156,7 +157,7 @@
             this.cmbType.FormattingEnabled = true;
             this.cmbType.Location = new System.Drawing.Point(82, 15);
             this.cmbType.Name = "cmbType";
-            this.cmbType.Size = new System.Drawing.Size(172, 29);
+            this.cmbType.Size = new System.Drawing.Size(172, 28);
             this.cmbType.TabIndex = 150;
             // 
             // label4
@@ -198,7 +199,7 @@
             // 
             this.txtSeller.Location = new System.Drawing.Point(346, 15);
             this.txtSeller.Name = "txtSeller";
-            this.txtSeller.Size = new System.Drawing.Size(153, 27);
+            this.txtSeller.Size = new System.Drawing.Size(153, 26);
             this.txtSeller.TabIndex = 147;
             // 
             // label1
@@ -217,7 +218,7 @@
             this.dtEDueDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtEDueDate.Location = new System.Drawing.Point(779, 12);
             this.dtEDueDate.Name = "dtEDueDate";
-            this.dtEDueDate.Size = new System.Drawing.Size(131, 27);
+            this.dtEDueDate.Size = new System.Drawing.Size(131, 26);
             this.dtEDueDate.TabIndex = 145;
             // 
             // dtSDueDate
@@ -226,7 +227,7 @@
             this.dtSDueDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtSDueDate.Location = new System.Drawing.Point(623, 12);
             this.dtSDueDate.Name = "dtSDueDate";
-            this.dtSDueDate.Size = new System.Drawing.Size(131, 27);
+            this.dtSDueDate.Size = new System.Drawing.Size(131, 26);
             this.dtSDueDate.TabIndex = 144;
             // 
             // label5
