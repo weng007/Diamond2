@@ -413,23 +413,35 @@ namespace DiamondShop {
             
             private global::System.Data.DataColumn columnMaterialWeight2;
             
-            private global::System.Data.DataColumn columnNote1;
+            private global::System.Data.DataColumn columnInventoryRemark21;
             
-            private global::System.Data.DataColumn columnNote1Status;
+            private global::System.Data.DataColumn columnCode21;
             
-            private global::System.Data.DataColumn columnNoteStatusName1;
+            private global::System.Data.DataColumn columnShop21;
             
-            private global::System.Data.DataColumn columnNote2;
+            private global::System.Data.DataColumn columnINVShopName21;
             
-            private global::System.Data.DataColumn columnNote2Status;
+            private global::System.Data.DataColumn columnInventoryImg21;
             
-            private global::System.Data.DataColumn columnNoteStatusName2;
+            private global::System.Data.DataColumn columnInventoryImg22;
             
-            private global::System.Data.DataColumn columnNote3;
+            private global::System.Data.DataColumn columnJewelryType21;
             
-            private global::System.Data.DataColumn columnNote3Status;
+            private global::System.Data.DataColumn columnJewelryTypeName21;
             
-            private global::System.Data.DataColumn columnNoteStatusName3;
+            private global::System.Data.DataColumn columnSize21;
+            
+            private global::System.Data.DataColumn columnINVMaterial21;
+            
+            private global::System.Data.DataColumn columnINVMaterialName21;
+            
+            private global::System.Data.DataColumn columnINVMaterial22;
+            
+            private global::System.Data.DataColumn columnINVMaterialName22;
+            
+            private global::System.Data.DataColumn columnMaterialWeight21;
+            
+            private global::System.Data.DataColumn columnMaterialWeight22;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -1002,73 +1014,121 @@ namespace DiamondShop {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn Note1Column {
+            public global::System.Data.DataColumn InventoryRemark21Column {
                 get {
-                    return this.columnNote1;
+                    return this.columnInventoryRemark21;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn Note1StatusColumn {
+            public global::System.Data.DataColumn Code21Column {
                 get {
-                    return this.columnNote1Status;
+                    return this.columnCode21;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn NoteStatusName1Column {
+            public global::System.Data.DataColumn Shop21Column {
                 get {
-                    return this.columnNoteStatusName1;
+                    return this.columnShop21;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn Note2Column {
+            public global::System.Data.DataColumn INVShopName21Column {
                 get {
-                    return this.columnNote2;
+                    return this.columnINVShopName21;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn Note2StatusColumn {
+            public global::System.Data.DataColumn InventoryImg21Column {
                 get {
-                    return this.columnNote2Status;
+                    return this.columnInventoryImg21;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn NoteStatusName2Column {
+            public global::System.Data.DataColumn InventoryImg22Column {
                 get {
-                    return this.columnNoteStatusName2;
+                    return this.columnInventoryImg22;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn Note3Column {
+            public global::System.Data.DataColumn JewelryType21Column {
                 get {
-                    return this.columnNote3;
+                    return this.columnJewelryType21;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn Note3StatusColumn {
+            public global::System.Data.DataColumn JewelryTypeName21Column {
                 get {
-                    return this.columnNote3Status;
+                    return this.columnJewelryTypeName21;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn NoteStatusName3Column {
+            public global::System.Data.DataColumn Size21Column {
                 get {
-                    return this.columnNoteStatusName3;
+                    return this.columnSize21;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn INVMaterial21Column {
+                get {
+                    return this.columnINVMaterial21;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn INVMaterialName21Column {
+                get {
+                    return this.columnINVMaterialName21;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn INVMaterial22Column {
+                get {
+                    return this.columnINVMaterial22;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn INVMaterialName22Column {
+                get {
+                    return this.columnINVMaterialName22;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn MaterialWeight21Column {
+                get {
+                    return this.columnMaterialWeight21;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn MaterialWeight22Column {
+                get {
+                    return this.columnMaterialWeight22;
                 }
             }
             
@@ -1176,15 +1236,21 @@ namespace DiamondShop {
                         string INVMaterialName2, 
                         double MaterialWeight1, 
                         double MaterialWeight2, 
-                        string Note1, 
-                        int Note1Status, 
-                        string NoteStatusName1, 
-                        string Note2, 
-                        int Note2Status, 
-                        string NoteStatusName2, 
-                        string Note3, 
-                        int Note3Status, 
-                        string NoteStatusName3) {
+                        string InventoryRemark21, 
+                        string Code21, 
+                        int Shop21, 
+                        string INVShopName21, 
+                        byte[] InventoryImg21, 
+                        byte[] InventoryImg22, 
+                        int JewelryType21, 
+                        string JewelryTypeName21, 
+                        double Size21, 
+                        int INVMaterial21, 
+                        string INVMaterialName21, 
+                        int INVMaterial22, 
+                        string INVMaterialName22, 
+                        double MaterialWeight21, 
+                        double MaterialWeight22) {
                 SP_Rpt_OrderRow rowSP_Rpt_OrderRow = ((SP_Rpt_OrderRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         RowNum,
@@ -1254,15 +1320,21 @@ namespace DiamondShop {
                         INVMaterialName2,
                         MaterialWeight1,
                         MaterialWeight2,
-                        Note1,
-                        Note1Status,
-                        NoteStatusName1,
-                        Note2,
-                        Note2Status,
-                        NoteStatusName2,
-                        Note3,
-                        Note3Status,
-                        NoteStatusName3};
+                        InventoryRemark21,
+                        Code21,
+                        Shop21,
+                        INVShopName21,
+                        InventoryImg21,
+                        InventoryImg22,
+                        JewelryType21,
+                        JewelryTypeName21,
+                        Size21,
+                        INVMaterial21,
+                        INVMaterialName21,
+                        INVMaterial22,
+                        INVMaterialName22,
+                        MaterialWeight21,
+                        MaterialWeight22};
                 rowSP_Rpt_OrderRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowSP_Rpt_OrderRow);
                 return rowSP_Rpt_OrderRow;
@@ -1359,15 +1431,21 @@ namespace DiamondShop {
                 this.columnINVMaterialName2 = base.Columns["INVMaterialName2"];
                 this.columnMaterialWeight1 = base.Columns["MaterialWeight1"];
                 this.columnMaterialWeight2 = base.Columns["MaterialWeight2"];
-                this.columnNote1 = base.Columns["Note1"];
-                this.columnNote1Status = base.Columns["Note1Status"];
-                this.columnNoteStatusName1 = base.Columns["NoteStatusName1"];
-                this.columnNote2 = base.Columns["Note2"];
-                this.columnNote2Status = base.Columns["Note2Status"];
-                this.columnNoteStatusName2 = base.Columns["NoteStatusName2"];
-                this.columnNote3 = base.Columns["Note3"];
-                this.columnNote3Status = base.Columns["Note3Status"];
-                this.columnNoteStatusName3 = base.Columns["NoteStatusName3"];
+                this.columnInventoryRemark21 = base.Columns["InventoryRemark21"];
+                this.columnCode21 = base.Columns["Code21"];
+                this.columnShop21 = base.Columns["Shop21"];
+                this.columnINVShopName21 = base.Columns["INVShopName21"];
+                this.columnInventoryImg21 = base.Columns["InventoryImg21"];
+                this.columnInventoryImg22 = base.Columns["InventoryImg22"];
+                this.columnJewelryType21 = base.Columns["JewelryType21"];
+                this.columnJewelryTypeName21 = base.Columns["JewelryTypeName21"];
+                this.columnSize21 = base.Columns["Size21"];
+                this.columnINVMaterial21 = base.Columns["INVMaterial21"];
+                this.columnINVMaterialName21 = base.Columns["INVMaterialName21"];
+                this.columnINVMaterial22 = base.Columns["INVMaterial22"];
+                this.columnINVMaterialName22 = base.Columns["INVMaterialName22"];
+                this.columnMaterialWeight21 = base.Columns["MaterialWeight21"];
+                this.columnMaterialWeight22 = base.Columns["MaterialWeight22"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1507,28 +1585,42 @@ namespace DiamondShop {
                 base.Columns.Add(this.columnMaterialWeight1);
                 this.columnMaterialWeight2 = new global::System.Data.DataColumn("MaterialWeight2", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnMaterialWeight2);
-                this.columnNote1 = new global::System.Data.DataColumn("Note1", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNote1);
-                this.columnNote1Status = new global::System.Data.DataColumn("Note1Status", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNote1Status);
-                this.columnNoteStatusName1 = new global::System.Data.DataColumn("NoteStatusName1", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNoteStatusName1);
-                this.columnNote2 = new global::System.Data.DataColumn("Note2", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNote2);
-                this.columnNote2Status = new global::System.Data.DataColumn("Note2Status", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNote2Status);
-                this.columnNoteStatusName2 = new global::System.Data.DataColumn("NoteStatusName2", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNoteStatusName2);
-                this.columnNote3 = new global::System.Data.DataColumn("Note3", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNote3);
-                this.columnNote3Status = new global::System.Data.DataColumn("Note3Status", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNote3Status);
-                this.columnNoteStatusName3 = new global::System.Data.DataColumn("NoteStatusName3", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNoteStatusName3);
+                this.columnInventoryRemark21 = new global::System.Data.DataColumn("InventoryRemark21", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnInventoryRemark21);
+                this.columnCode21 = new global::System.Data.DataColumn("Code21", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCode21);
+                this.columnShop21 = new global::System.Data.DataColumn("Shop21", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnShop21);
+                this.columnINVShopName21 = new global::System.Data.DataColumn("INVShopName21", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnINVShopName21);
+                this.columnInventoryImg21 = new global::System.Data.DataColumn("InventoryImg21", typeof(byte[]), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnInventoryImg21);
+                this.columnInventoryImg22 = new global::System.Data.DataColumn("InventoryImg22", typeof(byte[]), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnInventoryImg22);
+                this.columnJewelryType21 = new global::System.Data.DataColumn("JewelryType21", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnJewelryType21);
+                this.columnJewelryTypeName21 = new global::System.Data.DataColumn("JewelryTypeName21", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnJewelryTypeName21);
+                this.columnSize21 = new global::System.Data.DataColumn("Size21", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSize21);
+                this.columnINVMaterial21 = new global::System.Data.DataColumn("INVMaterial21", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnINVMaterial21);
+                this.columnINVMaterialName21 = new global::System.Data.DataColumn("INVMaterialName21", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnINVMaterialName21);
+                this.columnINVMaterial22 = new global::System.Data.DataColumn("INVMaterial22", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnINVMaterial22);
+                this.columnINVMaterialName22 = new global::System.Data.DataColumn("INVMaterialName22", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnINVMaterialName22);
+                this.columnMaterialWeight21 = new global::System.Data.DataColumn("MaterialWeight21", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMaterialWeight21);
+                this.columnMaterialWeight22 = new global::System.Data.DataColumn("MaterialWeight22", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMaterialWeight22);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnID}, true));
                 this.columnRowNum.ReadOnly = true;
                 this.columnID.AutoIncrement = true;
+                this.columnID.AutoIncrementSeed = -1;
+                this.columnID.AutoIncrementStep = -1;
                 this.columnID.AllowDBNull = false;
                 this.columnID.ReadOnly = true;
                 this.columnID.Unique = true;
@@ -1574,15 +1666,16 @@ namespace DiamondShop {
                 this.columnINVMaterialName1.MaxLength = 100;
                 this.columnINVMaterialName2.ReadOnly = true;
                 this.columnINVMaterialName2.MaxLength = 100;
-                this.columnNote1.MaxLength = 300;
-                this.columnNoteStatusName1.ReadOnly = true;
-                this.columnNoteStatusName1.MaxLength = 100;
-                this.columnNote2.MaxLength = 300;
-                this.columnNoteStatusName2.ReadOnly = true;
-                this.columnNoteStatusName2.MaxLength = 100;
-                this.columnNote3.MaxLength = 300;
-                this.columnNoteStatusName3.ReadOnly = true;
-                this.columnNoteStatusName3.MaxLength = 100;
+                this.columnInventoryRemark21.MaxLength = 250;
+                this.columnCode21.MaxLength = 30;
+                this.columnINVShopName21.ReadOnly = true;
+                this.columnINVShopName21.MaxLength = 100;
+                this.columnJewelryTypeName21.ReadOnly = true;
+                this.columnJewelryTypeName21.MaxLength = 100;
+                this.columnINVMaterialName21.ReadOnly = true;
+                this.columnINVMaterialName21.MaxLength = 100;
+                this.columnINVMaterialName22.ReadOnly = true;
+                this.columnINVMaterialName22.MaxLength = 100;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2792,145 +2885,241 @@ namespace DiamondShop {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Note1 {
+            public string InventoryRemark21 {
                 get {
                     try {
-                        return ((string)(this[this.tableSP_Rpt_Order.Note1Column]));
+                        return ((string)(this[this.tableSP_Rpt_Order.InventoryRemark21Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Note1\' in table \'SP_Rpt_Order\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'InventoryRemark21\' in table \'SP_Rpt_Order\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableSP_Rpt_Order.Note1Column] = value;
+                    this[this.tableSP_Rpt_Order.InventoryRemark21Column] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int Note1Status {
+            public string Code21 {
                 get {
                     try {
-                        return ((int)(this[this.tableSP_Rpt_Order.Note1StatusColumn]));
+                        return ((string)(this[this.tableSP_Rpt_Order.Code21Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Note1Status\' in table \'SP_Rpt_Order\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Code21\' in table \'SP_Rpt_Order\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableSP_Rpt_Order.Note1StatusColumn] = value;
+                    this[this.tableSP_Rpt_Order.Code21Column] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string NoteStatusName1 {
+            public int Shop21 {
                 get {
                     try {
-                        return ((string)(this[this.tableSP_Rpt_Order.NoteStatusName1Column]));
+                        return ((int)(this[this.tableSP_Rpt_Order.Shop21Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'NoteStatusName1\' in table \'SP_Rpt_Order\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Shop21\' in table \'SP_Rpt_Order\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableSP_Rpt_Order.NoteStatusName1Column] = value;
+                    this[this.tableSP_Rpt_Order.Shop21Column] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Note2 {
+            public string INVShopName21 {
                 get {
                     try {
-                        return ((string)(this[this.tableSP_Rpt_Order.Note2Column]));
+                        return ((string)(this[this.tableSP_Rpt_Order.INVShopName21Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Note2\' in table \'SP_Rpt_Order\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'INVShopName21\' in table \'SP_Rpt_Order\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableSP_Rpt_Order.Note2Column] = value;
+                    this[this.tableSP_Rpt_Order.INVShopName21Column] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int Note2Status {
+            public byte[] InventoryImg21 {
                 get {
                     try {
-                        return ((int)(this[this.tableSP_Rpt_Order.Note2StatusColumn]));
+                        return ((byte[])(this[this.tableSP_Rpt_Order.InventoryImg21Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Note2Status\' in table \'SP_Rpt_Order\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'InventoryImg21\' in table \'SP_Rpt_Order\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableSP_Rpt_Order.Note2StatusColumn] = value;
+                    this[this.tableSP_Rpt_Order.InventoryImg21Column] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string NoteStatusName2 {
+            public byte[] InventoryImg22 {
                 get {
                     try {
-                        return ((string)(this[this.tableSP_Rpt_Order.NoteStatusName2Column]));
+                        return ((byte[])(this[this.tableSP_Rpt_Order.InventoryImg22Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'NoteStatusName2\' in table \'SP_Rpt_Order\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'InventoryImg22\' in table \'SP_Rpt_Order\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableSP_Rpt_Order.NoteStatusName2Column] = value;
+                    this[this.tableSP_Rpt_Order.InventoryImg22Column] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Note3 {
+            public int JewelryType21 {
                 get {
                     try {
-                        return ((string)(this[this.tableSP_Rpt_Order.Note3Column]));
+                        return ((int)(this[this.tableSP_Rpt_Order.JewelryType21Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Note3\' in table \'SP_Rpt_Order\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'JewelryType21\' in table \'SP_Rpt_Order\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableSP_Rpt_Order.Note3Column] = value;
+                    this[this.tableSP_Rpt_Order.JewelryType21Column] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int Note3Status {
+            public string JewelryTypeName21 {
                 get {
                     try {
-                        return ((int)(this[this.tableSP_Rpt_Order.Note3StatusColumn]));
+                        return ((string)(this[this.tableSP_Rpt_Order.JewelryTypeName21Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Note3Status\' in table \'SP_Rpt_Order\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'JewelryTypeName21\' in table \'SP_Rpt_Order\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableSP_Rpt_Order.Note3StatusColumn] = value;
+                    this[this.tableSP_Rpt_Order.JewelryTypeName21Column] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string NoteStatusName3 {
+            public double Size21 {
                 get {
                     try {
-                        return ((string)(this[this.tableSP_Rpt_Order.NoteStatusName3Column]));
+                        return ((double)(this[this.tableSP_Rpt_Order.Size21Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'NoteStatusName3\' in table \'SP_Rpt_Order\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Size21\' in table \'SP_Rpt_Order\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableSP_Rpt_Order.NoteStatusName3Column] = value;
+                    this[this.tableSP_Rpt_Order.Size21Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int INVMaterial21 {
+                get {
+                    try {
+                        return ((int)(this[this.tableSP_Rpt_Order.INVMaterial21Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'INVMaterial21\' in table \'SP_Rpt_Order\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSP_Rpt_Order.INVMaterial21Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string INVMaterialName21 {
+                get {
+                    try {
+                        return ((string)(this[this.tableSP_Rpt_Order.INVMaterialName21Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'INVMaterialName21\' in table \'SP_Rpt_Order\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSP_Rpt_Order.INVMaterialName21Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int INVMaterial22 {
+                get {
+                    try {
+                        return ((int)(this[this.tableSP_Rpt_Order.INVMaterial22Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'INVMaterial22\' in table \'SP_Rpt_Order\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSP_Rpt_Order.INVMaterial22Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string INVMaterialName22 {
+                get {
+                    try {
+                        return ((string)(this[this.tableSP_Rpt_Order.INVMaterialName22Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'INVMaterialName22\' in table \'SP_Rpt_Order\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSP_Rpt_Order.INVMaterialName22Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double MaterialWeight21 {
+                get {
+                    try {
+                        return ((double)(this[this.tableSP_Rpt_Order.MaterialWeight21Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'MaterialWeight21\' in table \'SP_Rpt_Order\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSP_Rpt_Order.MaterialWeight21Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double MaterialWeight22 {
+                get {
+                    try {
+                        return ((double)(this[this.tableSP_Rpt_Order.MaterialWeight22Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'MaterialWeight22\' in table \'SP_Rpt_Order\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSP_Rpt_Order.MaterialWeight22Column] = value;
                 }
             }
             
@@ -3728,110 +3917,182 @@ namespace DiamondShop {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsNote1Null() {
-                return this.IsNull(this.tableSP_Rpt_Order.Note1Column);
+            public bool IsInventoryRemark21Null() {
+                return this.IsNull(this.tableSP_Rpt_Order.InventoryRemark21Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetNote1Null() {
-                this[this.tableSP_Rpt_Order.Note1Column] = global::System.Convert.DBNull;
+            public void SetInventoryRemark21Null() {
+                this[this.tableSP_Rpt_Order.InventoryRemark21Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsNote1StatusNull() {
-                return this.IsNull(this.tableSP_Rpt_Order.Note1StatusColumn);
+            public bool IsCode21Null() {
+                return this.IsNull(this.tableSP_Rpt_Order.Code21Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetNote1StatusNull() {
-                this[this.tableSP_Rpt_Order.Note1StatusColumn] = global::System.Convert.DBNull;
+            public void SetCode21Null() {
+                this[this.tableSP_Rpt_Order.Code21Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsNoteStatusName1Null() {
-                return this.IsNull(this.tableSP_Rpt_Order.NoteStatusName1Column);
+            public bool IsShop21Null() {
+                return this.IsNull(this.tableSP_Rpt_Order.Shop21Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetNoteStatusName1Null() {
-                this[this.tableSP_Rpt_Order.NoteStatusName1Column] = global::System.Convert.DBNull;
+            public void SetShop21Null() {
+                this[this.tableSP_Rpt_Order.Shop21Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsNote2Null() {
-                return this.IsNull(this.tableSP_Rpt_Order.Note2Column);
+            public bool IsINVShopName21Null() {
+                return this.IsNull(this.tableSP_Rpt_Order.INVShopName21Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetNote2Null() {
-                this[this.tableSP_Rpt_Order.Note2Column] = global::System.Convert.DBNull;
+            public void SetINVShopName21Null() {
+                this[this.tableSP_Rpt_Order.INVShopName21Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsNote2StatusNull() {
-                return this.IsNull(this.tableSP_Rpt_Order.Note2StatusColumn);
+            public bool IsInventoryImg21Null() {
+                return this.IsNull(this.tableSP_Rpt_Order.InventoryImg21Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetNote2StatusNull() {
-                this[this.tableSP_Rpt_Order.Note2StatusColumn] = global::System.Convert.DBNull;
+            public void SetInventoryImg21Null() {
+                this[this.tableSP_Rpt_Order.InventoryImg21Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsNoteStatusName2Null() {
-                return this.IsNull(this.tableSP_Rpt_Order.NoteStatusName2Column);
+            public bool IsInventoryImg22Null() {
+                return this.IsNull(this.tableSP_Rpt_Order.InventoryImg22Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetNoteStatusName2Null() {
-                this[this.tableSP_Rpt_Order.NoteStatusName2Column] = global::System.Convert.DBNull;
+            public void SetInventoryImg22Null() {
+                this[this.tableSP_Rpt_Order.InventoryImg22Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsNote3Null() {
-                return this.IsNull(this.tableSP_Rpt_Order.Note3Column);
+            public bool IsJewelryType21Null() {
+                return this.IsNull(this.tableSP_Rpt_Order.JewelryType21Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetNote3Null() {
-                this[this.tableSP_Rpt_Order.Note3Column] = global::System.Convert.DBNull;
+            public void SetJewelryType21Null() {
+                this[this.tableSP_Rpt_Order.JewelryType21Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsNote3StatusNull() {
-                return this.IsNull(this.tableSP_Rpt_Order.Note3StatusColumn);
+            public bool IsJewelryTypeName21Null() {
+                return this.IsNull(this.tableSP_Rpt_Order.JewelryTypeName21Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetNote3StatusNull() {
-                this[this.tableSP_Rpt_Order.Note3StatusColumn] = global::System.Convert.DBNull;
+            public void SetJewelryTypeName21Null() {
+                this[this.tableSP_Rpt_Order.JewelryTypeName21Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsNoteStatusName3Null() {
-                return this.IsNull(this.tableSP_Rpt_Order.NoteStatusName3Column);
+            public bool IsSize21Null() {
+                return this.IsNull(this.tableSP_Rpt_Order.Size21Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetNoteStatusName3Null() {
-                this[this.tableSP_Rpt_Order.NoteStatusName3Column] = global::System.Convert.DBNull;
+            public void SetSize21Null() {
+                this[this.tableSP_Rpt_Order.Size21Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsINVMaterial21Null() {
+                return this.IsNull(this.tableSP_Rpt_Order.INVMaterial21Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetINVMaterial21Null() {
+                this[this.tableSP_Rpt_Order.INVMaterial21Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsINVMaterialName21Null() {
+                return this.IsNull(this.tableSP_Rpt_Order.INVMaterialName21Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetINVMaterialName21Null() {
+                this[this.tableSP_Rpt_Order.INVMaterialName21Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsINVMaterial22Null() {
+                return this.IsNull(this.tableSP_Rpt_Order.INVMaterial22Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetINVMaterial22Null() {
+                this[this.tableSP_Rpt_Order.INVMaterial22Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsINVMaterialName22Null() {
+                return this.IsNull(this.tableSP_Rpt_Order.INVMaterialName22Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetINVMaterialName22Null() {
+                this[this.tableSP_Rpt_Order.INVMaterialName22Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsMaterialWeight21Null() {
+                return this.IsNull(this.tableSP_Rpt_Order.MaterialWeight21Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetMaterialWeight21Null() {
+                this[this.tableSP_Rpt_Order.MaterialWeight21Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsMaterialWeight22Null() {
+                return this.IsNull(this.tableSP_Rpt_Order.MaterialWeight22Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetMaterialWeight22Null() {
+                this[this.tableSP_Rpt_Order.MaterialWeight22Column] = global::System.Convert.DBNull;
             }
         }
         
