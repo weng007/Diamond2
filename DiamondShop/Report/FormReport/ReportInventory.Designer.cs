@@ -108,6 +108,7 @@
             this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Location = new System.Drawing.Point(1315, 0);
             this.button1.Margin = new System.Windows.Forms.Padding(0);
@@ -121,7 +122,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.reportViewer1);
-            this.panel2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel2.Location = new System.Drawing.Point(5, 147);
             this.panel2.Name = "panel2";
@@ -151,7 +152,7 @@
             this.panel4.Controls.Add(this.label1);
             this.panel4.Controls.Add(this.label7);
             this.panel4.Controls.Add(this.btnSearch);
-            this.panel4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel4.Location = new System.Drawing.Point(16, 34);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1318, 107);
@@ -162,7 +163,7 @@
             this.cmbStatus.FormattingEnabled = true;
             this.cmbStatus.Location = new System.Drawing.Point(148, 65);
             this.cmbStatus.Name = "cmbStatus";
-            this.cmbStatus.Size = new System.Drawing.Size(172, 29);
+            this.cmbStatus.Size = new System.Drawing.Size(172, 28);
             this.cmbStatus.TabIndex = 120;
             // 
             // label11
@@ -189,7 +190,7 @@
             // 
             this.txtEPriceTag.Location = new System.Drawing.Point(653, 19);
             this.txtEPriceTag.Name = "txtEPriceTag";
-            this.txtEPriceTag.Size = new System.Drawing.Size(74, 27);
+            this.txtEPriceTag.Size = new System.Drawing.Size(74, 26);
             this.txtEPriceTag.TabIndex = 118;
             this.txtEPriceTag.Text = "50";
             this.txtEPriceTag.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -198,7 +199,7 @@
             // 
             this.txtSPriceTag.Location = new System.Drawing.Point(555, 20);
             this.txtSPriceTag.Name = "txtSPriceTag";
-            this.txtSPriceTag.Size = new System.Drawing.Size(74, 27);
+            this.txtSPriceTag.Size = new System.Drawing.Size(74, 26);
             this.txtSPriceTag.TabIndex = 117;
             this.txtSPriceTag.Text = "0";
             this.txtSPriceTag.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -219,7 +220,7 @@
             this.dtEImpDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtEImpDate.Location = new System.Drawing.Point(304, 20);
             this.dtEImpDate.Name = "dtEImpDate";
-            this.dtEImpDate.Size = new System.Drawing.Size(131, 27);
+            this.dtEImpDate.Size = new System.Drawing.Size(131, 26);
             this.dtEImpDate.TabIndex = 114;
             // 
             // label8
@@ -238,7 +239,7 @@
             this.dtSImpDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtSImpDate.Location = new System.Drawing.Point(148, 20);
             this.dtSImpDate.Name = "dtSImpDate";
-            this.dtSImpDate.Size = new System.Drawing.Size(131, 27);
+            this.dtSImpDate.Size = new System.Drawing.Size(131, 26);
             this.dtSImpDate.TabIndex = 113;
             // 
             // label1

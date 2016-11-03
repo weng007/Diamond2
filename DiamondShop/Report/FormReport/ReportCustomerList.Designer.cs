@@ -109,6 +109,7 @@
             this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Location = new System.Drawing.Point(1315, 0);
             this.button1.Margin = new System.Windows.Forms.Padding(0);
@@ -122,7 +123,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.reportViewer1);
-            this.panel2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel2.Location = new System.Drawing.Point(5, 147);
             this.panel2.Name = "panel2";
@@ -153,7 +154,7 @@
             this.panel4.Controls.Add(this.dtSAnniDate);
             this.panel4.Controls.Add(this.label2);
             this.panel4.Controls.Add(this.label7);
-            this.panel4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel4.Location = new System.Drawing.Point(16, 34);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1318, 107);
@@ -163,7 +164,7 @@
             // 
             this.txtDisplayName.Location = new System.Drawing.Point(608, 20);
             this.txtDisplayName.Name = "txtDisplayName";
-            this.txtDisplayName.Size = new System.Drawing.Size(168, 27);
+            this.txtDisplayName.Size = new System.Drawing.Size(168, 26);
             this.txtDisplayName.TabIndex = 159;
             // 
             // label9
@@ -197,7 +198,7 @@
             this.dtEBirthDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtEBirthDate.Location = new System.Drawing.Point(337, 66);
             this.dtEBirthDate.Name = "dtEBirthDate";
-            this.dtEBirthDate.Size = new System.Drawing.Size(131, 27);
+            this.dtEBirthDate.Size = new System.Drawing.Size(131, 26);
             this.dtEBirthDate.TabIndex = 155;
             // 
             // label3
@@ -216,7 +217,7 @@
             this.dtSBirthDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtSBirthDate.Location = new System.Drawing.Point(181, 66);
             this.dtSBirthDate.Name = "dtSBirthDate";
-            this.dtSBirthDate.Size = new System.Drawing.Size(131, 27);
+            this.dtSBirthDate.Size = new System.Drawing.Size(131, 26);
             this.dtSBirthDate.TabIndex = 154;
             // 
             // label5
@@ -245,7 +246,7 @@
             this.dtEAnniDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtEAnniDate.Location = new System.Drawing.Point(337, 19);
             this.dtEAnniDate.Name = "dtEAnniDate";
-            this.dtEAnniDate.Size = new System.Drawing.Size(131, 27);
+            this.dtEAnniDate.Size = new System.Drawing.Size(131, 26);
             this.dtEAnniDate.TabIndex = 150;
             // 
             // label8
@@ -264,7 +265,7 @@
             this.dtSAnniDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtSAnniDate.Location = new System.Drawing.Point(181, 19);
             this.dtSAnniDate.Name = "dtSAnniDate";
-            this.dtSAnniDate.Size = new System.Drawing.Size(131, 27);
+            this.dtSAnniDate.Size = new System.Drawing.Size(131, 26);
             this.dtSAnniDate.TabIndex = 149;
             // 
             // label2

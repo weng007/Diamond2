@@ -119,6 +119,7 @@
             this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Location = new System.Drawing.Point(1315, 0);
             this.button1.Margin = new System.Windows.Forms.Padding(0);
@@ -132,7 +133,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.reportViewer1);
-            this.panel2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel2.Location = new System.Drawing.Point(5, 147);
             this.panel2.Name = "panel2";
@@ -173,7 +174,7 @@
             this.panel4.Controls.Add(this.cmbType);
             this.panel4.Controls.Add(this.label4);
             this.panel4.Controls.Add(this.btnSearch);
-            this.panel4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel4.Location = new System.Drawing.Point(16, 34);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1318, 107);
@@ -184,7 +185,7 @@
             this.cmbShape.FormattingEnabled = true;
             this.cmbShape.Location = new System.Drawing.Point(1054, 13);
             this.cmbShape.Name = "cmbShape";
-            this.cmbShape.Size = new System.Drawing.Size(172, 29);
+            this.cmbShape.Size = new System.Drawing.Size(172, 28);
             this.cmbShape.TabIndex = 128;
             // 
             // label12
@@ -202,7 +203,7 @@
             this.cmbPayment.FormattingEnabled = true;
             this.cmbPayment.Location = new System.Drawing.Point(793, 61);
             this.cmbPayment.Name = "cmbPayment";
-            this.cmbPayment.Size = new System.Drawing.Size(172, 29);
+            this.cmbPayment.Size = new System.Drawing.Size(172, 28);
             this.cmbPayment.TabIndex = 126;
             // 
             // label11
@@ -219,7 +220,7 @@
             // 
             this.txtEWeight.Location = new System.Drawing.Point(892, 17);
             this.txtEWeight.Name = "txtEWeight";
-            this.txtEWeight.Size = new System.Drawing.Size(73, 27);
+            this.txtEWeight.Size = new System.Drawing.Size(73, 26);
             this.txtEWeight.TabIndex = 124;
             this.txtEWeight.Text = "50";
             this.txtEWeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -238,7 +239,7 @@
             // 
             this.txtSWeight.Location = new System.Drawing.Point(793, 17);
             this.txtSWeight.Name = "txtSWeight";
-            this.txtSWeight.Size = new System.Drawing.Size(73, 27);
+            this.txtSWeight.Size = new System.Drawing.Size(73, 26);
             this.txtSWeight.TabIndex = 122;
             this.txtSWeight.Text = "0";
             this.txtSWeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -259,7 +260,7 @@
             this.dtEDueDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtEDueDate.Location = new System.Drawing.Point(546, 65);
             this.dtEDueDate.Name = "dtEDueDate";
-            this.dtEDueDate.Size = new System.Drawing.Size(131, 27);
+            this.dtEDueDate.Size = new System.Drawing.Size(131, 26);
             this.dtEDueDate.TabIndex = 118;
             // 
             // label3
@@ -278,7 +279,7 @@
             this.dtSDueDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtSDueDate.Location = new System.Drawing.Point(390, 65);
             this.dtSDueDate.Name = "dtSDueDate";
-            this.dtSDueDate.Size = new System.Drawing.Size(131, 27);
+            this.dtSDueDate.Size = new System.Drawing.Size(131, 26);
             this.dtSDueDate.TabIndex = 117;
             // 
             // label5
@@ -306,7 +307,7 @@
             this.cmbStatus.FormattingEnabled = true;
             this.cmbStatus.Location = new System.Drawing.Point(97, 65);
             this.cmbStatus.Name = "cmbStatus";
-            this.cmbStatus.Size = new System.Drawing.Size(172, 29);
+            this.cmbStatus.Size = new System.Drawing.Size(172, 28);
             this.cmbStatus.TabIndex = 114;
             // 
             // label2
@@ -325,7 +326,7 @@
             this.dtEBuyDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtEBuyDate.Location = new System.Drawing.Point(546, 18);
             this.dtEBuyDate.Name = "dtEBuyDate";
-            this.dtEBuyDate.Size = new System.Drawing.Size(131, 27);
+            this.dtEBuyDate.Size = new System.Drawing.Size(131, 26);
             this.dtEBuyDate.TabIndex = 93;
             // 
             // label8
@@ -344,7 +345,7 @@
             this.dtSBuyDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtSBuyDate.Location = new System.Drawing.Point(390, 18);
             this.dtSBuyDate.Name = "dtSBuyDate";
-            this.dtSBuyDate.Size = new System.Drawing.Size(131, 27);
+            this.dtSBuyDate.Size = new System.Drawing.Size(131, 26);
             this.dtSBuyDate.TabIndex = 92;
             // 
             // label1
@@ -372,7 +373,7 @@
             this.cmbType.FormattingEnabled = true;
             this.cmbType.Location = new System.Drawing.Point(97, 18);
             this.cmbType.Name = "cmbType";
-            this.cmbType.Size = new System.Drawing.Size(172, 29);
+            this.cmbType.Size = new System.Drawing.Size(172, 28);
             this.cmbType.TabIndex = 4;
             // 
             // label4
