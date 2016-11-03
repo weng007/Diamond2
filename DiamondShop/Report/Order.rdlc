@@ -1285,7 +1285,7 @@
             <KeepTogether>true</KeepTogether>
             <Top>3.9978in</Top>
             <Left>5.28743in</Left>
-            <Height>2.07082in</Height>
+            <Height>1.17047in</Height>
             <Width>5.31265in</Width>
             <ZIndex>13</ZIndex>
             <Style>
@@ -3753,9 +3753,9 @@
                   </Paragraph>
                 </Paragraphs>
                 <rd:DefaultName>Things</rd:DefaultName>
-                <Top>0.0625in</Top>
+                <Top>0.05139in</Top>
                 <Left>0.07923in</Left>
-                <Height>0.25in</Height>
+                <Height>1.42849in</Height>
                 <Width>2.49822in</Width>
                 <Style>
                   <Border>
