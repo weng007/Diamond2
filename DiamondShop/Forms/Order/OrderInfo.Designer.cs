@@ -473,10 +473,10 @@
             // txtNote3
             // 
             this.txtNote3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.txtNote3.Location = new System.Drawing.Point(19, 624);
+            this.txtNote3.Location = new System.Drawing.Point(19, 610);
             this.txtNote3.Multiline = true;
             this.txtNote3.Name = "txtNote3";
-            this.txtNote3.Size = new System.Drawing.Size(281, 42);
+            this.txtNote3.Size = new System.Drawing.Size(281, 56);
             this.txtNote3.TabIndex = 294;
             this.txtNote3.Text = "เพิ่มเติม3";
             this.txtNote3.Visible = false;
@@ -484,10 +484,10 @@
             // txtNote2
             // 
             this.txtNote2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.txtNote2.Location = new System.Drawing.Point(19, 555);
+            this.txtNote2.Location = new System.Drawing.Point(19, 544);
             this.txtNote2.Multiline = true;
             this.txtNote2.Name = "txtNote2";
-            this.txtNote2.Size = new System.Drawing.Size(281, 49);
+            this.txtNote2.Size = new System.Drawing.Size(281, 60);
             this.txtNote2.TabIndex = 293;
             this.txtNote2.Text = "เพิ่มเติม2";
             this.txtNote2.Visible = false;
@@ -495,10 +495,10 @@
             // txtNote1
             // 
             this.txtNote1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.txtNote1.Location = new System.Drawing.Point(19, 492);
+            this.txtNote1.Location = new System.Drawing.Point(19, 481);
             this.txtNote1.Multiline = true;
             this.txtNote1.Name = "txtNote1";
-            this.txtNote1.Size = new System.Drawing.Size(281, 46);
+            this.txtNote1.Size = new System.Drawing.Size(281, 57);
             this.txtNote1.TabIndex = 292;
             this.txtNote1.Text = "เพิ่มเติม1";
             this.txtNote1.Visible = false;

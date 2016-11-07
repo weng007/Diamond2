@@ -40,7 +40,7 @@
             this.txtTransferNo = new System.Windows.Forms.TextBox();
             this.cmbReceiver = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.btnRecieve = new System.Windows.Forms.Button();
+            this.btnReceive = new System.Windows.Forms.Button();
             this.btnPrint = new System.Windows.Forms.Button();
             this.txtSShop = new System.Windows.Forms.TextBox();
             this.txtReceivedDate = new System.Windows.Forms.TextBox();
@@ -82,11 +82,11 @@
             // dtSendDate
             // 
             this.dtSendDate.CustomFormat = "dd/MM/yyyy";
-            this.dtSendDate.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtSendDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtSendDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtSendDate.Location = new System.Drawing.Point(127, 17);
             this.dtSendDate.Name = "dtSendDate";
-            this.dtSendDate.Size = new System.Drawing.Size(145, 27);
+            this.dtSendDate.Size = new System.Drawing.Size(145, 26);
             this.dtSendDate.TabIndex = 2;
             // 
             // panel3
@@ -97,7 +97,7 @@
             this.panel3.Controls.Add(this.txtTransferNo);
             this.panel3.Controls.Add(this.cmbReceiver);
             this.panel3.Controls.Add(this.label7);
-            this.panel3.Controls.Add(this.btnRecieve);
+            this.panel3.Controls.Add(this.btnReceive);
             this.panel3.Controls.Add(this.btnPrint);
             this.panel3.Controls.Add(this.txtSShop);
             this.panel3.Controls.Add(this.txtReceivedDate);
@@ -116,7 +116,7 @@
             this.panel3.Controls.Add(this.label6);
             this.panel3.Controls.Add(this.txtSender);
             this.panel3.Controls.Add(this.dtSendDate);
-            this.panel3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel3.Location = new System.Drawing.Point(10, 72);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1022, 461);
@@ -128,7 +128,7 @@
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label8.Location = new System.Drawing.Point(659, 66);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(100, 21);
+            this.label8.Size = new System.Drawing.Size(96, 20);
             this.label8.TabIndex = 253;
             this.label8.Text = "Transfer No.";
             // 
@@ -136,10 +136,10 @@
             // 
             this.txtTransferNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.txtTransferNo.Enabled = false;
-            this.txtTransferNo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTransferNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTransferNo.Location = new System.Drawing.Point(788, 60);
             this.txtTransferNo.Name = "txtTransferNo";
-            this.txtTransferNo.Size = new System.Drawing.Size(156, 27);
+            this.txtTransferNo.Size = new System.Drawing.Size(156, 26);
             this.txtTransferNo.TabIndex = 252;
             // 
             // cmbReceiver
@@ -147,7 +147,7 @@
             this.cmbReceiver.FormattingEnabled = true;
             this.cmbReceiver.Location = new System.Drawing.Point(127, 90);
             this.cmbReceiver.Name = "cmbReceiver";
-            this.cmbReceiver.Size = new System.Drawing.Size(145, 29);
+            this.cmbReceiver.Size = new System.Drawing.Size(145, 28);
             this.cmbReceiver.TabIndex = 251;
             // 
             // label7
@@ -158,18 +158,18 @@
             this.label7.TabIndex = 250;
             this.label7.Text = "Receiver";
             // 
-            // btnRecieve
+            // btnReceive
             // 
-            this.btnRecieve.BackColor = System.Drawing.Color.Thistle;
-            this.btnRecieve.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRecieve.Image = ((System.Drawing.Image)(resources.GetObject("btnRecieve.Image")));
-            this.btnRecieve.Location = new System.Drawing.Point(23, 343);
-            this.btnRecieve.Name = "btnRecieve";
-            this.btnRecieve.Size = new System.Drawing.Size(77, 100);
-            this.btnRecieve.TabIndex = 249;
-            this.btnRecieve.UseVisualStyleBackColor = false;
-            this.btnRecieve.Visible = false;
-            this.btnRecieve.Click += new System.EventHandler(this.btnRecieve_Click);
+            this.btnReceive.BackColor = System.Drawing.Color.Thistle;
+            this.btnReceive.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReceive.Image = ((System.Drawing.Image)(resources.GetObject("btnReceive.Image")));
+            this.btnReceive.Location = new System.Drawing.Point(23, 343);
+            this.btnReceive.Name = "btnReceive";
+            this.btnReceive.Size = new System.Drawing.Size(77, 100);
+            this.btnReceive.TabIndex = 249;
+            this.btnReceive.UseVisualStyleBackColor = false;
+            this.btnReceive.Visible = false;
+            this.btnReceive.Click += new System.EventHandler(this.btnReceive_Click);
             // 
             // btnPrint
             // 
@@ -181,33 +181,32 @@
             this.btnPrint.Size = new System.Drawing.Size(77, 100);
             this.btnPrint.TabIndex = 248;
             this.btnPrint.UseVisualStyleBackColor = false;
-            this.btnPrint.Visible = false;
             // 
             // txtSShop
             // 
             this.txtSShop.Enabled = false;
-            this.txtSShop.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSShop.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSShop.Location = new System.Drawing.Point(447, 56);
             this.txtSShop.Name = "txtSShop";
-            this.txtSShop.Size = new System.Drawing.Size(156, 27);
+            this.txtSShop.Size = new System.Drawing.Size(156, 26);
             this.txtSShop.TabIndex = 242;
             // 
             // txtReceivedDate
             // 
             this.txtReceivedDate.Enabled = false;
-            this.txtReceivedDate.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtReceivedDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtReceivedDate.Location = new System.Drawing.Point(447, 19);
             this.txtReceivedDate.Name = "txtReceivedDate";
-            this.txtReceivedDate.Size = new System.Drawing.Size(156, 27);
+            this.txtReceivedDate.Size = new System.Drawing.Size(156, 26);
             this.txtReceivedDate.TabIndex = 241;
             // 
             // txtTransferStatus
             // 
             this.txtTransferStatus.Enabled = false;
-            this.txtTransferStatus.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTransferStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTransferStatus.Location = new System.Drawing.Point(788, 23);
             this.txtTransferStatus.Name = "txtTransferStatus";
-            this.txtTransferStatus.Size = new System.Drawing.Size(156, 27);
+            this.txtTransferStatus.Size = new System.Drawing.Size(156, 26);
             this.txtTransferStatus.TabIndex = 240;
             // 
             // cmbEShop
@@ -215,7 +214,7 @@
             this.cmbEShop.FormattingEnabled = true;
             this.cmbEShop.Location = new System.Drawing.Point(447, 92);
             this.cmbEShop.Name = "cmbEShop";
-            this.cmbEShop.Size = new System.Drawing.Size(156, 29);
+            this.cmbEShop.Size = new System.Drawing.Size(156, 28);
             this.cmbEShop.TabIndex = 238;
             // 
             // label3
@@ -238,11 +237,11 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label16.Location = new System.Drawing.Point(604, 343);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(45, 19);
+            this.label16.Size = new System.Drawing.Size(47, 20);
             this.label16.TabIndex = 237;
             this.label16.Text = "Note";
             // 
@@ -260,18 +259,18 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label2.Location = new System.Drawing.Point(659, 23);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(123, 21);
+            this.label2.Size = new System.Drawing.Size(119, 20);
             this.label2.TabIndex = 233;
             this.label2.Text = "Transfer Status";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label5.Location = new System.Drawing.Point(307, 22);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(128, 21);
+            this.label5.Size = new System.Drawing.Size(114, 20);
             this.label5.TabIndex = 231;
             this.label5.Text = "Received Date";
             // 
@@ -283,7 +282,7 @@
             this.btnDel.Enabled = false;
             this.btnDel.FlatAppearance.BorderSize = 0;
             this.btnDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDel.Image = ((System.Drawing.Image)(resources.GetObject("btnDel.Image")));
             this.btnDel.Location = new System.Drawing.Point(981, 179);
             this.btnDel.Name = "btnDel";
@@ -301,7 +300,7 @@
             this.btnAdd.Enabled = false;
             this.btnAdd.FlatAppearance.BorderSize = 0;
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.Location = new System.Drawing.Point(981, 143);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(30, 30);
@@ -334,7 +333,7 @@
             this.gridTransfer.Name = "gridTransfer";
             this.gridTransfer.ReadOnly = true;
             this.gridTransfer.RowHeadersWidth = 10;
-            this.gridTransfer.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridTransfer.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridTransfer.RowTemplate.Height = 25;
             this.gridTransfer.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.gridTransfer.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -462,32 +461,32 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label1.Location = new System.Drawing.Point(19, 56);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 21);
+            this.label1.Size = new System.Drawing.Size(61, 20);
             this.label1.TabIndex = 85;
             this.label1.Text = "Sender";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label6.Location = new System.Drawing.Point(19, 19);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(93, 21);
+            this.label6.Size = new System.Drawing.Size(86, 20);
             this.label6.TabIndex = 84;
             this.label6.Text = "Send Date";
             // 
             // txtSender
             // 
             this.txtSender.Enabled = false;
-            this.txtSender.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSender.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSender.Location = new System.Drawing.Point(127, 53);
             this.txtSender.Name = "txtSender";
-            this.txtSender.Size = new System.Drawing.Size(145, 27);
+            this.txtSender.Size = new System.Drawing.Size(145, 26);
             this.txtSender.TabIndex = 4;
             // 
             // btnEdit
@@ -496,7 +495,7 @@
             this.btnEdit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnEdit.FlatAppearance.BorderSize = 0;
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEdit.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEdit.Location = new System.Drawing.Point(751, 134);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(30, 30);
@@ -566,7 +565,7 @@
         private System.Windows.Forms.TextBox txtTransferStatus;
         private System.Windows.Forms.TextBox txtSShop;
         private System.Windows.Forms.Button btnPrint;
-        private System.Windows.Forms.Button btnRecieve;
+        private System.Windows.Forms.Button btnReceive;
         private System.Windows.Forms.ComboBox cmbReceiver;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;

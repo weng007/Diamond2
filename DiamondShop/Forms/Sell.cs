@@ -23,10 +23,6 @@ namespace DiamondShop
         byte[] image1;
         int custID = 0;
         int refID = 0;
-        int Shop;
-        decimal price = 0;
-        string isPrintPrice = "1";
-        bool isAuthorize = false;
 
         public Sell()
         {
@@ -178,6 +174,9 @@ namespace DiamondShop
                 throw ex;
             }
 
+            isClosed = false;
+            LoadData();
+
             return chkFlag;
         }
         protected override bool DeleteData()
@@ -202,30 +201,6 @@ namespace DiamondShop
             return chkFlag;
         }
 
-        protected override void EditData()
-        {
-            if (isAuthorize)
-            {
-                EnableSave = true;
-                EnableDelete = true;
-                SetControlEnable(true);
-            }
-            else
-            {
-                RequirePassword frm = new RequirePassword(ApplicationInfo.Shop);
-                frm.ShowDialog();
-                isAuthorize = frm.isAuthorize;
-                frm.Close();
-
-                if (isAuthorize)
-                {
-                    EnableSave = true;
-                    EnableDelete = true;
-                    SetControlEnable(true);
-                    base.EditData();
-                }
-            }
-        }
         private void SetControlEnable(bool status)
         {
             txtCode.Enabled = status;
@@ -237,9 +212,9 @@ namespace DiamondShop
             dtSellDate.Enabled = status;
             cmbPayment.Enabled = status;
             dtPaymentDate.Enabled = status;
-            //btnAvailable.Enabled = status;
-            //btnPending.Enabled = status;
-            //btnSold.Enabled = status;
+            btnAvailable.Enabled = status;
+            btnPending.Enabled = status;
+            btnSold.Enabled = status;
             btnBrowseCatalog.Enabled = status;
             btnBrowseCustomer.Enabled = status;
             cmbSeller.Enabled = status;

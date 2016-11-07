@@ -54,7 +54,6 @@ namespace DiamondShop
             this.id = id;
             LoadData();
             SetControlEnable(false);
-            SetPermission();
         }
         protected override void Initial()
         {
@@ -102,16 +101,18 @@ namespace DiamondShop
                 binder.BindValueToControl(tds.Transfer[0]);
                 txtReceivedDate.Text = string.Format("{0:d/M/yyyy}", tds.Transfer[0]["ReceiveDate"]);
 
-                //Receiver 
-                if (Convert.ToInt16(cmbReceiver.SelectedValue.ToString()) == ApplicationInfo.UserID)
-                {
-                    btnRecieve.Visible = true;
-                    btnPrint.Visible = true;
-                }
-
                 EnableSave = false;
                 EnableEdit = true;
                 EnableDelete = false;
+
+                //Receiver 
+                if (Convert.ToInt16(cmbReceiver.SelectedValue.ToString()) == ApplicationInfo.UserID)
+                {
+                    btnReceive.Visible = true;
+                    btnPrint.Visible = false;
+                    EnableEdit = false;
+                    EnableDelete = false;
+                }
             }
 
             if (ds2.Tables[0].Rows.Count > 0)
@@ -188,10 +189,6 @@ namespace DiamondShop
                 }
                 tds.AcceptChanges();
 
-                if (Convert.ToInt16(cmbReceiver.SelectedValue.ToString()) == ApplicationInfo.UserID)
-                {
-                    btnPrint.Visible = true;
-                }
             }
             catch (Exception ex)
             {
@@ -214,18 +211,6 @@ namespace DiamondShop
                     dr["RefID1"] = ds2.Tables[0].Rows[i]["RefID1"];
                     dr["flag"] = ds2.Tables[0].Rows[i]["Flag"];
                     dr["ID"] = 0;
-                    ////Sender
-                    //if (Convert.ToInt16(cmbReceiver.SelectedValue.ToString()) != ApplicationInfo.UserID)
-                    //{
-                    //    dr["EShop"] = ds2.Tables[0].Rows[i]["Shop"];//Shop BuyBook
-                    //    dr["Status"] = 208;//Reserved
-                    //}
-                    ////Receiver 
-                    //if (Convert.ToInt16(cmbReceiver.SelectedValue.ToString()) == ApplicationInfo.UserID)
-                    //{
-                    //    dr["EShop"] = shop;//shop ฝั่งรับ
-                    //    dr["Status"] = 73; //Available
-                    //}
 
                     SetCreateBy(dr);
                     SetEditBy(dr);
@@ -238,27 +223,13 @@ namespace DiamondShop
         }
         protected override bool DeleteData()
         {
-            if (chkGrid == 0)
+            try
             {
-                try
-                {
-                    chkFlag = ser.DoDeleteData("Transfer", DelID);
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
+                chkFlag = ser.DoDeleteData("Transfer", DelID);
             }
-            else
+            catch (Exception ex)
             {
-                try
-                {
-                    chkFlag = ser.DoDeleteData("TransferDetail", DelID);
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
+                throw ex;
             }
 
             return chkFlag;
@@ -357,27 +328,13 @@ namespace DiamondShop
             {
                 if (gridTransfer.Rows[rowIndex].Cells["RefID2"].Value != null)
                 {
-                    DeleteDataGrid(1);
+                    
                 }
 
                 gridTransfer.Rows.RemoveAt(rowIndex);
-                //tds2.Tables[0].Rows[rowIndex].Delete();
-                //tds2.AcceptChanges();
             }
         }
-        private void DeleteDataGrid(int type)
-        {
-            if (type == 0)
-            {
-                chkGrid = 0;
-                DeleteData();
-            }
-            else
-            {
-                chkGrid = 1;
-                DeleteData();
-            }
-        }
+
         private void SetControlEnable(bool status)
         {
             dtSendDate.Enabled = status;
@@ -386,21 +343,14 @@ namespace DiamondShop
             btnDel.Enabled = status;
             gridTransfer.Enabled = status;
         }
-        private void btnRecieve_Click(object sender, EventArgs e)
-        {
-            ser1 = GM.GetService1();
-            txtReceivedDate.Text = DateTime.Now.ToString();
-            txtTransferStatus.Text = "Received";
-            flag = 1;
-        }
 
         private void gridTransfer_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
             {
-                    rowIndex = e.RowIndex;
-                    if (gridTransfer.Rows[e.RowIndex].Cells["RefID2"].Value != null)
-                    { DelID = Convert.ToInt16(gridTransfer.Rows[e.RowIndex].Cells["RefID2"].Value.ToString()); }
+                rowIndex = e.RowIndex;
+                if (gridTransfer.Rows[e.RowIndex].Cells["RefID2"].Value != null)
+                { DelID = Convert.ToInt16(gridTransfer.Rows[e.RowIndex].Cells["RefID2"].Value.ToString()); }
             }
         }
 
@@ -413,14 +363,12 @@ namespace DiamondShop
             }
         }
 
-        private void SetPermission()
+        private void btnReceive_Click(object sender, EventArgs e)
         {
-            //Receiver
-            if (Convert.ToInt16(cmbReceiver.SelectedValue.ToString()) == ApplicationInfo.UserID)
-            {
-                btnRecieve.Enabled = true;
-                btnPrint.Enabled = true;
-            }
+            ser1 = GM.GetService1();
+            txtReceivedDate.Text = DateTime.Now.ToString();
+            txtTransferStatus.Text = "Received";
+            flag = 1;
         }
     }
 }

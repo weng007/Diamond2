@@ -310,22 +310,22 @@ namespace DiamondShop
                 btnAccounting.Visible = true;
                 btnReport.Visible = true;
 
-                //สิทธิ์ Sub Menu ภายใน
-                if (ApplicationInfo.Shop != 209)// Office ใช้เท่านั้น
-                {
-                    mnBBCD.Enabled = false;
-                    mnBBCG.Enabled = false;
-                    mnBBJW.Enabled = false;
-                    mnBBNCD.Enabled = false;
-                    mnBBNCG.Enabled = false;
-                    mnBBG.Enabled = false;
-                    mnBBST.Enabled = false;
-                    mnBBETC.Enabled = false;
-                }
-                if(ApplicationInfo.Shop == 232)// Factory ซื้อทองได้
-                {
-                    mnBBG.Enabled = true;
-                }
+                ////สิทธิ์ Sub Menu ภายใน
+                //if (ApplicationInfo.Shop != 209)// Office ใช้เท่านั้น
+                //{
+                //    mnBBCD.Enabled = false;
+                //    mnBBCG.Enabled = false;
+                //    mnBBJW.Enabled = false;
+                //    mnBBNCD.Enabled = false;
+                //    mnBBNCG.Enabled = false;
+                //    mnBBG.Enabled = false;
+                //    mnBBST.Enabled = false;
+                //    mnBBETC.Enabled = false;
+                //}
+                //if(ApplicationInfo.Shop == 232)// Factory ซื้อทองได้
+                //{
+                //    mnBBG.Enabled = true;
+                //}
             }         
         }
 

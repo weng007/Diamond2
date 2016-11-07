@@ -90,7 +90,7 @@ namespace DiamondShop
             cmbSeller.SelectedIndex = ds.Tables[0].Rows.Count - 1;
             cmbSeller.Refresh();
 
-            cmbQuality.DataSource = (GM.GetMasterTableDetail("C025")).Tables[0];
+            cmbQuality.DataSource = (GM.GetMasterTableDetail("C031")).Tables[0];
             cmbQuality.ValueMember = "ID";
             cmbQuality.DisplayMember = "Detail";
             cmbQuality.Refresh();

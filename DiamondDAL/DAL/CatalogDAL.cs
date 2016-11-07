@@ -46,14 +46,14 @@ namespace DiamondDAL.DAL
 
             return ds;
         }
-        public dsCatalog DoSearchByType(string prefix, int mode)
+        public dsCatalog DoSearchByCode(string code, int mode)
         {
             try
             {
                 SQL.ClearParameter();
-                SQL.CreateParameter("CatalogType", prefix);
+                SQL.CreateParameter("Code", code);
                 SQL.CreateParameter("Mode", mode);
-                SQL.FillDataSetBySP("SP_Catalog_By_Type", ds.Catalog);
+                SQL.FillDataSetBySP("SP_Catalog_By_Code", ds.Catalog);
             }
             catch (Exception ex)
             {
