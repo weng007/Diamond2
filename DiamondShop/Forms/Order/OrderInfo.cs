@@ -511,6 +511,7 @@ namespace DiamondShop
             SaveData();
             btnPrint.Visible = true;
             btnInventory.Visible = true;
+            btnDiamond.Enabled = true;
         }
 
         private void btnRefDel_Click(object sender, EventArgs e)
