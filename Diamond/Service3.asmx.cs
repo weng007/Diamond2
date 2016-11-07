@@ -422,13 +422,13 @@ namespace Diamond
             }
         }
         [WebMethod]
-        public DataSet DoSearchProductionLine(string OrderNo, int JewelryType, int SShop, int FactoryStatus, DateTime SOrderDate, DateTime EOrderDate)
+        public DataSet DoSearchProductionLine(string OrderNo, int JewelryType, int Shop, int FactoryStatus, DateTime SOrderDate, DateTime EOrderDate)
         {
             ProductionLineBiz biz = new ProductionLineBiz();
 
             try
             {
-                return biz.DoSearchData(OrderNo, JewelryType, SShop, FactoryStatus, SOrderDate, EOrderDate);
+                return biz.DoSearchData(OrderNo, JewelryType, Shop, FactoryStatus, SOrderDate, EOrderDate);
             }
             catch (Exception ex)
             {

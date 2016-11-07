@@ -19,7 +19,6 @@ namespace DiamondShop
         Service2 ser1;
         dsProductionLine tds = new dsProductionLine();
         bool isAuthorize = false;
-        Decimal TotalPrice;
         int SFactoryStatus;
         string[] idSelected;
 
@@ -29,7 +28,6 @@ namespace DiamondShop
             Initial();
 
             binder.BindControl(cmbFactoryStatus, "FactoryStatus");
-
         }
         public ProductionLineInfo(string idSelected,int SFactoryStatus)
         {
@@ -38,12 +36,12 @@ namespace DiamondShop
             this.SFactoryStatus = SFactoryStatus;
             this.idSelected = idSelected.Split(',');
 
-            cmbFactoryStatus.SelectedValue = SFactoryStatus+1;
+            if (SFactoryStatus != 221)
+            {
+                cmbFactoryStatus.SelectedValue = SFactoryStatus + 1;
+            }
 
-            LoadData();
-            SetControlEnable(false);
-            isEdit = false;
-            
+            LoadData();     
         }
 
         protected override void Initial()
@@ -52,8 +50,6 @@ namespace DiamondShop
             cmbFactoryStatus.ValueMember = "ID";
             cmbFactoryStatus.DisplayMember = "Detail";
             cmbFactoryStatus.Refresh();
-
-            //SetFieldService.SetRequireField(txtSeller, txtPrice);
         }
 
         protected override void LoadData()
@@ -75,7 +71,6 @@ namespace DiamondShop
 
         protected override bool SaveData()
         {
-
             ser1 = GM.GetService1();
             try
             {
@@ -99,7 +94,6 @@ namespace DiamondShop
             {
                 EnableSave = true;
                 EnableDelete = true;
-                SetControlEnable(true);
             }
             else
             {
@@ -112,34 +106,9 @@ namespace DiamondShop
                 {
                     EnableSave = true;
                     EnableDelete = true;
-                    SetControlEnable(true);
                     base.EditData();
                 }
             }
-        }
-
-        protected override bool ValidateData()
-        {
-            message = "";
-
-            
-            //if (txtPrice.Text == "" || GM.ConvertStringToDouble(txtPrice) == 0)
-            //{
-            //    message += "Please input Price > 0.\n";
-            //}
-
-            if (message == "") { return true; }
-            else { return false; }
-        }
-
-        private void SetControlEnable(bool status)
-        {
-            //txtPrice.Enabled = status;
-        }
-
-        private void txtPayDate_TextChanged(object sender, EventArgs e)
-        {
-            isEdit = true;
         }
     }
 }

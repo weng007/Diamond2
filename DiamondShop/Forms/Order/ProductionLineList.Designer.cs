@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductionLineList));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panal = new System.Windows.Forms.Panel();
             this.txtLable = new System.Windows.Forms.Label();
             this.cmbFactoryStatus = new System.Windows.Forms.ComboBox();
@@ -334,12 +334,12 @@
             this.gridProductionLine.Name = "gridProductionLine";
             this.gridProductionLine.ReadOnly = true;
             this.gridProductionLine.RowHeadersWidth = 10;
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridProductionLine.RowsDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridProductionLine.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.gridProductionLine.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridProductionLine.RowTemplate.Height = 30;
             this.gridProductionLine.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridProductionLine.Size = new System.Drawing.Size(1138, 378);
+            this.gridProductionLine.Size = new System.Drawing.Size(1138, 393);
             this.gridProductionLine.TabIndex = 2;
             this.gridProductionLine.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridProductionLine_CellClick);
             // 
@@ -348,7 +348,7 @@
             this.Select.HeaderText = "Select";
             this.Select.Name = "Select";
             this.Select.ReadOnly = true;
-            this.Select.Width = 80;
+            this.Select.Width = 60;
             // 
             // ID
             // 
@@ -372,7 +372,7 @@
             this.JewelryTypeName.HeaderText = "Jewelry Type";
             this.JewelryTypeName.Name = "JewelryTypeName";
             this.JewelryTypeName.ReadOnly = true;
-            this.JewelryTypeName.Width = 200;
+            this.JewelryTypeName.Width = 170;
             // 
             // SShopName
             // 
@@ -386,10 +386,10 @@
             // WeightDC
             // 
             this.WeightDC.DataPropertyName = "WeightDC";
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle13.Format = "N2";
-            dataGridViewCellStyle13.NullValue = "0";
-            this.WeightDC.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle1.Format = "N2";
+            dataGridViewCellStyle1.NullValue = "0";
+            this.WeightDC.DefaultCellStyle = dataGridViewCellStyle1;
             this.WeightDC.HeaderText = "นน. DC";
             this.WeightDC.Name = "WeightDC";
             this.WeightDC.ReadOnly = true;
@@ -397,10 +397,10 @@
             // WeightGC
             // 
             this.WeightGC.DataPropertyName = "WeightGC";
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle14.Format = "N2";
-            dataGridViewCellStyle14.NullValue = "0";
-            this.WeightGC.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle2.Format = "N2";
+            dataGridViewCellStyle2.NullValue = "0";
+            this.WeightGC.DefaultCellStyle = dataGridViewCellStyle2;
             this.WeightGC.HeaderText = "นน.  GC";
             this.WeightGC.Name = "WeightGC";
             this.WeightGC.ReadOnly = true;
@@ -408,14 +408,14 @@
             // Price
             // 
             this.Price.DataPropertyName = "Price";
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle15.Format = "N0";
-            dataGridViewCellStyle15.NullValue = "0";
-            this.Price.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle3.Format = "N0";
+            dataGridViewCellStyle3.NullValue = "0";
+            this.Price.DefaultCellStyle = dataGridViewCellStyle3;
             this.Price.HeaderText = "ราคาที่ตกลง";
             this.Price.Name = "Price";
             this.Price.ReadOnly = true;
-            this.Price.Width = 180;
+            this.Price.Width = 150;
             // 
             // FactoryStatusName
             // 

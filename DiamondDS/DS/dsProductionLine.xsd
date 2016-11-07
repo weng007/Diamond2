@@ -14,7 +14,7 @@
   <xs:element name="dsProductionLine" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsProductionLine" msprop:Generator_UserDSName="dsProductionLine">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="ProductionLine" msprop:Generator_TableClassName="ProductionLineDataTable" msprop:Generator_TableVarName="tableProductionLine" msprop:Generator_TablePropName="ProductionLine" msprop:Generator_RowDeletingName="ProductionLineRowDeleting" msprop:Generator_RowChangingName="ProductionLineRowChanging" msprop:Generator_RowEvHandlerName="ProductionLineRowChangeEventHandler" msprop:Generator_RowDeletedName="ProductionLineRowDeleted" msprop:Generator_UserTableName="ProductionLine" msprop:Generator_RowChangedName="ProductionLineRowChanged" msprop:Generator_RowEvArgName="ProductionLineRowChangeEvent" msprop:Generator_RowClassName="ProductionLineRow">
+        <xs:element name="ProductionLine" msprop:Generator_TableClassName="ProductionLineDataTable" msprop:Generator_TableVarName="tableProductionLine" msprop:Generator_RowChangedName="ProductionLineRowChanged" msprop:Generator_TablePropName="ProductionLine" msprop:Generator_RowDeletingName="ProductionLineRowDeleting" msprop:Generator_RowChangingName="ProductionLineRowChanging" msprop:Generator_RowEvHandlerName="ProductionLineRowChangeEventHandler" msprop:Generator_RowDeletedName="ProductionLineRowDeleted" msprop:Generator_RowClassName="ProductionLineRow" msprop:Generator_UserTableName="ProductionLine" msprop:Generator_RowEvArgName="ProductionLineRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="RowNum" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnRowNum" msprop:Generator_ColumnPropNameInRow="RowNum" msprop:Generator_ColumnPropNameInTable="RowNumColumn" msprop:Generator_UserColumnName="RowNum" type="xs:long" minOccurs="0" />
@@ -55,6 +55,8 @@
                 </xs:simpleType>
               </xs:element>
               <xs:element name="RefID" msprop:Generator_ColumnVarNameInTable="columnRefID" msprop:Generator_ColumnPropNameInRow="RefID" msprop:Generator_ColumnPropNameInTable="RefIDColumn" msprop:Generator_UserColumnName="RefID" type="xs:int" minOccurs="0" />
+              <xs:element name="MountingDate" msprop:Generator_ColumnVarNameInTable="columnMountingDate" msprop:Generator_ColumnPropNameInRow="MountingDate" msprop:Generator_ColumnPropNameInTable="MountingDateColumn" msprop:Generator_UserColumnName="MountingDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="JobDoneDate" msprop:Generator_ColumnVarNameInTable="columnJobDoneDate" msprop:Generator_ColumnPropNameInRow="JobDoneDate" msprop:Generator_ColumnPropNameInTable="JobDoneDateColumn" msprop:Generator_UserColumnName="JobDoneDate" type="xs:dateTime" minOccurs="0" />
               <xs:element name="IsDeleted" msprop:Generator_ColumnVarNameInTable="columnIsDeleted" msprop:Generator_ColumnPropNameInRow="IsDeleted" msprop:Generator_ColumnPropNameInTable="IsDeletedColumn" msprop:Generator_UserColumnName="IsDeleted" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">

@@ -229,6 +229,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsMasterTableDetail.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DS\dsOrder.cs">
+      <DependentUpon>dsOrder.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DS\dsOrder.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
