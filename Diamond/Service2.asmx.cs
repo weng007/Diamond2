@@ -120,6 +120,20 @@ namespace Diamond
         }
 
         [WebMethod]
+        public int UpdateTransferReceive(int id)
+        {
+            TransferBiz biz = GM.GetTransferBiz();
+            try
+            {
+                return biz.UpdateTransferReceive(id);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        [WebMethod]
         public bool UpdateSellBookStatus(int id, string status)
         {
             SellBookBiz biz = GM.GetSellBookBiz();

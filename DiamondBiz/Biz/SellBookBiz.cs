@@ -83,7 +83,7 @@ namespace DiamondBiz.Biz
                 }
                 else if (status == "Pending")
                 {
-                    tmp = 1;
+                    tmp = 211;
                 }
                 else if (status == "Sold")
                 {

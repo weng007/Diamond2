@@ -70,5 +70,17 @@ namespace DiamondBiz.Biz
                 throw ex;
             }
         }
+
+        public int UpdateTransferReceive(int id)
+        {
+            try
+            {
+                return dal.UpdateTransferReceive(id);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

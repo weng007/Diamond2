@@ -18,19 +18,16 @@ namespace DiamondShop
     public partial class TransferInfo : FormInfo
     {
         Service2 ser1;
+        Service3 ser2;
         dsTransfer tds = new dsTransfer();
-        dsTransferDetail tds2 = new dsTransferDetail();
-        //dsWarningTransfer tds3 = new dsWarningTransfer();
-        DataSet tmp = new DataSet();
-        bool isAuthorize = false;
-        DataSet ds2 = new DataSet();
-        int chkGrid = 0;
-        int rowIndex, rowIndex1;
-        int refID1 = 0;
         dsTransferBuyBook tds1 = new dsTransferBuyBook();
-        public Service3 ser2;
-        int shop;
-        int flag = 0;
+        dsTransferDetail tds2 = new dsTransferDetail();
+
+        DataSet tmp = new DataSet();
+        DataSet ds2 = new DataSet();
+
+        bool isAuthorize = false;
+        int rowIndex;
         int DelID;
 
         public TransferInfo()
@@ -70,7 +67,9 @@ namespace DiamondShop
             cmbEShop.Refresh();
 
             txtSender.Select();
-            SetFieldService.SetRequireField(txtSender);
+            
+            //SetFieldService.SetRequireField(txtSender);
+
             gridTransfer.AutoGenerateColumns = false;
         }
         private void BinderData()
@@ -139,56 +138,35 @@ namespace DiamondShop
             }
 
             binder.BindValueToDataRow(row);
-            row.TransferStatus = 222;
-            row.Sender = Convert.ToInt32(ApplicationInfo.UserID.ToString());
-            row.ReceiveDate = DateTime.MinValue.AddYears(1900);
             row.IsBuyBook = "1";
             row.SShop = ApplicationInfo.Shop;
-            row.EShop = Convert.ToInt32(cmbEShop.SelectedValue.ToString());
-            row.Receiver = Convert.ToInt32(cmbReceiver.SelectedValue.ToString());
             
-
             try
             {
                 if (id == 0)
                 {
                     SetCreateBy(row);
                     row.TransferNo = GM.GetRunningNumber("TRF");
+                    row.ReceiveDate = DateTime.MinValue.AddYears(1900);
+                    row.TransferStatus = 222;
                     chkFlag = ser.DoInsertData("Transfer", tds, 0);
                 }
+
                 else
                 {
-                    if (flag == 1)
-                    {
-                        //Receiver กดปุ่ม Receive
-                        if (Convert.ToInt16(cmbReceiver.SelectedValue.ToString()) == ApplicationInfo.UserID)
-                        {
-                            ser1.UpdateTransferReceived(id,223, Convert.ToDateTime(DateTime.Now.ToString()), Convert.ToInt32(cmbEShop.SelectedValue.ToString()));
-                        }
-                    }
-
                     SetEditBy(row);
-
-                    BindingDSOrderDetail();
-                    if (tds2.TransferDetail.Rows.Count > 0)
-                    {
-                        if (tds2.TransferDetail[0].ID == 0)
-                        {
-                            chkFlag = ser.DoInsertData("TransferDetail", tds2, 0); //Insert Detail
-                        }
-                        else
-                        {
-                            chkFlag = ser.DoUpdateData("TransferDetail", tds2);    //Update Detail
-                        }
-                    }
-                    else
-                    {
-                        chkFlag = ser.DoUpdateData("Transfer", tds);
-                    }
-
+                    chkFlag = ser.DoUpdateData("Transfer", tds);
                 }
-                tds.AcceptChanges();
 
+                BindingDSTransferDetail();
+
+                if (tds2.TransferDetail.Rows.Count > 0)
+                {
+                    chkFlag = ser.DoInsertData("TransferDetail", tds2, 0); //Insert, Update Detail                  
+                }
+                    
+                tds.AcceptChanges();
+                tds2.AcceptChanges();
             }
             catch (Exception ex)
             {
@@ -197,7 +175,7 @@ namespace DiamondShop
 
             return chkFlag;
         }
-        private void BindingDSOrderDetail()
+        private void BindingDSTransferDetail()
         {
             tds2.Clear();
             for (int i = 0; i < ds2.Tables[0].Rows.Count; i++)
@@ -274,17 +252,18 @@ namespace DiamondShop
         private void btnAdd_Click(object sender, EventArgs e)
         {
             ser2 = GM.GetService2();
-            shop = ApplicationInfo.Shop;
+
             TransferBuyBookDetail frm = new TransferBuyBookDetail();
             frm.ShowDialog();
 
             if (frm.refID1 != 0 && CheckDataExist(frm.refID1))
             {
-                tmp = ser2.DoSearchTransferBuyBook(shop, "", "", 0, frm.refID1);
+                tmp = ser2.DoSearchTransferBuyBook(ApplicationInfo.Shop, "", "", 0, frm.refID1);
                 tds1.Clear();
                 tds1.Merge(tmp);
 
                 DataRow dr = ds2.Tables[0].NewRow();
+
                 dr["Code"] = tds1.Tables[0].Rows[0]["Code"];
                 dr["Weight"] = tds1.Tables[0].Rows[0]["Weight"];
                 dr["JewelryTypeName"] = tds1.Tables[0].Rows[0]["JewelryTypeName"];
@@ -295,6 +274,7 @@ namespace DiamondShop
                 dr["Flag"] = tds1.Tables[0].Rows[0]["Flag"];
                 dr["RefID1"] = tds1.Tables[0].Rows[0]["ID"];
                 dr["EShop"] = tds1.Tables[0].Rows[0]["Shop"];
+
                 ds2.Tables[0].Rows.Add(dr);
                 gridTransfer.DataSource = ds2.Tables[0];
                 gridTransfer.RefreshEdit();
@@ -366,9 +346,8 @@ namespace DiamondShop
         private void btnReceive_Click(object sender, EventArgs e)
         {
             ser1 = GM.GetService1();
-            txtReceivedDate.Text = DateTime.Now.ToString();
-            txtTransferStatus.Text = "Received";
-            flag = 1;
+            ser1.UpdateTransferReceive(id);
+            LoadData();
         }
     }
 }
