@@ -100,7 +100,7 @@ namespace DiamondShop
             cmbStatus.Refresh();
 
             grid1.AutoGenerateColumns = false;
-
+            cmbSeller.Select();
             SetFieldService.SetRequireField(txtCustomer);
         }
 

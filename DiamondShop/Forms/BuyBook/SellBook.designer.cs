@@ -640,7 +640,7 @@
             this.dtDueDate.Location = new System.Drawing.Point(749, 45);
             this.dtDueDate.Name = "dtDueDate";
             this.dtDueDate.Size = new System.Drawing.Size(137, 26);
-            this.dtDueDate.TabIndex = 10;
+            this.dtDueDate.TabIndex = 12;
             this.dtDueDate.ValueChanged += new System.EventHandler(this.dtSellDate_ValueChanged);
             // 
             // label3
@@ -709,7 +709,7 @@
             this.cmbPayment.Location = new System.Drawing.Point(749, 78);
             this.cmbPayment.Name = "cmbPayment";
             this.cmbPayment.Size = new System.Drawing.Size(138, 28);
-            this.cmbPayment.TabIndex = 12;
+            this.cmbPayment.TabIndex = 14;
             this.cmbPayment.SelectedIndexChanged += new System.EventHandler(this.cmbPayment_SelectedIndexChanged);
             this.cmbPayment.SelectedValueChanged += new System.EventHandler(this.cmbSeller_SelectedValueChanged);
             // 
