@@ -95,9 +95,12 @@ namespace DiamondShop
 
             for (int i = 0; i < gridDiamondCer.Rows.Count; i++)
             {
-                if (gridDiamondCer.Rows[i].Cells["Select"].Value.ToString() == "True")
+                if (gridDiamondCer.Rows[i].Cells["Select"].Value != null)
                 {
-                    idSelected += gridDiamondCer.Rows[i].Cells["ID"].Value.ToString() + comma;
+                    if (gridDiamondCer.Rows[i].Cells["Select"].Value.ToString() == "True")
+                    {
+                        idSelected += gridDiamondCer.Rows[i].Cells["ID"].Value.ToString() + comma;
+                    }
                 }
             }
 
