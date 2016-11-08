@@ -37,6 +37,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tds = new DiamondDS.DS.dsDiamondCer();
             this.panel4 = new System.Windows.Forms.Panel();
             this.txtCode2 = new System.Windows.Forms.TextBox();
@@ -68,6 +69,7 @@
             this.PriceCaratUSD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PriceCaratB = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MarketPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Remain = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tds)).BeginInit();
             this.panel4.SuspendLayout();
@@ -257,7 +259,8 @@
             this.ClearityName,
             this.PriceCaratUSD,
             this.PriceCaratB,
-            this.MarketPrice});
+            this.MarketPrice,
+            this.Remain});
             this.gridDiamond.Location = new System.Drawing.Point(20, 0);
             this.gridDiamond.Name = "gridDiamond";
             this.gridDiamond.ReadOnly = true;
@@ -415,6 +418,15 @@
             this.MarketPrice.ReadOnly = true;
             this.MarketPrice.Width = 170;
             // 
+            // Remain
+            // 
+            this.Remain.DataPropertyName = "Remain";
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.Remain.DefaultCellStyle = dataGridViewCellStyle9;
+            this.Remain.HeaderText = "คงเหลือ";
+            this.Remain.Name = "Remain";
+            this.Remain.ReadOnly = true;
+            // 
             // BuyBookDiamondList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -467,5 +479,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn PriceCaratUSD;
         private System.Windows.Forms.DataGridViewTextBoxColumn PriceCaratB;
         private System.Windows.Forms.DataGridViewTextBoxColumn MarketPrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Remain;
     }
 }
