@@ -57,11 +57,17 @@ namespace DiamondShop
             {
                 if (gridSetting.Rows[i].Cells["Select"].Value != null)
                 {
-                    idSelected += gridSetting.Rows[i].Cells["ID"].Value.ToString() + comma;
+                    if (gridSetting.Rows[i].Cells["Select"].Value.ToString() == "True")
+                    {
+                        idSelected += gridSetting.Rows[i].Cells["ID"].Value.ToString() + comma;
+                    }
                 }
             }
 
-            idSelected = idSelected.Remove(idSelected.Length - 1, 1);
+            if (idSelected.Length > 0)
+            {
+                idSelected = idSelected.Remove(idSelected.Length - 1, 1);
+            }
         }
 
         private void DoSearchData()
@@ -98,7 +104,7 @@ namespace DiamondShop
         {
             if (e.ColumnIndex == 0)
             {
-                if (gridSetting.SelectedCells[0].Value == null)
+                if (gridSetting.SelectedCells[0].Value == null || gridSetting.SelectedCells[0].Value.ToString() == "False")
                 {
                     gridSetting.SelectedCells[0].Value = true;
                     id = (int)gridSetting.SelectedRows[0].Cells["ID"].Value;
