@@ -15,7 +15,7 @@ using DiamondShop.DiamondService2;
 
 namespace DiamondShop
 {
-    public partial class TransferInfo : FormInfo
+    public partial class TransferBuyBook : FormInfo
     {
         Service2 ser1;
         Service3 ser2;
@@ -30,7 +30,7 @@ namespace DiamondShop
         int rowIndex;
         int DelID;
 
-        public TransferInfo()
+        public TransferBuyBook()
         {
             InitializeComponent();
             Initial();
@@ -39,7 +39,7 @@ namespace DiamondShop
             txtSender.Text = ApplicationInfo.DisplayName;
             txtSShop.Text = ApplicationInfo.ShopName;
         }
-        public TransferInfo(int id)
+        public TransferBuyBook(int id)
         {
             InitializeComponent();
             Initial();

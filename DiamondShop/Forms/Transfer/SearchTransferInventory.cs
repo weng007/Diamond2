@@ -55,12 +55,6 @@ namespace DiamondShop
             }
             else { gridTransferInventory.DataSource = null; gridTransferInventory.Refresh(); }
         }
-        private void btnAdd_Click(object sender, EventArgs e)
-        {
-            TransferInfo frm = new TransferInfo();
-            frm.ShowDialog();
-            DoLoadData();
-        }
 
         private void DoSearchData()
         {
