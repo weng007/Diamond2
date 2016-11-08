@@ -50,11 +50,17 @@ namespace DiamondShop
             {
                 if (gridJewelry.Rows[i].Cells["Select"].Value != null)
                 {
-                    idSelected += gridJewelry.Rows[i].Cells["ID"].Value.ToString() + comma;
+                    if (gridJewelry.Rows[i].Cells["Select"].Value.ToString() == "True")
+                    {
+                        idSelected += gridJewelry.Rows[i].Cells["ID"].Value.ToString() + comma;
+                    }
                 }
             }
 
-            idSelected = idSelected.Remove(idSelected.Length - 1, 1);
+            if (idSelected.Length > 0)
+            {
+                idSelected = idSelected.Remove(idSelected.Length - 1, 1);
+            }
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -92,7 +98,7 @@ namespace DiamondShop
         {
             if (e.ColumnIndex == 0)
             {
-                if (gridJewelry.SelectedCells[0].Value == null)
+                if (gridJewelry.SelectedCells[0].Value == null || gridJewelry.SelectedCells[0].Value.ToString() == "False")
                 {
                     gridJewelry.SelectedCells[0].Value = true;
                     id = (int)gridJewelry.SelectedRows[0].Cells["ID"].Value;
