@@ -181,7 +181,7 @@ namespace DiamondShop
         {
             if (e.ColumnIndex == 0)
             {
-                if (gridDiamondCer.SelectedCells[0].Value == null)
+                if (gridDiamondCer.SelectedCells[0].Value == null || gridDiamondCer.SelectedCells[0].Value.ToString() == "False")
                 {
                     gridDiamondCer.SelectedCells[0].Value = true;
                     id = (int)gridDiamondCer.SelectedRows[0].Cells["ID"].Value;
