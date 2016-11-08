@@ -104,7 +104,10 @@ namespace DiamondShop
                 }
             }
 
-            idSelected = idSelected.Remove(idSelected.Length - 1, 1);
+            if (idSelected.Length > 0)
+            {
+                idSelected = idSelected.Remove(idSelected.Length - 1, 1);
+            }
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
