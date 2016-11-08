@@ -465,11 +465,10 @@ namespace DiamondShop
                 tmp.Clear();
                 tmp.Merge(ds1);
 
+                tmp = RemoveRowDuplicate(tmp);
+
                 for (int i = 0; i < tmp.SellBookDetail.Rows.Count; i++)
                 {
-                    //CheckRowDuplicate();
-
-
                     dsSellBookDetail.SellBookDetailRow row = tds1.SellBookDetail.NewSellBookDetailRow();
                     row.RefID = id;
                     row.RefID1 = tmp.SellBookDetail[i].RefID1;
@@ -478,9 +477,7 @@ namespace DiamondShop
                     row.USDRate = tmp.SellBookDetail[i].USDRate;
                     row.Amount = tmp.SellBookDetail[i].Amount;
                     row.Weight = tmp.SellBookDetail[i].Weight;
-                    row.Price = tmp.SellBookDetail[i].Price;
-
-                    
+                    row.Price = tmp.SellBookDetail[i].Price;               
                     tds1.SellBookDetail.Rows.Add(row);           
                 }
 
@@ -538,6 +535,26 @@ namespace DiamondShop
         private void txtDiscount_Leave(object sender, EventArgs e)
         {
             txtDiscount.Text = GM.ConvertDoubleToString(txtDiscount,0);
+        }
+
+        private dsSellBookDetail RemoveRowDuplicate(dsSellBookDetail temp)
+        {
+            for(int i = 0; i < temp.SellBookDetail.Rows.Count; i++)
+            {
+                for(int j = 0;j< grid1.Rows.Count;j++)
+                {
+                    if(temp.SellBookDetail.Rows[i]["RefID1"].ToString() == grid1.Rows[j].Cells["RefID1"].Value.ToString() &&
+                       temp.SellBookDetail.Rows[i]["BuyBookType"].ToString() == grid1.Rows[j].Cells["BuyBookType"].Value.ToString())
+                    {
+                        temp.SellBookDetail.Rows[i].Delete();
+                        i--;
+                        temp.AcceptChanges();
+                        break;
+                    }
+                }
+            }
+
+            return temp;
         }
     }
 }
