@@ -330,6 +330,7 @@
             this.btnSetting.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSetting.BackgroundImage")));
             this.btnSetting.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnSetting.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSetting.Enabled = false;
             this.btnSetting.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(109)))), ((int)(((byte)(65)))));
             this.btnSetting.FlatAppearance.BorderSize = 0;
             this.btnSetting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -347,6 +348,7 @@
             this.btnGold.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnGold.BackgroundImage")));
             this.btnGold.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnGold.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGold.Enabled = false;
             this.btnGold.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(109)))), ((int)(((byte)(65)))));
             this.btnGold.FlatAppearance.BorderSize = 0;
             this.btnGold.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -364,6 +366,7 @@
             this.btnJewelry.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnJewelry.BackgroundImage")));
             this.btnJewelry.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnJewelry.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnJewelry.Enabled = false;
             this.btnJewelry.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(109)))), ((int)(((byte)(65)))));
             this.btnJewelry.FlatAppearance.BorderSize = 0;
             this.btnJewelry.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -381,6 +384,7 @@
             this.btnETC.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnETC.BackgroundImage")));
             this.btnETC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnETC.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnETC.Enabled = false;
             this.btnETC.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(109)))), ((int)(((byte)(65)))));
             this.btnETC.FlatAppearance.BorderSize = 0;
             this.btnETC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -398,6 +402,7 @@
             this.btnNonGC.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnNonGC.BackgroundImage")));
             this.btnNonGC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnNonGC.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNonGC.Enabled = false;
             this.btnNonGC.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(109)))), ((int)(((byte)(65)))));
             this.btnNonGC.FlatAppearance.BorderSize = 0;
             this.btnNonGC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -415,6 +420,7 @@
             this.btnNonDC.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnNonDC.BackgroundImage")));
             this.btnNonDC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnNonDC.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNonDC.Enabled = false;
             this.btnNonDC.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(109)))), ((int)(((byte)(65)))));
             this.btnNonDC.FlatAppearance.BorderSize = 0;
             this.btnNonDC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -432,6 +438,7 @@
             this.btnGC.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnGC.BackgroundImage")));
             this.btnGC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnGC.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGC.Enabled = false;
             this.btnGC.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(109)))), ((int)(((byte)(65)))));
             this.btnGC.FlatAppearance.BorderSize = 0;
             this.btnGC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -449,6 +456,7 @@
             this.btnDC.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDC.BackgroundImage")));
             this.btnDC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnDC.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDC.Enabled = false;
             this.btnDC.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(109)))), ((int)(((byte)(65)))));
             this.btnDC.FlatAppearance.BorderSize = 0;
             this.btnDC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -657,6 +665,7 @@
             this.btnPending.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPending.BackgroundImage")));
             this.btnPending.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnPending.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPending.Enabled = false;
             this.btnPending.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(109)))), ((int)(((byte)(65)))));
             this.btnPending.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPending.Location = new System.Drawing.Point(455, 170);
@@ -672,6 +681,7 @@
             this.btnSold.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSold.BackgroundImage")));
             this.btnSold.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnSold.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSold.Enabled = false;
             this.btnSold.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(109)))), ((int)(((byte)(65)))));
             this.btnSold.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSold.Location = new System.Drawing.Point(592, 170);
