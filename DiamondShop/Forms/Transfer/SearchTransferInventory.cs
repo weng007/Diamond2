@@ -12,11 +12,11 @@ using DiamondDS;
 
 namespace DiamondShop
 {
-    public partial class TransferInventoryDetail : FormList
+    public partial class SearchTransferInventory : FormList
     {
         int shop;
         public int refID1 = 0;
-        public TransferInventoryDetail()
+        public SearchTransferInventory()
         {
             InitializeComponent();
             Initial();
@@ -48,8 +48,6 @@ namespace DiamondShop
                 gridTransferInventory.Refresh();
             }
             else { gridTransferInventory.DataSource = null; gridTransferInventory.Refresh(); }
-
-            //btnSearch_Click(null, null);
         }
         private void btnAdd_Click(object sender, EventArgs e)
         {
@@ -62,7 +60,7 @@ namespace DiamondShop
         {
             ser2 = GM.GetService2();
 
-            ds = ser2.DoSearchTransferBuyBook(shop, txtCode.Text, txtCode2.Text, Convert.ToInt16(cmbBuybookType.SelectedValue.ToString()),0);
+            ds = ser2.DoSearchTransferBuyBook(shop, txtCode.Text, txtCode2.Text, Convert.ToInt16(cmbBuybookType.SelectedValue.ToString()));
 
             if (ds.Tables[0].Rows.Count > 0)
             {
@@ -76,14 +74,8 @@ namespace DiamondShop
             DoSearchData();
         }
 
-        protected override bool DoDeleteData()
+        private void gridTransferInventory_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            return chkFlag;
-        }
-
-        private void gridSetting_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-
             refID1 = (int)gridTransferInventory.SelectedRows[0].Cells["ID"].Value;
             this.Close();
         }

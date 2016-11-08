@@ -1,6 +1,6 @@
 ﻿namespace DiamondShop
 {
-    partial class TransferBuyBookDetail
+    partial class SearchTransferBuyBook
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TransferBuyBookDetail));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SearchTransferBuyBook));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -43,8 +43,8 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.gridTransferBuyBook = new System.Windows.Forms.DataGridView();
+            this.btnClose = new System.Windows.Forms.Button();
             this.RowNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TotalBaht = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Code2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,7 +55,7 @@
             this.ColorName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EShop = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Flag = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnClose = new System.Windows.Forms.Button();
+            this.TotalBaht = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -166,7 +166,6 @@
             this.gridTransferBuyBook.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridTransferBuyBook.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.RowNum,
-            this.TotalBaht,
             this.ID,
             this.Code,
             this.Code2,
@@ -176,7 +175,8 @@
             this.ColorTypeName,
             this.ColorName,
             this.EShop,
-            this.Flag});
+            this.Flag,
+            this.TotalBaht});
             this.gridTransferBuyBook.Location = new System.Drawing.Point(9, 3);
             this.gridTransferBuyBook.Name = "gridTransferBuyBook";
             this.gridTransferBuyBook.ReadOnly = true;
@@ -186,7 +186,24 @@
             this.gridTransferBuyBook.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridTransferBuyBook.Size = new System.Drawing.Size(1095, 452);
             this.gridTransferBuyBook.TabIndex = 2;
-            this.gridTransferBuyBook.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.gridSetting_MouseDoubleClick);
+            this.gridTransferBuyBook.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.gridTransferBuyBook_MouseDoubleClick);
+            // 
+            // btnClose
+            // 
+            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClose.BackColor = System.Drawing.Color.Transparent;
+            this.btnClose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClose.BackgroundImage")));
+            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Location = new System.Drawing.Point(1094, 0);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(0);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(38, 32);
+            this.btnClose.TabIndex = 79;
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // RowNum
             // 
@@ -197,12 +214,6 @@
             this.RowNum.Name = "RowNum";
             this.RowNum.ReadOnly = true;
             this.RowNum.Width = 50;
-            // 
-            // TotalBaht
-            // 
-            this.TotalBaht.HeaderText = "TotalBaht";
-            this.TotalBaht.Name = "TotalBaht";
-            this.TotalBaht.ReadOnly = true;
             // 
             // ID
             // 
@@ -239,7 +250,7 @@
             this.Weight.HeaderText = "Weight";
             this.Weight.Name = "Weight";
             this.Weight.ReadOnly = true;
-            this.Weight.Width = 130;
+            this.Weight.Width = 80;
             // 
             // JewelryTypeName
             // 
@@ -274,10 +285,11 @@
             this.ColorName.HeaderText = "ColorName";
             this.ColorName.Name = "ColorName";
             this.ColorName.ReadOnly = true;
+            this.ColorName.Width = 120;
             // 
             // EShop
             // 
-            this.EShop.DataPropertyName = "Shop";
+            this.EShop.DataPropertyName = "EShop";
             this.EShop.HeaderText = "EShop";
             this.EShop.Name = "EShop";
             this.EShop.ReadOnly = true;
@@ -291,22 +303,13 @@
             this.Flag.ReadOnly = true;
             this.Flag.Visible = false;
             // 
-            // btnClose
+            // TotalBaht
             // 
-            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClose.BackColor = System.Drawing.Color.Transparent;
-            this.btnClose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClose.BackgroundImage")));
-            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnClose.FlatAppearance.BorderSize = 0;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Location = new System.Drawing.Point(1094, 0);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(0);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(38, 32);
-            this.btnClose.TabIndex = 79;
-            this.btnClose.UseVisualStyleBackColor = false;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            this.TotalBaht.DataPropertyName = "TotalBaht";
+            this.TotalBaht.HeaderText = "TotalBaht";
+            this.TotalBaht.Name = "TotalBaht";
+            this.TotalBaht.ReadOnly = true;
+            this.TotalBaht.Width = 120;
             // 
             // TransferBuyBookDetail
             // 
@@ -341,7 +344,6 @@
         private System.Windows.Forms.ComboBox cmbBuybookType;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.DataGridViewTextBoxColumn RowNum;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TotalBaht;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Code;
         private System.Windows.Forms.DataGridViewTextBoxColumn Code2;
@@ -352,5 +354,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColorName;
         private System.Windows.Forms.DataGridViewTextBoxColumn EShop;
         private System.Windows.Forms.DataGridViewTextBoxColumn Flag;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TotalBaht;
     }
 }

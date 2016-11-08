@@ -10,26 +10,27 @@ using System.Windows.Forms;
 using DiamondShop.FormMaster;
 using DiamondDS.DS;
 using DiamondShop.DiamondService;
+using DiamondShop.DiamondService1;
 using DiamondShop.DiamondService2;
 
 namespace DiamondShop
 {
-    public partial class TransferInventoryInfo : FormInfo
+    public partial class TransferInfo : FormInfo
     {
+        Service2 ser1;
+        Service3 ser2;
         dsTransfer tds = new dsTransfer();
+        dsTransferBuyBook tds1 = new dsTransferBuyBook();
         dsTransferDetail tds2 = new dsTransferDetail();
-        dsCatalog tdsCatalog = new dsCatalog();
-        DataSet tmp = new DataSet();
-        bool isAuthorize = false;
-        DataSet ds2 = new DataSet();
-        int chk = 0;
-        int rowIndex, rowIndex1;
-        int refID1 = 0;
-        dsTransferInventory tds1 = new dsTransferInventory();
-        public Service3 ser2;
-        int shop;
 
-        public TransferInventoryInfo()
+        DataSet tmp = new DataSet();
+        DataSet ds2 = new DataSet();
+
+        bool isAuthorize = false;
+        int rowIndex;
+        int DelID;
+
+        public TransferInfo()
         {
             InitializeComponent();
             Initial();
@@ -38,7 +39,7 @@ namespace DiamondShop
             txtSender.Text = ApplicationInfo.DisplayName;
             txtSShop.Text = ApplicationInfo.ShopName;
         }
-        public TransferInventoryInfo(int id)
+        public TransferInfo(int id)
         {
             InitializeComponent();
             Initial();
@@ -51,7 +52,6 @@ namespace DiamondShop
             LoadData();
             SetControlEnable(false);
         }
-
         protected override void Initial()
         {
             ds = GM.GetBuyer();
@@ -66,12 +66,12 @@ namespace DiamondShop
             cmbEShop.DisplayMember = "Detail";
             cmbEShop.Refresh();
 
-
             txtSender.Select();
-            SetFieldService.SetRequireField(txtSender);
-            gridTransferINV.AutoGenerateColumns = false;
-        }
+            
+            //SetFieldService.SetRequireField(txtSender);
 
+            gridTransfer.AutoGenerateColumns = false;
+        }
         private void BinderData()
         {
             binder.BindControl(dtSendDate, "SendDate");
@@ -91,7 +91,7 @@ namespace DiamondShop
             tds.Clear();
             tds.Merge(ds);
 
-            ds2 = ser.DoSelectData("TransferDetail", id, 1);
+            ds2 = ser.DoSelectData("TransferDetail", id, 0);
             tds1.Clear();
             tds1.Merge(ds2);
 
@@ -103,18 +103,26 @@ namespace DiamondShop
                 EnableSave = false;
                 EnableEdit = true;
                 EnableDelete = false;
+
+                //Receiver 
+                if (Convert.ToInt16(cmbReceiver.SelectedValue.ToString()) == ApplicationInfo.UserID)
+                {
+                    btnReceive.Visible = true;
+                    btnPrint.Visible = false;
+                    EnableEdit = false;
+                    EnableDelete = false;
+                }
             }
 
             if (ds2.Tables[0].Rows.Count > 0)
             {
-                gridTransferINV.DataSource = ds2.Tables[0];
-                gridTransferINV.Refresh();
+                gridTransfer.DataSource = ds2.Tables[0];
+                gridTransfer.Refresh();
             }
 
             SetFormatNumber();
             base.LoadData();
         }
-
         protected override bool SaveData()
         {
             dsTransfer.TransferRow row = null;
@@ -128,41 +136,37 @@ namespace DiamondShop
                 row = tds.Transfer.NewTransferRow();
                 tds.Transfer.Rows.Add(row);
             }
-            binder.BindValueToDataRow(row);
-            row.TransferStatus = 256;
-            row.Sender = Convert.ToInt32(ApplicationInfo.UserID.ToString());
-            row.ReceiveDate = DateTime.MinValue.AddYears(1900);
-            row.IsBuyBook = "0";
-            row.SShop = ApplicationInfo.Shop;
 
+            binder.BindValueToDataRow(row);
+            row.IsBuyBook = "1";
+            row.SShop = ApplicationInfo.Shop;
+            
             try
             {
                 if (id == 0)
                 {
                     SetCreateBy(row);
                     row.TransferNo = GM.GetRunningNumber("TRF");
+                    row.ReceiveDate = DateTime.MinValue.AddYears(1900);
+                    row.TransferStatus = 222;
                     chkFlag = ser.DoInsertData("Transfer", tds, 0);
-
                 }
+
                 else
                 {
-                    //Receiver 
-                    if (Convert.ToInt16(cmbReceiver.SelectedValue.ToString()) == ApplicationInfo.UserID)
-                    {
-                        row.TransferStatus = 254; //สถานะ received
-                        row.ReceiveDate = Convert.ToDateTime(DateTime.Now.ToString());
-                    }
                     SetEditBy(row);
                     chkFlag = ser.DoUpdateData("Transfer", tds);
-
-                    BindingDSOrderDetail();
-                    if (tds2.TransferDetail.Rows.Count > 0)
-                    {
-                        chkFlag = ser.DoInsertData("TransferDetail", tds2, 0);
-                    }
                 }
 
+                BindingDSTransferDetail();
+
+                if (tds2.TransferDetail.Rows.Count > 0)
+                {
+                    chkFlag = ser.DoInsertData("TransferDetail", tds2, 0); //Insert, Update Detail                  
+                }
+                    
                 tds.AcceptChanges();
+                tds2.AcceptChanges();
             }
             catch (Exception ex)
             {
@@ -171,32 +175,21 @@ namespace DiamondShop
 
             return chkFlag;
         }
-
-        private void BindingDSOrderDetail()
+        private void BindingDSTransferDetail()
         {
             tds2.Clear();
             for (int i = 0; i < ds2.Tables[0].Rows.Count; i++)
             {
-                if (ds2.Tables[0].Rows[i]["RowNum"].ToString() == "")
+                if (ds2.Tables[0].Rows[i]["RefID"].ToString() == "")
                 {
                     DataRow dr = tds2.Tables[0].NewRow();
 
                     dr["RefID"] = id;
                     dr["RowNum"] = ds2.Tables[0].Rows[i]["RowNum"];
                     dr["RefID1"] = ds2.Tables[0].Rows[i]["RefID1"];
-                    dr["JewelryType"] = ds2.Tables[0].Rows[i]["JewelryType"];
-                    //Sender
-                    if (Convert.ToInt16(cmbReceiver.SelectedValue.ToString()) != ApplicationInfo.UserID)
-                    {
-                        dr["EShop"] = ds2.Tables[0].Rows[i]["Shop"];//Shop Inventory
-                        dr["Status"] = 255;//Reserved
-                    }
-                    //Receiver 
-                    if (Convert.ToInt16(cmbReceiver.SelectedValue.ToString()) == ApplicationInfo.UserID)
-                    {
-                        dr["EShop"] = 239;//shop ฝั่งรับ
-                        dr["Status"] = 73; //Available
-                    }
+                    dr["flag"] = ds2.Tables[0].Rows[i]["Flag"];
+                    dr["ID"] = 0;
+
                     SetCreateBy(dr);
                     SetEditBy(dr);
 
@@ -205,50 +198,32 @@ namespace DiamondShop
             }
 
             tds2.AcceptChanges();
-            if (Convert.ToInt16(cmbReceiver.SelectedValue.ToString()) == ApplicationInfo.UserID)
-            {
-                btnPrint.Visible = true;
-            }
         }
         protected override bool DeleteData()
         {
             try
             {
-                if (chk == 0)
-                {
-                    chkFlag = ser.DoDeleteData("Transfer", id);
-                }
-                else if (chk == 1)
-                {
-                    chkFlag = ser.DoDeleteData("TransferDetail", Convert.ToInt32(gridTransferINV.SelectedRows[0].Cells["ID"].Value));
-
-                    chk = 0;
-                }
-
+                chkFlag = ser.DoDeleteData("Transfer", DelID);
             }
             catch (Exception ex)
             {
                 throw ex;
             }
 
-            LoadData();
-
             return chkFlag;
         }
-
         protected override bool ValidateData()
         {
             message = "";
 
-            //if (txtSender.Text == "")
-            //{
-            //    message = "Please input Seller.\n";
-            //}
+            if (txtSender.Text == "")
+            {
+                message = "Please input Seller.\n";
+            }
 
             if (message == "") { return true; }
             else { return false; }
         }
-
         protected override void EditData()
         {
             if (isAuthorize)
@@ -274,92 +249,50 @@ namespace DiamondShop
                 }
             }
         }
-
-        private void txtBuyPrice_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
-            {
-                e.Handled = true;
-            }
-        }
-
         private void btnAdd_Click(object sender, EventArgs e)
         {
             ser2 = GM.GetService2();
-            shop = ApplicationInfo.Shop;
-            TransferInventoryDetail frm = new TransferInventoryDetail();
+
+            SearchTransferBuyBook frm = new SearchTransferBuyBook();
             frm.ShowDialog();
 
             if (frm.refID1 != 0 && CheckDataExist(frm.refID1))
             {
-                tmp = ser2.DoSearchTransferInventory(shop, "", 0);
+                tmp = ser2.DoSearchTransferBuyBook(ApplicationInfo.Shop, "", "", 0);
                 tds1.Clear();
                 tds1.Merge(tmp);
 
                 DataRow dr = ds2.Tables[0].NewRow();
+
                 dr["Code"] = tds1.Tables[0].Rows[0]["Code"];
-                dr["Amount1"] = tds1.Tables[0].Rows[0]["Amount1"];
-                dr["Weight1"] = tds1.Tables[0].Rows[0]["Weight1"];
-                dr["Amount3"] = tds1.Tables[0].Rows[0]["Amount3"];
-                dr["Weight3"] = tds1.Tables[0].Rows[0]["Weight3"];
-                dr["MinPrice"] = tds1.Tables[0].Rows[0]["MinPrice"];
+                dr["Weight"] = tds1.Tables[0].Rows[0]["Weight"];
                 dr["JewelryTypeName"] = tds1.Tables[0].Rows[0]["JewelryTypeName"];
-                dr["JewelryType"] = tds1.Tables[0].Rows[0]["JewelryType"];
+                dr["ShapeName"] = tds1.Tables[0].Rows[0]["ShapeName"];
+                dr["ColorTypeName"] = tds1.Tables[0].Rows[0]["ColorTypeName"];
+                dr["ColorName"] = tds1.Tables[0].Rows[0]["ColorName"];
+                dr["TotalBaht"] = tds1.Tables[0].Rows[0]["TotalBaht"];
+                dr["Flag"] = tds1.Tables[0].Rows[0]["Flag"];
                 dr["RefID1"] = tds1.Tables[0].Rows[0]["ID"];
                 dr["EShop"] = tds1.Tables[0].Rows[0]["Shop"];
+
                 ds2.Tables[0].Rows.Add(dr);
-                gridTransferINV.DataSource = ds2.Tables[0];
-                gridTransferINV.RefreshEdit();
+                gridTransfer.DataSource = ds2.Tables[0];
+                gridTransfer.RefreshEdit();
             }
         }
         private bool CheckDataExist(int tmp)
         {
-            if (gridTransferINV.Rows.Count > 0)
+            if (gridTransfer.Rows.Count > 0)
             {
-                for (int i = 0; i < gridTransferINV.Rows.Count; i++)
+                for (int i = 0; i < gridTransfer.Rows.Count; i++)
                 {
-                    if (tmp == Convert.ToInt32(gridTransferINV.Rows[i].Cells["ID"].Value))
+                    if (tmp == Convert.ToInt32(gridTransfer.Rows[i].Cells["RefID1"].Value))
                     {
                         return false;
                     }
                 }
             }
-
             return true;
-        }
-
-        private void gridSetting_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-            //if (gridTransfer.SelectedRows.Count > 0)
-            //{
-            //    BuyBookSettingDetail frm = new BuyBookSettingDetail(id, 1);
-            //    frm.ShowDialog();
-
-            //    LoadData();
-            //}
-        }
-
-        private void gridSetting_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
-        {
-            if ((e.ColumnIndex == 4 || e.ColumnIndex == 5 || e.ColumnIndex == 6 || e.ColumnIndex == 7 ||
-                e.ColumnIndex == 8) && e.RowIndex != this.gridTransferINV.NewRowIndex && e.Value != null
-                && e.Value.ToString() != "")
-            {
-                double d = double.Parse(e.Value.ToString());
-
-                if (e.ColumnIndex != 5) { e.Value = d.ToString("N0"); }
-                else { e.Value = d.ToString("N2"); }
-            }
-        }
-
-        private void txtBuyPrice_Leave(object sender, EventArgs e)
-        {
-            //txtBuyPrice.Text = GM.ConvertDoubleToString(txtBuyPrice, 0);
-        }
-
-        private void txtSalePrice_Leave(object sender, EventArgs e)
-        {
-            //txtSalePrice.Text = GM.ConvertDoubleToString(txtSalePrice, 0);
         }
         private void SetFormatNumber()
         {
@@ -369,24 +302,17 @@ namespace DiamondShop
                 txtReceivedDate.Text = "";
             }
         }
-
         private void btnDel_Click(object sender, EventArgs e)
         {
-            if (gridTransferINV.SelectedRows.Count > 0)
+            if (gridTransfer.SelectedRows.Count > 0)
             {
-                chk = 1;
-                DeleteData();
+                if (gridTransfer.Rows[rowIndex].Cells["ID"].Value != null)
+                {
+                    DeleteData();
+                }
+
+                gridTransfer.Rows.RemoveAt(rowIndex);
             }
-        }
-
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void cmbTransferStatus_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void SetControlEnable(bool status)
@@ -395,7 +321,33 @@ namespace DiamondShop
             txtSender.Enabled = status;
             btnAdd.Enabled = status;
             btnDel.Enabled = status;
-            gridTransferINV.Enabled = status;
+            gridTransfer.Enabled = status;
+        }
+
+        private void gridTransfer_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                rowIndex = e.RowIndex;
+                if (gridTransfer.Rows[e.RowIndex].Cells["ID"].Value != null)
+                { DelID = Convert.ToInt32(gridTransfer.Rows[e.RowIndex].Cells["ID"].Value.ToString()); }
+            }
+        }
+
+        private void gridTransfer_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (e.ColumnIndex == 7)
+            {
+                double d = double.Parse(e.Value.ToString());
+                e.Value = d.ToString("N0");
+            }
+        }
+
+        private void btnReceive_Click(object sender, EventArgs e)
+        {
+            ser1 = GM.GetService1();
+            ser1.UpdateTransferReceive(id);
+            LoadData();
         }
     }
 }

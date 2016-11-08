@@ -1,6 +1,6 @@
 ﻿namespace DiamondShop
 {
-    partial class TransferInventoryDetail
+    partial class SearchTransferInventory
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TransferInventoryDetail));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SearchTransferInventory));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -43,23 +43,23 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.gridTransferInventory = new System.Windows.Forms.DataGridView();
+            this.btnClose = new System.Windows.Forms.Button();
             this.RowNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Code2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.JewelryTypeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Amount1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Weight1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Amount3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Weight3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TotalBaht = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Code2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Weight = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.JewelryTypeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ShapeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColorTypeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColorName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EShop = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TotalBaht = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Flag = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnClose = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -172,18 +172,18 @@
             this.RowNum,
             this.ID,
             this.Code,
+            this.Code2,
+            this.JewelryTypeName,
             this.Amount1,
             this.Weight1,
             this.Amount3,
             this.Weight3,
-            this.TotalBaht,
-            this.Code2,
             this.Weight,
-            this.JewelryTypeName,
             this.ShapeName,
             this.ColorTypeName,
             this.ColorName,
             this.EShop,
+            this.TotalBaht,
             this.Flag});
             this.gridTransferInventory.Location = new System.Drawing.Point(9, 3);
             this.gridTransferInventory.Name = "gridTransferInventory";
@@ -194,7 +194,24 @@
             this.gridTransferInventory.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridTransferInventory.Size = new System.Drawing.Size(1230, 452);
             this.gridTransferInventory.TabIndex = 2;
-            this.gridTransferInventory.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.gridSetting_MouseDoubleClick);
+            this.gridTransferInventory.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.gridTransferInventory_MouseDoubleClick);
+            // 
+            // btnClose
+            // 
+            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClose.BackColor = System.Drawing.Color.Transparent;
+            this.btnClose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClose.BackgroundImage")));
+            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Location = new System.Drawing.Point(1219, 1);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(0);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(38, 32);
+            this.btnClose.TabIndex = 79;
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // RowNum
             // 
@@ -220,7 +237,28 @@
             this.Code.HeaderText = "Code";
             this.Code.Name = "Code";
             this.Code.ReadOnly = true;
-            this.Code.Width = 170;
+            this.Code.Width = 150;
+            // 
+            // Code2
+            // 
+            this.Code2.DataPropertyName = "Code2";
+            dataGridViewCellStyle2.Format = "dd/MM/yyyy";
+            this.Code2.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Code2.HeaderText = "Code2";
+            this.Code2.Name = "Code2";
+            this.Code2.ReadOnly = true;
+            this.Code2.Width = 150;
+            // 
+            // JewelryTypeName
+            // 
+            this.JewelryTypeName.DataPropertyName = "JewelryTypeName";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle3.Format = "N0";
+            this.JewelryTypeName.DefaultCellStyle = dataGridViewCellStyle3;
+            this.JewelryTypeName.HeaderText = "JewelryType";
+            this.JewelryTypeName.Name = "JewelryTypeName";
+            this.JewelryTypeName.ReadOnly = true;
+            this.JewelryTypeName.Width = 130;
             // 
             // Amount1
             // 
@@ -228,7 +266,6 @@
             this.Amount1.HeaderText = "Amt. DC.";
             this.Amount1.Name = "Amount1";
             this.Amount1.ReadOnly = true;
-            this.Amount1.Width = 110;
             // 
             // Weight1
             // 
@@ -243,7 +280,6 @@
             this.Amount3.HeaderText = "Amt. GC.";
             this.Amount3.Name = "Amount3";
             this.Amount3.ReadOnly = true;
-            this.Amount3.Width = 110;
             // 
             // Weight3
             // 
@@ -251,44 +287,18 @@
             this.Weight3.HeaderText = "นน. GC.";
             this.Weight3.Name = "Weight3";
             this.Weight3.ReadOnly = true;
-            // 
-            // TotalBaht
-            // 
-            this.TotalBaht.HeaderText = "TotalBaht";
-            this.TotalBaht.Name = "TotalBaht";
-            this.TotalBaht.ReadOnly = true;
-            // 
-            // Code2
-            // 
-            this.Code2.DataPropertyName = "Code2";
-            dataGridViewCellStyle2.Format = "dd/MM/yyyy";
-            this.Code2.DefaultCellStyle = dataGridViewCellStyle2;
-            this.Code2.HeaderText = "Code2";
-            this.Code2.Name = "Code2";
-            this.Code2.ReadOnly = true;
-            this.Code2.Width = 130;
+            this.Weight3.Width = 90;
             // 
             // Weight
             // 
             this.Weight.DataPropertyName = "Weight";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle3.Format = "N0";
-            this.Weight.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle4.Format = "N0";
+            this.Weight.DefaultCellStyle = dataGridViewCellStyle4;
             this.Weight.HeaderText = "Weight";
             this.Weight.Name = "Weight";
             this.Weight.ReadOnly = true;
-            this.Weight.Width = 130;
-            // 
-            // JewelryTypeName
-            // 
-            this.JewelryTypeName.DataPropertyName = "JewelryTypeName";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle4.Format = "N0";
-            this.JewelryTypeName.DefaultCellStyle = dataGridViewCellStyle4;
-            this.JewelryTypeName.HeaderText = "JewelryType";
-            this.JewelryTypeName.Name = "JewelryTypeName";
-            this.JewelryTypeName.ReadOnly = true;
-            this.JewelryTypeName.Width = 130;
+            this.Weight.Width = 80;
             // 
             // ShapeName
             // 
@@ -296,7 +306,7 @@
             this.ShapeName.HeaderText = "Shape";
             this.ShapeName.Name = "ShapeName";
             this.ShapeName.ReadOnly = true;
-            this.ShapeName.Width = 150;
+            this.ShapeName.Width = 130;
             // 
             // ColorTypeName
             // 
@@ -312,6 +322,7 @@
             this.ColorName.HeaderText = "ColorName";
             this.ColorName.Name = "ColorName";
             this.ColorName.ReadOnly = true;
+            this.ColorName.Width = 120;
             // 
             // EShop
             // 
@@ -321,6 +332,13 @@
             this.EShop.ReadOnly = true;
             this.EShop.Visible = false;
             // 
+            // TotalBaht
+            // 
+            this.TotalBaht.DataPropertyName = "TotalBaht";
+            this.TotalBaht.HeaderText = "TotalBaht";
+            this.TotalBaht.Name = "TotalBaht";
+            this.TotalBaht.ReadOnly = true;
+            // 
             // Flag
             // 
             this.Flag.DataPropertyName = "Flag";
@@ -328,23 +346,6 @@
             this.Flag.Name = "Flag";
             this.Flag.ReadOnly = true;
             this.Flag.Visible = false;
-            // 
-            // btnClose
-            // 
-            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClose.BackColor = System.Drawing.Color.Transparent;
-            this.btnClose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClose.BackgroundImage")));
-            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnClose.FlatAppearance.BorderSize = 0;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Location = new System.Drawing.Point(1219, 1);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(0);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(38, 32);
-            this.btnClose.TabIndex = 79;
-            this.btnClose.UseVisualStyleBackColor = false;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // TransferInventoryDetail
             // 
@@ -381,18 +382,18 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn RowNum;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Code;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Code2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn JewelryTypeName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Amount1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Weight1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Amount3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Weight3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TotalBaht;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Code2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Weight;
-        private System.Windows.Forms.DataGridViewTextBoxColumn JewelryTypeName;
         private System.Windows.Forms.DataGridViewTextBoxColumn ShapeName;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColorTypeName;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColorName;
         private System.Windows.Forms.DataGridViewTextBoxColumn EShop;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TotalBaht;
         private System.Windows.Forms.DataGridViewTextBoxColumn Flag;
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace DiamondShop
 {
-    partial class TransferList
+    partial class TransferBuyBookList
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TransferList));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TransferBuyBookList));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -91,7 +91,7 @@
             this.panel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.panel4.Location = new System.Drawing.Point(0, 1);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1334, 144);
+            this.panel4.Size = new System.Drawing.Size(965, 144);
             this.panel4.TabIndex = 42;
             // 
             // cmbSender
@@ -266,7 +266,7 @@
             this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSearch.FlatAppearance.BorderColor = System.Drawing.Color.Linen;
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.Location = new System.Drawing.Point(990, 101);
+            this.btnSearch.Location = new System.Drawing.Point(825, 37);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(105, 32);
             this.btnSearch.TabIndex = 12;
@@ -280,7 +280,7 @@
             this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.Location = new System.Drawing.Point(5, 151);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1031, 414);
+            this.panel2.Size = new System.Drawing.Size(969, 414);
             this.panel2.TabIndex = 33;
             // 
             // gridTransfer
@@ -300,7 +300,7 @@
             this.ReceiveDate,
             this.TransferStatusName,
             this.SShopName});
-            this.gridTransfer.Location = new System.Drawing.Point(15, 8);
+            this.gridTransfer.Location = new System.Drawing.Point(15, 2);
             this.gridTransfer.Name = "gridTransfer";
             this.gridTransfer.ReadOnly = true;
             this.gridTransfer.RowHeadersWidth = 10;
@@ -309,7 +309,7 @@
             this.gridTransfer.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridTransfer.Size = new System.Drawing.Size(945, 395);
             this.gridTransfer.TabIndex = 2;
-            this.gridTransfer.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.gridSetting_MouseDoubleClick);
+            this.gridTransfer.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.gridTransferBuyBook_MouseDoubleClick);
             // 
             // RowNum
             // 
@@ -383,16 +383,16 @@
             this.SShopName.ReadOnly = true;
             this.SShopName.Width = 120;
             // 
-            // TransferList
+            // TransferBuyBookList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(91)))), ((int)(((byte)(59)))));
-            this.ClientSize = new System.Drawing.Size(1335, 577);
+            this.ClientSize = new System.Drawing.Size(984, 577);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
-            this.Name = "TransferList";
-            this.Text = "ProductList";
+            this.Name = "TransferBuyBookList";
+            this.Text = "TransferBuyBookList";
             ((System.ComponentModel.ISupportInitialize)(this.ds)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel2.ResumeLayout(false);

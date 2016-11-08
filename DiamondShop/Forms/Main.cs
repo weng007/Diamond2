@@ -132,7 +132,7 @@ namespace DiamondShop
         }
         private void buyBookToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            TransferList frm = new TransferList();
+            TransferBuyBookList frm = new TransferBuyBookList();
             SetFormList(frm, 19, "Transfer");
         }
         private void orderJewelryToolStripMenuItem_Click(object sender, EventArgs e)

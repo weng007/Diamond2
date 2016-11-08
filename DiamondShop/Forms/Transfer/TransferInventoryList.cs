@@ -75,7 +75,7 @@ namespace DiamondShop
         }
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            TransferInventoryInfo frm = new TransferInventoryInfo();
+            TransferInventory frm = new TransferInventory();
             frm.ShowDialog();
             DoLoadData();
         }
@@ -103,12 +103,12 @@ namespace DiamondShop
             return chkFlag;
         }
 
-        private void gridSetting_MouseDoubleClick(object sender, MouseEventArgs e)
+        private void gridTransferInventory_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             if (gridTransferInventory.RowCount > 0 && gridTransferInventory.SelectedRows.Count > 0)
             {
                 id = (int)gridTransferInventory.SelectedRows[0].Cells["ID"].Value;
-                TransferInventoryInfo frm = new TransferInventoryInfo(id);
+                TransferInventory frm = new TransferInventory(id);
                 frm.ShowDialog();
             }
 
