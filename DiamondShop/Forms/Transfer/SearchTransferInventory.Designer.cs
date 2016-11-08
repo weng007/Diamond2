@@ -80,7 +80,7 @@
             this.panel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.panel4.Location = new System.Drawing.Point(5, 1);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(954, 103);
+            this.panel4.Size = new System.Drawing.Size(1192, 103);
             this.panel4.TabIndex = 42;
             // 
             // label2
@@ -145,7 +145,7 @@
             this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSearch.FlatAppearance.BorderColor = System.Drawing.Color.Linen;
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.Location = new System.Drawing.Point(585, 18);
+            this.btnSearch.Location = new System.Drawing.Point(445, 60);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(105, 32);
             this.btnSearch.TabIndex = 12;
