@@ -90,6 +90,22 @@ namespace DiamondDAL.DAL
             return Convert.ToBoolean(flag);
         }
 
+        public int DoSearchByCode(string code)
+        {
+            try
+            {
+                SQL.ClearParameter();
+                SQL.CreateParameter("Code", code);
+                SQL.FillDataSetBySP("SP_SellBook_By_Code", ds.SellBook);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return (int)ds.SellBook[0]["ID"];
+        }
+
         public bool UpdateSellBookStatus(int id, int status)
         {
             try

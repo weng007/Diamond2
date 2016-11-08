@@ -404,6 +404,20 @@ namespace Diamond
         }
 
         [WebMethod]
+        public int DoSearchSellBookByCode(string code)
+        {
+            SellBookBiz biz = GM.GetSellBookBiz();
+            try
+            {
+                return biz.DoSearchByCode(code);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        [WebMethod]
         public int DoSearchBBSettingByCode(string code)
         {
             BuyBookSettingBiz biz = GM.BuyBookSettingBiz();

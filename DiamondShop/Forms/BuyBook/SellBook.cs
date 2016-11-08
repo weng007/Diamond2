@@ -220,6 +220,12 @@ namespace DiamondShop
                     row.SellNo = GM.GetRunningNumber("MAT");
                     SetCreateBy(row);
                     chkFlag = ser.DoInsertData("SellBook", tds,0);
+
+                    if (chkFlag)
+                    {
+                        ser1 = GM.GetService1();
+                        id = ser1.DoSearchSellBookByCode(row.SellNo);
+                    }
                 }
                 else
                 {

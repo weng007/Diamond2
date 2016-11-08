@@ -71,6 +71,18 @@ namespace DiamondBiz.Biz
             }
         }
 
+        public int DoSearchByCode(string code)
+        {
+            try
+            {
+                return dal.DoSearchByCode(code);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
         public bool UpdateSellBookStatus(int id, string status)
         {
             int tmp = 0;
