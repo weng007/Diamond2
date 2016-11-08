@@ -53,6 +53,7 @@
             this.gridJewelry = new System.Windows.Forms.DataGridView();
             this.RowNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StatusName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Code2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Image1 = new System.Windows.Forms.DataGridViewImageColumn();
@@ -67,7 +68,6 @@
             this.CostBaht = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MinPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ShopName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StatusName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Seller = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel4.SuspendLayout();
@@ -197,6 +197,7 @@
             this.gridJewelry.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.RowNum,
             this.ID,
+            this.StatusName,
             this.Code,
             this.Code2,
             this.Image1,
@@ -211,7 +212,6 @@
             this.CostBaht,
             this.MinPrice,
             this.ShopName,
-            this.StatusName,
             this.Seller});
             this.gridJewelry.Location = new System.Drawing.Point(15, 6);
             this.gridJewelry.Name = "gridJewelry";
@@ -241,6 +241,14 @@
             this.ID.Name = "ID";
             this.ID.ReadOnly = true;
             this.ID.Visible = false;
+            // 
+            // StatusName
+            // 
+            this.StatusName.DataPropertyName = "StatusName";
+            this.StatusName.HeaderText = "Status";
+            this.StatusName.Name = "StatusName";
+            this.StatusName.ReadOnly = true;
+            this.StatusName.Width = 90;
             // 
             // Code
             // 
@@ -383,14 +391,6 @@
             this.ShopName.ReadOnly = true;
             this.ShopName.Width = 120;
             // 
-            // StatusName
-            // 
-            this.StatusName.DataPropertyName = "StatusName";
-            this.StatusName.HeaderText = "Status";
-            this.StatusName.Name = "StatusName";
-            this.StatusName.ReadOnly = true;
-            this.StatusName.Width = 90;
-            // 
             // Seller
             // 
             this.Seller.DataPropertyName = "Seller";
@@ -432,6 +432,7 @@
         private System.Windows.Forms.TextBox txtCode2;
         private System.Windows.Forms.DataGridViewTextBoxColumn RowNum;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn StatusName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Code;
         private System.Windows.Forms.DataGridViewTextBoxColumn Code2;
         private System.Windows.Forms.DataGridViewImageColumn Image1;
@@ -446,7 +447,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn CostBaht;
         private System.Windows.Forms.DataGridViewTextBoxColumn MinPrice;
         private System.Windows.Forms.DataGridViewTextBoxColumn ShopName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn StatusName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Seller;
     }
 }
