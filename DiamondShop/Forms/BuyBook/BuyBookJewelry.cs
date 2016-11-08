@@ -298,12 +298,16 @@ namespace DiamondShop
         {
             BBJewelryDiamondDetail frm = new BBJewelryDiamondDetail(id);
             frm.ShowDialog();
+
+            isEdit = true;
         }
 
         private void btnGemstone_Click(object sender, EventArgs e)
         {
             BBJewelryGemstoneDetail frm = new BBJewelryGemstoneDetail(id);
             frm.ShowDialog();
+
+            isEdit = true;
         }
 
         private void btnImage1_Click(object sender, EventArgs e)

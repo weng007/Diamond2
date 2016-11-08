@@ -467,6 +467,9 @@ namespace DiamondShop
 
                 for (int i = 0; i < tmp.SellBookDetail.Rows.Count; i++)
                 {
+                    //CheckRowDuplicate();
+
+
                     dsSellBookDetail.SellBookDetailRow row = tds1.SellBookDetail.NewSellBookDetailRow();
                     row.RefID = id;
                     row.RefID1 = tmp.SellBookDetail[i].RefID1;
@@ -476,6 +479,8 @@ namespace DiamondShop
                     row.Amount = tmp.SellBookDetail[i].Amount;
                     row.Weight = tmp.SellBookDetail[i].Weight;
                     row.Price = tmp.SellBookDetail[i].Price;
+
+                    
                     tds1.SellBookDetail.Rows.Add(row);           
                 }
 
