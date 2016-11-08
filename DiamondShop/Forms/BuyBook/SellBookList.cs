@@ -40,9 +40,9 @@ namespace DiamondShop
                 gridSellBook.Refresh();
             }
 
-            btnSearch_Click(null, null);
-
             txtCode.Select();
+            btnSearch_Click(null, null);
+            
         }
 
         private void btnAdd_Click(object sender, EventArgs e)

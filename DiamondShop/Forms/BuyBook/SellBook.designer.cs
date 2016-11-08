@@ -489,7 +489,7 @@
             this.txtDiscount.Location = new System.Drawing.Point(448, 78);
             this.txtDiscount.Name = "txtDiscount";
             this.txtDiscount.Size = new System.Drawing.Size(130, 26);
-            this.txtDiscount.TabIndex = 6;
+            this.txtDiscount.TabIndex = 8;
             this.txtDiscount.Text = "0";
             this.txtDiscount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtDiscount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetPrice_KeyPress);
@@ -530,7 +530,7 @@
             this.txtUSDRate.Location = new System.Drawing.Point(448, 13);
             this.txtUSDRate.Name = "txtUSDRate";
             this.txtUSDRate.Size = new System.Drawing.Size(87, 26);
-            this.txtUSDRate.TabIndex = 4;
+            this.txtUSDRate.TabIndex = 6;
             this.txtUSDRate.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // btnChooseDate
@@ -630,7 +630,7 @@
             this.cmbShopReceive.Location = new System.Drawing.Point(126, 78);
             this.cmbShopReceive.Name = "cmbShopReceive";
             this.cmbShopReceive.Size = new System.Drawing.Size(167, 28);
-            this.cmbShopReceive.TabIndex = 6;
+            this.cmbShopReceive.TabIndex = 4;
             this.cmbShopReceive.SelectedIndexChanged += new System.EventHandler(this.cmbSeller_SelectedValueChanged);
             // 
             // dtDueDate
@@ -700,7 +700,7 @@
             this.dtSellDate.Location = new System.Drawing.Point(749, 11);
             this.dtSellDate.Name = "dtSellDate";
             this.dtSellDate.Size = new System.Drawing.Size(137, 26);
-            this.dtSellDate.TabIndex = 8;
+            this.dtSellDate.TabIndex = 10;
             this.dtSellDate.ValueChanged += new System.EventHandler(this.dtSellDate_ValueChanged);
             // 
             // cmbPayment
@@ -751,7 +751,7 @@
             // 
             // label14
             // 
-            this.label14.Location = new System.Drawing.Point(653, 13);
+            this.label14.Location = new System.Drawing.Point(656, 13);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(90, 25);
             this.label14.TabIndex = 92;
