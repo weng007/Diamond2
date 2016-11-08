@@ -518,9 +518,9 @@
             // 
             // txtSize
             // 
-            this.txtSize.Location = new System.Drawing.Point(763, 131);
+            this.txtSize.Location = new System.Drawing.Point(751, 131);
             this.txtSize.Name = "txtSize";
-            this.txtSize.Size = new System.Drawing.Size(48, 26);
+            this.txtSize.Size = new System.Drawing.Size(60, 26);
             this.txtSize.TabIndex = 14;
             this.txtSize.Text = "0";
             this.txtSize.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -531,7 +531,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label15.Location = new System.Drawing.Point(705, 134);
+            this.label15.Location = new System.Drawing.Point(694, 134);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(40, 20);
             this.label15.TabIndex = 110;
@@ -539,9 +539,9 @@
             // 
             // txtWeight
             // 
-            this.txtWeight.Location = new System.Drawing.Point(763, 94);
+            this.txtWeight.Location = new System.Drawing.Point(751, 94);
             this.txtWeight.Name = "txtWeight";
-            this.txtWeight.Size = new System.Drawing.Size(48, 26);
+            this.txtWeight.Size = new System.Drawing.Size(60, 26);
             this.txtWeight.TabIndex = 12;
             this.txtWeight.Text = "0";
             this.txtWeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -553,7 +553,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label14.Location = new System.Drawing.Point(626, 97);
+            this.label14.Location = new System.Drawing.Point(615, 97);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(119, 20);
             this.label14.TabIndex = 108;
