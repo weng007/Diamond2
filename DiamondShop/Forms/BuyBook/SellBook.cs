@@ -118,9 +118,12 @@ namespace DiamondShop
                 txtPayDate.Text = string.Format("{0:d/M/yyyy}", tds.SellBook[0]["PaymentDate"]);
                 custID = tds.SellBook[0].CustID;
 
-                EnableSave = false;
-                EnableEdit = GM.CheckIsEdit(ApplicationInfo.Shop, Convert.ToInt16(cmbShop.SelectedValue.ToString()));
-                EnableDelete = true;
+                if (!isAuthorize)
+                {
+                    EnableSave = false;
+                    EnableEdit = GM.CheckIsEdit(ApplicationInfo.Shop, Convert.ToInt16(cmbShop.SelectedValue.ToString()));
+                    EnableDelete = true;
+                }
             }
 
             ds1 = ser.DoSelectData("SellBookDetail", id, 0);
@@ -170,7 +173,6 @@ namespace DiamondShop
             txtDiscount.Enabled = status;
             cmbPayment.Enabled = status;
             cmbShopReceive.Enabled = status;
-            cmbShop.Enabled = status;
             dtDueDate.Enabled = status;
             txtUSDRate.Enabled = status;
             txtNote.Enabled = status;
@@ -191,73 +193,76 @@ namespace DiamondShop
         {
             dsSellBook.SellBookRow row = null;
 
-            if (tds.SellBook.Rows.Count > 0)
+            if (ValidateData())
             {
-                row = tds.SellBook[0];
-            }
-            else
-            {
-                row = tds.SellBook.NewSellBookRow();
-                tds.SellBook.Rows.Add(row);
-            }
-
-            binder.BindValueToDataRow(row);
-            row.CustID = custID;
-
-            if (txtPayDate.Text == "")
-            {
-                row.PaymentDate = DateTime.MinValue.AddYears(1900);
-            }
-            else
-            {
-                row.PaymentDate = Convert.ToDateTime(txtPayDate.Text.ToString());
-            }
-
-            try
-            {
-                if (id == 0)
+                if (tds.SellBook.Rows.Count > 0)
                 {
-                    row.SellNo = GM.GetRunningNumber("MAT");
-                    SetCreateBy(row);
-                    chkFlag = ser.DoInsertData("SellBook", tds,0);
-
-                    if (chkFlag)
-                    {
-                        ser1 = GM.GetService1();
-                        id = ser1.DoSearchSellBookByCode(row.SellNo);
-                    }
+                    row = tds.SellBook[0];
                 }
                 else
                 {
-                    SetEditBy(row);
-                    chkFlag = ser.DoUpdateData("SellBook", tds);
+                    row = tds.SellBook.NewSellBookRow();
+                    tds.SellBook.Rows.Add(row);
                 }
 
-                tds.AcceptChanges();
+                binder.BindValueToDataRow(row);
+                row.CustID = custID;
 
-                //Save SellBookDetail
-                if (tds1.SellBookDetail.Rows.Count > 0)
+                if (txtPayDate.Text == "")
                 {
-                    foreach (dsSellBookDetail.SellBookDetailRow row1 in tds1.SellBookDetail.Rows)
+                    row.PaymentDate = DateTime.MinValue.AddYears(1900);
+                }
+                else
+                {
+                    row.PaymentDate = Convert.ToDateTime(txtPayDate.Text.ToString());
+                }
+
+                try
+                {
+                    if (id == 0)
                     {
-                        if (row1.ID < 0)
+                        row.SellNo = GM.GetRunningNumber("MAT");
+                        SetCreateBy(row);
+                        chkFlag = ser.DoInsertData("SellBook", tds, 0);
+
+                        if (chkFlag)
                         {
-                            SetCreateBy(row1);
-                            row1.RefID = id;
+                            ser1 = GM.GetService1();
+                            id = ser1.DoSearchSellBookByCode(row.SellNo);
                         }
-                        else
-                        {
-                            SetEditBy(row1);
-                        }                    
+                    }
+                    else
+                    {
+                        SetEditBy(row);
+                        chkFlag = ser.DoUpdateData("SellBook", tds);
                     }
 
-                    chkFlag = ser.DoInsertData("SellBookDetail", tds1, 0);
-                    tds1.AcceptChanges();
+                    tds.AcceptChanges();
+
+                    //Save SellBookDetail
+                    if (tds1.SellBookDetail.Rows.Count > 0)
+                    {
+                        foreach (dsSellBookDetail.SellBookDetailRow row1 in tds1.SellBookDetail.Rows)
+                        {
+                            if (row1.ID < 0)
+                            {
+                                SetCreateBy(row1);
+                                row1.RefID = id;
+                            }
+                            else
+                            {
+                                SetEditBy(row1);
+                            }
+                        }
+
+                        chkFlag = ser.DoInsertData("SellBookDetail", tds1, 0);
+                        tds1.AcceptChanges();
+                    }
                 }
-            }
-            catch (Exception ex)
-            {
-                throw ex;
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
             }
 
             isClosed = false;
@@ -284,10 +289,10 @@ namespace DiamondShop
         {
             message = "";
 
-            //if (txtCode.Text == "")
-            //{
-            //    message = "Please Choose Product.\n";
-            //}
+            if (txtDiscount.Text == "")
+            {
+                message = "Please fill discount.\n";
+            }
             //if (txtNetPrice.Text == "" || GM.ConvertStringToDouble(txtNetPrice) == 0)
             //{
             //    message += "Please Input NetPrice > 0.\n";
