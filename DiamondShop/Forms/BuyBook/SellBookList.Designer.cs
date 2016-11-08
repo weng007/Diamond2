@@ -29,12 +29,18 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SellBookList));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SellBookList));
             this.panel2 = new System.Windows.Forms.Panel();
             this.gridSellBook = new System.Windows.Forms.DataGridView();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.txtCode = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.tds = new DiamondDS.DS.dsSell();
             this.RowNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SellDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,13 +49,7 @@
             this.JewelryTypeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PaymentName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SellByName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ShopName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.btnSearch = new System.Windows.Forms.Button();
-            this.txtCode = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.tds = new DiamondDS.DS.dsSell();
+            this.ShopReceiveName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridSellBook)).BeginInit();
@@ -93,7 +93,7 @@
             this.JewelryTypeName,
             this.PaymentName,
             this.SellByName,
-            this.ShopName});
+            this.ShopReceiveName});
             this.gridSellBook.Location = new System.Drawing.Point(14, 6);
             this.gridSellBook.Name = "gridSellBook";
             this.gridSellBook.ReadOnly = true;
@@ -104,6 +104,72 @@
             this.gridSellBook.Size = new System.Drawing.Size(1315, 446);
             this.gridSellBook.TabIndex = 4;
             this.gridSellBook.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.gridSell_MouseDoubleClick);
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(161)))), ((int)(((byte)(118)))));
+            this.panel4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel4.BackgroundImage")));
+            this.panel4.Controls.Add(this.btnAdd);
+            this.panel4.Controls.Add(this.btnSearch);
+            this.panel4.Controls.Add(this.txtCode);
+            this.panel4.Controls.Add(this.label3);
+            this.panel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel4.Location = new System.Drawing.Point(-1, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1322, 123);
+            this.panel4.TabIndex = 44;
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.BackColor = System.Drawing.Color.White;
+            this.btnAdd.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAdd.BackgroundImage")));
+            this.btnAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAdd.FlatAppearance.BorderColor = System.Drawing.Color.Linen;
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd.Location = new System.Drawing.Point(20, 21);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(70, 90);
+            this.btnAdd.TabIndex = 70;
+            this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.BackColor = System.Drawing.Color.PaleGoldenrod;
+            this.btnSearch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSearch.BackgroundImage")));
+            this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSearch.FlatAppearance.BorderColor = System.Drawing.Color.Linen;
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearch.Location = new System.Drawing.Point(206, 65);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(105, 32);
+            this.btnSearch.TabIndex = 8;
+            this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // txtCode
+            // 
+            this.txtCode.Location = new System.Drawing.Point(206, 18);
+            this.txtCode.Name = "txtCode";
+            this.txtCode.Size = new System.Drawing.Size(188, 26);
+            this.txtCode.TabIndex = 1;
+            // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(142, 21);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(62, 26);
+            this.label3.TabIndex = 27;
+            this.label3.Text = "Code";
+            // 
+            // tds
+            // 
+            this.tds.DataSetName = "dsSell";
+            this.tds.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // RowNum
             // 
@@ -175,79 +241,13 @@
             this.SellByName.ReadOnly = true;
             this.SellByName.Width = 120;
             // 
-            // ShopName
+            // ShopReceiveName
             // 
-            this.ShopName.DataPropertyName = "ShopName";
-            this.ShopName.HeaderText = "Received Shop";
-            this.ShopName.Name = "ShopName";
-            this.ShopName.ReadOnly = true;
-            this.ShopName.Width = 150;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(161)))), ((int)(((byte)(118)))));
-            this.panel4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel4.BackgroundImage")));
-            this.panel4.Controls.Add(this.btnAdd);
-            this.panel4.Controls.Add(this.btnSearch);
-            this.panel4.Controls.Add(this.txtCode);
-            this.panel4.Controls.Add(this.label3);
-            this.panel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel4.Location = new System.Drawing.Point(-1, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1322, 123);
-            this.panel4.TabIndex = 44;
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.BackColor = System.Drawing.Color.White;
-            this.btnAdd.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAdd.BackgroundImage")));
-            this.btnAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAdd.FlatAppearance.BorderColor = System.Drawing.Color.Linen;
-            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.Location = new System.Drawing.Point(20, 21);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(70, 90);
-            this.btnAdd.TabIndex = 70;
-            this.btnAdd.UseVisualStyleBackColor = false;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.BackColor = System.Drawing.Color.PaleGoldenrod;
-            this.btnSearch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSearch.BackgroundImage")));
-            this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSearch.FlatAppearance.BorderColor = System.Drawing.Color.Linen;
-            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.Location = new System.Drawing.Point(206, 65);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(105, 32);
-            this.btnSearch.TabIndex = 8;
-            this.btnSearch.UseVisualStyleBackColor = false;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
-            // 
-            // txtCode
-            // 
-            this.txtCode.Location = new System.Drawing.Point(206, 18);
-            this.txtCode.Name = "txtCode";
-            this.txtCode.Size = new System.Drawing.Size(188, 26);
-            this.txtCode.TabIndex = 1;
-            // 
-            // label3
-            // 
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(142, 21);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 26);
-            this.label3.TabIndex = 27;
-            this.label3.Text = "Code";
-            // 
-            // tds
-            // 
-            this.tds.DataSetName = "dsSell";
-            this.tds.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.ShopReceiveName.DataPropertyName = "ShopReceiveName";
+            this.ShopReceiveName.HeaderText = "Receive At";
+            this.ShopReceiveName.Name = "ShopReceiveName";
+            this.ShopReceiveName.ReadOnly = true;
+            this.ShopReceiveName.Width = 150;
             // 
             // SellBookList
             // 
@@ -288,6 +288,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn JewelryTypeName;
         private System.Windows.Forms.DataGridViewTextBoxColumn PaymentName;
         private System.Windows.Forms.DataGridViewTextBoxColumn SellByName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ShopName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ShopReceiveName;
     }
 }
