@@ -528,5 +528,10 @@ namespace DiamondShop
                 e.Handled = true;
             }
         }
+
+        private void txtDiscount_Leave(object sender, EventArgs e)
+        {
+            txtDiscount.Text = GM.ConvertDoubleToString(txtDiscount);
+        }
     }
 }
