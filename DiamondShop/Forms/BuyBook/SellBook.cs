@@ -262,6 +262,7 @@ namespace DiamondShop
 
             isClosed = false;
             LoadData();
+            SetControlEnable(true);
 
             return chkFlag;
         }
@@ -531,7 +532,7 @@ namespace DiamondShop
 
         private void txtDiscount_Leave(object sender, EventArgs e)
         {
-            txtDiscount.Text = GM.ConvertDoubleToString(txtDiscount);
+            txtDiscount.Text = GM.ConvertDoubleToString(txtDiscount,0);
         }
     }
 }
