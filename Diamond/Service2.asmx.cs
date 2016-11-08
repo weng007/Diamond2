@@ -418,6 +418,20 @@ namespace Diamond
         }
 
         [WebMethod]
+        public dsBuyBookSettingDetail DoSearchBBSettingDetail(int mode)
+        {
+            BuyBookSettingDetailBiz biz = GM.GetBuyBookSettingDetailBiz();
+            try
+            {
+                return biz.DoSearchBBSettingDetail(mode);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        [WebMethod]
         public int DoSearchJewelryByCode(string code)
         {
             BuyBookJewelryBiz biz = GM.GetBuyBookJewelryBiz();

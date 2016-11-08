@@ -491,5 +491,20 @@ namespace Diamond
                 throw ex;
             }
         }
+
+        [WebMethod]
+        public DataSet DoSearchBBSettingDetail(int mode)
+        {
+            BuyBookSettingDetailBiz biz = GM.GetBuyBookSettingDetailBiz();
+
+            try
+            {
+                return biz.DoSearchBBSettingDetail(mode);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

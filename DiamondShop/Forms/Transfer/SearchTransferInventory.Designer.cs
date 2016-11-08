@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SearchTransferInventory));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SearchTransferInventory));
             this.panel4 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.cmbBuybookType = new System.Windows.Forms.ComboBox();
@@ -61,6 +61,7 @@
             this.EShop = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TotalBaht = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BuyBookType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnSelect = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -70,6 +71,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(91)))), ((int)(((byte)(59)))));
+            this.panel4.Controls.Add(this.btnSelect);
             this.panel4.Controls.Add(this.label2);
             this.panel4.Controls.Add(this.cmbBuybookType);
             this.panel4.Controls.Add(this.txtCode2);
@@ -80,14 +82,14 @@
             this.panel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.panel4.Location = new System.Drawing.Point(5, 1);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1192, 103);
+            this.panel4.Size = new System.Drawing.Size(1192, 110);
             this.panel4.TabIndex = 42;
             // 
             // label2
             // 
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(261, 21);
+            this.label2.Location = new System.Drawing.Point(358, 21);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(114, 26);
             this.label2.TabIndex = 80;
@@ -96,7 +98,7 @@
             // cmbBuybookType
             // 
             this.cmbBuybookType.FormattingEnabled = true;
-            this.cmbBuybookType.Location = new System.Drawing.Point(378, 19);
+            this.cmbBuybookType.Location = new System.Drawing.Point(475, 19);
             this.cmbBuybookType.Name = "cmbBuybookType";
             this.cmbBuybookType.Size = new System.Drawing.Size(172, 28);
             this.cmbBuybookType.TabIndex = 79;
@@ -104,7 +106,7 @@
             // txtCode2
             // 
             this.txtCode2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCode2.Location = new System.Drawing.Point(82, 60);
+            this.txtCode2.Location = new System.Drawing.Point(179, 60);
             this.txtCode2.Name = "txtCode2";
             this.txtCode2.Size = new System.Drawing.Size(145, 26);
             this.txtCode2.TabIndex = 78;
@@ -113,7 +115,7 @@
             // 
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(15, 63);
+            this.label1.Location = new System.Drawing.Point(112, 63);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(68, 26);
             this.label1.TabIndex = 77;
@@ -122,7 +124,7 @@
             // txtCode
             // 
             this.txtCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCode.Location = new System.Drawing.Point(82, 18);
+            this.txtCode.Location = new System.Drawing.Point(179, 18);
             this.txtCode.Name = "txtCode";
             this.txtCode.Size = new System.Drawing.Size(145, 26);
             this.txtCode.TabIndex = 76;
@@ -131,7 +133,7 @@
             // 
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(15, 21);
+            this.label5.Location = new System.Drawing.Point(112, 21);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(68, 26);
             this.label5.TabIndex = 75;
@@ -145,7 +147,7 @@
             this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSearch.FlatAppearance.BorderColor = System.Drawing.Color.Linen;
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.Location = new System.Drawing.Point(445, 60);
+            this.btnSearch.Location = new System.Drawing.Point(542, 60);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(105, 32);
             this.btnSearch.TabIndex = 12;
@@ -157,7 +159,7 @@
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.gridTransferInventory);
             this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel2.Location = new System.Drawing.Point(5, 107);
+            this.panel2.Location = new System.Drawing.Point(5, 114);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1242, 458);
             this.panel2.TabIndex = 33;
@@ -356,6 +358,22 @@
             this.BuyBookType.ReadOnly = true;
             this.BuyBookType.Visible = false;
             // 
+            // btnSelect
+            // 
+            this.btnSelect.BackColor = System.Drawing.Color.Transparent;
+            this.btnSelect.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSelect.BackgroundImage")));
+            this.btnSelect.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnSelect.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSelect.FlatAppearance.BorderColor = System.Drawing.Color.Linen;
+            this.btnSelect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSelect.Image = ((System.Drawing.Image)(resources.GetObject("btnSelect.Image")));
+            this.btnSelect.Location = new System.Drawing.Point(9, 11);
+            this.btnSelect.Name = "btnSelect";
+            this.btnSelect.Size = new System.Drawing.Size(70, 90);
+            this.btnSelect.TabIndex = 81;
+            this.btnSelect.UseVisualStyleBackColor = false;
+            this.btnSelect.Click += new System.EventHandler(this.btnSelect_Click);
+            // 
             // SearchTransferInventory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -405,5 +423,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn EShop;
         private System.Windows.Forms.DataGridViewTextBoxColumn TotalBaht;
         private System.Windows.Forms.DataGridViewTextBoxColumn BuyBookType;
+        private System.Windows.Forms.Button btnSelect;
     }
 }

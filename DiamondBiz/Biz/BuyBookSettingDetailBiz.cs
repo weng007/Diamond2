@@ -71,5 +71,18 @@ namespace DiamondBiz.Biz
                 throw ex;
             }
         }
+
+        public dsBuyBookSettingDetail DoSearchBBSettingDetail(int mode)
+        {
+            try
+            {
+                return dal.DoSearchBBSettingDetail(mode);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        
     }
 }
