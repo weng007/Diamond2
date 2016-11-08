@@ -169,8 +169,6 @@ namespace DiamondShop
             dtSellDate.Enabled = status;
             txtDiscount.Enabled = status;
             cmbPayment.Enabled = status;
-            txtCustomer.Enabled = status;
-            cmbStatus.Enabled = status;
             cmbShopReceive.Enabled = status;
             cmbShop.Enabled = status;
             dtDueDate.Enabled = status;

@@ -23,8 +23,6 @@ namespace DiamondShop
 
         protected override void Initial()
         {
-            txtCode.Select();
-
             gridSellBook.AutoGenerateColumns = false;
         }
         protected override void DoLoadData()
@@ -43,6 +41,8 @@ namespace DiamondShop
             }
 
             btnSearch_Click(null, null);
+
+            txtCode.Select();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
