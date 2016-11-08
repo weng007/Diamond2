@@ -63,7 +63,6 @@ namespace DiamondShop
             cmbLab.DisplayMember = "Detail";
             cmbLab.Refresh();
 
-
             txtReportNumber.Select();
 
             gridGemstoneCer.AutoGenerateColumns = false;
@@ -93,11 +92,17 @@ namespace DiamondShop
             {
                 if (gridGemstoneCer.Rows[i].Cells["Select"].Value != null)
                 {
-                    idSelected += gridGemstoneCer.Rows[i].Cells["ID"].Value.ToString() + comma;
+                    if (gridGemstoneCer.Rows[i].Cells["Select"].Value.ToString() == "True")
+                    {
+                        idSelected += gridGemstoneCer.Rows[i].Cells["ID"].Value.ToString() + comma;
+                    }
                 }
             }
 
-            idSelected = idSelected.Remove(idSelected.Length - 1, 1);
+            if (idSelected.Length > 0)
+            {
+                idSelected = idSelected.Remove(idSelected.Length - 1, 1);
+            }
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -172,7 +177,7 @@ namespace DiamondShop
         {
             if (e.ColumnIndex == 0)
             {
-                if (gridGemstoneCer.SelectedCells[0].Value == null)
+                if (gridGemstoneCer.SelectedCells[0].Value == null || gridGemstoneCer.SelectedCells[0].Value.ToString() == "False")
                 {
                     gridGemstoneCer.SelectedCells[0].Value = true;
                     id = (int)gridGemstoneCer.SelectedRows[0].Cells["ID"].Value;
