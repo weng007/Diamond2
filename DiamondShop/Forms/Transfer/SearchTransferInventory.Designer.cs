@@ -44,6 +44,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.gridTransferInventory = new System.Windows.Forms.DataGridView();
             this.btnClose = new System.Windows.Forms.Button();
+            this.Select = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.RowNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -59,7 +60,7 @@
             this.ColorName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EShop = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TotalBaht = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Flag = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BuyBookType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -169,6 +170,7 @@
             this.gridTransferInventory.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.gridTransferInventory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridTransferInventory.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Select,
             this.RowNum,
             this.ID,
             this.Code,
@@ -184,7 +186,7 @@
             this.ColorName,
             this.EShop,
             this.TotalBaht,
-            this.Flag});
+            this.BuyBookType});
             this.gridTransferInventory.Location = new System.Drawing.Point(9, 3);
             this.gridTransferInventory.Name = "gridTransferInventory";
             this.gridTransferInventory.ReadOnly = true;
@@ -212,6 +214,13 @@
             this.btnClose.TabIndex = 79;
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // Select
+            // 
+            this.Select.HeaderText = "Select";
+            this.Select.Name = "Select";
+            this.Select.ReadOnly = true;
+            this.Select.Width = 60;
             // 
             // RowNum
             // 
@@ -339,15 +348,15 @@
             this.TotalBaht.Name = "TotalBaht";
             this.TotalBaht.ReadOnly = true;
             // 
-            // Flag
+            // BuyBookType
             // 
-            this.Flag.DataPropertyName = "Flag";
-            this.Flag.HeaderText = "Flag";
-            this.Flag.Name = "Flag";
-            this.Flag.ReadOnly = true;
-            this.Flag.Visible = false;
+            this.BuyBookType.DataPropertyName = "BuyBookType";
+            this.BuyBookType.HeaderText = "BuyBookType";
+            this.BuyBookType.Name = "BuyBookType";
+            this.BuyBookType.ReadOnly = true;
+            this.BuyBookType.Visible = false;
             // 
-            // TransferInventoryDetail
+            // SearchTransferInventory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -356,7 +365,7 @@
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
-            this.Name = "TransferInventoryDetail";
+            this.Name = "SearchTransferInventory";
             this.Text = "ProductList";
             ((System.ComponentModel.ISupportInitialize)(this.ds)).EndInit();
             this.panel4.ResumeLayout(false);
@@ -379,6 +388,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cmbBuybookType;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Select;
         private System.Windows.Forms.DataGridViewTextBoxColumn RowNum;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Code;
@@ -394,6 +404,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColorName;
         private System.Windows.Forms.DataGridViewTextBoxColumn EShop;
         private System.Windows.Forms.DataGridViewTextBoxColumn TotalBaht;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Flag;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BuyBookType;
     }
 }

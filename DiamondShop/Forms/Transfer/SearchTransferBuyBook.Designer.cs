@@ -44,6 +44,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.gridTransferBuyBook = new System.Windows.Forms.DataGridView();
             this.btnClose = new System.Windows.Forms.Button();
+            this.Select = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.RowNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -154,7 +155,7 @@
             this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.Location = new System.Drawing.Point(5, 107);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1117, 458);
+            this.panel2.Size = new System.Drawing.Size(1190, 458);
             this.panel2.TabIndex = 33;
             // 
             // gridTransferBuyBook
@@ -165,6 +166,7 @@
             this.gridTransferBuyBook.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.gridTransferBuyBook.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridTransferBuyBook.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Select,
             this.RowNum,
             this.ID,
             this.Code,
@@ -184,7 +186,7 @@
             this.gridTransferBuyBook.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridTransferBuyBook.RowTemplate.Height = 30;
             this.gridTransferBuyBook.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridTransferBuyBook.Size = new System.Drawing.Size(1095, 452);
+            this.gridTransferBuyBook.Size = new System.Drawing.Size(1178, 452);
             this.gridTransferBuyBook.TabIndex = 2;
             this.gridTransferBuyBook.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.gridTransferBuyBook_MouseDoubleClick);
             // 
@@ -197,13 +199,20 @@
             this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Location = new System.Drawing.Point(1094, 0);
+            this.btnClose.Location = new System.Drawing.Point(1170, 0);
             this.btnClose.Margin = new System.Windows.Forms.Padding(0);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(38, 32);
             this.btnClose.TabIndex = 79;
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // Select
+            // 
+            this.Select.HeaderText = "Select";
+            this.Select.Name = "Select";
+            this.Select.ReadOnly = true;
+            this.Select.Width = 60;
             // 
             // RowNum
             // 
@@ -311,16 +320,16 @@
             this.TotalBaht.ReadOnly = true;
             this.TotalBaht.Width = 120;
             // 
-            // TransferBuyBookDetail
+            // SearchTransferBuyBook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(91)))), ((int)(((byte)(59)))));
-            this.ClientSize = new System.Drawing.Size(1131, 577);
+            this.ClientSize = new System.Drawing.Size(1207, 577);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
-            this.Name = "TransferBuyBookDetail";
+            this.Name = "SearchTransferBuyBook";
             this.Text = "ProductList";
             ((System.ComponentModel.ISupportInitialize)(this.ds)).EndInit();
             this.panel4.ResumeLayout(false);
@@ -343,6 +352,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cmbBuybookType;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Select;
         private System.Windows.Forms.DataGridViewTextBoxColumn RowNum;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Code;

@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TransferInventoryList));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel4 = new System.Windows.Forms.Panel();
             this.cmbSender = new System.Windows.Forms.ComboBox();
             this.cmbEShop = new System.Windows.Forms.ComboBox();
@@ -61,7 +61,7 @@
             this.SendDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ReceiveDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TransferStatusName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SShopName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EShopName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -319,7 +319,7 @@
             this.SendDate,
             this.ReceiveDate,
             this.TransferStatusName,
-            this.SShopName});
+            this.EShopName});
             this.gridTransferInventory.Location = new System.Drawing.Point(15, 3);
             this.gridTransferInventory.Name = "gridTransferInventory";
             this.gridTransferInventory.ReadOnly = true;
@@ -334,8 +334,8 @@
             // RowNum
             // 
             this.RowNum.DataPropertyName = "RowNum";
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            this.RowNum.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            this.RowNum.DefaultCellStyle = dataGridViewCellStyle1;
             this.RowNum.HeaderText = "No.";
             this.RowNum.Name = "RowNum";
             this.RowNum.ReadOnly = true;
@@ -360,9 +360,9 @@
             // SendDate
             // 
             this.SendDate.DataPropertyName = "SendDate";
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle11.Format = "dd/MM/yyyy";
-            this.SendDate.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle2.Format = "dd/MM/yyyy";
+            this.SendDate.DefaultCellStyle = dataGridViewCellStyle2;
             this.SendDate.HeaderText = "SendDate";
             this.SendDate.Name = "SendDate";
             this.SendDate.ReadOnly = true;
@@ -371,9 +371,9 @@
             // ReceiveDate
             // 
             this.ReceiveDate.DataPropertyName = "ReceiveDate";
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle12.Format = "dd/MM/yyyy";
-            this.ReceiveDate.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle3.Format = "dd/MM/yyyy";
+            this.ReceiveDate.DefaultCellStyle = dataGridViewCellStyle3;
             this.ReceiveDate.HeaderText = "ReceiveDate";
             this.ReceiveDate.Name = "ReceiveDate";
             this.ReceiveDate.ReadOnly = true;
@@ -387,13 +387,13 @@
             this.TransferStatusName.ReadOnly = true;
             this.TransferStatusName.Width = 150;
             // 
-            // SShopName
+            // EShopName
             // 
-            this.SShopName.DataPropertyName = "SShopName";
-            this.SShopName.HeaderText = "Shop";
-            this.SShopName.Name = "SShopName";
-            this.SShopName.ReadOnly = true;
-            this.SShopName.Width = 120;
+            this.EShopName.DataPropertyName = "EShopName";
+            this.EShopName.HeaderText = "End Location";
+            this.EShopName.Name = "EShopName";
+            this.EShopName.ReadOnly = true;
+            this.EShopName.Width = 140;
             // 
             // TransferInventoryList
             // 
@@ -443,6 +443,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn SendDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn ReceiveDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn TransferStatusName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SShopName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EShopName;
     }
 }
