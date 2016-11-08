@@ -34,6 +34,7 @@ namespace DiamondShop
 
         protected override void DoLoadData()
         {
+            ser1 = GM.GetService1();
             ds = ser1.DoSearchBBSettingDetail(1);
 
             if (ds.Tables[0].Rows.Count > 0)
