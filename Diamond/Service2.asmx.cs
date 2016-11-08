@@ -120,12 +120,12 @@ namespace Diamond
         }
 
         [WebMethod]
-        public int UpdateTransferReceive(int id)
+        public int UpdateTransferReceive(int id, int eShop)
         {
             TransferBiz biz = GM.GetTransferBiz();
             try
             {
-                return biz.UpdateTransferReceive(id);
+                return biz.UpdateTransferReceive(id, eShop);
             }
             catch (Exception ex)
             {
@@ -368,20 +368,6 @@ namespace Diamond
                 DataSet ds = new DataSet();
                 ds = biz.CountUnReadMessage(userID);
                 return (int)ds.Tables[0].Rows[0][0];
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-
-        [WebMethod]
-        public int UpdateTransferReceived(int ID, int TransferStatus, DateTime ReceiveDate, int EShop)
-        {
-            GeneralBiz biz = new GeneralBiz();
-            try
-            {
-                return biz.UpdateTransferReceived(ID, TransferStatus, ReceiveDate, EShop);
             }
             catch (Exception ex)
             {

@@ -100,17 +100,19 @@ namespace DiamondShop
                 binder.BindValueToControl(tds.Transfer[0]);
                 txtReceivedDate.Text = string.Format("{0:d/M/yyyy}", tds.Transfer[0]["ReceiveDate"]);
 
-                EnableSave = false;
-                EnableEdit = true;
-                EnableDelete = false;
+
+                if (!isAuthorize)
+                {
+                    EnableSave = false;
+                    EnableEdit = true;
+                    EnableDelete = false;
+                }
 
                 //Receiver 
                 if (Convert.ToInt16(cmbReceiver.SelectedValue.ToString()) == ApplicationInfo.UserID)
                 {
                     btnReceive.Visible = true;
                     btnPrint.Visible = false;
-                    EnableEdit = false;
-                    EnableDelete = false;
                 }
             }
 
@@ -158,7 +160,7 @@ namespace DiamondShop
                     chkFlag = ser.DoUpdateData("Transfer", tds);
                 }
 
-                BindingDSTransferDetail();
+                BindingDSTransferBuyBook();
 
                 if (tds2.TransferDetail.Rows.Count > 0)
                 {
@@ -175,7 +177,7 @@ namespace DiamondShop
 
             return chkFlag;
         }
-        private void BindingDSTransferDetail()
+        private void BindingDSTransferBuyBook()
         {
             tds2.Clear();
             for (int i = 0; i < ds2.Tables[0].Rows.Count; i++)
@@ -203,7 +205,7 @@ namespace DiamondShop
         {
             try
             {
-                chkFlag = ser.DoDeleteData("Transfer", DelID);
+                chkFlag = ser.DoDeleteData("TransferBuyBook", id);
             }
             catch (Exception ex)
             {
@@ -216,10 +218,10 @@ namespace DiamondShop
         {
             message = "";
 
-            if (txtSender.Text == "")
-            {
-                message = "Please input Seller.\n";
-            }
+            //if (txtSender.Text == "")
+            //{
+            //    message = "Please input Seller.\n";
+            //}
 
             if (message == "") { return true; }
             else { return false; }
@@ -256,7 +258,7 @@ namespace DiamondShop
             SearchTransferBuyBook frm = new SearchTransferBuyBook();
             frm.ShowDialog();
 
-            if (frm.refID1 != 0 && CheckDataExist(frm.refID1))
+            if (frm.refID1 != 0)
             {
                 tmp = ser2.DoSearchTransferBuyBook(ApplicationInfo.Shop, "", "", 0);
                 tds1.Clear();
@@ -280,20 +282,7 @@ namespace DiamondShop
                 gridTransfer.RefreshEdit();
             }
         }
-        private bool CheckDataExist(int tmp)
-        {
-            if (gridTransfer.Rows.Count > 0)
-            {
-                for (int i = 0; i < gridTransfer.Rows.Count; i++)
-                {
-                    if (tmp == Convert.ToInt32(gridTransfer.Rows[i].Cells["RefID1"].Value))
-                    {
-                        return false;
-                    }
-                }
-            }
-            return true;
-        }
+
         private void SetFormatNumber()
         {
             //ดักเคส MinValue
@@ -304,24 +293,28 @@ namespace DiamondShop
         }
         private void btnDel_Click(object sender, EventArgs e)
         {
-            if (gridTransfer.SelectedRows.Count > 0)
-            {
-                if (gridTransfer.Rows[rowIndex].Cells["ID"].Value != null)
-                {
-                    DeleteData();
-                }
+            int delID = 0;
 
-                gridTransfer.Rows.RemoveAt(rowIndex);
+            if (rowIndex > -1)
+            {
+                delID = (int)gridTransfer.Rows[rowIndex].Cells["ID"].Value;
+                tds1.TransferBuyBook.Rows.RemoveAt(rowIndex);
+            }
+
+            tds1.AcceptChanges();
+            gridTransfer.Refresh();
+
+            if (delID != 0)
+            {
+                ser.DoDeleteData("TransferBuyBook", delID);
             }
         }
 
         private void SetControlEnable(bool status)
         {
-            dtSendDate.Enabled = status;
             txtSender.Enabled = status;
             btnAdd.Enabled = status;
             btnDel.Enabled = status;
-            gridTransfer.Enabled = status;
         }
 
         private void gridTransfer_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -334,20 +327,16 @@ namespace DiamondShop
             }
         }
 
-        private void gridTransfer_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
-        {
-            if (e.ColumnIndex == 7)
-            {
-                double d = double.Parse(e.Value.ToString());
-                e.Value = d.ToString("N0");
-            }
-        }
-
         private void btnReceive_Click(object sender, EventArgs e)
         {
             ser1 = GM.GetService1();
-            ser1.UpdateTransferReceive(id);
+            ser1.UpdateTransferReceive(id,(int)cmbEShop.SelectedValue);
             LoadData();
+        }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

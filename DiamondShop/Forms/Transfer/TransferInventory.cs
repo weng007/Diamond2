@@ -338,5 +338,10 @@ namespace DiamondShop
             btnDel.Enabled = status;
             gridTransferInventory.Enabled = status;
         }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -336,24 +336,6 @@ namespace DiamondDAL.DAL
 
             return ds;
         }
-        public int UpdateTransferReceived(int ID, int TransferStatus, DateTime ReceiveDate, int EShop)
-        {
-            try
-            {
-                SQL.ClearParameter();
-                SQL.CreateParameter("@ID", ID);
-                SQL.CreateParameter("@TransferStatus", TransferStatus);
-                SQL.CreateParameter("@ReceiveDate", ReceiveDate);
-                SQL.CreateParameter("@EShop", EShop);
-                flag = SQL.ExecuteSP("SP_Transfer_Upd_Received");
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-
-            return flag;
-        }
 
         public byte[] GetCertificate(int id, int mode)
         {

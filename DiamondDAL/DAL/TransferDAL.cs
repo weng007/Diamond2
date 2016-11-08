@@ -99,11 +99,14 @@ namespace DiamondDAL.DAL
             return Convert.ToBoolean(flag);
         }
 
-        public int UpdateTransferReceive(int id)
+        public int UpdateTransferReceive(int ID, int EShop)
         {
             try
             {
-                flag = SQL.ExecuteSP("SP_UpdateTransferReceive");
+                SQL.ClearParameter();
+                SQL.CreateParameter("@ID", ID);
+                SQL.CreateParameter("@EShop", EShop);
+                flag = SQL.ExecuteSP("SP_Transfer_Upd_Receive");
             }
             catch (Exception ex)
             {

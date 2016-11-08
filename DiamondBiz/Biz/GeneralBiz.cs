@@ -234,17 +234,6 @@ namespace DiamondBiz.Biz
                 throw ex;
             }
         }
-        public int UpdateTransferReceived(int ID, int TransferStatus, DateTime ReceiveDate, int EShop)
-        {
-            try
-            {
-                return dal.UpdateTransferReceived(ID, TransferStatus, ReceiveDate, EShop);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
 
         public byte[] GetCertificate(int id, int mode)
         {

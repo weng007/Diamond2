@@ -71,11 +71,11 @@ namespace DiamondBiz.Biz
             }
         }
 
-        public int UpdateTransferReceive(int id)
+        public int UpdateTransferReceive(int id, int eShop)
         {
             try
             {
-                return dal.UpdateTransferReceive(id);
+                return dal.UpdateTransferReceive(id, eShop);
             }
             catch (Exception ex)
             {

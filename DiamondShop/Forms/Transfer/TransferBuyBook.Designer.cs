@@ -182,6 +182,7 @@
             this.btnPrint.Size = new System.Drawing.Size(77, 100);
             this.btnPrint.TabIndex = 248;
             this.btnPrint.UseVisualStyleBackColor = false;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
             // txtSShop
             // 
@@ -344,7 +345,6 @@
             this.gridTransfer.Size = new System.Drawing.Size(905, 187);
             this.gridTransfer.TabIndex = 86;
             this.gridTransfer.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridTransfer_CellClick);
-            this.gridTransfer.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.gridTransfer_CellFormatting);
             // 
             // RowNum
             // 
@@ -529,14 +529,14 @@
             this.button1.TabIndex = 32;
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // TransferInfo
+            // TransferBuyBook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(195)))), ((int)(((byte)(157)))));
             this.ClientSize = new System.Drawing.Size(1007, 542);
             this.Controls.Add(this.panel3);
-            this.Name = "TransferInfo";
+            this.Name = "TransferBuyBook";
             this.Text = "DiamondCer";
             this.Controls.SetChildIndex(this.panel3, 0);
             ((System.ComponentModel.ISupportInitialize)(this.ds)).EndInit();
