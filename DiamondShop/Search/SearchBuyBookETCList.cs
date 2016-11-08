@@ -49,13 +49,18 @@ namespace DiamondShop
             {
                 if (gridETC.Rows[i].Cells["Select"].Value != null)
                 {
-                    idSelected += gridETC.Rows[i].Cells["ID"].Value.ToString() + comma;
+                    if (gridETC.Rows[i].Cells["Select"].Value.ToString() == "True")
+                    {
+                        idSelected += gridETC.Rows[i].Cells["ID"].Value.ToString() + comma;
+                    }
                 }
             }
 
-            idSelected = idSelected.Remove(idSelected.Length - 1, 1);
+            if (idSelected.Length > 0)
+            {
+                idSelected = idSelected.Remove(idSelected.Length - 1, 1);
+            }
         }
-
         private void btnSearch_Click(object sender, EventArgs e)
         {
             ser2 = GM.GetService2();
@@ -85,7 +90,7 @@ namespace DiamondShop
         {
             if (e.ColumnIndex == 0)
             {
-                if (gridETC.SelectedCells[0].Value == null)
+                if (gridETC.SelectedCells[0].Value == null || gridETC.SelectedCells[0].Value.ToString() == "False")
                 {
                     gridETC.SelectedCells[0].Value = true;
                     id = (int)gridETC.SelectedRows[0].Cells["ID"].Value;
