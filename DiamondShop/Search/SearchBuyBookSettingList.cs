@@ -9,11 +9,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DiamondShop.FormMaster;
 using DiamondDS;
+using DiamondShop.DiamondService1;
 
 namespace DiamondShop
 {
     public partial class SearchBuyBookSettingList : FormList
     {
+        Service2 ser1;
         public string idSelected = "";
 
         public SearchBuyBookSettingList()
@@ -32,7 +34,7 @@ namespace DiamondShop
 
         protected override void DoLoadData()
         {
-            ds = ser.DoSelectData("BuyBookSetting", -1, 0);
+            ds = ser1.DoSearchBBSettingDetail(1);
 
             if (ds.Tables[0].Rows.Count > 0)
             {

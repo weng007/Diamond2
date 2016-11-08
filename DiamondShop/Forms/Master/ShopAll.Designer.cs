@@ -46,10 +46,10 @@
             this.btnRestore = new System.Windows.Forms.Button();
             this.btnMinimize = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
-            this.Shop7 = new System.Windows.Forms.Label();
-            this.btnShop7 = new System.Windows.Forms.Button();
+            this.Shop8 = new System.Windows.Forms.Label();
             this.btnFactory = new System.Windows.Forms.Button();
             this.lblFactory = new System.Windows.Forms.Label();
+            this.btnShop8 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel13.SuspendLayout();
             this.SuspendLayout();
@@ -311,36 +311,21 @@
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // Shop7
+            // Shop8
             // 
-            this.Shop7.AccessibleName = "Shop6";
-            this.Shop7.AutoSize = true;
-            this.Shop7.BackColor = System.Drawing.Color.Transparent;
-            this.Shop7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Shop7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Shop7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Shop7.Location = new System.Drawing.Point(558, 65);
-            this.Shop7.Name = "Shop7";
-            this.Shop7.Size = new System.Drawing.Size(56, 20);
-            this.Shop7.TabIndex = 20;
-            this.Shop7.Text = "Shop7";
-            this.Shop7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Shop7.Visible = false;
-            // 
-            // btnShop7
-            // 
-            this.btnShop7.BackColor = System.Drawing.Color.Transparent;
-            this.btnShop7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnShop7.FlatAppearance.BorderSize = 0;
-            this.btnShop7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnShop7.Image = ((System.Drawing.Image)(resources.GetObject("btnShop7.Image")));
-            this.btnShop7.Location = new System.Drawing.Point(544, 55);
-            this.btnShop7.Name = "btnShop7";
-            this.btnShop7.Size = new System.Drawing.Size(172, 145);
-            this.btnShop7.TabIndex = 19;
-            this.btnShop7.UseVisualStyleBackColor = false;
-            this.btnShop7.Visible = false;
-            this.btnShop7.Click += new System.EventHandler(this.btnShop1_Click);
+            this.Shop8.AccessibleName = "Shop6";
+            this.Shop8.AutoSize = true;
+            this.Shop8.BackColor = System.Drawing.Color.Transparent;
+            this.Shop8.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Shop8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Shop8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Shop8.Location = new System.Drawing.Point(558, 65);
+            this.Shop8.Name = "Shop8";
+            this.Shop8.Size = new System.Drawing.Size(56, 20);
+            this.Shop8.TabIndex = 20;
+            this.Shop8.Text = "Shop7";
+            this.Shop8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Shop8.Visible = false;
             // 
             // btnFactory
             // 
@@ -349,7 +334,7 @@
             this.btnFactory.FlatAppearance.BorderSize = 0;
             this.btnFactory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFactory.Image = ((System.Drawing.Image)(resources.GetObject("btnFactory.Image")));
-            this.btnFactory.Location = new System.Drawing.Point(524, 266);
+            this.btnFactory.Location = new System.Drawing.Point(528, 194);
             this.btnFactory.Name = "btnFactory";
             this.btnFactory.Size = new System.Drawing.Size(227, 223);
             this.btnFactory.TabIndex = 21;
@@ -365,13 +350,28 @@
             this.lblFactory.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblFactory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblFactory.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFactory.Location = new System.Drawing.Point(531, 483);
+            this.lblFactory.Location = new System.Drawing.Point(540, 420);
             this.lblFactory.Name = "lblFactory";
             this.lblFactory.Size = new System.Drawing.Size(56, 20);
             this.lblFactory.TabIndex = 22;
-            this.lblFactory.Text = "Shop8";
+            this.lblFactory.Text = "Shop7";
             this.lblFactory.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblFactory.Visible = false;
+            // 
+            // btnShop8
+            // 
+            this.btnShop8.BackColor = System.Drawing.Color.Transparent;
+            this.btnShop8.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnShop8.FlatAppearance.BorderSize = 0;
+            this.btnShop8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnShop8.Image = ((System.Drawing.Image)(resources.GetObject("btnShop8.Image")));
+            this.btnShop8.Location = new System.Drawing.Point(544, 55);
+            this.btnShop8.Name = "btnShop8";
+            this.btnShop8.Size = new System.Drawing.Size(172, 145);
+            this.btnShop8.TabIndex = 19;
+            this.btnShop8.UseVisualStyleBackColor = false;
+            this.btnShop8.Visible = false;
+            this.btnShop8.Click += new System.EventHandler(this.btnShop1_Click);
             // 
             // ShopAll
             // 
@@ -380,8 +380,8 @@
             this.ClientSize = new System.Drawing.Size(789, 580);
             this.Controls.Add(this.lblFactory);
             this.Controls.Add(this.btnFactory);
-            this.Controls.Add(this.Shop7);
-            this.Controls.Add(this.btnShop7);
+            this.Controls.Add(this.Shop8);
+            this.Controls.Add(this.btnShop8);
             this.Controls.Add(this.Shop6);
             this.Controls.Add(this.Shop4);
             this.Controls.Add(this.Shop5);
@@ -456,9 +456,9 @@
         private System.Windows.Forms.Label Shop5;
         private System.Windows.Forms.Label Shop4;
         private System.Windows.Forms.Label Shop6;
-        private System.Windows.Forms.Label Shop7;
-        private System.Windows.Forms.Button btnShop7;
+        private System.Windows.Forms.Label Shop8;
         private System.Windows.Forms.Button btnFactory;
         private System.Windows.Forms.Label lblFactory;
+        private System.Windows.Forms.Button btnShop8;
     }
 }

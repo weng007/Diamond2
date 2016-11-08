@@ -12,11 +12,11 @@ namespace DiamondBiz.Biz
         dsProductionLine ds = new dsProductionLine();
         ProductionLineDAL dal = new ProductionLineDAL();
 
-        public dsProductionLine DoSearchData(string OrderNo, int JewelryType, int SShop, int FactoryStatus, DateTime SOrderDate, DateTime EOrderDate)
+        public dsProductionLine DoSearchData(string OrderNo, int JewelryType, int Shop, int FactoryStatus, DateTime SOrderDate, DateTime EOrderDate)
         {
             try
             {
-                return dal.DoSearchData(OrderNo, JewelryType, SShop, FactoryStatus, SOrderDate, EOrderDate);
+                return dal.DoSearchData(OrderNo, JewelryType, Shop, FactoryStatus, SOrderDate, EOrderDate);
             }
             catch (Exception ex)
             {

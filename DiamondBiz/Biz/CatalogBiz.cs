@@ -25,11 +25,11 @@ namespace DiamondBiz.Biz
                 throw ex;
             }
         }
-        public dsCatalog DoSearchByType(string prefix, int mode)
+        public dsCatalog DoSearchByCode(string code, int mode)
         {
             try
             {
-                return dal.DoSearchByType(prefix, mode);
+                return dal.DoSearchByCode(code, mode);
             }
             catch (Exception ex)
             {

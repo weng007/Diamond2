@@ -12,14 +12,14 @@ namespace DiamondDAL.DAL
         SQLHelper SQL = new SQLHelper();
         dsProductionLine ds = new dsProductionLine();
         int flag = 0;
-        public dsProductionLine DoSearchData(string OrderNo, int JewelryType, int SShop, int FactoryStatus, DateTime SOrderDate, DateTime EOrderDate)
+        public dsProductionLine DoSearchData(string OrderNo, int JewelryType, int Shop, int FactoryStatus, DateTime SOrderDate, DateTime EOrderDate)
         {
             try
             {
                 SQL.ClearParameter();
                 SQL.CreateParameter("OrderNo", OrderNo);
                 SQL.CreateParameter("JewelryType", JewelryType);
-                SQL.CreateParameter("SShop", SShop);
+                SQL.CreateParameter("Shop", Shop);
                 SQL.CreateParameter("FactoryStatus", FactoryStatus);
                 SQL.CreateParameter("SOrderDate", SOrderDate);
                 SQL.CreateParameter("EOrderDate", EOrderDate);

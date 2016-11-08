@@ -166,6 +166,8 @@ namespace DiamondShop
                 {
                     gridWarning.Rows[e.RowIndex].Cells["IsRead"].Value = imageList1.Images[0];
                 }
+
+                CheckUnReadMessage();
             }           
         }
         private void SetGridimage()

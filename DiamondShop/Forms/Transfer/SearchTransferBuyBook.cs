@@ -12,11 +12,13 @@ using DiamondDS;
 
 namespace DiamondShop
 {
-    public partial class TransferBuyBookDetail : FormList
-    {
-        int shop;
+    public partial class SearchTransferBuyBook : FormList
+    { 
         public int refID1 = 0;
-        public TransferBuyBookDetail()
+        public string tmpCode = "";
+        public string idSelected = "";
+
+        public SearchTransferBuyBook()
         {
             InitializeComponent();
             Initial();
@@ -33,6 +35,7 @@ namespace DiamondShop
                 new { Text = "BuyBookGemstoneCer", Value = "2" },
                 new { Text = "BuyBookJewelry", Value = "3" }
             };
+
             cmbBuybookType.DataSource = items;
             cmbBuybookType.SelectedIndex = 0;
 
@@ -43,8 +46,7 @@ namespace DiamondShop
         {
             ser2 = GM.GetService2();
             
-            shop = ApplicationInfo.Shop;
-            ds = ser2.DoSearchTransferBuyBook(shop, "", "", 0, 0);
+            ds = ser2.DoSearchTransferBuyBook(ApplicationInfo.Shop, "", "", 0);
 
             if (ds.Tables[0].Rows.Count > 0)
             {
@@ -52,21 +54,13 @@ namespace DiamondShop
                 gridTransferBuyBook.Refresh();
             }
             else { gridTransferBuyBook.DataSource = null; gridTransferBuyBook.Refresh(); }
-
-            //btnSearch_Click(null, null);
-        }
-        private void btnAdd_Click(object sender, EventArgs e)
-        {
-            TransferInfo frm = new TransferInfo();
-            frm.ShowDialog();
-            DoLoadData();
         }
 
         private void DoSearchData()
         {
             ser2 = GM.GetService2();
 
-            ds = ser2.DoSearchTransferBuyBook(shop, txtCode.Text, txtCode2.Text, Convert.ToInt16(cmbBuybookType.SelectedValue.ToString()),0);
+            ds = ser2.DoSearchTransferBuyBook(ApplicationInfo.Shop, txtCode.Text, txtCode2.Text, Convert.ToInt16(cmbBuybookType.SelectedValue.ToString()));
 
             if (ds.Tables[0].Rows.Count > 0)
             {
@@ -75,20 +69,38 @@ namespace DiamondShop
             }
             else { gridTransferBuyBook.DataSource = null; gridTransferBuyBook.Refresh(); }
         }
+
+        private void CheckSelected()
+        {
+            string comma = ",";
+
+            for (int i = 0; i < gridTransferBuyBook.Rows.Count; i++)
+            {
+                if (gridTransferBuyBook.Rows[i].Cells["Select"].Value != null)
+                {
+                    idSelected += gridTransferBuyBook.Rows[i].Cells["ID"].Value.ToString() + comma;
+                }
+            }
+
+            idSelected = idSelected.Remove(idSelected.Length - 1, 1);
+        }
+
+        private void btnSelect_Click(object sender, EventArgs e)
+        {
+            CheckSelected();
+
+            this.Close();
+        }
+
         private void btnSearch_Click(object sender, EventArgs e)
         {
             DoSearchData();
         }
 
-        protected override bool DoDeleteData()
+        private void gridTransferBuyBook_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            return chkFlag;
-        }
-
-        private void gridSetting_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-
             refID1 = (int)gridTransferBuyBook.SelectedRows[0].Cells["ID"].Value;
+            tmpCode = gridTransferBuyBook.SelectedRows[0].Cells["Code"].Value.ToString();
             this.Close();
         }
 

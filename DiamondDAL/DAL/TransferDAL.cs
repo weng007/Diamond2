@@ -98,5 +98,19 @@ namespace DiamondDAL.DAL
 
             return Convert.ToBoolean(flag);
         }
+
+        public int UpdateTransferReceive(int id)
+        {
+            try
+            {
+                flag = SQL.ExecuteSP("SP_UpdateTransferReceive");
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return flag;
+        }
     }
 }

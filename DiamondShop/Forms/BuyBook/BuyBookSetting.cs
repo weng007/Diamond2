@@ -17,7 +17,7 @@ namespace DiamondShop
     public partial class BuyBookSetting : FormInfo
     {
         dsBuyBookSetting tds = new dsBuyBookSetting();
-        dsBuyBookSettingDetail tds2 = new dsBuyBookSettingDetail();
+        DiamondDS.DS.dsBuyBookSettingDetail tds2 = new DiamondDS.DS.dsBuyBookSettingDetail();
         bool isAuthorize = false;
         Service2 ser1;
         DataSet ds2 = new DataSet();

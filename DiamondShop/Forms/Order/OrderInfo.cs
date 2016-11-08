@@ -15,7 +15,6 @@ using System.Data.OleDb;
 using System.Data.SqlClient;
 using DiamondShop.DiamondService1;
 
-
 namespace DiamondShop
 {
     public partial class OrderInfo : FormInfo
@@ -91,7 +90,7 @@ namespace DiamondShop
             cmbSeller.SelectedIndex = ds.Tables[0].Rows.Count - 1;
             cmbSeller.Refresh();
 
-            cmbQuality.DataSource = (GM.GetMasterTableDetail("C025")).Tables[0];
+            cmbQuality.DataSource = (GM.GetMasterTableDetail("C031")).Tables[0];
             cmbQuality.ValueMember = "ID";
             cmbQuality.DisplayMember = "Detail";
             cmbQuality.Refresh();
@@ -117,6 +116,7 @@ namespace DiamondShop
             cmbShop2.Refresh();
 
             dtOrderDate.Select();
+            txtShop.Text = ApplicationInfo.ShopName;
 
             //SetFieldService.SetRequireField(txtWeight, txtPrice, txtRap, txtUSDRate);
         }
@@ -129,15 +129,16 @@ namespace DiamondShop
             binder.BindControl(cmbJewelryType, "JewelryType");
             binder.BindControl(cmbMaterial, "Material");
             binder.BindControl(cmbQuality, "Quality");
+            binder.BindControl(txtShop, "ShopName");
             binder.BindControl(cmbSeller, "Seller");
             binder.BindControl(txtSize, "Size");
             binder.BindControl(txtCoating, "Coating");
             binder.BindControl(txtLaser, "Laser");
             binder.BindControl(txtOldBody, "OldBody");
             binder.BindControl(dtReceiveDate, "ReceiveDate");
-            binder.BindControl(cmbShop1, "Shop");
+            binder.BindControl(cmbShop1, "Shop1");
             binder.BindControl(dtOrderDate, "OrderDate");
-            binder.BindControl(cmbShop2, "Shop1");
+            binder.BindControl(cmbShop2, "Shop2");
             binder.BindControl(txtCustNote, "CustomerNote");
             binder.BindControl(txtImageNote, "ImageNote");
             binder.BindControl(txtNote, "Things");
@@ -148,6 +149,8 @@ namespace DiamondShop
             binder.BindControl(txtNote3, "Note3");
             binder.BindControl(txtPrice, "Price");
             binder.BindControl(txtPaid, "Paid");
+            binder.BindControl(txtMountingDate, "MountingDate");
+            binder.BindControl(txtJobDoneDate, "JobDoneDate");
         }
 
         protected override void LoadData()
@@ -199,13 +202,11 @@ namespace DiamondShop
                 }
                 if (tds.Order[0].RefID > 0)
                 {
-                    linkLabel1.Text = tds.Order[0].Code1;
-                    
+                    linkLabel1.Text = tds.Order[0].Code1;                   
                 }
                 if (tds.Order[0].RefID1 > 0)
                 {
                     linkLabel2.Text = tds.Order[0].Code2;
-
                 }
                 
                 InvID = tds.Order[0].RefID;
@@ -238,21 +239,9 @@ namespace DiamondShop
                     txtNote.Text = materail;
                 }
               }
-                if (ApplicationInfo.Shop == 232)// 232 = Factory
-                {
-                    FactoryStatus = tds.Order[0].FactoryStatus;
-                    
-                    if (FactoryStatus != 218)// Processing
-                    {
-                        btnPrint.Visible = true;
-                        btnInventory.Visible = true;
-                    }
-                    if (FactoryStatus == 218)// Not yet
-                    {
-                        btnConfirm.Visible = true;
-                    }
-                
-            }
+
+            SetMode();
+
             if(tds.Order[0].FactoryStatus == 219)
             {
                 btnNotYet.Enabled = false;
@@ -325,7 +314,6 @@ namespace DiamondShop
                 {
                     row.OrderNo = GM.GetRunningNumber("ORD");
                     row.FactoryStatus = 218; //Not Yet
-                    row.SShop = ApplicationInfo.Shop; // Shop ต้นทาง
                     SetCreateBy(row);
                     chkFlag = ser.DoInsertData("Order", tds, 0);
                 }
@@ -436,9 +424,7 @@ namespace DiamondShop
             txtPrice.Text = GM.ConvertDoubleToString(txtPrice, 0);
             txtPaid.Text = GM.ConvertDoubleToString(txtPaid, 0);
         }
-        private void linkFile_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-        }
+
         private void SetControlEnable(bool status)
         {
             txtCustomer.Enabled = status;
@@ -511,6 +497,7 @@ namespace DiamondShop
             SaveData();
             btnPrint.Visible = true;
             btnInventory.Visible = true;
+            btnDiamond.Enabled = true;
         }
 
         private void btnRefDel_Click(object sender, EventArgs e)
@@ -649,6 +636,49 @@ namespace DiamondShop
         {
             txtAppointDate.Text = monthCalendar1.SelectionRange.Start.ToShortDateString();
             monthCalendar1.Visible = false;
+        }
+
+        private void SetMode()
+        {
+            if (ApplicationInfo.Shop == 232)// 232 = Factory
+            {
+                FactoryStatus = tds.Order[0].FactoryStatus;
+
+                if (FactoryStatus != 218)// Processing
+                {
+                    btnPrint.Visible = true;
+                    btnInventory.Visible = true;
+                }
+                if (FactoryStatus == 218)// Not yet
+                {
+                    btnConfirm.Visible = true;
+                }
+            }
+            else
+            {
+                dtOrderDate.Enabled = false;
+                txtCustomer.Enabled = false;
+                cmbJewelryType.Enabled = false;
+                cmbMaterial.Enabled = false;
+                cmbQuality.Enabled = false;
+                cmbSeller.Enabled = false;
+                txtSize.Enabled = false;
+                txtCoating.Enabled = false;
+                txtLaser.Enabled = false;
+                txtOldBody.Enabled = false;
+                txtPaid.Enabled = false;
+                dtReceiveDate.Enabled = false;
+                cmbShop1.Enabled = false;
+                txtAppointDate.Enabled = false;
+                cmbShop2.Enabled = false;
+
+                groupBox1.Enabled = false;
+                groupBox2.Enabled = false;
+                txtNote.Enabled = false;
+                txtCustNote.Enabled = false;
+                btnDiamond.Enabled = false;
+                txtImageNote.Enabled = false;             
+            }
         }
     }
 }

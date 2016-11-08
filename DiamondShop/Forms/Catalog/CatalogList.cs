@@ -56,7 +56,7 @@ namespace DiamondShop
 
         protected override void DoLoadData()
         {
-            ds = ser2.DoSearchCatalogByType(txtPrefix.Text, mode);
+            ds = ser2.DoSearchCatalogByCode(txtPrefix.Text + txtCode.Text, mode);
 
             if (ds.Tables[0].Rows.Count > 0)
             {

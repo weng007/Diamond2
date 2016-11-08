@@ -61,7 +61,7 @@
             this.SendDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ReceiveDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TransferStatusName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SShopName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EShopName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -94,7 +94,7 @@
             this.panel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.panel4.Location = new System.Drawing.Point(0, 1);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1334, 144);
+            this.panel4.Size = new System.Drawing.Size(1083, 151);
             this.panel4.TabIndex = 42;
             // 
             // cmbSender
@@ -108,7 +108,7 @@
             // cmbEShop
             // 
             this.cmbEShop.FormattingEnabled = true;
-            this.cmbEShop.Location = new System.Drawing.Point(541, 60);
+            this.cmbEShop.Location = new System.Drawing.Point(556, 51);
             this.cmbEShop.Name = "cmbEShop";
             this.cmbEShop.Size = new System.Drawing.Size(172, 28);
             this.cmbEShop.TabIndex = 89;
@@ -117,7 +117,7 @@
             // 
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(421, 63);
+            this.label9.Location = new System.Drawing.Point(436, 54);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(118, 26);
             this.label9.TabIndex = 90;
@@ -126,7 +126,7 @@
             // cmbShop
             // 
             this.cmbShop.FormattingEnabled = true;
-            this.cmbShop.Location = new System.Drawing.Point(228, 60);
+            this.cmbShop.Location = new System.Drawing.Point(556, 16);
             this.cmbShop.Name = "cmbShop";
             this.cmbShop.Size = new System.Drawing.Size(172, 28);
             this.cmbShop.TabIndex = 87;
@@ -135,7 +135,7 @@
             // 
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(108, 63);
+            this.label8.Location = new System.Drawing.Point(436, 22);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(118, 26);
             this.label8.TabIndex = 88;
@@ -145,7 +145,7 @@
             // 
             this.dtEReceiveDate.CustomFormat = "dd/MM/yyyy";
             this.dtEReceiveDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtEReceiveDate.Location = new System.Drawing.Point(825, 106);
+            this.dtEReceiveDate.Location = new System.Drawing.Point(384, 121);
             this.dtEReceiveDate.Name = "dtEReceiveDate";
             this.dtEReceiveDate.Size = new System.Drawing.Size(131, 26);
             this.dtEReceiveDate.TabIndex = 84;
@@ -154,7 +154,7 @@
             // 
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(806, 106);
+            this.label2.Location = new System.Drawing.Point(365, 121);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(16, 25);
             this.label2.TabIndex = 86;
@@ -164,9 +164,9 @@
             // 
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(538, 106);
+            this.label1.Location = new System.Drawing.Point(108, 126);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(124, 25);
+            this.label1.Size = new System.Drawing.Size(106, 25);
             this.label1.TabIndex = 85;
             this.label1.Text = "Receive Date";
             // 
@@ -174,7 +174,7 @@
             // 
             this.dtSReceiveDate.CustomFormat = "dd/MM/yyyy";
             this.dtSReceiveDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtSReceiveDate.Location = new System.Drawing.Point(669, 106);
+            this.dtSReceiveDate.Location = new System.Drawing.Point(228, 121);
             this.dtSReceiveDate.Name = "dtSReceiveDate";
             this.dtSReceiveDate.Size = new System.Drawing.Size(131, 26);
             this.dtSReceiveDate.TabIndex = 83;
@@ -183,7 +183,7 @@
             // 
             this.dtESendDate.CustomFormat = "dd/MM/yyyy";
             this.dtESendDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtESendDate.Location = new System.Drawing.Point(383, 106);
+            this.dtESendDate.Location = new System.Drawing.Point(384, 89);
             this.dtESendDate.Name = "dtESendDate";
             this.dtESendDate.Size = new System.Drawing.Size(131, 26);
             this.dtESendDate.TabIndex = 80;
@@ -192,7 +192,7 @@
             // 
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(364, 106);
+            this.label6.Location = new System.Drawing.Point(365, 89);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(16, 25);
             this.label6.TabIndex = 82;
@@ -202,7 +202,7 @@
             // 
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(108, 106);
+            this.label7.Location = new System.Drawing.Point(108, 94);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(98, 25);
             this.label7.TabIndex = 81;
@@ -212,7 +212,7 @@
             // 
             this.dtSSendDate.CustomFormat = "dd/MM/yyyy";
             this.dtSSendDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtSSendDate.Location = new System.Drawing.Point(227, 106);
+            this.dtSSendDate.Location = new System.Drawing.Point(228, 89);
             this.dtSSendDate.Name = "dtSSendDate";
             this.dtSSendDate.Size = new System.Drawing.Size(131, 26);
             this.dtSSendDate.TabIndex = 79;
@@ -220,7 +220,7 @@
             // cmbTransferStatus
             // 
             this.cmbTransferStatus.FormattingEnabled = true;
-            this.cmbTransferStatus.Location = new System.Drawing.Point(875, 15);
+            this.cmbTransferStatus.Location = new System.Drawing.Point(896, 16);
             this.cmbTransferStatus.Name = "cmbTransferStatus";
             this.cmbTransferStatus.Size = new System.Drawing.Size(172, 28);
             this.cmbTransferStatus.TabIndex = 77;
@@ -229,16 +229,16 @@
             // 
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(734, 18);
+            this.label3.Location = new System.Drawing.Point(765, 19);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(136, 26);
+            this.label3.Size = new System.Drawing.Size(128, 26);
             this.label3.TabIndex = 78;
             this.label3.Text = "Transfer Status";
             // 
             // cmbReceiver
             // 
             this.cmbReceiver.FormattingEnabled = true;
-            this.cmbReceiver.Location = new System.Drawing.Point(541, 16);
+            this.cmbReceiver.Location = new System.Drawing.Point(228, 53);
             this.cmbReceiver.Name = "cmbReceiver";
             this.cmbReceiver.Size = new System.Drawing.Size(172, 28);
             this.cmbReceiver.TabIndex = 74;
@@ -247,7 +247,7 @@
             // 
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(421, 19);
+            this.label4.Location = new System.Drawing.Point(108, 56);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(80, 26);
             this.label4.TabIndex = 76;
@@ -287,7 +287,7 @@
             this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSearch.FlatAppearance.BorderColor = System.Drawing.Color.Linen;
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.Location = new System.Drawing.Point(990, 101);
+            this.btnSearch.Location = new System.Drawing.Point(623, 115);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(105, 32);
             this.btnSearch.TabIndex = 12;
@@ -299,9 +299,9 @@
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.gridTransferInventory);
             this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel2.Location = new System.Drawing.Point(5, 151);
+            this.panel2.Location = new System.Drawing.Point(5, 157);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1031, 414);
+            this.panel2.Size = new System.Drawing.Size(977, 396);
             this.panel2.TabIndex = 33;
             // 
             // gridTransferInventory
@@ -319,17 +319,17 @@
             this.SendDate,
             this.ReceiveDate,
             this.TransferStatusName,
-            this.SShopName});
-            this.gridTransferInventory.Location = new System.Drawing.Point(15, 8);
+            this.EShopName});
+            this.gridTransferInventory.Location = new System.Drawing.Point(15, 3);
             this.gridTransferInventory.Name = "gridTransferInventory";
             this.gridTransferInventory.ReadOnly = true;
             this.gridTransferInventory.RowHeadersWidth = 10;
             this.gridTransferInventory.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridTransferInventory.RowTemplate.Height = 30;
             this.gridTransferInventory.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridTransferInventory.Size = new System.Drawing.Size(945, 395);
+            this.gridTransferInventory.Size = new System.Drawing.Size(945, 390);
             this.gridTransferInventory.TabIndex = 2;
-            this.gridTransferInventory.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.gridSetting_MouseDoubleClick);
+            this.gridTransferInventory.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.gridTransferInventory_MouseDoubleClick);
             // 
             // RowNum
             // 
@@ -387,20 +387,20 @@
             this.TransferStatusName.ReadOnly = true;
             this.TransferStatusName.Width = 150;
             // 
-            // SShopName
+            // EShopName
             // 
-            this.SShopName.DataPropertyName = "SShopName";
-            this.SShopName.HeaderText = "Shop";
-            this.SShopName.Name = "SShopName";
-            this.SShopName.ReadOnly = true;
-            this.SShopName.Width = 120;
+            this.EShopName.DataPropertyName = "EShopName";
+            this.EShopName.HeaderText = "End Location";
+            this.EShopName.Name = "EShopName";
+            this.EShopName.ReadOnly = true;
+            this.EShopName.Width = 140;
             // 
             // TransferInventoryList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(91)))), ((int)(((byte)(59)))));
-            this.ClientSize = new System.Drawing.Size(1335, 577);
+            this.ClientSize = new System.Drawing.Size(1087, 565);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
             this.Name = "TransferInventoryList";
@@ -443,6 +443,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn SendDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn ReceiveDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn TransferStatusName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SShopName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EShopName;
     }
 }

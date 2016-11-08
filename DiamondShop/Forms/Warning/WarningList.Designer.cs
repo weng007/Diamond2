@@ -30,15 +30,28 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WarningList));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.imageList2 = new System.Windows.Forms.ImageList(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
             this.gridWarning = new System.Windows.Forms.DataGridView();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.dtEEditDate = new System.Windows.Forms.DateTimePicker();
+            this.label8 = new System.Windows.Forms.Label();
+            this.dtSEditDate = new System.Windows.Forms.DateTimePicker();
+            this.btnSendBox = new System.Windows.Forms.Button();
+            this.btnInbox = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtRefID = new System.Windows.Forms.TextBox();
+            this.cmbStatusType = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.tds = new DiamondDS.DS.dsWarning();
             this.IsRead = new System.Windows.Forms.DataGridViewImageColumn();
             this.RowNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,19 +67,6 @@
             this.StatusType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MessageStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.OrderNo = new System.Windows.Forms.DataGridViewLinkColumn();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.dtEEditDate = new System.Windows.Forms.DateTimePicker();
-            this.label8 = new System.Windows.Forms.Label();
-            this.dtSEditDate = new System.Windows.Forms.DateTimePicker();
-            this.btnSendBox = new System.Windows.Forms.Button();
-            this.btnInbox = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtRefID = new System.Windows.Forms.TextBox();
-            this.cmbStatusType = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btnSearch = new System.Windows.Forms.Button();
-            this.tds = new DiamondDS.DS.dsWarning();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridWarning)).BeginInit();
@@ -112,14 +112,14 @@
             this.gridWarning.AllowUserToOrderColumns = true;
             this.gridWarning.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.gridWarning.BackgroundColor = System.Drawing.SystemColors.ControlLight;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridWarning.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridWarning.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.gridWarning.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridWarning.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IsRead,
@@ -149,12 +149,160 @@
             this.gridWarning.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridWarning_CellClick);
             this.gridWarning.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.gridWarning_DataError);
             // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.IndianRed;
+            this.panel4.Controls.Add(this.label3);
+            this.panel4.Controls.Add(this.dtEEditDate);
+            this.panel4.Controls.Add(this.label8);
+            this.panel4.Controls.Add(this.dtSEditDate);
+            this.panel4.Controls.Add(this.btnSendBox);
+            this.panel4.Controls.Add(this.btnInbox);
+            this.panel4.Controls.Add(this.label1);
+            this.panel4.Controls.Add(this.txtRefID);
+            this.panel4.Controls.Add(this.cmbStatusType);
+            this.panel4.Controls.Add(this.label2);
+            this.panel4.Controls.Add(this.btnSearch);
+            this.panel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel4.Location = new System.Drawing.Point(-1, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1322, 117);
+            this.panel4.TabIndex = 44;
+            // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(534, 31);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(56, 26);
+            this.label3.TabIndex = 94;
+            this.label3.Text = "Date";
+            // 
+            // dtEEditDate
+            // 
+            this.dtEEditDate.CustomFormat = "dd/MM/yyyy";
+            this.dtEEditDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtEEditDate.Location = new System.Drawing.Point(752, 30);
+            this.dtEEditDate.Name = "dtEEditDate";
+            this.dtEEditDate.Size = new System.Drawing.Size(131, 26);
+            this.dtEEditDate.TabIndex = 92;
+            // 
+            // label8
+            // 
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(733, 30);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(16, 25);
+            this.label8.TabIndex = 93;
+            this.label8.Text = "-";
+            // 
+            // dtSEditDate
+            // 
+            this.dtSEditDate.CustomFormat = "dd/MM/yyyy";
+            this.dtSEditDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtSEditDate.Location = new System.Drawing.Point(596, 30);
+            this.dtSEditDate.Name = "dtSEditDate";
+            this.dtSEditDate.Size = new System.Drawing.Size(131, 26);
+            this.dtSEditDate.TabIndex = 91;
+            // 
+            // btnSendBox
+            // 
+            this.btnSendBox.BackColor = System.Drawing.Color.Transparent;
+            this.btnSendBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnSendBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSendBox.FlatAppearance.BorderColor = System.Drawing.Color.Linen;
+            this.btnSendBox.FlatAppearance.BorderSize = 0;
+            this.btnSendBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSendBox.Image = ((System.Drawing.Image)(resources.GetObject("btnSendBox.Image")));
+            this.btnSendBox.Location = new System.Drawing.Point(108, 19);
+            this.btnSendBox.Name = "btnSendBox";
+            this.btnSendBox.Size = new System.Drawing.Size(70, 90);
+            this.btnSendBox.TabIndex = 78;
+            this.btnSendBox.UseVisualStyleBackColor = false;
+            this.btnSendBox.Click += new System.EventHandler(this.btnSendBox_Click);
+            // 
+            // btnInbox
+            // 
+            this.btnInbox.BackColor = System.Drawing.Color.OldLace;
+            this.btnInbox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnInbox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnInbox.FlatAppearance.BorderColor = System.Drawing.Color.Linen;
+            this.btnInbox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInbox.Font = new System.Drawing.Font("Angsana New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInbox.Image = ((System.Drawing.Image)(resources.GetObject("btnInbox.Image")));
+            this.btnInbox.Location = new System.Drawing.Point(20, 19);
+            this.btnInbox.Margin = new System.Windows.Forms.Padding(0);
+            this.btnInbox.Name = "btnInbox";
+            this.btnInbox.Size = new System.Drawing.Size(70, 90);
+            this.btnInbox.TabIndex = 77;
+            this.btnInbox.Text = "UnRead()";
+            this.btnInbox.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnInbox.UseVisualStyleBackColor = false;
+            this.btnInbox.Click += new System.EventHandler(this.btnInbox_Click);
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(271, 33);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(56, 26);
+            this.label1.TabIndex = 76;
+            this.label1.Text = "RefID";
+            // 
+            // txtRefID
+            // 
+            this.txtRefID.Location = new System.Drawing.Point(333, 30);
+            this.txtRefID.Name = "txtRefID";
+            this.txtRefID.Size = new System.Drawing.Size(172, 26);
+            this.txtRefID.TabIndex = 75;
+            // 
+            // cmbStatusType
+            // 
+            this.cmbStatusType.FormattingEnabled = true;
+            this.cmbStatusType.Location = new System.Drawing.Point(333, 70);
+            this.cmbStatusType.Name = "cmbStatusType";
+            this.cmbStatusType.Size = new System.Drawing.Size(172, 28);
+            this.cmbStatusType.TabIndex = 73;
+            // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(213, 73);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(118, 26);
+            this.label2.TabIndex = 74;
+            this.label2.Text = "Message Jobs";
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.BackColor = System.Drawing.Color.PaleGoldenrod;
+            this.btnSearch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSearch.BackgroundImage")));
+            this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSearch.FlatAppearance.BorderColor = System.Drawing.Color.Linen;
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearch.Location = new System.Drawing.Point(596, 70);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(105, 32);
+            this.btnSearch.TabIndex = 8;
+            this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // tds
+            // 
+            this.tds.DataSetName = "dsWarning";
+            this.tds.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // IsRead
             // 
             this.IsRead.DataPropertyName = "IsRead";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.NullValue = "System.Drawing.Bitmap";
-            this.IsRead.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.NullValue = "System.Drawing.Bitmap";
+            this.IsRead.DefaultCellStyle = dataGridViewCellStyle6;
             this.IsRead.HeaderText = "";
             this.IsRead.Name = "IsRead";
             this.IsRead.ReadOnly = true;
@@ -164,8 +312,8 @@
             // RowNum
             // 
             this.RowNum.DataPropertyName = "RowNum";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.RowNum.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.RowNum.DefaultCellStyle = dataGridViewCellStyle7;
             this.RowNum.HeaderText = "No.";
             this.RowNum.Name = "RowNum";
             this.RowNum.ReadOnly = true;
@@ -214,9 +362,8 @@
             // SShopName
             // 
             this.SShopName.DataPropertyName = "SShopName";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
-            dataGridViewCellStyle4.Format = "N0";
-            this.SShopName.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.Format = "N0";
+            this.SShopName.DefaultCellStyle = dataGridViewCellStyle8;
             this.SShopName.HeaderText = "Location (From)";
             this.SShopName.Name = "SShopName";
             this.SShopName.ReadOnly = true;
@@ -282,154 +429,6 @@
             this.OrderNo.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.OrderNo.VisitedLinkColor = System.Drawing.Color.Gray;
             this.OrderNo.Width = 150;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.IndianRed;
-            this.panel4.Controls.Add(this.label3);
-            this.panel4.Controls.Add(this.dtEEditDate);
-            this.panel4.Controls.Add(this.label8);
-            this.panel4.Controls.Add(this.dtSEditDate);
-            this.panel4.Controls.Add(this.btnSendBox);
-            this.panel4.Controls.Add(this.btnInbox);
-            this.panel4.Controls.Add(this.label1);
-            this.panel4.Controls.Add(this.txtRefID);
-            this.panel4.Controls.Add(this.cmbStatusType);
-            this.panel4.Controls.Add(this.label2);
-            this.panel4.Controls.Add(this.btnSearch);
-            this.panel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel4.Location = new System.Drawing.Point(-1, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1322, 117);
-            this.panel4.TabIndex = 44;
-            // 
-            // label3
-            // 
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(557, 31);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(56, 26);
-            this.label3.TabIndex = 94;
-            this.label3.Text = "Date";
-            // 
-            // dtEEditDate
-            // 
-            this.dtEEditDate.CustomFormat = "dd/MM/yyyy";
-            this.dtEEditDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtEEditDate.Location = new System.Drawing.Point(775, 30);
-            this.dtEEditDate.Name = "dtEEditDate";
-            this.dtEEditDate.Size = new System.Drawing.Size(131, 26);
-            this.dtEEditDate.TabIndex = 92;
-            // 
-            // label8
-            // 
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(756, 30);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(16, 25);
-            this.label8.TabIndex = 93;
-            this.label8.Text = "-";
-            // 
-            // dtSEditDate
-            // 
-            this.dtSEditDate.CustomFormat = "dd/MM/yyyy";
-            this.dtSEditDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtSEditDate.Location = new System.Drawing.Point(619, 30);
-            this.dtSEditDate.Name = "dtSEditDate";
-            this.dtSEditDate.Size = new System.Drawing.Size(131, 26);
-            this.dtSEditDate.TabIndex = 91;
-            // 
-            // btnSendBox
-            // 
-            this.btnSendBox.BackColor = System.Drawing.Color.Transparent;
-            this.btnSendBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnSendBox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSendBox.FlatAppearance.BorderColor = System.Drawing.Color.Linen;
-            this.btnSendBox.FlatAppearance.BorderSize = 0;
-            this.btnSendBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSendBox.Image = ((System.Drawing.Image)(resources.GetObject("btnSendBox.Image")));
-            this.btnSendBox.Location = new System.Drawing.Point(108, 19);
-            this.btnSendBox.Name = "btnSendBox";
-            this.btnSendBox.Size = new System.Drawing.Size(70, 90);
-            this.btnSendBox.TabIndex = 78;
-            this.btnSendBox.UseVisualStyleBackColor = false;
-            this.btnSendBox.Click += new System.EventHandler(this.btnSendBox_Click);
-            // 
-            // btnInbox
-            // 
-            this.btnInbox.BackColor = System.Drawing.Color.OldLace;
-            this.btnInbox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnInbox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnInbox.FlatAppearance.BorderColor = System.Drawing.Color.Linen;
-            this.btnInbox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInbox.Font = new System.Drawing.Font("Angsana New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInbox.Image = ((System.Drawing.Image)(resources.GetObject("btnInbox.Image")));
-            this.btnInbox.Location = new System.Drawing.Point(20, 19);
-            this.btnInbox.Margin = new System.Windows.Forms.Padding(0);
-            this.btnInbox.Name = "btnInbox";
-            this.btnInbox.Size = new System.Drawing.Size(70, 90);
-            this.btnInbox.TabIndex = 77;
-            this.btnInbox.Text = "UnRead()";
-            this.btnInbox.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnInbox.UseVisualStyleBackColor = false;
-            this.btnInbox.Click += new System.EventHandler(this.btnInbox_Click);
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(283, 33);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 26);
-            this.label1.TabIndex = 76;
-            this.label1.Text = "RefID";
-            // 
-            // txtRefID
-            // 
-            this.txtRefID.Location = new System.Drawing.Point(345, 30);
-            this.txtRefID.Name = "txtRefID";
-            this.txtRefID.Size = new System.Drawing.Size(172, 26);
-            this.txtRefID.TabIndex = 75;
-            // 
-            // cmbStatusType
-            // 
-            this.cmbStatusType.FormattingEnabled = true;
-            this.cmbStatusType.Location = new System.Drawing.Point(345, 70);
-            this.cmbStatusType.Name = "cmbStatusType";
-            this.cmbStatusType.Size = new System.Drawing.Size(172, 28);
-            this.cmbStatusType.TabIndex = 73;
-            // 
-            // label2
-            // 
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(225, 73);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(118, 26);
-            this.label2.TabIndex = 74;
-            this.label2.Text = "Message Jobs";
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.BackColor = System.Drawing.Color.PaleGoldenrod;
-            this.btnSearch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSearch.BackgroundImage")));
-            this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSearch.FlatAppearance.BorderColor = System.Drawing.Color.Linen;
-            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.Location = new System.Drawing.Point(619, 70);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(105, 32);
-            this.btnSearch.TabIndex = 8;
-            this.btnSearch.UseVisualStyleBackColor = false;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
-            // 
-            // tds
-            // 
-            this.tds.DataSetName = "dsWarning";
-            this.tds.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // WarningList
             // 

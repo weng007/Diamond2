@@ -90,20 +90,21 @@ namespace DiamondShop
                     }
                     if (i == 6)
                     {
-                        btnShop7.Visible = true;
-                        Shop7.Visible = true;
-                        Shop7.Text = ds.Tables[0].Rows[6][1].ToString();
-
-                        btnShop7.Enabled = CheckShopAuthorized(Shop7.Text);
-                    }
-                    if (i == 7)
-                    {
                         btnFactory.Visible = true;
                         lblFactory.Visible = false;
-                        lblFactory.Text = ds.Tables[0].Rows[7][1].ToString();
+                        lblFactory.Text = ds.Tables[0].Rows[6][1].ToString();
 
                         btnFactory.Enabled = CheckShopAuthorized(lblFactory.Text);
                     }
+                    if (i == 7)
+                    {
+                        btnShop8.Visible = true;
+                        Shop8.Visible = true;
+                        Shop8.Text = ds.Tables[0].Rows[7][1].ToString();
+
+                        btnShop8.Enabled = CheckShopAuthorized(Shop8.Text);
+                    }
+                   
                 }
             }
         }

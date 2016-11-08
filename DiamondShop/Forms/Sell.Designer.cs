@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Sell));
             this.btnImage1 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.cmbShop = new System.Windows.Forms.ComboBox();
+            this.label16 = new System.Windows.Forms.Label();
             this.btnAvailable = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.txtStatus = new System.Windows.Forms.TextBox();
@@ -75,8 +77,6 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.cmbShop = new System.Windows.Forms.ComboBox();
-            this.label16 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -149,6 +149,23 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(943, 651);
             this.panel3.TabIndex = 1;
+            // 
+            // cmbShop
+            // 
+            this.cmbShop.Enabled = false;
+            this.cmbShop.FormattingEnabled = true;
+            this.cmbShop.Location = new System.Drawing.Point(513, 240);
+            this.cmbShop.Name = "cmbShop";
+            this.cmbShop.Size = new System.Drawing.Size(167, 28);
+            this.cmbShop.TabIndex = 199;
+            // 
+            // label16
+            // 
+            this.label16.Location = new System.Drawing.Point(420, 243);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(71, 28);
+            this.label16.TabIndex = 200;
+            this.label16.Text = "Location";
             // 
             // btnAvailable
             // 
@@ -597,23 +614,6 @@
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // cmbShop
-            // 
-            this.cmbShop.Enabled = false;
-            this.cmbShop.FormattingEnabled = true;
-            this.cmbShop.Location = new System.Drawing.Point(513, 240);
-            this.cmbShop.Name = "cmbShop";
-            this.cmbShop.Size = new System.Drawing.Size(167, 28);
-            this.cmbShop.TabIndex = 199;
-            // 
-            // label16
-            // 
-            this.label16.Location = new System.Drawing.Point(420, 243);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(71, 28);
-            this.label16.TabIndex = 200;
-            this.label16.Text = "Location";
             // 
             // Sell
             // 

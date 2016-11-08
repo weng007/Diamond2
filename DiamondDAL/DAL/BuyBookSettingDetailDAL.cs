@@ -93,5 +93,21 @@ namespace DiamondDAL.DAL
 
             return Convert.ToBoolean(flag);
         }
+
+        public dsBuyBookSettingDetail DoSearchBBSettingDetail(int mode)
+        {
+            try
+            {
+                SQL.ClearParameter();
+                SQL.CreateParameter("Mode", mode);
+                SQL.FillDataSetBySP("SP_SearchBBSettingDetail", ds.BBSettingDetail);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return ds;
+        }
     }
 }

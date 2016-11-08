@@ -132,7 +132,7 @@ namespace DiamondShop
         }
         private void buyBookToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            TransferList frm = new TransferList();
+            TransferBuyBookList frm = new TransferBuyBookList();
             SetFormList(frm, 19, "Transfer");
         }
         private void orderJewelryToolStripMenuItem_Click(object sender, EventArgs e)
@@ -310,22 +310,22 @@ namespace DiamondShop
                 btnAccounting.Visible = true;
                 btnReport.Visible = true;
 
-                //สิทธิ์ Sub Menu ภายใน
-                if (ApplicationInfo.Shop != 209)// Office ใช้เท่านั้น
-                {
-                    mnBBCD.Enabled = false;
-                    mnBBCG.Enabled = false;
-                    mnBBJW.Enabled = false;
-                    mnBBNCD.Enabled = false;
-                    mnBBNCG.Enabled = false;
-                    mnBBG.Enabled = false;
-                    mnBBST.Enabled = false;
-                    mnBBETC.Enabled = false;
-                }
-                if(ApplicationInfo.Shop == 232)// Factory ซื้อทองได้
-                {
-                    mnBBG.Enabled = true;
-                }
+                ////สิทธิ์ Sub Menu ภายใน
+                //if (ApplicationInfo.Shop != 209)// Office ใช้เท่านั้น
+                //{
+                //    mnBBCD.Enabled = false;
+                //    mnBBCG.Enabled = false;
+                //    mnBBJW.Enabled = false;
+                //    mnBBNCD.Enabled = false;
+                //    mnBBNCG.Enabled = false;
+                //    mnBBG.Enabled = false;
+                //    mnBBST.Enabled = false;
+                //    mnBBETC.Enabled = false;
+                //}
+                //if(ApplicationInfo.Shop == 232)// Factory ซื้อทองได้
+                //{
+                //    mnBBG.Enabled = true;
+                //}
             }         
         }
 

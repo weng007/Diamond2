@@ -44,27 +44,27 @@
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.cmbFactoryStatus);
             this.panel3.Controls.Add(this.label23);
-            this.panel3.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.panel3.Location = new System.Drawing.Point(12, 74);
+            this.panel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.panel3.Location = new System.Drawing.Point(6, 71);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(438, 102);
+            this.panel3.Size = new System.Drawing.Size(438, 81);
             this.panel3.TabIndex = 74;
             // 
             // cmbFactoryStatus
             // 
             this.cmbFactoryStatus.FormattingEnabled = true;
-            this.cmbFactoryStatus.Location = new System.Drawing.Point(176, 35);
+            this.cmbFactoryStatus.Location = new System.Drawing.Point(156, 26);
             this.cmbFactoryStatus.Name = "cmbFactoryStatus";
-            this.cmbFactoryStatus.Size = new System.Drawing.Size(207, 29);
+            this.cmbFactoryStatus.Size = new System.Drawing.Size(207, 28);
             this.cmbFactoryStatus.TabIndex = 221;
             // 
             // label23
             // 
             this.label23.AutoSize = true;
             this.label23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label23.Location = new System.Drawing.Point(48, 38);
+            this.label23.Location = new System.Drawing.Point(28, 29);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(122, 21);
+            this.label23.Size = new System.Drawing.Size(113, 20);
             this.label23.TabIndex = 160;
             this.label23.Text = "Factory Status";
             // 
@@ -93,7 +93,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(195)))), ((int)(((byte)(157)))));
-            this.ClientSize = new System.Drawing.Size(464, 188);
+            this.ClientSize = new System.Drawing.Size(451, 160);
             this.Controls.Add(this.panel3);
             this.Name = "ProductionLineInfo";
             this.Text = "DiamondCer";

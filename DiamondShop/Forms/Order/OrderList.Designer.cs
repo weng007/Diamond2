@@ -55,9 +55,9 @@
             this.JewelryTypeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SShopName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ReceiveDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ShopName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AppointDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ShopName1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AppointDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ShopName2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tds)).BeginInit();
             this.panel4.SuspendLayout();
@@ -86,7 +86,7 @@
             this.panel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1329, 160);
+            this.panel4.Size = new System.Drawing.Size(1329, 148);
             this.panel4.TabIndex = 40;
             // 
             // cmbSeller
@@ -195,9 +195,9 @@
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.gridOrder);
             this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel2.Location = new System.Drawing.Point(1, 166);
+            this.panel2.Location = new System.Drawing.Point(1, 148);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1335, 409);
+            this.panel2.Size = new System.Drawing.Size(1335, 417);
             this.panel2.TabIndex = 34;
             // 
             // gridOrder
@@ -216,9 +216,9 @@
             this.JewelryTypeName,
             this.SShopName,
             this.ReceiveDate,
-            this.ShopName,
+            this.ShopName1,
             this.AppointDate,
-            this.ShopName1});
+            this.ShopName2});
             this.gridOrder.Location = new System.Drawing.Point(15, 3);
             this.gridOrder.Name = "gridOrder";
             this.gridOrder.ReadOnly = true;
@@ -228,7 +228,7 @@
             this.gridOrder.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridOrder.RowTemplate.Height = 30;
             this.gridOrder.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridOrder.Size = new System.Drawing.Size(1313, 388);
+            this.gridOrder.Size = new System.Drawing.Size(1313, 411);
             this.gridOrder.TabIndex = 2;
             this.gridOrder.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.gridDiamondCer_MouseDoubleClick);
             // 
@@ -293,13 +293,13 @@
             this.ReceiveDate.ReadOnly = true;
             this.ReceiveDate.Width = 170;
             // 
-            // ShopName
+            // ShopName1
             // 
-            this.ShopName.DataPropertyName = "ShopName";
-            this.ShopName.HeaderText = "Location (นัดรับ)";
-            this.ShopName.Name = "ShopName";
-            this.ShopName.ReadOnly = true;
-            this.ShopName.Width = 160;
+            this.ShopName1.DataPropertyName = "ShopName1";
+            this.ShopName1.HeaderText = "Location (นัดรับ)";
+            this.ShopName1.Name = "ShopName1";
+            this.ShopName1.ReadOnly = true;
+            this.ShopName1.Width = 160;
             // 
             // AppointDate
             // 
@@ -311,16 +311,16 @@
             this.AppointDate.ReadOnly = true;
             this.AppointDate.Width = 160;
             // 
-            // ShopName1
+            // ShopName2
             // 
-            this.ShopName1.DataPropertyName = "ShopName1";
+            this.ShopName2.DataPropertyName = "ShopName2";
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
             dataGridViewCellStyle4.Format = "N2";
-            this.ShopName1.DefaultCellStyle = dataGridViewCellStyle4;
-            this.ShopName1.HeaderText = "Location (นัดดู)";
-            this.ShopName1.Name = "ShopName1";
-            this.ShopName1.ReadOnly = true;
-            this.ShopName1.Width = 160;
+            this.ShopName2.DefaultCellStyle = dataGridViewCellStyle4;
+            this.ShopName2.HeaderText = "Location (นัดดู)";
+            this.ShopName2.Name = "ShopName2";
+            this.ShopName2.ReadOnly = true;
+            this.ShopName2.Width = 160;
             // 
             // OrderList
             // 
@@ -365,8 +365,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn JewelryTypeName;
         private System.Windows.Forms.DataGridViewTextBoxColumn SShopName;
         private System.Windows.Forms.DataGridViewTextBoxColumn ReceiveDate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ShopName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn AppointDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn ShopName1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AppointDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ShopName2;
     }
 }

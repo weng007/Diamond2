@@ -43,6 +43,8 @@ namespace DiamondShop
             cmbFactoryStatus.DisplayMember = "Detail";
             cmbFactoryStatus.Refresh();
 
+            cmbShop.SelectedValue = ApplicationInfo.Shop;
+
             gridProductionLine.AutoGenerateColumns = false;
         }
 
@@ -58,10 +60,7 @@ namespace DiamondShop
             ProductionLineInfo frm = new ProductionLineInfo(idSelected, SFactoryStatus);
             frm.ShowDialog();
 
-            if (frm.isEdit)
-            {
-                DoLoadData();
-            }
+            DoLoadData();
         }
 
         private void CheckSelected()

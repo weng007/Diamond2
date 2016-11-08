@@ -218,13 +218,13 @@ namespace Diamond
         }
 
         [WebMethod]
-        public DataSet DoSearchCatalogByType(string prefix, int mode)
+        public DataSet DoSearchCatalogByCode(string code, int mode)
         {
             CatalogBiz biz = new CatalogBiz();
 
             try
             {
-                return biz.DoSearchByType(prefix, mode);
+                return biz.DoSearchByCode(code, mode);
             }
             catch (Exception ex)
             {
@@ -380,13 +380,13 @@ namespace Diamond
             }
         }
         [WebMethod]
-        public DataSet DoSearchTransferBuyBook(int shop, string code, string code2, int Flag, int ID)
+        public DataSet DoSearchTransferBuyBook(int shop, string code, string code2, int buyBookType)
         {
             TransferBuyBookBiz biz = new TransferBuyBookBiz();
 
             try
             {
-                return biz.DoSearchData(shop, code, code2, Flag,ID);
+                return biz.DoSearchData(shop, code, code2, buyBookType);
             }
             catch (Exception ex)
             {
@@ -422,13 +422,13 @@ namespace Diamond
             }
         }
         [WebMethod]
-        public DataSet DoSearchProductionLine(string OrderNo, int JewelryType, int SShop, int FactoryStatus, DateTime SOrderDate, DateTime EOrderDate)
+        public DataSet DoSearchProductionLine(string OrderNo, int JewelryType, int Shop, int FactoryStatus, DateTime SOrderDate, DateTime EOrderDate)
         {
             ProductionLineBiz biz = new ProductionLineBiz();
 
             try
             {
-                return biz.DoSearchData(OrderNo, JewelryType, SShop, FactoryStatus, SOrderDate, EOrderDate);
+                return biz.DoSearchData(OrderNo, JewelryType, Shop, FactoryStatus, SOrderDate, EOrderDate);
             }
             catch (Exception ex)
             {
@@ -485,6 +485,21 @@ namespace Diamond
             try
             {
                 return biz.DoSearchData(ReceiveNo, SReceiveDate, EReceiveDate, Receiver, Seller);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        [WebMethod]
+        public DataSet DoSearchBBSettingDetail(int mode)
+        {
+            BuyBookSettingDetailBiz biz = GM.GetBuyBookSettingDetailBiz();
+
+            try
+            {
+                return biz.DoSearchBBSettingDetail(mode);
             }
             catch (Exception ex)
             {

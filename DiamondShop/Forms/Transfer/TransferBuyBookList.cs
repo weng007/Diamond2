@@ -12,10 +12,10 @@ using DiamondDS;
 
 namespace DiamondShop
 {
-    public partial class TransferList : FormList
+    public partial class TransferBuyBookList : FormList
     {
         
-        public TransferList()
+        public TransferBuyBookList()
         {
             InitializeComponent();
             Initial();
@@ -103,7 +103,7 @@ namespace DiamondShop
             return chkFlag;
         }
 
-        private void gridSetting_MouseDoubleClick(object sender, MouseEventArgs e)
+        private void gridTransferBuyBook_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             if (gridTransfer.RowCount > 0 && gridTransfer.SelectedRows.Count > 0)
             {
