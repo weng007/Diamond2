@@ -75,7 +75,7 @@ namespace DiamondShop
         }
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            TransferInfo frm = new TransferInfo();
+            TransferBuyBook frm = new TransferBuyBook();
             frm.ShowDialog();
             DoLoadData();
         }
@@ -108,7 +108,7 @@ namespace DiamondShop
             if (gridTransfer.RowCount > 0 && gridTransfer.SelectedRows.Count > 0)
             {
                 id = (int)gridTransfer.SelectedRows[0].Cells["ID"].Value;
-                TransferInfo frm = new TransferInfo(id);
+                TransferBuyBook frm = new TransferBuyBook(id);
                 frm.ShowDialog();
             }
 

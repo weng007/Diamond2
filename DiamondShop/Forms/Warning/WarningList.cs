@@ -152,7 +152,7 @@ namespace DiamondShop
                 {
                     id = (int)gridWarning.Rows[e.RowIndex].Cells["RefID"].Value;
                     WarningID = Convert.ToInt32(gridWarning.Rows[e.RowIndex].Cells["ID"].Value);
-                    TransferInfo frm = new TransferInfo(id);
+                    TransferBuyBook frm = new TransferBuyBook(id);
                     frm.ShowDialog();
 
                     ser1.UpdateMessageStatus(WarningID, statusType,"0");
