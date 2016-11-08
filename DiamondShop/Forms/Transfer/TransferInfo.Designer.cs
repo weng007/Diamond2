@@ -182,6 +182,7 @@
             this.btnPrint.TabIndex = 248;
             this.btnPrint.UseVisualStyleBackColor = false;
             this.btnPrint.Visible = false;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
             // txtSShop
             // 

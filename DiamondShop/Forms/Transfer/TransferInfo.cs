@@ -413,6 +413,12 @@ namespace DiamondShop
             }
         }
 
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            //ReportInventory frm = new ReportInventory(ID);
+            //frm.ShowDialog();
+        }
+
         private void SetPermission()
         {
             //Receiver
