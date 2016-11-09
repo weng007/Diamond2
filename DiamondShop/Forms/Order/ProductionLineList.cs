@@ -43,7 +43,10 @@ namespace DiamondShop
             cmbFactoryStatus.DisplayMember = "Detail";
             cmbFactoryStatus.Refresh();
 
-            cmbShop.SelectedValue = ApplicationInfo.Shop;
+            if (ApplicationInfo.Shop == 232 && GM.IsOwner(ApplicationInfo.Authorized)
+            {
+                btnAdd.Enabled = true;
+            }
 
             gridProductionLine.AutoGenerateColumns = false;
         }

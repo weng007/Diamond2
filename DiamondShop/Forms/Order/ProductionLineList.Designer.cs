@@ -330,6 +330,7 @@
             this.Price,
             this.FactoryStatusName,
             this.FactoryStatus});
+            this.gridProductionLine.Enabled = false;
             this.gridProductionLine.Location = new System.Drawing.Point(19, 0);
             this.gridProductionLine.Name = "gridProductionLine";
             this.gridProductionLine.ReadOnly = true;
