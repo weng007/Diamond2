@@ -390,6 +390,20 @@ namespace Diamond
         }
 
         [WebMethod]
+        public int DoSearchOrderByCode(string code)
+        {
+            OrderBiz biz = GM.GetOrderBiz();
+            try
+            {
+                return biz.DoSearchByCode(code);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        [WebMethod]
         public int DoSearchSellByCode(string code)
         {
             SellBiz biz = GM.SellBiz();

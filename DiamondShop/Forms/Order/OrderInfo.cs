@@ -326,6 +326,12 @@ namespace DiamondShop
                     row.FactoryStatus = 218; //Not Yet
                     SetCreateBy(row);
                     chkFlag = ser.DoInsertData("Order", tds, 0);
+
+                    if (chkFlag)
+                    {
+                        ser1 = GM.GetService1();
+                        id = ser1.DoSearchOrderByCode(row.OrderNo);
+                    }
                 }
                 else
                 {
@@ -481,9 +487,13 @@ namespace DiamondShop
         {
             CustomerList frm = new CustomerList(1);
             frm.ShowDialog();
-            custID = frm.custID;
-            txtCustomer.Text = frm.customerName;
-            txtTel.Text = frm.Tel;
+
+            if (frm.custID != 0)
+            {
+                custID = frm.custID;
+                txtCustomer.Text = frm.customerName;
+                txtTel.Text = frm.Tel;
+            }
         }
         private void btnBrownInv_Click(object sender, EventArgs e)
         {
