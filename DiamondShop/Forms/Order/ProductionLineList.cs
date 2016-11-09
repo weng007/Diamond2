@@ -43,7 +43,7 @@ namespace DiamondShop
             cmbFactoryStatus.DisplayMember = "Detail";
             cmbFactoryStatus.Refresh();
 
-            if (ApplicationInfo.Shop == 232 && GM.IsOwner(ApplicationInfo.Authorized)
+            if (ApplicationInfo.Shop == 232 && GM.IsOwner(ApplicationInfo.Authorized))
             {
                 btnAdd.Enabled = true;
             }

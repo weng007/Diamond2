@@ -21,6 +21,9 @@ namespace DiamondShop
         dsSell tds = new dsSell();
         MemoryStream ms1;
         byte[] image1;
+
+        bool isAuthorize = false;
+
         int custID = 0;
         int refID = 0;
 
@@ -125,9 +128,12 @@ namespace DiamondShop
                     btnImage1.BackgroundImage = backImage1;
                 }
 
-                EnableSave = false;
-                EnableEdit = GM.CheckIsEdit(ApplicationInfo.Shop, Convert.ToInt16(cmbShop.SelectedValue.ToString()));
-                EnableDelete = false;
+                if (!isAuthorize)
+                {
+                    EnableSave = false;
+                    EnableEdit = GM.CheckIsEdit(ApplicationInfo.Shop, Convert.ToInt16(cmbShop.SelectedValue.ToString()));
+                    EnableDelete = false;
+                }
             }
             SetFormatNumber();
             base.LoadData();
@@ -218,7 +224,6 @@ namespace DiamondShop
             btnBrowseCatalog.Enabled = status;
             btnBrowseCustomer.Enabled = status;
             cmbSeller.Enabled = status;
-            btnPrint.Enabled = status;
         }
         protected override bool ValidateData()
         {
@@ -337,7 +342,33 @@ namespace DiamondShop
                 }
             }
         }
-        
+        protected override void EditData()
+        {
+            if (isAuthorize)
+            {
+                EnableSave = true;
+                EnableDelete = true;
+                SetControlEnable(true);
+                base.EditData();
+            }
+            else
+            {
+                RequirePassword frm = new RequirePassword(ApplicationInfo.Shop);
+                frm.ShowDialog();
+                isAuthorize = frm.isAuthorize;
+                frm.Close();
+
+                if (isAuthorize)
+                {
+                    EnableSave = true;
+                    EnableDelete = true;
+                    SetControlEnable(true);
+                    base.EditData();
+                }
+            }
+        }
+
+
         private void SetFormatNumber()
         {
             txtPriceTag.Text = GM.ConvertDoubleToString(txtPriceTag, 0);
