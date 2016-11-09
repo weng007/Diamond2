@@ -248,7 +248,7 @@ namespace DiamondShop
             if (!isAuthorize)
             {
                 EnableSave = false;
-                EnableEdit = GM.CheckIsEdit(ApplicationInfo.Shop, Convert.ToInt16(cmbShop.SelectedValue.ToString()));
+                EnableEdit = ((ApplicationInfo.ShopName == txtShop.Text)?true:false);
                 EnableDelete = false;
             }
 

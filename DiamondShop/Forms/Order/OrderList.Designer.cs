@@ -53,7 +53,7 @@
             this.OrderNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CustomerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.JewelryTypeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SShopName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ShopName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ReceiveDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ShopName1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AppointDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -214,7 +214,7 @@
             this.OrderNo,
             this.CustomerName,
             this.JewelryTypeName,
-            this.SShopName,
+            this.ShopName,
             this.ReceiveDate,
             this.ShopName1,
             this.AppointDate,
@@ -275,13 +275,13 @@
             this.JewelryTypeName.ReadOnly = true;
             this.JewelryTypeName.Width = 150;
             // 
-            // SShopName
+            // ShopName
             // 
-            this.SShopName.DataPropertyName = "SShopName";
-            this.SShopName.HeaderText = "Location (Order)";
-            this.SShopName.Name = "SShopName";
-            this.SShopName.ReadOnly = true;
-            this.SShopName.Width = 170;
+            this.ShopName.DataPropertyName = "ShopName";
+            this.ShopName.HeaderText = "Location (Order)";
+            this.ShopName.Name = "ShopName";
+            this.ShopName.ReadOnly = true;
+            this.ShopName.Width = 170;
             // 
             // ReceiveDate
             // 
@@ -363,7 +363,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn OrderNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn CustomerName;
         private System.Windows.Forms.DataGridViewTextBoxColumn JewelryTypeName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SShopName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ShopName;
         private System.Windows.Forms.DataGridViewTextBoxColumn ReceiveDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn ShopName1;
         private System.Windows.Forms.DataGridViewTextBoxColumn AppointDate;
