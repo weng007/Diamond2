@@ -14,8 +14,6 @@ namespace DiamondBiz.Biz
         OrderDAL dal = new OrderDAL();
 
         //type 0 = Login, 1 = BuyBook
-
-
         public dsOrder DoSearchData(string CustName, string Code, int Seller, int JewelryType)
         {
             try
@@ -74,6 +72,19 @@ namespace DiamondBiz.Biz
                 throw ex;
             }
         }
+
+        public int DoSearchByCode(string code)
+        {
+            try
+            {
+                return dal.DoSearchByCode(code);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
         public dsOrder GetFactoryStatus(int id)
         {
             try
