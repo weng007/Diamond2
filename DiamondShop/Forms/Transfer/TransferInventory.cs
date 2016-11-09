@@ -27,8 +27,7 @@ namespace DiamondShop
         DataSet tmp = new DataSet();
 
         bool isAuthorize = false;
-        
-        int chk = 0;
+       
         int rowIndex = 0;
         int DelID;
         
@@ -196,17 +195,7 @@ namespace DiamondShop
         {
             try
             {
-                if (chk == 0)
-                {
-                    chkFlag = ser.DoDeleteData("Transfer", DelID);
-                }
-                else if (chk == 1)
-                {
-                    chkFlag = ser.DoDeleteData("TransferDetail", Convert.ToInt32(gridTransferInventory.SelectedRows[0].Cells["ID"].Value));
-
-                    chk = 0;
-                }
-
+                chkFlag = ser.DoDeleteData("Transfer", id);
             }
             catch (Exception ex)
             {
@@ -264,7 +253,7 @@ namespace DiamondShop
             SearchTransferInventory frm = new SearchTransferInventory();
             frm.ShowDialog();
 
-            if (frm.refID1 != 0 && CheckDataExist(frm.refID1))
+            if (frm.refID1 != 0)
             {
                 tmp = ser2.DoSearchTransferInventory(ApplicationInfo.Shop, "", 0);
                 tds1.Clear();
@@ -286,20 +275,26 @@ namespace DiamondShop
                 gridTransferInventory.RefreshEdit();
             }
         }
-        private bool CheckDataExist(int tmp)
+        
+
+        private dsTransferDetail RemoveRowDuplicate(dsTransferDetail temp)
         {
-            if (gridTransferInventory.Rows.Count > 0)
+            for (int i = 0; i < temp.TransferDetail.Rows.Count; i++)
             {
-                for (int i = 0; i < gridTransferInventory.Rows.Count; i++)
+                for (int j = 0; j < gridTransferInventory.Rows.Count; j++)
                 {
-                    if (tmp == Convert.ToInt32(gridTransferInventory.Rows[i].Cells["ID"].Value))
+                    if (temp.TransferDetail.Rows[i]["RefID1"].ToString() == gridTransferInventory.Rows[j].Cells["RefID1"].Value.ToString() &&
+                       temp.TransferDetail.Rows[i]["BuyBookType"].ToString() == gridTransferInventory.Rows[j].Cells["BuyBookType"].Value.ToString())
                     {
-                        return false;
+                        temp.TransferDetail.Rows[i].Delete();
+                        i--;
+                        temp.AcceptChanges();
+                        break;
                     }
                 }
             }
 
-            return true;
+            return temp;
         }
 
         private void SetFormatNumber()
@@ -313,10 +308,20 @@ namespace DiamondShop
 
         private void btnDel_Click(object sender, EventArgs e)
         {
-            if (gridTransferInventory.SelectedRows.Count > 0)
+            int delID = 0;
+
+            if (rowIndex > -1)
             {
-                chk = 1;
-                DeleteData();
+                delID = (int)gridTransferInventory.Rows[rowIndex].Cells["ID"].Value;
+                tds1.TransferInventory.Rows.RemoveAt(rowIndex);
+            }
+
+            tds1.AcceptChanges();
+            gridTransferInventory.Refresh();
+
+            if (delID != 0)
+            {
+                ser.DoDeleteData("TransferDetail", delID);
             }
         }
 
