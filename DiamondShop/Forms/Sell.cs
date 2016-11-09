@@ -446,20 +446,5 @@ namespace DiamondShop
         {
             isEdit = true;
         }
-
-        private void btnImage1_Click(object sender, EventArgs e)
-        {
-            openFileDialog1.Filter = "Image files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png) | *.jpg; *.jpeg; *.jpe; *.jfif; *.png";
-            if (openFileDialog1.ShowDialog() == DialogResult.OK)
-            {
-                btnImage1.BackgroundImage = Image.FromFile(openFileDialog1.FileName);
-
-                FileStream fs;
-                fs = new FileStream(openFileDialog1.FileName, FileMode.Open, FileAccess.Read);
-                image1 = new byte[fs.Length];
-                fs.Read(image1, 0, System.Convert.ToInt32(fs.Length));
-                fs.Close();
-            }
-        }
     }
 }
