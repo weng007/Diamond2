@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsDeliveryOrder" targetNamespace="http://tempuri.org/dsDeliveryOrder.xsd" xmlns:mstns="http://tempuri.org/dsDeliveryOrder.xsd" xmlns="http://tempuri.org/dsDeliveryOrder.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="JusminConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="JusminConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.DiamondShop.Properties.Settings.GlobalReference.Default.JusminConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsDeliveryOrder" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsDeliveryOrder" msprop:Generator_UserDSName="dsDeliveryOrder">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="SP_Rpt_Delivery" msprop:Generator_TableClassName="SP_Rpt_DeliveryDataTable" msprop:Generator_TableVarName="tableSP_Rpt_Delivery" msprop:Generator_TablePropName="SP_Rpt_Delivery" msprop:Generator_RowDeletingName="SP_Rpt_DeliveryRowDeleting" msprop:Generator_RowChangingName="SP_Rpt_DeliveryRowChanging" msprop:Generator_RowEvHandlerName="SP_Rpt_DeliveryRowChangeEventHandler" msprop:Generator_RowDeletedName="SP_Rpt_DeliveryRowDeleted" msprop:Generator_UserTableName="SP_Rpt_Delivery" msprop:Generator_RowChangedName="SP_Rpt_DeliveryRowChanged" msprop:Generator_RowEvArgName="SP_Rpt_DeliveryRowChangeEvent" msprop:Generator_RowClassName="SP_Rpt_DeliveryRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:long" minOccurs="0" />
+              <xs:element name="Code" msprop:Generator_ColumnVarNameInTable="columnCode" msprop:Generator_ColumnPropNameInRow="Code" msprop:Generator_ColumnPropNameInTable="CodeColumn" msprop:Generator_UserColumnName="Code" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InventoryType" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnInventoryType" msprop:Generator_ColumnPropNameInRow="InventoryType" msprop:Generator_ColumnPropNameInTable="InventoryTypeColumn" msprop:Generator_UserColumnName="InventoryType" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CreateDate" msprop:Generator_ColumnVarNameInTable="columnCreateDate" msprop:Generator_ColumnPropNameInRow="CreateDate" msprop:Generator_ColumnPropNameInTable="CreateDateColumn" msprop:Generator_UserColumnName="CreateDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="MaterialWeight2" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnMaterialWeight2" msprop:Generator_ColumnPropNameInRow="MaterialWeight2" msprop:Generator_ColumnPropNameInTable="MaterialWeight2Column" msprop:Generator_UserColumnName="MaterialWeight2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="277" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MaterialNetCost" msprop:Generator_ColumnVarNameInTable="columnMaterialNetCost" msprop:Generator_ColumnPropNameInRow="MaterialNetCost" msprop:Generator_ColumnPropNameInTable="MaterialNetCostColumn" msprop:Generator_UserColumnName="MaterialNetCost" type="xs:decimal" minOccurs="0" />
+              <xs:element name="RedCost" msprop:Generator_ColumnVarNameInTable="columnRedCost" msprop:Generator_ColumnPropNameInRow="RedCost" msprop:Generator_ColumnPropNameInTable="RedCostColumn" msprop:Generator_UserColumnName="RedCost" type="xs:decimal" minOccurs="0" />
+              <xs:element name="MinPremium" msprop:Generator_ColumnVarNameInTable="columnMinPremium" msprop:Generator_ColumnPropNameInRow="MinPremium" msprop:Generator_ColumnPropNameInTable="MinPremiumColumn" msprop:Generator_UserColumnName="MinPremium" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PriceTag" msprop:Generator_ColumnVarNameInTable="columnPriceTag" msprop:Generator_ColumnPropNameInRow="PriceTag" msprop:Generator_ColumnPropNameInTable="PriceTagColumn" msprop:Generator_UserColumnName="PriceTag" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -246,5 +246,16 @@ namespace DiamondBiz.Biz
                 throw ex;
             }
         }
+        public DataSet GetDeliveryOrder(int ID)
+        {
+            try
+            {
+                return dal.GetDeliveryOrder(ID);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

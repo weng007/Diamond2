@@ -336,7 +336,8 @@ namespace DiamondShop
 
         private void btnPrint_Click(object sender, EventArgs e)
         {
-
+            Report.ReportDelivery report = new Report.ReportDelivery(id);
+            report.ShowDialog();
         }
     }
 }

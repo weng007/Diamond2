@@ -360,5 +360,20 @@ namespace DiamondDAL.DAL
                 return null;
             }
         }
+        public DataSet GetDeliveryOrder(int id)
+        {
+            try
+            {
+                SQL.ClearParameter();
+                SQL.CreateParameter("@RefID", id);
+                SQL.FillDataSetBySP2("SP_Rpt_Delivery", ds);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return ds;
+        }
     }
 }
