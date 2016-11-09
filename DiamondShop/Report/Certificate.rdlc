@@ -222,7 +222,6 @@
                                 <PaddingBottom>2pt</PaddingBottom>
                               </Style>
                             </Textbox>
-                            <rd:Selected>true</rd:Selected>
                           </CellContents>
                         </TablixCell>
                       </TablixCells>
@@ -268,72 +267,6 @@
               </Border>
             </Style>
           </Rectangle>
-          <Textbox Name="pcs">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>=Sum(Fields!pcs.Value, "Total")</Value>
-                    <Style>
-                      <FontFamily>tahoma</FontFamily>
-                      <FontSize>8pt</FontSize>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>pcs</rd:DefaultName>
-            <Top>3.05447in</Top>
-            <Left>2.63833in</Left>
-            <Height>0.1875in</Height>
-            <Width>0.25in</Width>
-            <ZIndex>2</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="Ct">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>=Sum(Fields!Ct.Value, "Total")</Value>
-                    <Style>
-                      <FontFamily>tahoma</FontFamily>
-                      <FontSize>8pt</FontSize>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>Ct</rd:DefaultName>
-            <Top>3.05447in</Top>
-            <Left>3.27167in</Left>
-            <Height>0.1875in</Height>
-            <Width>0.42708in</Width>
-            <ZIndex>3</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
           <Textbox Name="Textbox36">
             <CanGrow>true</CanGrow>
             <KeepTogether>true</KeepTogether>
@@ -356,7 +289,7 @@
             <Left>2.9175in</Left>
             <Height>0.1875in</Height>
             <Width>0.34653in</Width>
-            <ZIndex>4</ZIndex>
+            <ZIndex>2</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -389,7 +322,7 @@
             <Left>3.69876in</Left>
             <Height>0.1875in</Height>
             <Width>0.22152in</Width>
-            <ZIndex>5</ZIndex>
+            <ZIndex>3</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -422,7 +355,7 @@
             <Left>2.0932in</Left>
             <Height>0.19167in</Height>
             <Width>0.51735in</Width>
-            <ZIndex>6</ZIndex>
+            <ZIndex>4</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -438,7 +371,7 @@
             <Left>3.87305in</Left>
             <Height>0in</Height>
             <Width>-1.15625in</Width>
-            <ZIndex>7</ZIndex>
+            <ZIndex>5</ZIndex>
             <Style>
               <Border>
                 <Style>Solid</Style>
