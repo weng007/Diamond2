@@ -92,6 +92,7 @@
             this.btnImage1.Size = new System.Drawing.Size(150, 150);
             this.btnImage1.TabIndex = 14;
             this.btnImage1.UseVisualStyleBackColor = false;
+            this.btnImage1.Click += new System.EventHandler(this.btnImage1_Click);
             // 
             // panel3
             // 

@@ -74,8 +74,13 @@ namespace DiamondShop
             this.id = id;
             this.WarningID = WarningID;
             btnDiamond.Enabled = true;
+
             LoadData();
+
             SetControlEnable(false);
+            //ปิดเปิดปุ่ม Confirm, Print ใบสั่งงาน และสร้าง Inventory
+            SetMode();
+
             isEdit = false;
         }
 
@@ -240,7 +245,12 @@ namespace DiamondShop
                 }
               }
 
-            SetMode();
+            if (!isAuthorize)
+            {
+                EnableSave = false;
+                EnableEdit = GM.CheckIsEdit(ApplicationInfo.Shop, Convert.ToInt16(cmbShop.SelectedValue.ToString()));
+                EnableDelete = false;
+            }
 
             if(tds.Order[0].FactoryStatus == 219)
             {
@@ -427,8 +437,28 @@ namespace DiamondShop
 
         private void SetControlEnable(bool status)
         {
-            txtCustomer.Enabled = status;
-            txtCode.Enabled = status;
+            dtOrderDate.Enabled = false;
+            txtCustomer.Enabled = false;
+            cmbJewelryType.Enabled = false;
+            cmbMaterial.Enabled = false;
+            cmbQuality.Enabled = false;
+            cmbSeller.Enabled = false;
+            txtSize.Enabled = false;
+            txtCoating.Enabled = false;
+            txtLaser.Enabled = false;
+            txtOldBody.Enabled = false;
+            txtPaid.Enabled = false;
+            dtReceiveDate.Enabled = false;
+            cmbShop1.Enabled = false;
+            txtAppointDate.Enabled = false;
+            cmbShop2.Enabled = false;
+
+            groupBox1.Enabled = false;
+            groupBox2.Enabled = false;
+            txtNote.Enabled = false;
+            txtCustNote.Enabled = false;
+            btnDiamond.Enabled = false;
+            txtImageNote.Enabled = false;
         }
 
         private void txtNote_TextChanged(object sender, EventArgs e)
@@ -649,35 +679,10 @@ namespace DiamondShop
                     btnPrint.Visible = true;
                     btnInventory.Visible = true;
                 }
-                if (FactoryStatus == 218)// Not yet
+                else// Not yet
                 {
                     btnConfirm.Visible = true;
                 }
-            }
-            else
-            {
-                dtOrderDate.Enabled = false;
-                txtCustomer.Enabled = false;
-                cmbJewelryType.Enabled = false;
-                cmbMaterial.Enabled = false;
-                cmbQuality.Enabled = false;
-                cmbSeller.Enabled = false;
-                txtSize.Enabled = false;
-                txtCoating.Enabled = false;
-                txtLaser.Enabled = false;
-                txtOldBody.Enabled = false;
-                txtPaid.Enabled = false;
-                dtReceiveDate.Enabled = false;
-                cmbShop1.Enabled = false;
-                txtAppointDate.Enabled = false;
-                cmbShop2.Enabled = false;
-
-                groupBox1.Enabled = false;
-                groupBox2.Enabled = false;
-                txtNote.Enabled = false;
-                txtCustNote.Enabled = false;
-                btnDiamond.Enabled = false;
-                txtImageNote.Enabled = false;             
             }
         }
     }

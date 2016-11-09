@@ -166,6 +166,12 @@ namespace DiamondShop
                     row.CerNo = GM.GetRunningNumber("JAS");
                     SetCreateBy(row);
                     chkFlag = ser.DoInsertData("Sell", tds,0);
+
+                    if (chkFlag)
+                    {
+                        ser1 = GM.GetService1();
+                        id = ser1.DoSearchSellByCode(row.CerNo);
+                    }
                 }
                 else
                 {
@@ -439,6 +445,21 @@ namespace DiamondShop
         private void dtSellDate_ValueChanged(object sender, EventArgs e)
         {
             isEdit = true;
+        }
+
+        private void btnImage1_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.Filter = "Image files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png) | *.jpg; *.jpeg; *.jpe; *.jfif; *.png";
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                btnImage1.BackgroundImage = Image.FromFile(openFileDialog1.FileName);
+
+                FileStream fs;
+                fs = new FileStream(openFileDialog1.FileName, FileMode.Open, FileAccess.Read);
+                image1 = new byte[fs.Length];
+                fs.Read(image1, 0, System.Convert.ToInt32(fs.Length));
+                fs.Close();
+            }
         }
     }
 }

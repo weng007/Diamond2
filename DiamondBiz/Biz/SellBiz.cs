@@ -70,5 +70,17 @@ namespace DiamondBiz.Biz
                 throw ex;
             }
         }
+
+        public int DoSearchByCode(string code)
+        {
+            try
+            {
+                return dal.DoSearchByCode(code);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }
