@@ -10,7 +10,7 @@
     <Shape ID="DesignTable:Detail" ZOrder="4" X="81" Y="229" Height="67" Width="150" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="63" />
     <Shape ID="DesignTable:Detail1" ZOrder="3" X="83" Y="324" Height="67" Width="178" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="63" />
     <Shape ID="DesignTable:Detail2" ZOrder="2" X="83" Y="413" Height="67" Width="178" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="63" />
-    <Shape ID="DesignTable:Total" ZOrder="1" X="340" Y="118" Height="67" Width="178" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="63" />
+    <Shape ID="DesignTable:Total" ZOrder="1" X="340" Y="118" Height="48" Width="150" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="44" />
   </Shapes>
   <Connectors />
 </DiagramLayout>

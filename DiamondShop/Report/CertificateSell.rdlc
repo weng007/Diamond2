@@ -1,0 +1,1154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <Body>
+    <ReportItems>
+      <Line Name="Line13">
+        <Left>6.475in</Left>
+        <Height>3.13541in</Height>
+        <Width>0in</Width>
+        <Style>
+          <Border>
+            <Color>#6980a5</Color>
+            <Style>Solid</Style>
+            <Width>3pt</Width>
+          </Border>
+        </Style>
+      </Line>
+      <Line Name="Line14">
+        <Left>0.025in</Left>
+        <Height>3.13541in</Height>
+        <Width>0in</Width>
+        <ZIndex>1</ZIndex>
+        <Style>
+          <Border>
+            <Color>#6980a5</Color>
+            <Style>Solid</Style>
+            <Width>3pt</Width>
+          </Border>
+        </Style>
+      </Line>
+      <Line Name="Line16">
+        <Left>0.08194in</Left>
+        <Height>3.13541in</Height>
+        <Width>0in</Width>
+        <ZIndex>2</ZIndex>
+        <Style>
+          <Border>
+            <Color>#6980a5</Color>
+            <Style>Solid</Style>
+          </Border>
+        </Style>
+      </Line>
+      <Line Name="Line17">
+        <Left>6.41806in</Left>
+        <Height>3.13541in</Height>
+        <Width>0in</Width>
+        <ZIndex>3</ZIndex>
+        <Style>
+          <Border>
+            <Color>#6980a5</Color>
+            <Style>Solid</Style>
+          </Border>
+        </Style>
+      </Line>
+      <Rectangle Name="Rectangle2">
+        <ReportItems>
+          <Tablix Name="Tablix1">
+            <TablixBody>
+              <TablixColumns>
+                <TablixColumn>
+                  <Width>2.45833in</Width>
+                </TablixColumn>
+              </TablixColumns>
+              <TablixRows>
+                <TablixRow>
+                  <Height>0.20833in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Detail">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!Detail.Value</Value>
+                                  <Style>
+                                    <FontSize>9pt</FontSize>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Detail</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+              </TablixRows>
+            </TablixBody>
+            <TablixColumnHierarchy>
+              <TablixMembers>
+                <TablixMember />
+              </TablixMembers>
+            </TablixColumnHierarchy>
+            <TablixRowHierarchy>
+              <TablixMembers>
+                <TablixMember>
+                  <Group Name="Details" />
+                </TablixMember>
+              </TablixMembers>
+            </TablixRowHierarchy>
+            <DataSetName>Detail</DataSetName>
+            <Top>0.06389in</Top>
+            <Left>0.01042in</Left>
+            <Height>0.20833in</Height>
+            <Width>2.45833in</Width>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Tablix>
+          <Image Name="Image2">
+            <Source>Database</Source>
+            <Value>=First(Fields!Image1.Value, "SP_Rpt_Certificate")</Value>
+            <MIMEType>image/png</MIMEType>
+            <Sizing>FitProportional</Sizing>
+            <Top>0.02639in</Top>
+            <Left>2.85334in</Left>
+            <Height>1.82916in</Height>
+            <Width>1.90624in</Width>
+            <ZIndex>1</ZIndex>
+            <Style>
+              <Border>
+                <Color>#6980a5</Color>
+                <Style>Solid</Style>
+                <Width>1.5pt</Width>
+              </Border>
+            </Style>
+          </Image>
+        </ReportItems>
+        <Top>0.02778in</Top>
+        <Left>0.7559in</Left>
+        <Height>1.87904in</Height>
+        <Width>4.9882in</Width>
+        <ZIndex>4</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Rectangle>
+      <Rectangle Name="Rectangle3">
+        <ReportItems>
+          <Tablix Name="Tablix3">
+            <TablixBody>
+              <TablixColumns>
+                <TablixColumn>
+                  <Width>2.45833in</Width>
+                </TablixColumn>
+              </TablixColumns>
+              <TablixRows>
+                <TablixRow>
+                  <Height>0.19792in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Detail1">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!Detail.Value</Value>
+                                  <Style>
+                                    <FontSize>9pt</FontSize>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Detail1</rd:DefaultName>
+                          <Visibility>
+                            <Hidden>=IIF(Fields!Detail.Value="",True,False)</Hidden>
+                          </Visibility>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+              </TablixRows>
+            </TablixBody>
+            <TablixColumnHierarchy>
+              <TablixMembers>
+                <TablixMember />
+              </TablixMembers>
+            </TablixColumnHierarchy>
+            <TablixRowHierarchy>
+              <TablixMembers>
+                <TablixMember>
+                  <Group Name="Details1" />
+                </TablixMember>
+              </TablixMembers>
+            </TablixRowHierarchy>
+            <DataSetName>Detail1</DataSetName>
+            <Top>0.0625in</Top>
+            <Left>0.01042in</Left>
+            <Height>0.19792in</Height>
+            <Width>2.45833in</Width>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Tablix>
+          <Tablix Name="Tablix4">
+            <TablixBody>
+              <TablixColumns>
+                <TablixColumn>
+                  <Width>2.45833in</Width>
+                </TablixColumn>
+              </TablixColumns>
+              <TablixRows>
+                <TablixRow>
+                  <Height>0.19792in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Detail2">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!Detail.Value</Value>
+                                  <Style>
+                                    <FontSize>9pt</FontSize>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Detail2</rd:DefaultName>
+                          <Visibility>
+                            <Hidden>=IIF(Fields!Detail.Value = "",True,False)</Hidden>
+                          </Visibility>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+              </TablixRows>
+            </TablixBody>
+            <TablixColumnHierarchy>
+              <TablixMembers>
+                <TablixMember />
+              </TablixMembers>
+            </TablixColumnHierarchy>
+            <TablixRowHierarchy>
+              <TablixMembers>
+                <TablixMember>
+                  <Group Name="Details2" />
+                </TablixMember>
+              </TablixMembers>
+            </TablixRowHierarchy>
+            <DataSetName>Detail2</DataSetName>
+            <Top>0.0625in</Top>
+            <Left>2.5243in</Left>
+            <Height>0.19792in</Height>
+            <Width>2.45833in</Width>
+            <ZIndex>1</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Tablix>
+          <Textbox Name="Total">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Sum(Fields!Total.Value, "Total")</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Total</rd:DefaultName>
+            <Top>0.84665in</Top>
+            <Left>3.97013in</Left>
+            <Height>0.20833in</Height>
+            <Width>1in</Width>
+            <ZIndex>2</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+        </ReportItems>
+        <PageBreak>
+          <BreakLocation>Start</BreakLocation>
+        </PageBreak>
+        <Top>1.91376in</Top>
+        <Left>0.7559in</Left>
+        <Height>1.07165in</Height>
+        <Width>4.9882in</Width>
+        <ZIndex>5</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Rectangle>
+    </ReportItems>
+    <Height>3.13541in</Height>
+    <Style />
+  </Body>
+  <Width>6.5in</Width>
+  <Page>
+    <PageHeader>
+      <Height>2.26334in</Height>
+      <PrintOnFirstPage>true</PrintOnFirstPage>
+      <PrintOnLastPage>true</PrintOnLastPage>
+      <ReportItems>
+        <Line Name="Line6">
+          <Top>0.02917in</Top>
+          <Height>0in</Height>
+          <Width>6.48834in</Width>
+          <Style>
+            <Border>
+              <Color>#6980a5</Color>
+              <Style>Solid</Style>
+              <Width>4pt</Width>
+            </Border>
+          </Style>
+        </Line>
+        <Line Name="Line11">
+          <Top>0.02917in</Top>
+          <Left>6.47584in</Left>
+          <Height>2.23417in</Height>
+          <Width>0in</Width>
+          <ZIndex>1</ZIndex>
+          <Style>
+            <Border>
+              <Color>#6980a5</Color>
+              <Style>Solid</Style>
+              <Width>3pt</Width>
+            </Border>
+          </Style>
+        </Line>
+        <Line Name="Line12">
+          <Top>0.00833in</Top>
+          <Left>0.025in</Left>
+          <Height>2.25501in</Height>
+          <Width>0in</Width>
+          <ZIndex>2</ZIndex>
+          <Style>
+            <Border>
+              <Color>#6980a5</Color>
+              <Style>Solid</Style>
+              <Width>3pt</Width>
+            </Border>
+          </Style>
+        </Line>
+        <Line Name="Line5">
+          <Top>0.09in</Top>
+          <Left>0.08194in</Left>
+          <Height>0in</Height>
+          <Width>6.33612in</Width>
+          <ZIndex>3</ZIndex>
+          <Style>
+            <Border>
+              <Color>#6980a5</Color>
+              <Style>Solid</Style>
+            </Border>
+          </Style>
+        </Line>
+        <Line Name="Line9">
+          <Top>0.09in</Top>
+          <Left>0.08194in</Left>
+          <Height>2.17334in</Height>
+          <Width>0in</Width>
+          <ZIndex>4</ZIndex>
+          <Style>
+            <Border>
+              <Color>#6980a5</Color>
+              <Style>Solid</Style>
+            </Border>
+          </Style>
+        </Line>
+        <Line Name="Line10">
+          <Top>0.09834in</Top>
+          <Left>6.41806in</Left>
+          <Height>2.165in</Height>
+          <Width>0in</Width>
+          <ZIndex>5</ZIndex>
+          <Style>
+            <Border>
+              <Color>#6980a5</Color>
+              <Style>Solid</Style>
+            </Border>
+          </Style>
+        </Line>
+        <Textbox Name="Textbox1">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>CERTIFICATE  OF  GUARANTEE</Value>
+                  <Style>
+                    <FontFamily>Adobe Caslon Pro</FontFamily>
+                    <FontSize>18pt</FontSize>
+                    <Color>#6980a5</Color>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox1</rd:DefaultName>
+          <Top>0.76917in</Top>
+          <Left>1.18298in</Left>
+          <Height>0.29167in</Height>
+          <Width>4.08196in</Width>
+          <ZIndex>6</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+          </Style>
+        </Textbox>
+        <Line Name="Line1">
+          <Top>1.1025in</Top>
+          <Left>0.76632in</Left>
+          <Height>0in</Height>
+          <Width>4.9882in</Width>
+          <ZIndex>7</ZIndex>
+          <Style>
+            <Border>
+              <Color>#6980a5</Color>
+              <Style>Solid</Style>
+              <Width>1.5pt</Width>
+            </Border>
+          </Style>
+        </Line>
+        <Rectangle Name="Rectangle1">
+          <ReportItems>
+            <Textbox Name="Textbox2">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>Item Description</Value>
+                      <Style>
+                        <FontFamily>andalus</FontFamily>
+                        <FontSize>11pt</FontSize>
+                        <Color>#6980a5</Color>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>Textbox2</rd:DefaultName>
+              <Top>0.09446in</Top>
+              <Left>0.59945in</Left>
+              <Height>0.20833in</Height>
+              <Width>1.28125in</Width>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+              </Style>
+            </Textbox>
+            <Textbox Name="Textbox3">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>Design No.:</Value>
+                      <Style>
+                        <FontFamily>andalus</FontFamily>
+                        <Color>#6980a5</Color>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>Textbox2</rd:DefaultName>
+              <Top>0.37085in</Top>
+              <Left>0.59945in</Left>
+              <Height>0.20833in</Height>
+              <Width>0.66666in</Width>
+              <ZIndex>1</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+              </Style>
+            </Textbox>
+            <Textbox Name="Textbox4">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>Material:</Value>
+                      <Style>
+                        <FontFamily>andalus</FontFamily>
+                        <Color>#6980a5</Color>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>Textbox2</rd:DefaultName>
+              <Top>0.63195in</Top>
+              <Left>0.59945in</Left>
+              <Height>0.20833in</Height>
+              <Width>0.55208in</Width>
+              <ZIndex>2</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+              </Style>
+            </Textbox>
+            <Textbox Name="Textbox5">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>Date:</Value>
+                      <Style>
+                        <FontFamily>andalus</FontFamily>
+                        <Color>#6980a5</Color>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>Textbox2</rd:DefaultName>
+              <Top>0.37085in</Top>
+              <Left>3.44237in</Left>
+              <Height>0.20833in</Height>
+              <Width>0.30208in</Width>
+              <ZIndex>3</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+              </Style>
+            </Textbox>
+            <Textbox Name="Textbox6">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>Certificate No.:</Value>
+                      <Style>
+                        <FontFamily>andalus</FontFamily>
+                        <Color>#6980a5</Color>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>Textbox2</rd:DefaultName>
+              <Top>0.63195in</Top>
+              <Left>3.44236in</Left>
+              <Height>0.20833in</Height>
+              <Width>0.86458in</Width>
+              <ZIndex>4</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+              </Style>
+            </Textbox>
+            <Textbox Name="CerNo">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>=First(Fields!CerNo.Value, "SP_Rpt_Certificate")</Value>
+                      <Style>
+                        <FontSize>9pt</FontSize>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>CerNo</rd:DefaultName>
+              <Top>0.63195in</Top>
+              <Left>4.34861in</Left>
+              <Height>0.20833in</Height>
+              <Width>1in</Width>
+              <ZIndex>5</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+              </Style>
+            </Textbox>
+            <Textbox Name="DesignNo">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>=First(Fields!DesignNo.Value, "SP_Rpt_Certificate")</Value>
+                      <Style>
+                        <FontSize>9pt</FontSize>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>DesignNo</rd:DefaultName>
+              <Top>0.37085in</Top>
+              <Left>1.30778in</Left>
+              <Height>0.20833in</Height>
+              <Width>1in</Width>
+              <ZIndex>6</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+              </Style>
+            </Textbox>
+            <Textbox Name="Material1">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>=First(Fields!Material1.Value, "SP_Rpt_Certificate")</Value>
+                      <Style>
+                        <FontSize>9pt</FontSize>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>Material1</rd:DefaultName>
+              <Top>0.63195in</Top>
+              <Left>1.30778in</Left>
+              <Height>0.20833in</Height>
+              <Width>1in</Width>
+              <ZIndex>7</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+              </Style>
+            </Textbox>
+            <Textbox Name="Textbox13">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>=FORMAT(Cdate(today), "dd-MM-yyyy")</Value>
+                      <Style>
+                        <FontSize>9pt</FontSize>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>Textbox13</rd:DefaultName>
+              <Top>0.37085in</Top>
+              <Left>3.78611in</Left>
+              <Height>0.20833in</Height>
+              <Width>1in</Width>
+              <ZIndex>8</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+              </Style>
+            </Textbox>
+            <Textbox Name="Material2">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>=First(Fields!Material2.Value, "SP_Rpt_Certificate")</Value>
+                      <Style />
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>Material2</rd:DefaultName>
+              <Top>0.88514in</Top>
+              <Left>1.30778in</Left>
+              <Height>0.17708in</Height>
+              <Width>1in</Width>
+              <ZIndex>9</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+              </Style>
+            </Textbox>
+          </ReportItems>
+          <KeepTogether>true</KeepTogether>
+          <Top>1.11917in</Top>
+          <Left>0.16687in</Left>
+          <Height>1.09556in</Height>
+          <Width>5.57723in</Width>
+          <ZIndex>8</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+          </Style>
+        </Rectangle>
+      </ReportItems>
+      <Style>
+        <Border>
+          <Style>None</Style>
+        </Border>
+      </Style>
+    </PageHeader>
+    <PageFooter>
+      <Height>1.4625in</Height>
+      <PrintOnFirstPage>true</PrintOnFirstPage>
+      <PrintOnLastPage>true</PrintOnLastPage>
+      <ReportItems>
+        <Line Name="Line15">
+          <Top>0.00417in</Top>
+          <Left>6.47362in</Left>
+          <Height>1.45833in</Height>
+          <Width>0in</Width>
+          <Style>
+            <Border>
+              <Color>#6980a5</Color>
+              <Style>Solid</Style>
+              <Width>3pt</Width>
+            </Border>
+          </Style>
+        </Line>
+        <Line Name="Line19">
+          <Top>0.00417in</Top>
+          <Left>6.41806in</Left>
+          <Height>1.375in</Height>
+          <Width>0in</Width>
+          <ZIndex>1</ZIndex>
+          <Style>
+            <Border>
+              <Color>#6980a5</Color>
+              <Style>Solid</Style>
+            </Border>
+          </Style>
+        </Line>
+        <Line Name="Line7">
+          <Top>1.44167in</Top>
+          <Left>0.00583in</Left>
+          <Height>0in</Height>
+          <Width>6.48834in</Width>
+          <ZIndex>2</ZIndex>
+          <Style>
+            <Border>
+              <Color>#6980a5</Color>
+              <Style>Solid</Style>
+              <Width>3.5pt</Width>
+            </Border>
+          </Style>
+        </Line>
+        <Line Name="Line8">
+          <Top>1.37917in</Top>
+          <Left>0.08194in</Left>
+          <Height>0in</Height>
+          <Width>6.33612in</Width>
+          <ZIndex>3</ZIndex>
+          <Style>
+            <Border>
+              <Color>#6980a5</Color>
+              <Style>Solid</Style>
+            </Border>
+          </Style>
+        </Line>
+        <Line Name="Line18">
+          <Top>0.00417in</Top>
+          <Left>0.025in</Left>
+          <Height>1.45833in</Height>
+          <Width>0in</Width>
+          <ZIndex>4</ZIndex>
+          <Style>
+            <Border>
+              <Color>#6980a5</Color>
+              <Style>Solid</Style>
+              <Width>3pt</Width>
+            </Border>
+          </Style>
+        </Line>
+        <Line Name="Line24">
+          <Left>0.08194in</Left>
+          <Height>1.37917in</Height>
+          <Width>0in</Width>
+          <ZIndex>5</ZIndex>
+          <Style>
+            <Border>
+              <Color>#6980a5</Color>
+              <Style>Solid</Style>
+            </Border>
+          </Style>
+        </Line>
+        <Line Name="Line2">
+          <Top>0.01459in</Top>
+          <Left>0.7559in</Left>
+          <Height>0in</Height>
+          <Width>4.9882in</Width>
+          <ZIndex>6</ZIndex>
+          <Style>
+            <Border>
+              <Color>#6980a5</Color>
+              <Style>Solid</Style>
+              <Width>1.5pt</Width>
+            </Border>
+          </Style>
+        </Line>
+        <Textbox Name="Textbox7">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>We here by guarantee that the description stated above is accurate</Value>
+                  <Style>
+                    <FontFamily>andalus</FontFamily>
+                    <Color>#6980a5</Color>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox2</rd:DefaultName>
+          <Top>0.02847in</Top>
+          <Left>1.35798in</Left>
+          <Height>0.20833in</Height>
+          <Width>3.74862in</Width>
+          <ZIndex>7</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox8">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>and lifetime guarantee for value and service.</Value>
+                  <Style>
+                    <FontFamily>andalus</FontFamily>
+                    <Color>#6980a5</Color>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox2</rd:DefaultName>
+          <Top>0.27292in</Top>
+          <Left>1.35798in</Left>
+          <Height>0.20833in</Height>
+          <Width>3.74862in</Width>
+          <ZIndex>8</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+          </Style>
+        </Textbox>
+        <Line Name="Line3">
+          <Top>0.96604in</Top>
+          <Left>4.07882in</Left>
+          <Height>0in</Height>
+          <Width>1.6757in</Width>
+          <ZIndex>9</ZIndex>
+          <Style>
+            <Border>
+              <Color>#6980a5</Color>
+              <Style>Solid</Style>
+              <Width>1.5pt</Width>
+            </Border>
+          </Style>
+        </Line>
+        <Textbox Name="Textbox9">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Sale Manager</Value>
+                  <Style>
+                    <FontFamily>andalus</FontFamily>
+                    <FontSize>8pt</FontSize>
+                    <Color>#6980a5</Color>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox2</rd:DefaultName>
+          <Top>0.94104in</Top>
+          <Left>4.07882in</Left>
+          <Height>0.20833in</Height>
+          <Width>1.66528in</Width>
+          <ZIndex>10</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+          </Style>
+        </Textbox>
+      </ReportItems>
+      <Style>
+        <Border>
+          <Style>None</Style>
+        </Border>
+      </Style>
+    </PageFooter>
+    <PageHeight>8.27in</PageHeight>
+    <PageWidth>5.83in</PageWidth>
+    <Style />
+  </Page>
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="dsCertificate">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>d91b8469-e172-4a85-a146-03b111ffc055</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="SP_Rpt_Certificate">
+      <Query>
+        <DataSourceName>dsCertificate</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="RefID">
+          <DataField>RefID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="DesignNo">
+          <DataField>DesignNo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Material1">
+          <DataField>Material1</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Material2">
+          <DataField>Material2</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CerNo">
+          <DataField>CerNo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Image1">
+          <DataField>Image1</DataField>
+          <rd:TypeName>System.Byte[]</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>dsCertificate</rd:DataSetName>
+        <rd:SchemaPath>D:\leadssoft\Project\Diamond3\DiamondShop\Report\DS\dsCertificate.xsd</rd:SchemaPath>
+        <rd:TableName>SP_Rpt_Certificate</rd:TableName>
+        <rd:TableAdapterFillMethod />
+        <rd:TableAdapterGetDataMethod />
+        <rd:TableAdapterName />
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="Detail">
+      <Query>
+        <DataSourceName>dsCertificate</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="RowNum">
+          <DataField>RowNum</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Detail">
+          <DataField>Detail</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>dsCertificate</rd:DataSetName>
+        <rd:SchemaPath>D:\leadssoft\Project\Diamond3\DiamondShop\Report\DS\dsCertificate.xsd</rd:SchemaPath>
+        <rd:TableName>Detail</rd:TableName>
+        <rd:TableAdapterFillMethod />
+        <rd:TableAdapterGetDataMethod />
+        <rd:TableAdapterName />
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="Detail1">
+      <Query>
+        <DataSourceName>dsCertificate</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="RowNum">
+          <DataField>RowNum</DataField>
+          <rd:TypeName>System.Int64</rd:TypeName>
+        </Field>
+        <Field Name="Detail">
+          <DataField>Detail</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>dsCertificate</rd:DataSetName>
+        <rd:SchemaPath>D:\leadssoft\Project\Diamond3\DiamondShop\Report\DS\dsCertificate.xsd</rd:SchemaPath>
+        <rd:TableName>Detail1</rd:TableName>
+        <rd:TableAdapterFillMethod />
+        <rd:TableAdapterGetDataMethod />
+        <rd:TableAdapterName />
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="Detail2">
+      <Query>
+        <DataSourceName>dsCertificate</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="RowNum">
+          <DataField>RowNum</DataField>
+          <rd:TypeName>System.Int64</rd:TypeName>
+        </Field>
+        <Field Name="Detail">
+          <DataField>Detail</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>dsCertificate</rd:DataSetName>
+        <rd:SchemaPath>D:\leadssoft\Project\Diamond3\DiamondShop\Report\DS\dsCertificate.xsd</rd:SchemaPath>
+        <rd:TableName>Detail2</rd:TableName>
+        <rd:TableAdapterFillMethod />
+        <rd:TableAdapterGetDataMethod />
+        <rd:TableAdapterName />
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="Total">
+      <Query>
+        <DataSourceName>dsCertificate</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="Total">
+          <DataField>Total</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>dsCertificate</rd:DataSetName>
+        <rd:SchemaPath>D:\leadssoft\Project\Diamond3\DiamondShop\Report\DS\dsCertificate.xsd</rd:SchemaPath>
+        <rd:TableName>Total</rd:TableName>
+        <rd:TableAdapterFillMethod />
+        <rd:TableAdapterGetDataMethod />
+        <rd:TableAdapterName />
+      </rd:DataSetInfo>
+    </DataSet>
+  </DataSets>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>69b4a8d3-a3e2-450d-9ac0-f00711df0744</rd:ReportID>
+</Report>
