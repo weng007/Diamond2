@@ -43,7 +43,7 @@ namespace DiamondShop.Report
             ReportDataSource datasource2 = new ReportDataSource("Detail1", ds.Tables[2]);
             ReportDataSource datasource3 = new ReportDataSource("Detail2", ds.Tables[3]);
             ReportDataSource datasource4 = new ReportDataSource("Total", ds.Tables[4]);
-            this.reportViewer1.LocalReport.ReportPath = "..\\Report\\Certificate.rdlc";
+            this.reportViewer1.LocalReport.ReportPath = "..\\Report\\CertificateSell.rdlc";
 
 
             this.reportViewer1.LocalReport.DataSources.Add(datasource);

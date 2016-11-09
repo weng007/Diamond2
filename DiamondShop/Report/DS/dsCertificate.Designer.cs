@@ -1533,9 +1533,7 @@ namespace DiamondShop.Report.DS {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class TotalDataTable : global::System.Data.TypedTableBase<TotalRow> {
             
-            private global::System.Data.DataColumn columnpcs;
-            
-            private global::System.Data.DataColumn columnCt;
+            private global::System.Data.DataColumn columnTotal;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -1572,17 +1570,9 @@ namespace DiamondShop.Report.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn pcsColumn {
+            public global::System.Data.DataColumn TotalColumn {
                 get {
-                    return this.columnpcs;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn CtColumn {
-                get {
-                    return this.columnCt;
+                    return this.columnTotal;
                 }
             }
             
@@ -1623,11 +1613,10 @@ namespace DiamondShop.Report.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TotalRow AddTotalRow(int pcs, double Ct) {
+            public TotalRow AddTotalRow(int Total) {
                 TotalRow rowTotalRow = ((TotalRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        pcs,
-                        Ct};
+                        Total};
                 rowTotalRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowTotalRow);
                 return rowTotalRow;
@@ -1650,19 +1639,15 @@ namespace DiamondShop.Report.DS {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
-                this.columnpcs = base.Columns["pcs"];
-                this.columnCt = base.Columns["Ct"];
+                this.columnTotal = base.Columns["Total"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             private void InitClass() {
-                this.columnpcs = new global::System.Data.DataColumn("pcs", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnpcs);
-                this.columnCt = new global::System.Data.DataColumn("Ct", typeof(double), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCt);
-                this.columnpcs.ReadOnly = true;
-                this.columnCt.ReadOnly = true;
+                this.columnTotal = new global::System.Data.DataColumn("Total", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTotal);
+                this.columnTotal.ReadOnly = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2201,58 +2186,30 @@ namespace DiamondShop.Report.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int pcs {
+            public int Total {
                 get {
                     try {
-                        return ((int)(this[this.tableTotal.pcsColumn]));
+                        return ((int)(this[this.tableTotal.TotalColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'pcs\' in table \'Total\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Total\' in table \'Total\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTotal.pcsColumn] = value;
+                    this[this.tableTotal.TotalColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public double Ct {
-                get {
-                    try {
-                        return ((double)(this[this.tableTotal.CtColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Ct\' in table \'Total\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableTotal.CtColumn] = value;
-                }
+            public bool IsTotalNull() {
+                return this.IsNull(this.tableTotal.TotalColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IspcsNull() {
-                return this.IsNull(this.tableTotal.pcsColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetpcsNull() {
-                this[this.tableTotal.pcsColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsCtNull() {
-                return this.IsNull(this.tableTotal.CtColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetCtNull() {
-                this[this.tableTotal.CtColumn] = global::System.Convert.DBNull;
+            public void SetTotalNull() {
+                this[this.tableTotal.TotalColumn] = global::System.Convert.DBNull;
             }
         }
         
