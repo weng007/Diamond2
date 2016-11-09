@@ -342,6 +342,7 @@ namespace DiamondShop
 
             //ไม่ให้ปิดหน้าจอหลัง Save
             isClosed = false;
+            LoadData();
 
             return chkFlag;
         }
@@ -437,28 +438,28 @@ namespace DiamondShop
 
         private void SetControlEnable(bool status)
         {
-            dtOrderDate.Enabled = false;
-            txtCustomer.Enabled = false;
-            cmbJewelryType.Enabled = false;
-            cmbMaterial.Enabled = false;
-            cmbQuality.Enabled = false;
-            cmbSeller.Enabled = false;
-            txtSize.Enabled = false;
-            txtCoating.Enabled = false;
-            txtLaser.Enabled = false;
-            txtOldBody.Enabled = false;
-            txtPaid.Enabled = false;
-            dtReceiveDate.Enabled = false;
-            cmbShop1.Enabled = false;
-            txtAppointDate.Enabled = false;
-            cmbShop2.Enabled = false;
+            dtOrderDate.Enabled = status;
+            txtCustomer.Enabled = status;
+            cmbJewelryType.Enabled = status;
+            cmbMaterial.Enabled = status;
+            cmbQuality.Enabled = status;
+            cmbSeller.Enabled = status;
+            txtSize.Enabled = status;
+            txtCoating.Enabled = status;
+            txtLaser.Enabled = status;
+            txtOldBody.Enabled = status;
+            txtPaid.Enabled = status;
+            dtReceiveDate.Enabled = status;
+            cmbShop1.Enabled = status;
+            txtAppointDate.Enabled = status;
+            cmbShop2.Enabled = status;
 
-            groupBox1.Enabled = false;
-            groupBox2.Enabled = false;
-            txtNote.Enabled = false;
-            txtCustNote.Enabled = false;
-            btnDiamond.Enabled = false;
-            txtImageNote.Enabled = false;
+            groupBox1.Enabled = status;
+            groupBox2.Enabled = status;
+            txtNote.Enabled = status;
+            txtCustNote.Enabled = status;
+            btnDiamond.Enabled = status;
+            txtImageNote.Enabled = status;
         }
 
         private void txtNote_TextChanged(object sender, EventArgs e)
