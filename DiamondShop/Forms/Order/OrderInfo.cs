@@ -298,6 +298,7 @@ namespace DiamondShop
             row.Image5 = image5;
             row.IsHave = rdoHave.Checked ? "1" : "0";
             row.IsReceive = rdoReceive.Checked ? "1" : "0";
+
             if (txtAppointDate.Text == "")
             {
                 row.AppointDate = DateTime.MinValue.AddYears(1900);
@@ -324,6 +325,7 @@ namespace DiamondShop
                 {
                     row.OrderNo = GM.GetRunningNumber("ORD");
                     row.FactoryStatus = 218; //Not Yet
+                    row.Shop = ApplicationInfo.Shop;
                     SetCreateBy(row);
                     chkFlag = ser.DoInsertData("Order", tds, 0);
 

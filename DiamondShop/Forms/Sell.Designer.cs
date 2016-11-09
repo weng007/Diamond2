@@ -84,7 +84,6 @@
             // btnImage1
             // 
             this.btnImage1.BackColor = System.Drawing.SystemColors.Control;
-            this.btnImage1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnImage1.BackgroundImage")));
             this.btnImage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnImage1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnImage1.Location = new System.Drawing.Point(30, 335);
@@ -92,7 +91,6 @@
             this.btnImage1.Size = new System.Drawing.Size(150, 150);
             this.btnImage1.TabIndex = 14;
             this.btnImage1.UseVisualStyleBackColor = false;
-            this.btnImage1.Click += new System.EventHandler(this.btnImage1_Click);
             // 
             // panel3
             // 
