@@ -265,13 +265,18 @@ namespace DiamondShop
             CatalogList frm = new CatalogList(1);
             frm.ShowDialog();
 
-            refID = frm.refID1;
-            txtCode.Text = frm.code1;
-            txtJewelryTypeName.Text = frm.typeName;
-            txtPriceTag.Text = frm.price.ToString();
-            cmbShop.SelectedValue = frm.shop;
-            txtPriceTag.Text = GM.ConvertDoubleToString(txtPriceTag, 0);
-            SetJewelryDetail();
+            if (frm.refID1 != 0)
+            {
+                refID = frm.refID1;
+                txtCode.Text = frm.code1;
+                txtJewelryTypeName.Text = frm.typeName;
+                txtPriceTag.Text = frm.price.ToString();
+                cmbShop.SelectedValue = frm.shop;
+                txtPriceTag.Text = GM.ConvertDoubleToString(txtPriceTag, 0);
+
+                txtStatus.Text = "Avai.";
+                SetJewelryDetail();
+            }
 
             //Bind Image
             if (frm.image != null)
