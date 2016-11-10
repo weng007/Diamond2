@@ -15,9 +15,8 @@ namespace DiamondShop
 {
     public partial class ProductionLineList : FormList
     {
-        public int SFactoryStatus;
+        public int factoryStatus = 218; //218 = Not Yet, 219 = Processing, 220 = Mounting Complete, 221 = Job Done
         string idSelected = "";
-        int flag;
 
         public ProductionLineList()
         {
@@ -38,11 +37,6 @@ namespace DiamondShop
             cmbShop.DisplayMember = "Detail";
             cmbShop.Refresh();
 
-            cmbFactoryStatus.DataSource = (GM.GetMasterTableDetail("C036", true)).Tables[0];
-            cmbFactoryStatus.ValueMember = "ID";
-            cmbFactoryStatus.DisplayMember = "Detail";
-            cmbFactoryStatus.Refresh();
-
             if (ApplicationInfo.Shop == 232 && GM.IsOwner(ApplicationInfo.Authorized))
             {
                 btnAdd.Enabled = true;
@@ -60,7 +54,7 @@ namespace DiamondShop
         {
             CheckSelected();
 
-            ProductionLineInfo frm = new ProductionLineInfo(idSelected, SFactoryStatus);
+            ProductionLineInfo frm = new ProductionLineInfo(idSelected, factoryStatus);
             frm.ShowDialog();
 
             DoLoadData();
@@ -74,17 +68,24 @@ namespace DiamondShop
             {
                 if (gridProductionLine.Rows[i].Cells["Select"].Value != null)
                 {
-                    idSelected += gridProductionLine.Rows[i].Cells["ID"].Value.ToString() + comma;
+                    if (gridProductionLine.Rows[i].Cells["Select"].Value.ToString() == "True")
+                    {
+                        idSelected += gridProductionLine.Rows[i].Cells["ID"].Value.ToString() + comma;
+                    }
                 }
             }
-            idSelected = idSelected.Remove(idSelected.Length - 1, 1);
+
+            if (idSelected.Length > 0)
+            {
+                idSelected = idSelected.Remove(idSelected.Length - 1, 1);
+            }
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
             ser2 = GM.GetService2();
-            ds = ser2.DoSearchProductionLine(txtOrderNo.Text, Convert.ToInt32(cmbJewelryType.SelectedValue.ToString()), Convert.ToInt32(cmbShop.SelectedValue.ToString()), Convert.ToInt32(cmbFactoryStatus.SelectedValue.ToString()),
-               dtSOrderDate.Value, dtEOrderDate.Value);
+            ds = ser2.DoSearchProductionLine(txtOrderNo.Text, Convert.ToInt32(cmbJewelryType.SelectedValue.ToString()), 
+                Convert.ToInt32(cmbShop.SelectedValue.ToString()), factoryStatus, dtSOrderDate.Value, dtEOrderDate.Value);
 
             if (ds.Tables[0].Rows.Count > 0)
             {
@@ -109,17 +110,13 @@ namespace DiamondShop
             }
         }
 
-        private void btnChooseDate_Click(object sender, EventArgs e)
-        {
-            flag = 0;
-        }
         private void btnNotYet_Click(object sender, EventArgs e)
         {
-            btnNotYet.BackColor = Color.CadetBlue;
+            btnNotYet.BackColor = Color.CornflowerBlue;
             btnProcessing.BackColor = Color.Gray;
             btnMounting.BackColor = Color.Gray;
             btnJobDone.BackColor = Color.Gray;
-            SFactoryStatus = 218;
+            factoryStatus = 218;
 
             SearchProductionLine(218);
         }
@@ -127,10 +124,10 @@ namespace DiamondShop
         private void btnProcessing_Click(object sender, EventArgs e)
         {
             btnNotYet.BackColor = Color.Gray;
-            btnProcessing.BackColor = Color.CadetBlue;
+            btnProcessing.BackColor = Color.CornflowerBlue;
             btnMounting.BackColor = Color.Gray;
             btnJobDone.BackColor = Color.Gray;
-            SFactoryStatus = 219;
+            factoryStatus = 219;
 
             SearchProductionLine(219);
         }
@@ -139,9 +136,9 @@ namespace DiamondShop
         {
             btnNotYet.BackColor = Color.Gray;
             btnProcessing.BackColor = Color.Gray;
-            btnMounting.BackColor = Color.CadetBlue;
+            btnMounting.BackColor = Color.CornflowerBlue;
             btnJobDone.BackColor = Color.Gray;
-            SFactoryStatus = 220;
+            factoryStatus = 220;
 
             SearchProductionLine(220);
         }
@@ -151,15 +148,15 @@ namespace DiamondShop
             btnNotYet.BackColor = Color.Gray;
             btnProcessing.BackColor = Color.Gray;
             btnMounting.BackColor = Color.Gray;
-            btnJobDone.BackColor = Color.CadetBlue;
-            SFactoryStatus = 221;
+            btnJobDone.BackColor = Color.CornflowerBlue;
+            factoryStatus = 221;
 
             SearchProductionLine(221);
         }
-        private void SearchProductionLine(int FactoryStatus)
+        private void SearchProductionLine(int factoryStatus)
         {
             ser2 = GM.GetService2();
-            ds = ser2.DoSearchProductionLine(txtOrderNo.Text, Convert.ToInt32(cmbJewelryType.SelectedValue.ToString()), Convert.ToInt32(cmbShop.SelectedValue.ToString()), FactoryStatus,
+            ds = ser2.DoSearchProductionLine(txtOrderNo.Text, Convert.ToInt32(cmbJewelryType.SelectedValue.ToString()), Convert.ToInt32(cmbShop.SelectedValue.ToString()), factoryStatus,
                dtSOrderDate.Value, dtEOrderDate.Value);
 
             if (ds.Tables[0].Rows.Count > 0)

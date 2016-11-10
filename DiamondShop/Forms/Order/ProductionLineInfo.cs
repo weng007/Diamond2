@@ -19,7 +19,7 @@ namespace DiamondShop
         Service2 ser1;
         dsProductionLine tds = new dsProductionLine();
         bool isAuthorize = false;
-        int SFactoryStatus;
+        int factoryStatus;
         string[] idSelected;
 
         public ProductionLineInfo()
@@ -29,16 +29,16 @@ namespace DiamondShop
 
             binder.BindControl(cmbFactoryStatus, "FactoryStatus");
         }
-        public ProductionLineInfo(string idSelected,int SFactoryStatus)
+        public ProductionLineInfo(string idSelected,int tmp)
         {
             InitializeComponent();
             Initial();
-            this.SFactoryStatus = SFactoryStatus;
+            this.factoryStatus = tmp;
             this.idSelected = idSelected.Split(',');
 
-            if (SFactoryStatus != 221)
+            if (factoryStatus != 221)
             {
-                cmbFactoryStatus.SelectedValue = SFactoryStatus + 1;
+                cmbFactoryStatus.SelectedValue = factoryStatus + 1;
             }
 
             LoadData();     

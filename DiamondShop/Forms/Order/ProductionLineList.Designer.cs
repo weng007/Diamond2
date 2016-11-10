@@ -29,13 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductionLineList));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panal = new System.Windows.Forms.Panel();
-            this.txtLable = new System.Windows.Forms.Label();
-            this.cmbFactoryStatus = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtOrderNo = new System.Windows.Forms.TextBox();
             this.btnJobDone = new System.Windows.Forms.Button();
@@ -55,6 +54,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.gridProductionLine = new System.Windows.Forms.DataGridView();
             this.Select = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.RowNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.OrderNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.JewelryTypeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -63,7 +63,6 @@
             this.WeightGC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FactoryStatusName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FactoryStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panal.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -73,8 +72,6 @@
             // panal
             // 
             this.panal.BackColor = System.Drawing.Color.Transparent;
-            this.panal.Controls.Add(this.txtLable);
-            this.panal.Controls.Add(this.cmbFactoryStatus);
             this.panal.Controls.Add(this.label1);
             this.panal.Controls.Add(this.txtOrderNo);
             this.panal.Controls.Add(this.btnJobDone);
@@ -97,24 +94,6 @@
             this.panal.Size = new System.Drawing.Size(1175, 169);
             this.panal.TabIndex = 40;
             // 
-            // txtLable
-            // 
-            this.txtLable.BackColor = System.Drawing.Color.Transparent;
-            this.txtLable.ForeColor = System.Drawing.Color.Black;
-            this.txtLable.Location = new System.Drawing.Point(434, 90);
-            this.txtLable.Name = "txtLable";
-            this.txtLable.Size = new System.Drawing.Size(129, 26);
-            this.txtLable.TabIndex = 310;
-            this.txtLable.Text = "Factory Status";
-            // 
-            // cmbFactoryStatus
-            // 
-            this.cmbFactoryStatus.FormattingEnabled = true;
-            this.cmbFactoryStatus.Location = new System.Drawing.Point(564, 87);
-            this.cmbFactoryStatus.Name = "cmbFactoryStatus";
-            this.cmbFactoryStatus.Size = new System.Drawing.Size(168, 28);
-            this.cmbFactoryStatus.TabIndex = 309;
-            // 
             // label1
             // 
             this.label1.BackColor = System.Drawing.Color.Transparent;
@@ -134,7 +113,7 @@
             // 
             // btnJobDone
             // 
-            this.btnJobDone.BackColor = System.Drawing.Color.CadetBlue;
+            this.btnJobDone.BackColor = System.Drawing.Color.CornflowerBlue;
             this.btnJobDone.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnJobDone.FlatAppearance.BorderSize = 0;
             this.btnJobDone.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -150,7 +129,7 @@
             // 
             // btnMounting
             // 
-            this.btnMounting.BackColor = System.Drawing.Color.CadetBlue;
+            this.btnMounting.BackColor = System.Drawing.Color.CornflowerBlue;
             this.btnMounting.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMounting.FlatAppearance.BorderSize = 0;
             this.btnMounting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -166,7 +145,7 @@
             // 
             // btnProcessing
             // 
-            this.btnProcessing.BackColor = System.Drawing.Color.CadetBlue;
+            this.btnProcessing.BackColor = System.Drawing.Color.CornflowerBlue;
             this.btnProcessing.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnProcessing.FlatAppearance.BorderSize = 0;
             this.btnProcessing.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -182,7 +161,7 @@
             // 
             // btnNotYet
             // 
-            this.btnNotYet.BackColor = System.Drawing.Color.CadetBlue;
+            this.btnNotYet.BackColor = System.Drawing.Color.CornflowerBlue;
             this.btnNotYet.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNotYet.FlatAppearance.BorderSize = 0;
             this.btnNotYet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -200,16 +179,16 @@
             // 
             this.dtEOrderDate.CustomFormat = "dd/MM/yyyy";
             this.dtEOrderDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtEOrderDate.Location = new System.Drawing.Point(1014, 89);
+            this.dtEOrderDate.Location = new System.Drawing.Point(721, 128);
             this.dtEOrderDate.Name = "dtEOrderDate";
-            this.dtEOrderDate.Size = new System.Drawing.Size(131, 26);
+            this.dtEOrderDate.Size = new System.Drawing.Size(110, 26);
             this.dtEOrderDate.TabIndex = 88;
             // 
             // label8
             // 
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(995, 91);
+            this.label8.Location = new System.Drawing.Point(702, 130);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(16, 25);
             this.label8.TabIndex = 89;
@@ -219,18 +198,18 @@
             // 
             this.dtSOrderDate.CustomFormat = "dd/MM/yyyy";
             this.dtSOrderDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtSOrderDate.Location = new System.Drawing.Point(858, 89);
+            this.dtSOrderDate.Location = new System.Drawing.Point(582, 128);
             this.dtSOrderDate.Name = "dtSOrderDate";
-            this.dtSOrderDate.Size = new System.Drawing.Size(131, 26);
+            this.dtSOrderDate.Size = new System.Drawing.Size(114, 26);
             this.dtSOrderDate.TabIndex = 87;
             // 
             // label7
             // 
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(756, 90);
+            this.label7.Location = new System.Drawing.Point(474, 128);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(105, 26);
+            this.label7.Size = new System.Drawing.Size(91, 26);
             this.label7.TabIndex = 83;
             this.label7.Text = "Order Date";
             // 
@@ -238,16 +217,16 @@
             // 
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(434, 131);
+            this.label3.Location = new System.Drawing.Point(452, 89);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(129, 26);
+            this.label3.Size = new System.Drawing.Size(124, 26);
             this.label3.TabIndex = 81;
             this.label3.Text = "Order Location";
             // 
             // cmbShop
             // 
             this.cmbShop.FormattingEnabled = true;
-            this.cmbShop.Location = new System.Drawing.Point(564, 128);
+            this.cmbShop.Location = new System.Drawing.Point(582, 86);
             this.cmbShop.Name = "cmbShop";
             this.cmbShop.Size = new System.Drawing.Size(168, 28);
             this.cmbShop.TabIndex = 80;
@@ -260,7 +239,7 @@
             this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSearch.FlatAppearance.BorderSize = 0;
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.Location = new System.Drawing.Point(858, 128);
+            this.btnSearch.Location = new System.Drawing.Point(858, 122);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(131, 32);
             this.btnSearch.TabIndex = 52;
@@ -273,6 +252,7 @@
             this.btnAdd.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAdd.BackgroundImage")));
             this.btnAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAdd.Enabled = false;
             this.btnAdd.FlatAppearance.BorderColor = System.Drawing.Color.Linen;
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
@@ -321,6 +301,7 @@
             this.gridProductionLine.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridProductionLine.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Select,
+            this.RowNum,
             this.ID,
             this.OrderNo,
             this.JewelryTypeName,
@@ -328,15 +309,13 @@
             this.WeightDC,
             this.WeightGC,
             this.Price,
-            this.FactoryStatusName,
-            this.FactoryStatus});
-            this.gridProductionLine.Enabled = false;
+            this.FactoryStatusName});
             this.gridProductionLine.Location = new System.Drawing.Point(19, 0);
             this.gridProductionLine.Name = "gridProductionLine";
             this.gridProductionLine.ReadOnly = true;
             this.gridProductionLine.RowHeadersWidth = 10;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridProductionLine.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridProductionLine.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.gridProductionLine.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridProductionLine.RowTemplate.Height = 30;
             this.gridProductionLine.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -350,6 +329,16 @@
             this.Select.Name = "Select";
             this.Select.ReadOnly = true;
             this.Select.Width = 60;
+            // 
+            // RowNum
+            // 
+            this.RowNum.DataPropertyName = "RowNum";
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.RowNum.DefaultCellStyle = dataGridViewCellStyle1;
+            this.RowNum.HeaderText = "No.";
+            this.RowNum.Name = "RowNum";
+            this.RowNum.ReadOnly = true;
+            this.RowNum.Width = 60;
             // 
             // ID
             // 
@@ -387,10 +376,10 @@
             // WeightDC
             // 
             this.WeightDC.DataPropertyName = "WeightDC";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle1.Format = "N2";
-            dataGridViewCellStyle1.NullValue = "0";
-            this.WeightDC.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle2.Format = "N2";
+            dataGridViewCellStyle2.NullValue = "0";
+            this.WeightDC.DefaultCellStyle = dataGridViewCellStyle2;
             this.WeightDC.HeaderText = "นน. DC";
             this.WeightDC.Name = "WeightDC";
             this.WeightDC.ReadOnly = true;
@@ -398,10 +387,10 @@
             // WeightGC
             // 
             this.WeightGC.DataPropertyName = "WeightGC";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle2.Format = "N2";
-            dataGridViewCellStyle2.NullValue = "0";
-            this.WeightGC.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle3.Format = "N2";
+            dataGridViewCellStyle3.NullValue = "0";
+            this.WeightGC.DefaultCellStyle = dataGridViewCellStyle3;
             this.WeightGC.HeaderText = "นน.  GC";
             this.WeightGC.Name = "WeightGC";
             this.WeightGC.ReadOnly = true;
@@ -409,10 +398,10 @@
             // Price
             // 
             this.Price.DataPropertyName = "Price";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle3.Format = "N0";
-            dataGridViewCellStyle3.NullValue = "0";
-            this.Price.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle4.Format = "N0";
+            dataGridViewCellStyle4.NullValue = "0";
+            this.Price.DefaultCellStyle = dataGridViewCellStyle4;
             this.Price.HeaderText = "ราคาที่ตกลง";
             this.Price.Name = "Price";
             this.Price.ReadOnly = true;
@@ -425,14 +414,6 @@
             this.FactoryStatusName.Name = "FactoryStatusName";
             this.FactoryStatusName.ReadOnly = true;
             this.FactoryStatusName.Width = 150;
-            // 
-            // FactoryStatus
-            // 
-            this.FactoryStatus.DataPropertyName = "FactoryStatus";
-            this.FactoryStatus.HeaderText = "FactoryStatus";
-            this.FactoryStatus.Name = "FactoryStatus";
-            this.FactoryStatus.ReadOnly = true;
-            this.FactoryStatus.Visible = false;
             // 
             // ProductionLineList
             // 
@@ -474,9 +455,8 @@
         private System.Windows.Forms.Button btnNotYet;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtOrderNo;
-        private System.Windows.Forms.Label txtLable;
-        private System.Windows.Forms.ComboBox cmbFactoryStatus;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Select;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RowNum;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn OrderNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn JewelryTypeName;
@@ -485,6 +465,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn WeightGC;
         private System.Windows.Forms.DataGridViewTextBoxColumn Price;
         private System.Windows.Forms.DataGridViewTextBoxColumn FactoryStatusName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FactoryStatus;
     }
 }
