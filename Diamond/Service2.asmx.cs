@@ -148,20 +148,6 @@ namespace Diamond
         }
 
         [WebMethod]
-        public int UpdateOrderStatus(int id, int WarningID)
-        {
-            GeneralBiz biz = new GeneralBiz();
-            try
-            {
-                return biz.UpdateOrderStatus(id, WarningID);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-
-        [WebMethod]
         public DataSet GetPriceDaimondAndGemstone(int id)
         {
             GeneralBiz biz = new GeneralBiz();

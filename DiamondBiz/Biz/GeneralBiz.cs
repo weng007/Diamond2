@@ -52,20 +52,6 @@ namespace DiamondBiz.Biz
             }
         }
 
-        public int UpdateOrderStatus(int id, int WarningID)
-        {
-            int tmp = 0;
-
-            try
-            {
-                return dal.UpdateOrderStatus(id, WarningID);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-
         public DataSet GetJewelryDetail(int id)
         {
             try

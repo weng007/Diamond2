@@ -23,7 +23,6 @@ namespace DiamondShop
         DiamondDS.DS.dsOrder tds = new DiamondDS.DS.dsOrder();
         dsWarning tds2 = new dsWarning();
         bool isAuthorize = false;
-        string FilePath;
         int custID = 0;
         int InvID = 0;
         int InvID1 = 0;
@@ -35,7 +34,6 @@ namespace DiamondShop
         MemoryStream ms5;
         byte[] image1, image2, image3, image4, image5;
         public string materail = "";
-        int flag = 0;
         public int WarningID = 0;
         public int OrderID;
         public OrderInfo()
@@ -78,6 +76,7 @@ namespace DiamondShop
             LoadData();
 
             SetControlEnable(false);
+
             //ปิดเปิดปุ่ม Confirm, Print ใบสั่งงาน และสร้าง Inventory
             SetMode();
 
@@ -267,7 +266,6 @@ namespace DiamondShop
         protected override bool SaveData()
         {
             DiamondDS.DS.dsOrder.OrderRow row = null;
-            dsWarning.WarningRow row2 = null;
 
             if (tds.Order.Rows.Count > 0)
             {
@@ -277,16 +275,6 @@ namespace DiamondShop
             {
                 row = tds.Order.NewOrderRow();
                 tds.Order.Rows.Add(row);
-            }
-
-            if (tds2.Warning.Rows.Count > 0)
-            {
-                row2 = tds2.Warning[0];
-            }
-            else
-            {
-                row2 = tds2.Warning.NewWarningRow();
-                tds2.Warning.Rows.Add(row2);
             }
 
             binder.BindValueToDataRow(row);
@@ -309,21 +297,12 @@ namespace DiamondShop
             }
             row.RefID = InvID;
             row.RefID1 = InvID1;
-            if (flag == 1)
-            {
-                row.Flag = flag;
-                row.FactoryStatus = 219; //Processing
-            }
-            else
-            {
-                row.Flag = flag;
-            }
 
             try
             {
                 if (id == 0)
                 {
-                    row.OrderNo = GM.GetRunningNumber("ORD");
+                    row.OrderNo = GM.GetRunningNumber("ORD");             
                     row.FactoryStatus = 218; //Not Yet
                     row.Shop = ApplicationInfo.Shop;
                     SetCreateBy(row);
@@ -333,6 +312,8 @@ namespace DiamondShop
                     {
                         ser1 = GM.GetService1();
                         id = ser1.DoSearchOrderByCode(row.OrderNo);
+
+                        SetControlEnable(true);
                     }
                 }
                 else
@@ -534,10 +515,10 @@ namespace DiamondShop
         {          
             btnNotYet.Image = imageList1.Images[4];
             btnProcessing.Image = imageList1.Images[1];
-            flag = 1;
-            //ser1.UpdateMessageStatus(id, "1", "1");
 
-            SaveData();
+            ser1 = GM.GetService1();
+            ser1.UpdateProductionLine(id, 219,ApplicationInfo.UserID);
+
             btnPrint.Visible = true;
             btnInventory.Visible = true;
             btnDiamond.Enabled = true;

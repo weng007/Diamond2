@@ -398,8 +398,11 @@ namespace DiamondShop
         {
             CustomerList frm = new CustomerList(1);
             frm.ShowDialog();
-            custID = frm.custID;
-            txtCustomer.Text = frm.customerName;
+            if(frm.custID != 0)
+            {
+                custID = frm.custID;
+                txtCustomer.Text = frm.customerName;
+            }
         }
 
         private void txtPriceTag_Leave(object sender, EventArgs e)

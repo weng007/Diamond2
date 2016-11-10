@@ -74,22 +74,6 @@ namespace DiamondDAL.DAL
 
             return flag;
         }
-        public int UpdateOrderStatus(int id, int WarningID)
-        {
-            try
-            {
-                SQL.ClearParameter();
-                SQL.CreateParameter("@ID", id);
-                SQL.CreateParameter("@WarningID", WarningID);
-                flag = SQL.ExecuteSP("SP_OrderStatus_Upd");
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-
-            return flag;
-        }
 
         public DataSet GetPriceDaimondAndGemstone(int id)
         {

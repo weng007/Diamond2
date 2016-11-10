@@ -363,8 +363,6 @@ namespace DiamondDS.DS {
             
             private global::System.Data.DataColumn columnDetail;
             
-            private global::System.Data.DataColumn columnFlag;
-            
             private global::System.Data.DataColumn columnNote1;
             
             private global::System.Data.DataColumn columnNote1Status;
@@ -772,14 +770,6 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn FlagColumn {
-                get {
-                    return this.columnFlag;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn Note1Column {
                 get {
                     return this.columnNote1;
@@ -1001,7 +991,6 @@ namespace DiamondDS.DS {
                         string ImageNote, 
                         string Things, 
                         string Detail, 
-                        int Flag, 
                         string Note1, 
                         int Note1Status, 
                         string NoteStatusName1, 
@@ -1064,7 +1053,6 @@ namespace DiamondDS.DS {
                         ImageNote,
                         Things,
                         Detail,
-                        Flag,
                         Note1,
                         Note1Status,
                         NoteStatusName1,
@@ -1154,7 +1142,6 @@ namespace DiamondDS.DS {
                 this.columnImageNote = base.Columns["ImageNote"];
                 this.columnThings = base.Columns["Things"];
                 this.columnDetail = base.Columns["Detail"];
-                this.columnFlag = base.Columns["Flag"];
                 this.columnNote1 = base.Columns["Note1"];
                 this.columnNote1Status = base.Columns["Note1Status"];
                 this.columnNoteStatusName1 = base.Columns["NoteStatusName1"];
@@ -1262,8 +1249,6 @@ namespace DiamondDS.DS {
                 base.Columns.Add(this.columnThings);
                 this.columnDetail = new global::System.Data.DataColumn("Detail", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDetail);
-                this.columnFlag = new global::System.Data.DataColumn("Flag", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnFlag);
                 this.columnNote1 = new global::System.Data.DataColumn("Note1", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnNote1);
                 this.columnNote1Status = new global::System.Data.DataColumn("Note1Status", typeof(int), null, global::System.Data.MappingType.Element);
@@ -2154,22 +2139,6 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int Flag {
-                get {
-                    try {
-                        return ((int)(this[this.tableOrder.FlagColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Flag\' in table \'Order\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableOrder.FlagColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string Note1 {
                 get {
                     try {
@@ -2946,18 +2915,6 @@ namespace DiamondDS.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetDetailNull() {
                 this[this.tableOrder.DetailColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsFlagNull() {
-                return this.IsNull(this.tableOrder.FlagColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetFlagNull() {
-                this[this.tableOrder.FlagColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

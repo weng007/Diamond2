@@ -69,6 +69,7 @@ namespace DiamondShop
             cmbShop.Refresh();
 
             dtBuyDate.Select();
+            cmbShop.SelectedValue = ApplicationInfo.Shop;
 
             SetFieldService.SetRequireField(txtSeller, txtPrice);
         }

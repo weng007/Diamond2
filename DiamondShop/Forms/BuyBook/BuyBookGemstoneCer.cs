@@ -155,6 +155,7 @@ namespace DiamondShop
             cmbShape.Refresh();
 
             dtBuyDate.Select();
+            cmbShop.SelectedValue = ApplicationInfo.Shop;
 
             SetFieldService.SetRequireField(txtWeight, txtUSDRate);
         }

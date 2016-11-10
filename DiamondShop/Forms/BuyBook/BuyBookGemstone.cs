@@ -114,8 +114,8 @@ namespace DiamondShop
             cmbShop.DisplayMember = "Detail";
             cmbShop.Refresh();
 
-
             dtBuyDate.Select();
+            cmbShop.SelectedValue = ApplicationInfo.Shop;
 
             SetFieldService.SetRequireField(txtSeller, txtWeight, txtUSDRate);
         }

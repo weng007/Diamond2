@@ -36,6 +36,12 @@ namespace DiamondShop
             this.mode = mode;
             btnClose.Visible = true;
 
+            if(mode == 1)
+            {
+                txtPrefix.Enabled = true;
+                txtPrefix.Select();
+            }
+
             DoLoadData();
         }
 
