@@ -314,6 +314,7 @@ namespace DiamondShop
                         id = ser1.DoSearchOrderByCode(row.OrderNo);
 
                         SetControlEnable(true);
+                        isAuthorize = true;
                     }
                 }
                 else
