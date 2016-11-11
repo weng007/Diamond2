@@ -72,16 +72,23 @@ namespace DiamondShop
         private void CheckSelected()
         {
             string comma = ",";
+            idSelected = "";
 
             for (int i = 0; i < gridTransferInventory.Rows.Count; i++)
             {
                 if (gridTransferInventory.Rows[i].Cells["Select"].Value != null)
                 {
-                    idSelected += gridTransferInventory.Rows[i].Cells["ID"].Value.ToString() + comma;
+                    if (gridTransferInventory.Rows[i].Cells["Select"].Value.ToString() == "True")
+                    {
+                        idSelected += gridTransferInventory.Rows[i].Cells["ID"].Value.ToString() + comma;
+                    }
                 }
             }
 
-            idSelected = idSelected.Remove(idSelected.Length - 1, 1);
+            if (idSelected.Length > 0)
+            {
+                idSelected = idSelected.Remove(idSelected.Length - 1, 1);
+            }
         }
 
         private void btnSelect_Click(object sender, EventArgs e)

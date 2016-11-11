@@ -106,6 +106,8 @@ namespace DiamondShop
         private void CheckSelected()
         {
             string comma = ",";
+            idSelected = "";
+            buyBookType = "";
 
             for (int i = 0; i < gridBuyBookPayment.Rows.Count; i++)
             {
@@ -115,8 +117,12 @@ namespace DiamondShop
                     buyBookType += gridBuyBookPayment.Rows[i].Cells["BuyBookTypeID"].Value.ToString() +comma;
                 }
             }
-            idSelected = idSelected.Remove(idSelected.Length - 1, 1);
-            buyBookType = buyBookType.Remove(buyBookType.Length - 1, 1);
+
+            if (idSelected.Length > 0)
+            {
+                idSelected = idSelected.Remove(idSelected.Length - 1, 1);
+                buyBookType = buyBookType.Remove(buyBookType.Length - 1, 1);
+            }         
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
