@@ -283,20 +283,20 @@ namespace DiamondShop
 
                 txtStatus.Text = "Avai.";
                 SetJewelryDetail();
-            }
 
-            //Bind Image
-            if (frm.image != null)
-            {
-                image1 = frm.image;
-                ms1 = new MemoryStream(image1);
-                Image backImage1 = Image.FromStream(ms1);
-                btnImage1.BackgroundImage = backImage1;
-            }
-            else
-            {
-                btnImage1.BackgroundImage = null;
-            }
+                //Bind Image
+                if (frm.image != null)
+                {
+                    image1 = frm.image;
+                    ms1 = new MemoryStream(image1);
+                    Image backImage1 = Image.FromStream(ms1);
+                    btnImage1.BackgroundImage = backImage1;
+                }
+                else
+                {
+                    btnImage1.BackgroundImage = null;
+                }
+            }        
         }
 
         private void SetJewelryDetail()
