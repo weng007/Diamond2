@@ -429,6 +429,8 @@ namespace DiamondShop.Report.DS {
             
             private global::System.Data.DataColumn columnCerNo;
             
+            private global::System.Data.DataColumn columnNetPrice;
+            
             private global::System.Data.DataColumn columnImage1;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -506,6 +508,14 @@ namespace DiamondShop.Report.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn NetPriceColumn {
+                get {
+                    return this.columnNetPrice;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn Image1Column {
                 get {
                     return this.columnImage1;
@@ -549,7 +559,7 @@ namespace DiamondShop.Report.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public SP_Rpt_CertificateRow AddSP_Rpt_CertificateRow(int RefID, string DesignNo, string Material1, string Material2, string CerNo, byte[] Image1) {
+            public SP_Rpt_CertificateRow AddSP_Rpt_CertificateRow(int RefID, string DesignNo, string Material1, string Material2, string CerNo, string NetPrice, byte[] Image1) {
                 SP_Rpt_CertificateRow rowSP_Rpt_CertificateRow = ((SP_Rpt_CertificateRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         RefID,
@@ -557,6 +567,7 @@ namespace DiamondShop.Report.DS {
                         Material1,
                         Material2,
                         CerNo,
+                        NetPrice,
                         Image1};
                 rowSP_Rpt_CertificateRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowSP_Rpt_CertificateRow);
@@ -585,6 +596,7 @@ namespace DiamondShop.Report.DS {
                 this.columnMaterial1 = base.Columns["Material1"];
                 this.columnMaterial2 = base.Columns["Material2"];
                 this.columnCerNo = base.Columns["CerNo"];
+                this.columnNetPrice = base.Columns["NetPrice"];
                 this.columnImage1 = base.Columns["Image1"];
             }
             
@@ -601,6 +613,8 @@ namespace DiamondShop.Report.DS {
                 base.Columns.Add(this.columnMaterial2);
                 this.columnCerNo = new global::System.Data.DataColumn("CerNo", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCerNo);
+                this.columnNetPrice = new global::System.Data.DataColumn("NetPrice", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNetPrice);
                 this.columnImage1 = new global::System.Data.DataColumn("Image1", typeof(byte[]), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnImage1);
                 this.columnDesignNo.MaxLength = 30;
@@ -1870,6 +1884,22 @@ namespace DiamondShop.Report.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string NetPrice {
+                get {
+                    try {
+                        return ((string)(this[this.tableSP_Rpt_Certificate.NetPriceColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'NetPrice\' in table \'SP_Rpt_Certificate\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSP_Rpt_Certificate.NetPriceColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public byte[] Image1 {
                 get {
                     try {
@@ -1942,6 +1972,18 @@ namespace DiamondShop.Report.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetCerNoNull() {
                 this[this.tableSP_Rpt_Certificate.CerNoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsNetPriceNull() {
+                return this.IsNull(this.tableSP_Rpt_Certificate.NetPriceColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetNetPriceNull() {
+                this[this.tableSP_Rpt_Certificate.NetPriceColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

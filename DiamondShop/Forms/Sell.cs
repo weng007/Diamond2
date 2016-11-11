@@ -26,6 +26,7 @@ namespace DiamondShop
 
         int custID = 0;
         int refID = 0;
+        public string isPrice;
 
         public Sell()
         {
@@ -431,7 +432,16 @@ namespace DiamondShop
 
         private void btnPrint_Click(object sender, EventArgs e)
         {
-            Report.ReportViewer report = new Report.ReportViewer(id);
+            if (chkIsPrintPrice.Checked)
+            {
+                isPrice = "1";
+            }
+            else
+            {
+                isPrice = "0";
+            }
+
+            Report.ReportViewer report = new Report.ReportViewer(id,isPrice);
             report.ShowDialog();
         }
 

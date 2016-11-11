@@ -165,11 +165,11 @@ namespace DiamondBiz.Biz
                 throw ex;
             }
         }
-        public DataSet GetReportCertificate(int ID)
+        public DataSet GetReportCertificate(int id, string isPrice)
         {
             try
             {
-                return dal.GetReportCertificate(ID);
+                return dal.GetReportCertificate(id, isPrice);
             }
             catch (Exception ex)
             {

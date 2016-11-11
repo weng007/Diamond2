@@ -220,12 +220,13 @@ namespace DiamondDAL.DAL
 
             return ds;
         }
-        public DataSet GetReportCertificate(int id)
+        public DataSet GetReportCertificate(int id,string isPrice)
         {
             try
             {
                 SQL.ClearParameter();
                 SQL.CreateParameter("@ID", id);
+                SQL.CreateParameter("@IsPrice", isPrice);
                 SQL.FillDataSetBySP2("SP_Rpt_Certificate", ds);
 
                 //ds.Tables[1].TableName = "dsCertificate";

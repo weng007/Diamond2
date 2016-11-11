@@ -126,6 +126,43 @@
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
+          <Textbox Name="NetPrice">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!NetPrice.Value, "SP_Rpt_Certificate")</Value>
+                    <Style>
+                      <FontSize>8pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>NetPrice</rd:DefaultName>
+            <Top>2.03333in</Top>
+            <Left>3.21166in</Left>
+            <Height>0.20833in</Height>
+            <Width>1.79946in</Width>
+            <ZIndex>3</ZIndex>
+            <Visibility>
+              <Hidden>=iif(First(Fields!NetPrice.Value, "SP_Rpt_Certificate") = "0",true,false)</Hidden>
+            </Visibility>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
         </ReportItems>
         <Top>0.06944in</Top>
         <Left>0.3434in</Left>
@@ -864,6 +901,7 @@
           </Style>
         </Line>
         <Line Name="Line18">
+          <Top>0in</Top>
           <Left>0.025in</Left>
           <Height>1.4625in</Height>
           <Width>0in</Width>
@@ -1057,6 +1095,10 @@
         </Field>
         <Field Name="CerNo">
           <DataField>CerNo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="NetPrice">
+          <DataField>NetPrice</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="Image1">

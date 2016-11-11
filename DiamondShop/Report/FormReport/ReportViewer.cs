@@ -18,6 +18,7 @@ namespace DiamondShop.Report
     {
         Service2 ser1;
         public int ID;
+        string isPrice;
         DataSet ds = new DataSet();
 
         public ReportViewer()
@@ -27,16 +28,17 @@ namespace DiamondShop.Report
             DoLoadData();
         }
 
-        public ReportViewer(int ID)
+        public ReportViewer(int ID,string isPrice)
         {
             InitializeComponent();
             Initial();
 
             this.ID = ID;
+            this.isPrice = isPrice;
 
             Application.UseWaitCursor = true;
             ser1 = GM.GetService1();
-            ds = ser1.GetReportCertificate(ID);
+            ds = ser1.GetReportCertificate(ID,isPrice);
 
             ReportDataSource datasource = new ReportDataSource("SP_Rpt_Certificate", ds.Tables[1]);
             ReportDataSource datasource1 = new ReportDataSource("Detail", ds.Tables[0]);

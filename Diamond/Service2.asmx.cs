@@ -274,12 +274,12 @@ namespace Diamond
         }
 
         [WebMethod]
-        public DataSet GetReportCertificate(int id)
+        public DataSet GetReportCertificate(int id, string isPrice)
         {
             GeneralBiz biz = new GeneralBiz();
             try
             {
-                return biz.GetReportCertificate(id);
+                return biz.GetReportCertificate(id, isPrice);
             }
             catch (Exception ex)
             {
