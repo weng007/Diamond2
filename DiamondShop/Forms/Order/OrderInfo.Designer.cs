@@ -82,7 +82,7 @@
             this.txtPrice = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.txtNote = new System.Windows.Forms.TextBox();
+            this.txtThings = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.cmbShop2 = new System.Windows.Forms.ComboBox();
             this.label15 = new System.Windows.Forms.Label();
@@ -196,7 +196,7 @@
             this.panel3.Controls.Add(this.txtPrice);
             this.panel3.Controls.Add(this.label10);
             this.panel3.Controls.Add(this.label9);
-            this.panel3.Controls.Add(this.txtNote);
+            this.panel3.Controls.Add(this.txtThings);
             this.panel3.Controls.Add(this.label17);
             this.panel3.Controls.Add(this.cmbShop2);
             this.panel3.Controls.Add(this.label15);
@@ -834,14 +834,14 @@
             this.label9.TabIndex = 263;
             this.label9.Text = "ของที่ต้องมารับไป / ส่งโรงงาน";
             // 
-            // txtNote
+            // txtThings
             // 
-            this.txtNote.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.txtNote.Location = new System.Drawing.Point(453, 414);
-            this.txtNote.Multiline = true;
-            this.txtNote.Name = "txtNote";
-            this.txtNote.Size = new System.Drawing.Size(225, 97);
-            this.txtNote.TabIndex = 18;
+            this.txtThings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.txtThings.Location = new System.Drawing.Point(453, 414);
+            this.txtThings.Multiline = true;
+            this.txtThings.Name = "txtThings";
+            this.txtThings.Size = new System.Drawing.Size(225, 97);
+            this.txtThings.TabIndex = 18;
             // 
             // label17
             // 
@@ -1090,7 +1090,7 @@
             this.txtDetail.Name = "txtDetail";
             this.txtDetail.Size = new System.Drawing.Size(386, 86);
             this.txtDetail.TabIndex = 16;
-            this.txtDetail.TextChanged += new System.EventHandler(this.txtNote_TextChanged);
+            this.txtDetail.TextChanged += new System.EventHandler(this.txtThings_TextChanged);
             // 
             // label30
             // 
@@ -1158,7 +1158,7 @@
             this.txtCustomer.Name = "txtCustomer";
             this.txtCustomer.Size = new System.Drawing.Size(150, 26);
             this.txtCustomer.TabIndex = 2;
-            this.txtCustomer.TextChanged += new System.EventHandler(this.txtNote_TextChanged);
+            this.txtCustomer.TextChanged += new System.EventHandler(this.txtThings_TextChanged);
             // 
             // label14
             // 
@@ -1207,7 +1207,7 @@
             this.txtTel.Name = "txtTel";
             this.txtTel.Size = new System.Drawing.Size(150, 26);
             this.txtTel.TabIndex = 18;
-            this.txtTel.TextChanged += new System.EventHandler(this.txtNote_TextChanged);
+            this.txtTel.TextChanged += new System.EventHandler(this.txtThings_TextChanged);
             // 
             // label1
             // 
@@ -1237,7 +1237,7 @@
             this.txtCode.Name = "txtCode";
             this.txtCode.Size = new System.Drawing.Size(150, 26);
             this.txtCode.TabIndex = 150;
-            this.txtCode.TextChanged += new System.EventHandler(this.txtNote_TextChanged);
+            this.txtCode.TextChanged += new System.EventHandler(this.txtThings_TextChanged);
             // 
             // panel1
             // 
@@ -1351,7 +1351,7 @@
         private System.Windows.Forms.TextBox txtPrice;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txtNote;
+        private System.Windows.Forms.TextBox txtThings;
         private System.Windows.Forms.RadioButton rdoNotReceive;
         private System.Windows.Forms.RadioButton rdoReceive;
         private System.Windows.Forms.Button btnImage1;
