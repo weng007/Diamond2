@@ -195,7 +195,7 @@
             this.txtStatus.Location = new System.Drawing.Point(145, 240);
             this.txtStatus.Name = "txtStatus";
             this.txtStatus.ReadOnly = true;
-            this.txtStatus.Size = new System.Drawing.Size(166, 26);
+            this.txtStatus.Size = new System.Drawing.Size(167, 26);
             this.txtStatus.TabIndex = 196;
             // 
             // label11
@@ -618,7 +618,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(195)))), ((int)(((byte)(157)))));
-            this.ClientSize = new System.Drawing.Size(961, 734);
+            this.ClientSize = new System.Drawing.Size(964, 734);
             this.Controls.Add(this.panel3);
             this.Name = "Sell";
             this.Text = "Sale";
