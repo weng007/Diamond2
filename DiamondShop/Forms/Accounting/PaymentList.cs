@@ -171,13 +171,11 @@ namespace DiamondShop
                     gridBuyBookPayment.SelectedCells[0].Value = true;
                     id = (int)gridBuyBookPayment.SelectedRows[0].Cells["ID"].Value;
                     TotalPrice += Convert.ToDecimal(gridBuyBookPayment.SelectedRows[0].Cells["TotalBaht"].Value.ToString());
-                    //BuyBookType += Convert.Toint32(gridBuyBookPayment.SelectedRows[0].Cells["BuybookTypeID"].Value.ToString());
                 }
                 else
                 {
                     gridBuyBookPayment.SelectedCells[0].Value = false;
-                    TotalPrice -= Convert.ToDecimal(gridBuyBookPayment.SelectedRows[0].Cells["TotalBaht"].Value.ToString());
-                    
+                    TotalPrice -= Convert.ToDecimal(gridBuyBookPayment.SelectedRows[0].Cells["TotalBaht"].Value.ToString());                  
                 }
             }           
         }
