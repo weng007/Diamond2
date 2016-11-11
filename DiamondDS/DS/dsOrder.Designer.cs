@@ -389,6 +389,10 @@ namespace DiamondDS.DS {
             
             private global::System.Data.DataColumn columnCode2;
             
+            private global::System.Data.DataColumn columnMountingDate;
+            
+            private global::System.Data.DataColumn columnJobDoneDate;
+            
             private global::System.Data.DataColumn columnIsDeleted;
             
             private global::System.Data.DataColumn columnCreateBy;
@@ -874,6 +878,22 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn MountingDateColumn {
+                get {
+                    return this.columnMountingDate;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn JobDoneDateColumn {
+                get {
+                    return this.columnJobDoneDate;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn IsDeletedColumn {
                 get {
                     return this.columnIsDeleted;
@@ -1004,6 +1024,8 @@ namespace DiamondDS.DS {
                         string Code1, 
                         int RefID1, 
                         string Code2, 
+                        System.DateTime MountingDate, 
+                        System.DateTime JobDoneDate, 
                         string IsDeleted, 
                         int CreateBy, 
                         System.DateTime CreateDate, 
@@ -1066,6 +1088,8 @@ namespace DiamondDS.DS {
                         Code1,
                         RefID1,
                         Code2,
+                        MountingDate,
+                        JobDoneDate,
                         IsDeleted,
                         CreateBy,
                         CreateDate,
@@ -1155,6 +1179,8 @@ namespace DiamondDS.DS {
                 this.columnCode1 = base.Columns["Code1"];
                 this.columnRefID1 = base.Columns["RefID1"];
                 this.columnCode2 = base.Columns["Code2"];
+                this.columnMountingDate = base.Columns["MountingDate"];
+                this.columnJobDoneDate = base.Columns["JobDoneDate"];
                 this.columnIsDeleted = base.Columns["IsDeleted"];
                 this.columnCreateBy = base.Columns["CreateBy"];
                 this.columnCreateDate = base.Columns["CreateDate"];
@@ -1275,6 +1301,10 @@ namespace DiamondDS.DS {
                 base.Columns.Add(this.columnRefID1);
                 this.columnCode2 = new global::System.Data.DataColumn("Code2", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCode2);
+                this.columnMountingDate = new global::System.Data.DataColumn("MountingDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMountingDate);
+                this.columnJobDoneDate = new global::System.Data.DataColumn("JobDoneDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnJobDoneDate);
                 this.columnIsDeleted = new global::System.Data.DataColumn("IsDeleted", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnIsDeleted);
                 this.columnCreateBy = new global::System.Data.DataColumn("CreateBy", typeof(int), null, global::System.Data.MappingType.Element);
@@ -2347,6 +2377,38 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public System.DateTime MountingDate {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableOrder.MountingDateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'MountingDate\' in table \'Order\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableOrder.MountingDateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public System.DateTime JobDoneDate {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableOrder.JobDoneDateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'JobDoneDate\' in table \'Order\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableOrder.JobDoneDateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string IsDeleted {
                 get {
                     try {
@@ -3071,6 +3133,30 @@ namespace DiamondDS.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetCode2Null() {
                 this[this.tableOrder.Code2Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsMountingDateNull() {
+                return this.IsNull(this.tableOrder.MountingDateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetMountingDateNull() {
+                this[this.tableOrder.MountingDateColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsJobDoneDateNull() {
+                return this.IsNull(this.tableOrder.JobDoneDateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetJobDoneDateNull() {
+                this[this.tableOrder.JobDoneDateColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
