@@ -99,9 +99,10 @@ namespace DiamondShop
         {
             if (e.ColumnIndex == 0)
             {
-                if (gridProductionLine.SelectedCells[0].Value == null)
+                if (gridProductionLine.SelectedCells[0].Value == null || gridProductionLine.SelectedCells[0].Value.ToString() == "False")
                 {
                     gridProductionLine.SelectedCells[0].Value = true;
+                    id = (int)gridProductionLine.SelectedRows[0].Cells["ID"].Value;
                 }
                 else
                 {

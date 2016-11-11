@@ -153,8 +153,6 @@ namespace DiamondShop
             binder.BindControl(txtNote3, "Note3");
             binder.BindControl(txtPrice, "Price");
             binder.BindControl(txtPaid, "Paid");
-            binder.BindControl(txtMountingDate, "MountingDate");
-            binder.BindControl(txtJobDoneDate, "JobDoneDate");
         }
 
         protected override void LoadData()
@@ -278,6 +276,7 @@ namespace DiamondShop
                 row = tds.Order.NewOrderRow();
                 tds.Order.Rows.Add(row);
             }
+
             binder.BindValueToDataRow(row);
             row.CustID = custID;
             row.Image1 = image1;
@@ -296,6 +295,7 @@ namespace DiamondShop
             {
                 row.AppointDate = Convert.ToDateTime(txtAppointDate.Text.ToString());
             }
+
             if (txtMountingDate.Text == "")
             {
                 row.MountingDate = DateTime.MinValue.AddYears(1900);
@@ -304,6 +304,7 @@ namespace DiamondShop
             {
                 row.MountingDate = Convert.ToDateTime(txtMountingDate.Text.ToString());
             }
+
             if (txtJobDoneDate.Text == "")
             {
                 row.JobDoneDate = DateTime.MinValue.AddYears(1900);
