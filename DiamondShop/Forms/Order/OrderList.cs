@@ -52,7 +52,23 @@ namespace DiamondShop
                 gridOrder.Refresh();
             }
 
+            SetGrid();
+
             btnSearch_Click(null, null);
+        }
+
+        private void SetGrid()
+        {
+            int i = 0;
+            foreach (DataGridViewRow row in gridOrder.Rows)
+            {
+                if (row.Cells["AppointDate"].Value.ToString() == null)
+                {
+                    gridOrder.Rows[i].DefaultCellStyle.Format = "-";
+                }
+
+                i++;
+            }
         }
 
         private void btnAdd_Click(object sender, EventArgs e)

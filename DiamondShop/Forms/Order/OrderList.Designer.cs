@@ -281,7 +281,7 @@
             this.ShopName.HeaderText = "Location (Order)";
             this.ShopName.Name = "ShopName";
             this.ShopName.ReadOnly = true;
-            this.ShopName.Width = 170;
+            this.ShopName.Width = 150;
             // 
             // ReceiveDate
             // 
@@ -291,7 +291,7 @@
             this.ReceiveDate.HeaderText = "วันนัดรับสินค้า";
             this.ReceiveDate.Name = "ReceiveDate";
             this.ReceiveDate.ReadOnly = true;
-            this.ReceiveDate.Width = 170;
+            this.ReceiveDate.Width = 130;
             // 
             // ShopName1
             // 
@@ -299,7 +299,7 @@
             this.ShopName1.HeaderText = "Location (นัดรับ)";
             this.ShopName1.Name = "ShopName1";
             this.ShopName1.ReadOnly = true;
-            this.ShopName1.Width = 160;
+            this.ShopName1.Width = 150;
             // 
             // AppointDate
             // 
@@ -309,7 +309,7 @@
             this.AppointDate.HeaderText = "วันนัดดูตัวเรือน";
             this.AppointDate.Name = "AppointDate";
             this.AppointDate.ReadOnly = true;
-            this.AppointDate.Width = 160;
+            this.AppointDate.Width = 130;
             // 
             // ShopName2
             // 
@@ -320,7 +320,7 @@
             this.ShopName2.HeaderText = "Location (นัดดู)";
             this.ShopName2.Name = "ShopName2";
             this.ShopName2.ReadOnly = true;
-            this.ShopName2.Width = 160;
+            this.ShopName2.Width = 150;
             // 
             // OrderList
             // 
