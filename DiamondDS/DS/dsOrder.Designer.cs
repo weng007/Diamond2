@@ -319,6 +319,10 @@ namespace DiamondDS.DS {
             
             private global::System.Data.DataColumn columnReceiveDate;
             
+            private global::System.Data.DataColumn columnMountingDate;
+            
+            private global::System.Data.DataColumn columnJobDoneDate;
+            
             private global::System.Data.DataColumn columnShop;
             
             private global::System.Data.DataColumn columnShopName;
@@ -589,6 +593,22 @@ namespace DiamondDS.DS {
             public global::System.Data.DataColumn ReceiveDateColumn {
                 get {
                     return this.columnReceiveDate;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn MountingDateColumn {
+                get {
+                    return this.columnMountingDate;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn JobDoneDateColumn {
+                get {
+                    return this.columnJobDoneDate;
                 }
             }
             
@@ -969,6 +989,8 @@ namespace DiamondDS.DS {
                         string SellerName, 
                         string OldBody, 
                         System.DateTime ReceiveDate, 
+                        System.DateTime MountingDate, 
+                        System.DateTime JobDoneDate, 
                         int Shop, 
                         string ShopName, 
                         int Shop1, 
@@ -1031,6 +1053,8 @@ namespace DiamondDS.DS {
                         SellerName,
                         OldBody,
                         ReceiveDate,
+                        MountingDate,
+                        JobDoneDate,
                         Shop,
                         ShopName,
                         Shop1,
@@ -1120,6 +1144,8 @@ namespace DiamondDS.DS {
                 this.columnSellerName = base.Columns["SellerName"];
                 this.columnOldBody = base.Columns["OldBody"];
                 this.columnReceiveDate = base.Columns["ReceiveDate"];
+                this.columnMountingDate = base.Columns["MountingDate"];
+                this.columnJobDoneDate = base.Columns["JobDoneDate"];
                 this.columnShop = base.Columns["Shop"];
                 this.columnShopName = base.Columns["ShopName"];
                 this.columnShop1 = base.Columns["Shop1"];
@@ -1205,6 +1231,10 @@ namespace DiamondDS.DS {
                 base.Columns.Add(this.columnOldBody);
                 this.columnReceiveDate = new global::System.Data.DataColumn("ReceiveDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnReceiveDate);
+                this.columnMountingDate = new global::System.Data.DataColumn("MountingDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMountingDate);
+                this.columnJobDoneDate = new global::System.Data.DataColumn("JobDoneDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnJobDoneDate);
                 this.columnShop = new global::System.Data.DataColumn("Shop", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnShop);
                 this.columnShopName = new global::System.Data.DataColumn("ShopName", typeof(string), null, global::System.Data.MappingType.Element);
@@ -1782,6 +1812,38 @@ namespace DiamondDS.DS {
                 }
                 set {
                     this[this.tableOrder.ReceiveDateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public System.DateTime MountingDate {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableOrder.MountingDateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'MountingDate\' in table \'Order\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableOrder.MountingDateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public System.DateTime JobDoneDate {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableOrder.JobDoneDateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'JobDoneDate\' in table \'Order\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableOrder.JobDoneDateColumn] = value;
                 }
             }
             
@@ -2651,6 +2713,30 @@ namespace DiamondDS.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetReceiveDateNull() {
                 this[this.tableOrder.ReceiveDateColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsMountingDateNull() {
+                return this.IsNull(this.tableOrder.MountingDateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetMountingDateNull() {
+                this[this.tableOrder.MountingDateColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsJobDoneDateNull() {
+                return this.IsNull(this.tableOrder.JobDoneDateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetJobDoneDateNull() {
+                this[this.tableOrder.JobDoneDateColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

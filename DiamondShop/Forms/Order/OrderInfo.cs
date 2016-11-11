@@ -153,8 +153,6 @@ namespace DiamondShop
             binder.BindControl(txtNote3, "Note3");
             binder.BindControl(txtPrice, "Price");
             binder.BindControl(txtPaid, "Paid");
-            binder.BindControl(txtMountingDate, "MountingDate");
-            binder.BindControl(txtJobDoneDate, "JobDoneDate");
         }
 
         protected override void LoadData()
@@ -168,6 +166,8 @@ namespace DiamondShop
                 binder.BindValueToControl(tds.Order[0]);
                 custID = tds.Order[0].CustID;
                 txtAppointDate.Text = string.Format("{0:d/M/yyyy}", tds.Order[0]["AppointDate"]);
+                txtMountingDate.Text = string.Format("{0:d/M/yyyy}", tds.Order[0]["MountingDate"]);
+                txtJobDoneDate.Text = string.Format("{0:d/M/yyyy}", tds.Order[0]["JobDoneDate"]);
 
                 if (tds.Order[0].Image1 != null)
                 {
@@ -295,6 +295,24 @@ namespace DiamondShop
             {
                 row.AppointDate = Convert.ToDateTime(txtAppointDate.Text.ToString());
             }
+
+            if (txtMountingDate.Text == "")
+            {
+                row.MountingDate = DateTime.MinValue.AddYears(1900);
+            }
+            else
+            {
+                row.MountingDate = Convert.ToDateTime(txtMountingDate.Text.ToString());
+            }
+
+            if (txtJobDoneDate.Text == "")
+            {
+                row.JobDoneDate = DateTime.MinValue.AddYears(1900);
+            }
+            else
+            {
+                row.JobDoneDate = Convert.ToDateTime(txtJobDoneDate.Text.ToString());
+            }
             row.RefID = InvID;
             row.RefID1 = InvID1;
 
@@ -420,6 +438,14 @@ namespace DiamondShop
             if (txtAppointDate.Text != "" && Convert.ToDateTime(txtAppointDate.Text).Year == 1901)
             {
                 txtAppointDate.Text = "";
+            }
+            if (txtMountingDate.Text != "" && Convert.ToDateTime(txtMountingDate.Text).Year == 1901)
+            {
+                txtMountingDate.Text = "";
+            }
+            if (txtJobDoneDate.Text != "" && Convert.ToDateTime(txtJobDoneDate.Text).Year == 1901)
+            {
+                txtJobDoneDate.Text = "";
             }
 
             txtPrice.Text = GM.ConvertDoubleToString(txtPrice, 0);
