@@ -145,7 +145,7 @@ namespace DiamondShop
             binder.BindControl(cmbShop2, "Shop2");
             binder.BindControl(txtCustNote, "CustomerNote");
             binder.BindControl(txtImageNote, "ImageNote");
-            binder.BindControl(txtNote, "Things");
+            binder.BindControl(txtThings, "Things");
             binder.BindControl(txtDetail, "Detail");
             binder.BindControl(txtCustNote, "CustomerNote");
             binder.BindControl(txtNote1, "Note1");
@@ -240,7 +240,7 @@ namespace DiamondShop
                 }
                 if (materail != "")
                 {
-                    txtNote.Text = materail;
+                    txtThings.Text = materail;
                 }
               }
 
@@ -472,13 +472,13 @@ namespace DiamondShop
 
             groupBox1.Enabled = status;
             groupBox2.Enabled = status;
-            txtNote.Enabled = status;
+            txtThings.Enabled = status;
             txtCustNote.Enabled = status;
             btnDiamond.Enabled = status;
             txtImageNote.Enabled = status;
         }
 
-        private void txtNote_TextChanged(object sender, EventArgs e)
+        private void txtThings_TextChanged(object sender, EventArgs e)
         {
             isEdit = true;
         }
@@ -523,7 +523,7 @@ namespace DiamondShop
         {
             OrderDetail frm = new OrderDetail(id,materail);
             frm.ShowDialog();
-            txtNote.Text = frm.materail;
+            txtThings.Text = frm.materail;
         }
 
         private void linkLabel1_Click(object sender, EventArgs e)
