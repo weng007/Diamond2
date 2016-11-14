@@ -100,7 +100,6 @@ namespace DiamondShop
                 binder.BindValueToControl(tds.Transfer[0]);
                 txtReceivedDate.Text = string.Format("{0:d/M/yyyy}", tds.Transfer[0]["ReceiveDate"]);
 
-
                 if (!isAuthorize)
                 {
                     EnableSave = false;
@@ -148,25 +147,25 @@ namespace DiamondShop
                 if (id == 0)
                 {
                     SetCreateBy(row);
+                    row.Sender = row.CreateBy;
                     row.TransferNo = GM.GetRunningNumber("TRF");
                     row.ReceiveDate = DateTime.MinValue.AddYears(1900);
                     row.TransferStatus = 222;
                     chkFlag = ser.DoInsertData("Transfer", tds, 0);
                 }
-
                 else
                 {
                     SetEditBy(row);
                     chkFlag = ser.DoUpdateData("Transfer", tds);
-                }
 
-                BindingDSTransferBuyBook();
+                    BindingDSTransferBuyBook();
 
-                if (tds2.TransferDetail.Rows.Count > 0)
-                {
-                    chkFlag = ser.DoInsertData("TransferDetail", tds2, 0); //Insert, Update Detail                  
+                    if (tds2.TransferDetail.Rows.Count > 0)
+                    {
+                        chkFlag = ser.DoInsertData("TransferDetail", tds2, 0); //Insert, Update Detail                  
+                    }
                 }
-                    
+              
                 tds.AcceptChanges();
                 tds2.AcceptChanges();
             }
@@ -180,6 +179,7 @@ namespace DiamondShop
         private void BindingDSTransferBuyBook()
         {
             tds2.Clear();
+
             for (int i = 0; i < ds2.Tables[0].Rows.Count; i++)
             {
                 if (ds2.Tables[0].Rows[i]["RefID"].ToString() == "")
@@ -299,14 +299,14 @@ namespace DiamondShop
             {
                 delID = (int)gridTransfer.Rows[rowIndex].Cells["ID"].Value;
                 tds1.TransferBuyBook.Rows.RemoveAt(rowIndex);
-            }
 
-            tds1.AcceptChanges();
-            gridTransfer.Refresh();
+                tds1.AcceptChanges();
+                gridTransfer.Refresh();
 
-            if (delID != 0)
-            {
-                ser.DoDeleteData("TransferBuyBook", delID);
+                if (delID != 0)
+                {
+                    ser.DoDeleteData("TransferDetail", delID);
+                }
             }
         }
 
