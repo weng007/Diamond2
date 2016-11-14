@@ -17,7 +17,6 @@ namespace DiamondShop.Report
     public partial class ReportDelivery : FormList
     {
         Service2 ser1;
-        public int ID;
         DataSet ds = new DataSet();
 
         public ReportDelivery()
@@ -27,16 +26,16 @@ namespace DiamondShop.Report
             DoLoadData();
         }
 
-        public ReportDelivery(int ID)
+        public ReportDelivery(int id)
         {
             InitializeComponent();
             Initial();
 
-            this.ID = ID;
+            this.id = id;
 
             Application.UseWaitCursor = true;
             ser1 = GM.GetService1();
-            ds = ser1.GetDeliveryOrder(ID);
+            ds = ser1.GetDeliveryOrder(id);
 
             ReportDataSource datasource = new ReportDataSource("SP_Rpt_Delivery", ds.Tables[1]);
             this.reportViewer1.LocalReport.ReportPath = "..\\Report\\DeliverOrder.rdlc";

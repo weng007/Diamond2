@@ -198,11 +198,11 @@ namespace DiamondBiz.Biz
                 throw ex;
             }
         }
-        public int DoUpdateProductionLine(int id, int FactoryStatus, int EditBy)
+        public int DoUpdateProductionLine(int id, int factoryStatus, int editBy)
         {
             try
             {
-                return dal.DoUpdateProductionLine(id, FactoryStatus, EditBy);
+                return dal.DoUpdateProductionLine(id, factoryStatus, editBy);
             }
             catch (Exception ex)
             {
@@ -232,11 +232,11 @@ namespace DiamondBiz.Biz
                 throw ex;
             }
         }
-        public DataSet GetDeliveryOrder(int ID)
+        public DataSet GetDeliveryOrder(int id)
         {
             try
             {
-                return dal.GetDeliveryOrder(ID);
+                return dal.GetDeliveryOrder(id);
             }
             catch (Exception ex)
             {
