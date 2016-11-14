@@ -274,12 +274,12 @@ namespace Diamond
         }
 
         [WebMethod]
-        public DataSet GetReportCertificate(int id, string isPrice)
+        public DataSet GetReportCertificate(int id, string isPrintPrice)
         {
             GeneralBiz biz = new GeneralBiz();
             try
             {
-                return biz.GetReportCertificate(id, isPrice);
+                return biz.GetReportCertificate(id, isPrintPrice);
             }
             catch (Exception ex)
             {
@@ -307,6 +307,34 @@ namespace Diamond
             try
             {
                 return biz.UpdateMessageStatus(id, StatusType,Flag );
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        [WebMethod]
+        public int UpdateIsPrintPrice(int id, string isPrintPrice)
+        {
+            SellBiz biz = new SellBiz();
+            try
+            {
+                return biz.UpdateIsPrintPrice(id, isPrintPrice);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        [WebMethod]
+        public int UpdateIsPrintCer(int id)
+        {
+            SellBiz biz = new SellBiz();
+            try
+            {
+                return biz.UpdateIsPrintCer(id);
             }
             catch (Exception ex)
             {

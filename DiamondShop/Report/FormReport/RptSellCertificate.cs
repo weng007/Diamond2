@@ -14,31 +14,29 @@ using Microsoft.Reporting.WinForms;
 
 namespace DiamondShop.Report
 {
-    public partial class ReportViewer : FormList
+    public partial class RptSellCertificate : FormList
     {
         Service2 ser1;
-        public int ID;
-        string isPrice;
+
         DataSet ds = new DataSet();
 
-        public ReportViewer()
+        public RptSellCertificate()
         {
             InitializeComponent();
             Initial();
             DoLoadData();
         }
 
-        public ReportViewer(int ID,string isPrice)
+        public RptSellCertificate(int id, bool isPrintPrice)
         {
             InitializeComponent();
             Initial();
 
-            this.ID = ID;
-            this.isPrice = isPrice;
+            this.id = id;
 
             Application.UseWaitCursor = true;
             ser1 = GM.GetService1();
-            ds = ser1.GetReportCertificate(ID,isPrice);
+            ds = ser1.GetReportCertificate(id, (isPrintPrice)?"1":"0");
 
             ReportDataSource datasource = new ReportDataSource("SP_Rpt_Certificate", ds.Tables[1]);
             ReportDataSource datasource1 = new ReportDataSource("Detail", ds.Tables[0]);
@@ -75,6 +73,13 @@ namespace DiamondShop.Report
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void reportViewer1_Print(object sender, ReportPrintEventArgs e)
+        {
+            ser1 = GM.GetService1();
+
+            ser1.UpdateIsPrintCer(id);
         }
     }
 }

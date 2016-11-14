@@ -106,5 +106,38 @@ namespace DiamondDAL.DAL
 
             return (int)ds.Sell[0]["ID"];
         }
+
+        public int UpdateIsPrintPrice(int id, string isPrintPrice)
+        {
+            try
+            {
+                SQL.ClearParameter();
+                SQL.CreateParameter("ID", id);
+                SQL.CreateParameter("IsPrintPrice", isPrintPrice);
+                flag = SQL.ExecuteSP("SP_Sell_Upd_IsPrintPrice");
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return flag;
+        }
+
+        public int UpdateIsPrintCer(int id)
+        {
+            try
+            {
+                SQL.ClearParameter();
+                SQL.CreateParameter("ID", id);
+                flag = SQL.ExecuteSP("SP_Sell_Upd_IsPrintCer");
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return flag;
+        }
     }
 }
