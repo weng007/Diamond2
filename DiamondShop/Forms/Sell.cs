@@ -129,6 +129,10 @@ namespace DiamondShop
                     btnImage1.BackgroundImage = backImage1;
                 }
 
+                if (tds.Sell[0].IsPrintPrice == "1")
+                { chkIsPrintPrice.Checked = true; }
+                else { chkIsPrintPrice.Checked = false; }
+
                 if (!isAuthorize)
                 {
                     EnableSave = false;
@@ -432,16 +436,7 @@ namespace DiamondShop
 
         private void btnPrint_Click(object sender, EventArgs e)
         {
-            if (chkIsPrintPrice.Checked)
-            {
-                isPrice = "1";
-            }
-            else
-            {
-                isPrice = "0";
-            }
-
-            Report.ReportViewer report = new Report.ReportViewer(id,isPrice);
+            Report.RptSellCertificate report = new Report.RptSellCertificate(id, chkIsPrintPrice.Checked);
             report.ShowDialog();
         }
 
@@ -458,6 +453,13 @@ namespace DiamondShop
         private void dtSellDate_ValueChanged(object sender, EventArgs e)
         {
             isEdit = true;
+        }
+
+        private void chkIsPrintPrice_CheckedChanged(object sender, EventArgs e)
+        {
+            ser1 = GM.GetService1();
+
+            ser1.UpdateIsPrintPrice(id, (chkIsPrintPrice.Checked)?"1":"0");
         }
     }
 }

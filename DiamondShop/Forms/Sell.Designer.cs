@@ -84,7 +84,7 @@
             // btnImage1
             // 
             this.btnImage1.BackColor = System.Drawing.SystemColors.Control;
-            this.btnImage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnImage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnImage1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnImage1.Location = new System.Drawing.Point(30, 335);
             this.btnImage1.Name = "btnImage1";
@@ -230,6 +230,7 @@
             this.chkIsPrintPrice.TabIndex = 193;
             this.chkIsPrintPrice.Text = "Print Price";
             this.chkIsPrintPrice.UseVisualStyleBackColor = true;
+            this.chkIsPrintPrice.CheckedChanged += new System.EventHandler(this.chkIsPrintPrice_CheckedChanged);
             // 
             // label8
             // 
@@ -618,7 +619,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(195)))), ((int)(((byte)(157)))));
-            this.ClientSize = new System.Drawing.Size(964, 734);
+            this.ClientSize = new System.Drawing.Size(958, 734);
             this.Controls.Add(this.panel3);
             this.Name = "Sell";
             this.Text = "Sale";

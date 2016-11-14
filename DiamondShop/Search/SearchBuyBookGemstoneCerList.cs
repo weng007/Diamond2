@@ -87,6 +87,7 @@ namespace DiamondShop
         private void CheckSelected()
         {
             string comma = ",";
+            idSelected = "";
 
             for (int i = 0; i < gridGemstoneCer.Rows.Count; i++)
             {

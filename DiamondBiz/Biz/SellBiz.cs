@@ -82,5 +82,30 @@ namespace DiamondBiz.Biz
                 throw ex;
             }
         }
+
+        public int UpdateIsPrintPrice(int id, string isPrintPrice)
+        {
+            try
+            {
+                return dal.UpdateIsPrintPrice(id, isPrintPrice);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public int UpdateIsPrintCer(int id)
+        {
+            try
+            {
+                return dal.UpdateIsPrintCer(id);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
     }
 }

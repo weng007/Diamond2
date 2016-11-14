@@ -1,6 +1,6 @@
 ﻿namespace DiamondShop.Report
 {
-    partial class ReportViewer
+    partial class RptSellCertificate
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReportViewer));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RptSellCertificate));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnMinimize = new System.Windows.Forms.Button();
             this.btnRestore = new System.Windows.Forms.Button();
@@ -107,8 +107,9 @@
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.Size = new System.Drawing.Size(1005, 579);
             this.reportViewer1.TabIndex = 51;
+            this.reportViewer1.Print += new Microsoft.Reporting.WinForms.ReportPrintEventHandler(this.reportViewer1_Print);
             // 
-            // ReportViewer
+            // RptSellCertificate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -116,7 +117,7 @@
             this.ClientSize = new System.Drawing.Size(1029, 629);
             this.Controls.Add(this.reportViewer1);
             this.Controls.Add(this.panel1);
-            this.Name = "ReportViewer";
+            this.Name = "RptSellCertificate";
             this.Text = "ReportViewer";
             this.Load += new System.EventHandler(this.ReportViewer_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ds)).EndInit();
