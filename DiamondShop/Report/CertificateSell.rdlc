@@ -79,7 +79,7 @@
             <MIMEType>image/png</MIMEType>
             <Sizing>FitProportional</Sizing>
             <Top>0.20973in</Top>
-            <Left>3.21166in</Left>
+            <Left>2.97416in</Left>
             <Height>1.82916in</Height>
             <Width>1.90624in</Width>
             <ZIndex>1</ZIndex>
@@ -109,9 +109,9 @@
             </Paragraphs>
             <rd:DefaultName>Total</rd:DefaultName>
             <Top>2.89167in</Top>
-            <Left>3.21166in</Left>
+            <Left>3.06166in</Left>
             <Height>0.19792in</Height>
-            <Width>1.78554in</Width>
+            <Width>1.81874in</Width>
             <ZIndex>2</ZIndex>
             <Visibility>
               <Hidden>=Microsoft.VisualBasic.Interaction.IIF(First(Fields!Detail.Value, "Detail1") &lt;&gt; "", True, False)</Hidden>
@@ -146,7 +146,7 @@
             </Paragraphs>
             <rd:DefaultName>NetPrice</rd:DefaultName>
             <Top>2.12083in</Top>
-            <Left>3.21166in</Left>
+            <Left>3.06166in</Left>
             <Height>0.20833in</Height>
             <Width>1.79946in</Width>
             <ZIndex>3</ZIndex>
@@ -167,7 +167,7 @@
         <Top>0.06944in</Top>
         <Left>0.3434in</Left>
         <Height>3.08959in</Height>
-        <Width>5.30522in</Width>
+        <Width>5.2118in</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -339,9 +339,9 @@
             </Paragraphs>
             <rd:DefaultName>Total</rd:DefaultName>
             <Top>1.0779in</Top>
-            <Left>3.19708in</Left>
+            <Left>3.06166in</Left>
             <Height>0.19792in</Height>
-            <Width>1.78555in</Width>
+            <Width>1.81874in</Width>
             <ZIndex>2</ZIndex>
             <Visibility>
               <Hidden>=IIF(First(Fields!Detail.Value, "Detail1") = "",true,false)</Hidden>
@@ -364,7 +364,7 @@
         <Top>3.18681in</Top>
         <Left>0.3434in</Left>
         <Height>1.27582in</Height>
-        <Width>5.30522in</Width>
+        <Width>5.2118in</Width>
         <ZIndex>1</ZIndex>
         <Visibility>
           <Hidden>=IIF(First(Fields!Detail.Value, "Detail1") = "",true,false)</Hidden>
@@ -387,7 +387,7 @@
       </BackgroundImage>
     </Style>
   </Body>
-  <Width>5.77584in</Width>
+  <Width>5.66334in</Width>
   <Page>
     <PageHeader>
       <Height>2.27723in</Height>
@@ -398,7 +398,7 @@
           <Top>0.02917in</Top>
           <Left>0.025in</Left>
           <Height>0in</Height>
-          <Width>5.75084in</Width>
+          <Width>5.63834in</Width>
           <Style>
             <Border>
               <Color>#6980a5</Color>
@@ -409,7 +409,7 @@
         </Line>
         <Line Name="Line11">
           <Top>0.00833in</Top>
-          <Left>5.77584in</Left>
+          <Left>5.66334in</Left>
           <Height>2.2689in</Height>
           <Width>0in</Width>
           <ZIndex>1</ZIndex>
@@ -439,7 +439,7 @@
           <Top>0.09in</Top>
           <Left>0.08194in</Left>
           <Height>0in</Height>
-          <Width>5.63612in</Width>
+          <Width>5.51945in</Width>
           <ZIndex>3</ZIndex>
           <Style>
             <Border>
@@ -463,7 +463,7 @@
         </Line>
         <Line Name="Line10">
           <Top>0.09834in</Top>
-          <Left>5.71806in</Left>
+          <Left>5.60556in</Left>
           <Height>2.17889in</Height>
           <Width>0in</Width>
           <ZIndex>5</ZIndex>
@@ -849,7 +849,7 @@
       <ReportItems>
         <Line Name="Line15">
           <Top>0in</Top>
-          <Left>5.77362in</Left>
+          <Left>5.66112in</Left>
           <Height>1.4625in</Height>
           <Width>0in</Width>
           <Style>
@@ -862,7 +862,7 @@
         </Line>
         <Line Name="Line19">
           <Top>0.00417in</Top>
-          <Left>5.71806in</Left>
+          <Left>5.60556in</Left>
           <Height>1.375in</Height>
           <Width>0in</Width>
           <ZIndex>1</ZIndex>
@@ -877,7 +877,7 @@
           <Top>1.44167in</Top>
           <Left>0.00583in</Left>
           <Height>0in</Height>
-          <Width>5.77001in</Width>
+          <Width>5.65112in</Width>
           <ZIndex>2</ZIndex>
           <Style>
             <Border>
@@ -891,7 +891,7 @@
           <Top>1.37917in</Top>
           <Left>0.08194in</Left>
           <Height>0in</Height>
-          <Width>5.63612in</Width>
+          <Width>5.52362in</Width>
           <ZIndex>3</ZIndex>
           <Style>
             <Border>
@@ -1058,10 +1058,10 @@
     </PageFooter>
     <PageHeight>8.27in</PageHeight>
     <PageWidth>5.83in</PageWidth>
-    <LeftMargin>0.05cm</LeftMargin>
-    <RightMargin>0.05cm</RightMargin>
-    <TopMargin>0.05cm</TopMargin>
-    <BottomMargin>0.05cm</BottomMargin>
+    <LeftMargin>0.2cm</LeftMargin>
+    <RightMargin>0.2cm</RightMargin>
+    <TopMargin>0.2cm</TopMargin>
+    <BottomMargin>0.2cm</BottomMargin>
     <Style />
   </Page>
   <AutoRefresh>0</AutoRefresh>
