@@ -174,6 +174,9 @@ namespace DiamondShop
                 throw ex;
             }
 
+            isClosed = false;
+            LoadData();
+
             return chkFlag;
         }
         private void BindingDSTransferBuyBook()

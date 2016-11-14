@@ -104,16 +104,26 @@ namespace DiamondShop
             DoSearchData();
         }
 
-        private void gridTransferBuyBook_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-            refID1 = (int)gridTransferBuyBook.SelectedRows[0].Cells["ID"].Value;
-            tmpCode = gridTransferBuyBook.SelectedRows[0].Cells["Code"].Value.ToString();
-            this.Close();
-        }
 
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void gridTransferBuyBook_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 0)
+            {
+                if (gridTransferBuyBook.SelectedCells[0].Value == null || gridTransferBuyBook.SelectedCells[0].Value.ToString() == "False")
+                {
+                    gridTransferBuyBook.SelectedCells[0].Value = true;
+                    id = (int)gridTransferBuyBook.SelectedRows[0].Cells["ID"].Value;
+                }
+                else
+                {
+                    gridTransferBuyBook.SelectedCells[0].Value = false;
+                }
+            }
         }
     }
 }
