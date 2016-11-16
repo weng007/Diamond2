@@ -19,7 +19,6 @@ namespace DiamondShop.Report
         Service2 ser1;
 
         DataSet ds = new DataSet();
-
         public RptSellCertificate()
         {
             InitializeComponent();
@@ -31,33 +30,50 @@ namespace DiamondShop.Report
         {
             InitializeComponent();
             Initial();
-
             this.id = id;
+
+            ReportDataSource datasource;
+            ReportDataSource datasource1;
+            ReportDataSource datasource2;
+            ReportDataSource datasource3;
+            ReportDataSource datasource4 = null;
 
             Application.UseWaitCursor = true;
             ser1 = GM.GetService1();
             ds = ser1.GetReportCertificate(id, (isPrintPrice)?"1":"0");
 
-            ReportDataSource datasource = new ReportDataSource("SP_Rpt_Certificate", ds.Tables[1]);
-            ReportDataSource datasource1 = new ReportDataSource("Detail", ds.Tables[0]);
-            ReportDataSource datasource2 = new ReportDataSource("Detail1", ds.Tables[2]);
-            ReportDataSource datasource3 = new ReportDataSource("Detail2", ds.Tables[3]);
-            ReportDataSource datasource4 = new ReportDataSource("Total", ds.Tables[4]);
+            datasource = new ReportDataSource("SP_Rpt_Certificate", ds.Tables[1]);
+            datasource1 = new ReportDataSource("Detail", ds.Tables[0]);
+            datasource2 = new ReportDataSource("Detail1", ds.Tables[2]);
+            datasource3 = new ReportDataSource("Detail2", ds.Tables[3]);
+            datasource4 = new ReportDataSource("Total", ds.Tables[4]);
+
             this.reportViewer1.LocalReport.ReportPath = "..\\Report\\CertificateSell.rdlc";
-
-
             this.reportViewer1.LocalReport.DataSources.Add(datasource);
             this.reportViewer1.LocalReport.DataSources.Add(datasource1);
             this.reportViewer1.LocalReport.DataSources.Add(datasource2);
-            this.reportViewer1.LocalReport.DataSources.Add(datasource3);
             this.reportViewer1.LocalReport.DataSources.Add(datasource4);
+
+            if (ds.Tables[2].Rows.Count > 0)
+            {
+                reportViewer2.Visible = true;
+                this.reportViewer2.LocalReport.ReportPath = "..\\Report\\CertificateSell1.rdlc";
+                this.reportViewer2.LocalReport.DataSources.Add(datasource);
+                this.reportViewer2.LocalReport.DataSources.Add(datasource2);
+                this.reportViewer2.LocalReport.DataSources.Add(datasource3);
+                this.reportViewer2.LocalReport.DataSources.Add(datasource4);
+                this.reportViewer2.RefreshReport();
+            }
             this.reportViewer1.RefreshReport();
+            
             Application.UseWaitCursor = false;
         }
+
 
         private void ReportViewer_Load(object sender, EventArgs e)
         {
             this.reportViewer1.RefreshReport();
+            this.reportViewer2.RefreshReport();
         }
 
         private void btnMinimize_Click(object sender, EventArgs e)
@@ -80,6 +96,16 @@ namespace DiamondShop.Report
             ser1 = GM.GetService1();
 
             ser1.UpdateIsPrintCer(id);
+        }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            reportViewer1.PrintDialog();
+
+            if (ds.Tables[2].Rows.Count > 0)
+            {
+                reportViewer2.PrintDialog();
+            }
         }
     }
 }

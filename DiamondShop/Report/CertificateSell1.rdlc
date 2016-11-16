@@ -2,13 +2,13 @@
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <Body>
     <ReportItems>
-      <Rectangle Name="Rectangle2">
+      <Rectangle Name="Rectangle3">
         <ReportItems>
-          <Tablix Name="Tablix1">
+          <Tablix Name="Tablix3">
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>2.55902in</Width>
+                  <Width>2.47569in</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
@@ -17,7 +17,7 @@
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Detail">
+                        <Textbox Name="Detail1">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
@@ -33,7 +33,10 @@
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Detail</rd:DefaultName>
+                          <rd:DefaultName>Detail1</rd:DefaultName>
+                          <Visibility>
+                            <Hidden>=IIF(Fields!Detail.Value="",True,False)</Hidden>
+                          </Visibility>
                           <Style>
                             <Border>
                               <Style>None</Style>
@@ -58,39 +61,95 @@
             <TablixRowHierarchy>
               <TablixMembers>
                 <TablixMember>
-                  <Group Name="Details" />
+                  <Group Name="Details1" />
                 </TablixMember>
               </TablixMembers>
             </TablixRowHierarchy>
-            <DataSetName>Detail</DataSetName>
+            <DataSetName>Detail1</DataSetName>
             <Top>0.24723in</Top>
             <Height>0.21875in</Height>
-            <Width>2.55902in</Width>
+            <Width>2.47569in</Width>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <FontSize>8pt</FontSize>
+            </Style>
+          </Tablix>
+          <Tablix Name="Tablix4">
+            <TablixBody>
+              <TablixColumns>
+                <TablixColumn>
+                  <Width>2.40902in</Width>
+                </TablixColumn>
+              </TablixColumns>
+              <TablixRows>
+                <TablixRow>
+                  <Height>0.21875in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Detail2">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!Detail.Value</Value>
+                                  <Style>
+                                    <FontSize>8pt</FontSize>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Detail2</rd:DefaultName>
+                          <Visibility>
+                            <Hidden>=IIF(Fields!Detail.Value = "",True,False)</Hidden>
+                          </Visibility>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+              </TablixRows>
+            </TablixBody>
+            <TablixColumnHierarchy>
+              <TablixMembers>
+                <TablixMember />
+              </TablixMembers>
+            </TablixColumnHierarchy>
+            <TablixRowHierarchy>
+              <TablixMembers>
+                <TablixMember>
+                  <Group Name="Details2" />
+                </TablixMember>
+              </TablixMembers>
+            </TablixRowHierarchy>
+            <DataSetName>Detail2</DataSetName>
+            <Top>0.24723in</Top>
+            <Left>2.48819in</Left>
+            <Height>0.21875in</Height>
+            <Width>2.40902in</Width>
+            <ZIndex>1</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
               </Border>
             </Style>
           </Tablix>
-          <Image Name="Image2">
-            <Source>Database</Source>
-            <Value>=First(Fields!Image1.Value, "SP_Rpt_Certificate")</Value>
-            <MIMEType>image/png</MIMEType>
-            <Sizing>FitProportional</Sizing>
-            <Top>0.22223in</Top>
-            <Left>2.91166in</Left>
-            <Height>1.82916in</Height>
-            <Width>1.90624in</Width>
-            <ZIndex>1</ZIndex>
-            <Style>
-              <Border>
-                <Color>#6980a5</Color>
-                <Style>Solid</Style>
-                <Width>1.5pt</Width>
-              </Border>
-            </Style>
-          </Image>
-          <Textbox Name="Total2">
+          <Textbox Name="Total">
             <KeepTogether>true</KeepTogether>
             <Paragraphs>
               <Paragraph>
@@ -108,54 +167,19 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Total</rd:DefaultName>
-            <Top>4.01667in</Top>
+            <Top>3.14167in</Top>
             <Left>2.99916in</Left>
             <Height>0.19792in</Height>
             <Width>1.78554in</Width>
             <ZIndex>2</ZIndex>
             <Visibility>
-              <Hidden>=IIF(First(Fields!Detail.Value, "Detail1") &lt;&gt; "",true,false)</Hidden>
+              <Hidden>=IIF(First(Fields!Detail.Value, "Detail1") = "",true,false)</Hidden>
             </Visibility>
             <Style>
               <Border>
                 <Style>None</Style>
               </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="NetPrice">
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>=First(Fields!NetPrice.Value, "SP_Rpt_Certificate")</Value>
-                    <Style>
-                      <FontSize>8pt</FontSize>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style>
-                  <TextAlign>Right</TextAlign>
-                </Style>
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>NetPrice</rd:DefaultName>
-            <Top>2.12083in</Top>
-            <Left>2.99916in</Left>
-            <Height>0.20833in</Height>
-            <Width>1.79946in</Width>
-            <ZIndex>3</ZIndex>
-            <Visibility>
-              <Hidden>=iif(First(Fields!NetPrice.Value, "SP_Rpt_Certificate") = "0",true,false)</Hidden>
-            </Visibility>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
+              <VerticalAlign>Bottom</VerticalAlign>
               <PaddingLeft>2pt</PaddingLeft>
               <PaddingRight>2pt</PaddingRight>
               <PaddingTop>2pt</PaddingTop>
@@ -165,8 +189,11 @@
         </ReportItems>
         <Top>0.03194in</Top>
         <Left>0.3184in</Left>
-        <Height>4.25778in</Height>
-        <Width>4.9554in</Width>
+        <Height>3.33959in</Height>
+        <Width>5.02362in</Width>
+        <Visibility>
+          <Hidden>=IIF(First(Fields!Detail.Value, "Detail1") = "",true,false)</Hidden>
+        </Visibility>
         <Style>
           <Border>
             <Style>None</Style>
@@ -533,6 +560,9 @@
               <Height>0.18333in</Height>
               <Width>1.21055in</Width>
               <ZIndex>5</ZIndex>
+              <Visibility>
+                <Hidden>=IIF(First(Fields!Detail.Value, "Detail1") = "",true,false)</Hidden>
+              </Visibility>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -561,6 +591,9 @@
               <Height>0.17916in</Height>
               <Width>1in</Width>
               <ZIndex>6</ZIndex>
+              <Visibility>
+                <Hidden>=IIF(First(Fields!Detail.Value, "Detail1") = "",true,false)</Hidden>
+              </Visibility>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -589,6 +622,9 @@
               <Height>0.20833in</Height>
               <Width>1.39583in</Width>
               <ZIndex>7</ZIndex>
+              <Visibility>
+                <Hidden>=IIF(First(Fields!Detail.Value, "Detail1") = "",true,false)</Hidden>
+              </Visibility>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -617,6 +653,9 @@
               <Height>0.17916in</Height>
               <Width>1.31196in</Width>
               <ZIndex>8</ZIndex>
+              <Visibility>
+                <Hidden>=IIF(First(Fields!Detail.Value, "Detail1") = "",true,false)</Hidden>
+              </Visibility>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -643,6 +682,9 @@
               <Height>0.24375in</Height>
               <Width>1.39583in</Width>
               <ZIndex>9</ZIndex>
+              <Visibility>
+                <Hidden>=IIF(First(Fields!Detail.Value, "Detail1") = "",true,false)</Hidden>
+              </Visibility>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -963,7 +1005,7 @@
         <rd:TableAdapterName />
       </rd:DataSetInfo>
     </DataSet>
-    <DataSet Name="Detail">
+    <DataSet Name="Detail1">
       <Query>
         <DataSourceName>dsCertificate</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
@@ -971,7 +1013,7 @@
       <Fields>
         <Field Name="RowNum">
           <DataField>RowNum</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
+          <rd:TypeName>System.Int64</rd:TypeName>
         </Field>
         <Field Name="Detail">
           <DataField>Detail</DataField>
@@ -981,7 +1023,31 @@
       <rd:DataSetInfo>
         <rd:DataSetName>dsCertificate</rd:DataSetName>
         <rd:SchemaPath>D:\leadssoft\Project\Diamond3\DiamondShop\Report\DS\dsCertificate.xsd</rd:SchemaPath>
-        <rd:TableName>Detail</rd:TableName>
+        <rd:TableName>Detail1</rd:TableName>
+        <rd:TableAdapterFillMethod />
+        <rd:TableAdapterGetDataMethod />
+        <rd:TableAdapterName />
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="Detail2">
+      <Query>
+        <DataSourceName>dsCertificate</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="RowNum">
+          <DataField>RowNum</DataField>
+          <rd:TypeName>System.Int64</rd:TypeName>
+        </Field>
+        <Field Name="Detail">
+          <DataField>Detail</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>dsCertificate</rd:DataSetName>
+        <rd:SchemaPath>D:\leadssoft\Project\Diamond3\DiamondShop\Report\DS\dsCertificate.xsd</rd:SchemaPath>
+        <rd:TableName>Detail2</rd:TableName>
         <rd:TableAdapterFillMethod />
         <rd:TableAdapterGetDataMethod />
         <rd:TableAdapterName />
@@ -1002,30 +1068,6 @@
         <rd:DataSetName>dsCertificate</rd:DataSetName>
         <rd:SchemaPath>D:\leadssoft\Project\Diamond3\DiamondShop\Report\DS\dsCertificate.xsd</rd:SchemaPath>
         <rd:TableName>Total</rd:TableName>
-        <rd:TableAdapterFillMethod />
-        <rd:TableAdapterGetDataMethod />
-        <rd:TableAdapterName />
-      </rd:DataSetInfo>
-    </DataSet>
-    <DataSet Name="Detail1">
-      <Query>
-        <DataSourceName>dsCertificate</DataSourceName>
-        <CommandText>/* Local Query */</CommandText>
-      </Query>
-      <Fields>
-        <Field Name="RowNum">
-          <DataField>RowNum</DataField>
-          <rd:TypeName>System.Int64</rd:TypeName>
-        </Field>
-        <Field Name="Detail">
-          <DataField>Detail</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-      </Fields>
-      <rd:DataSetInfo>
-        <rd:DataSetName>dsCertificate</rd:DataSetName>
-        <rd:SchemaPath>D:\leadssoft\Project\Diamond3\DiamondShop\Report\DS\dsCertificate.xsd</rd:SchemaPath>
-        <rd:TableName>Detail1</rd:TableName>
         <rd:TableAdapterFillMethod />
         <rd:TableAdapterGetDataMethod />
         <rd:TableAdapterName />
