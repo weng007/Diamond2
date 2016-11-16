@@ -153,10 +153,13 @@ namespace DiamondShop
                     row.TransferStatus = 222;
                     chkFlag = ser.DoInsertData("Transfer", tds, 0);
 
-                    if(chkFlag)
+                    if (chkFlag)
                     {
-                        btnAdd.Enabled = true;
-                        btnDel.Enabled = true;
+                        ser1 = GM.GetService1();
+                        id = ser1.DoSearchTransferByCode(row.TransferNo);
+
+                        SetControlEnable(true);
+                        isAuthorize = true;
                     }
                 }
                 else
@@ -298,6 +301,8 @@ namespace DiamondShop
                 tds1.AcceptChanges();
                 gridTransfer.DataSource = tds1.TransferBuyBook;
                 gridTransfer.Refresh();
+
+                isEdit = true;
             }
         }
 
@@ -346,6 +351,8 @@ namespace DiamondShop
                     ser.DoDeleteData("TransferBuyBook", delID);
                 }
             }
+
+            isEdit = true;
         }
 
         private void SetControlEnable(bool status)
@@ -356,6 +363,7 @@ namespace DiamondShop
             btnAdd.Enabled = status;
             btnDel.Enabled = status;
             txtNote.Enabled = status;
+            btnPrint.Enabled = status;
         }
 
         private void gridTransfer_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -373,12 +381,19 @@ namespace DiamondShop
             ser1 = GM.GetService1();
             ser1.UpdateTransferReceive(id,(int)cmbEShop.SelectedValue);
             LoadData();
+
+            isEdit = true;
         }
 
         private void btnPrint_Click(object sender, EventArgs e)
         {
             Report.ReportDelivery report = new Report.ReportDelivery(id);
             report.ShowDialog();
+        }
+
+        private void txtNote_TextChanged(object sender, EventArgs e)
+        {
+            isEdit = true;
         }
     }
 }

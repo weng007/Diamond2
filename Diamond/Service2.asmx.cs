@@ -431,6 +431,20 @@ namespace Diamond
         }
 
         [WebMethod]
+        public int DoSearchTransferByCode(string code)
+        {
+            TransferBiz biz = GM.GetTransferBiz();
+            try
+            {
+                return biz.DoSearchByCode(code);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        [WebMethod]
         public int DoSearchSellByCode(string code)
         {
             SellBiz biz = GM.SellBiz();
