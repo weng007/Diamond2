@@ -356,7 +356,7 @@ namespace DiamondShop
         private void btnReceive_Click(object sender, EventArgs e)
         {
             ser1 = GM.GetService1();
-            ser1.UpdateTransferReceive(id,(int)cmbEShop.SelectedValue);
+            ser1.UpdateTransferReceive(id, Convert.ToInt32(cmbEShop.SelectedValue.ToString()));
             LoadData();
 
             isEdit = true;
