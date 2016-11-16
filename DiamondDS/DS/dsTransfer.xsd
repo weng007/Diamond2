@@ -14,7 +14,7 @@
   <xs:element name="dsTransfer" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsTransfer" msprop:Generator_UserDSName="dsTransfer">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Transfer" msprop:Generator_TableClassName="TransferDataTable" msprop:Generator_TableVarName="tableTransfer" msprop:Generator_TablePropName="Transfer" msprop:Generator_RowDeletingName="TransferRowDeleting" msprop:Generator_RowChangingName="TransferRowChanging" msprop:Generator_RowEvHandlerName="TransferRowChangeEventHandler" msprop:Generator_RowDeletedName="TransferRowDeleted" msprop:Generator_UserTableName="Transfer" msprop:Generator_RowChangedName="TransferRowChanged" msprop:Generator_RowEvArgName="TransferRowChangeEvent" msprop:Generator_RowClassName="TransferRow">
+        <xs:element name="Transfer" msprop:Generator_TableClassName="TransferDataTable" msprop:Generator_TableVarName="tableTransfer" msprop:Generator_RowChangedName="TransferRowChanged" msprop:Generator_TablePropName="Transfer" msprop:Generator_RowDeletingName="TransferRowDeleting" msprop:Generator_RowChangingName="TransferRowChanging" msprop:Generator_RowEvHandlerName="TransferRowChangeEventHandler" msprop:Generator_RowDeletedName="TransferRowDeleted" msprop:Generator_RowClassName="TransferRow" msprop:Generator_UserTableName="Transfer" msprop:Generator_RowEvArgName="TransferRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="RowNum" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnRowNum" msprop:Generator_ColumnPropNameInRow="RowNum" msprop:Generator_ColumnPropNameInTable="RowNumColumn" msprop:Generator_UserColumnName="RowNum" type="xs:long" minOccurs="0" />
@@ -50,8 +50,7 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Flag" msprop:Generator_ColumnVarNameInTable="columnFlag" msprop:Generator_ColumnPropNameInRow="Flag" msprop:Generator_ColumnPropNameInTable="FlagColumn" msprop:Generator_UserColumnName="Flag" type="xs:int" minOccurs="0" />
-              <xs:element name="TransferID" msprop:Generator_ColumnVarNameInTable="columnTransferID" msprop:Generator_ColumnPropNameInRow="TransferID" msprop:Generator_ColumnPropNameInTable="TransferIDColumn" msprop:Generator_UserColumnName="TransferID" type="xs:int" minOccurs="0" />
+              <xs:element name="Note" msprop:Generator_ColumnVarNameInTable="columnNote" msprop:Generator_ColumnPropNameInRow="Note" msprop:Generator_ColumnPropNameInTable="NoteColumn" msprop:Generator_UserColumnName="Note" type="xs:string" minOccurs="0" />
               <xs:element name="IsBuyBook" msprop:Generator_ColumnVarNameInTable="columnIsBuyBook" msprop:Generator_ColumnPropNameInRow="IsBuyBook" msprop:Generator_ColumnPropNameInTable="IsBuyBookColumn" msprop:Generator_UserColumnName="IsBuyBook" type="xs:string" minOccurs="0" />
               <xs:element name="IsDeleted" msprop:Generator_ColumnVarNameInTable="columnIsDeleted" msprop:Generator_ColumnPropNameInRow="IsDeleted" msprop:Generator_ColumnPropNameInTable="IsDeletedColumn" msprop:Generator_UserColumnName="IsDeleted" minOccurs="0">
                 <xs:simpleType>

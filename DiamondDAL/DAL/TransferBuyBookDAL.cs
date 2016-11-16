@@ -13,13 +13,12 @@ namespace DiamondDAL.DAL
         dsTransferBuyBook ds = new dsTransferBuyBook();
         int flag = 0;
 
-        public dsTransferBuyBook DoSelectData(int id, int mode)
+        public dsTransferBuyBook DoSelectData(int id)
         {
             try
             {
                 SQL.ClearParameter();
                 SQL.CreateParameter("ID", id);
-                SQL.CreateParameter("Mode", mode);
                 SQL.FillDataSetBySP("SP_TransferDetail_Sel", ds.TransferBuyBook);
             }
             catch (Exception ex)
@@ -34,8 +33,20 @@ namespace DiamondDAL.DAL
         {
             try
             {
-                dsTransferBuyBook.TransferBuyBookRow row = tds.TransferBuyBook[0];
-                SQL.ExecuteSP("SP_TransferDetail_Ins", row);
+                for(int i = 0; i < tds.TransferBuyBook.Rows.Count; i++)
+                {
+                    dsTransferBuyBook.TransferBuyBookRow row = tds.TransferBuyBook[i];
+
+                    if (tds.TransferBuyBook.Rows[i]["ID"].ToString() == "")
+                    {
+                        SQL.ExecuteSP("SP_TransferDetail_Ins", row);
+                    }
+                    else
+                    {
+                        flag = SQL.ExecuteSP("SP_TransferDetail_Upd", row);
+                    }
+                }
+                
             }
             catch (Exception ex)
             {

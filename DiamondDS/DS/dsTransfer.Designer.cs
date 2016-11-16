@@ -309,9 +309,7 @@ namespace DiamondDS.DS {
             
             private global::System.Data.DataColumn columnEShopName;
             
-            private global::System.Data.DataColumn columnFlag;
-            
-            private global::System.Data.DataColumn columnTransferID;
+            private global::System.Data.DataColumn columnNote;
             
             private global::System.Data.DataColumn columnIsBuyBook;
             
@@ -480,17 +478,9 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn FlagColumn {
+            public global::System.Data.DataColumn NoteColumn {
                 get {
-                    return this.columnFlag;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn TransferIDColumn {
-                get {
-                    return this.columnTransferID;
+                    return this.columnNote;
                 }
             }
             
@@ -594,8 +584,7 @@ namespace DiamondDS.DS {
                         string SShopName, 
                         int EShop, 
                         string EShopName, 
-                        int Flag, 
-                        int TransferID, 
+                        string Note, 
                         string IsBuyBook, 
                         string IsDeleted, 
                         int CreateBy, 
@@ -619,8 +608,7 @@ namespace DiamondDS.DS {
                         SShopName,
                         EShop,
                         EShopName,
-                        Flag,
-                        TransferID,
+                        Note,
                         IsBuyBook,
                         IsDeleted,
                         CreateBy,
@@ -671,8 +659,7 @@ namespace DiamondDS.DS {
                 this.columnSShopName = base.Columns["SShopName"];
                 this.columnEShop = base.Columns["EShop"];
                 this.columnEShopName = base.Columns["EShopName"];
-                this.columnFlag = base.Columns["Flag"];
-                this.columnTransferID = base.Columns["TransferID"];
+                this.columnNote = base.Columns["Note"];
                 this.columnIsBuyBook = base.Columns["IsBuyBook"];
                 this.columnIsDeleted = base.Columns["IsDeleted"];
                 this.columnCreateBy = base.Columns["CreateBy"];
@@ -714,10 +701,8 @@ namespace DiamondDS.DS {
                 base.Columns.Add(this.columnEShop);
                 this.columnEShopName = new global::System.Data.DataColumn("EShopName", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnEShopName);
-                this.columnFlag = new global::System.Data.DataColumn("Flag", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnFlag);
-                this.columnTransferID = new global::System.Data.DataColumn("TransferID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTransferID);
+                this.columnNote = new global::System.Data.DataColumn("Note", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNote);
                 this.columnIsBuyBook = new global::System.Data.DataColumn("IsBuyBook", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnIsBuyBook);
                 this.columnIsDeleted = new global::System.Data.DataColumn("IsDeleted", typeof(string), null, global::System.Data.MappingType.Element);
@@ -1121,33 +1106,17 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int Flag {
+            public string Note {
                 get {
                     try {
-                        return ((int)(this[this.tableTransfer.FlagColumn]));
+                        return ((string)(this[this.tableTransfer.NoteColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Flag\' in table \'Transfer\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Note\' in table \'Transfer\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTransfer.FlagColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int TransferID {
-                get {
-                    try {
-                        return ((int)(this[this.tableTransfer.TransferIDColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'TransferID\' in table \'Transfer\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableTransfer.TransferIDColumn] = value;
+                    this[this.tableTransfer.NoteColumn] = value;
                 }
             }
             
@@ -1417,26 +1386,14 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsFlagNull() {
-                return this.IsNull(this.tableTransfer.FlagColumn);
+            public bool IsNoteNull() {
+                return this.IsNull(this.tableTransfer.NoteColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetFlagNull() {
-                this[this.tableTransfer.FlagColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsTransferIDNull() {
-                return this.IsNull(this.tableTransfer.TransferIDColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetTransferIDNull() {
-                this[this.tableTransfer.TransferIDColumn] = global::System.Convert.DBNull;
+            public void SetNoteNull() {
+                this[this.tableTransfer.NoteColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
