@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/dsBuyBookSettingDetail.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/dsBuyBookSettingDetail.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/dsBuyBookSettingDetail.xsd" id="dsBuyBookSettingDetail" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="dsBuyBookSettingDetail">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="BBSettingDetail">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="RowNum" type="xs:long" />
+              <xs:element msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" name="ID" type="xs:int" />
+              <xs:element minOccurs="0" name="Code" type="xs:string" />
+              <xs:element msdata:Caption="SettingType" minOccurs="0" name="SettingTypeName" type="xs:string" />
+              <xs:element minOccurs="0" name="SettingType" type="xs:int" />
+              <xs:element minOccurs="0" name="Amount" type="xs:double" />
+              <xs:element minOccurs="0" name="Weight" type="xs:double" />
+              <xs:element minOccurs="0" name="LaborCost" type="xs:decimal" />
+              <xs:element msdata:Caption="Material" minOccurs="0" name="MaterialName" type="xs:string" />
+              <xs:element minOccurs="0" name="Material" type="xs:int" />
+              <xs:element minOccurs="0" name="PricePerGram" type="xs:decimal" />
+              <xs:element minOccurs="0" name="PricePerUnit" type="xs:decimal" />
+              <xs:element minOccurs="0" name="Detail">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="Image1" type="xs:base64Binary" />
+              <xs:element minOccurs="0" name="TotalUSD" type="xs:decimal" />
+              <xs:element minOccurs="0" name="USDRate" type="xs:decimal" />
+              <xs:element minOccurs="0" name="TotalBaht" type="xs:decimal" />
+              <xs:element minOccurs="0" name="RefID" type="xs:int" />
+              <xs:element minOccurs="0" name="IsDeleted">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="CreateBy" type="xs:int" />
+              <xs:element minOccurs="0" name="CreateDate" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="EditBy" type="xs:int" />
+              <xs:element minOccurs="0" name="EditDate" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="Constraint1">
+      <xs:selector xpath=".//mstns:BBSettingDetail" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

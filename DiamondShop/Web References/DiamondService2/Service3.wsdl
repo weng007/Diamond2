@@ -296,18 +296,18 @@
           </s:sequence>
         </s:complexType>
       </s:element>
-      <s:element name="DoSearchCatalogByType">
+      <s:element name="DoSearchCatalogByCode">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="prefix" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="code" type="s:string" />
             <s:element minOccurs="1" maxOccurs="1" name="mode" type="s:int" />
           </s:sequence>
         </s:complexType>
       </s:element>
-      <s:element name="DoSearchCatalogByTypeResponse">
+      <s:element name="DoSearchCatalogByCodeResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="DoSearchCatalogByTypeResult">
+            <s:element minOccurs="0" maxOccurs="1" name="DoSearchCatalogByCodeResult">
               <s:complexType>
                 <s:sequence>
                   <s:element ref="s:schema" />
@@ -583,8 +583,7 @@
             <s:element minOccurs="1" maxOccurs="1" name="shop" type="s:int" />
             <s:element minOccurs="0" maxOccurs="1" name="code" type="s:string" />
             <s:element minOccurs="0" maxOccurs="1" name="code2" type="s:string" />
-            <s:element minOccurs="1" maxOccurs="1" name="Flag" type="s:int" />
-            <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="buyBookType" type="s:int" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -656,7 +655,7 @@
           <s:sequence>
             <s:element minOccurs="0" maxOccurs="1" name="OrderNo" type="s:string" />
             <s:element minOccurs="1" maxOccurs="1" name="JewelryType" type="s:int" />
-            <s:element minOccurs="1" maxOccurs="1" name="SShop" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Shop" type="s:int" />
             <s:element minOccurs="1" maxOccurs="1" name="FactoryStatus" type="s:int" />
             <s:element minOccurs="1" maxOccurs="1" name="SOrderDate" type="s:dateTime" />
             <s:element minOccurs="1" maxOccurs="1" name="EOrderDate" type="s:dateTime" />
@@ -770,6 +769,27 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="DoSearchBBSettingDetail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="mode" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DoSearchBBSettingDetailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DoSearchBBSettingDetailResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
     </s:schema>
   </wsdl:types>
   <wsdl:message name="DoSearchCustomerSoapIn">
@@ -844,11 +864,11 @@
   <wsdl:message name="DoSearchCatalogSoapOut">
     <wsdl:part name="parameters" element="tns:DoSearchCatalogResponse" />
   </wsdl:message>
-  <wsdl:message name="DoSearchCatalogByTypeSoapIn">
-    <wsdl:part name="parameters" element="tns:DoSearchCatalogByType" />
+  <wsdl:message name="DoSearchCatalogByCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:DoSearchCatalogByCode" />
   </wsdl:message>
-  <wsdl:message name="DoSearchCatalogByTypeSoapOut">
-    <wsdl:part name="parameters" element="tns:DoSearchCatalogByTypeResponse" />
+  <wsdl:message name="DoSearchCatalogByCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:DoSearchCatalogByCodeResponse" />
   </wsdl:message>
   <wsdl:message name="DoSearchDiamondCerSoapIn">
     <wsdl:part name="parameters" element="tns:DoSearchDiamondCer" />
@@ -958,6 +978,12 @@
   <wsdl:message name="DoSearchReceiveDocumentSoapOut">
     <wsdl:part name="parameters" element="tns:DoSearchReceiveDocumentResponse" />
   </wsdl:message>
+  <wsdl:message name="DoSearchBBSettingDetailSoapIn">
+    <wsdl:part name="parameters" element="tns:DoSearchBBSettingDetail" />
+  </wsdl:message>
+  <wsdl:message name="DoSearchBBSettingDetailSoapOut">
+    <wsdl:part name="parameters" element="tns:DoSearchBBSettingDetailResponse" />
+  </wsdl:message>
   <wsdl:portType name="Service3Soap">
     <wsdl:operation name="DoSearchCustomer">
       <wsdl:input message="tns:DoSearchCustomerSoapIn" />
@@ -1007,9 +1033,9 @@
       <wsdl:input message="tns:DoSearchCatalogSoapIn" />
       <wsdl:output message="tns:DoSearchCatalogSoapOut" />
     </wsdl:operation>
-    <wsdl:operation name="DoSearchCatalogByType">
-      <wsdl:input message="tns:DoSearchCatalogByTypeSoapIn" />
-      <wsdl:output message="tns:DoSearchCatalogByTypeSoapOut" />
+    <wsdl:operation name="DoSearchCatalogByCode">
+      <wsdl:input message="tns:DoSearchCatalogByCodeSoapIn" />
+      <wsdl:output message="tns:DoSearchCatalogByCodeSoapOut" />
     </wsdl:operation>
     <wsdl:operation name="DoSearchDiamondCer">
       <wsdl:input message="tns:DoSearchDiamondCerSoapIn" />
@@ -1082,6 +1108,10 @@
     <wsdl:operation name="DoSearchReceiveDocument">
       <wsdl:input message="tns:DoSearchReceiveDocumentSoapIn" />
       <wsdl:output message="tns:DoSearchReceiveDocumentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DoSearchBBSettingDetail">
+      <wsdl:input message="tns:DoSearchBBSettingDetailSoapIn" />
+      <wsdl:output message="tns:DoSearchBBSettingDetailSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="Service3Soap" type="tns:Service3Soap">
@@ -1194,8 +1224,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="DoSearchCatalogByType">
-      <soap:operation soapAction="http://tempuri.org/DoSearchCatalogByType" style="document" />
+    <wsdl:operation name="DoSearchCatalogByCode">
+      <soap:operation soapAction="http://tempuri.org/DoSearchCatalogByCode" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1365,6 +1395,15 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="DoSearchBBSettingDetail">
+      <soap:operation soapAction="http://tempuri.org/DoSearchBBSettingDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:binding name="Service3Soap12" type="tns:Service3Soap">
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
@@ -1476,8 +1515,8 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="DoSearchCatalogByType">
-      <soap12:operation soapAction="http://tempuri.org/DoSearchCatalogByType" style="document" />
+    <wsdl:operation name="DoSearchCatalogByCode">
+      <soap12:operation soapAction="http://tempuri.org/DoSearchCatalogByCode" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -1647,13 +1686,22 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="DoSearchBBSettingDetail">
+      <soap12:operation soapAction="http://tempuri.org/DoSearchBBSettingDetail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:service name="Service3">
     <wsdl:port name="Service3Soap" binding="tns:Service3Soap">
-      <soap:address location="http://localhost:8888/DiamondService/Service3.asmx" />
+      <soap:address location="http://localhost:5555/DiamondService/Service3.asmx" />
     </wsdl:port>
     <wsdl:port name="Service3Soap12" binding="tns:Service3Soap12">
-      <soap12:address location="http://localhost:8888/DiamondService/Service3.asmx" />
+      <soap12:address location="http://localhost:5555/DiamondService/Service3.asmx" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>
