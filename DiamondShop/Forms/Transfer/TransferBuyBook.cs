@@ -34,6 +34,7 @@ namespace DiamondShop
         {
             InitializeComponent();
             Initial();
+            isAuthorize = true;
 
             BinderData();
 
@@ -151,6 +152,12 @@ namespace DiamondShop
                     row.ReceiveDate = DateTime.MinValue.AddYears(1900);
                     row.TransferStatus = 222;
                     chkFlag = ser.DoInsertData("Transfer", tds, 0);
+
+                    if(chkFlag)
+                    {
+                        btnAdd.Enabled = true;
+                        btnDel.Enabled = true;
+                    }
                 }
                 else
                 {

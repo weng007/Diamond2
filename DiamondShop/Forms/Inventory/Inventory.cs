@@ -29,6 +29,8 @@ namespace DiamondShop
         {
             InitializeComponent();
             Initial();
+            isAuthorize = true;
+
             BinderData();
         }
 
@@ -289,7 +291,6 @@ namespace DiamondShop
 
             //ไม่ให้ปิดหน้าจอหลัง Save
             isClosed = false;
-
             LoadData();
 
             return chkFlag;
