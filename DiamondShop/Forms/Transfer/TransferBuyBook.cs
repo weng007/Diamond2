@@ -127,6 +127,7 @@ namespace DiamondShop
         protected override bool SaveData()
         {
             dsTransfer.TransferRow row = null;
+            dsTransferBuyBook.TransferBuyBookRow row1 = null;
 
             if (tds.Transfer.Rows.Count > 0)
             {
@@ -167,8 +168,6 @@ namespace DiamondShop
                     SetEditBy(row);
                     chkFlag = ser.DoUpdateData("Transfer", tds);
 
-                    BindingDSTransferBuyBook();
-
                     if (tds1.TransferBuyBook.Rows.Count > 0)
                     {
                         chkFlag = ser.DoInsertData("TransferBuyBook", tds1, 0); //Insert, Update Detail                  
@@ -188,31 +187,7 @@ namespace DiamondShop
 
             return chkFlag;
         }
-        private void BindingDSTransferBuyBook()
-        {
-            tds1.Clear();
-
-            for (int i = 0; i < ds2.Tables[0].Rows.Count; i++)
-            {
-                if (ds2.Tables[0].Rows[i]["RefID"].ToString() == "")
-                {
-                    DataRow dr = tds1.Tables[0].NewRow();
-
-                    dr["RefID"] = id;
-                    dr["RowNum"] = ds2.Tables[0].Rows[i]["RowNum"];
-                    dr["RefID1"] = ds2.Tables[0].Rows[i]["RefID1"];
-                    dr["BuyBookType"] = ds2.Tables[0].Rows[i]["BuyBookType"];
-                    dr["ID"] = 0;
-
-                    SetCreateBy(dr);
-                    SetEditBy(dr);
-
-                    tds1.Tables[0].Rows.Add(dr);
-                }
-            }
-
-            tds1.AcceptChanges();
-        }
+ 
         protected override bool DeleteData()
         {
             try
@@ -295,6 +270,8 @@ namespace DiamondShop
                     row.ColorName = tmp.TransferBuyBook[i].ColorName;
                     row.TotalBaht = tmp.TransferBuyBook[i].TotalBaht;
                     row.BuyBookType = tmp.TransferBuyBook[i].BuyBookType;
+                    row.CreateBy = ApplicationInfo.UserID;
+                    row.EditBy = ApplicationInfo.UserID;
                     tds1.TransferBuyBook.Rows.Add(row);
                 }
 

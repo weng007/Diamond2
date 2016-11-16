@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TransferBuyBook));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dtSendDate = new System.Windows.Forms.DateTimePicker();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
@@ -53,7 +53,14 @@
             this.btnDel = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.gridTransfer = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtSender = new System.Windows.Forms.TextBox();
+            this.btnEdit = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.RowNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Weight = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.JewelryTypeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -66,12 +73,6 @@
             this.RefID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RefID1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BuyBookType = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtSender = new System.Windows.Forms.TextBox();
-            this.btnEdit = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridTransfer)).BeginInit();
@@ -325,6 +326,7 @@
             this.gridTransfer.ColumnHeadersHeight = 33;
             this.gridTransfer.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.RowNum,
+            this.ID,
             this.Code,
             this.Weight,
             this.JewelryTypeName,
@@ -348,117 +350,6 @@
             this.gridTransfer.Size = new System.Drawing.Size(905, 187);
             this.gridTransfer.TabIndex = 86;
             this.gridTransfer.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridTransfer_CellClick);
-            // 
-            // RowNum
-            // 
-            this.RowNum.DataPropertyName = "RowNum";
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            this.RowNum.DefaultCellStyle = dataGridViewCellStyle7;
-            this.RowNum.HeaderText = "No.";
-            this.RowNum.Name = "RowNum";
-            this.RowNum.ReadOnly = true;
-            this.RowNum.Width = 40;
-            // 
-            // Code
-            // 
-            this.Code.DataPropertyName = "Code";
-            this.Code.HeaderText = "Code";
-            this.Code.Name = "Code";
-            this.Code.ReadOnly = true;
-            this.Code.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Code.Width = 150;
-            // 
-            // Weight
-            // 
-            this.Weight.DataPropertyName = "Weight";
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle8.Format = "N2";
-            this.Weight.DefaultCellStyle = dataGridViewCellStyle8;
-            this.Weight.HeaderText = "Weight";
-            this.Weight.Name = "Weight";
-            this.Weight.ReadOnly = true;
-            this.Weight.Width = 70;
-            // 
-            // JewelryTypeName
-            // 
-            this.JewelryTypeName.DataPropertyName = "JewelryTypeName";
-            this.JewelryTypeName.HeaderText = "JewelryType";
-            this.JewelryTypeName.Name = "JewelryTypeName";
-            this.JewelryTypeName.ReadOnly = true;
-            this.JewelryTypeName.Width = 140;
-            // 
-            // ShapeName
-            // 
-            this.ShapeName.DataPropertyName = "ShapeName";
-            this.ShapeName.HeaderText = "Shape";
-            this.ShapeName.Name = "ShapeName";
-            this.ShapeName.ReadOnly = true;
-            // 
-            // ColorTypeName
-            // 
-            this.ColorTypeName.DataPropertyName = "ColorTypeName";
-            this.ColorTypeName.HeaderText = "Color Type";
-            this.ColorTypeName.Name = "ColorTypeName";
-            this.ColorTypeName.ReadOnly = true;
-            this.ColorTypeName.Width = 130;
-            // 
-            // ColorName
-            // 
-            this.ColorName.DataPropertyName = "ColorName";
-            this.ColorName.HeaderText = "Color";
-            this.ColorName.Name = "ColorName";
-            this.ColorName.ReadOnly = true;
-            // 
-            // TotalBaht
-            // 
-            this.TotalBaht.DataPropertyName = "TotalBaht";
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle9.Format = "N0";
-            this.TotalBaht.DefaultCellStyle = dataGridViewCellStyle9;
-            this.TotalBaht.HeaderText = "TotalBaht";
-            this.TotalBaht.Name = "TotalBaht";
-            this.TotalBaht.ReadOnly = true;
-            this.TotalBaht.Width = 120;
-            // 
-            // EShop
-            // 
-            this.EShop.DataPropertyName = "EShop";
-            this.EShop.HeaderText = "EShop";
-            this.EShop.Name = "EShop";
-            this.EShop.ReadOnly = true;
-            this.EShop.Visible = false;
-            // 
-            // Status
-            // 
-            this.Status.DataPropertyName = "Status";
-            this.Status.HeaderText = "Status";
-            this.Status.Name = "Status";
-            this.Status.ReadOnly = true;
-            this.Status.Visible = false;
-            // 
-            // RefID
-            // 
-            this.RefID.DataPropertyName = "RefID";
-            this.RefID.HeaderText = "RefID";
-            this.RefID.Name = "RefID";
-            this.RefID.ReadOnly = true;
-            this.RefID.Visible = false;
-            // 
-            // RefID1
-            // 
-            this.RefID1.DataPropertyName = "RefID1";
-            this.RefID1.HeaderText = "RefID1";
-            this.RefID1.Name = "RefID1";
-            this.RefID1.ReadOnly = true;
-            this.RefID1.Visible = false;
-            // 
-            // BuyBookType
-            // 
-            this.BuyBookType.DataPropertyName = "BuyBookType";
-            this.BuyBookType.HeaderText = "BuyBookType";
-            this.BuyBookType.Name = "BuyBookType";
-            this.BuyBookType.ReadOnly = true;
-            this.BuyBookType.Visible = false;
             // 
             // label1
             // 
@@ -526,6 +417,125 @@
             this.button1.TabIndex = 32;
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // RowNum
+            // 
+            this.RowNum.DataPropertyName = "RowNum";
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            this.RowNum.DefaultCellStyle = dataGridViewCellStyle1;
+            this.RowNum.HeaderText = "No.";
+            this.RowNum.Name = "RowNum";
+            this.RowNum.ReadOnly = true;
+            this.RowNum.Width = 40;
+            // 
+            // ID
+            // 
+            this.ID.DataPropertyName = "ID";
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Visible = false;
+            // 
+            // Code
+            // 
+            this.Code.DataPropertyName = "Code";
+            this.Code.HeaderText = "Code";
+            this.Code.Name = "Code";
+            this.Code.ReadOnly = true;
+            this.Code.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Code.Width = 150;
+            // 
+            // Weight
+            // 
+            this.Weight.DataPropertyName = "Weight";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle2.Format = "N2";
+            this.Weight.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Weight.HeaderText = "Weight";
+            this.Weight.Name = "Weight";
+            this.Weight.ReadOnly = true;
+            this.Weight.Width = 70;
+            // 
+            // JewelryTypeName
+            // 
+            this.JewelryTypeName.DataPropertyName = "JewelryTypeName";
+            this.JewelryTypeName.HeaderText = "JewelryType";
+            this.JewelryTypeName.Name = "JewelryTypeName";
+            this.JewelryTypeName.ReadOnly = true;
+            this.JewelryTypeName.Width = 140;
+            // 
+            // ShapeName
+            // 
+            this.ShapeName.DataPropertyName = "ShapeName";
+            this.ShapeName.HeaderText = "Shape";
+            this.ShapeName.Name = "ShapeName";
+            this.ShapeName.ReadOnly = true;
+            // 
+            // ColorTypeName
+            // 
+            this.ColorTypeName.DataPropertyName = "ColorTypeName";
+            this.ColorTypeName.HeaderText = "Color Type";
+            this.ColorTypeName.Name = "ColorTypeName";
+            this.ColorTypeName.ReadOnly = true;
+            this.ColorTypeName.Width = 130;
+            // 
+            // ColorName
+            // 
+            this.ColorName.DataPropertyName = "ColorName";
+            this.ColorName.HeaderText = "Color";
+            this.ColorName.Name = "ColorName";
+            this.ColorName.ReadOnly = true;
+            // 
+            // TotalBaht
+            // 
+            this.TotalBaht.DataPropertyName = "TotalBaht";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle3.Format = "N0";
+            this.TotalBaht.DefaultCellStyle = dataGridViewCellStyle3;
+            this.TotalBaht.HeaderText = "TotalBaht";
+            this.TotalBaht.Name = "TotalBaht";
+            this.TotalBaht.ReadOnly = true;
+            this.TotalBaht.Width = 120;
+            // 
+            // EShop
+            // 
+            this.EShop.DataPropertyName = "EShop";
+            this.EShop.HeaderText = "EShop";
+            this.EShop.Name = "EShop";
+            this.EShop.ReadOnly = true;
+            this.EShop.Visible = false;
+            // 
+            // Status
+            // 
+            this.Status.DataPropertyName = "Status";
+            this.Status.HeaderText = "Status";
+            this.Status.Name = "Status";
+            this.Status.ReadOnly = true;
+            this.Status.Visible = false;
+            // 
+            // RefID
+            // 
+            this.RefID.DataPropertyName = "RefID";
+            this.RefID.HeaderText = "RefID";
+            this.RefID.Name = "RefID";
+            this.RefID.ReadOnly = true;
+            this.RefID.Visible = false;
+            // 
+            // RefID1
+            // 
+            this.RefID1.DataPropertyName = "RefID1";
+            this.RefID1.HeaderText = "RefID1";
+            this.RefID1.Name = "RefID1";
+            this.RefID1.ReadOnly = true;
+            this.RefID1.Visible = false;
+            // 
+            // BuyBookType
+            // 
+            this.BuyBookType.DataPropertyName = "BuyBookType";
+            this.BuyBookType.HeaderText = "BuyBookType";
+            this.BuyBookType.Name = "BuyBookType";
+            this.BuyBookType.ReadOnly = true;
+            this.BuyBookType.Visible = false;
+            // 
             // TransferBuyBook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -574,6 +584,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtTransferNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn RowNum;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Code;
         private System.Windows.Forms.DataGridViewTextBoxColumn Weight;
         private System.Windows.Forms.DataGridViewTextBoxColumn JewelryTypeName;

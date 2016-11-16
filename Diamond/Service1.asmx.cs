@@ -483,7 +483,7 @@ namespace Diamond
                 TransferBuyBookBiz biz = GM.GetTransferBuyBookBiz();
                 try
                 {            
-                    return biz.DoSelectData(id, 0);
+                    return biz.DoSelectData(id);
                 }
                 catch (Exception ex)
                 {

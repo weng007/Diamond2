@@ -13,11 +13,11 @@ namespace DiamondBiz.Biz
         dsTransferBuyBook ds = new dsTransferBuyBook();
         TransferBuyBookDAL dal = new TransferBuyBookDAL();
 
-        public dsTransferBuyBook DoSelectData(int id, int mode)
+        public dsTransferBuyBook DoSelectData(int id)
         {
             try
             {
-                return dal.DoSelectData(id, mode);
+                return dal.DoSelectData(id);
             }
             catch (Exception ex)
             {
