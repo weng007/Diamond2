@@ -100,6 +100,8 @@ namespace DiamondShop.DiamondService1 {
         
         private System.Threading.SendOrPostCallback GetSellBookDetailOperationCompleted;
         
+        private System.Threading.SendOrPostCallback GetTransferBuyBookDetailOperationCompleted;
+        
         private System.Threading.SendOrPostCallback GetCertificateOperationCompleted;
         
         private bool useDefaultCredentialsSetExplicitly;
@@ -244,6 +246,9 @@ namespace DiamondShop.DiamondService1 {
         
         /// <remarks/>
         public event GetSellBookDetailCompletedEventHandler GetSellBookDetailCompleted;
+        
+        /// <remarks/>
+        public event GetTransferBuyBookDetailCompletedEventHandler GetTransferBuyBookDetailCompleted;
         
         /// <remarks/>
         public event GetCertificateCompletedEventHandler GetCertificateCompleted;
@@ -1328,6 +1333,35 @@ namespace DiamondShop.DiamondService1 {
             if ((this.GetSellBookDetailCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.GetSellBookDetailCompleted(this, new GetSellBookDetailCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/GetTransferBuyBookDetail", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataSet GetTransferBuyBookDetail(string codeSelected) {
+            object[] results = this.Invoke("GetTransferBuyBookDetail", new object[] {
+                        codeSelected});
+            return ((System.Data.DataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void GetTransferBuyBookDetailAsync(string codeSelected) {
+            this.GetTransferBuyBookDetailAsync(codeSelected, null);
+        }
+        
+        /// <remarks/>
+        public void GetTransferBuyBookDetailAsync(string codeSelected, object userState) {
+            if ((this.GetTransferBuyBookDetailOperationCompleted == null)) {
+                this.GetTransferBuyBookDetailOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetTransferBuyBookDetailOperationCompleted);
+            }
+            this.InvokeAsync("GetTransferBuyBookDetail", new object[] {
+                        codeSelected}, this.GetTransferBuyBookDetailOperationCompleted, userState);
+        }
+        
+        private void OnGetTransferBuyBookDetailOperationCompleted(object arg) {
+            if ((this.GetTransferBuyBookDetailCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.GetTransferBuyBookDetailCompleted(this, new GetTransferBuyBookDetailCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -9414,6 +9448,32 @@ namespace DiamondShop.DiamondService1 {
         private object[] results;
         
         internal GetSellBookDetailCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Data.DataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Data.DataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    public delegate void GetTransferBuyBookDetailCompletedEventHandler(object sender, GetTransferBuyBookDetailCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class GetTransferBuyBookDetailCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal GetTransferBuyBookDetailCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }
