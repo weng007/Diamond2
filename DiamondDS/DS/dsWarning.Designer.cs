@@ -805,7 +805,7 @@ namespace DiamondDS.DS {
                 this.columnSenderName.ReadOnly = true;
                 this.columnSenderName.MaxLength = 50;
                 this.columnDetail.ReadOnly = true;
-                this.columnDetail.MaxLength = 91;
+                this.columnDetail.MaxLength = 1000;
                 this.columnReceiver.ReadOnly = true;
                 this.columnReceiverName.ReadOnly = true;
                 this.columnReceiverName.MaxLength = 50;
