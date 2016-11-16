@@ -309,13 +309,13 @@ namespace Diamond
         }
 
         [WebMethod]
-        public DataSet DoSearchBuyBookSetting(string User, DateTime sBuyDate, DateTime eBuyDate)
+        public DataSet DoSearchBuyBookSetting(string user, DateTime sBuyDate, DateTime eBuyDate)
         {
             BuyBookSettingBiz biz = new BuyBookSettingBiz();
 
             try
             {
-                return biz.DoSearchData(User, sBuyDate, eBuyDate);
+                return biz.DoSearchData(user, sBuyDate, eBuyDate);
             }
             catch (Exception ex)
             {
@@ -338,13 +338,13 @@ namespace Diamond
             }
         }
         [WebMethod]
-        public DataSet DoSearchWarning(string RefID, int StatusType, DateTime SDate, DateTime EDate, int LoginID,int IsInbox)
+        public DataSet DoSearchWarning(string refID, int statusType, DateTime sDate, DateTime eDate, int loginID,int isInbox)
         {
             WarningBiz biz = new WarningBiz();
 
             try
             {
-                return biz.DoSearchData(RefID, StatusType, SDate, EDate, LoginID, IsInbox);
+                return biz.DoSearchData(refID, statusType, sDate, eDate, loginID, isInbox);
             }
             catch (Exception ex)
             {
@@ -352,13 +352,13 @@ namespace Diamond
             }
         }
         [WebMethod]
-        public DataSet DoSearchTransfer(int Sender, int TransferStatus, int SShop, int EShop, DateTime SSendDate, DateTime ESendDate, DateTime SReceiveDate, DateTime EReceiveDate,string Flag)
+        public DataSet DoSearchTransfer(int sender, int transferStatus, int sShop, int eShop, DateTime sSendDate, DateTime eSendDate,string isBuyBook)
         {
             TransferBiz biz = new TransferBiz();
 
             try
             {
-                return biz.DoSearchData(Sender, TransferStatus, SShop, EShop, SSendDate, ESendDate, SReceiveDate, EReceiveDate,Flag);
+                return biz.DoSearchData(sender, transferStatus, sShop, eShop, sSendDate, eSendDate, isBuyBook);
             }
             catch (Exception ex)
             {
@@ -366,13 +366,13 @@ namespace Diamond
             }
         }
         [WebMethod]
-        public DataSet DoSearchOrder(string CustName, string Code, int Seller, int JewelryType)
+        public DataSet DoSearchOrder(string custName, string code, int seller, int jewelryType)
         {
             OrderBiz biz = new OrderBiz();
 
             try
             {
-                return biz.DoSearchData(CustName, Code, Seller, JewelryType);
+                return biz.DoSearchData(custName, code, seller, jewelryType);
             }
             catch (Exception ex)
             {
@@ -408,13 +408,13 @@ namespace Diamond
             }
         }
         [WebMethod]
-        public DataSet DoSearchWarningTransfer(int Sender, int Receiver, int MessageStatus, int FactoryStatus, int Shop, int loginID)
+        public DataSet DoSearchWarningTransfer(int sender, int receiver, int messageStatus, int factoryStatus, int shop, int loginID)
         {
             WarningTransferBiz biz = new WarningTransferBiz();
 
             try
             {
-                return biz.DoSearchData(Sender, Receiver, MessageStatus, FactoryStatus, Shop, loginID);
+                return biz.DoSearchData(sender, receiver, messageStatus, factoryStatus, shop, loginID);
             }
             catch (Exception ex)
             {
@@ -422,13 +422,13 @@ namespace Diamond
             }
         }
         [WebMethod]
-        public DataSet DoSearchProductionLine(string OrderNo, int JewelryType, int Shop, int FactoryStatus, DateTime SOrderDate, DateTime EOrderDate)
+        public DataSet DoSearchProductionLine(string orderNo, int jewelryType, int shop, int factoryStatus, DateTime sOrderDate, DateTime eOrderDate)
         {
             ProductionLineBiz biz = new ProductionLineBiz();
 
             try
             {
-                return biz.DoSearchData(OrderNo, JewelryType, Shop, FactoryStatus, SOrderDate, EOrderDate);
+                return biz.DoSearchData(orderNo, jewelryType, shop, factoryStatus, sOrderDate, eOrderDate);
             }
             catch (Exception ex)
             {
@@ -450,13 +450,13 @@ namespace Diamond
             }
         }
         [WebMethod]
-        public DataSet DoSearchExpenseGroup(int ExpenseGroup)
+        public DataSet DoSearchExpenseGroup(int expenseGroup)
         {
             ExpenseGroupBiz biz = new ExpenseGroupBiz();
 
             try
             {
-                return biz.DoSearchData(ExpenseGroup);
+                return biz.DoSearchData(expenseGroup);
             }
             catch (Exception ex)
             {
@@ -464,13 +464,13 @@ namespace Diamond
             }
         }
         [WebMethod]
-        public DataSet DoSearchExpense(int ExpenseGroup, int Shop, DateTime SMemoDate, DateTime EMemoDate, DateTime SExpenseDate, DateTime EExpenseDate)
+        public DataSet DoSearchExpense(int expenseGroup, int shop, DateTime sMemoDate, DateTime eMemoDate, DateTime sExpenseDate, DateTime eExpenseDate)
         {
             ExpenseBiz biz = new ExpenseBiz();
 
             try
             {
-                return biz.DoSearchData(ExpenseGroup, Shop, SMemoDate, EMemoDate, SExpenseDate, EExpenseDate);
+                return biz.DoSearchData(expenseGroup, shop, sMemoDate, eMemoDate, sExpenseDate, eExpenseDate);
             }
             catch (Exception ex)
             {
@@ -478,13 +478,13 @@ namespace Diamond
             }
         }
         [WebMethod]
-        public DataSet DoSearchReceiveDocument(string ReceiveNo, DateTime SReceiveDate, DateTime EReceiveDate, int Receiver, string Seller)
+        public DataSet DoSearchReceiveDocument(string receiveNo, DateTime sReceiveDate, DateTime eReceiveDate, int receiver, string seller)
         {
             ReceiveDocumentBiz biz = new ReceiveDocumentBiz();
 
             try
             {
-                return biz.DoSearchData(ReceiveNo, SReceiveDate, EReceiveDate, Receiver, Seller);
+                return biz.DoSearchData(receiveNo, sReceiveDate, eReceiveDate, receiver, seller);
             }
             catch (Exception ex)
             {

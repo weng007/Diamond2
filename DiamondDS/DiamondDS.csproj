@@ -229,9 +229,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsMasterTableDetail.xsd</DependentUpon>
     </Compile>
-    <Compile Include="DS\dsOrder.cs">
-      <DependentUpon>dsOrder.xsd</DependentUpon>
-    </Compile>
     <Compile Include="DS\dsOrder.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -320,11 +317,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dsTransferBuyBook.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="DS\dsTransferDetail.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>dsTransferDetail.xsd</DependentUpon>
     </Compile>
     <Compile Include="DS\dsTransferInventory.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -906,17 +898,6 @@
     </None>
     <None Include="DS\dsTransferBuyBook.xss">
       <DependentUpon>dsTransferBuyBook.xsd</DependentUpon>
-    </None>
-    <None Include="DS\dsTransferDetail.xsc">
-      <DependentUpon>dsTransferDetail.xsd</DependentUpon>
-    </None>
-    <None Include="DS\dsTransferDetail.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>dsTransferDetail.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="DS\dsTransferDetail.xss">
-      <DependentUpon>dsTransferDetail.xsd</DependentUpon>
     </None>
     <None Include="DS\dsTransferInventory.xsc">
       <DependentUpon>dsTransferInventory.xsd</DependentUpon>

@@ -104,17 +104,17 @@ namespace DiamondShop
             {
                 ser1 = GM.GetService1();
 
-                dsTransferDetail tmp = new dsTransferDetail();
+                dsTransferInventory tmp = new dsTransferInventory();
 
                 ds1 = ser1.GetSellBookDetail(idSelected, buyBookType);
                 tmp.Clear();
                 tmp.Merge(ds1);
 
-                for (int i = 0; i < tmp.TransferDetail.Rows.Count; i++)
+                for (int i = 0; i < tmp.TransferInventory.Rows.Count; i++)
                 {
                     dsTransferInventory.TransferInventoryRow row = tds1.TransferInventory.NewTransferInventoryRow();
                     row.RefID = id;
-                    row.RefID1 = tmp.TransferDetail[i].RefID1;
+                    row.RefID1 = tmp.TransferInventory[i].RefID1;
                     tds1.TransferInventory.Rows.Add(row);
                 }
 

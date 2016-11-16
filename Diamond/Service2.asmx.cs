@@ -515,6 +515,20 @@ namespace Diamond
         }
 
         [WebMethod]
+        public DataSet GetTransferBuyBookDetail(string codeSelected)
+        {
+            TransferBuyBookBiz biz = GM.GetTransferBuyBookBiz();
+            try
+            {
+                return biz.GetTransferBuyBookDetail(codeSelected);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        [WebMethod]
         public byte[] GetCertificate(int id, int mode)
         {
             GeneralBiz biz = new GeneralBiz();

@@ -16,7 +16,7 @@ namespace DiamondShop
     { 
         public int refID1 = 0;
         public string tmpCode = "";
-        public string idSelected = "";
+        public string codeSelected = "";
 
         public SearchTransferBuyBook()
         {
@@ -73,7 +73,7 @@ namespace DiamondShop
         private void CheckSelected()
         {
             string comma = ",";
-            idSelected = "";
+            codeSelected = "";
 
             for (int i = 0; i < gridTransferBuyBook.Rows.Count; i++)
             {
@@ -81,14 +81,15 @@ namespace DiamondShop
                 {
                     if (gridTransferBuyBook.Rows[i].Cells["Select"].Value.ToString() == "True")
                     {
-                        idSelected += gridTransferBuyBook.Rows[i].Cells["ID"].Value.ToString() + comma;
+                        codeSelected += gridTransferBuyBook.Rows[i].Cells["Code"].Value.ToString() + comma;
+                         
                     }
                 }
             }
 
-            if (idSelected.Length > 0)
+            if (codeSelected.Length > 0)
             {
-                idSelected = idSelected.Remove(idSelected.Length - 1, 1);
+                codeSelected = codeSelected.Remove(codeSelected.Length - 1, 1);
             }
         }
 
@@ -103,7 +104,6 @@ namespace DiamondShop
         {
             DoSearchData();
         }
-
 
         private void btnClose_Click(object sender, EventArgs e)
         {

@@ -346,7 +346,7 @@ namespace DiamondDAL.DAL
             try
             {
                 SQL.ClearParameter();
-                SQL.CreateParameter("@RefID", id);
+                SQL.CreateParameter("@ID", id);
                 SQL.FillDataSetBySP2("SP_Rpt_Delivery", ds);
             }
             catch (Exception ex)

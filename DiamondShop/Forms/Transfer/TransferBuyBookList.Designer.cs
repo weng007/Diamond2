@@ -38,10 +38,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.cmbShop = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.dtEReceiveDate = new System.Windows.Forms.DateTimePicker();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.dtSReceiveDate = new System.Windows.Forms.DateTimePicker();
             this.dtESendDate = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -75,10 +71,6 @@
             this.panel4.Controls.Add(this.label9);
             this.panel4.Controls.Add(this.cmbShop);
             this.panel4.Controls.Add(this.label8);
-            this.panel4.Controls.Add(this.dtEReceiveDate);
-            this.panel4.Controls.Add(this.label2);
-            this.panel4.Controls.Add(this.label1);
-            this.panel4.Controls.Add(this.dtSReceiveDate);
             this.panel4.Controls.Add(this.dtESendDate);
             this.panel4.Controls.Add(this.label6);
             this.panel4.Controls.Add(this.label7);
@@ -137,44 +129,6 @@
             this.label8.Size = new System.Drawing.Size(118, 26);
             this.label8.TabIndex = 88;
             this.label8.Text = "StartLocation";
-            // 
-            // dtEReceiveDate
-            // 
-            this.dtEReceiveDate.CustomFormat = "dd/MM/yyyy";
-            this.dtEReceiveDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtEReceiveDate.Location = new System.Drawing.Point(825, 106);
-            this.dtEReceiveDate.Name = "dtEReceiveDate";
-            this.dtEReceiveDate.Size = new System.Drawing.Size(131, 26);
-            this.dtEReceiveDate.TabIndex = 84;
-            // 
-            // label2
-            // 
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(806, 106);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(16, 25);
-            this.label2.TabIndex = 86;
-            this.label2.Text = "-";
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(538, 106);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(124, 25);
-            this.label1.TabIndex = 85;
-            this.label1.Text = "Receive Date";
-            // 
-            // dtSReceiveDate
-            // 
-            this.dtSReceiveDate.CustomFormat = "dd/MM/yyyy";
-            this.dtSReceiveDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtSReceiveDate.Location = new System.Drawing.Point(669, 106);
-            this.dtSReceiveDate.Name = "dtSReceiveDate";
-            this.dtSReceiveDate.Size = new System.Drawing.Size(131, 26);
-            this.dtSReceiveDate.TabIndex = 83;
             // 
             // dtESendDate
             // 
@@ -335,7 +289,7 @@
             this.SenderName.HeaderText = "Sender";
             this.SenderName.Name = "SenderName";
             this.SenderName.ReadOnly = true;
-            this.SenderName.Width = 150;
+            this.SenderName.Width = 130;
             // 
             // TransferNo
             // 
@@ -343,7 +297,7 @@
             this.TransferNo.HeaderText = "TransferNo";
             this.TransferNo.Name = "TransferNo";
             this.TransferNo.ReadOnly = true;
-            this.TransferNo.Width = 150;
+            this.TransferNo.Width = 140;
             // 
             // SendDate
             // 
@@ -354,18 +308,19 @@
             this.SendDate.HeaderText = "SendDate";
             this.SendDate.Name = "SendDate";
             this.SendDate.ReadOnly = true;
-            this.SendDate.Width = 130;
+            this.SendDate.Width = 110;
             // 
             // ReceiveDate
             // 
             this.ReceiveDate.DataPropertyName = "ReceiveDate";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
             dataGridViewCellStyle3.Format = "dd/MM/yyyy";
+            dataGridViewCellStyle3.NullValue = "-";
             this.ReceiveDate.DefaultCellStyle = dataGridViewCellStyle3;
             this.ReceiveDate.HeaderText = "ReceiveDate";
             this.ReceiveDate.Name = "ReceiveDate";
             this.ReceiveDate.ReadOnly = true;
-            this.ReceiveDate.Width = 130;
+            this.ReceiveDate.Width = 110;
             // 
             // TransferStatusName
             // 
@@ -373,7 +328,7 @@
             this.TransferStatusName.HeaderText = "TransferStatus";
             this.TransferStatusName.Name = "TransferStatusName";
             this.TransferStatusName.ReadOnly = true;
-            this.TransferStatusName.Width = 150;
+            this.TransferStatusName.Width = 130;
             // 
             // SShopName
             // 
@@ -381,7 +336,7 @@
             this.SShopName.HeaderText = "Shop";
             this.SShopName.Name = "SShopName";
             this.SShopName.ReadOnly = true;
-            this.SShopName.Width = 120;
+            this.SShopName.Width = 130;
             // 
             // TransferBuyBookList
             // 
@@ -410,10 +365,6 @@
         private System.Windows.Forms.ComboBox cmbTransferStatus;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DateTimePicker dtEReceiveDate;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DateTimePicker dtSReceiveDate;
         private System.Windows.Forms.DateTimePicker dtESendDate;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;

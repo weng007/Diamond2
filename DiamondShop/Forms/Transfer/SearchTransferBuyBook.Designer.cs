@@ -29,10 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SearchTransferBuyBook));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnClose = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnSelect = new System.Windows.Forms.Button();
@@ -56,7 +55,7 @@
             this.ColorTypeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColorName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EShop = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Flag = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IsBuyBook = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TotalBaht = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel4.SuspendLayout();
@@ -212,7 +211,7 @@
             this.ColorTypeName,
             this.ColorName,
             this.EShop,
-            this.Flag,
+            this.IsBuyBook,
             this.TotalBaht});
             this.gridTransferBuyBook.Location = new System.Drawing.Point(9, 3);
             this.gridTransferBuyBook.Name = "gridTransferBuyBook";
@@ -235,8 +234,8 @@
             // RowNum
             // 
             this.RowNum.DataPropertyName = "RowNum";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            this.RowNum.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            this.RowNum.DefaultCellStyle = dataGridViewCellStyle1;
             this.RowNum.HeaderText = "No.";
             this.RowNum.Name = "RowNum";
             this.RowNum.ReadOnly = true;
@@ -261,8 +260,6 @@
             // Code2
             // 
             this.Code2.DataPropertyName = "Code2";
-            dataGridViewCellStyle6.Format = "dd/MM/yyyy";
-            this.Code2.DefaultCellStyle = dataGridViewCellStyle6;
             this.Code2.HeaderText = "Code2";
             this.Code2.Name = "Code2";
             this.Code2.ReadOnly = true;
@@ -271,9 +268,9 @@
             // Weight
             // 
             this.Weight.DataPropertyName = "Weight";
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle7.Format = "N0";
-            this.Weight.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle2.Format = "N2";
+            this.Weight.DefaultCellStyle = dataGridViewCellStyle2;
             this.Weight.HeaderText = "Weight";
             this.Weight.Name = "Weight";
             this.Weight.ReadOnly = true;
@@ -282,9 +279,6 @@
             // JewelryTypeName
             // 
             this.JewelryTypeName.DataPropertyName = "JewelryTypeName";
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle8.Format = "N0";
-            this.JewelryTypeName.DefaultCellStyle = dataGridViewCellStyle8;
             this.JewelryTypeName.HeaderText = "JewelryType";
             this.JewelryTypeName.Name = "JewelryTypeName";
             this.JewelryTypeName.ReadOnly = true;
@@ -322,17 +316,20 @@
             this.EShop.ReadOnly = true;
             this.EShop.Visible = false;
             // 
-            // Flag
+            // IsBuyBook
             // 
-            this.Flag.DataPropertyName = "Flag";
-            this.Flag.HeaderText = "Flag";
-            this.Flag.Name = "Flag";
-            this.Flag.ReadOnly = true;
-            this.Flag.Visible = false;
+            this.IsBuyBook.DataPropertyName = "IsBuyBook";
+            this.IsBuyBook.HeaderText = "IsBuyBook";
+            this.IsBuyBook.Name = "IsBuyBook";
+            this.IsBuyBook.ReadOnly = true;
+            this.IsBuyBook.Visible = false;
             // 
             // TotalBaht
             // 
             this.TotalBaht.DataPropertyName = "TotalBaht";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle3.Format = "N0";
+            this.TotalBaht.DefaultCellStyle = dataGridViewCellStyle3;
             this.TotalBaht.HeaderText = "TotalBaht";
             this.TotalBaht.Name = "TotalBaht";
             this.TotalBaht.ReadOnly = true;
@@ -370,6 +367,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cmbBuybookType;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Button btnSelect;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Select;
         private System.Windows.Forms.DataGridViewTextBoxColumn RowNum;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
@@ -381,8 +379,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColorTypeName;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColorName;
         private System.Windows.Forms.DataGridViewTextBoxColumn EShop;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Flag;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IsBuyBook;
         private System.Windows.Forms.DataGridViewTextBoxColumn TotalBaht;
-        private System.Windows.Forms.Button btnSelect;
     }
 }
