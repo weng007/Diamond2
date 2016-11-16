@@ -40,6 +40,7 @@ namespace DiamondShop
         {
             InitializeComponent();
             Initial();
+            isAuthorize = true;
            
             BinderControl();
         }

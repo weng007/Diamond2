@@ -111,9 +111,12 @@ namespace DiamondShop
                 id = (int)gridTransfer.SelectedRows[0].Cells["ID"].Value;
                 TransferBuyBook frm = new TransferBuyBook(id);
                 frm.ShowDialog();
-            }
 
-            DoLoadData();
+                if (frm.isEdit)
+                {
+                    DoLoadData();
+                }
+            }           
         }
     }
 }
