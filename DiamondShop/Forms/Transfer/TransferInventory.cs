@@ -20,7 +20,7 @@ namespace DiamondShop
 
         dsTransfer tds = new dsTransfer();
         dsTransferInventory tds1 = new dsTransferInventory();
-        dsTransferDetail tds2 = new dsTransferDetail();
+        dsTransferInventory tds2 = new dsTransferInventory();
         dsCatalog tdsCatalog = new dsCatalog();
 
         DataSet ds2 = new DataSet();
@@ -93,7 +93,7 @@ namespace DiamondShop
             tds.Clear();
             tds.Merge(ds);
 
-            ds2 = ser.DoSelectData("TransferDetail", id, 1);
+            ds2 = ser.DoSelectData("TransferInventory", id, 1);
             tds1.Clear();
             tds1.Merge(ds2);
 
@@ -152,9 +152,9 @@ namespace DiamondShop
 
                     BindingDSTransferInventory();
 
-                    if (tds2.TransferDetail.Rows.Count > 0)
+                    if (tds2.TransferInventory.Rows.Count > 0)
                     {
-                        chkFlag = ser.DoInsertData("TransferDetail", tds2, 0);
+                        chkFlag = ser.DoInsertData("TransferInventory", tds2, 0);
                     }
                 }
 
@@ -277,16 +277,16 @@ namespace DiamondShop
         }
         
 
-        private dsTransferDetail RemoveRowDuplicate(dsTransferDetail temp)
+        private dsTransferInventory RemoveRowDuplicate(dsTransferInventory temp)
         {
-            for (int i = 0; i < temp.TransferDetail.Rows.Count; i++)
+            for (int i = 0; i < temp.TransferInventory.Rows.Count; i++)
             {
                 for (int j = 0; j < gridTransferInventory.Rows.Count; j++)
                 {
-                    if (temp.TransferDetail.Rows[i]["RefID1"].ToString() == gridTransferInventory.Rows[j].Cells["RefID1"].Value.ToString() &&
-                       temp.TransferDetail.Rows[i]["BuyBookType"].ToString() == gridTransferInventory.Rows[j].Cells["BuyBookType"].Value.ToString())
+                    if (temp.TransferInventory.Rows[i]["RefID1"].ToString() == gridTransferInventory.Rows[j].Cells["RefID1"].Value.ToString() &&
+                       temp.TransferInventory.Rows[i]["BuyBookType"].ToString() == gridTransferInventory.Rows[j].Cells["BuyBookType"].Value.ToString())
                     {
-                        temp.TransferDetail.Rows[i].Delete();
+                        temp.TransferInventory.Rows[i].Delete();
                         i--;
                         temp.AcceptChanges();
                         break;

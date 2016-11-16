@@ -478,17 +478,12 @@ namespace Diamond
                     throw ex;
                 }
             }
-            else if (TableName == "TransferDetail")
+            else if (TableName == "TransferBuyBook")
             {
-                TransferDetailBiz biz = GM.GetTransferDetailBiz();
+                TransferBuyBookBiz biz = GM.GetTransferBuyBookBiz();
                 try
-                {
-                    
-                    if (mode == 0)
-                    { return biz.DoSelectData(id); }
-                    else
-                    { return biz.DoSelectData2(id); }
-
+                {            
+                    return biz.DoSelectData(id, 0);
                 }
                 catch (Exception ex)
                 {
@@ -1025,10 +1020,10 @@ namespace Diamond
                     throw ex;
                 }
             }
-            else if (TableName == "TransferDetail")
+            else if (TableName == "TransferBuyBook")
             {
-                TransferDetailBiz biz = GM.GetTransferDetailBiz();
-                dsTransferDetail ds1 = new dsTransferDetail();
+                TransferBuyBookBiz biz = GM.GetTransferBuyBookBiz();
+                dsTransferBuyBook ds1 = new dsTransferBuyBook();
                 ds1.Merge(ds);
 
                 try
@@ -1671,10 +1666,10 @@ namespace Diamond
                     throw ex;
                 }
             }
-            else if (TableName == "TransferDetail")
+            else if (TableName == "TransferBuyBook")
             {
-                TransferDetailBiz biz = GM.GetTransferDetailBiz();
-                dsTransferDetail ds1 = new dsTransferDetail();
+                TransferBuyBookBiz biz = GM.GetTransferBuyBookBiz();
+                dsTransferBuyBook ds1 = new dsTransferBuyBook();
 
                 ds1.Merge(ds);
 
@@ -2146,9 +2141,9 @@ namespace Diamond
                     throw ex;
                 }
             }
-            else if (TableName == "TransferDetail")
+            else if (TableName == "TransferBuyBook")
             {
-                TransferDetailBiz biz = GM.GetTransferDetailBiz();
+                TransferBuyBookBiz biz = GM.GetTransferBuyBookBiz();
                 try
                 {
                     flag = biz.DoDeleteData(id);

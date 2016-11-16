@@ -32,8 +32,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dtSendDate = new System.Windows.Forms.DateTimePicker();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
@@ -162,6 +160,7 @@
             // btnReceive
             // 
             this.btnReceive.BackColor = System.Drawing.Color.Thistle;
+            this.btnReceive.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnReceive.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReceive.Image = ((System.Drawing.Image)(resources.GetObject("btnReceive.Image")));
             this.btnReceive.Location = new System.Drawing.Point(23, 343);
@@ -175,6 +174,8 @@
             // btnPrint
             // 
             this.btnPrint.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btnPrint.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPrint.Enabled = false;
             this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPrint.Image = ((System.Drawing.Image)(resources.GetObject("btnPrint.Image")));
             this.btnPrint.Location = new System.Drawing.Point(116, 343);
@@ -317,6 +318,7 @@
             // gridTransfer
             // 
             this.gridTransfer.AllowUserToAddRows = false;
+            this.gridTransfer.AllowUserToDeleteRows = false;
             this.gridTransfer.AllowUserToOrderColumns = true;
             this.gridTransfer.BackgroundColor = System.Drawing.SystemColors.Control;
             this.gridTransfer.ColumnHeadersHeight = 33;
@@ -368,6 +370,9 @@
             // Weight
             // 
             this.Weight.DataPropertyName = "Weight";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle2.Format = "N2";
+            this.Weight.DefaultCellStyle = dataGridViewCellStyle2;
             this.Weight.HeaderText = "Weight";
             this.Weight.Name = "Weight";
             this.Weight.ReadOnly = true;
@@ -376,9 +381,6 @@
             // JewelryTypeName
             // 
             this.JewelryTypeName.DataPropertyName = "JewelryTypeName";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle2.Format = "N2";
-            this.JewelryTypeName.DefaultCellStyle = dataGridViewCellStyle2;
             this.JewelryTypeName.HeaderText = "JewelryType";
             this.JewelryTypeName.Name = "JewelryTypeName";
             this.JewelryTypeName.ReadOnly = true;
@@ -387,9 +389,6 @@
             // ShapeName
             // 
             this.ShapeName.DataPropertyName = "ShapeName";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle3.Format = "N0";
-            this.ShapeName.DefaultCellStyle = dataGridViewCellStyle3;
             this.ShapeName.HeaderText = "Shape";
             this.ShapeName.Name = "ShapeName";
             this.ShapeName.ReadOnly = true;
@@ -397,9 +396,6 @@
             // ColorTypeName
             // 
             this.ColorTypeName.DataPropertyName = "ColorTypeName";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle4.Format = "N0";
-            this.ColorTypeName.DefaultCellStyle = dataGridViewCellStyle4;
             this.ColorTypeName.HeaderText = "Color Type";
             this.ColorTypeName.Name = "ColorTypeName";
             this.ColorTypeName.ReadOnly = true;
@@ -415,9 +411,9 @@
             // TotalBaht
             // 
             this.TotalBaht.DataPropertyName = "TotalBaht";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle5.Format = "N0";
-            this.TotalBaht.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle3.Format = "N0";
+            this.TotalBaht.DefaultCellStyle = dataGridViewCellStyle3;
             this.TotalBaht.HeaderText = "TotalBaht";
             this.TotalBaht.Name = "TotalBaht";
             this.TotalBaht.ReadOnly = true;
@@ -457,7 +453,7 @@
             // 
             // BuyBookType
             // 
-            this.BuyBookType.DataPropertyName = "Flag";
+            this.BuyBookType.DataPropertyName = "BuyBookType";
             this.BuyBookType.HeaderText = "BuyBookType";
             this.BuyBookType.Name = "BuyBookType";
             this.BuyBookType.ReadOnly = true;

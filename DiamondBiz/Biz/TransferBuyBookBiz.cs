@@ -13,14 +13,70 @@ namespace DiamondBiz.Biz
         dsTransferBuyBook ds = new dsTransferBuyBook();
         TransferBuyBookDAL dal = new TransferBuyBookDAL();
 
-        //type 0 = Login, 1 = BuyBook
+        public dsTransferBuyBook DoSelectData(int id, int mode)
+        {
+            try
+            {
+                return dal.DoSelectData(id, mode);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public bool DoInsertData(dsTransferBuyBook tds)
+        {
+            try
+            {
+                return dal.DoInsertData(tds);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
 
+        public bool DoUpdateData(dsTransferBuyBook tds)
+        {
+            try
+            {
+                return dal.DoUpdateData(tds);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public bool DoDeleteData(int id)
+        {
+            try
+            {
+                return dal.DoDeleteData(id);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
 
         public dsTransferBuyBook DoSearchData(int shop, string code, string code2, int buybooktype)
         {
             try
             {
                 return dal.DoSearchData(shop, code, code2, buybooktype);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public dsTransferBuyBook GetTransferBuyBookDetail(string codeSelected)
+        {
+            try
+            {
+                return dal.GetTransferBuyBookDetail(codeSelected);
             }
             catch (Exception ex)
             {

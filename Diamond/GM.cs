@@ -44,7 +44,6 @@ namespace Diamond
         static BuyBookPaymentBiz bizBuyBookPayment;
         static WarningBiz bizWarning;
         static TransferBiz bizTransfer;
-        static TransferDetailBiz bizTransferDetail;
         static TransferBuyBookBiz bizTransferBuyBook;
         static TransferInventoryBiz bizTransferInventory;
         static OrderBiz bizOrder;
@@ -257,12 +256,6 @@ namespace Diamond
             if (bizTransfer == null)
             { return new TransferBiz(); }
             else { return bizTransfer; }
-        }
-        public static TransferDetailBiz GetTransferDetailBiz()
-        {
-            if (bizTransferDetail == null)
-            { return new TransferDetailBiz(); }
-            else { return bizTransferDetail; }
         }
         public static TransferBuyBookBiz GetTransferBuyBookBiz()
         {

@@ -19,8 +19,9 @@ namespace DiamondShop
         {
             InitializeComponent();
             Initial();
+
             dtSSendDate.Value = dtSSendDate.Value.AddDays(-90);
-            dtSReceiveDate.Value = dtSReceiveDate.Value.AddDays(-90);
+
             DoLoadData();
         }
 
@@ -84,7 +85,7 @@ namespace DiamondShop
         {
             ser2 = GM.GetService2();
 
-            ds = ser2.DoSearchTransfer(Convert.ToInt16(cmbSender.SelectedValue.ToString()), Convert.ToInt16(cmbTransferStatus.SelectedValue.ToString()), Convert.ToInt16(cmbShop.SelectedValue.ToString()), Convert.ToInt16(cmbEShop.SelectedValue.ToString()),dtSSendDate.Value, dtESendDate.Value,dtSReceiveDate.Value, dtEReceiveDate.Value,"0");
+            ds = ser2.DoSearchTransfer(Convert.ToInt16(cmbSender.SelectedValue.ToString()), Convert.ToInt16(cmbTransferStatus.SelectedValue.ToString()), Convert.ToInt16(cmbShop.SelectedValue.ToString()), Convert.ToInt16(cmbEShop.SelectedValue.ToString()),dtSSendDate.Value, dtESendDate.Value,"1");
 
             if (ds.Tables[0].Rows.Count > 0)
             {
