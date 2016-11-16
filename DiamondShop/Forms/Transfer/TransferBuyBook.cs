@@ -264,6 +264,7 @@ namespace DiamondShop
                     row.RefID1 = tmp.TransferBuyBook[i].RefID1;
                     row.Code = tmp.TransferBuyBook[i].Code;          
                     row.Weight = tmp.TransferBuyBook[i].Weight;
+                    row.JewelryType = tmp.TransferBuyBook[i].JewelryType;
                     row.JewelryTypeName = tmp.TransferBuyBook[i].JewelryTypeName;
                     row.ShapeName = tmp.TransferBuyBook[i].ShapeName;
                     row.ColorTypeName = tmp.TransferBuyBook[i].ColorTypeName;
