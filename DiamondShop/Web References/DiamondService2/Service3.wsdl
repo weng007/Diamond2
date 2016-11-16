@@ -296,18 +296,18 @@
           </s:sequence>
         </s:complexType>
       </s:element>
-      <s:element name="DoSearchCatalogByType">
+      <s:element name="DoSearchCatalogByCode">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="prefix" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="code" type="s:string" />
             <s:element minOccurs="1" maxOccurs="1" name="mode" type="s:int" />
           </s:sequence>
         </s:complexType>
       </s:element>
-      <s:element name="DoSearchCatalogByTypeResponse">
+      <s:element name="DoSearchCatalogByCodeResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="DoSearchCatalogByTypeResult">
+            <s:element minOccurs="0" maxOccurs="1" name="DoSearchCatalogByCodeResult">
               <s:complexType>
                 <s:sequence>
                   <s:element ref="s:schema" />
@@ -451,7 +451,7 @@
       <s:element name="DoSearchBuyBookSetting">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="User" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="s:string" />
             <s:element minOccurs="1" maxOccurs="1" name="sBuyDate" type="s:dateTime" />
             <s:element minOccurs="1" maxOccurs="1" name="eBuyDate" type="s:dateTime" />
           </s:sequence>
@@ -501,12 +501,12 @@
       <s:element name="DoSearchWarning">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="RefID" type="s:string" />
-            <s:element minOccurs="1" maxOccurs="1" name="StatusType" type="s:int" />
-            <s:element minOccurs="1" maxOccurs="1" name="SDate" type="s:dateTime" />
-            <s:element minOccurs="1" maxOccurs="1" name="EDate" type="s:dateTime" />
-            <s:element minOccurs="1" maxOccurs="1" name="LoginID" type="s:int" />
-            <s:element minOccurs="1" maxOccurs="1" name="IsInbox" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="refID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="statusType" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="sDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="eDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="loginID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="isInbox" type="s:int" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -527,15 +527,13 @@
       <s:element name="DoSearchTransfer">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="Sender" type="s:int" />
-            <s:element minOccurs="1" maxOccurs="1" name="TransferStatus" type="s:int" />
-            <s:element minOccurs="1" maxOccurs="1" name="SShop" type="s:int" />
-            <s:element minOccurs="1" maxOccurs="1" name="EShop" type="s:int" />
-            <s:element minOccurs="1" maxOccurs="1" name="SSendDate" type="s:dateTime" />
-            <s:element minOccurs="1" maxOccurs="1" name="ESendDate" type="s:dateTime" />
-            <s:element minOccurs="1" maxOccurs="1" name="SReceiveDate" type="s:dateTime" />
-            <s:element minOccurs="1" maxOccurs="1" name="EReceiveDate" type="s:dateTime" />
-            <s:element minOccurs="0" maxOccurs="1" name="Flag" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="sender" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="transferStatus" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="sShop" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="eShop" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="sSendDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="eSendDate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="isBuyBook" type="s:string" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -556,10 +554,10 @@
       <s:element name="DoSearchOrder">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="CustName" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="Code" type="s:string" />
-            <s:element minOccurs="1" maxOccurs="1" name="Seller" type="s:int" />
-            <s:element minOccurs="1" maxOccurs="1" name="JewelryType" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="custName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="code" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="seller" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="jewelryType" type="s:int" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -583,8 +581,7 @@
             <s:element minOccurs="1" maxOccurs="1" name="shop" type="s:int" />
             <s:element minOccurs="0" maxOccurs="1" name="code" type="s:string" />
             <s:element minOccurs="0" maxOccurs="1" name="code2" type="s:string" />
-            <s:element minOccurs="1" maxOccurs="1" name="Flag" type="s:int" />
-            <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="buyBookType" type="s:int" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -628,11 +625,11 @@
       <s:element name="DoSearchWarningTransfer">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="Sender" type="s:int" />
-            <s:element minOccurs="1" maxOccurs="1" name="Receiver" type="s:int" />
-            <s:element minOccurs="1" maxOccurs="1" name="MessageStatus" type="s:int" />
-            <s:element minOccurs="1" maxOccurs="1" name="FactoryStatus" type="s:int" />
-            <s:element minOccurs="1" maxOccurs="1" name="Shop" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="sender" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="receiver" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="messageStatus" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="factoryStatus" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="shop" type="s:int" />
             <s:element minOccurs="1" maxOccurs="1" name="loginID" type="s:int" />
           </s:sequence>
         </s:complexType>
@@ -654,12 +651,12 @@
       <s:element name="DoSearchProductionLine">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="OrderNo" type="s:string" />
-            <s:element minOccurs="1" maxOccurs="1" name="JewelryType" type="s:int" />
-            <s:element minOccurs="1" maxOccurs="1" name="SShop" type="s:int" />
-            <s:element minOccurs="1" maxOccurs="1" name="FactoryStatus" type="s:int" />
-            <s:element minOccurs="1" maxOccurs="1" name="SOrderDate" type="s:dateTime" />
-            <s:element minOccurs="1" maxOccurs="1" name="EOrderDate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="orderNo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="jewelryType" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="shop" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="factoryStatus" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="sOrderDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="eOrderDate" type="s:dateTime" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -701,7 +698,7 @@
       <s:element name="DoSearchExpenseGroup">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="ExpenseGroup" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="expenseGroup" type="s:int" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -722,12 +719,12 @@
       <s:element name="DoSearchExpense">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="ExpenseGroup" type="s:int" />
-            <s:element minOccurs="1" maxOccurs="1" name="Shop" type="s:int" />
-            <s:element minOccurs="1" maxOccurs="1" name="SMemoDate" type="s:dateTime" />
-            <s:element minOccurs="1" maxOccurs="1" name="EMemoDate" type="s:dateTime" />
-            <s:element minOccurs="1" maxOccurs="1" name="SExpenseDate" type="s:dateTime" />
-            <s:element minOccurs="1" maxOccurs="1" name="EExpenseDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="expenseGroup" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="shop" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="sMemoDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="eMemoDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="sExpenseDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="eExpenseDate" type="s:dateTime" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -748,11 +745,11 @@
       <s:element name="DoSearchReceiveDocument">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="ReceiveNo" type="s:string" />
-            <s:element minOccurs="1" maxOccurs="1" name="SReceiveDate" type="s:dateTime" />
-            <s:element minOccurs="1" maxOccurs="1" name="EReceiveDate" type="s:dateTime" />
-            <s:element minOccurs="1" maxOccurs="1" name="Receiver" type="s:int" />
-            <s:element minOccurs="0" maxOccurs="1" name="Seller" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="receiveNo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="sReceiveDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="eReceiveDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="receiver" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="seller" type="s:string" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -760,6 +757,27 @@
         <s:complexType>
           <s:sequence>
             <s:element minOccurs="0" maxOccurs="1" name="DoSearchReceiveDocumentResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DoSearchBBSettingDetail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="mode" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DoSearchBBSettingDetailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DoSearchBBSettingDetailResult">
               <s:complexType>
                 <s:sequence>
                   <s:element ref="s:schema" />
@@ -844,11 +862,11 @@
   <wsdl:message name="DoSearchCatalogSoapOut">
     <wsdl:part name="parameters" element="tns:DoSearchCatalogResponse" />
   </wsdl:message>
-  <wsdl:message name="DoSearchCatalogByTypeSoapIn">
-    <wsdl:part name="parameters" element="tns:DoSearchCatalogByType" />
+  <wsdl:message name="DoSearchCatalogByCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:DoSearchCatalogByCode" />
   </wsdl:message>
-  <wsdl:message name="DoSearchCatalogByTypeSoapOut">
-    <wsdl:part name="parameters" element="tns:DoSearchCatalogByTypeResponse" />
+  <wsdl:message name="DoSearchCatalogByCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:DoSearchCatalogByCodeResponse" />
   </wsdl:message>
   <wsdl:message name="DoSearchDiamondCerSoapIn">
     <wsdl:part name="parameters" element="tns:DoSearchDiamondCer" />
@@ -958,6 +976,12 @@
   <wsdl:message name="DoSearchReceiveDocumentSoapOut">
     <wsdl:part name="parameters" element="tns:DoSearchReceiveDocumentResponse" />
   </wsdl:message>
+  <wsdl:message name="DoSearchBBSettingDetailSoapIn">
+    <wsdl:part name="parameters" element="tns:DoSearchBBSettingDetail" />
+  </wsdl:message>
+  <wsdl:message name="DoSearchBBSettingDetailSoapOut">
+    <wsdl:part name="parameters" element="tns:DoSearchBBSettingDetailResponse" />
+  </wsdl:message>
   <wsdl:portType name="Service3Soap">
     <wsdl:operation name="DoSearchCustomer">
       <wsdl:input message="tns:DoSearchCustomerSoapIn" />
@@ -1007,9 +1031,9 @@
       <wsdl:input message="tns:DoSearchCatalogSoapIn" />
       <wsdl:output message="tns:DoSearchCatalogSoapOut" />
     </wsdl:operation>
-    <wsdl:operation name="DoSearchCatalogByType">
-      <wsdl:input message="tns:DoSearchCatalogByTypeSoapIn" />
-      <wsdl:output message="tns:DoSearchCatalogByTypeSoapOut" />
+    <wsdl:operation name="DoSearchCatalogByCode">
+      <wsdl:input message="tns:DoSearchCatalogByCodeSoapIn" />
+      <wsdl:output message="tns:DoSearchCatalogByCodeSoapOut" />
     </wsdl:operation>
     <wsdl:operation name="DoSearchDiamondCer">
       <wsdl:input message="tns:DoSearchDiamondCerSoapIn" />
@@ -1082,6 +1106,10 @@
     <wsdl:operation name="DoSearchReceiveDocument">
       <wsdl:input message="tns:DoSearchReceiveDocumentSoapIn" />
       <wsdl:output message="tns:DoSearchReceiveDocumentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DoSearchBBSettingDetail">
+      <wsdl:input message="tns:DoSearchBBSettingDetailSoapIn" />
+      <wsdl:output message="tns:DoSearchBBSettingDetailSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="Service3Soap" type="tns:Service3Soap">
@@ -1194,8 +1222,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="DoSearchCatalogByType">
-      <soap:operation soapAction="http://tempuri.org/DoSearchCatalogByType" style="document" />
+    <wsdl:operation name="DoSearchCatalogByCode">
+      <soap:operation soapAction="http://tempuri.org/DoSearchCatalogByCode" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1365,6 +1393,15 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="DoSearchBBSettingDetail">
+      <soap:operation soapAction="http://tempuri.org/DoSearchBBSettingDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:binding name="Service3Soap12" type="tns:Service3Soap">
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
@@ -1476,8 +1513,8 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="DoSearchCatalogByType">
-      <soap12:operation soapAction="http://tempuri.org/DoSearchCatalogByType" style="document" />
+    <wsdl:operation name="DoSearchCatalogByCode">
+      <soap12:operation soapAction="http://tempuri.org/DoSearchCatalogByCode" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -1640,6 +1677,15 @@
     </wsdl:operation>
     <wsdl:operation name="DoSearchReceiveDocument">
       <soap12:operation soapAction="http://tempuri.org/DoSearchReceiveDocument" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoSearchBBSettingDetail">
+      <soap12:operation soapAction="http://tempuri.org/DoSearchBBSettingDetail" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

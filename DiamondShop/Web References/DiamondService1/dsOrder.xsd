@@ -86,8 +86,18 @@
                 </xs:simpleType>
               </xs:element>
               <xs:element minOccurs="0" name="ReceiveDate" type="xs:dateTime" />
-              <xs:element minOccurs="0" name="Shop" type="xs:int" />
-              <xs:element minOccurs="0" name="ShopName">
+              <xs:element minOccurs="0" name="MountingDate" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="JobDoneDate" type="xs:dateTime" />
+              <xs:element msdata:Caption="Shop1" minOccurs="0" name="Shop" type="xs:int" />
+              <xs:element msdata:Caption="ShopName1" minOccurs="0" name="ShopName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="Shop1" type="xs:int" />
+              <xs:element minOccurs="0" name="ShopName1">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
@@ -95,8 +105,8 @@
                 </xs:simpleType>
               </xs:element>
               <xs:element minOccurs="0" name="AppointDate" type="xs:dateTime" />
-              <xs:element minOccurs="0" name="Shop1" type="xs:int" />
-              <xs:element minOccurs="0" name="ShopName1">
+              <xs:element minOccurs="0" name="Shop2" type="xs:int" />
+              <xs:element minOccurs="0" name="ShopName2">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
@@ -160,7 +170,6 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element minOccurs="0" name="Flag" type="xs:int" />
               <xs:element minOccurs="0" name="Note1">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -233,14 +242,6 @@
               <xs:element minOccurs="0" name="CreateDate" type="xs:dateTime" />
               <xs:element minOccurs="0" name="EditBy" type="xs:int" />
               <xs:element minOccurs="0" name="EditDate" type="xs:dateTime" />
-              <xs:element minOccurs="0" name="SShop" type="xs:int" />
-              <xs:element msdata:ReadOnly="true" minOccurs="0" name="SShopName">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="100" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
             </xs:sequence>
           </xs:complexType>
         </xs:element>

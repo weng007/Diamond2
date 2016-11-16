@@ -5,9 +5,11 @@
       <s:import namespace="http://tempuri.org/dsUser.xsd" />
       <s:import namespace="http://tempuri.org/dsOrder.xsd" />
       <s:import namespace="http://tempuri.org/dsExpenseGroup.xsd" />
-      <s:import schemaLocation="http://localhost:8888/DiamondService/Service2.asmx?schema=dsOrder" namespace="http://tempuri.org/dsOrder.xsd" />
-      <s:import schemaLocation="http://localhost:8888/DiamondService/Service2.asmx?schema=dsUser" namespace="http://tempuri.org/dsUser.xsd" />
+      <s:import namespace="http://tempuri.org/dsBuyBookSettingDetail.xsd" />
       <s:import schemaLocation="http://localhost:8888/DiamondService/Service2.asmx?schema=dsExpenseGroup" namespace="http://tempuri.org/dsExpenseGroup.xsd" />
+      <s:import schemaLocation="http://localhost:8888/DiamondService/Service2.asmx?schema=dsBuyBookSettingDetail" namespace="http://tempuri.org/dsBuyBookSettingDetail.xsd" />
+      <s:import schemaLocation="http://localhost:8888/DiamondService/Service2.asmx?schema=dsUser" namespace="http://tempuri.org/dsUser.xsd" />
+      <s:import schemaLocation="http://localhost:8888/DiamondService/Service2.asmx?schema=dsOrder" namespace="http://tempuri.org/dsOrder.xsd" />
       <s:element name="DoAuthenticate">
         <s:complexType>
           <s:sequence>
@@ -122,6 +124,7 @@
           <s:sequence>
             <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
             <s:element minOccurs="0" maxOccurs="1" name="status" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="shop" type="s:int" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -129,6 +132,21 @@
         <s:complexType>
           <s:sequence>
             <s:element minOccurs="1" maxOccurs="1" name="UpdateJewelryStatusResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateTransferReceive">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="eShop" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateTransferReceiveResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateTransferReceiveResult" type="s:int" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -144,21 +162,6 @@
         <s:complexType>
           <s:sequence>
             <s:element minOccurs="1" maxOccurs="1" name="UpdateSellBookStatusResult" type="s:boolean" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="UpdateOrderStatus">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
-            <s:element minOccurs="1" maxOccurs="1" name="WarningID" type="s:int" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="UpdateOrderStatusResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="UpdateOrderStatusResult" type="s:int" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -378,6 +381,7 @@
         <s:complexType>
           <s:sequence>
             <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="isPrintPrice" type="s:string" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -385,6 +389,27 @@
         <s:complexType>
           <s:sequence>
             <s:element minOccurs="0" maxOccurs="1" name="GetReportCertificateResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDeliveryOrder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDeliveryOrderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDeliveryOrderResult">
               <s:complexType>
                 <s:sequence>
                   <s:element ref="s:schema" />
@@ -408,6 +433,35 @@
         <s:complexType>
           <s:sequence>
             <s:element minOccurs="1" maxOccurs="1" name="UpdateMessageStatusResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateIsPrintPrice">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="isPrintPrice" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateIsPrintPriceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateIsPrintPriceResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateIsPrintCer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateIsPrintCerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateIsPrintCerResult" type="s:int" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -472,23 +526,6 @@
           </s:sequence>
         </s:complexType>
       </s:element>
-      <s:element name="UpdateTransferReceived">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
-            <s:element minOccurs="1" maxOccurs="1" name="TransferStatus" type="s:int" />
-            <s:element minOccurs="1" maxOccurs="1" name="ReceiveDate" type="s:dateTime" />
-            <s:element minOccurs="1" maxOccurs="1" name="EShop" type="s:int" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="UpdateTransferReceivedResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="UpdateTransferReceivedResult" type="s:int" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
       <s:element name="DoSearchInventoryByCode">
         <s:complexType>
           <s:sequence>
@@ -503,6 +540,48 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="DoSearchOrderByCode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="code" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DoSearchOrderByCodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DoSearchOrderByCodeResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DoSearchSellByCode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="code" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DoSearchSellByCodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DoSearchSellByCodeResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DoSearchSellBookByCode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="code" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DoSearchSellBookByCodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DoSearchSellBookByCodeResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
       <s:element name="DoSearchBBSettingByCode">
         <s:complexType>
           <s:sequence>
@@ -514,6 +593,26 @@
         <s:complexType>
           <s:sequence>
             <s:element minOccurs="1" maxOccurs="1" name="DoSearchBBSettingByCodeResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DoSearchBBSettingDetail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="mode" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DoSearchBBSettingDetailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DoSearchBBSettingDetailResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/dsBuyBookSettingDetail.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -543,6 +642,27 @@
         <s:complexType>
           <s:sequence>
             <s:element minOccurs="0" maxOccurs="1" name="GetSellBookDetailResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTransferBuyBookDetail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="codeSelected" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTransferBuyBookDetailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTransferBuyBookDetailResult">
               <s:complexType>
                 <s:sequence>
                   <s:element ref="s:schema" />
@@ -612,17 +732,17 @@
   <wsdl:message name="UpdateJewelryStatusSoapOut">
     <wsdl:part name="parameters" element="tns:UpdateJewelryStatusResponse" />
   </wsdl:message>
+  <wsdl:message name="UpdateTransferReceiveSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateTransferReceive" />
+  </wsdl:message>
+  <wsdl:message name="UpdateTransferReceiveSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateTransferReceiveResponse" />
+  </wsdl:message>
   <wsdl:message name="UpdateSellBookStatusSoapIn">
     <wsdl:part name="parameters" element="tns:UpdateSellBookStatus" />
   </wsdl:message>
   <wsdl:message name="UpdateSellBookStatusSoapOut">
     <wsdl:part name="parameters" element="tns:UpdateSellBookStatusResponse" />
-  </wsdl:message>
-  <wsdl:message name="UpdateOrderStatusSoapIn">
-    <wsdl:part name="parameters" element="tns:UpdateOrderStatus" />
-  </wsdl:message>
-  <wsdl:message name="UpdateOrderStatusSoapOut">
-    <wsdl:part name="parameters" element="tns:UpdateOrderStatusResponse" />
   </wsdl:message>
   <wsdl:message name="GetPriceDaimondAndGemstoneSoapIn">
     <wsdl:part name="parameters" element="tns:GetPriceDaimondAndGemstone" />
@@ -684,11 +804,29 @@
   <wsdl:message name="GetReportCertificateSoapOut">
     <wsdl:part name="parameters" element="tns:GetReportCertificateResponse" />
   </wsdl:message>
+  <wsdl:message name="GetDeliveryOrderSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDeliveryOrder" />
+  </wsdl:message>
+  <wsdl:message name="GetDeliveryOrderSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDeliveryOrderResponse" />
+  </wsdl:message>
   <wsdl:message name="UpdateMessageStatusSoapIn">
     <wsdl:part name="parameters" element="tns:UpdateMessageStatus" />
   </wsdl:message>
   <wsdl:message name="UpdateMessageStatusSoapOut">
     <wsdl:part name="parameters" element="tns:UpdateMessageStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateIsPrintPriceSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateIsPrintPrice" />
+  </wsdl:message>
+  <wsdl:message name="UpdateIsPrintPriceSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateIsPrintPriceResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateIsPrintCerSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateIsPrintCer" />
+  </wsdl:message>
+  <wsdl:message name="UpdateIsPrintCerSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateIsPrintCerResponse" />
   </wsdl:message>
   <wsdl:message name="DeleteDataReferenceSoapIn">
     <wsdl:part name="parameters" element="tns:DeleteDataReference" />
@@ -714,23 +852,41 @@
   <wsdl:message name="CountUnReadMessageSoapOut">
     <wsdl:part name="parameters" element="tns:CountUnReadMessageResponse" />
   </wsdl:message>
-  <wsdl:message name="UpdateTransferReceivedSoapIn">
-    <wsdl:part name="parameters" element="tns:UpdateTransferReceived" />
-  </wsdl:message>
-  <wsdl:message name="UpdateTransferReceivedSoapOut">
-    <wsdl:part name="parameters" element="tns:UpdateTransferReceivedResponse" />
-  </wsdl:message>
   <wsdl:message name="DoSearchInventoryByCodeSoapIn">
     <wsdl:part name="parameters" element="tns:DoSearchInventoryByCode" />
   </wsdl:message>
   <wsdl:message name="DoSearchInventoryByCodeSoapOut">
     <wsdl:part name="parameters" element="tns:DoSearchInventoryByCodeResponse" />
   </wsdl:message>
+  <wsdl:message name="DoSearchOrderByCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:DoSearchOrderByCode" />
+  </wsdl:message>
+  <wsdl:message name="DoSearchOrderByCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:DoSearchOrderByCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="DoSearchSellByCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:DoSearchSellByCode" />
+  </wsdl:message>
+  <wsdl:message name="DoSearchSellByCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:DoSearchSellByCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="DoSearchSellBookByCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:DoSearchSellBookByCode" />
+  </wsdl:message>
+  <wsdl:message name="DoSearchSellBookByCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:DoSearchSellBookByCodeResponse" />
+  </wsdl:message>
   <wsdl:message name="DoSearchBBSettingByCodeSoapIn">
     <wsdl:part name="parameters" element="tns:DoSearchBBSettingByCode" />
   </wsdl:message>
   <wsdl:message name="DoSearchBBSettingByCodeSoapOut">
     <wsdl:part name="parameters" element="tns:DoSearchBBSettingByCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="DoSearchBBSettingDetailSoapIn">
+    <wsdl:part name="parameters" element="tns:DoSearchBBSettingDetail" />
+  </wsdl:message>
+  <wsdl:message name="DoSearchBBSettingDetailSoapOut">
+    <wsdl:part name="parameters" element="tns:DoSearchBBSettingDetailResponse" />
   </wsdl:message>
   <wsdl:message name="DoSearchJewelryByCodeSoapIn">
     <wsdl:part name="parameters" element="tns:DoSearchJewelryByCode" />
@@ -743,6 +899,12 @@
   </wsdl:message>
   <wsdl:message name="GetSellBookDetailSoapOut">
     <wsdl:part name="parameters" element="tns:GetSellBookDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTransferBuyBookDetailSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTransferBuyBookDetail" />
+  </wsdl:message>
+  <wsdl:message name="GetTransferBuyBookDetailSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTransferBuyBookDetailResponse" />
   </wsdl:message>
   <wsdl:message name="GetCertificateSoapIn">
     <wsdl:part name="parameters" element="tns:GetCertificate" />
@@ -779,13 +941,13 @@
       <wsdl:input message="tns:UpdateJewelryStatusSoapIn" />
       <wsdl:output message="tns:UpdateJewelryStatusSoapOut" />
     </wsdl:operation>
+    <wsdl:operation name="UpdateTransferReceive">
+      <wsdl:input message="tns:UpdateTransferReceiveSoapIn" />
+      <wsdl:output message="tns:UpdateTransferReceiveSoapOut" />
+    </wsdl:operation>
     <wsdl:operation name="UpdateSellBookStatus">
       <wsdl:input message="tns:UpdateSellBookStatusSoapIn" />
       <wsdl:output message="tns:UpdateSellBookStatusSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="UpdateOrderStatus">
-      <wsdl:input message="tns:UpdateOrderStatusSoapIn" />
-      <wsdl:output message="tns:UpdateOrderStatusSoapOut" />
     </wsdl:operation>
     <wsdl:operation name="GetPriceDaimondAndGemstone">
       <wsdl:input message="tns:GetPriceDaimondAndGemstoneSoapIn" />
@@ -827,9 +989,21 @@
       <wsdl:input message="tns:GetReportCertificateSoapIn" />
       <wsdl:output message="tns:GetReportCertificateSoapOut" />
     </wsdl:operation>
+    <wsdl:operation name="GetDeliveryOrder">
+      <wsdl:input message="tns:GetDeliveryOrderSoapIn" />
+      <wsdl:output message="tns:GetDeliveryOrderSoapOut" />
+    </wsdl:operation>
     <wsdl:operation name="UpdateMessageStatus">
       <wsdl:input message="tns:UpdateMessageStatusSoapIn" />
       <wsdl:output message="tns:UpdateMessageStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateIsPrintPrice">
+      <wsdl:input message="tns:UpdateIsPrintPriceSoapIn" />
+      <wsdl:output message="tns:UpdateIsPrintPriceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateIsPrintCer">
+      <wsdl:input message="tns:UpdateIsPrintCerSoapIn" />
+      <wsdl:output message="tns:UpdateIsPrintCerSoapOut" />
     </wsdl:operation>
     <wsdl:operation name="DeleteDataReference">
       <wsdl:input message="tns:DeleteDataReferenceSoapIn" />
@@ -847,17 +1021,29 @@
       <wsdl:input message="tns:CountUnReadMessageSoapIn" />
       <wsdl:output message="tns:CountUnReadMessageSoapOut" />
     </wsdl:operation>
-    <wsdl:operation name="UpdateTransferReceived">
-      <wsdl:input message="tns:UpdateTransferReceivedSoapIn" />
-      <wsdl:output message="tns:UpdateTransferReceivedSoapOut" />
-    </wsdl:operation>
     <wsdl:operation name="DoSearchInventoryByCode">
       <wsdl:input message="tns:DoSearchInventoryByCodeSoapIn" />
       <wsdl:output message="tns:DoSearchInventoryByCodeSoapOut" />
     </wsdl:operation>
+    <wsdl:operation name="DoSearchOrderByCode">
+      <wsdl:input message="tns:DoSearchOrderByCodeSoapIn" />
+      <wsdl:output message="tns:DoSearchOrderByCodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DoSearchSellByCode">
+      <wsdl:input message="tns:DoSearchSellByCodeSoapIn" />
+      <wsdl:output message="tns:DoSearchSellByCodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DoSearchSellBookByCode">
+      <wsdl:input message="tns:DoSearchSellBookByCodeSoapIn" />
+      <wsdl:output message="tns:DoSearchSellBookByCodeSoapOut" />
+    </wsdl:operation>
     <wsdl:operation name="DoSearchBBSettingByCode">
       <wsdl:input message="tns:DoSearchBBSettingByCodeSoapIn" />
       <wsdl:output message="tns:DoSearchBBSettingByCodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DoSearchBBSettingDetail">
+      <wsdl:input message="tns:DoSearchBBSettingDetailSoapIn" />
+      <wsdl:output message="tns:DoSearchBBSettingDetailSoapOut" />
     </wsdl:operation>
     <wsdl:operation name="DoSearchJewelryByCode">
       <wsdl:input message="tns:DoSearchJewelryByCodeSoapIn" />
@@ -866,6 +1052,10 @@
     <wsdl:operation name="GetSellBookDetail">
       <wsdl:input message="tns:GetSellBookDetailSoapIn" />
       <wsdl:output message="tns:GetSellBookDetailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTransferBuyBookDetail">
+      <wsdl:input message="tns:GetTransferBuyBookDetailSoapIn" />
+      <wsdl:output message="tns:GetTransferBuyBookDetailSoapOut" />
     </wsdl:operation>
     <wsdl:operation name="GetCertificate">
       <wsdl:input message="tns:GetCertificateSoapIn" />
@@ -937,8 +1127,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="UpdateSellBookStatus">
-      <soap:operation soapAction="http://tempuri.org/UpdateSellBookStatus" style="document" />
+    <wsdl:operation name="UpdateTransferReceive">
+      <soap:operation soapAction="http://tempuri.org/UpdateTransferReceive" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -946,8 +1136,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="UpdateOrderStatus">
-      <soap:operation soapAction="http://tempuri.org/UpdateOrderStatus" style="document" />
+    <wsdl:operation name="UpdateSellBookStatus">
+      <soap:operation soapAction="http://tempuri.org/UpdateSellBookStatus" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1045,8 +1235,35 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="GetDeliveryOrder">
+      <soap:operation soapAction="http://tempuri.org/GetDeliveryOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="UpdateMessageStatus">
       <soap:operation soapAction="http://tempuri.org/UpdateMessageStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateIsPrintPrice">
+      <soap:operation soapAction="http://tempuri.org/UpdateIsPrintPrice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateIsPrintCer">
+      <soap:operation soapAction="http://tempuri.org/UpdateIsPrintCer" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1090,15 +1307,6 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="UpdateTransferReceived">
-      <soap:operation soapAction="http://tempuri.org/UpdateTransferReceived" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
     <wsdl:operation name="DoSearchInventoryByCode">
       <soap:operation soapAction="http://tempuri.org/DoSearchInventoryByCode" style="document" />
       <wsdl:input>
@@ -1108,8 +1316,44 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="DoSearchOrderByCode">
+      <soap:operation soapAction="http://tempuri.org/DoSearchOrderByCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoSearchSellByCode">
+      <soap:operation soapAction="http://tempuri.org/DoSearchSellByCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoSearchSellBookByCode">
+      <soap:operation soapAction="http://tempuri.org/DoSearchSellBookByCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="DoSearchBBSettingByCode">
       <soap:operation soapAction="http://tempuri.org/DoSearchBBSettingByCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoSearchBBSettingDetail">
+      <soap:operation soapAction="http://tempuri.org/DoSearchBBSettingDetail" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1128,6 +1372,15 @@
     </wsdl:operation>
     <wsdl:operation name="GetSellBookDetail">
       <soap:operation soapAction="http://tempuri.org/GetSellBookDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTransferBuyBookDetail">
+      <soap:operation soapAction="http://tempuri.org/GetTransferBuyBookDetail" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1210,8 +1463,8 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="UpdateSellBookStatus">
-      <soap12:operation soapAction="http://tempuri.org/UpdateSellBookStatus" style="document" />
+    <wsdl:operation name="UpdateTransferReceive">
+      <soap12:operation soapAction="http://tempuri.org/UpdateTransferReceive" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -1219,8 +1472,8 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="UpdateOrderStatus">
-      <soap12:operation soapAction="http://tempuri.org/UpdateOrderStatus" style="document" />
+    <wsdl:operation name="UpdateSellBookStatus">
+      <soap12:operation soapAction="http://tempuri.org/UpdateSellBookStatus" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -1318,8 +1571,35 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="GetDeliveryOrder">
+      <soap12:operation soapAction="http://tempuri.org/GetDeliveryOrder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="UpdateMessageStatus">
       <soap12:operation soapAction="http://tempuri.org/UpdateMessageStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateIsPrintPrice">
+      <soap12:operation soapAction="http://tempuri.org/UpdateIsPrintPrice" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateIsPrintCer">
+      <soap12:operation soapAction="http://tempuri.org/UpdateIsPrintCer" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -1363,15 +1643,6 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="UpdateTransferReceived">
-      <soap12:operation soapAction="http://tempuri.org/UpdateTransferReceived" style="document" />
-      <wsdl:input>
-        <soap12:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap12:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
     <wsdl:operation name="DoSearchInventoryByCode">
       <soap12:operation soapAction="http://tempuri.org/DoSearchInventoryByCode" style="document" />
       <wsdl:input>
@@ -1381,8 +1652,44 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="DoSearchOrderByCode">
+      <soap12:operation soapAction="http://tempuri.org/DoSearchOrderByCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoSearchSellByCode">
+      <soap12:operation soapAction="http://tempuri.org/DoSearchSellByCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoSearchSellBookByCode">
+      <soap12:operation soapAction="http://tempuri.org/DoSearchSellBookByCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="DoSearchBBSettingByCode">
       <soap12:operation soapAction="http://tempuri.org/DoSearchBBSettingByCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoSearchBBSettingDetail">
+      <soap12:operation soapAction="http://tempuri.org/DoSearchBBSettingDetail" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -1401,6 +1708,15 @@
     </wsdl:operation>
     <wsdl:operation name="GetSellBookDetail">
       <soap12:operation soapAction="http://tempuri.org/GetSellBookDetail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTransferBuyBookDetail">
+      <soap12:operation soapAction="http://tempuri.org/GetTransferBuyBookDetail" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
