@@ -35,7 +35,7 @@ namespace DiamondShop.Report
 
             Application.UseWaitCursor = true;
             ser1 = GM.GetService1();
-            ds = ser1.GetDeliveryOrder(id);
+            ds = ser1.GetDeliveryInventory(id);
 
             ReportDataSource datasource = new ReportDataSource("SP_Rpt_Delivery_Inventory", ds.Tables[1]);
             ReportDataSource datasource1 = new ReportDataSource("Detail", ds.Tables[0]);

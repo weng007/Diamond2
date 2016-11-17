@@ -356,5 +356,20 @@ namespace DiamondDAL.DAL
 
             return ds;
         }
+        public DataSet GetDeliveryInventory(int id)
+        {
+            try
+            {
+                SQL.ClearParameter();
+                SQL.CreateParameter("@ID", id);
+                SQL.FillDataSetBySP2("SP_Rpt_Delivery_Inventory", ds);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return ds;
+        }
     }
 }

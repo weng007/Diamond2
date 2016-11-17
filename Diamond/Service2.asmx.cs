@@ -299,6 +299,19 @@ namespace Diamond
                 throw ex;
             }
         }
+        [WebMethod]
+        public DataSet GetDeliveryInventory(int id)
+        {
+            GeneralBiz biz = new GeneralBiz();
+            try
+            {
+                return biz.GetDeliveryInventory(id);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
 
         [WebMethod]
         public int UpdateMessageStatus(int id, string StatusType,string Flag )

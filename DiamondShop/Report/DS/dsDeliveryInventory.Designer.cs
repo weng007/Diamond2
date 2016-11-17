@@ -658,15 +658,19 @@ namespace DiamondShop.Report.DS {
             
             private global::System.Data.DataColumn columnCode;
             
-            private global::System.Data.DataColumn columnMaterial1;
+            private global::System.Data.DataColumn columnSize;
             
-            private global::System.Data.DataColumn columnMaterial2;
+            private global::System.Data.DataColumn columnJewelryTypeName;
             
-            private global::System.Data.DataColumn columnJewelryType;
+            private global::System.Data.DataColumn columnAmount1;
             
-            private global::System.Data.DataColumn columnMaterialWeight1;
+            private global::System.Data.DataColumn columnWeight1;
             
-            private global::System.Data.DataColumn columnMaterialWeight2;
+            private global::System.Data.DataColumn columnAmount2;
+            
+            private global::System.Data.DataColumn columnWeight2;
+            
+            private global::System.Data.DataColumn columnPriceTag;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -719,41 +723,57 @@ namespace DiamondShop.Report.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn Material1Column {
+            public global::System.Data.DataColumn SizeColumn {
                 get {
-                    return this.columnMaterial1;
+                    return this.columnSize;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn Material2Column {
+            public global::System.Data.DataColumn JewelryTypeNameColumn {
                 get {
-                    return this.columnMaterial2;
+                    return this.columnJewelryTypeName;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn JewelryTypeColumn {
+            public global::System.Data.DataColumn Amount1Column {
                 get {
-                    return this.columnJewelryType;
+                    return this.columnAmount1;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn MaterialWeight1Column {
+            public global::System.Data.DataColumn Weight1Column {
                 get {
-                    return this.columnMaterialWeight1;
+                    return this.columnWeight1;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn MaterialWeight2Column {
+            public global::System.Data.DataColumn Amount2Column {
                 get {
-                    return this.columnMaterialWeight2;
+                    return this.columnAmount2;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Weight2Column {
+                get {
+                    return this.columnWeight2;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn PriceTagColumn {
+                get {
+                    return this.columnPriceTag;
                 }
             }
             
@@ -794,16 +814,18 @@ namespace DiamondShop.Report.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public DetailRow AddDetailRow(long RowNum, string Code, int Material1, int Material2, int JewelryType, double MaterialWeight1, double MaterialWeight2) {
+            public DetailRow AddDetailRow(long RowNum, string Code, double Size, string JewelryTypeName, int Amount1, double Weight1, int Amount2, double Weight2, decimal PriceTag) {
                 DetailRow rowDetailRow = ((DetailRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         RowNum,
                         Code,
-                        Material1,
-                        Material2,
-                        JewelryType,
-                        MaterialWeight1,
-                        MaterialWeight2};
+                        Size,
+                        JewelryTypeName,
+                        Amount1,
+                        Weight1,
+                        Amount2,
+                        Weight2,
+                        PriceTag};
                 rowDetailRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowDetailRow);
                 return rowDetailRow;
@@ -828,11 +850,13 @@ namespace DiamondShop.Report.DS {
             internal void InitVars() {
                 this.columnRowNum = base.Columns["RowNum"];
                 this.columnCode = base.Columns["Code"];
-                this.columnMaterial1 = base.Columns["Material1"];
-                this.columnMaterial2 = base.Columns["Material2"];
-                this.columnJewelryType = base.Columns["JewelryType"];
-                this.columnMaterialWeight1 = base.Columns["MaterialWeight1"];
-                this.columnMaterialWeight2 = base.Columns["MaterialWeight2"];
+                this.columnSize = base.Columns["Size"];
+                this.columnJewelryTypeName = base.Columns["JewelryTypeName"];
+                this.columnAmount1 = base.Columns["Amount1"];
+                this.columnWeight1 = base.Columns["Weight1"];
+                this.columnAmount2 = base.Columns["Amount2"];
+                this.columnWeight2 = base.Columns["Weight2"];
+                this.columnPriceTag = base.Columns["PriceTag"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -842,18 +866,28 @@ namespace DiamondShop.Report.DS {
                 base.Columns.Add(this.columnRowNum);
                 this.columnCode = new global::System.Data.DataColumn("Code", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCode);
-                this.columnMaterial1 = new global::System.Data.DataColumn("Material1", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnMaterial1);
-                this.columnMaterial2 = new global::System.Data.DataColumn("Material2", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnMaterial2);
-                this.columnJewelryType = new global::System.Data.DataColumn("JewelryType", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnJewelryType);
-                this.columnMaterialWeight1 = new global::System.Data.DataColumn("MaterialWeight1", typeof(double), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnMaterialWeight1);
-                this.columnMaterialWeight2 = new global::System.Data.DataColumn("MaterialWeight2", typeof(double), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnMaterialWeight2);
+                this.columnSize = new global::System.Data.DataColumn("Size", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSize);
+                this.columnJewelryTypeName = new global::System.Data.DataColumn("JewelryTypeName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnJewelryTypeName);
+                this.columnAmount1 = new global::System.Data.DataColumn("Amount1", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAmount1);
+                this.columnWeight1 = new global::System.Data.DataColumn("Weight1", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnWeight1);
+                this.columnAmount2 = new global::System.Data.DataColumn("Amount2", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAmount2);
+                this.columnWeight2 = new global::System.Data.DataColumn("Weight2", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnWeight2);
+                this.columnPriceTag = new global::System.Data.DataColumn("PriceTag", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPriceTag);
                 this.columnRowNum.ReadOnly = true;
                 this.columnCode.MaxLength = 30;
+                this.columnJewelryTypeName.ReadOnly = true;
+                this.columnJewelryTypeName.MaxLength = 100;
+                this.columnAmount1.ReadOnly = true;
+                this.columnWeight1.ReadOnly = true;
+                this.columnAmount2.ReadOnly = true;
+                this.columnWeight2.ReadOnly = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1245,81 +1279,113 @@ namespace DiamondShop.Report.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int Material1 {
+            public double Size {
                 get {
                     try {
-                        return ((int)(this[this.tableDetail.Material1Column]));
+                        return ((double)(this[this.tableDetail.SizeColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Material1\' in table \'Detail\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Size\' in table \'Detail\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDetail.Material1Column] = value;
+                    this[this.tableDetail.SizeColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int Material2 {
+            public string JewelryTypeName {
                 get {
                     try {
-                        return ((int)(this[this.tableDetail.Material2Column]));
+                        return ((string)(this[this.tableDetail.JewelryTypeNameColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Material2\' in table \'Detail\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'JewelryTypeName\' in table \'Detail\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDetail.Material2Column] = value;
+                    this[this.tableDetail.JewelryTypeNameColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int JewelryType {
+            public int Amount1 {
                 get {
                     try {
-                        return ((int)(this[this.tableDetail.JewelryTypeColumn]));
+                        return ((int)(this[this.tableDetail.Amount1Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'JewelryType\' in table \'Detail\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Amount1\' in table \'Detail\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDetail.JewelryTypeColumn] = value;
+                    this[this.tableDetail.Amount1Column] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public double MaterialWeight1 {
+            public double Weight1 {
                 get {
                     try {
-                        return ((double)(this[this.tableDetail.MaterialWeight1Column]));
+                        return ((double)(this[this.tableDetail.Weight1Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'MaterialWeight1\' in table \'Detail\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Weight1\' in table \'Detail\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDetail.MaterialWeight1Column] = value;
+                    this[this.tableDetail.Weight1Column] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public double MaterialWeight2 {
+            public int Amount2 {
                 get {
                     try {
-                        return ((double)(this[this.tableDetail.MaterialWeight2Column]));
+                        return ((int)(this[this.tableDetail.Amount2Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'MaterialWeight2\' in table \'Detail\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Amount2\' in table \'Detail\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDetail.MaterialWeight2Column] = value;
+                    this[this.tableDetail.Amount2Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double Weight2 {
+                get {
+                    try {
+                        return ((double)(this[this.tableDetail.Weight2Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Weight2\' in table \'Detail\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDetail.Weight2Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal PriceTag {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableDetail.PriceTagColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'PriceTag\' in table \'Detail\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDetail.PriceTagColumn] = value;
                 }
             }
             
@@ -1349,62 +1415,86 @@ namespace DiamondShop.Report.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsMaterial1Null() {
-                return this.IsNull(this.tableDetail.Material1Column);
+            public bool IsSizeNull() {
+                return this.IsNull(this.tableDetail.SizeColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetMaterial1Null() {
-                this[this.tableDetail.Material1Column] = global::System.Convert.DBNull;
+            public void SetSizeNull() {
+                this[this.tableDetail.SizeColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsMaterial2Null() {
-                return this.IsNull(this.tableDetail.Material2Column);
+            public bool IsJewelryTypeNameNull() {
+                return this.IsNull(this.tableDetail.JewelryTypeNameColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetMaterial2Null() {
-                this[this.tableDetail.Material2Column] = global::System.Convert.DBNull;
+            public void SetJewelryTypeNameNull() {
+                this[this.tableDetail.JewelryTypeNameColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsJewelryTypeNull() {
-                return this.IsNull(this.tableDetail.JewelryTypeColumn);
+            public bool IsAmount1Null() {
+                return this.IsNull(this.tableDetail.Amount1Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetJewelryTypeNull() {
-                this[this.tableDetail.JewelryTypeColumn] = global::System.Convert.DBNull;
+            public void SetAmount1Null() {
+                this[this.tableDetail.Amount1Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsMaterialWeight1Null() {
-                return this.IsNull(this.tableDetail.MaterialWeight1Column);
+            public bool IsWeight1Null() {
+                return this.IsNull(this.tableDetail.Weight1Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetMaterialWeight1Null() {
-                this[this.tableDetail.MaterialWeight1Column] = global::System.Convert.DBNull;
+            public void SetWeight1Null() {
+                this[this.tableDetail.Weight1Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsMaterialWeight2Null() {
-                return this.IsNull(this.tableDetail.MaterialWeight2Column);
+            public bool IsAmount2Null() {
+                return this.IsNull(this.tableDetail.Amount2Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetMaterialWeight2Null() {
-                this[this.tableDetail.MaterialWeight2Column] = global::System.Convert.DBNull;
+            public void SetAmount2Null() {
+                this[this.tableDetail.Amount2Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsWeight2Null() {
+                return this.IsNull(this.tableDetail.Weight2Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetWeight2Null() {
+                this[this.tableDetail.Weight2Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsPriceTagNull() {
+                return this.IsNull(this.tableDetail.PriceTagColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetPriceTagNull() {
+                this[this.tableDetail.PriceTagColumn] = global::System.Convert.DBNull;
             }
         }
         
