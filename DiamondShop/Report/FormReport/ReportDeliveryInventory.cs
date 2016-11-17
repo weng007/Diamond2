@@ -19,14 +19,14 @@ namespace DiamondShop.Report
         Service2 ser1;
         DataSet ds = new DataSet();
 
-        public ReportDelivery()
+        public ReportDeliveryInventory()
         {
             InitializeComponent();
             Initial();
             DoLoadData();
         }
 
-        public ReportDelivery(int id)
+        public ReportDeliveryInventory(int id)
         {
             InitializeComponent();
             Initial();
