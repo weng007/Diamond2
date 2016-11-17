@@ -366,7 +366,7 @@ namespace DiamondShop
 
         private void btnPrint_Click(object sender, EventArgs e)
         {
-            Report.ReportDelivery report = new Report.ReportDelivery(id);
+            Report.ReportDeliveryInventory report = new Report.ReportDeliveryInventory(id);
             report.ShowDialog();
         }
 
