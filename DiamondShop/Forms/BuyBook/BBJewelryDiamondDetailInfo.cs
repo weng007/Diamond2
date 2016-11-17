@@ -17,7 +17,6 @@ namespace DiamondShop
     public partial class BBJewelryDiamondDetailInfo : FormInfo
     {
         dsBBJewelryDiamondCerDetail tds = new dsBBJewelryDiamondCerDetail();
-        bool isAuthorize = false;
         byte[] file;
         int RefID;
 
@@ -90,10 +89,6 @@ namespace DiamondShop
               if (tds.BBJewelryDiamondCerDetail.Rows.Count > 0)
               {
                 binder.BindValueToControl(tds.BBJewelryDiamondCerDetail[0]);
-
-                EnableSave = false;
-                EnableEdit = true;
-                EnableDelete = false;
               }
 
               SetFormatNumber();
@@ -153,29 +148,6 @@ namespace DiamondShop
             }
 
             return chkFlag;
-        }
-
-        protected override void EditData()
-        {
-            if(isAuthorize)
-            {
-                EnableSave = true;
-                EnableDelete = true;
-            }
-            else
-            {
-                RequirePassword frm = new RequirePassword(ApplicationInfo.Shop);
-                frm.ShowDialog();
-                isAuthorize = frm.isAuthorize;
-                frm.Close();
-
-                if (isAuthorize)
-                {
-                    EnableSave = true;
-                    EnableDelete = true;
-                    base.EditData();
-                }
-            }
         }
 
         protected override bool ValidateData()
