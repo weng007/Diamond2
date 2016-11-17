@@ -269,7 +269,7 @@ namespace DiamondShop
                     row.Weight1 = tmp.TransferInventory[i].Weight1;
                     row.Amount2 = tmp.TransferInventory[i].Amount2;
                     row.Weight2 = tmp.TransferInventory[i].Weight2;
-                    row.Weight = tmp.TransferInventory[i].Weight;
+                    row.Size = tmp.TransferInventory[i].Size;
                     row.PriceTag = tmp.TransferInventory[i].PriceTag;
                     row.BuyBookType = tmp.TransferInventory[i].BuyBookType;
                     row.CreateBy = ApplicationInfo.UserID;

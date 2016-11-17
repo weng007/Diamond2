@@ -63,7 +63,7 @@
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.JewelryTypeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Weight = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Size = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Amount1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Weight1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Amount2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -330,7 +330,7 @@
             this.ID,
             this.Code,
             this.JewelryTypeName,
-            this.Weight,
+            this.Size,
             this.Amount1,
             this.Weight1,
             this.Amount2,
@@ -454,16 +454,16 @@
             this.JewelryTypeName.ReadOnly = true;
             this.JewelryTypeName.Width = 140;
             // 
-            // Weight
+            // Size
             // 
-            this.Weight.DataPropertyName = "Weight";
+            this.Size.DataPropertyName = "Size";
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
             dataGridViewCellStyle2.Format = "N2";
-            this.Weight.DefaultCellStyle = dataGridViewCellStyle2;
-            this.Weight.HeaderText = "Weight";
-            this.Weight.Name = "Weight";
-            this.Weight.ReadOnly = true;
-            this.Weight.Width = 70;
+            this.Size.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Size.HeaderText = "Size";
+            this.Size.Name = "Size";
+            this.Size.ReadOnly = true;
+            this.Size.Width = 70;
             // 
             // Amount1
             // 
@@ -599,7 +599,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Code;
         private System.Windows.Forms.DataGridViewTextBoxColumn JewelryTypeName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Weight;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Size;
         private System.Windows.Forms.DataGridViewTextBoxColumn Amount1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Weight1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Amount2;

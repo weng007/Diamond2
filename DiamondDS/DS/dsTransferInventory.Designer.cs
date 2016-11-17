@@ -285,7 +285,7 @@ namespace DiamondDS.DS {
             
             private global::System.Data.DataColumn columnCode;
             
-            private global::System.Data.DataColumn columnWeight;
+            private global::System.Data.DataColumn columnSize;
             
             private global::System.Data.DataColumn columnJewelryType;
             
@@ -380,9 +380,9 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn WeightColumn {
+            public global::System.Data.DataColumn SizeColumn {
                 get {
-                    return this.columnWeight;
+                    return this.columnSize;
                 }
             }
             
@@ -562,7 +562,7 @@ namespace DiamondDS.DS {
             public TransferInventoryRow AddTransferInventoryRow(
                         long RowNum, 
                         string Code, 
-                        int Weight, 
+                        int Size, 
                         int JewelryType, 
                         string JewelryTypeName, 
                         decimal PriceTag, 
@@ -585,7 +585,7 @@ namespace DiamondDS.DS {
                         RowNum,
                         null,
                         Code,
-                        Weight,
+                        Size,
                         JewelryType,
                         JewelryTypeName,
                         PriceTag,
@@ -635,7 +635,7 @@ namespace DiamondDS.DS {
                 this.columnRowNum = base.Columns["RowNum"];
                 this.columnID = base.Columns["ID"];
                 this.columnCode = base.Columns["Code"];
-                this.columnWeight = base.Columns["Weight"];
+                this.columnSize = base.Columns["Size"];
                 this.columnJewelryType = base.Columns["JewelryType"];
                 this.columnJewelryTypeName = base.Columns["JewelryTypeName"];
                 this.columnPriceTag = base.Columns["PriceTag"];
@@ -664,8 +664,8 @@ namespace DiamondDS.DS {
                 base.Columns.Add(this.columnID);
                 this.columnCode = new global::System.Data.DataColumn("Code", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCode);
-                this.columnWeight = new global::System.Data.DataColumn("Weight", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnWeight);
+                this.columnSize = new global::System.Data.DataColumn("Size", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSize);
                 this.columnJewelryType = new global::System.Data.DataColumn("JewelryType", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnJewelryType);
                 this.columnJewelryTypeName = new global::System.Data.DataColumn("JewelryTypeName", typeof(string), null, global::System.Data.MappingType.Element);
@@ -711,7 +711,7 @@ namespace DiamondDS.DS {
                 this.columnID.Unique = true;
                 this.columnCode.AllowDBNull = false;
                 this.columnCode.MaxLength = 30;
-                this.columnWeight.ReadOnly = true;
+                this.columnSize.ReadOnly = true;
                 this.columnJewelryTypeName.ReadOnly = true;
                 this.columnJewelryTypeName.MaxLength = 100;
                 this.columnIsDeleted.MaxLength = 1;
@@ -895,17 +895,17 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int Weight {
+            public int Size {
                 get {
                     try {
-                        return ((int)(this[this.tableTransferInventory.WeightColumn]));
+                        return ((int)(this[this.tableTransferInventory.SizeColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Weight\' in table \'TransferInventory\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Size\' in table \'TransferInventory\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTransferInventory.WeightColumn] = value;
+                    this[this.tableTransferInventory.SizeColumn] = value;
                 }
             }
             
@@ -1195,14 +1195,14 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsWeightNull() {
-                return this.IsNull(this.tableTransferInventory.WeightColumn);
+            public bool IsSizeNull() {
+                return this.IsNull(this.tableTransferInventory.SizeColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetWeightNull() {
-                this[this.tableTransferInventory.WeightColumn] = global::System.Convert.DBNull;
+            public void SetSizeNull() {
+                this[this.tableTransferInventory.SizeColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

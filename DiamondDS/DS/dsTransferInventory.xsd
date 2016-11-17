@@ -14,7 +14,7 @@
   <xs:element name="dsTransferInventory" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsTransferInventory" msprop:Generator_UserDSName="dsTransferInventory">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="TransferInventory" msprop:Generator_TableClassName="TransferInventoryDataTable" msprop:Generator_TableVarName="tableTransferInventory" msprop:Generator_RowChangedName="TransferInventoryRowChanged" msprop:Generator_TablePropName="TransferInventory" msprop:Generator_RowDeletingName="TransferInventoryRowDeleting" msprop:Generator_RowChangingName="TransferInventoryRowChanging" msprop:Generator_RowEvHandlerName="TransferInventoryRowChangeEventHandler" msprop:Generator_RowDeletedName="TransferInventoryRowDeleted" msprop:Generator_RowClassName="TransferInventoryRow" msprop:Generator_UserTableName="TransferInventory" msprop:Generator_RowEvArgName="TransferInventoryRowChangeEvent">
+        <xs:element name="TransferInventory" msprop:Generator_TableClassName="TransferInventoryDataTable" msprop:Generator_TableVarName="tableTransferInventory" msprop:Generator_TablePropName="TransferInventory" msprop:Generator_RowDeletingName="TransferInventoryRowDeleting" msprop:Generator_RowChangingName="TransferInventoryRowChanging" msprop:Generator_RowEvHandlerName="TransferInventoryRowChangeEventHandler" msprop:Generator_RowDeletedName="TransferInventoryRowDeleted" msprop:Generator_UserTableName="TransferInventory" msprop:Generator_RowChangedName="TransferInventoryRowChanged" msprop:Generator_RowEvArgName="TransferInventoryRowChangeEvent" msprop:Generator_RowClassName="TransferInventoryRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="RowNum" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnRowNum" msprop:Generator_ColumnPropNameInRow="RowNum" msprop:Generator_ColumnPropNameInTable="RowNumColumn" msprop:Generator_UserColumnName="RowNum" type="xs:long" minOccurs="0" />
@@ -26,7 +26,7 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Weight" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnWeight" msprop:Generator_ColumnPropNameInRow="Weight" msprop:Generator_ColumnPropNameInTable="WeightColumn" msprop:Generator_UserColumnName="Weight" type="xs:int" minOccurs="0" />
+              <xs:element name="Size" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSize" msprop:Generator_ColumnPropNameInRow="Size" msprop:Generator_ColumnPropNameInTable="SizeColumn" msprop:Generator_UserColumnName="Size" type="xs:int" minOccurs="0" />
               <xs:element name="JewelryType" msprop:Generator_ColumnVarNameInTable="columnJewelryType" msprop:Generator_ColumnPropNameInRow="JewelryType" msprop:Generator_ColumnPropNameInTable="JewelryTypeColumn" msprop:Generator_UserColumnName="JewelryType" type="xs:int" minOccurs="0" />
               <xs:element name="JewelryTypeName" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnJewelryTypeName" msprop:Generator_ColumnPropNameInRow="JewelryTypeName" msprop:Generator_ColumnPropNameInTable="JewelryTypeNameColumn" msprop:Generator_UserColumnName="JewelryTypeName" minOccurs="0">
                 <xs:simpleType>

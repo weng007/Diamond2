@@ -74,7 +74,7 @@ namespace DiamondShop
                 {
                     if (gridTransferInventory.Rows[i].Cells["Select"].Value.ToString() == "True")
                     {
-                        idSelected += gridTransferInventory.Rows[i].Cells["Code"].Value.ToString() + comma;                     
+                        idSelected += gridTransferInventory.Rows[i].Cells["ID"].Value.ToString() + comma;                     
                     }
                 }
             }
