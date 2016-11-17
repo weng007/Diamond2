@@ -102,7 +102,7 @@ namespace DiamondShop
 
                 if (!isAuthorize)
                 {
-                    EnableSave = false;
+                     EnableSave = false;
                     EnableEdit = (ApplicationInfo.ShopName == txtSShop.Text)?true:false;
                     EnableDelete = false;
                 }
