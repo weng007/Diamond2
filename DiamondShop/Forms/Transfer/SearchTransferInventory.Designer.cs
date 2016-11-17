@@ -44,6 +44,7 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.gridTransferInventory = new System.Windows.Forms.DataGridView();
+            this.btnClose = new System.Windows.Forms.Button();
             this.Select = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.RowNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,8 +53,8 @@
             this.JewelryTypeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Amount1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Weight1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Amount3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Weight3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Amount2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Weight2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Weight = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ShapeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColorTypeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -61,7 +62,6 @@
             this.EShop = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TotalBaht = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BuyBookType = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnClose = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -196,8 +196,8 @@
             this.JewelryTypeName,
             this.Amount1,
             this.Weight1,
-            this.Amount3,
-            this.Weight3,
+            this.Amount2,
+            this.Weight2,
             this.Weight,
             this.ShapeName,
             this.ColorTypeName,
@@ -215,6 +215,23 @@
             this.gridTransferInventory.Size = new System.Drawing.Size(1230, 452);
             this.gridTransferInventory.TabIndex = 2;
             this.gridTransferInventory.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.gridTransferInventory_MouseDoubleClick);
+            // 
+            // btnClose
+            // 
+            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClose.BackColor = System.Drawing.Color.Transparent;
+            this.btnClose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClose.BackgroundImage")));
+            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Location = new System.Drawing.Point(1219, 1);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(0);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(38, 32);
+            this.btnClose.TabIndex = 79;
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // Select
             // 
@@ -284,20 +301,20 @@
             this.Weight1.Name = "Weight1";
             this.Weight1.ReadOnly = true;
             // 
-            // Amount3
+            // Amount2
             // 
-            this.Amount3.DataPropertyName = "Amount3";
-            this.Amount3.HeaderText = "Amt. GC.";
-            this.Amount3.Name = "Amount3";
-            this.Amount3.ReadOnly = true;
+            this.Amount2.DataPropertyName = "Amount2";
+            this.Amount2.HeaderText = "Amt. GC.";
+            this.Amount2.Name = "Amount2";
+            this.Amount2.ReadOnly = true;
             // 
-            // Weight3
+            // Weight2
             // 
-            this.Weight3.DataPropertyName = "Weight3";
-            this.Weight3.HeaderText = "นน. GC.";
-            this.Weight3.Name = "Weight3";
-            this.Weight3.ReadOnly = true;
-            this.Weight3.Width = 90;
+            this.Weight2.DataPropertyName = "Weight2";
+            this.Weight2.HeaderText = "นน. GC.";
+            this.Weight2.Name = "Weight2";
+            this.Weight2.ReadOnly = true;
+            this.Weight2.Width = 90;
             // 
             // Weight
             // 
@@ -357,23 +374,6 @@
             this.BuyBookType.ReadOnly = true;
             this.BuyBookType.Visible = false;
             // 
-            // btnClose
-            // 
-            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClose.BackColor = System.Drawing.Color.Transparent;
-            this.btnClose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClose.BackgroundImage")));
-            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnClose.FlatAppearance.BorderSize = 0;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Location = new System.Drawing.Point(1219, 1);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(0);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(38, 32);
-            this.btnClose.TabIndex = 79;
-            this.btnClose.UseVisualStyleBackColor = false;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
             // SearchTransferInventory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -406,6 +406,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cmbJewelryType;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Button btnSelect;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Select;
         private System.Windows.Forms.DataGridViewTextBoxColumn RowNum;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
@@ -414,8 +415,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn JewelryTypeName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Amount1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Weight1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Amount3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Weight3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Amount2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Weight2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Weight;
         private System.Windows.Forms.DataGridViewTextBoxColumn ShapeName;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColorTypeName;
@@ -423,6 +424,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn EShop;
         private System.Windows.Forms.DataGridViewTextBoxColumn TotalBaht;
         private System.Windows.Forms.DataGridViewTextBoxColumn BuyBookType;
-        private System.Windows.Forms.Button btnSelect;
     }
 }

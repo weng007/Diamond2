@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TransferBuyBook));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TransferInventory));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -62,12 +62,13 @@
             this.RowNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Weight = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.JewelryTypeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ShapeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColorTypeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColorName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TotalBaht = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Weight = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Amount1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Weight1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Amount2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Weight2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PriceTag = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EShop = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RefID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -328,12 +329,13 @@
             this.RowNum,
             this.ID,
             this.Code,
-            this.Weight,
             this.JewelryTypeName,
-            this.ShapeName,
-            this.ColorTypeName,
-            this.ColorName,
-            this.TotalBaht,
+            this.Weight,
+            this.Amount1,
+            this.Weight1,
+            this.Amount2,
+            this.Weight2,
+            this.PriceTag,
             this.EShop,
             this.Status,
             this.RefID,
@@ -444,6 +446,14 @@
             this.Code.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Code.Width = 150;
             // 
+            // JewelryTypeName
+            // 
+            this.JewelryTypeName.DataPropertyName = "JewelryTypeName";
+            this.JewelryTypeName.HeaderText = "JewelryType";
+            this.JewelryTypeName.Name = "JewelryTypeName";
+            this.JewelryTypeName.ReadOnly = true;
+            this.JewelryTypeName.Width = 140;
+            // 
             // Weight
             // 
             this.Weight.DataPropertyName = "Weight";
@@ -455,46 +465,48 @@
             this.Weight.ReadOnly = true;
             this.Weight.Width = 70;
             // 
-            // JewelryTypeName
+            // Amount1
             // 
-            this.JewelryTypeName.DataPropertyName = "JewelryTypeName";
-            this.JewelryTypeName.HeaderText = "JewelryType";
-            this.JewelryTypeName.Name = "JewelryTypeName";
-            this.JewelryTypeName.ReadOnly = true;
-            this.JewelryTypeName.Width = 140;
+            this.Amount1.DataPropertyName = "Amount1";
+            this.Amount1.HeaderText = "Amt. DC.";
+            this.Amount1.Name = "Amount1";
+            this.Amount1.ReadOnly = true;
+            this.Amount1.Width = 90;
             // 
-            // ShapeName
+            // Weight1
             // 
-            this.ShapeName.DataPropertyName = "ShapeName";
-            this.ShapeName.HeaderText = "Shape";
-            this.ShapeName.Name = "ShapeName";
-            this.ShapeName.ReadOnly = true;
+            this.Weight1.DataPropertyName = "Weight1";
+            this.Weight1.HeaderText = "นน. DC.";
+            this.Weight1.Name = "Weight1";
+            this.Weight1.ReadOnly = true;
+            this.Weight1.Width = 90;
             // 
-            // ColorTypeName
+            // Amount2
             // 
-            this.ColorTypeName.DataPropertyName = "ColorTypeName";
-            this.ColorTypeName.HeaderText = "Color Type";
-            this.ColorTypeName.Name = "ColorTypeName";
-            this.ColorTypeName.ReadOnly = true;
-            this.ColorTypeName.Width = 130;
+            this.Amount2.DataPropertyName = "Amount2";
+            this.Amount2.HeaderText = "Amt. GC.";
+            this.Amount2.Name = "Amount2";
+            this.Amount2.ReadOnly = true;
+            this.Amount2.Width = 90;
             // 
-            // ColorName
+            // Weight2
             // 
-            this.ColorName.DataPropertyName = "ColorName";
-            this.ColorName.HeaderText = "Color";
-            this.ColorName.Name = "ColorName";
-            this.ColorName.ReadOnly = true;
+            this.Weight2.DataPropertyName = "Weight2";
+            this.Weight2.HeaderText = "นน. GC.";
+            this.Weight2.Name = "Weight2";
+            this.Weight2.ReadOnly = true;
+            this.Weight2.Width = 90;
             // 
-            // TotalBaht
+            // PriceTag
             // 
-            this.TotalBaht.DataPropertyName = "TotalBaht";
+            this.PriceTag.DataPropertyName = "PriceTag";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
             dataGridViewCellStyle3.Format = "N0";
-            this.TotalBaht.DefaultCellStyle = dataGridViewCellStyle3;
-            this.TotalBaht.HeaderText = "TotalBaht";
-            this.TotalBaht.Name = "TotalBaht";
-            this.TotalBaht.ReadOnly = true;
-            this.TotalBaht.Width = 120;
+            this.PriceTag.DefaultCellStyle = dataGridViewCellStyle3;
+            this.PriceTag.HeaderText = "PriceTag";
+            this.PriceTag.Name = "PriceTag";
+            this.PriceTag.ReadOnly = true;
+            this.PriceTag.Width = 120;
             // 
             // EShop
             // 
@@ -536,14 +548,14 @@
             this.BuyBookType.ReadOnly = true;
             this.BuyBookType.Visible = false;
             // 
-            // TransferBuyBook
+            // TransferInventory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(195)))), ((int)(((byte)(157)))));
             this.ClientSize = new System.Drawing.Size(1007, 542);
             this.Controls.Add(this.panel3);
-            this.Name = "TransferBuyBook";
+            this.Name = "TransferInventory";
             this.Text = "DiamondCer";
             this.Controls.SetChildIndex(this.panel3, 0);
             ((System.ComponentModel.ISupportInitialize)(this.ds)).EndInit();
@@ -586,12 +598,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn RowNum;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Code;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Weight;
         private System.Windows.Forms.DataGridViewTextBoxColumn JewelryTypeName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ShapeName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColorTypeName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColorName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TotalBaht;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Weight;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Amount1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Weight1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Amount2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Weight2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PriceTag;
         private System.Windows.Forms.DataGridViewTextBoxColumn EShop;
         private System.Windows.Forms.DataGridViewTextBoxColumn Status;
         private System.Windows.Forms.DataGridViewTextBoxColumn RefID;

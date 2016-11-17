@@ -108,7 +108,7 @@ namespace DiamondShop
                 }
 
                 //Receiver 
-                if (Convert.ToInt16(cmbReceiver.SelectedValue.ToString()) == ApplicationInfo.UserID)
+                if (cmbEShop.SelectedValue.ToString() == ApplicationInfo.ShopName)
                 {
                     SetControlEnable(false);
                     btnReceive.Visible = true;

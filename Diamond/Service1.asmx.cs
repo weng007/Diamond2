@@ -490,6 +490,18 @@ namespace Diamond
                     throw ex;
                 }
             }
+            else if (TableName == "TransferInventory")
+            {
+                TransferInventoryBiz biz = GM.GetTransferInventoryBiz();
+                try
+                {
+                    return biz.DoSelectData(id);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
             else if (TableName == "Order")
             {
                 OrderBiz biz = GM.GetOrderBiz();

@@ -15,12 +15,69 @@ namespace DiamondBiz.Biz
 
         //type 0 = Login, 1 = BuyBook
 
+        public dsTransferInventory DoSelectData(int id)
+        {
+            try
+            {
+                return dal.DoSelectData(id);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public bool DoInsertData(dsTransferInventory tds)
+        {
+            try
+            {
+                return dal.DoInsertData(tds);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
 
+        public bool DoUpdateData(dsTransferInventory tds)
+        {
+            try
+            {
+                return dal.DoUpdateData(tds);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public bool DoDeleteData(int id)
+        {
+            try
+            {
+                return dal.DoDeleteData(id);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
         public dsTransferInventory DoSearchData(int shop, string code, int jewelrytype)
         {
             try
             {
                 return dal.DoSearchData(shop, code, jewelrytype);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public dsTransferInventory GetTransferInventoryDetail(string idSelected)
+        {
+            try
+            {
+                return dal.GetTransferInventoryDetail(idSelected);
             }
             catch (Exception ex)
             {
