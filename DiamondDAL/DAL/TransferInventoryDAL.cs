@@ -19,7 +19,7 @@ namespace DiamondDAL.DAL
             {
                 SQL.ClearParameter();
                 SQL.CreateParameter("ID", id);
-                SQL.FillDataSetBySP("SP_TransferDetail_Sel", ds.TransferInventory);
+                SQL.FillDataSetBySP("SP_TransferDetail_Sel1", ds.TransferInventory);
             }
             catch (Exception ex)
             {
@@ -37,7 +37,7 @@ namespace DiamondDAL.DAL
                 {
                     dsTransferInventory.TransferInventoryRow row = tds.TransferInventory[i];
 
-                    if (tds.TransferInventory.Rows[i]["ID"].ToString() == "")
+                    if (Convert.ToInt32(tds.TransferInventory.Rows[i]["ID"].ToString()) < 0)
                     {
                         SQL.ExecuteSP("SP_TransferDetail_Ins", row);
                     }

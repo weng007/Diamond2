@@ -90,42 +90,6 @@
               </Border>
             </Style>
           </Image>
-          <Textbox Name="Total2">
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>=First(Fields!Total.Value, "Total")</Value>
-                    <Style>
-                      <FontSize>8pt</FontSize>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style>
-                  <TextAlign>Right</TextAlign>
-                </Style>
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>Total</rd:DefaultName>
-            <Top>4.01667in</Top>
-            <Left>2.99916in</Left>
-            <Height>0.19792in</Height>
-            <Width>1.78554in</Width>
-            <ZIndex>2</ZIndex>
-            <Visibility>
-              <Hidden>=IIF(First(Fields!Detail.Value, "Detail1") &lt;&gt; "",true,false)</Hidden>
-            </Visibility>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
           <Textbox Name="NetPrice">
             <KeepTogether>true</KeepTogether>
             <Paragraphs>
@@ -148,7 +112,7 @@
             <Left>2.99916in</Left>
             <Height>0.20833in</Height>
             <Width>1.79946in</Width>
-            <ZIndex>3</ZIndex>
+            <ZIndex>2</ZIndex>
             <Visibility>
               <Hidden>=iif(First(Fields!NetPrice.Value, "SP_Rpt_Certificate") = "0",true,false)</Hidden>
             </Visibility>
@@ -165,7 +129,7 @@
         </ReportItems>
         <Top>0.03194in</Top>
         <Left>0.3184in</Left>
-        <Height>4.25778in</Height>
+        <Height>3.56876in</Height>
         <Width>4.9554in</Width>
         <Style>
           <Border>
@@ -223,6 +187,42 @@
           </Border>
         </Style>
       </Line>
+      <Textbox Name="Total2">
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!Total.Value, "Total")</Value>
+                <Style>
+                  <FontSize>8pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Total</rd:DefaultName>
+        <Top>4.12027in</Top>
+        <Left>3.31756in</Left>
+        <Height>0.19792in</Height>
+        <Width>1.78554in</Width>
+        <ZIndex>5</ZIndex>
+        <Visibility>
+          <Hidden>=IIF(First(Fields!Detail.Value, "Detail1") &lt;&gt; "",true,false)</Hidden>
+        </Visibility>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
     </ReportItems>
     <Height>4.35916in</Height>
     <Style>
