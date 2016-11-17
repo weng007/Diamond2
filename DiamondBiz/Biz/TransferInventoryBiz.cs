@@ -61,11 +61,11 @@ namespace DiamondBiz.Biz
                 throw ex;
             }
         }
-        public dsTransferInventory DoSearchData(int shop, string code, int jewelrytype)
+        public dsTransferInventory DoSearchData(int shop, string code, int jewelryType)
         {
             try
             {
-                return dal.DoSearchData(shop, code, jewelrytype);
+                return dal.DoSearchData(shop, code, jewelryType);
             }
             catch (Exception ex)
             {

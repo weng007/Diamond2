@@ -87,14 +87,14 @@ namespace DiamondDAL.DAL
             return Convert.ToBoolean(flag);
         }
 
-        public dsTransferInventory DoSearchData(int shop,string code, int jewelrytype)
+        public dsTransferInventory DoSearchData(int shop,string code, int jewelryType)
         {
             try
             {
                 SQL.ClearParameter();
                 SQL.CreateParameter("Shop", shop);
                 SQL.CreateParameter("Code", code);
-                SQL.CreateParameter("JewelryType", jewelrytype);
+                SQL.CreateParameter("JewelryType", jewelryType);
                 SQL.FillDataSetBySP("SP_TransferInventory_Search", ds.TransferInventory);
             }
             catch (Exception ex)

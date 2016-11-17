@@ -8,19 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DiamondShop.FormMaster;
-using DiamondDS.DS;
-using DiamondShop.DiamondService1;
+using DiamondDS;
 
 namespace DiamondShop
 {
     public partial class SearchTransferInventory : FormList
-    {
-        Service2 ser1;
-
-        dsTransferInventory tds1 = new dsTransferInventory();
-        DataSet ds1 = new DataSet();
-
+    { 
         public int refID1 = 0;
+        public string tmpCode = "";
         public string idSelected = "";
 
         public SearchTransferInventory()
@@ -44,7 +39,7 @@ namespace DiamondShop
         {
             ser2 = GM.GetService2();
             
-            ds = ser2.DoSearchTransferInventory(ApplicationInfo.Shop, "", 0);
+            ds = ser2.DoSearchTransferInventory(ApplicationInfo.Shop, "", Convert.ToInt16(cmbJewelryType.SelectedValue.ToString()));
 
             if (ds.Tables[0].Rows.Count > 0)
             {
@@ -67,6 +62,7 @@ namespace DiamondShop
             }
             else { gridTransferInventory.DataSource = null; gridTransferInventory.Refresh(); }
         }
+
         private void CheckSelected()
         {
             string comma = ",";
@@ -78,7 +74,8 @@ namespace DiamondShop
                 {
                     if (gridTransferInventory.Rows[i].Cells["Select"].Value.ToString() == "True")
                     {
-                        idSelected += gridTransferInventory.Rows[i].Cells["ID"].Value.ToString() + comma;
+                        idSelected += gridTransferInventory.Rows[i].Cells["Code"].Value.ToString() + comma;
+                         
                     }
                 }
             }
@@ -96,46 +93,30 @@ namespace DiamondShop
             this.Close();
         }
 
-        private void SetGrid(string idSelected, int buyBookType)
-        {
-            if (idSelected != "")
-            {
-                ser1 = GM.GetService1();
-
-                dsTransferInventory tmp = new dsTransferInventory();
-
-                ds1 = ser1.GetSellBookDetail(idSelected, buyBookType);
-                tmp.Clear();
-                tmp.Merge(ds1);
-
-                for (int i = 0; i < tmp.TransferInventory.Rows.Count; i++)
-                {
-                    dsTransferInventory.TransferInventoryRow row = tds1.TransferInventory.NewTransferInventoryRow();
-                    row.RefID = id;
-                    row.RefID1 = tmp.TransferInventory[i].RefID1;
-                    tds1.TransferInventory.Rows.Add(row);
-                }
-
-                tds1.AcceptChanges();
-                gridTransferInventory.DataSource = tds1.TransferInventory;
-                gridTransferInventory.Refresh();
-            }
-        }
-
         private void btnSearch_Click(object sender, EventArgs e)
         {
             DoSearchData();
         }
 
-        private void gridTransferInventory_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-            refID1 = (int)gridTransferInventory.SelectedRows[0].Cells["ID"].Value;
-            this.Close();
-        }
-
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void gridTransferInventory_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 0)
+            {
+                if (gridTransferInventory.SelectedCells[0].Value == null || gridTransferInventory.SelectedCells[0].Value.ToString() == "False")
+                {
+                    gridTransferInventory.SelectedCells[0].Value = true;
+                    id = (int)gridTransferInventory.SelectedRows[0].Cells["ID"].Value;
+                }
+                else
+                {
+                    gridTransferInventory.SelectedCells[0].Value = false;
+                }
+            }
         }
     }
 }
