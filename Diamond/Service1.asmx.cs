@@ -763,7 +763,7 @@ namespace Diamond
                     throw ex;
                 }
             }
-            
+
             else if (TableName == "BuyBookDiamondCer")
             {
                 BuyBookDiamondCerBiz biz = GM.GetBuyBookDiamondCerBiz();
@@ -777,7 +777,7 @@ namespace Diamond
                     if (mode == 0)
                     { flag = biz.DoInsertData(ds1); }
                     else
-                    { flag = biz.DoInsertData(ds2); }                   
+                    { flag = biz.DoInsertData(ds2); }
                 }
                 catch (Exception ex)
                 {
@@ -879,7 +879,7 @@ namespace Diamond
                     throw ex;
                 }
             }
-            
+
             else if (TableName == "BuyBookDiamond")
             {
                 BuyBookDiamondBiz biz = GM.GetBuyBookDiamondBiz();
@@ -1036,6 +1036,21 @@ namespace Diamond
             {
                 TransferBuyBookBiz biz = GM.GetTransferBuyBookBiz();
                 dsTransferBuyBook ds1 = new dsTransferBuyBook();
+                ds1.Merge(ds);
+
+                try
+                {
+                    flag = biz.DoInsertData(ds1);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            else if (TableName == "TransferInventory")
+            {
+                TransferInventoryBiz biz = GM.GetTransferInventoryBiz();
+                dsTransferInventory ds1 = new dsTransferInventory();
                 ds1.Merge(ds);
 
                 try
@@ -1694,6 +1709,22 @@ namespace Diamond
                     throw ex;
                 }
             }
+            else if (TableName == "TransferInventory")
+            {
+                TransferInventoryBiz biz = GM.GetTransferInventoryBiz();
+                dsTransferInventory ds1 = new dsTransferInventory();
+
+                ds1.Merge(ds);
+
+                try
+                {
+                    flag = biz.DoUpdateData(ds1);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
             else if (TableName == "Order")
             {
                 OrderBiz biz = GM.GetOrderBiz();
@@ -2156,6 +2187,18 @@ namespace Diamond
             else if (TableName == "TransferBuyBook")
             {
                 TransferBuyBookBiz biz = GM.GetTransferBuyBookBiz();
+                try
+                {
+                    flag = biz.DoDeleteData(id);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            else if (TableName == "TransferInventory")
+            {
+                TransferInventoryBiz biz = GM.GetTransferInventoryBiz();
                 try
                 {
                     flag = biz.DoDeleteData(id);

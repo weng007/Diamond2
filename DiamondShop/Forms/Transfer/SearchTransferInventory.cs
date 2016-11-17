@@ -32,12 +32,10 @@ namespace DiamondShop
 
         protected override void Initial()
         {
-            ds = GM.GetBuyer();
-
-            cmbBuybookType.DataSource = ds.Tables[0];
-            cmbBuybookType.ValueMember = "ID";
-            cmbBuybookType.DisplayMember = "DisplayName";
-            cmbBuybookType.Refresh();
+            cmbJewelryType.DataSource = ds.Tables[0];
+            cmbJewelryType.ValueMember = "ID";
+            cmbJewelryType.DisplayMember = "DisplayName";
+            cmbJewelryType.Refresh();
 
             gridTransferInventory.AutoGenerateColumns = false;    
         }
@@ -60,7 +58,7 @@ namespace DiamondShop
         {
             ser2 = GM.GetService2();
 
-            ds = ser2.DoSearchTransferBuyBook(ApplicationInfo.Shop, txtCode.Text, txtCode2.Text, Convert.ToInt16(cmbBuybookType.SelectedValue.ToString()));
+            ds = ser2.DoSearchTransferBuyBook(ApplicationInfo.Shop, txtCode.Text, txtCode2.Text, Convert.ToInt16(cmbJewelryType.SelectedValue.ToString()));
 
             if (ds.Tables[0].Rows.Count > 0)
             {
