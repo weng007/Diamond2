@@ -91,7 +91,7 @@ namespace DiamondShop
             tds.Clear();
             tds.Merge(ds);
 
-            ds2 = ser.DoSelectData("TransferBuyBook", id, 0);
+            ds2 = ser.DoSelectData("TransferInventory", id, 0);
             tds1.Clear();
             tds1.Merge(ds2);
 
@@ -141,7 +141,7 @@ namespace DiamondShop
             }
 
             binder.BindValueToDataRow(row);
-            row.IsBuyBook = "1";           
+            row.IsBuyBook = "0";           
             
             try
             {
@@ -171,7 +171,7 @@ namespace DiamondShop
 
                     if (tds1.TransferInventory.Rows.Count > 0)
                     {
-                        chkFlag = ser.DoInsertData("TransferBuyBook", tds1, 0); //Insert, Update Detail                  
+                        chkFlag = ser.DoInsertData("TransferInventory", tds1, 0); //Insert, Update Detail                  
                     }
                 }
               
@@ -193,7 +193,7 @@ namespace DiamondShop
         {
             try
             {
-                chkFlag = ser.DoDeleteData("TransferBuyBook", id);
+                chkFlag = ser.DoDeleteData("TransferInventory", id);
             }
             catch (Exception ex)
             {
@@ -243,16 +243,16 @@ namespace DiamondShop
         {
             ser2 = GM.GetService2();
 
-            SearchTransferBuyBook frm = new SearchTransferBuyBook();
+            SearchTransferInventory frm = new SearchTransferInventory();
             frm.ShowDialog();
 
-            if (frm.codeSelected != "")
+            if (frm.idSelected != "")
             {
                 ser1 = GM.GetService1();
 
                 dsTransferInventory tmp = new dsTransferInventory();
 
-                ds1 = ser1.GetTransferBuyBookDetail(frm.codeSelected);
+                ds1 = ser1.GetTransferBuyBookDetail(frm.idSelected);
                 tmp.Clear();
                 tmp.Merge(ds1);
 
@@ -326,7 +326,7 @@ namespace DiamondShop
 
                 if (delID != 0)
                 {
-                    ser.DoDeleteData("TransferBuyBook", delID);
+                    ser.DoDeleteData("TransferInventory", delID);
                 }
             }
 
