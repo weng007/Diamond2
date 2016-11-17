@@ -14,7 +14,7 @@ using Microsoft.Reporting.WinForms;
 
 namespace DiamondShop.Report
 {
-    public partial class ReportDelivery : FormList
+    public partial class ReportDeliveryInventory : FormList
     {
         Service2 ser1;
         DataSet ds = new DataSet();
@@ -37,9 +37,9 @@ namespace DiamondShop.Report
             ser1 = GM.GetService1();
             ds = ser1.GetDeliveryOrder(id);
 
-            ReportDataSource datasource = new ReportDataSource("SP_Rpt_Delivery", ds.Tables[1]);
+            ReportDataSource datasource = new ReportDataSource("SP_Rpt_Delivery_Inventory", ds.Tables[1]);
             ReportDataSource datasource1 = new ReportDataSource("Detail", ds.Tables[0]);
-            this.reportViewer1.LocalReport.ReportPath = "..\\Report\\DeliverOrder.rdlc";
+            this.reportViewer1.LocalReport.ReportPath = "..\\Report\\DeliverOrderInventory.rdlc";
 
 
             this.reportViewer1.LocalReport.DataSources.Add(datasource);
