@@ -33,6 +33,11 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnSelect = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -56,11 +61,8 @@
             this.Amount2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Weight2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Weight = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ShapeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColorTypeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColorName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EShop = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TotalBaht = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PriceTag = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BuyBookType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel4.SuspendLayout();
@@ -199,11 +201,8 @@
             this.Amount2,
             this.Weight2,
             this.Weight,
-            this.ShapeName,
-            this.ColorTypeName,
-            this.ColorName,
             this.EShop,
-            this.TotalBaht,
+            this.PriceTag,
             this.BuyBookType});
             this.gridTransferInventory.Location = new System.Drawing.Point(9, 3);
             this.gridTransferInventory.Name = "gridTransferInventory";
@@ -290,6 +289,9 @@
             // Amount1
             // 
             this.Amount1.DataPropertyName = "Amount1";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle4.Format = "N0";
+            this.Amount1.DefaultCellStyle = dataGridViewCellStyle4;
             this.Amount1.HeaderText = "Amt. DC.";
             this.Amount1.Name = "Amount1";
             this.Amount1.ReadOnly = true;
@@ -297,6 +299,9 @@
             // Weight1
             // 
             this.Weight1.DataPropertyName = "Weight1";
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle5.Format = "N2";
+            this.Weight1.DefaultCellStyle = dataGridViewCellStyle5;
             this.Weight1.HeaderText = "นน. DC.";
             this.Weight1.Name = "Weight1";
             this.Weight1.ReadOnly = true;
@@ -304,6 +309,9 @@
             // Amount2
             // 
             this.Amount2.DataPropertyName = "Amount2";
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle6.Format = "N0";
+            this.Amount2.DefaultCellStyle = dataGridViewCellStyle6;
             this.Amount2.HeaderText = "Amt. GC.";
             this.Amount2.Name = "Amount2";
             this.Amount2.ReadOnly = true;
@@ -311,6 +319,9 @@
             // Weight2
             // 
             this.Weight2.DataPropertyName = "Weight2";
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle7.Format = "N2";
+            this.Weight2.DefaultCellStyle = dataGridViewCellStyle7;
             this.Weight2.HeaderText = "นน. GC.";
             this.Weight2.Name = "Weight2";
             this.Weight2.ReadOnly = true;
@@ -319,37 +330,13 @@
             // Weight
             // 
             this.Weight.DataPropertyName = "Weight";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle4.Format = "N0";
-            this.Weight.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle8.Format = "N0";
+            this.Weight.DefaultCellStyle = dataGridViewCellStyle8;
             this.Weight.HeaderText = "Weight";
             this.Weight.Name = "Weight";
             this.Weight.ReadOnly = true;
             this.Weight.Width = 80;
-            // 
-            // ShapeName
-            // 
-            this.ShapeName.DataPropertyName = "ShapeName";
-            this.ShapeName.HeaderText = "Shape";
-            this.ShapeName.Name = "ShapeName";
-            this.ShapeName.ReadOnly = true;
-            this.ShapeName.Width = 130;
-            // 
-            // ColorTypeName
-            // 
-            this.ColorTypeName.DataPropertyName = "ColorTypeName";
-            this.ColorTypeName.HeaderText = "ColorType";
-            this.ColorTypeName.Name = "ColorTypeName";
-            this.ColorTypeName.ReadOnly = true;
-            this.ColorTypeName.Width = 120;
-            // 
-            // ColorName
-            // 
-            this.ColorName.DataPropertyName = "ColorName";
-            this.ColorName.HeaderText = "ColorName";
-            this.ColorName.Name = "ColorName";
-            this.ColorName.ReadOnly = true;
-            this.ColorName.Width = 120;
             // 
             // EShop
             // 
@@ -359,12 +346,16 @@
             this.EShop.ReadOnly = true;
             this.EShop.Visible = false;
             // 
-            // TotalBaht
+            // PriceTag
             // 
-            this.TotalBaht.DataPropertyName = "TotalBaht";
-            this.TotalBaht.HeaderText = "TotalBaht";
-            this.TotalBaht.Name = "TotalBaht";
-            this.TotalBaht.ReadOnly = true;
+            this.PriceTag.DataPropertyName = "PriceTag";
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle9.Format = "N2";
+            this.PriceTag.DefaultCellStyle = dataGridViewCellStyle9;
+            this.PriceTag.HeaderText = "PriceTag";
+            this.PriceTag.Name = "PriceTag";
+            this.PriceTag.ReadOnly = true;
+            this.PriceTag.Width = 120;
             // 
             // BuyBookType
             // 
@@ -418,11 +409,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Amount2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Weight2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Weight;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ShapeName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColorTypeName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColorName;
         private System.Windows.Forms.DataGridViewTextBoxColumn EShop;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TotalBaht;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PriceTag;
         private System.Windows.Forms.DataGridViewTextBoxColumn BuyBookType;
     }
 }

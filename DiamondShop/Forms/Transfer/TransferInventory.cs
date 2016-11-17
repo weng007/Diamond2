@@ -252,7 +252,7 @@ namespace DiamondShop
 
                 dsTransferInventory tmp = new dsTransferInventory();
 
-                ds1 = ser1.GetTransferBuyBookDetail(frm.idSelected);
+                ds1 = ser1.GetTransferInventoryDetail(frm.idSelected);
                 tmp.Clear();
                 tmp.Merge(ds1);
 
@@ -263,14 +263,15 @@ namespace DiamondShop
                     dsTransferInventory.TransferInventoryRow row = tds1.TransferInventory.NewTransferInventoryRow();
                     row.RefID = id;
                     row.RefID1 = tmp.TransferInventory[i].RefID1;
-                    row.Code = tmp.TransferInventory[i].Code;          
-                    row.Weight = tmp.TransferInventory[i].Weight;
+                    row.Code = tmp.TransferInventory[i].Code;                        
                     row.JewelryTypeName = tmp.TransferInventory[i].JewelryTypeName;
-                    row.ShapeName = tmp.TransferInventory[i].ShapeName;
-                    row.ColorTypeName = tmp.TransferInventory[i].ColorTypeName;
-                    row.ColorName = tmp.TransferInventory[i].ColorName;
-                    //row.TotalBaht = tmp.TransferInventory[i].TotalBaht;
-                    //row.BuyBookType = tmp.TransferInventory[i].BuyBookType;
+                    row.Amount1 = tmp.TransferInventory[i].Amount1;
+                    row.Weight1 = tmp.TransferInventory[i].Weight1;
+                    row.Amount2 = tmp.TransferInventory[i].Amount2;
+                    row.Weight2 = tmp.TransferInventory[i].Weight2;
+                    row.Weight = tmp.TransferInventory[i].Weight;
+                    row.PriceTag = tmp.TransferInventory[i].PriceTag;
+                    row.BuyBookType = tmp.TransferInventory[i].BuyBookType;
                     row.CreateBy = ApplicationInfo.UserID;
                     row.EditBy = ApplicationInfo.UserID;
                     tds1.TransferInventory.Rows.Add(row);
