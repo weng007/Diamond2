@@ -32,9 +32,9 @@ namespace DiamondShop
 
         protected override void Initial()
         {
-            cmbJewelryType.DataSource = ds.Tables[0];
+            cmbJewelryType.DataSource = (GM.GetMasterTableDetail("C015")).Tables[0];
             cmbJewelryType.ValueMember = "ID";
-            cmbJewelryType.DisplayMember = "DisplayName";
+            cmbJewelryType.DisplayMember = "Detail";
             cmbJewelryType.Refresh();
 
             gridTransferInventory.AutoGenerateColumns = false;    

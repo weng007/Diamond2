@@ -55,8 +55,8 @@
             this.TransferNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SendDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ReceiveDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EShopName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TransferStatusName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SShopName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -252,8 +252,8 @@
             this.TransferNo,
             this.SendDate,
             this.ReceiveDate,
-            this.TransferStatusName,
-            this.SShopName});
+            this.EShopName,
+            this.TransferStatusName});
             this.gridTransfer.Location = new System.Drawing.Point(15, 2);
             this.gridTransfer.Name = "gridTransfer";
             this.gridTransfer.ReadOnly = true;
@@ -322,6 +322,14 @@
             this.ReceiveDate.ReadOnly = true;
             this.ReceiveDate.Width = 110;
             // 
+            // EShopName
+            // 
+            this.EShopName.DataPropertyName = "EShopName";
+            this.EShopName.HeaderText = "Dest. Shop";
+            this.EShopName.Name = "EShopName";
+            this.EShopName.ReadOnly = true;
+            this.EShopName.Width = 140;
+            // 
             // TransferStatusName
             // 
             this.TransferStatusName.DataPropertyName = "TransferStatusName";
@@ -329,14 +337,6 @@
             this.TransferStatusName.Name = "TransferStatusName";
             this.TransferStatusName.ReadOnly = true;
             this.TransferStatusName.Width = 130;
-            // 
-            // SShopName
-            // 
-            this.SShopName.DataPropertyName = "SShopName";
-            this.SShopName.HeaderText = "Shop";
-            this.SShopName.Name = "SShopName";
-            this.SShopName.ReadOnly = true;
-            this.SShopName.Width = 130;
             // 
             // TransferBuyBookList
             // 
@@ -380,7 +380,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TransferNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn SendDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn ReceiveDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EShopName;
         private System.Windows.Forms.DataGridViewTextBoxColumn TransferStatusName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SShopName;
     }
 }
