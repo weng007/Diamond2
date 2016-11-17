@@ -103,14 +103,13 @@ namespace DiamondShop
                 if (!isAuthorize)
                 {
                     EnableSave = false;
-                    EnableEdit = (ApplicationInfo.ShopName == txtSShop.Text)?true:false;
+                    EnableEdit = true;
                     EnableDelete = false;
                 }
 
                 //Receiver 
                 if (Convert.ToInt16(cmbReceiver.SelectedValue.ToString()) == ApplicationInfo.UserID)
                 {
-                    SetControlEnable(false);
                     btnReceive.Visible = true;
                     btnPrint.Visible = false;
                 }
@@ -141,7 +140,8 @@ namespace DiamondShop
             }
 
             binder.BindValueToDataRow(row);
-            row.IsBuyBook = "1";           
+            row.IsBuyBook = "1";
+            row.SShop = ApplicationInfo.Shop;
             
             try
             {
@@ -149,7 +149,6 @@ namespace DiamondShop
                 {
                     SetCreateBy(row);
                     row.Sender = row.CreateBy;
-                    row.SShop = ApplicationInfo.Shop;
                     row.TransferNo = GM.GetRunningNumber("TRF");
                     row.ReceiveDate = DateTime.MinValue.AddYears(1900);
                     row.TransferStatus = 222;

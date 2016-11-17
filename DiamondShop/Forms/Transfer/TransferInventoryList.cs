@@ -13,37 +13,37 @@ using DiamondDS;
 namespace DiamondShop
 {
     public partial class TransferInventoryList : FormList
-    {    
+    {
+        
         public TransferInventoryList()
         {
             InitializeComponent();
             Initial();
-
-            dtSSendDate.Value = dtSSendDate.Value.AddDays(-90);
-
             DoLoadData();
+            //dtSSendDate.Value = dtSSendDate.Value.AddDays(-90);
+            //dtSReceiveDate.Value = dtSReceiveDate.Value.AddDays(-90);
         }
 
         protected override void Initial()
         {
             ds = GM.GetBuyer();
-            DataRow row = ds.Tables[0].NewRow();
-            row["ID"] = 0;
-            row["DisplayName"] = "All";
-            ds.Tables[0].Rows.Add(row);
 
             cmbSender.DataSource = ds.Tables[0];
             cmbSender.ValueMember = "ID";
             cmbSender.DisplayMember = "DisplayName";
-            cmbSender.SelectedIndex = ds.Tables[0].Rows.Count - 1;
             cmbSender.Refresh();
+
+            cmbReceiver.DataSource = ds.Tables[0];
+            cmbReceiver.ValueMember = "ID";
+            cmbReceiver.DisplayMember = "DisplayName";
+            cmbReceiver.Refresh();
 
             cmbShop.DataSource = (GM.GetMasterTableDetail("C007", true)).Tables[0];
             cmbShop.ValueMember = "ID";
             cmbShop.DisplayMember = "Detail";
             cmbShop.Refresh();
 
-            cmbTransferStatus.DataSource = (GM.GetMasterTableDetail("C036", true)).Tables[0];
+            cmbTransferStatus.DataSource = (GM.GetMasterTableDetail("C035", true)).Tables[0];
             cmbTransferStatus.ValueMember = "ID";
             cmbTransferStatus.DisplayMember = "Detail";
             cmbTransferStatus.Refresh();
@@ -53,7 +53,7 @@ namespace DiamondShop
             cmbEShop.DisplayMember = "Detail";
             cmbEShop.Refresh();
 
-            gridTransfer.AutoGenerateColumns = false;    
+            gridTransferInventory.AutoGenerateColumns = false;    
         }
 
         protected override void DoLoadData()
@@ -62,13 +62,13 @@ namespace DiamondShop
 
             if (ds.Tables[0].Rows.Count > 0)
             {
-                gridTransfer.DataSource = ds.Tables[0];
-                gridTransfer.Refresh();
+                gridTransferInventory.DataSource = ds.Tables[0];
+                gridTransferInventory.Refresh();
             }
             else
             {
-                gridTransfer.DataSource = null;
-                gridTransfer.Refresh();
+                gridTransferInventory.DataSource = null;
+                gridTransferInventory.Refresh();
             }
 
             btnSearch_Click(null, null);
@@ -84,14 +84,14 @@ namespace DiamondShop
         {
             ser2 = GM.GetService2();
 
-            ds = ser2.DoSearchTransfer(Convert.ToInt16(cmbSender.SelectedValue.ToString()), Convert.ToInt16(cmbTransferStatus.SelectedValue.ToString()), Convert.ToInt16(cmbShop.SelectedValue.ToString()), Convert.ToInt16(cmbEShop.SelectedValue.ToString()),dtSSendDate.Value, dtESendDate.Value,"0");
+            ds = ser2.DoSearchTransfer(Convert.ToInt16(cmbSender.SelectedValue.ToString()), Convert.ToInt16(cmbTransferStatus.SelectedValue.ToString()), Convert.ToInt16(cmbShop.SelectedValue.ToString()), Convert.ToInt16(cmbEShop.SelectedValue.ToString()),dtSSendDate.Value, dtESendDate.Value,"1");
 
             if (ds.Tables[0].Rows.Count > 0)
             {
-                gridTransfer.DataSource = ds.Tables[0];
-                gridTransfer.Refresh();
+                gridTransferInventory.DataSource = ds.Tables[0];
+                gridTransferInventory.Refresh();
             }
-            else { gridTransfer.DataSource = null; gridTransfer.Refresh(); }
+            else { gridTransferInventory.DataSource = null; gridTransferInventory.Refresh(); }
         }
         private void btnSearch_Click(object sender, EventArgs e)
         {
@@ -103,19 +103,16 @@ namespace DiamondShop
             return chkFlag;
         }
 
-        private void gridTransferBuyBook_MouseDoubleClick(object sender, MouseEventArgs e)
+        private void gridTransferInventory_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            if (gridTransfer.RowCount > 0 && gridTransfer.SelectedRows.Count > 0)
+            if (gridTransferInventory.RowCount > 0 && gridTransferInventory.SelectedRows.Count > 0)
             {
-                id = (int)gridTransfer.SelectedRows[0].Cells["ID"].Value;
+                id = (int)gridTransferInventory.SelectedRows[0].Cells["ID"].Value;
                 TransferInventory frm = new TransferInventory(id);
                 frm.ShowDialog();
+            }
 
-                if (frm.isEdit)
-                {
-                    DoLoadData();
-                }
-            }           
+            DoLoadData();
         }
     }
 }
