@@ -108,7 +108,7 @@ namespace DiamondShop
                 }
 
                 //Receiver 
-                if (cmbEShop.SelectedValue.ToString() == ApplicationInfo.ShopName)
+                if (cmbEShop.SelectedValue.ToString() == ApplicationInfo.Shop.ToString())
                 {
                     btnReceive.Visible = true;
                     btnPrint.Visible = false;
