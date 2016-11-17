@@ -103,12 +103,12 @@ namespace DiamondShop
                 if (!isAuthorize)
                 {
                     EnableSave = false;
-                    EnableEdit = true;
+                    EnableEdit = (ApplicationInfo.ShopName == txtSShop.Text) ? true : false;
                     EnableDelete = false;
                 }
 
                 //Receiver 
-                if (Convert.ToInt16(cmbReceiver.SelectedValue.ToString()) == ApplicationInfo.UserID)
+                if (cmbEShop.SelectedValue.ToString() == ApplicationInfo.ShopName)
                 {
                     btnReceive.Visible = true;
                     btnPrint.Visible = false;
