@@ -32,6 +32,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dtSendDate = new System.Windows.Forms.DateTimePicker();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
@@ -468,6 +472,9 @@
             // Amount1
             // 
             this.Amount1.DataPropertyName = "Amount1";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle3.Format = "N2";
+            this.Amount1.DefaultCellStyle = dataGridViewCellStyle3;
             this.Amount1.HeaderText = "Amt. DC.";
             this.Amount1.Name = "Amount1";
             this.Amount1.ReadOnly = true;
@@ -476,6 +483,9 @@
             // Weight1
             // 
             this.Weight1.DataPropertyName = "Weight1";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle4.Format = "N2";
+            this.Weight1.DefaultCellStyle = dataGridViewCellStyle4;
             this.Weight1.HeaderText = "นน. DC.";
             this.Weight1.Name = "Weight1";
             this.Weight1.ReadOnly = true;
@@ -484,6 +494,9 @@
             // Amount2
             // 
             this.Amount2.DataPropertyName = "Amount2";
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle5.Format = "N0";
+            this.Amount2.DefaultCellStyle = dataGridViewCellStyle5;
             this.Amount2.HeaderText = "Amt. GC.";
             this.Amount2.Name = "Amount2";
             this.Amount2.ReadOnly = true;
@@ -492,6 +505,9 @@
             // Weight2
             // 
             this.Weight2.DataPropertyName = "Weight2";
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle6.Format = "N2";
+            this.Weight2.DefaultCellStyle = dataGridViewCellStyle6;
             this.Weight2.HeaderText = "นน. GC.";
             this.Weight2.Name = "Weight2";
             this.Weight2.ReadOnly = true;
@@ -500,9 +516,9 @@
             // PriceTag
             // 
             this.PriceTag.DataPropertyName = "PriceTag";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle3.Format = "N0";
-            this.PriceTag.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle7.Format = "N0";
+            this.PriceTag.DefaultCellStyle = dataGridViewCellStyle7;
             this.PriceTag.HeaderText = "PriceTag";
             this.PriceTag.Name = "PriceTag";
             this.PriceTag.ReadOnly = true;
