@@ -14,7 +14,7 @@
   <xs:element name="dsWarning" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsWarning" msprop:Generator_UserDSName="dsWarning">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Warning" msprop:Generator_TableClassName="WarningDataTable" msprop:Generator_TableVarName="tableWarning" msprop:Generator_RowChangedName="WarningRowChanged" msprop:Generator_TablePropName="Warning" msprop:Generator_RowDeletingName="WarningRowDeleting" msprop:Generator_RowChangingName="WarningRowChanging" msprop:Generator_RowEvHandlerName="WarningRowChangeEventHandler" msprop:Generator_RowDeletedName="WarningRowDeleted" msprop:Generator_RowClassName="WarningRow" msprop:Generator_UserTableName="Warning" msprop:Generator_RowEvArgName="WarningRowChangeEvent">
+        <xs:element name="Warning" msprop:Generator_TableClassName="WarningDataTable" msprop:Generator_TableVarName="tableWarning" msprop:Generator_TablePropName="Warning" msprop:Generator_RowDeletingName="WarningRowDeleting" msprop:Generator_RowChangingName="WarningRowChanging" msprop:Generator_RowEvHandlerName="WarningRowChangeEventHandler" msprop:Generator_RowDeletedName="WarningRowDeleted" msprop:Generator_UserTableName="Warning" msprop:Generator_RowChangedName="WarningRowChanged" msprop:Generator_RowEvArgName="WarningRowChangeEvent" msprop:Generator_RowClassName="WarningRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="RowNum" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnRowNum" msprop:Generator_ColumnPropNameInRow="RowNum" msprop:Generator_ColumnPropNameInTable="RowNumColumn" msprop:Generator_UserColumnName="RowNum" type="xs:long" minOccurs="0" />
@@ -31,7 +31,7 @@
               <xs:element name="Detail" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDetail" msprop:Generator_ColumnPropNameInRow="Detail" msprop:Generator_ColumnPropNameInTable="DetailColumn" msprop:Generator_UserColumnName="Detail" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
-                    <xs:maxLength value="91" />
+                    <xs:maxLength value="1000" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>

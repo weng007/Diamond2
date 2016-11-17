@@ -10,32 +10,34 @@ using System.Windows.Forms;
 using DiamondShop.FormMaster;
 using DiamondDS.DS;
 using DiamondShop.DiamondService;
+using DiamondShop.DiamondService1;
 using DiamondShop.DiamondService2;
 
 namespace DiamondShop
 {
     public partial class TransferInventory : FormInfo
     {
+        Service2 ser1;
         Service3 ser2;
-
         dsTransfer tds = new dsTransfer();
         dsTransferInventory tds1 = new dsTransferInventory();
-        dsTransferInventory tds2 = new dsTransferInventory();
-        dsCatalog tdsCatalog = new dsCatalog();
-
-        DataSet ds2 = new DataSet();
+     
         DataSet tmp = new DataSet();
+        DataSet ds1 = new DataSet();
+        DataSet ds2 = new DataSet();
 
         bool isAuthorize = false;
-       
-        int rowIndex = 0;
+        int rowIndex;
         int DelID;
-        
+
         public TransferInventory()
         {
             InitializeComponent();
             Initial();
+            isAuthorize = true;
+
             BinderData();
+
             txtTransferStatus.Text = "Send";
             txtSender.Text = ApplicationInfo.DisplayName;
             txtSShop.Text = ApplicationInfo.ShopName;
@@ -46,14 +48,10 @@ namespace DiamondShop
             Initial();
             BinderData();
 
-            btnAdd.Enabled = true;
-            btnDel.Enabled = true;
-
             this.id = id;
             LoadData();
             SetControlEnable(false);
         }
-
         protected override void Initial()
         {
             ds = GM.GetBuyer();
@@ -68,12 +66,12 @@ namespace DiamondShop
             cmbEShop.DisplayMember = "Detail";
             cmbEShop.Refresh();
 
-
             txtSender.Select();
-            SetFieldService.SetRequireField(txtSender);
-            gridTransferInventory.AutoGenerateColumns = false;
-        }
+            
+            //SetFieldService.SetRequireField(txtSender);
 
+            gridTransfer.AutoGenerateColumns = false;
+        }
         private void BinderData()
         {
             binder.BindControl(dtSendDate, "SendDate");
@@ -93,7 +91,7 @@ namespace DiamondShop
             tds.Clear();
             tds.Merge(ds);
 
-            ds2 = ser.DoSelectData("TransferInventory", id, 1);
+            ds2 = ser.DoSelectData("TransferBuyBook", id, 0);
             tds1.Clear();
             tds1.Merge(ds2);
 
@@ -102,24 +100,35 @@ namespace DiamondShop
                 binder.BindValueToControl(tds.Transfer[0]);
                 txtReceivedDate.Text = string.Format("{0:d/M/yyyy}", tds.Transfer[0]["ReceiveDate"]);
 
-                EnableSave = false;
-                EnableEdit = true;
-                EnableDelete = false;
+                if (!isAuthorize)
+                {
+                    EnableSave = false;
+                    EnableEdit = (ApplicationInfo.ShopName == txtSShop.Text)?true:false;
+                    EnableDelete = false;
+                }
+
+                //Receiver 
+                if (Convert.ToInt16(cmbReceiver.SelectedValue.ToString()) == ApplicationInfo.UserID)
+                {
+                    SetControlEnable(false);
+                    btnReceive.Visible = true;
+                    btnPrint.Visible = false;
+                }
             }
 
-            if (ds2.Tables[0].Rows.Count > 0)
+            if (tds1.Tables[0].Rows.Count > 0)
             {
-                gridTransferInventory.DataSource = ds2.Tables[0];
-                gridTransferInventory.Refresh();
+                gridTransfer.DataSource = tds1.Tables[0];
+                gridTransfer.Refresh();
             }
 
             SetFormatNumber();
             base.LoadData();
         }
-
         protected override bool SaveData()
         {
             dsTransfer.TransferRow row = null;
+            dsTransferInventory.TransferInventoryRow row1 = null;
 
             if (tds.Transfer.Rows.Count > 0)
             {
@@ -130,7 +139,9 @@ namespace DiamondShop
                 row = tds.Transfer.NewTransferRow();
                 tds.Transfer.Rows.Add(row);
             }
+
             binder.BindValueToDataRow(row);
+            row.IsBuyBook = "1";           
             
             try
             {
@@ -139,74 +150,58 @@ namespace DiamondShop
                     SetCreateBy(row);
                     row.Sender = row.CreateBy;
                     row.SShop = ApplicationInfo.Shop;
-                    row.IsBuyBook = "0";
-                    row.ReceiveDate = DateTime.MinValue.AddYears(1900);
                     row.TransferNo = GM.GetRunningNumber("TRF");
+                    row.ReceiveDate = DateTime.MinValue.AddYears(1900);
+                    row.TransferStatus = 222;
                     chkFlag = ser.DoInsertData("Transfer", tds, 0);
 
+                    if (chkFlag)
+                    {
+                        ser1 = GM.GetService1();
+                        id = ser1.DoSearchTransferByCode(row.TransferNo);
+
+                        SetControlEnable(true);
+                        isAuthorize = true;
+                    }
                 }
                 else
                 {
                     SetEditBy(row);
                     chkFlag = ser.DoUpdateData("Transfer", tds);
 
-                    BindingDSTransferInventory();
-
-                    if (tds2.TransferInventory.Rows.Count > 0)
+                    if (tds1.TransferInventory.Rows.Count > 0)
                     {
-                        chkFlag = ser.DoInsertData("TransferInventory", tds2, 0);
+                        chkFlag = ser.DoInsertData("TransferBuyBook", tds1, 0); //Insert, Update Detail                  
                     }
                 }
-
+              
                 tds.AcceptChanges();
+                tds1.AcceptChanges();
             }
             catch (Exception ex)
             {
                 throw ex;
             }
 
-            return chkFlag;
-        }
-
-        private void BindingDSTransferInventory()
-        {
-            tds2.Clear();
-            for (int i = 0; i < ds2.Tables[0].Rows.Count; i++)
-            {
-                if (ds2.Tables[0].Rows[i]["RowNum"].ToString() == "")
-                {
-                    DataRow dr = tds2.Tables[0].NewRow();
-
-                    dr["RefID"] = id;
-                    dr["RowNum"] = ds2.Tables[0].Rows[i]["RowNum"];
-                    dr["RefID1"] = ds2.Tables[0].Rows[i]["RefID1"];
-                    dr["JewelryType"] = ds2.Tables[0].Rows[i]["JewelryType"];
-                
-                    SetCreateBy(dr);
-                    SetEditBy(dr);
-
-                    tds2.Tables[0].Rows.Add(dr);
-                }
-            }
-
-            tds2.AcceptChanges();
-        }
-        protected override bool DeleteData()
-        {
-            try
-            {
-                chkFlag = ser.DoDeleteData("Transfer", id);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-
+            isClosed = false;
             LoadData();
 
             return chkFlag;
         }
+ 
+        protected override bool DeleteData()
+        {
+            try
+            {
+                chkFlag = ser.DoDeleteData("TransferBuyBook", id);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
 
+            return chkFlag;
+        }
         protected override bool ValidateData()
         {
             message = "";
@@ -219,7 +214,6 @@ namespace DiamondShop
             if (message == "") { return true; }
             else { return false; }
         }
-
         protected override void EditData()
         {
             if (isAuthorize)
@@ -245,46 +239,59 @@ namespace DiamondShop
                 }
             }
         }
-
         private void btnAdd_Click(object sender, EventArgs e)
         {
             ser2 = GM.GetService2();
 
-            SearchTransferInventory frm = new SearchTransferInventory();
+            SearchTransferBuyBook frm = new SearchTransferBuyBook();
             frm.ShowDialog();
 
-            if (frm.refID1 != 0)
+            if (frm.codeSelected != "")
             {
-                tmp = ser2.DoSearchTransferInventory(ApplicationInfo.Shop, "", 0);
-                tds1.Clear();
-                tds1.Merge(tmp);
+                ser1 = GM.GetService1();
 
-                DataRow dr = ds2.Tables[0].NewRow();
-                dr["Code"] = tds1.Tables[0].Rows[0]["Code"];
-                dr["Amount1"] = tds1.Tables[0].Rows[0]["Amount1"];
-                dr["Weight1"] = tds1.Tables[0].Rows[0]["Weight1"];
-                dr["Amount3"] = tds1.Tables[0].Rows[0]["Amount3"];
-                dr["Weight3"] = tds1.Tables[0].Rows[0]["Weight3"];
-                dr["MinPrice"] = tds1.Tables[0].Rows[0]["MinPrice"];
-                dr["JewelryTypeName"] = tds1.Tables[0].Rows[0]["JewelryTypeName"];
-                dr["JewelryType"] = tds1.Tables[0].Rows[0]["JewelryType"];
-                dr["RefID1"] = tds1.Tables[0].Rows[0]["ID"];
-                dr["EShop"] = tds1.Tables[0].Rows[0]["Shop"];
-                ds2.Tables[0].Rows.Add(dr);
-                gridTransferInventory.DataSource = ds2.Tables[0];
-                gridTransferInventory.RefreshEdit();
+                dsTransferInventory tmp = new dsTransferInventory();
+
+                ds1 = ser1.GetTransferBuyBookDetail(frm.codeSelected);
+                tmp.Clear();
+                tmp.Merge(ds1);
+
+                tmp = RemoveRowDuplicate(tmp);
+
+                for (int i = 0; i < tmp.TransferInventory.Rows.Count; i++)
+                {
+                    dsTransferInventory.TransferInventoryRow row = tds1.TransferInventory.NewTransferInventoryRow();
+                    row.RefID = id;
+                    row.RefID1 = tmp.TransferInventory[i].RefID1;
+                    row.Code = tmp.TransferInventory[i].Code;          
+                    row.Weight = tmp.TransferInventory[i].Weight;
+                    row.JewelryTypeName = tmp.TransferInventory[i].JewelryTypeName;
+                    row.ShapeName = tmp.TransferInventory[i].ShapeName;
+                    row.ColorTypeName = tmp.TransferInventory[i].ColorTypeName;
+                    row.ColorName = tmp.TransferInventory[i].ColorName;
+                    //row.TotalBaht = tmp.TransferInventory[i].TotalBaht;
+                    //row.BuyBookType = tmp.TransferInventory[i].BuyBookType;
+                    row.CreateBy = ApplicationInfo.UserID;
+                    row.EditBy = ApplicationInfo.UserID;
+                    tds1.TransferInventory.Rows.Add(row);
+                }
+
+                tds1.AcceptChanges();
+                gridTransfer.DataSource = tds1.TransferInventory;
+                gridTransfer.Refresh();
+
+                isEdit = true;
             }
         }
-        
 
         private dsTransferInventory RemoveRowDuplicate(dsTransferInventory temp)
         {
             for (int i = 0; i < temp.TransferInventory.Rows.Count; i++)
             {
-                for (int j = 0; j < gridTransferInventory.Rows.Count; j++)
+                for (int j = 0; j < gridTransfer.Rows.Count; j++)
                 {
-                    if (temp.TransferInventory.Rows[i]["RefID1"].ToString() == gridTransferInventory.Rows[j].Cells["RefID1"].Value.ToString() &&
-                       temp.TransferInventory.Rows[i]["BuyBookType"].ToString() == gridTransferInventory.Rows[j].Cells["BuyBookType"].Value.ToString())
+                    if (temp.TransferInventory.Rows[i]["RefID1"].ToString() == gridTransfer.Rows[j].Cells["RefID1"].Value.ToString() &&
+                        temp.TransferInventory.Rows[i]["BuyBookType"].ToString() == gridTransfer.Rows[j].Cells["BuyBookType"].Value.ToString())
                     {
                         temp.TransferInventory.Rows[i].Delete();
                         i--;
@@ -305,49 +312,66 @@ namespace DiamondShop
                 txtReceivedDate.Text = "";
             }
         }
-
         private void btnDel_Click(object sender, EventArgs e)
         {
             int delID = 0;
 
             if (rowIndex > -1)
             {
-                delID = (int)gridTransferInventory.Rows[rowIndex].Cells["ID"].Value;
+                delID = (int)gridTransfer.Rows[rowIndex].Cells["ID"].Value;
                 tds1.TransferInventory.Rows.RemoveAt(rowIndex);
+
+                tds1.AcceptChanges();
+                gridTransfer.Refresh();
+
+                if (delID != 0)
+                {
+                    ser.DoDeleteData("TransferBuyBook", delID);
+                }
             }
 
-            tds1.AcceptChanges();
-            gridTransferInventory.Refresh();
-
-            if (delID != 0)
-            {
-                ser.DoDeleteData("TransferDetail", delID);
-            }
-        }
-
-        private void gridTransferInventory_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0)
-            {
-                rowIndex = e.RowIndex;
-                if (gridTransferInventory.Rows[e.RowIndex].Cells["ID"].Value != null)
-                { DelID = Convert.ToInt32(gridTransferInventory.Rows[e.RowIndex].Cells["ID"].Value.ToString()); }
-            }
+            isEdit = true;
         }
 
         private void SetControlEnable(bool status)
         {
-            dtSendDate.Enabled = status;
             txtSender.Enabled = status;
+            cmbReceiver.Enabled = status;
+            cmbEShop.Enabled = status;
             btnAdd.Enabled = status;
             btnDel.Enabled = status;
-            gridTransferInventory.Enabled = status;
+            txtNote.Enabled = status;
+            btnPrint.Enabled = status;
+        }
+
+        private void gridTransfer_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                rowIndex = e.RowIndex;
+                if (gridTransfer.Rows[e.RowIndex].Cells["ID"].Value != null)
+                { DelID = Convert.ToInt32(gridTransfer.Rows[e.RowIndex].Cells["ID"].Value.ToString()); }
+            }
+        }
+
+        private void btnReceive_Click(object sender, EventArgs e)
+        {
+            ser1 = GM.GetService1();
+            ser1.UpdateTransferReceive(id, Convert.ToInt32(cmbEShop.SelectedValue.ToString()));
+            LoadData();
+
+            isEdit = true;
         }
 
         private void btnPrint_Click(object sender, EventArgs e)
         {
             Report.ReportDelivery report = new Report.ReportDelivery(id);
             report.ShowDialog();
+        }
+
+        private void txtNote_TextChanged(object sender, EventArgs e)
+        {
+            isEdit = true;
         }
     }
 }

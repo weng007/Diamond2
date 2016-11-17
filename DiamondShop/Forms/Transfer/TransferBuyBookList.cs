@@ -44,7 +44,7 @@ namespace DiamondShop
             cmbShop.DisplayMember = "Detail";
             cmbShop.Refresh();
 
-            cmbTransferStatus.DataSource = (GM.GetMasterTableDetail("C035", true)).Tables[0];
+            cmbTransferStatus.DataSource = (GM.GetMasterTableDetail("C036", true)).Tables[0];
             cmbTransferStatus.ValueMember = "ID";
             cmbTransferStatus.DisplayMember = "Detail";
             cmbTransferStatus.Refresh();
@@ -111,9 +111,12 @@ namespace DiamondShop
                 id = (int)gridTransfer.SelectedRows[0].Cells["ID"].Value;
                 TransferBuyBook frm = new TransferBuyBook(id);
                 frm.ShowDialog();
-            }
 
-            DoLoadData();
+                if (frm.isEdit)
+                {
+                    DoLoadData();
+                }
+            }           
         }
     }
 }

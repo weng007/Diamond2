@@ -6,10 +6,10 @@
       <s:import namespace="http://tempuri.org/dsOrder.xsd" />
       <s:import namespace="http://tempuri.org/dsExpenseGroup.xsd" />
       <s:import namespace="http://tempuri.org/dsBuyBookSettingDetail.xsd" />
-      <s:import schemaLocation="http://localhost:5555/DiamondService/Service2.asmx?schema=dsOrder" namespace="http://tempuri.org/dsOrder.xsd" />
-      <s:import schemaLocation="http://localhost:5555/DiamondService/Service2.asmx?schema=dsUser" namespace="http://tempuri.org/dsUser.xsd" />
-      <s:import schemaLocation="http://localhost:5555/DiamondService/Service2.asmx?schema=dsBuyBookSettingDetail" namespace="http://tempuri.org/dsBuyBookSettingDetail.xsd" />
-      <s:import schemaLocation="http://localhost:5555/DiamondService/Service2.asmx?schema=dsExpenseGroup" namespace="http://tempuri.org/dsExpenseGroup.xsd" />
+      <s:import schemaLocation="http://localhost:8888/DiamondService/Service2.asmx?schema=dsExpenseGroup" namespace="http://tempuri.org/dsExpenseGroup.xsd" />
+      <s:import schemaLocation="http://localhost:8888/DiamondService/Service2.asmx?schema=dsUser" namespace="http://tempuri.org/dsUser.xsd" />
+      <s:import schemaLocation="http://localhost:8888/DiamondService/Service2.asmx?schema=dsOrder" namespace="http://tempuri.org/dsOrder.xsd" />
+      <s:import schemaLocation="http://localhost:8888/DiamondService/Service2.asmx?schema=dsBuyBookSettingDetail" namespace="http://tempuri.org/dsBuyBookSettingDetail.xsd" />
       <s:element name="DoAuthenticate">
         <s:complexType>
           <s:sequence>
@@ -554,6 +554,20 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="DoSearchTransferByCode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="code" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DoSearchTransferByCodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DoSearchTransferByCodeResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
       <s:element name="DoSearchSellByCode">
         <s:complexType>
           <s:sequence>
@@ -642,6 +656,27 @@
         <s:complexType>
           <s:sequence>
             <s:element minOccurs="0" maxOccurs="1" name="GetSellBookDetailResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTransferBuyBookDetail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="codeSelected" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTransferBuyBookDetailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTransferBuyBookDetailResult">
               <s:complexType>
                 <s:sequence>
                   <s:element ref="s:schema" />
@@ -843,6 +878,12 @@
   <wsdl:message name="DoSearchOrderByCodeSoapOut">
     <wsdl:part name="parameters" element="tns:DoSearchOrderByCodeResponse" />
   </wsdl:message>
+  <wsdl:message name="DoSearchTransferByCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:DoSearchTransferByCode" />
+  </wsdl:message>
+  <wsdl:message name="DoSearchTransferByCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:DoSearchTransferByCodeResponse" />
+  </wsdl:message>
   <wsdl:message name="DoSearchSellByCodeSoapIn">
     <wsdl:part name="parameters" element="tns:DoSearchSellByCode" />
   </wsdl:message>
@@ -878,6 +919,12 @@
   </wsdl:message>
   <wsdl:message name="GetSellBookDetailSoapOut">
     <wsdl:part name="parameters" element="tns:GetSellBookDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTransferBuyBookDetailSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTransferBuyBookDetail" />
+  </wsdl:message>
+  <wsdl:message name="GetTransferBuyBookDetailSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTransferBuyBookDetailResponse" />
   </wsdl:message>
   <wsdl:message name="GetCertificateSoapIn">
     <wsdl:part name="parameters" element="tns:GetCertificate" />
@@ -1002,6 +1049,10 @@
       <wsdl:input message="tns:DoSearchOrderByCodeSoapIn" />
       <wsdl:output message="tns:DoSearchOrderByCodeSoapOut" />
     </wsdl:operation>
+    <wsdl:operation name="DoSearchTransferByCode">
+      <wsdl:input message="tns:DoSearchTransferByCodeSoapIn" />
+      <wsdl:output message="tns:DoSearchTransferByCodeSoapOut" />
+    </wsdl:operation>
     <wsdl:operation name="DoSearchSellByCode">
       <wsdl:input message="tns:DoSearchSellByCodeSoapIn" />
       <wsdl:output message="tns:DoSearchSellByCodeSoapOut" />
@@ -1025,6 +1076,10 @@
     <wsdl:operation name="GetSellBookDetail">
       <wsdl:input message="tns:GetSellBookDetailSoapIn" />
       <wsdl:output message="tns:GetSellBookDetailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTransferBuyBookDetail">
+      <wsdl:input message="tns:GetTransferBuyBookDetailSoapIn" />
+      <wsdl:output message="tns:GetTransferBuyBookDetailSoapOut" />
     </wsdl:operation>
     <wsdl:operation name="GetCertificate">
       <wsdl:input message="tns:GetCertificateSoapIn" />
@@ -1294,6 +1349,15 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="DoSearchTransferByCode">
+      <soap:operation soapAction="http://tempuri.org/DoSearchTransferByCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="DoSearchSellByCode">
       <soap:operation soapAction="http://tempuri.org/DoSearchSellByCode" style="document" />
       <wsdl:input>
@@ -1341,6 +1405,15 @@
     </wsdl:operation>
     <wsdl:operation name="GetSellBookDetail">
       <soap:operation soapAction="http://tempuri.org/GetSellBookDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTransferBuyBookDetail">
+      <soap:operation soapAction="http://tempuri.org/GetTransferBuyBookDetail" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1621,6 +1694,15 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="DoSearchTransferByCode">
+      <soap12:operation soapAction="http://tempuri.org/DoSearchTransferByCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="DoSearchSellByCode">
       <soap12:operation soapAction="http://tempuri.org/DoSearchSellByCode" style="document" />
       <wsdl:input>
@@ -1675,6 +1757,15 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="GetTransferBuyBookDetail">
+      <soap12:operation soapAction="http://tempuri.org/GetTransferBuyBookDetail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="GetCertificate">
       <soap12:operation soapAction="http://tempuri.org/GetCertificate" style="document" />
       <wsdl:input>
@@ -1687,10 +1778,10 @@
   </wsdl:binding>
   <wsdl:service name="Service2">
     <wsdl:port name="Service2Soap" binding="tns:Service2Soap">
-      <soap:address location="http://localhost:5555/DiamondService/Service2.asmx" />
+      <soap:address location="http://localhost:8888/DiamondService/Service2.asmx" />
     </wsdl:port>
     <wsdl:port name="Service2Soap12" binding="tns:Service2Soap12">
-      <soap12:address location="http://localhost:5555/DiamondService/Service2.asmx" />
+      <soap12:address location="http://localhost:8888/DiamondService/Service2.asmx" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>

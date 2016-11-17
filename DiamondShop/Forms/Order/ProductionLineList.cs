@@ -57,7 +57,7 @@ namespace DiamondShop
             ProductionLineInfo frm = new ProductionLineInfo(idSelected, factoryStatus);
             frm.ShowDialog();
 
-            DoLoadData();
+            SearchProductionLine(factoryStatus);
         }
 
         private void CheckSelected()
@@ -120,7 +120,7 @@ namespace DiamondShop
             btnJobDone.BackColor = Color.Gray;
             factoryStatus = 218;
 
-            SearchProductionLine(218);
+            SearchProductionLine(factoryStatus);
         }
 
         private void btnProcessing_Click(object sender, EventArgs e)
@@ -131,7 +131,7 @@ namespace DiamondShop
             btnJobDone.BackColor = Color.Gray;
             factoryStatus = 219;
 
-            SearchProductionLine(219);
+            SearchProductionLine(factoryStatus);
         }
 
         private void btnMounting_Click(object sender, EventArgs e)
@@ -142,7 +142,7 @@ namespace DiamondShop
             btnJobDone.BackColor = Color.Gray;
             factoryStatus = 220;
 
-            SearchProductionLine(220);
+            SearchProductionLine(factoryStatus);
         }
 
         private void btnJobDone_Click(object sender, EventArgs e)
@@ -153,7 +153,7 @@ namespace DiamondShop
             btnJobDone.BackColor = Color.CornflowerBlue;
             factoryStatus = 221;
 
-            SearchProductionLine(221);
+            SearchProductionLine(factoryStatus);
         }
         private void SearchProductionLine(int factoryStatus)
         {

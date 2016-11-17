@@ -28,6 +28,8 @@ namespace DiamondShop
         {
             InitializeComponent();
             Initial();
+            isAuthorize = true;
+
             ds = ser.DoSelectData("ExchangeRate", id, 0);
             txtUSDRate.Text = ds.Tables[0].Rows[0]["USDRate"].ToString();
 

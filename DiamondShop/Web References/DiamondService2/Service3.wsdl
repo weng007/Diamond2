@@ -451,7 +451,7 @@
       <s:element name="DoSearchBuyBookSetting">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="User" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="s:string" />
             <s:element minOccurs="1" maxOccurs="1" name="sBuyDate" type="s:dateTime" />
             <s:element minOccurs="1" maxOccurs="1" name="eBuyDate" type="s:dateTime" />
           </s:sequence>
@@ -501,12 +501,12 @@
       <s:element name="DoSearchWarning">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="RefID" type="s:string" />
-            <s:element minOccurs="1" maxOccurs="1" name="StatusType" type="s:int" />
-            <s:element minOccurs="1" maxOccurs="1" name="SDate" type="s:dateTime" />
-            <s:element minOccurs="1" maxOccurs="1" name="EDate" type="s:dateTime" />
-            <s:element minOccurs="1" maxOccurs="1" name="LoginID" type="s:int" />
-            <s:element minOccurs="1" maxOccurs="1" name="IsInbox" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="refID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="statusType" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="sDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="eDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="loginID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="isInbox" type="s:int" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -527,15 +527,13 @@
       <s:element name="DoSearchTransfer">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="Sender" type="s:int" />
-            <s:element minOccurs="1" maxOccurs="1" name="TransferStatus" type="s:int" />
-            <s:element minOccurs="1" maxOccurs="1" name="SShop" type="s:int" />
-            <s:element minOccurs="1" maxOccurs="1" name="EShop" type="s:int" />
-            <s:element minOccurs="1" maxOccurs="1" name="SSendDate" type="s:dateTime" />
-            <s:element minOccurs="1" maxOccurs="1" name="ESendDate" type="s:dateTime" />
-            <s:element minOccurs="1" maxOccurs="1" name="SReceiveDate" type="s:dateTime" />
-            <s:element minOccurs="1" maxOccurs="1" name="EReceiveDate" type="s:dateTime" />
-            <s:element minOccurs="0" maxOccurs="1" name="Flag" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="sender" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="transferStatus" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="sShop" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="eShop" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="sSendDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="eSendDate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="isBuyBook" type="s:string" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -556,10 +554,10 @@
       <s:element name="DoSearchOrder">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="CustName" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="Code" type="s:string" />
-            <s:element minOccurs="1" maxOccurs="1" name="Seller" type="s:int" />
-            <s:element minOccurs="1" maxOccurs="1" name="JewelryType" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="custName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="code" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="seller" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="jewelryType" type="s:int" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -627,11 +625,11 @@
       <s:element name="DoSearchWarningTransfer">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="Sender" type="s:int" />
-            <s:element minOccurs="1" maxOccurs="1" name="Receiver" type="s:int" />
-            <s:element minOccurs="1" maxOccurs="1" name="MessageStatus" type="s:int" />
-            <s:element minOccurs="1" maxOccurs="1" name="FactoryStatus" type="s:int" />
-            <s:element minOccurs="1" maxOccurs="1" name="Shop" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="sender" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="receiver" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="messageStatus" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="factoryStatus" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="shop" type="s:int" />
             <s:element minOccurs="1" maxOccurs="1" name="loginID" type="s:int" />
           </s:sequence>
         </s:complexType>
@@ -653,12 +651,12 @@
       <s:element name="DoSearchProductionLine">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="OrderNo" type="s:string" />
-            <s:element minOccurs="1" maxOccurs="1" name="JewelryType" type="s:int" />
-            <s:element minOccurs="1" maxOccurs="1" name="Shop" type="s:int" />
-            <s:element minOccurs="1" maxOccurs="1" name="FactoryStatus" type="s:int" />
-            <s:element minOccurs="1" maxOccurs="1" name="SOrderDate" type="s:dateTime" />
-            <s:element minOccurs="1" maxOccurs="1" name="EOrderDate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="orderNo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="jewelryType" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="shop" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="factoryStatus" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="sOrderDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="eOrderDate" type="s:dateTime" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -700,7 +698,7 @@
       <s:element name="DoSearchExpenseGroup">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="ExpenseGroup" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="expenseGroup" type="s:int" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -721,12 +719,12 @@
       <s:element name="DoSearchExpense">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="ExpenseGroup" type="s:int" />
-            <s:element minOccurs="1" maxOccurs="1" name="Shop" type="s:int" />
-            <s:element minOccurs="1" maxOccurs="1" name="SMemoDate" type="s:dateTime" />
-            <s:element minOccurs="1" maxOccurs="1" name="EMemoDate" type="s:dateTime" />
-            <s:element minOccurs="1" maxOccurs="1" name="SExpenseDate" type="s:dateTime" />
-            <s:element minOccurs="1" maxOccurs="1" name="EExpenseDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="expenseGroup" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="shop" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="sMemoDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="eMemoDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="sExpenseDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="eExpenseDate" type="s:dateTime" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -747,11 +745,11 @@
       <s:element name="DoSearchReceiveDocument">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="ReceiveNo" type="s:string" />
-            <s:element minOccurs="1" maxOccurs="1" name="SReceiveDate" type="s:dateTime" />
-            <s:element minOccurs="1" maxOccurs="1" name="EReceiveDate" type="s:dateTime" />
-            <s:element minOccurs="1" maxOccurs="1" name="Receiver" type="s:int" />
-            <s:element minOccurs="0" maxOccurs="1" name="Seller" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="receiveNo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="sReceiveDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="eReceiveDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="receiver" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="seller" type="s:string" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -1698,10 +1696,10 @@
   </wsdl:binding>
   <wsdl:service name="Service3">
     <wsdl:port name="Service3Soap" binding="tns:Service3Soap">
-      <soap:address location="http://localhost:5555/DiamondService/Service3.asmx" />
+      <soap:address location="http://localhost:8888/DiamondService/Service3.asmx" />
     </wsdl:port>
     <wsdl:port name="Service3Soap12" binding="tns:Service3Soap12">
-      <soap12:address location="http://localhost:5555/DiamondService/Service3.asmx" />
+      <soap12:address location="http://localhost:8888/DiamondService/Service3.asmx" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>
