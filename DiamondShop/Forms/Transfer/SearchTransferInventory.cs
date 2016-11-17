@@ -39,7 +39,7 @@ namespace DiamondShop
         {
             ser2 = GM.GetService2();
             
-            ds = ser2.DoSearchTransferInventory(ApplicationInfo.Shop, "", Convert.ToInt16(cmbJewelryType.SelectedValue.ToString()));
+            ds = ser2.DoSearchTransferInventory(ApplicationInfo.Shop, txtCode.Text, Convert.ToInt16(cmbJewelryType.SelectedValue.ToString()));
 
             if (ds.Tables[0].Rows.Count > 0)
             {
@@ -53,7 +53,7 @@ namespace DiamondShop
         {
             ser2 = GM.GetService2();
 
-            ds = ser2.DoSearchTransferBuyBook(ApplicationInfo.Shop, txtCode.Text, txtCode2.Text, Convert.ToInt16(cmbJewelryType.SelectedValue.ToString()));
+            ds = ser2.DoSearchTransferInventory(ApplicationInfo.Shop, txtCode.Text, Convert.ToInt16(cmbJewelryType.SelectedValue.ToString()));
 
             if (ds.Tables[0].Rows.Count > 0)
             {
@@ -74,8 +74,7 @@ namespace DiamondShop
                 {
                     if (gridTransferInventory.Rows[i].Cells["Select"].Value.ToString() == "True")
                     {
-                        idSelected += gridTransferInventory.Rows[i].Cells["Code"].Value.ToString() + comma;
-                         
+                        idSelected += gridTransferInventory.Rows[i].Cells["Code"].Value.ToString() + comma;                     
                     }
                 }
             }
