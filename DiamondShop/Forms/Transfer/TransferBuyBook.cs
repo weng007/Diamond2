@@ -27,7 +27,6 @@ namespace DiamondShop
         DataSet ds2 = new DataSet();
 
         bool isAuthorize = false;
-        int rowIndex;
         int DelID;
 
         public TransferBuyBook()
@@ -315,10 +314,10 @@ namespace DiamondShop
         {
             int delID = 0;
 
-            if (rowIndex > -1)
+            if (gridTransfer.SelectedRows.Count > 0)
             {
-                delID = (int)gridTransfer.Rows[rowIndex].Cells["ID"].Value;
-                tds1.TransferBuyBook.Rows.RemoveAt(rowIndex);
+                delID = (int)gridTransfer.Rows[gridTransfer.SelectedRows[0].Index].Cells["ID"].Value;
+                tds1.TransferBuyBook.Rows.RemoveAt(gridTransfer.SelectedRows[0].Index);
 
                 tds1.AcceptChanges();
                 gridTransfer.Refresh();
@@ -347,7 +346,6 @@ namespace DiamondShop
         {
             if (e.RowIndex >= 0)
             {
-                rowIndex = e.RowIndex;
                 if (gridTransfer.Rows[e.RowIndex].Cells["ID"].Value != null)
                 { DelID = Convert.ToInt32(gridTransfer.Rows[e.RowIndex].Cells["ID"].Value.ToString()); }
             }
