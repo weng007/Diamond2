@@ -79,6 +79,7 @@
             this.OriginName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Detail = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Remark = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.USDRate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panal.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -372,7 +373,8 @@
             this.ShapeName,
             this.OriginName,
             this.Detail,
-            this.Remark});
+            this.Remark,
+            this.USDRate});
             this.gridBuyBookPayment.Location = new System.Drawing.Point(19, 0);
             this.gridBuyBookPayment.Name = "gridBuyBookPayment";
             this.gridBuyBookPayment.ReadOnly = true;
@@ -551,6 +553,14 @@
             this.Remark.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Remark.Width = 120;
             // 
+            // USDRate
+            // 
+            this.USDRate.DataPropertyName = "USDRate";
+            this.USDRate.HeaderText = "USDRate";
+            this.USDRate.Name = "USDRate";
+            this.USDRate.ReadOnly = true;
+            this.USDRate.Visible = false;
+            // 
             // PaymentList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -616,5 +626,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn OriginName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Detail;
         private System.Windows.Forms.DataGridViewTextBoxColumn Remark;
+        private System.Windows.Forms.DataGridViewTextBoxColumn USDRate;
     }
 }

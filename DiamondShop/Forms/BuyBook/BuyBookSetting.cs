@@ -27,6 +27,9 @@ namespace DiamondShop
         {
             InitializeComponent();
             Initial();
+            ds = ser.DoSelectData("ExchangeRate", id, 0);
+            txtUSDRate.Text = ds.Tables[0].Rows[0]["USDRate"].ToString();
+
             BinderData();
         }
         public BuyBookSetting(int id)
@@ -73,6 +76,7 @@ namespace DiamondShop
             binder.BindControl(txtSalePrice, "SalePrice");
             binder.BindControl(cmbBuyer , "Buyer");
             binder.BindControl(txtCode, "Code");
+            binder.BindControl(txtUSDRate, "USDRate");
         }
         protected override void LoadData()
         {

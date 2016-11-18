@@ -990,7 +990,9 @@
                     <TextRuns>
                       <TextRun>
                         <Value>=First(Fields!JewelryTypeName.Value, "dsReportOrder")</Value>
-                        <Style />
+                        <Style>
+                          <FontSize>11pt</FontSize>
+                        </Style>
                       </TextRun>
                     </TextRuns>
                     <Style />
@@ -1000,7 +1002,7 @@
                 <Top>0.1109in</Top>
                 <Left>1.28189in</Left>
                 <Height>0.21875in</Height>
-                <Width>1.44934in</Width>
+                <Width>1.73353in</Width>
                 <ZIndex>9</ZIndex>
                 <Style>
                   <Border>
@@ -1020,7 +1022,9 @@
                     <TextRuns>
                       <TextRun>
                         <Value>=First(Fields!MaterialName.Value, "dsReportOrder")</Value>
-                        <Style />
+                        <Style>
+                          <FontSize>11pt</FontSize>
+                        </Style>
                       </TextRun>
                     </TextRuns>
                     <Style />
@@ -1050,7 +1054,9 @@
                     <TextRuns>
                       <TextRun>
                         <Value>=First(Fields!Laser.Value, "dsReportOrder")</Value>
-                        <Style />
+                        <Style>
+                          <FontSize>11pt</FontSize>
+                        </Style>
                       </TextRun>
                     </TextRuns>
                     <Style />
@@ -1081,6 +1087,7 @@
                       <TextRun>
                         <Value>=Sum(Fields!Size.Value, "dsReportOrder")</Value>
                         <Style>
+                          <FontSize>11pt</FontSize>
                           <Format>#,0.00;(#,0.00)</Format>
                         </Style>
                       </TextRun>
@@ -1112,7 +1119,9 @@
                     <TextRuns>
                       <TextRun>
                         <Value>=First(Fields!Coating.Value, "dsReportOrder")</Value>
-                        <Style />
+                        <Style>
+                          <FontSize>11pt</FontSize>
+                        </Style>
                       </TextRun>
                     </TextRuns>
                     <Style />
@@ -1166,8 +1175,9 @@
                 <Value>=First(Fields!Image1.Value, "dsReportOrder")</Value>
                 <MIMEType>image/png</MIMEType>
                 <Sizing>FitProportional</Sizing>
-                <Top>0.0125in</Top>
-                <Height>1.48959in</Height>
+                <Top>0.1in</Top>
+                <Left>0.2375in</Left>
+                <Height>1.37501in</Height>
                 <Width>1.39913in</Width>
                 <Style>
                   <Border>
@@ -1180,8 +1190,9 @@
                 <Value>=First(Fields!Image2.Value, "dsReportOrder")</Value>
                 <MIMEType>image/png</MIMEType>
                 <Sizing>FitProportional</Sizing>
-                <Left>1.51166in</Left>
-                <Height>1.48959in</Height>
+                <Top>0.0875in</Top>
+                <Left>1.87416in</Left>
+                <Height>1.38751in</Height>
                 <Width>1.3866in</Width>
                 <ZIndex>1</ZIndex>
                 <Style>
@@ -1195,9 +1206,9 @@
                 <Value>=First(Fields!Image3.Value, "dsReportOrder")</Value>
                 <MIMEType>image/png</MIMEType>
                 <Sizing>FitProportional</Sizing>
-                <Top>0.00208in</Top>
-                <Left>3.02888in</Left>
-                <Height>1.48959in</Height>
+                <Top>0.08958in</Top>
+                <Left>3.51638in</Left>
+                <Height>1.38543in</Height>
                 <Width>1.3866in</Width>
                 <ZIndex>2</ZIndex>
                 <Style>
@@ -1212,7 +1223,8 @@
                 <MIMEType>image/png</MIMEType>
                 <Sizing>FitProportional</Sizing>
                 <Top>1.58574in</Top>
-                <Height>1.48959in</Height>
+                <Left>0.2375in</Left>
+                <Height>1.36459in</Height>
                 <Width>1.39913in</Width>
                 <ZIndex>3</ZIndex>
                 <Style>
@@ -1227,9 +1239,9 @@
                 <MIMEType>image/png</MIMEType>
                 <Sizing>FitProportional</Sizing>
                 <Top>1.58574in</Top>
-                <Left>1.51166in</Left>
-                <Height>1.48959in</Height>
-                <Width>1.39913in</Width>
+                <Left>1.87416in</Left>
+                <Height>1.36459in</Height>
+                <Width>1.3866in</Width>
                 <ZIndex>4</ZIndex>
                 <Style>
                   <Border>
@@ -1237,6 +1249,156 @@
                   </Border>
                 </Style>
               </Image>
+              <Textbox Name="Textbox1">
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>1</Value>
+                        <Style />
+                      </TextRun>
+                    </TextRuns>
+                    <Style />
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>Textbox1</rd:DefaultName>
+                <Top>0.08611in</Top>
+                <Left>0.05688in</Left>
+                <Height>0.21063in</Height>
+                <Width>0.125in</Width>
+                <ZIndex>5</ZIndex>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                  <PaddingBottom>2pt</PaddingBottom>
+                </Style>
+              </Textbox>
+              <Textbox Name="Textbox2">
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>2</Value>
+                        <Style />
+                      </TextRun>
+                    </TextRuns>
+                    <Style />
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>Textbox1</rd:DefaultName>
+                <Top>0.06111in</Top>
+                <Left>1.6908in</Left>
+                <Height>0.21063in</Height>
+                <Width>0.125in</Width>
+                <ZIndex>6</ZIndex>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                  <PaddingBottom>2pt</PaddingBottom>
+                </Style>
+              </Textbox>
+              <Textbox Name="Textbox3">
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>3</Value>
+                        <Style />
+                      </TextRun>
+                    </TextRuns>
+                    <Style />
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>Textbox1</rd:DefaultName>
+                <Top>0.04722in</Top>
+                <Left>3.33993in</Left>
+                <Height>0.21063in</Height>
+                <Width>0.125in</Width>
+                <ZIndex>7</ZIndex>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                  <PaddingBottom>2pt</PaddingBottom>
+                </Style>
+              </Textbox>
+              <Textbox Name="Textbox4">
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>4</Value>
+                        <Style />
+                      </TextRun>
+                    </TextRuns>
+                    <Style />
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>Textbox1</rd:DefaultName>
+                <Top>1.66022in</Top>
+                <Left>0.05368in</Left>
+                <Height>0.21063in</Height>
+                <Width>0.125in</Width>
+                <ZIndex>8</ZIndex>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                  <PaddingBottom>2pt</PaddingBottom>
+                </Style>
+              </Textbox>
+              <Textbox Name="Textbox5">
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>5</Value>
+                        <Style />
+                      </TextRun>
+                    </TextRuns>
+                    <Style />
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>Textbox1</rd:DefaultName>
+                <Top>1.66022in</Top>
+                <Left>1.6908in</Left>
+                <Height>0.21063in</Height>
+                <Width>0.125in</Width>
+                <ZIndex>9</ZIndex>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                  <PaddingBottom>2pt</PaddingBottom>
+                </Style>
+              </Textbox>
             </ReportItems>
             <KeepTogether>true</KeepTogether>
             <Top>2.11306in</Top>
@@ -1260,7 +1422,9 @@
                     <TextRuns>
                       <TextRun>
                         <Value>=First(Fields!Detail.Value, "dsReportOrder")</Value>
-                        <Style />
+                        <Style>
+                          <FontSize>11pt</FontSize>
+                        </Style>
                       </TextRun>
                     </TextRuns>
                     <Style />
@@ -1304,7 +1468,9 @@
                     <TextRuns>
                       <TextRun>
                         <Value>=First(Fields!ImageNote.Value, "dsReportOrder")</Value>
-                        <Style />
+                        <Style>
+                          <FontSize>11pt</FontSize>
+                        </Style>
                       </TextRun>
                     </TextRuns>
                     <Style />
@@ -1348,7 +1514,9 @@
                     <TextRuns>
                       <TextRun>
                         <Value>=First(Fields!Note.Value, "dsReportOrder")</Value>
-                        <Style />
+                        <Style>
+                          <FontSize>11pt</FontSize>
+                        </Style>
                       </TextRun>
                     </TextRuns>
                     <Style />
@@ -1419,9 +1587,9 @@
               </Textbox>
               <Line Name="Line13">
                 <Top>0.32007in</Top>
-                <Left>0.45873in</Left>
+                <Left>0.50873in</Left>
                 <Height>0in</Height>
-                <Width>1.67708in</Width>
+                <Width>1.48266in</Width>
                 <ZIndex>1</ZIndex>
                 <Style>
                   <Border>
@@ -1483,7 +1651,9 @@
                     <TextRuns>
                       <TextRun>
                         <Value>=First(Fields!Code1.Value, "dsReportOrder")</Value>
-                        <Style />
+                        <Style>
+                          <FontSize>11pt</FontSize>
+                        </Style>
                       </TextRun>
                     </TextRuns>
                     <Style />
@@ -1491,9 +1661,9 @@
                 </Paragraphs>
                 <rd:DefaultName>Code1</rd:DefaultName>
                 <Top>0.09507in</Top>
-                <Left>0.48849in</Left>
+                <Left>0.48997in</Left>
                 <Height>0.25in</Height>
-                <Width>1.64732in</Width>
+                <Width>1.50142in</Width>
                 <ZIndex>4</ZIndex>
                 <Style>
                   <Border>
@@ -1513,7 +1683,9 @@
                     <TextRuns>
                       <TextRun>
                         <Value>=First(Fields!Code2.Value, "dsReportOrder")</Value>
-                        <Style />
+                        <Style>
+                          <FontSize>11pt</FontSize>
+                        </Style>
                       </TextRun>
                     </TextRuns>
                     <Style />
@@ -1629,7 +1801,9 @@
                     <TextRuns>
                       <TextRun>
                         <Value>=First(Fields!OrderNo.Value, "dsReportOrder")</Value>
-                        <Style />
+                        <Style>
+                          <FontSize>11pt</FontSize>
+                        </Style>
                       </TextRun>
                     </TextRuns>
                     <Style />
@@ -1659,7 +1833,9 @@
                     <TextRuns>
                       <TextRun>
                         <Value>=First(Fields!OldBody.Value, "dsReportOrder")</Value>
-                        <Style />
+                        <Style>
+                          <FontSize>11pt</FontSize>
+                        </Style>
                       </TextRun>
                     </TextRuns>
                     <Style />
@@ -1689,7 +1865,9 @@
                     <TextRuns>
                       <TextRun>
                         <Value>=First(Fields!CustomerName.Value, "dsReportOrder")</Value>
-                        <Style />
+                        <Style>
+                          <FontSize>11pt</FontSize>
+                        </Style>
                       </TextRun>
                     </TextRuns>
                     <Style />
@@ -1719,7 +1897,9 @@
                     <TextRuns>
                       <TextRun>
                         <Value>=FORMAT(Cdate(First(Fields!OrderDate.Value, "dsReportOrder")), "dd-MM-yyyy")</Value>
-                        <Style />
+                        <Style>
+                          <FontSize>11pt</FontSize>
+                        </Style>
                       </TextRun>
                     </TextRuns>
                     <Style />
@@ -1749,7 +1929,9 @@
                     <TextRuns>
                       <TextRun>
                         <Value>=FORMAT(Cdate(First(Fields!ReceiveDate.Value, "dsReportOrder")), "dd-MM-yyyy")</Value>
-                        <Style />
+                        <Style>
+                          <FontSize>11pt</FontSize>
+                        </Style>
                       </TextRun>
                     </TextRuns>
                     <Style />
@@ -1779,7 +1961,9 @@
                     <TextRuns>
                       <TextRun>
                         <Value>=First(Fields!SellerName.Value, "dsReportOrder")</Value>
-                        <Style />
+                        <Style>
+                          <FontSize>11pt</FontSize>
+                        </Style>
                       </TextRun>
                     </TextRuns>
                     <Style />
@@ -2259,7 +2443,7 @@
                 <Top>1.46669in</Top>
                 <Left>8.00949in</Left>
                 <Height>0.28125in</Height>
-                <Width>1.02643in</Width>
+                <Width>0.70929in</Width>
                 <ZIndex>6</ZIndex>
                 <Style>
                   <Border>
@@ -2460,7 +2644,9 @@
                     <TextRuns>
                       <TextRun>
                         <Value>=First(Fields!Code21.Value, "dsReportOrder")</Value>
-                        <Style />
+                        <Style>
+                          <FontSize>11pt</FontSize>
+                        </Style>
                       </TextRun>
                     </TextRuns>
                     <Style />
@@ -2470,7 +2656,7 @@
                 <Top>0.10417in</Top>
                 <Left>5.53862in</Left>
                 <Height>0.25in</Height>
-                <Width>1.68895in</Width>
+                <Width>1.51002in</Width>
                 <ZIndex>12</ZIndex>
                 <Style>
                   <Border>
@@ -2490,7 +2676,9 @@
                     <TextRuns>
                       <TextRun>
                         <Value>=First(Fields!INVShopName21.Value, "dsReportOrder")</Value>
-                        <Style />
+                        <Style>
+                          <FontSize>11pt</FontSize>
+                        </Style>
                       </TextRun>
                     </TextRuns>
                     <Style />
@@ -2500,7 +2688,7 @@
                 <Top>0.47431in</Top>
                 <Left>5.54296in</Left>
                 <Height>0.25in</Height>
-                <Width>1.68461in</Width>
+                <Width>1.19318in</Width>
                 <ZIndex>13</ZIndex>
                 <Style>
                   <Border>
@@ -2520,7 +2708,9 @@
                     <TextRuns>
                       <TextRun>
                         <Value>=First(Fields!JewelryTypeName21.Value, "dsReportOrder")</Value>
-                        <Style />
+                        <Style>
+                          <FontSize>11pt</FontSize>
+                        </Style>
                       </TextRun>
                     </TextRuns>
                     <Style />
@@ -2530,7 +2720,7 @@
                 <Top>0.11667in</Top>
                 <Left>8.60946in</Left>
                 <Height>0.25in</Height>
-                <Width>1.60355in</Width>
+                <Width>1.52251in</Width>
                 <ZIndex>14</ZIndex>
                 <Style>
                   <Border>
@@ -2550,7 +2740,9 @@
                     <TextRuns>
                       <TextRun>
                         <Value>=Sum(Fields!Size21.Value, "dsReportOrder")</Value>
-                        <Style />
+                        <Style>
+                          <FontSize>11pt</FontSize>
+                        </Style>
                       </TextRun>
                     </TextRuns>
                     <Style />
@@ -2560,7 +2752,7 @@
                 <Top>0.47431in</Top>
                 <Left>8.60946in</Left>
                 <Height>0.25in</Height>
-                <Width>0.90563in</Width>
+                <Width>0.66565in</Width>
                 <ZIndex>15</ZIndex>
                 <Style>
                   <Border>
@@ -2580,7 +2772,9 @@
                     <TextRuns>
                       <TextRun>
                         <Value>=First(Fields!INVMaterialName21.Value, "dsReportOrder")</Value>
-                        <Style />
+                        <Style>
+                          <FontSize>11pt</FontSize>
+                        </Style>
                       </TextRun>
                     </TextRuns>
                     <Style />
@@ -2590,7 +2784,7 @@
                 <Top>1.09933in</Top>
                 <Left>8.08653in</Left>
                 <Height>0.25in</Height>
-                <Width>2.24107in</Width>
+                <Width>1.77192in</Width>
                 <ZIndex>16</ZIndex>
                 <Style>
                   <Border>
@@ -2606,7 +2800,7 @@
                 <Top>0.70765in</Top>
                 <Left>5.51779in</Left>
                 <Height>0in</Height>
-                <Width>1.67708in</Width>
+                <Width>1.21835in</Width>
                 <ZIndex>17</ZIndex>
                 <Style>
                   <Border>
@@ -2618,7 +2812,7 @@
                 <Top>0.32917in</Top>
                 <Left>5.51779in</Left>
                 <Height>0in</Height>
-                <Width>1.67708in</Width>
+                <Width>1.53085in</Width>
                 <ZIndex>18</ZIndex>
                 <Style>
                   <Border>
@@ -2630,7 +2824,7 @@
                 <Top>0.34924in</Top>
                 <Left>8.53593in</Left>
                 <Height>0in</Height>
-                <Width>1.67708in</Width>
+                <Width>1.59604in</Width>
                 <ZIndex>19</ZIndex>
                 <Style>
                   <Border>
@@ -2642,7 +2836,7 @@
                 <Top>0.70765in</Top>
                 <Left>8.53593in</Left>
                 <Height>0in</Height>
-                <Width>0.97916in</Width>
+                <Width>0.73918in</Width>
                 <ZIndex>20</ZIndex>
                 <Style>
                   <Border>
@@ -2654,7 +2848,7 @@
                 <Top>1.32841in</Top>
                 <Left>8.00949in</Left>
                 <Height>0in</Height>
-                <Width>2.31811in</Width>
+                <Width>1.84896in</Width>
                 <ZIndex>21</ZIndex>
                 <Style>
                   <Border>
@@ -2670,7 +2864,9 @@
                     <TextRuns>
                       <TextRun>
                         <Value>=Sum(Fields!MaterialWeight21.Value, "dsReportOrder")</Value>
-                        <Style />
+                        <Style>
+                          <FontSize>11pt</FontSize>
+                        </Style>
                       </TextRun>
                     </TextRuns>
                     <Style />
@@ -2680,7 +2876,7 @@
                 <Top>1.52632in</Top>
                 <Left>8.09279in</Left>
                 <Height>0.25in</Height>
-                <Width>0.94313in</Width>
+                <Width>0.62599in</Width>
                 <ZIndex>22</ZIndex>
                 <Style>
                   <Border>
@@ -2696,7 +2892,7 @@
                 <Top>2.52632in</Top>
                 <Left>8.00949in</Left>
                 <Height>0in</Height>
-                <Width>2.31811in</Width>
+                <Width>1.84896in</Width>
                 <ZIndex>23</ZIndex>
                 <Style>
                   <Border>
@@ -2712,7 +2908,9 @@
                     <TextRuns>
                       <TextRun>
                         <Value>=First(Fields!INVMaterialName22.Value, "dsReportOrder")</Value>
-                        <Style />
+                        <Style>
+                          <FontSize>11pt</FontSize>
+                        </Style>
                       </TextRun>
                     </TextRuns>
                     <Style />
@@ -2722,7 +2920,7 @@
                 <Top>2.31181in</Top>
                 <Left>8.08653in</Left>
                 <Height>0.25in</Height>
-                <Width>2.20146in</Width>
+                <Width>1.77192in</Width>
                 <ZIndex>24</ZIndex>
                 <Style>
                   <Border>
@@ -2738,7 +2936,7 @@
                 <Top>2.9014in</Top>
                 <Left>8.00949in</Left>
                 <Height>0in</Height>
-                <Width>1.02643in</Width>
+                <Width>0.71762in</Width>
                 <ZIndex>25</ZIndex>
                 <Style>
                   <Border>
@@ -2754,7 +2952,9 @@
                     <TextRuns>
                       <TextRun>
                         <Value>=Sum(Fields!MaterialWeight22.Value, "dsReportOrder")</Value>
-                        <Style />
+                        <Style>
+                          <FontSize>11pt</FontSize>
+                        </Style>
                       </TextRun>
                     </TextRuns>
                     <Style />
@@ -2764,7 +2964,7 @@
                 <Top>2.68333in</Top>
                 <Left>8.09279in</Left>
                 <Height>0.25in</Height>
-                <Width>0.94313in</Width>
+                <Width>0.62599in</Width>
                 <ZIndex>26</ZIndex>
                 <Style>
                   <Border>
@@ -2786,7 +2986,9 @@
                         <TextRuns>
                           <TextRun>
                             <Value>=First(Fields!InventoryRemark21.Value, "dsReportOrder")</Value>
-                            <Style />
+                            <Style>
+                              <FontSize>11pt</FontSize>
+                            </Style>
                           </TextRun>
                         </TextRuns>
                         <Style />
@@ -3117,7 +3319,7 @@
                 <Top>1.42779in</Top>
                 <Left>8.12105in</Left>
                 <Height>0.28125in</Height>
-                <Width>1.02643in</Width>
+                <Width>0.62427in</Width>
                 <ZIndex>6</ZIndex>
                 <Style>
                   <Border>
@@ -3318,7 +3520,9 @@
                     <TextRuns>
                       <TextRun>
                         <Value>=First(Fields!Code.Value, "dsReportOrder")</Value>
-                        <Style />
+                        <Style>
+                          <FontSize>11pt</FontSize>
+                        </Style>
                       </TextRun>
                     </TextRuns>
                     <Style />
@@ -3328,7 +3532,7 @@
                 <Top>0.06527in</Top>
                 <Left>5.65018in</Left>
                 <Height>0.25in</Height>
-                <Width>1.68895in</Width>
+                <Width>1.41667in</Width>
                 <ZIndex>12</ZIndex>
                 <Style>
                   <Border>
@@ -3348,7 +3552,9 @@
                     <TextRuns>
                       <TextRun>
                         <Value>=First(Fields!INVShopName.Value, "dsReportOrder")</Value>
-                        <Style />
+                        <Style>
+                          <FontSize>11pt</FontSize>
+                        </Style>
                       </TextRun>
                     </TextRuns>
                     <Style />
@@ -3358,7 +3564,7 @@
                 <Top>0.43541in</Top>
                 <Left>5.65452in</Left>
                 <Height>0.25in</Height>
-                <Width>1.68461in</Width>
+                <Width>1.09983in</Width>
                 <ZIndex>13</ZIndex>
                 <Style>
                   <Border>
@@ -3378,7 +3584,9 @@
                     <TextRuns>
                       <TextRun>
                         <Value>=First(Fields!JewelryTypeName1.Value, "dsReportOrder")</Value>
-                        <Style />
+                        <Style>
+                          <FontSize>11pt</FontSize>
+                        </Style>
                       </TextRun>
                     </TextRuns>
                     <Style />
@@ -3388,7 +3596,7 @@
                 <Top>0.06527in</Top>
                 <Left>8.72102in</Left>
                 <Height>0.25in</Height>
-                <Width>1.60355in</Width>
+                <Width>1.42916in</Width>
                 <ZIndex>14</ZIndex>
                 <Style>
                   <Border>
@@ -3408,17 +3616,21 @@
                     <TextRuns>
                       <TextRun>
                         <Value>=Sum(Fields!Size1.Value, "dsReportOrder")</Value>
-                        <Style />
+                        <Style>
+                          <FontSize>11pt</FontSize>
+                        </Style>
                       </TextRun>
                     </TextRuns>
-                    <Style />
+                    <Style>
+                      <TextAlign>Center</TextAlign>
+                    </Style>
                   </Paragraph>
                 </Paragraphs>
                 <rd:DefaultName>Size1</rd:DefaultName>
                 <Top>0.43541in</Top>
                 <Left>8.72102in</Left>
                 <Height>0.25in</Height>
-                <Width>0.90563in</Width>
+                <Width>0.5723in</Width>
                 <ZIndex>15</ZIndex>
                 <Style>
                   <Border>
@@ -3438,7 +3650,9 @@
                     <TextRuns>
                       <TextRun>
                         <Value>=First(Fields!INVMaterialName1.Value, "dsReportOrder")</Value>
-                        <Style />
+                        <Style>
+                          <FontSize>11pt</FontSize>
+                        </Style>
                       </TextRun>
                     </TextRuns>
                     <Style />
@@ -3448,7 +3662,7 @@
                 <Top>1.06043in</Top>
                 <Left>8.19809in</Left>
                 <Height>0.25in</Height>
-                <Width>2.24107in</Width>
+                <Width>1.67857in</Width>
                 <ZIndex>16</ZIndex>
                 <Style>
                   <Border>
@@ -3464,7 +3678,7 @@
                 <Top>0.66875in</Top>
                 <Left>5.62935in</Left>
                 <Height>0in</Height>
-                <Width>1.67708in</Width>
+                <Width>1.125in</Width>
                 <ZIndex>17</ZIndex>
                 <Style>
                   <Border>
@@ -3476,7 +3690,7 @@
                 <Top>0.29027in</Top>
                 <Left>5.62935in</Left>
                 <Height>0in</Height>
-                <Width>1.67708in</Width>
+                <Width>1.4375in</Width>
                 <ZIndex>18</ZIndex>
                 <Style>
                   <Border>
@@ -3488,7 +3702,7 @@
                 <Top>0.27284in</Top>
                 <Left>8.64749in</Left>
                 <Height>0in</Height>
-                <Width>1.67708in</Width>
+                <Width>1.50269in</Width>
                 <ZIndex>19</ZIndex>
                 <Style>
                   <Border>
@@ -3500,7 +3714,7 @@
                 <Top>0.66875in</Top>
                 <Left>8.64749in</Left>
                 <Height>0in</Height>
-                <Width>0.97916in</Width>
+                <Width>0.64583in</Width>
                 <ZIndex>20</ZIndex>
                 <Style>
                   <Border>
@@ -3512,7 +3726,7 @@
                 <Top>1.28951in</Top>
                 <Left>8.12105in</Left>
                 <Height>0in</Height>
-                <Width>2.31811in</Width>
+                <Width>1.75561in</Width>
                 <ZIndex>21</ZIndex>
                 <Style>
                   <Border>
@@ -3528,17 +3742,21 @@
                     <TextRuns>
                       <TextRun>
                         <Value>=Sum(Fields!MaterialWeight1.Value, "dsReportOrder")</Value>
-                        <Style />
+                        <Style>
+                          <FontSize>11pt</FontSize>
+                        </Style>
                       </TextRun>
                     </TextRuns>
-                    <Style />
+                    <Style>
+                      <TextAlign>Center</TextAlign>
+                    </Style>
                   </Paragraph>
                 </Paragraphs>
                 <rd:DefaultName>MaterialWeight1</rd:DefaultName>
                 <Top>1.48742in</Top>
                 <Left>8.20435in</Left>
                 <Height>0.25in</Height>
-                <Width>0.94313in</Width>
+                <Width>0.54097in</Width>
                 <ZIndex>22</ZIndex>
                 <Style>
                   <Border>
@@ -3554,7 +3772,7 @@
                 <Top>2.48742in</Top>
                 <Left>8.12105in</Left>
                 <Height>0in</Height>
-                <Width>2.31811in</Width>
+                <Width>1.75561in</Width>
                 <ZIndex>23</ZIndex>
                 <Style>
                   <Border>
@@ -3570,7 +3788,9 @@
                     <TextRuns>
                       <TextRun>
                         <Value>=First(Fields!INVMaterialName2.Value, "dsReportOrder")</Value>
-                        <Style />
+                        <Style>
+                          <FontSize>11pt</FontSize>
+                        </Style>
                       </TextRun>
                     </TextRuns>
                     <Style />
@@ -3580,7 +3800,7 @@
                 <Top>2.27291in</Top>
                 <Left>8.20435in</Left>
                 <Height>0.25in</Height>
-                <Width>2.20146in</Width>
+                <Width>1.67231in</Width>
                 <ZIndex>24</ZIndex>
                 <Style>
                   <Border>
@@ -3596,7 +3816,7 @@
                 <Top>2.8625in</Top>
                 <Left>8.12105in</Left>
                 <Height>0in</Height>
-                <Width>1.02643in</Width>
+                <Width>0.62427in</Width>
                 <ZIndex>25</ZIndex>
                 <Style>
                   <Border>
@@ -3612,7 +3832,9 @@
                     <TextRuns>
                       <TextRun>
                         <Value>=Sum(Fields!MaterialWeight2.Value, "dsReportOrder")</Value>
-                        <Style />
+                        <Style>
+                          <FontSize>11pt</FontSize>
+                        </Style>
                       </TextRun>
                     </TextRuns>
                     <Style />
@@ -3622,7 +3844,7 @@
                 <Top>2.64443in</Top>
                 <Left>8.20435in</Left>
                 <Height>0.25in</Height>
-                <Width>0.94313in</Width>
+                <Width>0.54097in</Width>
                 <ZIndex>26</ZIndex>
                 <Style>
                   <Border>
@@ -3746,7 +3968,9 @@
                     <TextRuns>
                       <TextRun>
                         <Value>=First(Fields!Things.Value, "dsReportOrder")</Value>
-                        <Style />
+                        <Style>
+                          <FontSize>11pt</FontSize>
+                        </Style>
                       </TextRun>
                     </TextRuns>
                     <Style />
@@ -3789,7 +4013,9 @@
                     <TextRuns>
                       <TextRun>
                         <Value>=First(Fields!CustomerNote.Value, "dsReportOrder")</Value>
-                        <Style />
+                        <Style>
+                          <FontSize>11pt</FontSize>
+                        </Style>
                       </TextRun>
                     </TextRuns>
                     <Style />

@@ -76,6 +76,8 @@
             this.btnEdit = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
+            this.txtUSDRate = new System.Windows.Forms.TextBox();
+            this.lblll = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridSetting)).BeginInit();
@@ -95,6 +97,8 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.txtUSDRate);
+            this.panel3.Controls.Add(this.lblll);
             this.panel3.Controls.Add(this.label30);
             this.panel3.Controls.Add(this.txtCode);
             this.panel3.Controls.Add(this.btnChooseDate);
@@ -562,6 +566,26 @@
             this.button1.TabIndex = 32;
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // txtUSDRate
+            // 
+            this.txtUSDRate.Location = new System.Drawing.Point(436, 90);
+            this.txtUSDRate.Name = "txtUSDRate";
+            this.txtUSDRate.Size = new System.Drawing.Size(64, 26);
+            this.txtUSDRate.TabIndex = 257;
+            this.txtUSDRate.Text = "0";
+            this.txtUSDRate.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // lblll
+            // 
+            this.lblll.AutoSize = true;
+            this.lblll.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lblll.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
+            this.lblll.Location = new System.Drawing.Point(339, 93);
+            this.lblll.Name = "lblll";
+            this.lblll.Size = new System.Drawing.Size(83, 20);
+            this.lblll.TabIndex = 258;
+            this.lblll.Text = "USD Rate";
+            // 
             // BuyBookSetting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -623,5 +647,7 @@
         private System.Windows.Forms.Button btnChooseDate;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.TextBox txtCode;
+        private System.Windows.Forms.TextBox txtUSDRate;
+        private System.Windows.Forms.Label lblll;
     }
 }

@@ -743,7 +743,7 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox2</rd:DefaultName>
-              <Top>0.90625in</Top>
+              <Top>0.89375in</Top>
               <Left>2.37703in</Left>
               <Height>0.28125in</Height>
               <Width>0.36458in</Width>
@@ -806,12 +806,14 @@
                       </Style>
                     </TextRun>
                   </TextRuns>
-                  <Style />
+                  <Style>
+                    <TextAlign>Right</TextAlign>
+                  </Style>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox2</rd:DefaultName>
               <Top>0.5in</Top>
-              <Left>1.65203in</Left>
+              <Left>1.92703in</Left>
               <Height>0.28125in</Height>
               <Width>1.08333in</Width>
               <ZIndex>2</ZIndex>
@@ -881,9 +883,9 @@
               </Paragraphs>
               <rd:DefaultName>DeliveryDate1</rd:DefaultName>
               <Top>0.5in</Top>
-              <Left>2.75203in</Left>
+              <Left>2.88119in</Left>
               <Height>0.28125in</Height>
-              <Width>1.1438in</Width>
+              <Width>1.01464in</Width>
               <ZIndex>4</ZIndex>
               <Style>
                 <Border>
@@ -1259,7 +1261,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>=FORMAT(Cdate(First(Fields!ReceiveDate.Value, "SP_Rpt_Delivery_Inventory")), "dd-MM-yyyy")</Value>
+                      <Value>=iif(YEAR(First(Fields!ReceiveDate.Value, "SP_Rpt_Delivery_Inventory"))="1901","-",FORMAT(Cdate(First(Fields!ReceiveDate.Value, "SP_Rpt_Delivery_Inventory")), "dd-MM-yyyy"))</Value>
                       <Style>
                         <FontFamily>Century Gothic</FontFamily>
                         <FontSize>11pt</FontSize>

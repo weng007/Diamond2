@@ -38,13 +38,6 @@ namespace DiamondShop
             this.TotalPrice = TotalPrice;
             this.idSelected = idSelected.Split(',');
             this.buyBookType = buyBookType.Split(',');
-            //int CountLength;
-
-            //for (int i = 0; i < idSelected.Length; i++)
-            //{
-
-            //    idSelected = idSelected.Substring(0, 2);
-            //}
 
             binder.BindControl(txtUSDRate, "USDRete");
             
