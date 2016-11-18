@@ -282,9 +282,9 @@ namespace DiamondShop
 
         private void gridSetting_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            if(gridSetting.SelectedRows.Count > 0)
+            if (gridSetting.SelectedRows.Count > 0)
             {
-                BuyBookSettingDetail frm = new BuyBookSettingDetail(id,1);
+                BuyBookSettingDetail frm = new BuyBookSettingDetail(Convert.ToInt32(gridSetting.SelectedRows[0].Cells["ID"].Value), 1);
                 frm.ShowDialog();
 
                 LoadData();

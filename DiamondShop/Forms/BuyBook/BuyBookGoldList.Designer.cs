@@ -364,7 +364,7 @@
             this.PriceGram2.HeaderText = "75% กรัมละ";
             this.PriceGram2.Name = "PriceGram2";
             this.PriceGram2.ReadOnly = true;
-            this.PriceGram2.Width = 110;
+            this.PriceGram2.Width = 135;
             // 
             // BuyBookGoldList
             // 

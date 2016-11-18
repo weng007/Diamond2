@@ -48,11 +48,15 @@ namespace DiamondShop.Report
             datasource3 = new ReportDataSource("Detail2", ds.Tables[3]);
             datasource4 = new ReportDataSource("Total", ds.Tables[4]);
 
-            this.reportViewer1.LocalReport.ReportPath = "..\\Report\\CertificateSell.rdlc";
-            this.reportViewer1.LocalReport.DataSources.Add(datasource);
-            this.reportViewer1.LocalReport.DataSources.Add(datasource1);
-            this.reportViewer1.LocalReport.DataSources.Add(datasource2);
-            this.reportViewer1.LocalReport.DataSources.Add(datasource4);
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                reportViewer1.Visible = true;
+                this.reportViewer1.LocalReport.ReportPath = "..\\Report\\CertificateSell.rdlc";
+                this.reportViewer1.LocalReport.DataSources.Add(datasource);
+                this.reportViewer1.LocalReport.DataSources.Add(datasource1);
+                this.reportViewer1.LocalReport.DataSources.Add(datasource2);
+                this.reportViewer1.LocalReport.DataSources.Add(datasource4);
+            }
 
             if (ds.Tables[2].Rows.Count > 0)
             {
@@ -100,7 +104,10 @@ namespace DiamondShop.Report
 
         private void btnPrint_Click(object sender, EventArgs e)
         {
-            reportViewer1.PrintDialog();
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                reportViewer1.PrintDialog();
+            }
 
             if (ds.Tables[2].Rows.Count > 0)
             {

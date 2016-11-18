@@ -411,7 +411,7 @@ namespace Diamond
                 BuyBookSettingDetailBiz biz = GM.GetBuyBookSettingDetailBiz();
                 try
                 {
-                    return biz.DoSelectData(id);
+                    return biz.DoSelectData(id, mode);
                 }
                 catch (Exception ex)
                 {

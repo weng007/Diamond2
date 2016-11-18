@@ -196,9 +196,9 @@
             // 
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(804, 99);
+            this.label2.Location = new System.Drawing.Point(830, 99);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(94, 26);
+            this.label2.Size = new System.Drawing.Size(65, 26);
             this.label2.TabIndex = 82;
             this.label2.Text = "Origin";
             // 

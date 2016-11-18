@@ -32,12 +32,13 @@ namespace DiamondDAL.DAL
             return ds;
         }
 
-        public dsBuyBookSettingDetail DoSelectData(int id)
+        public dsBuyBookSettingDetail DoSelectData(int id,int mode)
         {
             try
             {
                 SQL.ClearParameter();
                 SQL.CreateParameter("ID", id);
+                SQL.CreateParameter("Mode", mode);
                 SQL.FillDataSetBySP("SP_BBSettingDetail_Sel", ds.BBSettingDetail);
             }
             catch (Exception ex)

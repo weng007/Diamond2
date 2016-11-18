@@ -25,11 +25,11 @@ namespace DiamondBiz.Biz
             }
         }
 
-        public dsBuyBookSettingDetail DoSelectData(int id)
+        public dsBuyBookSettingDetail DoSelectData(int id,int mode)
         {
             try
             {
-                return dal.DoSelectData(id);
+                return dal.DoSelectData(id, mode);
             }
             catch (Exception ex)
             {

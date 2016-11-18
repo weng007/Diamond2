@@ -55,7 +55,6 @@ namespace DiamondShop
             binder.BindControl(txtUSDRate, "USDRate");
             binder.BindControl(txtTotalBaht, "TotalBaht");
 
-
             this.id = id;
             this.mode = mode;
 
@@ -68,7 +67,7 @@ namespace DiamondShop
                 ds = ser.DoSelectData("ExchangeRate", id, 0);
                 txtUSDRate.Text = ds.Tables[0].Rows[0]["USDRate"].ToString();
             }
-            
+
         }
         protected override void Initial()
         {
@@ -88,7 +87,7 @@ namespace DiamondShop
         }
         protected override void LoadData()
         {
-            ds = ser.DoSelectData("BuyBookSettingDetail", id, 0);
+            ds = ser.DoSelectData("BuyBookSettingDetail", id, mode);
             tds.Clear();
             tds.Merge(ds);
 

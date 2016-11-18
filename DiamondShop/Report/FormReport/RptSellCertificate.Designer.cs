@@ -109,6 +109,7 @@
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.Size = new System.Drawing.Size(633, 547);
             this.reportViewer1.TabIndex = 51;
+            this.reportViewer1.Visible = false;
             this.reportViewer1.Print += new Microsoft.Reporting.WinForms.ReportPrintEventHandler(this.reportViewer1_Print);
             // 
             // reportViewer2

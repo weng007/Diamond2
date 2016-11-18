@@ -197,6 +197,7 @@
             this.btnBrowseReceiveNo.Size = new System.Drawing.Size(30, 30);
             this.btnBrowseReceiveNo.TabIndex = 227;
             this.btnBrowseReceiveNo.UseVisualStyleBackColor = false;
+            this.btnBrowseReceiveNo.Visible = false;
             this.btnBrowseReceiveNo.Click += new System.EventHandler(this.btnBrowseReceiveNo_Click);
             // 
             // txtReceiveNo
@@ -208,6 +209,7 @@
             this.txtReceiveNo.ReadOnly = true;
             this.txtReceiveNo.Size = new System.Drawing.Size(166, 26);
             this.txtReceiveNo.TabIndex = 228;
+            this.txtReceiveNo.Visible = false;
             // 
             // label27
             // 
@@ -218,6 +220,7 @@
             this.label27.Size = new System.Drawing.Size(86, 20);
             this.label27.TabIndex = 226;
             this.label27.Text = "ReceiveNo";
+            this.label27.Visible = false;
             // 
             // txtPayDate
             // 
@@ -667,7 +670,7 @@
             this.cmbClearity.Location = new System.Drawing.Point(737, 50);
             this.cmbClearity.Name = "cmbClearity";
             this.cmbClearity.Size = new System.Drawing.Size(87, 28);
-            this.cmbClearity.TabIndex = 26;
+            this.cmbClearity.TabIndex = 25;
             this.cmbClearity.SelectedValueChanged += new System.EventHandler(this.cmbShop_SelectedValueChanged);
             // 
             // label11

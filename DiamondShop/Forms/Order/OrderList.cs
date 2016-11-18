@@ -9,11 +9,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DiamondShop.FormMaster;
 using DiamondDS;
+using DiamondShop.DiamondService1;
 
 namespace DiamondShop
 {
     public partial class OrderList : FormList
-    {       
+    {
+        Service2 ser1;
         public OrderList()
         {
             InitializeComponent();
@@ -22,12 +24,19 @@ namespace DiamondShop
         }
         protected override void Initial()
         {
-            cmbSeller.DataSource = (GM.GetMasterTableDetail("C019",true)).Tables[0];
+            ds = GM.GetSeller();
+            DataRow row = ds.Tables[0].NewRow();
+            row["ID"] = 0;
+            row["DisplayName"] = "All";
+            ds.Tables[0].Rows.Add(row);
+
+            cmbSeller.DataSource = ds.Tables[0];
             cmbSeller.ValueMember = "ID";
-            cmbSeller.DisplayMember = "Detail";
+            cmbSeller.DisplayMember = "DisplayName";
+            cmbSeller.SelectedIndex = ds.Tables[0].Rows.Count - 1;
             cmbSeller.Refresh();
 
-            cmbJewelryType.DataSource = (GM.GetMasterTableDetail("C020", true)).Tables[0];
+            cmbJewelryType.DataSource = (GM.GetMasterTableDetail("C015", true)).Tables[0];
             cmbJewelryType.ValueMember = "ID";
             cmbJewelryType.DisplayMember = "Detail";
             cmbJewelryType.Refresh();
@@ -83,7 +92,7 @@ namespace DiamondShop
         {
             ser2 = GM.GetService2();
 
-            ds = ser2.DoSearchOrder(txtCode.Text, txtCustomerName.Text, Convert.ToInt16(cmbJewelryType.SelectedValue.ToString()),Convert.ToInt16(cmbSeller.SelectedValue.ToString()));
+            ds = ser2.DoSearchOrder( txtCustomerName.Text, txtCode.Text,Convert.ToInt16(cmbSeller.SelectedValue.ToString()),Convert.ToInt16(cmbJewelryType.SelectedValue.ToString()));
 
             if (ds.Tables[0].Rows.Count > 0)
             {
