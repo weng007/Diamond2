@@ -37,7 +37,7 @@ namespace DiamondShop
             binder.BindControl(txtCode, "Code");
             binder.BindControl(cmbShop, "Shop");
             binder.BindControl(cmbType, "JewelryType");
-            binder.BindControl(CmbStatus, "Status");
+            binder.BindControl(cmbStatus, "Status");
             binder.BindControl(cmbMaterial, "Material");
             binder.BindControl(txtWeight, "Weight");
             binder.BindControl(txtSize, "Size");
@@ -61,7 +61,7 @@ namespace DiamondShop
             binder.BindControl(txtCode, "Code");
             binder.BindControl(cmbShop, "Shop");
             binder.BindControl(cmbType, "JewelryType");
-            binder.BindControl(CmbStatus, "Status");
+            binder.BindControl(cmbStatus, "Status");
             binder.BindControl(cmbMaterial, "Material");
             binder.BindControl(txtWeight, "Weight");
             binder.BindControl(txtSize, "Size");
@@ -106,10 +106,10 @@ namespace DiamondShop
             cmbType.DisplayMember = "Detail";
             cmbType.Refresh();
 
-            CmbStatus.DataSource = (GM.GetMasterTableDetail("C023")).Tables[0];
-            CmbStatus.ValueMember = "ID";
-            CmbStatus.DisplayMember = "Detail";
-            CmbStatus.Refresh();
+            cmbStatus.DataSource = (GM.GetMasterTableDetail("C023")).Tables[0];
+            cmbStatus.ValueMember = "ID";
+            cmbStatus.DisplayMember = "Detail";
+            cmbStatus.Refresh();
 
             cmbMaterial.DataSource = (GM.GetMasterTableDetail("C014")).Tables[0];
             cmbMaterial.ValueMember = "ID";
@@ -174,7 +174,10 @@ namespace DiamondShop
             if (isAuthorize)
             {
                 EnableSave = true;
-                EnableDelete = true;
+                if (cmbStatus.SelectedValue.ToString() == "73")
+                {
+                    EnableDelete = true;
+                }
                 SetControlEnable(true);
 
                 base.EditData();
@@ -189,7 +192,10 @@ namespace DiamondShop
                 if (isAuthorize)
                 {
                     EnableSave = true;
-                    EnableDelete = true;
+                    if (cmbStatus.SelectedValue.ToString() == "73")
+                    {
+                        EnableDelete = true;
+                    }
                     SetControlEnable(true);
 
                     base.EditData();

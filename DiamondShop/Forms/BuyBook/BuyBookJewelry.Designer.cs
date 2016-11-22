@@ -74,7 +74,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.dtImportDate = new System.Windows.Forms.DateTimePicker();
             this.label10 = new System.Windows.Forms.Label();
-            this.CmbStatus = new System.Windows.Forms.ComboBox();
+            this.cmbStatus = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.cmbType = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -146,7 +146,7 @@
             this.panel3.Controls.Add(this.label11);
             this.panel3.Controls.Add(this.dtImportDate);
             this.panel3.Controls.Add(this.label10);
-            this.panel3.Controls.Add(this.CmbStatus);
+            this.panel3.Controls.Add(this.cmbStatus);
             this.panel3.Controls.Add(this.label9);
             this.panel3.Controls.Add(this.cmbType);
             this.panel3.Controls.Add(this.label8);
@@ -625,14 +625,14 @@
             this.label10.TabIndex = 100;
             this.label10.Text = "Status";
             // 
-            // CmbStatus
+            // cmbStatus
             // 
-            this.CmbStatus.Enabled = false;
-            this.CmbStatus.FormattingEnabled = true;
-            this.CmbStatus.Location = new System.Drawing.Point(970, 126);
-            this.CmbStatus.Name = "CmbStatus";
-            this.CmbStatus.Size = new System.Drawing.Size(156, 28);
-            this.CmbStatus.TabIndex = 22;
+            this.cmbStatus.Enabled = false;
+            this.cmbStatus.FormattingEnabled = true;
+            this.cmbStatus.Location = new System.Drawing.Point(970, 126);
+            this.cmbStatus.Name = "cmbStatus";
+            this.cmbStatus.Size = new System.Drawing.Size(156, 28);
+            this.cmbStatus.TabIndex = 22;
             // 
             // label9
             // 
@@ -759,7 +759,7 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.DateTimePicker dtImportDate;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ComboBox CmbStatus;
+        private System.Windows.Forms.ComboBox cmbStatus;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ComboBox cmbType;
         private System.Windows.Forms.Label label8;
