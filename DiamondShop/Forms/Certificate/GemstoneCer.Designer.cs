@@ -232,7 +232,6 @@
             // btnImage1
             // 
             this.btnImage1.BackColor = System.Drawing.SystemColors.Control;
-            this.btnImage1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnImage1.BackgroundImage")));
             this.btnImage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnImage1.Enabled = false;
             this.btnImage1.FlatAppearance.BorderSize = 0;
