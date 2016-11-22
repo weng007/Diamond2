@@ -228,6 +228,7 @@ namespace DiamondShop
                 throw ex;
             }
 
+            isEdit = true;
             return chkFlag;
         }
         protected override void EditData()

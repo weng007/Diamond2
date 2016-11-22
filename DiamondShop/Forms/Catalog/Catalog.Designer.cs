@@ -269,7 +269,6 @@
             // btnImage1
             // 
             this.btnImage1.BackColor = System.Drawing.SystemColors.Control;
-            this.btnImage1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnImage1.BackgroundImage")));
             this.btnImage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnImage1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnImage1.Enabled = false;
@@ -283,7 +282,6 @@
             // btnImage2
             // 
             this.btnImage2.BackColor = System.Drawing.SystemColors.Control;
-            this.btnImage2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnImage2.BackgroundImage")));
             this.btnImage2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnImage2.Enabled = false;
             this.btnImage2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;

@@ -421,6 +421,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(195)))), ((int)(((byte)(157)))));
             this.ClientSize = new System.Drawing.Size(962, 622);
             this.Controls.Add(this.panel3);
+            this.EnableSave = false;
             this.Name = "DiamondDetailCatalog";
             this.Text = "GemstoneCer";
             this.Controls.SetChildIndex(this.panel3, 0);

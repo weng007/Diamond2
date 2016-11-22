@@ -363,7 +363,10 @@ namespace DiamondShop
             if (isAuthorize)
             {
                 EnableSave = true;
-                EnableDelete = true;
+                if (txtStatus.Text == "Avai.")
+                {
+                    EnableDelete = true;
+                }
                 SetControlEnable(true);
                 base.EditData();
             }
@@ -377,7 +380,10 @@ namespace DiamondShop
                 if (isAuthorize)
                 {
                     EnableSave = true;
-                    EnableDelete = true;
+                    if (txtStatus.Text == "Avai.")
+                    {
+                        EnableDelete = true;
+                    }
                     SetControlEnable(true);
                     base.EditData();
                 }

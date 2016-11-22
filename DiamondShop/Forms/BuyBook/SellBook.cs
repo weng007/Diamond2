@@ -293,7 +293,6 @@ namespace DiamondShop
             }
 
             isEdit = true;
-
             return chkFlag;
         }
 

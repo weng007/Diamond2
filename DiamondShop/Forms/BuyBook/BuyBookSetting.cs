@@ -197,6 +197,7 @@ namespace DiamondShop
 
             LoadData();
 
+            isEdit = true;
             return chkFlag;
         }
 
