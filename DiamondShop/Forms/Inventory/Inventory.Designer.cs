@@ -514,6 +514,7 @@
             this.btnPrint.Size = new System.Drawing.Size(65, 96);
             this.btnPrint.TabIndex = 163;
             this.btnPrint.UseVisualStyleBackColor = false;
+            this.btnPrint.Visible = false;
             this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
             // btnDiamond

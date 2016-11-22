@@ -98,11 +98,12 @@
             // 
             // label20
             // 
-            this.label20.Image = ((System.Drawing.Image)(resources.GetObject("label20.Image")));
-            this.label20.Location = new System.Drawing.Point(25, 96);
+            this.label20.ForeColor = System.Drawing.Color.Black;
+            this.label20.Location = new System.Drawing.Point(38, 96);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(93, 19);
+            this.label20.Size = new System.Drawing.Size(80, 19);
             this.label20.TabIndex = 62;
+            this.label20.Text = "Password";
             // 
             // panel4
             // 

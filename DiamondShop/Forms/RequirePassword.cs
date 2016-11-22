@@ -28,6 +28,8 @@ namespace DiamondShop
         {
             InitializeComponent();
             AppShop = Shop;
+
+            txtPassword.Select();
         }
 
         private void btnOK_Click(object sender, EventArgs e)

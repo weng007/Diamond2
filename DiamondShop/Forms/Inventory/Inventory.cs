@@ -320,7 +320,10 @@ namespace DiamondShop
             if (isAuthorize)
             {
                 EnableSave = true;
-                EnableDelete = true;
+                if (cmbStatus.SelectedValue.ToString() == "73")
+                {
+                    EnableDelete = true;
+                }
                 SetControlEnable(true);
                 base.EditData();
             }
@@ -334,7 +337,10 @@ namespace DiamondShop
                 if (isAuthorize)
                 {
                     EnableSave = true;
-                    EnableDelete = true;
+                    if (cmbStatus.SelectedValue.ToString() == "73")
+                    {
+                        EnableDelete = true;
+                    }
                     SetControlEnable(true);
                     base.EditData();
                 }
