@@ -238,6 +238,7 @@ namespace DiamondShop
                     {
                         EnableDelete = true;
                     }
+
                     SetControlEnable(true);
                     base.EditData();
                 }

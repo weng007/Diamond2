@@ -134,6 +134,7 @@ namespace DiamondShop
                 row = tds.BBSetting.NewBBSettingRow();
                 tds.BBSetting.Rows.Add(row);
             }
+
             binder.BindValueToDataRow(row);
             row.IsPaid = rdoYes.Checked ? "1" : "0";
             if (txtPayDate.Text == "")
@@ -152,10 +153,14 @@ namespace DiamondShop
                     SetCreateBy(row);
                     chkFlag = ser.DoInsertData("BuyBookSetting", tds,0);
 
-                    ser1 = GM.GetService1();
-                    id = ser1.DoSearchBBSettingByCode(row.Code);
-                    btnAdd.Enabled = true;
-                    btnDel.Enabled = true;
+                    if (chkFlag)
+                    {
+                        ser1 = GM.GetService1();
+                        id = ser1.DoSearchBBSettingByCode(row.Code);
+
+                        SetControlEnable(true);
+                        isAuthorize = true;
+                    }
                 }
                 else
                 {
@@ -172,7 +177,6 @@ namespace DiamondShop
 
             //ไม่ให้ปิดหน้าจอหลัง Save
             isClosed = false;
-
             LoadData();
 
             return chkFlag;

@@ -93,7 +93,6 @@ namespace DiamondShop
             if (isAuthorize)
             {
                 EnableSave = true;
-                EnableDelete = true;
             }
             else
             {
@@ -105,7 +104,6 @@ namespace DiamondShop
                 if (isAuthorize)
                 {
                     EnableSave = true;
-                    EnableDelete = true;
                     base.EditData();
                 }
             }
