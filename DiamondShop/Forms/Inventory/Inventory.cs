@@ -365,15 +365,6 @@ namespace DiamondShop
                 }
             }
 
-            if(txtMinPrice.Text =="" || txtMinPrice.Text=="0")
-            {
-                message += "Please input Minimum Price > 0.\n";
-            }
-            if (txtPriceTag.Text == "" || txtPriceTag.Text == "0")
-            {
-                message += "Please input Price Tag > 0.\n";
-            }
-
             if (message == "") { return true; }
             else { return false; }
         }

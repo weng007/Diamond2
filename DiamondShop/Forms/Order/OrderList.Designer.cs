@@ -51,6 +51,7 @@
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RowNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.OrderNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SellerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CustomerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.JewelryTypeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ShopName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -212,6 +213,7 @@
             this.ID,
             this.RowNum,
             this.OrderNo,
+            this.SellerName,
             this.CustomerName,
             this.JewelryTypeName,
             this.ShopName,
@@ -259,6 +261,14 @@
             this.OrderNo.ReadOnly = true;
             this.OrderNo.Width = 150;
             // 
+            // SellerName
+            // 
+            this.SellerName.DataPropertyName = "SellerName";
+            this.SellerName.HeaderText = "SellerName";
+            this.SellerName.Name = "SellerName";
+            this.SellerName.ReadOnly = true;
+            this.SellerName.Width = 130;
+            // 
             // CustomerName
             // 
             this.CustomerName.DataPropertyName = "CustomerName";
@@ -273,7 +283,7 @@
             this.JewelryTypeName.HeaderText = "Type";
             this.JewelryTypeName.Name = "JewelryTypeName";
             this.JewelryTypeName.ReadOnly = true;
-            this.JewelryTypeName.Width = 150;
+            this.JewelryTypeName.Width = 170;
             // 
             // ShopName
             // 
@@ -361,6 +371,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn RowNum;
         private System.Windows.Forms.DataGridViewTextBoxColumn OrderNo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SellerName;
         private System.Windows.Forms.DataGridViewTextBoxColumn CustomerName;
         private System.Windows.Forms.DataGridViewTextBoxColumn JewelryTypeName;
         private System.Windows.Forms.DataGridViewTextBoxColumn ShopName;

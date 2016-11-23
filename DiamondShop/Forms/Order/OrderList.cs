@@ -25,15 +25,20 @@ namespace DiamondShop
         protected override void Initial()
         {
             ds = GM.GetSeller();
+
             DataRow row = ds.Tables[0].NewRow();
             row["ID"] = 0;
-            row["DisplayName"] = "All";
+            row["DisPlayName"] = "All";
+
             ds.Tables[0].Rows.Add(row);
+            ds.Tables[0].DefaultView.Sort = "ID";
+            DataTable table = ds.Tables[0];
+            DataView view = table.DefaultView;
+            view.Sort = "ID";
 
             cmbSeller.DataSource = ds.Tables[0];
             cmbSeller.ValueMember = "ID";
             cmbSeller.DisplayMember = "DisplayName";
-            cmbSeller.SelectedIndex = ds.Tables[0].Rows.Count - 1;
             cmbSeller.Refresh();
 
             cmbJewelryType.DataSource = (GM.GetMasterTableDetail("C015", true)).Tables[0];
