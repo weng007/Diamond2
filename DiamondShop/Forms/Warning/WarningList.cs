@@ -101,7 +101,7 @@ namespace DiamondShop
 
                 SetGrid();
                 SetGridimage();
-                gridWarning.Refresh();
+                gridWarning.RefreshEdit();
             }
             else { gridWarning.DataSource = null; gridWarning.Refresh(); }
         }
@@ -119,7 +119,7 @@ namespace DiamondShop
         private void WarningList_Load(object sender, EventArgs e)
         {
             Timer timer = new Timer();
-            timer.Interval = 6000; // 10 secs = 10000, 300000 = 5 m
+            timer.Interval = 3000; // 10 secs = 10000, 300000 = 5 m
             timer.Tick += new EventHandler(timer1_Tick);
             timer.Start();
         }
