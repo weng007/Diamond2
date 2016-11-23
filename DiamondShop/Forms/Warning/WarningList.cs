@@ -97,11 +97,12 @@ namespace DiamondShop
 
             if (tds.Tables[0].Rows.Count > 0)
             {
+                tds.AcceptChanges();
                 gridWarning.DataSource = tds.Tables[0];
-
+                
                 SetGrid();
                 SetGridimage();
-                gridWarning.RefreshEdit();
+                gridWarning.Refresh();             
             }
             else { gridWarning.DataSource = null; gridWarning.Refresh(); }
         }
