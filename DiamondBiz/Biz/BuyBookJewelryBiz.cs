@@ -12,12 +12,12 @@ namespace DiamondBiz.Biz
         dsBuyBookJewelry ds = new dsBuyBookJewelry();
         BuyBookJewelryDAL dal = new BuyBookJewelryDAL();
 
-        public dsBuyBookJewelry DoSearchData(string code,string code2)
+        public dsBuyBookJewelry DoSearchData(string code,string code2, int mode)
         {
 
             try
             {
-                return dal.DoSearchData(code, code2);
+                return dal.DoSearchData(code, code2, mode);
             }
             catch (Exception ex)
             {
@@ -25,11 +25,11 @@ namespace DiamondBiz.Biz
             }
         }
 
-        public dsBuyBookJewelry DoSelectData(int id)
+        public dsBuyBookJewelry DoSelectData(int id, int mode)
         {
             try
             {
-                return dal.DoSelectData(id);
+                return dal.DoSelectData(id, mode);
             }
             catch (Exception ex)
             {

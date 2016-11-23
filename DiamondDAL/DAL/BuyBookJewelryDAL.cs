@@ -13,13 +13,14 @@ namespace DiamondDAL.DAL
         dsBuyBookJewelry ds = new dsBuyBookJewelry();
         int flag = 0;
 
-        public dsBuyBookJewelry DoSearchData(string code, string code2)
+        public dsBuyBookJewelry DoSearchData(string code, string code2, int mode)
         {
             try
             {
                 SQL.ClearParameter();
                 SQL.CreateParameter("Code", code);
                 SQL.CreateParameter("Code2", code2);
+                SQL.CreateParameter("Mode", mode);
                 SQL.FillDataSetBySP("SP_BuyBookJewelry_Search", ds.BuyBookJewelry);
             }
             catch (Exception ex)
@@ -46,12 +47,13 @@ namespace DiamondDAL.DAL
             return (int)ds.BuyBookJewelry[0]["ID"];
         }
 
-        public dsBuyBookJewelry DoSelectData(int id)
+        public dsBuyBookJewelry DoSelectData(int id, int mode)
         {
             try
             {
                 SQL.ClearParameter();
                 SQL.CreateParameter("ID", id);
+                SQL.CreateParameter("Mode", mode);
                 SQL.FillDataSetBySP("SP_BuyBookJewelry_Sel", ds.BuyBookJewelry);
             }
             catch (Exception ex)

@@ -14,12 +14,22 @@ namespace DiamondShop
 {
     public partial class SearchBuyBookJewelryList : FormList
     {
-        public string idSelected = "";
+        public int mode = 0;
+        public string idSelected = "";      
 
         public SearchBuyBookJewelryList()
         {
             InitializeComponent();
             Initial();
+            DoLoadData();
+        }
+
+        public SearchBuyBookJewelryList(int mode)
+        {
+            InitializeComponent();
+            Initial();
+            this.mode = mode;
+
             DoLoadData();
         }
 
@@ -32,7 +42,7 @@ namespace DiamondShop
 
         protected override void DoLoadData()
         {
-            ds = ser.DoSelectData("BuyBookJewelry", -1, 0);
+            ds = ser.DoSelectData("BuyBookJewelry", -1, mode);
 
             if (ds.Tables[0].Rows.Count > 0)
             {
@@ -73,7 +83,7 @@ namespace DiamondShop
         {
             ser2 = GM.GetService2();
 
-            ds = ser2.DoSearchBuyBookJewelry(txtPrefix.Text + "-" + txtCode.Text,txtCode2.Text);
+            ds = ser2.DoSearchBuyBookJewelry(txtPrefix.Text + "-" + txtCode.Text,txtCode2.Text, mode);
 
             if (ds.Tables[0].Rows.Count > 0)
             {

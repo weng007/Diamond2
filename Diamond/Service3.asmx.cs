@@ -82,13 +82,13 @@ namespace Diamond
         }
 
         [WebMethod]
-        public DataSet DoSearchBuyBookJewelry(string code, string code2)
+        public DataSet DoSearchBuyBookJewelry(string code, string code2, int mode)
         {
             BuyBookJewelryBiz biz = new BuyBookJewelryBiz();
 
             try
             {
-                return biz.DoSearchData(code, code2);
+                return biz.DoSearchData(code, code2, mode);
             }
             catch (Exception ex)
             {
