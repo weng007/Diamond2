@@ -272,8 +272,9 @@ namespace DiamondShop
                     {
                         ser1 = GM.GetService1();
                         id = ser1.DoSearchInventoryByCode(row.Code);
-                        btnDiamond.Enabled = true;
-                        btnGemstone.Enabled = true;
+
+                        SetControlEnable(true);
+                        isAuthorize = true;
                     }
                 }
                 else
