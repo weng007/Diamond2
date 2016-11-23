@@ -27,7 +27,7 @@ namespace DiamondShop
 
         protected override void Initial()
         {
-            cmbJewelryType.DataSource = (GM.GetMasterTableDetail("C015")).Tables[0];
+            cmbJewelryType.DataSource = (GM.GetMasterTableDetail("C015", true)).Tables[0];
             cmbJewelryType.ValueMember = "ID";
             cmbJewelryType.DisplayMember = "Detail";
             cmbJewelryType.Refresh();
