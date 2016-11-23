@@ -48,14 +48,20 @@ namespace DiamondShop
             isEdit = false;
         }
 
-        public Inventory(string str, int mode)
+        public Inventory(string prefixCode, string code)
         {
-            if(mode == 0)
-            {
-                InitializeComponent();
-                Initial();
-                BinderData();
-            }
+            InitializeComponent();
+            Initial();
+            BinderData();
+
+            this.prefixCode = prefixCode;
+            txtOrderCode.Text = code;
+
+            //Set ตามที่เลือกเข้ามา
+            SetJewelryType();
+
+            txtUpdateBy.Text = ApplicationInfo.UserName;
+            cmbShop.SelectedValue = ApplicationInfo.Shop.ToString();
         }
 
         public Inventory(string prefix)

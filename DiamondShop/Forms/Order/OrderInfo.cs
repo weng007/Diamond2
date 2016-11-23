@@ -664,9 +664,69 @@ namespace DiamondShop
             txtPaid.Text = GM.ConvertDoubleToString(txtPaid, 0);
         }
 
+        private string SetJewelryType()
+        {
+            string prefixCode = "";
+
+            if (prefixCode == "DR")
+            {
+                cmbJewelryType.SelectedValue = 74;
+            }
+            else if (prefixCode == "DER")
+            {
+                cmbJewelryType.SelectedValue = 76;
+            }
+            else if (prefixCode == "GR")
+            {
+                cmbJewelryType.SelectedValue = 75;
+            }
+            else if (prefixCode == "GER")
+            {
+                cmbJewelryType.SelectedValue = 78;
+            }
+            else if (prefixCode == "WR")
+            {
+                cmbJewelryType.SelectedValue = 85;
+            }
+            else if (prefixCode == "IC")
+            {
+                cmbJewelryType.SelectedValue = 86;
+            }
+            else if (prefixCode == "NL")
+            {
+                cmbJewelryType.SelectedValue = 83;
+            }
+            else if (prefixCode == "BL")
+            {
+                cmbJewelryType.SelectedValue = 82;
+            }
+            else if (prefixCode == "CL")
+            {
+                cmbJewelryType.SelectedValue = 84;
+            }
+            else if (prefixCode == "BR")
+            {
+                cmbJewelryType.SelectedValue = 81;
+            }
+            else if (prefixCode == "PD")
+            {
+                cmbJewelryType.SelectedValue = 80;
+            }
+            else if (prefixCode == "SJ")
+            {
+                cmbJewelryType.SelectedValue = 207;
+            }
+            else if (prefixCode == "MTO")
+            {
+                cmbJewelryType.SelectedValue = 79;
+            }
+
+            return prefixCode;
+        }
+
         private void btnInventory_Click(object sender, EventArgs e)
         {
-            Inventory frm = new Inventory(txtCode.Text, 0);
+            Inventory frm = new Inventory(SetJewelryType(),txtCode.Text);
             frm.ShowDialog();
         }
 

@@ -129,6 +129,8 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.txtOrderCode = new System.Windows.Forms.TextBox();
+            this.label31 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -208,7 +210,7 @@
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Location = new System.Drawing.Point(364, 54);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(100, 21);
+            this.comboBox3.Size = new System.Drawing.Size(100, 27);
             this.comboBox3.TabIndex = 28;
             // 
             // textBox2
@@ -339,6 +341,8 @@
             // 
             this.panel7.BackColor = System.Drawing.Color.White;
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel7.Controls.Add(this.label31);
+            this.panel7.Controls.Add(this.txtOrderCode);
             this.panel7.Controls.Add(this.label32);
             this.panel7.Controls.Add(this.label30);
             this.panel7.Controls.Add(this.label39);
@@ -1154,7 +1158,7 @@
             this.cmbStatus.FormattingEnabled = true;
             this.cmbStatus.Location = new System.Drawing.Point(783, 13);
             this.cmbStatus.Name = "cmbStatus";
-            this.cmbStatus.Size = new System.Drawing.Size(165, 28);
+            this.cmbStatus.Size = new System.Drawing.Size(131, 28);
             this.cmbStatus.TabIndex = 12;
             this.cmbStatus.SelectedValueChanged += new System.EventHandler(this.cmbShop_SelectedValueChanged);
             // 
@@ -1270,13 +1274,32 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // txtOrderCode
+            // 
+            this.txtOrderCode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.txtOrderCode.Enabled = false;
+            this.txtOrderCode.Location = new System.Drawing.Point(954, 42);
+            this.txtOrderCode.Name = "txtOrderCode";
+            this.txtOrderCode.Size = new System.Drawing.Size(158, 26);
+            this.txtOrderCode.TabIndex = 206;
+            // 
+            // label31
+            // 
+            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label31.Location = new System.Drawing.Point(988, 19);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(105, 20);
+            this.label31.TabIndex = 207;
+            this.label31.Text = "Order Code";
+            // 
             // Inventory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(195)))), ((int)(((byte)(157)))));
-            this.ClientSize = new System.Drawing.Size(1165, 767);
+            this.ClientSize = new System.Drawing.Size(1160, 767);
             this.Controls.Add(this.panel7);
             this.Name = "Inventory";
             this.Text = "Product";
@@ -1394,5 +1417,7 @@
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.TextBox txtOrderCode;
     }
 }
