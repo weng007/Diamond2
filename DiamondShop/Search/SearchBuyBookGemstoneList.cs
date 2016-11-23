@@ -14,6 +14,7 @@ namespace DiamondShop
 {
     public partial class SearchBuyBookGemstoneList : FormList
     {
+        public int mode = 0;
         public string idSelected = "";
 
         public SearchBuyBookGemstoneList()
@@ -36,7 +37,7 @@ namespace DiamondShop
 
         protected override void DoLoadData()
         {
-            ds = ser.DoSelectData("BuyBookGemstone", -1, 0);
+            ds = ser.DoSelectData("BuyBookGemstone", -1, mode);
 
             if (ds.Tables[0].Rows.Count > 0)
             {

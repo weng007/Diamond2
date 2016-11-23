@@ -426,7 +426,7 @@ namespace DiamondShop
 
         private void btnJewelry_Click(object sender, EventArgs e)
         {
-            SearchBuyBookJewelryList frm = new SearchBuyBookJewelryList();
+            SearchBuyBookJewelryList frm = new SearchBuyBookJewelryList(1);
             frm.ShowDialog();
 
             SetGrid(frm.idSelected, 226);
