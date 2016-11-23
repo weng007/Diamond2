@@ -239,6 +239,9 @@ namespace DiamondShop
                         {
                             ser1 = GM.GetService1();
                             id = ser1.DoSearchSellBookByCode(row.SellNo);
+
+                            SetControlEnable(true);
+                            isAuthorize = true;
                         }
                     }
                     else
