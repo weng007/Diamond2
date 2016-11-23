@@ -14,7 +14,6 @@ namespace DiamondBiz.Biz
 
         public dsBuyBookJewelry DoSearchData(string code,string code2, int mode)
         {
-
             try
             {
                 return dal.DoSearchData(code, code2, mode);

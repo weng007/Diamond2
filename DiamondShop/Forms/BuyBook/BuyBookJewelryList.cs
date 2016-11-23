@@ -24,9 +24,7 @@ namespace DiamondShop
 
         protected override void Initial()
         {
-
             txtCode.Select();
-
             gridJewelry.AutoGenerateColumns = false;
         }
 

@@ -168,7 +168,7 @@ namespace DiamondShop
                         frm.ShowDialog();
                     }
 
-                    if (ApplicationInfo.Shop == (int)gridWarning.Rows[e.RowIndex].Cells["EShop"].Value)
+                    if (ApplicationInfo.ShopName == gridWarning.Rows[e.RowIndex].Cells["EShopName"].Value.ToString())
                     {
                         ser1.UpdateMessageStatus(WarningID, statusType, "0");
                     }
