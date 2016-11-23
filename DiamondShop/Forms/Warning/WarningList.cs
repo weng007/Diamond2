@@ -146,7 +146,10 @@ namespace DiamondShop
                     OrderInfo frm = new OrderInfo(id, WarningID);
                     frm.ShowDialog();
 
-                    ser1.UpdateMessageStatus(WarningID, statusType,"0");
+                    if (ApplicationInfo.Shop == 232)
+                    {
+                        ser1.UpdateMessageStatus(WarningID, statusType, "0");
+                    }
                 }
                 else
                 {
@@ -155,7 +158,10 @@ namespace DiamondShop
                     TransferBuyBook frm = new TransferBuyBook(id);
                     frm.ShowDialog();
 
-                    ser1.UpdateMessageStatus(WarningID, statusType,"0");
+                    if (ApplicationInfo.Shop == (int)gridWarning.Rows[e.RowIndex].Cells["EShop"].Value)
+                    {
+                        ser1.UpdateMessageStatus(WarningID, statusType, "0");
+                    }
                 }
 
                 if (gridWarning.Rows[e.RowIndex].Cells["MessageStatus"].Value.ToString() == "215" || gridWarning.Rows[e.RowIndex].Cells["MessageStatus"].Value.ToString() == "217")

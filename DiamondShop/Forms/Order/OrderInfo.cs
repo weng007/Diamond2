@@ -36,6 +36,7 @@ namespace DiamondShop
         public string materail = "";
         public int WarningID = 0;
         public int OrderID;
+
         public OrderInfo()
         {
             InitializeComponent();
