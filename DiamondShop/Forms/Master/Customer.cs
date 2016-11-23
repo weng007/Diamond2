@@ -178,6 +178,7 @@ namespace DiamondShop
                 throw ex;
             }
 
+            isEdit = true;
             return chkFlag;
         }
 

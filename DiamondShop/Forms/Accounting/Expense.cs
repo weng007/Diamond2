@@ -159,10 +159,6 @@ namespace DiamondShop
             return chkFlag;
         }
 
-        private void cmbRole_SelectedIndexChanged(object sender, EventArgs e)
-        {
-        }
-
         private void txtTitleName_TextChanged(object sender, EventArgs e)
         {
             isEdit = true;

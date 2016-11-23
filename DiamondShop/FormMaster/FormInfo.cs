@@ -29,6 +29,7 @@ namespace DiamondShop.FormMaster
         bool enableDelete = false;
 
         public bool isEdit = false;
+        public bool canDelete = true;
 
         [Category("Toolbar")]
         public bool EnableEdit

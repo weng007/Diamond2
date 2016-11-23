@@ -390,7 +390,6 @@ namespace DiamondShop
             }
         }
 
-
         private void SetFormatNumber()
         {
             txtPriceTag.Text = GM.ConvertDoubleToString(txtPriceTag, 0);

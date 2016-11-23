@@ -217,7 +217,10 @@ namespace DiamondShop
             if (isAuthorize)
             {
                 EnableSave = true;
-                EnableDelete = true;
+                if (txtTransferStatus.Text == "Send")
+                {
+                    EnableDelete = true;
+                }
                 SetControlEnable(true);
                 base.EditData();
             }
@@ -231,7 +234,10 @@ namespace DiamondShop
                 if (isAuthorize)
                 {
                     EnableSave = true;
-                    EnableDelete = true;
+                    if (txtTransferStatus.Text == "Send")
+                    {
+                        EnableDelete = true;
+                    }
                     SetControlEnable(true);
                     base.EditData();
                 }

@@ -93,9 +93,12 @@ namespace DiamondShop
                 binder.BindValueToControl(tds.BBSetting[0]);
                 txtPayDate.Text = string.Format("{0:d/M/yyyy}", tds.BBSetting[0]["PayDate"]);
 
-                EnableSave = false;
-                EnableEdit = GM.CheckIsEdit(ApplicationInfo.Shop, Convert.ToInt16(cmbShop.SelectedValue.ToString()));
-                EnableDelete = false;
+                if (!isAuthorize)
+                {
+                    EnableSave = false;
+                    EnableEdit = GM.CheckIsEdit(ApplicationInfo.Shop, Convert.ToInt16(cmbShop.SelectedValue.ToString()));
+                    EnableDelete = false;
+                }
             }
             if (tds.BBSetting[0]["IsPaid"].ToString() == "0")
             {

@@ -372,6 +372,7 @@ namespace DiamondShop
                 throw ex;
             }
 
+            isEdit = true;
             return chkFlag;
         }
 
@@ -380,7 +381,10 @@ namespace DiamondShop
             if (isAuthorize)
             {
                 EnableSave = true;
-                EnableDelete = true;
+                if (FactoryStatus == 218)
+                {
+                    EnableDelete = true;
+                }
                 SetControlEnable(true);
             }
             else
@@ -393,7 +397,10 @@ namespace DiamondShop
                 if (isAuthorize)
                 {
                     EnableSave = true;
-                    EnableDelete = true;
+                    if (FactoryStatus == 218)
+                    {
+                        EnableDelete = true;
+                    }
                     SetControlEnable(true);
                     base.EditData();
                 }
