@@ -155,8 +155,17 @@ namespace DiamondShop
                 {
                     id = (int)gridWarning.Rows[e.RowIndex].Cells["RefID"].Value;
                     WarningID = Convert.ToInt32(gridWarning.Rows[e.RowIndex].Cells["ID"].Value);
-                    TransferBuyBook frm = new TransferBuyBook(id);
-                    frm.ShowDialog();
+
+                    if (gridWarning.Rows[e.RowIndex].Cells["IsBuyBook"].Value.ToString() == "1")    // Order
+                    {
+                        TransferBuyBook frm = new TransferBuyBook(id);
+                        frm.ShowDialog();
+                    }
+                    else
+                    {
+                        TransferInventory frm = new TransferInventory(id);
+                        frm.ShowDialog();
+                    }
 
                     if (ApplicationInfo.Shop == (int)gridWarning.Rows[e.RowIndex].Cells["EShop"].Value)
                     {
