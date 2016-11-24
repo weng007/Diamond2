@@ -331,10 +331,10 @@ namespace DiamondShop
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            this.Close();
-
             Login frm = new Login();
-            frm.ShowDialog();            
+            frm.ShowDialog();
+
+            this.Close();
         }
     }
 }
