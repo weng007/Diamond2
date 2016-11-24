@@ -285,7 +285,7 @@ namespace DiamondDS.DS {
             
             private global::System.Data.DataColumn columnCode;
             
-            private global::System.Data.DataColumn columnOrderCode;
+            private global::System.Data.DataColumn columnOrderNo;
             
             private global::System.Data.DataColumn columnShop;
             
@@ -446,9 +446,9 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn OrderCodeColumn {
+            public global::System.Data.DataColumn OrderNoColumn {
                 get {
-                    return this.columnOrderCode;
+                    return this.columnOrderNo;
                 }
             }
             
@@ -892,7 +892,7 @@ namespace DiamondDS.DS {
             public InventoryRow AddInventoryRow(
                         long RowNum, 
                         string Code, 
-                        string OrderCode, 
+                        string OrderNo, 
                         int Shop, 
                         string ShopName, 
                         int JewelryType, 
@@ -948,7 +948,7 @@ namespace DiamondDS.DS {
                         RowNum,
                         null,
                         Code,
-                        OrderCode,
+                        OrderNo,
                         Shop,
                         ShopName,
                         JewelryType,
@@ -1031,7 +1031,7 @@ namespace DiamondDS.DS {
                 this.columnRowNum = base.Columns["RowNum"];
                 this.columnID = base.Columns["ID"];
                 this.columnCode = base.Columns["Code"];
-                this.columnOrderCode = base.Columns["OrderCode"];
+                this.columnOrderNo = base.Columns["OrderNo"];
                 this.columnShop = base.Columns["Shop"];
                 this.columnShopName = base.Columns["ShopName"];
                 this.columnJewelryType = base.Columns["JewelryType"];
@@ -1093,8 +1093,8 @@ namespace DiamondDS.DS {
                 base.Columns.Add(this.columnID);
                 this.columnCode = new global::System.Data.DataColumn("Code", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCode);
-                this.columnOrderCode = new global::System.Data.DataColumn("OrderCode", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnOrderCode);
+                this.columnOrderNo = new global::System.Data.DataColumn("OrderNo", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnOrderNo);
                 this.columnShop = new global::System.Data.DataColumn("Shop", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnShop);
                 this.columnShopName = new global::System.Data.DataColumn("ShopName", typeof(string), null, global::System.Data.MappingType.Element);
@@ -1413,17 +1413,17 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string OrderCode {
+            public string OrderNo {
                 get {
                     try {
-                        return ((string)(this[this.tableInventory.OrderCodeColumn]));
+                        return ((string)(this[this.tableInventory.OrderNoColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'OrderCode\' in table \'Inventory\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'OrderNo\' in table \'Inventory\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableInventory.OrderCodeColumn] = value;
+                    this[this.tableInventory.OrderNoColumn] = value;
                 }
             }
             
@@ -2253,14 +2253,14 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsOrderCodeNull() {
-                return this.IsNull(this.tableInventory.OrderCodeColumn);
+            public bool IsOrderNoNull() {
+                return this.IsNull(this.tableInventory.OrderNoColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetOrderCodeNull() {
-                this[this.tableInventory.OrderCodeColumn] = global::System.Convert.DBNull;
+            public void SetOrderNoNull() {
+                this[this.tableInventory.OrderNoColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
