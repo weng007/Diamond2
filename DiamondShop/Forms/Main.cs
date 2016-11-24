@@ -332,7 +332,7 @@ namespace DiamondShop
         private void btnLogout_Click(object sender, EventArgs e)
         {
             Login frm = new Login();
-            frm.ShowDialog();
+            frm.Show();
 
             this.Close();
         }
