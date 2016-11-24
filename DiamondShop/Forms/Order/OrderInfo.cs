@@ -76,9 +76,7 @@ namespace DiamondShop
             btnDiamond.Enabled = true;
 
             LoadData();
-
             SetControlEnable(false);
-
             //ปิดเปิดปุ่ม Confirm, Print ใบสั่งงาน และสร้าง Inventory
             SetMode();
 
@@ -130,7 +128,7 @@ namespace DiamondShop
         {
             binder.BindControl(dtOrderDate, "BuyDate");
             binder.BindControl(txtCustomer, "CustomerName");
-            binder.BindControl(txtCode, "OrderNo");
+            binder.BindControl(txtOrderNo, "OrderNo");
             binder.BindControl(txtTel, "MobilePhone");
             binder.BindControl(cmbJewelryType, "JewelryType");
             binder.BindControl(cmbMaterial, "Material");
@@ -380,13 +378,13 @@ namespace DiamondShop
         protected override void EditData()
         {
             if (isAuthorize)
-            {
-                EnableSave = true;
+            {              
                 if (FactoryStatus == 218)
                 {
+                    EnableSave = true;
                     EnableDelete = true;
-                }
-                SetControlEnable(true);
+                    SetControlEnable(true);
+                }          
             }
             else
             {
@@ -396,13 +394,14 @@ namespace DiamondShop
                 frm.Close();
 
                 if (isAuthorize)
-                {
-                    EnableSave = true;
+                {                    
                     if (FactoryStatus == 218)
                     {
+                        EnableSave = true;
                         EnableDelete = true;
+                        SetControlEnable(true);
                     }
-                    SetControlEnable(true);
+                    
                     base.EditData();
                 }
             }
@@ -478,9 +477,14 @@ namespace DiamondShop
             cmbShop1.Enabled = status;
             txtAppointDate.Enabled = status;
             cmbShop2.Enabled = status;
+            txtDetail.Enabled = status;
+            txtPrice.Enabled = status;
+            btnBrowseInv.Enabled = status;
+            btnBrowseInv1.Enabled = status;
+            btnRefDel.Enabled = status;
+            btnRefDel1.Enabled = status;
 
             groupBox1.Enabled = status;
-            groupBox2.Enabled = status;
             txtThings.Enabled = status;
             txtCustNote.Enabled = status;
             btnDiamond.Enabled = status;
@@ -668,71 +672,77 @@ namespace DiamondShop
         {
             string prefixCode = "";
 
-            if (prefixCode == "DR")
+            if (cmbJewelryType.SelectedValue.ToString() == "74")
             {
-                cmbJewelryType.SelectedValue = 74;
+                prefixCode = "DR";
             }
-            else if (prefixCode == "DER")
+            else if (cmbJewelryType.SelectedValue.ToString() == "75")
             {
-                cmbJewelryType.SelectedValue = 76;
+                prefixCode = "GR";
             }
-            else if (prefixCode == "GR")
+            else if (cmbJewelryType.SelectedValue.ToString() == "76")
             {
-                cmbJewelryType.SelectedValue = 75;
-            }
-            else if (prefixCode == "GER")
+                prefixCode = "DER";
+            }           
+            else if (cmbJewelryType.SelectedValue.ToString() == "78")
             {
-                cmbJewelryType.SelectedValue = 78;
+                prefixCode = "GER";
             }
-            else if (prefixCode == "WR")
+            else if (cmbJewelryType.SelectedValue.ToString() == "79")
             {
-                cmbJewelryType.SelectedValue = 85;
+                prefixCode = "MTO";
             }
-            else if (prefixCode == "IC")
+            else if (cmbJewelryType.SelectedValue.ToString() == "80")
             {
-                cmbJewelryType.SelectedValue = 86;
+                prefixCode = "PD";
             }
-            else if (prefixCode == "NL")
+            else if (cmbJewelryType.SelectedValue.ToString() == "81")
             {
-                cmbJewelryType.SelectedValue = 83;
+                prefixCode = "BR";
             }
-            else if (prefixCode == "BL")
+            else if (cmbJewelryType.SelectedValue.ToString() == "82")
             {
-                cmbJewelryType.SelectedValue = 82;
+                prefixCode = "BL";
             }
-            else if (prefixCode == "CL")
+            else if (cmbJewelryType.SelectedValue.ToString() == "83")
             {
-                cmbJewelryType.SelectedValue = 84;
+                prefixCode = "NL";
             }
-            else if (prefixCode == "BR")
+            else if (cmbJewelryType.SelectedValue.ToString() == "84")
             {
-                cmbJewelryType.SelectedValue = 81;
+                prefixCode = "CL";
             }
-            else if (prefixCode == "PD")
+            else if (cmbJewelryType.SelectedValue.ToString() == "85")
             {
-                cmbJewelryType.SelectedValue = 80;
+                prefixCode = "WR";
             }
-            else if (prefixCode == "SJ")
+            else if (cmbJewelryType.SelectedValue.ToString() == "86")
             {
-                cmbJewelryType.SelectedValue = 207;
-            }
-            else if (prefixCode == "MTO")
+                prefixCode = "IC";
+            }       
+            else if (cmbJewelryType.SelectedValue.ToString() == "207")
             {
-                cmbJewelryType.SelectedValue = 79;
-            }
+                prefixCode = "SJ";
+            }        
 
             return prefixCode;
         }
 
         private void btnInventory_Click(object sender, EventArgs e)
         {
-            Inventory frm = new Inventory(SetJewelryType(),txtCode.Text);
+            Inventory frm = new Inventory(SetJewelryType(),txtOrderNo.Text);
             frm.ShowDialog();
         }
 
         private void btnRefDel1_Click(object sender, EventArgs e)
         {
             ser1.DeleteDataReference(id, 1);
+        }
+
+        private void rdoReceive_CheckedChanged(object sender, EventArgs e)
+        {
+            ser1 = GM.GetService1();
+            ser1.UpdateReceiveMaterial(id, (rdoReceive.Checked)?"1":"0");
         }
 
         private void dtBuyDate_ValueChanged(object sender, EventArgs e)
@@ -773,6 +783,8 @@ namespace DiamondShop
                 {
                     btnConfirm.Visible = true;
                 }
+
+                groupBox2.Enabled = true;
             }
         }
     }

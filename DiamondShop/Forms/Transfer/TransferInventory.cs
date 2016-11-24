@@ -324,18 +324,21 @@ namespace DiamondShop
 
             if (gridTransfer.SelectedRows.Count > 0)
             {
-                delID = (int)gridTransfer.Rows[gridTransfer.SelectedRows[0].Index].Cells["ID"].Value;
+                if (gridTransfer.Rows[gridTransfer.SelectedRows[0].Index].Cells["ID"].Value.ToString() != "")
+                {
+                    delID = (int)gridTransfer.Rows[gridTransfer.SelectedRows[0].Index].Cells["ID"].Value;
+                }
                 tds1.TransferInventory.Rows.RemoveAt(gridTransfer.SelectedRows[0].Index);
-
-                tds1.AcceptChanges();
-                gridTransfer.Refresh();
 
                 if (delID != 0)
                 {
                     ser.DoDeleteData("TransferInventory", delID);
                 }
-            }
 
+                tds1.AcceptChanges();
+                gridTransfer.Refresh();
+            }
+            
             isEdit = true;
         }
 
@@ -354,7 +357,7 @@ namespace DiamondShop
         {
             if (e.RowIndex >= 0)
             {
-                if (gridTransfer.Rows[e.RowIndex].Cells["ID"].Value != null)
+                if (gridTransfer.Rows[e.RowIndex].Cells["ID"].Value.ToString() != "")
                 { DelID = Convert.ToInt32(gridTransfer.Rows[e.RowIndex].Cells["ID"].Value.ToString()); }
             }
         }

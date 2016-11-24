@@ -125,5 +125,24 @@ namespace DiamondDAL.DAL
 
             return ds;
         }
+
+        public bool UpdateReceiveMaterial(int id, string isReceive)
+        {
+            try
+            {
+                SQL.ClearParameter();
+                SQL.CreateParameter("@ID", id);
+                SQL.CreateParameter("@IsReceive", isReceive);
+                flag = SQL.ExecuteSP("SP_Order_Upd_ReceiveMaterial");
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return Convert.ToBoolean(flag);
+        }
+
+        
     }
 }

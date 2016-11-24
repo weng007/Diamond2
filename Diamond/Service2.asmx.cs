@@ -384,6 +384,20 @@ namespace Diamond
         }
 
         [WebMethod]
+        public bool UpdateReceiveMaterial(int id, string isReceive)
+        {
+            OrderBiz biz = new OrderBiz();
+            try
+            {
+                return biz.UpdateReceiveMaterial(id, isReceive);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        [WebMethod]
         public dsExpenseGroup GetExpenseGroup()
         {
             ExpenseGroupBiz biz = new ExpenseGroupBiz();

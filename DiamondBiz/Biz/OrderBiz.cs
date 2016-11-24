@@ -96,5 +96,17 @@ namespace DiamondBiz.Biz
                 throw ex;
             }
         }
+
+        public bool UpdateReceiveMaterial(int id, string isReceive)
+        {
+            try
+            {
+                return dal.UpdateReceiveMaterial(id, isReceive);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

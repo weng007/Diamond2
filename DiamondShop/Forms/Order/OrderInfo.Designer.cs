@@ -54,8 +54,8 @@
             this.txtNote3 = new System.Windows.Forms.TextBox();
             this.txtNote2 = new System.Windows.Forms.TextBox();
             this.txtNote1 = new System.Windows.Forms.TextBox();
-            this.btnBrownInv1 = new System.Windows.Forms.Button();
-            this.btnBrownInv = new System.Windows.Forms.Button();
+            this.btnBrowseInv1 = new System.Windows.Forms.Button();
+            this.btnBrowseInv = new System.Windows.Forms.Button();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.label29 = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
@@ -122,7 +122,7 @@
             this.txtTel = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtCode = new System.Windows.Forms.TextBox();
+            this.txtOrderNo = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
@@ -170,8 +170,8 @@
             this.panel3.Controls.Add(this.txtNote3);
             this.panel3.Controls.Add(this.txtNote2);
             this.panel3.Controls.Add(this.txtNote1);
-            this.panel3.Controls.Add(this.btnBrownInv1);
-            this.panel3.Controls.Add(this.btnBrownInv);
+            this.panel3.Controls.Add(this.btnBrowseInv1);
+            this.panel3.Controls.Add(this.btnBrowseInv);
             this.panel3.Controls.Add(this.linkLabel2);
             this.panel3.Controls.Add(this.label29);
             this.panel3.Controls.Add(this.linkLabel1);
@@ -234,7 +234,7 @@
             this.panel3.Controls.Add(this.txtTel);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.label6);
-            this.panel3.Controls.Add(this.txtCode);
+            this.panel3.Controls.Add(this.txtOrderNo);
             this.panel3.Controls.Add(this.dtOrderDate);
             this.panel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.panel3.Location = new System.Drawing.Point(12, 72);
@@ -502,37 +502,37 @@
             this.txtNote1.Text = "เพิ่มเติม1";
             this.txtNote1.Visible = false;
             // 
-            // btnBrownInv1
+            // btnBrowseInv1
             // 
-            this.btnBrownInv1.BackColor = System.Drawing.Color.Transparent;
-            this.btnBrownInv1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBrownInv1.BackgroundImage")));
-            this.btnBrownInv1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnBrownInv1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBrownInv1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(109)))), ((int)(((byte)(65)))));
-            this.btnBrownInv1.FlatAppearance.BorderSize = 0;
-            this.btnBrownInv1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBrownInv1.Location = new System.Drawing.Point(1257, 409);
-            this.btnBrownInv1.Name = "btnBrownInv1";
-            this.btnBrownInv1.Size = new System.Drawing.Size(30, 30);
-            this.btnBrownInv1.TabIndex = 291;
-            this.btnBrownInv1.UseVisualStyleBackColor = false;
-            this.btnBrownInv1.Click += new System.EventHandler(this.btnBrownInv1_Click);
+            this.btnBrowseInv1.BackColor = System.Drawing.Color.Transparent;
+            this.btnBrowseInv1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBrowseInv1.BackgroundImage")));
+            this.btnBrowseInv1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnBrowseInv1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBrowseInv1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(109)))), ((int)(((byte)(65)))));
+            this.btnBrowseInv1.FlatAppearance.BorderSize = 0;
+            this.btnBrowseInv1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBrowseInv1.Location = new System.Drawing.Point(1257, 409);
+            this.btnBrowseInv1.Name = "btnBrowseInv1";
+            this.btnBrowseInv1.Size = new System.Drawing.Size(30, 30);
+            this.btnBrowseInv1.TabIndex = 291;
+            this.btnBrowseInv1.UseVisualStyleBackColor = false;
+            this.btnBrowseInv1.Click += new System.EventHandler(this.btnBrownInv1_Click);
             // 
-            // btnBrownInv
+            // btnBrowseInv
             // 
-            this.btnBrownInv.BackColor = System.Drawing.Color.Transparent;
-            this.btnBrownInv.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBrownInv.BackgroundImage")));
-            this.btnBrownInv.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnBrownInv.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBrownInv.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(109)))), ((int)(((byte)(65)))));
-            this.btnBrownInv.FlatAppearance.BorderSize = 0;
-            this.btnBrownInv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBrownInv.Location = new System.Drawing.Point(1257, 377);
-            this.btnBrownInv.Name = "btnBrownInv";
-            this.btnBrownInv.Size = new System.Drawing.Size(30, 30);
-            this.btnBrownInv.TabIndex = 290;
-            this.btnBrownInv.UseVisualStyleBackColor = false;
-            this.btnBrownInv.Click += new System.EventHandler(this.btnBrownInv_Click);
+            this.btnBrowseInv.BackColor = System.Drawing.Color.Transparent;
+            this.btnBrowseInv.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBrowseInv.BackgroundImage")));
+            this.btnBrowseInv.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnBrowseInv.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBrowseInv.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(109)))), ((int)(((byte)(65)))));
+            this.btnBrowseInv.FlatAppearance.BorderSize = 0;
+            this.btnBrowseInv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBrowseInv.Location = new System.Drawing.Point(1257, 377);
+            this.btnBrowseInv.Name = "btnBrowseInv";
+            this.btnBrowseInv.Size = new System.Drawing.Size(30, 30);
+            this.btnBrowseInv.TabIndex = 290;
+            this.btnBrowseInv.UseVisualStyleBackColor = false;
+            this.btnBrowseInv.Click += new System.EventHandler(this.btnBrownInv_Click);
             // 
             // linkLabel2
             // 
@@ -588,6 +588,7 @@
             // 
             this.groupBox2.Controls.Add(this.rdoNotReceive);
             this.groupBox2.Controls.Add(this.rdoReceive);
+            this.groupBox2.Enabled = false;
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.groupBox2.Location = new System.Drawing.Point(610, 308);
@@ -619,6 +620,7 @@
             this.rdoReceive.TabIndex = 92;
             this.rdoReceive.Text = "รับ";
             this.rdoReceive.UseVisualStyleBackColor = true;
+            this.rdoReceive.CheckedChanged += new System.EventHandler(this.rdoReceive_CheckedChanged);
             // 
             // label28
             // 
@@ -1215,9 +1217,9 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
             this.label1.Location = new System.Drawing.Point(12, 71);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 20);
+            this.label1.Size = new System.Drawing.Size(73, 20);
             this.label1.TabIndex = 85;
-            this.label1.Text = "Order Code";
+            this.label1.Text = "Order No";
             // 
             // label6
             // 
@@ -1229,15 +1231,15 @@
             this.label6.TabIndex = 84;
             this.label6.Text = "Order Date";
             // 
-            // txtCode
+            // txtOrderNo
             // 
-            this.txtCode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.txtCode.Enabled = false;
-            this.txtCode.Location = new System.Drawing.Point(126, 68);
-            this.txtCode.Name = "txtCode";
-            this.txtCode.Size = new System.Drawing.Size(150, 26);
-            this.txtCode.TabIndex = 150;
-            this.txtCode.TextChanged += new System.EventHandler(this.txtThings_TextChanged);
+            this.txtOrderNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.txtOrderNo.Enabled = false;
+            this.txtOrderNo.Location = new System.Drawing.Point(126, 68);
+            this.txtOrderNo.Name = "txtOrderNo";
+            this.txtOrderNo.Size = new System.Drawing.Size(150, 26);
+            this.txtOrderNo.TabIndex = 150;
+            this.txtOrderNo.TextChanged += new System.EventHandler(this.txtThings_TextChanged);
             // 
             // panel1
             // 
@@ -1302,7 +1304,7 @@
         #endregion
         private System.Windows.Forms.DateTimePicker dtOrderDate;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox txtCode;
+        private System.Windows.Forms.TextBox txtOrderNo;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label6;
@@ -1373,8 +1375,8 @@
         private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.Button btnBrownInv1;
-        private System.Windows.Forms.Button btnBrownInv;
+        private System.Windows.Forms.Button btnBrowseInv1;
+        private System.Windows.Forms.Button btnBrowseInv;
         private System.Windows.Forms.TextBox txtNote3;
         private System.Windows.Forms.TextBox txtNote2;
         private System.Windows.Forms.TextBox txtNote1;
