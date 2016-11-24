@@ -90,7 +90,10 @@ namespace DiamondShop
         private void SearchData()
         {
             ser2 = GM.GetService2();
-            
+
+            //assign ค่าวันที่เวลาล่าสุด
+            dtEEditDate.Value = DateTime.Now;
+
             ds = ser2.DoSearchWarning(txtRefID.Text, Convert.ToInt16(cmbStatusType.SelectedValue.ToString()), dtSEditDate.Value, dtEEditDate.Value, ApplicationInfo.UserID, IsInbox);
             tds.Clear();
             tds.Merge(ds);

@@ -113,6 +113,9 @@ namespace DiamondShop.Report
             {
                 reportViewer2.PrintDialog();
             }
+
+            ser1 = GM.GetService1();
+            ser1.UpdateIsPrintCer(id);
         }
     }
 }
