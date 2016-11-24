@@ -715,7 +715,7 @@
             // 
             this.btnImage1.BackColor = System.Drawing.SystemColors.Control;
             this.btnImage1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnImage1.BackgroundImage")));
-            this.btnImage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnImage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnImage1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnImage1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnImage1.Location = new System.Drawing.Point(950, 13);
@@ -729,7 +729,7 @@
             // 
             this.btnImage5.BackColor = System.Drawing.SystemColors.Control;
             this.btnImage5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnImage5.BackgroundImage")));
-            this.btnImage5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnImage5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnImage5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnImage5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnImage5.Location = new System.Drawing.Point(950, 325);
@@ -743,7 +743,7 @@
             // 
             this.btnImage4.BackColor = System.Drawing.SystemColors.Control;
             this.btnImage4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnImage4.BackgroundImage")));
-            this.btnImage4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnImage4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnImage4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnImage4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnImage4.Location = new System.Drawing.Point(1159, 169);
@@ -757,7 +757,7 @@
             // 
             this.btnImage3.BackColor = System.Drawing.SystemColors.Control;
             this.btnImage3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnImage3.BackgroundImage")));
-            this.btnImage3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnImage3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnImage3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnImage3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnImage3.Location = new System.Drawing.Point(950, 169);
@@ -771,7 +771,7 @@
             // 
             this.btnImage2.BackColor = System.Drawing.SystemColors.Control;
             this.btnImage2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnImage2.BackgroundImage")));
-            this.btnImage2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnImage2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnImage2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnImage2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnImage2.Location = new System.Drawing.Point(1159, 13);
