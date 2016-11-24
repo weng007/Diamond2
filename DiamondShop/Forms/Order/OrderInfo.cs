@@ -167,8 +167,14 @@ namespace DiamondShop
                 binder.BindValueToControl(tds.Order[0]);
                 custID = tds.Order[0].CustID;
                 txtAppointDate.Text = string.Format("{0:d/M/yyyy}", tds.Order[0]["AppointDate"]);
-                txtMountingDate.Text = string.Format("{0:d/M/yyyy}", tds.Order[0]["MountingDate"]);
-                txtJobDoneDate.Text = string.Format("{0:d/M/yyyy}", tds.Order[0]["JobDoneDate"]);
+                if (Convert.ToInt32(tds.Order[0].FactoryStatus.ToString()) == 220)
+                {
+                    txtMountingDate.Text = string.Format("{0:d/M/yyyy}", tds.Order[0]["MountingDate"]);
+                }
+                if (Convert.ToInt32(tds.Order[0].FactoryStatus.ToString()) == 221)
+                {
+                    txtJobDoneDate.Text = string.Format("{0:d/M/yyyy}", tds.Order[0]["JobDoneDate"]);
+                }
 
                 if (tds.Order[0].Image1 != null)
                 {
@@ -231,13 +237,13 @@ namespace DiamondShop
 
                 if (tds.Order[0]["IsReceive"].ToString() == "0")
                 {
-                    rdoHave.Checked = false;
-                    rdoNotHave.Checked = true;
+                    rdoReceive.Checked = false;
+                    rdoNotReceive.Checked = true;
                 }
                 else
                 {
-                    rdoHave.Checked = true;
-                    rdoNotHave.Checked = false;
+                    rdoReceive.Checked = true;
+                    rdoNotReceive.Checked = false;
                 }
                 if (materail != "")
                 {
