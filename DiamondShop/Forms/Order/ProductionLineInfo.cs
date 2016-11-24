@@ -81,7 +81,6 @@ namespace DiamondShop
                         ser1.UpdateProductionLine(Convert.ToInt32(idSelected[i]), Convert.ToInt32(cmbFactoryStatus.SelectedValue.ToString()), ApplicationInfo.UserID);
                     }
                 }
-
                 catch (Exception ex)
                 {
                     throw ex;

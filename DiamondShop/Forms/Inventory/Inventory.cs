@@ -138,6 +138,7 @@ namespace DiamondShop
         private void BinderData()
         {
             binder.BindControl(txtCode, "Code");
+            binder.BindControl(txtOrderCode, "OrderNo");
             binder.BindControl(cmbShop, "Shop");
             binder.BindControl(cmbJewelryType, "JewelryType");
             binder.BindControl(cmbStatus, "Status");

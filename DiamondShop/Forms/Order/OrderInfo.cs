@@ -734,7 +734,7 @@ namespace DiamondShop
             ser1 = GM.GetService1();
             int invID = ser1.CheckOrderNoExist(txtOrderNo.Text);
 
-            if (InvID > 0)
+            if (invID > 0)
             {
                 Inventory frm = new Inventory(invID);
                 frm.ShowDialog();
