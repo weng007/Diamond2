@@ -120,7 +120,7 @@ namespace DiamondShop
         private void WarningList_Load(object sender, EventArgs e)
         {
             Timer timer = new Timer();
-            timer.Interval = 3000; // 10 secs = 10000, 300000 = 5 m
+            timer.Interval = 10000; // 10 secs = 10000, 300000 = 5 m
             timer.Tick += new EventHandler(timer1_Tick);
             timer.Start();
         }
