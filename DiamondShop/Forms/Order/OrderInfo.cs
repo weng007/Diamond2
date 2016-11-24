@@ -73,6 +73,7 @@ namespace DiamondShop
 
             this.id = id;
             this.WarningID = WarningID;
+            FactoryStatus = tds.Order[0].FactoryStatus;
             btnDiamond.Enabled = true;
 
             LoadData();
