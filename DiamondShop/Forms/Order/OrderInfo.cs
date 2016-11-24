@@ -167,14 +167,8 @@ namespace DiamondShop
                 binder.BindValueToControl(tds.Order[0]);
                 custID = tds.Order[0].CustID;
                 txtAppointDate.Text = string.Format("{0:d/M/yyyy}", tds.Order[0]["AppointDate"]);
-                if (Convert.ToInt32(tds.Order[0].FactoryStatus.ToString()) == 220)
-                {
-                    txtMountingDate.Text = string.Format("{0:d/M/yyyy}", tds.Order[0]["MountingDate"]);
-                }
-                if (Convert.ToInt32(tds.Order[0].FactoryStatus.ToString()) == 221)
-                {
-                    txtJobDoneDate.Text = string.Format("{0:d/M/yyyy}", tds.Order[0]["JobDoneDate"]);
-                }
+                txtMountingDate.Text = string.Format("{0:d/M/yyyy}", tds.Order[0]["MountingDate"]);
+                txtJobDoneDate.Text = string.Format("{0:d/M/yyyy}", tds.Order[0]["JobDoneDate"]);
 
                 if (tds.Order[0].Image1 != null)
                 {
