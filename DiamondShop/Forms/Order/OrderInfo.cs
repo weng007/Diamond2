@@ -730,6 +730,9 @@ namespace DiamondShop
 
         private void btnInventory_Click(object sender, EventArgs e)
         {
+            ser1 = GM.GetService1();
+            
+            
             Inventory frm = new Inventory(SetJewelryType(),txtOrderNo.Text);
             frm.ShowDialog();
         }

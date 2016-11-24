@@ -429,6 +429,20 @@ namespace Diamond
             }
         }
 
+        public int CheckOrderNoExist(string orderNo)
+        {
+            InventoryBiz biz = GM.GetInventoryBiz();
+
+            try
+            {
+                return biz.CheckOrderNoExist(orderNo);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
         [WebMethod]
         public int DoSearchInventoryByCode(string code)
         {

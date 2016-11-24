@@ -142,7 +142,5 @@ namespace DiamondDAL.DAL
 
             return Convert.ToBoolean(flag);
         }
-
-        
     }
 }

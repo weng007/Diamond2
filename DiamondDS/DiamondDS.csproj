@@ -318,6 +318,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsTransferBuyBook.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DS\dsTransferInventory.cs">
+      <DependentUpon>dsTransferInventory.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DS\dsTransferInventory.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

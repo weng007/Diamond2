@@ -95,5 +95,17 @@ namespace DiamondBiz.Biz
                 throw ex;
             }
         }
+
+        public int CheckOrderNoExist(string orderNo)
+        {
+            try
+            {
+                return dal.CheckOrderNoExist(orderNo);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

@@ -275,6 +275,12 @@ namespace Diamond
             { return new OrderBiz(); }
             else { return bizOrder; }
         }
+        public static InventoryBiz GetInventoryBiz()
+        {
+            if (bizInventory == null)
+            { return new InventoryBiz(); }
+            else { return bizInventory; }
+        }
         public static OrderDetailBiz GetOrderDetailBiz()
         {
             if (bizOrderDetail == null)

@@ -123,5 +123,25 @@ namespace DiamondDAL.DAL
 
             return Convert.ToBoolean(flag);
         }
+
+        public int CheckOrderNoExist(string orderNo)
+        {
+            try
+            {
+                SQL.ClearParameter();
+                SQL.CreateParameter("@OrderNo", orderNo);
+                SQL.FillDataSetBySP("SP_Inventory_CheckOrderNoExist", ds.Inventory);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            if (ds.Inventory[0]["ID"].ToString() != "")
+            {
+                return (int)ds.Inventory[0]["ID"];
+            }
+            else return 0;
+        }
     }
 }
