@@ -170,6 +170,7 @@ namespace DiamondShop
                 {
                     row.CerNo = GM.GetRunningNumber("JAS");
                     SetCreateBy(row);
+                    row.IsPrintPrice = (chkIsPrintPrice.Checked)?"1":"0";
                     chkFlag = ser.DoInsertData("Sell", tds,0);
 
                     if (chkFlag)
