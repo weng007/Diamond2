@@ -137,7 +137,7 @@ namespace DiamondDAL.DAL
                 throw ex;
             }
 
-            if (ds.Inventory[0]["ID"].ToString() != "")
+            if (ds.Inventory.Rows.Count > 0)
             {
                 return (int)ds.Inventory[0]["ID"];
             }

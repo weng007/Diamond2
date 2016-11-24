@@ -71,18 +71,21 @@ namespace DiamondShop
 
         protected override bool SaveData()
         {
-            ser1 = GM.GetService1();
-            try
+            if (idSelected.Length > 0)
             {
-                for (int i = 0; i < idSelected.Length; i++)
+                ser1 = GM.GetService1();
+                try
                 {
-                    ser1.UpdateProductionLine(Convert.ToInt32(idSelected[i]), Convert.ToInt32(cmbFactoryStatus.SelectedValue.ToString()), ApplicationInfo.UserID);
-                }             
-            }
-            
-            catch (Exception ex)
-            {
-                throw ex;
+                    for (int i = 0; i < idSelected.Length; i++)
+                    {
+                        ser1.UpdateProductionLine(Convert.ToInt32(idSelected[i]), Convert.ToInt32(cmbFactoryStatus.SelectedValue.ToString()), ApplicationInfo.UserID);
+                    }
+                }
+
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
             }
 
             return chkFlag;
