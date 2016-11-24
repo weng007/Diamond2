@@ -71,7 +71,7 @@ namespace DiamondShop
 
         protected override bool SaveData()
         {
-            if (idSelected.Length > 0)
+            if (idSelected[0].ToString() != "")
             {
                 ser1 = GM.GetService1();
                 try
