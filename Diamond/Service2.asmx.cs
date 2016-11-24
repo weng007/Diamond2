@@ -429,6 +429,7 @@ namespace Diamond
             }
         }
 
+        [WebMethod]
         public int CheckOrderNoExist(string orderNo)
         {
             InventoryBiz biz = GM.GetInventoryBiz();

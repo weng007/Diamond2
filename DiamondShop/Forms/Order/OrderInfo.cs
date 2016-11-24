@@ -731,10 +731,18 @@ namespace DiamondShop
         private void btnInventory_Click(object sender, EventArgs e)
         {
             ser1 = GM.GetService1();
-            
-            
-            Inventory frm = new Inventory(SetJewelryType(),txtOrderNo.Text);
-            frm.ShowDialog();
+            int invID = ser1.CheckOrderNoExist(txtOrderNo.Text);
+
+            if (InvID > 0)
+            {
+                Inventory frm = new Inventory(invID);
+                frm.ShowDialog();
+            }
+            else
+            {
+                Inventory frm = new Inventory(SetJewelryType(), txtOrderNo.Text);
+                frm.ShowDialog();
+            }
         }
 
         private void btnRefDel1_Click(object sender, EventArgs e)
