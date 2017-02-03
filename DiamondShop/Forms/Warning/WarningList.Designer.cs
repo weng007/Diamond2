@@ -432,7 +432,7 @@
             this.OrderNo.ActiveLinkColor = System.Drawing.Color.Brown;
             this.OrderNo.DataPropertyName = "OrderNo";
             this.OrderNo.HeaderText = "RefID";
-            this.OrderNo.LinkColor = System.Drawing.Color.Red;
+            this.OrderNo.LinkColor = System.Drawing.Color.LightGreen;
             this.OrderNo.Name = "OrderNo";
             this.OrderNo.ReadOnly = true;
             this.OrderNo.Resizable = System.Windows.Forms.DataGridViewTriState.True;

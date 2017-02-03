@@ -32,6 +32,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OrderInfo));
             this.dtOrderDate = new System.Windows.Forms.DateTimePicker();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.chkNote3Status = new System.Windows.Forms.CheckBox();
+            this.chkNote2Status = new System.Windows.Forms.CheckBox();
+            this.chkNote1Status = new System.Windows.Forms.CheckBox();
             this.txtShop = new System.Windows.Forms.TextBox();
             this.label36 = new System.Windows.Forms.Label();
             this.txtJobDoneDate = new System.Windows.Forms.TextBox();
@@ -48,9 +51,6 @@
             this.btnMounting = new System.Windows.Forms.Button();
             this.btnProcessing = new System.Windows.Forms.Button();
             this.btnNotYet = new System.Windows.Forms.Button();
-            this.label33 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
             this.txtNote3 = new System.Windows.Forms.TextBox();
             this.txtNote2 = new System.Windows.Forms.TextBox();
             this.txtNote1 = new System.Windows.Forms.TextBox();
@@ -148,6 +148,9 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.chkNote3Status);
+            this.panel3.Controls.Add(this.chkNote2Status);
+            this.panel3.Controls.Add(this.chkNote1Status);
             this.panel3.Controls.Add(this.txtShop);
             this.panel3.Controls.Add(this.label36);
             this.panel3.Controls.Add(this.txtJobDoneDate);
@@ -164,9 +167,6 @@
             this.panel3.Controls.Add(this.btnMounting);
             this.panel3.Controls.Add(this.btnProcessing);
             this.panel3.Controls.Add(this.btnNotYet);
-            this.panel3.Controls.Add(this.label33);
-            this.panel3.Controls.Add(this.label32);
-            this.panel3.Controls.Add(this.label31);
             this.panel3.Controls.Add(this.txtNote3);
             this.panel3.Controls.Add(this.txtNote2);
             this.panel3.Controls.Add(this.txtNote1);
@@ -242,6 +242,42 @@
             this.panel3.Size = new System.Drawing.Size(1331, 680);
             this.panel3.TabIndex = 74;
             // 
+            // chkNote3Status
+            // 
+            this.chkNote3Status.AutoSize = true;
+            this.chkNote3Status.Location = new System.Drawing.Point(310, 634);
+            this.chkNote3Status.Name = "chkNote3Status";
+            this.chkNote3Status.Size = new System.Drawing.Size(83, 24);
+            this.chkNote3Status.TabIndex = 317;
+            this.chkNote3Status.Text = "Confirm";
+            this.chkNote3Status.UseVisualStyleBackColor = true;
+            this.chkNote3Status.Visible = false;
+            this.chkNote3Status.CheckedChanged += new System.EventHandler(this.chkNote3Status_CheckedChanged);
+            // 
+            // chkNote2Status
+            // 
+            this.chkNote2Status.AutoSize = true;
+            this.chkNote2Status.Location = new System.Drawing.Point(310, 569);
+            this.chkNote2Status.Name = "chkNote2Status";
+            this.chkNote2Status.Size = new System.Drawing.Size(83, 24);
+            this.chkNote2Status.TabIndex = 316;
+            this.chkNote2Status.Text = "Confirm";
+            this.chkNote2Status.UseVisualStyleBackColor = true;
+            this.chkNote2Status.Visible = false;
+            this.chkNote2Status.CheckedChanged += new System.EventHandler(this.chkNote2Status_CheckedChanged);
+            // 
+            // chkNote1Status
+            // 
+            this.chkNote1Status.AutoSize = true;
+            this.chkNote1Status.Location = new System.Drawing.Point(310, 504);
+            this.chkNote1Status.Name = "chkNote1Status";
+            this.chkNote1Status.Size = new System.Drawing.Size(83, 24);
+            this.chkNote1Status.TabIndex = 315;
+            this.chkNote1Status.Text = "Confirm";
+            this.chkNote1Status.UseVisualStyleBackColor = true;
+            this.chkNote1Status.Visible = false;
+            this.chkNote1Status.CheckedChanged += new System.EventHandler(this.Note1Status_CheckedChanged);
+            // 
             // txtShop
             // 
             this.txtShop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -306,7 +342,7 @@
             this.btnPrint.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPrint.FlatAppearance.BorderSize = 0;
             this.btnPrint.Image = ((System.Drawing.Image)(resources.GetObject("btnPrint.Image")));
-            this.btnPrint.Location = new System.Drawing.Point(539, 578);
+            this.btnPrint.Location = new System.Drawing.Point(668, 578);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(76, 90);
             this.btnPrint.TabIndex = 308;
@@ -371,7 +407,7 @@
             // 
             this.btnConfirm.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnConfirm.Image = ((System.Drawing.Image)(resources.GetObject("btnConfirm.Image")));
-            this.btnConfirm.Location = new System.Drawing.Point(453, 578);
+            this.btnConfirm.Location = new System.Drawing.Point(582, 578);
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.Size = new System.Drawing.Size(76, 90);
             this.btnConfirm.TabIndex = 304;
@@ -436,48 +472,14 @@
             this.btnNotYet.TabIndex = 299;
             this.btnNotYet.UseVisualStyleBackColor = false;
             // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label33.Location = new System.Drawing.Point(306, 646);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(87, 20);
-            this.label33.TabIndex = 297;
-            this.label33.Text = "สถานะ Note";
-            this.label33.Visible = false;
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label32.Location = new System.Drawing.Point(306, 584);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(87, 20);
-            this.label32.TabIndex = 296;
-            this.label32.Text = "สถานะ Note";
-            this.label32.Visible = false;
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label31.Location = new System.Drawing.Point(306, 518);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(87, 20);
-            this.label31.TabIndex = 295;
-            this.label31.Text = "สถานะ Note";
-            this.label31.Visible = false;
-            // 
             // txtNote3
             // 
             this.txtNote3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.txtNote3.Location = new System.Drawing.Point(19, 610);
             this.txtNote3.Multiline = true;
             this.txtNote3.Name = "txtNote3";
-            this.txtNote3.Size = new System.Drawing.Size(281, 56);
+            this.txtNote3.Size = new System.Drawing.Size(272, 56);
             this.txtNote3.TabIndex = 294;
-            this.txtNote3.Text = "เพิ่มเติม3";
             this.txtNote3.Visible = false;
             // 
             // txtNote2
@@ -486,9 +488,8 @@
             this.txtNote2.Location = new System.Drawing.Point(19, 544);
             this.txtNote2.Multiline = true;
             this.txtNote2.Name = "txtNote2";
-            this.txtNote2.Size = new System.Drawing.Size(281, 60);
+            this.txtNote2.Size = new System.Drawing.Size(272, 60);
             this.txtNote2.TabIndex = 293;
-            this.txtNote2.Text = "เพิ่มเติม2";
             this.txtNote2.Visible = false;
             // 
             // txtNote1
@@ -497,9 +498,8 @@
             this.txtNote1.Location = new System.Drawing.Point(19, 481);
             this.txtNote1.Multiline = true;
             this.txtNote1.Name = "txtNote1";
-            this.txtNote1.Size = new System.Drawing.Size(281, 57);
+            this.txtNote1.Size = new System.Drawing.Size(272, 57);
             this.txtNote1.TabIndex = 292;
-            this.txtNote1.Text = "เพิ่มเติม1";
             this.txtNote1.Visible = false;
             // 
             // btnBrowseInv1
@@ -576,7 +576,7 @@
             this.btnDiamond.FlatAppearance.BorderSize = 0;
             this.btnDiamond.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDiamond.ForeColor = System.Drawing.Color.White;
-            this.btnDiamond.Location = new System.Drawing.Point(453, 517);
+            this.btnDiamond.Location = new System.Drawing.Point(467, 517);
             this.btnDiamond.Name = "btnDiamond";
             this.btnDiamond.Size = new System.Drawing.Size(225, 40);
             this.btnDiamond.TabIndex = 286;
@@ -685,10 +685,10 @@
             // txtCustNote
             // 
             this.txtCustNote.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.txtCustNote.Location = new System.Drawing.Point(693, 414);
+            this.txtCustNote.Location = new System.Drawing.Point(713, 414);
             this.txtCustNote.Multiline = true;
             this.txtCustNote.Name = "txtCustNote";
-            this.txtCustNote.Size = new System.Drawing.Size(212, 143);
+            this.txtCustNote.Size = new System.Drawing.Size(192, 143);
             this.txtCustNote.TabIndex = 20;
             // 
             // txtImageNote
@@ -796,7 +796,7 @@
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label18.Location = new System.Drawing.Point(299, 449);
+            this.label18.Location = new System.Drawing.Point(318, 433);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(38, 20);
             this.label18.TabIndex = 269;
@@ -805,9 +805,9 @@
             // txtPrice
             // 
             this.txtPrice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.txtPrice.Location = new System.Drawing.Point(145, 446);
+            this.txtPrice.Location = new System.Drawing.Point(178, 430);
             this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(148, 26);
+            this.txtPrice.Size = new System.Drawing.Size(134, 26);
             this.txtPrice.TabIndex = 268;
             this.txtPrice.Text = "0";
             this.txtPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -819,7 +819,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label10.Location = new System.Drawing.Point(14, 449);
+            this.label10.Location = new System.Drawing.Point(14, 433);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(120, 20);
             this.label10.TabIndex = 267;
@@ -830,7 +830,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label9.Location = new System.Drawing.Point(449, 383);
+            this.label9.Location = new System.Drawing.Point(460, 384);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(211, 20);
             this.label9.TabIndex = 263;
@@ -839,7 +839,7 @@
             // txtThings
             // 
             this.txtThings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.txtThings.Location = new System.Drawing.Point(453, 414);
+            this.txtThings.Location = new System.Drawing.Point(467, 414);
             this.txtThings.Multiline = true;
             this.txtThings.Name = "txtThings";
             this.txtThings.Size = new System.Drawing.Size(225, 97);
@@ -1090,7 +1090,7 @@
             this.txtDetail.Location = new System.Drawing.Point(18, 353);
             this.txtDetail.Multiline = true;
             this.txtDetail.Name = "txtDetail";
-            this.txtDetail.Size = new System.Drawing.Size(386, 86);
+            this.txtDetail.Size = new System.Drawing.Size(371, 70);
             this.txtDetail.TabIndex = 16;
             this.txtDetail.TextChanged += new System.EventHandler(this.txtThings_TextChanged);
             // 
@@ -1380,9 +1380,6 @@
         private System.Windows.Forms.TextBox txtNote3;
         private System.Windows.Forms.TextBox txtNote2;
         private System.Windows.Forms.TextBox txtNote1;
-        private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.Label label31;
         private System.Windows.Forms.MonthCalendar monthCalendar1;
         private System.Windows.Forms.Button btnJobDone;
         private System.Windows.Forms.Button btnMounting;
@@ -1400,5 +1397,8 @@
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.TextBox txtShop;
         private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.CheckBox chkNote3Status;
+        private System.Windows.Forms.CheckBox chkNote2Status;
+        private System.Windows.Forms.CheckBox chkNote1Status;
     }
 }

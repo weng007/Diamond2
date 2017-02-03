@@ -142,5 +142,23 @@ namespace DiamondDAL.DAL
 
             return Convert.ToBoolean(flag);
         }
+
+        public bool UpdateNoteStatus(int id, int note, string noteStatus)
+        {
+            try
+            {
+                SQL.ClearParameter();
+                SQL.CreateParameter("@ID", id);
+                SQL.CreateParameter("@Note", note);
+                SQL.CreateParameter("@NoteStatus", noteStatus);
+                flag = SQL.ExecuteSP("SP_Order_ConfirmNote");
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return Convert.ToBoolean(flag);
+        }
     }
 }

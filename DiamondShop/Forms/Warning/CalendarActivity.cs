@@ -6,25 +6,26 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 using System.Windows.Forms;
+using System.Windows.Forms.Calendar;
 using DiamondShop.FormMaster;
 using DiamondDS.DS;
+using System.IO;
+using DiamondShop.Forms.Warning;
 
 namespace DiamondShop
 {
     public partial class CalendarActivity : FormList
-    {     
+    {
+        List<CalendarItem> _items = new List<CalendarItem>();
+        CalendarItem contextItem = null;
+
         public CalendarActivity()
         {
             InitializeComponent();
             Initial();
-            DoLoadData();
-            for (int i = DateTime.Now.Year; i <= DateTime.Now.Year + 25; ++i)
-            {
-                cmbYear.Items.Add(i);
-            }
-            cmbYear.SelectedIndex = 0;
-            
+            DoLoadData();        
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -32,104 +33,25 @@ namespace DiamondShop
             this.Close();
         }
 
-        private void cmbYear_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            DateTime sdt;
-            DateTime edt;
-
-            sdt = new DateTime(cmbYear.SelectedIndex + DateTime.Now.Year, 1, 1);
-            edt = new DateTime(cmbYear.SelectedIndex + DateTime.Now.Year, 12, 31);
-
-            monthCalendar3.SelectionStart = sdt;
-            monthCalendar3.SelectionEnd = edt;
-            monthCalendar3.Refresh();
-        }
-
         protected override void Initial()
         {
-            //ds = GM.GetBuyer();
-            //DataRow row = ds.Tables[0].NewRow();
-            //row["ID"] = 0;
-            //row["DisplayName"] = "All";
-            //ds.Tables[0].Rows.Add(row);
+            dtStart.Value = DateTime.Now.AddMonths(-1);
+            dtEnd.Value = DateTime.Now.AddMonths(+1);
 
-            //cmbReceiver.DataSource = ds.Tables[0];
-            //cmbReceiver.ValueMember = "ID";
-            //cmbReceiver.DisplayMember = "DisplayName";
-            //cmbReceiver.SelectedIndex = ds.Tables[0].Rows.Count - 1;
-            //cmbReceiver.Refresh();
-
-            //cmbSender.DataSource = ds.Tables[0];
-            //cmbSender.ValueMember = "ID";
-            //cmbSender.DisplayMember = "DisplayName";
-            //cmbSender.SelectedIndex = ds.Tables[0].Rows.Count - 1;
-            //cmbSender.Refresh();
-
-            //cmbFactoryStatus.DataSource = (GM.GetMasterTableDetail("C034",true)).Tables[0];
-            //cmbFactoryStatus.ValueMember = "ID";
-            //cmbFactoryStatus.DisplayMember = "Detail";
-            //cmbFactoryStatus.Refresh();
-
-            //cmbYear.DataSource = (GM.GetMasterTableDetail("C033", true)).Tables[0];
-            //cmbYear.ValueMember = "ID";
-            //cmbYear.DisplayMember = "Detail";
-            //cmbYear.Refresh();
-
-            //cmbShop.DataSource = (GM.GetMasterTableDetail("C007",true)).Tables[0];
-            //cmbShop.ValueMember = "ID";
-            //cmbShop.DisplayMember = "Detail";
-            //cmbShop.Refresh();
-
-            //gridWarning.AutoGenerateColumns = false;
+            calendar1.SetViewRange(dtStart.Value, dtEnd.Value);
         }
+
+        public FileInfo ItemsFile
+        {
+            get
+            {
+                return new FileInfo(Path.Combine(Application.StartupPath, "items.xml"));
+            }
+        }
+
         protected override void DoLoadData()
         {
-            //ser2 = GM.GetService2();
-
-            //ds = ser2.DoSearchWarning(Convert.ToInt16(cmbSender.SelectedValue.ToString()), Convert.ToInt16(cmbReceiver.SelectedValue.ToString()), Convert.ToInt16(cmbYear.SelectedValue.ToString()), Convert.ToInt16(cmbFactoryStatus.SelectedValue.ToString()), Convert.ToInt16(cmbShop.SelectedValue.ToString()), ApplicationInfo.UserID);
-
-            //if (ds.Tables[0].Rows.Count > 0)
-            //{
-            //    gridWarning.DataSource = ds.Tables[0];
-            //    gridWarning.Refresh();
-            //}
-            //else { gridWarning.DataSource = null; gridWarning.Refresh(); }
-        }
-
-        private void btnAdd_Click(object sender, EventArgs e)
-        {
-            Warning frm = new Warning();
-            frm.ShowDialog();
-            DoLoadData();
-        }
-
-        private void btnSearch_Click(object sender, EventArgs e)
-        {
-            //ser2 = GM.GetService2();
-
-            //ds = ser2.DoSearchWarning(Convert.ToInt16(cmbSender.SelectedValue.ToString()), Convert.ToInt32(cmbReceiver.SelectedValue.ToString()), Convert.ToInt32(cmbYear.SelectedValue.ToString()), Convert.ToInt32(cmbFactoryStatus.SelectedValue.ToString()), Convert.ToInt32(cmbShop.SelectedValue.ToString()), ApplicationInfo.UserID);
-
-            //if (ds.Tables[0].Rows.Count > 0)
-            //{
-            //    gridWarning.DataSource = ds.Tables[0];
-            //    gridWarning.Refresh();
-            //}
-            //else { gridWarning.DataSource = null; gridWarning.Refresh(); }
-        }
-
-        private void gridSell_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-            //if (gridWarning.RowCount > 0 && gridWarning.SelectedRows.Count > 0)
-            //{
-            //    id = (int)gridWarning.SelectedRows[0].Cells["ID"].Value;
-            //    Warning frm = new Warning(id);
-            //    frm.ShowDialog();
-
-            //    if (frm.isEdit)
-            //    {
-            //        DoLoadData();
-            //    }
-            //}            
+            
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -137,17 +59,106 @@ namespace DiamondShop
             DoLoadData();
         }
 
-        private void WarningList_Load(object sender, EventArgs e)
+        private void calendar1_ItemCreated(object sender, System.Windows.Forms.Calendar.CalendarItemCancelEventArgs e)
         {
-            //Timer timer = new Timer();
-            //timer.Interval = 30000; // 10 secs = 10000, 300000 = 5 m
-            //timer.Tick += new EventHandler(timer1_Tick);
-            //timer.Start();
+            _items.Add(e.Item);
         }
 
-        private void monthCalendar3_ControlAdded(object sender, ControlEventArgs e)
+        private void calendar1_ItemDeleted(object sender, System.Windows.Forms.Calendar.CalendarItemEventArgs e)
+        {
+            _items.Remove(e.Item);
+        }
+
+        private void CalendarActivity_Load(object sender, EventArgs e)
+        {
+            if (ItemsFile.Exists)
+            {
+                List<ItemInfo> lst = new List<ItemInfo>();
+
+                XmlSerializer xml = new XmlSerializer(lst.GetType());
+
+                using (Stream s = ItemsFile.OpenRead())
+                {
+                    lst = xml.Deserialize(s) as List<ItemInfo>;
+                }
+
+                foreach (ItemInfo item in lst)
+                {
+                    CalendarItem cal = new CalendarItem(calendar1, item.StartTime, item.EndTime, item.Text);
+
+                    if (!(item.R == 0 && item.G == 0 && item.B == 0))
+                    {
+                        cal.ApplyColor(Color.FromArgb(item.A, item.R, item.G, item.B));
+                    }
+
+                    _items.Add(cal);
+                }
+
+                PlaceItems();
+            }
+        }
+
+        private void PlaceItems()
+        {
+            foreach (CalendarItem item in _items)
+            {
+                if (calendar1.ViewIntersects(item))
+                {
+                    calendar1.Items.Add(item);
+                }
+            }
+        }
+
+        private void calendar1_ItemMouseHover(object sender, CalendarItemEventArgs e)
+        {
+            Text = e.Item.Text;
+        }
+
+        private void CalendarActivity_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            List<ItemInfo> lst = new List<ItemInfo>();
+
+            foreach (CalendarItem item in _items)
+            {
+                lst.Add(new ItemInfo(item.StartDate, item.EndDate, item.Text, item.BackgroundColor));
+            }
+
+            XmlSerializer xmls = new XmlSerializer(lst.GetType());
+
+            if (ItemsFile.Exists)
+            {
+                ItemsFile.Delete();
+            }
+
+            using (Stream s = ItemsFile.OpenWrite())
+            {
+                xmls.Serialize(s, lst);
+                s.Close();
+            }
+        }
+
+        private void calendar1_ItemDoubleClick(object sender, CalendarItemEventArgs e)
+        {
+            MessageBox.Show("Double click: " + e.Item.Text);
+        }
+
+        private void monthView1_SelectionChanged(object sender, EventArgs e)
+        {
+            calendar1.SetViewRange(DateTime.Now.AddMonths(-4), DateTime.Now.AddMonths(+3));
+        }
+
+        private void cmbMonth_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void dtStart_ValueChanged(object sender, EventArgs e)
+        {
+            if(dtStart.Value > dtEnd.Value)
+            {
+                dtStart.Value = dtEnd.Value.AddMonths(-1);
+            }
+            calendar1.SetViewRange(dtStart.Value, dtEnd.Value);
         }
     }
 }

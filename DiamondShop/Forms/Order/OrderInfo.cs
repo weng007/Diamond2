@@ -489,6 +489,11 @@ namespace DiamondShop
             txtThings.Enabled = status;
             txtCustNote.Enabled = status;
             btnDiamond.Enabled = status;
+            btnImage1.Enabled = status;
+            btnImage2.Enabled = status;
+            btnImage3.Enabled = status;
+            btnImage4.Enabled = status;
+            btnImage5.Enabled = status;
             txtImageNote.Enabled = status;
         }
 
@@ -757,6 +762,24 @@ namespace DiamondShop
             ser1.UpdateReceiveMaterial(id, (rdoReceive.Checked)?"1":"0");
         }
 
+        private void Note1Status_CheckedChanged(object sender, EventArgs e)
+        {
+            ser1 = GM.GetService1();
+            ser1.UpdateNoteStatus(id, 1, chkNote1Status.Checked ? "1" : "0");
+        }
+
+        private void chkNote2Status_CheckedChanged(object sender, EventArgs e)
+        {
+            ser1 = GM.GetService1();
+            ser1.UpdateNoteStatus(id, 2, chkNote2Status.Checked ? "1" : "0");
+        }
+
+        private void chkNote3Status_CheckedChanged(object sender, EventArgs e)
+        {
+            ser1 = GM.GetService1();
+            ser1.UpdateNoteStatus(id, 3, chkNote3Status.Checked ? "1" : "0");
+        }
+
         private void dtBuyDate_ValueChanged(object sender, EventArgs e)
         {
             isEdit = true;
@@ -790,6 +813,56 @@ namespace DiamondShop
                 {
                     btnPrint.Visible = true;
                     btnInventory.Visible = true;
+
+                    //Set Note เพิ่มเติม
+                    if (!chkNote1Status.Checked && txtNote1.Text != "")
+                    {
+                        txtNote1.Visible = true;
+                        txtNote1.Enabled = false;
+                        chkNote1Status.Visible = true;
+                    }
+                    if (chkNote1Status.Checked && !chkNote2Status.Checked && txtNote2.Text != "")
+                    {
+                        txtNote1.Visible = true;
+                        txtNote1.Enabled = false;
+                        chkNote1Status.Visible = true;
+                        chkNote1Status.Enabled = false;
+
+                        txtNote2.Visible = true;
+                        txtNote2.Enabled = false;
+                        chkNote2Status.Visible = true;
+                    }
+                    if (chkNote1Status.Checked && chkNote2Status.Checked && !chkNote3Status.Checked)
+                    {
+                        txtNote1.Visible = true;
+                        txtNote1.Enabled = false;
+                        chkNote1Status.Enabled = false;
+
+                        txtNote2.Visible = true;
+                        txtNote2.Enabled = false;
+                        chkNote2Status.Visible = true;
+                        chkNote2Status.Enabled = false;
+
+                        txtNote3.Visible = true;
+                        txtNote3.Enabled = false;
+                        chkNote3Status.Visible = true;
+                    }
+                    if (chkNote1Status.Checked && chkNote2Status.Checked && chkNote3Status.Checked)
+                    {
+                        txtNote1.Visible = true;
+                        txtNote1.Enabled = false;
+                        chkNote1Status.Enabled = false;
+
+                        txtNote2.Visible = true;
+                        txtNote2.Enabled = false;
+                        chkNote2Status.Visible = true;
+                        chkNote2Status.Enabled = false;
+
+                        txtNote3.Visible = true;
+                        txtNote3.Enabled = false;
+                        chkNote3Status.Visible = true;
+                        chkNote3Status.Enabled = false;
+                    }
                 }
                 else// Not yet
                 {
@@ -797,6 +870,60 @@ namespace DiamondShop
                 }
 
                 groupBox2.Enabled = true;
+        }
+            else
+            {
+                //Set Note เพิ่มเติม
+                if (!chkNote1Status.Checked)
+                {
+                    txtNote1.Visible = true;
+                    chkNote1Status.Visible = true;
+                    chkNote1Status.Enabled = false;
+                }
+                if (chkNote1Status.Checked && !chkNote2Status.Checked)
+                {
+                    txtNote1.Visible = true;
+                    txtNote1.Enabled = false;
+                    chkNote1Status.Visible = true;
+                    chkNote1Status.Enabled = false;
+
+                    txtNote2.Visible = true;
+                    chkNote2Status.Visible = true;
+                    chkNote2Status.Enabled = false;
+                }
+                if (chkNote1Status.Checked && chkNote2Status.Checked && !chkNote3Status.Checked)
+                {
+                    txtNote1.Visible = true;
+                    txtNote1.Enabled = false;
+                    chkNote1Status.Visible = true;
+                    chkNote1Status.Enabled = false;
+
+                    txtNote2.Visible = true;
+                    txtNote2.Enabled = false;
+                    chkNote2Status.Visible = true;
+                    chkNote2Status.Enabled = false;
+
+                    txtNote3.Visible = true;
+                    chkNote3Status.Visible = true;
+                    chkNote3Status.Enabled = false;
+                }
+                if (chkNote1Status.Checked && chkNote2Status.Checked && chkNote3Status.Checked)
+                {
+                    txtNote1.Visible = true;
+                    txtNote1.Enabled = false;
+                    chkNote1Status.Visible = true;
+                    chkNote1Status.Enabled = false;
+
+                    txtNote2.Visible = true;
+                    txtNote2.Enabled = false;
+                    chkNote2Status.Visible = true;
+                    chkNote2Status.Enabled = false;
+
+                    txtNote3.Visible = true;
+                    txtNote3.Enabled = false;
+                    chkNote3Status.Visible = true;
+                    chkNote3Status.Enabled = false;
+                }
             }
         }
     }
