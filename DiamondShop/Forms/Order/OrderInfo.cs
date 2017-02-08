@@ -899,6 +899,7 @@ namespace DiamondShop
                     if (!chkNote1Status.Checked)
                     {
                         txtNote1.Visible = true;
+                        btnSendNote1.Visible = true;
                         chkNote1Status.Visible = true;
                         chkNote1Status.Enabled = false;
                     }
@@ -906,10 +907,13 @@ namespace DiamondShop
                     {
                         txtNote1.Visible = true;
                         txtNote1.Enabled = false;
+                        btnSendNote1.Visible = true;
+                        btnSendNote1.Enabled = false;
                         chkNote1Status.Visible = true;
                         chkNote1Status.Enabled = false;
 
                         txtNote2.Visible = true;
+                        btnSendNote2.Visible = true;
                         chkNote2Status.Visible = true;
                         chkNote2Status.Enabled = false;
                     }
@@ -917,15 +921,20 @@ namespace DiamondShop
                     {
                         txtNote1.Visible = true;
                         txtNote1.Enabled = false;
+                        btnSendNote1.Visible = true;
+                        btnSendNote1.Enabled = false;
                         chkNote1Status.Visible = true;
                         chkNote1Status.Enabled = false;
 
                         txtNote2.Visible = true;
                         txtNote2.Enabled = false;
+                        btnSendNote2.Visible = true;
+                        btnSendNote2.Enabled = false;
                         chkNote2Status.Visible = true;
                         chkNote2Status.Enabled = false;
 
                         txtNote3.Visible = true;
+                        btnSendNote3.Visible = true;
                         chkNote3Status.Visible = true;
                         chkNote3Status.Enabled = false;
                     }
@@ -933,16 +942,22 @@ namespace DiamondShop
                     {
                         txtNote1.Visible = true;
                         txtNote1.Enabled = false;
+                        btnSendNote1.Visible = true;
+                        btnSendNote1.Enabled = false;
                         chkNote1Status.Visible = true;
                         chkNote1Status.Enabled = false;
 
                         txtNote2.Visible = true;
                         txtNote2.Enabled = false;
+                        btnSendNote2.Visible = true;
+                        btnSendNote2.Enabled = false;
                         chkNote2Status.Visible = true;
                         chkNote2Status.Enabled = false;
 
                         txtNote3.Visible = true;
                         txtNote3.Enabled = false;
+                        btnSendNote3.Visible = true;
+                        btnSendNote3.Enabled = false;
                         chkNote3Status.Visible = true;
                         chkNote3Status.Enabled = false;
                     }

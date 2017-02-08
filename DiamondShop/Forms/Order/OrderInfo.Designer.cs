@@ -32,6 +32,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OrderInfo));
             this.dtOrderDate = new System.Windows.Forms.DateTimePicker();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnSendNote3 = new System.Windows.Forms.Button();
+            this.btnSendNote2 = new System.Windows.Forms.Button();
+            this.btnSendNote1 = new System.Windows.Forms.Button();
             this.chkNote3Status = new System.Windows.Forms.CheckBox();
             this.chkNote2Status = new System.Windows.Forms.CheckBox();
             this.chkNote1Status = new System.Windows.Forms.CheckBox();
@@ -128,9 +131,6 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.openFileDialog2 = new System.Windows.Forms.OpenFileDialog();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.btnSendNote1 = new System.Windows.Forms.Button();
-            this.btnSendNote2 = new System.Windows.Forms.Button();
-            this.btnSendNote3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -247,6 +247,42 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1331, 680);
             this.panel3.TabIndex = 74;
+            // 
+            // btnSendNote3
+            // 
+            this.btnSendNote3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSendNote3.Location = new System.Drawing.Point(296, 621);
+            this.btnSendNote3.Name = "btnSendNote3";
+            this.btnSendNote3.Size = new System.Drawing.Size(45, 31);
+            this.btnSendNote3.TabIndex = 320;
+            this.btnSendNote3.Text = "Send";
+            this.btnSendNote3.UseVisualStyleBackColor = true;
+            this.btnSendNote3.Visible = false;
+            this.btnSendNote3.Click += new System.EventHandler(this.btnSendNote3_Click);
+            // 
+            // btnSendNote2
+            // 
+            this.btnSendNote2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSendNote2.Location = new System.Drawing.Point(296, 559);
+            this.btnSendNote2.Name = "btnSendNote2";
+            this.btnSendNote2.Size = new System.Drawing.Size(45, 31);
+            this.btnSendNote2.TabIndex = 319;
+            this.btnSendNote2.Text = "Send";
+            this.btnSendNote2.UseVisualStyleBackColor = true;
+            this.btnSendNote2.Visible = false;
+            this.btnSendNote2.Click += new System.EventHandler(this.btnSendNote2_Click);
+            // 
+            // btnSendNote1
+            // 
+            this.btnSendNote1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSendNote1.Location = new System.Drawing.Point(296, 494);
+            this.btnSendNote1.Name = "btnSendNote1";
+            this.btnSendNote1.Size = new System.Drawing.Size(45, 31);
+            this.btnSendNote1.TabIndex = 318;
+            this.btnSendNote1.Text = "Send";
+            this.btnSendNote1.UseVisualStyleBackColor = true;
+            this.btnSendNote1.Visible = false;
+            this.btnSendNote1.Click += new System.EventHandler(this.btnSendNote1_Click);
             // 
             // chkNote3Status
             // 
@@ -1284,39 +1320,6 @@
             this.imageList1.Images.SetKeyName(2, "btnMounting.png");
             this.imageList1.Images.SetKeyName(3, "btnJobDone.png");
             this.imageList1.Images.SetKeyName(4, "btnEnableNotYet.png");
-            // 
-            // btnSendNote1
-            // 
-            this.btnSendNote1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSendNote1.Location = new System.Drawing.Point(296, 494);
-            this.btnSendNote1.Name = "btnSendNote1";
-            this.btnSendNote1.Size = new System.Drawing.Size(45, 31);
-            this.btnSendNote1.TabIndex = 318;
-            this.btnSendNote1.Text = "Send";
-            this.btnSendNote1.UseVisualStyleBackColor = true;
-            this.btnSendNote1.Click += new System.EventHandler(this.btnSendNote1_Click);
-            // 
-            // btnSendNote2
-            // 
-            this.btnSendNote2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSendNote2.Location = new System.Drawing.Point(296, 559);
-            this.btnSendNote2.Name = "btnSendNote2";
-            this.btnSendNote2.Size = new System.Drawing.Size(45, 31);
-            this.btnSendNote2.TabIndex = 319;
-            this.btnSendNote2.Text = "Send";
-            this.btnSendNote2.UseVisualStyleBackColor = true;
-            this.btnSendNote2.Click += new System.EventHandler(this.btnSendNote2_Click);
-            // 
-            // btnSendNote3
-            // 
-            this.btnSendNote3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSendNote3.Location = new System.Drawing.Point(296, 621);
-            this.btnSendNote3.Name = "btnSendNote3";
-            this.btnSendNote3.Size = new System.Drawing.Size(45, 31);
-            this.btnSendNote3.TabIndex = 320;
-            this.btnSendNote3.Text = "Send";
-            this.btnSendNote3.UseVisualStyleBackColor = true;
-            this.btnSendNote3.Click += new System.EventHandler(this.btnSendNote3_Click);
             // 
             // OrderInfo
             // 
