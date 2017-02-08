@@ -162,6 +162,20 @@ namespace Diamond
         }
 
         [WebMethod]
+        public bool UpdateNote(int id, string note, int noteOrd)
+        {
+            OrderBiz biz = GM.GetOrderBiz();
+            try
+            {
+                return biz.UpdateNote(id, note, noteOrd);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        [WebMethod]
         public DataSet GetPriceDaimondAndGemstone(int id)
         {
             GeneralBiz biz = new GeneralBiz();

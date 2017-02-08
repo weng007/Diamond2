@@ -385,7 +385,7 @@ namespace DiamondShop
                     EnableSave = true;
                     EnableDelete = true;
                     SetControlEnable(true);
-                }          
+                }
             }
             else
             {
@@ -402,7 +402,11 @@ namespace DiamondShop
                         EnableDelete = true;
                         SetControlEnable(true);
                     }
-                    
+                    if (FactoryStatus == 219)
+                    {
+                        EnableSave = true;
+                    }
+
                     base.EditData();
                 }
             }
@@ -780,6 +784,21 @@ namespace DiamondShop
             ser1.UpdateNoteStatus(id, 3, chkNote3Status.Checked ? "1" : "0");
         }
 
+        private void btnSendNote1_Click(object sender, EventArgs e)
+        {
+            ser1.UpdateNote(id, txtNote1.Text, 1);
+        }
+
+        private void btnSendNote2_Click(object sender, EventArgs e)
+        {
+            ser1.UpdateNote(id, txtNote2.Text, 2);
+        }
+
+        private void btnSendNote3_Click(object sender, EventArgs e)
+        {
+            ser1.UpdateNote(id, txtNote3.Text, 3);
+        }
+
         private void dtBuyDate_ValueChanged(object sender, EventArgs e)
         {
             isEdit = true;
@@ -820,6 +839,7 @@ namespace DiamondShop
                         txtNote1.Visible = true;
                         txtNote1.Enabled = false;
                         chkNote1Status.Visible = true;
+                        EnableSave = true;
                     }
                     if (chkNote1Status.Checked && !chkNote2Status.Checked && txtNote2.Text != "")
                     {

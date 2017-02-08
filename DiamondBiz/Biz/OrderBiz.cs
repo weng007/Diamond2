@@ -120,5 +120,16 @@ namespace DiamondBiz.Biz
                 throw ex;
             }
         }
+        public bool UpdateNote(int id, string note, int noteOrd)
+        {
+            try
+            {
+                return dal.UpdateNote(id,note,noteOrd);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

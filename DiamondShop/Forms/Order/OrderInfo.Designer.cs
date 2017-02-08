@@ -128,6 +128,9 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.openFileDialog2 = new System.Windows.Forms.OpenFileDialog();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.btnSendNote1 = new System.Windows.Forms.Button();
+            this.btnSendNote2 = new System.Windows.Forms.Button();
+            this.btnSendNote3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -148,6 +151,9 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.btnSendNote3);
+            this.panel3.Controls.Add(this.btnSendNote2);
+            this.panel3.Controls.Add(this.btnSendNote1);
             this.panel3.Controls.Add(this.chkNote3Status);
             this.panel3.Controls.Add(this.chkNote2Status);
             this.panel3.Controls.Add(this.chkNote1Status);
@@ -245,7 +251,7 @@
             // chkNote3Status
             // 
             this.chkNote3Status.AutoSize = true;
-            this.chkNote3Status.Location = new System.Drawing.Point(310, 634);
+            this.chkNote3Status.Location = new System.Drawing.Point(348, 628);
             this.chkNote3Status.Name = "chkNote3Status";
             this.chkNote3Status.Size = new System.Drawing.Size(83, 24);
             this.chkNote3Status.TabIndex = 317;
@@ -257,7 +263,7 @@
             // chkNote2Status
             // 
             this.chkNote2Status.AutoSize = true;
-            this.chkNote2Status.Location = new System.Drawing.Point(310, 569);
+            this.chkNote2Status.Location = new System.Drawing.Point(348, 563);
             this.chkNote2Status.Name = "chkNote2Status";
             this.chkNote2Status.Size = new System.Drawing.Size(83, 24);
             this.chkNote2Status.TabIndex = 316;
@@ -269,7 +275,7 @@
             // chkNote1Status
             // 
             this.chkNote1Status.AutoSize = true;
-            this.chkNote1Status.Location = new System.Drawing.Point(310, 504);
+            this.chkNote1Status.Location = new System.Drawing.Point(348, 497);
             this.chkNote1Status.Name = "chkNote1Status";
             this.chkNote1Status.Size = new System.Drawing.Size(83, 24);
             this.chkNote1Status.TabIndex = 315;
@@ -1279,6 +1285,39 @@
             this.imageList1.Images.SetKeyName(3, "btnJobDone.png");
             this.imageList1.Images.SetKeyName(4, "btnEnableNotYet.png");
             // 
+            // btnSendNote1
+            // 
+            this.btnSendNote1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSendNote1.Location = new System.Drawing.Point(296, 494);
+            this.btnSendNote1.Name = "btnSendNote1";
+            this.btnSendNote1.Size = new System.Drawing.Size(45, 31);
+            this.btnSendNote1.TabIndex = 318;
+            this.btnSendNote1.Text = "Send";
+            this.btnSendNote1.UseVisualStyleBackColor = true;
+            this.btnSendNote1.Click += new System.EventHandler(this.btnSendNote1_Click);
+            // 
+            // btnSendNote2
+            // 
+            this.btnSendNote2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSendNote2.Location = new System.Drawing.Point(296, 559);
+            this.btnSendNote2.Name = "btnSendNote2";
+            this.btnSendNote2.Size = new System.Drawing.Size(45, 31);
+            this.btnSendNote2.TabIndex = 319;
+            this.btnSendNote2.Text = "Send";
+            this.btnSendNote2.UseVisualStyleBackColor = true;
+            this.btnSendNote2.Click += new System.EventHandler(this.btnSendNote2_Click);
+            // 
+            // btnSendNote3
+            // 
+            this.btnSendNote3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSendNote3.Location = new System.Drawing.Point(296, 621);
+            this.btnSendNote3.Name = "btnSendNote3";
+            this.btnSendNote3.Size = new System.Drawing.Size(45, 31);
+            this.btnSendNote3.TabIndex = 320;
+            this.btnSendNote3.Text = "Send";
+            this.btnSendNote3.UseVisualStyleBackColor = true;
+            this.btnSendNote3.Click += new System.EventHandler(this.btnSendNote3_Click);
+            // 
             // OrderInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1400,5 +1439,8 @@
         private System.Windows.Forms.CheckBox chkNote3Status;
         private System.Windows.Forms.CheckBox chkNote2Status;
         private System.Windows.Forms.CheckBox chkNote1Status;
+        private System.Windows.Forms.Button btnSendNote3;
+        private System.Windows.Forms.Button btnSendNote2;
+        private System.Windows.Forms.Button btnSendNote1;
     }
 }
