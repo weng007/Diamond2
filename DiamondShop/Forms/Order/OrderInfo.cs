@@ -890,59 +890,62 @@ namespace DiamondShop
                 }
 
                 groupBox2.Enabled = true;
-        }
-            else
+            }
+            else 
             {
-                //Set Note เพิ่มเติม
-                if (!chkNote1Status.Checked)
+                if (FactoryStatus != 218)// Processing
                 {
-                    txtNote1.Visible = true;
-                    chkNote1Status.Visible = true;
-                    chkNote1Status.Enabled = false;
-                }
-                if (chkNote1Status.Checked && !chkNote2Status.Checked)
-                {
-                    txtNote1.Visible = true;
-                    txtNote1.Enabled = false;
-                    chkNote1Status.Visible = true;
-                    chkNote1Status.Enabled = false;
+                    //Set Note เพิ่มเติม
+                    if (!chkNote1Status.Checked)
+                    {
+                        txtNote1.Visible = true;
+                        chkNote1Status.Visible = true;
+                        chkNote1Status.Enabled = false;
+                    }
+                    if (chkNote1Status.Checked && !chkNote2Status.Checked)
+                    {
+                        txtNote1.Visible = true;
+                        txtNote1.Enabled = false;
+                        chkNote1Status.Visible = true;
+                        chkNote1Status.Enabled = false;
 
-                    txtNote2.Visible = true;
-                    chkNote2Status.Visible = true;
-                    chkNote2Status.Enabled = false;
-                }
-                if (chkNote1Status.Checked && chkNote2Status.Checked && !chkNote3Status.Checked)
-                {
-                    txtNote1.Visible = true;
-                    txtNote1.Enabled = false;
-                    chkNote1Status.Visible = true;
-                    chkNote1Status.Enabled = false;
+                        txtNote2.Visible = true;
+                        chkNote2Status.Visible = true;
+                        chkNote2Status.Enabled = false;
+                    }
+                    if (chkNote1Status.Checked && chkNote2Status.Checked && !chkNote3Status.Checked)
+                    {
+                        txtNote1.Visible = true;
+                        txtNote1.Enabled = false;
+                        chkNote1Status.Visible = true;
+                        chkNote1Status.Enabled = false;
 
-                    txtNote2.Visible = true;
-                    txtNote2.Enabled = false;
-                    chkNote2Status.Visible = true;
-                    chkNote2Status.Enabled = false;
+                        txtNote2.Visible = true;
+                        txtNote2.Enabled = false;
+                        chkNote2Status.Visible = true;
+                        chkNote2Status.Enabled = false;
 
-                    txtNote3.Visible = true;
-                    chkNote3Status.Visible = true;
-                    chkNote3Status.Enabled = false;
-                }
-                if (chkNote1Status.Checked && chkNote2Status.Checked && chkNote3Status.Checked)
-                {
-                    txtNote1.Visible = true;
-                    txtNote1.Enabled = false;
-                    chkNote1Status.Visible = true;
-                    chkNote1Status.Enabled = false;
+                        txtNote3.Visible = true;
+                        chkNote3Status.Visible = true;
+                        chkNote3Status.Enabled = false;
+                    }
+                    if (chkNote1Status.Checked && chkNote2Status.Checked && chkNote3Status.Checked)
+                    {
+                        txtNote1.Visible = true;
+                        txtNote1.Enabled = false;
+                        chkNote1Status.Visible = true;
+                        chkNote1Status.Enabled = false;
 
-                    txtNote2.Visible = true;
-                    txtNote2.Enabled = false;
-                    chkNote2Status.Visible = true;
-                    chkNote2Status.Enabled = false;
+                        txtNote2.Visible = true;
+                        txtNote2.Enabled = false;
+                        chkNote2Status.Visible = true;
+                        chkNote2Status.Enabled = false;
 
-                    txtNote3.Visible = true;
-                    txtNote3.Enabled = false;
-                    chkNote3Status.Visible = true;
-                    chkNote3Status.Enabled = false;
+                        txtNote3.Visible = true;
+                        txtNote3.Enabled = false;
+                        chkNote3Status.Visible = true;
+                        chkNote3Status.Enabled = false;
+                    }
                 }
             }
         }
