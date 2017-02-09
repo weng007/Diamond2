@@ -154,6 +154,9 @@ namespace DiamondShop
             binder.BindControl(txtNote3, "Note3");
             binder.BindControl(txtPrice, "Price");
             binder.BindControl(txtPaid, "Paid");
+            binder.BindControl(chkNote1Status, "Note1Status");
+            binder.BindControl(chkNote2Status, "Note2Status");
+            binder.BindControl(chkNote3Status, "Note3Status");
         }
 
         protected override void LoadData()
