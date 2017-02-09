@@ -109,22 +109,22 @@ namespace DiamondBiz.Biz
             }
         }
 
-        public bool UpdateNoteStatus(int id, int note, string noteStatus)
+        public bool UpdateNoteStatus(int id, int note, string noteStatus, int sender)
         {
             try
             {
-                return dal.UpdateNoteStatus(id, note, noteStatus);
+                return dal.UpdateNoteStatus(id, note, noteStatus, sender);
             }
             catch (Exception ex)
             {
                 throw ex;
             }
         }
-        public bool UpdateNote(int id, string note, int noteOrd)
+        public bool UpdateNote(int id, string note, int noteOrd, int editBy)
         {
             try
             {
-                return dal.UpdateNote(id,note,noteOrd);
+                return dal.UpdateNote(id,note,noteOrd, editBy);
             }
             catch (Exception ex)
             {

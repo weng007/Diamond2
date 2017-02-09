@@ -143,7 +143,7 @@ namespace DiamondDAL.DAL
             return Convert.ToBoolean(flag);
         }
 
-        public bool UpdateNoteStatus(int id, int note, string noteStatus)
+        public bool UpdateNoteStatus(int id, int note, string noteStatus, int sender)
         {
             try
             {
@@ -151,6 +151,7 @@ namespace DiamondDAL.DAL
                 SQL.CreateParameter("@ID", id);
                 SQL.CreateParameter("@Note", note);
                 SQL.CreateParameter("@NoteStatus", noteStatus);
+                SQL.CreateParameter("@Sender", sender);
                 flag = SQL.ExecuteSP("SP_Order_ConfirmNote");
             }
             catch (Exception ex)
@@ -160,7 +161,7 @@ namespace DiamondDAL.DAL
 
             return Convert.ToBoolean(flag);
         }
-        public bool UpdateNote(int id, string note, int noteOrd)
+        public bool UpdateNote(int id, string note, int noteOrd, int editBy)
         {
             try
             {
@@ -168,6 +169,7 @@ namespace DiamondDAL.DAL
                 SQL.CreateParameter("@ID", id);
                 SQL.CreateParameter("@Note", note);
                 SQL.CreateParameter("@NoteOrd", noteOrd);
+                SQL.CreateParameter("@EditBy", editBy);
                 flag = SQL.ExecuteSP("SP_Order_Upd_Note");
             }
             catch (Exception ex)

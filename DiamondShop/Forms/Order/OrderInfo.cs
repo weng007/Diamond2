@@ -794,34 +794,34 @@ namespace DiamondShop
         private void Note1Status_CheckedChanged(object sender, EventArgs e)
         {
             ser1 = GM.GetService1();
-            ser1.UpdateNoteStatus(id, 1, chkNote1Status.Checked ? "1" : "0");
+            ser1.UpdateNoteStatus(id, 1, chkNote1Status.Checked ? "1" : "0", ApplicationInfo.UserID);
         }
 
         private void chkNote2Status_CheckedChanged(object sender, EventArgs e)
         {
             ser1 = GM.GetService1();
-            ser1.UpdateNoteStatus(id, 2, chkNote2Status.Checked ? "1" : "0");
+            ser1.UpdateNoteStatus(id, 2, chkNote2Status.Checked ? "1" : "0", ApplicationInfo.UserID);
         }
 
         private void chkNote3Status_CheckedChanged(object sender, EventArgs e)
         {
             ser1 = GM.GetService1();
-            ser1.UpdateNoteStatus(id, 3, chkNote3Status.Checked ? "1" : "0");
+            ser1.UpdateNoteStatus(id, 3, chkNote3Status.Checked ? "1" : "0", ApplicationInfo.UserID);
         }
 
         private void btnSendNote1_Click(object sender, EventArgs e)
         {
-            ser1.UpdateNote(id, txtNote1.Text, 1);
+            ser1.UpdateNote(id, txtNote1.Text, 1, ApplicationInfo.UserID);
         }
 
         private void btnSendNote2_Click(object sender, EventArgs e)
         {
-            ser1.UpdateNote(id, txtNote2.Text, 2);
+            ser1.UpdateNote(id, txtNote2.Text, 2, ApplicationInfo.UserID);
         }
 
         private void btnSendNote3_Click(object sender, EventArgs e)
         {
-            ser1.UpdateNote(id, txtNote3.Text, 3);
+            ser1.UpdateNote(id, txtNote3.Text, 3, ApplicationInfo.UserID);
         }
 
         private void dtBuyDate_ValueChanged(object sender, EventArgs e)

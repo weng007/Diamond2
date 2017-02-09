@@ -148,12 +148,12 @@ namespace Diamond
         }
 
         [WebMethod]
-        public bool UpdateNoteStatus(int id, int note, string noteStatus)
+        public bool UpdateNoteStatus(int id, int note, string noteStatus,int sender)
         {
             OrderBiz biz = GM.GetOrderBiz();
             try
             {
-                return biz.UpdateNoteStatus(id, note, noteStatus);
+                return biz.UpdateNoteStatus(id, note, noteStatus,sender);
             }
             catch (Exception ex)
             {
@@ -162,12 +162,12 @@ namespace Diamond
         }
 
         [WebMethod]
-        public bool UpdateNote(int id, string note, int noteOrd)
+        public bool UpdateNote(int id, string note, int noteOrd, int editBy)
         {
             OrderBiz biz = GM.GetOrderBiz();
             try
             {
-                return biz.UpdateNote(id, note, noteOrd);
+                return biz.UpdateNote(id, note, noteOrd, editBy);
             }
             catch (Exception ex)
             {
