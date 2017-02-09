@@ -229,6 +229,22 @@ namespace DiamondShop
                 {
                     chkNote1Status.Checked = true;
                 }
+                if (tds.Order[0]["Note2Status"].ToString() == "0")
+                {
+                    chkNote2Status.Checked = false;
+                }
+                else
+                {
+                    chkNote2Status.Checked = true;
+                }
+                if (tds.Order[0]["Note3Status"].ToString() == "0")
+                {
+                    chkNote3Status.Checked = false;
+                }
+                else
+                {
+                    chkNote3Status.Checked = true;
+                }
 
                 if (tds.Order[0]["IsHave"].ToString() == "0")
                 {
