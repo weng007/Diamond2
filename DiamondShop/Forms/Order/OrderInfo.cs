@@ -221,6 +221,15 @@ namespace DiamondShop
                 InvID1 = tds.Order[0].RefID1;
                 OrderID = tds.Order[0].ID;
 
+                if (tds.Order[0]["Note1Status"].ToString() == "0")
+                {
+                    chkNote1Status.Checked = false;
+                }
+                else
+                {
+                    chkNote1Status.Checked = true;
+                }
+
                 if (tds.Order[0]["IsHave"].ToString() == "0")
                 {
                     rdoHave.Checked = false;
@@ -405,10 +414,7 @@ namespace DiamondShop
                         EnableDelete = true;
                         SetControlEnable(true);
                     }
-                    if (FactoryStatus == 219)
-                    {
-                        EnableSave = true;
-                    }
+                   
 
                     base.EditData();
                 }
