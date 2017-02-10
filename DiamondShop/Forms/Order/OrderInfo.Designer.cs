@@ -250,6 +250,7 @@
             // 
             // btnSendNote3
             // 
+            this.btnSendNote3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSendNote3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSendNote3.Location = new System.Drawing.Point(296, 621);
             this.btnSendNote3.Name = "btnSendNote3";
@@ -262,6 +263,7 @@
             // 
             // btnSendNote2
             // 
+            this.btnSendNote2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSendNote2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSendNote2.Location = new System.Drawing.Point(296, 559);
             this.btnSendNote2.Name = "btnSendNote2";
@@ -274,6 +276,7 @@
             // 
             // btnSendNote1
             // 
+            this.btnSendNote1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSendNote1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSendNote1.Location = new System.Drawing.Point(296, 494);
             this.btnSendNote1.Name = "btnSendNote1";

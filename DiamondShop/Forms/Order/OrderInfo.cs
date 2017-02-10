@@ -36,6 +36,9 @@ namespace DiamondShop
         public string materail = "";
         public int WarningID = 0;
         public int OrderID;
+        
+        //เช็คว่า Load เข้ามาครั้งแรก
+        private bool isFirst = false;
 
         public OrderInfo()
         {
@@ -82,6 +85,7 @@ namespace DiamondShop
             SetMode();
 
             isEdit = false;
+            isFirst = true;
         }
 
         protected override void Initial()
@@ -350,7 +354,6 @@ namespace DiamondShop
                 if (id == 0)
                 {
                     row.OrderNo = GM.GetRunningNumber("ORD");             
-                    row.FactoryStatus = 218; //Not Yet
                     row.Shop = ApplicationInfo.Shop;
                     SetCreateBy(row);
                     chkFlag = ser.DoInsertData("Order", tds, 0);
@@ -592,11 +595,19 @@ namespace DiamondShop
             btnProcessing.Image = imageList1.Images[1];
 
             ser1 = GM.GetService1();
-            ser1.UpdateProductionLine(id, 219,ApplicationInfo.UserID);
 
-            btnPrint.Visible = true;
-            btnInventory.Visible = true;
-            btnDiamond.Enabled = true;
+            Popup.Popup pop = new Popup.Popup("Are you sure to confirm order?");
+            pop.ShowDialog();
+
+            if (pop.result)
+            {
+                ser1.UpdateProductionLine(id, 219, ApplicationInfo.UserID);
+
+                btnConfirm.Visible = false;
+                btnPrint.Visible = true;
+                btnInventory.Visible = true;
+                btnDiamond.Enabled = true;
+            }        
         }
 
         private void btnRefDel_Click(object sender, EventArgs e)
@@ -793,35 +804,86 @@ namespace DiamondShop
 
         private void Note1Status_CheckedChanged(object sender, EventArgs e)
         {
-            ser1 = GM.GetService1();
-            ser1.UpdateNoteStatus(id, 1, chkNote1Status.Checked ? "1" : "0", ApplicationInfo.UserID);
+            if (isFirst)
+            {
+                ser1 = GM.GetService1();
+                Popup.Popup pop = new Popup.Popup("Are you sure to confirm note1?");
+                pop.ShowDialog();
+
+                if (pop.result)
+                {
+                    ser1.UpdateNoteStatus(id, 1, chkNote1Status.Checked ? "1" : "0", ApplicationInfo.UserID);
+                }
+            }
         }
 
         private void chkNote2Status_CheckedChanged(object sender, EventArgs e)
         {
-            ser1 = GM.GetService1();
-            ser1.UpdateNoteStatus(id, 2, chkNote2Status.Checked ? "1" : "0", ApplicationInfo.UserID);
+            if (isFirst)
+            {
+                ser1 = GM.GetService1();
+                Popup.Popup pop = new Popup.Popup("Are you sure to confirm note2?");
+                pop.ShowDialog();
+
+                if (pop.result)
+                {
+                    ser1.UpdateNoteStatus(id, 2, chkNote2Status.Checked ? "1" : "0", ApplicationInfo.UserID);
+                }
+            }
         }
 
         private void chkNote3Status_CheckedChanged(object sender, EventArgs e)
         {
-            ser1 = GM.GetService1();
-            ser1.UpdateNoteStatus(id, 3, chkNote3Status.Checked ? "1" : "0", ApplicationInfo.UserID);
+            if (isFirst)
+            {
+                ser1 = GM.GetService1();
+                Popup.Popup pop = new Popup.Popup("Are you sure to confirm note3?");
+                pop.ShowDialog();
+
+                if (pop.result)
+                {
+                    ser1.UpdateNoteStatus(id, 3, chkNote3Status.Checked ? "1" : "0", ApplicationInfo.UserID);
+                }
+            }
         }
 
         private void btnSendNote1_Click(object sender, EventArgs e)
         {
-            ser1.UpdateNote(id, txtNote1.Text, 1, ApplicationInfo.UserID);
+            Popup.Popup pop = new Popup.Popup("Are you confirm to send note1?");
+            pop.ShowDialog();
+
+            if (pop.result)
+            {
+                ser1.UpdateNote(id, txtNote1.Text, 1, ApplicationInfo.UserID);
+
+                btnSendNote1.Enabled = false;
+            }
         }
 
         private void btnSendNote2_Click(object sender, EventArgs e)
         {
-            ser1.UpdateNote(id, txtNote2.Text, 2, ApplicationInfo.UserID);
+            Popup.Popup pop = new Popup.Popup("Are you confirm to send note2?");
+            pop.ShowDialog();
+
+            if (pop.result)
+            {
+                ser1.UpdateNote(id, txtNote2.Text, 2, ApplicationInfo.UserID);
+
+                btnSendNote2.Enabled = false;
+            }
         }
 
         private void btnSendNote3_Click(object sender, EventArgs e)
         {
-            ser1.UpdateNote(id, txtNote3.Text, 3, ApplicationInfo.UserID);
+            Popup.Popup pop = new Popup.Popup("Are you confirm to send note3?");
+            pop.ShowDialog();
+
+            if (pop.result)
+            {
+                ser1.UpdateNote(id, txtNote3.Text, 3, ApplicationInfo.UserID);
+
+                btnSendNote3.Enabled = false;
+            }
         }
 
         private void dtBuyDate_ValueChanged(object sender, EventArgs e)
@@ -881,6 +943,7 @@ namespace DiamondShop
                     {
                         txtNote1.Visible = true;
                         txtNote1.Enabled = false;
+                        chkNote1Status.Visible = true;
                         chkNote1Status.Enabled = false;
 
                         txtNote2.Visible = true;

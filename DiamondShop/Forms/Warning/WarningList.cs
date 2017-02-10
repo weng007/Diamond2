@@ -150,10 +150,7 @@ namespace DiamondShop
                     OrderInfo frm = new OrderInfo(id, WarningID);
                     frm.ShowDialog();
 
-                    if (ApplicationInfo.Shop == 232)
-                    {
-                        ser1.UpdateMessageStatus(WarningID, statusType, "0");
-                    }
+                    ser1.UpdateMessageStatus(WarningID, statusType, "0");
                 }
                 else
                 {
