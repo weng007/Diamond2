@@ -43,7 +43,6 @@ namespace DiamondShop
             this.id = id;
             LoadData();
             SetControlEnable(false);
-            txtUpdateBy.Text = ApplicationInfo.UserName;
             
             isEdit = false;
         }
@@ -60,7 +59,6 @@ namespace DiamondShop
             //Set ตามที่เลือกเข้ามา
             SetJewelryType();
 
-            txtUpdateBy.Text = ApplicationInfo.UserName;
             cmbShop.SelectedValue = ApplicationInfo.Shop.ToString();
         }
 
@@ -75,7 +73,6 @@ namespace DiamondShop
             //Set ตามที่เลือกเข้ามา
             SetJewelryType();
 
-            txtUpdateBy.Text = ApplicationInfo.UserName;
             cmbShop.SelectedValue = ApplicationInfo.Shop.ToString();
         }
 
@@ -138,6 +135,7 @@ namespace DiamondShop
         private void BinderData()
         {
             binder.BindControl(txtCode, "Code");
+            binder.BindControl(txtCode2, "Code2");
             binder.BindControl(txtOrderCode, "OrderNo");
             binder.BindControl(cmbShop, "Shop");
             binder.BindControl(cmbJewelryType, "JewelryType");
@@ -200,7 +198,7 @@ namespace DiamondShop
 
             cmbShop.Select();
 
-            SetFieldService.SetRequireField(txtPricePerGram1,txtPricePerGram11,txtPricePerGram2,txtPricePerGram22,txtMinPrice, txtPriceTag);
+            SetFieldService.SetRequireField(txtPricePerGram11,txtPricePerGram2,txtPricePerGram22,txtMinPrice, txtPriceTag);
         }
 
         protected override void LoadData()
@@ -359,7 +357,7 @@ namespace DiamondShop
         {
             message = "";
 
-            if (txtPricePerGram1.Text == "" || txtPricePerGram1.Text == "0" || txtPricePerGram11.Text == "" || txtPricePerGram11.Text == "0")
+            if (txtPricePerGram11.Text == "" || txtPricePerGram11.Text == "0")
             {
                 message = "Please input Price1 Per Gram > 0.\n";
             }
@@ -664,6 +662,7 @@ namespace DiamondShop
         {
             dtUpdateDate.Enabled = status;
             txtCode.Enabled = status;
+            txtCode2.Enabled = status;
             cmbShop.Enabled = status;
             txtSize.Enabled = status;
             dtImportDate.Enabled = status;

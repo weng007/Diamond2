@@ -27,8 +27,6 @@ namespace DiamondShop
             Initial();
 
             BinderData();
-
-            txtUpdateBy.Text = ApplicationInfo.UserName;
         }
 
         public Catalog(int id)
@@ -37,7 +35,6 @@ namespace DiamondShop
             Initial();
 
             BinderData();
-            txtUpdateBy.Text = ApplicationInfo.UserName;
             this.id = id;
             LoadData();
 
@@ -67,7 +64,6 @@ namespace DiamondShop
 
         protected override void Initial()
         {
-
             txtRemark.Select();
 
             //SetFieldService.SetRequireField(txtCode, txtNetWeight, txtSize, txtMaterialWeight1, txtMinPrice, txtOpenPrice);

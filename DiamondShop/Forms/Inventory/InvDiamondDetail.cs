@@ -11,7 +11,6 @@ using DiamondShop.FormMaster;
 using DiamondDS.DS;
 using DiamondShop.DiamondService;
 
-
 namespace DiamondShop
 {
     public partial class InvDiamondDetail : FormInfo
@@ -55,6 +54,12 @@ namespace DiamondShop
             Color.ValueMember = "ID";
             Color.DisplayMember = "Detail";
             Color.DefaultCellStyle.NullValue = (GM.GetMasterTableDetail("C017")).Tables[0].Rows[0][1];
+
+            Quality = (DataGridViewComboBoxColumn)grid2.Columns["Quality"];
+            Quality.DataSource = (GM.GetMasterTableDetail("C031")).Tables[0];
+            Quality.ValueMember = "ID";
+            Quality.DisplayMember = "Detail";
+            Quality.DefaultCellStyle.NullValue = (GM.GetMasterTableDetail("C031")).Tables[0].Rows[0][1];
 
             Clearity1 = (DataGridViewComboBoxColumn)grid2.Columns["Clearity1"];
             Clearity1.DataSource = (GM.GetMasterTableDetail("C002")).Tables[0];
@@ -120,6 +125,7 @@ namespace DiamondShop
 
                         if (row["Shape"].ToString() == "") { row["Shape"] = 133; }
                         if (row["Color"].ToString() == "") { row["Color"] = 126; }
+                        if (row["Quality"].ToString() == "") { row["Quality"] = 233; }
                         if (row["Clearity"].ToString() == "") { row["Clearity"] = 25; }
 
                         SetCreateBy(row);
@@ -172,11 +178,6 @@ namespace DiamondShop
         protected override bool ValidateData()
         {
             message = "";
-
-            //if (txtWeight.Text == "" || GM.ConvertStringToDouble(txtWeight)==0)
-            //{
-            //    message = "Please input Weight > 0.\n";
-            //}
 
             if (message == "") { return true; }
             else { return false; }
@@ -324,6 +325,7 @@ namespace DiamondShop
                     grid2.Rows[i].Cells["Amount"].Value = row["Amount"].ToString();
                     grid2.Rows[i].Cells["Weight1"].Value = row["Weight"].ToString();
                     grid2.Rows[i].Cells["Color"].Value = row["Color"].ToString();
+                    grid2.Rows[i].Cells["Quality"].Value = row["Quality"].ToString();
                     grid2.Rows[i].Cells["Clearity1"].Value = row["Clearity"].ToString();
                     grid2.Rows[i].Cells["CostPerCarat"].Value = row["CostPerCarat"].ToString();
                     grid2.Rows[i].Cells["Cost1"].Value = row["Cost"].ToString();
@@ -395,6 +397,9 @@ namespace DiamondShop
                     if (row.Cells["Color"].Value != null)
                     { tds2.Tables[0].Rows[i]["Color"] = row.Cells["Color"].Value; }
 
+                    if (row.Cells["Quality"].Value != null)
+                    { tds2.Tables[0].Rows[i]["Quality"] = row.Cells["Quality"].Value; }
+
                     if (row.Cells["Clearity1"].Value != null)
                     { tds2.Tables[0].Rows[i]["Clearity"] = row.Cells["Clearity1"].Value; }
 
@@ -439,7 +444,7 @@ namespace DiamondShop
 
         private void grid2_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
-            if(e.ColumnIndex == 3 || e.ColumnIndex == 4 || e.ColumnIndex == 8 || e.ColumnIndex == 10)
+            if(e.ColumnIndex == 3 || e.ColumnIndex == 4 || e.ColumnIndex == 9 || e.ColumnIndex == 11)
             {              
                 if(grid2.Rows[e.RowIndex].Cells[3].Value ==null || grid2.Rows[e.RowIndex].Cells[3].Value.ToString().Trim() == "")
                 {
@@ -450,21 +455,19 @@ namespace DiamondShop
                     grid2.Rows[e.RowIndex].Cells[4].Value = 0;
                 }
 
-                if (grid2.Rows[e.RowIndex].Cells[8].Value == null || grid2.Rows[e.RowIndex].Cells[8].Value.ToString().Trim() == "")
+                if (grid2.Rows[e.RowIndex].Cells[9].Value == null || grid2.Rows[e.RowIndex].Cells[9].Value.ToString().Trim() == "")
                 {
-                    grid2.Rows[e.RowIndex].Cells[8].Value = 0;
-                }
+                    grid2.Rows[e.RowIndex].Cells[9].Value = 0;
+                }             
 
-               
-
-                if (grid2.Rows[e.RowIndex].Cells[10].Value == null || grid2.Rows[e.RowIndex].Cells[10].Value.ToString().Trim() == "")
+                if (grid2.Rows[e.RowIndex].Cells[11].Value == null || grid2.Rows[e.RowIndex].Cells[11].Value.ToString().Trim() == "")
                 {
-                    grid2.Rows[e.RowIndex].Cells[10].Value = 0;
+                    grid2.Rows[e.RowIndex].Cells[11].Value = 0;
                 }              
 
                 grid2.Rows[e.RowIndex].Cells[5].Value = Convert.ToDecimal(grid2.Rows[e.RowIndex].Cells[3].Value) * Convert.ToInt16(grid2.Rows[e.RowIndex].Cells[4].Value);
-                grid2.Rows[e.RowIndex].Cells[9].Value = Convert.ToDecimal(grid2.Rows[e.RowIndex].Cells[5].Value) * Convert.ToDecimal(grid2.Rows[e.RowIndex].Cells[8].Value);
-                grid2.Rows[e.RowIndex].Cells[11].Value = Convert.ToDecimal(grid2.Rows[e.RowIndex].Cells[5].Value) * Convert.ToDecimal(grid2.Rows[e.RowIndex].Cells[10].Value);
+                grid2.Rows[e.RowIndex].Cells[10].Value = Convert.ToDecimal(grid2.Rows[e.RowIndex].Cells[5].Value) * Convert.ToDecimal(grid2.Rows[e.RowIndex].Cells[9].Value);
+                grid2.Rows[e.RowIndex].Cells[12].Value = Convert.ToDecimal(grid2.Rows[e.RowIndex].Cells[5].Value) * Convert.ToDecimal(grid2.Rows[e.RowIndex].Cells[11].Value);
             }
 
             grid2.RefreshEdit();
@@ -484,7 +487,7 @@ namespace DiamondShop
 
         private void grid2_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            if ((e.ColumnIndex == 8 || e.ColumnIndex == 9 || e.ColumnIndex == 10 || e.ColumnIndex == 11) && e.RowIndex != this.grid2.NewRowIndex && e.Value != null
+            if ((e.ColumnIndex == 9 || e.ColumnIndex == 10 || e.ColumnIndex == 11 || e.ColumnIndex == 12) && e.RowIndex != this.grid2.NewRowIndex && e.Value != null
                 && e.Value.ToString() != "")
             {
                 double d = double.Parse(e.Value.ToString());

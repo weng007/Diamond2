@@ -131,6 +131,8 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.txtCode2 = new System.Windows.Forms.TextBox();
+            this.label40 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -210,7 +212,7 @@
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Location = new System.Drawing.Point(364, 54);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(100, 21);
+            this.comboBox3.Size = new System.Drawing.Size(100, 27);
             this.comboBox3.TabIndex = 28;
             // 
             // textBox2
@@ -341,6 +343,8 @@
             // 
             this.panel7.BackColor = System.Drawing.Color.White;
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel7.Controls.Add(this.label40);
+            this.panel7.Controls.Add(this.txtCode2);
             this.panel7.Controls.Add(this.label31);
             this.panel7.Controls.Add(this.txtOrderCode);
             this.panel7.Controls.Add(this.label32);
@@ -470,9 +474,9 @@
             // 
             // txtSize
             // 
-            this.txtSize.Location = new System.Drawing.Point(436, 90);
+            this.txtSize.Location = new System.Drawing.Point(516, 91);
             this.txtSize.Name = "txtSize";
-            this.txtSize.Size = new System.Drawing.Size(119, 26);
+            this.txtSize.Size = new System.Drawing.Size(85, 26);
             this.txtSize.TabIndex = 10;
             this.txtSize.Text = "0";
             this.txtSize.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -482,7 +486,7 @@
             // 
             this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label38.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label38.Location = new System.Drawing.Point(386, 90);
+            this.label38.Location = new System.Drawing.Point(468, 94);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(42, 29);
             this.label38.TabIndex = 202;
@@ -1218,7 +1222,7 @@
             // 
             this.txtCode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.txtCode.Enabled = false;
-            this.txtCode.Location = new System.Drawing.Point(149, 91);
+            this.txtCode.Location = new System.Drawing.Point(63, 91);
             this.txtCode.Name = "txtCode";
             this.txtCode.Size = new System.Drawing.Size(162, 26);
             this.txtCode.TabIndex = 200;
@@ -1292,6 +1296,25 @@
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // txtCode2
+            // 
+            this.txtCode2.BackColor = System.Drawing.Color.White;
+            this.txtCode2.Enabled = false;
+            this.txtCode2.Location = new System.Drawing.Point(305, 91);
+            this.txtCode2.Name = "txtCode2";
+            this.txtCode2.Size = new System.Drawing.Size(154, 26);
+            this.txtCode2.TabIndex = 208;
+            // 
+            // label40
+            // 
+            this.label40.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
+            this.label40.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label40.Location = new System.Drawing.Point(238, 94);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(64, 23);
+            this.label40.TabIndex = 209;
+            this.label40.Text = "Code2";
             // 
             // Inventory
             // 
@@ -1420,5 +1443,7 @@
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.TextBox txtOrderCode;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.TextBox txtCode2;
     }
 }

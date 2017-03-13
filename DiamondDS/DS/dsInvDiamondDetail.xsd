@@ -14,7 +14,7 @@
   <xs:element name="dsInvDiamondDetail" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsInvDiamondDetail" msprop:Generator_UserDSName="dsInvDiamondDetail">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="InvDiamondDetail" msprop:Generator_TableClassName="InvDiamondDetailDataTable" msprop:Generator_TableVarName="tableInvDiamondDetail" msprop:Generator_RowChangedName="InvDiamondDetailRowChanged" msprop:Generator_TablePropName="InvDiamondDetail" msprop:Generator_RowDeletingName="InvDiamondDetailRowDeleting" msprop:Generator_RowChangingName="InvDiamondDetailRowChanging" msprop:Generator_RowEvHandlerName="InvDiamondDetailRowChangeEventHandler" msprop:Generator_RowDeletedName="InvDiamondDetailRowDeleted" msprop:Generator_RowClassName="InvDiamondDetailRow" msprop:Generator_UserTableName="InvDiamondDetail" msprop:Generator_RowEvArgName="InvDiamondDetailRowChangeEvent">
+        <xs:element name="InvDiamondDetail" msprop:Generator_TableClassName="InvDiamondDetailDataTable" msprop:Generator_TableVarName="tableInvDiamondDetail" msprop:Generator_TablePropName="InvDiamondDetail" msprop:Generator_RowDeletingName="InvDiamondDetailRowDeleting" msprop:Generator_RowChangingName="InvDiamondDetailRowChanging" msprop:Generator_RowEvHandlerName="InvDiamondDetailRowChangeEventHandler" msprop:Generator_RowDeletedName="InvDiamondDetailRowDeleted" msprop:Generator_UserTableName="InvDiamondDetail" msprop:Generator_RowChangedName="InvDiamondDetailRowChanged" msprop:Generator_RowEvArgName="InvDiamondDetailRowChangeEvent" msprop:Generator_RowClassName="InvDiamondDetailRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="RowNum" msprop:Generator_ColumnVarNameInTable="columnRowNum" msprop:Generator_ColumnPropNameInRow="RowNum" msprop:Generator_ColumnPropNameInTable="RowNumColumn" msprop:Generator_UserColumnName="RowNum" type="xs:long" minOccurs="0" />
@@ -32,6 +32,14 @@
               <xs:element name="Weight" msprop:Generator_ColumnVarNameInTable="columnWeight" msprop:Generator_ColumnPropNameInRow="Weight" msprop:Generator_ColumnPropNameInTable="WeightColumn" msprop:Generator_UserColumnName="Weight" type="xs:double" default="0" minOccurs="0" />
               <xs:element name="Color" msprop:Generator_ColumnVarNameInTable="columnColor" msprop:Generator_ColumnPropNameInRow="Color" msprop:Generator_ColumnPropNameInTable="ColorColumn" msprop:Generator_UserColumnName="Color" type="xs:int" minOccurs="0" />
               <xs:element name="ColorName" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnColorName" msprop:Generator_ColumnPropNameInRow="ColorName" msprop:Generator_ColumnPropNameInTable="ColorNameColumn" msprop:Generator_UserColumnName="ColorName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Quality" msdata:Caption="Color" msprop:Generator_ColumnVarNameInTable="columnQuality" msprop:Generator_ColumnPropNameInRow="Quality" msprop:Generator_ColumnPropNameInTable="QualityColumn" msprop:Generator_UserColumnName="Quality" type="xs:int" minOccurs="0" />
+              <xs:element name="QualityName" msdata:ReadOnly="true" msdata:Caption="ColorName" msprop:Generator_ColumnVarNameInTable="columnQualityName" msprop:Generator_ColumnPropNameInRow="QualityName" msprop:Generator_ColumnPropNameInTable="QualityNameColumn" msprop:Generator_UserColumnName="QualityName" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />

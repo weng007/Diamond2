@@ -297,6 +297,10 @@ namespace DiamondDS.DS {
             
             private global::System.Data.DataColumn columnColorName;
             
+            private global::System.Data.DataColumn columnQuality;
+            
+            private global::System.Data.DataColumn columnQualityName;
+            
             private global::System.Data.DataColumn columnClearity;
             
             private global::System.Data.DataColumn columnClearityName;
@@ -421,6 +425,22 @@ namespace DiamondDS.DS {
             public global::System.Data.DataColumn ColorNameColumn {
                 get {
                     return this.columnColorName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn QualityColumn {
+                get {
+                    return this.columnQuality;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn QualityNameColumn {
+                get {
+                    return this.columnQualityName;
                 }
             }
             
@@ -558,6 +578,8 @@ namespace DiamondDS.DS {
                         double Weight, 
                         int Color, 
                         string ColorName, 
+                        int Quality, 
+                        string QualityName, 
                         int Clearity, 
                         string ClearityName, 
                         decimal CostPerCarat, 
@@ -580,6 +602,8 @@ namespace DiamondDS.DS {
                         Weight,
                         Color,
                         ColorName,
+                        Quality,
+                        QualityName,
                         Clearity,
                         ClearityName,
                         CostPerCarat,
@@ -629,6 +653,8 @@ namespace DiamondDS.DS {
                 this.columnWeight = base.Columns["Weight"];
                 this.columnColor = base.Columns["Color"];
                 this.columnColorName = base.Columns["ColorName"];
+                this.columnQuality = base.Columns["Quality"];
+                this.columnQualityName = base.Columns["QualityName"];
                 this.columnClearity = base.Columns["Clearity"];
                 this.columnClearityName = base.Columns["ClearityName"];
                 this.columnCostPerCarat = base.Columns["CostPerCarat"];
@@ -663,6 +689,10 @@ namespace DiamondDS.DS {
                 base.Columns.Add(this.columnColor);
                 this.columnColorName = new global::System.Data.DataColumn("ColorName", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnColorName);
+                this.columnQuality = new global::System.Data.DataColumn("Quality", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnQuality);
+                this.columnQualityName = new global::System.Data.DataColumn("QualityName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnQualityName);
                 this.columnClearity = new global::System.Data.DataColumn("Clearity", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnClearity);
                 this.columnClearityName = new global::System.Data.DataColumn("ClearityName", typeof(string), null, global::System.Data.MappingType.Element);
@@ -699,6 +729,10 @@ namespace DiamondDS.DS {
                 this.columnWeight.DefaultValue = ((double)(0D));
                 this.columnColorName.ReadOnly = true;
                 this.columnColorName.MaxLength = 100;
+                this.columnQuality.Caption = "Color";
+                this.columnQualityName.ReadOnly = true;
+                this.columnQualityName.Caption = "ColorName";
+                this.columnQualityName.MaxLength = 100;
                 this.columnClearityName.ReadOnly = true;
                 this.columnClearityName.MaxLength = 100;
                 this.columnCostPerCarat.DefaultValue = ((decimal)(0m));
@@ -987,6 +1021,38 @@ namespace DiamondDS.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int Quality {
+                get {
+                    try {
+                        return ((int)(this[this.tableInvDiamondDetail.QualityColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Quality\' in table \'InvDiamondDetail\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableInvDiamondDetail.QualityColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string QualityName {
+                get {
+                    try {
+                        return ((string)(this[this.tableInvDiamondDetail.QualityNameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'QualityName\' in table \'InvDiamondDetail\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableInvDiamondDetail.QualityNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public int Clearity {
                 get {
                     try {
@@ -1255,6 +1321,30 @@ namespace DiamondDS.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetColorNameNull() {
                 this[this.tableInvDiamondDetail.ColorNameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsQualityNull() {
+                return this.IsNull(this.tableInvDiamondDetail.QualityColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetQualityNull() {
+                this[this.tableInvDiamondDetail.QualityColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsQualityNameNull() {
+                return this.IsNull(this.tableInvDiamondDetail.QualityNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetQualityNameNull() {
+                this[this.tableInvDiamondDetail.QualityNameColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
