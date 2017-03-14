@@ -65,6 +65,8 @@ namespace DiamondShop
             cmbEShop.DisplayMember = "Detail";
             cmbEShop.Refresh();
 
+            cmbEShop.SelectedValue = GM.GetShopByUserID((int)cmbReceiver.SelectedValue);
+
             txtSender.Select();
             
             //SetFieldService.SetRequireField(txtSender);
@@ -379,6 +381,14 @@ namespace DiamondShop
         private void txtNote_TextChanged(object sender, EventArgs e)
         {
             isEdit = true;
+        }
+
+        private void cmbReceiver_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbEShop.SelectedValue != null)
+            {
+                cmbEShop.SelectedValue = GM.GetShopByUserID((int)cmbReceiver.SelectedValue);
+            }
         }
     }
 }

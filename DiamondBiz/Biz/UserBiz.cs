@@ -106,5 +106,17 @@ namespace DiamondBiz.Biz
                 throw ex;
             }
         }
+
+        public int GetShopByUserID(int userID)
+        {
+            try
+            {
+                return dal.GetShopByUserID(userID);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

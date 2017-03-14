@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DiamondDS.DS;
+using System.Data;
 
 namespace DiamondDAL.DAL
 {
@@ -136,6 +137,31 @@ namespace DiamondDAL.DAL
             }
 
             return ds;
+        }
+
+        public int GetShopByUserID(int userID)
+        {
+            int shop = 0;
+            DataSet ds1 = new DataSet();
+            ds1.Tables.Add();
+
+            try
+            {
+                SQL.ClearParameter();
+                SQL.FillDataSet(string.Format("Select dbo.fns_GetShopByUserID('{0}')", userID), ds1.Tables[0]);
+
+                if (ds1.Tables[0].Rows.Count > 0 && ds1.Tables[0].Rows[0][0].ToString() != "")
+                {
+                    shop = Convert.ToInt16(ds1.Tables[0].Rows[0][0]);
+                    ds1.Clear();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return shop;
         }
     }
 }

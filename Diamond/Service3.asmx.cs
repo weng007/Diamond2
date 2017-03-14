@@ -50,21 +50,6 @@ namespace Diamond
             }
         }
 
-        //[WebMethod]
-        //public DataSet DoSearchSeller(string search, int shop)
-        //{
-        //    SellerBiz biz = new SellerBiz();
-
-        //    try
-        //    {
-        //        return biz.DoSearchData(search, shop);
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        throw ex;
-        //    }
-        //}
-
         [WebMethod]
         public DataSet DoSearchBuyBookDiamondCer(string code, string reportNumber, int shape, int lab, double sWeight, double eWeight, int colorType, int sColor,
             int eColor, int sClearity, int eClearity, int status, int shop, string code2, int mode)
@@ -500,6 +485,21 @@ namespace Diamond
             try
             {
                 return biz.DoSearchBBSettingDetail(mode);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        [WebMethod]
+        public int GetShopByUserID(int userID)
+        {
+            UserBiz biz = GM.GetUserBiz();
+
+            try
+            {
+                return biz.GetShopByUserID(userID);
             }
             catch (Exception ex)
             {
