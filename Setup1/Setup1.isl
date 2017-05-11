@@ -52,7 +52,7 @@
 	<summary>
 		<codepage>1252</codepage>
 		<title>Installation Database</title>
-		<subject/>
+		<subject></subject>
 		<author>##ID_STRING2##</author>
 		<keywords>Installer,MSI,Database</keywords>
 		<comments>Contact:  Your local administrator</comments>
@@ -340,9 +340,8 @@
 		<col def="S0">ISDotNetInstallerArgsCommit</col>
 		<col def="S0">ISDotNetInstallerArgsUninstall</col>
 		<col def="S0">ISDotNetInstallerArgsRollback</col>
-		<row><td>DiamondDS.dll</td><td>{A44505F7-9B3D-4D86-ABC8-6E3600068909}</td><td>DEBUG</td><td>2</td><td/><td>diamondds.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>DiamondShop.exe</td><td>{ABF612D2-65C6-47BD-990C-006F66B5ADFC}</td><td>DEBUG</td><td>2</td><td/><td>diamondshop.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>DiamondShop.vshost.exe</td><td>{BC04A300-8986-4F3F-BD8A-A6EB59C3BB21}</td><td>DEBUG</td><td>2</td><td/><td>diamondshop.vshost.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>DiamondDS.dll</td><td>{4D28E55F-EC27-494C-9572-8573FBA2C2BB}</td><td>DEBUG</td><td>2</td><td/><td>diamondds.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>DiamondShop.exe</td><td>{49020306-311F-4136-9509-C28C945A24E2}</td><td>DEBUG</td><td>2</td><td/><td>diamondshop.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td>{2DC3DDC1-9642-4EE5-BFF4-0BC20804EA43}</td><td>BIN</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT1</td><td>{BF5DBC4E-7230-46D5-8F78-662E32F2D2BA}</td><td>DEBUG</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT10</td><td>{108DC9E5-D5FA-401D-BA81-F93B93D8AF44}</td><td>ZH_HANS</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
@@ -358,9 +357,8 @@
 		<row><td>ISX_DEFAULTCOMPONENT7</td><td>{E4700186-2DA7-4012-8872-527C5C7126B4}</td><td>KO</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT8</td><td>{A9686C47-3F73-4136-A990-F6772EBC04B9}</td><td>PT</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT9</td><td>{A1AFE148-DC15-45F4-BB41-37B4E754B81C}</td><td>RU</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.ReportViewer.Common.dll</td><td>{D355A0FB-00B5-4528-B91A-1658E7BF273D}</td><td>DEBUG</td><td>2</td><td/><td>microsoft.reportviewer.commo</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.ReportViewer.WinForms.dll</td><td>{3B237332-F19D-4F40-AA10-79FA5D0F71CA}</td><td>DEBUG</td><td>2</td><td/><td>microsoft.reportviewer.winfo</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.SqlServer.Types.dll</td><td>{848663ED-F8B2-4CC8-AFE8-B0D2FF4C332F}</td><td>DEBUG</td><td>2</td><td/><td>microsoft.sqlserver.types.dl</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.ReportViewer.Common.dll</td><td>{E2F579F0-4160-4C7F-BA00-BFA2D44A61BE}</td><td>DEBUG</td><td>2</td><td/><td>microsoft.reportviewer.commo</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.ReportViewer.WinForms.dll</td><td>{F8A3BC43-8942-467E-B475-D01583D81EC1}</td><td>DEBUG</td><td>2</td><td/><td>microsoft.reportviewer.winfo</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>Microsoft.SqlServer.Types.resources.dll</td><td>{5594006D-FE7E-4756-A26B-E4EB9B75F406}</td><td>DE</td><td>2</td><td/><td>microsoft.sqlserver.types.re</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>Microsoft.SqlServer.Types.resources.dll1</td><td>{CF04D56C-293E-47A0-B40E-82FA663B60F8}</td><td>ES</td><td>2</td><td/><td>microsoft.sqlserver.types.re1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>Microsoft.SqlServer.Types.resources.dll2</td><td>{1121A560-27CE-49DF-95A2-366FDEB044F8}</td><td>FR</td><td>2</td><td/><td>microsoft.sqlserver.types.re2</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
@@ -371,7 +369,8 @@
 		<row><td>Microsoft.SqlServer.Types.resources.dll7</td><td>{BF8CD32E-349B-4CE2-BF27-86B6F9EED764}</td><td>RU</td><td>2</td><td/><td>microsoft.sqlserver.types.re7</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>Microsoft.SqlServer.Types.resources.dll8</td><td>{A09517B1-C5DA-49C0-B4B9-E6C4DFD48C9F}</td><td>ZH_HANS</td><td>2</td><td/><td>microsoft.sqlserver.types.re8</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>Microsoft.SqlServer.Types.resources.dll9</td><td>{D3F5076F-0879-41A0-A2F0-31384EB40D7F}</td><td>ZH_HANT</td><td>2</td><td/><td>microsoft.sqlserver.types.re9</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>System.Net.Http.dll</td><td>{3081685E-BC66-4DB3-B863-6D31195F1E65}</td><td>DEBUG</td><td>2</td><td/><td>system.net.http.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>System.Windows.Forms.Calendar.dll</td><td>{90C4E6E7-CDA8-4435-9C78-092E4D0E192E}</td><td>DEBUG</td><td>2</td><td/><td>system.windows.forms.calenda</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>WealthUpdate.exe</td><td>{94311AF4-47AF-453E-A917-1D8B79A520E3}</td><td>DEBUG</td><td>2</td><td/><td>wealthupdate.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 	</table>
 
 	<table name="Condition">
@@ -1085,12 +1084,11 @@
 		<row><td>DE</td><td>Microsoft.SqlServer.Types.resources.dll</td></row>
 		<row><td>DEBUG</td><td>DiamondDS.dll</td></row>
 		<row><td>DEBUG</td><td>DiamondShop.exe</td></row>
-		<row><td>DEBUG</td><td>DiamondShop.vshost.exe</td></row>
 		<row><td>DEBUG</td><td>ISX_DEFAULTCOMPONENT1</td></row>
 		<row><td>DEBUG</td><td>Microsoft.ReportViewer.Common.dll</td></row>
 		<row><td>DEBUG</td><td>Microsoft.ReportViewer.WinForms.dll</td></row>
-		<row><td>DEBUG</td><td>Microsoft.SqlServer.Types.dll</td></row>
-		<row><td>DEBUG</td><td>System.Net.Http.dll</td></row>
+		<row><td>DEBUG</td><td>System.Windows.Forms.Calendar.dll</td></row>
+		<row><td>DEBUG</td><td>WealthUpdate.exe</td></row>
 		<row><td>DS</td><td>ISX_DEFAULTCOMPONENT14</td></row>
 		<row><td>ES</td><td>ISX_DEFAULTCOMPONENT3</td></row>
 		<row><td>ES</td><td>Microsoft.SqlServer.Types.resources.dll1</td></row>
@@ -1098,7 +1096,6 @@
 		<row><td>FR</td><td>Microsoft.SqlServer.Types.resources.dll2</td></row>
 		<row><td>INSTALLDIR</td><td>DiamondDS.dll</td></row>
 		<row><td>INSTALLDIR</td><td>DiamondShop.exe</td></row>
-		<row><td>INSTALLDIR</td><td>DiamondShop.vshost.exe</td></row>
 		<row><td>INSTALLDIR</td><td>ISX_DEFAULTCOMPONENT</td></row>
 		<row><td>INSTALLDIR</td><td>ISX_DEFAULTCOMPONENT1</td></row>
 		<row><td>INSTALLDIR</td><td>ISX_DEFAULTCOMPONENT10</td></row>
@@ -1116,7 +1113,6 @@
 		<row><td>INSTALLDIR</td><td>ISX_DEFAULTCOMPONENT9</td></row>
 		<row><td>INSTALLDIR</td><td>Microsoft.ReportViewer.Common.dll</td></row>
 		<row><td>INSTALLDIR</td><td>Microsoft.ReportViewer.WinForms.dll</td></row>
-		<row><td>INSTALLDIR</td><td>Microsoft.SqlServer.Types.dll</td></row>
 		<row><td>INSTALLDIR</td><td>Microsoft.SqlServer.Types.resources.dll</td></row>
 		<row><td>INSTALLDIR</td><td>Microsoft.SqlServer.Types.resources.dll1</td></row>
 		<row><td>INSTALLDIR</td><td>Microsoft.SqlServer.Types.resources.dll2</td></row>
@@ -1127,7 +1123,8 @@
 		<row><td>INSTALLDIR</td><td>Microsoft.SqlServer.Types.resources.dll7</td></row>
 		<row><td>INSTALLDIR</td><td>Microsoft.SqlServer.Types.resources.dll8</td></row>
 		<row><td>INSTALLDIR</td><td>Microsoft.SqlServer.Types.resources.dll9</td></row>
-		<row><td>INSTALLDIR</td><td>System.Net.Http.dll</td></row>
+		<row><td>INSTALLDIR</td><td>System.Windows.Forms.Calendar.dll</td></row>
+		<row><td>INSTALLDIR</td><td>WealthUpdate.exe</td></row>
 		<row><td>IT</td><td>ISX_DEFAULTCOMPONENT5</td></row>
 		<row><td>IT</td><td>Microsoft.SqlServer.Types.resources.dll3</td></row>
 		<row><td>JA</td><td>ISX_DEFAULTCOMPONENT6</td></row>
@@ -1972,7 +1969,6 @@
 		<col key="yes" def="s72">Component_</col>
 		<row><td>AlwaysInstall</td><td>DiamondDS.dll</td></row>
 		<row><td>AlwaysInstall</td><td>DiamondShop.exe</td></row>
-		<row><td>AlwaysInstall</td><td>DiamondShop.vshost.exe</td></row>
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT</td></row>
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT1</td></row>
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT10</td></row>
@@ -1990,7 +1986,6 @@
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT9</td></row>
 		<row><td>AlwaysInstall</td><td>Microsoft.ReportViewer.Common.dll</td></row>
 		<row><td>AlwaysInstall</td><td>Microsoft.ReportViewer.WinForms.dll</td></row>
-		<row><td>AlwaysInstall</td><td>Microsoft.SqlServer.Types.dll</td></row>
 		<row><td>AlwaysInstall</td><td>Microsoft.SqlServer.Types.resources.dll</td></row>
 		<row><td>AlwaysInstall</td><td>Microsoft.SqlServer.Types.resources.dll1</td></row>
 		<row><td>AlwaysInstall</td><td>Microsoft.SqlServer.Types.resources.dll2</td></row>
@@ -2001,7 +1996,8 @@
 		<row><td>AlwaysInstall</td><td>Microsoft.SqlServer.Types.resources.dll7</td></row>
 		<row><td>AlwaysInstall</td><td>Microsoft.SqlServer.Types.resources.dll8</td></row>
 		<row><td>AlwaysInstall</td><td>Microsoft.SqlServer.Types.resources.dll9</td></row>
-		<row><td>AlwaysInstall</td><td>System.Net.Http.dll</td></row>
+		<row><td>AlwaysInstall</td><td>System.Windows.Forms.Calendar.dll</td></row>
+		<row><td>AlwaysInstall</td><td>WealthUpdate.exe</td></row>
 	</table>
 
 	<table name="File">
@@ -2017,16 +2013,11 @@
 		<col def="I4">ISAttributes</col>
 		<col def="S72">ISComponentSubFolder_</col>
 		<row><td>certificate.rdlc</td><td>ISX_DEFAULTCOMPONENT13</td><td>CERTIF~1.RDL|Certificate.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>F:\Project\Diamond2\DiamondShop\bin\Report\Certificate.rdlc</td><td>1</td><td/></row>
+		<row><td>deliverorderinventory.rdlc</td><td>ISX_DEFAULTCOMPONENT13</td><td>DELIVE~1.RDL|DeliverOrderInventory.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>F:\Project\Diamond2\DiamondShop\bin\Report\DeliverOrderInventory.rdlc</td><td>1</td><td/></row>
 		<row><td>diamondds.dll</td><td>DiamondDS.dll</td><td>DIAMON~1.DLL|DiamondDS.dll</td><td>0</td><td/><td/><td/><td>1</td><td>F:\Project\Diamond2\DiamondShop\bin\Debug\DiamondDS.dll</td><td>1</td><td/></row>
-		<row><td>diamondds.pdb</td><td>ISX_DEFAULTCOMPONENT1</td><td>DIAMON~1.PDB|DiamondDS.pdb</td><td>0</td><td/><td/><td/><td>1</td><td>F:\Project\Diamond2\DiamondShop\bin\Debug\DiamondDS.pdb</td><td>1</td><td/></row>
 		<row><td>diamondshop.exe</td><td>DiamondShop.exe</td><td>DIAMON~1.EXE|DiamondShop.exe</td><td>0</td><td/><td/><td/><td>1</td><td>F:\Project\Diamond2\DiamondShop\bin\Debug\DiamondShop.exe</td><td>1</td><td/></row>
-		<row><td>diamondshop.exe.config</td><td>ISX_DEFAULTCOMPONENT1</td><td>DIAMON~1.CON|DiamondShop.exe.config</td><td>0</td><td/><td/><td/><td>1</td><td>F:\Project\Diamond2\DiamondShop\bin\Debug\DiamondShop.exe.config</td><td>1</td><td/></row>
-		<row><td>diamondshop.pdb</td><td>ISX_DEFAULTCOMPONENT1</td><td>DIAMON~1.PDB|DiamondShop.pdb</td><td>0</td><td/><td/><td/><td>1</td><td>F:\Project\Diamond2\DiamondShop\bin\Debug\DiamondShop.pdb</td><td>1</td><td/></row>
-		<row><td>diamondshop.vshost.exe</td><td>DiamondShop.vshost.exe</td><td>DIAMON~1.EXE|DiamondShop.vshost.exe</td><td>0</td><td/><td/><td/><td>1</td><td>F:\Project\Diamond2\DiamondShop\bin\Debug\DiamondShop.vshost.exe</td><td>1</td><td/></row>
-		<row><td>diamondshop.vshost.exe.confi</td><td>ISX_DEFAULTCOMPONENT1</td><td>DIAMON~1.CON|DiamondShop.vshost.exe.config</td><td>0</td><td/><td/><td/><td>1</td><td>F:\Project\Diamond2\DiamondShop\bin\Debug\DiamondShop.vshost.exe.config</td><td>1</td><td/></row>
 		<row><td>microsoft.reportviewer.commo</td><td>Microsoft.ReportViewer.Common.dll</td><td>MICROS~1.DLL|Microsoft.ReportViewer.Common.dll</td><td>0</td><td/><td/><td/><td>1</td><td>F:\Project\Diamond2\DiamondShop\bin\Debug\Microsoft.ReportViewer.Common.dll</td><td>1</td><td/></row>
 		<row><td>microsoft.reportviewer.winfo</td><td>Microsoft.ReportViewer.WinForms.dll</td><td>MICROS~1.DLL|Microsoft.ReportViewer.WinForms.dll</td><td>0</td><td/><td/><td/><td>1</td><td>F:\Project\Diamond2\DiamondShop\bin\Debug\Microsoft.ReportViewer.WinForms.dll</td><td>1</td><td/></row>
-		<row><td>microsoft.sqlserver.types.dl</td><td>Microsoft.SqlServer.Types.dll</td><td>MICROS~1.DLL|Microsoft.SqlServer.Types.dll</td><td>0</td><td/><td/><td/><td>1</td><td>F:\Project\Diamond2\DiamondShop\bin\Debug\Microsoft.SqlServer.Types.dll</td><td>1</td><td/></row>
 		<row><td>microsoft.sqlserver.types.re</td><td>Microsoft.SqlServer.Types.resources.dll</td><td>MICROS~1.DLL|Microsoft.SqlServer.Types.resources.dll</td><td>0</td><td/><td/><td/><td>1</td><td>F:\Project\Diamond2\DiamondShop\bin\Debug\de\Microsoft.SqlServer.Types.resources.dll</td><td>1</td><td/></row>
 		<row><td>microsoft.sqlserver.types.re1</td><td>Microsoft.SqlServer.Types.resources.dll1</td><td>MICROS~1.DLL|Microsoft.SqlServer.Types.resources.dll</td><td>0</td><td/><td/><td/><td>1</td><td>F:\Project\Diamond2\DiamondShop\bin\Debug\es\Microsoft.SqlServer.Types.resources.dll</td><td>1</td><td/></row>
 		<row><td>microsoft.sqlserver.types.re2</td><td>Microsoft.SqlServer.Types.resources.dll2</td><td>MICROS~1.DLL|Microsoft.SqlServer.Types.resources.dll</td><td>0</td><td/><td/><td/><td>1</td><td>F:\Project\Diamond2\DiamondShop\bin\Debug\fr\Microsoft.SqlServer.Types.resources.dll</td><td>1</td><td/></row>
@@ -2050,8 +2041,9 @@
 		<row><td>reportviewer.designer.cs</td><td>ISX_DEFAULTCOMPONENT13</td><td>REPORT~1.CS|ReportViewer.Designer.cs</td><td>0</td><td/><td/><td/><td>1</td><td>F:\Project\Diamond2\DiamondShop\bin\Report\ReportViewer.Designer.cs</td><td>1</td><td/></row>
 		<row><td>reportviewer.resx</td><td>ISX_DEFAULTCOMPONENT13</td><td>REPORT~1.RES|ReportViewer.resx</td><td>0</td><td/><td/><td/><td>1</td><td>F:\Project\Diamond2\DiamondShop\bin\Report\ReportViewer.resx</td><td>1</td><td/></row>
 		<row><td>shopcertificate.rdlc</td><td>ISX_DEFAULTCOMPONENT13</td><td>SHOPCE~1.RDL|ShopCertificate.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>F:\Project\Diamond2\DiamondShop\bin\Report\ShopCertificate.rdlc</td><td>1</td><td/></row>
-		<row><td>system.net.http.dll</td><td>System.Net.Http.dll</td><td>SYSTEM~1.DLL|System.Net.Http.dll</td><td>0</td><td/><td/><td/><td>1</td><td>F:\Project\Diamond2\DiamondShop\bin\Debug\System.Net.Http.dll</td><td>1</td><td/></row>
-		<row><td>system.net.http.xml</td><td>ISX_DEFAULTCOMPONENT1</td><td>SYSTEM~1.XML|System.Net.Http.xml</td><td>0</td><td/><td/><td/><td>1</td><td>F:\Project\Diamond2\DiamondShop\bin\Debug\System.Net.Http.xml</td><td>1</td><td/></row>
+		<row><td>system.windows.forms.calenda</td><td>System.Windows.Forms.Calendar.dll</td><td>SYSTEM~1.DLL|System.Windows.Forms.Calendar.dll</td><td>0</td><td/><td/><td/><td>1</td><td>F:\Project\Diamond2\DiamondShop\bin\Debug\System.Windows.Forms.Calendar.dll</td><td>1</td><td/></row>
+		<row><td>versionprogram.txt</td><td>ISX_DEFAULTCOMPONENT1</td><td>VERSIO~1.TXT|VersionProgram.txt</td><td>0</td><td/><td/><td/><td>1</td><td>F:\Project\Diamond2\DiamondShop\bin\Debug\VersionProgram.txt</td><td>1</td><td/></row>
+		<row><td>wealthupdate.exe</td><td>WealthUpdate.exe</td><td>WEALTH~1.EXE|WealthUpdate.exe</td><td>0</td><td/><td/><td/><td>1</td><td>F:\Project\Diamond2\DiamondShop\bin\Debug\WealthUpdate.exe</td><td>1</td><td/></row>
 	</table>
 
 	<table name="FileSFPCatalog">
@@ -2193,9 +2185,8 @@
 		<col def="S0">FTPLocation</col>
 		<col def="S0">HTTPLocation</col>
 		<col def="S0">Miscellaneous</col>
-		<row><td>DiamondDS.dll</td><td/><td/><td>_10FCA75D_8A69_4E66_9B2F_3F77911E776C_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>DiamondShop.exe</td><td/><td/><td>_09C43E18_9FAA_41F4_BC3A_572882D7CA13_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>DiamondShop.vshost.exe</td><td/><td/><td>_D63C4760_68DF_49C0_8D14_1494FE6861B9_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>DiamondDS.dll</td><td/><td/><td>_D863E583_30F5_4DC3_A3D4_1F1B35BBB126_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>DiamondShop.exe</td><td/><td/><td>_CA2DBF4B_BD8F_4E19_BBD6_834ECBD9983D_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td/><td/><td>_46C07099_471C_45B4_A160_C45D412AB0F0_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT1</td><td/><td/><td>_E07B420C_9EEB_4C07_8C60_B5AA850DBBC1_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT10</td><td/><td/><td>_4B7D70C1_96AD_443A_855F_706D0096E0D4_FILTER</td><td/><td/><td/><td/></row>
@@ -2211,9 +2202,8 @@
 		<row><td>ISX_DEFAULTCOMPONENT7</td><td/><td/><td>_7928B92A_A80D_4BFD_99DA_EADFB443899C_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT8</td><td/><td/><td>_9E934A8F_EDAD_4E5A_8C6E_18F6BCB6EBCD_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT9</td><td/><td/><td>_3CF68AE9_E75D_44D5_AD2A_980447A9402F_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.ReportViewer.Common.dll</td><td/><td/><td>_3FBDBAA7_BF06_4364_9095_72C7A5E1B82A_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.ReportViewer.WinForms.dll</td><td/><td/><td>_10E7E6B5_D5C4_479B_A9C7_F6B5FEF8646A_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.SqlServer.Types.dll</td><td/><td/><td>_456CB186_5D91_44B7_8357_B8CA3B197179_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.ReportViewer.Common.dll</td><td/><td/><td>_0B006EAE_CB04_44D6_B12E_C33BD4BF00ED_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.ReportViewer.WinForms.dll</td><td/><td/><td>_04D0EAE5_4C9E_477F_A4F8_DD3738CA818D_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>Microsoft.SqlServer.Types.resources.dll</td><td/><td/><td>_C347EA5B_1690_4AD3_BDC4_C9601E310C21_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>Microsoft.SqlServer.Types.resources.dll1</td><td/><td/><td>_9CDD87AF_5E4C_4A20_B01C_E44AA9879822_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>Microsoft.SqlServer.Types.resources.dll2</td><td/><td/><td>_E3C376D9_D6C4_4CB2_9F2F_1802D1BCA13B_FILTER</td><td/><td/><td/><td/></row>
@@ -2224,7 +2214,8 @@
 		<row><td>Microsoft.SqlServer.Types.resources.dll7</td><td/><td/><td>_71B9CD9A_82B4_427C_9792_AFB356ACF95F_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>Microsoft.SqlServer.Types.resources.dll8</td><td/><td/><td>_C7BB4F12_9180_4516_A84D_4B003C3422D1_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>Microsoft.SqlServer.Types.resources.dll9</td><td/><td/><td>_61DD7E0A_A825_4431_8986_51F20AA420FB_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>System.Net.Http.dll</td><td/><td/><td>_2452F581_F495_4AEE_B796_2B245CF5F341_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>System.Windows.Forms.Calendar.dll</td><td/><td/><td>_C3E95EB8_FB84_4A8D_8B9A_129581D56103_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>WealthUpdate.exe</td><td/><td/><td>_DF9D8B80_8A98_4BD6_BC85_D59A3020B7F7_FILTER</td><td/><td/><td/><td/></row>
 	</table>
 
 	<table name="ISCustomActionReference">
@@ -4166,7 +4157,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>ISTheme</td><td>InstallShield Blue.theme</td></row>
 		<row><td>ISUSLock</td><td>{0DC7565E-4418-42DF-A843-83B41BCDE6CF}</td></row>
 		<row><td>ISUSSignature</td><td>{00AB5244-D850-46A8-BC11-7D68D47D29BB}</td></row>
-		<row><td>ISVisitedViews</td><td>viewAssistant</td></row>
+		<row><td>ISVisitedViews</td><td>viewAssistant,viewSystemSearch,viewAppFiles,viewISToday,viewObjects</td></row>
 		<row><td>Limited</td><td>1</td></row>
 		<row><td>LockPermissionMode</td><td>1</td></row>
 		<row><td>MsiExecCmdLineOptions</td><td/></row>
@@ -4617,8 +4608,6 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="L255">FileName</col>
 		<col def="s72">DirProperty</col>
 		<col def="i2">InstallMode</col>
-		<row><td>FileKey1</td><td>DiamondShop.exe</td><td/><td>jasmin</td><td>2</td></row>
-		<row><td>FileKey2</td><td>DiamondShop.exe</td><td/><td>setup1</td><td>2</td></row>
 	</table>
 
 	<table name="RemoveIniFile">
@@ -4704,7 +4693,6 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="S255">ISComments</col>
 		<col def="S255">ISShortcutName</col>
 		<col def="I4">ISAttributes</col>
-		<row><td>DiamondShop.exe1</td><td>DesktopFolder</td><td>##IDS_SHORTCUT_DISPLAY_NAME3##</td><td>DiamondShop.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>DiamondShop.exe1_0555D521C6BE4F9CB3EAD6CC5B645130.exe</td><td>0</td><td>1</td><td>DEBUG</td><td/><td/><td/><td/><td/><td/><td/></row>
 	</table>
 
 	<table name="Signature">

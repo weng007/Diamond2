@@ -41,6 +41,7 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.lblError = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.lblVer = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
@@ -54,7 +55,7 @@
             this.panel2.Controls.Add(this.txtUserName);
             this.panel2.Controls.Add(this.txtPassword);
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.panel2.Location = new System.Drawing.Point(12, 161);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(256, 135);
@@ -88,10 +89,10 @@
             // 
             this.txtUserName.BackColor = System.Drawing.SystemColors.Window;
             this.txtUserName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtUserName.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.txtUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtUserName.Location = new System.Drawing.Point(103, 14);
             this.txtUserName.Name = "txtUserName";
-            this.txtUserName.Size = new System.Drawing.Size(132, 27);
+            this.txtUserName.Size = new System.Drawing.Size(132, 26);
             this.txtUserName.TabIndex = 1;
             this.txtUserName.UseSystemPasswordChar = true;
             this.txtUserName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUserName_KeyPress);
@@ -101,7 +102,7 @@
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPassword.Location = new System.Drawing.Point(103, 50);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(132, 27);
+            this.txtPassword.Size = new System.Drawing.Size(132, 26);
             this.txtPassword.TabIndex = 4;
             this.txtPassword.UseSystemPasswordChar = true;
             this.txtPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUserName_KeyPress);
@@ -131,7 +132,7 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(73, 303);
+            this.pictureBox1.Location = new System.Drawing.Point(127, 302);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(139, 59);
             this.pictureBox1.TabIndex = 34;
@@ -156,7 +157,7 @@
             // lblError
             // 
             this.lblError.BackColor = System.Drawing.Color.Transparent;
-            this.lblError.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblError.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblError.ForeColor = System.Drawing.Color.Red;
             this.lblError.Location = new System.Drawing.Point(28, 136);
             this.lblError.Name = "lblError";
@@ -169,12 +170,22 @@
             this.errorProvider1.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.errorProvider1.ContainerControl = this;
             // 
+            // lblVer
+            // 
+            this.lblVer.AutoSize = true;
+            this.lblVer.Location = new System.Drawing.Point(22, 337);
+            this.lblVer.Name = "lblVer";
+            this.lblVer.Size = new System.Drawing.Size(26, 13);
+            this.lblVer.TabIndex = 38;
+            this.lblVer.Text = "Ver.";
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(280, 380);
+            this.Controls.Add(this.lblVer);
             this.Controls.Add(this.lblError);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.pictureBox1);
@@ -190,6 +201,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -206,5 +218,6 @@
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Label lblError;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Label lblVer;
     }
 }

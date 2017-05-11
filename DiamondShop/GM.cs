@@ -7,6 +7,7 @@ using System.Drawing;
 using DiamondShop.DiamondService;
 using DiamondShop.DiamondService1;
 using DiamondShop.DiamondService2;
+using DiamondShop.DiamondService3;
 using System.Data;
 using DiamondDS.DS;
 using System.Text.RegularExpressions;
@@ -21,6 +22,7 @@ namespace DiamondShop
         private static Service1 ser1;
         private static Service2 ser2;
         private static Service3 ser3;
+        private static Service4 ser4;
 
         //Path For Save Temp File
         public static string Path = "C:\\Certificate";
@@ -107,6 +109,12 @@ namespace DiamondShop
         {
             if (ser3 != null) { return ser3; }
             else { return new Service3(); }
+        }
+
+        public static Service4 GetService3()
+        {
+            if (ser4 != null) { return ser4; }
+            else { return new Service4(); }
         }
 
         public static bool CheckLetter(string mes)
@@ -292,6 +300,16 @@ namespace DiamondShop
             if (str == "Owner")
             { return true; }
             else { return false; }
+        }
+
+        public static int GetShopByUserID(int userID)
+        {
+            int shop = 0;
+
+            ser3 = new Service3();
+            shop = ser3.GetShopByUserID(userID);
+
+            return shop;
         }
     }
 }

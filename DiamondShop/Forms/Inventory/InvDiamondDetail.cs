@@ -444,11 +444,11 @@ namespace DiamondShop
 
         private void grid2_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
-            if(e.ColumnIndex == 3 || e.ColumnIndex == 4 || e.ColumnIndex == 9 || e.ColumnIndex == 11)
+            if(e.ColumnIndex == 5 || e.ColumnIndex == 4 || e.ColumnIndex == 9 || e.ColumnIndex == 11)
             {              
-                if(grid2.Rows[e.RowIndex].Cells[3].Value ==null || grid2.Rows[e.RowIndex].Cells[3].Value.ToString().Trim() == "")
+                if(grid2.Rows[e.RowIndex].Cells[5].Value ==null || grid2.Rows[e.RowIndex].Cells[5].Value.ToString().Trim() == "")
                 {
-                    grid2.Rows[e.RowIndex].Cells[3].Value = 0;
+                    grid2.Rows[e.RowIndex].Cells[5].Value = 0;
                 }
                 if (grid2.Rows[e.RowIndex].Cells[4].Value == null || grid2.Rows[e.RowIndex].Cells[4].Value.ToString().Trim() == "")
                 {
@@ -465,7 +465,7 @@ namespace DiamondShop
                     grid2.Rows[e.RowIndex].Cells[11].Value = 0;
                 }              
 
-                grid2.Rows[e.RowIndex].Cells[5].Value = Convert.ToDecimal(grid2.Rows[e.RowIndex].Cells[3].Value) * Convert.ToInt16(grid2.Rows[e.RowIndex].Cells[4].Value);
+                grid2.Rows[e.RowIndex].Cells[3].Value = Convert.ToDecimal(grid2.Rows[e.RowIndex].Cells[5].Value) / Convert.ToInt16(grid2.Rows[e.RowIndex].Cells[4].Value);
                 grid2.Rows[e.RowIndex].Cells[10].Value = Convert.ToDecimal(grid2.Rows[e.RowIndex].Cells[5].Value) * Convert.ToDecimal(grid2.Rows[e.RowIndex].Cells[9].Value);
                 grid2.Rows[e.RowIndex].Cells[12].Value = Convert.ToDecimal(grid2.Rows[e.RowIndex].Cells[5].Value) * Convert.ToDecimal(grid2.Rows[e.RowIndex].Cells[11].Value);
             }

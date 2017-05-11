@@ -51,6 +51,8 @@
             this.btnImage1 = new System.Windows.Forms.Button();
             this.btnImage2 = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.label40 = new System.Windows.Forms.Label();
+            this.txtCode2 = new System.Windows.Forms.TextBox();
             this.label31 = new System.Windows.Forms.Label();
             this.txtOrderCode = new System.Windows.Forms.TextBox();
             this.label32 = new System.Windows.Forms.Label();
@@ -131,8 +133,6 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.txtCode2 = new System.Windows.Forms.TextBox();
-            this.label40 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -212,7 +212,7 @@
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Location = new System.Drawing.Point(364, 54);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(100, 27);
+            this.comboBox3.Size = new System.Drawing.Size(100, 21);
             this.comboBox3.TabIndex = 28;
             // 
             // textBox2
@@ -422,6 +422,24 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(1139, 672);
             this.panel7.TabIndex = 37;
+            // 
+            // label40
+            // 
+            this.label40.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
+            this.label40.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label40.Location = new System.Drawing.Point(238, 94);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(64, 23);
+            this.label40.TabIndex = 209;
+            this.label40.Text = "Code2";
+            // 
+            // txtCode2
+            // 
+            this.txtCode2.BackColor = System.Drawing.Color.White;
+            this.txtCode2.Location = new System.Drawing.Point(305, 91);
+            this.txtCode2.Name = "txtCode2";
+            this.txtCode2.Size = new System.Drawing.Size(154, 26);
+            this.txtCode2.TabIndex = 9;
             // 
             // label31
             // 
@@ -1296,25 +1314,6 @@
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // txtCode2
-            // 
-            this.txtCode2.BackColor = System.Drawing.Color.White;
-            this.txtCode2.Enabled = false;
-            this.txtCode2.Location = new System.Drawing.Point(305, 91);
-            this.txtCode2.Name = "txtCode2";
-            this.txtCode2.Size = new System.Drawing.Size(154, 26);
-            this.txtCode2.TabIndex = 208;
-            // 
-            // label40
-            // 
-            this.label40.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label40.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label40.Location = new System.Drawing.Point(238, 94);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(64, 23);
-            this.label40.TabIndex = 209;
-            this.label40.Text = "Code2";
             // 
             // Inventory
             // 

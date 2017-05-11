@@ -203,7 +203,7 @@
             this.txtSumMinPrice1.BackColor = System.Drawing.SystemColors.Window;
             this.txtSumMinPrice1.Enabled = false;
             this.txtSumMinPrice1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSumMinPrice1.Location = new System.Drawing.Point(1045, 479);
+            this.txtSumMinPrice1.Location = new System.Drawing.Point(1105, 479);
             this.txtSumMinPrice1.Name = "txtSumMinPrice1";
             this.txtSumMinPrice1.ReadOnly = true;
             this.txtSumMinPrice1.Size = new System.Drawing.Size(133, 26);
@@ -216,7 +216,7 @@
             this.txtSumCost1.BackColor = System.Drawing.SystemColors.Window;
             this.txtSumCost1.Enabled = false;
             this.txtSumCost1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSumCost1.Location = new System.Drawing.Point(791, 479);
+            this.txtSumCost1.Location = new System.Drawing.Point(866, 479);
             this.txtSumCost1.Name = "txtSumCost1";
             this.txtSumCost1.ReadOnly = true;
             this.txtSumCost1.Size = new System.Drawing.Size(105, 26);
@@ -564,11 +564,13 @@
             // 
             this.WeightPerStone.DataPropertyName = "WeightPerStone";
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             dataGridViewCellStyle2.Format = "N2";
             dataGridViewCellStyle2.NullValue = "0";
             this.WeightPerStone.DefaultCellStyle = dataGridViewCellStyle2;
             this.WeightPerStone.HeaderText = "Weight/Stone";
             this.WeightPerStone.Name = "WeightPerStone";
+            this.WeightPerStone.ReadOnly = true;
             this.WeightPerStone.Width = 120;
             // 
             // Amount
@@ -586,13 +588,12 @@
             // 
             this.Weight1.DataPropertyName = "Weight";
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle4.Format = "N2";
             dataGridViewCellStyle4.NullValue = "0";
             this.Weight1.DefaultCellStyle = dataGridViewCellStyle4;
             this.Weight1.HeaderText = "Weight";
             this.Weight1.Name = "Weight1";
-            this.Weight1.ReadOnly = true;
             this.Weight1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Weight1.Width = 80;
             // 
@@ -609,8 +610,10 @@
             // Quality
             // 
             this.Quality.DataPropertyName = "Quality";
+            this.Quality.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Quality.HeaderText = "Quality";
             this.Quality.Name = "Quality";
+            this.Quality.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Quality.Width = 80;
             // 
             // Clearity1

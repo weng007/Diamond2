@@ -5,10 +5,12 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.IO;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DiamondShop.DiamondService;
 using DiamondShop.DiamondService1;
+using DiamondShop.DiamondService3;
 using DiamondShop.FormMaster;
 
 namespace DiamondShop
@@ -17,6 +19,7 @@ namespace DiamondShop
     {
         Service1 ser = GM.GetService();
         Service2 ser1 = GM.GetService1();
+        Service4 ser4 = GM.GetService3();
         DiamondDS.DS.dsUser tds = new DiamondDS.DS.dsUser();
         bool chkFlag;
 
@@ -104,7 +107,28 @@ namespace DiamondShop
 
         private void Login_Load(object sender, EventArgs e)
         {
+            int versionPC = 0;
             txtUserName.Select();
+
+            using (StreamReader verPC = new StreamReader("VersionProgram.txt"))
+            {
+                versionPC = Convert.ToInt32(verPC.ReadLine());
+            }
+
+            lblVer.Text = "Ver. " +versionPC;
+
+            if (ser4.GetVersion() > versionPC)
+            {
+                try
+                {
+                    System.Diagnostics.Process.Start(Application.StartupPath + "\\WealthUpdate.exe", Crypto.AesEncrypt(Application.StartupPath));
+                    this.Close();
+                }
+                catch (Exception ex)
+                {
+                    throw (ex);
+                }
+            }
         }
     }
 }

@@ -198,7 +198,7 @@ namespace DiamondShop
 
             cmbShop.Select();
 
-            SetFieldService.SetRequireField(txtPricePerGram11,txtPricePerGram2,txtPricePerGram22,txtMinPrice, txtPriceTag);
+            SetFieldService.SetRequireField(txtPricePerGram2,txtPricePerGram22,txtMinPrice, txtPriceTag);
         }
 
         protected override void LoadData()
@@ -356,11 +356,6 @@ namespace DiamondShop
         protected override bool ValidateData()
         {
             message = "";
-
-            if (txtPricePerGram11.Text == "" || txtPricePerGram11.Text == "0")
-            {
-                message = "Please input Price1 Per Gram > 0.\n";
-            }
 
             if (chkMoreMaterial.Checked)
             {
@@ -661,7 +656,6 @@ namespace DiamondShop
         private void SetControlEnable(bool status)
         {
             dtUpdateDate.Enabled = status;
-            txtCode.Enabled = status;
             txtCode2.Enabled = status;
             cmbShop.Enabled = status;
             txtSize.Enabled = status;
