@@ -32,6 +32,7 @@ namespace DiamondShop
             isAuthorize = true;
 
             BinderData();
+            //txtRedCost1.Text = GM.ConvertDoubleToString(txtRedCost, 0);
         }
 
         public Inventory(int id)
@@ -542,10 +543,10 @@ namespace DiamondShop
 
         private void txtCostBody1_TextChanged(object sender, EventArgs e)
         {
-            txtRedCost1.Text= (GM.ConvertStringToDouble(txtCostBody1) + GM.ConvertStringToDouble(txtCostNonCer1) + GM.ConvertStringToDouble(txtCostCer1)).ToString();
+            txtRedCost1.Text = (GM.ConvertStringToDouble(txtCostBody1) + GM.ConvertStringToDouble(txtCostNonCer1) + GM.ConvertStringToDouble(txtCostCer1)).ToString();
             txtPricePerGram1_Leave(sender, e);
 
-            txtRedCost1.Text = GM.ConvertDoubleToString(txtRedCost1,0);
+            txtRedCost1.Text = GM.ConvertDoubleToString(txtRedCost1, 0);
 
             isEdit = true;
         }
@@ -553,7 +554,11 @@ namespace DiamondShop
         private void txtPricePerGram1_Leave(object sender, EventArgs e)
         {
             TextBox txt = sender as TextBox;
-            txt.Text = GM.ConvertDoubleToString(txt,0);
+            //double Cost = Convert.ToDouble(txt.Text);
+            //txtMaterialCost1.Text = Convert.ToString(Math.Round(Cost / 100, 0) * 100);
+            //txtPricePerGram1.Text = Convert.ToString(Math.Round(Cost / 100, 0) * 100);
+
+            txt.Text = GM.ConvertDoubleToString(txt, 0);
         }
 
         private void txtMaterialWeight1_Leave(object sender, EventArgs e)
@@ -564,6 +569,7 @@ namespace DiamondShop
 
         private void SetFormatNumber()
         {
+            //txtMaterialCost1.Text = GM.ConvertDoubleToString(txtMaterialCost1, 0);
             txtMaterialCost1.Text = GM.ConvertDoubleToString(txtMaterialCost1, 0);
             txtMaterialCost2.Text = GM.ConvertDoubleToString(txtMaterialCost2, 0);
 
@@ -604,6 +610,10 @@ namespace DiamondShop
 
         private void btnDiamond_Click(object sender, EventArgs e)
         {
+            if(id == 0)
+            {
+                SaveData();
+            }
             InvDiamondDetail frm = new InvDiamondDetail(id);
             frm.ShowDialog();
 
@@ -612,6 +622,10 @@ namespace DiamondShop
 
         private void btnGemstone_Click(object sender, EventArgs e)
         {
+            if (id == 0)
+            {
+                SaveData();
+            }
             InvGemstoneDetail frm = new InvGemstoneDetail(id);
             frm.ShowDialog();
 
@@ -650,7 +664,16 @@ namespace DiamondShop
 
         private void txtRedCost_TextChanged(object sender, EventArgs e)
         {
+            if(id == 0)
+            {
+                txtRedCost1.Text = GM.ConvertDoubleToString(txtRedCost, 0);
+            }
             isEdit = true;
+        }
+
+        private void txtRedCost1_Leave(object sender, EventArgs e)
+        {
+            txtRedCost1.Text = GM.ConvertDoubleToString(txtRedCost1, 0);
         }
 
         private void SetControlEnable(bool status)

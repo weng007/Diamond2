@@ -62,10 +62,10 @@ namespace DiamondShop
             Quality.DefaultCellStyle.NullValue = (GM.GetMasterTableDetail("C031")).Tables[0].Rows[0][1];
 
             Clearity1 = (DataGridViewComboBoxColumn)grid2.Columns["Clearity1"];
-            Clearity1.DataSource = (GM.GetMasterTableDetail("C002")).Tables[0];
+            Clearity1.DataSource = (GM.GetMasterTableDetail("C032")).Tables[0];
             Clearity1.ValueMember = "ID";
             Clearity1.DisplayMember = "Detail";
-            Clearity1.DefaultCellStyle.NullValue = (GM.GetMasterTableDetail("C002")).Tables[0].Rows[0][1];
+            Clearity1.DefaultCellStyle.NullValue = (GM.GetMasterTableDetail("C032")).Tables[0].Rows[0][1];
 
             grid2.Refresh();
         }

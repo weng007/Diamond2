@@ -536,7 +536,6 @@
             // 
             this.btnGemstone.BackColor = System.Drawing.Color.White;
             this.btnGemstone.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnGemstone.Enabled = false;
             this.btnGemstone.FlatAppearance.BorderSize = 0;
             this.btnGemstone.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGemstone.Image = ((System.Drawing.Image)(resources.GetObject("btnGemstone.Image")));
@@ -566,7 +565,6 @@
             // 
             this.btnDiamond.BackColor = System.Drawing.Color.White;
             this.btnDiamond.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDiamond.Enabled = false;
             this.btnDiamond.FlatAppearance.BorderSize = 0;
             this.btnDiamond.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDiamond.Image = ((System.Drawing.Image)(resources.GetObject("btnDiamond.Image")));
@@ -644,15 +642,14 @@
             // txtRedCost1
             // 
             this.txtRedCost1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.txtRedCost1.Enabled = false;
             this.txtRedCost1.Location = new System.Drawing.Point(653, 568);
             this.txtRedCost1.Name = "txtRedCost1";
             this.txtRedCost1.Size = new System.Drawing.Size(135, 26);
             this.txtRedCost1.TabIndex = 154;
             this.txtRedCost1.Text = "0";
             this.txtRedCost1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtRedCost1.TextChanged += new System.EventHandler(this.txtRedCost_TextChanged);
             this.txtRedCost1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
+            this.txtRedCost1.Leave += new System.EventHandler(this.txtRedCost1_Leave);
             // 
             // label34
             // 
@@ -708,7 +705,7 @@
             this.txtCostCer1.TabIndex = 148;
             this.txtCostCer1.Text = "0";
             this.txtCostCer1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtCostCer1.TextChanged += new System.EventHandler(this.txtCostBody1_TextChanged);
+            this.txtCostCer1.Visible = false;
             this.txtCostCer1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
             // 
             // txtCostNonCer
@@ -732,7 +729,7 @@
             this.txtCostNonCer1.TabIndex = 145;
             this.txtCostNonCer1.Text = "0";
             this.txtCostNonCer1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtCostNonCer1.TextChanged += new System.EventHandler(this.txtCostBody1_TextChanged);
+            this.txtCostNonCer1.Visible = false;
             this.txtCostNonCer1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
             // 
             // txtCostBody
@@ -756,7 +753,7 @@
             this.txtCostBody1.TabIndex = 142;
             this.txtCostBody1.Text = "0";
             this.txtCostBody1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtCostBody1.TextChanged += new System.EventHandler(this.txtCostBody1_TextChanged);
+            this.txtCostBody1.Visible = false;
             this.txtCostBody1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
             // 
             // txtCost3
@@ -780,7 +777,7 @@
             this.txtCost33.TabIndex = 139;
             this.txtCost33.Text = "0";
             this.txtCost33.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtCost33.TextChanged += new System.EventHandler(this.txtMaterialNetCost1_TextChanged);
+            this.txtCost33.Visible = false;
             this.txtCost33.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
             this.txtCost33.Leave += new System.EventHandler(this.txtPricePerGram1_Leave);
             // 
@@ -803,7 +800,7 @@
             this.txtCost11.TabIndex = 137;
             this.txtCost11.Text = "0";
             this.txtCost11.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtCost11.TextChanged += new System.EventHandler(this.txtMaterialNetCost1_TextChanged);
+            this.txtCost11.Visible = false;
             this.txtCost11.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
             this.txtCost11.Leave += new System.EventHandler(this.txtPricePerGram1_Leave);
             // 
@@ -860,7 +857,7 @@
             this.txtCost22.TabIndex = 132;
             this.txtCost22.Text = "0";
             this.txtCost22.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtCost22.TextChanged += new System.EventHandler(this.txtMaterialNetCost1_TextChanged);
+            this.txtCost22.Visible = false;
             this.txtCost22.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
             this.txtCost22.Leave += new System.EventHandler(this.txtPricePerGram1_Leave);
             // 
@@ -884,7 +881,7 @@
             this.txtMaterialNetCost1.TabIndex = 130;
             this.txtMaterialNetCost1.Text = "0";
             this.txtMaterialNetCost1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtMaterialNetCost1.TextChanged += new System.EventHandler(this.txtMaterialNetCost1_TextChanged);
+            this.txtMaterialNetCost1.Visible = false;
             this.txtMaterialNetCost1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
             // 
             // txtMaterialNetCost
@@ -1051,7 +1048,7 @@
             this.txtPricePerGram11.TabIndex = 22;
             this.txtPricePerGram11.Text = "0";
             this.txtPricePerGram11.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtPricePerGram11.TextChanged += new System.EventHandler(this.txtPricePerGram11_TextChanged);
+            this.txtPricePerGram11.Visible = false;
             this.txtPricePerGram11.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
             this.txtPricePerGram11.Leave += new System.EventHandler(this.txtPricePerGram1_Leave);
             // 
@@ -1064,6 +1061,7 @@
             this.txtMaterialCost11.TabIndex = 144;
             this.txtMaterialCost11.Text = "0";
             this.txtMaterialCost11.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtMaterialCost11.Visible = false;
             this.txtMaterialCost11.TextChanged += new System.EventHandler(this.txtMaterialCost11_TextChanged);
             this.txtMaterialCost11.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
             // 
@@ -1109,7 +1107,7 @@
             this.txtLaborCost1.TabIndex = 120;
             this.txtLaborCost1.Text = "0";
             this.txtLaborCost1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtLaborCost1.TextChanged += new System.EventHandler(this.txtMaterialNetCost1_TextChanged);
+            this.txtLaborCost1.Visible = false;
             this.txtLaborCost1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
             this.txtLaborCost1.Leave += new System.EventHandler(this.txtPricePerGram1_Leave);
             // 

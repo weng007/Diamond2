@@ -120,7 +120,7 @@ namespace DiamondShop
             cmbColor.DisplayMember = "Detail";
             cmbColor.Refresh();
 
-            cmbClearity.DataSource = (GM.GetMasterTableDetail("C002")).Tables[0];
+            cmbClearity.DataSource = (GM.GetMasterTableDetail("C032")).Tables[0];
             cmbClearity.ValueMember = "ID";
             cmbClearity.DisplayMember = "Detail";
             cmbClearity.Refresh();
