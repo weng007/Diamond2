@@ -69,7 +69,7 @@ namespace DiamondShop
             ds = ser1.GetReportOrder(OrderID);
 
             ReportDataSource datasource = new ReportDataSource("dsReportOrder", ds.Tables[1]);
-            this.reportViewer1.LocalReport.ReportPath = "..\\Report\\Order.rdlc";
+            this.reportViewer1.LocalReport.ReportPath = "Report\\Order.rdlc";
 
 
             this.reportViewer1.LocalReport.DataSources.Add(datasource);
@@ -84,7 +84,7 @@ namespace DiamondShop
 
         private void reportViewer1_Load(object sender, EventArgs e)
         {
-            this.reportViewer1.LocalReport.ReportPath = "..\\Report\\Order.rdlc";
+            this.reportViewer1.LocalReport.ReportPath = "Report\\Order.rdlc";
         }
     }
 }

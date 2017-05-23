@@ -65,7 +65,7 @@ namespace DiamondShop
             ds = ser1.GetReportDebt(Convert.ToInt32(cmbType.SelectedValue), txtSeller.Text, dtSDueDate.Value, dtEDueDate.Value);
 
             ReportDataSource datasource = new ReportDataSource("dsReportDebt", ds.Tables[1]);
-            this.reportViewer1.LocalReport.ReportPath = "..\\Report\\ReportDebt.rdlc";
+            this.reportViewer1.LocalReport.ReportPath = "Report\\ReportDebt.rdlc";
 
 
             this.reportViewer1.LocalReport.DataSources.Add(datasource);

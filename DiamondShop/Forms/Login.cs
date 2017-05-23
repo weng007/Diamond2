@@ -112,7 +112,7 @@ namespace DiamondShop
 
             using (StreamReader verPC = new StreamReader("VersionProgram.txt"))
             {
-                versionPC = Convert.ToInt32(verPC.ReadLine());
+                versionPC = Convert.ToInt32(verPC.ReadLine().Trim());
             }
 
             lblVer.Text = "Ver. " +versionPC;

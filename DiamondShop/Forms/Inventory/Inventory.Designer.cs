@@ -693,6 +693,7 @@
             this.txtCostCer.TabIndex = 64;
             this.txtCostCer.Text = "0";
             this.txtCostCer.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtCostCer.BindingContextChanged += new System.EventHandler(this.txtCostCer_BindingContextChanged);
             this.txtCostCer.TextChanged += new System.EventHandler(this.txtCostNonCer_TextChanged);
             this.txtCostCer.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
             // 
@@ -717,8 +718,10 @@
             this.txtCostNonCer.TabIndex = 60;
             this.txtCostNonCer.Text = "0";
             this.txtCostNonCer.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtCostNonCer.BindingContextChanged += new System.EventHandler(this.txtCostCer_BindingContextChanged);
             this.txtCostNonCer.TextChanged += new System.EventHandler(this.txtCostNonCer_TextChanged);
             this.txtCostNonCer.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
+            this.txtCostNonCer.Leave += new System.EventHandler(this.txtPricePerGram1_Leave);
             // 
             // txtCostNonCer1
             // 
@@ -741,8 +744,9 @@
             this.txtCostBody.TabIndex = 56;
             this.txtCostBody.Text = "0";
             this.txtCostBody.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtCostBody.TextChanged += new System.EventHandler(this.txtCostNonCer_TextChanged);
+            this.txtCostBody.TextChanged += new System.EventHandler(this.txtCostBody1_TextChanged);
             this.txtCostBody.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
+            this.txtCostBody.Leave += new System.EventHandler(this.txtPricePerGram1_Leave);
             // 
             // txtCostBody1
             // 
@@ -1121,7 +1125,7 @@
             this.txtPricePerGram1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtPricePerGram1.TextChanged += new System.EventHandler(this.txtMaterialWeight1_TextChanged);
             this.txtPricePerGram1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
-            this.txtPricePerGram1.Leave += new System.EventHandler(this.txtPricePerGram1_Leave);
+            this.txtPricePerGram1.Leave += new System.EventHandler(this.txtPricePerGram_Leave);
             // 
             // label10
             // 
@@ -1294,7 +1298,7 @@
             // 
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(89)))), ((int)(((byte)(52)))));
-            this.label14.Location = new System.Drawing.Point(82, 236);
+            this.label14.Location = new System.Drawing.Point(82, 240);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(134, 24);
             this.label14.TabIndex = 47;

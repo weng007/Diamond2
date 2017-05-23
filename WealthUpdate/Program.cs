@@ -92,14 +92,14 @@ namespace WealthUpdate
                             CreateDirectoryAndFile(fileDesList[i].DirectoryName, fileDesList[i].fileName, path);
                             break;
                         }
-                    }
-                   
-                    Updateversion(softwareVersion); // อัพเดต Version Software
-                    Console.WriteLine("Software Version " + softwareVersion + " Is Success");
-
-                    Console.WriteLine("Please enter for exit....");
-                    Console.ReadLine();
+                    }                  
                 }
+
+                Updateversion(softwareVersion); // อัพเดต Version Software
+                Console.WriteLine("Software Version " + softwareVersion + " Is Success");
+
+                Console.WriteLine("Please enter for exit....");
+                Console.ReadLine();
             }
             catch (Exception exe)
             {
@@ -180,7 +180,7 @@ namespace WealthUpdate
             //เช็คว่าเป็นไฟล์ SQL หรือไม่
             if(tmp.Length >1)
             {
-                if (tmp[1] == "Script" ||tmp[1] == "Reports" || tmp[1] == "Report2" || tmp[1] == "User Manual")
+                if (tmp[1] == "Report")
                 {
                    path += "\\" + tmp[1];
                 }

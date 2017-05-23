@@ -51,7 +51,7 @@ namespace DiamondShop.Report
             if (ds.Tables[0].Rows.Count > 0)
             {
                 reportViewer1.Visible = true;
-                this.reportViewer1.LocalReport.ReportPath = "..\\Report\\CertificateSell.rdlc";
+                this.reportViewer1.LocalReport.ReportPath = "Report\\CertificateSell.rdlc";
                 this.reportViewer1.LocalReport.DataSources.Add(datasource);
                 this.reportViewer1.LocalReport.DataSources.Add(datasource1);
                 this.reportViewer1.LocalReport.DataSources.Add(datasource2);
@@ -61,7 +61,7 @@ namespace DiamondShop.Report
             if (ds.Tables[2].Rows.Count > 0)
             {
                 reportViewer2.Visible = true;
-                this.reportViewer2.LocalReport.ReportPath = "..\\Report\\CertificateSell1.rdlc";
+                this.reportViewer2.LocalReport.ReportPath = "Report\\CertificateSell1.rdlc";
                 this.reportViewer2.LocalReport.DataSources.Add(datasource);
                 this.reportViewer2.LocalReport.DataSources.Add(datasource2);
                 this.reportViewer2.LocalReport.DataSources.Add(datasource3);

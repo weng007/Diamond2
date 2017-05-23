@@ -580,6 +580,16 @@ namespace DiamondShop
             }
         }
 
+        private void grid2_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+
+        }
+
+        private void grid1_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+
+        }
+
         private void DeleteDataGrid(int type)
         {
             if (type == 0)

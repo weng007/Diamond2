@@ -39,7 +39,7 @@ namespace DiamondShop.Report
 
             ReportDataSource datasource = new ReportDataSource("SP_Rpt_Delivery_Inventory", ds.Tables[1]);
             ReportDataSource datasource1 = new ReportDataSource("Detail", ds.Tables[0]);
-            this.reportViewer1.LocalReport.ReportPath = "..\\Report\\DeliverOrderInventory.rdlc";
+            this.reportViewer1.LocalReport.ReportPath = "Report\\DeliverOrderInventory.rdlc";
 
 
             this.reportViewer1.LocalReport.DataSources.Add(datasource);

@@ -564,7 +564,17 @@ namespace DiamondShop
             {
                 e.Handled = true;
             }
-        }        
+        }
+
+        private void grid2_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+
+        }
+
+        private void grid1_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+
+        }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {

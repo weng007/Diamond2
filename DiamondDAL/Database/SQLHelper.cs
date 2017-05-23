@@ -18,7 +18,7 @@ public class SQLHelper : IDisposable
     {
         get
         {
-            INIHelper ini = new INIHelper();
+            //INIHelper ini = new INIHelper();
             //string server = ini.Read("DataBase", "Server");
             //string dbName = ini.Read("DataBase", "DBName");
             //string userName = ini.Read("DataBase", "UserName");

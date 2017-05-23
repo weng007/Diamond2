@@ -60,7 +60,7 @@ namespace DiamondShop
             ds = ser1.GetReportCustomer(dtSBirthDate.Value,dtEBirthDate.Value, dtSAnniDate.Value, dtEAnniDate.Value,txtDisplayName.Text);
 
             ReportDataSource datasource = new ReportDataSource("dsReportCustomer", ds.Tables[1]);
-            this.reportViewer1.LocalReport.ReportPath = "..\\Report\\ReportCustomer.rdlc";
+            this.reportViewer1.LocalReport.ReportPath = "Report\\ReportCustomer.rdlc";
 
 
             this.reportViewer1.LocalReport.DataSources.Add(datasource);

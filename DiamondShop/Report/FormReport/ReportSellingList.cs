@@ -75,8 +75,8 @@ namespace DiamondShop
             ds = ser1.GetReportSelling(Convert.ToInt32(cmbType.SelectedValue), Convert.ToInt32(cmbSeller.SelectedValue), dtSSaleDate.Value, dtESaleDate.Value);
 
             ReportDataSource datasource = new ReportDataSource("dsReportSelling", ds.Tables[1]);
-            //this.reportViewer1.LocalReport.ReportPath = "..\\Report\\Order.rdlc";
-            this.reportViewer1.LocalReport.ReportPath = "..\\Report\\ReportSelling.rdlc";
+            //this.reportViewer1.LocalReport.ReportPath = "Report\\Order.rdlc";
+            this.reportViewer1.LocalReport.ReportPath = "Report\\ReportSelling.rdlc";
 
 
             this.reportViewer1.LocalReport.DataSources.Add(datasource);
@@ -91,7 +91,7 @@ namespace DiamondShop
 
         private void reportViewer1_Load(object sender, EventArgs e)
         {
-            this.reportViewer1.LocalReport.ReportPath = "..\\Report\\Order.rdlc";
+            this.reportViewer1.LocalReport.ReportPath = "Report\\Order.rdlc";
         }
     }
 }

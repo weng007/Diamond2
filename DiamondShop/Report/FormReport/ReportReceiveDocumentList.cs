@@ -69,7 +69,7 @@ namespace DiamondShop
             ds = ser1.GetReportReceiveDocument(ID);
 
             ReportDataSource datasource = new ReportDataSource("dsReportReceiveDocument", ds.Tables[1]);
-            this.reportViewer1.LocalReport.ReportPath = "..\\Report\\ReceiveDocument.rdlc";
+            this.reportViewer1.LocalReport.ReportPath = "Report\\ReceiveDocument.rdlc";
 
 
             this.reportViewer1.LocalReport.DataSources.Add(datasource);
@@ -84,7 +84,7 @@ namespace DiamondShop
 
         private void reportViewer1_Load(object sender, EventArgs e)
         {
-            this.reportViewer1.LocalReport.ReportPath = "..\\Report\\ReceiveDocument.rdlc";
+            this.reportViewer1.LocalReport.ReportPath = "Report\\ReceiveDocument.rdlc";
         }
     }
 }

@@ -65,7 +65,7 @@ namespace DiamondShop
             ds = ser1.GetReportInventory(Convert.ToInt32(cmbStatus.SelectedValue), dtSImpDate.Value, dtEImpDate.Value, Convert.ToInt32(txtSPriceTag.Text), Convert.ToInt32(txtEPriceTag.Text));
 
             ReportDataSource datasource = new ReportDataSource("dsReportInventory", ds.Tables[1]);
-            this.reportViewer1.LocalReport.ReportPath = "..\\Report\\ReportInventory.rdlc";
+            this.reportViewer1.LocalReport.ReportPath = "Report\\ReportInventory.rdlc";
 
 
             this.reportViewer1.LocalReport.DataSources.Add(datasource);

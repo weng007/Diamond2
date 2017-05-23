@@ -89,12 +89,10 @@ namespace DiamondShop
             Application.UseWaitCursor = true;
             ser1 = GM.GetService1();
 
-            ds = ser1.GetReportBuying(Convert.ToInt32(cmbType.SelectedValue), dtSBuyDate.Value, dtEBuyDate.Value, Convert.ToInt32(txtSWeight.Text), Convert.ToInt32(txtEWeight.Text), Convert.ToInt32(cmbShape.SelectedValue), Convert.ToInt32(cmbStatus.SelectedValue),dtSDueDate.Value,dtEDueDate.Value,Convert.ToInt32(cmbPayment.SelectedValue));
-
-            
+            ds = ser1.GetReportBuying(Convert.ToInt32(cmbType.SelectedValue), dtSBuyDate.Value, dtEBuyDate.Value, Convert.ToInt32(txtSWeight.Text), Convert.ToInt32(txtEWeight.Text), Convert.ToInt32(cmbShape.SelectedValue), Convert.ToInt32(cmbStatus.SelectedValue),dtSDueDate.Value,dtEDueDate.Value,Convert.ToInt32(cmbPayment.SelectedValue));           
 
             ReportDataSource datasource = new ReportDataSource("dsReportBuying", ds.Tables[1]);
-            this.reportViewer1.LocalReport.ReportPath = "..\\Report\\ReportBuying.rdlc";
+            this.reportViewer1.LocalReport.ReportPath = "Report\\ReportBuying.rdlc";
             
 
             this.reportViewer1.LocalReport.DataSources.Add(datasource);
