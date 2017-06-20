@@ -24,6 +24,7 @@ namespace DiamondShop
         MemoryStream ms2;
         byte[] image1, image2;
         string prefixCode = "";
+        double minPremium = 0;
         
         public Inventory()
         {
@@ -211,6 +212,7 @@ namespace DiamondShop
             if (tds.Inventory.Rows.Count > 0)
             {
                 binder.BindValueToControl(tds.Inventory[0]);
+                minPremium = tds.Inventory[0].MinPremium;
 
                 if (tds.Inventory[0].MoreMaterial == "0")
                 { chkMoreMaterial.Checked = false; }
@@ -426,10 +428,15 @@ namespace DiamondShop
         private void txtMaterialWeight1_TextChanged(object sender, EventArgs e)
         {
             txtMaterialCost1.Text = (GM.ConvertStringToDouble(txtMaterialWeight1) * GM.ConvertStringToDouble(txtPricePerGram1)).ToString();
-            txtMaterialCost11.Text = (GM.ConvertStringToDouble(txtMaterialWeight1) * GM.ConvertStringToDouble(txtPricePerGram11)).ToString();
+            //txtMaterialCost11.Text = (GM.ConvertStringToDouble(txtMaterialWeight1) * GM.ConvertStringToDouble(txtPricePerGram11)).ToString();
+            txtMaterialCost1_Leave(null, null);
 
-            txtMaterialCost1.Text = GM.ConvertDoubleToString(txtMaterialCost1,0);
-            txtMaterialCost11.Text = GM.ConvertDoubleToString(txtMaterialCost11,0);
+            txtRedCost.Text = (GM.ConvertStringToDouble(txtCostBody) + GM.ConvertStringToDouble(txtCostNonCer) + GM.ConvertStringToDouble(txtCostCer)).ToString();
+            txtRedCost.Text = GM.ConvertDoubleToString(txtRedCost, 0);
+
+            txtRedCost1.Text = GM.ConvertDoubleToString(txtRedCost, 0);
+
+            //txtMaterialCost11.Text = GM.ConvertDoubleToString(txtMaterialCost11,0);
             isEdit = true;
         }
 
@@ -464,6 +471,7 @@ namespace DiamondShop
         {
             txtMaterialNetCost.Text = (GM.ConvertStringToDouble(txtMaterialCost1) + GM.ConvertStringToDouble(txtMaterialCost2)).ToString();
             txtMaterialNetCost.Text = GM.ConvertDoubleToString(txtMaterialNetCost,0);
+            txtMaterialNetCost_Leave(null, null);
 
             isEdit = true;
         }
@@ -481,6 +489,10 @@ namespace DiamondShop
             txtCost3_TextChanged(sender, e);
             txtLaborCost1.Text = (GM.ConvertStringToDouble(txtLaborCost) * 2).ToString();
 
+            txtRedCost.Text = (GM.ConvertStringToDouble(txtCostBody) + GM.ConvertStringToDouble(txtCostNonCer) + GM.ConvertStringToDouble(txtCostCer)).ToString();
+            txtRedCost.Text = GM.ConvertDoubleToString(txtRedCost, 0);
+            txtRedCost1.Text = GM.ConvertDoubleToString(txtRedCost, 0);
+ 
             isEdit = true;
         }
 
@@ -489,6 +501,11 @@ namespace DiamondShop
             txtCost3_TextChanged(sender, e);
             txtCost11.Text = (GM.ConvertStringToDouble(txtCost1) * 2).ToString();
 
+            txtRedCost.Text = (GM.ConvertStringToDouble(txtCostBody) + GM.ConvertStringToDouble(txtCostNonCer) + GM.ConvertStringToDouble(txtCostCer)).ToString();
+
+            txtRedCost.Text = GM.ConvertDoubleToString(txtRedCost, 0);
+            txtRedCost1.Text = GM.ConvertDoubleToString(txtRedCost, 0);
+ 
             isEdit = true;
         }
 
@@ -497,16 +514,25 @@ namespace DiamondShop
             txtCost3_TextChanged(sender, e);
             txtCost22.Text = (GM.ConvertStringToDouble(txtCost2) * 2).ToString();
 
+            txtRedCost.Text = (GM.ConvertStringToDouble(txtCostBody) + GM.ConvertStringToDouble(txtCostNonCer) + GM.ConvertStringToDouble(txtCostCer)).ToString();
+
+            txtRedCost.Text = GM.ConvertDoubleToString(txtRedCost, 0);
+            txtRedCost1.Text = GM.ConvertDoubleToString(txtRedCost, 0);
+
             isEdit = true;
         }
 
         private void txtCost3_TextChanged(object sender, EventArgs e)
         {
-            txtCost33.Text = (GM.ConvertStringToDouble(txtCost3) * 2).ToString();
+            //txtCost33.Text = (GM.ConvertStringToDouble(txtCost3) * 2).ToString();
             txtCostBody.Text = (GM.ConvertStringToDouble(txtMaterialNetCost) + GM.ConvertStringToDouble(txtLaborCost) + GM.ConvertStringToDouble(txtCost1) +
                 GM.ConvertStringToDouble(txtCost2) + GM.ConvertStringToDouble(txtCost3)).ToString();
 
             txtCostBody.Text = GM.ConvertDoubleToString(txtCostBody,0);
+
+            txtRedCost.Text = (GM.ConvertStringToDouble(txtCostBody) + GM.ConvertStringToDouble(txtCostNonCer) + GM.ConvertStringToDouble(txtCostCer)).ToString();
+            txtRedCost.Text = GM.ConvertDoubleToString(txtRedCost, 0);
+            txtRedCost1.Text = GM.ConvertDoubleToString(txtRedCost, 0);
 
             isEdit = true;
         }
@@ -537,16 +563,6 @@ namespace DiamondShop
             txtRedCost.Text = (GM.ConvertStringToDouble(txtCostBody)+ GM.ConvertStringToDouble(txtCostNonCer) + GM.ConvertStringToDouble(txtCostCer)).ToString();         
 
             txtRedCost.Text = GM.ConvertDoubleToString(txtRedCost,0);
-
-            isEdit = true;
-        }
-
-        private void txtCostBody1_TextChanged(object sender, EventArgs e)
-        {
-            txtRedCost1.Text = (GM.ConvertStringToDouble(txtCostBody1) + GM.ConvertStringToDouble(txtCostNonCer1) + GM.ConvertStringToDouble(txtCostCer1)).ToString();
-            //txtPricePerGram1_Leave(sender, e);
-
-            txtRedCost1.Text = GM.ConvertDoubleToString(txtRedCost1, 0);
 
             isEdit = true;
         }
@@ -599,13 +615,12 @@ namespace DiamondShop
             txtCostCer1.Text = GM.ConvertDoubleToString(txtCostCer1, 0);
 
             txtRedCost.Text = GM.ConvertDoubleToString(txtRedCost,0);
+
+            txtRedCost1.Text = minPremium.ToString();
             txtRedCost1.Text = GM.ConvertDoubleToString(txtRedCost1,0);
 
             txtMinPrice.Text = GM.ConvertDoubleToString(txtMinPrice,0);
             txtPriceTag.Text = GM.ConvertDoubleToString(txtPriceTag,0);
-
-            txtMaterialWeight1.Text = GM.ConvertDoubleToString(txtMaterialWeight1, 0);
-
         }
 
         private void btnDiamond_Click(object sender, EventArgs e)
@@ -617,9 +632,10 @@ namespace DiamondShop
             InvDiamondDetail frm = new InvDiamondDetail(id);
             frm.ShowDialog();
 
-            LoadData();
             txtPricePerGram1_Leave(txtCostCer, null);
             txtPricePerGram1_Leave(txtCostNonCer, null);
+
+            LoadData();          
         }
 
         private void btnGemstone_Click(object sender, EventArgs e)
@@ -650,9 +666,19 @@ namespace DiamondShop
             if (ds.Tables[0].Rows.Count > 0)
             {            
                 txtCostNonCer.Text = Convert.ToString(Convert.ToDouble(ds.Tables[0].Rows[0]["Cost"]) + Convert.ToDouble(ds.Tables[0].Rows[1]["Cost"]));
-                txtCostNonCer1.Text = Convert.ToString(Convert.ToDouble(ds.Tables[0].Rows[0]["Price"]) + Convert.ToDouble(ds.Tables[0].Rows[1]["Price"]));
+                //txtCostNonCer1.Text = Convert.ToString(Convert.ToDouble(ds.Tables[0].Rows[0]["Price"]) + Convert.ToDouble(ds.Tables[0].Rows[1]["Price"]));
                 txtCostCer.Text = Convert.ToString(Convert.ToDouble(ds.Tables[0].Rows[2]["Cost"]) + Convert.ToDouble(ds.Tables[0].Rows[3]["Cost"]));
-                txtCostCer1.Text = Convert.ToString(Convert.ToDouble(ds.Tables[0].Rows[2]["Price"]) + Convert.ToDouble(ds.Tables[0].Rows[3]["Price"]));
+                //txtCostCer1.Text = Convert.ToString(Convert.ToDouble(ds.Tables[0].Rows[2]["Price"]) + Convert.ToDouble(ds.Tables[0].Rows[3]["Price"]));
+
+                double cost = GM.ConvertStringToDouble(txtCostNonCer);
+                cost = Math.Ceiling(cost / 100) * 100;
+                txtCostNonCer.Text = cost.ToString();
+                txtCostNonCer.Text = GM.ConvertDoubleToString(txtCostNonCer, 0);
+
+                cost = GM.ConvertStringToDouble(txtCostCer);
+                cost = Math.Ceiling(cost / 100) * 100;
+                txtCostCer.Text = cost.ToString();
+                txtCostCer.Text = GM.ConvertDoubleToString(txtCostCer, 0);
             }
         }
 
@@ -663,12 +689,6 @@ namespace DiamondShop
 
         private void dtUpdateDate_ValueChanged(object sender, EventArgs e)
         {
-            isEdit = true;
-        }
-
-        private void txtRedCost_TextChanged(object sender, EventArgs e)
-        {
-            txtRedCost1.Text = GM.ConvertDoubleToString(txtRedCost, 0);
             isEdit = true;
         }
 
@@ -686,6 +706,24 @@ namespace DiamondShop
         private void txtCostCer_BindingContextChanged(object sender, EventArgs e)
         {
             txtPricePerGram1_Leave(sender, e);
+        }
+
+        private void txtMaterialNetCost_Leave(object sender, EventArgs e)
+        {
+            double cost = GM.ConvertStringToDouble(txtMaterialNetCost);
+            cost = Math.Ceiling(cost / 100) * 100;
+            txtMaterialNetCost.Text = cost.ToString();
+
+            txtMaterialNetCost.Text = GM.ConvertDoubleToString(txtMaterialNetCost, 0);
+        }
+
+        private void txtMaterialCost1_Leave(object sender, EventArgs e)
+        {
+            double cost = GM.ConvertStringToDouble(txtMaterialCost1);
+            cost = Math.Ceiling(cost / 100) * 100;
+            txtMaterialCost1.Text = cost.ToString();
+
+            txtMaterialCost1.Text = GM.ConvertDoubleToString(txtMaterialCost1, 0);
         }
 
         private void SetControlEnable(bool status)
@@ -714,6 +752,7 @@ namespace DiamondShop
             txtPriceTag.Enabled = status;
             btnDiamond.Enabled = status;
             btnGemstone.Enabled = status;
+            txtRedCost1.Enabled = status;
             btnImage1.Enabled = status;
             btnImage2.Enabled = status;
             txtRemark.Enabled = status;

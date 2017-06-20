@@ -212,7 +212,7 @@
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Location = new System.Drawing.Point(364, 54);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(100, 21);
+            this.comboBox3.Size = new System.Drawing.Size(100, 27);
             this.comboBox3.TabIndex = 28;
             // 
             // textBox2
@@ -498,7 +498,6 @@
             this.txtSize.TabIndex = 10;
             this.txtSize.Text = "0";
             this.txtSize.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtSize.TextChanged += new System.EventHandler(this.txtRedCost_TextChanged);
             // 
             // label38
             // 
@@ -581,7 +580,6 @@
             this.txtTechnician.Name = "txtTechnician";
             this.txtTechnician.Size = new System.Drawing.Size(187, 26);
             this.txtTechnician.TabIndex = 32;
-            this.txtTechnician.TextChanged += new System.EventHandler(this.txtRedCost_TextChanged);
             // 
             // label37
             // 
@@ -602,7 +600,6 @@
             this.txtPriceTag.TabIndex = 38;
             this.txtPriceTag.Text = "0";
             this.txtPriceTag.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtPriceTag.TextChanged += new System.EventHandler(this.txtRedCost_TextChanged);
             this.txtPriceTag.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
             this.txtPriceTag.Leave += new System.EventHandler(this.txtPricePerGram1_Leave);
             // 
@@ -625,7 +622,6 @@
             this.txtMinPrice.TabIndex = 36;
             this.txtMinPrice.Text = "0";
             this.txtMinPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtMinPrice.TextChanged += new System.EventHandler(this.txtRedCost_TextChanged);
             this.txtMinPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
             this.txtMinPrice.Leave += new System.EventHandler(this.txtPricePerGram1_Leave);
             // 
@@ -671,7 +667,6 @@
             this.txtRedCost.TabIndex = 68;
             this.txtRedCost.Text = "0";
             this.txtRedCost.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtRedCost.TextChanged += new System.EventHandler(this.txtRedCost_TextChanged);
             this.txtRedCost.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
             // 
             // label33
@@ -744,9 +739,7 @@
             this.txtCostBody.TabIndex = 56;
             this.txtCostBody.Text = "0";
             this.txtCostBody.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtCostBody.TextChanged += new System.EventHandler(this.txtCostBody1_TextChanged);
             this.txtCostBody.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
-            this.txtCostBody.Leave += new System.EventHandler(this.txtPricePerGram1_Leave);
             // 
             // txtCostBody1
             // 
@@ -899,6 +892,7 @@
             this.txtMaterialNetCost.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtMaterialNetCost.TextChanged += new System.EventHandler(this.txtMaterialNetCost_TextChanged);
             this.txtMaterialNetCost.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
+            this.txtMaterialNetCost.Leave += new System.EventHandler(this.txtMaterialNetCost_Leave);
             // 
             // label28
             // 
@@ -1101,6 +1095,7 @@
             this.txtMaterialCost1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtMaterialCost1.TextChanged += new System.EventHandler(this.txtMaterialCost1_TextChanged);
             this.txtMaterialCost1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNetWeight_KeyPress);
+            this.txtMaterialCost1.Leave += new System.EventHandler(this.txtMaterialCost1_Leave);
             // 
             // txtLaborCost1
             // 
@@ -1164,7 +1159,6 @@
             this.txtRemark.Name = "txtRemark";
             this.txtRemark.Size = new System.Drawing.Size(320, 87);
             this.txtRemark.TabIndex = 40;
-            this.txtRemark.TextChanged += new System.EventHandler(this.txtRedCost_TextChanged);
             // 
             // label27
             // 
@@ -1256,7 +1250,6 @@
             this.txtUpdateBy.ReadOnly = true;
             this.txtUpdateBy.Size = new System.Drawing.Size(162, 26);
             this.txtUpdateBy.TabIndex = 2;
-            this.txtUpdateBy.TextChanged += new System.EventHandler(this.txtRedCost_TextChanged);
             // 
             // label19
             // 

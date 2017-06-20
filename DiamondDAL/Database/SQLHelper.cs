@@ -31,7 +31,7 @@ public class SQLHelper : IDisposable
             //string password = "tostos";
 
             string server = "mssql-2012.chaiyohosting.com";
-            string dbName = "Jusmin2";
+            string dbName = "Jusmin";
             string userName = "sa4";
             string password = "weng4525017#";
 

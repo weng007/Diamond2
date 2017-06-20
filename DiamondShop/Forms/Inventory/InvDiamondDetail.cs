@@ -126,7 +126,7 @@ namespace DiamondShop
                         if (row["Shape"].ToString() == "") { row["Shape"] = 133; }
                         if (row["Color"].ToString() == "") { row["Color"] = 126; }
                         if (row["Quality"].ToString() == "") { row["Quality"] = 233; }
-                        if (row["Clearity"].ToString() == "") { row["Clearity"] = 25; }
+                        if (row["Clearity"].ToString() == "") { row["Clearity"] = 236; }
 
                         SetCreateBy(row);
                     }
